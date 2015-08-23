@@ -1,0 +1,187 @@
+liste d'intégration des éléments dans la version test.
+
+*version DEV
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-loi : acceptation religieuse
+-events : tradition religieuse, départ + maintenance
+-modifiers : traditions religieuses + minorités + GFX
+-events : révision MTTH chartes forets
+-events : 2 nouveaux events de downgrade de forêt : don à l'Eglise (2 versions)
+-events : révision MTTH upgrades forets + timer pour repousser une nouvelle offre
+-localisation : english texts by Okawoa
+-events : rivalités entre constructeurs de cathédrale, coups bas
+-localisation : refonte fichiers ReC et Xylo
+-ambition : construire un monument
+-interface : refonte fichier
+-event : réduction fréquence d'apparition de conseillers juifs
+-decicion : corrections sur les emprunts juifs
+-modifier : ressources pour les jungles et steppes
+-localisation : ajustement rôle bâtisseur
+-localisation : event batisseurs et dépendances
+-events : suppression recrutement parlier et architecte
+-minor title : prise en compte du trait du commanditaire de cathédrale pour nommer le batisseur
+-event : recrutement batisseur complètement revu
+-gfx : icone décison cathédrale
+-decision contruire une cathédrale
+-gfx : placeholder pour les nouveaux traits ReC
+-trait : batisseur
+-localisation : corrections et ajouts de textes
+-buildings : ajustement condtions cathédrale + AI factor renforcé pour les théocraties
+-events : flavour events supplémentaires (ambition gain de compétences)
+-events : falvour events supplémentaires (mine)
+-batiments : tous les batiments ECO
+-events : prise en compte des routes commerciales pour le choix villes commerciales VS villes productions
+-events : conversion culturelle plus difficile en terrain montagne
+-events : suppression temporaire mongols et aztèques
+-batiments : les batiments brigands sont à présent masqués à la construction
+-decisions : chasse au tigre autorisée si présence de jungle dans le royaume (au lieu du critère des empires DJ en inde)
+-events : correctif distribution ressources (après attribution côtier/non-côtier)
+-events : event d'intro via un perso le jour 1
+-events : tweaks apparition disparition des bandits (état de guerre)
+-events : correctif distribution ressources et re-roll
+
+
+*version BETA 7 du 25 août 2014
+-gfx event : redistribution des GFX pour divers events
+-gfx event : ajout de image (CK1 et ECO3)
+-batiments : suppression fortifications bandits
+-equilibre : MTTH evil events
+-decision : diversification des emprunts auprès des usuriers
+-event : ajout embuscade de bandits (chasse)
+-modifier : raids_pirates
+-feature : kit Bandits (1 traits, des modificateurs, des bâtiments, 1 spécialisation de domaines, 1 décision, des events, des events vanilla modifiés -evil events-  des nicks)
+-fix : les emprunts sont maintenant hérités
+-minor titles + event : fusion architecte/parlier/batisseur en bâtisseur. modification de l'event d'attribution du titre
+-modifier : ajustement ressources plaines (-de forets +d'élevage)
+-modifier : suppression des choix domaine de chasse et foret sanctuarisées pour les musulmans
+-event : re-roll des ressources pour les provinces dépourvues 
+-fixed incorrect peace of god event text
+
+*version BETA 6 du 3 août 2014
+-localization in French for "Monasteries decision" mod
+-icon : grapes
+-events : lowered MTTH for forest charter event by 200days
+-continent : extended province list for coastal provinces with SWMH
+-population events (town building chains auto-growth)
+-pushed peace of god lenght to 7 years
+-Added towers, moats and walls buildings to every demesne type
+-Abdicate decision if you founded a monastery during your life and are old enough. Credits to Lumberking for the base decision and event.
+-CB and Factions : 5 years peace of god at start
+-modifiers + event : commercial nodes
+-buildings : pass, small bridge, great bridge, oasis, pass relay /code + texts
+-events : trade roads degrouped into 3
+-ressources : addition of gold and copper for desert cities
+-ressources : increased chances to obtain minerals in desert, slightly reduced chances for stone as counterpoint
+-event : reduced frequency for mushroom hunt, forest charter and specialization events
+
+*version BETA 5 du 14 juillet 2014
+-localisation : complétion placeholder en langue angloise
+-localisation : encore plein en plus :p (modificateurs de ressources)
+-interface : transfert de tous les éléments d'interface vers l'Arkopack
+-documentation : clean changelogs
+-documentation : refonte synthèse events
+-event : activation vin + localisation
+-batiments : encodage bâtiment du château
+-event : révision code reliques pour nouvelles religions
+-localisation : française, château
+-localisation : avancement pour anglais
+-event : distribution facteurs commerciaux (routes, fleuves, côtes)
+-modifiers : modificateurs commerciaux
+-event : clean connexions commerciales
+-ajout init détection mods
+-harmonisation/répartition entre mods (LCDA//L3T)
+-mise à jour 2.0.4
+
+*version BETA 4 du 13 mai 2013
+-events : récoltes
+-localisation : mise à jour et ajouts de nouveaux modificateurs ECO
+-common : révision modifieurs XYLO
+-events : révision init XYLO
+-buildings : révision bâtiments XYLO
+-buildings : ajustements conditions bâtiments
+-localisation : ajouts et amélioration
+-gfx : nouvelles icones
+-event : d'initialisation et activation des ressources remaniées
+-common : modifieurs pour les ressources remanié
+-font : ajout nouvelle police de caractères pour nom des provinces et domaines// fenêtres construction et province
+-interface : modif fenêtre construction
+-interface : modif fenêtre province
+
+*version test du 21 avril
+-fichiers : allègement et refonte Xylo
+-fichiers : fusion Xylo
+-events : suppression carrières de pierre de ReC (doublon)
+-gfx : attribution d'icônes de ReC et Xylo
+-events : event recherche relique caché
+-fichiers : intégration ReC
+-fichiers : split buildings en 3 fichiers // exploitation ressoures, industries et négoce.
+-buildings : ajout brasserie monastère et ville
+-buildings : ajustements bâtiments
+-localisation : debug activation ressources
+-events : attribution des modifiers connexions commerciales
+-modifier : ajout modifier cachés pour marquer les provinces ayant 1, 2, 3 ou + connexions commerciales
+-interface : ajout et modif des fichiers concernant l'écran de construction
+-gfx : ajout écran de construction agrandi et recolorisé
+
+*Version test du 7 avril
+-localisation : ajouts et amélioration
+-buildings : ajouts et ajustement
+-gfx : ajout test "Codex Manesse"
+-events : route commerciales
+-buildings : ajout trigger en doublon de potential
+-events : augmentation MTTH init domaine
+
+*Version test du 20 février
+-events : corrections et équilibrages
+-localisation : plein de choses
+-gfx : icones redessinées (toujours des placeholders)
+-localisation : ajustement divers
+-équilibrages divers
+-buildings : ajustements potential et prerequis
+-events : activation/mise en commerce des ressources
+-ajout contenu L3T (localisation;buidings;events;defines;static_modifiers
+-localisation : màj listing bâtiments
+-buildings : ajout des bâtiments pour les ressources primaires dans les monastères
+-localisation : ajout textes modifieurs
+-buildings : ajout des bâtiments pour les ressources primaires dans les villes
+-modifier : séparation pêche et pisciculture en 2 modifieurs disctincts. adaptation des batiments en conséquence
+-buildings : ajouts bâtiments pour les déserts
+-events : ajout ressources pour les déserts
+-buildings : ajustement conditions
+-buildings : ajout bâtiments forets pour village féodal. 
+-event : màj avec région "côtes maritimes" + équilibrage ressources
+-continent : définition région "côtes maritimes" 
+-events : adaptation pour cacher tous es events
+-séparation ECO+ et phase 2
+-localisation : variation des spécialisation par religions
+-buildings : ajustement conditions
+-events : ajout attribution règle monastiques, commanderies et ordres militaires
+-buildings : ajout : règles monastiques, ordre monastiques, ordres militaires
+-buildings : ajout : commanderie en batiment simple
+-buildings : suppression commanderie en tant que domaine 
+-events : ajouts event pour upgrade grande cite L1 vers L2 (fn du nb de batiments construits ; valeur test 5 batiments)
+-events : mise à jour de l'initialisation des domaines. rééquilibrage des probabilités et ajout de pondérations
+-buildings : initialisation domaines : ajout commanderie et grande cité L2
+-buildings : corrections bugs
+-events : ajout pondération du MTTH pour éviter le spam
+-localisation : placeholder pour events et modifiers
+-interface : ajustement province.gfx en conséquences
+-gfx : ajout icones temporaire pour les ressources
+-map : ajout continent.txt pour la définition des régions et routes commerciales
+-event : d'initialisation des ressources
+-common : modifier pour les ressources
+-event : import de l'initialisation des domaines de LCDA
+-buildings : import des domaines d'LCDA
+
+7 février 2013
+DEBUT !
