@@ -1,0 +1,779 @@
+namespace = ECO
+
+province_event = { #installe les provinces côtières SWMH
+    id = ECO.0009
+	desc = "DESCECO.0009"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_SWMH
+			NOT = { has_province_modifier = province_cotiere }
+			AND = {
+			OR = {
+				port = yes
+				continent = real_coastal_SWMH
+				}
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.0009A"
+		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
+	}
+}
+
+province_event = { #installe les provinces côtières LCDA
+    id = ECO.0010
+	desc = "DESCECO.0010"
+	picture = GFX_evt_market
+	hide_window = yes
+	
+	trigger = {
+			has_global_flag = running_LCDA
+			NOT = { has_province_modifier = province_cotiere }
+			OR = {   
+			province_id = 1 #Nyon
+			province_id = 2 #Gex
+			province_id = 3 #Genève
+			province_id = 4 #Thonon
+			province_id = 5 #Abondance
+			province_id = 6 #Aigle
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.0010A"
+		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
+	}
+}
+
+province_event = { #installe les provinces terrestres SWMH
+    id = ECO.0011
+	desc = "DESCECO.0011"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_SWMH
+			port = no
+			NOT = { 
+				has_province_modifier = province_terrestre
+				continent = real_coastal_SWMH			
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.0011A"
+		add_province_modifier = {	name = province_terrestre  	duration = -1 
+		#hidden = yes
+		}	
+	}
+}
+
+province_event = { #installe les provinces terrestres LCDA
+    id = ECO.0012
+	desc = "DESCECO.0012"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_LCDA
+			NOT = { has_province_modifier = province_terrestre }
+			NOT = {   
+			province_id = 1 #Nyon
+			province_id = 2 #Gex
+			province_id = 3 #Genève
+			province_id = 4 #Thonon
+			province_id = 5 #Abondance
+			province_id = 6 #Aigle
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.0012A"
+		add_province_modifier = {	name = province_terrestre  	duration = -1 
+		#hidden = yes
+		}	
+	}
+}
+
+province_event = { #installe les routes fluviales SWMH
+    id = ECO.0013
+	desc = "DESCECO.0013"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_SWMH
+			NOT = { has_province_modifier = route_fluviale }
+			OR = {   
+			##Rhine
+				province_id = 91 # Brabant
+				province_id = 91 # Loon
+				province_id = 89 # Kleve
+				province_id = 119 # Koln
+				province_id = 123 # Mainz
+				province_id = 124 # Pfalz
+				province_id = 126 # Nordgau
+				province_id = 134 # Sundgau
+			##Seine-Marne
+				province_id = 97 # Arques
+				province_id = 99 # Evreux
+				province_id = 98 # Vexin
+				province_id = 84 # France
+				province_id = 114 # Reims
+				province_id = 130 # Troyes
+				province_id = 131 # Sens
+				province_id = 132 # Auxerre	
+				}
+		}
+	mean_time_to_happen = { days = 10 }
+
+immediate = {
+		name = "ECO.0013A"
+		add_province_modifier = {	name = route_fluviale  	duration = -1 }	
+	}
+}
+
+province_event = { #installe les provinces fluviales LCDA
+    id = ECO.0014
+	desc = "DESCECO.0014"
+	picture = GFX_evt_market
+	hide_window = yes
+	
+	trigger = {
+			has_global_flag = running_LCDA
+			NOT = { has_province_modifier = route_fluviale }
+			OR = {   
+			province_id = 6 # Aigle
+			province_id = 28 # Martigny
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.0014A"
+		add_province_modifier = {	name = route_fluviale  	duration = -1 }	
+	}
+}
+
+province_event = { #installe les routes terrestres 1/2/3 SWMH
+    id = ECO.001501
+	desc = "DESCECO.001501"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_SWMH
+			NOT = { has_province_modifier = route_terrestre01 }
+			OR = {   
+			##Angleterre : (du nord vers le sud)
+#1#
+			province_id = 48 # Lothian
+			province_id = 51 # Dunbar
+			province_id = 52 # Northumberland
+			province_id = 56 # Durham
+			province_id = 57 # York
+			province_id = 62 # Leicester
+			province_id = 68 # Northampton
+			province_id = 69 # Bedford
+			province_id = 32 # Middlessex
+			province_id = 22 # Oxford
+			province_id = 23 # Wiltshire
+			province_id = 21 # Gloucester
+			
+			##Paris->Vienne :
+			province_id = 112 # Ile de France
+			#province_id = 114 # Reims              ou  { 131 # Sens puis 130 # Troyes} --> pour cause de tracé allant entre Reims-Verdun et Sens-Troyes
+			province_id = 131 # Sens puis 
+			province_id = 130 # Troyes
+			province_id = 129 # Verdun                
+			province_id = 127 # Lorraine
+			province_id = 126 # Nordgau
+			province_id = 125 # Baden
+			province_id = 251 # Furstenberg
+			province_id = 252 # Ulm
+			province_id = 314 # Nurnberg
+			province_id = 361 # Niederbayern
+			province_id = 448 # Salzburg
+			province_id = 449 # Osterreich
+
+			##Lyon->Venise			
+			province_id = 227 # Lyon
+			province_id = 237 # Savoie
+			province_id = 236 # Piemonte
+			province_id = 232 # Monferrato
+			province_id = 235 # Lombardia
+			province_id = 320 # Cremona
+			province_id = 354 # Mantua
+			province_id = 357 # Treviso
+			province_id = 356 # Venezia
+			
+			##Riga->Constantinople :
+			province_id = 374 # Zemigalians
+			province_id = 416 # West Dvina
+			province_id = 419 # Polotsk
+			province_id = 417 # Vitebsk
+			province_id = 551 # Mstislavl
+			province_id = 553 # Lyubech
+			province_id = 547 # Kiev
+			province_id = 544 # Korsun
+			province_id = 543 # Oleshye
+			province_id = 542 # Olvia
+			province_id = 511 # Galaz
+			province_id = 510 # Constantia
+			province_id = 509 # Karvuna
+			province_id = 498 # Mesembria
+			province_id = 497 # Thrake
+			province_id = 496 # Byzantion
+			
+			##Narva->Azov : 
+
+			province_id = 380 # Narva
+			province_id = 413 # Pksov 
+			province_id = 414 # Novgorod
+			province_id = 410 # Toropets
+			province_id = 570 # Tver
+			province_id = 575 # Moskva
+			province_id = 582 # Vladimir
+			province_id = 584 # Nizhny Novgorod
+			province_id = 589 # Grassland Cheremisa
+			province_id = 610 # Bulgar
+			province_id = 609 # Syrt
+			province_id = 608 # Lower Volga
+			province_id = 595 # Don portage
+			province_id = 607 # Sarpa
+			province_id = 596 # Tana
+			province_id = 597 # Azov
+
+			##Le Caire->Bagdad (étendu) : pour le Caire vers le sud, j'ai choisi d'étendre dans les terres (au milieu), pas de canal de Suez à l'époque ---- j'emmène l'après Bagdad jusqu'à Ispahan en passantn par un col (ensuite la vérité historique...)
+			province_id = 885 # Matamma
+			province_id = 883 # Gondar
+			province_id = 877 # Kassala
+			province_id = 878 # Hayya
+			province_id = 792 # Nubia
+			province_id = 794 # Aswan
+			province_id = 795 # Asyut
+			province_id = 796 # Cairo
+			province_id = 797 # Manupura
+			province_id = 789 # Pelusia
+			province_id = 788 # Farama
+			province_id = 787 # El-Arish
+			province_id = 781 # Darum
+			province_id = 780 # Ascalon
+			province_id = 775 # Jaffa
+			province_id = 772 # Acre
+			province_id = 773 # Tiberias
+			province_id = 725 # Irbid
+			province_id = 769 # Safed
+			province_id = 728 # Damascus
+			province_id = 730 # Palmyra
+			province_id = 709 # Asas
+			province_id = 710 # Al Bichri
+			province_id = 711 # Sinjar
+			province_id = 712 # Suwaida
+			province_id = 695 # Deir
+			province_id = 693 # Baghdad
+			province_id = 689 # Ilam
+			province_id = 656 # Tigris
+			province_id = 647 # Avhaz
+			province_id = 646 # Esfahan
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.001501A"
+		add_province_modifier = {	name = route_terrestre01  	duration = -1 }	
+	}
+}
+
+province_event = {
+    id = ECO.001502
+	desc = "DESCECO.001502"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_SWMH
+			NOT = { has_province_modifier = route_terrestre02 }
+			OR = {   
+			##Angleterre : (du nord vers le sud)
+
+#2#
+			##Fès->Alexandrie : choisir entre le tracé intérieur des terres (cf carte) ou côtes méditerannéennes (me semble plus logique) => le trajet commun est au milieu
+			province_id = 840 # Fes
+			province_id = 837 # Figuig                 
+ 			province_id = 836 # Snassen
+			province_id = 832 # Orania
+			province_id = 831 # Al Djazair
+			province_id = 825 # Beni Yanni
+			province_id = 822 # Bejaija
+			province_id = 820 # Annaba
+			province_id = 818 # Medjerda
+			province_id = 815 # Kairwan
+			province_id = 814 # Gabes
+			province_id = 813 # Djerba
+			province_id = 811 # Tripolitana
+			province_id = 810 # Leptis Magna
+			province_id = 809 # Syrte
+			province_id = 807 # Senoussi
+			province_id = 805 # Tobruk
+			province_id = 803 # Quattara
+			province_id = 800 # Gizeh
+			province_id = 796 # Cairo
+			province_id = 797 # Manupura
+			province_id = 801 # Buhairya
+			province_id = 802 # Alexandria
+
+			##Santiago->Amiens :
+			province_id = 157 # Santiago
+			province_id = 189 # Astorga
+			province_id = 190 # Leon
+			province_id = 199 # Burgos
+			province_id = 201 # Najera
+			province_id = 152 # Navarra
+			province_id = 151 # Labourd
+			province_id = 150 # Albret
+			province_id = 149 # Bordeaux
+			province_id = 148 # Angouleme
+			province_id = 144 # Lusignan
+			province_id = 140 # Tourraine (Etape à Tours !!! => un p'tit bonus :D ?)
+			province_id = 110 # Blois
+			province_id = 138 # Orleans
+			province_id = 112 # Ile de France
+			province_id = 95 # Amiens
+
+			##Barcelone->Bruges :
+			province_id = 204 # Barcelona
+			province_id = 205 # Empuries
+			province_id = 211 # Rosello
+			province_id = 212 # Narbonne
+			province_id = 220 # Montpellier
+			province_id = 221 # Provence
+			province_id = 222 # Venaissin
+			province_id = 228 # Dauphine Viennois
+			province_id = 227 # Lyon
+			province_id = 240 # Chalons
+			province_id = 136 # Dijon
+			province_id = 130 # Troyes
+			province_id = 131 # Sens
+			province_id = 114 # Reims
+			province_id = 113 # Vermandois
+			province_id = 94 # Hainaut
+			province_id = 93 # Gent
+			province_id = 78 # Brugge
+
+			##Bruxelles->Naples :
+			province_id = 117 # Brabant
+			province_id = 91 # Loon
+			province_id = 89 # Kleve
+			province_id = 119 # Koln
+			province_id = 123 # Mainz
+			province_id = 124 # Pfalz
+			province_id = 126 # Nordgau
+			province_id = 134 # Sundgau
+			province_id = 242 # Aargau
+			province_id = 245 # Schwyz
+			province_id = 246 # Grisons
+			province_id = 235 # Lombardia
+			province_id = 234 # Pavia
+			province_id = 233 # Genoa
+			province_id = 323 # Lucca
+			province_id = 327 # Pisa
+			province_id = 331 # Piombino
+			province_id = 332 # Orbetello
+			province_id = 243 # Orvieto
+			province_id = 333 # Roma
+			province_id = 851 # Capua
+			province_id = 334 # Napoli
+
+			##Venise->Lübeck :
+			province_id = 356 # Venezia
+			province_id = 357 # Treviso
+			province_id = 317 # Trent
+			province_id = 316 # Tirol
+			province_id = 315 # Kempten
+			province_id = 314 # Nurnberg
+			province_id = 313 # Bamberg
+			province_id = 311 # Plauen
+			province_id = 255 # Thuringen
+			province_id = 121 # Nassau
+			province_id = 119 # Koln
+			province_id = 88 # Munster
+			province_id = 87 # Osnabruck
+			province_id = 259 # Celle
+			province_id = 263 # Holstein
+			province_id = 262 # Lubeck
+
+			##Novgorod->Trébizonde : à revérifier => trajet Stettin->Prague pas évident du tout + Vienne->Constantinople
+
+			province_id = 414 # Novgorod
+			province_id = 413 # Pskov
+			province_id = 416 # West Dvina
+			province_id = 421 # Zhmud
+			province_id = 372 # Memel
+			province_id = 371 # Sambia
+			province_id = 370 # Marienburg
+			province_id = 368 # Danzig
+			province_id = 367 # Slupsk
+			province_id = 366 # Stettin
+			province_id = 365 # Brandenburg
+			province_id = 430 # Lubusz
+			province_id = 434 # Lower Silesia
+			province_id = 363 # Litomerice
+			province_id = 435 # Upper Silesia
+			province_id = 436 # Boleslav
+			province_id = 440 # Olomouc
+			province_id = 441 # Brno
+			province_id = 438 # Hradec
+			province_id = 437 # Praha
+			province_id = 362 # Domazlice
+			province_id = 447 # Passau
+			province_id = 449 # Osterreich
+			province_id = 450 # Sopron
+			province_id = 451 # Fejer
+			province_id = 453 # Szekezfehervar
+			province_id = 462 # Krizevci
+			province_id = 504 # Rama
+			province_id = 503 # Hum
+			province_id = 502 # Rashka
+			province_id = 501 # Naissus
+			province_id = 500 # Serdica
+			province_id = 499 # Tyrnovo
+			province_id = 498 # Mesembria ou 494 # Adrianopolis (trajet entre les deux provinces)
+			province_id = 497 # Thrake
+			province_id = 496 # Byzantion
+			province_id = 741 # Nikomedeia
+			province_id = 750 # Nikaea
+			province_id = 753 # Ankyra
+			province_id = 752 # Galatia
+			province_id = 737 # Kaisereia
+			province_id = 706 # Koloneia
+			province_id = 704 # Theodosiopolis
+			province_id = 678 # Trapezous
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.001502A"
+		add_province_modifier = {	name = route_terrestre02  	duration = -1 }	
+	}
+}
+
+province_event = {
+    id = ECO.001503
+	desc = "DESCECO.001503"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_SWMH
+			NOT = { has_province_modifier = route_terrestre03 }
+			OR = {   
+			##Angleterre : (du nord vers le sud)
+#3#
+			##Barcelone->Fez :
+
+			province_id = 204 # Barcelona
+			province_id = 173 # Tarragona
+			province_id = 174 # Albarracin
+			province_id = 175 # Calatayud
+			province_id = 176 # Molina
+			province_id = 177 # Cuenca
+			province_id = 197 # Toledo
+			province_id = 196 # Calatrava
+			province_id = 181 # Cordoba
+			province_id = 182 # Sevilla
+			province_id = 166 # Algeciras
+			province_id = 839 # Cebta
+			province_id = 841 # Tangiers
+			province_id = 840 # Fes
+			province_id = 843 # Marrakech
+			province_id = 844 # Massat
+			province_id = 845 # Anti-Atlas
+			province_id = 846 # Ifni
+			province_id = 847 # Tharasset
+
+			##Bordeaux->Kiev :
+
+			province_id = 149 # Bordeaux
+			province_id = 215 # Agen
+			province_id = 214 # Toulouse
+			province_id = 212 # Narbonne
+			province_id = 220 # Montpellier
+			province_id = 221 # Provence
+			province_id = 230 # Nice
+			province_id = 233 # Genoa
+			province_id = 234 # Pavia
+			province_id = 235 # Lombardia
+			province_id = 320 # Cremona
+			province_id = 354 # Mantua
+			province_id = 319 # Verona
+			province_id = 355 # Padua
+			province_id = 356 # Venezia
+			province_id = 358 # Aquileia
+			province_id = 455 # Steiermark
+			province_id = 449 # Osterreich
+			province_id = 445 # Pressburg
+			province_id = 441 # Brno
+			province_id = 440 # Olomouc
+			province_id = 526 # Cieszyn
+			province_id = 527 # Krakowskie
+			province_id = 531 # Sandomierskie
+			province_id = 549 # Beresty
+			province_id = 542 # Olvia
+			province_id = 547 # Kiev
+
+			##Nantes->Turin :
+			province_id = 106 # Nantes
+			province_id = 107 # Anjou
+			province_id = 109 # Vendome
+			province_id = 111 # Chartres
+			province_id = 112 # Ile de France
+			province_id = 131 # Sens
+			province_id = 130 # Troyes
+			province_id = 135 # Besancon
+			province_id = 239 # Geneve
+			province_id = 237 # Savoie
+			province_id = 236 # Piemonte
+
+			##Durazzo->Bagdad :
+			province_id = 470 # Dyrrachion
+			province_id = 471 # Ochrid
+			province_id = 490 # Thessalonike
+			province_id = 491 # Chalkidike
+			province_id = 492 # Strymon
+			province_id = 493 # Philippopolis
+			province_id = 494 # Adrianopolis
+			province_id = 495 # Kaliopolis
+			province_id = 496 # Byzantion
+			province_id = 741 # Nikomedeia
+			province_id = 742 # Prusa
+			province_id = 749 # Dorylaion
+			province_id = 759 # Ikonion
+			province_id = 761 # Tarsos
+			province_id = 762 # Adana
+			province_id = 735 # Teluch
+			province_id = 763 # Alexandretta
+			province_id = 764 # Antiocheia
+			province_id = 733 # Aleppo
+			province_id = 732 # Hama
+			province_id = 709 # Asas
+			province_id = 710 # Al Bichri
+			province_id = 711 # Sinjar
+			province_id = 712 # Suwaida
+			province_id = 695 # Deir
+			province_id = 693 # Baghdad
+
+			###Oslo->Stockholm :
+			province_id = 272 # Akershus
+			province_id = 296 # Viken
+			province_id = 297 # Vastergotland
+			province_id = 294 # Narke
+			province_id = 292 # Sodermanland
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.001503A"
+		add_province_modifier = {	name = route_terrestre03  	duration = -1 }	
+	}
+}
+
+province_event = { #installe les routes terrestres LCDA
+    id = ECO.0016
+	desc = "DESCECO.0016"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_LCDA
+			NOT = { has_province_modifier = route_terrestre }
+			OR = {   
+			province_id = 26  #Châtillon
+			province_id = 25  #Aoste
+			province_id = 29  #Mont Joux
+			province_id = 28  #Martigny
+			province_id = 27  #Saint Maurice
+			province_id = 6   #Aigle -nord Léman-
+			province_id = 1   #Nyon
+			province_id = 3   #Genève
+			province_id = 12  #Seyssel
+			province_id = 13  #Albens
+			province_id = 14  #Yenne
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.0016A"
+		add_province_modifier = {	name = route_terrestre  	duration = -1 }	
+	}
+}
+
+###2.4 support vanilla à retaguer
+province_event = { #installe les provinces côtières Vanilla
+    id = ECO.0017
+	desc = "DESCECO.0017"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_VANILLA
+			NOT = { has_province_modifier = province_cotiere }
+			OR = {
+				port = yes
+			#mer caspienne
+				province_id = 625 #Usturt
+				province_id = 624 #Mangyshlak
+				province_id = 621 #Kangly
+				province_id = 618 #Guryev
+				province_id = 620 #Itil
+				province_id = 604 #Kuma
+				province_id = 675 #Semender
+				province_id = 674 #Derbent
+				province_id = 669 #Shemakha
+				province_id = 668 #Shirvan
+				province_id = 667 #Tabriz
+				province_id = 666 #Gilan
+				province_id = 662 #Mazandaran
+				province_id = 661 #Tabaristan
+				province_id = 633 #Gurgan
+				province_id = 631 #Dihistan
+				province_id = 627 #Kara-Kum
+			#mer d'Aral
+				province_id = 622 #Turkestan
+				province_id = 623 #Aral
+				province_id = 1378 #Urgench
+				province_id = 901 #Kyzylkum
+				province_id = 900 #Syr Darya
+			}
+		}
+	mean_time_to_happen = { days = 10 }
+
+immediate = {
+		name = "ECO.0017A"
+		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
+	}
+}
+
+province_event = { #installe les provinces terrestres VANILLA
+    id = ECO.0018
+	desc = "DESCECO.0018"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_VANILLA
+			NOT = {	has_province_modifier = province_terrestre }
+			NOT = {	has_province_modifier = province_cotiere }
+			NOT = {
+				#OR = {
+					port = yes
+				#mer caspienne
+					province_id = 625 #Usturt
+					province_id = 624 #Mangyshlak
+					province_id = 621 #Kangly
+					province_id = 618 #Guryev
+					province_id = 620 #Itil
+					province_id = 604 #Kuma
+					province_id = 675 #Semender
+					province_id = 674 #Derbent
+					province_id = 669 #Shemakha
+					province_id = 668 #Shirvan
+					province_id = 667 #Tabriz
+					province_id = 666 #Gilan
+					province_id = 662 #Mazandaran
+					province_id = 661 #Tabaristan
+					province_id = 633 #Gurgan
+					province_id = 631 #Dihistan
+					province_id = 627 #Kara-Kum
+				#mer d'Aral
+					province_id = 622 #Turkestan
+					province_id = 623 #Aral
+					province_id = 1378 #Urgench
+					province_id = 901 #Kyzylkum
+					province_id = 900 #Syr Darya
+					#}
+			}
+		}
+	mean_time_to_happen = { days = 20 }
+
+immediate = {
+		name = "ECO.0018A"
+		add_province_modifier = {	name = province_terrestre  	duration = -1  
+		#hidden = yes
+		}	
+	}
+}
+
+province_event = { #installe les routes fluviales SWMH
+    id = ECO.0019
+	desc = "DESCECO.0019"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_VANILLA
+			NOT = { has_province_modifier = route_fluviale }
+			OR = {
+			##Seine-Marne
+				province_id = 97 # Arques
+				province_id = 99 # Evreux
+				province_id = 98 # Vexin
+				province_id = 84 # France
+				province_id = 114 # Reims
+				province_id = 130 # Troyes
+				province_id = 131 # Sens
+				province_id = 132 # Auxerre	
+				}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.0019A"
+		add_province_modifier = {	name = route_fluviale  	duration = -1 }	
+	}
+}
+
+province_event = { #installe les routes terrestres VANILLA
+    id = ECO.0020
+	desc = "DESCECO.0020"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	trigger = {
+			AND = {
+				has_global_flag = running_VANILLA
+			NOT = { has_province_modifier = route_terrestre }
+
+				OR = {   
+					##Lyon->Venise			
+					province_id = 227 # Lyon
+					province_id = 237 # Savoie
+					province_id = 236 # Piemonte
+					province_id = 232 # Monferrato
+					province_id = 235 # Lombardia
+					province_id = 320 # Cremona
+					province_id = 354 # Mantua
+					province_id = 319 # Verona			
+					province_id = 357 # Treviso
+					province_id = 356 # Venezia
+				}
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		name = "ECO.0020A"
+		add_province_modifier = {	name = route_terrestre01  	duration = -1 }	
+	}
+}

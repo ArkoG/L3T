@@ -1,0 +1,421 @@
+#####
+# ECO+ _an improved economy and trade by Arko 
+# [ReC]Reliques et Cathédrales _Build gigantic cathedrals ! by Arko
+#[XYLO Kit] _Manage your woodlands by Arko
+#####
+
+# Icons:
+#
+# Good 				    <=> 	  		 Bad
+#
+#  1 - Martial 							- 19
+#  2 - Learning, livre ouvert 			- 20
+#  3 - Diplomacy, parchemin 			- 21
+#  4 - Stewardship, coffre + pièces		- 22
+#  5 - Intrigue, lettre + poignard 		- 23
+#  6 - Money, pile de pièces 			- 24
+#  7 - Prestige, couronne ouverte 		- 25
+#  8 - Piety, croix rayonnante 			- 26
+#  9 - Titles, écu + couronne 			- 27
+# 10 - Council, couronne fermée 		- 28 
+# 11 - Laws, marteau 					- 29
+# 12 - Tech, rouages 					- 30 
+# 13 - Military, épée + heaume mini 	- 31
+# 14 - Plots, dague + lettre mini 		- 32
+# 15 - Messages, parchemin enroulé mini	- 33
+# 16 - Diplomatic actions, parchemin mini 	- 34
+# 17 - Church, croix chapelet 				- 35
+# 18 - Characters, MSN 						- 36
+# 37 - Prison 								- 38
+# 39 - Love 								- 40
+#
+# 45 - Relique
+# 46 - épi grisé
+# 47 - épi bleu
+# 48 - feuille rouge
+# 49 - feuille or
+# 50 - feuille violette
+# 51 - feuille or
+# 52 - feuille bleue
+# 53 - couronne or
+# 54 - poisson bleu
+# 55 - poisson grisé
+# 56 - sainte grenade pourpre halo vert foncé
+# 57 - sainte grenade pourpre halo vert clair
+# 58 - Rouage rouge brisé
+# 59 - Rouage halo rouge
+# 60 - Rouage halo vert
+# 61 - pastille verte + croix dorée
+# 62 - pastille verte + couronne dorée
+# 63 - pastille verte + clé dorée
+# 64 - parchemin + sceau + plume //normal
+# 65 - parchemin + sceau + plume //vert
+# 66 - parchemin + sceau + plume //rouge
+
+# 76 - tradition chrétienne
+# 77 - tradition musulmane
+# 78 - tradition autre
+
+# 79 - chaines esclaves
+# 80 - route_terrestre01
+# 81 - route_terrestre02
+# 82 - route_terrestre03
+
+# 95 - placeholder AGRI épi sepia
+# 96 - placeholder ELEV bois
+# 97 - placeholder BOIS feuille sepia
+# 98 - placeholder PIER sepia
+# 99 - placeholder MINE sepia
+#100 - placeholder FISH poisson sepia
+#101 - placeholder AGRI épi doré
+#102 - placeholder ELEV boeuf brun
+#103 - épi bleu
+#104 - placeholder PIER
+#105 - placeholder MINE
+#106 - placeholder FISH poisson bleu
+
+# 95 - AGRI épi doré
+# 96 - AGRI épi doré
+# 97 - AGRI épi doré
+# 98 - AGRI épi doré
+# 99 - AGRI épi doré
+#100 - AGRI épi doré
+#101 - AGRI épi doré
+#102 - AGRI épi doré
+#103 - AGRI épi doré
+#104 - AGRI épi doré
+#105 - ELEV boeuf brun
+#106 - ELEV boeuf brun
+#107 - ELEV boeuf brun
+#108 - ELEV boeuf brun
+#109 - ELEV boeuf brun
+#110 - ELEV boeuf brun
+#111 - ELEV boeuf brun
+#112 - ELEV boeuf brun
+#113 - BOIS feuille verte
+#114 - BOIS feuille verte
+#115 - BOIS feuille verte
+#116 - BOIS feuille verte
+#117 - BOIS feuille verte
+#118 - BOIS feuille verte
+#119 - BOIS feuille verte
+#119 - BOIS feuille verte
+#120 - PIER rouage gris
+#121 - PIER hache bleu
+#122 - PIER hache bleu
+#123 - MINE rouage bleu argent
+#124 - MINE rouage bleu argent
+#125 - MINE rouage bleu argent
+#126 - MINE rouage bleu argent
+#127 - MINE rouage bleu argent
+#128 - MINE rouage bleu argent
+#129 - MINE rouage bleu argent
+#130 - FISH poisson bleu
+#131 - FISH poisson bleu
+#132 - FISH poisson bleu
+#133 - FISH poisson bleu
+#134 - FISH poisson fumé
+
+# 98 - placeholder PIER sepia
+# 99 - placeholder MINE sepia
+#100 - placeholder FISH poisson sepia
+#101 - placeholder AGRI épi doré
+#102 - placeholder ELEV boeuf brun
+#103 - épi bleu
+#104 - placeholder PIER
+#105 - placeholder MINE
+#106 - placeholder FISH poisson bleu
+
+
+#139 - côte maritime
+#140 - route fluviale
+#141 - route terrestre
+#142 - land/demesne
+
+###ECO+
+agriculture1			= {icon = 95 local_revolt_risk = -0.01} 
+agriculture2_cereales	= {icon = 96}	agriculture2_fruits	= {icon = 100}	agriculture2_legumes = {icon = 102}	agriculture2_vigne	= {icon = 103} 
+agriculture3_farine 	= {icon = 97}	agriculture3_cidre	= {icon = 101}										agriculture3_vin 	= {icon = 104}
+agriculture3_biere		= {icon = 98}	
+agriculture4_pain 		= {icon = 99}
+
+elevage1		= {icon = 105}
+elevage2_laine	= {icon = 106}	elevage2_boeuf	= {icon = 109	local_tax_modifier = 0.01}	elevage2_fromage	= {icon = 112}  elevage2_cheval = {icon = 112}
+elevage4_drap	= {icon = 107}	elevage3_viande	= {icon = 110}
+elevage3_etoffe	= {icon = 108}	elevage3_cuir	= {icon = 111}
+
+foret1			= {icon = 113}
+foret2_expl		= {icon = 113} #caché
+foret2_bois		= {icon = 114 local_tax_modifier = 0.01}	foret3_planche	= {icon = 116 local_build_time_modifier = -0.03}		
+foret2_charbon	= {icon = 115 local_tax_modifier = 0.01}	foret3_verre	= {icon = 117}	
+
+foret2_chasse = { 	tax_income = 0.1 local_revolt_risk = 0.04	icon = 118} #contrepartie loi, réduction max de 4% à 1%
+foret2_holy   = { 	tax_income = 0.1 local_revolt_risk = 0.04	icon = 119} #contrepartie loi, réduction max de 4% à 1%
+
+pierre1					= {icon = 120}
+pierre2_pierre_brute	= {icon = 121}
+pierre3_pierre_taille	= {local_build_time_modifier = -0.03 icon = 122}
+
+minerai1		= {icon = 123}
+minerai2_fer	= {icon = 124}	minerai2_sel_gemme		= {icon = 127 local_tax_modifier = 0.02}
+minerai3_metal	= {icon = 125}	minerai3_sel_raffine	= {icon = 128}
+minerai4_outils	= {icon = 126 local_build_time_modifier = -0.05}	minerai3_salaison		= {icon = 129}
+minerai4_armes	= {icon = 125}
+
+minerai2_cuivre	= {icon = 143}
+minerai2_or	= {icon = 144}
+
+peche1					= {icon = 130}	pisci1			= {icon = 133}	
+peche2_poisson			= {icon = 131}	pisci2_poisson	= {icon = 134}
+peche_pisci3_fumaison	= {icon = 132}
+
+peaux2_fourrure	= {icon = 135 	tax_income = 0.2}
+joyaux2_bijoux	= {icon = 136 	tax_income = 0.1}
+epices2_epices	= {icon = 137 	tax_income = 0.3}
+
+
+
+
+1connexion_commerciale = {icon = 1 } #hidden
+2connexion_commerciale = {icon = 1 } #hidden
+3connexion_commerciale = {icon = 137 } #hidden
+
+###ReC
+relique01 = {icon = 45}	relique02 = {icon = 45}	relique03 = {icon = 45}	relique04 = {icon = 45}	relique05 = {icon = 45}	relique06 = {icon = 45}	relique07 = {icon = 45}	relique08 = {icon = 45}	relique09 = {icon = 45}	relique10 = {icon = 45}	relique11 = {icon = 45}	relique12 = {icon = 45}	relique13 = {icon = 45}	relique14 = {icon = 45}	relique15 = {icon = 45}	relique16 = {icon = 45}	relique17 = {icon = 45}	relique18 = {icon = 45}	relique19 = {icon = 45}	relique20 = {icon = 45}	relique21 = {icon = 45}	relique22 = {icon = 45}	relique23 = {icon = 45}	relique24 = {icon = 45}	relique25 = {icon = 45}
+relique_fort_douteuse = {icon = 45} relique_falsifiee = {icon = 45} relique_mineure = {icon = 45} 
+
+repasse_dans_un_an = {icon = 45}  # hidden
+a_offert_sculpture = {icon = 45}  # hidden
+a_deja_recu_sculpture = {icon = 45}  # hidden
+a_offert_fresque = {icon = 45}  # hidden
+a_deja_recu_fresque = {icon = 45}  # hidden
+a_offert_vitrail = {icon = 45}  # hidden
+a_deja_recu_vitrail = {icon = 45}  # hidden
+
+
+chantier_stop = {
+	local_build_time_modifier = 1.00 #+100%
+	local_revolt_risk = 0.01 #1% chantier stoppé cause grève ou arrêt "simple" : employés non payés
+	icon = 58
+}
+chantier_stop_rivalite_1 = { # Chantier arrêté à cause d'un coup bas
+	local_build_time_modifier = 1.00 #+100%
+	local_revolt_risk = 0.01
+	icon = 58
+}
+chantier_stop_rivalite_2 = { # Mis si le 1er existe déjà
+	local_build_time_modifier = 1.00 #+100%
+	local_revolt_risk = 0.01
+	icon = 58
+}
+chantier_stop_rivalite_3 = { # Mis si le 1er et le 2ème existent déjà
+	local_build_time_modifier = 1.00 #+100%
+	local_revolt_risk = 0.01
+	icon = 58
+}
+chantier_down = {
+	local_build_time_modifier = 0.10 #+10%
+	icon = 59
+}
+chantier_down_rivalite_1 = { # Chantier ralenti à cause d'un coup bas
+	local_build_time_modifier = 0.10 #+10%
+	icon = 59
+}
+chantier_down_rivalite_2 = { # Mis si le 1er existe déjà
+	local_build_time_modifier = 0.10 #+10%
+	icon = 59
+}
+chantier_down_rivalite_3 = { # Mis si le 1er et le 2ème existent déjà
+	local_build_time_modifier = 0.10 #+10%
+	icon = 59
+}
+chantier_up = {
+	local_build_time_modifier = -0.10 #-10%
+	icon = 60
+}
+loge_modifier = {
+	local_build_time_modifier = -0.10 #-10%
+	icon = 60
+}
+
+##########
+chantier_cathedrale = { icon = 60 }
+
+trad_chretienne = { icon = 76 } #flag
+trad_musulmane = { icon = 77 } #flag
+trad_autre = { icon = 78 } #flag
+
+minorite_chretienne = { icon = 76 }
+minorite_musulmane = { icon = 77 }
+
+##########
+boost_opinion_bourgeois	= {	town_opinion	= 25	icon = 63	}
+boost_opinion_feodaux	= {	castle_opinion	= 25	icon = 62	}
+boost_opinion_ecclesia	= {	church_opinion	= 25	icon = 61	}
+en_odeur_de_saintete	= {	church_opinion	= 20	monthly_character_piety = 2.5	icon = 61	}
+
+##########
+emprunt_A = { icon = 66 } #T3% M150
+emprunt_B = { icon = 66 } #T3%  M250
+emprunt_C = { icon = 66 } #T3%   M350
+emprunt_D = { icon = 66 } #T3%    M450
+emprunt_E = { icon = 66 }  #T4% M150
+emprunt_F = { icon = 66	}  #T4%  M250
+emprunt_G = { icon = 66	}  #T4%   M350
+emprunt_H = { icon = 66 }  #T4%    M450
+emprunt_I = { icon = 66 } #T5% M150
+emprunt_J = { icon = 66 } #T5%  M250
+emprunt_K = { icon = 66 } #T5%   M350
+emprunt_L = { icon = 66 } #T5%    M450
+
+emprunt_jew_75 = { icon = 66 }
+emprunt_jew_150 = { icon = 66 }
+emprunt_jew_300 = { icon = 66 }
+
+#XYLO
+
+foret_xylo = { #encore utilisé ?
+	#local_tax_modifier = 0.01 #+1%
+	icon = 47
+}
+
+trouve_bolet = {icon = 1 } #hidden #à remplcer par flags ?
+trouve_chanterelle = {icon = 1 } #hidden		
+trouve_mysterieux = {icon = 1 } #hidden	
+
+raids_pirates = {
+	supply_limit = -2
+	local_revolt_risk = 0.03
+	castle_tax_modifier = -0.25
+	temple_tax_modifier = -0.25
+	local_build_cost_modifier = 0.25
+	icon = 19
+}
+bandits_renforces = {icon = 1 } #hidden	Pour déclencher events et ne plus avoir à gérer les 3 types de bandits.
+bandits_installes = { #cumul de tout le reste ;p
+	icon = 31
+	local_revolt_risk = 0.07
+	city_tax_modifier = -0.35
+	#castle_tax_modifier = -0.3
+	temple_tax_modifier = -0.35
+	disease_defence = -0.1
+	local_build_time_modifier = 0.5
+	local_build_cost_modifier = 0.3
+	supply_limit = -2
+	#castle_levy_size = -0.33
+	#city_levy_size = -0.33
+	#temple_levy_size = -0.33
+}
+
+la_province_se_remet = { #
+	icon = 22
+	local_revolt_risk = 0.02
+	city_tax_modifier = -0.10
+	castle_tax_modifier = -0.20
+	temple_tax_modifier = -0.15
+	#disease_defence = -0.1
+	local_build_time_modifier = 0.1
+	#local_build_cost_modifier = 0.3
+	supply_limit = -1
+	castle_levy_size = -0.25
+	#city_levy_size = -0.33
+	#temple_levy_size = -0.33
+}
+
+
+##########
+#DIFFERENTS MODIFICATEURS (prosperité, immersion, taille du domaine forestier, lois...)
+
+foret_up = {
+	local_tax_modifier = 0.02 #+2% #cumulatif.
+	icon = 49
+}
+
+loi_forestiere_L1 = {
+	local_revolt_risk = -0.01 #-1%
+	tax_income = -0.1
+	icon = 64
+}
+loi_forestiere_L2 = {
+	local_revolt_risk = -0.03 #-3%
+	tax_income = -0.1
+	icon = 65
+}
+
+foret_hantee = {
+	local_tax_modifier = -0.1 #-10%
+	icon = 48
+}
+foret_malfamee = {
+	local_tax_modifier = -0.30 #-30%
+	icon = 52
+}
+foret_maudite = {
+	local_tax_modifier = -0.50 #-50%
+	icon = 50
+}
+foret_poor = {
+	local_tax_modifier = -0.10 #-10%
+	local_revolt_risk = 0.01
+	icon = 48
+}
+
+poachers = {}
+illegal_cut = {}
+a_witch = {}
+
+recolte_bonne = {
+	icon = 47 
+	local_revolt_risk = -0.05
+	tax_income = 0.2
+	local_tax_modifier =  0.01
+} 
+
+recolte_mauvaise = {
+	icon =  46 
+	local_revolt_risk =  0.05
+	tax_income = -0.2
+	local_tax_modifier = -0.01
+} 
+
+peche_bonne = {
+	icon = 54 
+	local_revolt_risk = -0.05
+	tax_income = 0.2
+	local_tax_modifier =  0.01
+} 
+
+peche_mauvaise = {
+	icon =  55 
+	local_revolt_risk =  0.05
+	tax_income = -0.2
+	local_tax_modifier = -0.01
+} 
+
+###Terrain et commerce
+mine_accident = {
+	icon =  59 
+	local_revolt_risk =  0.05
+	tax_income = -0.2
+	local_tax_modifier = -0.01
+}
+mine_filon = {
+	icon =  60
+	local_revolt_risk = -0.05
+	tax_income = 0.2
+	local_tax_modifier =  0.01
+}
+industrie_prospere = {
+	icon =  138
+	local_revolt_risk = -0.05
+	tax_income = 0.2
+	local_tax_modifier =  0.01
+}
+	
+province_cotiere = { icon = 139 local_tax_modifier = 0.02 }
+route_fluviale = { icon = 140 local_tax_modifier = 0.05 }
+route_terrestre = { icon = 141 local_tax_modifier = 0.05 }
+province_terrestre = { icon = 142 }
+route_terrestre01 = { local_tax_modifier = 0.05	icon = 80 } #+5%
+route_terrestre02 = { local_tax_modifier = 0.05	icon = 81 } #+5%
+route_terrestre03 = { local_tax_modifier = 0.05	icon = 82 } #+5%

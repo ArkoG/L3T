@@ -1,0 +1,199 @@
+namespace = ECO
+
+#province_event = { #test
+#    id = ECO.0023
+#	desc = "DESCECO.0023"
+#	hide_window = yes
+#	
+#	trigger = {
+#			NOT = { has_province_modifier = 1connexion_commerciale }
+#			NOT = { has_province_modifier = 2connexion_commerciale }
+#			NOT = { has_province_modifier = 3connexion_commerciale }
+#			OR = { 
+#				has_province_modifier = province_cotiere
+#				has_province_modifier = route_fluviale		
+#				has_province_modifier = route_terrestre01
+#				has_province_modifier = route_terrestre02
+#				has_province_modifier = route_terrestre03
+#				has_trade_post = yes
+#				}
+#		}
+		
+#mean_time_to_happen = {	days = 10	}	
+
+#immediate = {
+#		#name = "ECO.0023A"		
+#		add_province_modifier = {	name = 1connexion_commerciale  	duration = -1	
+#		hidden = yes
+#		}
+#	}
+#}
+
+#province_event = { #
+#    id = ECO.0024
+#	desc = "DESCECO.0024"
+#    hide_window = yes
+#
+#	trigger = {
+#			NOT = { has_province_modifier = 2connexion_commerciale }
+#			NOT = { has_province_modifier = 3connexion_commerciale }
+#			OR = {
+#				AND = {
+#				has_province_modifier = province_cotiere
+#				has_trade_post = yes		
+#				}
+#				AND = {
+#				has_province_modifier = route_fluviale
+#				has_trade_post = yes
+#				}
+#				AND = {
+#				has_province_modifier = route_terrestre		
+#				has_trade_post = yes
+#				}
+#				AND = {
+#				has_province_modifier = province_cotiere
+#				has_province_modifier = route_fluviale		
+#				}
+#				AND = {
+#				has_province_modifier = province_cotiere
+#				has_province_modifier = route_terrestre
+#				}
+#				AND = {
+#				has_province_modifier = route_fluviale		
+#				has_province_modifier = route_terrestre
+#				}
+#			}
+#		}		
+#mean_time_to_happen = {	days = 10	}	
+#
+#immediate = {
+#		#name = "ECO.0024A"		
+#		add_province_modifier = {	name = 2connexion_commerciale  	duration = -1	
+#		hidden = yes
+#		}
+#		remove_province_modifier = 1connexion_commerciale
+#	}
+#}
+
+province_event = { #validates every 3 connexions provinces for specific buildings
+    id = ECO.0025
+	desc = "DESCECO.0025"
+	hide_window = yes
+	
+	trigger = {
+			NOT = { has_province_modifier = 3connexion_commerciale }
+			OR = {
+				AND = {
+				has_province_modifier = province_cotiere
+				has_trade_post = yes
+				has_province_modifier = route_fluviale
+				}
+				AND = {
+				has_province_modifier = province_cotiere
+				has_trade_post = yes
+				has_province_modifier = route_terrestre01
+				}
+				AND = {
+				has_province_modifier = province_cotiere
+				has_trade_post = yes
+				has_province_modifier = route_terrestre02
+				}
+				AND = {
+				has_province_modifier = province_cotiere
+				has_trade_post = yes
+				has_province_modifier = route_terrestre03
+				}
+				AND = {
+				has_province_modifier = province_cotiere
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre01
+				}
+				AND = {
+				has_province_modifier = province_cotiere
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre02
+				}
+				AND = {
+				has_province_modifier = province_cotiere
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre03
+				}
+				AND = {
+				has_province_modifier = province_cotiere
+				has_province_modifier = route_terrestre01
+				has_province_modifier = route_terrestre02
+				}
+				AND = {
+				has_province_modifier = province_cotiere
+				has_province_modifier = route_terrestre01
+				has_province_modifier = route_terrestre03
+				}
+				AND = {
+				has_province_modifier = province_cotiere
+				has_province_modifier = route_terrestre02
+				has_province_modifier = route_terrestre03
+				}
+				AND = {
+				has_trade_post = yes
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre01
+				}
+				AND = {
+				has_trade_post = yes
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre02
+				}
+				AND = {
+				has_trade_post = yes
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre03
+				}
+				AND = {
+				has_trade_post = yes
+				has_province_modifier = route_terrestre01
+				has_province_modifier = route_terrestre02
+				}
+				AND = {
+				has_trade_post = yes
+				has_province_modifier = route_terrestre01
+				has_province_modifier = route_terrestre03
+				}
+				AND = {
+				has_trade_post = yes
+				has_province_modifier = route_terrestre02
+				has_province_modifier = route_terrestre03
+				}
+				AND = {
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre01
+				has_province_modifier = route_terrestre02
+				}
+				AND = {
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre01
+				has_province_modifier = route_terrestre03
+				}
+				AND = {
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre02
+				has_province_modifier = route_terrestre03
+				}
+				AND = {
+				has_province_modifier = route_terrestre01
+				has_province_modifier = route_terrestre02
+				has_province_modifier = route_terrestre03
+				}
+			}
+		}		
+mean_time_to_happen = {	days = 250	}	
+
+immediate = {
+		#name = "ECO.0025A"		
+		add_province_modifier = {	name = 3connexion_commerciale  	duration = -1	
+		#hidden = yes
+		}
+		remove_province_modifier = 1connexion_commerciale
+		remove_province_modifier = 2connexion_commerciale
+		}
+}
+

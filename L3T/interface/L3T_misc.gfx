@@ -1,0 +1,104 @@
+spriteTypes = {
+
+#DECISIONS
+	spriteType = {
+		name = "GFX_abdiquer"
+		texturefile = "gfx\\interface\\decision_icon_retire_to_monastery.dds"
+	}
+	spriteType = {
+		name = "GFX_found_a_monastery"
+		texturefile = "gfx\\interface\\decision_icon_found_monastery.dds"
+	}
+	spriteType = {
+		name = "GFX_construire_cathedrale"
+		texturefile = "gfx\\interface\\decision_icon_construire_cathedrale.dds"
+	}
+	spriteType = {
+		name = "GFX_borrow_money_jews_cd"
+		texturefile = "gfx\\interface\\decision_icon_borrow_money.dds"
+	}
+	spriteType = {
+		name = "GFX_repay_money_jews_cd"
+		texturefile = "gfx\\interface\\decision_icon_repay_loan.dds"
+	}
+	spriteType = {
+		name = "GFX_borrow_money_jews_dk"
+		texturefile = "gfx\\interface\\decision_icon_borrow_money.dds"
+	}
+	spriteType = {
+		name = "GFX_repay_money_jews_dk"
+		texturefile = "gfx\\interface\\decision_icon_repay_loan.dds"
+	}
+	spriteType = {
+		name = "GFX_borrow_money_jews_ke"
+		texturefile = "gfx\\interface\\decision_icon_borrow_money.dds"
+	}
+	spriteType = {
+		name = "GFX_repay_money_jews_ke"
+		texturefile = "gfx\\interface\\decision_icon_repay_loan.dds"
+	}
+
+#REC traits
+	spriteType = {
+		name = "GFX_trait_batisseur_cathedrale"
+		texturefile = "gfx/traits/batisseur_cathedrale.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+
+#XYLO traits	
+	spriteType = {
+		name = "GFX_trait_chef_malandrin"
+		texturefile = "gfx/traits/chef_malandrin.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+#ambition
+	spriteType = {
+		name = "GFX_obj_build_something"
+		texturefile = "gfx/ambitions/obj_build_something.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+### government icons
+	spriteType = {
+		name = "GFX_icon_abbaye_government"
+		texturefile = "gfx\\interface\\government_icon_abbaye.dds"
+	}
+	spriteType = {
+		name = "GFX_charframe_150_abbaye"
+		texturefile = "gfx\\interface\\charframe_150_abbaye.tga"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_100_abbaye"
+		texturefile = "gfx\\interface\\charframe_100_abbaye.tga"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_75_abbaye"
+		texturefile = "gfx\\interface\\charframe_75_abbaye.tga"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_50_abbaye"
+		texturefile = "gfx\\interface\\charframe_50_abbaye.tga"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_34_abbaye"
+		texturefile = "gfx\\interface\\charframe_34_abbaye.tga"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+}

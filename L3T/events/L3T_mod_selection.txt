@@ -1,0 +1,122 @@
+namespace = L3T
+
+character_event = {
+    id = L3T.0010
+	title = "L3T.0010"
+	desc = "DESCL3T.0010"
+	picture = GFX_evt_CK1
+	major = yes
+	hide_new = yes
+	hide_from = yes
+	ai=no 
+	
+	is_triggered_only = yes
+
+	option = {	
+	name = "L3T.0010A"	
+	ai_chance = { factor = 0 }
+	trigger = { ai = no }
+	set_global_flag = running_SWMH	
+		#set_global_flag = paix_de_dieu 
+		#narrative_event = { id = L3T.0011 days = 2555 } #7 years ATM
+	}
+	option = {	
+	name = "L3T.0010B"	
+	ai_chance = { factor = 0 }
+	trigger = { ai = no }
+	set_global_flag = running_LCDA	
+		#set_global_flag = paix_de_dieu 
+		#narrative_event = { id = L3T.0011 days = 1800 } #5 years ATM
+	}
+	option = {
+	name = "L3T.0010C"	
+	ai_chance = { factor = 0 }
+	trigger = { ai = no }
+	set_global_flag = running_VANILLA	
+		#set_global_flag = paix_de_dieu 
+		#narrative_event = { id = L3T.0011 days = 2555 } #7 years ATM
+	}
+	option = {
+	name = "L3T.0010D"	
+	trigger = { ai = yes }
+	ai_chance = { factor = 100 }
+	}
+}
+
+#narrative_event = {
+ #   id = L3T.0014
+#	title = "L3T.0014"
+#	desc = "DESCL3T.0014"
+#	picture = GFX_evt_market
+#
+#	trigger = {
+#			NOT = {	
+#			has_global_flag = paix_de_dieu
+#			has_global_flag = paix_de_dieu_cleared
+#			}
+#			religion = catholic
+#			controls_religion = yes # Let it happen for the Pope - he's always around
+#			}
+#		
+#	mean_time_to_happen = { days = 1 }	
+#
+#	option = {
+#	name = "L3T.0014A"	
+#	set_global_flag = paix_de_dieu 
+#	narrative_event = { id = L3T.0011 days = 2555 } #7 years ATM
+#	}
+#}
+
+narrative_event = {
+    id = L3T.0011
+	desc = "DESCL3T.0011"
+	picture = GFX_evt_market
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {	
+	clr_global_flag = paix_de_dieu
+	set_global_flag = paix_de_dieu_cleared	}
+}
+
+character_event = {
+    id = L3T.0012
+	desc = "DESCL3T.0012"
+	picture = GFX_evt_market
+
+	trigger = {
+		OR = {
+			has_global_flag = running_SWMH
+			has_global_flag = running_LCDA
+			has_global_flag = running_VANILLA
+			}
+		NOT = { has_character_flag = start_bonus_given }
+		ai = yes
+		is_feudal = no
+		tier = baron
+		}
+		
+	mean_time_to_happen = { days = 1 }	
+
+	option = {
+#	set_global_flag = paix_de_dieu 
+	narrative_event = { id = L3T.0011 days = 2555 } #7 years ATM
+	name = "L3T.0012A"
+	set_character_flag = start_bonus_given  
+	random_list = {
+		16 = { wealth = 35	}
+		14 = { wealth = 42	}
+		13 = { wealth = 57	}
+		12 = { wealth = 78	}
+		10 = { wealth = 82	}
+		 9 = { wealth = 95	}
+		 8 = { wealth = 110	}
+		 7 = { wealth = 125	}
+		 6 = { wealth = 137	}
+		 5 = { wealth = 148	}
+		}
+	}
+
+}
+

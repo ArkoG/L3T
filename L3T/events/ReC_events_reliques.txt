@@ -1,0 +1,2239 @@
+############################################
+# [ReC][Reliques et Cathédrales]  par Arko #
+############################################
+
+namespace = REC
+
+### initialisation Reliques   
+province_event = {
+    id = 	REC.0101
+	Desc = "DESCREC.0101"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+		NOT = {	
+			has_global_flag = relique_trouvee_01
+			has_province_flag = vraie_relique01
+			has_province_modifier = relique01
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique01 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_01	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0102
+	Desc = "DESCREC.0102"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_01
+		NOT = {	
+			has_global_flag = relique_trouvee_02
+			has_province_flag = vraie_relique02
+			has_province_modifier = relique02
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique02 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_02	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0103
+	Desc = "DESCREC.0103"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_02
+		NOT = {	
+			has_global_flag = relique_trouvee_03
+			has_province_flag = vraie_relique03
+			has_province_modifier = relique03
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique03 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_03	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0104
+	Desc = "DESCREC.0104"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_03
+		NOT = {	
+			has_global_flag = relique_trouvee_04
+			has_province_flag = vraie_relique04
+			has_province_modifier = relique04
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique04 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_04	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0105
+	Desc = "DESCREC.0105"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_04
+		NOT = {	
+			has_global_flag = relique_trouvee_05
+			has_province_flag = vraie_relique05
+			has_province_modifier = relique05
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique05 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_05	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0106
+	Desc = "DESCREC.0106"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_05
+		NOT = {	
+			has_global_flag = relique_trouvee_06
+			has_province_flag = vraie_relique06
+			has_province_modifier = relique06
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique06 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_06	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0107
+	Desc = "DESCREC.0107"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_06
+		NOT = {	
+			has_global_flag = relique_trouvee_07
+			has_province_flag = vraie_relique07
+			has_province_modifier = relique07
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique07 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_07	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0108
+	Desc = "DESCREC.0108"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_07
+		NOT = {	
+			has_global_flag = relique_trouvee_08
+			has_province_flag = vraie_relique08
+			has_province_modifier = relique08
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique08 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_08	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0109
+	Desc = "DESCREC.0109"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_08
+		NOT = {	
+			has_global_flag = relique_trouvee_09
+			has_province_flag = vraie_relique09
+			has_province_modifier = relique09
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique09 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_09	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0110
+	Desc = "DESCREC.0110"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_09
+		NOT = {	
+			has_global_flag = relique_trouvee_10
+			has_province_flag = vraie_relique10
+			has_province_modifier = relique10
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique10 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_10	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0111
+	Desc = "DESCREC.0111"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_10
+		NOT = {	
+			has_global_flag = relique_trouvee_11
+			has_province_flag = vraie_relique11
+			has_province_modifier = relique11
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique11 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_11	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0112
+	Desc = "DESCREC.0112"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_11
+		NOT = {	
+			has_global_flag = relique_trouvee_12
+			has_province_flag = vraie_relique12
+			has_province_modifier = relique12
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique12 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_12	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0113
+	Desc = "DESCREC.0113"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_12
+		NOT = {	
+			has_global_flag = relique_trouvee_13
+			has_province_flag = vraie_relique13
+			has_province_modifier = relique13
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique13 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_13	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0114
+	Desc = "DESCREC.0114"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_13
+		NOT = {	
+			has_global_flag = relique_trouvee_14
+			has_province_flag = vraie_relique14
+			has_province_modifier = relique14
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique14 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_14	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0115
+	Desc = "DESCREC.0115"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_14
+		NOT = {	
+			has_global_flag = relique_trouvee_15
+			has_province_flag = vraie_relique15
+			has_province_modifier = relique15
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique15 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_15	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0116
+	Desc = "DESCREC.0116"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_15
+		NOT = {	
+			has_global_flag = relique_trouvee_16
+			has_province_flag = vraie_relique16
+			has_province_modifier = relique16
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique16 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_16	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0117
+	Desc = "DESCREC.0117"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_16
+		NOT = {	
+			has_global_flag = relique_trouvee_17
+			has_province_flag = vraie_relique17
+			has_province_modifier = relique17
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique17 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_17	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0118
+	Desc = "DESCREC.0118"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_17	
+		NOT = {	
+			has_global_flag = relique_trouvee_18
+			has_province_flag = vraie_relique18
+			has_province_modifier = relique18
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique18 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_18	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0119
+	Desc = "DESCREC.0119"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_18
+		NOT = {	
+			has_global_flag = relique_trouvee_19
+			has_province_flag = vraie_relique19
+			has_province_modifier = relique19
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique19 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_19	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0120
+	Desc = "DESCREC.0120"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_19
+		NOT = {	
+			has_global_flag = relique_trouvee_20
+			has_province_flag = vraie_relique20
+			has_province_modifier = relique20
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique20 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_20	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0121
+	Desc = "DESCREC.0121"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_20
+		NOT = {	
+			has_global_flag = relique_trouvee_21
+			has_province_flag = vraie_relique21
+			has_province_modifier = relique21
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique21 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_21	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0122
+	Desc = "DESCREC.0122"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_21
+		NOT = {	
+			has_global_flag = relique_trouvee_22
+			has_province_flag = vraie_relique22
+			has_province_modifier = relique22
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique22 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_22	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0123
+	Desc = "DESCREC.0123"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_22
+		NOT = {	
+			has_global_flag = relique_trouvee_23
+			has_province_flag = vraie_relique23
+			has_province_modifier = relique23
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique23 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_23	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0124
+	Desc = "DESCREC.0124"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_23
+		NOT = {	
+			has_global_flag = relique_trouvee_24
+			has_province_flag = vraie_relique24
+			has_province_modifier = relique24
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique24 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_24	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+province_event = {
+    id = 	REC.0125
+	Desc = "DESCREC.0125"
+	picture = GFX_evt_REC2
+	hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_24	
+		NOT = {	
+			has_global_flag = relique_trouvee_25
+			has_province_flag = vraie_relique25
+			has_province_modifier = relique25
+			has_province_flag = a_deja_une_relique
+			religion_group = zoroastrian_group
+			religion_group = pagan_group
+			religion_group = indian_group
+			religion_group = jewish_group
+			}
+		}
+		
+	mean_time_to_happen = { months = 12
+		modifier = { factor = 19.50 religion_group = muslim }
+		modifier = { factor = 1.20 religion_group = christian }
+		modifier = { factor = 3.50 religion = orthodoxe }
+		modifier = { factor = 0.50 religion = catholic }
+		modifier = { factor = 3.50 has_province_flag = relique_testee }
+		}
+	
+	immediate = {
+		#name = "REC.0101A"
+		#hidden_tooltip = {	
+			random_list = {
+			96 = { } #la relique n'est pas authentique, pas de notif pour limiter le spam
+			 1 = { 
+			 set_province_flag = fausse_relique 
+			 set_province_flag = a_deja_une_relique
+			 } #la relique n'est pas authentique, notification pour les catholiques uniquement
+			 3 = { 
+			 clr_province_flag = fausse_relique
+			 set_province_flag = vraie_relique25 
+			 set_province_flag = a_deja_une_relique
+			 set_global_flag =	relique_trouvee_25	} #notification de relique authentique pour catholique et musulmans
+			}
+		set_province_flag = relique_testee #sert à renouveler le test plus tard
+		#} 
+		}
+}
+
+##########################
+
+### confirmation Reliques  -catholique-  
+province_event = {
+    id = REC.0151
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_01
+			has_province_flag = vraie_relique01
+			NOT = { has_province_modifier = relique01 }
+			NOT = { has_global_flag = relique01_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique01_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique01
+			}
+		add_province_modifier = {	name = 	relique01	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique01
+			}
+		add_province_modifier = {	name = 	relique01	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0152
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_02
+			has_province_flag = vraie_relique02
+			NOT = { has_province_modifier = relique02 }
+			NOT = { has_global_flag = relique02_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique02_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique02
+			}
+		add_province_modifier = {	name = 	relique02	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique02
+			}
+		add_province_modifier = {	name = 	relique02	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0153
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_03
+			has_province_flag = vraie_relique03
+			NOT = { has_province_modifier = relique03 }
+			NOT = { has_global_flag = relique03_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique03_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique03
+			}
+		add_province_modifier = {	name = 	relique03	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique03
+			}
+		add_province_modifier = {	name = 	relique03	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0154
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_04
+			has_province_flag = vraie_relique04
+			NOT = { has_province_modifier = relique04 }
+			NOT = { has_global_flag = relique04_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique04_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique04
+			}
+		add_province_modifier = {	name = 	relique04	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique04
+			}
+		add_province_modifier = {	name = 	relique04	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0155
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_05
+			has_province_flag = vraie_relique05
+			NOT = { has_province_modifier = relique05 }
+			NOT = { has_global_flag = relique05_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique05_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique05
+			}
+		add_province_modifier = {	name = 	relique05	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique05
+			}
+		add_province_modifier = {	name = 	relique05	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0156
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_06
+			has_province_flag = vraie_relique06
+			NOT = { has_province_modifier = relique06 }
+			NOT = { has_global_flag = relique06_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique06_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique06
+			}
+		add_province_modifier = {	name = 	relique06	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique06
+			}
+		add_province_modifier = {	name = 	relique06	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0157
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_07
+			has_province_flag = vraie_relique07
+			NOT = { has_province_modifier = relique07 }
+			NOT = { has_global_flag = relique07_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique07_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique07
+			}
+		add_province_modifier = {	name = 	relique07	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique07
+			}
+		add_province_modifier = {	name = 	relique07	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0158
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_08
+			has_province_flag = vraie_relique08
+			NOT = { has_province_modifier = relique08 }
+			NOT = { has_global_flag = relique08_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique08_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique08
+			}
+		add_province_modifier = {	name = 	relique08	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique08
+			}
+		add_province_modifier = {	name = 	relique08	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0159
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_09
+			has_province_flag = vraie_relique09
+			NOT = { has_province_modifier = relique09 }
+			NOT = { has_global_flag = relique09_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique09_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique09
+			}
+		add_province_modifier = {	name = 	relique09	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique09
+			}
+		add_province_modifier = {	name = 	relique09	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0160
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_10
+			has_province_flag = vraie_relique10
+			NOT = { has_province_modifier = relique10 }
+			NOT = { has_global_flag = relique10_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique10_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique10
+			}
+		add_province_modifier = {	name = 	relique10	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique10
+			}
+		add_province_modifier = {	name = 	relique10	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0161
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_11
+			has_province_flag = vraie_relique11
+			NOT = { has_province_modifier = relique11 }
+			NOT = { has_global_flag = relique11_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique11_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique11
+			}
+		add_province_modifier = {	name = 	relique11	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique11
+			}
+		add_province_modifier = {	name = 	relique11	duration = -1	}
+		}
+}	
+province_event = {
+    id = REC.0162
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_12
+			has_province_flag = vraie_relique12
+			NOT = { has_province_modifier = relique12 }
+			NOT = { has_global_flag = relique12_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique12_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique12
+			}
+		add_province_modifier = {	name = 	relique12	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique12
+			}
+		add_province_modifier = {	name = 	relique12	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0163
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_13
+			has_province_flag = vraie_relique13
+			NOT = { has_province_modifier = relique13 }
+			NOT = { has_global_flag = relique13_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique13_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique13
+			}
+		add_province_modifier = {	name = 	relique13	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique13
+			}
+		add_province_modifier = {	name = 	relique13	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0164
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_14
+			has_province_flag = vraie_relique14
+			NOT = { has_province_modifier = relique14 }
+			NOT = { has_global_flag = relique14_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique14_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique14
+			}
+		add_province_modifier = {	name = 	relique14	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique14
+			}
+		add_province_modifier = {	name = 	relique14	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0165
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_15
+			has_province_flag = vraie_relique15
+			NOT = { has_province_modifier = relique15 }
+			NOT = { has_global_flag = relique15_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique15_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique15
+			}
+		add_province_modifier = {	name = 	relique15	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique15
+			}
+		add_province_modifier = {	name = 	relique15	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0166
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_16
+			has_province_flag = vraie_relique16
+			NOT = { has_province_modifier = relique16 }
+			NOT = { has_global_flag = relique16_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique16_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique16
+			}
+		add_province_modifier = {	name = 	relique16	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique16
+			}
+		add_province_modifier = {	name = 	relique16	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0167
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_17
+			has_province_flag = vraie_relique17
+			NOT = { has_province_modifier = relique17 }
+			NOT = { has_global_flag = relique17_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique17_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique107
+			}
+		add_province_modifier = {	name = 	relique17	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique17
+			}
+		add_province_modifier = {	name = 	relique17	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0168
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_18
+			has_province_flag = vraie_relique18
+			NOT = { has_province_modifier = relique18 }
+			NOT = { has_global_flag = relique18_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique18_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique18
+			}
+		add_province_modifier = {	name = 	relique18	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique18
+			}
+		add_province_modifier = {	name = 	relique18	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0169
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_19
+			has_province_flag = vraie_relique19
+			NOT = { has_province_modifier = relique19 }
+			NOT = { has_global_flag = relique19_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique19_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique19
+			}
+		add_province_modifier = {	name = 	relique19	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique19
+			}
+		add_province_modifier = {	name = 	relique19	duration = -1	}
+		}
+}
+
+province_event = {
+    id = REC.0170
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_20
+			has_province_flag = vraie_relique20
+			NOT = { has_province_modifier = relique20 }
+			NOT = { has_global_flag = relique20_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique20_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique20
+			}
+		add_province_modifier = {	name = 	relique20	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique20
+			}
+		add_province_modifier = {	name = 	relique20	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0171
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_21
+			has_province_flag = vraie_relique21
+			NOT = { has_province_modifier = relique21 }
+			NOT = { has_global_flag = relique21_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique21_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique21
+			}
+		add_province_modifier = {	name = 	relique21	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique21
+			}
+		add_province_modifier = {	name = 	relique21	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0172
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_22
+			has_province_flag = vraie_relique22
+			NOT = { has_province_modifier = relique22 }
+			NOT = { has_global_flag = relique22_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique22_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique22
+			}
+		add_province_modifier = {	name = 	relique22	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique22
+			}
+		add_province_modifier = {	name = 	relique22	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0173
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_23
+			has_province_flag = vraie_relique23
+			NOT = { has_province_modifier = relique23 }
+			NOT = { has_global_flag = relique23_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique23_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique23
+			}
+		add_province_modifier = {	name = 	relique23	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique23
+			}
+		add_province_modifier = {	name = 	relique23	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0174
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_24
+			has_province_flag = vraie_relique24
+			NOT = { has_province_modifier = relique24 }
+			NOT = { has_global_flag = relique24_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique24_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique24
+			}
+		add_province_modifier = {	name = 	relique24	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique24
+			}
+		add_province_modifier = {	name = 	relique24	duration = -1	}
+		}
+}
+province_event = {
+    id = REC.0175
+	desc = "DESCREC.0151"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {  
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					religion_group = muslim
+					}
+				}
+			has_global_flag = relique_trouvee_25
+			has_province_flag = vraie_relique25
+			NOT = { has_province_modifier = relique25 }
+			NOT = { has_global_flag = relique25_confirmee }
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	immediate = { set_global_flag = relique25_confirmee }
+	
+	option = {	
+		name = "REC.0151A"
+		trigger = { 
+			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			has_province_flag = vraie_relique25
+			}
+		add_province_modifier = {	name = 	relique25	duration = -1	}
+		}
+	option = {	
+		name = "REC.0151B"
+		trigger = { 
+			owner = { religion_group = muslim }
+			has_province_flag = vraie_relique25
+			}
+		add_province_modifier = {	name = 	relique25	duration = -1	}
+		}
+}
+
+###############
+
+### notification fausse relique (catholique)
+
+province_event = {
+    id = REC.0175
+	desc = "DESCREC.0175"
+	picture = GFX_evt_REC1
+
+	trigger = {
+			owner = {
+				OR = { 
+					religion = catholic  
+					is_heresy_of = catholic
+					}
+				}
+			has_province_flag = fausse_relique
+			}
+		
+	mean_time_to_happen = { days = 75 }
+
+	option = {
+		name = "REC.0175A"
+		}
+	option = {	
+		name = "REC.0175B"
+		}
+}
+
+#event de maintenance
+province_event = {
+    id = 	REC.0176
+	Desc = "DESCREC.0176"
+	picture = GFX_evt_REC2
+	#hide_window = yes
+	
+	trigger = {	
+			has_global_flag = relique_trouvee_01 #la relique a été préattribuée
+			has_global_flag = relique01_confirmee #la relique a été confirmée (sur une autre province)
+			has_province_flag = vraie_relique01 #s'était vue pré attribuée la relique mais n'a pas été confirmée
+			NOT = { has_province_modifier = relique01 } #pas de confirmation de la relique sur cette province
+		}
+		
+	mean_time_to_happen = { months = 12	} #à voir pour le mettre en pulse ?
+	
+#	immediate = {
+	option = {
+		name = "OK"
+			 clr_province_flag = vraie_relique01
+			 clr_province_flag = a_deja_une_relique
+		}
+}
