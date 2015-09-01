@@ -11,7 +11,15 @@ character_event = {
 	ai=no 
 	
 	is_triggered_only = yes
-
+	
+	trigger = {
+			NOT = { 
+				has_global_flag = running_SWMH
+				has_global_flag = running_LCDA	
+				has_global_flag = running_VANILLA
+			}
+	}
+	
 	option = {	
 	name = "L3T.0010A"	
 	ai_chance = { factor = 0 }
