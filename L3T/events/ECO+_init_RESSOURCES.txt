@@ -64,7 +64,7 @@ province_event = {
 			random_list = {
 				40 = { add_province_modifier = { name = elevage1		duration = -1	} }
 				20 = { add_province_modifier = { name = agriculture1	duration = -1	} }
-				140 = {}
+				40 = {}
 				}
 			random_list = {
 				60 = { add_province_modifier = { name = minerai1		duration = -1	} }
@@ -120,7 +120,7 @@ province_event = {
 			random_list = {
 				50 = { add_province_modifier = { name = elevage1	duration = -1	} }
 				25 = { add_province_modifier = { name = minerai1	duration = -1	} }
-				125 = {}
+				25 = {}
 				}
 			random_list = {
 				70 = { add_province_modifier = { name = pierre1		duration = -1	} }
@@ -164,7 +164,6 @@ province_event = {
 			NOT = { 
 				has_province_flag = ressources_peche_testees
 				has_province_modifier = province_terrestre
-				terrain = hills
 				}
 			has_province_modifier = province_cotiere
 			}
@@ -327,7 +326,7 @@ province_event = {
 			random_list = {
 				25 = { add_province_modifier = { name = minerai1	duration = -1	} }
 				25 = { add_province_modifier = { name = elevage1	duration = -1	} }
-				150 = {}
+				50 = {}
 				}
 	}
 }
