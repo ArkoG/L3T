@@ -36,7 +36,7 @@ province_event = {
 			random_list = {
 				30 = { add_province_modifier = { name = elevage1		duration = -1	} }
 				35 = { add_province_modifier = { name = foret1			duration = -1	} }
-				35 = {}
+				135 = {}
 				}
 			}
 }
@@ -62,13 +62,13 @@ province_event = {
 	immediate = {
 			set_province_flag = ressources_coteaux_testees
 			random_list = {
-				40 = { add_province_modifier = { name = elevage1		duration = -1	} }
-				20 = { add_province_modifier = { name = agriculture1	duration = -1	} }
-				40 = {}
+				20 = { add_province_modifier = { name = elevage1		duration = -1	} }
+				50 = { add_province_modifier = { name = agriculture1	duration = -1	} }
+				30 = {}
 				}
 			random_list = {
-				60 = { add_province_modifier = { name = minerai1		duration = -1	} }
-				40 = {}
+				70 = { add_province_modifier = { name = minerai1		duration = -1	} }
+				30 = {}
 				}
 	}
 }
@@ -94,6 +94,13 @@ province_event = {
 	immediate = {
 			set_province_flag = ressources_forets_testees
 			add_province_modifier = { name = foret1		duration = -1	}
+			random_list = {
+				 5 = { add_province_modifier = { name = elevage1		duration = -1	} }
+				10 = { add_province_modifier = { name = agriculture1	duration = -1	} }
+				10 = { add_province_modifier = { name = minerai1		duration = -1	} }
+				 5 = { add_province_modifier = { name = pierre1			duration = -1	} }
+				70 = {}
+				}
 	}
 }
 
@@ -118,9 +125,9 @@ province_event = {
 	immediate = {
 			set_province_flag = ressources_montagnes_testees
 			random_list = {
-				50 = { add_province_modifier = { name = elevage1	duration = -1	} }
+				40 = { add_province_modifier = { name = elevage1	duration = -1	} }
 				25 = { add_province_modifier = { name = minerai1	duration = -1	} }
-				25 = {}
+				35 = {}
 				}
 			random_list = {
 				70 = { add_province_modifier = { name = pierre1		duration = -1	} }
@@ -150,6 +157,13 @@ province_event = {
 	immediate = {
 			set_province_flag = ressources_farmlands_testees
 			add_province_modifier = { name = agriculture1		duration = -1	}
+			random_list = {
+				10 = { add_province_modifier = { name = elevage1		duration = -1	} }
+				 5 = { add_province_modifier = { name = foret1			duration = -1	} }
+				 5 = { add_province_modifier = { name = minerai1		duration = -1	} }
+				10 = { add_province_modifier = { name = pierre1			duration = -1	} }
+				70 = {}
+				}
 	}
 }
 
@@ -173,8 +187,8 @@ province_event = {
 	immediate = {
 			set_province_flag = ressources_peche_testees
 			random_list = {
-				35 = { add_province_modifier = { name = peche1	duration = -1	} }
-				65 = {}
+				30 = { add_province_modifier = { name = peche1	duration = -1	} }
+				70 = {}
 				}
 	}
 }
@@ -227,8 +241,8 @@ province_event = {
 	immediate = {
 			set_province_flag = ressources_deserts_testees
 			random_list = {
-				30 = { add_province_modifier = { name = pierre1		duration = -1	} }
-				70 = {}
+				25 = { add_province_modifier = { name = pierre1		duration = -1	} }
+				75 = {}
 				}
 			random_list = {
 				70 = { add_province_modifier = { name = minerai1	duration = -1	} }
@@ -289,12 +303,12 @@ province_event = {
 	immediate = {
 			set_province_flag = ressources_jungle_testees
 			random_list = {
-				60 = { add_province_modifier = { name = foret1		duration = -1	} }
-				40 = {}
+				65 = { add_province_modifier = { name = foret1		duration = -1	} }
+				35 = {}
 				}
 			random_list = {
-				25 = { add_province_modifier = { name = minerai1	duration = -1	} }
-				75 = {}
+				30 = { add_province_modifier = { name = minerai1	duration = -1	} }
+				70 = {}
 				}
 	}
 }
@@ -324,9 +338,9 @@ province_event = {
 				40 = {}
 				}
 			random_list = {
-				25 = { add_province_modifier = { name = minerai1	duration = -1	} }
+				15 = { add_province_modifier = { name = minerai1	duration = -1	} }
 				25 = { add_province_modifier = { name = elevage1	duration = -1	} }
-				50 = {}
+				60 = {}
 				}
 	}
 }
@@ -344,12 +358,12 @@ province_event = {
 			has_province_flag = ressources_forets_testees
 			has_province_flag = ressources_coteaux_testees
 			has_province_flag = ressources_montagnes_testees
-			has_province_flag = ressources_peche_testees
-			has_province_flag = ressources_pisciculture_testees
+			#has_province_flag = ressources_peche_testees
+			#has_province_flag = ressources_pisciculture_testees
 			has_province_flag = ressources_deserts_testees
 			has_province_flag = ressources_arctique_testees
-			has_province_flag = ressources_steppe_testees
-			has_province_flag = ressources_jungle_testees	
+			has_province_flag = ressources_steppe_testees	## MOUCHI: ligne ajoutée
+			has_province_flag = ressources_jungle_testees	## MOUCHI: ligne ajoutée	
 			}
 		NOT = { #aucune ressource présente
 			has_province_modifier = agriculture1
@@ -357,11 +371,11 @@ province_event = {
 			has_province_modifier = foret1				
 			has_province_modifier = pierre1
 			has_province_modifier = minerai1
-			has_province_modifier = peche1				
-			has_province_modifier = pisci1
-			has_province_modifier = peche2_poisson				
-			has_province_modifier = pisci2_poisson
-			has_province_modifier = pierre2_pierre_brute
+			#has_province_modifier = peche1				
+			#has_province_modifier = pisci1
+			#has_province_modifier = peche2_poisson 			## MOUCHI: ligne ajoutée				
+			#has_province_modifier = pisci2_poisson 			## MOUCHI: ligne ajoutée
+			has_province_modifier = pierre2_pierre_brute 	## MOUCHI: ligne ajoutée 
 			#voir si autres ressources avancées à tester
 			}
 		}
@@ -373,12 +387,12 @@ province_event = {
 			clr_province_flag = ressources_forets_testees
 			clr_province_flag = ressources_coteaux_testees
 			clr_province_flag = ressources_montagnes_testees
-			clr_province_flag = ressources_peche_testees
-			clr_province_flag = ressources_pisciculture_testees
+			#clr_province_flag = ressources_peche_testees
+			#clr_province_flag = ressources_pisciculture_testees
 			clr_province_flag = ressources_deserts_testees
 			clr_province_flag = ressources_arctique_testees
-			clr_province_flag = ressources_steppe_testees
-			clr_province_flag = ressources_jungle_testees	
+			clr_province_flag = ressources_steppe_testees	## MOUCHI: ligne ajoutée	
+			clr_province_flag = ressources_jungle_testees	## MOUCHI: ligne ajoutée	
 	}
 }
 
@@ -874,7 +888,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = agriculture2_cereales
-			any_neighbor_province = { has_province_modifier = agriculture2_cereales }
+			any_neighbor_province = { has_province_modifier = agriculture2_cereales } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = agriculture3_biere }
 		any_province_lord  = {
@@ -909,7 +923,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = agriculture2_vigne
-			any_neighbor_province = { has_province_modifier = agriculture2_vigne }
+			any_neighbor_province = { has_province_modifier = agriculture2_vigne } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = agriculture3_vin }
 		any_province_lord  = {
@@ -935,6 +949,7 @@ province_event = {
 	}
 }
 
+############# MOUCHI : début ajout ###########
 #activation CIDRE
 province_event = {
     id = ECO.00108
@@ -944,7 +959,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = agriculture2_fruits
-			any_neighbor_province = { has_province_modifier = agriculture2_fruits }
+			any_neighbor_province = { has_province_modifier = agriculture2_fruits } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = agriculture3_cidre}
 		any_province_lord  = {
@@ -954,7 +969,7 @@ province_event = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
 				OR = {	
-					has_building = TP_presse_L2
+					has_building = TP_presse_L2 ################## MOUCHI : remarque, normal que les cités ne peuvent pas en produire?
 					}
 				}
 			}
@@ -1112,7 +1127,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = elevage2_boeuf
-			any_neighbor_province = { has_province_modifier = elevage2_boeuf }
+			any_neighbor_province = { has_province_modifier = elevage2_boeuf } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = elevage3_cuir}
 		any_province_lord  = {
@@ -1146,7 +1161,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = foret2_bois
-			any_neighbor_province = { has_province_modifier = foret2_bois }
+			any_neighbor_province = { has_province_modifier = foret2_bois } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = foret3_planche}
 		any_province_lord  = {
@@ -1181,7 +1196,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = foret2_charbon
-			any_neighbor_province = { has_province_modifier = foret2_charbon }
+			any_neighbor_province = { has_province_modifier = foret2_charbon } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = foret3_verre}
 		any_province_lord  = {
@@ -1217,7 +1232,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = pierre2_pierre_brute
-			any_neighbor_province = { has_province_modifier = pierre2_pierre_brute }
+			any_neighbor_province = { has_province_modifier = pierre2_pierre_brute } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = pierre3_pierre_taille}
 		any_province_lord  = {
@@ -1252,7 +1267,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = minerai2_fer
-			any_neighbor_province = { has_province_modifier = minerai2_fer }
+			any_neighbor_province = { has_province_modifier = minerai2_fer } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = minerai3_metal}
 		any_province_lord  = {
@@ -1286,7 +1301,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = minerai3_metal
-			any_neighbor_province = { has_province_modifier = minerai3_metal }
+			any_neighbor_province = { has_province_modifier = minerai3_metal } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = minerai4_outils}
 		any_province_lord  = {
@@ -1320,7 +1335,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = minerai2_sel_gemme
-			any_neighbor_province = { has_province_modifier = minerai2_sel_gemme }
+			any_neighbor_province = { has_province_modifier = minerai2_sel_gemme } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = minerai3_sel_raffine}
 		any_province_lord  = {
@@ -1354,7 +1369,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = minerai2_sel_gemme
-			any_neighbor_province = { has_province_modifier = minerai2_sel_gemme }
+			any_neighbor_province = { has_province_modifier = minerai2_sel_gemme } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = minerai3_salaison}
 		any_province_lord  = {
@@ -1388,7 +1403,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = elevage2_laine
-			any_neighbor_province = { has_province_modifier = elevage2_laine }
+			any_neighbor_province = { has_province_modifier = elevage2_laine } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = elevage3_etoffe}
 		any_province_lord  = {
@@ -1422,7 +1437,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = elevage3_etoffe
-			any_neighbor_province = { has_province_modifier = elevage3_etoffe }
+			any_neighbor_province = { has_province_modifier = elevage3_etoffe } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = elevage4_drap}
 		any_province_lord  = {
@@ -1464,7 +1479,7 @@ province_event = {
 				tier = baron
 				OR = {	
 					has_building = CA_ELEV_cheval_L2
-					#has_building = TP_ELEV_cheval_L2
+					#has_building = TP_ELEV_cheval_L2 ## MOUCHI: j'ai vu que c'était pour les ordres militaires
 					}
 				}
 			}
@@ -1488,7 +1503,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = minerai3_metal
-			any_neighbor_province = { has_province_modifier = minerai3_metal }
+			any_neighbor_province = { has_province_modifier = minerai3_metal } ########## MOUCHI: Ligne ajoutée + bloc OR
 		}
 		NOT = { has_province_modifier = minerai4_armes}
 		any_province_lord  = {
@@ -1512,6 +1527,8 @@ province_event = {
 		add_province_modifier = { name = minerai4_armes duration = -1 }		
 	}
 }
+
+############# MOUCHI : fin ajout #############
 
 #activation OR
 province_event = {
