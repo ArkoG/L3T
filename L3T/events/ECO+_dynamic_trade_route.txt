@@ -1,0 +1,343 @@
+namespace = TRADE
+
+# Give the step A of the trade routes
+province_event = {
+    id = TRADE.0001
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_flag = trade_route_step_A }
+		OR = {
+			province_id = 112 # Ile de France
+			province_id = 228 # Dauphine Viennois
+		}		
+	}
+		
+	mean_time_to_happen = {	days = 10 }	
+
+	immediate = {
+		set_province_flag = trade_route_step_A
+		add_province_modifier = { name = route_terrestre duration = -1 }	
+	}
+}
+
+# Give the step B of the trade routes
+province_event = {
+    id = TRADE.0002
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = trade_route_step_A
+	}
+		
+	mean_time_to_happen = {	days = 10 }	
+
+	immediate = {
+		random_neighbor_province = {
+			limit = {
+				NOT = {
+					# To not give step B to the province which gave it the step A
+					has_province_modifier = route_terrestre
+					
+					# To not give step B to a province which have already it
+					has_province_flag = trade_route_step_B
+					
+					# To not give step B to distinct routes
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					
+					# To not give step C to a province which don't have a minimal distance of 1 (in terms of neighboor) to a step A province
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_D }
+					any_neighbor_province = { has_province_flag = trade_route_step_E }
+					any_neighbor_province = { has_province_flag = trade_route_step_F }
+					any_neighbor_province = { has_province_flag = trade_route_step_G }
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }
+				}
+			}
+			set_province_flag = trade_route_step_B
+			add_province_modifier = { name = route_terrestre duration = -1 }
+		}
+	}
+}
+
+# Give the step C of the trade routes
+# COPY-PASTE with adaptation of TRADE.0002
+province_event = {
+    id = TRADE.0003
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = trade_route_step_B
+	}
+		
+	mean_time_to_happen = {	days = 10 }	
+
+	immediate = {
+		random_neighbor_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = route_terrestre
+					has_province_flag = trade_route_step_C
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_D }
+					any_neighbor_province = { has_province_flag = trade_route_step_E }
+					any_neighbor_province = { has_province_flag = trade_route_step_F }
+					any_neighbor_province = { has_province_flag = trade_route_step_G }
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }					
+				}
+			}
+			set_province_flag = trade_route_step_C
+			add_province_modifier = { name = route_terrestre duration = -1 }
+		}
+	}
+}
+
+# Give the step D of the trade routes
+# COPY-PASTE with adaptation of TRADE.0002
+province_event = {
+    id = TRADE.0004
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = trade_route_step_C
+	}
+		
+	mean_time_to_happen = {	days = 10 }	
+
+	immediate = {
+		random_neighbor_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = route_terrestre
+					has_province_flag = trade_route_step_D
+					any_neighbor_province = { has_province_flag = trade_route_step_D }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_E }
+					any_neighbor_province = { has_province_flag = trade_route_step_F }
+					any_neighbor_province = { has_province_flag = trade_route_step_G }
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }	
+				}
+			}
+			set_province_flag = trade_route_step_D
+			add_province_modifier = { name = route_terrestre duration = -1 }
+		}
+	}
+}
+
+# Give the step E of the trade routes
+# COPY-PASTE with adaptation of TRADE.0002
+province_event = {
+    id = TRADE.0005
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = trade_route_step_D
+	}
+		
+	mean_time_to_happen = {	days = 10 }	
+
+	immediate = {
+		random_neighbor_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = route_terrestre
+					has_province_flag = trade_route_step_E
+					any_neighbor_province = { has_province_flag = trade_route_step_E }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_F }
+					any_neighbor_province = { has_province_flag = trade_route_step_G }
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }	
+				}
+			}
+			set_province_flag = trade_route_step_E
+			add_province_modifier = { name = route_terrestre duration = -1 }
+		}
+	}
+}
+
+# Give the step F of the trade routes
+# COPY-PASTE with adaptation of TRADE.0002
+province_event = {
+    id = TRADE.0006
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = trade_route_step_E
+	}
+		
+	mean_time_to_happen = {	days = 10 }	
+
+	immediate = {
+		random_neighbor_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = route_terrestre
+					has_province_flag = trade_route_step_F
+					any_neighbor_province = { has_province_flag = trade_route_step_F }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_D }
+					any_neighbor_province = { has_province_flag = trade_route_step_G }
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }
+				}
+			}
+			set_province_flag = trade_route_step_F
+			add_province_modifier = { name = route_terrestre duration = -1 }
+		}
+	}
+}
+
+# Give the step G of the trade routes
+# COPY-PASTE with adaptation of TRADE.0002
+province_event = {
+    id = TRADE.0007
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = trade_route_step_F
+	}
+		
+	mean_time_to_happen = {	days = 10 }	
+
+	immediate = {
+		random_neighbor_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = route_terrestre
+					has_province_flag = trade_route_step_G
+					any_neighbor_province = { has_province_flag = trade_route_step_G }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_D }
+					any_neighbor_province = { has_province_flag = trade_route_step_E }
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }
+				}
+			}
+			set_province_flag = trade_route_step_G
+			add_province_modifier = { name = route_terrestre duration = -1 }
+		}
+	}
+}
+
+# Give the step H of the trade routes
+# COPY-PASTE with adaptation of TRADE.0002
+province_event = {
+    id = TRADE.0008
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = trade_route_step_G
+	}
+		
+	mean_time_to_happen = {	days = 10 }	
+
+	immediate = {
+		random_neighbor_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = route_terrestre
+					has_province_flag = trade_route_step_H
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_D }
+					any_neighbor_province = { has_province_flag = trade_route_step_E }
+					any_neighbor_province = { has_province_flag = trade_route_step_F }
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }
+				}
+			}
+			set_province_flag = trade_route_step_H
+			add_province_modifier = { name = route_terrestre duration = -1 }
+		}
+	}
+}
+
+# Give the step I of the trade routes
+# COPY-PASTE with adaptation of TRADE.0002
+province_event = {
+    id = TRADE.0009
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = trade_route_step_H
+	}
+		
+	mean_time_to_happen = {	days = 10 }	
+
+	immediate = {
+		random_neighbor_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = route_terrestre
+					has_province_flag = trade_route_step_I
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_D }
+					any_neighbor_province = { has_province_flag = trade_route_step_E }
+					any_neighbor_province = { has_province_flag = trade_route_step_F }
+					any_neighbor_province = { has_province_flag = trade_route_step_G }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }
+				}
+			}
+			set_province_flag = trade_route_step_I
+			add_province_modifier = { name = route_terrestre duration = -1 }
+		}
+	}
+}
+
+# Give the step J of the trade routes
+# COPY-PASTE with adaptation of TRADE.0002
+province_event = {
+    id = TRADE.0010
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = trade_route_step_I
+	}
+		
+	mean_time_to_happen = {	days = 10 }	
+
+	immediate = {
+		random_neighbor_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = route_terrestre
+					has_province_flag = trade_route_step_J
+					any_neighbor_province = { has_province_flag = trade_route_step_J }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_D }
+					any_neighbor_province = { has_province_flag = trade_route_step_E }
+					any_neighbor_province = { has_province_flag = trade_route_step_F }
+					any_neighbor_province = { has_province_flag = trade_route_step_G }
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+				}
+			}
+			set_province_flag = trade_route_step_J
+			add_province_modifier = { name = route_terrestre duration = -1 }
+		}
+	}
+}
