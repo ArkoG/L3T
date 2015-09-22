@@ -1,26 +1,26 @@
 namespace = TRADE
 
 # Give the step A of the trade routes
-province_event = {
-    id = TRADE.0001
-	hide_window = yes
+#province_event = {
+#   id = TRADE.0001
+#	hide_window = yes
 	
-	trigger = {
-		NOT = { has_province_flag = trade_route_step_A }
-		OR = {
-			province_id = 112 # Ile de France
-			province_id = 228 # Dauphine Viennois
-		}		
-	}
+#	trigger = {
+#		NOT = { has_province_flag = bloc_A }
+#		OR = {
+#			province_id = 112 # Ile de France
+#			province_id = 228 # Dauphine Viennois
+#		}		
+#	}
 		
-	mean_time_to_happen = {	days = 10 }	
+#	mean_time_to_happen = {	days = 100 }	
 
-	immediate = {
-		set_province_flag = trade_route_step_A
-		add_province_modifier = { name = route_terrestre duration = -1 }
-		add_province_modifier = { name = flag_A duration = -1 }
-	}
-}
+#	immediate = {
+#		set_province_flag = bloc_A
+#		add_province_modifier = { name = route_terrestre duration = -1 }
+#		add_province_modifier = { name = flag_A duration = -1 }
+#	}
+#}
 
 # Give the step B of the trade routes
 province_event = {
@@ -28,10 +28,10 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = trade_route_step_A
+		has_province_flag = bloc_A
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }	
 
 	immediate = {
 		random_neighbor_province = {
@@ -41,23 +41,23 @@ province_event = {
 					has_province_modifier = route_terrestre
 					
 					# To not give step B to a province which have already it
-					has_province_flag = trade_route_step_B
+					has_province_flag = bloc_B
 					
 					# To not give step B to distinct routes
-					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = bloc_B }
 					
 					# To not give step C to a province which don't have a minimal distance of 1 (in terms of neighboor) to a step A province
-					any_neighbor_province = { has_province_flag = trade_route_step_C }
-					any_neighbor_province = { has_province_flag = trade_route_step_D }
-					any_neighbor_province = { has_province_flag = trade_route_step_E }
-					any_neighbor_province = { has_province_flag = trade_route_step_F }
-					any_neighbor_province = { has_province_flag = trade_route_step_G }
-					any_neighbor_province = { has_province_flag = trade_route_step_H }
-					any_neighbor_province = { has_province_flag = trade_route_step_I }
-					any_neighbor_province = { has_province_flag = trade_route_step_J }
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_E }
+					any_neighbor_province = { has_province_flag = bloc_F }
+					any_neighbor_province = { has_province_flag = bloc_G }
+					any_neighbor_province = { has_province_flag = bloc_H }
+					any_neighbor_province = { has_province_flag = bloc_I }
+					any_neighbor_province = { has_province_flag = bloc_J }
 				}
 			}
-			set_province_flag = trade_route_step_B
+			set_province_flag = bloc_B
 			add_province_modifier = { name = route_terrestre duration = -1 }
 			add_province_modifier = { name = flag_B duration = -1 }
 		}
@@ -71,29 +71,29 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = trade_route_step_B
+		has_province_flag = bloc_B
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }	
 
 	immediate = {
 		random_neighbor_province = {
 			limit = {
 				NOT = {
 					has_province_modifier = route_terrestre
-					has_province_flag = trade_route_step_C
-					any_neighbor_province = { has_province_flag = trade_route_step_C }
-					any_neighbor_province = { has_province_flag = trade_route_step_A }
-					any_neighbor_province = { has_province_flag = trade_route_step_D }
-					any_neighbor_province = { has_province_flag = trade_route_step_E }
-					any_neighbor_province = { has_province_flag = trade_route_step_F }
-					any_neighbor_province = { has_province_flag = trade_route_step_G }
-					any_neighbor_province = { has_province_flag = trade_route_step_H }
-					any_neighbor_province = { has_province_flag = trade_route_step_I }
-					any_neighbor_province = { has_province_flag = trade_route_step_J }					
+					has_province_flag = bloc_C
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_E }
+					any_neighbor_province = { has_province_flag = bloc_F }
+					any_neighbor_province = { has_province_flag = bloc_G }
+					any_neighbor_province = { has_province_flag = bloc_H }
+					any_neighbor_province = { has_province_flag = bloc_I }
+					any_neighbor_province = { has_province_flag = bloc_J }					
 				}
 			}
-			set_province_flag = trade_route_step_C
+			set_province_flag = bloc_C
 			add_province_modifier = { name = route_terrestre duration = -1 }
 			add_province_modifier = { name = flag_C duration = -1 }
 		}
@@ -107,29 +107,29 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = trade_route_step_C
+		has_province_flag = bloc_C
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }	
 
 	immediate = {
 		random_neighbor_province = {
 			limit = {
 				NOT = {
 					has_province_modifier = route_terrestre
-					has_province_flag = trade_route_step_D
-					any_neighbor_province = { has_province_flag = trade_route_step_D }
-					any_neighbor_province = { has_province_flag = trade_route_step_A }
-					any_neighbor_province = { has_province_flag = trade_route_step_B }
-					any_neighbor_province = { has_province_flag = trade_route_step_E }
-					any_neighbor_province = { has_province_flag = trade_route_step_F }
-					any_neighbor_province = { has_province_flag = trade_route_step_G }
-					any_neighbor_province = { has_province_flag = trade_route_step_H }
-					any_neighbor_province = { has_province_flag = trade_route_step_I }
-					any_neighbor_province = { has_province_flag = trade_route_step_J }	
+					has_province_flag = bloc_D
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_B }
+					any_neighbor_province = { has_province_flag = bloc_E }
+					any_neighbor_province = { has_province_flag = bloc_F }
+					any_neighbor_province = { has_province_flag = bloc_G }
+					any_neighbor_province = { has_province_flag = bloc_H }
+					any_neighbor_province = { has_province_flag = bloc_I }
+					any_neighbor_province = { has_province_flag = bloc_J }	
 				}
 			}
-			set_province_flag = trade_route_step_D
+			set_province_flag = bloc_D
 			add_province_modifier = { name = route_terrestre duration = -1 }
 			add_province_modifier = { name = flag_D duration = -1 }
 		}
@@ -143,29 +143,29 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = trade_route_step_D
+		has_province_flag = bloc_D
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }	
 
 	immediate = {
 		random_neighbor_province = {
 			limit = {
 				NOT = {
 					has_province_modifier = route_terrestre
-					has_province_flag = trade_route_step_E
-					any_neighbor_province = { has_province_flag = trade_route_step_E }
-					any_neighbor_province = { has_province_flag = trade_route_step_A }
-					any_neighbor_province = { has_province_flag = trade_route_step_B }
-					any_neighbor_province = { has_province_flag = trade_route_step_C }
-					any_neighbor_province = { has_province_flag = trade_route_step_F }
-					any_neighbor_province = { has_province_flag = trade_route_step_G }
-					any_neighbor_province = { has_province_flag = trade_route_step_H }
-					any_neighbor_province = { has_province_flag = trade_route_step_I }
-					any_neighbor_province = { has_province_flag = trade_route_step_J }	
+					has_province_flag = bloc_E
+					any_neighbor_province = { has_province_flag = bloc_E }
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_B }
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_F }
+					any_neighbor_province = { has_province_flag = bloc_G }
+					any_neighbor_province = { has_province_flag = bloc_H }
+					any_neighbor_province = { has_province_flag = bloc_I }
+					any_neighbor_province = { has_province_flag = bloc_J }	
 				}
 			}
-			set_province_flag = trade_route_step_E
+			set_province_flag = bloc_E
 			add_province_modifier = { name = route_terrestre duration = -1 }
 			add_province_modifier = { name = flag_E duration = -1 }
 		}
@@ -179,29 +179,29 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = trade_route_step_E
+		has_province_flag = bloc_E
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }	
 
 	immediate = {
 		random_neighbor_province = {
 			limit = {
 				NOT = {
 					has_province_modifier = route_terrestre
-					has_province_flag = trade_route_step_F
-					any_neighbor_province = { has_province_flag = trade_route_step_F }
-					any_neighbor_province = { has_province_flag = trade_route_step_A }
-					any_neighbor_province = { has_province_flag = trade_route_step_B }
-					any_neighbor_province = { has_province_flag = trade_route_step_C }
-					any_neighbor_province = { has_province_flag = trade_route_step_D }
-					any_neighbor_province = { has_province_flag = trade_route_step_G }
-					any_neighbor_province = { has_province_flag = trade_route_step_H }
-					any_neighbor_province = { has_province_flag = trade_route_step_I }
-					any_neighbor_province = { has_province_flag = trade_route_step_J }
+					has_province_flag = bloc_F
+					any_neighbor_province = { has_province_flag = bloc_F }
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_B }
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_G }
+					any_neighbor_province = { has_province_flag = bloc_H }
+					any_neighbor_province = { has_province_flag = bloc_I }
+					any_neighbor_province = { has_province_flag = bloc_J }
 				}
 			}
-			set_province_flag = trade_route_step_F
+			set_province_flag = bloc_F
 			add_province_modifier = { name = route_terrestre duration = -1 }
 			add_province_modifier = { name = flag_F duration = -1 }
 		}
@@ -215,29 +215,29 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = trade_route_step_F
+		has_province_flag = bloc_F
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }	
 
 	immediate = {
 		random_neighbor_province = {
 			limit = {
 				NOT = {
 					has_province_modifier = route_terrestre
-					has_province_flag = trade_route_step_G
-					any_neighbor_province = { has_province_flag = trade_route_step_G }
-					any_neighbor_province = { has_province_flag = trade_route_step_A }
-					any_neighbor_province = { has_province_flag = trade_route_step_B }
-					any_neighbor_province = { has_province_flag = trade_route_step_C }
-					any_neighbor_province = { has_province_flag = trade_route_step_D }
-					any_neighbor_province = { has_province_flag = trade_route_step_E }
-					any_neighbor_province = { has_province_flag = trade_route_step_H }
-					any_neighbor_province = { has_province_flag = trade_route_step_I }
-					any_neighbor_province = { has_province_flag = trade_route_step_J }
+					has_province_flag = bloc_G
+					any_neighbor_province = { has_province_flag = bloc_G }
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_B }
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_E }
+					any_neighbor_province = { has_province_flag = bloc_H }
+					any_neighbor_province = { has_province_flag = bloc_I }
+					any_neighbor_province = { has_province_flag = bloc_J }
 				}
 			}
-			set_province_flag = trade_route_step_G
+			set_province_flag = bloc_G
 			add_province_modifier = { name = route_terrestre duration = -1 }
 			add_province_modifier = { name = flag_G duration = -1 }
 		}
@@ -251,29 +251,29 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = trade_route_step_G
+		has_province_flag = bloc_G
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }	
 
 	immediate = {
 		random_neighbor_province = {
 			limit = {
 				NOT = {
 					has_province_modifier = route_terrestre
-					has_province_flag = trade_route_step_H
-					any_neighbor_province = { has_province_flag = trade_route_step_H }
-					any_neighbor_province = { has_province_flag = trade_route_step_A }
-					any_neighbor_province = { has_province_flag = trade_route_step_B }
-					any_neighbor_province = { has_province_flag = trade_route_step_C }
-					any_neighbor_province = { has_province_flag = trade_route_step_D }
-					any_neighbor_province = { has_province_flag = trade_route_step_E }
-					any_neighbor_province = { has_province_flag = trade_route_step_F }
-					any_neighbor_province = { has_province_flag = trade_route_step_I }
-					any_neighbor_province = { has_province_flag = trade_route_step_J }
+					has_province_flag = bloc_H
+					any_neighbor_province = { has_province_flag = bloc_H }
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_B }
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_E }
+					any_neighbor_province = { has_province_flag = bloc_F }
+					any_neighbor_province = { has_province_flag = bloc_I }
+					any_neighbor_province = { has_province_flag = bloc_J }
 				}
 			}
-			set_province_flag = trade_route_step_H
+			set_province_flag = bloc_H
 			add_province_modifier = { name = route_terrestre duration = -1 }
 			add_province_modifier = { name = flag_H duration = -1 }
 		}
@@ -287,29 +287,29 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = trade_route_step_H
+		has_province_flag = bloc_H
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }	
 
 	immediate = {
 		random_neighbor_province = {
 			limit = {
 				NOT = {
 					has_province_modifier = route_terrestre
-					has_province_flag = trade_route_step_I
-					any_neighbor_province = { has_province_flag = trade_route_step_I }
-					any_neighbor_province = { has_province_flag = trade_route_step_A }
-					any_neighbor_province = { has_province_flag = trade_route_step_B }
-					any_neighbor_province = { has_province_flag = trade_route_step_C }
-					any_neighbor_province = { has_province_flag = trade_route_step_D }
-					any_neighbor_province = { has_province_flag = trade_route_step_E }
-					any_neighbor_province = { has_province_flag = trade_route_step_F }
-					any_neighbor_province = { has_province_flag = trade_route_step_G }
-					any_neighbor_province = { has_province_flag = trade_route_step_J }
+					has_province_flag = bloc_I
+					any_neighbor_province = { has_province_flag = bloc_I }
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_B }
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_E }
+					any_neighbor_province = { has_province_flag = bloc_F }
+					any_neighbor_province = { has_province_flag = bloc_G }
+					any_neighbor_province = { has_province_flag = bloc_J }
 				}
 			}
-			set_province_flag = trade_route_step_I
+			set_province_flag = bloc_I
 			add_province_modifier = { name = route_terrestre duration = -1 }
 			add_province_modifier = { name = flag_I duration = -1 }
 		}
@@ -323,29 +323,29 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = trade_route_step_I
+		has_province_flag = bloc_I
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }	
 
 	immediate = {
 		random_neighbor_province = {
 			limit = {
 				NOT = {
 					has_province_modifier = route_terrestre
-					has_province_flag = trade_route_step_J
-					any_neighbor_province = { has_province_flag = trade_route_step_J }
-					any_neighbor_province = { has_province_flag = trade_route_step_A }
-					any_neighbor_province = { has_province_flag = trade_route_step_B }
-					any_neighbor_province = { has_province_flag = trade_route_step_C }
-					any_neighbor_province = { has_province_flag = trade_route_step_D }
-					any_neighbor_province = { has_province_flag = trade_route_step_E }
-					any_neighbor_province = { has_province_flag = trade_route_step_F }
-					any_neighbor_province = { has_province_flag = trade_route_step_G }
-					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					has_province_flag = bloc_J
+					any_neighbor_province = { has_province_flag = bloc_J }
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_B }
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_E }
+					any_neighbor_province = { has_province_flag = bloc_F }
+					any_neighbor_province = { has_province_flag = bloc_G }
+					any_neighbor_province = { has_province_flag = bloc_H }
 				}
 			}
-			set_province_flag = trade_route_step_J
+			set_province_flag = bloc_J
 			add_province_modifier = { name = route_terrestre duration = -1 }
 			add_province_modifier = { name = flag_J duration = -1 }
 		}
