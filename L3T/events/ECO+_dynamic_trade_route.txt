@@ -50,11 +50,11 @@ province_event = {
 					any_neighbor_province = { has_province_flag = trade_route_step_C }
 					any_neighbor_province = { has_province_flag = trade_route_step_D }
 					any_neighbor_province = { has_province_flag = trade_route_step_E }
-					#any_neighbor_province = { has_province_flag = trade_route_step_F }
-					#any_neighbor_province = { has_province_flag = trade_route_step_G }
-					#any_neighbor_province = { has_province_flag = trade_route_step_H }
-					#any_neighbor_province = { has_province_flag = trade_route_step_I }
-					#any_neighbor_province = { has_province_flag = trade_route_step_J }
+					any_neighbor_province = { has_province_flag = trade_route_step_F }
+					any_neighbor_province = { has_province_flag = trade_route_step_G }
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }
 				}
 			}
 			set_province_flag = trade_route_step_B
@@ -87,10 +87,10 @@ province_event = {
 					any_neighbor_province = { has_province_flag = trade_route_step_D }
 					any_neighbor_province = { has_province_flag = trade_route_step_E }
 					any_neighbor_province = { has_province_flag = trade_route_step_F }
-					#any_neighbor_province = { has_province_flag = trade_route_step_G }
-					#any_neighbor_province = { has_province_flag = trade_route_step_H }
-					#any_neighbor_province = { has_province_flag = trade_route_step_I }
-					#any_neighbor_province = { has_province_flag = trade_route_step_J }					
+					any_neighbor_province = { has_province_flag = trade_route_step_G }
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }					
 				}
 			}
 			set_province_flag = trade_route_step_C
@@ -119,14 +119,14 @@ province_event = {
 					has_province_modifier = route_terrestre
 					has_province_flag = trade_route_step_D
 					any_neighbor_province = { has_province_flag = trade_route_step_D }
-					#any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
 					any_neighbor_province = { has_province_flag = trade_route_step_B }
 					any_neighbor_province = { has_province_flag = trade_route_step_E }
 					any_neighbor_province = { has_province_flag = trade_route_step_F }
 					any_neighbor_province = { has_province_flag = trade_route_step_G }
-					#any_neighbor_province = { has_province_flag = trade_route_step_H }
-					#any_neighbor_province = { has_province_flag = trade_route_step_I }
-					#any_neighbor_province = { has_province_flag = trade_route_step_J }	
+					any_neighbor_province = { has_province_flag = trade_route_step_H }
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }	
 				}
 			}
 			set_province_flag = trade_route_step_D
@@ -155,14 +155,14 @@ province_event = {
 					has_province_modifier = route_terrestre
 					has_province_flag = trade_route_step_E
 					any_neighbor_province = { has_province_flag = trade_route_step_E }
-					#any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
 					any_neighbor_province = { has_province_flag = trade_route_step_B }
 					any_neighbor_province = { has_province_flag = trade_route_step_C }
 					any_neighbor_province = { has_province_flag = trade_route_step_F }
 					any_neighbor_province = { has_province_flag = trade_route_step_G }
 					any_neighbor_province = { has_province_flag = trade_route_step_H }
-					#any_neighbor_province = { has_province_flag = trade_route_step_I }
-					#any_neighbor_province = { has_province_flag = trade_route_step_J }	
+					any_neighbor_province = { has_province_flag = trade_route_step_I }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }	
 				}
 			}
 			set_province_flag = trade_route_step_E
@@ -191,14 +191,14 @@ province_event = {
 					has_province_modifier = route_terrestre
 					has_province_flag = trade_route_step_F
 					any_neighbor_province = { has_province_flag = trade_route_step_F }
-					#any_neighbor_province = { has_province_flag = trade_route_step_A }
-					#any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
 					any_neighbor_province = { has_province_flag = trade_route_step_C }
 					any_neighbor_province = { has_province_flag = trade_route_step_D }
 					any_neighbor_province = { has_province_flag = trade_route_step_G }
 					any_neighbor_province = { has_province_flag = trade_route_step_H }
 					any_neighbor_province = { has_province_flag = trade_route_step_I }
-					#any_neighbor_province = { has_province_flag = trade_route_step_J }
+					any_neighbor_province = { has_province_flag = trade_route_step_J }
 				}
 			}
 			set_province_flag = trade_route_step_F
@@ -227,9 +227,9 @@ province_event = {
 					has_province_modifier = route_terrestre
 					has_province_flag = trade_route_step_G
 					any_neighbor_province = { has_province_flag = trade_route_step_G }
-					#any_neighbor_province = { has_province_flag = trade_route_step_A }
-					#any_neighbor_province = { has_province_flag = trade_route_step_B }
-					#any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
 					any_neighbor_province = { has_province_flag = trade_route_step_D }
 					any_neighbor_province = { has_province_flag = trade_route_step_E }
 					any_neighbor_province = { has_province_flag = trade_route_step_H }
@@ -263,9 +263,9 @@ province_event = {
 					has_province_modifier = route_terrestre
 					has_province_flag = trade_route_step_H
 					any_neighbor_province = { has_province_flag = trade_route_step_H }
-					#any_neighbor_province = { has_province_flag = trade_route_step_A }
-					#any_neighbor_province = { has_province_flag = trade_route_step_B }
-					#any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
 					any_neighbor_province = { has_province_flag = trade_route_step_D }
 					any_neighbor_province = { has_province_flag = trade_route_step_E }
 					any_neighbor_province = { has_province_flag = trade_route_step_F }
@@ -299,9 +299,9 @@ province_event = {
 					has_province_modifier = route_terrestre
 					has_province_flag = trade_route_step_I
 					any_neighbor_province = { has_province_flag = trade_route_step_I }
-					#any_neighbor_province = { has_province_flag = trade_route_step_A }
-					#any_neighbor_province = { has_province_flag = trade_route_step_B }
-					#any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
 					any_neighbor_province = { has_province_flag = trade_route_step_D }
 					any_neighbor_province = { has_province_flag = trade_route_step_E }
 					any_neighbor_province = { has_province_flag = trade_route_step_F }
@@ -335,9 +335,9 @@ province_event = {
 					has_province_modifier = route_terrestre
 					has_province_flag = trade_route_step_J
 					any_neighbor_province = { has_province_flag = trade_route_step_J }
-					#any_neighbor_province = { has_province_flag = trade_route_step_A }
-					#any_neighbor_province = { has_province_flag = trade_route_step_B }
-					#any_neighbor_province = { has_province_flag = trade_route_step_C }
+					any_neighbor_province = { has_province_flag = trade_route_step_A }
+					any_neighbor_province = { has_province_flag = trade_route_step_B }
+					any_neighbor_province = { has_province_flag = trade_route_step_C }
 					any_neighbor_province = { has_province_flag = trade_route_step_D }
 					any_neighbor_province = { has_province_flag = trade_route_step_E }
 					any_neighbor_province = { has_province_flag = trade_route_step_F }
