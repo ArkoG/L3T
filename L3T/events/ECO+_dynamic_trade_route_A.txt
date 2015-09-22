@@ -16,7 +16,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -30,6 +30,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_01
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -38,7 +39,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -52,6 +53,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_02
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -60,7 +62,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -74,6 +76,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_03
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -82,7 +85,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -96,6 +99,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_04
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -104,7 +108,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -118,6 +122,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_05
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -126,7 +131,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -140,6 +145,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_06
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -148,7 +154,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -162,6 +168,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_07
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -170,7 +177,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -184,6 +191,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_08
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -192,7 +200,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -206,6 +214,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_09
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -214,7 +223,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -228,6 +237,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_10
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -236,7 +246,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -250,6 +260,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_11
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -258,7 +269,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -272,6 +283,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_12
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -280,7 +292,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -294,6 +306,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_13
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -302,7 +315,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -316,6 +329,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_14
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -324,7 +338,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -338,6 +352,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_15
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -346,7 +361,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -360,6 +375,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_16
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -368,7 +384,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -382,6 +398,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_17
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -390,7 +407,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -404,6 +421,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_18
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -412,7 +430,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -426,6 +444,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_19
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -434,7 +453,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -448,6 +467,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_20
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -456,7 +476,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -470,6 +490,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_21
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -478,7 +499,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -492,6 +513,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_22
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -500,7 +522,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -514,6 +536,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_23
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -522,7 +545,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
@@ -536,6 +559,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
+		has_global_flag = bloc_A_24
 		NOT = { 
 			# N A PAS DEJA UN FLAG DE BLOC
 			has_province_flag = bloc_A	has_province_flag = bloc_B	has_province_flag = bloc_C	has_province_flag = bloc_D	has_province_flag = bloc_E	has_province_flag = bloc_F	has_province_flag = bloc_G	has_province_flag = bloc_H	has_province_flag = bloc_I	has_province_flag = bloc_J
@@ -544,7 +568,7 @@ province_event = {
 		}
 	}
 		
-	mean_time_to_happen = {	days = 10 }	
+	mean_time_to_happen = {	days = 100 }
 
 	immediate = {
 		set_province_flag = bloc_A
