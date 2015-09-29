@@ -197,3 +197,64 @@ immediate = {
 		}
 }
 
+# Count the number of resources in the provinces and its neighboor (in order to choose it will be a land of commerce or production)
+province_event = {
+    id = ECO.0026
+	hide_window = yes
+	
+	# TODO add a trigger (a global flag?) to do the event only when all resources were distributed
+	trigger = {
+		NOT = { has_province_flag = counted_resources }
+	}
+	
+	mean_time_to_happen = {	days = 10 }
+	
+	immediate = {
+		set_province_flag = counted_resources
+		set_variable = { which = "resourceNb" value = 0 }
+		
+		# Count resources of the province
+		if = { limit = { has_province_modifier = agriculture1} change_variable = { which = "resourceNb" value = 1 } }
+		if = { limit = { has_province_modifier = elevage1} change_variable = { which = "resourceNb" value = 1 } }
+		if = { limit = { has_province_modifier = foret1} change_variable = { which = "resourceNb" value = 1 } }
+		if = { limit = { has_province_modifier = pierre1} change_variable = { which = "resourceNb" value = 1 } }
+		if = { limit = { has_province_modifier = minerai1} change_variable = { which = "resourceNb" value = 1 } }
+		if = { limit = { has_province_modifier = peche1} change_variable = { which = "resourceNb" value = 1 } }
+		if = { limit = { has_province_modifier = pisci1} change_variable = { which = "resourceNb" value = 1 } }
+		
+		# Count resources of the neighboor province
+		any_neighbor_province = {
+			if = { limit = { has_province_modifier = agriculture1} ROOT = { change_variable = { which = "resourceNb" value = 1 } } }
+			if = { limit = { has_province_modifier = elevage1} ROOT = { change_variable = { which = "resourceNb" value = 1 } } }
+			if = { limit = { has_province_modifier = foret1} ROOT = { change_variable = { which = "resourceNb" value = 1 } } }
+			if = { limit = { has_province_modifier = pierre1} ROOT = { change_variable = { which = "resourceNb" value = 1 } } }
+			if = { limit = { has_province_modifier = minerai1} ROOT = { change_variable = { which = "resourceNb" value = 1 } } }
+			if = { limit = { has_province_modifier = peche1} ROOT = { change_variable = { which = "resourceNb" value = 1 } } }
+			if = { limit = { has_province_modifier = pisci1} ROOT = { change_variable = { which = "resourceNb" value = 1 } } }
+		}
+		
+		# On met des mouchards, mais plus tard cela servira à spécialiser le domaine
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 1 } } add_province_modifier = { name = 1resource duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 2 } } add_province_modifier = { name = 2resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 3 } } add_province_modifier = { name = 3resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 4 } } add_province_modifier = { name = 4resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 5 } } add_province_modifier = { name = 5resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 6 } } add_province_modifier = { name = 6resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 7 } } add_province_modifier = { name = 7resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 8 } } add_province_modifier = { name = 8resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 9 } } add_province_modifier = { name = 9resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 10 } } add_province_modifier = { name = 10resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 11 } } add_province_modifier = { name = 11resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 12 } } add_province_modifier = { name = 12resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 13 } } add_province_modifier = { name = 13resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 14 } } add_province_modifier = { name = 14resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 15 } } add_province_modifier = { name = 15resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 16 } } add_province_modifier = { name = 16resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 17 } } add_province_modifier = { name = 17resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 18 } } add_province_modifier = { name = 18resources duration = -1 } }
+		if = { limit = { is_variable_equal = { which = "resourceNb" value = 19 } } add_province_modifier = { name = 19resources duration = -1 } }
+		if = { limit = { check_variable = { which = "resourceNb" value = 20 } } add_province_modifier = { name = 20resourcesPLUS duration = -1 } }
+	}
+}
+
+	
