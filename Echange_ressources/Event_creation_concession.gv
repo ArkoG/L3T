@@ -1,0 +1,55 @@
+digraph G {
+	node [shape=ellipse];
+		{node [label="La province pB detenue par B possede la ressource R utile a  la province voisine pA detenue par A"] trig0;};
+		{node [label="Chaque baron recoit un flag apres avoir ete consulte selon son opinion.\n L'event suivant a lieu quand tous les barons ont le flag."] trig1;};
+		{node [label="pB perd le modifier de la ressource B
+			[Si negociateur de B a intendance > 10] pB gagne le modifier R_concedee_favorablement (+3 or)
+			[Sinon] pB gagne le modifier R_concedee_defavorablement (+2 or)
+			[Si negociateur de A a intendance > 10] pA gagne le modifier R_en_concession_favorablement (-1 or)
+			[Sinon] pA gagne le modifier R_en_concession_defavorablement (-2 or)"] res0;};
+	node [shape=ellipse, style=dashed];
+		{node [label="Je vais aller negocier une concession\nFlag negocie_soi_meme"] opt0;};
+		{node [label="J'envoie mon intendant negocier une concession\nFlag negocie_intendant"] opt1;};
+		{node [label="Cela ne me concerne pas"] opt2;};
+		{node [label="Je prefere garder la ressource R"] opt3;};
+		{node [label="Je vais reflechir a la proposition"] opt4;};
+		{node [label="Je n'ai que faire de leur opinion sur le sujet\n-20 de relations avec les barons concernes"] opt5;};
+		{node [label="Je vais les recevoir un a  un"] opt6;};
+		{node [label="Je vais finalement garder la ressource\n-10 de relation avec les barons consultes favorables a la concession"] opt7;};
+		{node [label="Je suis d'accord pour la concession, je vais negocier le montant\nFlag negocie_soi_meme\n-10 de relation avec les barons consultes defavorables a la concession"] opt8;};
+		{node [label="Je suis d'accord pour la concession, j'envoie mon intendant negocier le montant\nFlag negocie_intendant\n-10 de relation avec les barons consultes defavorables a la concession"] opt9;};
+		{node [label="Demander une concession a quelqu'un d'autre"] opt10;};
+		{node [label="J'aurai la ressource par un autre moyen"] opt11;};
+	node [shape=box, style=filled, color=lightgrey];
+		{node [label="A : Notre voisin B possede une ressource qui pourrait nous etre utile pour le developpement de la province pA"] evt0;};
+		{node [label="B : Une proposition commerciale tres bancale nous est parvenu de notre voisin A.\n Il souhaite une concession de notre ressource R pour developper la province A.\nCela nous rapportera de l'or mais nous privera de la ressource"] evt1;};
+		{node [label="B : Une proposition commerciale interessante nous est parvenu de notre voisin A.\n Il souhaite une concession de notre ressource R pour developper la province A.\nCela nous rapportera de l'or mais nous privera de la ressource"] evt2;};
+		{node [label="B : Avant d'entamer une negociation, je devrais peut-etre en parler avec les barons de la province pB.\nEn effet eux aussi peuvent avoir a y gagner/perdre dans cet echange"] evt3;};
+		{node [label="B : Le baron XXX voudrait que l'on garde la ressource R"] evt4;};
+		{node [label="B : Le baron XXX est favorable a  la concession de la ressource R"] evt5;};
+		{node [label="B : Le moment est venu de negocier la concession de la ressource R"] evt6;};
+		{node [label="A: B a refuse notre genereuse offre de concession\n (-10 de relation avec A)"] evt7;};
+
+	trig0 -> evt0
+	evt0 -> opt0
+	evt0 -> opt1
+	evt0 -> opt2
+	opt0, opt1 -> evt1 [label="intendance<10",len=1.00, fontcolor=red, color=red]
+	opt0, opt1 -> evt2 [label="intendance>10",len=1.00, fontcolor=blue, color=blue]
+	evt1 -> opt3 [label="IA = 75%\nModifier les bats liees a R,\navare",len=1.00, fontcolor=red, color=red]
+	evt1 -> opt4 [label="IA = 25%\nModifier les bats liees a R,\ngenereux",len=1.00, fontcolor=red, color=red]
+	evt2 -> opt3 [label="IA = 25%\nModifier les bats liees a R,\navare",len=1.00, fontcolor=blue, color=blue]
+	evt2 -> opt4 [label="IA = 75%\nModifier les bats liees a R,\ngenereux",len=1.00, fontcolor=blue, color=blue]
+	opt4 -> evt3
+	evt3 -> opt5
+	evt3 -> opt6
+	opt6 -> evt4 [label="Possede des batiments liees a R",len=1.00, fontcolor=red, color=red]
+	opt6 -> evt5 [label="Ne possede pas des batiments liees a R",len=1.00, fontcolor=blue, color=blue]
+	evt4, evt5 -> trig1
+	trig1, opt5 -> evt6
+	evt6 -> opt7, opt8, opt9
+	opt3, opt7 -> evt7
+	evt7 -> opt10  [label="Il existe une concession possible ailleurs",len=1.00, fontcolor=red, color=red]
+	evt7 -> opt11
+	opt8, opt9 -> res0
+}
