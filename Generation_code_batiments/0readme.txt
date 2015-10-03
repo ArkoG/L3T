@@ -1,4 +1,8 @@
 UPDATE
+	3 octobre 2015 :
+		nouvelle IHM
+		mise à jour 2.4
+
 	29 décembre 2014 :
 		correction d'un bug dans l'IHM (Interface Homme Machine)
 		ajout d'une fonction qui teste à minima que les données nécessaires des bâtiments sont présentes
@@ -8,11 +12,14 @@ UPDATE
 		programme désormais en java et tu peux l'utiliser directement
 
 UTILISATION	
-	- mettre dans un même dossier le programme (generate_code_bats.jar), le script pour l'utiliser (script.bat) et 
-	  un fichier csv sur le même modèle que requis (pour plus d'infos voir parapraghe REMARQUES DE REQUIS)
+	- mettre dans un même dossier le programme (generate_code_bats.jar), le script pour l'utiliser (script.bat)
+	- créer un fichier CSV (pouvant être généré à partir d'un fichier ods) suivant les modèles (cf remarque de requis)
+		=> ATTENTION, il doit être en UTF8
 	- double cliquer sur script.bat (Remarque : c'est un script windows pour éviter d'ouvrir la console et d'exécuter le programme à la main)
-	- se laisser guider par l'IHM (interface homme machine)
-	  i.e répondre aux questions via la console ouverte par le script
+	- utiliser les boutons ... pour naviguer dans les dossiers pour sélectionner les fichiers
+	ATTENTION
+		- le fichier de code ne fonctionne pas tel quel, il faut AJOUTER LE CONTEXTE DE DOMAINE (castle, city, temple, ...)
+		- le fichier de localisation peut fonctionner tel quel UNE FOIS CONVERTI EN ANSI
 	
 REMARQUES SUR LE FONCTIONNEMENT
 	- mon programme est en fait un gros aspirateur de caractère organisé (je ne teste pas si ce qui est écrit a un sens)
