@@ -1,0 +1,240 @@
+#L3T - BATS
+#by ARKO
+
+
+### ponts et chaussées ###
+
+
+castle = {
+#petit pont partout sauf désert
+CA_pont_L1 = { #gué
+	desc = "CA_pont_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {	NOT = { terrain = desert }	}
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_pont_L2 = { #pont en bois
+	desc = "CA_pont_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CA_pont_L1
+	prerequisites = { ca_town_2 }
+		gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_pont_L3 = { #pont de pierre
+	desc = "CA_pont_L3_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CA_pont_L2
+	prerequisites = { ca_town_3 }
+		gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.03	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#col montagne seulement
+CA_col_L1 = { #chemin col
+	desc = "CA_col_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {	terrain = mountain }
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_col_L2 = { #col route empierrée
+	desc = "CA_col_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CA_col_L1
+	prerequisites = { ca_town_1 }
+		gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+}
+
+
+#############################
+
+
+city = {
+
+#petit pont partout sauf désert
+CT_pont_L1 = { #gué
+	desc = "CT_pont_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {	NOT = { terrain = desert }	}
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_pont_L2 = { #pont en bois
+	desc = "CT_pont_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_pont_L1
+	prerequisites = { CT_town_2 }
+		gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_pont_L3 = { #pont de pierre
+	desc = "CT_pont_L3_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_pont_L2
+	prerequisites = { CT_town_3 }
+		gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.03	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#col montagne seulement
+CT_col_L1 = { #chemin col
+	desc = "CT_col_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {	terrain = mountain }
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_col_L2 = { #col route empierrée
+	desc = "CT_col_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_col_L1
+	prerequisites = { CT_town_1 }
+	gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#relais au col et cité seulement (variante pour temple)
+CT_relais_L1 = { #relais col
+	desc = "CT_relais_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {	terrain = mountain }
+	prerequisites = { CT_col_L1 }
+	gold_cost = 75.0	build_time = 150	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_relais_L2 = { #relais col
+	desc = "CT_relais_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_relais_L1
+	prerequisites = { CT_col_L2 }
+		gold_cost = 150.0	build_time = 350	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_relais_L3 = { #relais col
+	desc = "CT_relais_L3_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_relais_L2
+		gold_cost = 120.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#oasis désert et cité seulement
+CT_oasis_L1 = { #oasis 
+	desc = "CT_oasis_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {	terrain = desert }
+	#prerequisites = { CT_oasis_L1 }
+	gold_cost = 95.0	build_time = 220	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_oasis_L2 = { #oasis 
+	desc = "CT_oasis_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_oasis_L1
+	#prerequisites = { CT_oasis_L2 }
+		gold_cost = 150.0	build_time = 350	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_oasis_L3 = { #oasis 
+	desc = "CT_oasis_L3_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_oasis_L2
+		gold_cost = 120.0	build_time = 250	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#grand pont sur fleuves seulement
+CT_pont_fluvial_L1 = { #-bac
+	desc = "CT_pont_fluvial_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {	has_province_modifier = route_fluviale	}
+	prerequisites = { VOC_COMMERCIALE }	
+	gold_cost = 65.0	build_time = 95	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_pont_fluvial_L2 = { #-bac tracté
+	desc = "CT_pont_fluvial_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_pont_fluvial_L1
+	prerequisites = { CITE_L1 }
+		gold_cost = 150.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_pont_fluvial_L3 = { #-pont flottant
+	desc = "CT_pont_fluvial_L3_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_pont_fluvial_L2
+		gold_cost = 250.0	build_time = 450	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_pont_fluvial_L4 = { #-pont en bois
+	desc = "CT_pont_fluvial_L4_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_pont_fluvial_L3
+	prerequisites = { CITE_L2 }
+	gold_cost = 425.0	build_time = 900	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_pont_fluvial_L5 = { #-pont en pierre
+	desc = "CT_pont_fluvial_L5_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_pont_fluvial_L4
+		gold_cost = 650.0	build_time = 1800	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_pont_fluvial_L6 = { #-grand pont
+	desc = "CT_pont_fluvial_L6_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_pont_fluvial_L5
+	prerequisites = { CITE_L3 }
+	gold_cost = 250.0	build_time = 540	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+}
+
+
+#############################
+
+
+temple = {
+
+#petit pont partout sauf désert
+TP_pont_L1 = { #gué
+	desc = "TP_pont_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {	NOT = { terrain = desert }	}
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_pont_L2 = { #pont en bois
+	desc = "TP_pont_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = TP_pont_L1
+	prerequisites = { TP_town_2 }
+		gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_pont_L3 = { #pont de pierre
+	desc = "TP_pont_L3_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = TP_pont_L2
+	prerequisites = { TP_town_3 }
+		gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.03	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#col montagne seulement
+TP_col_L1 = { #chemin col
+	desc = "TP_col_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {	terrain = mountain }
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_col_L2 = { #col route empierrée
+	desc = "TP_col_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = TP_col_L1
+	prerequisites = { TP_town_1 }
+	gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#relais au col et cité seulement (variante pour temple)
+TP_relais_L1 = { #relais col
+	desc = "TP_relais_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {	terrain = mountain }
+	prerequisites = { TP_col_L1 }
+	gold_cost = 100.0	build_time = 180	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_relais_L2 = { #relais col
+	desc = "TP_relais_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = TP_relais_L1
+	prerequisites = { TP_col_L2 }
+		gold_cost = 150.0	build_time = 350	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+}
+
+
