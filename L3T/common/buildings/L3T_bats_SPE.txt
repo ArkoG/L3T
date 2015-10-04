@@ -1,0 +1,355 @@
+#L3T - BATS
+#by STRATEGIUM TEAM
+
+
+ # Triggers are in Province scope. The From Scope contains the settlement holder (character)
+ # start trigger is in title scope.
+ 
+#Recensement des effets
+#	COSTING = 1 income 50po de coût
+#	    potential = { NOT = { has_building = FORT }}	#inutile car pas de mise à jour après chargement
+#	    potential = {FROM = { has_landed_title = b_annecy1 }}
+#
+#		trigger = { #marche pô !
+#			FROM = {
+#				any_demesne_title = { 
+#					limit = { 
+#						tier = baron
+#						has_building = FORT  
+#						NOT = {
+#							has_building = BOURGFEODAL 
+#							has_building = CITADELLE 
+#							}
+#					}
+#
+#					}
+#				}
+#			}
+			
+# EN VRAC
+#	tax_income = 1.0
+#	local_tax_modifier = 0.25	# very large tax boost
+#	
+#	tech_growth_modifier = 0.1
+#	
+#	monthly_character_prestige = 0.1
+#	monthly_character_piety = 0.1
+#	
+#	disease_defence = -0.01
+#	
+#	land_morale = 0.025
+#	local_revolt_risk = -0.005 N'A PAS L'AIR DE FONCTIONNER...
+#	
+#	local_build_time_modifier = -0.02
+#	local_gold_cost_modifier = -0.02
+#	
+# MILITAIRE
+#	fort_level = 1.0	
+#	levy_reinforce_rate = 0.1
+#	levy_size = 0.025
+#	garrison_size = 0.1
+#	
+# UNITES
+#	archers = 30
+#	pikemen = 45
+#	light_infantry = 60
+#	heavy_infantry = 45
+#	horse_archers = 20
+#	light_cavalry = 10
+#	knights = 25
+#	galleys = 1
+#	
+# BOOST UNITES
+#	archers_offensive = 0.05
+#	archers_defensive = 0.02
+#	light_infantry_offensive = 0.02
+#	light_infantry_defensive = 0.02
+#	heavy_infantry_offensive = 0.02
+#	heavy_infantry_defensive = 0.02
+#	pikemen_offensive = 0.05
+#	pikemen_defensive = 0.05
+#	light_cavalry_offensive = 0.05
+#	light_cavalry_defensive = 0.05
+#	heavy_infantry_offensive = 0.05
+#	heavy_infantry_defensive = 0.05
+#	knight_offensive = ?
+#	knight_offensive = ?
+#	horse_archers_morale
+
+
+
+#irrigation system
+#	ca_irrigationsystem_1 = {
+#		desc = "d_irrigationsystem""
+#		trigger = {TECH_AGRI = 1 TECH_EDU =1 
+#		FROM = {realm_Stewardship = 20}
+
+ # Castle
+castle = {
+
+	FORT = { #défense et attaque, vocation militaire
+		desc = "FORT_desc"
+		#prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		not_if_x_exists = { CITADELLE BOURGFEODAL REPAIREVOLEUR	}
+		potential = { NOT = { religion_group = pagan_group } }		
+		gold_cost = 0.0
+		build_time = 8
+		fort_level = 2.0
+		light_infantry = 13
+		heavy_infantry = 32
+		light_cavalry = 3
+		#galleys = 1
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+	CITADELLE = { #capitale seigneuriale
+		desc = "CITADELLE_desc"
+		#prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		not_if_x_exists = { FORT BOURGFEODAL REPAIREVOLEUR	}
+		gold_cost = 0.0
+		build_time = 8
+		fort_level = 1.0
+		light_infantry = 15
+		heavy_infantry = 37
+		light_cavalry = 4
+		#galleys = 1
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+	BOURGFEODAL = { #
+		desc = "BOURGFEODAL_desc"
+		#prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		not_if_x_exists = { CITADELLE FORT REPAIREVOLEUR }	
+		gold_cost = 0.0
+		build_time = 8
+		fort_level = 0.5
+		light_infantry = 4
+		heavy_infantry = 11
+		light_cavalry = 1
+		#galleys = 0
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}	
+}
+
+# City
+city = {
+
+	VOC_INDUSTRIELLE = {
+		desc = "VOC_INDUSTRIELLE_desc"
+		prerequisites = { CITE_L1 }
+		trigger = { TECH_TRADE_PRACTICES = 0 }	
+		not_if_x_exists = { VOC_COMMERCIALE }		
+		gold_cost = 0.0
+		build_time = 8
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+	VOC_COMMERCIALE = {
+		desc = "VOC_COMMERCIALE_desc"
+		prerequisites = { CITE_L1 }
+		trigger = { TECH_TRADE_PRACTICES = 0 }	
+		not_if_x_exists = { VOC_INDUSTRIELLE }		
+		gold_cost = 0.0
+		build_time = 8
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+	CITE_L1 = {
+		desc = "CITE_L1_desc"
+		prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }	
+		gold_cost = 0.0
+		build_time = 8
+		fort_level = 0.5
+		light_infantry = 24
+		archers = 13
+		#galleys = 2
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+	CITE_L2 = {
+		desc = "CITE_L2_desc"
+		prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		upgrades_from = CITE_L1
+		#potential = { NOT = { religion_group = pagan_group } }
+		gold_cost = 0.0
+		build_time = 8
+		fort_level = 0.5
+		light_infantry = 24
+		archers = 13
+		#galleys = 2
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+
+	CITE_L3 = {
+		desc = "CITE_L3_desc"
+		prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		upgrades_from = CITE_L2
+		#potential = { NOT = { religion_group = pagan_group } }
+		gold_cost = 0.0
+		build_time = 8
+		fort_level = 0.5
+		light_infantry = 24
+		archers = 13
+		#galleys = 2
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}	
+	
+#	COMPTOIR_L1 = { desc = "COMPTOIR_L_1_desc" ###1 connexion commerciale
+#	trigger = {
+#	#potential = {
+#			OR = {
+#				has_province_modifier = route_terrestre01
+#				has_province_modifier = route_terrestre02		
+#				has_province_modifier = route_terrestre03
+#				has_trade_post = yes
+#				}
+#		}
+#	#potential = { religion = catholic }	
+#	gold_cost = 1.0	build_time = 30 	ai_creation_factor = 100			add_number_to_name = no	extra_tech_building_start = 10.0	
+#	local_tax_modifier = 0.01
+#	}
+	
+#	COMPTOIR_L2 = { desc = "COMPTOIR_L_2_desc" ###2 connexions commerciales
+#	trigger = {
+#	#potential = {
+#
+#			OR = {
+#				AND = {
+#				has_province_modifier = route_terrestre01
+#				has_trade_post = yes		
+#				}
+#				AND = {
+#				has_province_modifier = route_terrestre02
+#				has_trade_post = yes
+#				}
+#				AND = {
+#				has_province_modifier = route_terrestre03		
+#				has_trade_post = yes
+#				}
+#				AND = {
+#				has_province_modifier = route_terrestre01
+#				has_province_modifier = route_terrestre02		
+#				}
+#				AND = {
+#				has_province_modifier = route_terrestre01
+#				has_province_modifier = route_terrestre03
+#				}
+#				AND = {
+#				has_province_modifier = route_terrestre02		
+#				has_province_modifier = route_terrestre03
+#				}
+#			}
+#		}
+#	upgrades_from = COMPTOIR_L1	
+#	#potential = { religion = catholic }
+#	gold_cost = 1.0	build_time = 30 	ai_creation_factor = 100			add_number_to_name = no	extra_tech_building_start = 10.0
+#	local_tax_modifier = 0.01
+#	}
+#	
+#	COMPTOIR_L3 = { desc = "COMPTOIR_L_3_desc" ###3 connexions commerciales ou +
+#	trigger = {
+#	#potential = {
+#
+#			OR = {
+#				AND = {
+#				has_province_modifier = route_terrestre01
+#				has_province_modifier = route_terrestre02
+#				has_trade_post = yes		
+#				}
+#				AND = {
+#				has_province_modifier = route_terrestre01
+#				has_province_modifier = route_terrestre03
+#				has_trade_post = yes		
+#				}
+#				AND = {
+#				has_province_modifier = route_terrestre02
+#				has_province_modifier = route_terrestre03
+#				has_trade_post = yes		
+#				}
+#				AND = {
+#				has_province_modifier = route_terrestre01
+#				has_province_modifier = route_terrestre02
+#				has_province_modifier = route_terrestre03
+#				}
+#			}
+#		}
+#			
+#	upgrades_from = COMPTOIR_L2	
+#	#potential = { religion = catholic }
+#	gold_cost = 1.0	build_time = 30 	ai_creation_factor = 100			add_number_to_name = no	extra_tech_building_start = 10.0
+#	local_tax_modifier = 0.01
+#	}
+
+}
+
+# Temple
+temple = {
+
+	MONASTERE = {
+		desc = "MONASTERE_desc"
+		#prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		not_if_x_exists = { CITEEPISCOPALE }	
+		potential = { religion_group = christian }
+		gold_cost = 0.0
+		build_time = 8
+		fort_level = 0
+		heavy_infantry = 2
+		light_infantry = 2
+		archers = 1
+		#galleys = 0		
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+
+	CITEEPISCOPALE = {
+		desc = "CITEEPISCOPALE_desc"
+		#prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		not_if_x_exists = { MONASTERE }		
+		potential = { NOT = { religion_group = pagan_group } }
+		gold_cost = 0.0
+		build_time = 8
+		fort_level = 0.0
+		heavy_infantry = 15
+		light_infantry = 15
+		archers = 13
+		#galleys = 1
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+
+	COMMANDERIE = { 
+		desc = "COMMANDERIE_desc"
+		prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		prerequisites = { MONASTERE }
+		potential = { religion = catholic }	
+		gold_cost = 1000
+		build_time = 8
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+
+	REGLE_DE_1 = { desc = "REGLE_DE_1_desc"	prerequisites = { MONASTERE }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion = catholic }	prerequisites = { XXX }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
+	REGLE_DE_2 = { desc = "REGLE_DE_2_desc"	prerequisites = { MONASTERE }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion = catholic }	prerequisites = { XXX }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
+	REGLE_DE_3 = { desc = "REGLE_DE_3_desc"	prerequisites = { MONASTERE }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion_group = christian	NOT = { religion = catholic } }		prerequisites = { XXX }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
+
+	#ORDRE_MONACAL_1 = { desc = "ORDRE_MONACAL_1_desc"	prerequisites = {REGLE_DE_1}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
+	#ORDRE_MONACAL_2 = { desc = "ORDRE_MONACAL_2_desc"	prerequisites = {REGLE_DE_2}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
+	#ORDRE_MONACAL_3 = { desc = "ORDRE_MONACAL_3_desc"	prerequisites = {REGLE_DE_1}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
+
+	#ORDRE_MILIT_1 = { desc = "ORDRE_MILIT_1_desc"	prerequisites = {xxx}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
+	#ORDRE_MILIT_2 = { desc = "ORDRE_MILIT_2_desc"	prerequisites = {xxx}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
+	#ORDRE_MILIT_3 = { desc = "ORDRE_MILIT_3_desc"	prerequisites = {xxx}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
+	
+}
