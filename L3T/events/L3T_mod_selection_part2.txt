@@ -110,7 +110,7 @@ province_event = { #installe les routes fluviales SWMH
 
 	trigger = {
 			has_global_flag = running_SWMH
-			NOT = { has_province_modifier = route_fluviale }
+			NOT = { has_province_modifier = province_fleuve }
 			OR = {   
 			##Rhine
 				province_id = 91 # Brabant
@@ -136,7 +136,7 @@ province_event = { #installe les routes fluviales SWMH
 
 immediate = {
 		name = "ECO.0013A"
-		add_province_modifier = {	name = route_fluviale  	duration = -1 }	
+		add_province_modifier = {	name = province_fleuve  	duration = -1 }	
 	}
 }
 
@@ -148,7 +148,7 @@ province_event = { #installe les provinces fluviales LCDA
 	
 	trigger = {
 			has_global_flag = running_LCDA
-			NOT = { has_province_modifier = route_fluviale }
+			NOT = { has_province_modifier = province_fleuve }
 			OR = {   
 			province_id = 6 # Aigle
 			province_id = 28 # Martigny
@@ -158,7 +158,7 @@ province_event = { #installe les provinces fluviales LCDA
 
 immediate = {
 		name = "ECO.0014A"
-		add_province_modifier = {	name = route_fluviale  	duration = -1 }	
+		add_province_modifier = {	name = province_fleuve  	duration = -1 }	
 	}
 }
 
@@ -629,6 +629,7 @@ province_event = { #installe les provinces côtières Vanilla
 	trigger = {
 			has_global_flag = running_VANILLA
 			NOT = { has_province_modifier = province_cotiere }
+			NOT = { has_province_modifier = province_terrestre }
 			OR = {
 				port = yes
 			#mer caspienne
@@ -715,7 +716,7 @@ immediate = {
 	}
 }
 
-province_event = { #installe les routes fluviales SWMH
+province_event = { #installe les provinces fluviales SWMH
     id = ECO.0019
 	desc = "DESCECO.0019"
 	picture = GFX_evt_market
@@ -723,7 +724,7 @@ province_event = { #installe les routes fluviales SWMH
 
 	trigger = {
 			has_global_flag = running_VANILLA
-			NOT = { has_province_modifier = route_fluviale }
+			NOT = { has_province_modifier = province_fleuve }
 			OR = {
 			##Seine-Marne
 				province_id = 97 # Arques
@@ -740,7 +741,7 @@ province_event = { #installe les routes fluviales SWMH
 
 immediate = {
 		name = "ECO.0019A"
-		add_province_modifier = {	name = route_fluviale  	duration = -1 }	
+		add_province_modifier = {	name = province_fleuve  	duration = -1 }	
 	}
 }
 
