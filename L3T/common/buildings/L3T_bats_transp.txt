@@ -139,6 +139,7 @@ CT_pont_fluvial_L1 = { #-bac
 	potential = {	
 				has_province_modifier = province_fleuve
 				any_neighbor_province = { has_province_modifier = route_terrestre }
+				NOT = { has_province_modifier = route_fluviale }
 				}
 	prerequisites = { VOC_COMMERCIALE }	
 	gold_cost = 65.0	build_time = 95	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
