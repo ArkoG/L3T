@@ -242,7 +242,7 @@ province_event = {
 			if = {
 				limit = { 
 					tier = baron
-					is_republic = yes
+					holding_type = city
 				} 
 				ROOT = { change_variable = { which = "cityNb" value = 1 } }
 			}
@@ -258,7 +258,7 @@ province_event = {
 			random_province_holding = {
 				limit = {
 					tier = baron
-					is_republic = yes
+					holding_type = city
 				}
 				add_building = CITE_L1
 				add_building = VOC_COMMERCIALE
@@ -271,7 +271,7 @@ province_event = {
 				if = {
 					limit = {
 						tier = baron
-						is_republic = yes
+						holding_type = city
 						NOT = { has_building = VOC_COMMERCIALE }
 					}
 					add_building = CITE_L1
