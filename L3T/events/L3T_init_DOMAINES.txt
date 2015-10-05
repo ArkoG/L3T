@@ -117,7 +117,11 @@ narrative_event = {
 	prisoner = no
 		
 	trigger = {
-		has_global_flag = after_first_year # TODO event narratif
+		OR = {
+			had_global_flag = { flag = running_SWMH days = 730 }
+			had_global_flag = { flag = running_LCDA days = 730 }
+			had_global_flag = { flag = running_VANILLA days = 730 }
+		}
 		any_demesne_title = {
 			tier = baron
 			holding_type = city
