@@ -136,9 +136,7 @@ narrative_event = {
 		
 	mean_time_to_happen = { months = 9 }
 
-	option = {
-		name = "L3T.0004A"	
-		ai_chance = { factor = 0 } # de base 80 # TODO critère de ressources (une seule exploitable dans la province PAR LA CITE)
+	immediate = {
 		random_demesne_title = {
 			limit = {
 				tier = baron
@@ -150,8 +148,36 @@ narrative_event = {
 					has_building = VOC_COMMERCIALE
 				}
 			}
+			set_title_flag = to_specialize
+		}
+	}
+	
+	option = {
+		name = "L3T.0004A"	
+		ai_chance = { 
+			factor = 50			
+			modifier = {
+				factor = 3
+				any_demesne_title = {
+					has_title_flag = to_specialize
+					location = { is_variable_equal = { which = "resourceNb" value = 2 } }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				any_demesne_title = {
+					has_title_flag = to_specialize
+					location = { is_variable_equal = { which = "resourceNb" value = 1 } }
+				}
+			}
+		}	
+		random_demesne_title = {
+			limit = {
+				has_title_flag = to_specialize
+			}
 			add_building = CITE_L1
 			add_building = VOC_INDUSTRIELLE
+			clr_title_flag = to_specialize
 		}
 	}
 	
@@ -159,14 +185,8 @@ narrative_event = {
 		name = "L3T.0004B"
 		trigger = {
 			any_demesne_title = {
-				tier = baron
-				holding_type = city
-				NOT = {
-					has_building = CITE_L1
-					has_building = CITE_L2
-					has_building = VOC_INDUSTRIELLE
-					has_building = VOC_COMMERCIALE
-				}
+				has_title_flag = to_specialize
+				
 				# Pas de cité commerçante dans la province et les provinces voisines
 				location = {
 					NOT = {
@@ -183,13 +203,20 @@ narrative_event = {
 							}
 						}
 					}
-				}
+				}				
 			}
 		}
 		ai_chance = {
-			factor = 100 #De base 20 # TODO critère de ressources (une seule exploitable dans la province PAR LA CITE)
+			factor = 50
 			modifier = { factor = 100	NOT = { tier = baron }	}
 			modifier = { factor = 0.7	tier = baron }
+			modifier = {
+				factor = 0.1
+				any_demesne_title = {
+					has_title_flag = to_specialize
+					location = { is_variable_equal = { which = "resourceNb" value = 3 } }
+				}
+			}
 		}
 		random_demesne_title = {
 			limit = {
@@ -221,6 +248,7 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
+			clr_title_flag = to_specialize
 			# MOUCHARD # TODO blocA
 			location = { add_province_modifier = { name = 20resourcesPLUS duration = -1 }}
 		}
