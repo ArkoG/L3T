@@ -1,355 +1,162 @@
 namespace = TRADE
 
-# Give the step A of the trade routes
-#province_event = {
-#   id = TRADE.0001
-#	hide_window = yes
-	
-#	trigger = {
-#		NOT = { has_province_flag = bloc_A }
-#		OR = {
-#			province_id = 112 # Ile de France
-#			province_id = 228 # Dauphine Viennois
-#		}		
-#	}
-		
-#	mean_time_to_happen = {	days = 100 }	
-
-#	immediate = {
-#		set_province_flag = bloc_A
-#		add_province_modifier = { name = route_terrestre duration = -1 }
-#		add_province_modifier = { name = flag_A duration = -1 }
-#	}
-#}
-
 # Give the step B of the trade routes
+province_event = {
+    id = TRADE.0001
+	hide_window = yes
+	
+	trigger = {
+		# Give the bloc B to a province which is neighbor to a province with the previous bloc, here A
+		any_neighbor_province = {
+			has_province_flag = bloc_A
+		}
+		
+		NOT = {
+			# To not give step B to the province which has already a bloc (typically the previous step, here A)
+			has_province_modifier = route_terrestre
+			
+			# To not give step B to distinct routes each other
+			any_neighbor_province = { has_province_flag = bloc_B }
+			
+			# To not give step B to a province which don't have a minimal distance of 1 (in terms of neighboor) to a step A province
+			any_neighbor_province = { has_province_flag = bloc_C }
+			any_neighbor_province = { has_province_flag = bloc_D }
+			any_neighbor_province = { has_province_flag = bloc_E }
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.01
+			any_province_holding = {
+				count = 2
+				tier = baron
+				holding_type = city
+			}
+		}
+	}
+
+	immediate = {
+		set_province_flag = bloc_B
+		add_province_modifier = { name = route_terrestre duration = -1 }
+		add_province_modifier = { name = flag_B duration = -1 } #TODO mouchard
+	}
+}
+
+# Give the step C of the trade routes
+# COPY-PASTE with adaptation of TRADE.0001
 province_event = {
     id = TRADE.0002
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = bloc_A
-		has_global_flag = bloc_A_25
+		any_neighbor_province = {
+			has_province_flag = bloc_B
+		}
+		
+		NOT = {
+			has_province_modifier = route_terrestre
+			any_neighbor_province = { has_province_flag = bloc_A }
+			any_neighbor_province = { has_province_flag = bloc_C }
+			any_neighbor_province = { has_province_flag = bloc_D }
+			any_neighbor_province = { has_province_flag = bloc_E }
+		}
 	}
 		
-	mean_time_to_happen = {	days = 100 }	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.01
+			any_province_holding = {
+				count = 2
+				tier = baron
+				holding_type = city
+			}
+		}
+	}
 
 	immediate = {
-		random_neighbor_province = {
-			limit = {
-				NOT = {
-					# To not give step B to the province which gave it the step A
-					has_province_modifier = route_terrestre
-					
-					# To not give step B to a province which have already it
-					has_province_flag = bloc_B
-					
-					# To not give step B to distinct routes
-					any_neighbor_province = { has_province_flag = bloc_B }
-					
-					# To not give step C to a province which don't have a minimal distance of 1 (in terms of neighboor) to a step A province
-					any_neighbor_province = { has_province_flag = bloc_C }
-					any_neighbor_province = { has_province_flag = bloc_D }
-					any_neighbor_province = { has_province_flag = bloc_E }
-					any_neighbor_province = { has_province_flag = bloc_F }
-					any_neighbor_province = { has_province_flag = bloc_G }
-					any_neighbor_province = { has_province_flag = bloc_H }
-					any_neighbor_province = { has_province_flag = bloc_I }
-					any_neighbor_province = { has_province_flag = bloc_J }
-				}
-			}
-			set_province_flag = bloc_B
-			add_province_modifier = { name = route_terrestre duration = -1 }
-			add_province_modifier = { name = flag_B duration = -1 }
-		}
+		set_province_flag = bloc_C
+		add_province_modifier = { name = route_terrestre duration = -1 }
+		add_province_modifier = { name = flag_C duration = -1 } #TODO mouchard
 	}
 }
 
-# Give the step C of the trade routes
-# COPY-PASTE with adaptation of TRADE.0002
+# Give the step D of the trade routes
+# COPY-PASTE with adaptation of TRADE.0001
 province_event = {
     id = TRADE.0003
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = bloc_B
+		any_neighbor_province = {
+			has_province_flag = bloc_C
+		}
+		
+		NOT = {
+			has_province_modifier = route_terrestre
+			any_neighbor_province = { has_province_flag = bloc_A }
+			any_neighbor_province = { has_province_flag = bloc_B }
+			any_neighbor_province = { has_province_flag = bloc_D }
+			any_neighbor_province = { has_province_flag = bloc_E }
+		}
 	}
 		
-	mean_time_to_happen = {	days = 100 }	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.01
+			any_province_holding = {
+				count = 2
+				tier = baron
+				holding_type = city
+			}
+		}
+	}
 
 	immediate = {
-		random_neighbor_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = route_terrestre
-					has_province_flag = bloc_A
-					has_province_flag = bloc_C
-					any_neighbor_province = { has_province_flag = bloc_C }
-					any_neighbor_province = { has_province_flag = bloc_A }
-					any_neighbor_province = { has_province_flag = bloc_D }
-					any_neighbor_province = { has_province_flag = bloc_E }
-					any_neighbor_province = { has_province_flag = bloc_F }
-					any_neighbor_province = { has_province_flag = bloc_G }
-					any_neighbor_province = { has_province_flag = bloc_H }
-					any_neighbor_province = { has_province_flag = bloc_I }
-					any_neighbor_province = { has_province_flag = bloc_J }					
-				}
-			}
-			set_province_flag = bloc_C
-			add_province_modifier = { name = route_terrestre duration = -1 }
-			add_province_modifier = { name = flag_C duration = -1 }
-		}
+		set_province_flag = bloc_D
+		add_province_modifier = { name = route_terrestre duration = -1 }
+		add_province_modifier = { name = flag_D duration = -1 } #TODO mouchard
 	}
 }
 
-# Give the step D of the trade routes
-# COPY-PASTE with adaptation of TRADE.0002
+# Give the step E of the trade routes
+# COPY-PASTE with adaptation of TRADE.0001
 province_event = {
     id = TRADE.0004
 	hide_window = yes
 	
 	trigger = {
-		has_province_flag = bloc_C
-	}
+		any_neighbor_province = {
+			has_province_flag = bloc_D
+		}
 		
-	mean_time_to_happen = {	days = 100 }	
-
-	immediate = {
-		random_neighbor_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = route_terrestre
-					has_province_flag = bloc_D
-					any_neighbor_province = { has_province_flag = bloc_D }
-					any_neighbor_province = { has_province_flag = bloc_A }
-					any_neighbor_province = { has_province_flag = bloc_B }
-					any_neighbor_province = { has_province_flag = bloc_E }
-					any_neighbor_province = { has_province_flag = bloc_F }
-					any_neighbor_province = { has_province_flag = bloc_G }
-					any_neighbor_province = { has_province_flag = bloc_H }
-					any_neighbor_province = { has_province_flag = bloc_I }
-					any_neighbor_province = { has_province_flag = bloc_J }	
-				}
-			}
-			set_province_flag = bloc_D
-			add_province_modifier = { name = route_terrestre duration = -1 }
-			add_province_modifier = { name = flag_D duration = -1 }
+		NOT = {
+			has_province_modifier = route_terrestre
+			any_neighbor_province = { has_province_flag = bloc_A }
+			any_neighbor_province = { has_province_flag = bloc_B }
+			any_neighbor_province = { has_province_flag = bloc_C }
+			any_neighbor_province = { has_province_flag = bloc_E }
 		}
 	}
-}
-
-# Give the step E of the trade routes
-# COPY-PASTE with adaptation of TRADE.0002
-province_event = {
-    id = TRADE.0005
-	hide_window = yes
-	
-	trigger = {
-		has_province_flag = bloc_D
-	}
 		
-	mean_time_to_happen = {	days = 100 }	
-
-	immediate = {
-		random_neighbor_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = route_terrestre
-					has_province_flag = bloc_E
-					any_neighbor_province = { has_province_flag = bloc_E }
-					any_neighbor_province = { has_province_flag = bloc_A }
-					any_neighbor_province = { has_province_flag = bloc_B }
-					any_neighbor_province = { has_province_flag = bloc_C }
-					any_neighbor_province = { has_province_flag = bloc_F }
-					any_neighbor_province = { has_province_flag = bloc_G }
-					any_neighbor_province = { has_province_flag = bloc_H }
-					any_neighbor_province = { has_province_flag = bloc_I }
-					any_neighbor_province = { has_province_flag = bloc_J }	
-				}
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.01
+			any_province_holding = {
+				count = 2
+				tier = baron
+				holding_type = city
 			}
-			set_province_flag = bloc_E
-			add_province_modifier = { name = route_terrestre duration = -1 }
-			add_province_modifier = { name = flag_E duration = -1 }
 		}
 	}
-}
-
-# Give the step F of the trade routes
-# COPY-PASTE with adaptation of TRADE.0002
-province_event = {
-    id = TRADE.0006
-	hide_window = yes
-	
-	trigger = {
-		has_province_flag = bloc_E
-	}
-		
-	mean_time_to_happen = {	days = 100 }	
 
 	immediate = {
-		random_neighbor_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = route_terrestre
-					has_province_flag = bloc_F
-					any_neighbor_province = { has_province_flag = bloc_F }
-					any_neighbor_province = { has_province_flag = bloc_A }
-					any_neighbor_province = { has_province_flag = bloc_B }
-					any_neighbor_province = { has_province_flag = bloc_C }
-					any_neighbor_province = { has_province_flag = bloc_D }
-					any_neighbor_province = { has_province_flag = bloc_G }
-					any_neighbor_province = { has_province_flag = bloc_H }
-					any_neighbor_province = { has_province_flag = bloc_I }
-					any_neighbor_province = { has_province_flag = bloc_J }
-				}
-			}
-			set_province_flag = bloc_F
-			add_province_modifier = { name = route_terrestre duration = -1 }
-			add_province_modifier = { name = flag_F duration = -1 }
-		}
-	}
-}
-
-# Give the step G of the trade routes
-# COPY-PASTE with adaptation of TRADE.0002
-province_event = {
-    id = TRADE.0007
-	hide_window = yes
-	
-	trigger = {
-		has_province_flag = bloc_F
-	}
-		
-	mean_time_to_happen = {	days = 100 }	
-
-	immediate = {
-		random_neighbor_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = route_terrestre
-					has_province_flag = bloc_G
-					any_neighbor_province = { has_province_flag = bloc_G }
-					any_neighbor_province = { has_province_flag = bloc_A }
-					any_neighbor_province = { has_province_flag = bloc_B }
-					any_neighbor_province = { has_province_flag = bloc_C }
-					any_neighbor_province = { has_province_flag = bloc_D }
-					any_neighbor_province = { has_province_flag = bloc_E }
-					any_neighbor_province = { has_province_flag = bloc_H }
-					any_neighbor_province = { has_province_flag = bloc_I }
-					any_neighbor_province = { has_province_flag = bloc_J }
-				}
-			}
-			set_province_flag = bloc_G
-			add_province_modifier = { name = route_terrestre duration = -1 }
-			add_province_modifier = { name = flag_G duration = -1 }
-		}
-	}
-}
-
-# Give the step H of the trade routes
-# COPY-PASTE with adaptation of TRADE.0002
-province_event = {
-    id = TRADE.0008
-	hide_window = yes
-	
-	trigger = {
-		has_province_flag = bloc_G
-	}
-		
-	mean_time_to_happen = {	days = 100 }	
-
-	immediate = {
-		random_neighbor_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = route_terrestre
-					has_province_flag = bloc_H
-					any_neighbor_province = { has_province_flag = bloc_H }
-					any_neighbor_province = { has_province_flag = bloc_A }
-					any_neighbor_province = { has_province_flag = bloc_B }
-					any_neighbor_province = { has_province_flag = bloc_C }
-					any_neighbor_province = { has_province_flag = bloc_D }
-					any_neighbor_province = { has_province_flag = bloc_E }
-					any_neighbor_province = { has_province_flag = bloc_F }
-					any_neighbor_province = { has_province_flag = bloc_I }
-					any_neighbor_province = { has_province_flag = bloc_J }
-				}
-			}
-			set_province_flag = bloc_H
-			add_province_modifier = { name = route_terrestre duration = -1 }
-			add_province_modifier = { name = flag_H duration = -1 }
-		}
-	}
-}
-
-# Give the step I of the trade routes
-# COPY-PASTE with adaptation of TRADE.0002
-province_event = {
-    id = TRADE.0009
-	hide_window = yes
-	
-	trigger = {
-		has_province_flag = bloc_H
-	}
-		
-	mean_time_to_happen = {	days = 100 }	
-
-	immediate = {
-		random_neighbor_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = route_terrestre
-					has_province_flag = bloc_I
-					any_neighbor_province = { has_province_flag = bloc_I }
-					any_neighbor_province = { has_province_flag = bloc_A }
-					any_neighbor_province = { has_province_flag = bloc_B }
-					any_neighbor_province = { has_province_flag = bloc_C }
-					any_neighbor_province = { has_province_flag = bloc_D }
-					any_neighbor_province = { has_province_flag = bloc_E }
-					any_neighbor_province = { has_province_flag = bloc_F }
-					any_neighbor_province = { has_province_flag = bloc_G }
-					any_neighbor_province = { has_province_flag = bloc_J }
-				}
-			}
-			set_province_flag = bloc_I
-			add_province_modifier = { name = route_terrestre duration = -1 }
-			add_province_modifier = { name = flag_I duration = -1 }
-		}
-	}
-}
-
-# Give the step J of the trade routes
-# COPY-PASTE with adaptation of TRADE.0002
-province_event = {
-    id = TRADE.0010
-	hide_window = yes
-	
-	trigger = {
-		has_province_flag = bloc_I
-	}
-		
-	mean_time_to_happen = {	days = 100 }	
-
-	immediate = {
-		random_neighbor_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = route_terrestre
-					has_province_flag = bloc_J
-					any_neighbor_province = { has_province_flag = bloc_J }
-					any_neighbor_province = { has_province_flag = bloc_A }
-					any_neighbor_province = { has_province_flag = bloc_B }
-					any_neighbor_province = { has_province_flag = bloc_C }
-					any_neighbor_province = { has_province_flag = bloc_D }
-					any_neighbor_province = { has_province_flag = bloc_E }
-					any_neighbor_province = { has_province_flag = bloc_F }
-					any_neighbor_province = { has_province_flag = bloc_G }
-					any_neighbor_province = { has_province_flag = bloc_H }
-				}
-			}
-			set_province_flag = bloc_J
-			add_province_modifier = { name = route_terrestre duration = -1 }
-			add_province_modifier = { name = flag_J duration = -1 }
-		}
+		set_province_flag = bloc_E
+		add_province_modifier = { name = route_terrestre duration = -1 }
+		add_province_modifier = { name = flag_E duration = -1 } #TODO mouchard
 	}
 }
