@@ -1,0 +1,19 @@
+digraph G {
+	node [shape=ellipse];
+		{node [label="AN 0 : Placement des provinces terrestres et cotières\nL3T_mod_selection_part2"] n0;};
+		{node [label="Distribution des ressources\nECO+_init_RESSOURCES"] n1;};
+		{node [label="AN 0 : Spécialisation des cités dans les provinces multi-cité\nL3T_init_DOMAINES"] n2;};
+		{node [label="Calcul du nombre de ressources par province\nECO+_init_COMMERCE"] n3;};
+		{node [label="Spécialisation des cités uniques dans les provinces\nL3T_init_DOMAINES"] n4;};
+		{node [label="Attribution des départs des routes\nL3T_init_DOMAINES"] n5;};
+		{node [label="Développement des routes\nECO+_dynamic_trade_route"] n6;};
+
+	n0 -> n1
+	n1 -> n3  [label="AN 1 \n pour être sûr que les ressources\n ont finies d'être distribuées"]
+	n3 -> n4  [label="AN 2 \n pour être sûr que le nombre de \n ressources\n a fini d'être calculé",len=1.00, fontcolor=red, color=red]
+	n3 -> n4  [label="Des cités commerçantes ne peuvent\n être sur des provinces voisines",len=1.00, fontcolor=blue, color=blue]
+	n3 -> n4  [label="Plus il y a de ressources sur la province,\nplus la cité de celle-ci sera artisane",len=1.00, fontcolor=green, color=green]
+	n2 -> n5 [label="Les provinces multi-cités non voisines\n d'un départ de route,\ndeviennent un départ de route",len=1.00, fontcolor=red, color=red]
+	n4 -> n5 [label="Une province avec cité commerçante\n est le départ d'une route",len=1.00, fontcolor=blue, color=blue]
+	n5 -> n6 [label="Les provinces multi-cités sont privilégiées"]
+}
