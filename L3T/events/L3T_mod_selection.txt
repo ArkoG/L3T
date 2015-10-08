@@ -18,12 +18,12 @@ character_event = {
 				has_global_flag = running_LCDA	
 				has_global_flag = running_VANILLA
 			}
+			ai = no 
 	}
 	
 	option = {	
 	name = "L3T.0010A"	
 	ai_chance = { factor = 0 }
-	trigger = { ai = no }
 	set_global_flag = running_SWMH	
 		#set_global_flag = paix_de_dieu 
 		#narrative_event = { id = L3T.0011 days = 2555 } #7 years ATM
@@ -77,8 +77,6 @@ character_event = {
 
 narrative_event = {
     id = L3T.0011
-	desc = "DESCL3T.0011"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	is_triggered_only = yes

@@ -11,8 +11,6 @@ namespace = ECO
 ##évaluation du potentiel économique -plaines-
 province_event = {
     id = ECO.0001
-	desc = "DESCECO.0001"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -44,8 +42,6 @@ province_event = {
 ##évaluation du potentiel économique -coteaux-			
 province_event = {
     id = ECO.0002
-	desc = "DESCECO.0002"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -76,8 +72,6 @@ province_event = {
 ##évaluation du potentiel économique -forets-
 province_event = {
     id = ECO.0003
-	desc = "DESCECO.0003"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -107,8 +101,6 @@ province_event = {
 ##évaluation du potentiel économique -montagnes-	
 province_event = {
     id = ECO.0004
-	desc = "DESCECO.0004"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -139,8 +131,6 @@ province_event = {
 ##évaluation du potentiel économique -terres arables-	
 province_event = {
     id = ECO.0005
-	desc = "DESCECO.0005"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -170,8 +160,6 @@ province_event = {
 ##évaluation du potentiel économique -côtes maritimes pêche-	
 province_event = {
     id = ECO.0006
-	desc = "DESCECO.0006"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -196,8 +184,6 @@ province_event = {
 ##évaluation du potentiel économique -coteaux non côtiers pisciculture-	
 province_event = {
     id = ECO.0007
-	desc = "DESCECO.0007"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -223,8 +209,6 @@ province_event = {
 ##évaluation du potentiel économique -déserts-	
 province_event = {
     id = ECO.0008
-	desc = "DESCECO.0008"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -254,8 +238,6 @@ province_event = {
 ##évaluation du potentiel économique -steppe-	
 province_event = {
     id = ECO.00080
-	desc = "DESCECO.00080"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -285,8 +267,6 @@ province_event = {
 ##évaluation du potentiel économique -jungle-	
 province_event = {
     id = ECO.00081
-	desc = "DESCECO.00081"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -316,8 +296,6 @@ province_event = {
 ##évaluation du potentiel économique -arctique-	
 province_event = {
     id = ECO.00082
-	desc = "DESCECO.00082"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -348,8 +326,6 @@ province_event = {
 ##ré-évaluation si zéro ressource.	
 province_event = {
     id = ECO.0015
-	desc = "DESCECO.0015"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -415,12 +391,8 @@ province_event = {
 				tier = baron
 				OR = {	
 					has_building = CA_AGRI_cereale_L2
-					#has_building = CA_AGRI_verger_L2
 					has_building = CT_AGRI_cereale_L2
-					#has_building = CT_AGRI_verger_L2
 					has_building = TP_AGRI_cereale_L2
-					#has_building = TP_AGRI_maraichage_L2
-					#has_building = TP_AGRI_vigne_L2
 					}
 				}
 			}
@@ -450,13 +422,8 @@ province_event = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
 				OR = {	
-					#has_building = CA_AGRI_cereale_L2
 					has_building = CA_AGRI_verger_L2
-					#has_building = CT_AGRI_cereale_L2
 					has_building = CT_AGRI_verger_L2
-					#has_building = TP_AGRI_cereale_L2
-					#has_building = TP_AGRI_maraichage_L2
-					#has_building = TP_AGRI_vigne_L2
 					}
 				}
 			}
@@ -485,17 +452,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					#has_building = CA_AGRI_cereale_L2
-					#has_building = CA_AGRI_verger_L2
-					#has_building = CT_AGRI_cereale_L2
-					#has_building = CT_AGRI_verger_L2
-					#has_building = TP_AGRI_cereale_L2
-					has_building = TP_AGRI_maraichage_L2
-					#has_building = TP_AGRI_vigne_L2
-					}
-				}
+				has_building = TP_AGRI_maraichage_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -521,17 +480,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					#has_building = CA_AGRI_cereale_L2
-					#has_building = CA_AGRI_verger_L2
-					#has_building = CT_AGRI_cereale_L2
-					#has_building = CT_AGRI_verger_L2
-					#has_building = TP_AGRI_cereale_L2
-					#has_building = TP_AGRI_maraichage_L2
-					has_building = TP_AGRI_vigne_L2
-					}
-				}
+				has_building = TP_AGRI_vigne_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -557,14 +508,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CA_ELEV_ovin_L2a #bourg féodal hors montagne
-					#has_building = CA_ELEV_ovin_L2b 
-					#has_building = CT_ELEV_bovin_L2
-					#has_building = TP_ELEV_ovin_L2
-					}
-				}
+				has_building = CA_ELEV_ovin_L2a #bourg féodal hors montagne
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -591,9 +537,7 @@ province_event = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
 				OR = {	
-					#has_building = CA_ELEV_ovin_L2a
 					has_building = CA_ELEV_ovin_L2b #bourg féodal, alpage
-					#has_building = CT_ELEV_bovin_L2
 					has_building = TP_ELEV_ovin_L2
 					}
 				}
@@ -623,14 +567,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					#has_building = CA_ELEV_ovin_L2a
-					#has_building = CA_ELEV_ovin_L2b
-					has_building = CT_ELEV_bovin_L2
-					#has_building = TP_ELEV_ovin_L2
-					}
-				}
+				has_building = CT_ELEV_bovin_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -658,10 +597,7 @@ province_event = {
 				tier = baron
 				OR = {	
 					has_building = CA_BOIS_bois_L2
-					#has_building = CA_BOIS_charbon_L2
 					has_building = CT_BOIS_bois_L2
-					#has_building = CT_BOIS_charbon_L2
-					#has_building = TP_BOIS_charbon_L2
 					}
 				}
 			}
@@ -691,9 +627,7 @@ province_event = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
 				OR = {	
-					#has_building = CA_BOIS_bois_L2
 					has_building = CA_BOIS_charbon_L2
-					#has_building = CT_BOIS_bois_L2
 					has_building = CT_BOIS_charbon_L2
 					has_building = TP_BOIS_charbon_L2
 					}
@@ -755,12 +689,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CA_MINE_minerai_L2
-					#has_building = CT_MINE_sel_L2
-					}
-				}
+				has_building = CA_MINE_minerai_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -785,13 +716,10 @@ province_event = {
 			is_ruler = yes
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					#has_building = CA_MINE_minerai_L2
-					has_building = CT_MINE_sel_L2
-					}
-				}
+			tier = baron
+				has_building = CT_MINE_sel_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -950,11 +878,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = TP_presse_L2
-					}
-				}
+				has_building = TP_presse_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1044,11 +970,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CT_ELEV_boucherie_L2
-					}
-				}
+				has_building = CT_ELEV_boucherie_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1113,11 +1037,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CT_tannerie_L2
-					}
-				}
+				has_building = CT_tannerie_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1249,11 +1171,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CA_fonderie_L2
-					}
-				}
+				has_building = CA_fonderie_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1282,11 +1202,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CA_outilleur_L2
-					}
-				}
+				has_building = CA_outilleur_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1315,11 +1233,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CT_sel_raffine_L2
-					}
-				}
+				has_building = CT_sel_raffine_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1348,11 +1264,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CT_saline_L2
-					}
-				}
+				has_building = CT_saline_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1381,11 +1295,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CA_atelier_L2
-					}
-				}
+				has_building = CA_atelier_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1414,11 +1326,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CA_draperie_L2
-					}
-				}
+				has_building = CA_draperie_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1444,12 +1354,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CA_ELEV_cheval_L2
-					#has_building = TP_ELEV_cheval_L2
-					}
-				}
+				has_building = CA_ELEV_cheval_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1478,11 +1385,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CA_armurerie_L2
-					}
-				}
+				has_building = CA_armurerie_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1508,12 +1413,9 @@ province_event = {
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
 				tier = baron
-				OR = {	
-					has_building = CT_MINE_or_L2
-					#has_building = CT_MINE_sel_L2
-					}
-				}
+				has_building = CT_MINE_or_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1537,13 +1439,10 @@ province_event = {
 			is_ruler = yes
 			any_demesne_title = {
 				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CT_MINE_cuivre_L2
-					#has_building = CT_MINE_sel_L2
-					}
-				}
+				tier = baron	
+				has_building = CT_MINE_cuivre_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }

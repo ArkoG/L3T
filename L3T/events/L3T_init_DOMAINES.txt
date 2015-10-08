@@ -14,14 +14,13 @@ narrative_event = {
     id = L3T.0003
 	desc = "DESCL3T.0003"
 	picture = GFX_evt_castle_construction
-	title = "NAMEL3T.0003"
 	
 	is_ruler = yes
 	capable_only = yes
 	prisoner = no
 		
 	trigger = {
-		NOT = { trait = chef_malandrin }
+		#NOT = { trait = chef_malandrin }
 		any_demesne_title = {
 			tier = baron
 			holding_type = castle 
@@ -251,7 +250,14 @@ narrative_event = {
 			# La province devient le départ d'une route		
 			location = {
 				set_province_flag = bloc_A
-				add_province_modifier = { name = route_terrestre duration = -1 }
+				if = {
+					limit = { has_province_modifier = province_fleuve }
+					add_province_modifier = { name = route_fluviale duration = -1 }
+				}
+				if = {
+					limit = { NOT = { has_province_modifier = province_fleuve } }
+					add_province_modifier = { name = route_terrestre duration = -1 }
+				}
 				add_province_modifier = { name = flag_A duration = -1 } #mouchard
 			}
 			clr_title_flag = to_specialize	
@@ -312,7 +318,14 @@ province_event = {
 					}
 					location = {
 						set_province_flag = bloc_A
-						add_province_modifier = { name = route_terrestre duration = -1 }
+						if = {
+							limit = { has_province_modifier = province_fleuve }
+							add_province_modifier = { name = route_fluviale duration = -1 }
+						}
+						if = {
+							limit = { NOT = { has_province_modifier = province_fleuve } }
+							add_province_modifier = { name = route_terrestre duration = -1 }
+						}
 						add_province_modifier = { name = flag_A duration = -1 } #mouchard
 					}
 				}
@@ -595,108 +608,108 @@ narrative_event = {
 }
 
 #attribution ordre (militaire)
-character_event = {
-    id = L3T.0008
-	desc = "DESCL3T.0008"
-	picture = GFX_evt_monk
+# character_event = {
+    # id = L3T.0008
+	# desc = "DESCL3T.0008"
+	# picture = GFX_evt_monk
 	
-	is_ruler = yes
-	capable_only = yes
-	prisoner = no
+	# is_ruler = yes
+	# capable_only = yes
+	# prisoner = no
 		
-	trigger = {
-		any_demesne_title = {
-			tier = baron
-			holding_type = temple
-			has_building = COMMANDERIE
-			num_of_buildings = 100 #fic
-			NOT = {
-				has_building = ORDRE_MILIT_1
-				has_building = ORDRE_MILIT_2				
-				has_building = ORDRE_MILIT_3
-			}
-		}
-	}
+	# trigger = {
+		# any_demesne_title = {
+			# tier = baron
+			# holding_type = temple
+			# has_building = COMMANDERIE
+			# num_of_buildings = 100 #fic
+			# NOT = {
+				# has_building = ORDRE_MILIT_1
+				# has_building = ORDRE_MILIT_2				
+				# has_building = ORDRE_MILIT_3
+			# }
+		# }
+	# }
 		
-	mean_time_to_happen = { months = 30 }	
+	# mean_time_to_happen = { months = 30 }	
 	        
-	option = { #ajouter prérequis existence des ordres.
-		name = "L3T.0008A"	
-		trigger = { ai=no }
-		random_demesne_title = {
-			limit = {
-				tier = baron
-				holding_type = temple
-				has_building = COMMANDERIE
-				num_of_buildings = 100 #fic
-				NOT = {
-					has_building = ORDRE_MILIT_1
-					has_building = ORDRE_MILIT_2				
-					has_building = ORDRE_MILIT_3
-				}
-			}
-			add_building = ORDRE_MILIT_1
-		}
-	}
+	# option = { #ajouter prérequis existence des ordres.
+		# name = "L3T.0008A"	
+		# trigger = { ai=no }
+		# random_demesne_title = {
+			# limit = {
+				# tier = baron
+				# holding_type = temple
+				# has_building = COMMANDERIE
+				# num_of_buildings = 100 #fic
+				# NOT = {
+					# has_building = ORDRE_MILIT_1
+					# has_building = ORDRE_MILIT_2				
+					# has_building = ORDRE_MILIT_3
+				# }
+			# }
+			# add_building = ORDRE_MILIT_1
+		# }
+	# }
 	
-	option = {
-		name = "L3T.0008B"	
-		trigger = { ai=no }
-		random_demesne_title = {
-			limit = {
-				tier = baron
-				holding_type = temple
-				has_building = COMMANDERIE
-				num_of_buildings = 100 #fic
-				NOT = {
-					has_building = ORDRE_MILIT_1
-					has_building = ORDRE_MILIT_2				
-					has_building = ORDRE_MILIT_3
-				}
-			}
-			add_building = ORDRE_MILIT_2
-		}
-	}
+	# option = {
+		# name = "L3T.0008B"	
+		# trigger = { ai=no }
+		# random_demesne_title = {
+			# limit = {
+				# tier = baron
+				# holding_type = temple
+				# has_building = COMMANDERIE
+				# num_of_buildings = 100 #fic
+				# NOT = {
+					# has_building = ORDRE_MILIT_1
+					# has_building = ORDRE_MILIT_2				
+					# has_building = ORDRE_MILIT_3
+				# }
+			# }
+			# add_building = ORDRE_MILIT_2
+		# }
+	# }
 
-	option = {
-		name = "L3T.0008C"	
-		trigger = { ai=no }
-		random_demesne_title = {
-			limit = {
-				tier = baron
-				holding_type = temple
-				has_building = COMMANDERIE
-				num_of_buildings = 100 #fic
-				NOT = {
-					has_building = ORDRE_MILIT_1
-					has_building = ORDRE_MILIT_2				
-					has_building = ORDRE_MILIT_3
-				}
-			}
-			add_building = ORDRE_MILIT_3
-		}
-	}
+	# option = {
+		# name = "L3T.0008C"	
+		# trigger = { ai=no }
+		# random_demesne_title = {
+			# limit = {
+				# tier = baron
+				# holding_type = temple
+				# has_building = COMMANDERIE
+				# num_of_buildings = 100 #fic
+				# NOT = {
+					# has_building = ORDRE_MILIT_1
+					# has_building = ORDRE_MILIT_2				
+					# has_building = ORDRE_MILIT_3
+				# }
+			# }
+			# add_building = ORDRE_MILIT_3
+		# }
+	# }
 
-	option = {
-		name = "L3T.0008C"	
-		trigger = { ai=yes }
-		random_demesne_title = {
-			limit = {
-				tier = baron
-				holding_type = temple
-				has_building = COMMANDERIE
-				num_of_buildings = 100 #fic
-				NOT = {
-					has_building = ORDRE_MILIT_1
-					has_building = ORDRE_MILIT_2				
-					has_building = ORDRE_MILIT_3
-				}
-			}
-			random_list = {
-				3 = { add_building = ORDRE_MILIT_1 }
-				3 = { add_building = ORDRE_MILIT_2 }
-				3 = { add_building = ORDRE_MILIT_3 }
-			}
-		}
-	}
-}
+	# option = {
+		# name = "L3T.0008C"	
+		# trigger = { ai=yes }
+		# random_demesne_title = {
+			# limit = {
+				# tier = baron
+				# holding_type = temple
+				# has_building = COMMANDERIE
+				# num_of_buildings = 100 #fic
+				# NOT = {
+					# has_building = ORDRE_MILIT_1
+					# has_building = ORDRE_MILIT_2				
+					# has_building = ORDRE_MILIT_3
+				# }
+			# }
+			# random_list = {
+				# 3 = { add_building = ORDRE_MILIT_1 }
+				# 3 = { add_building = ORDRE_MILIT_2 }
+				# 3 = { add_building = ORDRE_MILIT_3 }
+			# }
+		# }
+	# }
+# }

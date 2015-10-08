@@ -2,32 +2,25 @@ namespace = ECO
 
 province_event = { #installe les provinces côtières SWMH
     id = ECO.0009
-	desc = "DESCECO.0009"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
 			has_global_flag = running_SWMH
 			NOT = { has_province_modifier = province_cotiere }
-			AND = {
 			OR = {
 				port = yes
 				continent = real_coastal_SWMH
-				}
 			}
 		}
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.0009A"
 		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
 	}
 }
 
 province_event = { #installe les provinces côtières LCDA
     id = ECO.0010
-	desc = "DESCECO.0010"
-	picture = GFX_evt_market
 	hide_window = yes
 	
 	trigger = {
@@ -45,15 +38,12 @@ province_event = { #installe les provinces côtières LCDA
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.0010A"
 		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
 	}
 }
 
 province_event = { #installe les provinces terrestres SWMH
     id = ECO.0011
-	desc = "DESCECO.0011"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -67,17 +57,13 @@ province_event = { #installe les provinces terrestres SWMH
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.0011A"
 		add_province_modifier = {	name = province_terrestre  	duration = -1 
-		#hidden = yes
 		}	
 	}
 }
 
 province_event = { #installe les provinces terrestres LCDA
     id = ECO.0012
-	desc = "DESCECO.0012"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -95,7 +81,6 @@ province_event = { #installe les provinces terrestres LCDA
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.0012A"
 		add_province_modifier = {	name = province_terrestre  	duration = -1 
 		#hidden = yes
 		}	
@@ -104,8 +89,6 @@ immediate = {
 
 province_event = { #installe les routes fluviales SWMH
     id = ECO.0013
-	desc = "DESCECO.0013"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -114,7 +97,7 @@ province_event = { #installe les routes fluviales SWMH
 			OR = {   
 			##Rhine
 				province_id = 91 # Brabant
-				province_id = 91 # Loon
+				#province_id = 91 # Loon #ERREUR
 				province_id = 89 # Kleve
 				province_id = 119 # Koln
 				province_id = 123 # Mainz
@@ -135,15 +118,12 @@ province_event = { #installe les routes fluviales SWMH
 	mean_time_to_happen = { days = 10 }
 
 immediate = {
-		name = "ECO.0013A"
 		add_province_modifier = {	name = province_fleuve  	duration = -1 }	
 	}
 }
 
 province_event = { #installe les provinces fluviales LCDA
     id = ECO.0014
-	desc = "DESCECO.0014"
-	picture = GFX_evt_market
 	hide_window = yes
 	
 	trigger = {
@@ -157,15 +137,12 @@ province_event = { #installe les provinces fluviales LCDA
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.0014A"
 		add_province_modifier = {	name = province_fleuve  	duration = -1 }	
 	}
 }
 
 province_event = { #installe les routes terrestres 1/2/3 SWMH
     id = ECO.001501
-	desc = "DESCECO.001501"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -288,15 +265,12 @@ province_event = { #installe les routes terrestres 1/2/3 SWMH
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.001501A"
 		add_province_modifier = {	name = route_terrestre01  	duration = -1 }	
 	}
 }
 
 province_event = {
     id = ECO.001502
-	desc = "DESCECO.001502"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -373,7 +347,7 @@ province_event = {
 			province_id = 117 # Brabant
 			province_id = 91 # Loon
 			province_id = 89 # Kleve
-			province_id = 119 # Koln
+			#province_id = 119 # Koln #DOUBLON
 			province_id = 123 # Mainz
 			province_id = 124 # Pfalz
 			province_id = 126 # Nordgau
@@ -462,15 +436,12 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.001502A"
 		add_province_modifier = {	name = route_terrestre02  	duration = -1 }	
 	}
 }
 
 province_event = {
     id = ECO.001503
-	desc = "DESCECO.001503"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -583,15 +554,12 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.001503A"
 		add_province_modifier = {	name = route_terrestre03  	duration = -1 }	
 	}
 }
 
 province_event = { #installe les routes terrestres LCDA
     id = ECO.0016
-	desc = "DESCECO.0016"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -614,7 +582,6 @@ province_event = { #installe les routes terrestres LCDA
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.0016A"
 		add_province_modifier = {	name = route_terrestre  	duration = -1 }	
 	}
 }
@@ -622,8 +589,6 @@ immediate = {
 ###2.4 support vanilla à retaguer
 province_event = { #installe les provinces côtières Vanilla
     id = ECO.0017
-	desc = "DESCECO.0017"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -661,15 +626,12 @@ province_event = { #installe les provinces côtières Vanilla
 	mean_time_to_happen = { days = 10 }
 
 immediate = {
-		name = "ECO.0017A"
 		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
 	}
 }
 
 province_event = { #installe les provinces terrestres VANILLA
     id = ECO.0018
-	desc = "DESCECO.0018"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -709,17 +671,12 @@ province_event = { #installe les provinces terrestres VANILLA
 	mean_time_to_happen = { days = 20 }
 
 immediate = {
-		name = "ECO.0018A"
-		add_province_modifier = {	name = province_terrestre  	duration = -1  
-		#hidden = yes
-		}	
+		add_province_modifier = {	name = province_terrestre  	duration = -1  }	
 	}
 }
 
 province_event = { #installe les provinces fluviales SWMH
     id = ECO.0019
-	desc = "DESCECO.0019"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
@@ -740,19 +697,15 @@ province_event = { #installe les provinces fluviales SWMH
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.0019A"
 		add_province_modifier = {	name = province_fleuve  	duration = -1 }	
 	}
 }
 
 province_event = { #installe les routes terrestres VANILLA
     id = ECO.0020
-	desc = "DESCECO.0020"
-	picture = GFX_evt_market
 	hide_window = yes
 
 	trigger = {
-			AND = {
 				has_global_flag = running_VANILLA
 			NOT = { has_province_modifier = route_terrestre }
 
@@ -769,12 +722,10 @@ province_event = { #installe les routes terrestres VANILLA
 					province_id = 357 # Treviso
 					province_id = 356 # Venezia
 				}
-			}
 		}
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		name = "ECO.0020A"
 		add_province_modifier = {	name = route_terrestre01  	duration = -1 }	
 	}
 }

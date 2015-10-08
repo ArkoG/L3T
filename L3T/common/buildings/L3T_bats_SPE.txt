@@ -91,7 +91,7 @@ castle = {
 		desc = "FORT_desc"
 		#prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { CITADELLE BOURGFEODAL REPAIREVOLEUR	}
+		not_if_x_exists = { CITADELLE BOURGFEODAL } # REPAIREVOLEUR	}
 		potential = { NOT = { religion_group = pagan_group } }		
 		gold_cost = 0.0
 		build_time = 8
@@ -107,7 +107,7 @@ castle = {
 		desc = "CITADELLE_desc"
 		#prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { FORT BOURGFEODAL REPAIREVOLEUR	}
+		not_if_x_exists = { FORT BOURGFEODAL } #REPAIREVOLEUR	}
 		gold_cost = 0.0
 		build_time = 8
 		fort_level = 1.0
@@ -122,7 +122,7 @@ castle = {
 		desc = "BOURGFEODAL_desc"
 		#prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { CITADELLE FORT REPAIREVOLEUR }	
+		not_if_x_exists = { CITADELLE FORT } # REPAIREVOLEUR }	
 		gold_cost = 0.0
 		build_time = 8
 		fort_level = 0.5
@@ -296,7 +296,6 @@ temple = {
 
 	MONASTERE = {
 		desc = "MONASTERE_desc"
-		#prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		not_if_x_exists = { CITEEPISCOPALE }	
 		potential = { religion_group = christian }
@@ -313,7 +312,6 @@ temple = {
 
 	CITEEPISCOPALE = {
 		desc = "CITEEPISCOPALE_desc"
-		#prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		not_if_x_exists = { MONASTERE }		
 		potential = { NOT = { religion_group = pagan_group } }
@@ -330,9 +328,8 @@ temple = {
 
 	COMMANDERIE = { 
 		desc = "COMMANDERIE_desc"
-		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		prerequisites = { MONASTERE }
+		prerequisites = { MONASTERE xxx }
 		potential = { religion = catholic }	
 		gold_cost = 1000
 		build_time = 8
@@ -340,9 +337,9 @@ temple = {
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
 
-	REGLE_DE_1 = { desc = "REGLE_DE_1_desc"	prerequisites = { MONASTERE }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion = catholic }	prerequisites = { XXX }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
-	REGLE_DE_2 = { desc = "REGLE_DE_2_desc"	prerequisites = { MONASTERE }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion = catholic }	prerequisites = { XXX }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
-	REGLE_DE_3 = { desc = "REGLE_DE_3_desc"	prerequisites = { MONASTERE }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion_group = christian	NOT = { religion = catholic } }		prerequisites = { XXX }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
+	REGLE_DE_1 = { desc = "REGLE_DE_1_desc"	prerequisites = { MONASTERE XXX }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
+	REGLE_DE_2 = { desc = "REGLE_DE_2_desc"	prerequisites = { MONASTERE XXX }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
+	REGLE_DE_3 = { desc = "REGLE_DE_3_desc"	prerequisites = { MONASTERE XXX }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion_group = christian	NOT = { religion = catholic } }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
 
 	#ORDRE_MONACAL_1 = { desc = "ORDRE_MONACAL_1_desc"	prerequisites = {REGLE_DE_1}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
 	#ORDRE_MONACAL_2 = { desc = "ORDRE_MONACAL_2_desc"	prerequisites = {REGLE_DE_2}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
