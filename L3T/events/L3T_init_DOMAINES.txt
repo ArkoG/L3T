@@ -248,9 +248,13 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
-			clr_title_flag = to_specialize
-			# MOUCHARD # TODO blocA
-			location = { add_province_modifier = { name = 20resourcesPLUS duration = -1 }}
+			# La province devient le départ d'une route		
+			location = {
+				set_province_flag = bloc_A
+				add_province_modifier = { name = route_terrestre duration = -1 }
+				add_province_modifier = { name = flag_A duration = -1 } #mouchard
+			}
+			clr_title_flag = to_specialize	
 		}
 	}
 }
@@ -294,8 +298,24 @@ province_event = {
 				}
 				add_building = CITE_L1
 				add_building = VOC_COMMERCIALE
-				# MOUCHARD # TODO blocA mais ATTENTION gestion du voisinage
-				location = { add_province_modifier = { name = 17resources duration = -1 }}
+				
+				# La province devient le départ d'une route si aucune voisine ne l'est
+				if =  {
+					limit = {
+						location = {
+							NOT = {
+								any_neighbor_province = {
+									has_province_flag = bloc_A
+								}
+							}
+						}
+					}
+					location = {
+						set_province_flag = bloc_A
+						add_province_modifier = { name = route_terrestre duration = -1 }
+						add_province_modifier = { name = flag_A duration = -1 } #mouchard
+					}
+				}
 			}
 			
 			# Les autres productrices
