@@ -43,6 +43,36 @@ CA_col_L2 = { #col route empierrée
 		gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
+#routes de commerces
+CA_route_L1 = { #petit chemin de terre
+	desc = "CA_route_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {
+		OR = {
+			has_province_modifier = route_terrestre
+			any_neighbor_province = { has_province_modifier = route_terrestre}
+		}
+	}
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+CA_route_L2 = { #route pavée
+	desc = "CA_route_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CA_route_L1
+	potential = { has_province_modifier = route_terrestre }
+	prerequisites = { ca_town_2 }
+	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+CA_route_L3 = { #grande route pavée avec péage
+	desc = "CA_route_L3_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CA_route_L2
+	potential = { has_province_modifier = route_terrestre }
+	prerequisites = { ca_town_3 }
+	gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
 }
 
 
@@ -178,6 +208,36 @@ CT_pont_fluvial_L6 = { #-grand pont
 	gold_cost = 250.0	build_time = 540	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
+#routes de commerces
+CT_route_L1 = { #petit chemin de terre
+	desc = "CT_route_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {
+		OR = {
+			has_province_modifier = route_terrestre
+			any_neighbor_province = { has_province_modifier = route_terrestre}
+		}
+	}
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+CT_route_L2 = { #route pavée
+	desc = "CT_route_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_route_L1
+	potential = { has_province_modifier = route_terrestre }
+	prerequisites = { CT_town_2 }
+	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+CT_route_L3 = { #grande route pavée avec péage
+	desc = "CT_route_L3_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = CT_route_L2
+	potential = { has_province_modifier = route_terrestre }
+	prerequisites = { CT_town_3 }
+	gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
 }
 
 
@@ -197,14 +257,14 @@ TP_pont_L2 = { #pont en bois
 	desc = "TP_pont_L2_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = TP_pont_L1
-	prerequisites = { TP_town_2 }
+	prerequisites = { tp_town_2 }
 		gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_pont_L3 = { #pont de pierre
 	desc = "TP_pont_L3_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = TP_pont_L2
-	prerequisites = { TP_town_3 }
+	prerequisites = { tp_town_3 }
 		gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.03	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
@@ -219,7 +279,7 @@ TP_col_L2 = { #col route empierrée
 	desc = "TP_col_L2_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = TP_col_L1
-	prerequisites = { TP_town_1 }
+	prerequisites = { tp_town_1 }
 	gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
@@ -239,6 +299,36 @@ TP_relais_L2 = { #relais col
 		gold_cost = 150.0	build_time = 350	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
+#routes de commerces
+TP_route_L1 = { #petit chemin de terre
+	desc = "TP_route_L1_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	potential = {
+		OR = {
+			has_province_modifier = route_terrestre
+			any_neighbor_province = { has_province_modifier = route_terrestre}
+		}
+	}
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+TP_route_L2 = { #route pavée
+	desc = "TP_route_L2_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = TP_route_L1
+	potential = { has_province_modifier = route_terrestre }
+	prerequisites = { tp_town_2 }
+	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+TP_route_L3 = { #grande route pavée avec péage
+	desc = "TP_route_L3_desc"
+	trigger = { TECH_CONSTRUCTION = 0 }
+	upgrades_from = TP_route_L2
+	potential = { has_province_modifier = route_terrestre }
+	prerequisites = { tp_town_3 }
+	gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
 }
 
 
