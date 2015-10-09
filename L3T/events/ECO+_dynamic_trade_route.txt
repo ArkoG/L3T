@@ -14,6 +14,7 @@ province_event = {
 		NOT = {
 			# To not give step B to the province which has already a bloc (typically the previous step, here A)
 			has_province_modifier = route_terrestre
+			has_province_modifier = route_fluviale
 			
 			# To not give step B to distinct routes each other
 			any_neighbor_province = { has_province_flag = bloc_B }
@@ -78,6 +79,7 @@ province_event = {
 		
 		NOT = {
 			has_province_modifier = route_terrestre
+			has_province_modifier = route_fluviale
 			any_neighbor_province = { has_province_flag = bloc_A }
 			any_neighbor_province = { has_province_flag = bloc_C }
 			any_neighbor_province = { has_province_flag = bloc_D }
@@ -138,6 +140,7 @@ province_event = {
 		
 		NOT = {
 			has_province_modifier = route_terrestre
+			has_province_modifier = route_fluviale
 			any_neighbor_province = { has_province_flag = bloc_A }
 			any_neighbor_province = { has_province_flag = bloc_B }
 			any_neighbor_province = { has_province_flag = bloc_D }
@@ -198,6 +201,7 @@ province_event = {
 		
 		NOT = {
 			has_province_modifier = route_terrestre
+			has_province_modifier = route_fluviale
 			any_neighbor_province = { has_province_flag = bloc_A }
 			any_neighbor_province = { has_province_flag = bloc_B }
 			any_neighbor_province = { has_province_flag = bloc_C }

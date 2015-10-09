@@ -1,0 +1,592 @@
+
+#Evolution population	CASTLE 
+##niveau 1	CASTLE
+character_event = {
+	#title = "NAMEL3T.0101"
+    	id = L3T.0101
+	desc = "DESCL3T.0101"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_feudal = yes	
+			NOT = {	has_building = ca_town_1	}
+			num_of_buildings = 5
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_feudal = yes	
+				NOT = {	has_building = ca_town_1	}
+				num_of_buildings = 5
+			}
+			add_building = ca_town_1
+		}
+	}
+}
+
+##niveau 2	CASTLE
+character_event = {
+	#title = "NAMEL3T.0102"
+    	id = L3T.0102
+	desc = "DESCL3T.0102"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_feudal = yes	
+			has_building = ca_town_1
+			NOT = { has_building = ca_town_2 }
+			num_of_buildings = 8
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_feudal = yes
+				num_of_buildings = 8
+				has_building = ca_town_1
+				NOT = { has_building = ca_town_2 }
+			}
+			add_building = ca_town_2
+		}
+	}
+}
+
+##niveau 3	CASTLE
+character_event = {
+	#title = "NAMEL3T.0103"
+    	id = L3T.0103
+	desc = "DESCL3T.0103"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_feudal = yes	
+			has_building = ca_town_2
+			NOT = { has_building = ca_town_3 }
+			num_of_buildings = 15
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_feudal = yes
+				num_of_buildings = 15
+				has_building = ca_town_2
+				NOT = { has_building = ca_town_3 }
+			}
+			add_building = ca_town_3
+		}
+	}
+}
+
+##niveau 4	CASTLE
+character_event = {
+	#title = "NAMEL3T.0104"
+    	id = L3T.0104
+	desc = "DESCL3T.0104"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_feudal = yes	
+			has_building = ca_town_3
+			NOT = { has_building = ca_town_4 }
+			num_of_buildings = 20
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_feudal = yes
+				num_of_buildings = 20
+				has_building = ca_town_3
+				NOT = { has_building = ca_town_4 }
+			}
+			add_building = ca_town_4
+		}
+	}
+}
+
+##niveau 5	CASTLE
+character_event = {
+	#title = "NAMEL3T.0105"
+    	id = L3T.0105
+	desc = "DESCL3T.0105"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	
+trigger = {
+		war = no
+		primary_title = { higher_tier_than = BARON }
+		
+		any_demesne_title = {	
+			tier = baron	
+			is_feudal = yes	
+			has_building = ca_town_4
+			NOT = { has_building = ca_town_5 }
+			num_of_buildings = 30
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_feudal = yes
+				num_of_buildings = 30
+				has_building = ca_town_4
+				NOT = { has_building = ca_town_5 }
+			}
+			add_building = ca_town_5
+		}
+	}
+}
+
+
+#Evolution population	CITY sligtly faster
+##niveau 1	CITY 
+character_event = {
+	#title = "NAMEL3T.0106"
+    	id = L3T.0106
+	desc = "DESCL3T.0106"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_republic = yes	
+			NOT = {	has_building = CT_town_1	}
+			num_of_buildings = 5
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_republic = yes	
+				NOT = {	has_building = CT_town_1	}
+				num_of_buildings = 5
+			}
+			add_building = ct_town_1
+		}
+	}
+}
+
+##niveau 2	CITY 
+character_event = {
+	#title = "NAMEL3T.0107"
+    	id = L3T.0107
+	desc = "DESCL3T.0107"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_republic = yes	
+			has_building = CT_town_1
+			NOT = { has_building = CT_town_2 }
+			num_of_buildings = 8
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_republic = yes
+				num_of_buildings = 8
+				has_building = CT_town_1
+				NOT = { has_building = CT_town_2 }
+			}
+			add_building = ct_town_2
+		}
+	}
+}
+
+##niveau 3	CITY 
+character_event = {
+	#title = "NAMEL3T.0108"
+    	id = L3T.0108
+	desc = "DESCL3T.0108"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_republic = yes	
+			has_building = CT_town_2
+			NOT = { has_building = CT_town_3 }
+			num_of_buildings = 12
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_republic = yes
+				num_of_buildings = 12
+				has_building = CT_town_2
+				NOT = { has_building = CT_town_3 }
+			}
+			add_building = ct_town_3
+		}
+	}
+}
+
+##niveau 4	CITY 
+character_event = {
+	#title = "NAMEL3T.0109"
+    	id = L3T.0109
+	desc = "DESCL3T.0109"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_republic = yes	
+			has_building = CT_town_3
+			NOT = { has_building = CT_town_4 }
+			num_of_buildings = 16
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_republic = yes
+				num_of_buildings = 16
+				has_building = CT_town_3
+						NOT = { has_building = CT_town_4 }
+			}
+			add_building = ct_town_4
+		}
+	}
+}
+
+##niveau 5	CITY 
+character_event = {
+	#title = "NAMEL3T.0110"
+    	id = L3T.0110
+	desc = "DESCL3T.0110"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	
+trigger = {
+		war = no
+		primary_title = { higher_tier_than = BARON }
+		
+		any_demesne_title = {	
+			tier = baron	
+			is_republic = yes	
+			has_building = CT_town_4
+			NOT = { has_building = CT_town_5 }
+			num_of_buildings = 20
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_republic = yes
+				num_of_buildings = 20
+				has_building = CT_town_4
+				NOT = { has_building = CT_town_5 }
+			}
+			add_building = ct_town_5
+		}
+	}
+}
+
+#Evolution population	TEMPLE sligtly slower 
+##niveau 1	TEMPLE 
+character_event = {
+	#title = "NAMEL3T.0111"
+    	id = L3T.01011
+	desc = "DESCL3T.0111"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_theocracy = yes	
+			NOT = {	has_building = tp_town_1	}
+			num_of_buildings = 7
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_theocracy = yes	
+				NOT = {	has_building = tp_town_1	}
+				num_of_buildings = 7
+			}
+			add_building = tp_town_1
+		}
+	}
+}
+
+##niveau 2	TEMPLE 
+character_event = {
+	#title = "NAMEL3T.0112"
+    	id = L3T.0112
+	desc = "DESCL3T.0112"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_theocracy = yes	
+			has_building = tp_town_1
+			NOT = { has_building = tp_town_2 }
+			num_of_buildings = 10
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_theocracy = yes
+				num_of_buildings = 10
+				has_building = tp_town_1
+				NOT = {	has_building = tp_town_2	}
+			}
+			add_building = tp_town_2
+		}
+	}
+}
+
+##niveau 3	TEMPLE 
+character_event = {
+	#title = "NAMEL3T.0113"
+    	id = L3T.0113
+	desc = "DESCL3T.0113"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_theocracy = yes	
+			has_building = tp_town_2
+			NOT = { has_building = tp_town_3 }
+			num_of_buildings = 15
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_theocracy = yes
+				num_of_buildings = 15
+				has_building = tp_town_2
+				NOT = {	has_building = tp_town_3	}
+			}
+			add_building = tp_town_3
+		}
+	}
+}
+
+##niveau 4	TEMPLE 
+character_event = {
+	#title = "NAMEL3T.0114"
+    	id = L3T.0114
+	desc = "DESCL3T.0114"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+trigger = {
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_theocracy = yes	
+			has_building = tp_town_3
+			NOT = { has_building = tp_town_4 }
+			num_of_buildings = 20
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_theocracy = yes
+				num_of_buildings = 20
+				has_building = tp_town_3
+				NOT = {	has_building = tp_town_4	}
+			}
+			add_building = tp_town_4
+		}
+	}
+}
+
+##niveau 5	TEMPLE 
+character_event = {
+	#title = "NAMEL3T.0115"
+    	id = L3T.0115
+	desc = "DESCL3T.0115"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	
+trigger = {
+		war = no
+		primary_title = { higher_tier_than = BARON }
+		
+		any_demesne_title = {	
+			tier = baron	
+			is_theocracy = yes	
+			has_building = tp_town_4
+			NOT = { has_building = tp_town_5 }
+			num_of_buildings = 25
+		}
+	}
+		
+	mean_time_to_happen = { months = 18 }
+
+option = {
+		name = "OK"	
+		random_demesne_title = {	
+			limit = {	
+				tier = baron	
+				is_theocracy = yes
+				num_of_buildings = 25
+				has_building = tp_town_4
+				NOT = {	has_building = tp_town_5	}
+			}
+			add_building = tp_town_5
+		}
+	}
+}

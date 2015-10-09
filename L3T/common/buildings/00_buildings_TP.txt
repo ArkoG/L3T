@@ -365,6 +365,7 @@ temple = {
 ##utilise en prebuild jusqu au niveau 2	
 	tp_town_1 = {
 		desc = tp_town_1_desc
+		prerequisites = {xxx}
 		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
 		gold_cost = 100
 		build_time = 365
@@ -376,7 +377,7 @@ temple = {
 	tp_town_2 = {
 		desc = tp_town_2_desc
 		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
-		prerequisites = { tp_wall_1 }
+		prerequisites = { tp_wall_1 xxx }
 		upgrades_from = tp_town_1
 		gold_cost = 120
 		build_time = 547
@@ -387,6 +388,7 @@ temple = {
 	}
 	tp_town_3 = {
 		desc = tp_town_3_desc
+		prerequisites = {xxx}
 		trigger = { TECH_TEMPLE_CONSTRUCTION = 1 }
 		prerequisites = { tp_wall_2 }
 		upgrades_from = tp_town_2
@@ -399,6 +401,7 @@ temple = {
 	}
 	tp_town_4 = {
 		desc = tp_town_4_desc
+		prerequisites = {xxx}
 		trigger = { TECH_TEMPLE_CONSTRUCTION = 3 }
 		upgrades_from = tp_town_3
 		gold_cost = 300
@@ -410,6 +413,7 @@ temple = {
 	}
 	tp_town_5 = {
 		desc = tp_town_4_desc
+		prerequisites = {xxx}
 		trigger = { TECH_TEMPLE_CONSTRUCTION = 5 }
 		upgrades_from = tp_town_4
 		gold_cost = 400
@@ -419,17 +423,7 @@ temple = {
 
 		extra_tech_building_start = 0.2
 	}
-	tp_town_6 = {
-		desc = tp_town_5_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 7 }
-		upgrades_from = tp_town_5
-		gold_cost = 500
-		build_time = 2190
-		tax_income = 2
-		ai_creation_factor = 92
 
-		extra_tech_building_start = 0.2
-	}
 ##utilise en prebuild jusqu au niveau 4	
 	tp_shipyard_1 = {
 		desc = shipyard_desc

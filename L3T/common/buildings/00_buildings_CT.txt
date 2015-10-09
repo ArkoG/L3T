@@ -646,12 +646,12 @@ city = {
 		tax_income = 0.4
 		ai_creation_factor = 100
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 0.2
 	}
 	
 	CT_town_2 = {
 		desc = CT_town_2_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
 		prerequisites = {xxx}
 		upgrades_from = CT_town_1
 		gold_cost = 120
@@ -659,12 +659,12 @@ city = {
 		tax_income = 0.8
 		ai_creation_factor = 99
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 0.2
 	}
 	
 	CT_town_3 = {
 		desc = CT_town_3_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
 		prerequisites = {xxx}
 		upgrades_from = CT_town_2
 		gold_cost = 200
@@ -672,12 +672,12 @@ city = {
 		tax_income = 1.2
 		ai_creation_factor = 98
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 0.2
 	}
 	
 	CT_town_4 = {
 		desc = CT_town_4_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		trigger = { TECH_CITY_CONSTRUCTION = 5 }
 		prerequisites = {xxx}
 		upgrades_from = CT_town_3
 		gold_cost = 300
@@ -685,23 +685,13 @@ city = {
 		tax_income = 1.6
 		ai_creation_factor = 97
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 0.2
 	}
 	
 	CT_town_5 = {
 		desc = CT_town_4_desc
 		trigger = { TECH_CITY_CONSTRUCTION = 0 }
 		prerequisites = {xxx}
-		#potential = { #event dealt
-		#	FROM = {	
-		#		OR = { 
-		#		tier = count
-		#		tier = duke
-		#		tier = king
-		#		tier = emperor
-		#		}
-		#	}
-		#}
 		upgrades_from = CT_town_4
 		gold_cost = 400
 		build_time = 2190
@@ -710,17 +700,7 @@ city = {
 		add_number_to_name = no
 		extra_tech_building_start = 10.0
 	}
-#	CT_town_6 = {
-#		desc = CT_town_5_desc
-#		trigger = { TECH_ADMINISTRATION_FISCALE = 8 }
-#		upgrades_from = CT_town_5
-#		gold_cost = 500
-#		build_time = 2190
-#		tax_income = 0.2
-#		ai_creation_factor = 96
-#		add_number_to_name = no
-#		extra_tech_building_start = 10.0
-#	}
+
 }
 
 
