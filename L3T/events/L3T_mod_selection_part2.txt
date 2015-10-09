@@ -238,6 +238,7 @@ province_event = { #installe les provinces fluviales SWMH
 			has_global_flag = running_VANILLA
 			NOT = { has_province_modifier = province_fleuve }
 			OR = {
+			borders_major_river = yes
 			##Seine-Marne
 				province_id = 97 # Arques
 				province_id = 99 # Evreux

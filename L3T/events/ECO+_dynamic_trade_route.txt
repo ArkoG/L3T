@@ -36,7 +36,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.2
 			any_province_holding = {
 				OR = {
 					has_building = CA_route_L1
@@ -44,6 +44,10 @@ province_event = {
 					has_building = TP_route_L1
 				}
 			}
+		}
+		modifier = {
+			factor = 0.5
+			has_province_modifier = province_fleuve
 		}
 	}
 
@@ -92,7 +96,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.2
 			any_province_holding = {
 				OR = {
 					has_building = CA_route_L1
@@ -100,6 +104,10 @@ province_event = {
 					has_building = TP_route_L1
 				}
 			}
+		}
+		modifier = {
+			factor = 0.5
+			has_province_modifier = province_fleuve
 		}
 	}
 
@@ -148,7 +156,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.2
 			any_province_holding = {
 				OR = {
 					has_building = CA_route_L1
@@ -156,6 +164,10 @@ province_event = {
 					has_building = TP_route_L1
 				}
 			}
+		}
+		modifier = {
+			factor = 0.5
+			has_province_modifier = province_fleuve
 		}		
 	}
 
@@ -204,7 +216,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.2
 			any_province_holding = {
 				OR = {
 					has_building = CA_route_L1
@@ -212,7 +224,11 @@ province_event = {
 					has_building = TP_route_L1
 				}
 			}
-		}		
+		}
+		modifier = {
+			factor = 0.5
+			has_province_modifier = province_fleuve
+		}
 	}
 
 	immediate = {
