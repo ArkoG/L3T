@@ -5,10 +5,17 @@ TODO list d'avant release
 	-> ne pas oublier les bats COMM et IND
 	-> revoir les effets des bâtiments
 	-> revoir certaines images (par exemple minerai4_armes)
-	
+
+- Routes
+	-> voir design_eco 27-29 septembre
+		=> notamment attribution du modifier de route une fois le bâtiment de route construit
+			-> propagation que lorsque le modifier est donné
+			=> ralentissement de la création des routes qui est trop rapide
+		
 - Fleuves
-	-> liste des provinces fluviales qui ne sont pas in game sur un sleuve naviguable
+	-> liste des provinces fluviales qui ne sont pas in game sur un fleuve naviguable
 	-> regarder si les bâtiments de pont sont toujours valides
+	-> regarder si il n'y a pas trop d'incohérences (exemple 2 provinces adjacentes ont le modifier route fluviale mais pas le même fleuve)
 			
 - Bâtiments de population
 	-> relevé le nombre de bâtiments nécessaires?
@@ -25,4 +32,4 @@ BUGS (étrange)
 
 - Regarder l'error.log
 
-- passer un coup de validator	-> is_ruler non autorisé en narrative_event?
+- passer un coup de validator	-> is_ruler non autorisé en narrative_event?	-> is_ruler non autorisé en narrative_event? essayer only_rulers?
