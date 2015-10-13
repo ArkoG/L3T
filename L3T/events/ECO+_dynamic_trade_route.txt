@@ -132,7 +132,10 @@ province_event = {
 	trigger = {
 		any_neighbor_province = {
 			has_province_flag = bloc_C
-
+			OR = {
+				has_province_modifier = route_terrestre
+				has_province_modifier = route_fluviale
+			}
 		}
 		
 		NOT = {
@@ -190,6 +193,10 @@ province_event = {
 	trigger = {
 		any_neighbor_province = {
 			has_province_flag = bloc_D
+			OR = {
+				has_province_modifier = route_terrestre
+				has_province_modifier = route_fluviale
+			}
 		}
 		
 		NOT = {
