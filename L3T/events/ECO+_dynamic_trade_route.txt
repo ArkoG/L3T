@@ -50,18 +50,14 @@ province_event = {
 			factor = 0.5
 			has_province_modifier = province_fleuve
 		}
+		modifier = {
+			factor = 0.5
+			is_variable_equal = { which = "resourceNb" value = 1 }
+		}
 	}
 
 	immediate = {
 		set_province_flag = bloc_B
-		if = {
-			limit = { has_province_modifier = province_fleuve }
-			add_province_modifier = { name = route_fluviale duration = -1 }
-		}
-		if = {
-			limit = { NOT = { has_province_modifier = province_fleuve } }
-			add_province_modifier = { name = route_terrestre duration = -1 }
-		}
 		add_province_modifier = { name = flag_B duration = -1 } #TODO mouchard
 	}
 }
@@ -75,6 +71,10 @@ province_event = {
 	trigger = {
 		any_neighbor_province = {
 			has_province_flag = bloc_B
+			OR = {
+				has_province_modifier = route_terrestre
+				has_province_modifier = route_fluviale
+			}
 		}
 		
 		NOT = {
@@ -111,18 +111,14 @@ province_event = {
 			factor = 0.5
 			has_province_modifier = province_fleuve
 		}
+		modifier = {
+			factor = 0.5
+			is_variable_equal = { which = "resourceNb" value = 1 }
+		}
 	}
 
 	immediate = {
 		set_province_flag = bloc_C
-		if = {
-			limit = { has_province_modifier = province_fleuve }
-			add_province_modifier = { name = route_fluviale duration = -1 }
-		}
-		if = {
-			limit = { NOT = { has_province_modifier = province_fleuve } }
-			add_province_modifier = { name = route_terrestre duration = -1 }
-		}
 		add_province_modifier = { name = flag_C duration = -1 } #TODO mouchard
 	}
 }
@@ -136,6 +132,7 @@ province_event = {
 	trigger = {
 		any_neighbor_province = {
 			has_province_flag = bloc_C
+
 		}
 		
 		NOT = {
@@ -171,19 +168,15 @@ province_event = {
 		modifier = {
 			factor = 0.5
 			has_province_modifier = province_fleuve
+		}
+		modifier = {
+			factor = 0.5
+			is_variable_equal = { which = "resourceNb" value = 1 }
 		}		
 	}
 
 	immediate = {
 		set_province_flag = bloc_D
-		if = {
-			limit = { has_province_modifier = province_fleuve }
-			add_province_modifier = { name = route_fluviale duration = -1 }
-		}
-		if = {
-			limit = { NOT = { has_province_modifier = province_fleuve } }
-			add_province_modifier = { name = route_terrestre duration = -1 }
-		}
 		add_province_modifier = { name = flag_D duration = -1 } #TODO mouchard
 	}
 }
@@ -233,10 +226,51 @@ province_event = {
 			factor = 0.5
 			has_province_modifier = province_fleuve
 		}
+		modifier = {
+			factor = 0.5
+			is_variable_equal = { which = "resourceNb" value = 1 }
+		}
 	}
 
 	immediate = {
-		set_province_flag = bloc_E
+		set_province_flag = bloc_E		
+		add_province_modifier = { name = flag_E duration = -1 } #TODO mouchard
+	}
+}
+
+# Give the route modifier
+province_event = {
+    id = TRADE.0005
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			has_province_flag = bloc_B
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
+		}
+		any_province_holding = {
+			OR = {
+				has_building = CA_route_L1
+				has_building = CT_route_L1
+				has_building = TP_route_L1
+				has_building = CA_fleuve_L1
+				has_building = CT_fleuve_L1
+				has_building = TP_fleuve_L1
+			}
+		}
+		NOT = {
+			has_province_modifier = route_fluviale
+			has_province_modifier = route_terrestre
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	immediate = {
 		if = {
 			limit = { has_province_modifier = province_fleuve }
 			add_province_modifier = { name = route_fluviale duration = -1 }
@@ -245,6 +279,5 @@ province_event = {
 			limit = { NOT = { has_province_modifier = province_fleuve } }
 			add_province_modifier = { name = route_terrestre duration = -1 }
 		}
-		add_province_modifier = { name = flag_E duration = -1 } #TODO mouchard
 	}
 }

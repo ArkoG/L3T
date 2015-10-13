@@ -7,10 +7,8 @@ TODO list d'avant release
 	-> revoir certaines images (par exemple minerai4_armes)
 
 - Routes
-	-> voir design_eco 27-29 septembre
-		=> notamment attribution du modifier de route une fois le bâtiment de route construit
-			-> propagation que lorsque le modifier est donné
-			=> ralentissement de la création des routes qui est trop rapide
+	- Si on n'est pas A ou B et que l'on a 3 voisins qui sont des routes, on a un bonus
+	- Ajout d'un bonus pour A selon la taille maximale de la route
 		
 - Fleuves
 	-> liste des provinces fluviales qui ne sont pas in game sur un fleuve naviguable
@@ -32,4 +30,4 @@ BUGS (étrange)
 
 - Regarder l'error.log
 
-- passer un coup de validator	-> is_ruler non autorisé en narrative_event?	-> is_ruler non autorisé en narrative_event? essayer only_rulers?
+- passer un coup de validator

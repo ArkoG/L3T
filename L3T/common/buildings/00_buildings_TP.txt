@@ -388,9 +388,8 @@ temple = {
 	}
 	tp_town_3 = {
 		desc = tp_town_3_desc
-		prerequisites = {xxx}
+		prerequisites = {tp_wall_2 xxx}
 		trigger = { TECH_TEMPLE_CONSTRUCTION = 1 }
-		prerequisites = { tp_wall_2 }
 		upgrades_from = tp_town_2
 		gold_cost = 200
 		build_time = 730

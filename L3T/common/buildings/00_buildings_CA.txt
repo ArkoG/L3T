@@ -496,9 +496,8 @@ castle = {
 	}
 	ca_town_3 = {
 		desc = ca_town_3_desc
-		prerequisites = {xxx}
+		prerequisites = {ca_wall_2 xxx}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		prerequisites = { ca_wall_2 }
 		upgrades_from = ca_town_2
 		gold_cost = 200
 		build_time = 730
