@@ -206,7 +206,7 @@ narrative_event = {
 			}
 		}
 		ai_chance = {
-			factor = 50
+			factor = 10
 			modifier = { factor = 100	NOT = { tier = baron }	}
 			modifier = { factor = 0.7	tier = baron }
 			modifier = {
@@ -247,18 +247,38 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
-			# La province devient le départ d'une route		
+			# La province devient le départ d'une route	si possible
 			location = {
-				set_province_flag = bloc_A
 				if = {
-					limit = { has_province_modifier = province_fleuve }
-					add_province_modifier = { name = route_fluviale duration = -1 }
+					limit = {
+						NOT = {
+							# N'est pas déjà prévu pour être sur une route
+							has_province_flag = bloc_A
+							has_province_flag = bloc_B
+							has_province_flag = bloc_C
+							has_province_flag = bloc_D
+							has_province_flag = bloc_E	
+							
+							# N'a pas déjà des voisins prévus pour être sur une route de manière incompatible
+							any_neighbor_province = {
+								has_province_flag = bloc_A
+								has_province_flag = bloc_C
+								has_province_flag = bloc_D
+								has_province_flag = bloc_E
+							}
+						}
+					}				
+					set_province_flag = bloc_A
+					if = {
+						limit = { has_province_modifier = province_fleuve }
+						add_province_modifier = { name = route_fluviale duration = -1 }
+					}
+					if = {
+						limit = { NOT = { has_province_modifier = province_fleuve } }
+						add_province_modifier = { name = route_terrestre duration = -1 }
+					}
+					add_province_modifier = { name = flag_A duration = -1 } #mouchard
 				}
-				if = {
-					limit = { NOT = { has_province_modifier = province_fleuve } }
-					add_province_modifier = { name = route_terrestre duration = -1 }
-				}
-				add_province_modifier = { name = flag_A duration = -1 } #mouchard
 			}
 			clr_title_flag = to_specialize	
 		}
