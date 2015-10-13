@@ -7,16 +7,30 @@
 
 castle = {
 
-############# MOUCHI : début ajout ###########
 #ETOFFE
 CA_atelier_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = elevage2_laine
-		any_neighbor_province = { has_province_modifier = elevage2_laine }
-			}
+			# Has the resource
+			has_province_modifier = elevage2_laine
+			
+			# Or is on a route and e neighboor on the route has the resource
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = elevage2_laine
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CA_ELEV_ovin_L1a }
 	prerequisites = { BOURGFEODAL }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -39,10 +53,22 @@ CA_draperie_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = elevage3_etoffe
-		any_neighbor_province = { has_province_modifier = elevage3_etoffe }
-			}
+			has_province_modifier = elevage3_etoffe
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = elevage3_etoffe
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CA_ELEV_ovin_L1a }
 	prerequisites = { BOURGFEODAL }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -65,10 +91,22 @@ CA_scierie_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = foret2_bois
-		any_neighbor_province = { has_province_modifier = foret2_bois }
-			}
+			has_province_modifier = foret2_bois
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = foret2_bois
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CA_BOIS_bois_L1 }
 	prerequisites = { BOURGFEODAL }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -91,10 +129,22 @@ CA_four_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = foret2_charbon
-		any_neighbor_province = { has_province_modifier = foret2_charbon }
-			}
+			has_province_modifier = foret2_charbon
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = foret2_charbon
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CA_BOIS_charbon_L1 }
 	prerequisites = { BOURGFEODAL }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -117,10 +167,22 @@ CA_pierre_taille_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = pierre2_pierre_brute
-		any_neighbor_province = { has_province_modifier = pierre2_pierre_brute }
-			}
+			has_province_modifier = pierre2_pierre_brute
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = pierre2_pierre_brute
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CA_CARR_pierre_L1 }
 	prerequisites = { BOURGFEODAL }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -143,10 +205,22 @@ CA_fonderie_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = minerai2_fer
-		any_neighbor_province = { has_province_modifier = minerai2_fer }
-			}
+			has_province_modifier = minerai2_fer
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = minerai2_fer
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CA_MINE_minerai_L1 }
 	prerequisites = { BOURGFEODAL }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -169,10 +243,22 @@ CA_outilleur_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = minerai3_metal
-		any_neighbor_province = { has_province_modifier = minerai3_metal }
-			}
+			has_province_modifier = minerai3_metal
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = minerai3_metal
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CA_fonderie_L1 }
 	prerequisites = { BOURGFEODAL }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -194,10 +280,22 @@ CA_armurerie_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = minerai3_metal
-		any_neighbor_province = { has_province_modifier = minerai3_metal }
-			}
+			has_province_modifier = minerai3_metal
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = minerai3_metal
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CA_fonderie_L1 }
 	prerequisites = { BOURGFEODAL }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	garrison_size = 0.1 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -214,7 +312,6 @@ CA_armurerie_L3 = {
 	upgrades_from = CA_armurerie_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	garrison_size = 0.3 ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
-############# MOUCHI : fin ajout #############
 
 }
 
@@ -230,10 +327,22 @@ CT_brasserie_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = agriculture2_cereales
-		any_neighbor_province = { has_province_modifier = agriculture2_cereales }
-			}
+			has_province_modifier = agriculture2_cereales
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = agriculture2_cereales
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CT_AGRI_cereale_L1 }
 	prerequisites = { VOC_INDUSTRIELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -264,15 +373,27 @@ CT_brasserie_L5 = {
 		gold_cost = 175.0	build_time = 350	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
-#VIN !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! TP_AGRi pour origine raison à caler pour que ça fonctionne
+#VIN
 CT_chai_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
 			has_province_modifier = agriculture2_vigne
-			any_neighbor_province = { has_province_modifier = agriculture2_vigne }
-			}
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = agriculture2_vigne
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { TP_AGRI_vigne_L1 }
 	prerequisites = { VOC_INDUSTRIELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -303,16 +424,28 @@ CT_chai_L5 = {
 		gold_cost = 175.0	build_time = 350	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
-############# MOUCHI : début ajout ###########
+
 #CUIR
 CT_tannerie_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = elevage2_boeuf
-		any_neighbor_province = { has_province_modifier = elevage2_boeuf }
-			}
+			has_province_modifier = elevage2_boeuf
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = elevage2_boeuf
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CT_ELEV_bovin_L1 }
 	prerequisites = { VOC_INDUSTRIELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -348,10 +481,22 @@ CT_scierie_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = foret2_bois
-		any_neighbor_province = { has_province_modifier = foret2_bois }
-			}
+			has_province_modifier = foret2_bois
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = foret2_bois
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CT_BOIS_bois_L1 }
 	prerequisites = { VOC_INDUSTRIELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -387,10 +532,22 @@ CT_four_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = foret2_charbon
-		any_neighbor_province = { has_province_modifier = foret2_charbon }
-			}
+			has_province_modifier = foret2_charbon
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = foret2_charbon
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CT_BOIS_charbon_L1 }
 	prerequisites = { VOC_INDUSTRIELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -426,10 +583,22 @@ CT_pierre_taille_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = pierre2_pierre_brute
-		any_neighbor_province = { has_province_modifier = pierre2_pierre_brute }
-			}
+			has_province_modifier = pierre2_pierre_brute
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = pierre2_pierre_brute
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CT_CARR_pierre_L1 }
 	prerequisites = { VOC_INDUSTRIELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -465,10 +634,22 @@ CT_sel_raffine_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = minerai2_sel_gemme
-		any_neighbor_province = { has_province_modifier = minerai2_sel_gemme }
-			}
+			has_province_modifier = minerai2_sel_gemme
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = minerai2_sel_gemme
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CT_MINE_sel_L1 }
 	prerequisites = { VOC_COMMERCIALE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -504,10 +685,22 @@ CT_saline_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = minerai2_sel_gemme
-		any_neighbor_province = { has_province_modifier = minerai2_sel_gemme }
-			}
+			has_province_modifier = minerai2_sel_gemme
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = minerai2_sel_gemme
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { CT_MINE_sel_L1 }
 	prerequisites = { VOC_INDUSTRIELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -537,7 +730,6 @@ CT_saline_L5 = {
 	upgrades_from = CT_saline_L4
 		gold_cost = 175.0	build_time = 350	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
 }
-############# MOUCHI : fin ajout #############
 
 }
 
@@ -553,16 +745,22 @@ TP_presse_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = agriculture2_fruits
-		#has_province_modifier = 1connexion_commerciale
-		#has_province_modifier = 2connexion_commerciale
-		#has_province_modifier = 3connexion_commerciale
-		any_neighbor_province = { has_province_modifier = agriculture2_fruits }
-		#any_neighbor_province = { has_province_modifier = 1connexion_commerciale }
-		#any_neighbor_province = { has_province_modifier = 2connexion_commerciale }
-		#any_neighbor_province = { has_province_modifier = 3connexion_commerciale }
-			}
+			has_province_modifier = agriculture2_fruits
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = agriculture2_fruits
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	prerequisites = { CITEEPISCOPALE }
 		gold_cost = 50.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -577,16 +775,27 @@ TP_presse_L3 = {
 		gold_cost = 100.0	build_time = 100	tax_income = 0.4	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
-############# MOUCHI : début ajout ###########
 #VERRE
 TP_four_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
-		has_province_modifier = foret2_charbon
-		any_neighbor_province = { has_province_modifier = foret2_charbon }
-			}
+			has_province_modifier = foret2_charbon
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = foret2_charbon
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
 		}
+	}
 	#prerequisites = { TP_BOIS_charbon_L1 }
 	prerequisites = { CITEEPISCOPALE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -603,7 +812,6 @@ TP_four_L3 = {
 	upgrades_from = TP_four_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
-############# MOUCHI : fin ajout #############
 
 }
 

@@ -1,8 +1,10 @@
 TODO list d'avant release
+
+- Spécialisation
+	-> mettre un critère de distance entre les cités commerçantes
 	
 - Resources
-	-> revoir les bâtiments de PROD en fonction de la route
-	-> ne pas oublier les bats COMM et IND
+	-> ne pas oublier les bats COMM
 	-> revoir les effets des bâtiments
 	-> revoir certaines images (par exemple minerai4_armes)
 
@@ -19,8 +21,10 @@ TODO list d'avant release
 	-> relevé le nombre de bâtiments nécessaires?
 	-> refondre le concept?
 
-BUGS (étrange)
-	- présence des modifiers minerai4_armes et minerai4_outils dans une province après seulement 3 ans IG
+BUGS
+	- Spécialisation d'une cité après que sa province ait reçu le bloc C => bloc A quand même donné
+		=> SOLUTION : Pas de don de blocA si on ne peut pas le donner (présence d'un bloc dans sa province OU le voisinage qui n'a pas que des B)
+	- [ETRANGE] présence des modifiers minerai4_armes et minerai4_outils dans une province après seulement 3 ans IG
 
 - Vérifier la localisation
 	-> références de traduction non réalisées
