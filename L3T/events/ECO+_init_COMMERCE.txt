@@ -75,126 +75,124 @@ namespace = ECO
 #	}
 #}
 
-province_event = { #validates every 3 connexions provinces for specific buildings
-    id = ECO.0025
-	hide_window = yes
+# province_event = { #validates every 3 connexions provinces for specific buildings
+    # id = ECO.0025
+	# hide_window = yes
 	
-	trigger = {
-			NOT = { has_province_modifier = 3connexion_commerciale }
-			OR = {
-				AND = {
-				has_province_modifier = province_cotiere
-				has_trade_post = yes
-				has_province_modifier = route_fluviale
-				}
-				AND = {
-				has_province_modifier = province_cotiere
-				has_trade_post = yes
-				has_province_modifier = route_terrestre01
-				}
-				AND = {
-				has_province_modifier = province_cotiere
-				has_trade_post = yes
-				has_province_modifier = route_terrestre02
-				}
-				AND = {
-				has_province_modifier = province_cotiere
-				has_trade_post = yes
-				has_province_modifier = route_terrestre03
-				}
-				AND = {
-				has_province_modifier = province_cotiere
-				has_province_modifier = route_fluviale
-				has_province_modifier = route_terrestre01
-				}
-				AND = {
-				has_province_modifier = province_cotiere
-				has_province_modifier = route_fluviale
-				has_province_modifier = route_terrestre02
-				}
-				AND = {
-				has_province_modifier = province_cotiere
-				has_province_modifier = route_fluviale
-				has_province_modifier = route_terrestre03
-				}
-				AND = {
-				has_province_modifier = province_cotiere
-				has_province_modifier = route_terrestre01
-				has_province_modifier = route_terrestre02
-				}
-				AND = {
-				has_province_modifier = province_cotiere
-				has_province_modifier = route_terrestre01
-				has_province_modifier = route_terrestre03
-				}
-				AND = {
-				has_province_modifier = province_cotiere
-				has_province_modifier = route_terrestre02
-				has_province_modifier = route_terrestre03
-				}
-				AND = {
-				has_trade_post = yes
-				has_province_modifier = route_fluviale
-				has_province_modifier = route_terrestre01
-				}
-				AND = {
-				has_trade_post = yes
-				has_province_modifier = route_fluviale
-				has_province_modifier = route_terrestre02
-				}
-				AND = {
-				has_trade_post = yes
-				has_province_modifier = route_fluviale
-				has_province_modifier = route_terrestre03
-				}
-				AND = {
-				has_trade_post = yes
-				has_province_modifier = route_terrestre01
-				has_province_modifier = route_terrestre02
-				}
-				AND = {
-				has_trade_post = yes
-				has_province_modifier = route_terrestre01
-				has_province_modifier = route_terrestre03
-				}
-				AND = {
-				has_trade_post = yes
-				has_province_modifier = route_terrestre02
-				has_province_modifier = route_terrestre03
-				}
-				AND = {
-				has_province_modifier = route_fluviale
-				has_province_modifier = route_terrestre01
-				has_province_modifier = route_terrestre02
-				}
-				AND = {
-				has_province_modifier = route_fluviale
-				has_province_modifier = route_terrestre01
-				has_province_modifier = route_terrestre03
-				}
-				AND = {
-				has_province_modifier = route_fluviale
-				has_province_modifier = route_terrestre02
-				has_province_modifier = route_terrestre03
-				}
-				AND = {
-				has_province_modifier = route_terrestre01
-				has_province_modifier = route_terrestre02
-				has_province_modifier = route_terrestre03
-				}
-			}
-		}		
-mean_time_to_happen = {	days = 250	}	
+	# trigger = {
+			# NOT = { has_province_modifier = 3connexion_commerciale }
+			# OR = {
+				# AND = {
+				# has_province_modifier = province_cotiere
+				# has_trade_post = yes
+				# has_province_modifier = route_fluviale
+				# }
+				# AND = {
+				# has_province_modifier = province_cotiere
+				# has_trade_post = yes
+				# has_province_modifier = route_terrestre01
+				# }
+				# AND = {
+				# has_province_modifier = province_cotiere
+				# has_trade_post = yes
+				# has_province_modifier = route_terrestre02
+				# }
+				# AND = {
+				# has_province_modifier = province_cotiere
+				# has_trade_post = yes
+				# has_province_modifier = route_terrestre03
+				# }
+				# AND = {
+				# has_province_modifier = province_cotiere
+				# has_province_modifier = route_fluviale
+				# has_province_modifier = route_terrestre01
+				# }
+				# AND = {
+				# has_province_modifier = province_cotiere
+				# has_province_modifier = route_fluviale
+				# has_province_modifier = route_terrestre02
+				# }
+				# AND = {
+				# has_province_modifier = province_cotiere
+				# has_province_modifier = route_fluviale
+				# has_province_modifier = route_terrestre03
+				# }
+				# AND = {
+				# has_province_modifier = province_cotiere
+				# has_province_modifier = route_terrestre01
+				# has_province_modifier = route_terrestre02
+				# }
+				# AND = {
+				# has_province_modifier = province_cotiere
+				# has_province_modifier = route_terrestre01
+				# has_province_modifier = route_terrestre03
+				# }
+				# AND = {
+				# has_province_modifier = province_cotiere
+				# has_province_modifier = route_terrestre02
+				# has_province_modifier = route_terrestre03
+				# }
+				# AND = {
+				# has_trade_post = yes
+				# has_province_modifier = route_fluviale
+				# has_province_modifier = route_terrestre01
+				# }
+				# AND = {
+				# has_trade_post = yes
+				# has_province_modifier = route_fluviale
+				# has_province_modifier = route_terrestre02
+				# }
+				# AND = {
+				# has_trade_post = yes
+				# has_province_modifier = route_fluviale
+				# has_province_modifier = route_terrestre03
+				# }
+				# AND = {
+				# has_trade_post = yes
+				# has_province_modifier = route_terrestre01
+				# has_province_modifier = route_terrestre02
+				# }
+				# AND = {
+				# has_trade_post = yes
+				# has_province_modifier = route_terrestre01
+				# has_province_modifier = route_terrestre03
+				# }
+				# AND = {
+				# has_trade_post = yes
+				# has_province_modifier = route_terrestre02
+				# has_province_modifier = route_terrestre03
+				# }
+				# AND = {
+				# has_province_modifier = route_fluviale
+				# has_province_modifier = route_terrestre01
+				# has_province_modifier = route_terrestre02
+				# }
+				# AND = {
+				# has_province_modifier = route_fluviale
+				# has_province_modifier = route_terrestre01
+				# has_province_modifier = route_terrestre03
+				# }
+				# AND = {
+				# has_province_modifier = route_fluviale
+				# has_province_modifier = route_terrestre02
+				# has_province_modifier = route_terrestre03
+				# }
+				# AND = {
+				# has_province_modifier = route_terrestre01
+				# has_province_modifier = route_terrestre02
+				# has_province_modifier = route_terrestre03
+				# }
+			# }
+		# }		
+# mean_time_to_happen = {	days = 250	}	
 
-immediate = {
-		#name = "ECO.0025A"		
-		add_province_modifier = {	name = 3connexion_commerciale  	duration = -1	
-		#hidden = yes
-		}
-		remove_province_modifier = 1connexion_commerciale
-		remove_province_modifier = 2connexion_commerciale
-		}
-}
+# immediate = {	
+		# add_province_modifier = {	name = 3connexion_commerciale  	duration = -1	
+		# }
+		# remove_province_modifier = 1connexion_commerciale
+		# remove_province_modifier = 2connexion_commerciale
+		# }
+# }
 
 # Count the number of resources in the provinces (in order to choose later if it will be a land of commerce or production)
 province_event = {

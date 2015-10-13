@@ -288,3 +288,32 @@ province_event = {
 		}
 	}
 }
+
+# Give the commercial node modifier
+province_event = {
+    id = TRADE.0006
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
+		}
+		any_neighbor_province = {
+			count = 3
+			OR = {
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	immediate = {
+		add_province_modifier = { name = 3connexion_commerciale duration = -1 }
+	}
+}

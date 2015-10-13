@@ -9,7 +9,6 @@ TODO list d'avant release
 	-> revoir certaines images (par exemple minerai4_armes)
 
 - Routes
-	- Si on n'est pas A ou B et que l'on a 3 voisins qui sont des routes, on a un bonus
 	- Ajout d'un bonus pour A selon la taille maximale de la route
 		
 - Fleuves
@@ -21,6 +20,9 @@ TODO list d'avant release
 	-> relevé le nombre de bâtiments nécessaires?
 	-> refondre le concept?
 
+- A améliorer
+	recoder L3T.00041 (dans L3T_init_DOMAINES) sans utiliser de variables
+	
 BUGS
 	- Spécialisation d'une cité après que sa province ait reçu le bloc C => bloc A quand même donné
 		=> SOLUTION : Pas de don de blocA si on ne peut pas le donner (présence d'un bloc dans sa province OU le voisinage qui n'a pas que des B)
