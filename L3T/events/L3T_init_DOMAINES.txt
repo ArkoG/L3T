@@ -269,6 +269,8 @@ narrative_event = {
 						}
 					}				
 					set_province_flag = bloc_A
+					add_province_modifier = { name = route_size1 duration = -1 }
+					set_variable = { which = "route_size" value = 1 }
 					if = {
 						limit = { has_province_modifier = province_fleuve }
 						add_province_modifier = { name = route_fluviale duration = -1 }
@@ -338,6 +340,8 @@ province_event = {
 					}
 					location = {
 						set_province_flag = bloc_A
+						add_province_modifier = { name = route_size1 duration = -1 }
+						set_variable = { which = "route_size" value = 1 }
 						if = {
 							limit = { has_province_modifier = province_fleuve }
 							add_province_modifier = { name = route_fluviale duration = -1 }

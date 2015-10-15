@@ -58,6 +58,30 @@ province_event = {
 
 	immediate = {
 		set_province_flag = bloc_B
+		
+		# The route size is the max route size of its C neighboors + 1
+		set_variable = { which = "route_size" value = 1 } # the value to evaluate the neighboor, then to store final value
+		set_variable = { which = "tmp" value = 1 } # store the value when route_size is used to evaluate neighboor
+		any_neighbor_province = {
+			limit = { has_province_flag = bloc_C }
+			ROOT = { subtract_variable = { which = "route_size" which = THIS} }
+			if = {
+				limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+				# We have found a neighboor with a route_size value more or equal, so we update the value
+				ROOT = { set_variable = { which = "route_size" which = THIS} } # B route_size = C route_size
+				ROOT = { change_variable = { which = "route_size" value = 1} } # B route_size = C route_size + 1
+				ROOT = { set_variable = { which = "tmp" which = "route_size"} } # store the value
+			}
+			# Reset the B route_size for the stored value
+			ROOT = { set_variable = { which = "route_size" which = "tmp"} }
+		}
+		
+		# Update the route size in previous blocs (here A)
+		any_neighbor_province = {
+			limit = { has_province_flag = bloc_A }
+			province_event = { id = TRADE.0008 days = 10}
+		}
+		
 		add_province_modifier = { name = flag_B duration = -1 } #TODO mouchard
 	}
 }
@@ -119,6 +143,26 @@ province_event = {
 
 	immediate = {
 		set_province_flag = bloc_C
+		
+		set_variable = { which = "route_size" value = 1 }
+		set_variable = { which = "tmp" value = 1 }
+		any_neighbor_province = {
+			limit = { has_province_flag = bloc_D }
+			ROOT = { subtract_variable = { which = "route_size" which = THIS} }
+			if = {
+				limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+				ROOT = { set_variable = { which = "route_size" which = THIS} }
+				ROOT = { change_variable = { which = "route_size" value = 1} }
+				ROOT = { set_variable = { which = "tmp" which = "route_size"} }
+			}
+			ROOT = { set_variable = { which = "route_size" which = "tmp"} }
+		}
+		
+		any_neighbor_province = {
+			limit = { has_province_flag = bloc_B }
+			province_event = { id = TRADE.0008 days = 10}
+		}
+		
 		add_province_modifier = { name = flag_C duration = -1 } #TODO mouchard
 	}
 }
@@ -180,6 +224,26 @@ province_event = {
 
 	immediate = {
 		set_province_flag = bloc_D
+		
+		set_variable = { which = "route_size" value = 1 }
+		set_variable = { which = "tmp" value = 1 }
+		any_neighbor_province = {
+			limit = { has_province_flag = bloc_E }
+			ROOT = { subtract_variable = { which = "route_size" which = THIS} }
+			if = {
+				limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+				ROOT = { set_variable = { which = "route_size" which = THIS} }
+				ROOT = { change_variable = { which = "route_size" value = 1} }
+				ROOT = { set_variable = { which = "tmp" which = "route_size"} }
+			}
+			ROOT = { set_variable = { which = "route_size" which = "tmp"} }
+		}
+		
+		any_neighbor_province = {
+			limit = { has_province_flag = bloc_C }
+			province_event = { id = TRADE.0008 days = 10}
+		}
+		
 		add_province_modifier = { name = flag_D duration = -1 } #TODO mouchard
 	}
 }
@@ -241,6 +305,15 @@ province_event = {
 
 	immediate = {
 		set_province_flag = bloc_E		
+		
+		set_variable = { which = "route_size" value = 1 }
+		set_variable = { which = "tmp" value = 1 }
+		
+		any_neighbor_province = {
+			limit = { has_province_flag = bloc_D }
+			province_event = { id = TRADE.0008 days = 10}
+		}
+		
 		add_province_modifier = { name = flag_E duration = -1 } #TODO mouchard
 	}
 }
@@ -315,5 +388,116 @@ province_event = {
 	
 	immediate = {
 		add_province_modifier = { name = 3connexion_commerciale duration = -1 }
+	}
+}
+
+# Update the modifier of the route size
+province_event = {
+    id = TRADE.0007
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_province_modifier = route_size1
+		remove_province_modifier = route_size2
+		remove_province_modifier = route_size3
+		remove_province_modifier = route_size4		
+		if = {
+			limit = { is_variable_equal = { which = "route_size" value = 2 } }
+			add_province_modifier = { name = route_size2 duration = -1 }
+		}
+		if = {
+			limit = { is_variable_equal = { which = "route_size" value = 3 } }
+			add_province_modifier = { name = route_size3 duration = -1 }
+		}
+		if = {
+			limit = { is_variable_equal = { which = "route_size" value = 4 } }
+			add_province_modifier = { name = route_size4 duration = -1 }
+		}
+		if = {
+			limit = { is_variable_equal = { which = "route_size" value = 5 } }
+			add_province_modifier = { name = route_size5 duration = -1 }
+		}
+	}
+}
+
+# Update the route size variable for previous steps
+# REQUIRED : The caller (a next step, EX: C for B) has the same values in route_size and tmp
+province_event = {
+    id = TRADE.0008
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_province_flag = bloc_A }			
+			FROM = { subtract_variable = { which = "route_size" which = THIS} }
+			if = {
+				limit = { FROM = { check_variable = { which = "route_size" value = -1 } } }
+				# We have found a neighboor with a less route_size value, so we update the value
+				FROM = { set_variable = { which = "route_size" which = "tmp"} } # restore route_size value
+				set_variable = { which = "route_size" which = FROM}
+				change_variable = { which = "route_size" value = 1}
+				# Update the modifier
+				province_event = { id = TRADE.0007 days = 10}
+			}
+			# Reset the route_size with the stored value
+			FROM = { set_variable = { which = "route_size" which = "tmp"} }
+		}
+		
+		if = {
+			limit = { has_province_flag = bloc_B }			
+			FROM = { subtract_variable = { which = "route_size" which = THIS} }
+			if = {
+				limit = { FROM = { check_variable = { which = "route_size" value = -1 } } }
+				# We have found a neighboor with a less route_size value, so we update the value
+				FROM = { set_variable = { which = "route_size" which = "tmp"} } # restore route_size value
+				set_variable = { which = "route_size" which = FROM}
+				change_variable = { which = "route_size" value = 1}
+				set_variable = { which = "tmp" which = "route_size"} #copy in tmp before to call TRADE.0008
+				# Update previous steps
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_A }
+					province_event = { id = TRADE.0008 days = 10}
+				}				
+			}
+			# Reset the route_size with the stored value
+			FROM = { set_variable = { which = "route_size" which = "tmp"} }
+		}
+		
+		if = {
+			limit = { has_province_flag = bloc_C }			
+			FROM = { subtract_variable = { which = "route_size" which = THIS} }
+			if = {
+				limit = { FROM = { check_variable = { which = "route_size" value = -1 } } }
+				# We have found a neighboor with a less route_size value, so we update the value
+				FROM = { set_variable = { which = "route_size" which = "tmp"} } # restore route_size value
+				set_variable = { which = "route_size" which = FROM}
+				change_variable = { which = "route_size" value = 1}
+				set_variable = { which = "tmp" which = "route_size"} #copy in tmp before to call TRADE.0008
+				# Update previous steps
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_B }
+					province_event = { id = TRADE.0008 days = 10}
+				}				
+			}
+			# Reset the route_size with the stored value
+			FROM = { set_variable = { which = "route_size" which = "tmp"} }
+		}
+		
+		if = {
+			limit = { has_province_flag = bloc_D }
+				set_variable = { which = "route_size" value = 2}
+				set_variable = { which = "tmp" value = 2} #copy in tmp before to call TRADE.0008
+				# Update previous steps
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_C }
+					province_event = { id = TRADE.0008 days = 10}
+				}				
+			# Reset the route_size with the stored value
+			FROM = { set_variable = { which = "route_size" which = "tmp"} }
+		}
 	}
 }
