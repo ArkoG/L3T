@@ -35,14 +35,11 @@ narrative_event = {
 		
 	mean_time_to_happen = { months = 9 }
 
-	option = {
-		name = "L3T.0003A"	
-		ai_chance = { factor = 35 }
-		trigger = { NOT = { religion_group = pagan_group } }
+	immediate = {
 		random_demesne_title = {
 			limit = {
 				tier = baron
-				holding_type = castle 
+				holding_type = castle
 				NOT = {
 					#has_building = REPAIREVOLEUR
 					has_building = FORT
@@ -50,7 +47,20 @@ narrative_event = {
 					has_building = CITADELLE
 				}
 			}
+			set_title_flag = castle_to_specialize
+		}
+	}
+	
+	option = {
+		name = "L3T.0003A"	
+		ai_chance = { factor = 35 }
+		trigger = { NOT = { religion_group = pagan_group } }
+		random_demesne_title = {
+			limit = {
+				has_title_flag = castle_to_specialize
+			}
 			add_building = FORT
+			clr_title_flag = castle_to_specialize
 		}
 	}
 	
@@ -63,21 +73,21 @@ narrative_event = {
 		}
 		random_demesne_title = {
 			limit = {
-				tier = baron
-				holding_type = castle 
-				NOT = {
-					#has_building = REPAIREVOLEUR
-					has_building = FORT
-					has_building = BOURGFEODAL
-					has_building = CITADELLE
-				}
+				has_title_flag = castle_to_specialize
 			}
 			add_building = BOURGFEODAL
+			clr_title_flag = castle_to_specialize
 		}
 	}
 
 	option = {
-		name = "L3T.0003C"	
+		name = "L3T.0003C"
+		trigger = {
+			any_demesne_title = {
+				has_title_flag = castle_to_specialize
+				location = { is_capital = yes }
+			}
+		}
 		ai_chance = {
 			factor = 15
 			#modifier = { factor =  50	tier = emperor	}			
@@ -90,16 +100,10 @@ narrative_event = {
 		}
 		random_demesne_title = {
 			limit = {
-				tier = baron
-				holding_type = castle 
-				NOT = {
-					#has_building = REPAIREVOLEUR
-					has_building = FORT
-					has_building = BOURGFEODAL
-					has_building = CITADELLE
-				}
+				has_title_flag = castle_to_specialize
 			}
 			add_building = CITADELLE
+			clr_title_flag = castle_to_specialize
 		}
 	}
 }
@@ -147,7 +151,7 @@ narrative_event = {
 					has_building = VOC_COMMERCIALE
 				}
 			}
-			set_title_flag = to_specialize
+			set_title_flag = city_to_specialize
 		}
 	}
 	
@@ -158,25 +162,25 @@ narrative_event = {
 			modifier = {
 				factor = 3
 				any_demesne_title = {
-					has_title_flag = to_specialize
+					has_title_flag = city_to_specialize
 					location = { is_variable_equal = { which = "resourceNb" value = 2 } }
 				}
 			}
 			modifier = {
 				factor = 0.1
 				any_demesne_title = {
-					has_title_flag = to_specialize
+					has_title_flag = city_to_specialize
 					location = { is_variable_equal = { which = "resourceNb" value = 1 } }
 				}
 			}
 		}	
 		random_demesne_title = {
 			limit = {
-				has_title_flag = to_specialize
+				has_title_flag = city_to_specialize
 			}
 			add_building = CITE_L1
 			add_building = VOC_INDUSTRIELLE
-			clr_title_flag = to_specialize
+			clr_title_flag = city_to_specialize
 		}
 	}
 	
@@ -184,7 +188,7 @@ narrative_event = {
 		name = "L3T.0004B"
 		trigger = {
 			any_demesne_title = {
-				has_title_flag = to_specialize
+				has_title_flag = city_to_specialize
 				
 				# Pas de cité commerçante dans la province et les provinces voisines
 				location = {
@@ -212,7 +216,7 @@ narrative_event = {
 			modifier = {
 				factor = 0.1
 				any_demesne_title = {
-					has_title_flag = to_specialize
+					has_title_flag = city_to_specialize
 					location = { is_variable_equal = { which = "resourceNb" value = 3 } }
 				}
 			}
@@ -282,7 +286,7 @@ narrative_event = {
 					add_province_modifier = { name = flag_A duration = -1 } #mouchard
 				}
 			}
-			clr_title_flag = to_specialize	
+			clr_title_flag = city_to_specialize	
 		}
 	}
 }
