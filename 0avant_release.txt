@@ -1,7 +1,6 @@
 TODO list d'avant release
 
 - Spécialisation
-	-> mettre un critère de distance entre les cités commerçantes
 	-> favoriser le Bourg Féodal si plein de ressources
 	-> favoriser les citadelles pour les capitales de duché, royaume de jure
 	-> faire de même pour les Temple (ne pas oublier le flag temple_to_specialize)
@@ -12,7 +11,7 @@ TODO list d'avant release
 	-> revoir certaines images (par exemple minerai4_armes)
 
 - Routes
-	- Transformer le mouchard des flas en modifier "Route commerciale en devenir"
+	- Transformer le mouchard des flags en modifier "Route commerciale en devenir"
 		-> rendre également l'event visible
 		-> faire un event lorsqu'une province voisine devient une route (reçoit le modifier route/fleuve)
 		
@@ -29,8 +28,7 @@ TODO list d'avant release
 	recoder L3T.00041 (dans L3T_init_DOMAINES) sans utiliser de variables
 	
 BUGS
-	- Spécialisation d'une cité après que sa province ait reçu le bloc C => bloc A quand même donné
-		=> SOLUTION : Pas de don de blocA si on ne peut pas le donner (présence d'un bloc dans sa province OU le voisinage qui n'a pas que des B)
+	- Calcul de la taille maximale de la sphère
 	- [ETRANGE] présence des modifiers minerai4_armes et minerai4_outils dans une province après seulement 3 ans IG
 
 - Vérifier la localisation
