@@ -317,22 +317,15 @@ province_event = {
 	
 	immediate = {
 		set_province_flag = check_double_city
-		# Compte le nombre de cités
-		set_variable = { which = "cityNb" value = 0 }
-		any_province_holding = {
-			if = {
-				limit = { 
-					tier = baron
-					holding_type = city
-				} 
-				ROOT = { change_variable = { which = "cityNb" value = 1 } }
-			}
-		}
 		
 		# S'il y a plus de 2 cités (supérieur ou égal)
 		if = {
 			limit = {
-				check_variable = { which = "cityNb" value = 2 }
+				any_province_holding = {
+					count = 2
+					tier = baron
+					holding_type = city
+				}
 			}
 			
 			# Une cité sera commerçante
