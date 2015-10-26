@@ -306,9 +306,6 @@ province_event = {
 	immediate = {
 		set_province_flag = bloc_E		
 		
-		set_variable = { which = "route_size" value = 1 }
-		set_variable = { which = "tmp" value = 1 }
-		
 		any_neighbor_province = {
 			limit = { has_province_flag = bloc_D }
 			province_event = { id = TRADE.0008 days = 10}
@@ -435,7 +432,7 @@ province_event = {
 			limit = { has_province_flag = bloc_A }			
 			FROM = { subtract_variable = { which = "route_size" which = THIS} }
 			if = {
-				limit = { FROM = { check_variable = { which = "route_size" value = -1 } } }
+				limit = { FROM = { check_variable = { which = "route_size" value = 0 } } }
 				# We have found a neighboor with a less route_size value, so we update the value
 				FROM = { set_variable = { which = "route_size" which = "tmp"} } # restore route_size value
 				set_variable = { which = "route_size" which = FROM}
@@ -451,7 +448,7 @@ province_event = {
 			limit = { has_province_flag = bloc_B }			
 			FROM = { subtract_variable = { which = "route_size" which = THIS} }
 			if = {
-				limit = { FROM = { check_variable = { which = "route_size" value = -1 } } }
+				limit = { FROM = { check_variable = { which = "route_size" value = 0 } } }
 				# We have found a neighboor with a less route_size value, so we update the value
 				FROM = { set_variable = { which = "route_size" which = "tmp"} } # restore route_size value
 				set_variable = { which = "route_size" which = FROM}
@@ -471,7 +468,7 @@ province_event = {
 			limit = { has_province_flag = bloc_C }			
 			FROM = { subtract_variable = { which = "route_size" which = THIS} }
 			if = {
-				limit = { FROM = { check_variable = { which = "route_size" value = -1 } } }
+				limit = { FROM = { check_variable = { which = "route_size" value = 0 } } }
 				# We have found a neighboor with a less route_size value, so we update the value
 				FROM = { set_variable = { which = "route_size" which = "tmp"} } # restore route_size value
 				set_variable = { which = "route_size" which = FROM}
