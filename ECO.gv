@@ -6,7 +6,10 @@ digraph G {
 		{node [label="Calcul du nombre de ressources par province\nECO+_init_COMMERCE"] n3;};
 		{node [label="Spécialisation des cités uniques dans les provinces\nL3T_init_DOMAINES"] n4;};
 		{node [label="Attribution des départs des routes\nL3T_init_DOMAINES"] n5;};
-		{node [label="Développement des routes\nECO+_dynamic_trade_route"] n6;};
+		{node [label="Les provinces voisines peuvent aménager une route\nou un fleuve pour attirer la route\nECO+_dynamic_trade_route"] n6;};
+		{node [label="Des provinces voisines sont choisies pour être la route\nECO+_dynamic_trade_route"] n7;};
+		{node [label="La province obtient le modifier de route ou fleuve\nECO+_dynamic_trade_route"] n8;};
+		{node [label="Peut construire des bâtiments industriels\nECO_bats_IND"] n9;};
 
 	n0 -> n1
 	n1 -> n3  [label="AN 1 \n pour être sûr que les ressources\n ont finies d'être distribuées"]
@@ -15,5 +18,13 @@ digraph G {
 	n3 -> n4  [label="Plus il y a de ressources sur la province,\nplus la cité de celle-ci sera artisane",len=1.00, fontcolor=green, color=green]
 	n2 -> n5 [label="Les provinces multi-cités non voisines\n d'un départ de route,\ndeviennent un départ de route",len=1.00, fontcolor=red, color=red]
 	n4 -> n5 [label="Une province avec cité commerçante\n est le départ d'une route",len=1.00, fontcolor=blue, color=blue]
-	n5 -> n6 [label="Les provinces multi-cités sont privilégiées"]
+	n5 -> n6
+	n5 -> n7 [label="Les provinces multi-cités sont privilégiées",len=1.00, fontcolor=blue, color=blue]
+	n6 -> n8 [label="La province doit être choisie",len=1.00, fontcolor=green, color=green]
+	n7 -> n8 [label="Requiert un bâtiment de route ou fleuve dans la province"]
+	n8 -> n6
+	n8 -> n7 [label="Les provinces multi-cités sont privilégiées",len=1.00, fontcolor=blue, color=blue]
+	n1 -> n9 [label="La ressource est dans la province",len=1.00, fontcolor=blue, color=blue]
+	n8 -> n9 [label="OU la province a une route (ou fleuve)\net un voisin qui a une route (ou fleuve)\na la ressource",len=1.00, fontcolor=green, color=green]
+
 }
