@@ -296,6 +296,16 @@ narrative_event = {
 						limit = { NOT = { has_province_modifier = province_fleuve } }
 						add_province_modifier = { name = route_terrestre duration = -1 }
 					}
+					# Avert the player that a route is on its demesne
+					any_province_lord = {
+						limit = {
+							ai = no
+							NOT = { has_global_flag = avert_player } # assure that the player is averted only once
+						}
+						character_event = { id = TRADE.0010 days = 10}
+					}
+					clr_global_flag = avert_player
+						
 					# Avert the player that the route building can be build on its demesne
 					any_neighbor_province = {
 						any_province_lord = {
@@ -389,6 +399,16 @@ province_event = {
 							limit = { NOT = { has_province_modifier = province_fleuve } }
 							add_province_modifier = { name = route_terrestre duration = -1 }
 						}
+						# Avert the player that a route is on its demesne
+						any_province_lord = {
+							limit = {
+								ai = no
+								NOT = { has_global_flag = avert_player } # assure that the player is averted only once
+							}
+							character_event = { id = TRADE.0010 days = 10}
+						}
+						clr_global_flag = avert_player	
+						
 						# Avert the player that the route building can be build on its demesne
 						any_neighbor_province = {
 							any_province_lord = {
@@ -400,7 +420,7 @@ province_event = {
 								character_event = { id = TRADE.0009 days = 10}
 							}
 						}
-						clr_global_flag = avert_player
+						clr_global_flag = avert_player											
 						add_province_modifier = { name = flag_A duration = -1 } #mouchard
 					}
 				}

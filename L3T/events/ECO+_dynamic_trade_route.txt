@@ -3,7 +3,8 @@ namespace = TRADE
 # Give the step B of the trade routes
 province_event = {
     id = TRADE.0001
-	hide_window = yes
+	desc = "DESCSTEP"
+	picture = GFX_evt_market
 	
 	trigger = {
 		# Give the bloc B to a province which is neighbor to a province with the previous bloc, here A
@@ -37,7 +38,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			any_province_holding = {
 				OR = {
 					has_building = CA_route_L1
@@ -56,33 +57,36 @@ province_event = {
 		}
 	}
 
-	immediate = {
-		set_province_flag = bloc_B
-		
-		# The route size is the max route size of its C neighboors + 1
-		set_variable = { which = "route_size" value = 1 } # the value to evaluate the neighboor, then to store final value
-		set_variable = { which = "tmp" value = 1 } # store the value when route_size is used to evaluate neighboor
-		any_neighbor_province = {
-			limit = { has_province_flag = bloc_C }
-			ROOT = { subtract_variable = { which = "route_size" which = THIS} }
-			if = {
-				limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
-				# We have found a neighboor with a route_size value more or equal, so we update the value
-				ROOT = { set_variable = { which = "route_size" which = THIS} } # B route_size = C route_size
-				ROOT = { change_variable = { which = "route_size" value = 1} } # B route_size = C route_size + 1
-				ROOT = { set_variable = { which = "tmp" which = "route_size"} } # store the value
+	option = {
+		name = "TRADESTEP"
+		hidden_tooltip = {	
+			set_province_flag = bloc_B
+			
+			# The route size is the max route size of its C neighboors + 1
+			set_variable = { which = "route_size" value = 1 } # the value to evaluate the neighboor, then to store final value
+			set_variable = { which = "tmp" value = 1 } # store the value when route_size is used to evaluate neighboor
+			any_neighbor_province = {
+				limit = { has_province_flag = bloc_C }
+				ROOT = { subtract_variable = { which = "route_size" which = THIS} }
+				if = {
+					limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+					# We have found a neighboor with a route_size value more or equal, so we update the value
+					ROOT = { set_variable = { which = "route_size" which = THIS} } # B route_size = C route_size
+					ROOT = { change_variable = { which = "route_size" value = 1} } # B route_size = C route_size + 1
+					ROOT = { set_variable = { which = "tmp" which = "route_size"} } # store the value
+				}
+				# Reset the B route_size for the stored value
+				ROOT = { set_variable = { which = "route_size" which = "tmp"} }
 			}
-			# Reset the B route_size for the stored value
-			ROOT = { set_variable = { which = "route_size" which = "tmp"} }
+			
+			# Update the route size in previous blocs (here A)
+			any_neighbor_province = {
+				limit = { has_province_flag = bloc_A }
+				province_event = { id = TRADE.0008 days = 10}
+			}
+			
+			add_province_modifier = { name = flag_B duration = -1 } #TODO mouchard
 		}
-		
-		# Update the route size in previous blocs (here A)
-		any_neighbor_province = {
-			limit = { has_province_flag = bloc_A }
-			province_event = { id = TRADE.0008 days = 10}
-		}
-		
-		add_province_modifier = { name = flag_B duration = -1 } #TODO mouchard
 	}
 }
 
@@ -90,7 +94,8 @@ province_event = {
 # COPY-PASTE with adaptation of TRADE.0001
 province_event = {
     id = TRADE.0002
-	hide_window = yes
+	desc = "DESCSTEP"
+	picture = GFX_evt_market
 	
 	trigger = {
 		any_neighbor_province = {
@@ -122,7 +127,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			any_province_holding = {
 				OR = {
 					has_building = CA_route_L1
@@ -141,29 +146,32 @@ province_event = {
 		}
 	}
 
-	immediate = {
-		set_province_flag = bloc_C
-		
-		set_variable = { which = "route_size" value = 1 }
-		set_variable = { which = "tmp" value = 1 }
-		any_neighbor_province = {
-			limit = { has_province_flag = bloc_D }
-			ROOT = { subtract_variable = { which = "route_size" which = THIS} }
-			if = {
-				limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
-				ROOT = { set_variable = { which = "route_size" which = THIS} }
-				ROOT = { change_variable = { which = "route_size" value = 1} }
-				ROOT = { set_variable = { which = "tmp" which = "route_size"} }
+	option = {
+		name = "TRADESTEP"
+		hidden_tooltip = {			
+			set_province_flag = bloc_C
+			
+			set_variable = { which = "route_size" value = 1 }
+			set_variable = { which = "tmp" value = 1 }
+			any_neighbor_province = {
+				limit = { has_province_flag = bloc_D }
+				ROOT = { subtract_variable = { which = "route_size" which = THIS} }
+				if = {
+					limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+					ROOT = { set_variable = { which = "route_size" which = THIS} }
+					ROOT = { change_variable = { which = "route_size" value = 1} }
+					ROOT = { set_variable = { which = "tmp" which = "route_size"} }
+				}
+				ROOT = { set_variable = { which = "route_size" which = "tmp"} }
 			}
-			ROOT = { set_variable = { which = "route_size" which = "tmp"} }
+			
+			any_neighbor_province = {
+				limit = { has_province_flag = bloc_B }
+				province_event = { id = TRADE.0008 days = 10}
+			}
+			
+			add_province_modifier = { name = flag_C duration = -1 } #TODO mouchard
 		}
-		
-		any_neighbor_province = {
-			limit = { has_province_flag = bloc_B }
-			province_event = { id = TRADE.0008 days = 10}
-		}
-		
-		add_province_modifier = { name = flag_C duration = -1 } #TODO mouchard
 	}
 }
 
@@ -171,7 +179,8 @@ province_event = {
 # COPY-PASTE with adaptation of TRADE.0001
 province_event = {
     id = TRADE.0003
-	hide_window = yes
+	desc = "DESCSTEP"
+	picture = GFX_evt_market
 	
 	trigger = {
 		any_neighbor_province = {
@@ -203,7 +212,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			any_province_holding = {
 				OR = {
 					has_building = CA_route_L1
@@ -222,29 +231,32 @@ province_event = {
 		}		
 	}
 
-	immediate = {
-		set_province_flag = bloc_D
-		
-		set_variable = { which = "route_size" value = 1 }
-		set_variable = { which = "tmp" value = 1 }
-		any_neighbor_province = {
-			limit = { has_province_flag = bloc_E }
-			ROOT = { subtract_variable = { which = "route_size" which = THIS} }
-			if = {
-				limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
-				ROOT = { set_variable = { which = "route_size" which = THIS} }
-				ROOT = { change_variable = { which = "route_size" value = 1} }
-				ROOT = { set_variable = { which = "tmp" which = "route_size"} }
+	option = {
+		name = "TRADESTEP"
+		hidden_tooltip = {			
+			set_province_flag = bloc_D
+			
+			set_variable = { which = "route_size" value = 1 }
+			set_variable = { which = "tmp" value = 1 }
+			any_neighbor_province = {
+				limit = { has_province_flag = bloc_E }
+				ROOT = { subtract_variable = { which = "route_size" which = THIS} }
+				if = {
+					limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+					ROOT = { set_variable = { which = "route_size" which = THIS} }
+					ROOT = { change_variable = { which = "route_size" value = 1} }
+					ROOT = { set_variable = { which = "tmp" which = "route_size"} }
+				}
+				ROOT = { set_variable = { which = "route_size" which = "tmp"} }
 			}
-			ROOT = { set_variable = { which = "route_size" which = "tmp"} }
+			
+			any_neighbor_province = {
+				limit = { has_province_flag = bloc_C }
+				province_event = { id = TRADE.0008 days = 10}
+			}
+			
+			add_province_modifier = { name = flag_D duration = -1 } #TODO mouchard
 		}
-		
-		any_neighbor_province = {
-			limit = { has_province_flag = bloc_C }
-			province_event = { id = TRADE.0008 days = 10}
-		}
-		
-		add_province_modifier = { name = flag_D duration = -1 } #TODO mouchard
 	}
 }
 
@@ -252,7 +264,8 @@ province_event = {
 # COPY-PASTE with adaptation of TRADE.0001
 province_event = {
     id = TRADE.0004
-	hide_window = yes
+	desc = "DESCSTEP"
+	picture = GFX_evt_market
 	
 	trigger = {
 		any_neighbor_province = {
@@ -284,7 +297,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			any_province_holding = {
 				OR = {
 					has_building = CA_route_L1
@@ -303,22 +316,26 @@ province_event = {
 		}
 	}
 
-	immediate = {
-		set_province_flag = bloc_E		
-		
-		any_neighbor_province = {
-			limit = { has_province_flag = bloc_D }
-			province_event = { id = TRADE.0008 days = 10}
+	option = {
+		name = "TRADESTEP"
+		hidden_tooltip = {	
+			set_province_flag = bloc_E		
+			
+			any_neighbor_province = {
+				limit = { has_province_flag = bloc_D }
+				province_event = { id = TRADE.0008 days = 10}
+			}
+			
+			add_province_modifier = { name = flag_E duration = -1 } #TODO mouchard
 		}
-		
-		add_province_modifier = { name = flag_E duration = -1 } #TODO mouchard
 	}
 }
 
 # Give the route modifier
 province_event = {
     id = TRADE.0005
-	hide_window = yes
+	desc = "DESCTRADE.0005"
+	picture = GFX_evt_market
 	
 	trigger = {
 		OR = {
@@ -347,28 +364,31 @@ province_event = {
 		months = 10
 	}
 	
-	immediate = {
-		if = {
-			limit = { has_province_modifier = province_fleuve }
-			add_province_modifier = { name = route_fluviale duration = -1 }
-		}
-		if = {
-			limit = { NOT = { has_province_modifier = province_fleuve } }
-			add_province_modifier = { name = route_terrestre duration = -1 }
-		}
-		
-		# Avert the player that the route building can be build on its demesne
-		any_neighbor_province = {
-			any_province_lord = {
-				limit = {
-					ai = no
-					NOT = { has_global_flag = avert_player }
-				}
-				set_global_flag = avert_player
-				character_event = { id = TRADE.0009 days = 10}
+	option = {
+		name = "TRADE.0005A"
+		hidden_tooltip = {	
+			if = {
+				limit = { has_province_modifier = province_fleuve }
+				add_province_modifier = { name = route_fluviale duration = -1 }
 			}
+			if = {
+				limit = { NOT = { has_province_modifier = province_fleuve } }
+				add_province_modifier = { name = route_terrestre duration = -1 }
+			}
+			
+			# Avert the player that the route building can be build on its demesne
+			any_neighbor_province = {
+				any_province_lord = {
+					limit = {
+						ai = no
+						NOT = { has_global_flag = avert_player }
+					}
+					set_global_flag = avert_player
+					character_event = { id = TRADE.0009 days = 10}
+				}
+			}
+			clr_global_flag = avert_player
 		}
-		clr_global_flag = avert_player
 	}
 }
 
@@ -522,5 +542,18 @@ character_event = {
 	
 	option = {
 		name = "TRADE.0009A"
+	}
+}
+
+# Avert the player that a route is on its demesne
+character_event = {
+    id = TRADE.0010
+	desc = "DESCTRADE.0010"
+	picture = GFX_evt_market
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "TRADE.0010A"
 	}
 }
