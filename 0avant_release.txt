@@ -3,17 +3,19 @@ TODO list d'avant release
 - Spécialisation
 	-> favoriser le Bourg Féodal si plein de ressources
 	-> favoriser les citadelles pour les capitales de duché, royaume de jure
+		-> faire une décision pour passer sa capitale en Cité Fortifiée
+		-> faire une décision pour transformer une ancienne Cité Foritifiée (qui n'est plus une capitale) en Bourg Fortifié/Citadelle
 	-> faire de même pour les Temple (ne pas oublier le flag temple_to_specialize)
 	
 - Resources
 	-> ne pas oublier les bats COMM
 	-> revoir les effets des bâtiments
-	-> revoir certaines images (par exemple minerai4_armes)
+	-> revoir certaines images (par exemple minerai4_armes, le fromage)
 
 - Routes
 	- Transformer le mouchard des flags en modifier "Route commerciale en devenir"
 		-> rendre également l'event visible
-		-> faire un event lorsqu'une province voisine devient une route (reçoit le modifier route/fleuve)
+		-> mettre des modifiers pour les provinces qui ne peuvent plus avoir de routes de commerces? [dans le but de dire au joueur qu'il n'y aura pas de route ici]
 		
 - Fleuves
 	-> liste des provinces fluviales qui ne sont pas in game sur un fleuve naviguable
@@ -25,7 +27,7 @@ TODO list d'avant release
 	-> refondre le concept?
 	
 BUGS
-	- [ETRANGE] présence des modifiers minerai4_armes et minerai4_outils dans une province après seulement 3 ans IG
+	- [ETRANGE/PEUT ETRE DEJA RESOLU] présence des modifiers minerai4_armes et minerai4_outils dans une province après seulement 3 ans IG
 
 - Vérifier la localisation
 	-> références de traduction non réalisées
