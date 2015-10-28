@@ -139,7 +139,7 @@ castle = {
 city = {
 
 	VOC_INDUSTRIELLE = {
-		desc = "VOC_INDUSTRIELLE_desc"
+		desc = "VOC_INDUSTRIELLE_DESC"
 		prerequisites = { CITE_L1 }
 		trigger = { TECH_TRADE_PRACTICES = 0 }	
 		not_if_x_exists = { VOC_COMMERCIALE }		
@@ -149,7 +149,7 @@ city = {
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
 	VOC_COMMERCIALE = {
-		desc = "VOC_COMMERCIALE_desc"
+		desc = "VOC_COMMERCIALE_DESC"
 		prerequisites = { CITE_L1 }
 		trigger = { TECH_TRADE_PRACTICES = 0 }	
 		not_if_x_exists = { VOC_INDUSTRIELLE }		

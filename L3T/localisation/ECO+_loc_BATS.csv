@@ -49,9 +49,9 @@ CA_CARR_pierre_L3_desc;Ce site carrier fournit l'ensemble de la région en pierre
 CA_MINE_minerai_L1;MINERAI : Excavation Minière;MINERAI : Excavation Minière;;;;;;;;;;;;x;
 CA_MINE_minerai_L1_desc;Une excavation grossière a été forée dans la roche. On y en extrait péniblement du minerai.;Une excavation grossière a été forée dans la roche. On y en extrait péniblement du minerai.;;;;;;;;;;;;x;
 CA_MINE_minerai_L2;MINERAI : Tunnels Miniers;MINERAI : Tunnels Miniers;;;;;;;;;;;;x;
-CA_MINE_minerai_L2;L'excavation s'est agrandie et des galeries partent dans plusieurs directions qui suivent les veines, permettant une production croissante qui pourra être transformée dans une forge.;L'excavation s'est agrandie et des galeries partent dans plusieurs directions qui suivent les veines, permettant une production croissante qui pourra être transformée dans une forge.;;;;;;;;;;;;x;
+CA_MINE_minerai_L2_desc;L'excavation s'est agrandie et des galeries partent dans plusieurs directions qui suivent les veines, permettant une production croissante qui pourra être transformée dans une forge.;L'excavation s'est agrandie et des galeries partent dans plusieurs directions qui suivent les veines, permettant une production croissante qui pourra être transformée dans une forge.;;;;;;;;;;;;x;
 CA_MINE_minerai_L3;MINERAI : Grande Mine;MINERAI : Grande Mine;;;;;;;;;;;;x;
-CA_MINE_minerai_L3;Maintenant, une vraie mine soutenue par des étais a été creusée. Les risques d'éboulement sont diminués et les mineurs peuvent travailler plus sereinement. Le minerai extrait en bonnes quantités pourra dès lors fournir le métal nécessaire à la fabrication d'armes et outils.;Maintenant, une vraie mine soutenue par des étais a été creusée. Les risques d'éboulement sont diminués et les mineurs peuvent travailler plus sereinement. Le minerai extrait en bonnes quantités pourra dès lors fournir le métal nécessaire à la fabrication d'armes et outils.;;;;;;;;;;;;x;
+CA_MINE_minerai_L3_desc;Maintenant, une vraie mine soutenue par des étais a été creusée. Les risques d'éboulement sont diminués et les mineurs peuvent travailler plus sereinement. Le minerai extrait en bonnes quantités pourra dès lors fournir le métal nécessaire à la fabrication d'armes et outils.;Maintenant, une vraie mine soutenue par des étais a été creusée. Les risques d'éboulement sont diminués et les mineurs peuvent travailler plus sereinement. Le minerai extrait en bonnes quantités pourra dès lors fournir le métal nécessaire à la fabrication d'armes et outils.;;;;;;;;;;;;x;
 #FISH pêche (côtes);;;;;;;;;;;;;;;x
 CA_FISH_peche_L1;PECHE : Ponton;PECHE : Ponton;;;;;;;;;;;;x;
 CA_FISH_peche_L1_desc;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;;;;;;;;;;;;x;
@@ -63,8 +63,6 @@ CA_FISH_peche_L3_desc;C'est maintenant un port fourmillant d'activités et accuei
 CA_FISH_pisci_L1;PISCICULTURE : Élevage en Rivière;PISCICULTURE : Élevage en Rivière;Élevage Piscicole en Rivière;;;;;;;;;;;x;
 CA_FISH_pisci_L2;PISCICULTURE : Étang Aménagé;PISCICULTURE : Étang Aménagé;Étang Aménagé;;;;;;;;;;;x;
 #CA_FISH_pisci_L3;PISCICULTURE : Ferme Piscicole;PISCICULTURE : Ferme Piscicole;Ferme Piscicole;;;;;;;;;;;x;
-#;x;x;;;;;;;;;;;;x
-#;x;DEBUT AJOUT MOUCHI;;;;;;;;;;;;x
 CA_AGRI_moulin_L1;;;;;;;;;;;;;;x
 CA_AGRI_moulin_L1_desc;;;;;;;;;;;;;;x
 CA_AGRI_moulin_L2;;;;;;;;;;;;;;x
@@ -111,6 +109,12 @@ CA_outilleur_L1;;;;;;;;;;;;;;x
 CA_outilleur_L1_desc;;;;;;;;;;;;;;x
 CA_outilleur_L2;;;;;;;;;;;;;;x
 CA_outilleur_L2_desc;;;;;;;;;;;;;;x
+CA_armurerie_L1;;;;;;;;;;;;;;x
+CA_armurerie_L1_desc;;;;;;;;;;;;;;x
+CA_armurerie_L2;;;;;;;;;;;;;;x
+CA_armurerie_L2_desc;;;;;;;;;;;;;;x
+CA_armurerie_L3;;;;;;;;;;;;;;x
+CA_armurerie_L3_desc;;;;;;;;;;;;;;x
 CA_atelier_L1;;;;;;;;;;;;;;x
 CA_atelier_L1_desc;;;;;;;;;;;;;;x
 CA_atelier_L2;;;;;;;;;;;;;;x
@@ -129,8 +133,6 @@ CA_ELEV_cheval_L2;;;;;;;;;;;;;;x
 CA_ELEV_cheval_L2_desc;;;;;;;;;;;;;;x
 CA_ELEV_cheval_L3;;;;;;;;;;;;;;x
 CA_ELEV_cheval_L3_desc;;;;;;;;;;;;;;x
-#;x;x;;;;;;;;;;;;x
-#;x;FIN AJOUT MOUCHI;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x;
 #;-Villes-;-Villes-;;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x;
