@@ -1,0 +1,621 @@
+namespace = ECO
+
+####################
+# Martial Ambition #
+####################
+
+### Epée légendaire
+
+# Début chaîne d'event
+character_event = {
+	id = ECO.0311
+	desc = "DESCECO.0311"
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+	is_female = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_focus = focus_war
+				NOT = { martial = 8 }
+			}
+			has_ambition = obj_improve_martial
+		}
+		wealth = 100
+		NOT = { has_character_flag = toy_army }
+		NOT = { has_character_flag = street_ruffians }
+		NOT = { has_character_flag = warrior_mentor }
+		NOT = { has_character_flag = epee }
+		NOT = { has_character_flag = epee_taken }
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_feudal = yes	
+			has_building = CA_fonderie_L2
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 280
+	}
+	
+	# La chaîne d'event commence
+	option = {
+		name = "ECO.0311A"
+		character_event = { id = ECO.0312 days = 30 tooltip = TOOLTIPECO.0311A}
+		set_character_flag = epee
+		set_character_flag = epee_taken
+	}
+	
+	# On n'est pas interessé
+	option = {
+		name = "ECO.0311B"
+		custom_tooltip = { text = improve_martial_quit }
+	}
+}
+
+# Envoi d'un serviteur
+character_event = {
+	id = ECO.0312
+	desc = "DESCECO.0312"
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_martial
+			has_focus = focus_war
+		}
+		has_character_flag = epee
+	}
+	
+	# Aix la Chappelle
+	option = {
+		name = "ECO.0312A"
+		wealth = -20
+		random_list = {
+			60 = { character_event = { id = ECO.0313 days = 30 tooltip = TOOLTIPECO.0312A} }
+			40 = { character_event = { id = ECO.0315 days = 30 tooltip = TOOLTIPECO.0312B} }
+		}
+	}
+	
+	# Reims
+	option = {
+		name = "ECO.0312B"
+		wealth = -20
+		random_list = {
+			60 = { character_event = { id = ECO.0313 days = 30 tooltip = TOOLTIPECO.0312A} }
+			40 = { character_event = { id = ECO.0315 days = 30 tooltip = TOOLTIPECO.0312B} }
+		}
+	}
+	
+	# Rocamadour
+	option = {
+		name = "ECO.0312C"
+		wealth = -20
+		random_list = {
+			60 = { character_event = { id = ECO.0313 days = 30 tooltip = TOOLTIPECO.0312A} }
+			40 = { character_event = { id = ECO.0315 days = 30 tooltip = TOOLTIPECO.0312B} }
+		}
+	}
+}
+
+# Une femme vient vous voir
+character_event = {
+	id = ECO.0313
+	desc = "DESCECO.0313"
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_martial
+			has_focus = focus_war
+		}
+		has_character_flag = epee
+	}
+	
+	# Il va revenir
+	option = {
+		name = "ECO.0313A"
+		random_list = {
+			20 = { 
+				if = {
+					limit = { NOT = { trait = deceitful } }
+					add_trait = deceitful
+				}
+			}
+			80 = {}
+		}
+		character_event = { id = ECO.0314 days = 30 tooltip = TOOLTIPECO.0313A} 
+	}
+	
+	# Il est mort
+	option = {
+		name = "ECO.0313B"
+		wealth = -20
+		random_list = {
+			10 = { 
+				if = {
+					limit = { NOT = { trait = charitable } }
+					add_trait = charitable
+				}
+			}
+			90 = {}
+		}
+		character_event = { id = ECO.0314 days = 30 tooltip = TOOLTIPECO.0313B} 
+	}
+	
+	# C'est un voleur
+	option = {
+		name = "ECO.0313C"
+		wealth = 5
+		random_list = {
+			30 = { 
+				if = {
+					limit = { NOT = { trait = arbitrary } }
+					add_trait = arbitrary
+				}
+			}
+			70 = {}
+		}
+		character_event = { id = ECO.0314 days = 30 tooltip = TOOLTIPECO.0313C} 
+	}
+}
+
+# Nouveau serviteur ou abandon
+character_event = {
+	id = ECO.0314
+	desc = "DESCECO.0314"
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_martial
+			has_focus = focus_war
+		}
+		has_character_flag = epee
+	}
+	
+	# Chercher un autre serviteur à envoyer
+	option = {
+		name = "ECO.0314A"
+		character_event = { id = ECO.0312 days = 30 tooltip = TOOLTIPECO.0314A}
+	}
+	
+	# Abandonner
+	option = {
+		name = "ECO.0314B"
+		prestige = -10
+		custom_tooltip = { text = improve_martial_quit }
+		clr_character_flag = epee
+	}
+}
+
+# Plan trouvé
+character_event = {
+	id = ECO.0315
+	desc = "DESCECO.0315"
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_martial
+			has_focus = focus_war
+		}
+		has_character_flag = epee
+	}
+	
+	# Forger l'épée
+	option = {
+		name = "ECO.0315A"
+		wealth = -50
+		character_event = { id = ECO.0316 days = 30 tooltip = TOOLTIPECO.0315A}
+	}	
+}
+
+# Essai de l'épée
+character_event = {
+	id = ECO.0316
+	desc = "DESCECO.0316"
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_martial
+			has_focus = focus_war
+		}
+		has_character_flag = epee
+	}
+	
+	# Sur un bonhomme de paille
+	option = {
+		name = "ECO.0316A"
+		wealth = -5
+		random_list = {
+			60 = { character_event = { id = ECO.0317 days = 30 tooltip = TOOLTIPECO.0316AA} }
+			40 = { character_event = { id = ECO.0318 days = 30 tooltip = TOOLTIPECO.0316AB} }
+		}
+	}	
+	
+	option = {
+		name = "ECO.0316B"
+		random_list = {
+			50 = { 
+				if = {
+					limit = { NOT = { trait = cruel } }
+					add_trait = cruel
+				}
+			}
+			50 = {}
+		}
+		random_list = {
+			60 = { character_event = { id = ECO.0317 days = 30 tooltip = TOOLTIPECO.0316BA} }
+			40 = { character_event = { id = ECO.0318 days = 30 tooltip = TOOLTIPECO.0316BB} }
+		}	
+	}
+}
+
+# Equilibrage épée ou abandon
+character_event = {
+	id = ECO.0317
+	desc = "DESCECO.0317"
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_martial
+			has_focus = focus_war
+		}
+		has_character_flag = epee
+	}
+	
+	# Equilibrer l'épée
+	option = {
+		name = "ECO.0317A"
+		wealth = -10
+		character_event = { id = ECO.0316 days = 30 tooltip = TOOLTIPECO.0317A}
+	}
+	
+	# Abandonner
+	option = {
+		name = "ECO.0317B"
+		prestige = -20
+		custom_tooltip = { text = improve_martial_quit }
+		clr_character_flag = epee
+	}
+}
+
+# Fin de la chaîne
+character_event = {
+	id = ECO.0318
+	desc = "DESCECO.0318"
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_martial
+			has_focus = focus_war
+		}
+		has_character_flag = epee
+	}	
+	
+	# Succes
+	option = {
+		name = "ECO.0318A"
+		change_martial = 2
+		clr_character_flag = epee
+	}
+}
+
+########################
+# Stewardship Ambition #
+########################
+
+
+# Event de choix de faire la suite ou pas
+character_event = {
+	id = ECO.0301
+	desc = "DESCECO.0301"
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_focus = focus_business
+				NOT = { stewardship = 8 }
+			}
+			has_ambition = obj_improve_stewardship
+		}
+		wealth = 50
+		NOT = { has_character_flag = the_inn }
+		NOT = { has_character_flag = the_garden }
+		NOT = { has_character_flag = the_survey }
+		NOT = { has_character_flag = drap }
+		NOT = { has_character_flag = drap_taken }
+		war = no
+		any_demesne_title = {	
+			tier = baron	
+			is_feudal = yes	
+			has_building = CA_draperie_L2
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 280
+	}
+	
+	option = {
+		name = "ECO.0301A"
+		character_event = { id = ECO.0302 days = 30 tooltip = TOOLTIPECO.0301A}
+		set_character_flag = drap
+		set_character_flag = drap_taken
+	}
+	option = {
+		name = "ECO.0301B"
+		custom_tooltip = { text = improve_stewardship_quit }
+	}
+}
+
+# Choix de l'achat
+character_event = {
+	id = ECO.0302
+	desc = "DESCECO.0302"
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_economy
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_stewardship
+			has_focus = focus_business
+		}
+		has_character_flag = drap
+	}
+	
+	# Laine
+	option = {
+		name = "ECO.0302A"
+		wealth = -10
+		character_event = { id = ECO.0303 days = 30 tooltip = TOOLTIPECO.0302A}
+	}
+
+	# Etoffe
+	option = {
+		name = "ECO.0302B"
+		wealth = -25
+		character_event = { id = ECO.0304 days = 30 tooltip = TOOLTIPECO.0302B}
+	}
+	
+	# Drap
+	option = {
+		name = "ECO.0302C"
+		wealth = -50
+		character_event = { id = ECO.0305 days = 30 tooltip = TOOLTIPECO.0302C}
+	}
+}
+
+# Vente laine
+character_event = {
+	id = ECO.0303
+	desc = "DESCECO.0303"
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_economy
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_stewardship
+			has_focus = focus_business
+		}
+		has_character_flag = drap
+	}
+	
+	option = {
+		name = "ECO.0303A"
+		# Loi de Poisson simulant le nombre de ventes (espérance de 5; bornée à 9 (i.e retirage si plus grand))
+		random_list = {
+			1 = { character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303A} }
+			3 = { wealth = 2 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303B} }
+			9 = { wealth = 4 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303C} }
+			14 = { wealth = 6 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303D} }
+			18 = { wealth = 8 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303E} }
+			19 = { wealth = 10 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303F} }
+			15 = { wealth = 12 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303G} }
+			11 = { wealth = 14 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303H} }
+			6 = { wealth = 16 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303I} }
+			4 = { wealth = 18 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303J} }	
+		}	
+	}
+}
+
+# Vente étoffe
+character_event = {
+	id = ECO.0304
+	desc = "DESCECO.0304"
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_economy
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_stewardship
+			has_focus = focus_business
+		}
+		has_character_flag = drap
+	}
+	
+	option = {
+		name = "ECO.0304A"
+		# Loi de Poisson simulant le nombre de ventes (espérance de 5; bornée à 9 (i.e retirage si plus grand))
+		random_list = {
+			1 = { character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304A} }
+			3 = { wealth = 5 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304B} }
+			9 = { wealth = 10 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304C} }
+			14 = { wealth = 15 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304D} }
+			18 = { wealth = 20 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304E} }
+			19 = { wealth = 25 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304F} }
+			15 = { wealth = 30 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304G} }
+			11 = { wealth = 35 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304H} }
+			6 = { wealth = 40 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304I} }
+			4 = { wealth = 45 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304J} }
+		}	
+	}
+}
+
+# Vente drap
+character_event = {
+	id = ECO.0305
+	desc = "DESCECO.0305"
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_economy
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_stewardship
+			has_focus = focus_business
+		}
+		has_character_flag = drap
+	}
+	
+	option = {
+		name = "ECO.0305A"
+		# Loi de Poisson simulant le nombre de ventes (espérance de 5; bornée à 9 (i.e retirage si plus grand))
+		random_list = {
+			1 = { character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305A} }
+			5 = { wealth = 10 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305B} }
+			12 = { wealth = 20 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305C} }
+			17 = { wealth = 30 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305D} }
+			19 = { wealth = 40 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305E} }
+			18 = { wealth = 50 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305F} }
+			13 = { wealth = 60 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305G} }
+			8 = { wealth = 70 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305H} }
+			5 = { wealth = 80 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305I} }
+			2 = { wealth = 90 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305J} }
+		}	
+	}
+}
+
+# Gestion des invendus
+character_event = {
+	id = ECO.0306
+	desc = "DESCECO.0306"
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_economy
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ambition = obj_improve_stewardship
+			has_focus = focus_business
+		}
+		has_character_flag = drap
+	}
+	
+	#Les bruler
+	option = {
+		name = "ECO.0306A"
+		random_list = {		
+			50 = { 
+				if = {
+					limit = { NOT = { trait = greedy } }
+					add_trait = greedy
+				}
+			}
+			50 = { prestige = 10 }
+		}
+		character_event = { id = ECO.0307 days = 30 tooltip = TOOLTIPECO.0306A}
+	}
+	
+	#Les donner
+	option = {
+		name = "ECO.0306B"
+		random_list = {		
+			50 = {
+				if = {
+					limit = { NOT = { trait = charitable } }
+					add_trait = charitable
+				}
+			}
+			50 = { piety = 10 }
+		}
+		character_event = { id = ECO.0307 days = 30 tooltip = TOOLTIPECO.0306B}
+	}
+}
+
+# Fin de la chaîne
+character_event = {
+	id = ECO.0307
+	desc = DESCECO.0307
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_economy
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "ECO.0307A"
+		change_stewardship = 1
+		clr_character_flag = drap
+	}
+}
