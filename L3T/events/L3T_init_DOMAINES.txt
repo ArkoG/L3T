@@ -53,7 +53,22 @@ narrative_event = {
 	
 	option = {
 		name = "L3T.0003A"	
-		ai_chance = { factor = 35 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 3
+				any_demesne_title = {
+					has_title_flag = castle_to_specialize
+					location = { NOT = { check_variable = { which = "resourceNb" value = 2 } } }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				capital_holding = {
+					has_title_flag = castle_to_specialize
+				}
+			}
+		}
 		trigger = { NOT = { religion_group = pagan_group } }
 		random_demesne_title = {
 			limit = {
@@ -68,8 +83,19 @@ narrative_event = {
 		name = "L3T.0003B"	
 		ai_chance = { 
 			factor = 50
-			modifier = { factor = 1.5	tier = baron	}
-			modifier = { factor = 5.0   NOT = { location = { is_capital = yes } } }
+			modifier = {
+				factor = 3
+				any_demesne_title = {
+					has_title_flag = castle_to_specialize
+					location = { check_variable = { which = "resourceNb" value = 2 } }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				capital_holding = {
+					has_title_flag = castle_to_specialize
+				}
+			}
 		}
 		random_demesne_title = {
 			limit = {
@@ -83,19 +109,21 @@ narrative_event = {
 	option = {
 		name = "L3T.0003C"
 		trigger = {
+			higher_tier_than = COUNT # Duke, King or Emperor
 			capital_holding = {
 				has_title_flag = castle_to_specialize
 			}
 		}
 		ai_chance = {
-			factor = 15
-			#modifier = { factor =  50	tier = emperor	}			
-			#modifier = { factor =  10	tier = king		}			
-			modifier = { factor =  10	tier = duke		}
-			modifier = { factor = 1.3	tier = count	}
-			modifier = { factor = 0.5	tier = baron	}
-			modifier = { factor = 1.5   location = { is_capital = yes } }
-			modifier = { factor =  50	independent = yes	}
+			factor = 50		
+			modifier = {
+				factor =  10
+				higher_tier_than = DUKE # King or Emperor
+			}
+			modifier = {
+				factor =  10
+				independent = yes
+			}
 		}
 		random_demesne_title = {
 			limit = {

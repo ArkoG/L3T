@@ -105,7 +105,12 @@ castle = {
 	}
 	CITADELLE = { #capitale seigneuriale
 		desc = "CITADELLE_desc"
-		#prerequisites = {xxx}
+		#prerequisites = {xxx} # Enlever potential (pour raisons de performances) si on décommente cette ligne
+		potential = { 
+			is_capital = yes # Dans la province capitale
+			FROMFROM = { is_capital = yes } # Capitale de la province
+			FROM = { higher_tier_than = COUNT } # Le possesseur est au moins duc
+		}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		not_if_x_exists = { FORT BOURGFEODAL } #REPAIREVOLEUR	}
 		gold_cost = 0.0
