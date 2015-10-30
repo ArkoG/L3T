@@ -330,9 +330,9 @@ narrative_event = {
 							ai = no
 							NOT = { has_global_flag = avert_player } # assure that the player is averted only once
 						}
+						set_global_flag = avert_player
 						character_event = { id = TRADE.0010 days = 10}
 					}
-					clr_global_flag = avert_player
 						
 					# Avert the player that the route building can be build on its demesne
 					any_neighbor_province = {
@@ -433,9 +433,9 @@ province_event = {
 								ai = no
 								NOT = { has_global_flag = avert_player } # assure that the player is averted only once
 							}
+							set_global_flag = avert_player
 							character_event = { id = TRADE.0010 days = 10}
-						}
-						clr_global_flag = avert_player	
+						}	
 						
 						# Avert the player that the route building can be build on its demesne
 						any_neighbor_province = {

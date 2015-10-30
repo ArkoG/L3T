@@ -1,0 +1,262 @@
+#############################################################
+#  ECO+ an improved economy MOD for CK2 by ARKO  #
+#############################################################
+
+
+namespace = ECO
+
+
+###events d'immersion
+
+
+#Récoltes agricoles -Bonne récolte
+province_event = {
+    id = ECO.0200
+	desc = "DESCECO.0200"
+	picture = GFX_evt_ECO1
+	
+	trigger = {
+		OR = {
+			has_province_modifier = agriculture2_cereales
+			has_province_modifier = agriculture2_fruits		
+			has_province_modifier = agriculture2_legumes		
+		}
+		NOT = { has_province_modifier = recolte_bonne }
+		NOT = { has_province_modifier = recolte_mauvaise }
+		month = 8 # pour avoir septembre, bilan des récoltes
+		NOT = { month = 9 }
+	}
+		
+	mean_time_to_happen = {
+		years = 2
+		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = recolte_mauvaise } }
+		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = recolte_bonne } }
+		modifier = { factor = 0.60	owner = { stewardship = 13 } }
+		modifier = { factor = 1.50	owner = { NOT = { stewardship = 9 } } }
+	}
+
+	option = {
+		name = "ECO.0200A"
+		add_province_modifier = { name = recolte_bonne duration = 300 }		
+	}
+}
+
+#Récoltes agricoles -Mauvaise récolte
+province_event = {
+    id = ECO.0201
+	desc = "DESCECO.0201"
+	picture = GFX_evt_ECO3
+	
+	trigger = {
+		OR = {
+			has_province_modifier = agriculture2_cereales
+			has_province_modifier = agriculture2_fruits		
+			has_province_modifier = agriculture2_legumes		
+		}
+		NOT = { has_province_modifier = recolte_bonne }
+		NOT = { has_province_modifier = recolte_mauvaise }
+		#ajouter critère de technologie (efficacité accrue réduit le risque)
+		month = 8 #pour avoir septembre, bilan des récoltes
+		NOT = { month = 9 }
+	}
+		
+	mean_time_to_happen = { 
+		years = 2
+		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = recolte_bonne } }
+		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = recolte_mauvaise } }
+		modifier = { factor = 1.50	owner = { stewardship = 13 } }
+		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
+		modifier = { factor = 0.50	owner = { war = yes } }		
+	}
+
+	option = {
+		name = "ECO.0201A"
+		add_province_modifier = { name = recolte_mauvaise duration = 300 }		
+	}
+}
+
+#Pêche -Pêche abondante
+province_event = {
+    id = ECO.0202
+	desc = "DESCECO.0202"
+	picture = GFX_evt_merchant_ship_at_sea_republic
+	
+	trigger = {
+		has_province_modifier = peche2_poisson
+		NOT = { has_province_modifier = peche_bonne }
+		NOT = { has_province_modifier = peche_mauvaise }
+		month = 8 #pour avoir septembre et octobre, bilan de la saison
+		NOT = { month = 10 }
+	}
+		
+	mean_time_to_happen = {
+		years = 5
+		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = peche_mauvaise } }
+		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = peche_bonne } }
+		modifier = { factor = 0.60	owner = { stewardship = 13 } }
+		modifier = { factor = 1.50	owner = { NOT = { stewardship = 9 } } }
+	}
+
+	option = {
+		name = "ECO.0202A"
+		add_province_modifier = { name = peche_bonne duration = 300 }		
+	}
+}
+
+#Pêche -Pêche peu fructueuse
+province_event = {
+    id = ECO.0203
+	desc = "DESCECO.0203"
+	picture = GFX_evt_merchant_ship_at_sea_republic
+	
+	trigger = {
+		has_province_modifier = peche2_poisson
+		NOT = { has_province_modifier = peche_bonne }
+		NOT = { has_province_modifier = peche_mauvaise }
+		#ajouter critère de technologie (efficacité accrue réduit le risque)
+		month = 8 #pour avoir septembre et octobre, bilan de la saison
+		NOT = { month = 10 }
+	}
+		
+	mean_time_to_happen = { 
+		years = 5
+		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = peche_bonne } }
+		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = peche_mauvaise } }
+		modifier = { factor = 1.50	owner = { stewardship = 13 } }
+		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
+		modifier = { factor = 0.50	owner = { war = yes } }		
+	}
+
+	option = {
+		name = "ECO.0203A"
+		add_province_modifier = { name = peche_mauvaise duration = 300 }		
+	}
+}
+
+# Accident à la mine
+province_event = {
+    id = ECO.0204
+	desc = "DESCECO.0204"
+	picture = GFX_evt_market
+	
+	trigger = {
+		has_province_modifier = minerai2_fer
+		NOT = { has_province_modifier = mine_accident }
+		#ajouter critère de technologie (efficacité accrue réduit le risque)
+		month = 6 #pour avoir juilliet et août, beaucoup d'accidents l'été #à voir ce qu'on mettre comme critère plutot qu'un mois de l'année.
+		NOT = { month = 8 }
+	}
+		
+	mean_time_to_happen = { 
+		years = 5
+		modifier = { factor = 1.50	owner = { stewardship = 13 } }
+		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
+		modifier = { factor = 0.50	owner = { war = yes } }		
+	}
+
+	option = {
+		name = "ECO.0204A"
+		hidden_tooltip = {	
+			random_list = {
+				10 = { add_province_modifier = { name = mine_accident duration = 200 } }
+				15 = { add_province_modifier = { name = mine_accident duration = 250 } }	
+				50 = { add_province_modifier = { name = mine_accident duration = 300 } }
+				15 = { add_province_modifier = { name = mine_accident duration = 350 } }
+				10 = { add_province_modifier = { name = mine_accident duration = 450 } }
+			}
+		}	
+	}
+}
+# Nouveau filon découvert à la mine
+province_event = {
+    id = ECO.0205
+	desc = "DESCECO.0205"
+	picture = GFX_evt_market
+	
+	trigger = {
+		has_province_modifier = minerai2_fer
+		NOT = { has_province_modifier = mine_filon }
+		month = 6 #pour avoir juilliet et août #à voir ce qu'on mettre comme critère plutot qu'un mois de l'année.
+		NOT = { month = 8 }
+	}
+		
+	mean_time_to_happen = { 
+		years = 5
+		modifier = { factor = 0.60	owner = { stewardship = 13 } }
+		modifier = { factor = 1.50	owner = { NOT = { stewardship = 9 } } }
+		modifier = { factor = 2.00	owner = { war = yes } }		
+	}
+
+	option = {
+		name = "ECO.0205A"
+		hidden_tooltip = {
+			random_list = {
+				10 = { add_province_modifier = { name = mine_filon duration = 200 } }			
+				15 = { add_province_modifier = { name = mine_filon duration = 250 } }	
+				50 = { add_province_modifier = { name = mine_filon duration = 300 } }
+				15 = { add_province_modifier = { name = mine_filon duration = 350 } }
+				10 = { add_province_modifier = { name = mine_filon duration = 450 } }
+			}
+		}
+	}
+}
+
+#Industrie prospère
+province_event = {
+    id = ECO.0206
+	desc = "DESCECO.0206"
+	picture = GFX_evt_market
+	
+	trigger = {
+		NOT = { has_province_modifier = industrie_prospere }
+		owner = { war = no }
+		OR = {
+			has_province_modifier = agriculture3_biere
+			has_province_modifier = agriculture3_cidre
+			has_province_modifier = agriculture3_vin
+			has_province_modifier = elevage3_etoffe
+			has_province_modifier = elevage3_cuir
+			has_province_modifier = foret3_planche
+			has_province_modifier = foret3_verre
+			has_province_modifier = pierre3_pierre_taille
+			has_province_modifier = minerai3_metal
+			has_province_modifier = minerai3_salaison
+			has_province_modifier = minerai3_sel_raffine
+			has_province_modifier = peche_pisci3_fumaison
+		}
+	}
+	
+	mean_time_to_happen = { 
+		years = 10
+		modifier = { factor = 0.60	owner = { realm_stewardship = 50 } }
+		modifier = { factor = 1.50	owner = { NOT = { realm_stewardship = 30 } } }	
+	}
+	
+	option = {
+		name = "ECO.0206A"
+		add_province_modifier = { name = industrie_prospere duration = -1 }		
+	}
+}
+
+#Fin industrie prospère
+province_event = {
+    id = ECO.0207
+	desc = "DESCECO.0207"
+	picture = GFX_evt_market
+	
+	trigger = {
+		has_province_modifier = industrie_prospere
+		owner = { war = yes }
+	}
+	
+	mean_time_to_happen = { 
+		years = 1
+		modifier = { factor = 1.50	owner = { realm_martial = 50 } }
+		modifier = { factor = 0.60	owner = { NOT = { realm_martial = 30 } } }
+	}
+	
+	option = {
+		name = "ECO.0207A"
+		remove_province_modifier = industrie_prospere
+	}
+}	
