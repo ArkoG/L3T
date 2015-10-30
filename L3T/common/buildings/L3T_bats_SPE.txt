@@ -89,7 +89,7 @@ castle = {
 
 	FORT = { #défense et attaque, vocation militaire
 		desc = "FORT_desc"
-		#prerequisites = {xxx}
+		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		not_if_x_exists = { CITADELLE BOURGFEODAL } # REPAIREVOLEUR	}
 		potential = { NOT = { religion_group = pagan_group } }		
@@ -105,12 +105,7 @@ castle = {
 	}
 	CITADELLE = { #capitale seigneuriale
 		desc = "CITADELLE_desc"
-		#prerequisites = {xxx} # Enlever potential (pour raisons de performances) si on décommente cette ligne
-		potential = { 
-			is_capital = yes # Dans la province capitale
-			FROMFROM = { is_capital = yes } # Capitale de la province
-			FROM = { higher_tier_than = COUNT } # Le possesseur est au moins duc
-		}
+		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		not_if_x_exists = { FORT BOURGFEODAL } #REPAIREVOLEUR	}
 		gold_cost = 0.0
@@ -125,7 +120,7 @@ castle = {
 	}
 	BOURGFEODAL = { #
 		desc = "BOURGFEODAL_desc"
-		#prerequisites = {xxx}
+		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		not_if_x_exists = { CITADELLE FORT } # REPAIREVOLEUR }	
 		gold_cost = 0.0
