@@ -1,0 +1,125 @@
+#ECO+ - BATS
+#by ARKO
+
+
+### traitement des ressources primaires ###
+
+
+castle = {
+
+#BUCHERONNAGE foret
+CA_BOIS_bois_L1 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = { has_province_modifier = foret1 }
+	prerequisites = { BOURGFEODAL }	
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_BOIS_bois_L2 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CA_BOIS_bois_L1
+		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_BOIS_bois_L3 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 terrain = forest }
+	potential = { terrain = forest }
+	upgrades_from = CA_BOIS_bois_L2
+		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#CHARBONNIER foret
+CA_BOIS_charbon_L1 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = { has_province_modifier = foret1 }
+	prerequisites = { BOURGFEODAL }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_BOIS_charbon_L2 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CA_BOIS_charbon_L1
+		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_BOIS_charbon_L3 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 terrain = forest }
+	potential = { terrain = forest }
+	upgrades_from = CA_BOIS_charbon_L2
+		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+}
+
+
+#############################
+
+
+city = {
+
+#BUCHERONNAGE foret
+CT_BOIS_bois_L1 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = { has_province_modifier = foret1 }
+	prerequisites = { VOC_INDUSTRIELLE }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_BOIS_bois_L2 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_BOIS_bois_L1
+		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_BOIS_bois_L3 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 terrain = forest }
+	potential = { terrain = forest }
+	upgrades_from = CT_BOIS_bois_L2
+		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#CHARBONNIER foret
+CT_BOIS_charbon_L1 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = { has_province_modifier = foret1 }
+	prerequisites = { VOC_INDUSTRIELLE }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_BOIS_charbon_L2 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_BOIS_charbon_L1
+		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_BOIS_charbon_L3 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 terrain = forest }
+	potential = { terrain = forest }
+	upgrades_from = CT_BOIS_charbon_L2
+		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+}
+
+
+#############################
+
+
+temple = {
+
+#CHARBONNIER foret
+TP_BOIS_charbon_L1 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = { has_province_modifier = foret1 }
+	prerequisites = { MONASTERE }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_BOIS_charbon_L2 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_BOIS_charbon_L1
+		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_BOIS_charbon_L3 = {
+	trigger = { TECH_TRADE_PRACTICES = 0 terrain = forest }
+	potential = { terrain = forest }
+	upgrades_from = TP_BOIS_charbon_L2
+		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+}
+
+
+
+
