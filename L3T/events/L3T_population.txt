@@ -17,7 +17,7 @@ trigger = {
 			tier = baron	
 			is_feudal = yes	
 			NOT = {	has_building = ca_town_1	}
-			num_of_buildings = 5
+			num_of_buildings = 10
 		}
 	}
 		
@@ -30,7 +30,7 @@ option = {
 				tier = baron	
 				is_feudal = yes	
 				NOT = {	has_building = ca_town_1	}
-				num_of_buildings = 5
+				num_of_buildings = 10
 			}
 			add_building = ca_town_1
 		}
@@ -55,7 +55,7 @@ trigger = {
 			is_feudal = yes	
 			has_building = ca_town_1
 			NOT = { has_building = ca_town_2 }
-			num_of_buildings = 8
+			num_of_buildings = 15
 		}
 	}
 		
@@ -67,7 +67,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_feudal = yes
-				num_of_buildings = 8
+				num_of_buildings = 15
 				has_building = ca_town_1
 				NOT = { has_building = ca_town_2 }
 			}
@@ -94,7 +94,7 @@ trigger = {
 			is_feudal = yes	
 			has_building = ca_town_2
 			NOT = { has_building = ca_town_3 }
-			num_of_buildings = 15
+			num_of_buildings = 20
 		}
 	}
 		
@@ -106,7 +106,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_feudal = yes
-				num_of_buildings = 15
+				num_of_buildings = 20
 				has_building = ca_town_2
 				NOT = { has_building = ca_town_3 }
 			}
@@ -133,7 +133,7 @@ trigger = {
 			is_feudal = yes	
 			has_building = ca_town_3
 			NOT = { has_building = ca_town_4 }
-			num_of_buildings = 20
+			num_of_buildings = 25
 		}
 	}
 		
@@ -145,7 +145,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_feudal = yes
-				num_of_buildings = 20
+				num_of_buildings = 25
 				has_building = ca_town_3
 				NOT = { has_building = ca_town_4 }
 			}
@@ -175,7 +175,7 @@ trigger = {
 			is_feudal = yes	
 			has_building = ca_town_4
 			NOT = { has_building = ca_town_5 }
-			num_of_buildings = 30
+			num_of_buildings = 35
 		}
 	}
 		
@@ -187,7 +187,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_feudal = yes
-				num_of_buildings = 30
+				num_of_buildings = 35
 				has_building = ca_town_4
 				NOT = { has_building = ca_town_5 }
 			}
@@ -215,7 +215,7 @@ trigger = {
 			tier = baron	
 			is_republic = yes	
 			NOT = {	has_building = CT_town_1	}
-			num_of_buildings = 5
+			num_of_buildings = 10
 		}
 	}
 		
@@ -228,7 +228,7 @@ option = {
 				tier = baron	
 				is_republic = yes	
 				NOT = {	has_building = CT_town_1	}
-				num_of_buildings = 5
+				num_of_buildings = 10
 			}
 			add_building = CT_town_1
 		}
@@ -253,7 +253,7 @@ trigger = {
 			is_republic = yes	
 			has_building = CT_town_1
 			NOT = { has_building = CT_town_2 }
-			num_of_buildings = 8
+			num_of_buildings = 15
 		}
 	}
 		
@@ -265,7 +265,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_republic = yes
-				num_of_buildings = 8
+				num_of_buildings = 15
 				has_building = CT_town_1
 				NOT = { has_building = CT_town_2 }
 			}
@@ -292,7 +292,7 @@ trigger = {
 			is_republic = yes	
 			has_building = CT_town_2
 			NOT = { has_building = CT_town_3 }
-			num_of_buildings = 12
+			num_of_buildings = 20
 		}
 	}
 		
@@ -304,7 +304,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_republic = yes
-				num_of_buildings = 12
+				num_of_buildings = 20
 				has_building = CT_town_2
 				NOT = { has_building = CT_town_3 }
 			}
@@ -331,7 +331,7 @@ trigger = {
 			is_republic = yes	
 			has_building = CT_town_3
 			NOT = { has_building = CT_town_4 }
-			num_of_buildings = 16
+			num_of_buildings = 25
 		}
 	}
 		
@@ -343,7 +343,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_republic = yes
-				num_of_buildings = 16
+				num_of_buildings = 25
 				has_building = CT_town_3
 						NOT = { has_building = CT_town_4 }
 			}
@@ -373,7 +373,7 @@ trigger = {
 			is_republic = yes	
 			has_building = CT_town_4
 			NOT = { has_building = CT_town_5 }
-			num_of_buildings = 20
+			num_of_buildings = 30
 		}
 	}
 		
@@ -385,7 +385,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_republic = yes
-				num_of_buildings = 20
+				num_of_buildings = 30
 				has_building = CT_town_4
 				NOT = { has_building = CT_town_5 }
 			}
@@ -412,7 +412,7 @@ trigger = {
 			tier = baron	
 			is_theocracy = yes	
 			NOT = {	has_building = tp_town_1	}
-			num_of_buildings = 7
+			num_of_buildings = 12
 		}
 	}
 		
@@ -425,7 +425,7 @@ option = {
 				tier = baron	
 				is_theocracy = yes	
 				NOT = {	has_building = tp_town_1	}
-				num_of_buildings = 7
+				num_of_buildings = 12
 			}
 			add_building = tp_town_1
 		}
@@ -450,7 +450,7 @@ trigger = {
 			is_theocracy = yes	
 			has_building = tp_town_1
 			NOT = { has_building = tp_town_2 }
-			num_of_buildings = 10
+			num_of_buildings = 17
 		}
 	}
 		
@@ -462,7 +462,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_theocracy = yes
-				num_of_buildings = 10
+				num_of_buildings = 17
 				has_building = tp_town_1
 				NOT = {	has_building = tp_town_2	}
 			}
@@ -489,7 +489,7 @@ trigger = {
 			is_theocracy = yes	
 			has_building = tp_town_2
 			NOT = { has_building = tp_town_3 }
-			num_of_buildings = 15
+			num_of_buildings = 22
 		}
 	}
 		
@@ -501,7 +501,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_theocracy = yes
-				num_of_buildings = 15
+				num_of_buildings = 22
 				has_building = tp_town_2
 				NOT = {	has_building = tp_town_3	}
 			}
@@ -528,7 +528,7 @@ trigger = {
 			is_theocracy = yes	
 			has_building = tp_town_3
 			NOT = { has_building = tp_town_4 }
-			num_of_buildings = 20
+			num_of_buildings = 26
 		}
 	}
 		
@@ -540,7 +540,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_theocracy = yes
-				num_of_buildings = 20
+				num_of_buildings = 26
 				has_building = tp_town_3
 				NOT = {	has_building = tp_town_4	}
 			}
@@ -570,7 +570,7 @@ trigger = {
 			is_theocracy = yes	
 			has_building = tp_town_4
 			NOT = { has_building = tp_town_5 }
-			num_of_buildings = 25
+			num_of_buildings = 30
 		}
 	}
 		
@@ -582,7 +582,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_theocracy = yes
-				num_of_buildings = 25
+				num_of_buildings = 30
 				has_building = tp_town_4
 				NOT = {	has_building = tp_town_5	}
 			}
