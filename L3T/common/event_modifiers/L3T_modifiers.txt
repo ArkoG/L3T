@@ -135,13 +135,13 @@
 ###ECO+
 agriculture1			= {icon = 95 local_revolt_risk = -0.01} 
 agriculture2_cereales	= {icon = 96}	agriculture2_fruits	= {icon = 100}	agriculture2_legumes = {icon = 102}	agriculture2_vigne	= {icon = 103} 
-agriculture3_farine 	= {icon = 97}	agriculture3_cidre	= {icon = 101}										agriculture3_vin 	= {icon = 104}
+agriculture3_farine 	= {icon = 97}	agriculture3_cidre	= {icon = 101 garrison_size  = 0.05}				agriculture3_vin 	= {icon = 104 garrison_size  = 0.05}
 agriculture3_biere		= {icon = 98}	
-agriculture4_pain 		= {icon = 99}
+agriculture4_pain 		= {icon = 99 local_revolt_risk = -0.05}
 
 elevage1		= {icon = 105}
 elevage2_laine	= {icon = 106}	elevage2_boeuf	= {icon = 109	local_tax_modifier = 0.01}	elevage2_fromage	= {icon = 112}  elevage2_cheval = {icon = 112}
-elevage4_drap	= {icon = 107}	elevage3_viande	= {icon = 110}
+elevage4_drap	= {icon = 107}	elevage3_viande	= {icon = 110 levy_size = 0.05}
 elevage3_etoffe	= {icon = 108}	elevage3_cuir	= {icon = 111}
 
 foret1			= {icon = 113}
@@ -160,14 +160,14 @@ minerai1		= {icon = 123}
 minerai2_fer	= {icon = 124}	minerai2_sel_gemme		= {icon = 127 local_tax_modifier = 0.02}
 minerai3_metal	= {icon = 125}	minerai3_sel_raffine	= {icon = 128}
 minerai4_outils	= {icon = 126 local_build_time_modifier = -0.05}	minerai3_salaison		= {icon = 129}
-minerai4_armes	= {icon = 125}
+minerai4_armes	= {icon = 125 levy_size = 0.05}
 
 minerai2_cuivre	= {icon = 143}
 minerai2_or	= {icon = 144}
 
 peche1					= {icon = 130}	pisci1			= {icon = 133}	
 peche2_poisson			= {icon = 131}	pisci2_poisson	= {icon = 134}
-peche_pisci3_fumaison	= {icon = 132}
+peche_pisci3_fumaison	= {icon = 132 local_revolt_risk = -0.03}
 
 peaux2_fourrure	= {icon = 135 	tax_income = 0.2}
 joyaux2_bijoux	= {icon = 136 	tax_income = 0.1}
@@ -442,8 +442,8 @@ flag_H = { icon = 78 tax_income = -90}
 flag_I = { icon = 78 tax_income = -90}
 flag_J = { icon = 78 tax_income = -90}
 
-route_size1 = { icon = 94 local_tax_modifier = 0.01}
-route_size2 = { icon = 93 local_tax_modifier = 0.02}
-route_size3 = { icon = 92 local_tax_modifier = 0.03}
-route_size4 = { icon = 91 local_tax_modifier = 0.04}
-route_size5 = { icon = 90 local_tax_modifier = 0.05}
+route_size1 = { icon = 94 local_tax_modifier = 0.02}
+route_size2 = { icon = 93 local_tax_modifier = 0.04}
+route_size3 = { icon = 92 local_tax_modifier = 0.06}
+route_size4 = { icon = 91 local_tax_modifier = 0.08}
+route_size5 = { icon = 90 local_tax_modifier = 0.10}
