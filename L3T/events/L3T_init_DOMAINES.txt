@@ -20,6 +20,11 @@ narrative_event = {
 	prisoner = no
 		
 	trigger = {
+		OR = {
+			had_global_flag = { flag = running_SWMH days = 180 }
+			had_global_flag = { flag = running_LCDA days = 180 }
+			had_global_flag = { flag = running_VANILLA days = 180 }
+		}
 		#NOT = { trait = chef_malandrin }
 		any_demesne_title = {
 			tier = baron
@@ -569,6 +574,11 @@ narrative_event = {
 	prisoner = no
 		
 	trigger = {
+		OR = {
+			had_global_flag = { flag = running_SWMH days = 180 }
+			had_global_flag = { flag = running_LCDA days = 180 }
+			had_global_flag = { flag = running_VANILLA days = 180 }
+		}
 		NOT = { religion_group = pagan_group }
 		any_demesne_title = {
 			tier = baron
@@ -579,18 +589,10 @@ narrative_event = {
 			}
 		}
 	}	
-		
-	mean_time_to_happen = { months = 9 }	
 
-	option = {
-		name = "L3T.0006A"	
-		ai_chance = {
-			factor = 80
-			#modifier = { factor =  10	learning = 20	}
-			#modifier = { factor =   2	learning = 15	}
-			#modifier = { factor = 0.8	NOT = { learning = 10 }	}
-		}
-		trigger = { religion_group = christian }
+	mean_time_to_happen = { months = 9 }
+	
+	immediate = {
 		random_demesne_title = {
 			limit = {
 				tier = baron
@@ -599,6 +601,30 @@ narrative_event = {
 					has_building = MONASTERE
 					has_building = CITEEPISCOPALE
 				}
+			}
+			set_title_flag = temple_to_specialize
+		}
+	}
+	
+	option = {
+		name = "L3T.0006A"	
+		ai_chance = {
+			factor = 40
+			#modifier = { factor =  10	learning = 20	}
+			#modifier = { factor =   2	learning = 15	}
+			#modifier = { factor = 0.8	NOT = { learning = 10 }	}
+			modifier = {
+				factor = 3
+				any_demesne_title = {
+					has_title_flag = temple_to_specialize
+					location = { check_variable = { which = "resourceNb" value = 2 } }
+				}
+			}
+		}
+		trigger = { religion_group = christian }
+		random_demesne_title = {
+			limit = {
+				has_title_flag = temple_to_specialize
 			}
 			add_building = MONASTERE
 		}
@@ -607,18 +633,13 @@ narrative_event = {
 	option = {
 		name = "L3T.0006B"	
 		ai_chance = {
-			factor = 10
+			factor = 40
 			modifier = { factor = 100	NOT = { tier = baron }	}
 			modifier = { factor = 0.7	tier = baron }
 		}	
 		random_demesne_title = {
 			limit = {
-				tier = baron
-				holding_type = temple
-				NOT = {
-					has_building = MONASTERE
-					has_building = CITEEPISCOPALE
-				}
+				has_title_flag = temple_to_specialize
 			}
 			add_building = CITEEPISCOPALE
 		}
@@ -627,7 +648,7 @@ narrative_event = {
 	option = {
 		name = "L3T.0006C"	
 		ai_chance = {
-			factor = 10
+			factor = 20
 			modifier = { factor = 2.5	martial = 20	}
 			modifier = { factor = 1.5	martial = 15	}
 			modifier = { factor = 0.5	NOT = { martial = 10 }	}
@@ -635,12 +656,7 @@ narrative_event = {
 		trigger = { religion = catholic }
 		random_demesne_title = {
 			limit = {
-				tier = baron
-				holding_type = temple
-				NOT = {
-					has_building = MONASTERE
-					has_building = CITEEPISCOPALE
-				}
+				has_title_flag = temple_to_specialize
 			}
 			add_building = MONASTERE
 			add_building = COMMANDERIE

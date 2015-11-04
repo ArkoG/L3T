@@ -297,6 +297,7 @@ temple = {
 	MONASTERE = {
 		desc = "MONASTERE_desc"
 		trigger = { TECH_TRADE_PRACTICES = 0 }
+		prerequisites = { xxx }
 		not_if_x_exists = { CITEEPISCOPALE }	
 		potential = { religion_group = christian }
 		gold_cost = 0.0
@@ -313,6 +314,7 @@ temple = {
 	CITEEPISCOPALE = {
 		desc = "CITEEPISCOPALE_desc"
 		trigger = { TECH_TRADE_PRACTICES = 0 }
+		prerequisites = { xxx }
 		not_if_x_exists = { MONASTERE }		
 		potential = { NOT = { religion_group = pagan_group } }
 		gold_cost = 0.0
@@ -329,7 +331,7 @@ temple = {
 	COMMANDERIE = { 
 		desc = "COMMANDERIE_desc"
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		prerequisites = { MONASTERE xxx }
+		prerequisites = { xxx }
 		potential = { religion = catholic }	
 		gold_cost = 1000
 		build_time = 8
@@ -337,9 +339,9 @@ temple = {
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
 
-	REGLE_DE_1 = { desc = "REGLE_DE_1_desc"	prerequisites = { MONASTERE XXX }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
-	REGLE_DE_2 = { desc = "REGLE_DE_2_desc"	prerequisites = { MONASTERE XXX }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
-	REGLE_DE_3 = { desc = "REGLE_DE_3_desc"	prerequisites = { MONASTERE XXX }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion_group = christian	NOT = { religion = catholic } }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
+	REGLE_DE_1 = { desc = "REGLE_DE_1_desc"	prerequisites = { xxx }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
+	REGLE_DE_2 = { desc = "REGLE_DE_2_desc"	prerequisites = { xxx }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
+	REGLE_DE_3 = { desc = "REGLE_DE_3_desc"	prerequisites = { xxx }	trigger = { TECH_TRADE_PRACTICES = 0 }	potential = { religion_group = christian	NOT = { religion = catholic } }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 5	start = { always = no }	}
 
 	#ORDRE_MONACAL_1 = { desc = "ORDRE_MONACAL_1_desc"	prerequisites = {REGLE_DE_1}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
 	#ORDRE_MONACAL_2 = { desc = "ORDRE_MONACAL_2_desc"	prerequisites = {REGLE_DE_2}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}

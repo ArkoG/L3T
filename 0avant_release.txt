@@ -1,8 +1,5 @@
 TODO list d'avant release
 
-- Spécialisation
-	-> revoir les Temple comme on l'a fait pour les cités et châteaux (ne pas oublier le flag temple_to_specialize)
-
 - Resources
 	-> revoir certaines images (par exemple minerai4_armes, le fromage)
 
@@ -13,7 +10,6 @@ TODO list d'avant release
 - Fleuves
 	-> liste des provinces fluviales qui ne sont pas in game sur un fleuve naviguable
 		=> Quelques provinces sont déjà mises (c'est du hardcode, donc pas terrible), faut-il les enlever ou en ajouter d'autres?
-	-> regarder si il n'y a pas trop d'incohérences (exemple 2 provinces adjacentes ont le modifier route fluviale mais pas le même fleuve)
 
 - Quid du gouvernement abbatiale et du bâtiment test de gouvernement féodal?
 
@@ -34,5 +30,5 @@ BUGS
 
 - passer un coup de validator
 
-- tester une partie un peu longue
+- tester une partie un peu longue (idéalement en Vanilla et avec SWMH)
 	=> Notamment pour voir si il n'y a pas un trop plein de ressources avec les routes
