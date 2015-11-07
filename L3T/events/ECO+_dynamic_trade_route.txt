@@ -13,9 +13,13 @@ province_event = {
 		}
 		
 		NOT = {
-			# To not give step B to the province which has already a bloc (typically the previous step, here A)
-			has_province_modifier = route_terrestre
-			has_province_modifier = route_fluviale
+			# To not give step B to the province which has already a bloc
+			has_province_flag = bloc_A
+			has_province_flag = bloc_B
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
+			has_province_flag = bloc_F
 			
 			# To not give step B to distinct routes each other
 			any_neighbor_province = { has_province_flag = bloc_B }
@@ -107,8 +111,12 @@ province_event = {
 		}
 		
 		NOT = {
-			has_province_modifier = route_terrestre
-			has_province_modifier = route_fluviale
+			has_province_flag = bloc_A
+			has_province_flag = bloc_B
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
+			has_province_flag = bloc_F
 			any_neighbor_province = { has_province_flag = bloc_A }
 			any_neighbor_province = { has_province_flag = bloc_C }
 			any_neighbor_province = { has_province_flag = bloc_D }
@@ -192,8 +200,12 @@ province_event = {
 		}
 		
 		NOT = {
-			has_province_modifier = route_terrestre
-			has_province_modifier = route_fluviale
+			has_province_flag = bloc_A
+			has_province_flag = bloc_B
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
+			has_province_flag = bloc_F
 			any_neighbor_province = { has_province_flag = bloc_A }
 			any_neighbor_province = { has_province_flag = bloc_B }
 			any_neighbor_province = { has_province_flag = bloc_D }
@@ -277,8 +289,12 @@ province_event = {
 		}
 		
 		NOT = {
-			has_province_modifier = route_terrestre
-			has_province_modifier = route_fluviale
+			has_province_flag = bloc_A
+			has_province_flag = bloc_B
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
+			has_province_flag = bloc_F
 			any_neighbor_province = { has_province_flag = bloc_A }
 			any_neighbor_province = { has_province_flag = bloc_B }
 			any_neighbor_province = { has_province_flag = bloc_C }
@@ -376,18 +392,23 @@ province_event = {
 				add_province_modifier = { name = route_terrestre duration = -1 }
 			}
 			
-			# Avert the player that the route building can be build on its demesne
-			any_neighbor_province = {
-				any_province_lord = {
-					limit = {
-						ai = no
-						NOT = { has_global_flag = avert_player }
+			# If the player does not receive this event ...
+			if = {
+				limit = { owner = { ai = yes } }
+				holder_scope
+				# ... but is a neighbour. Avert the player that the route building can be build on its demesne
+				any_neighbor_province = {
+					any_province_lord = {
+						limit = {
+							ai = no
+							NOT = { has_global_flag = avert_player }
+						}
+						set_global_flag = avert_player
+						character_event = { id = TRADE.0009 days = 10}
 					}
-					set_global_flag = avert_player
-					character_event = { id = TRADE.0009 days = 10}
 				}
+				clr_global_flag = avert_player
 			}
-			clr_global_flag = avert_player
 		}
 	}
 }
@@ -539,6 +560,7 @@ character_event = {
 	picture = GFX_evt_market
 
 	is_triggered_only = yes
+	hide_from = yes
 	
 	option = {
 		name = "TRADE.0009A"
@@ -551,7 +573,8 @@ character_event = {
 	desc = "DESCTRADE.0010"
 	picture = GFX_evt_market
 
-	is_triggered_only = yes
+	is_triggered_only = yes	
+	hide_from = yes
 	
 	option = {
 		name = "TRADE.0010A"

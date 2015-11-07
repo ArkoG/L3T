@@ -15,6 +15,12 @@ TODO list d'avant release
 - Nettoyage des fichiers d'event de sélection de mods
 	
 - Mettre à jour le fichier ID_list
+
+OPTIMISATIONS
+	- Mettre un flag route_checked_province pour les provinces ayant un bloc ou ne pouvant en avoir
+		=> évite de tester en permanence les events TRADE.0001->0004, qui ont des triggers assez lourd, pour rien
+	- Mettre un flag pour les provinces non fluviales
+		=> évite qu'elles soient visitées en permanence pour rien
 	
 BUGS
 	- [ETRANGE/PEUT ETRE DEJA RESOLU] présence des modifiers minerai4_armes et minerai4_outils dans une province après seulement 3 ans IG
