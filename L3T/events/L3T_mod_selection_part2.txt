@@ -238,6 +238,11 @@ province_event = { #installe les provinces fluviales VANILLA
 			has_global_flag = running_VANILLA
 			NOT = { has_province_modifier = province_fleuve }
 			OR = {
+			## India
+			AND = {
+				region = world_india
+				borders_major_river = yes
+			}			
 			##IRLANDE
 				province_id = 13 # Thomond
 				province_id = 9 # Connacht
@@ -674,8 +679,6 @@ province_event = { #installe les provinces fluviales VANILLA
 				province_id = 399 # Syrj
 				province_id = 401 # Hlynov
 				province_id = 400 # Zyriane
-			##L'Inde, on s'en fout grave n'est-ce pas ?
-			##La Sibérie et ses rivières gelées idem
 			}
 		}
 	mean_time_to_happen = { days = 10 }	
