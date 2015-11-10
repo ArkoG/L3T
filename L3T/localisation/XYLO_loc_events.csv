@@ -2,10 +2,10 @@ CODE;ENGLISH;FRENCH;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;EVENTS GENERAUX - FLAVOUR;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-XYLO.0001;Woodlands discoverd;Détection des Forêts;;;;;;;;;;;;x
-DESCXYLO.0001;The province of [From.Location.GetName] consists of dense woodland. A more thorough investigation is necessary in order to conclude what benefits can be exploited. Hireing a specialist in the person of a §YForester§! is essential.;La province de [From.Location.GetName] est en bonne partie couverte de forêts. Un inventaire plus précis est nécessaire cepedant pour voir quels avantages nous pourrions en tirer. Engager un spécialiste en la personne d'un §YForestier§! apparaît indispensable.;;;;;;;;;;;;x
-XYLO.0001A;OK.;Bien.;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+XYLO.0001;Hire a forester;Embaucher un forestier;;;;;;;;;;;x;
+DESCXYLO.0001;My liege, you are clearly busy with managing the affairs of your people, might I suggest a member of your court that could fill the position of Forester?;Vous êtes très occupé à diriger vos gens et vos terres, aussi je me permets de vous proposer quelqu'un de votre Cour qui pourrait convenir pour le poste de Forestier.;;;;;;;;;;;;x
+XYLO.0001A;He will do nicely. Have him start immediately.;Il fera l'affaire, qu'il se présente à moi et s'attèle à la tâche.;;;;;;;;;;;;x
+XYLO.0001B;If one want a job done properly...;Je le choisirais moi même.;;;;;;;;;;;;x
 XYLO.0002;Forest Specialization1;Spécialisation des Forêts1;;;;;;;;;;;;x
 DESCXYLO.0002;After an evaluation of our domains, our Forester informs us that the forests of [From.Location.GetName] are both able to be used for hunting or for good lumber. \n Do we need to retain it to your private hunting pleasures or open it to exploitation ?;Après un inventaire de nos domaines, notre Forestier nous informe que les bois de [From.Location.GetName] sont giboyeux et abondent d'arbres de belle stature, quel développment privilègier ? \n \nDevons-nous en réserver l'usage à sa seigneurie pour son bon plaisir de chasse ou bien les faire exploiter par nos gens ?;;;;;;;;;;;;x
 XYLO.0002A;Go for a hunt !;Partons chasser !;;;;;;;;;;;;x
@@ -60,10 +60,6 @@ DESCXYLO.0203;-Our coffers are teeming with gold, maybe it would be advisable to
 XYLO.0203A;I like to see my money grow, let's put it to good use.;Cela me paraît un bon investissement.;;;;;;;;;;;;x
 XYLO.0203B;Let me think it over.;Je dois réfléchir.;;;;;;;;;;;;x
 XYLO.0203C;-Unless you have found a new lord to advice, I would advise you to lookup -no- in the dictionary.;N'ai-je pas déjà dit non ?;;;;;;;;;;;;x
-XYLO.0301;Hire a forester;Embaucher un forestier;;;;;;;;;;;x;
-DESCXYLO.0301;My liege, you are clearly busy with managing the affairs of your people, might I suggest a member of your court that could fill the position of Forester?;Vous êtes très occupé à diriger vos gens et vos terres, aussi je me permets de vous proposer quelqu'un de votre Cour qui pourrait convenir pour le poste de Forestier.;;;;;;;;;;;;x
-XYLO.0301A;He will do nicely. Have him start immediately.;Il fera l'affaire, qu'il se présente à moi et s'attèle à la tâche.;;;;;;;;;;;;x
-XYLO.0301B;If one want a job done properly...;Je le choisirais moi même.;;;;;;;;;;;;x
 XYLO.0302;forest charter related stuff;RR foret;;;;;;;;;;;;x
 DESCXYLO.0302;;En nous réservant presque l'exclusivité des droits d'exploitation de nos forêts, cela crée un mécontentement croissant parmi la population. Nous pourrions par exemple accorder une licence forestière pour une courte durée durée afin de calmer les vélléités des villageois dans la province de [From.Location.GetName].;;;;;;;;;;;;x
 XYLO.0302A;;Il nous faut agir avant que ça ne dégénère.;;;;;;;;;;;;x
