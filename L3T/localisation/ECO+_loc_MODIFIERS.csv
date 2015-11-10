@@ -117,58 +117,16 @@ industrie_prospere_desc;The peace permits a prosperous industry;La paix permet à
 pont_fluvial;Bridge;Pont;;;;;;;;;;;;x
 pont_fluvial_desc;Bridge desc;The bridge over this important river is a must for a number of merchants that stand of profit from good income generated through a policy of levying tolls.;Le pont qui enjambe cet important cours d'eau est un passage obligé pour de nombreux marchands qui peut être mis à profit pour générer des revenus confortables par une politique de prélèvement de droits de péages.;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
-route_fluviale01;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#route_fluviale01_desc;Inland Commercial Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-route_fluviale02;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#route_fluviale02_desc;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-route_fluviale03;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#route_fluviale03_desc;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-route_fluviale04;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#route_fluviale04_desc;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-route_fluviale05;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#route_fluviale05_desc;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-route_fluviale06;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#route_fluviale06_desc;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-route_fluviale07;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#route_fluviale07_desc;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-route_fluviale08;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#route_fluviale08_desc;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-route_fluviale09;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#route_fluviale09_desc;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-route_fluviale10;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#route_fluviale10_desc;River Trade Route;Voie Commerciale Fluviale;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
 province_cotiere;Sea access;Accès à la mer;;;;;;;;;;;;x
 province_cotiere_desc;This province benefits from its situation being beside the sea or a big lake favouring trade and fishing.;Cette province bénéficie d'une situation en bord de mer ou d'un grand lac propice au commerce et à la pêche.;;;;;;;;;;;;x
 route_fluviale;River trade route;Voie commerciale fluviale;;;;;;;;;;;;x
-route_fluviale_desc;A River trade route goes through this province.;Le commerce de cette province est irrigué par un fleuve.;;;;;;;;;;;;x
+route_fluviale_desc;Trade goes by river in this river.;Le transit commercial se fait ici par voie fluviale.;;;;;;;;;;;;x
 route_terrestre;Continental trade road;Route de commerce;;;;;;;;;;;;x
 route_terrestre_desc;The road that goes through the province brings merchants and their goods.;La route traversant la province est fréquentée par les marchands de passage.;;;;;;;;;;;;x
 province_terrestre;Land province;Province continentale;;;;;;;;;;;;x
 province_terrestre_desc;This province doesn't benefit from direct sea access.;Cette province ne bénéficie pas d'un accès à la mer.;;;;;;;;;;;;x
-province_fleuve;River;Fleuve;;;;;;;;;;;;x
-province_fleuve_desc;A major river flows there;Un fleuve important passe par ici. \nNul question de l'enjamber par un pont dans l'immédiat, seule une embarcation peut s'y aventurer. \nLe génie qui réussiera à y construire un pont sera.... un (riche) génie !;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
-route_terrestre01;Commercial road;Route Commerciale;;;;;;;;;;;;x
-#route_terrestre01_desc;Commercial road;Route Commerciale;;;;;;;;;;;;x
-route_terrestre02;Commercial road;Route Commerciale;;;;;;;;;;;;x
-#route_terrestre02_desc;Commercial road;Route Commerciale;;;;;;;;;;;;x
-route_terrestre03;Commercial road;Route Commerciale;;;;;;;;;;;;x
-#route_terrestre03_desc;Commercial road;Route Commerciale;;;;;;;;;;;;x
-route_terrestre04;unused;Route Commerciale;;;;;;;;;;;;x
-#route_terrestre04_desc;unused;Route Commerciale;;;;;;;;;;;;x
-route_terrestre05;unused;Route Commerciale;;;;;;;;;;;;x
-#route_terrestre05_desc;unused;Route Commerciale;;;;;;;;;;;;x
-route_terrestre06;unused;Route Commerciale;;;;;;;;;;;;x
-#route_terrestre06_desc;unused;Route Commerciale;;;;;;;;;;;;x
-route_terrestre07;unused;Route Commerciale;;;;;;;;;;;;x
-#route_terrestre07_desc;unused;Route Commerciale;;;;;;;;;;;;x
-route_terrestre08;unused;Route Commerciale;;;;;;;;;;;;x
-#route_terrestre08_desc;unused;Route Commerciale;;;;;;;;;;;;x
-route_terrestre09;unused;Route Commerciale;;;;;;;;;;;;x
-#route_terrestre09_desc;unused;Route Commerciale;;;;;;;;;;;;x
-route_terrestre10;unused;Route Commerciale;;;;;;;;;;;;x
-#route_terrestre10_desc;unused;Route Commerciale;;;;;;;;;;;;x
+province_fleuve;River;Cours d'eau;;;;;;;;;;;;x
+province_fleuve_desc;A river large enough to transport merchandises flows there, it is also an obstacle to land movement.;La province est traversée par un ou plusieurs cours d'eau permettant le transport de marchandises mais rendant également difficile le passage d'une rive à l'autre, évidemment, aménager dess chemins de halage ou construire un pont serait profitable.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 3connexion_commerciale;Commercial node;Noeud commercial;;;;;;;;;;;;x
 3connexion_commerciale_desc;This province has access to at least 3 commercial connexions. Commercial connexions can be : land trade roads, fluvial trade roads, sea access and tradeposts. This gives accesss to luxury goods in the cities of the province. The cities have to be big enough.;Cette province a accès à au moins 3 voies commerciales. Les voies commerciales sont soit des routes terrestres, soit des routes fluviales, soit un accès à la mer ou encore un comptoir commercial. Ceci donne accès aux cités de la province, sous réserve qu'elles soient suffisemmant développées, aux biens précieux disponibles uniquement par le commerce. ;;;;;;;;;;;;x
@@ -176,3 +134,14 @@ route_terrestre10;unused;Route Commerciale;;;;;;;;;;;;x
 hills;Hillsides;Côteaux;Hügel;;Colinas;;;;;;;;;x
 defenderbonus_hills;Hillsides;Côteaux;Hügel;;Colinas;;;;;;;;;x
 paix_de_dieu;Peace of God;Paix de Dieu;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+route_size1;Trade zone I;Zone commerciale I;;;;;;;;;;;;x
+route_size1_desc;This indicates the level of the influence of this trade centre over the neighboring region.;Cet indicateur mesure l'étendue de l'influence régionale de ce centre de commerce.;;;;;;;;;;;;x
+route_size2;Trade zone II;Zone commerciale II;;;;;;;;;;;;x
+route_size2_desc;This indicates the level of the influence of this trade centre over the neighboring region.;Cet indicateur mesure l'étendue de l'influence régionale de ce centre de commerce.;;;;;;;;;;;;x
+route_size3;Trade zone III;Zone commerciale III;;;;;;;;;;;;x
+route_size3_desc;This indicates the level of the influence of this trade centre over the neighboring region.;Cet indicateur mesure l'étendue de l'influence régionale de ce centre de commerce.;;;;;;;;;;;;x
+route_size4;Trade zone IV;Zone commerciale IV;;;;;;;;;;;;x
+route_size4_desc;This indicates the level of the influence of this trade centre over the neighboring region.;Cet indicateur mesure l'étendue de l'influence régionale de ce centre de commerce.;;;;;;;;;;;;x
+route_size5;Trade zone V;Zone commerciale V;;;;;;;;;;;;x
+route_size5_desc;This indicates the level of the influence of this trade centre over the neighboring region.;Cet indicateur mesure l'étendue de l'influence régionale de ce centre de commerce.;;;;;;;;;;;;x
