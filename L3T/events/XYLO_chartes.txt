@@ -1,0 +1,195 @@
+#################################
+# XYLO KIT par Arko #
+#################################
+
+
+namespace = XYLO
+
+
+# charte forestière - RR du uniquement au type d'exploitation
+province_event = {
+    id = XYLO.0302
+	desc = "DESCXYLO.0302"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+		OR = {
+			has_province_modifier = foret2_chasse
+			has_province_modifier = foret2_holy	
+			}
+		revolt_risk = 0.04 #RR du uniquement au type d'exploitation
+		NOT = {
+				has_province_modifier = loi_forestiere_L1
+				has_province_modifier = loi_forestiere_L2	
+				has_province_modifier = peasants_upset #paysans inquiets 				
+			}
+	}
+		
+	mean_time_to_happen = {
+		days = 850
+	}	
+
+option = {
+		name = "XYLO.0302A"	#agissons !
+		ai_chance = { factor = 20 }
+		add_province_modifier = {
+			name = loi_forestiere_L2 
+			duration = 1095 #3ans
+			}
+	}
+option = {
+		name = "XYLO.0302B"	#tentons de relâcher un peu la tension
+		ai_chance = { factor = 45 }
+		add_province_modifier = {
+			name = loi_forestiere_L1 
+			duration =  365 #1an
+			}
+	}	
+option = {
+		name = "XYLO.0302C"	#et alors ?
+		ai_chance = { factor = 35 }
+		add_province_modifier = {
+			name = peasants_upset #paysans inquiets
+			duration = 1095 #3ans
+			}
+	}
+}
+
+# charte forestière - RR à causes multiples
+province_event = {
+    id = XYLO.0303
+	desc = "DESCXYLO.0303"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+		OR = {
+			has_province_modifier = foret2_chasse
+			has_province_modifier = foret2_holy	
+			}
+		revolt_risk = 0.09 #RR à causes multiples
+		NOT = {
+				has_province_modifier = loi_forestiere_L1
+				has_province_modifier = loi_forestiere_L2	
+				has_province_modifier = peasants_upset #paysans inquiets 				
+			}
+	}
+		
+	mean_time_to_happen = {
+		days = 850
+	}	
+
+option = {
+		name = "XYLO.0303A"	#ça sent le pâté, tapons fort !
+		ai_chance = { factor = 20 }
+		add_province_modifier = {
+			name = loi_forestiere_L2 
+			duration = 1825 #5ans
+			}
+	}
+option = {
+		name = "XYLO.0303B"	#faisons un geste
+		ai_chance = { factor = 45 }
+		add_province_modifier = {
+			name = loi_forestiere_L1 
+			duration = 1095 #3ans
+			}
+	}	
+option = {
+		name = "XYLO.0303C"	#ce n'est pas la cause réelle
+		ai_chance = { factor = 35 }
+		add_province_modifier = {
+			name = peasants_upset #paysans inquiets
+			duration = 1095 #3ans
+			}
+	}
+}
+
+# charte forestière - demande simple de charte
+province_event = {
+    id = XYLO.0304
+	desc = "DESCXYLO.0304"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+		OR = {
+			has_province_modifier = foret2_chasse
+			has_province_modifier = foret2_holy	
+			}
+		revolt_risk = 0.04 #
+		NOT = {
+				has_province_modifier = loi_forestiere_L1
+				has_province_modifier = loi_forestiere_L2	
+				has_province_modifier = peasants_upset #paysans inquiets 				
+			}
+	}
+		
+	mean_time_to_happen = {
+		days = 850
+	}	
+
+option = {
+		name = "XYLO.0304A"	#accordé
+		ai_chance = { factor = 50 }
+		add_province_modifier = {
+			name = loi_forestiere_L1 
+			duration = 1095 #3ans
+			}
+	}
+option = {
+		name = "XYLO.0304B"	#envoyez la milice
+		ai_chance = { factor = 50 }
+		add_province_modifier = {
+			name = peasants_upset #paysans inquiets
+			duration = 1095 #3ans
+			}
+	}
+}
+
+# charte forestière - demande d'extension de charte en qualité
+province_event = {
+    id = XYLO.0305
+	desc = "DESCXYLO.0305"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+		OR = {
+			has_province_modifier = foret2_chasse
+			has_province_modifier = foret2_holy	
+			}
+			has_province_modifier = loi_forestiere_L1
+		NOT = {	has_province_modifier = loi_forestiere_L2	
+			}
+	}
+		
+	mean_time_to_happen = {
+		days = 960
+	}	
+
+option = {
+		name = "XYLO.0305A"	#accordé
+		ai_chance = { factor = 25 }
+		add_province_modifier = {
+			name = loi_forestiere_L2
+			duration = 1825 #5ans
+			}
+		remove_province_modifier = loi_forestiere_L1
+		remove_province_modifier = peasants_upset
+	}
+option = {
+		name = "XYLO.0305B"	#non
+		ai_chance = { factor = 60 }
+		add_province_modifier = {
+			name = peasants_upset #paysans inquiets
+			duration = 1095 #3ans
+			}
+	}
+option = {
+		name = "XYLO.0305C"	#non et je vais leur retirer leurs droits actuels
+		ai_chance = { factor = 15 }
+		add_province_modifier = {
+			name = peasants_upset #paysans inquiets
+			duration = 1825 #5ans
+			}
+		remove_province_modifier = loi_forestiere_L1
+	}
+}
