@@ -6,6 +6,83 @@
 namespace = XYLO
 
 
+# embaucher un Forestier
+character_event = {
+    id = XYLO.0001
+	desc = "DESCXYLO.0001"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+			is_ruler = yes
+			capable_only = yes
+			OR = {
+				religion = catholic
+				is_heresy_of = catholic
+				}
+			prisoner = no
+			any_demesne_province = { has_province_modifier = foret1  }
+			NOT = {	any_courtier = { has_minor_title = title_forestier }	}
+			NOT = {	any_vassal = { has_minor_title = title_forestier }	}
+
+			any_courtier = {
+							prisoner = no
+							age = 16
+							is_female = no	
+							stewardship = 10 
+							NOT = { has_minor_title = title_court_jester }
+							NOT = { has_minor_title = title_keeper_of_swans }
+							NOT = { has_minor_title = title_court_dwarf }
+							NOT = { has_minor_title = title_master_of_the_horse }
+							NOT = { has_minor_title = title_master_of_the_hunt }
+							NOT = { has_minor_title = title_high_almoner }
+							NOT = { has_minor_title = title_cupbearer }
+							NOT = { has_minor_title = title_seneschal }
+							NOT = { has_minor_title = title_veneur }		
+							NOT = { has_minor_title = title_court_poet_christian }
+							NOT = { has_minor_title = title_court_troubadour }
+			}
+	}
+
+	mean_time_to_happen = {
+		months = 5
+			modifier = {
+				factor = 4.5
+				has_character_flag = recrutement_forestier_repousse
+		}
+	}
+	
+option = {
+		name = "XYLO.0001A"	#trouvez moi quelqu'un
+		ai_chance = { factor = 100 }	
+						random_courtier = {
+									limit = {
+											prisoner = no											
+											age = 16
+											is_female = no	
+											stewardship = 10 
+											NOT = { has_minor_title = title_court_jester }
+											NOT = { has_minor_title = title_keeper_of_swans }
+											NOT = { has_minor_title = title_court_dwarf }
+											NOT = { has_minor_title = title_master_of_the_horse }
+											NOT = { has_minor_title = title_master_of_the_hunt }
+											NOT = { has_minor_title = title_high_almoner }
+											NOT = { has_minor_title = title_cupbearer }
+											NOT = { has_minor_title = title_seneschal }
+											NOT = { has_minor_title = title_veneur }		
+											NOT = { has_minor_title = title_court_poet_christian }
+											NOT = { has_minor_title = title_court_troubadour }
+											}
+						give_minor_title = title_forestier									
+						}
+	}
+
+option = {
+		name = "XYLO.0001B" #je le choisirai	
+		ai_chance = { factor = 0 }	
+		set_character_flag = recrutement_forestier_repousse
+	}
+}
+
 # spécialisation Forêts -pour les Féodaux
 province_event = {
     id = XYLO.0002
@@ -25,14 +102,14 @@ province_event = {
 				is_republic = no
 				#is_patrician = no
 				is_theocracy = no				
-#				OR = {
-#					any_courtier = {
-#						has_minor_title = title_forestier
-#					}
-#					any_vassal = {
-#						has_minor_title = title_forestier
-#					}
-#				}
+				OR = {
+					any_courtier = {
+						has_minor_title = title_forestier
+					}
+					any_vassal = {
+						has_minor_title = title_forestier
+					}
+				}
 			}
 	}
 		
@@ -44,7 +121,7 @@ option = {
 		name = "XYLO.0002A"	
 		ai_chance = {
 			factor = 70
-			modifier = { factor = 0 religion_group = muslim		}
+			modifier = { factor = 0 NOT = { religion_group = christian }		}
 		}		#à pondérer. choix privilégié si trait chasseur	et a nommé un maître de chasse.
 		add_province_modifier = {
 			name = foret2_chasse 
@@ -81,14 +158,14 @@ province_event = {
 				is_republic = yes
 				#is_patrician = yes
 				is_theocracy = no				
-#				OR = {
-#					any_courtier = {
-#						has_minor_title = title_forestier
-#					}
-#					any_vassal = {
-#						has_minor_title = title_forestier
-#					}
-#				}
+				OR = {
+					any_courtier = {
+						has_minor_title = title_forestier
+					}
+					any_vassal = {
+						has_minor_title = title_forestier
+					}
+				}
 			}
 	}
 		
@@ -126,14 +203,14 @@ province_event = {
 				is_republic = no
 				#is_patrician = no
 				is_theocracy = yes				
-#				OR = {
-#					any_courtier = {
-#						has_minor_title = title_forestier
-#					}
-#					any_vassal = {
-#						has_minor_title = title_forestier
-#					}
-#				}
+				OR = {
+					any_courtier = {
+						has_minor_title = title_forestier
+					}
+					any_vassal = {
+						has_minor_title = title_forestier
+					}
+				}
 			}
 	}
 		
