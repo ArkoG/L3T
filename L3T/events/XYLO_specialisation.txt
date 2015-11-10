@@ -1,0 +1,164 @@
+#################################
+# XYLO KIT par Arko #
+#################################
+
+
+namespace = XYLO
+
+
+# spécialisation Forêts -pour les Féodaux
+province_event = {
+    id = XYLO.0002
+	desc = "DESCXYLO.0002"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+		has_province_modifier =	foret1
+		NOT = {
+			has_province_modifier = foret2_expl
+			has_province_modifier = foret2_chasse
+			has_province_modifier = foret2_holy				
+			}
+		
+		owner = {
+				is_feudal = yes
+				is_republic = no
+				#is_patrician = no
+				is_theocracy = no				
+#				OR = {
+#					any_courtier = {
+#						has_minor_title = title_forestier
+#					}
+#					any_vassal = {
+#						has_minor_title = title_forestier
+#					}
+#				}
+			}
+	}
+		
+	mean_time_to_happen = {
+		days = 300
+	}	
+
+option = {
+		name = "XYLO.0002A"	
+		ai_chance = {
+			factor = 70
+			modifier = { factor = 0 religion_group = muslim		}
+		}		#à pondérer. choix privilégié si trait chasseur	et a nommé un maître de chasse.
+		add_province_modifier = {
+			name = foret2_chasse 
+			duration = -1
+			}
+	}
+option = {
+		name = "XYLO.0002B"	
+		ai_chance = { factor = 30 }		#à pondérer. choix privilégié si bon niveau d'intendance
+		add_province_modifier = {
+			name = foret2_expl 
+			duration = -1
+			hidden = yes
+			}
+	}	
+}
+
+# spécialisation Forêts -pour les Villes
+province_event = {
+    id = XYLO.0003
+	desc = "DESCXYLO.0003"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+		has_province_modifier =	foret1
+		NOT = {
+			has_province_modifier = foret2_expl
+			has_province_modifier = foret2_chasse
+			has_province_modifier = foret2_holy				
+			}
+		
+		owner = {
+				is_feudal = no
+				is_republic = yes
+				#is_patrician = yes
+				is_theocracy = no				
+#				OR = {
+#					any_courtier = {
+#						has_minor_title = title_forestier
+#					}
+#					any_vassal = {
+#						has_minor_title = title_forestier
+#					}
+#				}
+			}
+	}
+		
+	mean_time_to_happen = {
+		days = 300
+	}	
+
+option = {
+		name = "XYLO.0003A"	
+		ai_chance = { factor = 100 }		#à pondérer. choix privilégié si trait chasseur	et a nommé un maître de chasse.
+		add_province_modifier = {
+			name = foret2_expl 
+			hidden = yes
+			duration = -1
+			}
+	}
+}
+
+# spécialisation -Forêts clericales
+province_event = {
+    id = XYLO.0004
+	desc = "DESCXYLO.0004"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+		has_province_modifier =	foret1
+		NOT = {
+			has_province_modifier = foret2_expl
+			has_province_modifier = foret2_chasse
+			has_province_modifier = foret2_holy				
+			}
+		
+		owner = {
+				is_feudal = no
+				is_republic = no
+				#is_patrician = no
+				is_theocracy = yes				
+#				OR = {
+#					any_courtier = {
+#						has_minor_title = title_forestier
+#					}
+#					any_vassal = {
+#						has_minor_title = title_forestier
+#					}
+#				}
+			}
+	}
+		
+	mean_time_to_happen = {
+		days = 300
+	}	
+
+option = {
+		name = "XYLO.0004A"	
+		ai_chance = {
+			factor = 70
+			modifier = { factor = 0 religion_group = muslim		}
+		}	#à pondérer. choix privilégié si monastère
+		add_province_modifier = {
+			name = foret2_holy
+			duration = -1
+			}
+	}
+option = {
+		name = "XYLO.0004B"	
+		ai_chance = { factor = 30 }	#à pondérer. choix privilégié si cité épiscopale
+		add_province_modifier = {
+			name = foret2_expl 
+			duration = -1
+			hidden = yes
+			}		
+	}
+}
