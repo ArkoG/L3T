@@ -1,0 +1,141 @@
+#################################
+# XYLO KIT par Arko #
+#################################
+
+
+namespace = XYLO
+
+
+###################UP
+
+#upgrade achat v1
+province_event = { 
+    id = XYLO.0201
+	desc = "DESCXYLO.0201"
+	picture = GFX_evt_XYLO_forest1
+
+	trigger = {
+		has_province_modifier = foret1
+		NOT = { has_province_modifier = foret_up }
+		NOT = { has_province_modifier = foret_poor }
+		NOT = { has_province_flag = offre_achat_refusee }
+		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }
+		owner = {
+			 wealth = 400
+			 is_theocracy = no
+			 }
+	}
+		
+	mean_time_to_happen = {
+		months = 30
+	}	
+
+option = {
+		name = "XYLO.0201A"	
+		ai_chance = { factor = 30 }
+		owner = { wealth = -350 }
+		clr_province_flag = forest_razed
+		add_province_modifier = {
+			name = foret_up 
+			duration = -1
+			}
+	}
+option = {
+		name = "XYLO.0201B"	
+		ai_chance = { factor = 20 }
+		set_province_flag = offre_achat_repoussee
+		}
+option = {
+		name = "XYLO.0201C"	
+		ai_chance = { factor = 50 }
+		set_province_flag = offre_achat_refusee
+		}
+}
+
+#upgrade achat v2
+province_event = { 
+    id = XYLO.0202
+	desc = "DESCXYLO.0202"
+	picture = GFX_evt_XYLO_forest1
+
+	trigger = {
+		has_province_modifier = foret1
+		NOT = { has_province_modifier = foret_up }
+		NOT = { has_province_modifier = foret_poor }
+		NOT = { has_province_flag = offre_achat_refusee }
+		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }
+		owner = {
+			 wealth = 450
+			 is_theocracy = no
+			 }
+	}
+		
+	mean_time_to_happen = {
+		months = 35
+	}	
+
+option = {
+		name = "XYLO.0202A"	
+		ai_chance = { factor = 25 }
+		owner = { wealth = -450 }
+		clr_province_flag = forest_razed
+		add_province_modifier = {
+			name = foret_up 
+			duration = -1
+			}
+	}
+option = {
+		name = "XYLO.0202B"	
+		ai_chance = { factor = 15 }
+		set_province_flag = offre_achat_repoussee
+		}
+option = {
+		name = "XYLO.0202C"	
+		ai_chance = { factor = 60 }
+		set_province_flag = offre_achat_refusee
+		}
+}
+
+#upgrade achat v3
+province_event = { 
+    id = XYLO.0203
+	desc = "DESCXYLO.0203"
+	picture = GFX_evt_XYLO_forest1
+
+	trigger = {
+		has_province_modifier =  foret1
+		NOT = { has_province_modifier = foret_up }
+		NOT = { has_province_modifier = foret_poor }
+		NOT = { has_province_flag = offre_achat_refusee }
+		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }
+		owner = {
+			 wealth = 350
+			 is_theocracy = no
+			 }
+		}
+		
+	mean_time_to_happen = {
+		months = 40
+	}	
+
+option = {
+		name = "XYLO.0203A"	
+		ai_chance = { factor = 35 }
+		owner = { wealth = -300 }
+		clr_province_flag = forest_razed
+		add_province_modifier = {
+			name = foret_up 
+			duration = -1
+			}
+	}
+option = {
+		name = "XYLO.0203B"	
+		ai_chance = { factor = 20 }
+		set_province_flag = offre_achat_repoussee
+	}
+option = {
+		name = "XYLO.0203C"	
+		ai_chance = { factor = 45 }
+		set_province_flag = offre_achat_refusee
+	}
+}

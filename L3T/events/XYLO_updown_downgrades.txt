@@ -1,0 +1,237 @@
+#################################
+# XYLO KIT par Arko #
+#################################
+
+
+namespace = XYLO
+
+
+###################DOWN
+
+# downgrade serie for bankruptcy - niv2 >> niv1 -domaine de chasse.
+#première coupe
+province_event = { 
+    id = XYLO.0103
+	desc = "DESCXYLO.0103"
+	picture = GFX_evt_XYLO_forest5
+
+	trigger = {
+		has_province_modifier = foret_up
+		NOT = { has_province_flag = cut_once }
+		NOT = { has_province_flag = cut_twice }
+		NOT = { has_province_flag = cut_third }
+		owner = {
+			NOT = { wealth = -50 }
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 12
+	}	
+
+option = {
+		name = "XYLO.0103A"	
+		ai_chance = { factor = 65 }
+	}
+option = {
+		name = "XYLO.0103B"	
+		ai_chance = { factor = 35 }
+		set_province_flag = cut_once
+		owner = { wealth = 75 }
+		}
+}
+
+#seconde coupe
+province_event = { 
+    id = XYLO.0104
+	desc = "DESCXYLO.0104"
+	picture = GFX_evt_XYLO_forest5
+
+	trigger = {
+		has_province_modifier = foret_up
+		has_province_flag = cut_once
+		NOT = { has_province_flag = cut_twice }
+		NOT = { has_province_flag = cut_third }
+		owner = {
+			NOT = { wealth = -50 }
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 18
+	}	
+
+option = {
+		name = "XYLO.0104A"	
+		ai_chance = { factor = 75 }
+	}
+option = {
+		name = "XYLO.0104B"	
+		ai_chance = { factor = 25 }
+		clr_province_flag = cut_once
+		set_province_flag = cut_twice
+		owner = { wealth = 65 }
+		}
+}
+
+#troisième coupe AKA la coupe de trop
+province_event = {
+    id = XYLO.0105
+	desc = "DESCXYLO.0105"
+	picture = GFX_evt_XYLO_forest5
+
+	trigger = {
+		has_province_modifier = foret_up
+		NOT = { has_province_flag = cut_once }
+		NOT = { has_province_flag = cut_third }
+		has_province_flag = cut_twice
+		owner = {
+			NOT = { wealth = -50 }
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 24
+	}	
+
+option = {
+		name = "XYLO.0105A"	
+		ai_chance = { factor = 90 }
+	}
+option = {
+		name = "XYLO.0105B"	
+		ai_chance = { factor = 10 }
+		clr_province_flag = cut_twice
+		set_province_flag = cut_third
+		owner = { wealth = 65 }
+		}
+}
+
+#csqs de XYLO.0105
+province_event = {
+    id = XYLO.0106
+	desc = "DESCXYLO.0106"
+	picture = GFX_evt_XYLOforestcut
+
+	trigger = {
+		NOT = { has_province_flag = forest_razed }
+		has_province_modifier = foret_up
+		NOT = { has_province_flag = cut_once }
+		OR = { 
+		has_province_flag = cut_twice 
+		has_province_flag = cut_third }
+	}
+		
+	mean_time_to_happen = {
+		months = 15
+	}	
+
+option = {
+		name = "XYLO.0106A"	
+		clr_province_flag = cut_twice
+		clr_province_flag = cut_third
+		set_province_flag = forest_razed
+		remove_province_modifier =	foret_up
+		add_province_modifier = {
+			name = foret_poor 
+			duration = 5500 #~15ans
+			}
+		}
+}
+
+# downgrade -don de terres boisées à l'Eglise- v1
+province_event = { 
+    id = XYLO.0107
+	desc = "DESCXYLO.0107"
+	picture = GFX_evt_XYLO_forest1
+
+	trigger = {
+		has_province_modifier = foret_up
+		NOT = { has_province_flag = don_refuse }
+		religion_group = christian
+		owner = {
+			NOT = { piety = 50 }
+		}
+	}
+		
+	mean_time_to_happen = { days = 450 }	
+
+option = {
+		name = "XYLO.0107A"	 #non
+		ai_chance = { factor = 60 }
+		set_province_flag = don_refuse
+	}
+option = {
+		name = "XYLO.0107B"	#oui
+		ai_chance = { factor = 40 }
+		remove_province_modifier = foret_up
+		owner = { piety = 75 }
+		religion_authority = { modifier = don_foret		years = 5 }
+		}
+option = {
+		name = "XYLO.0107C"	#vente
+		ai_chance = { factor = 40 }
+		trigger = { 
+			owner = { 
+				OR = { 
+					trait = cynical
+					trait = greedy
+					trait = imbecile
+					trait = slow
+					}
+				}
+			}
+		remove_province_modifier = foret_up
+		owner = { piety = -50 }
+		owner = { wealth = 150 }
+		}
+}
+
+# downgrade -don de terres boisées à l'Eglise- v2
+province_event = { 
+    id = XYLO.0108
+	desc = "DESCXYLO.0108"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+		has_province_modifier = foret_up
+		NOT = { has_province_flag = don_refuse }
+		religion_group = christian
+		owner = {
+			NOT = { piety = 250 }
+			piety = 100
+		}
+	}
+		
+	mean_time_to_happen = { months = 25 }	
+
+option = {
+		name = "XYLO.0108A"	 #non
+		ai_chance = { factor = 60 }
+		set_province_flag = don_refuse
+	}
+option = {
+		name = "XYLO.0108B"	#oui
+		ai_chance = { factor = 40 }
+		remove_province_modifier = foret_up
+		owner = { piety = 90 }
+		religion_authority = { modifier = don_foret		years = 5 }
+		}
+option = {
+		name = "XYLO.0108C"	#vente
+		ai_chance = { factor = 20 }
+		trigger = { 
+			owner = { 
+				OR = { 
+					trait = cynical
+					trait = greedy
+					trait = imbecile
+					trait = slow
+					}
+				}
+			}
+		remove_province_modifier = foret_up
+		owner = { piety = -150 }
+		owner = { wealth =  90 }
+		}
+}
