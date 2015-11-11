@@ -71,11 +71,11 @@ province_event = {
 			set_variable = { which = "tmp" value = 1 } # store the value when route_size is used to evaluate neighboor
 			any_neighbor_province = {
 				limit = { has_province_flag = bloc_C }
-				ROOT = { subtract_variable = { which = "route_size" which = THIS} }
+				ROOT = { subtract_variable = { which = "route_size" which = PREV} }
 				if = {
 					limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
 					# We have found a neighboor with a route_size value more or equal, so we update the value
-					ROOT = { set_variable = { which = "route_size" which = THIS} } # B route_size = C route_size
+					ROOT = { set_variable = { which = "route_size" which = PREV} } # B route_size = C route_size
 					ROOT = { change_variable = { which = "route_size" value = 1} } # B route_size = C route_size + 1
 					ROOT = { set_variable = { which = "tmp" which = "route_size"} } # store the value
 				}
@@ -163,10 +163,10 @@ province_event = {
 			set_variable = { which = "tmp" value = 1 }
 			any_neighbor_province = {
 				limit = { has_province_flag = bloc_D }
-				ROOT = { subtract_variable = { which = "route_size" which = THIS} }
+				ROOT = { subtract_variable = { which = "route_size" which = PREV} }
 				if = {
 					limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
-					ROOT = { set_variable = { which = "route_size" which = THIS} }
+					ROOT = { set_variable = { which = "route_size" which = PREV} }
 					ROOT = { change_variable = { which = "route_size" value = 1} }
 					ROOT = { set_variable = { which = "tmp" which = "route_size"} }
 				}
@@ -252,10 +252,10 @@ province_event = {
 			set_variable = { which = "tmp" value = 1 }
 			any_neighbor_province = {
 				limit = { has_province_flag = bloc_E }
-				ROOT = { subtract_variable = { which = "route_size" which = THIS} }
+				ROOT = { subtract_variable = { which = "route_size" which = PREV} }
 				if = {
 					limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
-					ROOT = { set_variable = { which = "route_size" which = THIS} }
+					ROOT = { set_variable = { which = "route_size" which = PREV} }
 					ROOT = { change_variable = { which = "route_size" value = 1} }
 					ROOT = { set_variable = { which = "tmp" which = "route_size"} }
 				}
@@ -484,7 +484,7 @@ province_event = {
 	immediate = {
 		if = {
 			limit = { has_province_flag = bloc_A }			
-			FROM = { subtract_variable = { which = "route_size" which = THIS} }
+			FROM = { subtract_variable = { which = "route_size" which = PREV} }
 			if = {
 				limit = { FROM = { check_variable = { which = "route_size" value = 0 } } }
 				# We have found a neighboor with a less route_size value, so we update the value
@@ -500,7 +500,7 @@ province_event = {
 		
 		if = {
 			limit = { has_province_flag = bloc_B }			
-			FROM = { subtract_variable = { which = "route_size" which = THIS} }
+			FROM = { subtract_variable = { which = "route_size" which = PREV} }
 			if = {
 				limit = { FROM = { check_variable = { which = "route_size" value = 0 } } }
 				# We have found a neighboor with a less route_size value, so we update the value
@@ -520,7 +520,7 @@ province_event = {
 		
 		if = {
 			limit = { has_province_flag = bloc_C }			
-			FROM = { subtract_variable = { which = "route_size" which = THIS} }
+			FROM = { subtract_variable = { which = "route_size" which = PREV} }
 			if = {
 				limit = { FROM = { check_variable = { which = "route_size" value = 0 } } }
 				# We have found a neighboor with a less route_size value, so we update the value
