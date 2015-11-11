@@ -1,0 +1,89 @@
+#XYLO KIT - BATS
+#by ARKO
+
+## Féodal
+castle = {
+	CA_chasse_L1 = { #loge de chasse
+	desc = "CA_chasse_L1_desc"
+		trigger = { TECH_ADMINISTRATION_FISCALE = 0 }
+		potential = { has_province_modifier = foret2_chasse }
+		build_cost = 50.0
+		build_time = 100
+		
+		archers = 20
+		
+		ai_creation_factor = 80
+		extra_tech_building_start = 100.0
+	}
+	CA_chasse_L2 = { #logis de chasse
+	desc = "CA_chasse_L2_desc"
+		trigger = { TECH_ADMINISTRATION_FISCALE = 0 }
+		upgrades_from = CA_chasse_L1
+		build_cost = 160.0
+		build_time = 200
+		
+		light_infantry = 10
+		archers = 10
+		
+		ai_creation_factor = 70
+		extra_tech_building_start = 100.0
+	}
+	CA_chasse_L3 = { #manoir de chasse
+	desc = "CA_chasse_L3_desc"
+		trigger = { TECH_ADMINISTRATION_FISCALE = 0 }
+		upgrades_from = CA_chasse_L2
+		build_cost = 250.0
+		build_time = 350
+		
+		light_infantry = 15
+		archers = 10
+		
+		ai_creation_factor = 70
+		extra_tech_building_start = 100.0
+	}
+	
+
+}
+
+##
+temple = {
+	TP_herboriste_L1 = { 
+	desc = "TP_herboriste_L1_desc"
+		trigger = { TECH_ADMINISTRATION_FISCALE = 0 }
+		potential = { has_province_modifier = foret2_holy }
+		build_cost = 60.0
+		build_time = 100
+		
+		tax_income = 0.1
+		disease_defence = 0.05
+		
+		ai_creation_factor = 80
+		extra_tech_building_start = 100.0
+	}
+	TP_herboriste_L2 = { #Apothicaire
+	desc = "TP_herboriste_L1_desc"
+		trigger = { TECH_ADMINISTRATION_FISCALE = 0 }
+		upgrades_from = TP_herboriste_L1
+		build_cost = 150.0
+		build_time = 250
+		
+		tax_income = 0.1
+		disease_defence = 0.10
+		
+		ai_creation_factor = 70
+		extra_tech_building_start = 100.0
+	}
+	
+	TP_oratoire_sylvestre = { 
+	desc = "TP_oratoire_sylvestre_desc"
+		trigger = { TECH_ADMINISTRATION_FISCALE = 0 }
+		potential = { has_province_modifier = foret2_holy }
+		build_cost = 120.0
+		build_time = 250
+		
+		liege_piety = 0.05
+		
+		ai_creation_factor = 75
+		extra_tech_building_start = 100.0
+	}
+}
