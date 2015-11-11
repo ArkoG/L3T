@@ -33,6 +33,7 @@ province_event = {
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = recolte_bonne } }
 		modifier = { factor = 0.60	owner = { stewardship = 13 } }
 		modifier = { factor = 1.50	owner = { NOT = { stewardship = 9 } } }
+		modifier = { factor = 2.00	owner = { war = yes } }
 	}
 
 	option = {
@@ -95,6 +96,7 @@ province_event = {
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = peche_bonne } }
 		modifier = { factor = 0.60	owner = { stewardship = 13 } }
 		modifier = { factor = 1.50	owner = { NOT = { stewardship = 9 } } }
+		modifier = { factor = 2.00	owner = { war = yes } }
 	}
 
 	option = {
@@ -238,14 +240,18 @@ province_event = {
 	}
 }
 
-#Fin industrie prospère
+#Fin prospèrité à cause de la guerre
 province_event = {
     id = ECO.0207
 	desc = "DESCECO.0207"
-	picture = GFX_evt_market
+	picture = GFX_evt_L3T_war
 	
 	trigger = {
-		has_province_modifier = industrie_prospere
+		OR = {
+			has_province_modifier = recolte_bonne
+			has_province_modifier = peche_bonne
+			has_province_modifier = industrie_prospere
+			}
 		owner = { war = yes }
 	}
 	
@@ -257,6 +263,8 @@ province_event = {
 	
 	option = {
 		name = "ECO.0207A"
+		remove_province_modifier = recolte_bonne
+		remove_province_modifier = peche_bonne
 		remove_province_modifier = industrie_prospere
 	}
 }	
