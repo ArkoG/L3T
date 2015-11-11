@@ -28,14 +28,14 @@ character_event = {
 		#set_global_flag = paix_de_dieu 
 		#narrative_event = { id = L3T.0011 days = 2555 } #7 years ATM
 	}
-	option = {	
-	name = "L3T.0010B"	
-	ai_chance = { factor = 0 }
-	trigger = { ai = no }
-	set_global_flag = running_LCDA	
+#	option = {	
+#	name = "L3T.0010B"	
+#	ai_chance = { factor = 0 }
+#	trigger = { ai = no }
+#	set_global_flag = running_LCDA	
 		#set_global_flag = paix_de_dieu 
 		#narrative_event = { id = L3T.0011 days = 1800 } #5 years ATM
-	}
+#	}
 	option = {
 	name = "L3T.0010C"	
 	ai_chance = { factor = 0 }
