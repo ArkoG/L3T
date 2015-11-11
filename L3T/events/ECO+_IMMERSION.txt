@@ -250,6 +250,7 @@ province_event = {
 		OR = {
 			has_province_modifier = recolte_bonne
 			has_province_modifier = peche_bonne
+			has_province_modifier = mine_filon
 			has_province_modifier = industrie_prospere
 			}
 		owner = { war = yes }
@@ -265,6 +266,7 @@ province_event = {
 		name = "ECO.0207A"
 		remove_province_modifier = recolte_bonne
 		remove_province_modifier = peche_bonne
+		remove_province_modifier = mine_filon
 		remove_province_modifier = industrie_prospere
 	}
 }	
