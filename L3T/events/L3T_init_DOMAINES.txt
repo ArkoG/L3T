@@ -145,7 +145,7 @@ narrative_event = {
 	title = "NAMEL3T.0004"
 	id = L3T.0004
 	desc = "DESCL3T.0004"
-	picture = GFX_evt_castle_construction
+	picture = GFX_evt_L3T_city
 	
 	only_rulers = yes
 	capable_only = yes
@@ -303,6 +303,7 @@ narrative_event = {
 						}
 					}				
 					set_province_flag = bloc_A
+					add_province_modifier = { name = noeud_commercial_primaire duration = -1 }
 					
 					# Marque les voisins et voisins de voisins pour faire une distance entre les blocs A
 					any_neighbor_province = {
@@ -423,6 +424,7 @@ province_event = {
 							}
 						}
 						add_province_modifier = { name = route_size1 duration = -1 }
+						add_province_modifier = { name = noeud_commercial_primaire duration = -1 }
 						set_variable = { which = "route_size" value = 1 }
 						if = {
 							limit = { has_province_modifier = province_fleuve }
@@ -480,7 +482,7 @@ narrative_event = {
 	title = "NAMEL3T.0005"
 	desc = "DESCL3T.0005"
     id = L3T.0005
-	picture = GFX_evt_castle_construction
+	picture = GFX_evt_L3T_city
 	
 	only_rulers = yes
 	capable_only = yes
@@ -523,7 +525,7 @@ narrative_event = {
 	title = "NAMEL3T.0002"
 	desc = "DESCL3T.0002"
     id = L3T.0002
-	picture = GFX_evt_castle_construction
+	picture = GFX_evt_L3T_city
 	
 	only_rulers = yes
 	capable_only = yes
