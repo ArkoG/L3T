@@ -201,9 +201,9 @@ province_event = {
 	
 	trigger = {
 		OR = {
-			had_global_flag = { flag = running_SWMH days = 365 }
-			had_global_flag = { flag = running_LCDA days = 365 }
+			had_global_flag = { flag = running_SWMH days = 365 }			
 			had_global_flag = { flag = running_VANILLA days = 365 }
+			had_global_flag = { flag = running_LCDA days = 365 }
 		}
 		NOT = { has_province_flag = counted_resources }
 	}

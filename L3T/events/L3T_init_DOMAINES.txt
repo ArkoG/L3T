@@ -21,9 +21,9 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
-			had_global_flag = { flag = running_SWMH days = 180 }
-			had_global_flag = { flag = running_LCDA days = 180 }
+			had_global_flag = { flag = running_SWMH days = 180 }			
 			had_global_flag = { flag = running_VANILLA days = 180 }
+			had_global_flag = { flag = running_LCDA days = 180 }
 		}
 		#NOT = { trait = chef_malandrin }
 		any_demesne_title = {
@@ -153,9 +153,18 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
-			had_global_flag = { flag = running_SWMH days = 730 }
-			had_global_flag = { flag = running_LCDA days = 730 }
+			had_global_flag = { flag = running_SWMH days = 730 }			
 			had_global_flag = { flag = running_VANILLA days = 730 }
+			had_global_flag = { flag = running_LCDA days = 730 }
+			AND = { # Priorité aux républiques
+				is_republic = yes
+				NOT = { tier = baron }
+				OR = {
+					had_global_flag = { flag = running_SWMH days = 180 }				
+					had_global_flag = { flag = running_VANILLA days = 180 }
+					had_global_flag = { flag = running_LCDA days = 180 }
+				}
+			}
 		}
 		any_demesne_title = {
 			tier = baron
@@ -169,7 +178,10 @@ narrative_event = {
 		}
 	}	
 		
-	mean_time_to_happen = { months = 9 }
+	mean_time_to_happen = {
+		months = 9
+		modifier = { factor = 0.1	NOT = { tier = baron }	}
+	}
 
 	immediate = {
 		random_demesne_title = {
@@ -366,7 +378,16 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
-		NOT = { has_province_flag = check_double_city }		
+		NOT = { has_province_flag = check_double_city }
+		OR = { 		
+			had_global_flag = { flag = running_SWMH days = 360 }				
+			had_global_flag = { flag = running_VANILLA days = 360 }
+			had_global_flag = { flag = running_LCDA days = 360 }
+			owner = { # Priorités aux républiques	
+				is_republic = yes
+				NOT = { tier = baron }
+			}
+		}
 	}
 	
 	mean_time_to_happen = {	days = 100 }
@@ -577,9 +598,9 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
-			had_global_flag = { flag = running_SWMH days = 180 }
-			had_global_flag = { flag = running_LCDA days = 180 }
+			had_global_flag = { flag = running_SWMH days = 180 }			
 			had_global_flag = { flag = running_VANILLA days = 180 }
+			had_global_flag = { flag = running_LCDA days = 180 }
 		}
 		NOT = { religion_group = pagan_group }
 		any_demesne_title = {
