@@ -364,7 +364,6 @@ narrative_event = {
 						}
 					}
 					clr_global_flag = avert_player
-					add_province_modifier = { name = flag_A duration = -1 } #mouchard
 				}
 			}
 			clr_title_flag = city_to_specialize	
@@ -476,8 +475,7 @@ province_event = {
 								character_event = { id = TRADE.0009 days = 10}
 							}
 						}
-						clr_global_flag = avert_player											
-						add_province_modifier = { name = flag_A duration = -1 } #mouchard
+						clr_global_flag = avert_player
 					}
 				}
 			}
