@@ -57,8 +57,7 @@ province_event = { #installe les provinces terrestres SWMH
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		add_province_modifier = {	name = province_terrestre  	duration = -1 
-		}	
+		add_province_modifier = {	name = province_terrestre  	duration = -1 hidden = yes }	
 	}
 }
 
@@ -81,9 +80,7 @@ province_event = { #installe les provinces terrestres LCDA
 	mean_time_to_happen = { days = 10 }	
 
 immediate = {
-		add_province_modifier = {	name = province_terrestre  	duration = -1 
-		#hidden = yes
-		}	
+		add_province_modifier = {	name = province_terrestre  	duration = -1 hidden = yes }	
 	}
 }
 
@@ -226,7 +223,7 @@ province_event = { #installe les provinces terrestres VANILLA
 	mean_time_to_happen = { days = 20 }
 
 immediate = {
-		add_province_modifier = {	name = province_terrestre  	duration = -1  }	
+		add_province_modifier = {	name = province_terrestre  	duration = -1  hidden = yes }	
 	}
 }
 
