@@ -10,7 +10,7 @@ castle = {
 #BUCHERONNAGE foret
 CA_BOIS_bois_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = { has_province_modifier = foret1 }
+	potential = { has_province_modifier = foret2_expl }
 	prerequisites = { BOURGFEODAL }	
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -29,7 +29,7 @@ CA_BOIS_bois_L3 = {
 #CHARBONNIER foret
 CA_BOIS_charbon_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = { has_province_modifier = foret1 }
+	potential = { has_province_modifier = foret2_expl }
 	prerequisites = { BOURGFEODAL }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -102,7 +102,7 @@ temple = {
 #CHARBONNIER foret
 TP_BOIS_charbon_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = { has_province_modifier = foret1 }
+	potential = { has_province_modifier = foret2_expl }
 	prerequisites = { MONASTERE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
