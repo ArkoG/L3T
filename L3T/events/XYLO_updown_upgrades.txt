@@ -9,7 +9,7 @@ namespace = XYLO
 ###################UP
 
 #upgrade achat v1
-province_event = { 
+province_event = {
     id = XYLO.0201
 	desc = "DESCXYLO.0201"
 	picture = GFX_evt_XYLO_forest1
@@ -19,7 +19,7 @@ province_event = {
 		NOT = { has_province_modifier = foret_up }
 		NOT = { has_province_modifier = foret_poor }
 		NOT = { has_province_flag = offre_achat_refusee }
-		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }
+		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
 		owner = {
 			 wealth = 400
 			 is_theocracy = no
@@ -63,7 +63,7 @@ province_event = {
 		NOT = { has_province_modifier = foret_up }
 		NOT = { has_province_modifier = foret_poor }
 		NOT = { has_province_flag = offre_achat_refusee }
-		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }
+		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
 		owner = {
 			 wealth = 450
 			 is_theocracy = no
@@ -107,7 +107,7 @@ province_event = {
 		NOT = { has_province_modifier = foret_up }
 		NOT = { has_province_modifier = foret_poor }
 		NOT = { has_province_flag = offre_achat_refusee }
-		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }
+		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
 		owner = {
 			 wealth = 350
 			 is_theocracy = no
