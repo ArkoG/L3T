@@ -147,28 +147,31 @@ province_event = {
 
 	trigger = {
 		has_province_modifier = foret_up
-		NOT = { has_province_flag = don_refuse }
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente years = 5 }}
 		owner = {
-			OR = { religion = catholic is_heresy_of = catholic }
+			NOT = { has_character_flag = don_refuse }
+			 OR = { religion = catholic is_heresy_of = catholic }
 			NOT = { piety = 50 }
 		}
 	}
 		
 	mean_time_to_happen = { months = 15 }	
 
-option = {
+	immediate = { set_province_flag = transaction_forestiere_recente }	
+	
+	option = {
 		name = "XYLO.0107A"	 #non
 		ai_chance = { factor = 60 }
-		set_province_flag = don_refuse
+		owner = { set_character_flag = don_refuse }
 	}
-option = {
+	option = {
 		name = "XYLO.0107B"	#oui
 		ai_chance = { factor = 40 }
 		remove_province_modifier = foret_up
 		owner = { piety = 75 }
 		religion_authority = { modifier = don_foret		years = 5 }
 		}
-option = {
+	option = {
 		name = "XYLO.0107C"	#vente
 		ai_chance = { factor = 40 }
 		trigger = { 
@@ -195,9 +198,10 @@ province_event = {
 
 	trigger = {
 		has_province_modifier = foret_up
-		NOT = { has_province_flag = don_refuse }
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente years = 5 }}
 		owner = {
-			OR = { religion = catholic is_heresy_of = catholic }
+			NOT = { has_character_flag = don_refuse }
+			 OR = { religion = catholic is_heresy_of = catholic }
 			NOT = { piety = 250 }
 			piety = 100
 		}
@@ -205,19 +209,21 @@ province_event = {
 		
 	mean_time_to_happen = { months = 25 }	
 
-option = {
+	immediate = { set_province_flag = transaction_forestiere_recente }		
+	
+	option = {
 		name = "XYLO.0108A"	 #non
 		ai_chance = { factor = 60 }
-		set_province_flag = don_refuse
+		owner = { set_character_flag = don_refuse }
 	}
-option = {
+	option = {
 		name = "XYLO.0108B"	#oui
 		ai_chance = { factor = 40 }
 		remove_province_modifier = foret_up
 		owner = { piety = 90 }
 		religion_authority = { modifier = don_foret		years = 7 }
 		}
-option = {
+	option = {
 		name = "XYLO.0108C"	#vente
 		ai_chance = { factor = 20 }
 		trigger = { 

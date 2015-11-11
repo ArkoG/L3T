@@ -20,6 +20,7 @@ province_event = {
 		NOT = { has_province_modifier = foret_poor }
 		NOT = { has_province_flag = offre_achat_refusee }
 		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente years = 5 }}
 		owner = {
 			 wealth = 400
 			 is_theocracy = no
@@ -30,7 +31,7 @@ province_event = {
 		months = 30
 	}	
 
-option = {
+	option = {
 		name = "XYLO.0201A"	
 		ai_chance = { factor = 30 }
 		owner = { wealth = -350 }
@@ -39,16 +40,18 @@ option = {
 			name = foret_up 
 			duration = -1
 			}
+		set_province_flag = transaction_forestiere_recente
 	}
-option = {
+	option = {
 		name = "XYLO.0201B"	
 		ai_chance = { factor = 20 }
 		set_province_flag = offre_achat_repoussee
 		}
-option = {
+	option = {
 		name = "XYLO.0201C"	
 		ai_chance = { factor = 50 }
 		set_province_flag = offre_achat_refusee
+		set_province_flag = transaction_forestiere_recente
 		}
 }
 
@@ -64,6 +67,7 @@ province_event = {
 		NOT = { has_province_modifier = foret_poor }
 		NOT = { has_province_flag = offre_achat_refusee }
 		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente years = 5 }}
 		owner = {
 			 wealth = 450
 			 is_theocracy = no
@@ -74,7 +78,7 @@ province_event = {
 		months = 35
 	}	
 
-option = {
+	option = {
 		name = "XYLO.0202A"	
 		ai_chance = { factor = 25 }
 		owner = { wealth = -450 }
@@ -83,16 +87,18 @@ option = {
 			name = foret_up 
 			duration = -1
 			}
+		set_province_flag = transaction_forestiere_recente	
 	}
-option = {
+	option = {
 		name = "XYLO.0202B"	
 		ai_chance = { factor = 15 }
 		set_province_flag = offre_achat_repoussee
 		}
-option = {
+	option = {
 		name = "XYLO.0202C"	
 		ai_chance = { factor = 60 }
 		set_province_flag = offre_achat_refusee
+		set_province_flag = transaction_forestiere_recente
 		}
 }
 
@@ -108,6 +114,7 @@ province_event = {
 		NOT = { has_province_modifier = foret_poor }
 		NOT = { has_province_flag = offre_achat_refusee }
 		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente years = 5 }}
 		owner = {
 			 wealth = 350
 			 is_theocracy = no
@@ -127,6 +134,7 @@ option = {
 			name = foret_up 
 			duration = -1
 			}
+		set_province_flag = transaction_forestiere_recente	
 	}
 option = {
 		name = "XYLO.0203B"	
@@ -137,5 +145,6 @@ option = {
 		name = "XYLO.0203C"	
 		ai_chance = { factor = 45 }
 		set_province_flag = offre_achat_refusee
+		set_province_flag = transaction_forestiere_recente
 	}
 }
