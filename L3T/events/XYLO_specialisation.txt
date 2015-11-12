@@ -15,10 +15,10 @@ character_event = {
 	trigger = {
 			is_ruler = yes
 			capable_only = yes
-			OR = {
-				religion = catholic
-				is_heresy_of = catholic
-				}
+#			OR = {
+#				religion = catholic
+#				is_heresy_of = catholic
+#				}
 			prisoner = no
 			any_demesne_province = { has_province_modifier = foret1  }
 			NOT = {	any_courtier = { has_minor_title = title_forestier }	}
@@ -119,6 +119,7 @@ province_event = {
 
 option = {
 		name = "XYLO.0002A"	
+		trigger = { region = world_europe }
 		ai_chance = {
 			factor = 70
 			modifier = { factor = 0 NOT = { religion_group = christian }		}
@@ -130,6 +131,17 @@ option = {
 	}
 option = {
 		name = "XYLO.0002B"	
+		trigger = { region = world_europe }
+		ai_chance = { factor = 30 }		#à pondérer. choix privilégié si bon niveau d'intendance
+		add_province_modifier = {
+			name = foret2_expl 
+			duration = -1
+			hidden = yes
+			}
+	}
+option = {
+		name = "XYLO.0002C"	
+		trigger = { NOT = { region = world_europe }}
 		ai_chance = { factor = 30 }		#à pondérer. choix privilégié si bon niveau d'intendance
 		add_province_modifier = {
 			name = foret2_expl 
@@ -174,7 +186,7 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0003A"	
+		name = "XYLO.0003B"	
 		ai_chance = { factor = 100 }		#à pondérer. choix privilégié si trait chasseur	et a nommé un maître de chasse.
 		add_province_modifier = {
 			name = foret2_expl 
@@ -220,6 +232,7 @@ province_event = {
 
 option = {
 		name = "XYLO.0004A"	
+		trigger = { region = world_europe }
 		ai_chance = {
 			factor = 70
 			modifier = { factor = 0 religion_group = muslim		}
@@ -231,6 +244,17 @@ option = {
 	}
 option = {
 		name = "XYLO.0004B"	
+		trigger = { region = world_europe }
+		ai_chance = { factor = 30 }	#à pondérer. choix privilégié si cité épiscopale
+		add_province_modifier = {
+			name = foret2_expl 
+			duration = -1
+			hidden = yes
+			}		
+	}
+option = {
+		name = "XYLO.0004C"
+		trigger = { NOT = { region = world_europe }}
 		ai_chance = { factor = 30 }	#à pondérer. choix privilégié si cité épiscopale
 		add_province_modifier = {
 			name = foret2_expl 
