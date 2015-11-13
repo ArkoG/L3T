@@ -3,9 +3,6 @@ TODO list d'avant release
 - Resources
 	-> revoir certaines images (par exemple le fromage)
 
-- Routes
-	- mettre une image à future_route
-
 - XYLO
 	-> Regarder au validator
 	-> Mettre à jour le tableur des features
@@ -16,14 +13,14 @@ TODO list d'avant release
 	
 - Mettre à jour le fichier ID_list
 
+- Mettre à jour le fichier de Changelogs
+
 OPTIMISATIONS
 	- Mettre un flag route_checked_province pour les provinces ayant un bloc ou ne pouvant en avoir
 		=> évite de tester en permanence les events TRADE.0001->0004, qui ont des triggers assez lourd, pour rien
-	- Mettre un flag pour les provinces non fluviales
-		=> évite qu'elles soient visitées en permanence pour rien
 	
 BUGS
-	- [ETRANGE/PEUT ETRE DEJA RESOLU] présence des modifiers minerai4_armes et minerai4_outils dans une province après seulement 3 ans IG
+	- Corriger le test de localisation de l'event de population
 
 - Vérifier la localisation
 	-> traduction non réalisée	
