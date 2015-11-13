@@ -147,7 +147,7 @@ province_event = {
 
 	trigger = {
 		has_province_modifier = foret_up
-		NOT = { had_province_flag = { flag = transaction_forestiere_recente years = 5 }}
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1825 }}
 		owner = {
 			NOT = { has_character_flag = don_refuse }
 			 OR = { religion = catholic is_heresy_of = catholic }
@@ -198,7 +198,7 @@ province_event = {
 
 	trigger = {
 		has_province_modifier = foret_up
-		NOT = { had_province_flag = { flag = transaction_forestiere_recente years = 5 }}
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1825 }}
 		owner = {
 			NOT = { has_character_flag = don_refuse }
 			 OR = { religion = catholic is_heresy_of = catholic }
