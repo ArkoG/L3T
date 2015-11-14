@@ -7,29 +7,12 @@ province_event = {
 	picture = GFX_evt_market
 	
 	trigger = {
-		# Give the bloc B to a province which is neighbor to a province with the previous bloc, here A
+		NOT = { has_province_flag = checked_blocB } #Flag to avoid big CPU computation of a trigger for nothing (see limit of the option)
+		# Check for the bloc B if the province is neighbor to a province with the previous bloc, here A
 		any_neighbor_province = {
 			has_province_flag = bloc_A
 		}
-		
-		NOT = {
-			# To not give step B to the province which has already a bloc
-			has_province_flag = bloc_A
-			has_province_flag = bloc_B
-			has_province_flag = bloc_C
-			has_province_flag = bloc_D
-			has_province_flag = bloc_E
-			has_province_flag = bloc_F
-			
-			# To not give step B to distinct routes each other
-			any_neighbor_province = { has_province_flag = bloc_B }
-			
-			# To not give step B to a province which don't have a minimal distance of 1 (in terms of neighboor) to a step A province
-			any_neighbor_province = { has_province_flag = bloc_C }
-			any_neighbor_province = { has_province_flag = bloc_D }
-			any_neighbor_province = { has_province_flag = bloc_E }
-		}
-	}
+	}	
 		
 	mean_time_to_happen = {
 		months = 100
@@ -63,33 +46,55 @@ province_event = {
 
 	option = {
 		name = "TRADESTEP"
-		hidden_tooltip = {	
-			set_province_flag = bloc_B
-			
-			# The route size is the max route size of its C neighboors + 1
-			set_variable = { which = "route_size" value = 1 } # the value to evaluate the neighboor, then to store final value
-			set_variable = { which = "tmp" value = 1 } # store the value when route_size is used to evaluate neighboor
-			any_neighbor_province = {
-				limit = { has_province_flag = bloc_C }
-				ROOT = { subtract_variable = { which = "route_size" which = PREV} }
-				if = {
-					limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
-					# We have found a neighboor with a route_size value more or equal, so we update the value
-					ROOT = { set_variable = { which = "route_size" which = PREV} } # B route_size = C route_size
-					ROOT = { change_variable = { which = "route_size" value = 1} } # B route_size = C route_size + 1
-					ROOT = { set_variable = { which = "tmp" which = "route_size"} } # store the value
+		set_province_flag = checked_blocB
+		if = {
+			limit = {
+				NOT = {
+					# To not give step B to the province which has already a bloc
+					has_province_flag = bloc_A
+					has_province_flag = bloc_B
+					has_province_flag = bloc_C
+					has_province_flag = bloc_D
+					has_province_flag = bloc_E
+					has_province_flag = bloc_F
+					
+					# To not give step B to distinct routes each other
+					any_neighbor_province = { has_province_flag = bloc_B }
+					
+					# To not give step B to a province which don't have a minimal distance of 1 (in terms of neighboor) to a step A province
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_E }
 				}
-				# Reset the B route_size for the stored value
-				ROOT = { set_variable = { which = "route_size" which = "tmp"} }
 			}
-			
-			# Update the route size in previous blocs (here A)
-			any_neighbor_province = {
-				limit = { has_province_flag = bloc_A }
-				province_event = { id = TRADE.0008 days = 10}
+			hidden_tooltip = {	
+				set_province_flag = bloc_B
+				
+				# The route size is the max route size of its C neighboors + 1
+				set_variable = { which = "route_size" value = 1 } # the value to evaluate the neighboor, then to store final value
+				set_variable = { which = "tmp" value = 1 } # store the value when route_size is used to evaluate neighboor
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_C }
+					ROOT = { subtract_variable = { which = "route_size" which = PREV} }
+					if = {
+						limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+						# We have found a neighboor with a route_size value more or equal, so we update the value
+						ROOT = { set_variable = { which = "route_size" which = PREV} } # B route_size = C route_size
+						ROOT = { change_variable = { which = "route_size" value = 1} } # B route_size = C route_size + 1
+						ROOT = { set_variable = { which = "tmp" which = "route_size"} } # store the value
+					}
+					# Reset the B route_size for the stored value
+					ROOT = { set_variable = { which = "route_size" which = "tmp"} }
+				}
+				
+				# Update the route size in previous blocs (here A)
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_A }
+					province_event = { id = TRADE.0008 days = 10}
+				}
+				
+				add_province_modifier = { name = future_route duration = -1 }
 			}
-			
-			add_province_modifier = { name = future_route duration = -1 }
 		}
 	}
 }
@@ -102,25 +107,13 @@ province_event = {
 	picture = GFX_evt_market
 	
 	trigger = {
+		NOT = { has_province_flag = checked_blocC } 
 		any_neighbor_province = {
 			has_province_flag = bloc_B
 			OR = {
 				has_province_modifier = route_terrestre
 				has_province_modifier = route_fluviale
 			}
-		}
-		
-		NOT = {
-			has_province_flag = bloc_A
-			has_province_flag = bloc_B
-			has_province_flag = bloc_C
-			has_province_flag = bloc_D
-			has_province_flag = bloc_E
-			has_province_flag = bloc_F
-			any_neighbor_province = { has_province_flag = bloc_A }
-			any_neighbor_province = { has_province_flag = bloc_C }
-			any_neighbor_province = { has_province_flag = bloc_D }
-			any_neighbor_province = { has_province_flag = bloc_E }
 		}
 	}
 		
@@ -156,29 +149,46 @@ province_event = {
 
 	option = {
 		name = "TRADESTEP"
-		hidden_tooltip = {			
-			set_province_flag = bloc_C
-			
-			set_variable = { which = "route_size" value = 1 }
-			set_variable = { which = "tmp" value = 1 }
-			any_neighbor_province = {
-				limit = { has_province_flag = bloc_D }
-				ROOT = { subtract_variable = { which = "route_size" which = PREV} }
-				if = {
-					limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
-					ROOT = { set_variable = { which = "route_size" which = PREV} }
-					ROOT = { change_variable = { which = "route_size" value = 1} }
-					ROOT = { set_variable = { which = "tmp" which = "route_size"} }
+		set_province_flag = checked_blocC
+		if = {
+			limit = {
+				NOT = {
+					has_province_flag = bloc_A
+					has_province_flag = bloc_B
+					has_province_flag = bloc_C
+					has_province_flag = bloc_D
+					has_province_flag = bloc_E
+					has_province_flag = bloc_F
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_E }
 				}
-				ROOT = { set_variable = { which = "route_size" which = "tmp"} }
 			}
-			
-			any_neighbor_province = {
-				limit = { has_province_flag = bloc_B }
-				province_event = { id = TRADE.0008 days = 10}
+			hidden_tooltip = {			
+				set_province_flag = bloc_C
+				
+				set_variable = { which = "route_size" value = 1 }
+				set_variable = { which = "tmp" value = 1 }
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_D }
+					ROOT = { subtract_variable = { which = "route_size" which = PREV} }
+					if = {
+						limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+						ROOT = { set_variable = { which = "route_size" which = PREV} }
+						ROOT = { change_variable = { which = "route_size" value = 1} }
+						ROOT = { set_variable = { which = "tmp" which = "route_size"} }
+					}
+					ROOT = { set_variable = { which = "route_size" which = "tmp"} }
+				}
+				
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_B }
+					province_event = { id = TRADE.0008 days = 10}
+				}
+				
+				add_province_modifier = { name = future_route duration = -1 }
 			}
-			
-			add_province_modifier = { name = future_route duration = -1 }
 		}
 	}
 }
@@ -191,25 +201,13 @@ province_event = {
 	picture = GFX_evt_market
 	
 	trigger = {
+		NOT = { has_province_flag = checked_blocD }
 		any_neighbor_province = {
 			has_province_flag = bloc_C
 			OR = {
 				has_province_modifier = route_terrestre
 				has_province_modifier = route_fluviale
 			}
-		}
-		
-		NOT = {
-			has_province_flag = bloc_A
-			has_province_flag = bloc_B
-			has_province_flag = bloc_C
-			has_province_flag = bloc_D
-			has_province_flag = bloc_E
-			has_province_flag = bloc_F
-			any_neighbor_province = { has_province_flag = bloc_A }
-			any_neighbor_province = { has_province_flag = bloc_B }
-			any_neighbor_province = { has_province_flag = bloc_D }
-			any_neighbor_province = { has_province_flag = bloc_E }
 		}
 	}
 		
@@ -245,29 +243,46 @@ province_event = {
 
 	option = {
 		name = "TRADESTEP"
-		hidden_tooltip = {			
-			set_province_flag = bloc_D
-			
-			set_variable = { which = "route_size" value = 1 }
-			set_variable = { which = "tmp" value = 1 }
-			any_neighbor_province = {
-				limit = { has_province_flag = bloc_E }
-				ROOT = { subtract_variable = { which = "route_size" which = PREV} }
-				if = {
-					limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
-					ROOT = { set_variable = { which = "route_size" which = PREV} }
-					ROOT = { change_variable = { which = "route_size" value = 1} }
-					ROOT = { set_variable = { which = "tmp" which = "route_size"} }
+		set_province_flag = checked_blocD
+		if = {
+			limit = {
+				NOT = {
+					has_province_flag = bloc_A
+					has_province_flag = bloc_B
+					has_province_flag = bloc_C
+					has_province_flag = bloc_D
+					has_province_flag = bloc_E
+					has_province_flag = bloc_F
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_B }
+					any_neighbor_province = { has_province_flag = bloc_D }
+					any_neighbor_province = { has_province_flag = bloc_E }
 				}
-				ROOT = { set_variable = { which = "route_size" which = "tmp"} }
 			}
-			
-			any_neighbor_province = {
-				limit = { has_province_flag = bloc_C }
-				province_event = { id = TRADE.0008 days = 10}
+			hidden_tooltip = {			
+				set_province_flag = bloc_D
+				
+				set_variable = { which = "route_size" value = 1 }
+				set_variable = { which = "tmp" value = 1 }
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_E }
+					ROOT = { subtract_variable = { which = "route_size" which = PREV} }
+					if = {
+						limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+						ROOT = { set_variable = { which = "route_size" which = PREV} }
+						ROOT = { change_variable = { which = "route_size" value = 1} }
+						ROOT = { set_variable = { which = "tmp" which = "route_size"} }
+					}
+					ROOT = { set_variable = { which = "route_size" which = "tmp"} }
+				}
+				
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_C }
+					province_event = { id = TRADE.0008 days = 10}
+				}
+				
+				add_province_modifier = { name = future_route duration = -1 }
 			}
-			
-			add_province_modifier = { name = future_route duration = -1 }
 		}
 	}
 }
@@ -280,25 +295,13 @@ province_event = {
 	picture = GFX_evt_market
 	
 	trigger = {
+		NOT = { has_province_flag = checked_blocE }
 		any_neighbor_province = {
 			has_province_flag = bloc_D
 			OR = {
 				has_province_modifier = route_terrestre
 				has_province_modifier = route_fluviale
 			}
-		}
-		
-		NOT = {
-			has_province_flag = bloc_A
-			has_province_flag = bloc_B
-			has_province_flag = bloc_C
-			has_province_flag = bloc_D
-			has_province_flag = bloc_E
-			has_province_flag = bloc_F
-			any_neighbor_province = { has_province_flag = bloc_A }
-			any_neighbor_province = { has_province_flag = bloc_B }
-			any_neighbor_province = { has_province_flag = bloc_C }
-			any_neighbor_province = { has_province_flag = bloc_E }
 		}
 	}
 		
@@ -334,15 +337,32 @@ province_event = {
 
 	option = {
 		name = "TRADESTEP"
-		hidden_tooltip = {	
-			set_province_flag = bloc_E		
-			
-			any_neighbor_province = {
-				limit = { has_province_flag = bloc_D }
-				province_event = { id = TRADE.0008 days = 10}
+		set_province_flag = checked_blocE
+		if = {
+			limit = {
+				NOT = {
+					has_province_flag = bloc_A
+					has_province_flag = bloc_B
+					has_province_flag = bloc_C
+					has_province_flag = bloc_D
+					has_province_flag = bloc_E
+					has_province_flag = bloc_F
+					any_neighbor_province = { has_province_flag = bloc_A }
+					any_neighbor_province = { has_province_flag = bloc_B }
+					any_neighbor_province = { has_province_flag = bloc_C }
+					any_neighbor_province = { has_province_flag = bloc_E }
+				}
 			}
-			
-			add_province_modifier = { name = future_route duration = -1 }
+			hidden_tooltip = {	
+				set_province_flag = bloc_E		
+				
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_D }
+					province_event = { id = TRADE.0008 days = 10}
+				}
+				
+				add_province_modifier = { name = future_route duration = -1 }
+			}
 		}
 	}
 }
