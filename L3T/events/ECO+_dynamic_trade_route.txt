@@ -387,7 +387,6 @@ province_event = {
 			# If the player does not receive this event ...
 			if = {
 				limit = { owner = { ai = yes } }
-				holder_scope
 				# ... but is a neighbour. Avert the player that the route building can be build on its demesne
 				any_neighbor_province = {
 					any_province_lord = {

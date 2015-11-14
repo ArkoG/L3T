@@ -20,7 +20,7 @@ province_event = {
 		NOT = { has_province_modifier = foret_poor }
 		NOT = { has_province_flag = offre_achat_refusee }
 		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
-		NOT = { had_province_flag = { flag = transaction_forestiere_recente years = 5 }}
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1825 }} # 5 ans
 		owner = {
 			 wealth = 400
 			 is_theocracy = no
@@ -67,7 +67,7 @@ province_event = {
 		NOT = { has_province_modifier = foret_poor }
 		NOT = { has_province_flag = offre_achat_refusee }
 		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
-		NOT = { had_province_flag = { flag = transaction_forestiere_recente years = 5 }}
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1825 }} # 5 ans
 		owner = {
 			 wealth = 450
 			 is_theocracy = no
@@ -114,7 +114,7 @@ province_event = {
 		NOT = { has_province_modifier = foret_poor }
 		NOT = { has_province_flag = offre_achat_refusee }
 		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
-		NOT = { had_province_flag = { flag = transaction_forestiere_recente years = 5 }}
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1825 }} # 5 ans
 		owner = {
 			 wealth = 350
 			 is_theocracy = no
