@@ -8,32 +8,19 @@ title_forestier = {
 	monthly_salary = 0.04
 	monthly_prestige = 0.004
 	
-	allow = {
-		age = 16
+	allowed_to_hold = {
+		is_adult = yes
 		is_female = no
 		stewardship = 10
-		FROM = {
-			#is_feudal = yes
-			#religion_group = christian
-			any_demesne_province = { has_province_modifier = foret1 }
+		NOT = { has_character_flag = titre_mineur_detenu }
 		}
-		NOT = { has_minor_title = title_court_jester }
-		NOT = { has_minor_title = title_keeper_of_swans }
-		NOT = { has_minor_title = title_court_dwarf }
-		NOT = { has_minor_title = title_master_of_the_horse }
-		NOT = { has_minor_title = title_master_of_the_hunt }
-		NOT = { has_minor_title = title_high_almoner }
-		NOT = { has_minor_title = title_cupbearer }
-		NOT = { has_minor_title = title_seneschal }
-		NOT = { has_minor_title = title_veneur }		
-		NOT = { has_minor_title = title_court_poet_christian }
-		NOT = { has_minor_title = title_court_troubadour }
+		
+	allowed_to_grant = {
+		any_demesne_province = { has_province_modifier = foret1 }
 		}
-	
-	gain_effect = {
-	}
-	lose_effect = {
-	}
+		
+	gain_effect = { set_character_flag = titre_mineur_detenu }
+	lose_effect = { remove_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -46,36 +33,25 @@ title_veneur = {
 	
 	monthly_salary = 0.03
 	
-	allow = {
-		age = 16
+	allowed_to_hold = {
+		is_adult = yes
 		is_female = no
 		OR = {
-		trait = hunter
-		trait = falconer
-		martial = 12
+			trait = hunter
+			trait = falconer
+			martial = 12
+			}
+		NOT = { has_character_flag = titre_mineur_detenu }
 		}
-		FROM = {
+		
+		allowed_to_grant = {
 			is_feudal = yes
 			religion_group = christian
 			any_demesne_province = { has_province_modifier = foret2_chasse }
 		}
-		NOT = { has_minor_title = title_court_jester }
-		NOT = { has_minor_title = title_keeper_of_swans }
-		NOT = { has_minor_title = title_court_dwarf }
-		NOT = { has_minor_title = title_master_of_the_horse }
-		NOT = { has_minor_title = title_master_of_the_hunt }
-		NOT = { has_minor_title = title_high_almoner }
-		NOT = { has_minor_title = title_cupbearer }
-		NOT = { has_minor_title = title_seneschal }
-		NOT = { has_minor_title = title_forestier }
-		NOT = { has_minor_title = title_court_poet_christian }
-		NOT = { has_minor_title = title_court_troubadour }
-		}
 	
-	gain_effect = {
-	}
-	lose_effect = {
-	}
+	gain_effect = { set_character_flag = titre_mineur_detenu }
+	lose_effect = { remove_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -90,32 +66,19 @@ title_soigneur = {
 	monthly_salary = 0.02
 	monthly_prestige = 0.002
 	
-	allow = {
-		age = 16
+	allowed_to_hold = {
+		is_adult = yes
 		is_female = no
 		learning = 12
-		FROM = {
-			#is_feudal = yes
-			#religion_group = christian
+		NOT = { has_character_flag = titre_mineur_detenu }
+		}
+		
+		allowed_to_grant = {
 			capital_holding = { has_building = TP_herboriste_L2 }
 		}
-		NOT = { has_minor_title = title_court_jester }
-		NOT = { has_minor_title = title_keeper_of_swans }
-		NOT = { has_minor_title = title_court_dwarf }
-		NOT = { has_minor_title = title_master_of_the_horse }
-		NOT = { has_minor_title = title_master_of_the_hunt }
-		NOT = { has_minor_title = title_high_almoner }
-		NOT = { has_minor_title = title_cupbearer }
-		NOT = { has_minor_title = title_seneschal }
-		NOT = { has_minor_title = title_veneur }		
-		NOT = { has_minor_title = title_court_poet_christian }
-		NOT = { has_minor_title = title_court_troubadour }
-		}
 	
-	gain_effect = {
-	}
-	lose_effect = {
-	}
+	gain_effect = { set_character_flag = titre_mineur_detenu }
+	lose_effect = { remove_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
