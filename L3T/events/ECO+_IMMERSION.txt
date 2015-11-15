@@ -21,6 +21,8 @@ province_event = {
 			has_province_modifier = agriculture2_fruits		
 			has_province_modifier = agriculture2_legumes		
 		}
+		NOT = { has_province_modifier = meteo_inondation }
+		NOT = { has_province_modifier = meteo_secheresse }
 		NOT = { has_province_modifier = recolte_bonne }
 		NOT = { has_province_modifier = recolte_mauvaise }
 		month = 8 # pour avoir septembre, bilan des récoltes
@@ -28,7 +30,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = {
-		years = 2
+		years = 4
 		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = recolte_mauvaise } }
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = recolte_bonne } }
 		modifier = { factor = 0.60	owner = { stewardship = 13 } }
@@ -62,12 +64,14 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { 
-		years = 2
+		years = 4
 		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = recolte_bonne } }
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = recolte_mauvaise } }
 		modifier = { factor = 1.50	owner = { stewardship = 13 } }
 		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
-		modifier = { factor = 0.50	owner = { war = yes } }		
+		modifier = { factor = 0.50	owner = { war = yes } }	
+		modifier = { factor = 0.50	has_province_modifier = meteo_secheresse }	
+		modifier = { factor = 0.85	any_neighbor_province = { has_province_modifier = meteo_secheresse } }
 	}
 
 	option = {
@@ -91,7 +95,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = {
-		years = 5
+		years = 6
 		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = peche_mauvaise } }
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = peche_bonne } }
 		modifier = { factor = 0.60	owner = { stewardship = 13 } }
@@ -121,7 +125,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { 
-		years = 5
+		years = 6
 		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = peche_bonne } }
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = peche_mauvaise } }
 		modifier = { factor = 1.50	owner = { stewardship = 13 } }
@@ -150,7 +154,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { 
-		years = 5
+		years = 6
 		modifier = { factor = 1.50	owner = { stewardship = 13 } }
 		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
 		modifier = { factor = 0.50	owner = { war = yes } }		
@@ -183,7 +187,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { 
-		years = 5
+		years = 6
 		modifier = { factor = 0.60	owner = { stewardship = 13 } }
 		modifier = { factor = 1.50	owner = { NOT = { stewardship = 9 } } }
 		modifier = { factor = 2.00	owner = { war = yes } }		
@@ -270,3 +274,115 @@ province_event = {
 		remove_province_modifier = industrie_prospere
 	}
 }	
+
+#Météo - inondation
+province_event = {
+    id = ECO.0208
+	desc = "DESCECO.0208"
+	picture = GFX_evt_ECO2 #plaine avec rivière
+	
+	trigger = {
+		NOT = { has_province_modifier = meteo_secheresse }
+		NOT = { has_province_modifier = meteo_inondation }
+		has_province_modifier = province_fleuve
+		#ajouter critère de technologie (efficacité accrue réduit le risque) #logistique ?
+		month = 9 #inondations d'automne
+		NOT = { month = 12 }
+	}
+		
+	mean_time_to_happen = { 
+		years = 10
+		modifier = { factor = 0.1	any_neighbor_province = { has_province_modifier = meteo_inondation } }
+		modifier = { factor = 0.95	owner = { NOT = { piety = 100 } } } #punition divine hahahaha !
+		modifier = { factor = 0.95	owner = { NOT = { piety = 200 } } }
+		modifier = { factor = 0.95	owner = { NOT = { piety = 300 } } }
+		modifier = { factor = 0.95	owner = { NOT = { piety = 400 } } }
+		modifier = { factor = 0.95	owner = { NOT = { piety = 500 } } }
+	}
+
+	option = {
+		name = "ECO.0208A"
+		trigger = { 
+			owner = { NOT = { realm_stewardship = 30 } }
+			}
+		custom_tooltip = { text = meteo_inondation_tooltip }
+		hidden_tooltip = {
+			random_list = {		
+				10 = { add_province_modifier = { name = meteo_inondation duration = 25 }}
+				25 = { add_province_modifier = { name = meteo_inondation duration = 35 }} 
+				35 = { add_province_modifier = { name = meteo_inondation duration = 45 }}
+				30 = { add_province_modifier = { name = meteo_inondation duration = 60 }}
+			}
+		}
+	}
+	option = {
+		name = "ECO.0208A"
+		trigger = { 
+			owner = { realm_stewardship = 30 }
+			owner = { NOT = { realm_stewardship = 50 } }
+			}
+		custom_tooltip = { text = meteo_inondation_tooltip }
+		hidden_tooltip = {
+			random_list = {		
+				20 = { add_province_modifier = { name = meteo_inondation duration = 25 }}
+				30 = { add_province_modifier = { name = meteo_inondation duration = 35 }} 
+				30 = { add_province_modifier = { name = meteo_inondation duration = 45 }}
+				20 = { add_province_modifier = { name = meteo_inondation duration = 60 }}
+			}
+		}
+	}
+	option = {
+		name = "ECO.0208A"
+		trigger = {
+			owner = { realm_stewardship = 50 }
+			}
+		custom_tooltip = { text = meteo_inondation_tooltip }
+		hidden_tooltip = {
+			random_list = {		
+				30 = { add_province_modifier = { name = meteo_inondation duration = 25 }}
+				35 = { add_province_modifier = { name = meteo_inondation duration = 35 }} 
+				25 = { add_province_modifier = { name = meteo_inondation duration = 45 }}
+				10 = { add_province_modifier = { name = meteo_inondation duration = 60 }}
+			}
+		}
+	}
+}
+#Météo - sécheresse
+province_event = {
+    id = ECO.0209
+	desc = "DESCECO.0209"
+	picture = GFX_evt_ECO2 #plaine avec rivière
+	
+	trigger = {
+		NOT = { has_province_modifier = meteo_inondation }
+		NOT = { has_province_modifier = meteo_secheresse }
+		has_province_modifier = province_fleuve
+		#ajouter critère de technologie (efficacité accrue réduit le risque) #irrigation
+		month = 6 #été
+		NOT = { month = 10 }
+	}
+		
+	mean_time_to_happen = { 
+		years = 12
+		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = meteo_secheresse } }
+		modifier = { factor = 0.9	owner = { NOT = { piety = 100 } } } #punition divine hahahaha !
+		modifier = { factor = 0.9	owner = { NOT = { piety = 200 } } }
+		modifier = { factor = 0.9	owner = { NOT = { piety = 300 } } }
+		modifier = { factor = 0.9	owner = { NOT = { piety = 400 } } }
+		modifier = { factor = 0.9	owner = { NOT = { piety = 500 } } }
+	}
+
+	option = {
+		name = "ECO.0209A"
+		custom_tooltip = { text = meteo_secheresse_tooltip }
+		hidden_tooltip = {
+			random_list = {		
+				20 = { add_province_modifier = { name = meteo_secheresse duration =  30 }}
+				30 = { add_province_modifier = { name = meteo_secheresse duration =  50 }} 
+				20 = { add_province_modifier = { name = meteo_secheresse duration =  70 }}
+				20 = { add_province_modifier = { name = meteo_secheresse duration =  90 }} 
+				10 = { add_province_modifier = { name = meteo_secheresse duration = 120 }}
+			}
+		}
+	}
+}
