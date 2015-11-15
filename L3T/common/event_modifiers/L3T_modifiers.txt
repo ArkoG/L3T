@@ -51,6 +51,8 @@
 # 64 - parchemin + sceau + plume //normal
 # 65 - parchemin + sceau + plume //vert
 # 66 - parchemin + sceau + plume //rouge
+# 67 - riviére inondation
+# 68 - rivière asséchée
 
 # 76 - tradition chrétienne
 # 77 - tradition musulmane
@@ -382,7 +384,7 @@ recolte_mauvaise = {
 	icon =  46 
 	local_revolt_risk =  0.05
 	tax_income = -0.2
-	local_tax_modifier = -0.01
+	local_tax_modifier = -0.02
 } 
 
 peche_bonne = {
@@ -416,8 +418,22 @@ industrie_prospere = {
 	icon =  138
 	local_revolt_risk = -0.05
 	tax_income = 0.2
-	local_tax_modifier =  0.01
+	local_tax_modifier =  0.02
 }
+
+###Meteo
+meteo_inondation = {
+	icon =  67 
+	local_revolt_risk =  0.02
+	tax_income = -0.2
+	local_tax_modifier = -0.02
+} 
+meteo_secheresse = {
+	icon =  68 
+	local_revolt_risk =  0.02
+	tax_income = -0.3
+	local_tax_modifier = -0.03
+} 
 	
 province_cotiere = { icon = 139 local_tax_modifier = 0.02 }
 province_fleuve = { icon = 140 }
@@ -431,7 +447,7 @@ route_terrestre02 = { local_tax_modifier = 0.05	icon = 81 } #+5%
 route_terrestre03 = { local_tax_modifier = 0.05	icon = 82 } #+5%
 
 #mouchards
-future_route = { icon = 78 }
+future_route = { icon = 80 }
 
 route_size1 = { icon = 94 local_tax_modifier = 0.02}
 route_size2 = { icon = 93 local_tax_modifier = 0.04}
