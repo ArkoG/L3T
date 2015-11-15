@@ -71,6 +71,11 @@ spriteTypes =
 		allwaystransparent = yes
 	}
 	spriteType = {
+		name = "GFX_evt_REC9" #enlumire chantier
+		texturefile = "gfx\\event_pictures\ReC9.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
 		name = "GFX_evt_ECO1" #champ céréales
 		texturefile = "gfx\\event_pictures\ECO1.tga"
 		allwaystransparent = yes
@@ -103,6 +108,11 @@ spriteTypes =
 	spriteType = {
 		name = "GFX_evt_L3T_moulin" #
 		texturefile = "gfx\\event_pictures\L3T_moulin.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_L3T_boucherie" #
+		texturefile = "gfx\\event_pictures\L3T_boucherie.tga"
 		allwaystransparent = yes
 	}
 }
