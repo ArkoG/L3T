@@ -307,6 +307,7 @@ province_event = {
 		modifier = { factor = 0.95	owner = { NOT = { piety = 300 } } }
 		modifier = { factor = 0.95	owner = { NOT = { piety = 400 } } }
 		modifier = { factor = 0.95	owner = { NOT = { piety = 500 } } }
+		modifier = { factor = 0.90	borders_major_river = yes }
 	}
 
 	option = {
