@@ -110,7 +110,7 @@ CA_fleuve_L2 = { #petit port
 CA_fleuve_L3 = { #port fluvial avec péage
 	desc = "CA_fleuve_L3_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
-	upgrades_from = TP_fleuve_L2
+	upgrades_from = CA_fleuve_L2
 	potential = { has_province_modifier = route_fluviale }
 	prerequisites = { ca_town_3 }
 	gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
