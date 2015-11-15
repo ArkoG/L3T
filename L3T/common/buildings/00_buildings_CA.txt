@@ -237,7 +237,7 @@ castle = {
 		light_infantry = 80
 		archers = 10
 		ai_creation_factor = 100
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 1.0
 	}
 	ca_militia_barracks_2 = {
@@ -250,7 +250,7 @@ castle = {
 		light_infantry = 50
 		archers = 50
 		ai_creation_factor = 99
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 2.0
 	}
 	ca_militia_barracks_3 = {
@@ -262,7 +262,7 @@ castle = {
 		light_infantry = 20
 		archers = 90
 		ai_creation_factor = 98
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 0.5
 	}
 	ca_militia_barracks_4 = {
@@ -274,7 +274,7 @@ castle = {
 		light_infantry = 30
 		archers = 120
 		ai_creation_factor = 98
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 0.5
 	}
 
@@ -290,7 +290,7 @@ castle = {
 		levy_reinforce_rate = 0.1
 		retinuesize = 20
 		ai_creation_factor = 89
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 1.2
 	}
 	ca_training_grounds_2 = {
@@ -303,7 +303,7 @@ castle = {
 		levy_reinforce_rate = 0.15
 		retinuesize = 20
 		ai_creation_factor = 88
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 0.5
 	}
 	ca_training_grounds_3 = {
@@ -316,7 +316,7 @@ castle = {
 		levy_reinforce_rate = 0.2
 		retinuesize = 20
 		ai_creation_factor = 88
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 0.2
 	}
 	
@@ -330,7 +330,7 @@ castle = {
 		heavy_infantry = 30
 		pikemen = 15
 		ai_creation_factor = 105
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 1.0
 	}
 	ca_barracks_2 = {
@@ -343,7 +343,7 @@ castle = {
 		heavy_infantry = 40
 		pikemen = 15
 		ai_creation_factor = 104
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 1.8
 	}
 	ca_barracks_3 = {
@@ -356,7 +356,7 @@ castle = {
 		heavy_infantry = 45
 		pikemen = 20
 		ai_creation_factor = 103
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 3.0
 	}
 	ca_barracks_4 = {
@@ -368,7 +368,7 @@ castle = {
 		heavy_infantry = 50
 		pikemen = 25
 		ai_creation_factor = 102
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 3.0
 	}
 	ca_barracks_5 = {
@@ -380,7 +380,7 @@ castle = {
 		heavy_infantry = 60
 		pikemen = 25
 		ai_creation_factor = 101
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 2.0
 	}
 	ca_barracks_6 = {
@@ -392,7 +392,7 @@ castle = {
 		heavy_infantry = 65
 		pikemen = 30
 		ai_creation_factor = 100
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
 	
@@ -405,7 +405,7 @@ castle = {
 		build_time = 365
 		light_cavalry = 35
 		ai_creation_factor = 89
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 0.4
 	}
 	ca_stable_2 = {
@@ -417,7 +417,7 @@ castle = {
 		build_time = 547
 		light_cavalry = 45
 		ai_creation_factor = 88
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 0.8
 	}
 	ca_stable_3 = {
@@ -429,7 +429,7 @@ castle = {
 		build_time = 730
 		light_cavalry = 55
 		ai_creation_factor = 87
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
 	ca_stable_4 = {
@@ -441,7 +441,7 @@ castle = {
 		light_cavalry = 55
 		knights = 5
 		ai_creation_factor = 86
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
 	ca_stable_5 = {
@@ -453,7 +453,7 @@ castle = {
 		light_cavalry = 55
 		knights = 10
 		ai_creation_factor = 85
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
 	ca_stable_6 = {
@@ -465,7 +465,7 @@ castle = {
 		light_cavalry = 55
 		knights = 20
 		ai_creation_factor = 85
-		add_number_to_name = no
+		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
 	
@@ -480,7 +480,7 @@ castle = {
 		tax_income = 2
 		ai_creation_factor = 100
 		add_number_to_name = no
-		extra_tech_building_start = 0.5
+		extra_tech_building_start = 10.0
 	}
 	ca_town_2 = {
 		desc = ca_town_2_desc
@@ -492,7 +492,7 @@ castle = {
 		tax_income = 2
 		ai_creation_factor = 99
 		add_number_to_name = no
-		extra_tech_building_start = 1.0
+		extra_tech_building_start = 10.0
 	}
 	ca_town_3 = {
 		desc = ca_town_3_desc
@@ -504,7 +504,7 @@ castle = {
 		tax_income = 2
 		ai_creation_factor = 98
 		add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10.0
 	}
 	ca_town_4 = {
 		desc = ca_town_4_desc
@@ -516,7 +516,7 @@ castle = {
 		tax_income = 2
 		ai_creation_factor = 97
 		add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10.0
 	}
 	ca_town_5 = {
 		desc = ca_town_4_desc
@@ -528,7 +528,7 @@ castle = {
 		tax_income = 2
 		ai_creation_factor = 96
 		add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10.0
 	}
 
 	#shipyard
@@ -541,7 +541,7 @@ castle = {
 		build_time = 365
 		galleys = 6
 		ai_creation_factor = 100
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 0.3
 	}
 	
@@ -554,7 +554,7 @@ castle = {
 		build_time = 730
 		galleys = 7
 		ai_creation_factor = 99
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 0.3
 	}
 	
@@ -567,7 +567,7 @@ castle = {
 		build_time = 1095
 		galleys = 8
 		ai_creation_factor = 98
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 0.3
 	}
 	
@@ -580,7 +580,7 @@ castle = {
 		build_time = 1460
 		galleys = 9
 		ai_creation_factor = 97
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 0.3
 	}
 }
