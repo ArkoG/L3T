@@ -51,6 +51,7 @@
 # 64 - parchemin + sceau + plume //normal
 # 65 - parchemin + sceau + plume //vert
 # 66 - parchemin + sceau + plume //rouge
+
 # 67 - riviére inondation
 # 68 - rivière asséchée
 
@@ -378,28 +379,28 @@ recolte_bonne = {
 	local_revolt_risk = -0.05
 	tax_income = 0.2
 	local_tax_modifier =  0.01
-} 
+}
 
 recolte_mauvaise = {
 	icon =  46 
 	local_revolt_risk =  0.05
 	tax_income = -0.2
 	local_tax_modifier = -0.02
-} 
+}
 
 peche_bonne = {
 	icon = 54 
 	local_revolt_risk = -0.05
 	tax_income = 0.2
 	local_tax_modifier =  0.01
-} 
+}
 
 peche_mauvaise = {
 	icon =  55 
 	local_revolt_risk =  0.05
 	tax_income = -0.2
 	local_tax_modifier = -0.01
-} 
+}
 
 ###Terrain et commerce
 mine_accident = {
