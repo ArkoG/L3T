@@ -38,10 +38,6 @@ province_event = {
 			factor = 0.5
 			has_province_modifier = province_fleuve
 		}
-		modifier = {
-			factor = 0.5
-			is_variable_equal = { which = "resourceNb" value = 1 }
-		}
 	}
 
 	immediate = {
@@ -150,10 +146,6 @@ province_event = {
 			factor = 0.5
 			has_province_modifier = province_fleuve
 		}
-		modifier = {
-			factor = 0.5
-			is_variable_equal = { which = "resourceNb" value = 1 }
-		}
 	}
 
 	immediate = {
@@ -252,10 +244,6 @@ province_event = {
 		modifier = {
 			factor = 0.5
 			has_province_modifier = province_fleuve
-		}
-		modifier = {
-			factor = 0.5
-			is_variable_equal = { which = "resourceNb" value = 1 }
 		}		
 	}
 
@@ -355,10 +343,6 @@ province_event = {
 		modifier = {
 			factor = 0.5
 			has_province_modifier = province_fleuve
-		}
-		modifier = {
-			factor = 0.5
-			is_variable_equal = { which = "resourceNb" value = 1 }
 		}
 	}
 
