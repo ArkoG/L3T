@@ -36,6 +36,8 @@ province_event = {
 		modifier = { factor = 0.60	owner = { stewardship = 13 } }
 		modifier = { factor = 1.50	owner = { NOT = { stewardship = 9 } } }
 		modifier = { factor = 2.00	owner = { war = yes } }
+		modifier = { factor = 0.75	owner = { has_focus = focus_business } }
+		modifier = { factor = 3.00	owner = { has_focus = focus_war } }
 	}
 
 	option = {
@@ -72,6 +74,7 @@ province_event = {
 		modifier = { factor = 0.50	owner = { war = yes } }	
 		modifier = { factor = 0.50	has_province_modifier = meteo_secheresse }	
 		modifier = { factor = 0.85	any_neighbor_province = { has_province_modifier = meteo_secheresse } }
+		modifier = { factor = 0.80	owner = { has_focus = focus_war } }
 	}
 
 	option = {
@@ -101,6 +104,8 @@ province_event = {
 		modifier = { factor = 0.60	owner = { stewardship = 13 } }
 		modifier = { factor = 1.50	owner = { NOT = { stewardship = 9 } } }
 		modifier = { factor = 2.00	owner = { war = yes } }
+		modifier = { factor = 0.75	owner = { has_focus = focus_business } }
+		modifier = { factor = 3.00	owner = { has_focus = focus_war } }
 	}
 
 	option = {
@@ -130,7 +135,8 @@ province_event = {
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = peche_mauvaise } }
 		modifier = { factor = 1.50	owner = { stewardship = 13 } }
 		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
-		modifier = { factor = 0.50	owner = { war = yes } }		
+		modifier = { factor = 0.50	owner = { war = yes } }	
+		modifier = { factor = 0.80	owner = { has_focus = focus_war } }	
 	}
 
 	option = {
@@ -190,7 +196,8 @@ province_event = {
 		years = 6
 		modifier = { factor = 0.60	owner = { stewardship = 13 } }
 		modifier = { factor = 1.50	owner = { NOT = { stewardship = 9 } } }
-		modifier = { factor = 2.00	owner = { war = yes } }		
+		modifier = { factor = 2.00	owner = { war = yes } }	
+		modifier = { factor = 0.75	owner = { has_focus = focus_business } }		
 	}
 
 	option = {
@@ -236,6 +243,7 @@ province_event = {
 		years = 10
 		modifier = { factor = 0.60	owner = { realm_stewardship = 50 } }
 		modifier = { factor = 1.50	owner = { NOT = { realm_stewardship = 30 } } }	
+		modifier = { factor = 0.75	owner = { has_focus = focus_business } }
 	}
 	
 	option = {
@@ -264,6 +272,7 @@ province_event = {
 		years = 1
 		modifier = { factor = 1.50	owner = { realm_martial = 50 } }
 		modifier = { factor = 0.60	owner = { NOT = { realm_martial = 30 } } }
+		modifier = { factor = 0.8	owner = { has_focus = focus_war } }
 	}
 	
 	option = {
