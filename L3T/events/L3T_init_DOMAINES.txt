@@ -152,7 +152,6 @@ narrative_event = {
 	prisoner = no
 		
 	trigger = {
-		has_province_flag = check_double_city
 		OR = {
 			had_global_flag = { flag = running_SWMH days = 730 }			
 			had_global_flag = { flag = running_VANILLA days = 730 }

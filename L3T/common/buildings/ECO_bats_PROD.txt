@@ -615,19 +615,17 @@ CT_AGRI_moulin_L3 = {
 CT_AGRI_moulin_L4 = {
 	desc = "CT_AGRI_moulin_L4_desc"
 	potential = {
-		AND = {
+		OR = {
+			has_province_modifier = route_fluviale
+			has_province_modifier = route_terrestre
+		}
+		any_neighbor_province = {
+			has_province_modifier = agriculture2_cereales
 			OR = {
 				has_province_modifier = route_fluviale
 				has_province_modifier = route_terrestre
-			}
-			any_neighbor_province = {
-				has_province_modifier = agriculture2_cereales
-				OR = {
-					has_province_modifier = route_fluviale
-					has_province_modifier = route_terrestre
-				}					
-			}
-		}			
+			}					
+		}		
 	}
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_AGRI_cereale_L2 }
@@ -938,29 +936,29 @@ TP_chai_L2 = {
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_chai_L3 = {
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { TP_AGRI_vigne_L3 }
 	trigger = {
+		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_vin_Q1
-		}
+	}
+	#prerequisites = { TP_AGRI_vigne_L3 }
 	upgrades_from = TP_chai_L2
 		gold_cost = 125.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_chai_L4 = {
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { TP_AGRI_vigne_L3 } #à remplacer par pré-requis de trait
 	trigger = {
+		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_vin_Q2
-		}
+	}
+	#prerequisites = { TP_AGRI_vigne_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = TP_chai_L3
 		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_chai_L5 = {
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { TP_AGRI_vigne_L3 } #à remplacer par pré-requis de trait
 	trigger = {
-		has_province_modifier = agriculture3_vin_Q1
-		}
+		TECH_TRADE_PRACTICES = 0
+		has_province_modifier = agriculture3_vin_Q3
+	}
+	#prerequisites = { TP_AGRI_vigne_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = TP_chai_L4
 		gold_cost = 200.0	build_time = 100	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -983,29 +981,29 @@ TP_brasserie_L2 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_brasserie_L3 = {
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { TP_AGRI_cereale_L3 }
 	trigger = {
+		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_biere_Q1
-		}
+	}
+	#prerequisites = { TP_AGRI_cereale_L3 }
 	upgrades_from = TP_brasserie_L2
 		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_brasserie_L4 = {
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { TP_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
 	trigger = {
+		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_biere_Q2
-		}
+	}
+	#prerequisites = { TP_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = TP_brasserie_L3
 		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_brasserie_L5 = {
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { TP_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
 	trigger = {
+		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_biere_Q3
-		}
+	}
+	#prerequisites = { TP_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = TP_brasserie_L4
 		gold_cost = 50.0	build_time = 100	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
 }
