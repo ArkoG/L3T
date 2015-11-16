@@ -804,7 +804,12 @@ province_event = {
 			has_province_modifier = agriculture2_cereales
 			any_neighbor_province = { has_province_modifier = agriculture2_cereales }
 		}
-		NOT = { has_province_modifier = agriculture3_biere }
+		NOT = { 
+			has_province_modifier = agriculture3_biere
+			has_province_modifier = agriculture3_biere_Q1
+			has_province_modifier = agriculture3_biere_Q2
+			has_province_modifier = agriculture3_biere_Q3
+			}
 		any_province_lord  = {
 			is_ruler = yes
 			any_demesne_title = {
@@ -838,7 +843,12 @@ province_event = {
 			has_province_modifier = agriculture2_vigne
 			any_neighbor_province = { has_province_modifier = agriculture2_vigne }
 		}
-		NOT = { has_province_modifier = agriculture3_vin }
+		NOT = { 
+			has_province_modifier = agriculture3_vin
+			has_province_modifier = agriculture3_vin_Q1
+			has_province_modifier = agriculture3_vin_Q2
+			has_province_modifier = agriculture3_vin_Q3			
+			}
 		any_province_lord  = {
 			is_ruler = yes
 			any_demesne_title = {
