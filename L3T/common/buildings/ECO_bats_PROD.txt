@@ -606,6 +606,7 @@ CT_AGRI_moulin_L2 = {
 }
 CT_AGRI_moulin_L3 = {
 	desc = "CT_AGRI_moulin_L3_desc"
+
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_AGRI_cereale_L3 }
 	upgrades_from = CT_AGRI_moulin_L2
@@ -613,6 +614,21 @@ CT_AGRI_moulin_L3 = {
 }
 CT_AGRI_moulin_L4 = {
 	desc = "CT_AGRI_moulin_L4_desc"
+	potential = {
+		AND = {
+			OR = {
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre
+			}
+			any_neighbor_province = {
+				has_province_modifier = agriculture2_cereales
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}					
+			}
+		}			
+	}
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_AGRI_cereale_L2 }
 	upgrades_from = CT_AGRI_moulin_L3
