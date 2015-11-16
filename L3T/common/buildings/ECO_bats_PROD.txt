@@ -585,24 +585,45 @@ CT_FISH_peche_L3 = {
 
 #FARINE
 CT_AGRI_moulin_L1 = {
+	desc = "CT_AGRI_moulin_L1_desc"
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	
 	potential = {
-		has_province_modifier = agriculture2_cereales}
+		has_province_modifier = agriculture2_cereales
+		has_province_modifier = province_fleuve
+		}
+		
 	#prerequisites = { CT_AGRI_cereale_L1 }
 	prerequisites = { VOC_INDUSTRIELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_AGRI_moulin_L2 = {
+	desc = "CT_AGRI_moulin_L2_desc"
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_AGRI_cereale_L2 }
 	upgrades_from = CT_AGRI_moulin_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_AGRI_moulin_L3 = {
+	desc = "CT_AGRI_moulin_L3_desc"
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_AGRI_cereale_L3 }
 	upgrades_from = CT_AGRI_moulin_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 200	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_AGRI_moulin_L4 = {
+	desc = "CT_AGRI_moulin_L4_desc"
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CT_AGRI_cereale_L2 }
+	upgrades_from = CT_AGRI_moulin_L3
+		gold_cost = 250.0	build_time = 350	tax_income = 0.5	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_AGRI_moulin_L5 = {
+	desc = "CT_AGRI_moulin_L5_desc"
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CT_AGRI_cereale_L3 }
+	upgrades_from = CT_AGRI_moulin_L4
+		gold_cost = 200.0	build_time = 150	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #PAIN
