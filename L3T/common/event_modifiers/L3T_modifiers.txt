@@ -135,6 +135,13 @@
 #141 - route terrestre
 #142 - land/demesne
 
+#145 biere_Q1
+#146 biere_Q2
+#147 biere_Q3
+#148 vin_Q1
+#149 vin_Q2
+#150 vin_Q3
+
 ###ECO+
 agriculture1			= {icon = 95 local_revolt_risk = -0.01} 
 agriculture2_cereales	= {icon = 96}	agriculture2_fruits	= {icon = 100}	agriculture2_legumes = {icon = 102}	agriculture2_vigne	= {icon = 103} 
@@ -142,6 +149,13 @@ agriculture3_farine 	= {icon = 97}	agriculture3_cidre	= {icon = 101 garrison_siz
 agriculture3_biere		= {icon = 98}	
 agriculture4_pain 		= {icon = 99 local_revolt_risk = -0.05}
 
+agriculture3_biere_Q1 = {icon = 145}
+agriculture3_biere_Q2 = {icon = 146}
+agriculture3_biere_Q3 = {icon = 147}
+agriculture3_vin_Q1 = {icon = 148}
+agriculture3_vin_Q2 = {icon = 149}
+agriculture3_vin_Q3 = {icon = 150}
+			
 elevage1		= {icon = 105}
 elevage2_laine	= {icon = 106}	elevage2_boeuf	= {icon = 109	local_tax_modifier = 0.01}	elevage2_fromage	= {icon = 112}  elevage2_cheval = {icon = 112}
 elevage4_drap	= {icon = 107}	elevage3_viande	= {icon = 110 levy_size = 0.05}
