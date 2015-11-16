@@ -396,3 +396,70 @@ province_event = {
 		}
 	}
 }
+
+##biere ou vin que servir à nos hôtes ?
+#character_event = {
+#	id = ECO.0320
+#	desc = DESCECO.0320
+#	picture = GFX_evt_feast
+#	border = GFX_event_normal_frame_diplomacy
+	
+#	capable_only = yes
+#	only_rulers = yes
+#	prisoner = no
+	
+#	trigger = {
+#		OR = {
+#			has_focus = focus_carousing
+#			has_character_flag = party_host
+#			has_character_modifier = party_carousing
+#			}
+#		has_character_modifier = holding_large_feast
+#		any_realm_province = { has_province_modifier = agriculture3_vin }
+#		any_realm_province = { has_province_modifier = agriculture3_biere }
+#		NOT = { has_character_flag = prefere_le_vin }
+#		NOT = { has_character_flag = prefere_la_biere }
+#		}
+	
+#	mean_time_to_happen = { months = 4 }
+		
+#	option = { #servons du vin du royaume
+#		name = "ECO.0320A"
+#		set_character_flag = prefere_le_vin
+#		hidden_tooltip = {		
+#			random_realm_province = { 
+#				limit = { 
+#					has_province_modifier = agriculture3_vin
+#					}
+					#province_event = { id = ECO.0321 days = 5 } #la province reçoit un boost de réputation pour son vin
+#				}
+#		}
+#	}
+	
+#	option = { #servons de la bière du royaume
+#		name = "ECO.0320B"
+#		set_character_flag = prefere_la_biere
+#		hidden_tooltip = {
+#			random_realm_province = { 
+#				limit = { 
+#					has_province_modifier = agriculture3_biere
+#					}
+					#province_event = { id = ECO.0322 days = 5 } #la province reçoit un boost de réputation pour sa bière
+#				}
+#			}
+#	}
+	#option C : servir un produit étranger
+#}
+
+#modifiers réputation à faire (plusieurs niveaux ?)
+#modifiers dénigrement à faire
+
+#idées : 
+#le seigneur se rend dans la province réputée -confirmation ou non
+#le seigneur se rend dans la province dénigrée -confirmation ou non
+	
+		
+	
+			
+			
+			
