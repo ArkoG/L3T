@@ -1,5 +1,6 @@
 namespace = L3T
 
+# Détection de la carte
 character_event = {
     id = L3T.0010
 	title = "L3T.0010"
@@ -75,6 +76,7 @@ character_event = {
 #	}
 #}
 
+# Fin paix de Dieu
 narrative_event = {
     id = L3T.0011
 	hide_window = yes
@@ -86,6 +88,7 @@ narrative_event = {
 	set_global_flag = paix_de_dieu_cleared	}
 }
 
+# Boost IA
 character_event = {
     id = L3T.0012
 	desc = "DESCL3T.0012"

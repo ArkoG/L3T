@@ -4,7 +4,9 @@
 
 #List ID des events.
 #namespace = L3T
-   
+
+# Cf [COMMENTE] pour les events qui ne sont pas disponibles car commentés
+# Cf [NON INCLUS] pour les fichiers d'events non inclus dans la version courante
 
 ###L3T_init_DOMAINES.txt
 
@@ -14,20 +16,19 @@
 #id = L3T.00041 #domaine Communal province à double cité  
 #id = L3T.0006 #domaine Ecclésial 
 #id = L3T.0007 #attribution règle monastique
-#id = L3T.0008 #attribution ordre militaire
+#[COMMENTE] id = L3T.0008 #attribution ordre militaire
 
 ##upgrades 
 #id = L3T.0005 #upgrade CITE GRANDE L1  vers L2
 #id = L3T.0002 #upgrade CITE GRANDE L2  vers L1
 
 ###L3T_mod_selection.txt
-#id = L3T.0010 #détection mod
+#id = L3T.0010 #détection de la carte
 #id = L3T.0011 #fin paix de Dieu
 #id = L3T.0012 #boost IA
-#id = L3T.0013 #abdication >> decision monastère
-#id = L3T.0014 #début paix de dieu
+#[COMMENTE] id = L3T.0014 #début paix de dieu
 
-###L3T_minorite.txt
+###[NON INCLUS] L3T_minorite.txt
 #id = L3T.0015 #event initial
 #id = L3T.0016 #check annuel religion
 #id = L3T.0017 #marquage conversion depuis
@@ -51,7 +52,7 @@
 #id = L3T.0114 #upgrade population TP vers L4
 #id = L3T.0115 #upgrade population TP vers L5
 
-#id = L3T.2000-2999 #Amis_Ennemis
+#[NON INCLUS] id = L3T.2000-2999 #Amis_Ennemis
 
 ################################################
 # ECO+ an improved economy MOD for CK2 by Arko #
@@ -60,7 +61,17 @@
 
 #List ID des events.
 #namespace = ECO
-   
+
+###L3T_mod_selection_part2.txt
+#id = ECO.0009 #attribution provinces cotières SWMH 
+#id = ECO.0010 #attribution provinces cotières LCDA
+#id = ECO.0011 #attribution provinces continentales SWMH 
+#id = ECO.0012 #attribution provinces continentales LCDA
+#id = ECO.0013 #attribution routes fluviales SWMH
+#id = ECO.0014 #attribution routes fluviales LCDA
+#id = ECO.0017 #installe les provinces côtières Vanilla
+#id = ECO.0018 #installe les provinces terrestres VANILLA
+#id = ECO.0019 #installe les provinces fluviales VANILLA  
    
 ###ECO_init_RESSOURCES.txt
 
@@ -73,23 +84,10 @@
 #id = ECO.0006 #évaluation du potentiel économique -peche- 
 #id = ECO.0007 #évaluation du potentiel économique -pisci- 
 #id = ECO.0008 #évaluation du potentiel économique -désert- 
-#id = ECO.00081 #évaluation du potentiel économique -steppe- 
-#id = ECO.00082 #évaluation du potentiel économique -jungle- 
-#id = ECO.0015 #reroll pour les malchanceux
-
-###L3T_mod_selection.txt
-#id = ECO.0009 #attribution provinces cotières SWMH 
-#id = ECO.0010 #attribution provinces cotières LCDA
-#id = ECO.0011 #attribution provinces continentales SWMH 
-#id = ECO.0012 #attribution provinces continentales LCDA
-
-#id = ECO.0013 #attribution routes fluviales SWMH
-#id = ECO.0014 #attribution routes fluviales LCDA
+#id = ECO.00080 #évaluation du potentiel économique -steppe- 
+#id = ECO.00081 #évaluation du potentiel économique -jungle-
+#id = ECO.00082 #évaluation du potentiel économique -arctique-  
 #id = ECO.0015 #reroll pour les malchanceux (voir détection ressources)
-#id = ECO.001501 #attribution routes terrestres G1 SWMH
-#id = ECO.001502 #attribution routes terrestres G2 SWMH
-#id = ECO.001503 #attribution routes terrestres G3 SWMH
-#id = ECO.0016 #attribution routes terrestres LCDA
 
 ##activation ressources
 #id = ECO.00100 #activation pour commerce -agriculture -céréales 
@@ -106,8 +104,8 @@
 #id = ECO.00109 #activation pour commerce -agriculture -pain
 
 #id = ECO.00110 #activation pour commerce -elevage -ovin laine-
-#id = ECO.00111 #activation pour commerce -elevage -bovin bétail-
-#id = ECO.00112 #activation pour commerce -elevage -ovin fromage-
+#id = ECO.00111 #activation pour commerce -elevage -ovin fromage-
+#id = ECO.00112 #activation pour commerce -elevage -bovin bétail-
 #id = ECO.00113 #activation pour commerce -elevage -bovin cuir-
 #id = ECO.00114 #activation pour commerce -elevage -bovin viande-
 #id = ECO.00115 #activation pour commerce -elevage -etoffe-
@@ -136,21 +134,13 @@
 #id = ECO.00151 #activation pour commerce -pisciculture -poisson-
 #id = ECO.00152 #activation pour commerce -peche/pisciculture -fumaison-
 
-#id = ECO.001501 #attribution routes terrestres G1 SWMH
-#id = ECO.001502 #attribution routes terrestres G2 SWMH
-#id = ECO.001503 #attribution routes terrestres G3 SWMH
-
-
 
 ###ECO+_init_COMMERCE.txt
 
 ##Détection route commerciales
-#id = ECO.0020 #route 1 test -supprimé
-#id = ECO.0021 #route 2 test -supprimé
-#id = ECO.0022 #route 3 test -supprimé
-#id = ECO.0023 #centre commercial1 test
-#id = ECO.0024 #centre commercial2 test
-#id = ECO.0025 #centre commercial3 test
+#[COMMENTE] id = ECO.0023 #centre commercial1 test
+#[COMMENTE] id = ECO.0024 #centre commercial2 test
+#[COMMENTE] id = ECO.0025 #centre commercial3 test
 #id = ECO.0026 #calcul du nombre de ressources
 
 ###ECO+_immersion.txt
@@ -203,6 +193,12 @@
 #id = TRADE.0002 #Step C attribution
 #id = TRADE.0003 #Step D attribution
 #id = TRADE.0004 #Step E attribution
+#id = TRADE.0005 #Route modifier attribution
+#id = TRADE.0006 #Annex comercial node attribution
+#id = TRADE.0007 #Update the modifier of the route size
+#id = TRADE.0008 #Update the route size variable for previous steps
+#id = TRADE.0009 #Avert the player that the route building can be build on its demesne
+#id = TRADE.0010 #Avert the player that a route is on its demesne
 
 ######################################################
 # [ReC][Reliques et Cathédrales]  par Arko et Mouchi #
@@ -214,9 +210,9 @@
 
  
 ##ReC_events_reliques.txt
-#id = REC.0101 >> REC.125 # initialisation Reliques
-#id = REC.0126 >> REC.130 # initialisation Reliques à découvrir
-#id = REC.0131 >> REC.135 # confirmation Reliques à découvrir (cachée)
+#id = REC.0101 >> REC.0125 # initialisation Reliques
+#id = REC.0126 >> REC.0130 # initialisation Reliques à découvrir
+#id = REC.0131 >> REC.0135 # confirmation Reliques à découvrir (cachée)
 #id = REC.0136 # initialisation Relique Graal
 #id = REC.0137 # confirmation Relique Graal (cachée)
 #libres ID 138 >> 150
@@ -224,15 +220,12 @@
 #id = REC.0176 # fausse relique (catholique)
 #id = REC.0177 # maintenance doublon pré-attribution reliques
 
-##ReC_events_generaux.txt
-
-
-
+##[NON INCLUS]ReC_events_generaux.txt
 #id = REC.0301 # recruter un maitre batisseur
 #OBSOLETE #id = REC.0302 # recruter un batisseur
 #OBSOLETE #id = REC.0303 # recruter un architecte
 
-##ReC_events_bonus.txt
+##[NON INCLUS]ReC_events_bonus.txt
 #id = REC.0201 # bonus achèvement étape 1 (modifieur pour recrutement)
 #id = REC.0202 >> REC.211 # bonus achévement des étapes sauf 0210
 #id = REC.1210 # bonus achévement étape n°10_ca
@@ -240,7 +233,7 @@
 #id = REC.3210 # bonus achévement étape n°10_tp
 #id = REC.0212 # bonus achévement ultime étape
 
-##ReC_flavour_events.txt
+##[NON INCLUS]ReC_flavour_events.txt
 #ralentissements chantier
 #id = REC.1101 # 
 #id = REC.1101 # 
@@ -296,7 +289,7 @@
 #id = REC.6001 # 
 #id = REC.6001 # 
 
-## ReC_events_rivalite.txt
+##[NON INCLUS] ReC_events_rivalite.txt
 # id = REC.2001 # Chatelin jaloux bâtit (ou non) une cathérale
 # id = REC.2002 # Appartion de la cathédrale [ Désormais inutile sauf pour faire apparaître des cathédrales cachées]
 # id = REC.2003 # Construction de la cathédrale à l'issue de la décision
@@ -330,7 +323,7 @@
 # id = REC.2030 # Ralentissement d'un chantier pendant 180 jours suite à un coup bas
 # id = REC.2031 # Ralentissement d'un chantier pendant 90 jours suite à un coup bas
 
-## ReC_sculpteurs
+##[NON INCLUS] ReC_sculpteurs
 # id = REC.2101 # Création d'artistes - sculpteur
 # id = REC.2102 # Demande de financement d'une petite sculpture
 # id = REC.2103 # Sculpture réalisée - travail du sculpteur
@@ -374,7 +367,7 @@
 # id = REC.2141 # Offrir une sculpture - nettoyage des flags
 # id = REC.2142 # Offrir une sculpture - liste épuisée
 
-## ReC_fresquistes
+##[NON INCLUS] ReC_fresquistes
 # id = REC.2201 # Création d'artistes - sculpteur
 # id = REC.2202 # Demande de financement d'une petite sculpture
 # id = REC.2203 # Sculpture réalisée - travail du sculpteur
@@ -426,12 +419,13 @@
 #List ID des events.
 #namespace = XYLO
 
-    
+###XYLO_specialisation.txt   
 #id = XYLO.0001 # initialisation Recruter un forestier
 #id = XYLO.0002 # initialisation Forêts féodales
 #id = XYLO.0003 # initialisation Forêts communales
 #id = XYLO.0004 # initialisation Forêts cléricales
 
+###[NON INCLUS] XYLO_champis.txt
 #des champignons !
 #id = XYLO.0111  # découverte sylvestre
 #id = XYLO.01121 # bolet + cueillette or not cueillette ?
@@ -449,6 +443,7 @@
 #id = XYLO.01152 # potion de soin (blessure)
 #id = XYLO.01153 # potion de soin (maladie)
 
+###[NON INCLUS] XYLO_bandits.txt
 #des bandits !
 #id = XYLO.02101 # raids pirates
 #id = XYLO.02102 # suppression raids pirates
@@ -474,6 +469,7 @@
 
 #id = XYLO.2000-2999 #Chasse spéciale
 
+### XYLO_updown_downgrades.txt
 #id = XYLO.0101 # libre
 #id = XYLO.0102 # libre
 #id = XYLO.0103 # downgrade serie for bankruptcy -première coupe
@@ -483,15 +479,18 @@
 #id = XYLO.0107 # downgrade -don église v1
 #id = XYLO.0108 # downgrade -don église v2
 
+### XYLO_updown_upgrades.txt
 #id = XYLO.0201 # upgrade achat v1
 #id = XYLO.0202 # upgrade achat v2
 #id = XYLO.0203 # upgrade achat v3
 
+### XYLO_chartes.txt
 #id = XYLO.0301 # -libre-
 #id = XYLO.0302 # Loi forestière -agir contre la révolte (4% ou +)
 #id = XYLO.0303 # Loi forestière -agir contre la révolte (9% ou +)
 #id = XYLO.0304 # Loi forestière -simple demande
 #id = XYLO.0305 # Loi forestière -demande d'upgrade
 
+#[NON INCLUS] 
 #Divers flavour
 #id = XYLO.0401 # attaque de bandits pendant une partie de chasse
