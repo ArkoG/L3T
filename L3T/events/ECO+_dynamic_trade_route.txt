@@ -100,7 +100,27 @@ province_event = {
 	
 	option = {
 		name = "TRADESTEPKO"
-		trigger = { NOT = { has_province_flag = bloc_B } }
+		trigger = { 
+			NOT = {
+				has_province_flag = bloc_A
+				has_province_flag = bloc_B
+				has_province_flag = bloc_C
+				has_province_flag = bloc_D
+				has_province_flag = bloc_E
+			}
+		}
+	}
+
+	option = {
+		name = "TRADESTEPALREADY"
+		trigger = { 
+			OR = {
+				has_province_flag = bloc_A
+				has_province_flag = bloc_C
+				has_province_flag = bloc_D
+				has_province_flag = bloc_E
+			}
+		}
 	}
 }
 
@@ -199,7 +219,27 @@ province_event = {
 	
 	option = {
 		name = "TRADESTEPKO"
-		trigger = { NOT = { has_province_flag = bloc_C } }
+		trigger = { 
+			NOT = {
+				has_province_flag = bloc_A
+				has_province_flag = bloc_B
+				has_province_flag = bloc_C
+				has_province_flag = bloc_D
+				has_province_flag = bloc_E
+			}
+		}
+	}
+
+	option = {
+		name = "TRADESTEPALREADY"
+		trigger = { 
+			OR = {
+				has_province_flag = bloc_A
+				has_province_flag = bloc_B
+				has_province_flag = bloc_D
+				has_province_flag = bloc_E
+			}
+		}
 	}
 }
 
@@ -298,7 +338,27 @@ province_event = {
 	
 	option = {
 		name = "TRADESTEPKO"
-		trigger = { NOT = { has_province_flag = bloc_D } }
+		trigger = { 
+			NOT = {
+				has_province_flag = bloc_A
+				has_province_flag = bloc_B
+				has_province_flag = bloc_C
+				has_province_flag = bloc_D
+				has_province_flag = bloc_E
+			}
+		}
+	}
+
+	option = {
+		name = "TRADESTEPALREADY"
+		trigger = { 
+			OR = {
+				has_province_flag = bloc_A
+				has_province_flag = bloc_B
+				has_province_flag = bloc_C
+				has_province_flag = bloc_E
+			}
+		}
 	}
 }
 
@@ -383,7 +443,27 @@ province_event = {
 	
 	option = {
 		name = "TRADESTEPKO"
-		trigger = { NOT = { has_province_flag = bloc_E } }
+		trigger = { 
+			NOT = {
+				has_province_flag = bloc_A
+				has_province_flag = bloc_B
+				has_province_flag = bloc_C
+				has_province_flag = bloc_D
+				has_province_flag = bloc_E
+			}
+		}
+	}
+
+	option = {
+		name = "TRADESTEPALREADY"
+		trigger = { 
+			OR = {
+				has_province_flag = bloc_A
+				has_province_flag = bloc_B
+				has_province_flag = bloc_C
+				has_province_flag = bloc_D
+			}
+		}
 	}
 }
 
