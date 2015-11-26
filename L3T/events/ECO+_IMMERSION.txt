@@ -42,7 +42,16 @@ province_event = {
 
 	option = {
 		name = "ECO.0200A"
-		add_province_modifier = { name = recolte_bonne duration = 300 }		
+		add_province_modifier = { name = recolte_bonne duration = 300 }	
+		random_list = {		
+			85 = {}
+			15 = { 		
+				chronicle = {
+					entry = RECOLTE_BONNE_CHRONIQUE
+					picture = GFX_evt_ECO1
+				}
+			}
+		}		
 	}
 }
 
@@ -79,7 +88,16 @@ province_event = {
 
 	option = {
 		name = "ECO.0201A"
-		add_province_modifier = { name = recolte_mauvaise duration = 300 }		
+		add_province_modifier = { name = recolte_mauvaise duration = 300 }
+		random_list = {		
+			85 = {}
+			15 = { 		
+				chronicle = {
+					entry = RECOLTE_MAUVAISE_CHRONIQUE
+					picture = GFX_evt_ECO3
+				}
+			}
+		}		
 	}
 }
 
@@ -110,7 +128,16 @@ province_event = {
 
 	option = {
 		name = "ECO.0202A"
-		add_province_modifier = { name = peche_bonne duration = 300 }		
+		add_province_modifier = { name = peche_bonne duration = 300 }
+		random_list = {		
+			85 = {}
+			15 = { 		
+				chronicle = {
+					entry = PECHE_BONNE_CHRONIQUE
+					picture = GFX_evt_merchant_ship_at_sea_republic
+				}
+			}
+		}
 	}
 }
 
@@ -141,7 +168,16 @@ province_event = {
 
 	option = {
 		name = "ECO.0203A"
-		add_province_modifier = { name = peche_mauvaise duration = 300 }		
+		add_province_modifier = { name = peche_mauvaise duration = 300 }	
+		random_list = {		
+			85 = {}
+			15 = { 		
+				chronicle = {
+					entry = PECHE_MAUVAISE_CHRONIQUE
+					picture = GFX_evt_merchant_ship_at_sea_republic
+				}
+			}
+		}		
 	}
 }
 
