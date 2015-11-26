@@ -248,7 +248,8 @@ province_event = {
 	
 	option = {
 		name = "ECO.0206A"
-		add_province_modifier = { name = industrie_prospere duration = -1 }		
+		add_province_modifier = { name = industrie_prospere duration = -1 }	
+		set_province_flag = industrie_prospere
 	}
 }
 
@@ -281,6 +282,9 @@ province_event = {
 		remove_province_modifier = peche_bonne
 		remove_province_modifier = mine_filon
 		remove_province_modifier = industrie_prospere
+		remove_province_flag = industrie_prospere_A
+		remove_province_flag = industrie_prospere_B
+		remove_province_flag = industrie_prospere_C
 	}
 }	
 
@@ -394,6 +398,95 @@ province_event = {
 				10 = { add_province_modifier = { name = meteo_secheresse duration = 120 }}
 			}
 		}
+	}
+}
+#Prospérité - notif chronique
+province_event = {
+    id = ECO.0210
+	desc = "DESCECO.0210"
+	picture = GFX_evt_market
+	
+	trigger = {
+		had_province_flag = { flag = industrie_prospere_A days = 1825 } #5 ans
+	}
+		
+	mean_time_to_happen = { 
+		years = 5
+		modifier = { factor = 0.9	any_neighbor_province = { has_province_modifier = industrie_prospere } }
+		modifier = { factor = 0.8	had_province_flag = { flag = industrie_prospere_A days = 2190 }} #6 ans
+		modifier = { factor = 0.7	had_province_flag = { flag = industrie_prospere_A days = 2555 }} #7 ans
+		modifier = { factor = 0.6	had_province_flag = { flag = industrie_prospere_A days = 2920 }} #8 ans
+		modifier = { factor = 0.5	had_province_flag = { flag = industrie_prospere_A days = 3285 }} #9 ans
+	}
+
+	option = {
+		name = "ECO.0210A"
+		chronicle = {
+				entry = CHRONICLE_PROSPERITE_A
+				picture = GFX_evt_market
+			}
+		remove_province_flag = industrie_prospere_A
+		set_province_flag = industrie_prospere_B
+		owner = { wealth =  175 }
+	}
+}
+province_event = {
+    id = ECO.0211
+	desc = "DESCECO.0211"
+	picture = GFX_evt_market
+	
+	trigger = {
+		had_province_flag = { flag = industrie_prospere_B days = 1825 } #5 ans
+	}
+		
+	mean_time_to_happen = { 
+		years = 5
+		modifier = { factor = 0.9	any_neighbor_province = { has_province_modifier = industrie_prospere } }
+		modifier = { factor = 0.8	had_province_flag = { flag = industrie_prospere_B days = 2190 }} #6 ans
+		modifier = { factor = 0.7	had_province_flag = { flag = industrie_prospere_B days = 2555 }} #7 ans
+		modifier = { factor = 0.6	had_province_flag = { flag = industrie_prospere_B days = 2920 }} #8 ans
+		modifier = { factor = 0.5	had_province_flag = { flag = industrie_prospere_B days = 3285 }} #9 ans
+	}
+
+	option = {
+		name = "ECO.0211A"
+		chronicle = {
+				entry = CHRONICLE_PROSPERITE_B
+				picture = GFX_evt_market
+			}
+		remove_province_flag = industrie_prospere_B
+		set_province_flag = industrie_prospere_C
+		owner = { wealth =  350 }
+	}
+}
+province_event = {
+    id = ECO.0212
+	desc = "DESCECO.0212"
+	picture = GFX_evt_market
+	
+	trigger = {
+		had_province_flag = { flag = industrie_prospere_C days = 1825 } #5 ans
+	}
+		
+	mean_time_to_happen = { 
+		years = 5
+		modifier = { factor = 0.9	any_neighbor_province = { has_province_modifier = industrie_prospere } }
+		modifier = { factor = 0.8	had_province_flag = { flag = industrie_prospere_C days = 2190 }} #6 ans
+		modifier = { factor = 0.7	had_province_flag = { flag = industrie_prospere_C days = 2555 }} #7 ans
+		modifier = { factor = 0.6	had_province_flag = { flag = industrie_prospere_C days = 2920 }} #8 ans
+		modifier = { factor = 0.5	had_province_flag = { flag = industrie_prospere_C days = 3285 }} #9 ans
+	}
+
+	option = {
+		name = "ECO.0212A"
+		chronicle = {
+				entry = CHRONICLE_PROSPERITE_C
+				picture = GFX_evt_market
+			}
+		remove_province_flag = industrie_prospere_C
+		#set_province_flag = industrie_prospere_B
+		owner = { change_stewardship = 1 }
+		owner = { wealth =  250 }
 	}
 }
 
