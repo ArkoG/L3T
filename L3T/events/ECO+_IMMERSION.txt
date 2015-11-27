@@ -43,15 +43,19 @@ province_event = {
 	option = {
 		name = "ECO.0200A"
 		add_province_modifier = { name = recolte_bonne duration = 300 }	
-		random_list = {		
-			85 = {}
-			15 = { 		
-				chronicle = {FROM = {
-					entry = RECOLTE_BONNE_CHRONIQUE
-					picture = GFX_evt_ECO1
+		hidden_tooltip = {
+			random_list = {		
+				85 = {}
+				15 = {
+					owner = { 		
+						chronicle = {
+							entry = RECOLTE_BONNE_CHRONIQUE
+							picture = GFX_evt_ECO1
+						}
+					}
 				}
-			}}
-		}		
+			}
+		}
 	}
 }
 
@@ -89,13 +93,17 @@ province_event = {
 	option = {
 		name = "ECO.0201A"
 		add_province_modifier = { name = recolte_mauvaise duration = 300 }
-		random_list = {		
-			85 = {}
-			15 = { 		
-				chronicle = {FROM = {
-					entry = RECOLTE_MAUVAISE_CHRONIQUE
-					picture = GFX_evt_ECO3
-				}}
+		hidden_tooltip = {
+			random_list = {		
+				85 = {}
+				15 = {
+					owner = { 		
+						chronicle = {
+							entry = RECOLTE_MAUVAISE_CHRONIQUE
+							picture = GFX_evt_ECO3
+						}
+					}
+				}
 			}
 		}		
 	}
@@ -129,15 +137,18 @@ province_event = {
 	option = {
 		name = "ECO.0202A"
 		add_province_modifier = { name = peche_bonne duration = 300 }
-		random_list = {		
-			85 = {}
-			15 = { 	
-			FROM = {			
-				chronicle = {
-					entry = PECHE_BONNE_CHRONIQUE
-					picture = GFX_evt_merchant_ship_at_sea_republic
+		hidden_tooltip = {
+			random_list = {		
+				85 = {}
+				15 = {
+					owner = { 		
+						chronicle = {
+							entry = PECHE_BONNE_CHRONIQUE
+							picture = GFX_evt_merchant_ship_at_sea_republic
+						}
+					}
 				}
-			}}
+			}
 		}
 	}
 }
@@ -170,13 +181,16 @@ province_event = {
 	option = {
 		name = "ECO.0203A"
 		add_province_modifier = { name = peche_mauvaise duration = 300 }	
-		random_list = {		
-			85 = {}
-			15 = { FROM = {		
-				chronicle = {
-					entry = PECHE_MAUVAISE_CHRONIQUE
-					picture = GFX_evt_merchant_ship_at_sea_republic
-				}
+		hidden_tooltip = {
+			random_list = {		
+				85 = {}
+				15 = {
+					owner = { 		
+						chronicle = {
+							entry = PECHE_MAUVAISE_CHRONIQUE
+							picture = GFX_evt_merchant_ship_at_sea_republic
+						}
+					}
 				}
 			}
 		}		
@@ -282,6 +296,7 @@ province_event = {
 		modifier = { factor = 0.60	owner = { realm_stewardship = 50 } }
 		modifier = { factor = 1.50	owner = { NOT = { realm_stewardship = 30 } } }
 		modifier = { factor = 0.75	owner = { has_focus = focus_business } }
+		modifier = { factor = 1.50	has_province_modifier = interrupted_by_war }
 	}
 	
 	option = {
@@ -308,7 +323,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = { 
-		years = 1
+		years = 3
 		modifier = { factor = 1.50	owner = { realm_martial = 50 } }
 		modifier = { factor = 0.60	owner = { NOT = { realm_martial = 30 } } }
 		modifier = { factor = 0.8	owner = { has_focus = focus_war } }
@@ -323,6 +338,7 @@ province_event = {
 		remove_province_flag = industrie_prospere_A
 		remove_province_flag = industrie_prospere_B
 		remove_province_flag = industrie_prospere_C
+		add_province_modifier = { name = interrupted_by_war duration = 1095 hidden = yes }
 	}
 }	
 
@@ -459,10 +475,15 @@ province_event = {
 
 	option = {
 		name = "ECO.0210A"
-		chronicle = {
-				entry = CHRONICLE_PROSPERITE_A
-				picture = GFX_evt_market
+		custom_tooltip = { text = chronique_prosperite_custom }
+		hidden_tooltip = {
+			owner = {
+				chronicle = {
+					entry = CHRONICLE_PROSPERITE_A
+					picture = GFX_evt_market
+				}
 			}
+		}
 		remove_province_flag = industrie_prospere_A
 		set_province_flag = industrie_prospere_B
 		owner = { wealth =  175 }
@@ -488,10 +509,15 @@ province_event = {
 
 	option = {
 		name = "ECO.0211A"
-		chronicle = {
-				entry = CHRONICLE_PROSPERITE_B
-				picture = GFX_evt_market
+		custom_tooltip = { text = chronique_prosperite_custom }
+		hidden_tooltip = {
+			owner = {
+				chronicle = {
+					entry = CHRONICLE_PROSPERITE_B
+					picture = GFX_evt_market
+				}
 			}
+		}
 		remove_province_flag = industrie_prospere_B
 		set_province_flag = industrie_prospere_C
 		owner = { wealth =  350 }
@@ -517,10 +543,15 @@ province_event = {
 
 	option = {
 		name = "ECO.0212A"
-		chronicle = {
-				entry = CHRONICLE_PROSPERITE_C
-				picture = GFX_evt_market
+		custom_tooltip = { text = chronique_prosperite_custom }
+		hidden_tooltip = {
+			owner = {
+				chronicle = {
+					entry = CHRONICLE_PROSPERITE_C
+					picture = GFX_evt_market
+				}
 			}
+		}
 		remove_province_flag = industrie_prospere_C
 		#set_province_flag = industrie_prospere_B
 		owner = { change_stewardship = 1 }
