@@ -350,7 +350,7 @@ character_event = {
 # Stewardship Ambition #
 ########################
 
-
+##Le textile
 # Event de choix de faire la suite ou pas
 character_event = {
 	id = ECO.0301
@@ -400,7 +400,6 @@ character_event = {
 		custom_tooltip = { text = improve_stewardship_quit }
 	}
 }
-
 # Choix de l'achat
 character_event = {
 	id = ECO.0302
@@ -441,7 +440,6 @@ character_event = {
 		character_event = { id = ECO.0305 days = 30 tooltip = TOOLTIPECO.0302C}
 	}
 }
-
 # Vente laine
 character_event = {
 	id = ECO.0303
@@ -478,7 +476,6 @@ character_event = {
 		}	
 	}
 }
-
 # Vente étoffe
 character_event = {
 	id = ECO.0304
@@ -515,7 +512,6 @@ character_event = {
 		}	
 	}
 }
-
 # Vente drap
 character_event = {
 	id = ECO.0305
@@ -552,7 +548,6 @@ character_event = {
 		}	
 	}
 }
-
 # Gestion des invendus
 character_event = {
 	id = ECO.0306
@@ -602,7 +597,6 @@ character_event = {
 		character_event = { id = ECO.0307 days = 30 tooltip = TOOLTIPECO.0306B}
 	}
 }
-
 # Fin de la chaîne
 character_event = {
 	id = ECO.0307
@@ -621,7 +615,7 @@ character_event = {
 	}
 }
 
-# Le cadastre
+##Le cadastre
 character_event = {
 	id = ECO.319
 	desc = "DESCECO.319"
@@ -667,7 +661,8 @@ character_event = {
 	}
 }
 
-character_event = { #régler les conflits de parcelles #chaine 1
+#régler les conflits de parcelles #chaine 1
+character_event = { #régler les conflits de parcelles #acception/refus
 	id = ECO.320
 	desc = "DESCECO.320"
 	picture = GFX_evt_L3T_carte
@@ -707,7 +702,6 @@ character_event = { #régler les conflits de parcelles #chaine 1
 		set_character_flag = { chaine_cadastre_1_refusee }
 	}
 }
-
 character_event = { #régler les conflits de parcelle : sur le terrain
 	id = ECO.3201
 	desc = "DESCECO.3201"
@@ -731,7 +725,6 @@ character_event = { #régler les conflits de parcelle : sur le terrain
 		set_character_flag = chaine_cadastre_1_terminee #fin prématurée
 	}
 }
-
 character_event = { #faire les mesures
 	id = ECO.3202
 	desc = "DESCECO.3202"
@@ -762,8 +755,8 @@ character_event = { #faire les mesures
 		}
 	}
 }
-
-character_event = { #Inventaire des fiefs #chaine 2
+#Inventaire des fiefs #chaine 2
+character_event = { #Inventaire des fiefs #acception/refus
 	id = ECO.321
 	desc = "DESCECO.321"
 	picture = GFX_evt_L3T_carte
@@ -811,7 +804,6 @@ character_event = { #Inventaire des fiefs #chaine 2
 		character_event = { id = ECO.3212 days = 30 tooltip = TOOLTIPECO.3212}
 	}
 }
-
 character_event = { #outils/techniques
 	id = ECO.3212
 	desc = "DESCECO.3212"
@@ -863,7 +855,6 @@ character_event = { #outils/techniques
 		character_event = { id = ECO.3211 days = 40 tooltip = TOOLTIPECO.3211}
 	}
 }
-
 character_event = { #résultats mesures
 	id = ECO.3211
 	desc = "DESCECO.3211"
@@ -893,7 +884,6 @@ character_event = { #résultats mesures
 		trigger = { has_character_flag = cadastre_chaine2_resultat3 }
 	}
 }
-
 character_event = { #allons plus loin ? registre or not registre ?
 	id = ECO.03213
 	desc = "DESCECO.03213"
@@ -918,8 +908,8 @@ character_event = { #allons plus loin ? registre or not registre ?
 		prestige = 25
 	}
 }
-
-character_event = { #cartographier nos fiefs ? #chaine 3
+#cartographier nos fiefs ? #chaine 3
+character_event = { #cartographier nos fiefs ? #acception/refus
 	id = ECO.322
 	desc = "DESCECO.322"
 	picture = GFX_evt_L3T_carte
@@ -960,8 +950,7 @@ character_event = { #cartographier nos fiefs ? #chaine 3
 		character_event = { id = ECO.3221 days = 30 tooltip = TOOLTIPECO.3221}
 	}
 }
-
-character_event = { #
+character_event = { #existant ou néant ?
 	id = ECO.3221
 	desc = "DESCECO.3221"
 	picture = GFX_evt_L3T_carte
@@ -995,7 +984,8 @@ character_event = { #
 		name = "ECO.3221C" #en fait non
 	}
 }
-character_event = { #harmoniser les mesures ? #chaine 4
+#harmoniser les mesures ? #chaine 4
+character_event = { #harmoniser les mesures ? #acception/refus
 	id = ECO.323
 	desc = "DESCECO.323"
 	picture = GFX_evt_L3T_carte
@@ -1066,11 +1056,8 @@ character_event = { #harmoniser les mesures
 		wealth = 45		
 	}
 }
-
-
 #conclusions
-#324
-character_event = {
+character_event = { 
 	id = ECO.324
 	desc = "DESCECO.324"
 	picture = GFX_evt_L3T_carte
