@@ -1,0 +1,358 @@
+#Reliques et Cathédrales - BATS
+#by ARKO
+
+ # Castle
+castle = {
+
+ca_cathedrale_lite_01 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique01
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_02 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique02
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_03 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique03
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_04 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique04
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_05 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique05
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_06 = {
+	desc = cathedrale_lite_06_desc	
+	potential = { 
+		has_province_modifier = relique06
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_07 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique07
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_08 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique08
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_09 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique09
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_10 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique10
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_11 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique11
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_12 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique12
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_13 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique13
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_14 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique14
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_15 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique15
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_16 = {
+	desc = cathedrale_lite_16_desc	
+	potential = { 
+		has_province_modifier = relique06
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_17 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique17
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_18 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique18
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_19 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique19
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_20 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique20
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_21 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique21
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_22 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique22
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_23 = {
+	desc = cathedrale_lite_desc	
+	potential = { 
+		has_province_modifier = relique23
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_24 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique24
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+ca_cathedrale_lite_25 = {
+	desc = cathedrale_lite_desc		
+	potential = { 
+		has_province_modifier = relique25
+		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+		}
+	trigger = { TECH_CONSTRUCTION = 1 }
+	gold_cost = 	950		
+	build_time = 	3650 #10ans		
+	ai_creation_factor = 	90	
+	add_number_to_name = no	
+	extra_tech_building_start = 100.0
+	liege_piety = 0.05
+	}
+}
+
