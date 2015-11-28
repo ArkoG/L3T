@@ -70,3 +70,1073 @@ DESCL3T.00160;;DESCL3T.00160 \n [From.Location.GetName];;;;;;;;;;;;x
 DESCL3T.00161;;DESCL3T.00161 \n [From.Location.GetName];;;;;;;;;;;;x
 DESCL3T.0017;;DESCL3T.0017 \n [From.Location.GetName];;;;;;;;;;;;x
 DESCL3T.0018;;DESCL3T.0018 \n [From.Location.GetName];;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+XYLO.0001;Hire a forester;Embaucher un forestier;;;;;;;;;;;x;
+DESCXYLO.0001;My liege, you are clearly busy with managing the affairs of your people, might I suggest a member of your court that could fill the position of Forester?;Vous êtes très occupé à diriger vos gens et vos terres, aussi je me permets de vous proposer quelqu'un de votre Cour qui pourrait convenir pour le poste de Forestier.;;;;;;;;;;;;x
+XYLO.0001A;He will do nicely. Have him start immediately.;Il fera l'affaire, qu'il se présente à moi et s'attèle à la tâche.;;;;;;;;;;;;x
+XYLO.0001B;If one want a job done properly...;Je le choisirais moi même.;;;;;;;;;;;;x
+XYLO.0002;Forest Specialization1;Spécialisation des Forêts1;;;;;;;;;;;;x
+DESCXYLO.0002;After an evaluation of our domains, our Forester informs us that the forests of [From.Location.GetName] are both able to be used for hunting or for good lumber. \n Do we need to retain it to your private hunting pleasures or open it to exploitation ?;Après un inventaire de nos domaines, notre Forestier nous informe que les bois de [From.Location.GetName] sont giboyeux et abondent d'arbres de belle stature, quel développment privilègier ? \n \nDevons-nous en réserver l'usage à sa seigneurie pour son bon plaisir de chasse ou bien les faire exploiter par nos gens ?;;;;;;;;;;;;x
+XYLO.0002A;Go for a hunt !;Partons chasser !;;;;;;;;;;;;x
+XYLO.0002B;Lets those lazy peasents work for us !;Faisons-la exploiter par ces fainéants de paysans !;;;;;;;;;;;;x
+XYLO.0002C;Some wood, what else ?;Du bois, quoi d'autre ? ;;;;;;;;;;;;x
+XYLO.0003;Forest Specialization2;Spécialisation des Forêts2;;;;;;;;;;;;x
+DESCXYLO.0003;After an evaluation of our domain, our forester informs us that our forest of  [From.Location.GetName] are composed of beautiful trees that will make perfect building and artistical material. A prosperous business should be possible. Should we assume the exclusive exploitation rights?;Après inventaire et évaluation de nos domaines boisés, notre Forestier nous informe que les forêts de [From.Location.GetName] sont composées de belles futaies qui feront de bons matériaux de construction et d'artisanat. Une belle rentabilité doit pouvoir en être tirée. \n \nJe suppose que l'on va s'en arroger un droit d'exploitation exclusif ?;;;;;;;;;;;;x
+XYLO.0003A;Am I greedy ? So what ?!;Moi cupide ? Et alors ?!;;;;;;;;;;;;x
+XYLO.0003B;Let's be generous and leave the unprofitable activities for farmers!;Soyons généreux laissons les activités peu rentables aux paysans !;;;;;;;;;;;;x
+XYLO.0004;Forest Specialization3;Spécialisation des Forêts3;;;;;;;;;;;;x
+DESCXYLO.0004;After an evaluation of our domain, our forester informs us that our forest of  [From.Location.GetName] would make an excellent framework for meditation and spirituel contemplation. Should we preserve these lands for such use or should we open them up to exploitation.;Suite à notre inventaire des nos bois, notre Forestier nous informe que les forêts de [From.Location.GetName] offrent un cadre excellent pour la pratique de la méditation et de l'ermitage. \n \n Devons-nous réserver ces domaines à cet usage ou les ouvrir à l'exploitation de ressources ?;;;;;;;;;;;;x
+XYLO.0004B;Glory to [Root.Religion.GetRandomGodName] !;Gloire à [Root.Religion.GetRandomGodName] !;;;;;;;;;;;;x
+XYLO.0004A;These trees will be a remarkable wooden frame to enlarge the house of the Lord ... or my palace. Only god knows !;Ces arbres feront un remarquable bois charpente pour agrandir la demeure du Seigneur...ou de mon palais. Dieu seul le sait !;;;;;;;;;;;;x
+XYLO.0004C;[Root.Religion.GetRandomGodName] made trees for wood isn't it ?;[Root.Religion.GetRandomGodName] a créé les arbres pour leur bois non ? ;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+XYLO.0103;Timber sale to fill the coffers;Vente bois pour renflouer les caisses1;;;;;;;;;;;;x
+DESCXYLO.0103;Our treasury is nearly empty. We could chop down some forest plots from our hunting demesne, and sell the timber to replenish the treasury.;Nos finances sont au plus bas. Nous pourrions abattre quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres.;;;;;;;;;;;;x
+XYLO.0103A;It won't be necessary;Ce ne sera pas nécessaire.;;;;;;;;;;;;x
+XYLO.0103B;Let's cut some of those.;Procédons à une coupe.;;;;;;;;;;;;x
+XYLO.0104;Timber sale to fill the coffers;Vente bois pour renflouer les caisses2;;;;;;;;;;;;x
+DESCXYLO.0104;We barely got enough gold to cover the bottom of our coffers. Do we need to chop down more forest plots from our hunting demesne ?;Nos finances sont toujours au plus bas. Devons nous abattre à nouveau le bois de quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres ?;;;;;;;;;;;;x
+XYLO.0104A;Again ? No.;Encore ? Non.;;;;;;;;;;;;x
+XYLO.0104B;Let's go for it.;Allons-y;;;;;;;;;;;;x
+XYLO.0105;Timber sale to fill the coffers;Vente bois pour renflouer les caisses3;;;;;;;;;;;;x
+DESCXYLO.0105;Our gold reserves is still hardly fit for a lord. Do we need to chop down more forest plots from our hunting demesne ?;Nos finances sont toujours au plus bas. Devons nous abattre à nouveau le bois de quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres ?;;;;;;;;;;;;x
+XYLO.0105A;Again ? No.;Encore ? Non.;;;;;;;;;;;;x
+XYLO.0105B;Let's go for it.;Allons-y;;;;;;;;;;;;x
+XYLO.0106;To deforest a forest;La coupe de trop;;;;;;;;;;;;x
+DESCXYLO.0106;Cutting down so many trees to fill our coffers has led to dramatic reduction in the foilage… We will probably soon have to halt most of our activites….;Couper autant d'arbres pour renflouer nos caisses a conduit à une réduction dramatique de la couverture forestière... Nous allons probalement devoir cesser bientôt un certain nombre de nos activités...;;;;;;;;;;;;x
+XYLO.0106A;That is to say ?;C'est à dire ?;;;;;;;;;;;;x
+XYLO.0107;;;;;;;;;;;;;;x
+DESCXYLO.0107;;Au regard de notre niveau de piété, et puisque nous en aurions la possibilité, nous pourrions faire don d'une partie de nos bois à l'Eglise. \nCela serait bénéfique pour le salut de notre âme et la réputation de notre famille.;;;;;;;;;;;;x
+XYLO.0107A;;Allons-y;;;;;;;;;;;;x
+XYLO.0107B;;L'enjeu me semble trop faible;;;;;;;;;;;;x
+XYLO.0107C;;Et si nous essayions d'en retirer quelques profits ?;;;;;;;;;;;;x
+XYLO.0108;;;;;;;;;;;;;;x
+DESCXYLO.0108;;Nos forêts sont grandes et nous pourrions en céder une partie à l'Eglise. \nCela serait bon pour le salut de notre âme et renforcerait notre très sainte Mère l'Eglise.;;;;;;;;;;;;x
+XYLO.0108A;;Pour le salut de notre âme !;;;;;;;;;;;;x
+XYLO.0108B;;Je trouverai d'autres moyens;;;;;;;;;;;;x
+XYLO.0108C;;Et contre quelque or ?;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+XYLO.0201;;Achat v1;;;;;;;;;;;x;
+DESCXYLO.0201;The treasury is brimming with coin. Expanding our forest domain could be an attractive investment opportunity. Should some of the gold be used to grow our woodland demesne?;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelque or dans cette voie ?;;;;;;;;;;;;x
+XYLO.0201A;Trees... that must be a safe investment right ? Let's give it a shot.;Tentons cela.;;;;;;;;;;;;x
+XYLO.0201B;Come back tomorrow.;Repassez demain.;;;;;;;;;;;;x
+XYLO.0201C;Treasury filling up ?! Speak sense your imbecile ! There will be no wasting my money on silly plants.;Débordent, débordent, c'est vite dit. Non.;;;;;;;;;;;;x
+XYLO.0202;;Achat v2;;;;;;;;;;;x;
+DESCXYLO.0202;We have a lot of excess gold lying about, should some of it be put to work enlarging our woodland industry?;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelques pièces dans cette voie ?;;;;;;;;;;;;x
+XYLO.0202A;Seems sensible.;Allons-y.;;;;;;;;;;;;x
+XYLO.0202B;Not tonight, my head is hurting.;Pas ce soir, j'ai mal à la tête.;;;;;;;;;;;;x
+XYLO.0202C;Excess gold ? Such a thing does not exist.;Débordent ? Qui prétend cela ? Non.;;;;;;;;;;;;x
+XYLO.0203;;Achat v3;;;;;;;;;;;x;
+DESCXYLO.0203;-Our coffers are teeming with gold, maybe it would be advisable to spend some of it on forest plots ?;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelques pièces dans cette politique ?;;;;;;;;;;;;x
+XYLO.0203A;I like to see my money grow, let's put it to good use.;Cela me paraît un bon investissement.;;;;;;;;;;;;x
+XYLO.0203B;Let me think it over.;Je dois réfléchir.;;;;;;;;;;;;x
+XYLO.0203C;-Unless you have found a new lord to advice, I would advise you to lookup -no- in the dictionary.;N'ai-je pas déjà dit non ?;;;;;;;;;;;;x
+XYLO.0302;forest charter related stuff;RR foret;;;;;;;;;;;;x
+DESCXYLO.0302;;En nous réservant presque l'exclusivité des droits d'exploitation de nos forêts, cela crée un mécontentement croissant parmi la population. Nous pourrions par exemple accorder une licence forestière pour une courte durée durée afin de calmer les vélléités des villageois dans la province de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.0302A;;Il nous faut agir avant que ça ne dégénère.;;;;;;;;;;;;x
+XYLO.0302B;;Faisons un geste.;;;;;;;;;;;;x
+XYLO.0302C;And ? ;Et alors ?;;;;;;;;;;;;x
+XYLO.0303;;RR général + foret;;;;;;;;;;;;x
+DESCXYLO.0303;;La révolte gronde en [From.Location.GetName] ! L'exploitation de la forêt à vos seules fins semble être l'un des objets des revendications et qui vient s'ajouter à d'autres causes. Relâcher un peu de pression pendant un temps sur ce point en proposant un licence forestière pourrait calmer la population.;;;;;;;;;;;;x
+XYLO.0303A;;Soyons efficace, et dans la durée !;;;;;;;;;;;;x
+XYLO.0303B;;Tentons cela pour le moment.;;;;;;;;;;;;x
+XYLO.0303C;;Ce n'est pas la cause principale.;;;;;;;;;;;;x
+XYLO.0304;;demande d'upgrade de la licence;;;;;;;;;;;;x
+DESCXYLO.0304;;Les villageois prétendent peiner à survivre car ils ne peuvent profiter que d'une trop infime part des richeses de la forêt. Ils implorent votre bonté pour l'octroi d'une charte leur ouvrant des droits supplémentaires sur la forêt de [From.Location.GetName]. Que décidez-vous ?;;;;;;;;;;;;x
+XYLO.0304A;Granted;Accordé.;;;;;;;;;;;;x
+XYLO.0304B;I govern !;JE gouverne !;;;;;;;;;;;;x
+XYLO.0305;;demande d'upgrade de la licence;;;;;;;;;;;;x
+DESCXYLO.0305;;La licence forestière accordée ne suffit pas au peuple de [From.Location.GetName]. Il est toujours inquiet des restrictions qui persistent, il demande une charte lui garantissant plus de droits et sur une plus longue durée. Que faisons-nous ?;;;;;;;;;;;;x
+XYLO.0305A;Granted;Accordé.;;;;;;;;;;;;x
+XYLO.0305B;;Nous ne pouvons nous le permettre.;;;;;;;;;;;;x
+XYLO.0305C;;Supprimons la charte existante ça leur apprendra !;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#;;EVENTS BANDITS;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+EVTDESC68001;The peasants of [Root.GetName] are slowly starting to respect my rule again. I should keep my demesne small enough to manage.;Les paysans de [Root.GetName] recommencent progressivement à respecter mon autorité. Je devrais maintenir mon domaine à une taille gérable.;;;;;;;;;;;;x
+EVTDESC68010;Due to my somewhat lacking Stewardship skill, a Thieves' Guild has been established in [Root.GetName].;Mon inaptitude pour l’intendance a entraîné l’établissement d’une Guilde de voleurs à [Root.GetName].;;;;;;;;;;;;x
+EVTDESC68020;My less than perfect Diplomacy has allowed a Smugglers' Ring to appear in [Root.GetName].;Mes piètres talents de diplomate ont permis à un Cercle de contrebandiers de se créer à [Root.GetName].;;;;;;;;;;;;x
+EVTDESC68030;Due to my mediocre understanding of Martial matters, bands of robbers are roaming the countryside in [Root.GetName]. They are too craven to attack my castles though.;À cause de mon manque de discernement dans le domaine martial, des bandes de voleurs sillonnent les campagnes de [Root.GetName]. Ils sont cependant trop lâches pour attaquer mes châteaux.;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+raids_pirates;Pirates' raids;Raids pirates;;;;;;;;;;;;x
+raids_pirates_desc;;Les raids des pirates ici sont réguliers. Face à l'inefficacité et l'impuissance du Seigneur ils prospèrent et ont probablement établi domicile non loin de là.;;;;;;;;;;;;x
+XYLO.02101;;établissement des pirates;;;;;;;;;;;;x
+DESCXYLO.02101;Due to our incapacity to rule so much lands, a band of pirates freely terrorize the coasts of [From.Location.GetName];Nous avons bien trop de terres à gérer... surtout au reagrd de nos compétences et notre incapacité à y maintenir l'ordre. Voilà une situation en or pour les roublards de tous poil ! Notamment semble-t-il cette bande de pirates qui sévit depuis quelques temps déjà et lancent des raids de plus en plus audacieux sur les côtes de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.02101A;Gottferdom ! ;Gottferdom ! ;;;;;;;;;;;;x
+XYLO.02101B;;Sacrebleu ! ;;;;;;;;;;;;x
+XYLO.02102;;suppression des pirates;;;;;;;;;;;;x
+DESCXYLO.02102;Pirates' raids ends in [From.Location.GetName].;En retrouvant un Domaine à la mesure de ce que nous pouvions maintenir en ordre et au prix d'une lutte longue et acharnée, nous avons finalement pu regagner le contrôle de nos terres et éradiquer les pirates qui ravageaient les côtes de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.02102A;Il était temps !;Il était temps !;;;;;;;;;;;;x
+DESC00401;;Sortis de nul part, un groupe de bandits nous attaquent ! \n Personne ne m'avait-il conseillé de m'occuper de la prolifération des bandits sur nos terres ? ;;;;;;;;;;;;x;
+XYLO.04013A;They are few enough to defeat alone..;Ils ne sont pas nombreux, je peux les vaincre seul...;;;;;;;;;;;;x;
+XYLO.04013B;Charge!;Chargez !;;;;;;;;;;;;x;
+XYLO.0401C;Pay them .;Payer-les.;;;;;;;;;;;;x;
+bandits_installes;Well settlef bandits;Bandits bien installés;;;;;;;;;;;;x
+bandits_installes_desc;;Les voleurs, malandrins et autres bandes d'affreux ce sont installés durablement sur ces terres, s'affairant à leurs viles activités et avec des conséquences désastreuses.;;;;;;;;;;;;x
+chef_malandrin;Bandit leader;Meneur de bandits;;;;;;;;;;;;x
+chef_malandrin_desc;Bandits in [From.Location.GetName] are now installed for some times and tend to reinforce. Maybe it is time to act against them ?;Ce personnage est à la tête d'une bande de malfrats toujours plus influants pillant et volant dans la région. Il serait peut être temps de s'en débarrasser non ?;;;;;;;;;;;;x
+XYLO.0211;;renforcement des bandits;;;;;;;;;;;;x
+DESCXYLO.0211;;Les bandits qui terrorisent la campagne et pertubent le commerce sont à présent installés depuis un certain temps dans la région de [From.Location.GetName]. \nPeut-être faudrait-il tenter de les disperser avant que la situation ne s'aggrave ?;;;;;;;;;;;;x
+XYLO.0211A;War is raging, there is nothing we can do;La guerre fait rage, nous ne pouvons rien faire;;;;;;;;;;;;x
+XYLO.0211B;Let's decide what to do.;Décidons au plus vite de ce qu'il convient de faire.;;;;;;;;;;;;x
+reunir_le_conseil;Convocate the Council;Nous réunissons le Conseil afin de prendre une décision.;;;;;;;;;;;;x
+XYLO.0212;send a councilor;envoyer un conseiller;;;;;;;;;;;;x
+DESCXYLO.0212;How will we try to eliminate the bandits that terrorize [From.Location.GetName];Au regard de la situation, par quel moyen pourrions-nous nous débarrasser de ces bandits qui empoisonnent l'économie et la vie de nos gens de la région de [From.Location.GetName] ?;;;;;;;;;;;;x
+XYLO.0212A;Try negociating;Tentons de négocier;;;;;;;;;;;;x
+XYLO.0212B;Try destabilize them;Tentons de les déstabiliser;;;;;;;;;;;;x
+XYLO.0212C;Try to defeat them;Tentons de les mater;;;;;;;;;;;;x
+XYLO.0212D;Don't worry they will leave one day...;Il n'y pas de quoi s'alarmer, ils partiront bien un jour...;;;;;;;;;;;;x
+envoi_chancelier;Chancelor sent;Notre Chancelier est missionné pour tenter de trouver une issue acceptable pour les deux camps.;;;;;;;;;;;;x
+envoi_espion;Spymaster sent;Notre maître-espion va tenter disperser les bandits par la ruse.;;;;;;;;;;;;x
+envoi_marechal;Marshal sent;Notre maréchal part accompagné de ses hommes tenter de réduire les bandits.;;;;;;;;;;;;x
+laisser_faire;We do nothing, hoping the situation will settle down quietly...;Nous ne faisons rien. En espérant que la situation se tasse sans trop de heurts...;;;;;;;;;;;;x
+XYLO.02120;;Réussite;;;;;;;;;;;;x
+DESCXYLO.02120;Victory ! \n Bandits left [From.Location.GetName] but the province needs to recover.;Notre démarche n'a pas été vaine et nous avons pu démanteler ce nid de bandits qui empoisonnait la région de [From.Location.GetName].\n Espérons que la région s'en remette assez rapidement...;;;;;;;;;;;;x
+XYLO.02121;;Echec;;;;;;;;;;;;x
+DESCXYLO.02121;Fail ! \n Bandits will now probably re-inforce their presence in [From.Location.GetName]...;Malgré tous nos efforts, nous ne sommes pas parvenus à nous débarraser des fauteurs de troubles de la région de [From.Location.GetName].\n Pillages, vols et destructions restent le lot quotidien des populations locales. Il est à redouter à présent que cette entreprise qui a déjà bien trop duré ne cesse de prospérer et ne conteste encore plus ouvertement notre autorité.;;;;;;;;;;;;x
+XYLO.02131;;Fief libre + échec;;;;;;;;;;;;x
+DESCXYLO.02131;As expected, the bandits in [From.Location.GetName] continue to proliferate.;Comme nous devions le craindre, les bandits ont continué de plus belles leurs méfaits et ont désormais la mainmise sur une bonne partie de l'économie de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.02131A;Wonderfull news... ;Super nouvelle... ;;;;;;;;;;;;x
+XYLO.02132;;Pas de Fief libre + échec;;;;;;;;;;;;x
+DESCXYLO.02132;Bandits left [From.Location.GetName]. The province had become too poor for them haha !;Les malandrins ont fini par quitter [From.Location.GetName].\n A croire qu'à force de pillages et vols, la province est devenue trop pauvre pour eux...;;;;;;;;;;;;x
+XYLO.02132A;Well, for us either sadly...;Elle n'en est pas moins pauvre pour nous...;;;;;;;;;;;;x
+XYLO.0214;;x;;;;;;;;;;;;x
+DESCXYLO.0214;The bandits network of [From.Location.GetName] is now lead by a famous hoodlum ! ;Le réseau de bandits qui terrorisent la région de [From.Location.GetName] est paraît-il mené par un chef et s'est même construit une base d'où organiser son petit commerce et mener ses exactions. Il va falloir l'en déloger !;;;;;;;;;;;;x
+XYLO.0214A;Damn !;Enfer et damnation !!;;;;;;;;;;;;x
+creation_bandit;A bandit leader appears in the province\n;Un meneur de bandits apparait dans la province\n;;;;;;;;;;;x
+#XYLO.0216;;le chef des bandits reçoit un surnom;;;;;;;;;;;;x
+#DESCXYLO.0216;unused anymore;Comme tout bon criminel, je me dois de porter un nom à la mesure de ma réputation !;;;;;;;;;;;;x
+DESCXYLO.02172;[From.Location.GetName] is now free from bandits' rule but will need time to recover.;Le propriétaire du Repaire de bandits ayant définitevement quitté les lieux, la province de [From.Location.GetName] va pouvoir se remettre de cette dure et éprouvante période pour sa population et son économie. Selon l'ampleur des dégâts, cela peut prendre quelques années avant un retour total à la normale.;;;;;;;;;;;;x
+XYLO.02172A;It is already a relief for us all !;C'est un déjà soulagement pour tous !;;;;;;;;;;;;x
+la_province_se_remet;Province recovers;La province se remet;;;;;;;;;;;;x
+la_province_se_remet_desc;Province recovers from bandits' rule;Après une occupation prolongée par un chef bandit et les méfaits qu'il a fait subir à cette province, il faut du temps pour que son économie se redresse.;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#recoit_un_sobriquet;;Le personnage reçoit un surnom.;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#;;MUSHROOM HUNT;;;;;;;;;;;;x
+#;x;;;;;;;;;;;;;x
+XYLO.0111;x;DECOUVERTE;;;;;;;;;;;;x
+DESCXYLO.0111;x;Au détour d'un chemin, nous apercevons dans un recoin ombragé une masse sombre dont la forme rappelle celle d'un champignon mais... d'une taille plutôt conséquente qui attire le regard.\n Que décidons-nous ?;;;;;;;;;;;;x
+XYLO.0111A;x;Je suis là pour chasser ! ;;;;;;;;;;;;x
+XYLO.0111B;x;Allons voir de plus près...;;;;;;;;;;;;x
+XYLO.01121;x;Approach and identify 1;;;;;;;;;;;;x
+DESCXYLO.01121;x;De plus près, il s'agit effectivement d'un champignon. Qui plus est d'une espèce plutôt bien connue : un Bolet. Mais celui-ci mesure plus de deux coudées... une taille des plus surprenantes.\n Allons-nous céder à la tentation ou retourner à notre occupation première, à savoir la chasse ?;;;;;;;;;;;;x
+XYLO.01121A;x;Vaut mieux le laisser ici...;;;;;;;;;;;;x
+XYLO.01121B;x;Cueillons-le ! ;;;;;;;;;;;;x
+XYLO.01122;x;Approach and identify 2;;;;;;;;;;;;x
+DESCXYLO.01122;x;Eh bien voici probablement la plus énorme chanterelle jamais vue ! De la taille d'un chien de chasse par sa hauteur, l'on peine à l'enlacer par des bras d'homme, ce spécimen est des plus étonnants !  Allons-nous céder à notre curiosité et cueillir ce beau morceau ? ;;;;;;;;;;;;;x
+XYLO.01122A;x;Cela ne me dit rien qui vaille... ;;;;;;;;;;;;x
+XYLO.01122B;x;Cueillons-la ! ;;;;;;;;;;;;x
+XYLO.01123;x;Approach and identify 3;;;;;;;;;;;;x
+DESCXYLO.01123;Comme suspecté, il s'agit bel et bien d'un champignon... mais d'un genre assez bizarre voire inconnu. Arrivant à hauteur du poitrail de mon cheval, un chapeau plutôt plat, d'un vert légèrement luisant et dégageant une suave odeur anisée... \n Allons-nous l'emporter ? ;;;;;;;;;;;;;x
+XYLO.01123A;x;Passons notre chemin plutôt;;;;;;;;;;;;x
+XYLO.01123B;x;Cueillons ce trophée ! ;;;;;;;;;;;;x
+XYLO.0113;x;et maintenant ?;;;;;;;;;;;;x
+DESCXYLO.0113;x;Nous sommes à présent en possession l'encombrant champignon aux dimensions hors normes.\n Reste à savoir ce que nous voulons en faire... ;;;;;;;;;;;;x
+XYLO.0113A;x;L'emmener. Mon soigneur l'examinera.;;;;;;;;;;;;x
+XYLO.0113B;x;Rapportons notre trouvaille à nos cuisiniers pour le souper ! ;;;;;;;;;;;;x
+XYLO.0113C;x;Donnez-en à manger mon cheval.;;;;;;;;;;;;x
+XYLO.0113D;x;Je connais un ermite qui vit non loin. Je vais aller le lui montrer.;;;;;;;;;;;;x
+XYLO.01131;x;;;;;;;;;;;;;x
+DESCXYLO.01131;x;;;;;;;;;;;;;x
+XYLO.01131A;x;;;;;;;;;;;;;x
+XYLO.01131B;x;;;;;;;;;;;;;x
+XYLO.01131C;x;;;;;;;;;;;;;x
+XYLO.01132;x;;;;;;;;;;;;;x
+DESCXYLO.01132;x;;;;;;;;;;;;;x
+XYLO.01132A;x;;;;;;;;;;;;;x
+intoxication_champignon;Intoxication au champignon;Intoxication au champignon;;;;;;;;;;;;x
+intoxication_champignon_desc;Intoxication au champignon;Le champignon n'était visiblement pas des plus comestibles ! Espérons qu'il ne soit point mortel.;;;;;;;;;;;;x
+death_intoxication;;Intoxication au champignon;;;;;;;;;;;;x
+death_intoxication_desc;;De mauvais champignons ont eu sa peau !;;;;;;;;;;;;x
+XYLO.01133;x;;;;;;;;;;;;;x
+DESCXYLO.01133;x;;;;;;;;;;;;;x
+XYLO.01133A;x;;;;;;;;;;;;;x
+XYLO.01134;x;;;;;;;;;;;;;x
+XYLO.01141;x;;;;;;;;;;;;;x
+XYLO.01142;x;;;;;;;;;;;;;x
+XYLO.01143;x;;;;;;;;;;;;;x
+XYLO.01151;x;;;;;;;;;;;;;x
+XYLO.01152;x;;;;;;;;;;;;;x
+XYLO.01153;x;;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+DESCTRADE.0005;;Une route s'est développée dans la province de [From.Location.GetName], dans notre domaine.\nOn devrait développer notre infrastructure pour tirer parti de cette manne.;;;;;;;;;;;;x
+TRADE.0005A;OK;J'en prends note;;;;;;;;;;;;x
+DESCTRADE.0009;;Une route s'est développée dans la province de [From.Location.GetName], juste à côté de notre domaine.\nOn devrait développer notre infrastructure pour accueillir également les marchands.;;;;;;;;;;;;x
+TRADE.0009A;OK;J'en prends note;;;;;;;;;;;;x
+DESCTRADE.0010;;Le développement d'une cité dans la province de [From.Location.GetName] a fait de celle-ci un centre de commerce.\nOn devrait aménager davantage pour profiter de cette manne.;;;;;;;;;;;;x
+TRADE.0010A;OK;J'en prends note;;;;;;;;;;;;x
+DESCSTEP;;Des marchands évaluent la possibilité de passer par la province de [From.Location.GetName] pour mener à bien leur affaire.\nS'ils choisissent cette province, on devrait l'aménager davantage pour profiter de cette manne.;;;;;;;;;;;;x
+TRADESTEPOK;The traders are interesting by [From.Location.GetName];Les marchands ont trouvé la province de [From.Location.GetName] intéressante.;;;;;;;;;;;;x
+TRADESTEPKO;The traders refuse to pass by [From.Location.GetName];Les marchands refusent de passer par [From.Location.GetName]. Qu'ils aillent en enfer!;;;;;;;;;;;;x
+TRADESTEPALREADY;The traders already pass by [From.Location.GetName];Les marchands passent déjà par [From.Location.GetName].;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+REC.0151;Confirmation relique;;;;;;;;;;;;;x
+DESCREC.0151;;On nous a rapporté que la province de [From.Location.GetName] abrite une Sainte Relique répertoriée par l'Eglise Catholique. Cet objet revêt une grande importance pour les fidèles de cette religion. Elle peut faire l'objet d'un culte particulier voire donner lieu à des pélérinages.;;;;;;;;;;;;;x
+REC.0151A;Hallelujah!;Hallelujah ! ;;;;;;;;;;;;x
+REC.0151B;This could be interesting...;Cela peut avoir son intérêt...;;;;;;;;;;;;x
+REC.0151C;OK;D'accord;;;;;;;;;;;;x
+REC.0176;False relic;Fausse relique;;;;;;;;;;;;x
+DESCREC.0176;La relique récemment découverte dans un monastère isolé de [From.Location.GetName] s'est avérée ne pas être authentique. C'est assez dommageable car en ces temps troublés, un signe du Seigneur aurait été le bienvenu.;La relique récemment découverte dans un monastère isolé de [From.Location.GetName] s'est avérée ne pas être authentique. C'est assez dommageable car en ces temps troublés, un signe du Seigneur aurait été le bienvenu.;;;;;;;;;;;;x
+REC.0176A;From what this letter says, it is a vile counterfeit...;Une immonde contrefaçon d'après ce document...;;;;;;;;;;;;x
+REC.0176B;It is maybe not so necessary to spread the news...;Nul besoin de répandre la nouvelle peut-être...;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+REC.0301;Recruit a Parlier;Recruter un Parlier;;;;;;;;;;;;x
+DESCREC.0301;The construction of the Cathedral requires hiring a Parlier. Fortunately, knowing your very busy, we have drawn some candidates for you to hold this office.;Le chantier de la Cathédrale requiert d'engager un Maître Bâtisseur. Heureusement, vous sachant très occupé, nous avons quelques candidats à vous proposer pour tenir cet office.;;;;;;;;;;;;x
+REC.0301A;Nay, I prefer to choose myself.;Non, je préfère le choisir moi même.;;;;;;;;;;;;x
+REC.0301B;Take the first comer, he'll cost less.;Prenez le premier venu, il coûtera moins cher.;;;;;;;;;;;;x
+REC.0301C;Yes but keep a management profile;Oui mais avec un profil de gestionnaire;;;;;;;;;;;;x
+REC.0301D;Hire us a gifted negotiator;Recrutons un négociateur doué;;;;;;;;;;;;x
+REC.0301E;We want ourselves a construction genius;Nous voulons un génie de la construction;;;;;;;;;;;;x
+recrutement_profil_sans;A new courtier without pretensions appears at your court. Without pretended or real skills mind you.;Un nouveau courtisan sans prétention apparaît à votre cour. Sans prétention ni vraies compétences par ailleurs.;;;;;;;;;;;;x
+recrutement_profil_intendance;A new courtier appears on your court to assume the function of §YMaître bâtisseur§!.\nHis specialization in §Ygestionnaire§! has led him to pay more attention to logistics, procurement and the recruitment of artisans and artists.;Un nouveau courtisan apparait à votre cour pour assumer la fonction de §YMaître bâtisseur§!.\nSa spécialisation de §Ygestionnaire§! le conduit à porter davantage d'attention à la logistique, les approvisionnement et le recrutement des artisans et artistes.;;;;;;;;;;;;x
+recrutement_profil_diplomatie;A new courtier appears on your court to assume the function of §YMaître bâtisseur§!.\nHis skills as a §Ynégociateur§! permits him to coordinate the skills of others, regardless of differing languages and characteristics.;Un nouveau courtisan apparait à votre cour pour assumer la fonction de §YMaître bâtisseur§!.\nSon profil de §Ynégociateur§! lui permettra de coordonner les compétences des ouvriers, malgré leurs différences de langues et leurs caractères.;;;;;;;;;;;;x
+recrutement_profil_erudition;A new courtier appears on your court to assume the function of §YMaître bâtisseur§!.\nthe §Yérudit§! Will Be the brains behind the project, he draws the plans, decides on the pace and stylists of the building and will probably author a few megalo-artistic deviations;Un nouveau courtisan apparait à votre cour pour assumer la fonction de §YMaître bâtisseur§!.\nCet §Yérudit§! sera la tête pensante du projet, il dessine les plans, décide de l'allure et du style de l'édifice et auteur de probablement de quelques délires mégalo-artistiques;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+REC.0201;Work in progress;Chantier en cours;;;;;;;;;;;;x
+DESCREC.0201;The Cathedral project in the province of [From.Location.GetName] has started.\nLa construction of such a monument, if carried to completion, will mark our century for future generations.;Le projet de Cathédrale dans la province de [From.Location.GetName] se concrétise.\nLa construction d'un tel monument, si elle est menée à son terme, marquera notre siècle et les générations futures.;;;;;;;;;;;;x
+REC.0201A;Let the journey begin!;Que l'aventure commence !;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+REC.0202;Foundations complete;Achèvement Fondations;;;;;;;;;;;;x
+DESCREC.0202;All the foundations of the cathedral are in place and the crypt to house the reliquary.;L'ensemble des fondations de la cathédrale est en place ainsi que la crypte qui accueillera le reliquaire.;;;;;;;;;;;;x
+REC.0202A;Much remains to be done.;Il reste encore beaucoup à faire.;;;;;;;;;;;;x
+REC.0203;Proto-Cathedral Completed;Achèvement Proto-Cathédrale;;;;;;;;;;;;x
+DESCREC.0203;The entire temporary building is in place. The cathedral can accommodate the faithful. It's already a success. Will content yourself with just a modest achievement?;L'ensemble du bâtiment temporaire est en place. La cathédrale peut accueillir les fidèles. C'est déjà une belle réussite. Vous contenterez vous juste d'une si modeste réalisation ?;;;;;;;;;;;;x
+REC.0203A;Praise the Lord!;Gloire au Seigneur !;;;;;;;;;;;;x
+REC.0204;Portal Complete;Achèvement Portail;;;;;;;;;;;;x
+DESCREC.0204;The Grand Portal, opening facing the west, bears all its magnificence by glowing golden in the dusk. A superb achievement.;Le Grand Portail, s'ouvrant face au couchant, arbore toute sa magnificence en se parant d'or au crépuscule. Une superbe réalisation.;;;;;;;;;;;;x
+REC.0204A;All credit goes to me!;Tout le mérite me revient !;;;;;;;;;;;;x
+REC.0204B;I am the artisan of the will of God;Je ne suis qu'un artisan de la volonté de Dieu;;;;;;;;;;;;x
+REC.0205;Nave most magnificent and most complete;Achèvement Nef Magnifique;;;;;;;;;;;;x
+DESCREC.0205;The immense vault of the nave is an architectural feat and the windows at each opening are magnificent .;L'immense voûte de la Nef est une prouesse architecturale et les vitraux qui en parent chaque ouverture sont magnifiques.;;;;;;;;;;;;x
+REC.0205A;Am I entitled to a reward?;Ai-je droit à une récompense ?;;;;;;;;;;;;x
+REC.0205B;Dazzling!;Eblouissant !;;;;;;;;;;;;x
+REC.0206;Transept Complete;Achèvement Transept;;;;;;;;;;;;x
+DESCREC.0206;The addition of the transept is now complete and it is still adding to superb feeling of the edifice.;L'ajout du Transept est à présent achevé et ne fait qu'ajouter encore à la superbe de l'édifice.;;;;;;;;;;;;x
+REC.0206A;I told you it was a good idea!;Je vous avait dit que c'était une bonne idée !;;;;;;;;;;;;x
+REC.0206B;I have no words for this;J'en reste bouche bée...;;;;;;;;;;;;x
+REC.0207;North Tower Complete;Achèvement Tour Nord;;;;;;;;;;;;x
+DESCREC.0207;The construction of the first tower seemed indeterminable as there is hardly a point where it meets the sky.;La construction de cette première Tour a semblé aussi interminable que l'on distingue à peine le point où elle rencontre le ciel.;;;;;;;;;;;;x
+REC.0207A;The wait was worth it.;L'attente en valait la peine.;;;;;;;;;;;;x
+REC.0207B;One feels so small in face of work desired by God.;On se sent si petit face à l'oeuvre voulue par Dieu.;;;;;;;;;;;;x
+REC.0208;South Tower Complete;Achèvement Tour du Midi;;;;;;;;;;;;x
+DESCREC.0208;The second Tour majestically compliments the first. Let's take care of the Great Rose now.;La seconde Tour complète magnifiquement la première. Occupons nous de la Grande Rosace à présent.;;;;;;;;;;;;x
+REC.0208A;Finally! After all these years!;Enfin ! Après tant d'années !;;;;;;;;;;;;x
+REC.0208B;Nothing can stop us when we do right;Ne nous arrêtons pas en si bon chemin !;;;;;;;;;;;;x
+REC.0209;Completed the Rose Window;Achèvement Grande Rosace;;;;;;;;;;;;x
+DESCREC.0209;The Rose Window that sits above the western portal is complete and proves once again how this building is grandiose.;La Grande Rosace qui trône au dessus du portail occidental est achevé et prouve une fois de plus combien cette édifice est grandiose.;;;;;;;;;;;;x
+REC.0209A;And I thought the steeple had a steep price...;Un peu comme son prix...;;;;;;;;;;;;x
+REC.0209B;This is only one piece of the grand design of God, next step.;Ce n'est qu'une pièce du grand dessein de Dieu, étape suivante.;;;;;;;;;;;;x
+REC.1210;Feudal Chapelle Complete;Achèvement Chapelle Seigneuriale;;;;;;;;;;;;x
+DESCREC.1210;The addition of a stately chapel will please the nobility immensely.;L'ajout de la Chapelle seigneuriale plaît immensément à la noblesse.;;;;;;;;;;;;x
+REC.1210A;What is good for God is good to us !;Ce qui est bon pour Dieu est bon pour nous !;;;;;;;;;;;;x
+REC.2210;Chime Complete;Achèvement Carillon;;;;;;;;;;;;x
+DESCREC.2210;The addition of a Chime resounds the contribution of the city and thus its involvement in the work. The Citizens will be very grateful for this.;L'ajout du Carillon montre l'implication de la cité et donc sa contribution à l'oeuvre. Les citoyens vont sont très reconnaissants pour cela.;;;;;;;;;;;;x
+REC.2210A;God inspires all.;Dieu nous inspire tous.;;;;;;;;;;;;x
+REC.3210;Holy Chapel Complete;Achèvement Très Sainte Chapelle;;;;;;;;;;;;x
+DESCREC.3210;The Addition of this Holy Chapel proves our devotion to the Lord and inspires great respect from all the ecclesiastical class.;L'ajout de cette Très Sainte Chapelle prouve notre dévotion au Seigneur et nous inspire le plus grand respect de la part de toute la classe écclésiastique.;;;;;;;;;;;;x
+REC.3210A;Amen !;Amen ! ;;;;;;;;;;;;x
+REC.0211;Celestial Spire Complete;Achèvement Flèche Céleste;;;;;;;;;;;;x
+DESCREC.0211;The Cathedral's Spire faces heaven and continues to adds to the reputation of the building.;La Flèche de la cathédrale tutoie les cieux et ajoute encore au rayonnement de l'édifice.;;;;;;;;;;;;x
+REC.0211A;This stage bring us close to completion.;On approche de la fin cette fois.;;;;;;;;;;;;x
+REC.0211B;Good.;Bien.;;;;;;;;;;;;x
+REC.0212;Cathedral Complete;Achèvement Cathédrale;;;;;;;;;;;;x
+NAMEREC.0212;The Cathedral;La Cathédrale;;;;;;;;;;;;x
+DESCREC.0212;The finishing touches are now complete. We can no longer count the amounts of statues, sculptures, gargoyles and stained glass. The interior frescoes are magnificent. Completing the construction of the Cathedral, a relic has officially been placed inside a case, and we will long remember its looming contributor: You !;Les finitions sont à présent achevées. On ne dénombre plus les statues, sculptures, gargouilles, vitraux. Les fresques intérieures sont magnifiques. Ainsi s'achève le chantier de la Cathédrale, la Relique a officiellement rejoins son écrin, et l'on se souviendra longtemps de son dernier contributeur : Vous !;;;;;;;;;;;x
+REC.0212A;Glory to God;Gloire à Dieu;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+REC.1301;Donation from the faithful;Dons de fidèles;;;;;;;;;;;;x
+DESCREC.1301;A number of followers, despite their humble wealth have sent the fruit of donation appeals to finance the Cathedral. Money is always welcome.;Nombre de fidèles, malgré leur peu de richesses nous ont fait parvenir le fruit d'une collecte de dons pour le financement de la Cathédrale. Argent qui est toujours le bienvenu.;;;;;;;;;;;;x
+REC.1301A;That is timely;Voilà qui tombe à point.;;;;;;;;;;;;x
+REC.1302;Pilgrim Donations;Dons de pélerins;;;;;;;;;;;;x
+DESCREC.1302;The news of the construction of the Cathedral began to spread, and pilgrims flock in rising numbers almost daily. Their detachment from material things in life helps fill the coffers of on site construction.;Les nouvelles de la construction de la Cathédrale commencent à se répandre, et les pélerins affluent en nombres davantage chaque jour ou presque. Leur détachement des choses matérielles de la vie aide à remplir les caisses de financement du chantier.;;;;;;;;;;;;x
+REC.1302A;This should help well, praise the Lord!;Cela devrait bien aider, louons le Seigneur !;;;;;;;;;;;;x
+REC.1303;Support of the Pope;Soutien du Pape;;;;;;;;;;;;x
+DESCREC.1303;The news of our great and holy enterprise of building a Cathedral has reached the ears of the Pope (thanks to a well informed conseiller ...). He has sent by the grace of God to us his contribution towards the project.;La nouvelle de notre grande et sainte entreprise d'édification d'une Cathédrale est parvenue aux oreilles du Pape (grâce à un conseiller fort bien informé...). Il nous fait parvenir par la grâce de Dieu sa contribution au projet.;;;;;;;;;;;;x
+REC.1303A;It's better than nothing.;C'est toujours mieux que rien.;;;;;;;;;;;;x
+REC.1304;Support of the clergy;Soutien du clergé;;;;;;;;;;;;x
+DESCREC.1304;The local clergy levied an additional tax to finance the Cathedral: here is the fruits;Le Clergé local a fait prélever une taxe additionnelle pour le financement de la Cathédrale : en voici le fruit.;;;;;;;;;;;;x
+REC.1304A;Good;Bien.;;;;;;;;;;;;x
+REC.1304B;That's All ?;C'est tout ?;;;;;;;;;;;;x
+REC.1305;Burgher Support;Soutien des bourgeois;;;;;;;;;;;;x
+DESCREC.1305;Towns and cities, guilds and burgher corporations in the region bring us their funding for the cathedral. A tidy sum you will agree.;Les villes et cités, guildes et corporations bourgeoises de la région nous apportent leur participation au financement de la cathédrale. Une somme rondelette vous en conviendrez.;;;;;;;;;;;;x
+REC.1305A;We do not tax enough apparently;On ne les taxe pas encore assez apparemment...;;;;;;;;;;;;x
+REC.1306;Nobles Support;Soutien des nobles v1;;;;;;;;;;;;x
+DESCREC.1306;The local nobility address their support for the construction of the Cathedral by a most generous gift.;La noblesse locale addresse son soutien à la construction de la Cathédrale par ce don des plus généreux.;;;;;;;;;;;;x
+REC.1306A;Poor nobility or just plain greedy?;Noblesse désargentée ou simplement avare ?;;;;;;;;;;;;x
+REC.1307;Noblity Support;Soutien des nobles v2;;;;;;;;;;;;x
+DESCREC.1307;The local nobility addresses their support for the construction of the Cathedral by providing most generous gifts indeed ...! What gift do you choose?;La noblesse locale addresse son soutien à la construction de la Cathédrale par ce don des plus généreux... en nature ! Quel cadeau choisissez vous ?;;;;;;;;;;;;x
+REC.1307A;These Stained Glass seems good.;Ces Vitraux me paraîssent bien.;;;;;;;;;;;;x
+REC.1307B;This statue is awesome.;Cette statue est grandiose.;;;;;;;;;;;;x
+REC.1307C;This gargoyle looks good to me.;Cette gargouille a une bonne tête.;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+REC.1401;Unscrupulous suppliers v1;Fournisseurs peu scrupuleux v1;;;;;;;;;;;;x
+DESCREC.1401;One of our suppliers of stone for the construction of the Cathedral, appeared this morning to post an increase in these prices - economic downturn he says - and staff expenditure too high, competition from far East, everything, in short, we not understand much (and that supplier has probably noticed too).;Un de nos fournisseurs de pierres pour la construction de la Cathédrale, s'est présenté ce matin pour nous soumettre une augmentation de ces tarifs -crise oblige paraît-il-, et les charges sur le personnel trop élevées, la concurrence d'extrême-Orient, tout ça, bref, on y comprend pas grand chose (et ce fournisseur l'a probablement remarqué lui aussi).;;;;;;;;;;;;x
+REC.1401A;Grrrrr ... well well! pay him;Grrrrrr... bien bien ! disposez !;;;;;;;;;;;;x
+REC.1402;A Defects of the Supplier;Défaut d'un fournisseur;;;;;;;;;;;;x
+DESCREC.1402;One of our wood suppliers went bankrupt. We need to find a replacement without delay. This will further widen our construction costs for the Cathedral.;Un de nos fournisseurs de bois a fait faillite. Il nous faut en trouver un en remplacement dans les meilleurs délais. Ce qui va encore alourdir nos coûts de construction pour la Cathédrale.;;;;;;;;;;;;x
+REC.1402A;We do not really have a choice. Do the best you can;Nous n'avons pas vraiment le choix. Faîtes au mieux.;;;;;;;;;;;;x
+REC.1403;;Un fournisseur demande du lest;;;;;;;;;;;;x
+DESCREC.1403;One of our suppliers finds it difficult to provide in time the materials we need for the construction of the Cathedral, which may cause a delay in delivery unless we can extend financial assistance.;Un de nos fournisseurs rencontrent des difficultés pour nous fournir à temps les matériaux dont nous avons besoin pour le chantier de la Cathédrale, ce qui risque de causer un retard dans les livraisons à moins que l'on puisse lui fournir une aide pécunière.;;;;;;;;;;;;x
+REC.1403A;The construction must not be delayed.;Le chantier ne doit souffrir aucun retard.;;;;;;;;;;;;x
+REC.1403B;We need to wait for how many years exactly?;Nous ne sommes à plus à quelques années près...;;;;;;;;;;;;x
+REC.1404;Cargo for ransom;Cargaison rançonnée;;;;;;;;;;;;x
+DESCREC.1404;A cargo of stone blocks due for the construction of our Cathedral has been intercepted by bandits whom demand ransom. We have to pay to get it back if we do not want to suffer too much delay on site.;Une cargaison de blocs de pierre destinée au chantier de notre Cathédrale a été interceptée par des brigands qui nous en demande rançon. Il nous faut payer pour la récupérer si nous ne voulons souffrir trop de retard sur le chantier.;;;;;;;;;;;;x
+REC.1404A;Immediate payment is our only solution ...;Dans l'immédiat payer est notre seule solution...;;;;;;;;;;;;x
+REC.1404B;So much for that one. Make sure you escort the next one.;Tant pis pour celle-ci. Veillez à ce qu'on fasse escorter les prochaines.;;;;;;;;;;;;x
+REC.1405;Surcoût (AR) défaut de conception;Surcoût (AR) défaut de conception;;;;;;;;;;;;x
+DESCREC.1405;If you ever had doubts about the competence of your architect, here is some news that will not reassure you. It seems that some parts of the Cathedral strucutre show weaknesses and flaws. Is this not the work of someone who is trying to reduce the cost of the work.;Si jamais vous aviez quelques déjà doutes sur les compétences de votre architecte, voici des nouvelles qui ne vont pas vous rassurer. Il semblerait que certaines structures de la Cathédrale montrent des faiblesses et des défauts. Ce n'est pas ça qui va alléger le coût des travaux.;;;;;;;;;;;;x
+REC.1405A;Note to self: "choose a better architect";Note pour plus tard : "mieux choisir son architecte";;;;;;;;;;;;x
+REC.1406;Surely (AR) the cost has been underestimated;surcoût (AR) coût mésestimé;;;;;;;;;;;;x
+DESCREC.1406;Our Architect seems to be not a kindred spirit to clarity and evidence, his last cost estimates reveal themselves to be greatly disconnected with reality. It will cost us more than expected.;Notre architecte ne semble pas être un esprit des plus éclairés et pour preuve, ses dernières estimations des coûts se sont révélées grandement en dessous de la réalité. Cela va nous coûter plus cher que prévu.;;;;;;;;;;;;x
+REC.1406A;Argh...!;Argh...!;;;;;;;;;;;;x
+REC.1407;Unscrupulous suppliers v2;Fournisseurs peu scrupuleux v2 ;;;;;;;;;;;;x
+DESCREC.1407;One of our suppliers of stone for the construction of the Cathedral, appeared this morning to post an increase in the rates -crisis obliges it - it seems ...;Un de nos fournisseurs de pierres pour la construction de la Cathédrale, s'est présenté ce matin pour nous soumettre une augmentation de ces tarifs -crise oblige paraît-il-,...;;;;;;;;;;;;x
+REC.1407A;Arrestez! He takes me for a ham-sandwitch? Heave him to the field!;Stop ! Il me prend pour un jambon ? Virez-le sur le champs !;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+REC.1408;pre-proposal loan;pré-proposition emprunt;;;;;;;;;;;;x
+DESCREC.1408;Rumors of the construction of our Cathedral is spreading to all and all and have reached the ears of loan sharks that come to offer their loan services to accelerate the funding of the construction.;Les rumeurs de la construction de notre Cathédrale se répand de plus en plus et sont venues à l'oreille d'usuriers qui viennent nous proposer leurs services de prêts pour accélérer le financement du chantier.;;;;;;;;;;;;x
+REC.1408A;Let's see what you have to offer me ... (usury is a sin?);Voyons ce que vous avez à me proposer... (l'usure est un péché ? );;;;;;;;;;;;x
+usure1;Usury is a sin? \n;L'usure est un péché ? \n;;;;;;;;;;;;x
+REC.1408B;Not for now.;Pas pour le moment.;;;;;;;;;;;;x
+usure2;I'll think about it for a while.;Je vais y réfléchir pendant un temps.;;;;;;;;;;;;x
+REC.1408C;Not in your life! Get out!;Jamais de la vie ! Sortez !;;;;;;;;;;;;x
+usure3;Usury is a sin!\n;L'usure est un péché !\n;;;;;;;;;;;;x
+REC.1409;Loans at 3%;Prêts à 3%;;;;;;;;;;;;x
+DESCREC.1409;With regard to your income, here are the sums we can lend you.\nThe interest rate is 3% and the duration is 10 years.;Au regard de nos revenus, voici les sommes que nous pouvons vous prêter.\nLe taux d'intérêt est de 3% et la durée est de 10ans.;;;;;;;;;;;;x
+REC.1409A;Moneylenders have cancelled in light of our revenue. The filth!;Les usuriers ont renoncé au vu de nos revenus. Les ordures !;;;;;;;;;;;;x
+REC.1409B;Borrow 150 ducats. 18 ducats annual interest;Emprunter 150 ducats. Remboursement annuel 18 ducats;;;;;;;;;;;;x
+REC.1409C;Borrow 250 ducats. 30 ducats annual interest;Emprunter 250 ducats. Remboursement annuel 30 ducats;;;;;;;;;;;;x
+REC.1409D;Borrow 350 ducats. 42 ducats annual interest;Emprunter 350 ducats. Remboursement annuel 42 ducats;;;;;;;;;;;;x
+REC.1409E;Borrow 450 ducats. 54 ducats annual interest;Emprunter 450 ducats. Remboursement annuel 54 ducats;;;;;;;;;;;;x
+REC.1409F;Not very interesting. I decline your offers.;Pas très intéressant. Je décline vos offres.;;;;;;;;;;;;x
+REC.1410;Loans at 4%;Prêts à 4%;;;;;;;;;;;;x
+DESCREC.1410;With regard to your income, here are the sums we can lend you.\nThe interest rate is 3% and the duration is 10 years.;Au regard de nos revenus, voici les sommes que nous pouvons vous prêter.\nLe taux d'intérêt est de 4% et la durée est de 10ans.;;;;;;;;;;;;x 
+REC.1410A;Moneylenders have cancelled in light of our revenue. The filth!;Les usuriers ont renoncé au vu de nos revenus. Les ordures !;;;;;;;;;;;;x
+REC.1410B;Borrow 150 ducats. 19 ducats annual interest;Emprunter 150 ducats. Remboursement annuel 19 ducats;;;;;;;;;;;;x
+REC.1410C;Borrow 250 ducats. 32 ducats annual interest;Emprunter 250 ducats. Remboursement annuel 32 ducats;;;;;;;;;;;;x
+REC.1410D;Borrow 350 ducats. 45 ducats annual interest;Emprunter 350 ducats. Remboursement annuel 45 ducats;;;;;;;;;;;;x
+REC.1410E;Borrow 450 ducats. 57 ducats annual interest;Emprunter 450 ducats. Remboursement annuel 57 ducats;;;;;;;;;;;;x
+REC.1410F;Not very interesting. I decline your offers.;Pas très intéressant. Je décline vos offres.;;;;;;;;;;;;x
+REC.1410G;Is this truly all you have to offer?;Est-ce vraiment tout ce que vous avez à proposer ?;;;;;;;;;;;;x
+usure4;Seek to renegotiate the interest rate;Chercher à renégocier le taux d'intérêt.;;;;;;;;;;;;x
+REC.1411;Loans at 5%;Prêts à 5%;;;;;;;;;;;;x
+DESCREC.1411;With regard to your income, here are the sums we can lend you.\nThe interest rate is 3% and the duration is 10 years.;Au regard de nos revenus, voici les sommes que nous pouvons vous prêter.\nLe taux d'intérêt est de 5% et la durée est de 10ans.;;;;;;;;;;;;x
+REC.1411A;Moneylenders have cancelled in light of our revenue. The impiety!;Les usuriers ont renoncé au vu de nos revenus. Les impies !;;;;;;;;;;;;x
+REC.1411B;Borrow 150 ducats. 20 ducats annual interest;Emprunter 150 ducats. Remboursement annuel 20 ducats;;;;;;;;;;;;x
+REC.1411C;Borrow 250 ducats. 34 ducats annual interest;Emprunter 250 ducats. Remboursement annuel 34 ducats;;;;;;;;;;;;x
+REC.1411D;Borrow 350 ducats. 47 ducats annual interest;Emprunter 350 ducats. Remboursement annuel 47 ducats;;;;;;;;;;;;x
+REC.1411E;Borrow 450 ducats. 60 ducats annual interest;Emprunter 450 ducats. Remboursement annuel 60 ducats;;;;;;;;;;;;x
+REC.1411F;Not very interesting. I decline your offers.;Pas très intéressant. Je décline vos offres.;;;;;;;;;;;;x
+REC.1411G;Anything better ?;Vous n'avez rien de mieux ?;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+REC.1420;Loans;RMB emprunts;;;;;;;;;;;;x
+DESCREC.1420;As on time as a helvetian cuckoo clock, usurers come claiming their annual refund and interests.;Réglés comme des coucous helvètes, nos prêteurs nous réclament le paiement de l'annuité majorée des intérêts pour cette année.;;;;;;;;;;;;x
+REC.1420A1;Never late, nor ever early...;Jamais en retard les bougres  !;;;;;;;;;;;;x
+REC.1420A2;The ultimate instalment. At last !;Enfin le dernier versement !;;;;;;;;;;;;x
+REC.1420B1;Can't they forget me once ?;Ils ne m'oublient donc jamais ?;;;;;;;;;;;;x
+REC.1420B2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1420C1;Never late, nor ever early...;Jamais en retard les bougres...;;;;;;;;;;;;x
+REC.1420C2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1420D1;Never late, nor ever early...;Jamais en retard les bougres...;;;;;;;;;;;;x
+REC.1420D2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1420E1;Never late, nor ever early...;Jamais en retard les bougres...;;;;;;;;;;;;x
+REC.1420E2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1420F1;Never late, nor ever early...;Jamais en retard les bougres...;;;;;;;;;;;;x
+REC.1420F2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1420G1;Never late, nor ever early...;Jamais en retard les bougres...;;;;;;;;;;;;x
+REC.1420G2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1420H1;Never late, nor ever early...;Jamais en retard les bougres...;;;;;;;;;;;;x
+REC.1420H2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1420I1;Never late, nor ever early...;Jamais en retard les bougres...;;;;;;;;;;;;x
+REC.1420I2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1420J1;Never late, nor ever early...;Jamais en retard les bougres...;;;;;;;;;;;;x
+REC.1420J2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1420K1;Never late, nor ever early...;Jamais en retard les bougres...;;;;;;;;;;;;x
+REC.1420K2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1420L1;Never late, nor ever early...;Jamais en retard les bougres...;;;;;;;;;;;;x
+REC.1420L2;The ultimate instalment. At last !;L'ultime versement. Enfin !;;;;;;;;;;;;x
+REC.1421;Death of a debt;Mort d'un endetté;;;;;;;;;;;;x
+DESCREC.1421;I died leaving the debt to my heir;Je suis mort en laissant une dette à mon héritier.;;;;;;;;;;;;x
+REC.1421A;This will be for my heir to deal with;Ce sera à mon héritier de s'en occuper;;;;;;;;;;;;x
+TOOLTIPREC.1421A;Loaners will visit my heir soon;Les prêteurs vont bientôt rendrent visite à mon héritier;;;;;;;;;;;;x
+REC.1422;Visit lenders;Visite des prêteurs;;;;;;;;;;;;x
+DESCREC.1422;The lenders present their condolences. \nHowever they want you to pay your predecessor's loan. \nIn their kindless they have extended the contract a year;Les prêteurs vous présentent leur condoléances. \nCependant ils désirent que vous remboursiez l'emprunt contracté par votre prédecesseur.\nDans leur grande bonté, ils décalent les échéances à pile dans une année.;;;;;;;;;;;;x
+REC.1422A;I will honor the loan;Je vais honorer l'emprunt;;;;;;;;;;;;x
+REC.1422B;Request a period of 5 years before the next deadline;Demander un délai de 5 ans avant la prochaine échéance;;;;;;;;;;;;x
+REC.1422C;What loan?;Quel emprunt ?;;;;;;;;;;;;x
+TOOLTIPREC.1422C;No one will lend you money after your refusal to pay;Plus personne ne vous prêtera de l'argent après ce refus de payer;;;;;;;;;;;;x
+REC.2001;Jealous cousins;Voisins jaloux;;;;;;;;;;;;x
+DESCREC.2001;One of our neighbors has embarked on the construction of a cathedral with a relic.\nThe cathedral begins to take shape and makes you jealous.\nShould you as you embark on the construction of a cathedral even with a fake relic?;Un de nos voisins s'est lancé dans la construction d'une cathédrale grâce à une relique.\nLa cathédrale commence à prendre forme et à vous rendre jaloux.\nDevez vous vous lancez vous aussi dans la construction d'une cathédrale même avec une fausse relique ?;;;;;;;;;;;;x
+REC.2001A;Do not wait a second, falsify us a relic;Il ne faut pas attendre une seconde, falsifions une relique;;;;;;;;;;;;x
+REC.2001B;I must not do so for reasons of honour;Je ne dois pas être fait pour un tel honneur;;;;;;;;;;;;x
+TOOLTIPREC.2001A;The §Ydecision§! build a cathedral has become available \n;La §Ydécision§! pour construire une cathédrale devient disponible\n;;;;;;;;;;;;x
+REC.2004;;Faire un coup bas;;;;;;;;;;;;x
+DESCREC.2004;;Vous réflechissez à une manière de mettre des bâtons dans les roues (de construction) à un autre bâtisseur de cathédrale, en l'occurence à un co-vassal;;;;;;;;;;;;x
+REC.2004A;;Non, cela ne plairait pas à Dieu;;;;;;;;;;;;x
+TOOLTIPREC.2004B;;Une bonne compétence en §Yintendance§! serait préférable pour mener à bien le coup bas\n;;;;;;;;;;;;x
+TOOLTIPREC.2004C;;Une bonne compétence en §Ymartial§! serait préférable pour mener à bien le coup bas\n;;;;;;;;;;;;x
+TOOLTIPREC.2004D;;Une bonne compétence en §Yconnaissance§! serait préférable pour mener à bien le coup bas\n;;;;;;;;;;;;x
+REC.2004B;;Soudoyez certains membres du chantier;;;;;;;;;;;;x
+REC.2004C;;Massacrez certains membres du chantier;;;;;;;;;;;;x
+REC.2004D;;Effrayez certains membres du chantier avec des malédictions;;;;;;;;;;;;x
+REC.20041;;Faire un coup bas;;;;;;;;;;;;x
+DESCREC.20041;;Vous réflechissez à une manière de mettre des bâtons dans les roues (de construction) à un autre bâtisseur de cathédrale, en l'occurence à un voisin;;;;;;;;;;;;x
+REC.20041B;;Faisons un coup bas à ce voisin;;;;;;;;;;;;x
+EVTTOOLTIPREC.2004A;;Coup bas est un succès et reste anonyme;;;;;;;;;;;;x
+EVTTOOLTIPREC.2004B;;Coup bas est un succès mais identité dévoilée;;;;;;;;;;;;x
+EVTTOOLTIPREC.2004C;;Coup bas est un échec mais reste anonyme;;;;;;;;;;;;x
+EVTTOOLTIPREC.2004D;;Coup bas est un échec et identité dévoilée;;;;;;;;;;;;x
+REC.2009;;Compte-rendu du coup bas;;;;;;;;;;;;x
+DESCREC.2009;;Le coup bas est un succès et mon nom n'a pas été divulgué.;;;;;;;;;;;;x
+REC.2009A;;C'est une réussite totale;;;;;;;;;;;;x
+REC.2010;;Compte-rendu du coup bas;;;;;;;;;;;;x
+DESCREC.2010;;Le coup bas est un succès mais mon nom a été divulgué sous la torture.;;;;;;;;;;;;x
+REC.2010A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+REC.2011;;Compte-rendu du coup bas;;;;;;;;;;;;x
+DESCREC.2011;;Le coup bas est un échec mais mon nom n'a pas été divulgué.;;;;;;;;;;;;x
+REC.2011A;;Au moins ces minables n'ont pas avoué;;;;;;;;;;;;x
+REC.2012;;Compte-rendu du coup bas;;;;;;;;;;;;x
+DESCREC.2012;;Le coup bas est un échec et mon nom a été divulgué sous la torture.;;;;;;;;;;;;x
+REC.2012A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+REC.2013;;Réaction au coup bas dévoilé;;;;;;;;;;;;x
+DESCREC.2013;;Un coup bas a été intenté contre la construction de ma cathédrale. \nAprès avoir soumis à la question, je connais le nom du coupable.;;;;;;;;;;;;x
+REC.2013A;;Je vais lui rendre la monnaie de sa pièce;;;;;;;;;;;;x
+REC.2013B;;Je lui pardonne, puisse Dieu en faire autant;;;;;;;;;;;;x
+REC.2014;;Réaction au coup bas non dévoilé;;;;;;;;;;;;x
+DESCREC.2014;;Un coup bas a été intenté contre la construction de ma cathédrale. \nJe n'ai pas réussi à connaître le nom du coupable.;;;;;;;;;;;;x
+REC.2014A;;C'est surement ce voisin qui me fait de l'ombre avec sa cathédrale;;;;;;;;;;;;x
+REC.2014B;;C'est surement ce co-vassal qui me fait de l'ombre avec sa cathédrale;;;;;;;;;;;;x
+REC.2014C;;Je lui pardonne, puisse Dieu en faire autant;;;;;;;;;;;;x
+DESCREC.2018;;Une relique qui m'est inutile se trouve sur mon domaine. \nJe pourrais la vendre, cela me serait plus utile.;;;;;;;;;;;;x
+REC.2018A;;Vendre une relique inutile;;;;;;;;;;;;x
+REC.2018B;;Garder la relique;;;;;;;;;;;;x
+DESCREC.2019;;Pour batir une cathédrale, il me faut apparement une relique. \nJe dois en acheter une à fort prix à un marchand ou sinon payer seulement la moitié pour une relique mineure à mon vassal le prêtre si j'en trouve une avec lui dans sa crypte.;;;;;;;;;;;;x
+REC.2019A;;Chercher dans la crypte une relique mineure avec ce prêtre;;;;;;;;;;;;x
+TOOLTIPREC.2019A;;J'espère que cela ne sera pas trop ennuyeux;;;;;;;;;;;;x
+REC.2019B;;Acheter cette relique authentifiée par Rome au marchand;;;;;;;;;;;;x
+TOOLTIPREC.2019B;;Je vais mettre cette relique sur une province de mon domaine\n;;;;;;;;;;;;x
+REC.2019C;;Acheter cette relique d'origine forte douteuse au marchand;;;;;;;;;;;;x
+TOOLTIPREC.2019C;;Je vais mettre cette relique sur une province de mon domaine. \nEspérons qu'elle ne pose pas de problème par la suite.\n;;;;;;;;;;;;x
+DESCREC.2021;;Après une journée passée dans la crypte, j'ai réussi avec le prêtre à mettre la main sur une relique mineure. \nComme convenu je m'en suis emparé pour la grâce de Dieu pour la modique somme de 50 ducats.;;;;;;;;;;;;x
+REC.2021A;;Je vais pouvoir construire une cathédrale;;;;;;;;;;;;x
+DESCREC.2022;;Cette journée passée dans la crypte avec le prêtre fut horrible. \nNon seulement je n'ai pas pu mettre la main sur une relique mais en plus le prêtre était de forte mauvaise compagnie.\n;;;;;;;;;;;;x
+REC.2022A;;Je dois cherchez une relique ailleurs;;;;;;;;;;;;x
+TOOLTIPREC.2022A;;Je vais voir avec un autre prêtre ou le marchand\n;;;;;;;;;;;;x
+DESCREC.2023;;Un cardinal, envoyé par Rome pour authentifié ma relique livre ses conclusions. \nIl s'avère que celle-ci est fausse. \nJ'échappe de peu à l'excommunication.;;;;;;;;;;;;x
+REC.2023A;;La fausse relique a fait un vrai miracle.;;;;;;;;;;;;x
+DESCREC.2025;;Vous avez construit l'une des premières cathédrales au monde.;;;;;;;;;;;;x
+REC.2025A;;J'ai construit la 1ère;;;;;;;;;;;;x
+REC.2025B;;J'ai construit la 2ème;;;;;;;;;;;;x
+REC.2025C;;J'ai construit la 3ème;;;;;;;;;;;;x
+REC.2025D;;J'ai construit la 4ème;;;;;;;;;;;;x
+REC.2025E;;J'ai construit la 5ème;;;;;;;;;;;;x
+REC.2025F;;J'ai construit la 6ème;;;;;;;;;;;;x
+REC.2025G;;J'ai construit la 7ème;;;;;;;;;;;;x
+REC.2025H;;J'ai construit la 8ème;;;;;;;;;;;;x
+REC.2025I;;J'ai construit la 9ème;;;;;;;;;;;;x
+REC.2025J;;J'ai construit la 10ème;;;;;;;;;;;;x
+NAMEREC.2026;;Cathédrale construite;;;;;;;;;;;;x
+DESCREC.2026;;On vient de finir de construire une cathédrale. \nDes bâtisseurs ont réussi à bâtir une impressionnante maison du Seigneur connue dans tout le monde Chrétien. Les généreux donnateurs de cet édifice iront directement au paradis. En attendant, sur Terre, ils deviennent des exemples;;;;;;;;;;;;x
+REC.2026A;;C'est la 1ère;;;;;;;;;;;;x
+REC.2026B;;C'est la 2ème;;;;;;;;;;;;x
+REC.2026C;;C'est la 3ème;;;;;;;;;;;;x
+REC.2026D;;C'est la 4ème;;;;;;;;;;;;x
+REC.2026E;;C'est la 5ème;;;;;;;;;;;;x
+REC.2026F;;C'est déjà la 6ème;;;;;;;;;;;;x
+REC.2026G;;C'est déjà la 7ème;;;;;;;;;;;;x
+REC.2026H;;C'est déjà la 8ème;;;;;;;;;;;;x
+REC.2026I;;C'est déjà la 9ème;;;;;;;;;;;;x
+REC.2026J;;C'est déjà la 10ème;;;;;;;;;;;;x
+DESCREC.2101;;Un sculpteur s'est fait remarqué sur votre chantier. Ce qu'il peut faire avec la pierre est à couper le souffle.\n Il va peut-être vous demander audience afin de réaliser des œuvres grandioses.;;;;;;;;;;;;x
+REC.2101A;;Je suis content qu'il soit sur mon chantier;;;;;;;;;;;;x
+sculpteur_repere;;Un sculpeur apparaît dans votre cour;;;;;;;;;;;;x
+DESCREC.2102;;Un sculpteur de votre cour vous sollicite pour financer la création d'une petite sculpture qui devrait être magnifique.;;;;;;;;;;;;x
+REC.2102A;;Je vais financer ce chef d'œuvre;;;;;;;;;;;;x
+EVTTOOLTIPREC.2102A;;Le sculpteur se met au travail;;;;;;;;;;;;x
+REC.2102B;;Lui dire de repasser l'an prochain;;;;;;;;;;;;x
+EVTTOOLTIPREC.2102B;;Le sculpteur s'en va et ne manquera pas de revenir;;;;;;;;;;;;x
+REC.2102C;;Ce serai gaspiller de l'argent;;;;;;;;;;;;x
+DESCREC.2104;;Votre sculpteur vous présente sa réalisation.\n Tous les gens autour de vous sont en émoi, même la brute du village se met à pleurer devant une telle beauté.;;;;;;;;;;;;x
+REC.2104A;;J'aime sa sculpture;;;;;;;;;;;;x
+DESCREC.2105;;Votre sculpteur vous présente sa réalisation.\n Les gens autour de vous sont partagés. Certains l'aiment mais d'autres trouvent qu'elle est somme toute banale.;;;;;;;;;;;;x
+REC.2105A;;J'accepte la sculpture mais il devra refaire ses preuves.;;;;;;;;;;;;x
+sculpteur_retour_base;;Le sculpteur va faire des travaux plus simple avant de revenir à la charge avec une nouvelle idée de chef d'œuvre.;;;;;;;;;;;;x
+REC.2105B;;Je vais lui donner l'occasion de faire mieux;;;;;;;;;;;;x
+REC.2105C;;Je ne veux plus qu'il sculpte d'œuvres;;;;;;;;;;;;x
+DESCREC.2106;;Votre sculpteur vous présente sa réalisation.\n Tous les gens autour de vous sont effarés devant la laideur du résultat. Même l'aveugle du village trouve cela moche.;;;;;;;;;;;;x
+REC.2106A;;Je vais lui donner l'occasion de faire mieux;;;;;;;;;;;;x
+REC.2106B;;Je ne veux plus qu'il sculpte d'œuvres;;;;;;;;;;;;x
+REC.2106C;;Qu'on l'emprisonne;;;;;;;;;;;;x
+DESCREC.2107;;Un sculpteur de votre cour vous sollicite pour financer la création d'une sculpture de taille moyenne qui devrait être magnifique.;;;;;;;;;;;;x
+DESCREC.2108;;Un sculpteur de votre cour vous sollicite pour financer la création d'une grande sculpture qui devrait être magnifique.;;;;;;;;;;;;x
+DESCREC.2110;;Une rumeur d'un autre comté fait état d'une splendide sculpture réalisée pour une cathédrale.;;;;;;;;;;;;x
+REC.2110A;;Envoyer un faux voyageur pour aller y voir de plus près.;;;;;;;;;;;;x
+REC.2110B;;D'autres choses me préoccupent davantage pour le moment.;;;;;;;;;;;;x
+REC.2110C;;Je n'ai que faire des sculptures.;;;;;;;;;;;;x
+EVTTOOLTIPREC.2110A;;Le faux voyageur partira enqueter;;;;;;;;;;;;x
+DESCREC.2111;;Le faux voyageur que vous avez envoyé il y a environ 2 ans est de retour.;;;;;;;;;;;;x
+REC.2111A;;La rumeur était infondée, la sculpture n'a rien d'un chef d'œuvre.;;;;;;;;;;;;x
+DESCREC.2113;;Le faux voyageur que vous avez envoyé il y a longtemps a pris contact avec le sculpteur ayant réalisé le chef d'œuvre.\n Quel ordre lui avez-vous transmis ?;;;;;;;;;;;;x
+REC.2113A;;Soudoyer des gens importants pour qu'il ne sculpte plus rien de bien.;;;;;;;;;;;;x
+REC.2113B;;Soudoyer le sculpteur pour qu'il vienne sculpter pour vous.;;;;;;;;;;;;x
+REC.2113C;;Tuer le sculpteur.;;;;;;;;;;;;x
+REC.2113D;;Aucun, il ne va pas aller plus loin.;;;;;;;;;;;;x
+DESCREC.2122;;Mon faux voyageur a réussi, le sculpteur ne sculptera plus rien de bien pour notre rival.\n De plus notre rival ignore qui est derrière tout cela;;;;;;;;;;;;x
+REC.2122A;;Le subterfuge du faux voyageur a marché à merveille.;;;;;;;;;;;;x
+DESCREC.2123;;Mon faux voyageur a réussi, le sculpteur ne sculptera plus rien de bien pour notre rival.\n Mais notre rival sait que l'on est derrière tout cela;;;;;;;;;;;;;x
+REC.2123A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2124;;Mon faux voyageur a échoué, mais il n'a pas divulgué mon nom sous la torture.;;;;;;;;;;;;x
+REC.2124A;;Au moins il n'a pas parlé;;;;;;;;;;;;x
+DESCREC.2125;;Mon faux voyageur a échoué et il a pas divulgué mon nom sous la torture.;;;;;;;;;;;;x
+REC.2125A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2126;;Mon faux voyageur a réussi, le sculpteur a rejoint ma cour et mon rival ignore où il est parti;;;;;;;;;;;;x
+REC.2126A;;Le subterfuge du faux voyageur a marché à merveille.;;;;;;;;;;;;x
+DESCREC.2127;;Mon faux voyageur a réussi, le sculpteur a rejoint ma cour mais mon rival sait qu'il est à ma cour;;;;;;;;;;;;x
+REC.2127A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2128;;Mon faux voyageur a réussi, le sculpteur n'est plus et tout le monde ignore qui est derrière cela;;;;;;;;;;;;x
+REC.2128A;;Le subterfuge du faux voyageur a marché à merveille.;;;;;;;;;;;;x
+DESCREC.2129;;Mon faux voyageur a réussi, le sculpteur n'est plus mais le faux voyageur a divulgué mon nom sous la torture;;;;;;;;;;;;x
+REC.2129A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2130;;Sous le règne de leur précédent seigneur, de nombreux sculpteurs se sont vus interdire de sculpter de coûteux chef d'œuvres. Voulez-vous les y autoriser de nouveau ?;;;;;;;;;;;;x
+REC.2130A;;Autoriser les sculpteurs à resculpter;;;;;;;;;;;;x
+REC.2130B;;Ne pas les autoriser à resculpter;;;;;;;;;;;;x
+DESCREC.2131;;Après la réalisation d'une immense sculpture de toute beauté, un maître sculpteur souhaite fonder une guilde de sculpteur.;;;;;;;;;;;;x
+REC.2131A;;Bien sûr, j'en suis ravi;;;;;;;;;;;;x
+REC.2131B;;Non, je ne veux plus voir de sculpteurs ici une fois la cathédrale finie;;;;;;;;;;;;x
+DESCREC.2132;;A qui vais-je offrir une sculpture ?;;;;;;;;;;;;x
+REC.2132A;;A son chef religieux;;;;;;;;;;;;x
+TOOLTIPRECAUCUNEFFET;;§RCela n'apportera aucun effet sur l'opinion§!;;;;;;;;;;;;x
+REC.2132B;;A mon suzerain;;;;;;;;;;;;x
+REC.2132C;;A un vassal;;;;;;;;;;;;x
+TOOLTIPREC.2132C;;Vous pouvez dorénavant réfléchir à quel vassal offrir une sculpture.;;;;;;;;;;;;x
+REC.2132D;;A un membre de ma famille;;;;;;;;;;;;x
+TOOLTIPREC.2132D;;Vous pouvez dorénavant réfléchir à quel membre de votre famille offrir une sculpture.;;;;;;;;;;;;x
+DESCREC.2133;;A quel rang de vassal vais-je offrir une sculpture ?;;;;;;;;;;;;x
+REC.2133A;;A un vassal Roi;;;;;;;;;;;;x
+TOOLTIPREC.2133A;;Vous pouvez dorénavant réfléchir à quel vassal de rang Roi offrir une sculpture.;;;;;;;;;;;;x
+REC.2133B;;A un vassal Duc;;;;;;;;;;;;x
+TOOLTIPREC.2133B;;Vous pouvez dorénavant réfléchir à quel vassal de rang Duc offrir une sculpture.;;;;;;;;;;;;x
+REC.2133C;;A un vassal Comte;;;;;;;;;;;;x
+TOOLTIPREC.2133C;;Vous pouvez dorénavant réfléchir à quel vassal de rang Comte offrir une sculpture.;;;;;;;;;;;;x
+REC.2133D;;A un vassal Baron;;;;;;;;;;;;x
+TOOLTIPREC.2133D;;Vous pouvez dorénavant réfléchir à quel vassal de rang Baron offrir une sculpture.;;;;;;;;;;;;x
+DESCREC.2134;;A quel vassal de ce rang vais-je offrir une sculpture ?;;;;;;;;;;;;x
+REC.2134A;;Offrir une sculpture à ce vassal;;;;;;;;;;;;x
+TOOLTIPREC.2134A;;Ce vassal recevra ma sculpture;;;;;;;;;;;;x
+REC.2134B;;Offrir une sculpture à un autre vassal;;;;;;;;;;;;x
+TOOLTIPREC.2134B;;Ce vassal ne recevra pas ma sculpture;;;;;;;;;;;;x
+REC.2134C;;Je n'ai pas d'autre vassal de ce rang;;;;;;;;;;;;x
+DESCREC.2138;;A quel membre de ma famille vais-je offrir une sculpture ?;;;;;;;;;;;;x
+REC.2138A;;Offrir une sculpture à mon époux/épouse;;;;;;;;;;;;x
+REC.2138B;;Offrir une sculpture à un enfant;;;;;;;;;;;;x
+TOOLTIPREC.2138B;;Vous pouvez dorénavant réfléchir à quel enfant offrir une sculpture;;;;;;;;;;;;x
+REC.2138C;;Offrir une sculpture à un frère ou une sœur;;;;;;;;;;;;x
+REC.2138D;;Offrir une sculpture à sa mère;;;;;;;;;;;;x
+DESCREC.2139;;A quel enfant vais-je offrir une sculpture ?;;;;;;;;;;;;x
+REC.2139A;;Offrir une sculpture à cet enfant;;;;;;;;;;;;x
+TOOLTIPREC.2139A;;Cet enfant recevra ma sculpture;;;;;;;;;;;;x
+REC.2139B;;Offrir une sculpture à un autre enfant;;;;;;;;;;;;x
+TOOLTIPREC.2139B;;Cet enfant ne recevra pas ma sculpture;;;;;;;;;;;;x
+REC.2139C;;Je n'ai pas d'autres enfants;;;;;;;;;;;;x
+DESCREC.2140;;A quel frère ou sœur vais-je offrir une sculpture ?;;;;;;;;;;;;x
+REC.2140A;;Offrir une sculpture à ce frère ou cette sœur;;;;;;;;;;;;x
+TOOLTIPREC.2140A;;Ce frère ou cette sœure recevra ma sculpture;;;;;;;;;;;;x
+REC.2140B;;Offrir une sculpture à un autre frère ou sœur;;;;;;;;;;;;x
+TOOLTIPREC.2140B;;Ce frère ou cette sœure ne recevra pas ma sculpture;;;;;;;;;;;;x
+REC.2140C;;Je n'ai pas d'autre frère ou sœur;;;;;;;;;;;;x
+DESCREC.2142;;En cherchant à qui offrir ma sculpture, personne ne correspond à mes critères.;;;;;;;;;;;;x
+REC.2142A;;Je vais réfléchir à nouveau à qui l'offrir;;;;;;;;;;;;x
+REC.2142B;;Finalement, je vais garder la sculpture pour moi;;;;;;;;;;;;x
+DESCREC.2201;;Un fresquiste s'est fait remarqué sur votre chantier. Ce qu'il peut faire est à couper le souffle.\n Il va peut-être vous demander audience afin de réaliser des œuvres grandioses.;;;;;;;;;;;;x
+REC.2201A;;Je suis content qu'il soit sur mon chantier;;;;;;;;;;;;x
+fresquiste_repere;;Un fresquiste apparaît dans votre cour;;;;;;;;;;;;x
+DESCREC.2202;;Un fresquiste de votre cour vous sollicite pour financer la création d'une petite fresque qui devrait être magnifique.;;;;;;;;;;;;x
+REC.2202A;;Je vais financer ce chef d'œuvre;;;;;;;;;;;;x
+EVTTOOLTIPREC.2202A;;Le fresquiste se met au travail;;;;;;;;;;;;x
+REC.2202B;;Lui dire de repasser l'an prochain;;;;;;;;;;;;x
+EVTTOOLTIPREC.2202B;;Le fresquiste s'en va et ne manquera pas de revenir;;;;;;;;;;;;x
+REC.2202C;;Ce serai gaspiller de l'argent;;;;;;;;;;;;x
+DESCREC.2204;;Votre fresquiste vous présente sa réalisation.\n Tous les gens autour de vous sont en émoi, même la brute du village se met à pleurer devant une telle beauté.;;;;;;;;;;;;x
+REC.2204A;;J'aime sa fresque;;;;;;;;;;;;x
+DESCREC.2205;;Votre fresquiste vous présente sa réalisation.\n Les gens autour de vous sont partagés. Certains l'aiment mais d'autres trouvent qu'elle est somme toute banale.;;;;;;;;;;;;x
+REC.2205A;;J'accepte la fresque mais il devra refaire ses preuves.;;;;;;;;;;;;x
+fresquiste_retour_base;;Le fresquiste va faire des travaux plus simple avant de revenir à la charge avec une nouvelle idée de chef d'œuvre.;;;;;;;;;;;;x
+REC.2205B;;Je vais lui donner l'occasion de faire mieux;;;;;;;;;;;;x
+REC.2205C;;Je ne veux plus qu'il fasse d'œuvres;;;;;;;;;;;;x
+DESCREC.2206;;Votre fresquiste vous présente sa réalisation.\n Tous les gens autour de vous sont effarés devant la laideur du résultat. Même l'aveugle du village trouve cela moche.;;;;;;;;;;;;x
+REC.2206A;;Je vais lui donner l'occasion de faire mieux;;;;;;;;;;;;x
+REC.2206B;;Je ne veux plus qu'il fasse d'œuvres;;;;;;;;;;;;x
+REC.2206C;;Qu'on l'emprisonne;;;;;;;;;;;;x
+DESCREC.2207;;Un fresquiste de votre cour vous sollicite pour financer la création d'une fresque de taille moyenne qui devrait être magnifique.;;;;;;;;;;;;x
+DESCREC.2208;;Un fresquiste de votre cour vous sollicite pour financer la création d'une grande fresque qui devrait être magnifique.;;;;;;;;;;;;x
+DESCREC.2210;;Une rumeur d'un autre comté fait état d'une splendide fresque réalisée pour une cathédrale.;;;;;;;;;;;;x
+REC.2210A;;Envoyer un faux voyageur pour aller y voir de plus près.;;;;;;;;;;;;x
+REC.2210B;;D'autres choses me préoccupent davantage pour le moment.;;;;;;;;;;;;x
+REC.2210C;;Je n'ai que faire des fresques.;;;;;;;;;;;;x
+EVTTOOLTIPREC.2210A;;Le faux voyageur partira enqueter;;;;;;;;;;;;x
+DESCREC.2211;;Le faux voyageur que vous avez envoyé il y a environ 2 ans est de retour.;;;;;;;;;;;;x
+REC.2211A;;La rumeur était infondée, la fresque n'a rien d'un chef d'œuvre.;;;;;;;;;;;;x
+DESCREC.2213;;Le faux voyageur que vous avez envoyé il y a longtemps a pris contact avec le fresquiste ayant réalisé le chef d'œuvre.\n Quel ordre lui avez-vous transmis ?;;;;;;;;;;;;x
+REC.2213A;;Soudoyer des gens importants pour qu'il ne fasse plus rien de bien.;;;;;;;;;;;;x
+REC.2213B;;Soudoyer le fresquiste pour qu'il vienne faire des fresques pour vous.;;;;;;;;;;;;x
+REC.2213C;;Tuer le fresquiste.;;;;;;;;;;;;x
+REC.2213D;;Aucun, il ne va pas aller plus loin.;;;;;;;;;;;;x
+DESCREC.2222;;Mon faux voyageur a réussi, le fresquiste ne fera plus rien de bien pour notre rival.\n De plus notre rival ignore qui est derrière tout cela;;;;;;;;;;;;x
+REC.2222A;;Le subterfuge du faux voyageur a marché à merveille.;;;;;;;;;;;;x
+DESCREC.2223;;Mon faux voyageur a réussi, le fresquiste ne fera plus rien de bien pour notre rival.\n Mais notre rival sait que l'on est derrière tout cela;;;;;;;;;;;;;x
+REC.2223A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2224;;Mon faux voyageur a échoué, mais il n'a pas divulgué mon nom sous la torture.;;;;;;;;;;;;x
+REC.2224A;;Au moins il n'a pas parlé;;;;;;;;;;;;x
+DESCREC.2225;;Mon faux voyageur a échoué et il a pas divulgué mon nom sous la torture.;;;;;;;;;;;;x
+REC.2225A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2226;;Mon faux voyageur a réussi, le fresquiste a rejoint ma cour et mon rival ignore où il est parti;;;;;;;;;;;;x
+REC.2226A;;Le subterfuge du faux voyageur a marché à merveille.;;;;;;;;;;;;x
+DESCREC.2227;;Mon faux voyageur a réussi, le fresquiste a rejoint ma cour mais mon rival sait qu'il est à ma cour;;;;;;;;;;;;x
+REC.2227A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2228;;Mon faux voyageur a réussi, le fresquiste n'est plus et tout le monde ignore qui est derrière cela;;;;;;;;;;;;x
+REC.2228A;;Le subterfuge du faux voyageur a marché à merveille.;;;;;;;;;;;;x
+DESCREC.2229;;Mon faux voyageur a réussi, le fresquiste n'est plus mais le faux voyageur a divulgué mon nom sous la torture;;;;;;;;;;;;x
+REC.2229A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2230;;Sous le règne de leur précédent seigneur, de nombreux fresquistes se sont vus interdire de faire de coûteux chef d'œuvres. Voulez-vous les y autoriser de nouveau ?;;;;;;;;;;;;x
+REC.2230A;;Autoriser les fresquistes à faire des chef d'œuvres;;;;;;;;;;;;x
+REC.2230B;;Ne pas les autoriser à faire des chef d'œuvres;;;;;;;;;;;;x
+DESCREC.2231;;Après la réalisation d'une immense fresque de toute beauté, un maître fresquiste souhaite fonder une guilde de fresquiste.;;;;;;;;;;;;x
+REC.2231A;;Bien sûr, j'en suis ravi;;;;;;;;;;;;x
+REC.2231B;;Non, je ne veux plus voir de fresquistes ici une fois la cathédrale finie;;;;;;;;;;;;x
+DESCREC.2232;;A qui vais-je offrir une fresque ?;;;;;;;;;;;;x
+REC.2232A;;A son chef religieux;;;;;;;;;;;;x
+TOOLTIPRECAUCUNEFFET;;§RCela n'apportera aucun effet sur l'opinion§!;;;;;;;;;;;;x
+REC.2232B;;A mon suzerain;;;;;;;;;;;;x
+REC.2232C;;A un vassal;;;;;;;;;;;;x
+TOOLTIPREC.2232C;;Vous pouvez dorénavant réfléchir à quel vassal offrir une fresque.;;;;;;;;;;;;x
+REC.2232D;;A un membre de ma famille;;;;;;;;;;;;x
+TOOLTIPREC.2232D;;Vous pouvez dorénavant réfléchir à quel membre de votre famille offrir une fresque.;;;;;;;;;;;;x
+DESCREC.2233;;A quel rang de vassal vais-je offrir une fresque ?;;;;;;;;;;;;x
+REC.2233A;;A un vassal Roi;;;;;;;;;;;;x
+TOOLTIPREC.2233A;;Vous pouvez dorénavant réfléchir à quel vassal de rang Roi offrir une fresque.;;;;;;;;;;;;x
+REC.2233B;;A un vassal Duc;;;;;;;;;;;;x
+TOOLTIPREC.2233B;;Vous pouvez dorénavant réfléchir à quel vassal de rang Duc offrir une fresque.;;;;;;;;;;;;x
+REC.2233C;;A un vassal Comte;;;;;;;;;;;;x
+TOOLTIPREC.2233C;;Vous pouvez dorénavant réfléchir à quel vassal de rang Comte offrir une fresque.;;;;;;;;;;;;x
+REC.2233D;;A un vassal Baron;;;;;;;;;;;;x
+TOOLTIPREC.2233D;;Vous pouvez dorénavant réfléchir à quel vassal de rang Baron offrir une fresque.;;;;;;;;;;;;x
+DESCREC.2234;;A quel vassal de ce rang vais-je offrir une fresque ?;;;;;;;;;;;;x
+REC.2234A;;Offrir une fresque à ce vassal;;;;;;;;;;;;x
+TOOLTIPREC.2234A;;Ce vassal recevra ma fresque;;;;;;;;;;;;x
+REC.2234B;;Offrir une fresque à un autre vassal;;;;;;;;;;;;x
+TOOLTIPREC.2234B;;Ce vassal ne recevra pas ma fresque;;;;;;;;;;;;x
+REC.2234C;;Je n'ai pas d'autre vassal de ce rang;;;;;;;;;;;;x
+DESCREC.2238;;A quel membre de ma famille vais-je offrir une fresque ?;;;;;;;;;;;;x
+REC.2238A;;Offrir une fresque à mon époux/épouse;;;;;;;;;;;;x
+REC.2238B;;Offrir une fresque à un enfant;;;;;;;;;;;;x
+TOOLTIPREC.2238B;;Vous pouvez dorénavant réfléchir à quel enfant offrir une fresque;;;;;;;;;;;;x
+REC.2238C;;Offrir une fresque à un frère ou une sœur;;;;;;;;;;;;x
+REC.2238D;;Offrir une fresque à sa mère;;;;;;;;;;;;x
+DESCREC.2239;;A quel enfant vais-je offrir une fresque ?;;;;;;;;;;;;x
+REC.2239A;;Offrir une fresque à cet enfant;;;;;;;;;;;;x
+TOOLTIPREC.2239A;;Cet enfant recevra ma fresque;;;;;;;;;;;;x
+REC.2239B;;Offrir une fresque à un autre enfant;;;;;;;;;;;;x
+TOOLTIPREC.2239B;;Cet enfant ne recevra pas ma fresque;;;;;;;;;;;;x
+REC.2239C;;Je n'ai pas d'autres enfants;;;;;;;;;;;;x
+DESCREC.2240;;A quel frère ou sœur vais-je offrir une fresque ?;;;;;;;;;;;;x
+REC.2240A;;Offrir une fresque à ce frère ou cette sœur;;;;;;;;;;;;x
+TOOLTIPREC.2240A;;Ce frère ou cette sœure recevra ma fresque;;;;;;;;;;;;x
+REC.2240B;;Offrir une fresque à un autre frère ou sœur;;;;;;;;;;;;x
+TOOLTIPREC.2240B;;Ce frère ou cette sœure ne recevra pas ma fresque;;;;;;;;;;;;x
+REC.2240C;;Je n'ai pas d'autre frère ou sœur;;;;;;;;;;;;x
+DESCREC.2242;;En cherchant à qui offrir ma fresque, personne ne correspond à mes critères.;;;;;;;;;;;;x
+REC.2242A;;Je vais réfléchir à nouveau à qui l'offrir;;;;;;;;;;;;x
+REC.2242B;;Finalement, je vais garder la fresque pour moi;;;;;;;;;;;;x
+DESCREC.2301;;Un verrier s'est fait remarqué sur votre chantier. Ce qu'il peut faire est à couper le souffle.\n Il va peut-être vous demander audience afin de réaliser des œuvres grandioses.;;;;;;;;;;;;x
+REC.2301A;;Je suis content qu'il soit sur mon chantier;;;;;;;;;;;;x
+verrier_repere;;Un verrier apparaît dans votre cour;;;;;;;;;;;;x
+DESCREC.2302;;Un verrier de votre cour vous sollicite pour financer la création d'une petit vitrail qui devrait être magnifique.;;;;;;;;;;;;x
+REC.2302A;;Je vais financer ce chef d'œuvre;;;;;;;;;;;;x
+EVTTOOLTIPREC.2302A;;Le verrier se met au travail;;;;;;;;;;;;x
+REC.2302B;;Lui dire de repasser l'an prochain;;;;;;;;;;;;x
+EVTTOOLTIPREC.2302B;;Le verrier s'en va et ne manquera pas de revenir;;;;;;;;;;;;x
+REC.2302C;;Ce serai gaspiller de l'argent;;;;;;;;;;;;x
+DESCREC.2304;;Votre verrier vous présente sa réalisation.\n Tous les gens autour de vous sont en émoi, même la brute du village se met à pleurer devant une telle beauté.;;;;;;;;;;;;x
+REC.2304A;;J'aime son vitrail;;;;;;;;;;;;x
+DESCREC.2305;;Votre verrier vous présente sa réalisation.\n Les gens autour de vous sont partagés. Certains l'aiment mais d'autres trouvent qu'elle est somme toute banal.;;;;;;;;;;;;x
+REC.2305A;;J'accepte le vitrail mais il devra refaire ses preuves.;;;;;;;;;;;;x
+verrier_retour_base;;Le verrier va faire des travaux plus simple avant de revenir à la charge avec une nouvelle idée de chef d'œuvre.;;;;;;;;;;;;x
+REC.2305B;;Je vais lui donner l'occasion de faire mieux;;;;;;;;;;;;x
+REC.2305C;;Je ne veux plus qu'il fasse d'œuvres;;;;;;;;;;;;x
+DESCREC.2306;;Votre verrier vous présente sa réalisation.\n Tous les gens autour de vous sont effarés devant la laideur du résultat. Même l'aveugle du village trouve cela moche.;;;;;;;;;;;;x
+REC.2306A;;Je vais lui donner l'occasion de faire mieux;;;;;;;;;;;;x
+REC.2306B;;Je ne veux plus qu'il fasse d'œuvres;;;;;;;;;;;;x
+REC.2306C;;Qu'on l'emprisonne;;;;;;;;;;;;x
+DESCREC.2307;;Un verrier de votre cour vous sollicite pour financer la création d'un vitrail de taille moyenne qui devrait être magnifique.;;;;;;;;;;;;x
+DESCREC.2308;;Un verrier de votre cour vous sollicite pour financer la création d'un grand vitrail qui devrait être magnifique.;;;;;;;;;;;;x
+DESCREC.2310;;Une rumeur d'un autre comté fait état d'une splendide vitrail réalisée pour une cathédrale.;;;;;;;;;;;;x
+REC.2310A;;Envoyer un faux voyageur pour aller y voir de plus près.;;;;;;;;;;;;x
+REC.2310B;;D'autres choses me préoccupent davantage pour le moment.;;;;;;;;;;;;x
+REC.2310C;;Je n'ai que faire des vitraux.;;;;;;;;;;;;x
+EVTTOOLTIPREC.2310A;;Le faux voyageur partira enqueter;;;;;;;;;;;;x
+DESCREC.2311;;Le faux voyageur que vous avez envoyé il y a environ 2 ans est de retour.;;;;;;;;;;;;x
+REC.2311A;;La rumeur était infondée, le vitrail n'a rien d'un chef d'œuvre.;;;;;;;;;;;;x
+DESCREC.2313;;Le faux voyageur que vous avez envoyé il y a longtemps a pris contact avec le verrier ayant réalisé le chef d'œuvre.\n Quel ordre lui avez-vous transmis ?;;;;;;;;;;;;x
+REC.2313A;;Soudoyer des gens importants pour qu'il ne fasse plus rien de bien.;;;;;;;;;;;;x
+REC.2313B;;Soudoyer le verrier pour qu'il vienne faire des vitraux pour vous.;;;;;;;;;;;;x
+REC.2313C;;Tuer le verrier.;;;;;;;;;;;;x
+REC.2313D;;Aucun, il ne va pas aller plus loin.;;;;;;;;;;;;x
+DESCREC.2322;;Mon faux voyageur a réussi, le verrier ne fera plus rien de bien pour notre rival.\n De plus notre rival ignore qui est derrière tout cela;;;;;;;;;;;;x
+REC.2322A;;Le subterfuge du faux voyageur a marché à merveille.;;;;;;;;;;;;x
+DESCREC.2323;;Mon faux voyageur a réussi, le verrier ne fera plus rien de bien pour notre rival.\n Mais notre rival sait que l'on est derrière tout cela;;;;;;;;;;;;;x
+REC.2323A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2324;;Mon faux voyageur a échoué, mais il n'a pas divulgué mon nom sous la torture.;;;;;;;;;;;;x
+REC.2324A;;Au moins il n'a pas parlé;;;;;;;;;;;;x
+DESCREC.2325;;Mon faux voyageur a échoué et il a pas divulgué mon nom sous la torture.;;;;;;;;;;;;x
+REC.2325A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2326;;Mon faux voyageur a réussi, le verrier a rejoint ma cour et mon rival ignore où il est parti;;;;;;;;;;;;x
+REC.2326A;;Le subterfuge du faux voyageur a marché à merveille.;;;;;;;;;;;;x
+DESCREC.2327;;Mon faux voyageur a réussi, le verrier a rejoint ma cour mais mon rival sait qu'il est à ma cour;;;;;;;;;;;;x
+REC.2327A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2328;;Mon faux voyageur a réussi, le verrier n'est plus et tout le monde ignore qui est derrière cela;;;;;;;;;;;;x
+REC.2328A;;Le subterfuge du faux voyageur a marché à merveille.;;;;;;;;;;;;x
+DESCREC.2329;;Mon faux voyageur a réussi, le verrier n'est plus mais le faux voyageur a divulgué mon nom sous la torture;;;;;;;;;;;;x
+REC.2329A;;Je dois m'attendre à en subir les conséquences;;;;;;;;;;;;x
+DESCREC.2330;;Sous le règne de leur précédent seigneur, de nombreux verriers se sont vus interdire de faire de coûteux chef d'œuvres. Voulez-vous les y autoriser de nouveau ?;;;;;;;;;;;;x
+REC.2330A;;Autoriser les verriers à faire des chef d'œuvres;;;;;;;;;;;;x
+REC.2330B;;Ne pas les autoriser à faire des chef d'œuvres;;;;;;;;;;;;x
+DESCREC.2331;;Après la réalisation d'un immense vitrail de toute beauté, un maître verrier souhaite fonder une guilde de verrier.;;;;;;;;;;;;x
+REC.2331A;;Bien sûr, j'en suis ravi;;;;;;;;;;;;x
+REC.2331B;;Non, je ne veux plus voir de verriers ici une fois la cathédrale finie;;;;;;;;;;;;x
+DESCREC.2332;;A qui vais-je offrir un vitrail ?;;;;;;;;;;;;x
+REC.2332A;;A son chef religieux;;;;;;;;;;;;x
+TOOLTIPRECAUCUNEFFET;;§RCela n'apportera aucun effet sur l'opinion§!;;;;;;;;;;;;x
+REC.2332B;;A mon suzerain;;;;;;;;;;;;x
+REC.2332C;;A un vassal;;;;;;;;;;;;x
+TOOLTIPREC.2332C;;Vous pouvez dorénavant réfléchir à quel vassal offrir un vitrail.;;;;;;;;;;;;x
+REC.2332D;;A un membre de ma famille;;;;;;;;;;;;x
+TOOLTIPREC.2332D;;Vous pouvez dorénavant réfléchir à quel membre de votre famille offrir un vitrail.;;;;;;;;;;;;x
+DESCREC.2333;;A quel rang de vassal vais-je offrir un vitrail ?;;;;;;;;;;;;x
+REC.2333A;;A un vassal Roi;;;;;;;;;;;;x
+TOOLTIPREC.2333A;;Vous pouvez dorénavant réfléchir à quel vassal de rang Roi offrir un vitrail.;;;;;;;;;;;;x
+REC.2333B;;A un vassal Duc;;;;;;;;;;;;x
+TOOLTIPREC.2333B;;Vous pouvez dorénavant réfléchir à quel vassal de rang Duc offrir un vitrail.;;;;;;;;;;;;x
+REC.2333C;;A un vassal Comte;;;;;;;;;;;;x
+TOOLTIPREC.2333C;;Vous pouvez dorénavant réfléchir à quel vassal de rang Comte offrir un vitrail.;;;;;;;;;;;;x
+REC.2333D;;A un vassal Baron;;;;;;;;;;;;x
+TOOLTIPREC.2333D;;Vous pouvez dorénavant réfléchir à quel vassal de rang Baron offrir un vitrail.;;;;;;;;;;;;x
+DESCREC.2334;;A quel vassal de ce rang vais-je offrir un vitrail?;;;;;;;;;;;;x
+REC.2334A;;Offrir un vitrail à ce vassal;;;;;;;;;;;;x
+TOOLTIPREC.2334A;;Ce vassal recevra mon vitrail;;;;;;;;;;;;x
+REC.2334B;;Offrir un vitrail à un autre vassal;;;;;;;;;;;;x
+TOOLTIPREC.2334B;;Ce vassal ne recevra pas mon vitrail;;;;;;;;;;;;x
+REC.2334C;;Je n'ai pas d'autre vassal de ce rang;;;;;;;;;;;;x
+DESCREC.2338;;A quel membre de ma famille vais-je offrir un vitrail ?;;;;;;;;;;;;x
+REC.2338A;;Offrir un vitrail à mon époux/épouse;;;;;;;;;;;;x
+REC.2338B;;Offrir un vitrail à un enfant;;;;;;;;;;;;x
+TOOLTIPREC.2338B;;Vous pouvez dorénavant réfléchir à quel enfant offrir un vitrail;;;;;;;;;;;;x
+REC.2338C;;Offrir un vitrail à un frère ou une sœur;;;;;;;;;;;;x
+REC.2338D;;Offrir un vitrail à sa mère;;;;;;;;;;;;x
+DESCREC.2339;;A quel enfant vais-je offrir un vitrail ?;;;;;;;;;;;;x
+REC.2339A;;Offrir un vitrail à cet enfant;;;;;;;;;;;;x
+TOOLTIPREC.2339A;;Cet enfant recevra mon vitrail;;;;;;;;;;;;x
+REC.2339B;;Offrir un vitrail à un autre enfant;;;;;;;;;;;;x
+TOOLTIPREC.2339B;;Cet enfant ne recevra pas mon vitrail;;;;;;;;;;;;x
+REC.2339C;;Je n'ai pas d'autres enfants;;;;;;;;;;;;x
+DESCREC.2340;;A quel frère ou sœur vais-je offrir un vitrail ?;;;;;;;;;;;;x
+REC.2340A;;Offrir un vitrail à ce frère ou cette sœur;;;;;;;;;;;;x
+TOOLTIPREC.2340A;;Ce frère ou cette sœure recevra mon vitrail;;;;;;;;;;;;x
+REC.2340B;;Offrir un vitrail à un autre frère ou sœur;;;;;;;;;;;;x
+TOOLTIPREC.2340B;;Ce frère ou cette sœure ne recevra pas mon vitrail;;;;;;;;;;;;x
+REC.2340C;;Je n'ai pas d'autre frère ou sœur;;;;;;;;;;;;x
+DESCREC.2342;;En cherchant à qui offrir mon vitrail, personne ne correspond à mes critères.;;;;;;;;;;;;x
+REC.2342A;;Je vais réfléchir à nouveau à qui l'offrir;;;;;;;;;;;;x
+REC.2342B;;Finalement, je vais garder le vitrail pour moi;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+soutien_noble_nature1;;Vous recevez un ensemble de vitraux représentant la Sainte Trinité.;;;;;;;;;;;;x
+soutien_noble_nature2;;Vous recevez une statue taillée dans un marbre blanc nacré.;;;;;;;;;;;;x
+soutien_noble_nature3;;Vous recevez une trio de gargouilles en granite rose dont le visage de l'une d'entre elles ressemble à s'y méprendre à votre évêque...;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+soutien_noble_nature1;You receive a set of stained glass windows depicting the Holy Trinity;Vous recevez un ensemble de vitraux représentant la Sainte Trinité.;;;;;;;;;;;;x
+soutien_noble_nature2;You receive a statue carved from a pearly white marble.;Vous recevez une statue taillée dans un marbre blanc nacré.;;;;;;;;;;;;x
+soutien_noble_nature3;You receive a trio of pink granite gargoyles one whose face has an eery resemblance to your bishop ...;Vous recevez une trio de gargouilles en granite rose dont le visage de l'une d'entre elles ressemble à s'y méprendre à votre évêque...;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+bourse_soulagee;There we go! That ought to come lighten our purse;Voilà qui devrait venir alléger notre bourse.;;;;;;;;;;;;x
+bourse_remplie;Some trinkets in addition to the treasure is never bad.;Quelques pièces venant s'ajouter au trésor ne font jamais de mal.;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+ECO.00100;activation AGRICULTURE;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.00100;Les cultures céréalières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les cultures céréalières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00100A;OK;OK;;;;;;;;;;;;x
+ECO.00101;activation AGRICULTURE;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.00101;Les productions de nos vergers en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les productions de nos vergers en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00101A;OK;OK;;;;;;;;;;;;x
+ECO.00102;activation AGRICULTURE;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.00102;Les activités agricoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités maraîchères en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00102A;OK;OK;;;;;;;;;;;;x
+ECO.00103;activation AGRICULTURE;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.00103;Les activités agricoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités viticoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans  les villes de la région.;;;;;;;;;;;;x
+ECO.00103A;OK;OK;;;;;;;;;;;;x
+ECO.00105;activation BIERE;;;;;;;;;;;;;x
+DESCECO.00105;;Les brassins produits en [From.Location.GetName] commencent à avoir une pluôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
+ECO.00105A;OK;Fort bien !;;;;;;;;;;;;x
+ECO.00106;activation VIN;;;;;;;;;;;;;x
+DESCECO.00106;;Les crus qui sortent de nos chais en [From.Location.GetName] commencent à avoir une pluôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
+ECO.00106A;OK;Fort bien !;;;;;;;;;;;;x
+ECO.00110;activation ELEVAGE;activation ELEVAGE;;;;;;;;;;;;x
+DESCECO.00110;Les activités d'élevage en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;La production de laine en [From.Location.GetName] est suffisamment importante pour être vendue et transportée pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00110A;OK;OK;;;;;;;;;;;;x
+ECO.00112;activation ELEVAGE;activation ELEVAGE;;;;;;;;;;;;x
+DESCECO.00112;Les activités d'élevage en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités d'élevage en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00112A;OK;OK;;;;;;;;;;;;x
+ECO.00111;activation ELEVAGE;activation ELEVAGE;;;;;;;;;;;;x
+DESCECO.00111;Les activités d'élevage en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les productions fromagères en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00111A;OK;OK;;;;;;;;;;;;x
+ECO.00120;activation FORET;activation FORET;;;;;;;;;;;;x
+DESCECO.00120;Les activités sylvicoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les produits de la coupe de bois en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00120A;OK;OK;;;;;;;;;;;;x
+ECO.00121;activation FORET;activation FORET;;;;;;;;;;;;x
+DESCECO.00121;Les activités sylvicoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;La production de charbon de bois en [From.Location.GetName] est devenue suffisamment importante pour être vendue et transportée pour alimenter dans les villes de la région en combustible.;;;;;;;;;;;;x
+ECO.00121A;OK;OK;;;;;;;;;;;;x
+ECO.00130;activation PIERRE;activation PIERRE;;;;;;;;;;;;x
+DESCECO.00130;Les activités de nos carrières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités de nos carrières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00130A;OK;OK;;;;;;;;;;;;x
+ECO.00140;activation MINERAI;activation MINERAI;;;;;;;;;;;;x
+DESCECO.00140;Les activités d'exploitation des ressources minérales en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités d'exploitation de nos ressources minières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00140A;OK;OK;;;;;;;;;;;;x
+ECO.00141;activation MINERAI;activation MINERAI;;;;;;;;;;;;x
+DESCECO.00141;Les activités d'exploitation des ressources minérales en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les produits de l'exploitation de sel en [From.Location.GetName] sont suffisamment importantes pour enpermettre la vente et le transports vers les villes de la région.;;;;;;;;;;;;x
+ECO.00141A;OK;OK;;;;;;;;;;;;x
+ECO.0015;activation PECHE;activation PECHE;;;;;;;;;;;;x
+DESCECO.00150;Les activités de pêche en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités de pêche en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00150A;OK;OK;;;;;;;;;;;;x
+ECO.00151;activation PISCICULTURE;activation PISCICULTURE;;;;;;;;;;;;x
+DESCECO.00151;Les activités piscicoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités piscicoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00151A;OK;OK;;;;;;;;;;;;x
+ECO.00142;activation OR;activation OR;;;;;;;;;;;;x
+DESCECO.00142;;La production d'or en [From.Location.GetName] est désormais suffisante pour en permettre l'export par caravane à destination des les villes de la région.;;;;;;;;;;;;x
+ECO.00142A;OK;OK;;;;;;;;;;;;x
+ECO.00143;activation CUIVRE;activation CUIVRE;;;;;;;;;;;;x
+DESCECO.00143;;La production de cuivre en [From.Location.GetName] permet à présent d'approvisionner caravanes, marchands et artisans.;;;;;;;;;;;;x
+ECO.00143A;OK;OK;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+ECO.00107;activation FARINE;activation FARINE;;;;;;;;;;;;x
+DESCECO.00107;;;;;;;;;;;;;;x
+ECO.00107A;OK;OK;;;;;;;;;;;;x
+ECO.00108;activation CIDRE;activation CIDRE;;;;;;;;;;;;x
+DESCECO.00108;;;;;;;;;;;;;;x
+ECO.00108A;OK;OK;;;;;;;;;;;;x
+ECO.00109;activation PAIN;activation PAIN;;;;;;;;;;;;x
+DESCECO.00109;;;;;;;;;;;;;;x
+ECO.00109A;OK;OK;;;;;;;;;;;;x
+ECO.00113;activation CUIR;activation CUIR;;;;;;;;;;;;x
+DESCECO.00113;;;;;;;;;;;;;;x
+ECO.00113A;OK;OK;;;;;;;;;;;;x
+ECO.00114;activation VIANDE;activation VIANDE;;;;;;;;;;;;x
+DESCECO.00114;;;;;;;;;;;;;;x
+ECO.00114A;OK;OK;;;;;;;;;;;;x
+ECO.00115;activation ETOFFE;activation ETOFFE;;;;;;;;;;;;x
+DESCECO.00115;;;;;;;;;;;;;;x
+ECO.00115A;OK;OK;;;;;;;;;;;;x
+ECO.00116;activation DRAP;activation DRAP;;;;;;;;;;;;x
+DESCECO.00116;;;;;;;;;;;;;;x
+ECO.00116A;OK;OK;;;;;;;;;;;;x
+ECO.00117;activation CHEVAL;activation CHEVAL;;;;;;;;;;;;x
+DESCECO.00117;;;;;;;;;;;;;;x
+ECO.00117A;OK;OK;;;;;;;;;;;;x
+ECO.00122;activation PLANCHE;activation PLANCHE;;;;;;;;;;;;x
+DESCECO.00122;;;;;;;;;;;;;;x
+ECO.00122A;OK;OK;;;;;;;;;;;;x
+ECO.00123;activation VERRE;activation VERRE;;;;;;;;;;;;x
+DESCECO.00123;;;;;;;;;;;;;;x
+ECO.00123A;OK;OK;;;;;;;;;;;;x
+ECO.00131;activation PIERRE TAILLE;activation PIERRE TAILLE;;;;;;;;;;;;x
+DESCECO.00131;;;;;;;;;;;;;;x
+ECO.00131A;OK;OK;;;;;;;;;;;;x
+ECO.00144;activation METAL;activation METAL;;;;;;;;;;;;x
+DESCECO.00144;;;;;;;;;;;;;;x
+ECO.00144A;OK;OK;;;;;;;;;;;;x
+ECO.00145;activation OUTILS;activation OUTILS;;;;;;;;;;;;x
+DESCECO.00145;;;;;;;;;;;;;;x
+ECO.00145A;OK;OK;;;;;;;;;;;;x
+ECO.00146;activation SEL RAFFINE;activation SEL RAFFINE;;;;;;;;;;;;x
+DESCECO.00146;;;;;;;;;;;;;;x
+ECO.00146A;OK;OK;;;;;;;;;;;;x
+ECO.00147;activation SALAISON;activation SALAISON;;;;;;;;;;;;x
+DESCECO.00147;;;;;;;;;;;;;;x
+ECO.00147A;OK;OK;;;;;;;;;;;;x
+ECO.00148;activation ARMES;activation ARMES;;;;;;;;;;;;x
+DESCECO.00148;;;;;;;;;;;;;;x
+ECO.00148A;OK;OK;;;;;;;;;;;;x
+ECO.00152;activation FUMAISON;activation FUMAISON;;;;;;;;;;;;x
+DESCECO.00152;;;;;;;;;;;;;;x
+ECO.00152A;OK;OK;;;;;;;;;;;;x
+ECO.0301;;Acheter pour vendre;;;;;;;;;;;;x
+DESCECO.0301;;Une occasion pour améliorer mon intendance se présente.\n Je pourrais user de mon pouvoir pour acheter des tissus à prix réduit et les revendre à prix exhorbitant.;;;;;;;;;;;;x
+ECO.0301A;;C'est une bonne idée;;;;;;;;;;;;x
+TOOLTIPECO.0301A;;Vous partez à la recherche de commerçants à intimider.;;;;;;;;;;;;x
+ECO.0301B;;C'est une mauvaise idée;;;;;;;;;;;;x
+ECO.0302;;Que faut-il acheter ?;;;;;;;;;;;;x
+DESCECO.0302;;En parcourant les rues et places bondées de marchands et chalands qui se bousculent, parlent, marchandent en échangent soit or, soit jurons, je repère plusieurs étals plus intéressants. \n Le textile semble être un bon choix, mais que choisir alors ? \n;;;;;;;;;;;;x
+ECO.0302A;;Acheter 10 sacs de laine;;;;;;;;;;;;x
+TOOLTIPECO.0302A;;Le laine est la base de toute l'industire textile de la région.;;;;;;;;;;;;x
+ECO.0302B;;Acheter 10 rouleaux d'étoffe;;;;;;;;;;;;x
+TOOLTIPECO.0302B;;Avec les étoffes, on pourra tisser ce que l'on veut.;;;;;;;;;;;;x
+ECO.0302C;;Acheter 10 draps tout faits;;;;;;;;;;;;x
+TOOLTIPECO.0302C;;Les gens voudront me ressembler et les acheter.;;;;;;;;;;;;x
+ECO.0303;;Vente;;;;;;;;;;;;x
+DESCECO.0303;;Les clients affluent et s'agglutinent autour de mon étal pour voir, toucher, palper le moelleux et la finesse de la laine qui leur est présentée.\n J'espère en tirer un bon prix et écouler mon stock.;;;;;;;;;;;;x
+ECO.0303A;;J'ai fini de vendre les sacs de laine;;;;;;;;;;;;x
+TOOLTIPECO.0303A;;Je n'ai rien vendu;;;;;;;;;;;;x
+TOOLTIPECO.0303B;;Je n'ai vendu qu'un sac;;;;;;;;;;;;x
+TOOLTIPECO.0303C;;Je n'ai vendu que 2 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303D;;Je n'ai vendu que 3 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303E;;Je n'ai vendu que 4 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303F;;Je n'ai vendu que 5 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303G;;J'ai réussi à vendre 6 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303H;;J'ai réussi à vendre 7 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303I;;J'ai réussi à vendre 8 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303J;;J'ai réussi à vendre 9 sacs;;;;;;;;;;;;x
+ECO.0304;;Vente;;;;;;;;;;;;x
+DESCECO.0304;;Les clients se pressent pour voir mes marchandises. Certains en bons connaisseurs -ou pour s'en donner l'air- font mine d'examiner avec forte attention et soin la finesse et le détail du tissage des étoffes. J'espère malgré ces simagrées leur vendre à prix d'or.;;;;;;;;;;;;x
+ECO.0304A;;J'ai fini de vendre les rouleaux d'etoffes;;;;;;;;;;;;x
+TOOLTIPECO.0304A;;Je n'ai pas vendu le moindre rouleau;;;;;;;;;;;;x
+TOOLTIPECO.0304B;;Je n'ai vendu qu'un rouleau;;;;;;;;;;;;x
+TOOLTIPECO.0304C;;Je n'ai vendu que 2 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304D;;Je n'ai vendu que 3 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304E;;Je n'ai vendu que 4 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304F;;Je n'ai vendu que 5 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304G;;J'ai réussi à vendre 6 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304H;;J'ai réussi à vendre 7 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304I;;J'ai réussi à vendre 8 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304J;;J'ai réussi à vendre 9 rouleaux;;;;;;;;;;;;x
+ECO.0305;;Vente;;;;;;;;;;;;x
+DESCECO.0305;;Les acheteurs de draps ne sont guère les plus faciles à convaincre. Comptant sur la qualité des produits et un peu de belles paroles je m'attèle à la tâche hardue pour tenter de vendre mes draps et ce au meilleur prix pour au moins récupérer sur mon investissement.;;;;;;;;;;;;x
+ECO.0305A;;J'ai fini de vendre les draps;;;;;;;;;;;;x
+TOOLTIPECO.0305A;;Je n'ai point vendu de drap;;;;;;;;;;;;x
+TOOLTIPECO.0305B;;Je n'ai vendu qu'une pièce drap;;;;;;;;;;;;x
+TOOLTIPECO.0305C;;Je n'ai vendu que 2 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.0305D;;Je n'ai vendu que 3 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.0305E;;Je n'ai vendu que 4 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.0305F;;Je n'ai vendu que 5 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.0305G;;J'ai réussi à vendre 6 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.0305H;;J'ai réussi à vendre 7 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.0305I;;J'ai réussi à vendre 8 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.0305J;;J'ai réussi à vendre 9 pièces de draps;;;;;;;;;;;;x
+ECO.0306;;Les invendus;;;;;;;;;;;;x
+DESCECO.0306;;Certains de mes achats me sont restés sur les bras faute de suffisamment d'acheteurs.\n Que vais-je bien pouvoir en faire ?;;;;;;;;;;;;x
+ECO.0306A;;Les brûler, pardi !;;;;;;;;;;;;x
+TOOLTIPECO.0306A;;Les flammes s'élèvent et manquent de brûler une maison.;;;;;;;;;;;;x
+ECO.0306B;;Les donner aux necessiteux;;;;;;;;;;;;x
+TOOLTIPECO.0306B;;Jacquoille la fripouille est désormais habillé en Jacques-Henri.;;;;;;;;;;;;x
+ECO.0307;;Fin de l'entreprise;;;;;;;;;;;;x
+DESCECO.0307;;Ce fut une entreprise enrichissante où vous avez beaucoup appris.;;;;;;;;;;;;x
+ECO.0307A;;Je ne m'y essayerais plus.;;;;;;;;;;;;x
+ECO.0311;;Epée légendaire;;;;;;;;;;;;x
+DESCECO.0311;;Les grands hommes avaient tous une épée digne de leur grandeur.\nSi j'avais une telle épée, elle pourrait m'aider à laisser ma marque dans l'Histoire.\nVoilà une occasion d'améliorer ma compétence militaire.;;;;;;;;;;;;x
+ECO.0311A;;C'est une bonne idée;;;;;;;;;;;;x
+TOOLTIPECO.0311A;;Je vais chercher un serviteur pour m'aider;;;;;;;;;;;;x
+ECO.0311B;;C'est une mauvaise idée;;;;;;;;;;;;x
+ECO.0312;;Envoi d'un serviteur;;;;;;;;;;;;x
+DESCECO.0312;;J'ai trouvé un volontaire pour partir à la recherche du plan d'une épée légendaire. \nOù vais-je l'envoyer ?;;;;;;;;;;;;x
+ECO.0312A;;A Aix-La-Chappelle, il doit y avoir le plan de Joyeuse;;;;;;;;;;;;x
+TOOLTIPECO.0312A;;Cette quête pourrait être dangereuse pour lui;;;;;;;;;;;;x
+TOOLTIPECO.0312B;;Il me ramène le plan;;;;;;;;;;;;x
+ECO.0312B;;A Reims, il doit y avoir le plan de Almace;;;;;;;;;;;;x
+ECO.0312C;;A Rocamadour, il doit y avoir le plan de Durandal;;;;;;;;;;;;x
+ECO.0313;;Une femme vient;;;;;;;;;;;;x
+DESCECO.0313;;Une femme se présente à vous, elle dit que son mari n'est pas revenu ? \nVous lui demandez en quoi est-ce votre problème.\nElle vous répond que vous l'avez envoyé, il y a longtemps, chercher le plan d'une épée légendaire.\n Que lui répondre ?;;;;;;;;;;;;x
+ECO.0313A;;Il va revenir;;;;;;;;;;;;x
+TOOLTIPECO.0313A;;Vous lui mentez;;;;;;;;;;;;x
+ECO.0313B;;Il a du être tué par des bandits ou mangé par les loups;;;;;;;;;;;;x
+TOOLTIPECO.0313B;;Vous compatissez;;;;;;;;;;;;x
+ECO.0313C;;C'est un voleur;;;;;;;;;;;;x
+TOOLTIPECO.0313C;;Vous exigez réparation;;;;;;;;;;;;x
+ECO.0314;;Que faire ?;;;;;;;;;;;;x
+DESCECO.0314;;Le serviteur que vous avez envoyé chercher un plan d'épée légendaire n'est pas revenu.\nDevez-vous en envoyer un autre ?;;;;;;;;;;;;x
+ECO.0314A;;Chercher quelqu'un d'autre à envoyer;;;;;;;;;;;;x
+TOOLTIPECO.0314A;;Vous chercher un nouveau candidat;;;;;;;;;;;;x
+ECO.0314B;;Abandonner la quête;;;;;;;;;;;;x
+ECO.0315;;Plan trouvé;;;;;;;;;;;;x
+DESCECO.0315;;Votre serviteur est revenu avec le plan d'une épée légendaire.;;;;;;;;;;;;x
+ECO.0315A;;Forger l'épée;;;;;;;;;;;;x
+TOOLTIPECO.0315A;;Le forgeron est à pied d'oeuvre;;;;;;;;;;;;x
+ECO.0316;;Essayer l'épée;;;;;;;;;;;;x
+DESCECO.0316;;Le forgeron a fini l'épée.\nComme vous ne lui faites pas confiance, vous voulez essayer l'épée.\nMais sur qui ?;;;;;;;;;;;;x
+ECO.0316A;;Un bonhomme de paille;;;;;;;;;;;;x
+TOOLTIPECO.0316AA;;Le bonhomme de paille est vaincu;;;;;;;;;;;;x
+TOOLTIPECO.0316AB;;Le bonhomme de paille refuse de mourir;;;;;;;;;;;;x
+ECO.0316B;;Un condamné à mort;;;;;;;;;;;;x
+TOOLTIPECO.0316BA;;Le bourreau m'admire;;;;;;;;;;;;x
+TOOLTIPECO.0316BB;;Le condamné perd seulement un bras;;;;;;;;;;;;x
+ECO.0317;;Epée déséquilibrée;;;;;;;;;;;;x
+DESCECO.0317;;Le forgeron a mal travaillé. Il vous dit que votre épée sera une épée légendaire +2 mais qu'il faut lui accorder encore un peu de temps.;;;;;;;;;;;;x
+ECO.0317A;;Il m'a convaincu;;;;;;;;;;;;x
+TOOLTIPECO.0317A;;L'épée est reforgée;;;;;;;;;;;;x
+ECO.0317B;;J'abandonne;;;;;;;;;;;;x
+ECO.0318;;Succès;;;;;;;;;;;;x
+DESCECO.0318;;L'épée est parfaite.\nJ'ai beaucoup appris de cette expérience.;;;;;;;;;;;;x
+ECO.0318A;;La gloire vous attend : vous et votre épée;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#;x;NOW HIDDEN EVENTS;;;;;;;;;;;;x
+#ECO.0020;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0020;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0020A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.0021;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0021;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0021A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.0022;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0022;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0022A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.0020;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0020;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0020A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.0021;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0021;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0021A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.0022;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0022;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0022A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#;x;VARIOUS FLAVOUR eVENTS;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#ECO.0200;;bonne récolte;;;;;;;;;;;;x
+DESCECO.0200;;Les rendements agricoles en [From.Location.GetName] ont été excellents cette année, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des paysans contents.;;;;;;;;;;;;x
+ECO.0200A;OK;Bien !;;;;;;;;;;;;x
+#ECO.0201;;mauvaise récolte;;;;;;;;;;;;x
+DESCECO.0201;;Les récoltes en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
+ECO.0201A;OK;Ces incapables de paysans...;;;;;;;;;;;;x
+#ECO.0202;;pêche abondante;;;;;;;;;;;;x
+DESCECO.0202;;La saison de pêche cette année en [From.Location.GetName] a été excellente, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des pêcheurs contents.;;;;;;;;;;;;x
+ECO.0202A;OK;Bien !;;;;;;;;;;;;x
+#ECO.0203;;pêche médiocre;;;;;;;;;;;;x
+DESCECO.0203;;Les rendements de la pêche en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
+ECO.0203A;OK;Ces incapables de paysans...;;;;;;;;;;;;x
+ECO.0204;;Accident à la mine;;;;;;;;;;;;x
+DESCECO.0204;;Mauvaise nouvelles en provenance d'une de nos mines de [From.Location.GetName] : certaines installations se sont éffondrées et pires des mineurs y ont perdus la vie.;;;;;;;;;;;;x
+ECO.0204A;OK;Cela va pas arranger nos affaires...;;;;;;;;;;;;x
+ECO.0205;;Nouveau filon à la mine;;;;;;;;;;;;x
+DESCECO.0205;;Le contremaître d'une de nos mines en [From.Location.GetName] nous informe qu'un nouveau filon a été découvert ! La productivité en sera améliorée pour un temps.;;;;;;;;;;;;x
+ECO.0205A;OK;Enfin une bonne nouvelle !;;;;;;;;;;;;x
+ECO.0206;;Industrie prospère;;;;;;;;;;;;x
+DESCECO.0206;;Bonnes nouvelles en provenance de [From.Location.GetName]. \n Cela fait un bon moment que la province n'est plus en proie à la guerre.\n Cela permet à son industrie de prospérer.;;;;;;;;;;;;x
+ECO.0206A;OK;Bien !;;;;;;;;;;;;x
+ECO.0207;;Industrie plus si prospère;;;;;;;;;;;;x
+DESCECO.0207;;Les ravages de la guerre et les forces mobilisées en [From.Location.GetName] font d'importants dommages à l'économie locale.;;;;;;;;;;;;x
+ECO.0207A;OK;C'est le prix à payer;;;;;;;;;;;;x
+DESCECO.0208;Bad news from [From.Location.GetName]. \nRecent rains have flooded a lot of lands. This will badly impact the local economy. Pray [This.Religion.GetRandomGodNameCap] to help us !;Mauvaises nouvelles en provenance de [From.Location.GetName]. \nLes pluies torrentielles qui s'y sont dernièrement abattues ont fait grossir les rivières, inondé des terres cultivées, mis à mal ponts et gués. Pour sûr, cela aura un impact sur l'économie locale, espérons que [This.Religion.GetRandomGodNameCap] nous aide à nous remettre sur pied rapidement. ;;;;;;;;;;;;x
+ECO.0208A;OK;Mettons-nous au travail !;;;;;;;;;;;;x
+DESCECO.0209;This year the weather is particulry dry in [From.Location.GetName]. \nLet's hope it won't affect too mush crops.;Situation inquiétante dans la province de [From.Location.GetName] \nEspérons que cela ne dure pas trop et ainsi n'affecte point trop nos récoltes. ;;;;;;;;;;;;x
+ECO.0209A;Is this a divine punishment ?;Est-ce une punition divine ? ;;;;;;;;;;;;x
+DESCECO.0210;;Cela fait plus de cinq années consécutives que la province de [Root.GetName] affiche un niveau de properité sans pareil.;;;;;;;;;;;;x
+ECO.0210A;;Nous récoltons le fruit de notre travail;;;;;;;;;;;;x
+CHRONICLE_PROSPERITE_A;;La province de [Root.GetName] s'illustre par une prosperité sans précédent dans le royaume et ce, pour plus de 5 années d'affilée.
+DESCECO.0211;;Cela fait désormais près de dix ans que l'industrie et l'artisanat de la province de [Root.GetName] jouissent d'une propsérité sans précédent. \nQui plus est, cela nous rapporte !;;;;;;;;;;;;x
+ECO.0211A;;La paix c'est la prospérité !;;;;;;;;;;;;x
+CHRONICLE_PROSPERITE_B;;La province de [Root.GetName] s'illustre par une prosperité sans précédent dans le royaume et ce, pour plus de 10 années d'affilée. ;;;;;;;;;;;;x
+DESCECO.0212;;La stabilité politique et la paix sont les amies de la prosperité. \n Cela se ressent particulièrement sur les terres de [Root.GetName]. Cela nous apporte expérience, sagesse et emplit nos coffres, ce qui est toujours bon à prendre.;;;;;;;;;;;;x
+ECO.0212A;;Voilà le bénéfice de la patience;;;;;;;;;;;;x
+CHRONICLE_PROSPERITE_C;;La province de [Root.GetName] s'illustre par une prosperité sans précédent dans le royaume et ce, pour plus de 15 années d'affilée. ;;;;;;;;;;;;x
+PECHE_BONNE_CHRONIQUE;;La saison de pêche a été particulièrement fructueuse cette année dans la province de [Root.GetName]. ;;;;;;;;;;;;x
+PECHE_MAUVAISE_CHRONIQUE;;Une très mauvaise saison de pêche sur les côtes de [Root.GetName] a affamé nos gens. ;;;;;;;;;;;;x
+RECOLTE_BONNE_CHRONIQUE;;Les abondantes récoltes en cette année sur les terres de [Root.GetName] ont rempli les panses et gonflé les stocks. ;;;;;;;;;;;;x
+RECOLTE_MAUVAISE_CHRONIQUE;;La médiocrité des récoltes de l'année sur les terres de [Root.GetName] a engendré une période de disette l'hiver qui a suivi.;;;;;;;;;;;;x 
+chronique_prosperite_custom;This disserves to get registered in our chronicles \n.;Cela vaut une inscription aux annales du royaume. \n;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
