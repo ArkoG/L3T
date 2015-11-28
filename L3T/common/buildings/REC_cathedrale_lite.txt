@@ -75,7 +75,7 @@ ca_cathedrale_lite_05 = {
 	liege_piety = 0.05
 	}
 ca_cathedrale_lite_06 = {
-	desc = cathedrale_lite_06_desc	
+	desc = cathedrale_lite_desc	
 	potential = { 
 		has_province_modifier = relique06
 		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
@@ -215,9 +215,9 @@ ca_cathedrale_lite_15 = {
 	liege_piety = 0.05
 	}
 ca_cathedrale_lite_16 = {
-	desc = cathedrale_lite_16_desc	
+	desc = cathedrale_lite_desc	
 	potential = { 
-		has_province_modifier = relique06
+		has_province_modifier = relique16
 		FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
 		}
 	trigger = { TECH_CONSTRUCTION = 1 }
