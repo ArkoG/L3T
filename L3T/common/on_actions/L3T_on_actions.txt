@@ -4,3 +4,15 @@ on_startup = {
 			L3T.0010 #choix carte/map choice
 		}
 }
+
+#character
+on_yearly_pulse = {
+	
+	random_events = {
+		# Stewardship focus
+		1000 = ECO.320
+		3000 = ECO.321
+		1000 = ECO.322
+		1000 = ECO.323		
+	}
+}

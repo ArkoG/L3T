@@ -376,6 +376,7 @@ character_event = {
 		NOT = { has_character_flag = the_survey }
 		NOT = { has_character_flag = drap }
 		NOT = { has_character_flag = drap_taken }
+		NOT = { has_character_flag = cadastreux }
 		war = no
 		any_demesne_title = {	
 			tier = baron	
@@ -617,5 +618,592 @@ character_event = {
 		name = "ECO.0307A"
 		change_stewardship = 1
 		clr_character_flag = drap
+	}
+}
+
+# Le cadastre
+character_event = {
+	id = ECO.319
+	desc = "DESCECO.319"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_focus = focus_business
+				NOT = { stewardship = 10 }
+			}
+			has_ambition = obj_improve_stewardship
+		}
+		wealth = 100
+		NOT = { has_character_flag = the_inn }
+		NOT = { has_character_flag = the_garden }
+		NOT = { has_character_flag = the_survey }
+		NOT = { has_character_flag = drap }
+		NOT = { has_character_flag = drap_taken }
+		war = no
+		NOT = { has_character_flag = cadastreux } #ne peut plus relancer cette session une fois entamée, même terminée
+		NOT = { has_character_flag = cadastreux_refuse }
+	}
+	
+	mean_time_to_happen = {
+		months = 280
+	}
+	
+	option = {
+		name = "ECO.319A"
+		custom_tooltip = { tooltip = TOOLTIPECO.319 }
+		set_character_flag = cadastreux
+	}
+	option = {
+		name = "ECO.319B"
+		custom_tooltip = { text = improve_stewardship_quit } #d'autres moyens
+		set_character_flag = cadastreux_refuse #ne se le reverra pas proposé
+	}
+}
+
+character_event = { #régler les conflits de parcelles #chaine 1
+	id = ECO.320
+	desc = "DESCECO.320"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+		
+	trigger = {
+		OR = {
+			AND = {
+				has_focus = focus_business
+				NOT = { stewardship = 10 }
+			}
+			has_ambition = obj_improve_stewardship
+		}
+		wealth = 100
+		NOT = { has_character_flag = the_inn }
+		NOT = { has_character_flag = the_garden }
+		NOT = { has_character_flag = the_survey }
+		NOT = { has_character_flag = drap }
+		NOT = { has_character_flag = drap_taken }
+		#war = no
+		has_character_flag = cadastreux
+		NOT = { has_character_flag = chaine_cadastre_1_refusee }
+	}
+	
+	option = {
+		name = "ECO.320A" #intérêt
+		character_event = { id = ECO.3201 days = 30 }
+	}
+	option = {
+		name = "ECO.320B" #pas intéressé
+		set_character_flag = { chaine_cadastre_1_refusee }
+	}
+}
+
+character_event = { #régler les conflits de parcelle : sur le terrain
+	id = ECO.3201
+	desc = "DESCECO.3201"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+		
+	option = {
+		name = "ECO.3201A" #partons nous même
+		character_event = { id = ECO.3202 days = 20 tooltip = TOOLTIPECO.3202A}
+		set_variable = { which = "cadastre" value = 1 }
+	}
+	option = {
+		name = "ECO.3201B" #envoyer quelqu'un d'autre
+		custom_tooltip = { TOOLTIPECO.3202B }
+		set_character_flag = chaine_cadastre_1_terminee #fin prématurée
+	}
+}
+
+character_event = { #faire les mesures
+	id = ECO.3202
+	desc = "DESCECO.3202"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+
+	immediate = { set_character_flag = chaine_cadastre_1_terminee }
+		
+	option = {
+		name = "ECO.3202A" #augmenter les taxes
+		ROOT = { change_variable = { which = "cadastre" value = 1}}
+	}
+	option = {
+		name = "ECO.3202B" #faire preuve de clémence fiscale
+		random_list = {
+			50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
+			50 = { }
+		}
+		random_list = {
+			50 = { add_trait = content }
+			50 = { }
+		}
+	}
+}
+
+character_event = { #Inventaire des fiefs #chaine 2
+	id = ECO.321
+	desc = "DESCECO.321"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+		
+	trigger = {
+		OR = {
+			AND = {
+				has_focus = focus_business
+				NOT = { stewardship = 10 }
+			}
+			has_ambition = obj_improve_stewardship
+		}
+		wealth = 100
+		NOT = { has_character_flag = the_inn }
+		NOT = { has_character_flag = the_garden }
+		NOT = { has_character_flag = the_survey }
+		NOT = { has_character_flag = drap }
+		NOT = { has_character_flag = drap_taken }
+		#war = no
+		has_character_flag = cadastreux
+		NOT = { has_character_flag = chaine_cadastre_2_refusee }
+	}
+	
+	option = {
+		name = "ECO.0321A" #pas intéressé
+		set_character_flag = { chaine_cadastre_2_refusee }
+	}
+	option = {
+		name = "ECO.0321B" #intérêt #propres fiefs
+		character_event = { id = ECO.3211 days = 30 tooltip = TOOLTIPECO.32111}
+	}
+	option = {
+		name = "ECO.0321C" #intérêt #les autres fiefs
+		character_event = { id = ECO.3211 days = 30 tooltip = TOOLTIPECO.32112}
+	}
+	option = {
+		name = "ECO.0321D" #intérêt #outils ?
+		character_event = { id = ECO.3212 days = 30 tooltip = TOOLTIPECO.3212}
+	}
+}
+
+character_event = { #outils/techniques
+	id = ECO.3212
+	desc = "DESCECO.3212"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+		
+	option = {
+		name = "ECO.03212A" #meilleurs outils
+		ROOT = { change_variable = { which = "cadastre" value = 2}}
+		wealth = -120
+		character_event = { id = ECO.3211 days = 45 tooltip = TOOLTIPECO.3211}
+		random_list = {
+			30 = { set_character_flag = cadastre_chaine2_resultat1 }
+			70 = { set_character_flag = cadastre_chaine2_resultat2 }
+		}
+	}
+	option = {
+		name = "ECO.3212B" #meilleurs outils mais pas trop
+		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		wealth = -80
+		random_list = {
+			15 = { add_trait = greedy }
+			85 = {}
+		}
+		random_list = {
+			20 = { set_character_flag = cadastre_chaine2_resultat1 }
+			60 = { set_character_flag = cadastre_chaine2_resultat2 }
+			20 = { set_character_flag = cadastre_chaine2_resultat3 }
+		}
+		character_event = { id = ECO.3211 days = 40 tooltip = TOOLTIPECO.3211}
+	}
+	option = { #nous sommes déjà les meilleurs et ça couterait trop cher
+		name = "ECO.3212C" #radin et/ou fier
+		random_list = {
+			15 = { add_trait = proud }
+			15 = { add_trait = greedy }
+			70 = {}
+		}
+		random_list = {
+			30 = { set_character_flag = cadastre_chaine2_resultat2 }
+			70 = { set_character_flag = cadastre_chaine2_resultat3 }
+		}
+		character_event = { id = ECO.3211 days = 40 tooltip = TOOLTIPECO.3211}
+	}
+}
+
+character_event = { #résultats mesures
+	id = ECO.3211
+	desc = "DESCECO.3211"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+		
+	option = {
+		name = "ECO.03211A" #très bon résultat
+		ROOT = { change_variable = { which = "cadastre" value = 2}}
+		trigger = { has_character_flag = cadastre_chaine2_resultat1 }
+		character_event = { id = ECO.3213 days = 25 tooltip = TOOLTIPECO.3213} #allons plus loin ?
+	}
+	option = {
+		name = "ECO.03211B" #
+		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		trigger = { has_character_flag = cadastre_chaine2_resultat2 }
+		character_event = { id = ECO.3213 days = 25 tooltip = TOOLTIPECO.3213} #allons plus loin ?
+	}
+	option = { #je suis nul
+		name = "ECO.03211C" 
+		trigger = { has_character_flag = cadastre_chaine2_resultat3 }
+	}
+}
+
+character_event = { #allons plus loin ? registre or not registre ?
+	id = ECO.03213
+	desc = "DESCECO.03213"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+
+	immediate = { set_character_flag = chaine_cadastre_2_terminee }
+		
+	option = {
+		name = "ECO.03213A" #tenons un registre
+		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		wealth = -50
+	}
+	option = {
+		name = "ECO.03213B" #inutile
+		prestige = 25
+	}
+}
+
+character_event = { #cartographier nos fiefs ? #chaine 3
+	id = ECO.322
+	desc = "DESCECO.322"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+		
+	trigger = {
+		OR = {
+			AND = {
+				has_focus = focus_business
+				NOT = { stewardship = 10 }
+			}
+			has_ambition = obj_improve_stewardship
+		}
+		wealth = 100
+		NOT = { has_character_flag = the_inn }
+		NOT = { has_character_flag = the_garden }
+		NOT = { has_character_flag = the_survey }
+		NOT = { has_character_flag = drap }
+		NOT = { has_character_flag = drap_taken }
+		#war = no
+		has_character_flag = cadastreux
+		NOT = { has_character_flag = chaine_cadastre_3_refusee }
+	}
+	
+	option = {
+		name = "ECO.322A" #pas intéressé
+		set_character_flag = { chaine_cadastre_3_refusee }
+	}
+	option = {
+		name = "ECO.322B" #intérêt
+		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		character_event = { id = ECO.3221 days = 30 tooltip = TOOLTIPECO.3221}
+	}
+}
+
+character_event = { #
+	id = ECO.3221
+	desc = "DESCECO.3221"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+
+	immediate = { set_character_flag = chaine_cadastre_3_terminee }
+		
+	option = {
+		name = "ECO.3221A" #se baser sur l'existant
+		random_list = {
+		50 = {}
+		50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
+		}
+		wealth = -40
+	}
+	option = {
+		name = "ECO.3221B" #partir de zero
+		random_list = {
+		50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
+		50 = { ROOT = { change_variable = { which = "cadastre" value = 2}}}
+		}
+		wealth = -80
+	}
+	option = {
+		name = "ECO.3221C" #en fait non
+	}
+}
+character_event = { #harmoniser les mesures ? #chaine 4
+	id = ECO.323
+	desc = "DESCECO.323"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+		
+	trigger = {
+		OR = {
+			AND = {
+				has_focus = focus_business
+				NOT = { stewardship = 10 }
+			}
+			has_ambition = obj_improve_stewardship
+		}
+		wealth = 100
+		NOT = { has_character_flag = the_inn }
+		NOT = { has_character_flag = the_garden }
+		NOT = { has_character_flag = the_survey }
+		NOT = { has_character_flag = drap }
+		NOT = { has_character_flag = drap_taken }
+		#war = no
+		has_character_flag = cadastreux
+		NOT = { has_character_flag = chaine_cadastre_4_refusee }
+	}
+	
+	option = {
+		name = "ECO.323A" #pas intéressé
+		set_character_flag = { chaine_cadastre_4_refusee }
+	}
+	option = {
+		name = "ECO.323B" #intérêt
+		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		character_event = { id = ECO.3231 days = 30 tooltip = TOOLTIPECO.3231}
+	}
+}
+character_event = { #harmoniser les mesures
+	id = ECO.3231
+	desc = "DESCECO.3231"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+
+	immediate = { set_character_flag = chaine_cadastre_4_terminee }
+
+	option = {
+		name = "ECO.3231A" #sur notre capitale
+		prestige = 50
+		wealth = 25		
+	}
+	option = {
+		name = "ECO.3231B" #sur le suzerain/voisin
+		prestige = -50
+		wealth = 65
+	}
+	option = {
+		name = "ECO.3231C" #peu importe seul le résultat compte
+		prestige = -25
+		wealth = 45		
+	}
+}
+
+
+#conclusions
+#324
+character_event = {
+	id = ECO.324
+	desc = "DESCECO.324"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_character_flag = cadastreux
+		OR = {
+			has_character_flag = chaine_cadastre_1_refusee
+			has_character_flag = chaine_cadastre_1_terminee
+			}
+		OR = {
+			has_character_flag = chaine_cadastre_2_refusee
+			has_character_flag = chaine_cadastre_2_terminee
+			}
+		OR = {
+			has_character_flag = chaine_cadastre_3_refusee
+			has_character_flag = chaine_cadastre_3_terminee
+			}
+		OR = {
+			has_character_flag = chaine_cadastre_4_refusee
+			has_character_flag = chaine_cadastre_4_terminee
+			}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = { factor = 1.20	chaine_cadastre_1_refusee }
+		modifier = { factor = 1.50	chaine_cadastre_2_refusee }
+		modifier = { factor = 1.20	chaine_cadastre_3_refusee }
+		modifier = { factor = 1.20	chaine_cadastre_4_refusee }
+		modifier = { factor = 0.80	chaine_cadastre_1_terminee }
+		modifier = { factor = 0.60	chaine_cadastre_2_terminee }
+		modifier = { factor = 0.80	chaine_cadastre_3_terminee }
+		modifier = { factor = 0.80	chaine_cadastre_4_terminee }		
+	}
+
+	option = { #nous avons beaucoup appris homme
+		name = "ECO.324A" 
+		trigger = { 
+			is_variable_equal = { "cadastre" value = 15 }
+			is_female = no
+			}
+		stewardship = 1
+		random_list = {
+			50 = { give_nickname = nick_larpenteur }
+			50 = { give_nickname = nick_le_cartographe }
+			}
+		}			
+	option = { #nous avons beaucoup appris femme
+		name = "ECO.324A" 
+		trigger = { 
+			is_variable_equal = { "cadastre" value = 15 }
+			is_female = yes
+			}
+		stewardship = 1
+		random_list = {
+			50 = { give_nickname = nick_larpenteuse }
+			50 = { give_nickname = nick_la_cartographe }
+			}
+		}
+	option = {
+		name = "ECO.324B" #j'ai appris homme
+		trigger = { 
+			is_variable_equal = { "cadastre" value = 10 }
+			NOT = { is_variable_equal = { "cadastre" value = 15 }}
+			is_female = no			
+			}
+		random_list = {
+			50 = { give_nickname = nick_larpenteur }
+			50 = { give_nickname = nick_le_cartographe }
+			}
+		random_list = {
+			50 = { stewardship = 1 }
+			50 = { }
+		}		
+	}
+	option = {
+		name = "ECO.324B" #j'ai appris femme
+		trigger = { 
+			is_variable_equal = { "cadastre" value = 10 }
+			NOT = { is_variable_equal = { "cadastre" value = 15 }}
+			is_female = yes			
+			}
+		random_list = {
+			50 = { give_nickname = nick_larpenteuse }
+			50 = { give_nickname = nick_la_cartographe }
+			}
+		random_list = {
+			50 = { stewardship = 1 }
+			50 = { }
+		}
+	}
+	option = { 
+		name = "ECO.324C" #j'ai appris un peu homme
+		trigger = { 
+			is_variable_equal = { "cadastre" value =  5 }
+			NOT = { is_variable_equal = { "cadastre" value = 11 }}
+			is_female = no
+			}
+		random_list = {
+			50 = { give_nickname = nick_larpenteur }
+			50 = { give_nickname = nick_le_cartographe }
+			}
+		random_list = {
+			25 = { stewardship = 1 }
+			85 = { }
+		}
+	}
+	option = { 
+		name = "ECO.324C" #j'ai appris un peu femme
+		trigger = { 
+			is_variable_equal = { "cadastre" value =  5 }
+			NOT = { is_variable_equal = { "cadastre" value = 11 }}
+			is_female = yes
+			}
+		random_list = {
+			50 = { give_nickname = nick_larpenteuse }
+			50 = { give_nickname = nick_la_cartographe }
+			}
+		random_list = {
+			25 = { stewardship = 1 }
+			85 = { }
+		}
+	}
+	option = { 
+		name = "ECO.324D" #cela ne m'a rien appris
+		trigger = {
+			NOT = { is_variable_equal = { "cadastre" value =  5 }}
+			}
 	}
 }
