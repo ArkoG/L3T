@@ -1,0 +1,729 @@
+CODE;ENGLISH;FRENCH;;;;;;;;;;;;x;
+#;;x;;;;;;;;;;;;x;
+BATIMENTS;;x;;;;;;;;;;;;x;
+#;;x;;;;;;;;;;;;x;
+#-Château-;;;;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x;
+#;;BATIMENTS XYLO;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+CA_chasse_L1;Hunting Lodge;Loge de Chasse;;;;;;;;;;;;x
+CA_chasse_L1_desc;;Il s'agit ici d'une grande cabane en bois permettant de s'abriter et de se retrouver lors de campagnes de chasse qui durent quelques jours.;;;;;;;;;;;;x
+CA_chasse_L2;Hunting Manor;Logis de Chasse;;;;;;;;;;;;x
+CA_chasse_L2_desc;;Ce refuge offre un plus grand confort et une capacité d'hébergement plus importante. Il a l'avantage aussi d'être à l'abri des regards indiscrets de la cour...;;;;;;;;;;;;x
+CA_chasse_L3;Hunting Manor;Manoir de Chasse;;;;;;;;;;;;x
+CA_chasse_L3_desc;;Avec ces airs de maison forte, cet pied-à-terre forestier offre tout le confort d'un château pour donner des banquets et recevoir nos hôtes de marque lors de longues parties de chasse.;;;;;;;;;;;;x
+TP_herboriste_L1;Herbalist;Herboriste;;;;;;;;;;;;x
+TP_herboriste_L1_desc;;L'herboriste récolte dans les alentours et cultive des plantes médicinales. Un savoir fort apprécié et des plus utiles quand la maladie survient.;;;;;;;;;;;;x
+TP_herboriste_L2;Aphoticary;Apothicaire;;;;;;;;;;;;x
+TP_herboriste_L2_desc;;L'Apothicaire fabrique toute sorte de soins et remèdes tant pour soigner des infections que des blessures. Sa présence dans cette contrée rassure et protège la populace.;;;;;;;;;;;;x
+TP_oratoire_sylvestre;Sylvan Oratory;Oratoire Sylvestre;;;;;;;;;;;;x
+TP_oratoire_sylvestre_desc;;Ce lieu de culte perdu au milieu de la sérénité des bois sert de lieu de prière et de recueillement pour les pélérins de passage par chez nous ou les pécheurs en quête d'apaisement pour leur âme.;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#;;BATIMENTS BANDITS;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+REPAIREVOLEUR;BRIGANTS LAIR;REPAIRE DE BRIGANDS;;;;;;;;;;;;x
+REPAIREVOLEUR_desc;;Les bandits de cette province sont suffisamment bien implantés et organisés et ont même contruit un repaire aux yeux de tous. Intolérable !;;;;;;;;;;;;x
+repaire_voleur_L1;Brigand's lair L1;Cache de brigands ;;;;;;;;;;;;x
+repaire_voleur_L1_desc;;Cette cache permet d'entreposer les résultats des forfaiteries commises par les gredins. ;;;;;;;;;;;;x
+repaire_voleur_L2;Brigand's lair L2;Repaire de brigands;;;;;;;;;;;;x
+repaire_voleur_L2_desc;;La cache a disparu et perdu de sa clandestinité pour laisser place à un endroit qu'il est impossible d'ignorer. Le pire est à craindre.;;;;;;;;;;;;x
+repaire_voleur_L3;Brigand's lair L3;Maison forte de brigands;;;;;;;;;;;;x
+repaire_voleur_L3_desc;;L'expansion du banditisme dans la province a permis d'étendre et fortifier plus stratégiquement le repaire. Déloger ces occupants rique de s'avérer ardu...;;;;;;;;;;;;x
+repaire_voleur_L4;Brigand's lair L4;Guilde de brigands;;Au vu et au su de tous, c'est un rassemblement corporatif qui s'étale maintenant. Les coffres remplis de denrées et autres butins rapinés débordent.;;;;;;;;;;x
+repaire_voleur_L4_desc;;manque d'inspiration;;;;;;;;;;;;x
+repaire_voleur_L5;Brigand's lair L5;Fortin de brigands;;;;;;;;;;;;x
+repaire_voleur_L5_desc;;Le mélange parfait entre lieu de stockage et place défensive. Un trône volé y accueille le chef de la bande qui y mène sa "cour" singeant par là même les nobles détroussés.;;;;;;;;;;;;x
+#fort_brigands_L1;;Palissade;;;;;;;;;;;;x
+#fort_brigands_L1_desc;;Cette ligne de pieux plantés verticalement est parfaite pour stopper des petites attaques surprises.;;;;;;;;;;;;x
+#fort_brigands_L2;;Rideau de pierre;;;;;;;;;;;;x
+#fort_brigands_L2_desc;Le bois a laissé place à la pierre et donne aux malandrins un sentiment de sécurité confortable.;;;;;;;;;;;;;x
+#fort_brigands_L3;;Hauts murs;;;;;;;;;;;;x
+#fort_brigands_L3_desc;;Qui oserait maintenant partir à l'assaut de tels murs où patrouillent des coquins sûrs de leur invincibilité.;;;;;;;;;;;;x
+caserne_brigands_L1;Brigand's barrack L1;Abri des malandrins;;;;;;;;;;;;x
+caserne_brigands_L1_desc;;C'est ici que se reposent et s'entraînent les ennemis de la justice seigneuriale.;;;;;;;;;;;;x
+caserne_brigands_L2;Brigand's barrack L2;Gîte des malandrins;;;;;;;;;;;;x
+caserne_brigands_L2_desc;;Un lieu où sont posées les paillasses et les armes des brigands.;;;;;;;;;;;;x
+caserne_brigands_L3;Brigand's barrack L3;Caserne des malandrins;;;;;;;;;;;;x
+caserne_brigands_L3_desc;;Ici dorment et s'entraînent les bandits au milieu de piles d'armes volées.;;;;;;;;;;;;x
+reseau_provincial_L1;Underground trade L1;Commerce parallèle naissant;;;;;;;;;;;;x
+reseau_provincial_L1_desc;;Toute organisation criminelle se doit d'établir un réseau de receleurs et autres contrebandiers.;;;;;;;;;;;;x
+reseau_provincial_L2;Underground trade L2;Commerce parallèle organisé;;;;;;;;;;;;x
+reseau_provincial_L2_desc;;On peut trouver partout dans la province de fort belles marchandises préalablement subtilisées.;;;;;;;;;;;;x
+reseau_provincial_L3;Underground trade L3;Commerce parallèle efficace;;;;;;;;;;;;x
+reseau_provincial_L3_desc;;L'efficacité du commerce souterrain est surprenante : marchandises moins chères que sur le marché et parfois de meilleure qualité, les bourgeois en raffolent ! ;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#FERME CEREALIERE (plaine et terres arables);;;;;;;;;;;;;;;x
+CA_AGRI_cereale_L1;CEREALS : L1;CEREALES : Plaine Défrichée;;;;;;;;;;;;x;
+CA_AGRI_cereale_L1_desc;Ce terrain a été défriché et devrait bientôt pouvoir produire des céréales.;Ce terrain a été défriché et devrait bientôt pouvoir produire des céréales.;;;;;;;;;;;;x;
+CA_AGRI_cereale_L2;CEREALS : Fields;CEREALES : Champs Cultivés;;;;;;;;;;;;x;
+CA_AGRI_cereale_L2_desc;Ce terrain comporte maintenant plusieurs champs cultivés où se succèdent différents assolements triennaux céréaliers aux rythmes des saisons.;Ce terrain comporte maintenant plusieurs champs cultivés où se succèdent différents assolements triennaux céréaliers aux rythmes des saisons.;;;;;;;;;;;;x;
+CA_AGRI_cereale_L3;CEREALS : L3;CEREALES : Exploitation Agricole;;;;;;;;;;;;x;
+CA_AGRI_cereale_L3_desc;Ce qui était naguère un tas de broussailles est maintenant une exploitation agricole où la culture du blé et du froment sont menées de main de maître.;Ce qui était naguère un tas de broussailles est maintenant une exploitation agricole où la culture du blé et du froment sont menées de main de maître.;;;;;;;;;;;;x;
+#VERGER (côteaux);;;;;;;;;;;;;;;x
+CA_AGRI_verger_L1;FRUITS : Small Ochards;FRUITS : Vergers Épars;;;;;;;;;;;;x ;
+CA_AGRI_verger_L2;FRUITS : Bigger Ochards;FRUITS : Grands Vergers;;;;;;;;;;;;x;
+CA_AGRI_verger_L3;FRUITS : Feudal Ochards;FRUITS : Vergers Seigneuriaux;;;;;;;;;;;;x;
+CA_AGRI_verger_L3_desc;Les vergers couvrent à présent une bonne partie des côteaux et les arbres plient sous le poids de leurs fruits abondants.;Les vergers couvrent à présent une bonne partie des côteaux et les arbres plient sous le poids de leurs fruits abondants.;;;;;;;;;;;;x;
+#ELEVAGE ovin (sauf montagne);;;;;;;;;;;;;;;x
+CA_ELEV_ovin_L1a;BETAIL : Pâturages;BETAIL : Pâturages;;;;;;;;;;;;x;
+CA_ELEV_ovin_L1a_desc;Un endroit propice à la consommation de l'herbe, un met de choix pour les ovins sous la houlette des bergers et bergères venant des hameaux alentours.;Un endroit propice à la consommation de l'herbe, un met de choix pour les ovins sous la houlette des bergers et bergères venant des hameaux alentours.;;;;;;;;;;;;x;
+CA_ELEV_ovin_L2a;BETAIL : Enclos à ovins;BETAIL : Enclos à ovins;;;;;;;;;;;;x;
+CA_ELEV_ovin_L2a_desc;Un ensemble d'enclos a été construit de manière à concentrer davantage la production ovine et en faciliter la surveillance.;Un ensemble d'enclos a été construit de manière à concentrer davantage la production ovine et en faciliter la surveillance.;;;;;;;;;;;;x;
+CA_ELEV_ovin_L3a;BETAIL : Bergerie;BETAIL : Bergerie;;;;;;;;;;;;x;
+CA_ELEV_ovin_L3a_desc;La bergerie accueille les ovins pour la nuit et leur apporte protection face aux prédateurs aux longues dents...;La bergerie accueille les ovins pour la nuit et leur apporte protection face aux prédateurs aux longues dents...;;;;;;;;;;;;x;
+#ELEVAGE ovin (alpage, montagne);;;;;;;;;;;;;;;x
+CA_ELEV_ovin_L1b;BETAIL : Alpage;BETAIL : Alpage;;;;;;;;;;;;x;
+CA_ELEV_ovin_L1b_desc;Cette prairie d'altitude est fréquentée pendant toute la belle saison et offre aux ovins une herbe fleurie et savoureuse dont ils raffolent.;Cette prairie d'altitude est fréquentée pendant toute la belle saison et offre aux ovins une herbe fleurie et savoureuse dont ils raffolent.;;;;;;;;;;;;x;
+CA_ELEV_ovin_L2b;BETAIL : Refuge d'alpage;BETAIL : Refuge d'alpage;;;;;;;;;;;;x;
+CA_ELEV_ovin_L2b_desc;Tout juste un modeste abri en bois assorti d'un enclos pour les bêtes, assurant néanmoins de meilleures conditions d'élevage.;Tout juste un modeste abri en bois assorti d'un enclos pour les bêtes, assurant néanmoins de meilleures conditions d'élevage.;;;;;;;;;;;;x;
+CA_ELEV_ovin_L3b;BETAIL : Hameau d'alpage;BETAIL : Hameau d'alpage;;;;;;;;;;;;x;
+CA_ELEV_ovin_L3b_desc;Tout juste quelques cabanes et abris saisonniers accueillant un petit groupe de bergers et leurs troupeaux paissant sur l'ensemble de l'alpage.;Tout juste quelques cabanes et abris saisonniers accueillant un petit groupe de bergers et leurs troupeaux paissant sur l'ensemble de l'alpage.;;;;;;;;;;;;x;
+#BOIS (plaine + foret );;;;;;;;;;;;;;;x
+CA_BOIS_bois_L1;WOOD : Woodcutters' Camp1;BOIS : Site de Coupe;;;;;;;;;;;;x;
+CA_BOIS_bois_L2;WOOD : Woodcutters' Camp2;BOIS : Camp de Bûcherons;;;;;;;;;;;;x;
+CA_BOIS_bois_L3;WOOD : Woodcutters' Camp3;BOIS : Exploitation Forestière;;;;;;;;;;;;x;
+#CHARBON DE BOIS (foret);;;;;;;;;;;;;;;x
+CA_BOIS_charbon_L1;CHARBON DE BOIS : Charbonnière Improvisée;CHARBON DE BOIS : Charbonnière Improvisée;;;;;;;;;;;;x;
+CA_BOIS_charbon_L2;CHARBON DE BOIS : Charbonnière Permanente;CHARBON DE BOIS : Charbonnière Permanente;;;;;;;;;;;;x;
+CA_BOIS_charbon_L3;CHARBON DE BOIS : Charbonnière Seigneuriale;CHARBON DE BOIS : Charbonnière Seigneuriale;;;;;;;;;;;;x;
+#CARRIERE pierre (montagne + côteau);;;;;;;;;;;;;;;x
+CA_CARR_pierre_L1;PIERRE : Carrière sommaire;PIERRE : Carrière sommaire;;;;;;;;;;;;x;
+CA_CARR_pierre_L1_desc;L'exploitation consiste surtout à casser des rochers plus gros dans un éboulis ou un affleurement rocheux d'une colline. On y extrait péniblement roches et remblais qui seront utilisés localement.;L'exploitation consiste surtout à casser des rochers plus gros dans un éboulis ou un affleurement rocheux d'une colline. On y extrait péniblement roches et remblais qui seront utilisés localement.;;;;;;;;;;;;x;
+CA_CARR_pierre_L2;PIERRE : Front de taille;PIERRE : Front de taille;;;;;;;;;;;;x;
+CA_CARR_pierre_L2_desc;L'intensification de l'extraction a formé cette paroi verticale ouverte dans ce flanc de plateau, permettant d'extraire de la pierre en gros bloc qui pourront donner une belle pierre de taille.;L'intensification de l'extraction a formé cette paroi verticale ouverte dans ce flanc de plateau, permettant d'extraire de la pierre en gros bloc qui pourront donner une belle pierre de taille.;;;;;;;;;;;;x;
+CA_CARR_pierre_L3;PIERRE : Grande Carrière;PIERRE : Grande Carrière;;;;;;;;;;;;x;
+CA_CARR_pierre_L3_desc;Ce site carrier fournit l'ensemble de la région en pierre de qualité qui sert notamment à l'édification de fortifications ou contructions telles les églises et cathédrales.;Ce site carrier fournit l'ensemble de la région en pierre de qualité qui sert notamment à l'édification de fortifications ou contructions telles les églises et cathédrales.;;;;;;;;;;;;x;
+#MINE minerai (montagne + côteau);;;;;;;;;;;;;;;x
+CA_MINE_minerai_L1;MINERAI : Excavation Minière;MINERAI : Excavation Minière;;;;;;;;;;;;x;
+CA_MINE_minerai_L1_desc;Une excavation grossière a été forée dans la roche. On y en extrait péniblement du minerai.;Une excavation grossière a été forée dans la roche. On y en extrait péniblement du minerai.;;;;;;;;;;;;x;
+CA_MINE_minerai_L2;MINERAI : Tunnels Miniers;MINERAI : Tunnels Miniers;;;;;;;;;;;;x;
+CA_MINE_minerai_L2_desc;L'excavation s'est agrandie et des galeries partent dans plusieurs directions qui suivent les veines, permettant une production croissante qui pourra être transformée dans une forge.;L'excavation s'est agrandie et des galeries partent dans plusieurs directions qui suivent les veines, permettant une production croissante qui pourra être transformée dans une forge.;;;;;;;;;;;;x;
+CA_MINE_minerai_L3;MINERAI : Grande Mine;MINERAI : Grande Mine;;;;;;;;;;;;x;
+CA_MINE_minerai_L3_desc;Maintenant, une vraie mine soutenue par des étais a été creusée. Les risques d'éboulement sont diminués et les mineurs peuvent travailler plus sereinement. Le minerai extrait en bonnes quantités pourra dès lors fournir le métal nécessaire à la fabrication d'armes et outils.;Maintenant, une vraie mine soutenue par des étais a été creusée. Les risques d'éboulement sont diminués et les mineurs peuvent travailler plus sereinement. Le minerai extrait en bonnes quantités pourra dès lors fournir le métal nécessaire à la fabrication d'armes et outils.;;;;;;;;;;;;x;
+#FISH pêche (côtes);;;;;;;;;;;;;;;x
+CA_FISH_peche_L1;PECHE : Ponton;PECHE : Ponton;;;;;;;;;;;;x;
+CA_FISH_peche_L1_desc;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;;;;;;;;;;;;x;
+CA_FISH_peche_L2;PECHE : Quai;PECHE : Quai;;;;;;;;;;;;x;
+CA_FISH_peche_L2_desc;Le ponton a été transformé en un quai et peut maintenant accueillir une flotille de pêche ramenant suffisamment de poissons tant pour nourrir la population locale qu'alimenter les activités de salage et fumage de la région.;Le ponton a été transformé en un quai et peut maintenant accueillir une flotille de pêche ramenant suffisamment de poissons tant pour nourrir la population locale qu'alimenter les activités de salage et fumage de la région.;;;;;;;;;;;;x;
+CA_FISH_peche_L3;PECHE : Port;PECHE : Port;;;;;;;;;;;;x;
+CA_FISH_peche_L3_desc;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;;;;;;;;;;;;x;
+#FISH pisciculture (terres);;;;;;;;;;;;;;;x
+CA_FISH_pisci_L1;PISCICULTURE : Élevage en Rivière;PISCICULTURE : Élevage en Rivière;Élevage Piscicole en Rivière;;;;;;;;;;;x;
+CA_FISH_pisci_L2;PISCICULTURE : Étang Aménagé;PISCICULTURE : Étang Aménagé;Étang Aménagé;;;;;;;;;;;x;
+#CA_FISH_pisci_L3;PISCICULTURE : Ferme Piscicole;PISCICULTURE : Ferme Piscicole;Ferme Piscicole;;;;;;;;;;;x;
+CA_AGRI_moulin_L1;;;;;;;;;;;;;;x
+CA_AGRI_moulin_L1_desc;;;;;;;;;;;;;;x
+CA_AGRI_moulin_L2;;;;;;;;;;;;;;x
+CA_AGRI_moulin_L2_desc;;;;;;;;;;;;;;x
+CA_AGRI_moulin_L3;;;;;;;;;;;;;;x
+CA_AGRI_moulin_L3_desc;;;;;;;;;;;;;;x
+CA_AGRI_boulangerie_L1;;;;;;;;;;;;;;x
+CA_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
+CA_AGRI_boulangerie_L2;;;;;;;;;;;;;;x
+CA_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
+CA_AGRI_boulangerie_L3;;;;;;;;;;;;;;x
+CA_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
+CA_FISH_fumoir_L1;;;;;;;;;;;;;;x
+CA_FISH_fumoir_L1_desc;;;;;;;;;;;;;;x
+CA_FISH_fumoir_L2;;;;;;;;;;;;;;x
+CA_FISH_fumoir_L2_desc;;;;;;;;;;;;;;x
+CA_FISH_fumoir_L3;;;;;;;;;;;;;;x
+CA_FISH_fumoir_L3_desc;;;;;;;;;;;;;;x
+CA_scierie_L1;;;;;;;;;;;;;;x
+CA_scierie_L1_desc;;;;;;;;;;;;;;x
+CA_scierie_L2;;;;;;;;;;;;;;x
+CA_scierie_L2_desc;;;;;;;;;;;;;;x
+CA_scierie_L3;;;;;;;;;;;;;;x
+CA_scierie_L3_desc;;;;;;;;;;;;;;x
+CA_four_L1;;;;;;;;;;;;;;x
+CA_four_L1_desc;;;;;;;;;;;;;;x
+CA_four_L2;;;;;;;;;;;;;;x
+CA_four_L2_desc;;;;;;;;;;;;;;x
+CA_four_L3;;;;;;;;;;;;;;x
+CA_four_L3_desc;;;;;;;;;;;;;;x
+CA_pierre_taille_L1;;;;;;;;;;;;;;x
+CA_pierre_taille_L1_desc;;;;;;;;;;;;;;x
+CA_pierre_taille_L2;;;;;;;;;;;;;;x
+CA_pierre_taille_L2_desc;;;;;;;;;;;;;;x
+CA_pierre_taille_L3;;;;;;;;;;;;;;x
+CA_pierre_taille_L3_desc;;;;;;;;;;;;;;x
+CA_fonderie_L1;;;;;;;;;;;;;;x
+CA_fonderie_L1_desc;;;;;;;;;;;;;;x
+CA_fonderie_L2;;;;;;;;;;;;;;x
+CA_fonderie_L2_desc;;;;;;;;;;;;;;x
+CA_fonderie_L3;;;;;;;;;;;;;;x
+CA_fonderie_L3_desc;;;;;;;;;;;;;;x
+CA_outilleur_L1;;;;;;;;;;;;;;x
+CA_outilleur_L1_desc;;;;;;;;;;;;;;x
+CA_outilleur_L2;;;;;;;;;;;;;;x
+CA_outilleur_L2_desc;;;;;;;;;;;;;;x
+CA_outilleur_L3;;;;;;;;;;;;;;x
+CA_outilleur_L3_desc;;;;;;;;;;;;;;x
+CA_armurerie_L1;;;;;;;;;;;;;;x
+CA_armurerie_L1_desc;;;;;;;;;;;;;;x
+CA_armurerie_L2;;;;;;;;;;;;;;x
+CA_armurerie_L2_desc;;;;;;;;;;;;;;x
+CA_armurerie_L3;;;;;;;;;;;;;;x
+CA_armurerie_L3_desc;;;;;;;;;;;;;;x
+CA_atelier_L1;;;;;;;;;;;;;;x
+CA_atelier_L1_desc;;;;;;;;;;;;;;x
+CA_atelier_L2;;;;;;;;;;;;;;x
+CA_atelier_L2_desc;;;;;;;;;;;;;;x
+CA_atelier_L3;;;;;;;;;;;;;;x
+CA_atelier_L3_desc;;;;;;;;;;;;;;x
+CA_draperie_L1;;;;;;;;;;;;;;x
+CA_draperie_L1_desc;;;;;;;;;;;;;;x
+CA_draperie_L2;;;;;;;;;;;;;;x
+CA_draperie_L2_desc;;;;;;;;;;;;;;x
+CA_draperie_L3;;;;;;;;;;;;;;x
+CA_draperie_L3_desc;;;;;;;;;;;;;;x
+CA_ELEV_cheval_L1;;;;;;;;;;;;;;x
+CA_ELEV_cheval_L1_desc;;;;;;;;;;;;;;x
+CA_ELEV_cheval_L2;;;;;;;;;;;;;;x
+CA_ELEV_cheval_L2_desc;;;;;;;;;;;;;;x
+CA_ELEV_cheval_L3;;;;;;;;;;;;;;x
+CA_ELEV_cheval_L3_desc;;;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x;
+#;-Villes-;-Villes-;;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x;
+#FERME CEREALIERE (plaine et terres arables);;;;;;;;;;;;;;;x
+CT_AGRI_cereale_L1;CEREALES : Plaine Défrichée;CEREALES : Plaine Défrichée;;;;;;;;;;;;x;
+CT_AGRI_cereale_L1_desc;Ce terrain a été défriché et devrait bientôt pouvoir produire des céréales.;Ce terrain a été défriché et devrait bientôt pouvoir produire des céréales.;;;;;;;;;;;;x;
+CT_AGRI_cereale_L2;CEREALES : Champs Cultivés;CEREALES : Champs Cultivés;;;;;;;;;;;;x;
+CT_AGRI_cereale_L2_desc;Ce terrain comporte maintenant plusieurs champs cultivés où se succèdent les assolements triennaux céréaliers au fil des saisons.;Ce terrain comporte maintenant plusieurs champs cultivés où se succèdent les assolements triennaux céréaliers au fil des saisons.;;;;;;;;;;;;x;
+CT_AGRI_cereale_L3;CEREALES : Exploitation Agricole;CEREALES : Exploitation Agricole;;;;;;;;;;;;x;
+CT_AGRI_cereale_L3_desc;Ce qui était naguère un tas de broussailles est maintenant une exploitation agricole où la culture de la céréale est menée de main de maître.;Ce qui était naguère un tas de broussailles est maintenant une exploitation agricole où la culture de la céréale est menée de main de maître.;;;;;;;;;;;;x;
+#VERGER (côteaux);;;;;;;;;;;;;;;x
+CT_AGRI_verger_L1;FRUITS : Vergers Épars;FRUITS : Vergers Épars;;;;;;;;;;;;x;
+CT_AGRI_verger_L2;FRUITS : Grands Vergers;FRUITS : Grands Vergers;;;;;;;;;;;;x;
+CT_AGRI_verger_L3;FRUITS : Vergers Communaux;FRUITS : Vergers Communaux;;;;;;;;;;;;x;
+#ELEVAGE bovin;;;;;;;;;;;;;;;x
+CT_ELEV_bovin_L1;BETAIL : Pré;BETAIL : Pré;;;;;;;;;;;;x;
+CT_ELEV_bovin_L1_desc;Un pré pour les bovins a été délimité.;Un pré pour les bovins a été délimité.;;;;;;;;;;;;x;
+CT_ELEV_bovin_L2;BETAIL : Enclos à bovins;BETAIL : Enclos à bovins;;;;;;;;;;;;x;
+CT_ELEV_bovin_L2_desc;Sur le pré, un ensemble de barrière formant un enclos a été établi.;Sur le pré, un ensemble de barrière formant un enclos a été établi.;;;;;;;;;;;;x;
+CT_ELEV_bovin_L3;BETAIL : Étable;BETAIL : Étable;;;;;;;;;;;;x;
+CT_ELEV_bovin_L3_desc;Une étable accueillant les bêtes pour la nuit a été batie.;Une étable accueillant les bêtes pour la nuit a été batie.;;;;;;;;;;;;x;
+#BOIS (plaine + foret );;;;;;;;;;;;;;;x
+CT_BOIS_bois_L1;BOIS : Site de Coupe de Bois;BOIS : Site de Coupe de Bois;;;;;;;;;;;;x;
+CT_BOIS_bois_L2;BOIS : Camp de Bûcherons;BOIS : Camp de Bûcherons;;;;;;;;;;;;x;
+CT_BOIS_bois_L3;BOIS : Exploitation Forestière;BOIS : Exploitation Forestière;;;;;;;;;;;;x;
+#CHARBON DE BOIS (foret);;;;;;;;;;;;;;;x
+CT_BOIS_charbon_L1;CHARBON DE BOIS : Charbonnière Improvisée;CHARBON DE BOIS : Charbonnière Improvisée;;;;;;;;;;;;x;
+CT_BOIS_charbon_L2;CHARBON DE BOIS : Charbonnière Permanente;CHARBON DE BOIS : Charbonnière Permanente;;;;;;;;;;;;x;
+CT_BOIS_charbon_L3;CHARBON DE BOIS : Charbonnière Communale;CHARBON DE BOIS : Charbonnière Communale;;;;;;;;;;;;x;
+#CARRIERE pierre (montagne + côteau);;;;;;;;;;;;;;;x
+CT_CARR_pierre_L1;PIERRE : Carrière sommaire;PIERRE : Carrière sommaire;;;;;;;;;;;;x;
+CT_CARR_pierre_L1_desc;L'exploitation consiste surtout à casser des rochers plus gros dans un éboulis ou un affleurement rocheux d'une colline. On y extrait péniblement roches et remblais qui seront utilisés localement.;L'exploitation consiste surtout à casser des rochers plus gros dans un éboulis ou un affleurement rocheux d'une colline. On y extrait péniblement roches et remblais qui seront utilisés localement.;;;;;;;;;;;;x;
+CT_CARR_pierre_L2;PIERRE : Front de taille;PIERRE : Front de taille;Carrière : Front de taille;;;;;;;;;;;;x
+CT_CARR_pierre_L2_desc;L'intensification de l'extraction a formé cette paroi verticale ouverte dans le flanc de plateau, permettant d'extraire de la pierre en gros bloc qui pourront donner ensuite une belle pierre de taille.;L'intensification de l'extraction a formé cette paroi verticale ouverte dans le flanc de plateau, permettant d'extraire de la pierre en gros bloc qui pourront donner ensuite une belle pierre de taille.;;;;;;;;;;;;x;
+CT_CARR_pierre_L3;PIERRE : Grande Carrière;PIERRE : Grande Carrière;;;;;;;;;;;;x;
+CT_CARR_pierre_L3_desc;Ce site carrier fournit l'ensemble de la région en pierre de qualité qui sert notamment à l'édification de fortifications ou contructions telles les églises et cathédrales.;Ce site carrier fournit l'ensemble de la région en pierre de qualité qui sert notamment à l'édification de fortifications ou contructions telles les églises et cathédrales.;;;;;;;;;;;;x;
+#MINE minerai sel(montagne + côteau + désert);;;;;;;;;;;;;;;x
+CT_MINE_sel_L1;SEL : Puits de Saumure;SEL : Puits de Saumure;;;;;;;;;;;;x;
+CT_MINE_sel_L2;SEL : Chaudière;SEL : Chaudière;;;;;;;;;;;;x;
+CT_MINE_sel_L3;SEL : Saline;SEL : Saline;;;;;;;;;;;;x;
+CT_MINE_sel_L4;SEL : Saline Fortifiée;SEL : Saline Fortifiée;;;;;;;;;;;;x;
+CT_MINE_sel_L5;SEL : Grande Saline;SEL : Grande Saline;;;;;;;;;;;;x;
+#MINE minerai or(désert);;;;;;;;;;;;;;;x
+CT_MINE_or_L1;GOLD : improvised pit;OR : Mine sommaire;;;;;;;;;;;;;x
+CT_MINE_or_L2;GOLD : small mine;OR : Petite excavation;;;;;;;;;;;;;x
+CT_MINE_or_L3;GOLD : great mine;OR : Grande mine;;;;;;;;;;;;;x
+#MINE minerai cuivre(désert);;;;;;;;;;;;;;;x
+CT_MINE_cuivre_L1;COPPER : improvised pit;CUIVRE : Mine sommaire;;;;;;;;;;;;;x
+CT_MINE_cuivre_L2;COPPER : small mine;CUIVRE : Petite excavation;;;;;;;;;;;;;x
+CT_MINE_cuivre_L3;COPPER : great mine;CUIVRE : Grande mine;;;;;;;;;;;;;x
+#FISH pêche (côtes);;;;;;;;;;;;;;;x
+CT_FISH_peche_L1;PECHE : Ponton;PECHE : Ponton;;;;;;;;;;;;x;
+CT_FISH_peche_L1_desc;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;;;;;;;;;;;;x;
+CT_FISH_peche_L2;PECHE : Quai;PECHE : Quai;;;;;;;;;;;;x;
+CT_FISH_peche_L2_desc;Le ponton a été transformé en un quai et peut maintenant accueillir une flotille de pêche ramenant suffisamment de poissons tant pour nourrir la population locale qu'alimenter les activités de salage et fumage de la région.;Le ponton a été transformé en un quai et peut maintenant accueillir une flotille de pêche ramenant suffisamment de poissons tant pour nourrir la population locale qu'alimenter les activités de salage et fumage de la région.;;;;;;;;;;;;x;
+CT_FISH_peche_L3;PECHE : Port;PECHE : Port;;;;;;;;;;;;x;
+CT_FISH_peche_L3_desc;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;;;;;;;;;;;;x;
+#VIN (coteaux);;;;;;;;;;;;;;x;
+CT_chai_L1;VIN : Chai Modeste;VIN : Chai Modeste;;;;;;;;;;;;x;
+CT_chai_L2;VIN : Chai Agrandi;VIN : Chai Agrandi;;;;;;;;;;;;x;
+CT_chai_L3;VIN : Grand Chai;VIN : Grand Chai;;;;;;;;;;;;x;
+CT_chai_L4;VIN : Chai Réputé;VIN : Chai Réputé;;;;;;;;;;;;x;
+CT_chai_L5;VIN : Chai de Haute Renommée;VIN : Chai de Haute Renommée;;;;;;;;;;;;x;
+#BIERE;;;;;;;;;;;;;;x;
+CT_brasserie_L1;BIERE : Brasserie Modeste;BIERE : Brasserie Modeste;;;;;;;;;;;;x;
+CT_brasserie_L2;BIERE : Brasserie Agrandie;BIERE : Brasserie Agrandie;;;;;;;;;;;;x;
+CT_brasserie_L3;BIERE : Grande Brasserie;BIERE : Grande Brasserie;;;;;;;;;;;;x;
+CT_brasserie_L4;BIERE : Brasserie Réputée;BIERE : Brasserie Réputée;;;;;;;;;;;;x;
+CT_brasserie_L5;BIERE : Brasserie de Haute Renommée;BIERE : Brasserie de Haute Renommée;;;;;;;;;;;;x;
+#;x;x;;;;;;;;;;;;x
+#;x;DEBUT AJOUT MOUCHI;;;;;;;;;;;;x
+CT_AGRI_moulin_L1;;FARINE : Moulin à aubes;;;;;;;;;;;;x
+CT_AGRI_moulin_L1_desc;;Un modeste moulin à eau placé le long de la rive.;;;;;;;;;;;;x
+CT_AGRI_moulin_L2;;FARINE : Moulin à noria;;;;;;;;;;;;x
+CT_AGRI_moulin_L2_desc;;Le moulin à eau est ici doté d'une immense roue appelée noria, bien plus efficace.;;;;;;;;;;;;x
+CT_AGRI_moulin_L3;;FARINE : Grand moulin citadin;;;;;;;;;;;;x
+CT_AGRI_moulin_L3_desc;;L'installation au bord la rivière est ici alimentée par un petit canal dédié qui assure un débit régulier et ainsi une bien meilleure production.;;;;;;;;;;;;x
+CT_AGRI_moulin_L4;;FARINE : Grands moulins urbains;;;;;;;;;;;;x
+CT_AGRI_moulin_L4_desc;;Les installations ici sont de taille et produisent une bonne farine en quantité.;;;;;;;;;;;;x
+CT_AGRI_moulin_L5;;FARINE : Grands moulins;;;;;;;;;;;;x
+CT_AGRI_moulin_L5_desc;;Le batiments massif qui accueille les moulins est alimenté par un canal dédié et équipé de grandes roues. La farine produite est très fine et très blanche.\n Elle fait le bonheur des maîtres boulangers et la fierté de la cité.;;;;;;;;;;;;x
+CT_AGRI_boulangerie_L1;;;;;;;;;;;;;;x
+CT_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
+CT_AGRI_boulangerie_L2;;;;;;;;;;;;;;x
+CT_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
+CT_AGRI_boulangerie_L3;;;;;;;;;;;;;;x
+CT_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
+CT_ELEV_boucherie_L1;;;;;;;;;;;;;;x
+CT_ELEV_boucherie_L1_desc;;;;;;;;;;;;;;x
+CT_ELEV_boucherie_L2;;;;;;;;;;;;;;x
+CT_ELEV_boucherie_L2_desc;;;;;;;;;;;;;;x
+CT_ELEV_boucherie_L3;;;;;;;;;;;;;;x
+CT_ELEV_boucherie_L3_desc;;;;;;;;;;;;;;x
+CT_FISH_fumoir_L1;;;;;;;;;;;;;;x
+CT_FISH_fumoir_L1_desc;;;;;;;;;;;;;;x
+CT_FISH_fumoir_L2;;;;;;;;;;;;;;x
+CT_FISH_fumoir_L2_desc;;;;;;;;;;;;;;x
+CT_FISH_fumoir_L3;;;;;;;;;;;;;;x
+CT_FISH_fumoir_L3_desc;;;;;;;;;;;;;;x
+CT_tannerie_L1;;;;;;;;;;;;;;x
+CT_tannerie_L1_desc;;;;;;;;;;;;;;x
+CT_tannerie_L2;;;;;;;;;;;;;;x
+CT_tannerie_L2_desc;;;;;;;;;;;;;;x
+CT_tannerie_L3;;;;;;;;;;;;;;x
+CT_tannerie_L3_desc;;;;;;;;;;;;;;x
+CT_tannerie_L4;;;;;;;;;;;;;;x
+CT_tannerie_L4_desc;;;;;;;;;;;;;;x
+CT_tannerie_L5;;;;;;;;;;;;;;x
+CT_tannerie_L5_desc;;;;;;;;;;;;;;x
+CT_scierie_L1;;;;;;;;;;;;;;;x
+CT_scierie_L1_desc;;;;;;;;;;;;;;x
+CT_scierie_L2;;;;;;;;;;;;;;x
+CT_scierie_L2_desc;;;;;;;;;;;;;;x
+CT_scierie_L3;;;;;;;;;;;;;;x
+CT_scierie_L3_desc;;;;;;;;;;;;;;x
+CT_scierie_L4;;;;;;;;;;;;;;x
+CT_scierie_L4_desc;;;;;;;;;;;;;;x
+CT_scierie_L5;;;;;;;;;;;;;;x
+CT_scierie_L5_desc;;;;;;;;;;;;;;x
+CT_four_L1;;;;;;;;;;;;;;x
+CT_four_L1_desc;;;;;;;;;;;;;;x
+CT_four_L2;;;;;;;;;;;;;;x
+CT_four_L2_desc;;;;;;;;;;;;;;x
+CT_four_L3;;;;;;;;;;;;;;x
+CT_four_L3_desc;;;;;;;;;;;;;;x
+CT_four_L4;;;;;;;;;;;;;;x
+CT_four_L4_desc;;;;;;;;;;;;;;x
+CT_four_L5;;;;;;;;;;;;;;x
+CT_four_L5_desc;;;;;;;;;;;;;;x
+CT_pierre_taille_L1;;;;;;;;;;;;;;x
+CT_pierre_taille_L1_desc;;;;;;;;;;;;;;x
+CT_pierre_taille_L2;;;;;;;;;;;;;;x
+CT_pierre_taille_L2_desc;;;;;;;;;;;;;;x
+CT_pierre_taille_L3;;;;;;;;;;;;;;x
+CT_pierre_taille_L3_desc;;;;;;;;;;;;;;x
+CT_pierre_taille_L4;;;;;;;;;;;;;;x
+CT_pierre_taille_L4_desc;;;;;;;;;;;;;;x
+CT_pierre_taille_L5;;;;;;;;;;;;;;x
+CT_pierre_taille_L5_desc;;;;;;;;;;;;;;x
+CT_sel_raffine_L1;;;;;;;;;;;;;;x
+CT_sel_raffine_L1_desc;;;;;;;;;;;;;;x
+CT_sel_raffine_L2;;;;;;;;;;;;;;x
+CT_sel_raffine_L2_desc;;;;;;;;;;;;;;x
+CT_sel_raffine_L3;;;;;;;;;;;;;;x
+CT_sel_raffine_L3_desc;;;;;;;;;;;;;;x
+CT_sel_raffine_L4;;;;;;;;;;;;;;x
+CT_sel_raffine_L4_desc;;;;;;;;;;;;;;x
+CT_sel_raffine_L5;;;;;;;;;;;;;;x
+CT_sel_raffine_L5_desc;;;;;;;;;;;;;;x
+CT_saline_L1;;;;;;;;;;;;;;x
+CT_saline_L1_desc;;;;;;;;;;;;;;x
+CT_saline_L2;;;;;;;;;;;;;;x
+CT_saline_L2_desc;;;;;;;;;;;;;;x
+CT_saline_L3;;;;;;;;;;;;;;x
+CT_saline_L3_desc;;;;;;;;;;;;;;x
+CT_saline_L4;;;;;;;;;;;;;;x
+CT_saline_L4_desc;;;;;;;;;;;;;;x
+CT_saline_L5;;;;;;;;;;;;;;x
+CT_saline_L5_desc;;;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#;x;FIN AJOUT MOUCHI;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x;
+#;-Temples-;-Temples-;;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x;
+#FERME CEREALIERE (terres arables);;;;;;;;;;;;;;;x
+TP_AGRI_cereale_L1;CEREALES : Plaine Défrichée;CEREALES : Plaine Défrichée;;;;;;;;;;;;x;
+TP_AGRI_cereale_L1_desc;Ce terrain a été défriché et devrait bientôt pouvoir produire des céréales.;Ce terrain a été défriché et devrait bientôt pouvoir produire des céréales.;;;;;;;;;;;;x;
+TP_AGRI_cereale_L2;CEREALES : Champs Cultivés;CEREALES : Champs Cultivés;;;;;;;;;;;x;;
+TP_AGRI_cereale_L2_desc;Ce terrain comporte maintenant plusieurs champs cultivés où se succèdent les assolements triennaux céréaliers au fil des saisons.;Ce terrain comporte maintenant plusieurs champs cultivés où se succèdent les assolements triennaux céréaliers au fil des saisons.;;;;;;;;;;;;x;
+TP_AGRI_cereale_L3;CEREALES : Exploitation Agricole;CEREALES : Exploitation Agricole;;;;;;;;;;;;x;
+TP_AGRI_cereale_L3_desc;Ce qui était naguère un tas de broussailles est maintenant une exploitation agricole où la culture de la céréale est menée de main de maître.;Ce qui était naguère un tas de broussailles est maintenant une exploitation agricole où la culture de la céréale est menée de main de maître.;;;;;;;;;;;;x;
+#FERME MARAICHERE (plaine);;;;;;;;;;;;;;;x
+TP_AGRI_maraichage_L1;MARAICHÂGE : Potagers;MARAICHÂGE : Potagers;;;;;;;;;;;;x;
+TP_AGRI_maraichage_L2;MARAICHÂGE : Ferme Maraîchère;MARAICHÂGE : Ferme Maraîchère;;;;;;;;;;;;x;
+TP_AGRI_maraichage_L3;MARAICHÂGE : Exploitation Maraîchère;MARAICHÂGE : Exploitation Maraîchère;;;;;;;;;;;;x;
+#VIGNOBLE (côteau);;;;;;;;;;;;;;;x
+TP_AGRI_vigne_L1;VIGNE : Parcelles;VIGNE : Parcelles;;;;;;;;;;;;x;
+TP_AGRI_vigne_L2;VIGNE : Petit Vignoble;VIGNE : Petit Vignoble;;;;;;;;;;;;x;
+TP_AGRI_vigne_L3;VIGNE : Grand Vignoble;VIGNE : Grand Vignoble;;;;;;;;;;;;x;
+#ELEVAGE ovin;;;;;;;;;;;;;;;x
+TP_ELEV_ovin_L1;BETAIL : Pâturages;BETAIL : Pâturages;;;;;;;;;;;;x;
+TP_ELEV_ovin_L1_desc;Un endroit propice à la consommation de l'herbe, un met de choix pour les ovins sous la houlette des bergers et bergères venant des alentours.;Un endroit propice à la consommation de l'herbe, un met de choix pour les ovins sous la houlette des bergers et bergères venant des alentours.;;;;;;;;;;;;x;
+TP_ELEV_ovin_L2;BETAIL : Enclos à Brebis;BETAIL : Enclos à Brebis;;;;;;;;;;;;x;
+TP_ELEV_ovin_L2_desc;Un ensemble d'enclos a été construit de manière à concentrer davantage la production et en faciliter la surveillance.;Un ensemble d'enclos a été construit de manière à concentrer davantage la production et en faciliter la surveillance.;;;;;;;;;;;;x;
+TP_ELEV_ovin_L3;BETAIL : Bergerie;BETAIL : Bergerie;;;;;;;;;;;;x;
+TP_ELEV_ovin_L3_desc;La bergerie accueillent les ovins pour la nuit et permet la fabrication de fromages.;La bergerie accueillent les ovins pour la nuit et permet la fabrication de fromages.;;;;;;;;;;;;x;
+#CHARBON DE BOIS (foret);;;;;;;;;;;;;;;x
+TP_BOIS_charbon_L1;CHARBON DE BOIS : Charbonnière Improvisée;CHARBON DE BOIS : Charbonnière Improvisée;;;;;;;;;;;;x;
+TP_BOIS_charbon_L2;CHARBON DE BOIS : Charbonnière Permanente;CHARBON DE BOIS : Charbonnière Permanente;;;;;;;;;;;;x;
+TP_BOIS_charbon_L3;CHARBON DE BOIS : Charbonnière Organisée;CHARBON DE BOIS : Charbonnière Organisée;;;;;;;;;;;;x;
+#FISH pisciculture (terres);;;;;;;;;;;;;;;x
+TP_FISH_pisci_L1;FISH FARMING : River fish farming;PISCICULTURE : Élevage en Rivière;;;;;;;;;;;;x;
+TP_FISH_pisci_L2;FISH FARMING : Pond fish farming;PISCICULTURE : Étang Aménagé;;;;;;;;;;;x;;
+TP_FISH_pisci_L3;FISH FARMING : Fish farming installation;PISCICULTURE : Ferme Piscicole;;;;;;;;;;;;x;
+#VIN;;;;;;;;;;;;;;;x
+TP_chai_L1;VIN : Chai Modeste;VIN : Chai Modeste;;;;;;;;;;;;x;
+TP_chai_L2;VIN : Chai Agrandi;VIN : Chai Agrandi;;;;;;;;;;;;x;
+TP_chai_L3;VIN : Grand Chai;VIN : Grand Chai;;;;;;;;;;;;x;
+TP_chai_L4;VIN : Chai Réputé;VIN : Chai Réputé;;;;;;;;;;;;x;
+TP_chai_L5;VIN : Chai de Haute Renommée;VIN : Chai de Haute Renommée;;;;;;;;;;;;x;
+#BIERE;;;;;;;;;;;;;;x;
+TP_brasserie_L1;BIERE : Brasserie Modeste;BIERE : Brasserie Modeste;;;;;;;;;;;;x;
+TP_brasserie_L2;BIERE : Brasserie Agrandie;BIERE : Brasserie Agrandie;;;;;;;;;;;;x;
+TP_brasserie_L3;BIERE : Grande Brasserie;BIERE : Grande Brasserie;;;;;;;;;;;;x;
+TP_brasserie_L4;BIERE : Brasserie Réputée;BIERE : Brasserie Réputée;;;;;;;;;;;;x;
+TP_brasserie_L5;BIERE : Brasserie de Haute Renommée;BIERE : Brasserie de Haute Renommée;;;;;;;;;;;;x;
+#CIDRE;;;;;;;;;;;;;;;x
+TP_presse_L1;CIDRE : Pressoir;CIDRE : Pressoir;;;;;;;;;;;;x;
+TP_presse_L2;CIDRE : Grande Presse;CIDRE : Grande Presse;;;;;;;;;;;;x;
+TP_presse_L3;CIDRE : Cidrerie;CIDRE : Cidrerie;;;;;;;;;;;;x;
+#PEAUX;;;;;;;;;;;;;;;x
+CT_COMM_peaux_L1;PEAUX : Atelier du Pelletier;PEAUX : Atelier du Pelletier;;;;;;;;;;;;x;
+CT_COMM_peaux_L2;PEAUX : Petite Echoppe;PEAUX : Petite Echoppe;;;;;;;;;;;;x;
+CT_COMM_peaux_L3;PEAUX : Echoppe Renommée;PEAUX : Echoppe Renommée;;;;;;;;;;;;x;
+#JOYAUX;;;;;;;;;;;;;;;x
+CT_COMM_joyaux_L1;JOYAUX : Atelier;JOYAUX : Atelier;;;;;;;;;;;;x;
+CT_COMM_joyaux_L2;JOYAUX : Petite Echoppe;JOYAUX : Petite Echoppe;;;;;;;;;;;;x;
+CT_COMM_joyaux_L3;JOYAUX : Echoppe Renommée;JOYAUX : Echoppe Renommée;;;;;;;;;;;;x;
+#EPICES;;;;;;;;;;;;;;;x
+CT_COMM_epices_L1;EPICES : Petit Etal;EPICES : Petit Etal;;;;;;;;;;;;x;
+CT_COMM_epices_L2;EPICES : Boutique;EPICES : Boutique;;;;;;;;;;;;x;
+CT_COMM_epices_L3;EPICES : Marchand;EPICES : Marchand;;;;;;;;;;;;x;
+#;x;x;;;;;;;;;;;;x
+#;x;DEBUT AJOUT MOUCHI;;;;;;;;;;;;x
+TP_AGRI_moulin_L1;FLOUR: Wooden windmill;FARINE : Petit Moulin en bois;;;;;;;;;;;;x
+TP_AGRI_moulin_L1_desc;;;;;;;;;;;;;;x
+TP_AGRI_moulin_L2;FLOUR: Stone windmills;FARINE : Moulin à vent en pierre;;;;;;;;;;;;x
+TP_AGRI_moulin_L2_desc;;;;;;;;;;;;;;x
+TP_AGRI_moulin_L3;FLOUR: Great windmills;FARINE : Grands Moulins à vent;;;;;;;;;;;;x
+TP_AGRI_moulin_L3_desc;;;;;;;;;;;;;;x
+TP_AGRI_boulangerie_L1;;;;;;;;;;;;;;x
+TP_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
+TP_AGRI_boulangerie_L2;;;;;;;;;;;;;;x
+TP_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
+TP_AGRI_boulangerie_L3;;;;;;;;;;;;;;x
+TP_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
+TP_FISH_fumoir_L1;;;;;;;;;;;;;;x
+TP_FISH_fumoir_L1_desc;;;;;;;;;;;;;;x
+TP_FISH_fumoir_L2;;;;;;;;;;;;;;x
+TP_FISH_fumoir_L2_desc;;;;;;;;;;;;;;x
+TP_FISH_fumoir_L3;;;;;;;;;;;;;;x
+TP_FISH_fumoir_L3_desc;;;;;;;;;;;;;;x
+TP_four_L1;;;;;;;;;;;;;;x
+TP_four_L1_desc;;;;;;;;;;;;;;x
+TP_four_L2;;;;;;;;;;;;;;x
+TP_four_L2_desc;;;;;;;;;;;;;;x
+TP_four_L3;;;;;;;;;;;;;;x
+TP_four_L3_desc;;;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#;x;FIN AJOUT MOUCHI;;;;;;;;;;;;x
+#NIVEAU COMMERCIAL;;;;;;;;;;;;;;x;
+#COMPTOIR_L1;COMMERCIAL PLACE;PLACE COMMERCIALE;;;;;;;;;;;;;x
+#COMPTOIR_L1_desc;Cette ville est reliée à un itinéraire commmercial, qu'il s'agisse d'un comptoir patricien ou d'une route terrestre ou fluviale. Cette situation privilégiée permet un meilleur développement de nos infrastructures commerciales.;Cette ville est reliée à un itinéraire commmercial, qu'il s'agisse d'un comptoir patricien ou d'une route terrestre ou fluviale. Cette situation privilégiée permet un meilleur développement de nos infrastructures commerciales.;;;;;;;;;;;;;x
+#COMPTOIR_L2;COMMERCIAL NODE;NOEUD DE COMMERCE;;;;;;;;;;;;;x
+#COMPTOIR_L2_desc;Cette cité est située au croisement de deux itinéraires commerciaux. Il peut s'agir de comptoirs patriciens ou de routes terrestres ou fluviales. Cette situation privilégiée permet un meilleur développement de nos infrastructures commerciales.;Cette cité est située au croisement de deux itinéraires commerciaux. Il peut s'agir de comptoirs patriciens ou de routes terrestres ou fluviales. Cette situation privilégiée permet un meilleur développement de nos infrastructures commerciales.;;;;;;;;;;;;;x
+#COMPTOIR_L3;COMMERCIAL CENTRE;CENTRE DE COMMERCE;;;;;;;;;;;;;x
+#COMPTOIR_L3_desc;Cette cité se trouve au carrefour de pas moins de trois routes commerciales. Il peut s'agir de comptoirs patriciens ou de routes terrestres ou fluviales. Cette situation privilégiée permet un meilleur développement de nos infrastructures commerciales.;Cette cité se trouve au carrefour de pas moins de trois routes commerciales. Il peut s'agir de comptoirs patriciens ou de routes terrestres ou fluviales. Cette situation privilégiée permet un meilleur développement de nos infrastructures commerciales.;;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x;
+ca_town_1;Hamlet;Hameau;;;;;;;;;;;;x
+ca_town_1_desc;Requires §Y10§! buildings.;Requiert §Y10§! bâtiments au total.;;;;;;;;;;;;x
+ca_town_2;Village;Village;;;;;;;;;;;;x
+ca_town_2_desc;Requires §Y15§! buildings.;Requiert §Y15§! bâtiments au total.;;;;;;;;;;;;x
+ca_town_3;Bourg;Bourg;;;;;;;;;;;;x
+ca_town_3_desc;Requires §Y20§! buildings.;Requiert §Y20§! bâtiments au total.;;;;;;;;;;;;x
+ca_town_4;Town;Ville;;;;;;;;;;;;x
+ca_town_4_desc;Requires §Y25§! buildings.;Requiert §Y25§! bâtiments au total.;;;;;;;;;;;;x
+ca_town_5;City;Cité;;;;;;;;;;;;x
+ca_town_5_desc;Requires §Y35§! buildings.;Requiert §Y35§! bâtiments au total;;;;;;;;;;;;x
+CT_town_1;Hamlet;Hameau;;;;;;;;;;;;x
+CT_town_1_desc;Requires §Y10§! buildings.;Requiert §Y10§! bâtiments au total.;;;;;;;;;;;;x
+CT_town_2;Village;Village;;;;;;;;;;;;x
+CT_town_2_desc;Requires §Y15§! buildings.;Requiert §Y15§! bâtiments au total.;;;;;;;;;;;;x
+CT_town_3;Bourg;Bourg;;;;;;;;;;;;x
+CT_town_3_desc;Requires §Y20§! buildings.;Requiert §Y20§! bâtiments au total.;;;;;;;;;;;;x
+CT_town_4;Town;Ville;;;;;;;;;;;;x
+CT_town_4_desc;Requires §Y25§! buildings.;Requiert §Y25§! bâtiments au total.;;;;;;;;;;;;x
+CT_town_5;City;Cité;;;;;;;;;;;;x
+ct_town_5_desc;Requires §Y30§! buildings.;Requiert §Y30§! bâtiments au total;;;;;;;;;;;;x
+tp_town_1;Hamlet;Hameau;;;;;;;;;;;;x
+tp_town_1_desc;Requires §Y12§! buildings.;Requiert §Y12§! bâtiments au total.;;;;;;;;;;;;x
+tp_town_2;Village;Village;;;;;;;;;;;;x
+tp_town_2_desc;Requires §Y17§! buildings.;Requiert §Y17§! bâtiments au total.;;;;;;;;;;;;x
+tp_town_3;Bourg;Bourg;;;;;;;;;;;;x
+tp_town_3_desc;Requires §Y22§! buildings.;Requiert §Y22§! bâtiments au total.;;;;;;;;;;;;x
+tp_town_4;Town;Ville;;;;;;;;;;;;x
+tp_town_4_desc;Requires §Y26§! buildings.;Requiert §Y26§! bâtiments au total.;;;;;;;;;;;;x
+tp_town_5;City;Cité;;;;;;;;;;;;x
+tp_town_5_desc;Requires §Y30§! buildings.;Requiert §Y30§! bâtiments au total;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+ca_cathedrale_01;Cathedral, Building site overture;Cathédrale, Ouverture du chantier;;;;;;;;;;;;x
+cathedrale_01_desc;When constructing a cathedral one must make decisions;Pour construire la cathédrale il faut en prendre la §Ydécision§!;;;;;;;;;;;;x
+ca_cathedrale_02;Cathedral, Foundations;Cathédrale, Fondations;;;;;;;;;;;;x
+ca_cathedrale_03;Proto-Cathedral;Proto-Cathédrale;;;;;;;;;;;;x
+ca_cathedrale_04;Cathedral, Portal;Cathédrale, Portail;;;;;;;;;;;;x
+ca_cathedrale_05;Cathedral, Magnificent Nave;Cathédrale, Nef Magnifique;;;;;;;;;;;;x
+ca_cathedrale_06;Cathedral, Transept;Cathédrale, Transept;;;;;;;;;;;;x
+ca_cathedrale_07;Cathedral, Northern Tower;Cathédrale, Tour Nord;;;;;;;;;;;;x
+ca_cathedrale_08;Cathedral, Southern Tower;Cathédrale, Tour du Midi;;;;;;;;;;;;x
+ca_cathedrale_09;Cathedral, Rose Window;Cathédrale, Grande Rosace;;;;;;;;;;;;x
+ca_cathedrale_10;Cathedral, Feudal Chapel;Cathédrale, Chapelle Seigneuriale;;;;;;;;;;;;x
+ca_cathedrale_11;Cathedral, Celestial Spire;Cathédrale, Flèche Céleste;;;;;;;;;;;;x
+ca_cathedrale_12;Cathedral;Cathédrale;;;;;;;;;;;;x
+ca_cathedrale_12_desc;;Cette cathédrale est enfin parachevée et fait rayonner la toute puissance divine sur les terres environnantes et par la même occasion procure au seigneur local la gloire et le fruit de la taxation du détenteur d'un tel édifice où affluent pélerins et pécheurs en quête de salut.;;;;;;;;;;;;x
+ca_loge;;Loge;;;;;;;;;;;;x
+loge_desc;;La loge permet aux ouvriers de travailler plus efficacement l'hiver.\nElle permet également de former les ouvriers.;;;;;;;;;;;;x
+ca_hotel_pelerins;;Auberge des pélerins;;;;;;;;;;;;x
+hotel_pelerins_desc;;L'auberge permet d'accueillir davantage de pélerins;;;;;;;;;;;;x
+ca_guilde_sculpteur;;Guilde de sculpteurs;;;;;;;;;;;;x
+guilde_sculpteur_desc;;La guilde de sculpteurs est une véritable organisation de sculpteurs.\nElle permet de gérer une activité rentable au délà de la construction de monuments.;;;;;;;;;;;;x
+ca_guilde_fresquiste;;Guilde de fresquistes;;;;;;;;;;;;x
+guilde_fresquiste_desc;;La guilde de fresquistes est une véritable organisation de fresquistes.\nElle permet de gérer une activité rentable au délà de la construction de monuments.;;;;;;;;;;;;x
+ca_guilde_verrier;;Guilde de verriers;;;;;;;;;;;;x
+guilde_verrier_desc;;La guilde de verriers est une véritable organisation de verriers.\nElle permet de gérer une activité rentable au délà de la construction de monuments.;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+ct_cathedrale_01;Cathedral, Building site overture;Cathédrale, Ouverture du chantier;;;;;;;;;;;;x
+ct_cathedrale_02;Cathedral, Fundations;Cathédrale, Fondations;;;;;;;;;;;;x
+ct_cathedrale_03;Proto-Cathedral;Proto-Cathédrale;;;;;;;;;;;;x
+ct_cathedrale_04;Cathedral, Portal;Cathédrale, Portail;;;;;;;;;;;;x
+ct_cathedrale_05;Cathedral, Magnificent Nave;Cathédrale, Nef Magnifique;;;;;;;;;;;;x
+ct_cathedrale_06;Cathedral, Transept;Cathédrale, Transept;;;;;;;;;;;;x
+ct_cathedrale_07;Cathedral, Northern Tower;Cathédrale, Tour Nord;;;;;;;;;;;;x
+ct_cathedrale_08;Cathedral, Southern Tower;Cathédrale, Tour du Midi;;;;;;;;;;;;x
+ct_cathedrale_09;Cathedral, Rose Window;Cathédrale, Grande Rosace;;;;;;;;;;;;x
+ct_cathedrale_10;Cathedral, Chime;Cathédrale, Carillon;;;;;;;;;;;;x
+ct_cathedrale_11;Cathedral, Celestial Spire;Cathédrale, Flèche Céleste;;;;;;;;;;;;x
+ct_cathedrale_12;Cathedral;Cathédrale;;;;;;;;;;;;x
+ct_cathedrale_12_desc;This cathedral is finally completed and radiates divine omnipotence on the surrounding land also providing the local lord glory giving reason to the lords taxing in form of a building where pilgrims flock and sinners seek for salvation.;Cette cathédrale est enfin parachevée et fait rayonner la toute puissance divine sur les terres environnantes et par la même occasion procure au seigneur local la gloire et le fruit de la taxation du détenteur d'un tel édifice où affluent pélerins et pécheurs en quête de salut.;;;;;;;;;;;;x
+ct_loge;;Loge;;;;;;;;;;;;x
+ct_hotel_pelerins;;Auberge des pélerins;;;;;;;;;;;;x
+ct_guilde_sculpteur;;Guilde de sculpteurs;;;;;;;;;;;;x
+ct_guilde_fresquiste;;Guilde de fresquistes;;;;;;;;;;;;x
+ct_guilde_verrier;;Guilde de verriers;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+tp_cathedrale_01;Cathedral, Building site overture;Cathédrale, Ouverture du chantier;;;;;;;;;;;;x
+tp_cathedrale_02;Cathedral, Foundations;Cathédrale, Fondations;;;;;;;;;;;;x
+tp_cathedrale_03;Proto-Cathedral;Proto-Cathédrale;;;;;;;;;;;;x
+tp_cathedrale_04;Cathedral, Portal;Cathédrale, Portail;;;;;;;;;;;;x
+tp_cathedrale_05;Cathedral, Magnificent Nave;Cathédrale, Nef Magnifique;;;;;;;;;;;;x
+tp_cathedrale_06;Cathedral, Transept;Cathédrale, Transept;;;;;;;;;;;;x
+tp_cathedrale_07;Cathedral, Northern Tower;Cathédrale, Tour Nord;;;;;;;;;;;;x
+tp_cathedrale_08;Cathedral, Southern Tower;Cathédrale, Tour du Midi;;;;;;;;;;;;x
+tp_cathedrale_09;Cathedral, Rose Window;Cathédrale, Grande Rosace;;;;;;;;;;;;x
+tp_cathedrale_10;Cathedral, Most Holy Chapel;Cathédrale, Très Sainte Chapelle;;;;;;;;;;;x;
+tp_cathedrale_11;Cathedral, Celestial Spire;Cathédrale, Flèche Céleste;;;;;;;;;;;;x
+tp_cathedrale_12;Cathedral;Cathédrale;;;;;;;;;;;;x
+tp_cathedrale_12_desc;This cathedral is finally completed and radiates divine omnipotence on the surrounding land also providing the local lord glory giving reason to the lords taxing in form of a building where pilgrims flock and sinners seek for salvation.;Cette cathédrale est enfin parachevée et fait rayonner la toute puissance divine sur les terres environnantes et par la même occasion procure au seigneur local la gloire et le fruit de la taxation du détenteur d'un tel édifice où affluent pélerins et pécheurs en quête de salut.;;;;;;;;;;;;x
+tp_loge;;Loge;;;;;;;;;;;;x
+tp_hotel_pelerins;;Auberge des pélerins;;;;;;;;;;;;x
+tp_guilde_sculpteur;;Guilde de sculpteurs;;;;;;;;;;;;x
+tp_guilde_fresquiste;;Guilde de fresquistes;;;;;;;;;;;;x
+tp_guilde_verrier;;Guilde de verriers;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+FORT;CITADEL;CITADELLE ;;;;;;;;;;;;x
+FORT_desc;CITADEL;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
+BOURGFEODAL;FEUDAL VILLAGE;BOURG FÉODAL ;;;;;;;;;;;;x
+BOURGFEODAL_muslim;FORTIFIED VILLAGE;BOURG FORTIFIÉ;;;;;;;;;;;;x
+BOURGFEODAL_zoroastrian_group;FORTIFIED VILLAGE;BOURG FORTIFIÉ ;;;;;;;;;;;;x
+BOURGFEODAL_pagan_group;PEASANT VILLAGE;COMMUNAUTÉ PAYSANNE ;;;;;;;;;;;;x
+BOURGFEODAL_desc;FEUDAL VILLAGE;Le Bourg Féodal est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+CITADELLE;FORTIFIED CITY;CITE FORTIFIEE ;;;;;;;;;;;;x
+CITADELLE_muslim;FAITH BASTION;BASTION DE LA FOI ;;;;;;;;;;;;x
+CITADELLE_zoroastrian_group;FAITH BASTION;FORTERESSE ;;;;;;;;;;;;x
+CITADELLE_pagan_group;FORTIFIED PLACE;PLACE FORTE ;;;;;;;;;;;;x
+CITADELLE_desc;FORTIFIED CITY;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
+CITE_L1;SMALL CITY;BOURG COMMUNAL ;;;;;;;;;;;;x
+CITE_L1_muslim;URBAN VILLAGE;BOURG URBAIN ;;;;;;;;;;;;x
+CITE_L1_zoroastrian_group;COMMUNAL VILLAGE;BOURG URBAIN ;;;;;;;;;;;;x
+CITE_L1_pagan_group;VILLAGE;VILLAGE ;;;;;;;;;;;;x
+CITE_L1_desc;SMALL CITY;Cité mineure, relais de votre administration, elle abrite un centre de commerce et d'artisanat en plus des sources de revenus agricoles de la campagne avoisinante.;;;;;;;;;;x
+CITE_L2;SMALL CITY;PETITE CITÉ ;;;;;;;;;;;;x
+CITE_L2_muslim;SMALL CITY;PETITE CITÉ ;;;;;;;;;;;;x
+CITE_L2_zoroastrian_group;SMALL CITY;PETITE CITÉ ;;;;;;;;;;;;x
+CITE_L2_pagan_group;CITY;CITÉ ;;;;;;;;;;;;x
+CITE_L2_desc;CITY;Une prometteuse cité qui commence à prendre de l'importance au niveau économique et démographique. Une bonne source de taxes en somme ! ;;;;;;;;;;x
+CITE_L3;GREAT CITY;GRANDE CITÉ ;;;;;;;;;;;;x
+CITE_L3_desc;GREAT CITY;Une grande cité, riche et bien peuplée : une mine d'or mais bien gardée ! ;;;;;;;;;;x
+VOC_INDUSTRIELLE;Production and Craftmanship;Production et artisanat;;;;;;;;;;;;x
+VOC_INDUSTRIELLE_DESC;Production and Craftmanship;Cette cité s'est spécialisée dans l'extration et la production de matières premières ainsi que dans leur transformation. Elle en attire de bons revenus. ;;;;;;;;;;;;x
+VOC_COMMERCIALE;Trade and Tolls;Commerce et péages;;;;;;;;;;;;x
+VOC_COMMERCIALE_DESC;Trade and Tolls;Cette cité s'est spécilaisée dans les activités de commerce et retire des bénéfices par tous les moyens, marchés, foires, péages entre autres. ;;;;;;;;;;;;x
+MONASTERE;MONASTERY;MONASTÈRE ;;;;;;;;;;;;x
+MONASTERE_desc;MONASTERY;"Travail et Priére" : tel est le crédo de la vie monastique. Souvent isolés, les institutions monastiques sont les conservatoires du savoir et source d'éducation. Vous pouvez compter sur ces communautés pour leurs rôles dans le défrichement de terres nouvelles et également soigner les maux de tous.;;;;;;;;;;x
+CITEEPISCOPALE;EPISCOPAL CITY;CITÉ ÉPISCOPALE ;;;;;;;;;;;;x
+CITEEPISCOPALE_muslim;RELIGIOUS CENTRE;CENTRE RELIGIEUX ;;;;;;;;;;;;x
+CITEEPISCOPALE_zoroastrian_group;RELIGIOUS CENTRE;CENTRE RELIGIEUX ;;;;;;;;;;;;x
+CITEEPISCOPALE_pagan_group;RELIGIOUS CENTRE;CENTRE RELIGIEUX ;;;;;;;;;;;;x
+CITEEPISCOPALE_desc;EPISCOPAL CITY;L'influence de l'évêque a érigé ce centre épiscopal en une fière cité pouvant tout à fait rivaliser en puissance et richesse avec la plupart des villes et châteaux de la région.;;;;;;;;;;x
+COMMANDERIE;COMMANDRY;COMMANDERIE ;;;;;;;;;;;;x
+COMMANDERIE_desc;COMMANDRY;COMMANDERIE ;;;;;;;;;;;;x
+REGLE_DE_1;Regula Benedicti;Regula Benedicti;;;;;;;;;;;;x
+REGLE_DE_1_desc;Regula Benedicti;La Règle de saint Benoît est une règle monastique écrite par Benoît de Nursie pour guider ses disciples dans la vie monastique communautaire. L'idée générale est que les moines sont tous frères. La journée du moine est réglée en fonction de ce que saint Benoît appelle « Œuvre de Dieu ». Une partie est dédiée à la prière, l'autre au travail manuel et la dernière à l'enrichissement spirituel par l'étude et la lecture de l'Ecriture des Pères de l'Eglise.;;;;;;;;;;;;x
+REGLE_DE_2;Regula Augustini;Regula Augustini;;;;;;;;;;;;x
+REGLE_DE_2_desc;Regula Augustini;La Règle de saint Augustin dérive de plusieurs écrits dont une lettre authentique d'Augustin d'Hippone. Elle est destinée à régler la vie d'une communauté d'hommes.;;;;;;;;;;;;x
+REGLE_DE_3;Regula Basili;Regula Basili;;;;;;;;;;;;x
+REGLE_DE_3_desc;Regula Basili;La règle de saint Basile est celle suivie par les basiliens, le plus ancien des ordres monastiques. Cet ordre, auquel sont affiliés presque tous les monastères d'Orient, se voue surtout à la prière et à la contemplation.;;;;;;;;;;;;x
+ORDRE_MONACAL_1;ORDO STRATEGIUM;ORDO STRATEGIUM;;;;;;;;;;;;x
+ORDRE_MONACAL_2;ORDO CISTERIENSIS;ORDO CISTERIENSIS ;;;;;;;;;;;;x
+ORDRE_MONACAL_3;ORDO CARTUSIENSIS;ORDO CARTUSIENSIS ;;;;;;;;;;;;x
+ORDRE_MILIT_1;TEMPLAR ORDER;ORDRE DU TEMPLE ;;;;;;;;;;;;x
+ORDRE_MILIT_2;KNIGHTS HOSPITALLER;ORDRE DES HOSPITALIERS ;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+Necropole_A;Necropolis;Nécropôle ;;;;;;;;;;;;x
+Necropole_A_desc;Necropolis;Les familles les plus nobles font ériger de tels monuments funéraires pour y acceuillir générations après générations leurs défunts.;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+ca_banal_four;Banal Kiln;Four Banal ;;;;;;;;;;;;x
+ca_banal_moulin;Banal Mill;Moulin Banal ;;;;;;;;;;;;x
+ca_banal_pressoir;Banal Press;Pressoir Banal ;;;;;;;;;;;;x
+ca_banal_four_desc;Banal Kiln;C'est ici que la paysannerie vient entre autres cuire son pain.;;;;;;;;;;;;x
+ca_banal_moulin_desc;Banal Mill;Cet établissement à vocation collective permet de moudre le grain, étape importante du plus primordial des mets médiévaux : le pain.;;;;;;;;;;;;x
+ca_banal_pressoir_desc;Banal Press;Que serait un monde sans alcool ? Acratique, primitif... Heureusement, ce pressoir mis à disposition par le seigneur permet la fabrication des liqueurs.;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#PONTS et CHAUSSEES;;x;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+CA_pont_L1;Ford;Gué;;;;;;;;;;;;x
+CA_pont_L1_desc;;Un passage à gué a été aménagé à l'endroit ou le lit de la rivière est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prélever un droit de péage, bien que faible.;;;;;;;;;;;;x
+CA_pont_L2;Wooden bridge;Pont en bois;;;;;;;;;;;;x
+CA_pont_L2_desc;;Le passage étant relativement emprunté, permettre le franchissement de la rivière en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prélever un droit de passage plus élevé qu'auparavant.;;;;;;;;;;;;x
+CA_pont_L3;Stone bridge;Pont en pierre;;;;;;;;;;;;x
+CA_pont_L3_desc;;Le pont en pierre est solide et permet un passage aisé que l'on soit à pied ou que l'on roule. Une halte pour alléger sa bourse au péage reste néanmoins indispensable.;;;;;;;;;;;;x
+CA_col_L1;PASS : trail;COL : sentier;;;;;;;;;;;;x
+CA_col_L1_desc;;Le petit sentier qui méne au col est l'unique et indispensable passage au travers la montagne à des lieues à la ronde. Les paysans complètent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
+CA_col_L2;PASS : gravel path;COL : chemin empierré;;;;;;;;;;;;x
+CA_col_L2_desc;;Le sentier menant au col est à présent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
+CA_route_L1;Dirt path;Chemin de terre;;;;;;;;;;;;x
+CA_route_L1_desc;ENGLISH;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rôle de voie de transport.;;;;;;;;;;;;x
+CA_route_L2;Stoned path;Chemin empierré;;;;;;;;;;;;x
+CA_route_L2_desc;ENGLISH;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
+CA_route_L3;Paved road;Route pavée;;;;;;;;;;;;x
+CA_route_L3_desc;ENGLISH;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
+CA_fleuve_L1;River pontoon;Ponton fluvial;;;;;;;;;;;;x
+CA_fleuve_L1_desc;ENGLISH;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
+CA_fleuve_L2;River stoned deck;Quai fluvial;;;;;;;;;;;;x
+CA_fleuve_L2_desc;ENGLISH;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
+CA_fleuve_L3;River harbour;Port fluvial;;;;;;;;;;;;x
+CA_fleuve_L3_desc;ENGLISH;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
+CT_pont_L1;Ford;Gué;;;;;;;;;;;;x
+CT_pont_L1_desc;;Un passage à gué a été aménagé à l'endroit ou le lit de la rivière est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prélever un droit de péage, bien que faible.;;;;;;;;;;;;x
+CT_pont_L2;Wooden bridge;Pont en bois;;;;;;;;;;;;x
+CT_pont_L2_desc;;Le passage étant relativement emprunté, permettre le franchissement de la rivière en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prélever un droit de passage plus élevé qu'auparavant.;;;;;;;;;;;;x
+CT_pont_L3;Stone bridge;Pont en pierre;;;;;;;;;;;;x
+CT_pont_L3_desc;;Le pont en pierre est solide et permet un passage aisé que l'on soit à pied ou que l'on roule. Une halte pour alléger sa bourse au péage reste néanmoins indispensable.;;;;;;;;;;;;x
+CT_col_L1;PASS : trail;COL : sentier;;;;;;;;;;;;x
+CT_col_L1_desc;;Le petit sentier qui méne au col est l'unique et indispensable passage au travers la montagne à des lieues à la ronde. Les paysans complètent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
+CT_col_L2;PASS : gravel path;COL : chemin empierré;;;;;;;;;;;;x
+CT_col_L2_desc;;Le sentier menant au col est à présent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
+CT_relais_L1;Moutain shelter;Abri de montagne;;;;;;;;;;;;x
+CT_relais_L1_desc;;Cette construction assez sommaire permet aux voyageurs et marchands une halte au sommet du col pour passer la nuit ou laisser passer le mauvais temps.;;;;;;;;;;;;x
+CT_relais_L2;Mountain refuge;Refuge de montagne;;;;;;;;;;;;x
+CT_relais_L2_desc;;Cette auberge de montagne installée au passage du col offre une halte au chaud et le couvert aux marchands désireux de franchir la montagne.;;;;;;;;;;;;x
+CT_relais_L3;Mountain road house;Relais de montagne;;;;;;;;;;;;x
+CT_relais_L3_desc;;Ce relais permet d'herberger et nourrir tous les marchand désireux de passer la montagne avec leur marchandises. L'acceuil y est chaleureux pour peu que l'on paye correctement son dû.;;;;;;;;;;;;x
+CT_oasis_L1;Oasis shelter;Petite Oasis;;;;;;;;;;;;x
+CT_oasis_L1_desc;;Cette petite oasis, quasi inhabitée permet aux nomades de faire halte pour remplir leurs outres, se protéger d'une tempête de sable.;;;;;;;;;;;;x
+CT_oasis_L2;Oasis hamlet;Oasis moyenne;;;;;;;;;;;;x
+CT_oasis_L2_desc;;Cette oasis est plus grande que la moyenne et héberge quelques habitants permanents. Les caravanes y font halte pour se ravitailler en eau et nourriture, au prix de quelques pièces néanmoins.;;;;;;;;;;;;x
+CT_oasis_L3;Oasis village;Oasis verdoyante;;;;;;;;;;;;x
+CT_oasis_L3_desc;;Cette grande oasis détient suffisamment d'eau pour irriguer jardins et cultures au beau milieu du désert. Cette une halte agréable pour tous voyageur et une halte indispensable pour tout marchand ou caravanes souhaitant se ravitaller en eau et nourriture, voire même y commercer un peu avant de repartir sur à travers le désert.;;;;;;;;;;;;x
+CT_pont_fluvial_L1;Ferry;Bac;;;;;;;;;;;;x
+CT_pont_fluvial_L1_desc;;Le passage du fleuve se fait ici à l'aide d'un bac moyennant un prix modique.;;;;;;;;;;;;x
+CT_pont_fluvial_L2;Towed ferry;Bac tracté;;;;;;;;;;;;x
+CT_pont_fluvial_L2_desc;;Le courant étant plus fort ici, le bac est tracté par un mécanisme de cordes et chaînes permettant une traversée sereine y compris en période de hautes eaux.;;;;;;;;;;;;x
+CT_pont_fluvial_L3;Floating bridge;Pont flottant;;;;;;;;;;;;x
+CT_pont_fluvial_L3_desc;;Un ensemble de rondins encordées forment une passerelle sur les eaux permettant un franchissement rapide et aisé du fleuve;;;;;;;;;;;;x
+CT_pont_fluvial_L4;Permanent wooden bridge;Pont fixe en bois;;;;;;;;;;;;x
+CT_pont_fluvial_L4_desc;;Rien ne vaut un pont permanent et résistant pour passer le fleuve en sécurité et... réclamer une bonne somme pour ledit passage.;;;;;;;;;;;;x
+CT_pont_fluvial_L5;Great stone bridge;Grand pont de pierre;;;;;;;;;;;;x
+CT_pont_fluvial_L5_desc;;L'ancien pont de bois a finalement laissé place à un fier et solide pont en pierre. La cité a bien entendu pris soin d'y instaurer un péage d'un montant tout aussi peu commun aux alentours que de ponts de cette envergure.;;;;;;;;;;;;x
+CT_pont_fluvial_L6;Doubled stone bridge;Pont de pierre double;;;;;;;;;;;;x
+CT_pont_fluvial_L6_desc;;En sus d'être en pierre, ce pont permet même le passage de front de deux carioles. Double capacité de passage, donc double revenus !;;;;;;;;;;;;x
+CT_route_L1;Dirt path;Chemin de terre;;;;;;;;;;;;x
+CT_route_L1_desc;ENGLISH;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rôle de voie de transport.;;;;;;;;;;;;x
+CT_route_L2;Stoned path;Chemin empierré;;;;;;;;;;;;x
+CT_route_L2_desc;ENGLISH;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
+CT_route_L3;Paved road;Route pavée;;;;;;;;;;;;x
+CT_route_L3_desc;ENGLISH;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
+CT_fleuve_L1;River pontoon;Ponton fluvial;;;;;;;;;;;;x
+CT_fleuve_L1_desc;ENGLISH;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
+CT_fleuve_L2;River stoned deck;Quai fluvial;;;;;;;;;;;;x
+CT_fleuve_L2_desc;ENGLISH;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
+CT_fleuve_L3;River harbour;Port fluvial;;;;;;;;;;;;x
+CT_fleuve_L3_desc;ENGLISH;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
+TP_pont_L1;Ford;Gué;;;;;;;;;;;;x
+TP_pont_L1_desc;;Un passage à gué a été aménagé à l'endroit ou le lit de la rivière est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prélever un droit de péage, bien que faible.;;;;;;;;;;;;x
+TP_pont_L2;Wooden bridge;Pont en bois;;;;;;;;;;;;x
+TP_pont_L2_desc;;Le passage étant relativement emprunté, permettre le franchissement de la rivière en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prélever un droit de passage plus élevé qu'auparavant.;;;;;;;;;;;;x
+TP_pont_L3;Stone bridge;Pont en pierre;;;;;;;;;;;;x
+TP_pont_L3_desc;;Le pont en pierre est solide et permet un passage aisé que l'on soit à pied ou que l'on roule. Une halte pour alléger sa bourse au péage reste néanmoins indispensable.;;;;;;;;;;;;x
+TP_col_L1;PASS : trail;COL : sentier;;;;;;;;;;;;x
+TP_col_L1_desc;;Le petit sentier qui méne au col est l'unique et indispensable passage au travers la montagne à des lieues à la ronde. Les paysans complètent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
+TP_col_L2;PASS : gravel path;COL : chemin empierré;;;;;;;;;;;;x
+TP_col_L2_desc;;Le sentier menant au col est à présent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
+TP_relais_L1;Moutain shelter;Abri de montagne;;;;;;;;;;;;x
+TP_relais_L1_desc;;Cette construction assez sommaire permet aux voyageurs et marchands une halte au sommet du col pour passer la nuit ou laisser passer le mauvais temps.;;;;;;;;;;;;x
+TP_relais_L2;Mountain refuge;Refuge de montagne;;;;;;;;;;;;x
+TP_relais_L2_desc;;Cette auberge de montagne installée au passage du col offre une halte au chaud et le couvert aux marchands désireux de franchir la montagne.;;;;;;;;;;;;x
+TP_route_L1;Dirt path;Chemin de terre;;;;;;;;;;;;x
+TP_route_L1_desc;ENGLISH;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rôle de voie de transport.;;;;;;;;;;;;x
+TP_route_L2;Stoned path;Chemin empierré;;;;;;;;;;;;x
+TP_route_L2_desc;ENGLISH;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
+TP_route_L3;Paved road;Route pavée;;;;;;;;;;;;x
+TP_route_L3_desc;ENGLISH;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
+TP_fleuve_L1;River pontoon;Ponton fluvial;;;;;;;;;;;;x
+TP_fleuve_L1_desc;ENGLISH;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
+TP_fleuve_L2;River stoned deck;Quai fluvial;;;;;;;;;;;;x
+TP_fleuve_L2_desc;ENGLISH;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
+TP_fleuve_L3;River harbour;Port fluvial;;;;;;;;;;;;x
+TP_fleuve_L3_desc;ENGLISH;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+tr_port_fluvial_1;Fluvial landing stage;Débarcadère fluvial;;;;;;;;;;;;x
+tr_port_fluvial_1_desc;Fluvial landing stage;Ce ponton en bois permet l'arraisonnement des gabares et autres barques marchandes. Seul inconvénient le peu de place qu'il possède et l'écot à payer en sus !;;;;;;;;;;;;x
+tr_port_fluvial_2;Fluvial harbour;Port fluvial;;;;;;;;;;;;x
+tr_port_fluvial_2_desc;Fluvial harbour;Le port permet le va et vient incessant des denrées et autres marchandises. Avec le trafic incessant rentre l'argent.;;;;;;;;;;;;x
+tr_port_fluvial_3;Great fluvial harbour;Grand port fluvial;;;;;;;;;;;;x
+tr_port_fluvial_3_desc;Great fluvial harbour;Cet endroit est une vraie fourmilière où se rencontre porteurs, marchands, bourgeois et coquins à la recherche d'un petit larçin.;;;;;;;;;;;;x
+tr_port_maritime_1;Maritime landing stage;Débarcadère maritime;;;;;;;;;;;;x
+tr_port_maritime_1_desc;Maritime landing stage;Cet endroit est l'embryon du commerce maritime. Sans lui pas de commerce !;;;;;;;;;;;;x
+tr_port_maritime_2;Maritime harbour;Port maritime;;;;;;;;;;;;x
+tr_port_maritime_2_desc;Maritime harbour;Le port possède de nombreux quais où les voiles des marchands viennent se protéger des pirates et déverser leur précieuse cargaison.;;;;;;;;;;;;x
+tr_port_maritime_3;Great maritime landing stage;Grand port maritime;;;;;;;;;;;;x
+tr_port_maritime_3_desc;Great maritime landing stage;Ce port possède suffisament de quais pour accueillir une flotte complète de navires débordant de biens.;;;;;;;;;;;;x
+tr_relais_route_1;Toll;Péage;;;;;;;;;;;;x
+tr_relais_route_1_desc;Toll;Le malheur des marchands et le bonheur des bourgmestres. Ici, il faudra payer pour passer.;;;;;;;;;;;;x
+tr_relais_route_2;Road stance;Relais routier;;;;;;;;;;;;x
+tr_relais_route_2_desc;Road stance;Les caravanes s'arrêtent là afin de permettre à leurs membres de se reposer. Celà génèrent des revenus forts lucratifs.;;;;;;;;;;;;x
+tr_relais_route_3;Trade stance;Relais commercial;;;;;;;;;;;;x
+tr_relais_route_3_desc;Trade stance;La quintessence de la route commerciale : auberges, échoppes, entrepôts et droit de douane se mélangent ici.;;;;;;;;;;;;x
+tr_entrepot_1;Merchandises warehouse;Entrepôt à marchandises;;;;;;;;;;;;x
+tr_entrepot_1_desc;Merchandises warehouse;Il est important de pouvoir garder les marchandises quelquepart. Ce petit entrepôt s'en chargera.;;;;;;;;;;;;x
+tr_entrepot_2;Merchandises hall;Halle à marchandises;;;;;;;;;;;;x
+tr_entrepot_2_desc;Merchandises hall;Un lieu regroupant divers entrepôts où dorment les futurs achats du marché.;;;;;;;;;;;;x
+tr_bureau_1;Barter office;Bureau d'échange;;;;;;;;;;;;x
+tr_bureau_1_desc;Barter office;C'est là que se trouve la tête du commerce. Un lieu où seuls les hommes de confiance ont accès.;;;;;;;;;;;x
+tr_bureau_2;Commercial office;Bureau de commerce;;;;;;;;;;;;x
+tr_bureau_2_desc;Commercial office;Ce lieu est le centre décisionnaire de la toile commerciale. Les marchands tremblent à l'idée d'en offenser son dirigeant.;;;;;;;;;;;;x
+tr_garnison_1;Tradepost's guard;Garde du comptoir;;;;;;;;;;;;x
+tr_garnison_1_desc;Tradepost's guard;Un petit bâtiment où se regroupent des soldats chargés des tâches policières intrinsèques au commerce.;;;;;;;;;;;;x
+tr_garnison_2;Reinforced guard;Garde renforcée;;;;;;;;;;;;x
+tr_garnison_2_desc;Reinforced guard;Un lieu imposant qui domine sévèrement la place du marché.;;;;;;;;;;;;x
+tr_garnison_3;Garrison;Garnison;;;;;;;;;;;;x
+tr_garnison_3_desc;Garrison;Tout malandrin devra se préparer à voir surgir de cet endoit moults protecteurs du commerce.;;;;;;;;;;;;x
