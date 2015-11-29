@@ -1135,11 +1135,11 @@ narrative_event = {
 	immediate = {
 		set_character_flag = cadastreux_termine
 		}
-		
+	#score maxi = 12	
 	option = { #nous avons beaucoup appris homme
 		name = "ECO.324A" 
 		trigger = { 
-			check_variable = { which = "cadastre" value = 15 }
+			check_variable = { which = "cadastre" value = 10 }
 			is_female = no
 			}
 		change_stewardship = 1
@@ -1151,7 +1151,7 @@ narrative_event = {
 	option = { #nous avons beaucoup appris femme
 		name = "ECO.324A" 
 		trigger = { 
-			check_variable = { which = "cadastre" value = 15 }
+			check_variable = { which = "cadastre" value = 10 }
 			is_female = yes
 			}
 		change_stewardship = 1
@@ -1163,8 +1163,8 @@ narrative_event = {
 	option = {
 		name = "ECO.324B" #j'ai appris homme
 		trigger = { 
-			check_variable = { which = "cadastre" value = 10 }
-			NOT = { check_variable = { which = "cadastre" value = 15 }}
+			check_variable = { which = "cadastre" value = 7 }
+			NOT = { check_variable = { which = "cadastre" value = 10 }}
 			is_female = no			
 			}
 		random_list = {
@@ -1179,8 +1179,8 @@ narrative_event = {
 	option = {
 		name = "ECO.324B" #j'ai appris femme
 		trigger = { 
-			check_variable = { which = "cadastre" value = 10 }
-			NOT = { check_variable = { which = "cadastre" value = 15 }}
+			check_variable = { which = "cadastre" value = 7 }
+			NOT = { check_variable = { which = "cadastre" value = 10 }}
 			is_female = yes			
 			}
 		random_list = {
@@ -1195,8 +1195,8 @@ narrative_event = {
 	option = { 
 		name = "ECO.324C" #j'ai appris un peu homme
 		trigger = { 
-			check_variable = { which = "cadastre" value =  5 }
-			NOT = { check_variable = { which = "cadastre" value = 10 }}
+			check_variable = { which = "cadastre" value =  4 }
+			NOT = { check_variable = { which = "cadastre" value = 7 }}
 			is_female = no
 			}
 		random_list = {
@@ -1211,8 +1211,8 @@ narrative_event = {
 	option = { 
 		name = "ECO.324C" #j'ai appris un peu femme
 		trigger = { 
-			check_variable = { which = "cadastre" value =  5 }
-			NOT = { check_variable = { which = "cadastre" value = 10 }}
+			check_variable = { which = "cadastre" value =  4 }
+			NOT = { check_variable = { which = "cadastre" value = 7 }}
 			is_female = yes
 			}
 		random_list = {
@@ -1227,7 +1227,7 @@ narrative_event = {
 	option = { 
 		name = "ECO.324D" #cela ne m'a rien appris
 		trigger = {
-			NOT = { check_variable = { which = "cadastre" value =  5 }}
+			NOT = { check_variable = { which = "cadastre" value =  4 }}
 			}
 	}
 }
