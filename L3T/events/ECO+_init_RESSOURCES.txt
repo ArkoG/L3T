@@ -1405,7 +1405,8 @@ province_event = {
 	option = {
 		name = "ECO.00148A"
 		#remove_province_modifier = minerai3_metal
-		add_province_modifier = { name = minerai4_armes duration = -1 }		
+		add_province_modifier = { name = minerai4_armes duration = -1 }	
+		custom_tooltip = { des_armes }
 	}
 }
 
