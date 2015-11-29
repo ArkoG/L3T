@@ -50,8 +50,8 @@ L3T.0010B;La Couronne des Alpes (LCDA);La Couronne des Alpes (LCDA);;;;;;;;;;;;x
 L3T.0010C;Vanilla;;;;;;;;;;;;;x
 L3T.15;Choose your language;Choix de la langue;;;;;;;;;;;;;x
 DESCL3T.15;Some parts of the mod are not translated from French yet (or maybe won't be)\n You can disable some of the unlocalized stuff (mostly some flavour events) by selecting you want to play the English version.;Une partie du contenu n'est pas traduit en langue angloise. Cet évènement introductif permet de désactiver une partie des contenus non traduits. \n Logiquement, si vous lisez ceci, cliquez sur "JOUER en français".;;;;;;;;;;;;;x
-L3T.15A;FRENCH speaking version;;;;;;;;;;;;;x
-L3T.15B;ENGLISH speaking version;;;;;;;;;;;;;x
+L3T.15A;FRENCH speaking version;L3T complet, en français;;;;;;;;;;;;x
+L3T.15B;ENGLISH speaking version;L3T partiel, en anglais;;;;;;;;;;;;x
 L3T.15C;IA choice;choix de l'AI;;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 DESCL3T.0101;Population grew in this province !;La population a cru autour du château. \n Les quelques maisonnées assemblées ici forment à présent un petit hameau !;;;;;;;;;;;;x
@@ -1202,4 +1202,16 @@ DESCECO.324;;Après avoir tenté diverses expériences dans le domaine du foncier e
 ECO.324A;;J'ai beaucoup appris;;;;;;;;;;;;x
 ECO.324B;;Ce fût une belle expérience;;;;;;;;;;;;x
 ECO.324C;;Nous apprenons toujours un peu de nos expériences;;;;;;;;;;;;x
-ECO.324D;;Je n'ai rien appris;;;;;;;;;;;;x
+ECO.324D;I've learned nothing;Je n'ai rien appris;;;;;;;;;;;;x
+ECO.324E;I am not done with it yet;Je n'en ai pas tout à fait terminé;;;;;;;;;;;;x
+DESCECO.325;;Forts de nos riches expériences dans le domaine de la carthographie foncière, nous pourrions nous lancer dans la rédaction d'un grand registre cadastral couvrant la province entière. \nCela représente bien sûr un investissement important. \nQu'en pensez-vous ?;;;;;;;;;;;;x
+ECO.325A;;C'en est assez de cela;;;;;;;;;;;;x
+ECO.325B;;Allons-y !;;;;;;;;;;;;x
+TOOLTIPECO3251;;Nous nous lançons dans ce projet de rédaction;;;;;;;;;;;;x
+DESCECO.3251;;La rédaction a bien avancé mais le registre demeure imcomplet et présente encore de nombreuses imprécisions et entrées manquante. Il faudrait investir davantage.;;;;;;;;;;;;x
+ECO.3251A;;Nous avons assez dépensé pour ça;;;;;;;;;;;;x
+ECO.3251B;;Investissons davantage;;;;;;;;;;;;x
+TOOLTIPECO3252;;Nous arriverons au terme de notre projet.;;;;;;;;;;;;x
+DESCECO.3252;;C'est la fin d'un travail minitieux et de longue haleine qui s'achève enfin. Le grand cadastre de la province est enfin achevé et devrait permettre une taxation plus efficace de nos terres.;;;;;;;;;;;;x
+ECO.3252A;;Excellent !;;;;;;;;;;;;x
+entree_chronique;;Une entrée est inscrite aux chroniques de notre dynastie;;;;;;;;;;;;x

@@ -1132,12 +1132,12 @@ narrative_event = {
 		modifier = { factor = 0.80	has_character_flag = chaine_cadastre_4_terminee }		
 	}
 
-	immediate = {
-		set_character_flag = cadastreux_termine
-		}
+	immediate = {}
+	
 	#score maxi = 12	
 	option = { #nous avons beaucoup appris homme
-		name = "ECO.324A" 
+		name = "ECO.324A"
+		set_character_flag = cadastreux_termine		
 		trigger = { 
 			check_variable = { which = "cadastre" value = 10 }
 			is_female = no
@@ -1150,6 +1150,7 @@ narrative_event = {
 		}			
 	option = { #nous avons beaucoup appris femme
 		name = "ECO.324A" 
+		set_character_flag = cadastreux_termine
 		trigger = { 
 			check_variable = { which = "cadastre" value = 10 }
 			is_female = yes
@@ -1162,6 +1163,7 @@ narrative_event = {
 		}
 	option = {
 		name = "ECO.324B" #j'ai appris homme
+		set_character_flag = cadastreux_termine
 		trigger = { 
 			check_variable = { which = "cadastre" value = 7 }
 			NOT = { check_variable = { which = "cadastre" value = 10 }}
@@ -1178,6 +1180,7 @@ narrative_event = {
 	}
 	option = {
 		name = "ECO.324B" #j'ai appris femme
+		set_character_flag = cadastreux_termine
 		trigger = { 
 			check_variable = { which = "cadastre" value = 7 }
 			NOT = { check_variable = { which = "cadastre" value = 10 }}
@@ -1194,6 +1197,7 @@ narrative_event = {
 	}
 	option = { 
 		name = "ECO.324C" #j'ai appris un peu homme
+		set_character_flag = cadastreux_termine
 		trigger = { 
 			check_variable = { which = "cadastre" value =  4 }
 			NOT = { check_variable = { which = "cadastre" value = 7 }}
@@ -1210,6 +1214,7 @@ narrative_event = {
 	}
 	option = { 
 		name = "ECO.324C" #j'ai appris un peu femme
+		set_character_flag = cadastreux_termine
 		trigger = { 
 			check_variable = { which = "cadastre" value =  4 }
 			NOT = { check_variable = { which = "cadastre" value = 7 }}
@@ -1226,8 +1231,120 @@ narrative_event = {
 	}
 	option = { 
 		name = "ECO.324D" #cela ne m'a rien appris
+		set_character_flag = cadastreux_termine
 		trigger = {
 			NOT = { check_variable = { which = "cadastre" value =  4 }}
 			}
 	}
+	option = { 
+		name = "ECO.324E" #prolonger
+		trigger = {
+			NOT = { check_variable = { which = "cadastre" value =  10 }}
+			}
+	}
 }
+character_event = { #aller plus loin ?
+	id = ECO.325
+	desc = "DESCECO.325"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+	
+	is_triggered_only = yes	
+	
+	trigger = {
+		has_character_flag = cadastreux_termine
+		NOT = { has_character_flag = cadastre_finale_encours } 
+		NOT = { has_character_flag = cadastre_finale_terminee } 
+		AND = {
+			has_character_flag = chaine_cadastre_1_terminee
+			has_character_flag = chaine_cadastre_2_terminee
+			has_character_flag = chaine_cadastre_3_terminee
+			has_character_flag = chaine_cadastre_4_terminee
+			}
+		wealth = 400
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = { factor = 1.50	owner = { stewardship = 13 } }
+		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
+	}
+
+	immediate = { set_character_flag = cadastre_finale_encours }
+	
+	option = { #ça fluffy
+		name = "ECO.325A"
+		set_character_flag = cadastre_finale_terminee
+	}
+	option = { #go
+		name = "ECO.325B"
+		character_event = { id = ECO.3251 days = 150 tooltip = TOOLTIPECO3251}
+		wealth = -150
+	}
+}
+character_event = { #
+	id = ECO.3251
+	desc = "DESCECO.3251"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+	
+	is_triggered_only = yes	
+	
+	trigger = {
+		has_character_flag = cadastre_finale_encours 
+		NOT = { has_character_flag = cadastre_finale_terminee } 
+	}
+	
+	#immediate = { set_character_flag = cadastre_finale_terminee }
+	
+	option = { #nous avons assez dépensé
+		name = "ECO.3251A"
+		set_character_flag = cadastre_finale_terminee
+		prestige = 50
+	}
+	option = { #investissons davantage
+		name = "ECO.3251B"
+		character_event = { id = ECO.3252 days = 200 tooltip = TOOLTIPECO3252}
+		wealth = -250
+	}
+}
+character_event = { #cadastre achevé
+	id = ECO.3252
+	desc = "DESCECO.3252"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_normal_frame_economy
+	
+	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+	capable_only = yes
+	prisoner = no
+	
+	is_triggered_only = yes	
+	
+	trigger = {
+		has_character_flag = cadastre_finale_encours 
+		NOT = { has_character_flag = cadastre_finale_terminee } 
+	}
+	
+	immediate = { set_character_flag = cadastre_finale_terminee }
+	
+	option = { #nous avons assez dépensé
+		name = "ECO.3252A"
+			prestige = 100
+			change_stewardship = 1
+			custom_tooltip = { text = entree_chronique }
+			chronicle = {
+				entry = CHRONICLE_CADASTRE
+				picture = GFX_evt_L3T_carte
+			}
+			location = { add_province_modifier = { name = redaction_dun_cadastre duration = 3650 }}
+	}
+}
+
