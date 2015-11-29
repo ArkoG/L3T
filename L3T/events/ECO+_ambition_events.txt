@@ -656,6 +656,7 @@ narrative_event = {
 		name = "ECO.319A"
 		custom_tooltip = { text = TOOLTIPECO319 }
 		set_character_flag = cadastreux
+		hidden_tooltip = {	ROOT = { set_variable = { which = "cadastre" value = 1}}}
 	}
 	option = {
 		name = "ECO.319B"
@@ -694,6 +695,7 @@ character_event = { #régler les conflits de parcelles #acception/refus
 		#war = no
 		has_character_flag = cadastreux
 		NOT = { has_character_flag = chaine_cadastre_1_refusee }
+		NOT = { has_character_flag = chaine_cadastre_1_terminee }
 	}
 	
 	option = {
@@ -720,7 +722,7 @@ character_event = { #régler les conflits de parcelle : sur le terrain
 	option = {
 		name = "ECO.3201A" #partons nous même
 		character_event = { id = ECO.3202 days = 20 tooltip = TOOLTIPECO3202A}
-		set_variable = { which = "cadastre" value = 1 }
+		hidden_tooltip = { change_variable = { which = "cadastre" value = 1 }}
 	}
 	option = {
 		name = "ECO.3201B" #envoyer quelqu'un d'autre
@@ -744,10 +746,11 @@ character_event = { #faire les mesures
 		
 	option = {
 		name = "ECO.3202A" #augmenter les taxes
-		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 	}
 	option = {
 		name = "ECO.3202B" #faire preuve de clémence fiscale
+		hidden_tooltip = { 
 		random_list = {
 			50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 			50 = { }
@@ -755,6 +758,7 @@ character_event = { #faire les mesures
 		random_list = {
 			50 = { add_trait = content }
 			50 = { }
+		}
 		}
 	}
 }
@@ -788,6 +792,7 @@ character_event = { #Inventaire des fiefs #acception/refus
 		#war = no
 		has_character_flag = cadastreux
 		NOT = { has_character_flag = chaine_cadastre_2_refusee }
+		NOT = { has_character_flag = chaine_cadastre_2_terminee }
 	}
 	
 	option = {
@@ -797,10 +802,22 @@ character_event = { #Inventaire des fiefs #acception/refus
 	option = {
 		name = "ECO.321B" #intérêt #propres fiefs
 		character_event = { id = ECO.3211 days = 30 tooltip = TOOLTIPECO32111}
+		hidden_tooltip = {
+		random_list = { 
+			2 = { set_character_flag = cadastre_chaine2_resultat2 }
+			2 = { set_character_flag = cadastre_chaine2_resultat3 }
+		}
+		}
 	}
 	option = {
 		name = "ECO.321C" #intérêt #les autres fiefs
 		character_event = { id = ECO.3211 days = 30 tooltip = TOOLTIPECO32112}
+		hidden_tooltip = {
+		random_list = {
+			2 = { set_character_flag = cadastre_chaine2_resultat2 }
+			2 = { set_character_flag = cadastre_chaine2_resultat3 }
+		}
+		}
 	}
 	option = {
 		name = "ECO.321D" #intérêt #outils ?
@@ -821,19 +838,22 @@ character_event = { #outils/techniques
 		
 	option = {
 		name = "ECO.3212A" #meilleurs outils
-		ROOT = { change_variable = { which = "cadastre" value = 2}}
+		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 2}}}
 		wealth = -120
 		character_event = { id = ECO.3211 days = 45 tooltip = TOOLTIPECO3211}
+		hidden_tooltip = {
 		random_list = {
 			30 = { set_character_flag = cadastre_chaine2_resultat1 }
 			70 = { set_character_flag = cadastre_chaine2_resultat2 }
 		}
+		}
 	}
 	option = {
 		name = "ECO.3212B" #meilleurs outils mais pas trop
-		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		wealth = -80
-		random_list = { #à masquer
+		hidden_tooltip = {
+		random_list = { 
 			15 = { add_trait = greedy }
 			85 = {}
 		}
@@ -842,18 +862,21 @@ character_event = { #outils/techniques
 			60 = { set_character_flag = cadastre_chaine2_resultat2 }
 			20 = { set_character_flag = cadastre_chaine2_resultat3 }
 		}
+		}
 		character_event = { id = ECO.3211 days = 40 tooltip = TOOLTIPECO3211}
 	}
 	option = { #nous sommes déjà les meilleurs et ça couterait trop cher
 		name = "ECO.3212C" #radin et/ou fier
-		random_list = { #à masquer
+		hidden_tooltip = {
+		random_list = { 
 			15 = { add_trait = proud }
 			15 = { add_trait = greedy }
 			70 = {}
 		}
-		random_list = { #à masquer
+		random_list = {
 			30 = { set_character_flag = cadastre_chaine2_resultat2 }
 			70 = { set_character_flag = cadastre_chaine2_resultat3 }
+		}
 		}
 		character_event = { id = ECO.3211 days = 40 tooltip = TOOLTIPECO3211}
 	}
@@ -872,13 +895,13 @@ character_event = { #résultats mesures
 		
 	option = {
 		name = "ECO.3211A" #très bon résultat
-		ROOT = { change_variable = { which = "cadastre" value = 2}}
+		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 2}}}
 		trigger = { has_character_flag = cadastre_chaine2_resultat1 }
 		character_event = { id = ECO.3213 days = 25 tooltip = TOOLTIPECO3213} #allons plus loin ?
 	}
 	option = {
 		name = "ECO.3211B" #
-		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		trigger = { has_character_flag = cadastre_chaine2_resultat2 }
 		character_event = { id = ECO.3213 days = 25 tooltip = TOOLTIPECO3213} #allons plus loin ?
 	}
@@ -903,7 +926,7 @@ character_event = { #allons plus loin ? registre or not registre ?
 		
 	option = {
 		name = "ECO.3213A" #tenons un registre
-		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		wealth = -50
 	}
 	option = {
@@ -941,6 +964,7 @@ character_event = { #cartographier nos fiefs ? #acception/refus
 		#war = no
 		has_character_flag = cadastreux
 		NOT = { has_character_flag = chaine_cadastre_3_refusee }
+		NOT = { has_character_flag = chaine_cadastre_3_terminee }
 	}
 	
 	option = {
@@ -949,7 +973,7 @@ character_event = { #cartographier nos fiefs ? #acception/refus
 	}
 	option = {
 		name = "ECO.322B" #intérêt
-		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		character_event = { id = ECO.3221 days = 30 tooltip = TOOLTIPECO3221}
 	}
 }
@@ -969,17 +993,21 @@ character_event = { #existant ou néant ?
 		
 	option = {
 		name = "ECO.3221A" #se baser sur l'existant
+		hidden_tooltip = {
 		random_list = {
 		50 = {}
 		50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
+		}
 		}
 		wealth = -40
 	}
 	option = {
 		name = "ECO.3221B" #partir de zero
+		hidden_tooltip = {
 		random_list = {
 		50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		50 = { ROOT = { change_variable = { which = "cadastre" value = 2}}}
+		}
 		}
 		wealth = -80
 	}
@@ -1017,6 +1045,7 @@ character_event = { #harmoniser les mesures ? #acception/refus
 		#war = no
 		has_character_flag = cadastreux
 		NOT = { has_character_flag = chaine_cadastre_4_refusee }
+		NOT = { has_character_flag = chaine_cadastre_4_terminee }
 	}
 	
 	option = {
@@ -1025,7 +1054,7 @@ character_event = { #harmoniser les mesures ? #acception/refus
 	}
 	option = {
 		name = "ECO.323B" #intérêt
-		ROOT = { change_variable = { which = "cadastre" value = 1}}
+		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		character_event = { id = ECO.3231 days = 30 tooltip = TOOLTIPECO3231}
 	}
 }
@@ -1113,7 +1142,7 @@ narrative_event = {
 			check_variable = { which = "cadastre" value = 15 }
 			is_female = no
 			}
-		stewardship = 1
+		change_stewardship = 1
 		random_list = {
 			50 = { give_nickname = nick_larpenteur }
 			50 = { give_nickname = nick_le_cartographe }
@@ -1125,7 +1154,7 @@ narrative_event = {
 			check_variable = { which = "cadastre" value = 15 }
 			is_female = yes
 			}
-		stewardship = 1
+		change_stewardship = 1
 		random_list = {
 			50 = { give_nickname = nick_larpenteuse }
 			50 = { give_nickname = nick_la_cartographe }
@@ -1167,7 +1196,7 @@ narrative_event = {
 		name = "ECO.324C" #j'ai appris un peu homme
 		trigger = { 
 			check_variable = { which = "cadastre" value =  5 }
-			NOT = { check_variable = { which = "cadastre" value = 11 }}
+			NOT = { check_variable = { which = "cadastre" value = 10 }}
 			is_female = no
 			}
 		random_list = {
@@ -1183,7 +1212,7 @@ narrative_event = {
 		name = "ECO.324C" #j'ai appris un peu femme
 		trigger = { 
 			check_variable = { which = "cadastre" value =  5 }
-			NOT = { check_variable = { which = "cadastre" value = 11 }}
+			NOT = { check_variable = { which = "cadastre" value = 10 }}
 			is_female = yes
 			}
 		random_list = {
