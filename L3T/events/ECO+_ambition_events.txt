@@ -19,6 +19,7 @@ character_event = {
 	is_female = no
 	
 	trigger = {
+		NOT = { has_global_flag = playing_english }
 		OR = {
 			AND = {
 				has_focus = focus_war
@@ -363,6 +364,7 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
+		NOT = { has_global_flag = playing_english }
 		OR = {
 			AND = {
 				has_focus = focus_business
@@ -627,6 +629,7 @@ narrative_event = {
 	prisoner = no
 	
 	trigger = {
+		NOT = { has_global_flag = playing_english }
 		OR = {
 			AND = {
 				has_focus = focus_business
