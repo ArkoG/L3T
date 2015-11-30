@@ -47,7 +47,7 @@ L3T.0010;MAP choice;Les cartes en main !;;;;;;;;;;;;x
 DESCL3T.0010;\n Please tell me what map your are playing alongside to L3T to adapt the game. ;\n Dis-moi sur quelle carte joues-tu pour adapter la partie ? ;;;;;;;;;;;;x
 L3T.0010A;Some What More Historic (SWMH);Some What More Historic (SWMH);;;;;;;;;;;;x
 L3T.0010B;La Couronne des Alpes (LCDA);La Couronne des Alpes (LCDA);;;;;;;;;;;;x
-L3T.0010C;Vanilla;;;;;;;;;;;;;x
+L3T.0010C;Vanilla;Vanilla;;;;;;;;;;;;x
 L3T.15;Choose your language;Choix de la langue;;;;;;;;;;;;;x
 DESCL3T.15;Some parts of the mod are not translated from French yet (or maybe won't be)\n You can disable some of the unlocalized stuff (mostly some flavour events) by selecting you want to play the English version.;Une partie du contenu n'est pas traduit en langue angloise. Cet évènement introductif permet de désactiver une partie des contenus non traduits. \n Logiquement, si vous lisez ceci, cliquez sur "JOUER en français".;;;;;;;;;;;;;x
 L3T.15A;FRENCH speaking version;L3T complet, en français;;;;;;;;;;;;x
@@ -110,12 +110,10 @@ XYLO.0105B;Let's go for it.;Allons-y;;;;;;;;;;;;x
 XYLO.0106;To deforest a forest;La coupe de trop;;;;;;;;;;;;x
 DESCXYLO.0106;Cutting down so many trees to fill our coffers has led to dramatic reduction in the foilage… We will probably soon have to halt most of our activites….;Couper autant d'arbres pour renflouer nos caisses a conduit à une réduction dramatique de la couverture forestière... Nous allons probalement devoir cesser bientôt un certain nombre de nos activités...;;;;;;;;;;;;x
 XYLO.0106A;That is to say ?;C'est à dire ?;;;;;;;;;;;;x
-XYLO.0107;;;;;;;;;;;;;;x
 DESCXYLO.0107;;Au regard de notre niveau de piété, et puisque nous en aurions la possibilité, nous pourrions faire don d'une partie de nos bois à l'Eglise. \nCela serait bénéfique pour le salut de notre âme et la réputation de notre famille.;;;;;;;;;;;;x
 XYLO.0107A;;Allons-y;;;;;;;;;;;;x
 XYLO.0107B;;L'enjeu me semble trop faible;;;;;;;;;;;;x
 XYLO.0107C;;Et si nous essayions d'en retirer quelques profits ?;;;;;;;;;;;;x
-XYLO.0108;;;;;;;;;;;;;;x
 DESCXYLO.0108;;Nos forêts sont grandes et nous pourrions en céder une partie à l'Eglise. \nCela serait bon pour le salut de notre âme et renforcerait notre très sainte Mère l'Eglise.;;;;;;;;;;;;x
 XYLO.0108A;;Pour le salut de notre âme !;;;;;;;;;;;;x
 XYLO.0108B;;Je trouverai d'autres moyens;;;;;;;;;;;;x
@@ -233,7 +231,7 @@ DESCXYLO.01122;x;Eh bien voici probablement la plus énorme chanterelle jamais vu
 XYLO.01122A;x;Cela ne me dit rien qui vaille... ;;;;;;;;;;;;x
 XYLO.01122B;x;Cueillons-la ! ;;;;;;;;;;;;x
 XYLO.01123;x;Approach and identify 3;;;;;;;;;;;;x
-DESCXYLO.01123;Comme suspecté, il s'agit bel et bien d'un champignon... mais d'un genre assez bizarre voire inconnu. Arrivant à hauteur du poitrail de mon cheval, un chapeau plutôt plat, d'un vert légèrement luisant et dégageant une suave odeur anisée... \n Allons-nous l'emporter ? ;;;;;;;;;;;;;x
+DESCXYLO.01123;;Comme suspecté, il s'agit bel et bien d'un champignon... mais d'un genre assez bizarre voire inconnu. Arrivant à hauteur du poitrail de mon cheval, un chapeau plutôt plat, d'un vert légèrement luisant et dégageant une suave odeur anisée... \n Allons-nous l'emporter ? ;;;;;;;;;;;;;x
 XYLO.01123A;x;Passons notre chemin plutôt;;;;;;;;;;;;x
 XYLO.01123B;x;Cueillons ce trophée ! ;;;;;;;;;;;;x
 XYLO.0113;x;et maintenant ?;;;;;;;;;;;;x
@@ -276,7 +274,7 @@ TRADESTEPOK;The traders are interesting by [From.Location.GetName];Les marchands
 TRADESTEPKO;The traders refuse to pass by [From.Location.GetName];Les marchands refusent de passer par [From.Location.GetName]. Qu'ils aillent en enfer!;;;;;;;;;;;;x
 TRADESTEPALREADY;The traders already pass by [From.Location.GetName];Les marchands passent déjà par [From.Location.GetName].;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-REC.0151;Confirmation relique;;;;;;;;;;;;;x
+REC.0151;Confirmation relique;x;;;;;;;;;;;;x
 DESCREC.0151;;On nous a rapporté que la province de [From.Location.GetName] abrite une Sainte Relique répertoriée par l'Eglise Catholique. Cet objet revêt une grande importance pour les fidèles de cette religion. Elle peut faire l'objet d'un culte particulier voire donner lieu à des pélérinages.;;;;;;;;;;;;;x
 REC.0151A;Hallelujah!;Hallelujah ! ;;;;;;;;;;;;x
 REC.0151B;This could be interesting...;Cela peut avoir son intérêt...;;;;;;;;;;;;x
@@ -878,10 +876,10 @@ ECO.00102A;OK;OK;;;;;;;;;;;;x
 ECO.00103;activation AGRICULTURE;activation AGRICULTURE;;;;;;;;;;;;x
 DESCECO.00103;Les activités agricoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités viticoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans  les villes de la région.;;;;;;;;;;;;x
 ECO.00103A;OK;OK;;;;;;;;;;;;x
-ECO.00105;activation BIERE;;;;;;;;;;;;;x
+ECO.00105;activation BIERE;activation BIERE;;;;;;;;;;;;x
 DESCECO.00105;;Les brassins produits en [From.Location.GetName] commencent à avoir une pluôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
 ECO.00105A;OK;Fort bien !;;;;;;;;;;;;x
-ECO.00106;activation VIN;;;;;;;;;;;;;x
+ECO.00106;activation VIN;activation VIN;;;;;;;;;;;;x
 DESCECO.00106;;Les crus qui sortent de nos chais en [From.Location.GetName] commencent à avoir une pluôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
 ECO.00106A;OK;Fort bien !;;;;;;;;;;;;x
 ECO.00110;activation ELEVAGE;activation ELEVAGE;;;;;;;;;;;;x
