@@ -704,7 +704,7 @@ character_event = { #régler les conflits de parcelles #acception/refus
 	}
 	option = {
 		name = "ECO.320B" #pas intéressé
-		set_character_flag = { chaine_cadastre_1_refusee }
+		set_character_flag = chaine_cadastre_1_refusee
 	}
 }
 character_event = { #régler les conflits de parcelle : sur le terrain
@@ -797,7 +797,7 @@ character_event = { #Inventaire des fiefs #acception/refus
 	
 	option = {
 		name = "ECO.321A" #pas intéressé
-		set_character_flag = { chaine_cadastre_2_refusee }
+		set_character_flag = chaine_cadastre_2_refusee
 	}
 	option = {
 		name = "ECO.321B" #intérêt #propres fiefs
@@ -969,7 +969,7 @@ character_event = { #cartographier nos fiefs ? #acception/refus
 	
 	option = {
 		name = "ECO.322A" #pas intéressé
-		set_character_flag = { chaine_cadastre_3_refusee }
+		set_character_flag = chaine_cadastre_3_refusee
 	}
 	option = {
 		name = "ECO.322B" #intérêt
@@ -1050,7 +1050,7 @@ character_event = { #harmoniser les mesures ? #acception/refus
 	
 	option = {
 		name = "ECO.323A" #pas intéressé
-		set_character_flag = { chaine_cadastre_4_refusee }
+		set_character_flag = chaine_cadastre_4_refusee
 	}
 	option = {
 		name = "ECO.323B" #intérêt
@@ -1101,7 +1101,7 @@ narrative_event = {
 	
 	trigger = {
 		has_character_flag = cadastreux
-		NOT = { character_flag = cadastreux_termine }
+		NOT = { has_character_flag = cadastreux_termine }
 		OR = {
 			has_character_flag = chaine_cadastre_1_refusee
 			has_character_flag = chaine_cadastre_1_terminee
@@ -1253,25 +1253,21 @@ character_event = { #aller plus loin ?
 	capable_only = yes
 	prisoner = no
 	
-	is_triggered_only = yes	
-	
 	trigger = {
 		has_character_flag = cadastreux_termine
 		NOT = { has_character_flag = cadastre_finale_encours } 
-		NOT = { has_character_flag = cadastre_finale_terminee } 
-		AND = {
-			has_character_flag = chaine_cadastre_1_terminee
-			has_character_flag = chaine_cadastre_2_terminee
-			has_character_flag = chaine_cadastre_3_terminee
-			has_character_flag = chaine_cadastre_4_terminee
-			}
+		NOT = { has_character_flag = cadastre_finale_terminee }
+		has_character_flag = chaine_cadastre_1_terminee
+		has_character_flag = chaine_cadastre_2_terminee
+		has_character_flag = chaine_cadastre_3_terminee
+		has_character_flag = chaine_cadastre_4_terminee
 		wealth = 400
 	}
 	
 	mean_time_to_happen = {
 		months = 12
-		modifier = { factor = 1.50	owner = { stewardship = 13 } }
-		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
+		modifier = { factor = 1.50	stewardship = 13 }
+		modifier = { factor = 0.60	NOT = { stewardship = 9 } }
 	}
 
 	immediate = { set_character_flag = cadastre_finale_encours }
