@@ -331,10 +331,10 @@ province_event = {
 	
 	option = {
 		name = "ECO.0207A"
-		remove_province_modifier = recolte_bonne
-		remove_province_modifier = peche_bonne
-		remove_province_modifier = mine_filon
-		remove_province_modifier = industrie_prospere
+		if = { limit = { has_province_modifier = recolte_bonne} remove_province_modifier = recolte_bonne }
+		if = { limit = { has_province_modifier = peche_bonne} remove_province_modifier = peche_bonne }
+		if = { limit = { has_province_modifier = mine_filon} remove_province_modifier = mine_filon }
+		if = { limit = { has_province_modifier = industrie_prospere} remove_province_modifier = industrie_prospere }
 		clr_province_flag = industrie_prospere_A
 		clr_province_flag = industrie_prospere_B
 		clr_province_flag = industrie_prospere_C
