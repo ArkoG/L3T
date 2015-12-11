@@ -1,8 +1,8 @@
-ï»¿CODE;ENGLISH;FRENCH;;;;;;;;;;;;x;
+CODE;ENGLISH;FRENCH;;;;;;;;;;;;x;
 #;;x;;;;;;;;;;;;x;
 #BATIMENTS;;x;;;;;;;;;;;;x;
 #;;x;;;;;;;;;;;;x;
-#-Château-;;;;;;;;;;;;;;;x
+#-ChÃ¢teau-;;;;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x;
 #;;BATIMENTS XYLO;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
@@ -81,12 +81,15 @@ CA_ELEV_ovin_L2b_desc;Enclosing the herds allows more efficient use of grazing l
 CA_ELEV_ovin_L3b;Cheese: Mountain Hamlet;BETAIL : Hameau d'alpage;;;;;;;;;;;;x;
 CA_ELEV_ovin_L3b_desc;Small communities of shepherds have established hamlets centered around the breeding of livestock, increasing production and making more efficient use of shared land.;Tout juste quelques cabanes et abris saisonniers accueillant un petit groupe de bergers et leurs troupeaux paissant sur l'ensemble de l'alpage.;;;;;;;;;;;;x;
 #BOIS (plaine + foret );;;;;;;;;;;;;;;x
-CA_BOIS_bois_L1;Timber: Woodcutters' Lodge;BOIS : Site de Coupe;;;;;;;;;;;;x;
-CA_BOIS_bois_L2;Timber: Lumber Camp;BOIS : Camp de BÃ»cherons;;;;;;;;;;;;x;
+CA_BOIS_bois_L1;Timber: Woodcutters' Lodges;BOIS : Site de Coupe;;;;;;;;;;;;x;
+CA_BOIS_bois_L1_desc;Small lodges support a few dozen lumberjacks at a time as they chip slowly at the woodlands of the region, supplying only barely what is needed to sustain local industries.;;;;;;;;;;;;;x;
+CA_BOIS_bois_L2;Timber: Logging Camp;BOIS : Camp de BÃ»cherons;;;;;;;;;;;;x;
+CA_BOIS_bois_L2_desc;Larger camps of loggers have opened up and teams of lumberjacks are making their way deeper into the woods. Logs are piling up faster than the oxen can transport them back to the villages and cities.;;;;;;;;;;;;;x;
 CA_BOIS_bois_L3;Timber: Lumber Mill;BOIS : Exploitation ForestiÃ¨re;;;;;;;;;;;;x;
+CA_BOIS_bois_L3_desc;The construction of lumber mills have greatly increased productivity and lessened the logistical burden of hauling uncut logs to the cities for processing. Small villages springing up next to these facilities provide more labor and support for the hundreds of loggers employed throughout the province.;;;;;;;;;;;;;x;
 #CHARBON DE BOIS (foret);;;;;;;;;;;;;;;x
 CA_BOIS_charbon_L1;Charcoal: Colliers' Huts;CHARBON DE BOIS : CharbonniÃ¨re ImprovisÃ©e;;;;;;;;;;;;x;
-CA_BOIS_charbon_L2;Charcoal: Colliers' Kilns;CHARBON DE BOIS : CharbonniÃ¨re Permanente;;;;;;;;;;;;x;
+CA_BOIS_charbon_L2;Charcoal: Coal-firing Kilns;CHARBON DE BOIS : CharbonniÃ¨re Permanente;;;;;;;;;;;;x;
 CA_BOIS_charbon_L3;Charcoal: Seigneurial Kilns: CharbonniÃ¨re Seigneuriale;CHARBON DE BOIS : CharbonniÃ¨re Seigneuriale;;;;;;;;;;;;x;
 #CARRIERE pierre (montagne + cÃ´teau);;;;;;;;;;;;;;;x
 CA_CARR_pierre_L1;Stone: Open-cast Quarry;PIERRE : CarriÃ¨re sommaire;;;;;;;;;;;;x;
@@ -94,21 +97,21 @@ CA_CARR_pierre_L1_desc;Stone is mined here in significant quantities, but survey
 CA_CARR_pierre_L2;Stone: Shallow Shaft Mining;PIERRE : Front de taille;;;;;;;;;;;;x;
 CA_CARR_pierre_L2_desc;The construction of a shaft extending deep underground allows for more stone to be extracted in blocks and lifted to the surface by ingenious elevators and sturdy cranes.;L'intensification de l'extraction a formÃ© cette paroi verticale ouverte dans ce flanc de plateau, permettant d'extraire de la pierre en gros bloc qui pourront donner une belle pierre de taille.;;;;;;;;;;;;x;
 CA_CARR_pierre_L3;Stone: Extensive Shaft Mining;PIERRE : Grande CarriÃ¨re;;;;;;;;;;;;x;
-CA_CARR_pierre_L3_desc;The construction of an extensive tunnel network and the machinery needed to lift large blocks of stone to the surface have greatly increased productivity, but also make mining much more dangerous and a few lives are claimed every year. However, ;Ce site carrier fournit l'ensemble de la rÃ©gion en pierre de qualitÃ© qui sert notamment Ã  l'Ã©dification de fortifications ou contructions telles les Ã©glises et cathÃ©drales.;;;;;;;;;;;;x;
-#MINE minerai (montagne + côteau);;;;;;;;;;;;;;;x
-CA_MINE_minerai_L1;MINERAI : Excavation Minière;MINERAI : Excavation Minière;;;;;;;;;;;;x;
-CA_MINE_minerai_L1_desc;Une excavation grossière a été forée dans la roche. On y en extrait péniblement du minerai.;Une excavation grossière a été forée dans la roche. On y en extrait péniblement du minerai.;;;;;;;;;;;;x;
-CA_MINE_minerai_L2;MINERAI : Tunnels Miniers;MINERAI : Tunnels Miniers;;;;;;;;;;;;x;
-CA_MINE_minerai_L2_desc;L'excavation s'est agrandie et des galeries partent dans plusieurs directions qui suivent les veines, permettant une production croissante qui pourra être transformée dans une forge.;L'excavation s'est agrandie et des galeries partent dans plusieurs directions qui suivent les veines, permettant une production croissante qui pourra être transformée dans une forge.;;;;;;;;;;;;x;
-CA_MINE_minerai_L3;MINERAI : Grande Mine;MINERAI : Grande Mine;;;;;;;;;;;;x;
-CA_MINE_minerai_L3_desc;Maintenant, une vraie mine soutenue par des étais a été creusée. Les risques d'éboulement sont diminués et les mineurs peuvent travailler plus sereinement. Le minerai extrait en bonnes quantités pourra dès lors fournir le métal nécessaire à la fabrication d'armes et outils.;Maintenant, une vraie mine soutenue par des étais a été creusée. Les risques d'éboulement sont diminués et les mineurs peuvent travailler plus sereinement. Le minerai extrait en bonnes quantités pourra dès lors fournir le métal nécessaire à la fabrication d'armes et outils.;;;;;;;;;;;;x;
-#FISH pêche (côtes);;;;;;;;;;;;;;;x
-CA_FISH_peche_L1;PECHE : Ponton;PECHE : Ponton;;;;;;;;;;;;x;
-CA_FISH_peche_L1_desc;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;;;;;;;;;;;;x;
-CA_FISH_peche_L2;PECHE : Quai;PECHE : Quai;;;;;;;;;;;;x;
-CA_FISH_peche_L2_desc;Le ponton a été transformé en un quai et peut maintenant accueillir une flotille de pêche ramenant suffisamment de poissons tant pour nourrir la population locale qu'alimenter les activités de salage et fumage de la région.;Le ponton a été transformé en un quai et peut maintenant accueillir une flotille de pêche ramenant suffisamment de poissons tant pour nourrir la population locale qu'alimenter les activités de salage et fumage de la région.;;;;;;;;;;;;x;
-CA_FISH_peche_L3;PECHE : Port;PECHE : Port;;;;;;;;;;;;x;
-CA_FISH_peche_L3_desc;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;;;;;;;;;;;;x;
+CA_CARR_pierre_L3_desc;The construction of an extensive tunnel network and the machinery needed to lift large blocks of stone to the surface have greatly increased productivity to supply the construction of fortifications and cathedrals, but also make mining much more dangerous and a few lives are claimed every year.;Ce site carrier fournit l'ensemble de la rÃ©gion en pierre de qualitÃ© qui sert notamment Ã  l'Ã©dification de fortifications ou contructions telles les Ã©glises et cathÃ©drales.;;;;;;;;;;;;x;
+#MINE minerai (montagne + cÃ´teau);;;;;;;;;;;;;;;x
+CA_MINE_minerai_L1;Raw Ores: Open-cast Mine;MINERAI : Excavation MiniÃ¨re;;;;;;;;;;;;x;
+CA_MINE_minerai_L1_desc;This surface mine only yields a bare amount of ore compared to the volume potentially hidden underground. Additional infrastructure is needed to extract more ores from deeper within the subsoil.;Une excavation grossiÃ¨re a Ã©tÃ© forÃ©e dans la roche. On y en extrait pÃ©niblement du minerai.;;;;;;;;;;;;x;
+CA_MINE_minerai_L2;Raw Ores: Shallow Shaft Mining;MINERAI : Tunnels Miniers;;;;;;;;;;;;x;
+CA_MINE_minerai_L2_desc;The construction of a shaft extending deep underground allows for more ore to be extracted and lifted to the surface by ingenious elevators and sturdy cranes.;L'excavation s'est agrandie et des galeries partent dans plusieurs directions qui suivent les veines, permettant une production croissante qui pourra Ãªtre transformÃ©e dans une forge.;;;;;;;;;;;;x;
+CA_MINE_minerai_L3;Raw Ores: Extensive Shaft Mining;MINERAI : Grande Mine;;;;;;;;;;;;x;
+CA_MINE_minerai_L3_desc;The construction of an extensive tunnel network and the machinery needed to lift large loads of ore to the surface have greatly increased productivity to supply the production of arms and tools, but also make mining much more dangerous and a few lives are claimed every year.;Maintenant, une vraie mine soutenue par des Ã©tais a Ã©tÃ© creusÃ©e. Les risques d'Ã©boulement sont diminuÃ©s et les mineurs peuvent travailler plus sereinement. Le minerai extrait en bonnes quantitÃ©s pourra dÃ¨s lors fournir le mÃ©tal nÃ©cessaire Ã  la fabrication d'armes et outils.;;;;;;;;;;;;x;
+#FISH pÃªche (cÃ´tes);;;;;;;;;;;;;;;x
+CA_FISH_peche_L1;Fishing: Fishing Piers;PECHE : Ponton;;;;;;;;;;;;x;
+CA_FISH_peche_L1_desc;A small pier has been constructed to accommodate the emergence of a small fishing village. Some fish are caught here, but the waters are still teeming with wildlife and could yield even more were there more infrastructure to support local fishing.;Un ponton a Ã©tÃ© construit afin d'y accueillir quelques barques de pÃªcheurs.;;;;;;;;;;;;x;
+CA_FISH_peche_L2;Fishing: Fishing Quay;PECHE : Quai;;;;;;;;;;;;x;
+CA_FISH_peche_L2_desc;The pier has been renovated into a quay capable of accommodating a sizeable flotilla of small fishing craft. The yield has increased considerably and can easily feed the local populace and leave a surplus for the salting and smoking industries;Le ponton a Ã©tÃ© transformÃ© en un quai et peut maintenant accueillir une flotille de pÃªche ramenant suffisamment de poissons tant pour nourrir la population locale qu'alimenter les activitÃ©s de salage et fumage de la rÃ©gion.;;;;;;;;;;;;x;
+CA_FISH_peche_L3;Fishing: Fishing Harbor;PECHE : Port;;;;;;;;;;;;x;
+CA_FISH_peche_L3_desc;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;C'est maintenant un port fourmillant d'activitÃ©s et accueillant une pÃªche abondante qui est installÃ© sur le site.;;;;;;;;;;;;x;
 #FISH pisciculture (terres);;;;;;;;;;;;;;;x
 CA_FISH_pisci_L1;PISCICULTURE : Élevage en Rivière;PISCICULTURE : Élevage en Rivière;Élevage Piscicole en Rivière;;;;;;;;;;;x;
 CA_FISH_pisci_L2;PISCICULTURE : Étang Aménagé;PISCICULTURE : Étang Aménagé;Étang Aménagé;;;;;;;;;;;x;
@@ -538,194 +541,200 @@ tp_guilde_fresquiste;;Guilde de fresquistes;;;;;;;;;;;;x
 tp_guilde_verrier;;Guilde de verriers;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-FORT;CITADEL;CITADELLE ;;;;;;;;;;;;x
-FORT_desc;CITADEL;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
-BOURGFEODAL;FEUDAL VILLAGE;BOURG FÉODAL ;;;;;;;;;;;;x
-BOURGFEODAL_muslim;FORTIFIED VILLAGE;BOURG FORTIFIÉ;;;;;;;;;;;;x
-BOURGFEODAL_zoroastrian_group;FORTIFIED VILLAGE;BOURG FORTIFIÉ ;;;;;;;;;;;;x
-BOURGFEODAL_pagan_group;PEASANT VILLAGE;COMMUNAUTÉ PAYSANNE ;;;;;;;;;;;;x
-BOURGFEODAL_desc;FEUDAL VILLAGE;Le Bourg Féodal est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
-CITADELLE;FORTIFIED CITY;CITE FORTIFIEE ;;;;;;;;;;;;x
-CITADELLE_muslim;FAITH BASTION;BASTION DE LA FOI ;;;;;;;;;;;;x
-CITADELLE_zoroastrian_group;FAITH BASTION;FORTERESSE ;;;;;;;;;;;;x
-CITADELLE_pagan_group;FORTIFIED PLACE;PLACE FORTE ;;;;;;;;;;;;x
-CITADELLE_desc;FORTIFIED CITY;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
-CITE_L1;SMALL CITY;BOURG COMMUNAL ;;;;;;;;;;;;x
-CITE_L1_muslim;URBAN VILLAGE;BOURG URBAIN ;;;;;;;;;;;;x
-CITE_L1_zoroastrian_group;COMMUNAL VILLAGE;BOURG URBAIN ;;;;;;;;;;;;x
-CITE_L1_pagan_group;VILLAGE;VILLAGE ;;;;;;;;;;;;x
-CITE_L1_desc;SMALL CITY;Cité mineure, relais de votre administration, elle abrite un centre de commerce et d'artisanat en plus des sources de revenus agricoles de la campagne avoisinante.;;;;;;;;;;x
-CITE_L2;SMALL CITY;PETITE CITÉ ;;;;;;;;;;;;x
-CITE_L2_muslim;SMALL CITY;PETITE CITÉ ;;;;;;;;;;;;x
-CITE_L2_zoroastrian_group;SMALL CITY;PETITE CITÉ ;;;;;;;;;;;;x
-CITE_L2_pagan_group;CITY;CITÉ ;;;;;;;;;;;;x
-CITE_L2_desc;CITY;Une prometteuse cité qui commence à prendre de l'importance au niveau économique et démographique. Une bonne source de taxes en somme ! ;;;;;;;;;;x
-CITE_L3;GREAT CITY;GRANDE CITÉ ;;;;;;;;;;;;x
-CITE_L3_desc;GREAT CITY;Une grande cité, riche et bien peuplée : une mine d'or mais bien gardée ! ;;;;;;;;;;x
-VOC_INDUSTRIELLE;Production and Craftmanship;Production et artisanat;;;;;;;;;;;;x
-VOC_INDUSTRIELLE_DESC;Production and Craftmanship;Cette cité s'est spécialisée dans l'extration et la production de matières premières ainsi que dans leur transformation. Elle en attire de bons revenus. ;;;;;;;;;;;;x
-VOC_COMMERCIALE;Trade and Tolls;Commerce et péages;;;;;;;;;;;;x
-VOC_COMMERCIALE_DESC;Trade and Tolls;Cette cité s'est spécilaisée dans les activités de commerce et retire des bénéfices par tous les moyens, marchés, foires, péages entre autres. ;;;;;;;;;;;;x
-MONASTERE;MONASTERY;MONASTÈRE ;;;;;;;;;;;;x
-MONASTERE_desc;MONASTERY;"Travail et Priére" : tel est le crédo de la vie monastique. Souvent isolés, les institutions monastiques sont les conservatoires du savoir et source d'éducation. Vous pouvez compter sur ces communautés pour leurs rôles dans le défrichement de terres nouvelles et également soigner les maux de tous.;;;;;;;;;;x
-CITEEPISCOPALE;EPISCOPAL CITY;CITÉ ÉPISCOPALE ;;;;;;;;;;;;x
-CITEEPISCOPALE_muslim;RELIGIOUS CENTRE;CENTRE RELIGIEUX ;;;;;;;;;;;;x
-CITEEPISCOPALE_zoroastrian_group;RELIGIOUS CENTRE;CENTRE RELIGIEUX ;;;;;;;;;;;;x
-CITEEPISCOPALE_pagan_group;RELIGIOUS CENTRE;CENTRE RELIGIEUX ;;;;;;;;;;;;x
-CITEEPISCOPALE_desc;EPISCOPAL CITY;L'influence de l'évêque a érigé ce centre épiscopal en une fière cité pouvant tout à fait rivaliser en puissance et richesse avec la plupart des villes et châteaux de la région.;;;;;;;;;;x
+FORT;Specialization: Citadel;CITADELLE;;;;;;;;;;;;x
+FORT_desc;Designating this holding as a Â§YCitadelÂ§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mÃ¨nera Ã  dÃ©velopper ce domaine d'un simple poste frontiÃ¨re Ã  un vÃ©ritable fort, fournissant troupes en nombre et offrant une efficace protection derriÃ¨re ses murs.;;;;;;;;;;x
+FORT_muslim;Specialization: Kasbah;CITADELLE;;;;;;;;;;;;x
+FORT_muslim_desc;Designating this holding as a Â§YKasbahÂ§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mÃ¨nera Ã  dÃ©velopper ce domaine d'un simple poste frontiÃ¨re Ã  un vÃ©ritable fort, fournissant troupes en nombre et offrant une efficace protection derriÃ¨re ses murs.;;;;;;;;;;x
+FORT_zoroastrian_group;Specialization: Kalat;CITADELLE;;;;;;;;;;;;x
+FORT_zoroastrian_group_desc;Designating this holding as a Â§YKalatÂ§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mÃ¨nera Ã  dÃ©velopper ce domaine d'un simple poste frontiÃ¨re Ã  un vÃ©ritable fort, fournissant troupes en nombre et offrant une efficace protection derriÃ¨re ses murs.;;;;;;;;;;x
+FORT_pagan_group;Specialization: Stronghold;CITADELLE;;;;;;;;;;;;x
+FORT_pagan_group_desc;Designating this holding as a Â§YStrongholdÂ§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mÃ¨nera Ã  dÃ©velopper ce domaine d'un simple poste frontiÃ¨re Ã  un vÃ©ritable fort, fournissant troupes en nombre et offrant une efficace protection derriÃ¨re ses murs.;;;;;;;;;;x
+BOURGFEODAL;Specialization: Feudal Manor;BOURG FÃ‰ODAL ;;;;;;;;;;;;x
+BOURGFEODAL_muslim;Specialization: Iqta Estate;BOURG FORTIFIÃ‰;;;;;;;;;;;;x
+BOURGFEODAL_zoroastrian_group;Specialization: Dihqan Estate;BOURG FORTIFIÃ‰ ;;;;;;;;;;;;x
+BOURGFEODAL_pagan_group;Specialization: Clan Village;COMMUNAUTÃ‰ PAYSANNE ;;;;;;;;;;;;x
+BOURGFEODAL_desc;Designating this holding as a Â§YFeudal ManorÂ§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The manorial system places the peasants of the land as serfs bound to serve and pay tributes to a local lord in exchange for protection.;Le Bourg FÃ©odal est le type de domaine le plus rÃ©pandu. Il est le siÃ¨ge d'un chÃ¢teau plus ou moins important et constitue donc un relais de votre autoritÃ©. C'est un domaine Ã  dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+BOURGFEODAL_muslim_desc;Designating this holding as an Â§YIqta EstateÂ§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The iqta system considers the peasants of the land as freemen in theory, but a strong muqta could easily assert his authority over them to yield greater benefits.;Le Bourg FortifiÃ© est le type de domaine le plus rÃ©pandu. Il est le siÃ¨ge d'un chÃ¢teau plus ou moins important et constitue donc un relais de votre autoritÃ©. C'est un domaine Ã  dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+BOURGFEODAL_zoroastrian_group_desc;Designating this holding as a Â§YDihqan EstateÂ§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The traditional landowning dihqan class has always ruled over the peasantry with a firm hand, ensuring the prosperity of the realm.;Le Bourg FortifiÃ© est le type de domaine le plus rÃ©pandu. Il est le siÃ¨ge d'un chÃ¢teau plus ou moins important et constitue donc un relais de votre autoritÃ©. C'est un domaine Ã  dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+BOURGFEODAL_pagan_group_desc;Designating this holding as a Â§YClan VillageÂ§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The traditional clan chiefs have always ruled over their kin with a firm hand, ensuring the prosperity of the realm.;Le CommunautÃ© Paysanne est le type de domaine le plus rÃ©pandu. Il est le siÃ¨ge d'un chÃ¢teau plus ou moins important et constitue donc un relais de votre autoritÃ©. C'est un domaine Ã  dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+CITADELLE;Specialization: Administrative Center;CITE FORTIFIEE ;;;;;;;;;;;;x
+CITADELLE_desc;Designating this holding as an Â§YAdministrative CenterÂ§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette citÃ© abrite un centre de politique important et convient tout Ã  fait pour y installer votre rÃ©sidence et votre capitale. Elle abrite une population non nÃ©gligeable, protÃ©gÃ©e derriÃ¨re d'Ã©pais murs et dÃ©fendue par une puissante garnison. C'est lÃ  aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
+CITE_L1;Urban Commune;BOURG COMMUNAL ;;;;;;;;;;;;x
+CITE_L1_muslim;Medina Quarter;BOURG URBAIN ;;;;;;;;;;;;x
+CITE_L1_zoroastrian_group;Market Town;BOURG URBAIN ;;;;;;;;;;;;x
+CITE_L1_pagan_group;Market Village;VILLAGE ;;;;;;;;;;;;x
+CITE_L1_desc;This burgeoning city is developing from a small market to a significant urban center. Under the wise leadership of an astute leader, it has the potential to become a major center of commerce, industry, and artisanry fueled by resources from trade and the surrounding land.;CitÃ© mineure, relais de votre administration, elle abrite un centre de commerce et d'artisanat en plus des sources de revenus agricoles de la campagne avoisinante.;;;;;;;;;;x
+CITE_L2;Regional Urban Center;PETITE CITÃ‰ ;;;;;;;;;;;;x
+CITE_L2_desc;This city has become the bedrock of the regional economy, connecting the local rural villages and attracting merchants from far and wide to peruse the wide selection of goods in the market square.;Une prometteuse citÃ© qui commence Ã  prendre de l'importance au niveau Ã©conomique et dÃ©mographique. Une bonne source de taxes en somme ! ;;;;;;;;;;x
+CITE_L3;Major Urban Center;GRANDE CITÃ‰ ;;;;;;;;;;;;x
+CITE_L3_desc;This city has risen in prominence among the great municipalities of the realm and is renowned for its great wealth. Merchant caravans arrive in droves and the burghers' wealth rivals that of even the high nobility.;Une grande citÃ©, riche et bien peuplÃ©e : une mine d'or mais bien gardÃ©e ! ;;;;;;;;;;x
+VOC_INDUSTRIELLE;Specialization: Manufacturing and Artisanry;Production et artisanat;;;;;;;;;;;;x
+VOC_INDUSTRIELLE_DESC;Specializing this holding as a center of Â§YManufacturing and ArtisanryÂ§! allows the holder to focus solely on the extraction and production of processed and luxury goods to be used by the local lord or exported for profit.;Cette citÃ© s'est spÃ©cialisÃ©e dans l'extration et la production de matiÃ¨res premiÃ¨res ainsi que dans leur transformation. Elle en attire de bons revenus. ;;;;;;;;;;;;x
+VOC_COMMERCIALE;Specialization: Trade and Commerce;Commerce et pÃ©ages;;;;;;;;;;;;x
+VOC_COMMERCIALE_DESC;Specializing this holding as a center of Â§YTrade and CommerceÂ§! allows the holder to focus solely on facilitating and expanding the passage of numerous trade routes and the levying of tolls and taxes upon the droves of merchants flocking here seeking to make a generous profit.;Cette citÃ© s'est spÃ©cilaisÃ©e dans les activitÃ©s de commerce et retire des bÃ©nÃ©fices par tous les moyens, marchÃ©s, foires, pÃ©ages entre autres. ;;;;;;;;;;;;x
+MONASTERE;Specialization: Monastic Town;MONASTÃˆRE ;;;;;;;;;;;;x
+MONASTERE_desc;Specializing this holding as a Â§YMonastic TownÂ§! allows the holder to facilitate the growth of a thriving monastic community. These humble, isolated institutions act as repositories of knowledge as well as tend to the people's illnesses and disease. Some orders are also actively involved in land reclamation and small-scale industry.;"Travail et PriÃ©re" : tel est le crÃ©do de la vie monastique. Souvent isolÃ©s, les institutions monastiques sont les conservatoires du savoir et source d'Ã©ducation. Vous pouvez compter sur ces communautÃ©s pour leurs rÃ´les dans le dÃ©frichement de terres nouvelles et Ã©galement soigner les maux de tous.;;;;;;;;;;x
+CITEEPISCOPALE;Specialization: Episcopal See;CITÃ‰ Ã‰PISCOPALE ;;;;;;;;;;;;x
+CITEEPISCOPALE_muslim;Specialization: Grand Mosque;CENTRE RELIGIEUX ;;;;;;;;;;;;x
+CITEEPISCOPALE_zoroastrian_group;Specialization: Great Fire Temple;CENTRE RELIGIEUX ;;;;;;;;;;;;x
+CITEEPISCOPALE_pagan_group;Specialization: Grand Temple;CENTRE RELIGIEUX ;;;;;;;;;;;;x
+CITEEPISCOPALE_desc;Specializing this holding as an Â§YEpiscopal SeeÂ§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy headed by the bishop has facilitated the growth of a thriving town centered around the local church.;L'influence de l'Ã©vÃªque a Ã©rigÃ© ce centre Ã©piscopal en une fiÃ¨re citÃ© pouvant tout Ã  fait rivaliser en puissance et richesse avec la plupart des villes et chÃ¢teaux de la rÃ©gion.;;;;;;;;;;x
+CITEEPISCOPALE_muslim_desc;Specializing this holding as a Â§YGrand MosqueÂ§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy has facilitated the growth of a thriving town centered around a great mosque where the people gather to pray.;L'influence de le clergÃ© a Ã©rigÃ© ce centre religieux en une fiÃ¨re citÃ© pouvant tout Ã  fait rivaliser en puissance et richesse avec la plupart des villes et chÃ¢teaux de la rÃ©gion.;;;;;;;;;;x
+CITEEPISCOPALE_zoroastrian_group_desc;Specializing this holding as a Â§YGreat Fire TempleÂ§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy has facilitated the growth of a thriving town centered around a great temple where the people gather to pray.;L'influence de le clergÃ© a Ã©rigÃ© ce centre religieux en une fiÃ¨re citÃ© pouvant tout Ã  fait rivaliser en puissance et richesse avec la plupart des villes et chÃ¢teaux de la rÃ©gion.;;;;;;;;;;x
+CITEEPISCOPALE_pagan_group_desc;Specializing this holding as a Â§YGreat TempleÂ§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy has facilitated the growth of a thriving town centered around a great temple where the people gather to pray.;L'influence de le clergÃ© a Ã©rigÃ© ce centre religieux en une fiÃ¨re citÃ© pouvant tout Ã  fait rivaliser en puissance et richesse avec la plupart des villes et chÃ¢teaux de la rÃ©gion.;;;;;;;;;;x
 COMMANDERIE;COMMANDRY;COMMANDERIE ;;;;;;;;;;;;x
 COMMANDERIE_desc;COMMANDRY;COMMANDERIE ;;;;;;;;;;;;x
-REGLE_DE_1;Regula Benedicti;Regula Benedicti;;;;;;;;;;;;x
-REGLE_DE_1_desc;Regula Benedicti;La Règle de saint Benoît est une règle monastique écrite par Benoît de Nursie pour guider ses disciples dans la vie monastique communautaire. L'idée générale est que les moines sont tous frères. La journée du moine est réglée en fonction de ce que saint Benoît appelle « Œuvre de Dieu ». Une partie est dédiée à la prière, l'autre au travail manuel et la dernière à l'enrichissement spirituel par l'étude et la lecture de l'Ecriture des Pères de l'Eglise.;;;;;;;;;;;;x
-REGLE_DE_2;Regula Augustini;Regula Augustini;;;;;;;;;;;;x
-REGLE_DE_2_desc;Regula Augustini;La Règle de saint Augustin dérive de plusieurs écrits dont une lettre authentique d'Augustin d'Hippone. Elle est destinée à régler la vie d'une communauté d'hommes.;;;;;;;;;;;;x
-REGLE_DE_3;Regula Basili;Regula Basili;;;;;;;;;;;;x
-REGLE_DE_3_desc;Regula Basili;La règle de saint Basile est celle suivie par les basiliens, le plus ancien des ordres monastiques. Cet ordre, auquel sont affiliés presque tous les monastères d'Orient, se voue surtout à la prière et à la contemplation.;;;;;;;;;;;;x
+REGLE_DE_1;Order: Regula Benedicti;Regula Benedicti;;;;;;;;;;;;x
+REGLE_DE_1_desc;The Rule of Saint Benedict is a monastic rule written by Saint Benedict of Nursia to instruct his disciples in the way of monastic life. The unique Benedictine emphasis on autonomy include cultivating models of tightly bonded communities, contemplative lifestyles, as well as encouragement of manual labor. ;La RÃ¨gle de saint BenoÃ®t est une rÃ¨gle monastique Ã©crite par BenoÃ®t de Nursie pour guider ses disciples dans la vie monastique communautaire. L'idÃ©e gÃ©nÃ©rale est que les moines sont tous frÃ¨res. La journÃ©e du moine est rÃ©glÃ©e en fonction de ce que saint BenoÃ®t appelle "Oeuvre de Dieu". Une partie est dÃ©diÃ©e Ã  la priÃ¨re, l'autre au travail manuel et la derniÃ¨re Ã  l'enrichissement spirituel par l'Ã©tude et la lecture de l'Ecriture des PÃ¨res de l'Eglise.;;;;;;;;;;;;x
+REGLE_DE_2;Order: Regula Augustini;Regula Augustini;;;;;;;;;;;;x
+REGLE_DE_2_desc;The Rule of Saint Augustine is derived from a brief document divided into eight chapters and serves as an outline for religious life lived in community. The Rule governs chastity, poverty, obedience, detachment from the world, the apportionment of labour, the inferiors, fraternal charity, prayer in common, fasting and abstinence proportionate to the strength of the individual, care of the sick, silence and reading during meals.;La RÃ¨gle de saint Augustin dÃ©rive de plusieurs Ã©crits dont une lettre authentique d'Augustin d'Hippone. Elle est destinÃ©e Ã  rÃ©gler la vie d'une communautÃ© d'hommes.;;;;;;;;;;;;x
+REGLE_DE_3;Order: Regula Basili;Regula Basili;;;;;;;;;;;;x
+REGLE_DE_3_desc;The "Rule" of Saint Basil refers to the principles of ascetic life followed by the Basilians, the most ancient of the monastic communities. While not an Order by the Western monastic definition, adherents live in small communities focused mainly upon prayer and contemplation isolated from the world.;La RÃ¨gle de saint Basile est celle suivie par les basiliens, le plus ancien des ordres monastiques. Cet ordre, auquel sont affiliÃ©s presque tous les monastÃ¨res d'Orient, se voue surtout Ã  la priÃ¨re et Ã  la contemplation.;;;;;;;;;;;;x
 ORDRE_MONACAL_1;ORDO STRATEGIUM;ORDO STRATEGIUM;;;;;;;;;;;;x
 ORDRE_MONACAL_2;ORDO CISTERIENSIS;ORDO CISTERIENSIS ;;;;;;;;;;;;x
 ORDRE_MONACAL_3;ORDO CARTUSIENSIS;ORDO CARTUSIENSIS ;;;;;;;;;;;;x
-ORDRE_MILIT_1;TEMPLAR ORDER;ORDRE DU TEMPLE ;;;;;;;;;;;;x
-ORDRE_MILIT_2;KNIGHTS HOSPITALLER;ORDRE DES HOSPITALIERS ;;;;;;;;;;;;x
+ORDRE_MILIT_1;Order: Knights Templar;ORDRE DU TEMPLE ;;;;;;;;;;;;x
+ORDRE_MILIT_2;Order: Knights Hospitaller;ORDRE DES HOSPITALIERS ;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-Necropole_A;Necropolis;Nécropôle ;;;;;;;;;;;;x
-Necropole_A_desc;Necropolis;Les familles les plus nobles font ériger de tels monuments funéraires pour y acceuillir générations après générations leurs défunts.;;;;;;;;;;;;x
+Necropole_A;Necropolis;NÃ©cropÃ´le ;;;;;;;;;;;;x
+Necropole_A_desc;The most noble families have erected these monuments to commemorate the many generations of their defunct ancestors.;Les familles les plus nobles font Ã©riger de tels monuments funÃ©raires pour y acceuillir gÃ©nÃ©rations aprÃ¨s gÃ©nÃ©rations leurs dÃ©funts.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-ca_banal_four;Banal Kiln;Four Banal ;;;;;;;;;;;;x
-ca_banal_moulin;Banal Mill;Moulin Banal ;;;;;;;;;;;;x
-ca_banal_pressoir;Banal Press;Pressoir Banal ;;;;;;;;;;;;x
-ca_banal_four_desc;Banal Kiln;C'est ici que la paysannerie vient entre autres cuire son pain.;;;;;;;;;;;;x
-ca_banal_moulin_desc;Banal Mill;Cet établissement à vocation collective permet de moudre le grain, étape importante du plus primordial des mets médiévaux : le pain.;;;;;;;;;;;;x
-ca_banal_pressoir_desc;Banal Press;Que serait un monde sans alcool ? Acratique, primitif... Heureusement, ce pressoir mis à disposition par le seigneur permet la fabrication des liqueurs.;;;;;;;;;;;;x
+ca_banal_four;Banal-Oven;Four Banal ;;;;;;;;;;;;x
+ca_banal_moulin;Banal-Mill;Moulin Banal ;;;;;;;;;;;;x
+ca_banal_pressoir;Banal-Press;Pressoir Banal ;;;;;;;;;;;;x
+ca_banal_four_desc;The banal-oven is where peasants gather to bake their bread for a somewhat reasonable charge.;C'est ici que la paysannerie vient entre autres cuire son pain.;;;;;;;;;;;;x
+ca_banal_moulin_desc;The banal-oven is where peasants gather to grind their wheat for a somewhat reasonable charge.;Cet Ã©tablissement Ã  vocation collective permet de moudre le grain, Ã©tape importante du plus primordial des mets mÃ©diÃ©vaux : le pain.;;;;;;;;;;;;x
+ca_banal_pressoir_desc;The banal-press is where peasants gather to press crops to prepare them for distillation.;Que serait un monde sans alcool ? Acratique, primitif... Heureusement, ce pressoir mis Ã  disposition par le seigneur permet la fabrication des liqueurs.;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #PONTS et CHAUSSEES;;x;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-CA_pont_L1;Ford;Gué;;;;;;;;;;;;x
-CA_pont_L1_desc;;Un passage à gué a été aménagé à l'endroit ou le lit de la rivière est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prélever un droit de péage, bien que faible.;;;;;;;;;;;;x
-CA_pont_L2;Wooden bridge;Pont en bois;;;;;;;;;;;;x
-CA_pont_L2_desc;;Le passage étant relativement emprunté, permettre le franchissement de la rivière en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prélever un droit de passage plus élevé qu'auparavant.;;;;;;;;;;;;x
-CA_pont_L3;Stone bridge;Pont en pierre;;;;;;;;;;;;x
-CA_pont_L3_desc;;Le pont en pierre est solide et permet un passage aisé que l'on soit à pied ou que l'on roule. Une halte pour alléger sa bourse au péage reste néanmoins indispensable.;;;;;;;;;;;;x
-CA_col_L1;PASS : trail;COL : sentier;;;;;;;;;;;;x
-CA_col_L1_desc;;Le petit sentier qui méne au col est l'unique et indispensable passage au travers la montagne à des lieues à la ronde. Les paysans complètent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
-CA_col_L2;PASS : gravel path;COL : chemin empierré;;;;;;;;;;;;x
-CA_col_L2_desc;;Le sentier menant au col est à présent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
-CA_route_L1;Dirt path;Chemin de terre;;;;;;;;;;;;x
-CA_route_L1_desc;ENGLISH;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rôle de voie de transport.;;;;;;;;;;;;x
-CA_route_L2;Stoned path;Chemin empierré;;;;;;;;;;;;x
-CA_route_L2_desc;ENGLISH;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
-CA_route_L3;Paved road;Route pavée;;;;;;;;;;;;x
-CA_route_L3_desc;ENGLISH;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
-CA_fleuve_L1;River pontoon;Ponton fluvial;;;;;;;;;;;;x
-CA_fleuve_L1_desc;ENGLISH;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
-CA_fleuve_L2;River stoned deck;Quai fluvial;;;;;;;;;;;;x
-CA_fleuve_L2_desc;ENGLISH;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
-CA_fleuve_L3;River harbour;Port fluvial;;;;;;;;;;;;x
-CA_fleuve_L3_desc;ENGLISH;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
-CT_pont_L1;Ford;Gué;;;;;;;;;;;;x
-CT_pont_L1_desc;;Un passage à gué a été aménagé à l'endroit ou le lit de la rivière est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prélever un droit de péage, bien que faible.;;;;;;;;;;;;x
-CT_pont_L2;Wooden bridge;Pont en bois;;;;;;;;;;;;x
-CT_pont_L2_desc;;Le passage étant relativement emprunté, permettre le franchissement de la rivière en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prélever un droit de passage plus élevé qu'auparavant.;;;;;;;;;;;;x
-CT_pont_L3;Stone bridge;Pont en pierre;;;;;;;;;;;;x
-CT_pont_L3_desc;;Le pont en pierre est solide et permet un passage aisé que l'on soit à pied ou que l'on roule. Une halte pour alléger sa bourse au péage reste néanmoins indispensable.;;;;;;;;;;;;x
-CT_col_L1;PASS : trail;COL : sentier;;;;;;;;;;;;x
-CT_col_L1_desc;;Le petit sentier qui méne au col est l'unique et indispensable passage au travers la montagne à des lieues à la ronde. Les paysans complètent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
-CT_col_L2;PASS : gravel path;COL : chemin empierré;;;;;;;;;;;;x
-CT_col_L2_desc;;Le sentier menant au col est à présent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
-CT_relais_L1;Moutain shelter;Abri de montagne;;;;;;;;;;;;x
-CT_relais_L1_desc;;Cette construction assez sommaire permet aux voyageurs et marchands une halte au sommet du col pour passer la nuit ou laisser passer le mauvais temps.;;;;;;;;;;;;x
-CT_relais_L2;Mountain refuge;Refuge de montagne;;;;;;;;;;;;x
-CT_relais_L2_desc;;Cette auberge de montagne installée au passage du col offre une halte au chaud et le couvert aux marchands désireux de franchir la montagne.;;;;;;;;;;;;x
-CT_relais_L3;Mountain road house;Relais de montagne;;;;;;;;;;;;x
-CT_relais_L3_desc;;Ce relais permet d'herberger et nourrir tous les marchand désireux de passer la montagne avec leur marchandises. L'acceuil y est chaleureux pour peu que l'on paye correctement son dû.;;;;;;;;;;;;x
-CT_oasis_L1;Oasis shelter;Petite Oasis;;;;;;;;;;;;x
-CT_oasis_L1_desc;;Cette petite oasis, quasi inhabitée permet aux nomades de faire halte pour remplir leurs outres, se protéger d'une tempête de sable.;;;;;;;;;;;;x
-CT_oasis_L2;Oasis hamlet;Oasis moyenne;;;;;;;;;;;;x
-CT_oasis_L2_desc;;Cette oasis est plus grande que la moyenne et héberge quelques habitants permanents. Les caravanes y font halte pour se ravitailler en eau et nourriture, au prix de quelques pièces néanmoins.;;;;;;;;;;;;x
-CT_oasis_L3;Oasis village;Oasis verdoyante;;;;;;;;;;;;x
-CT_oasis_L3_desc;;Cette grande oasis détient suffisamment d'eau pour irriguer jardins et cultures au beau milieu du désert. Cette une halte agréable pour tous voyageur et une halte indispensable pour tout marchand ou caravanes souhaitant se ravitaller en eau et nourriture, voire même y commercer un peu avant de repartir sur à travers le désert.;;;;;;;;;;;;x
-CT_pont_fluvial_L1;Ferry;Bac;;;;;;;;;;;;x
-CT_pont_fluvial_L1_desc;;Le passage du fleuve se fait ici à l'aide d'un bac moyennant un prix modique.;;;;;;;;;;;;x
-CT_pont_fluvial_L2;Towed ferry;Bac tracté;;;;;;;;;;;;x
-CT_pont_fluvial_L2_desc;;Le courant étant plus fort ici, le bac est tracté par un mécanisme de cordes et chaînes permettant une traversée sereine y compris en période de hautes eaux.;;;;;;;;;;;;x
-CT_pont_fluvial_L3;Floating bridge;Pont flottant;;;;;;;;;;;;x
-CT_pont_fluvial_L3_desc;;Un ensemble de rondins encordées forment une passerelle sur les eaux permettant un franchissement rapide et aisé du fleuve;;;;;;;;;;;;x
-CT_pont_fluvial_L4;Permanent wooden bridge;Pont fixe en bois;;;;;;;;;;;;x
-CT_pont_fluvial_L4_desc;;Rien ne vaut un pont permanent et résistant pour passer le fleuve en sécurité et... réclamer une bonne somme pour ledit passage.;;;;;;;;;;;;x
-CT_pont_fluvial_L5;Great stone bridge;Grand pont de pierre;;;;;;;;;;;;x
-CT_pont_fluvial_L5_desc;;L'ancien pont de bois a finalement laissé place à un fier et solide pont en pierre. La cité a bien entendu pris soin d'y instaurer un péage d'un montant tout aussi peu commun aux alentours que de ponts de cette envergure.;;;;;;;;;;;;x
-CT_pont_fluvial_L6;Doubled stone bridge;Pont de pierre double;;;;;;;;;;;;x
-CT_pont_fluvial_L6_desc;;En sus d'être en pierre, ce pont permet même le passage de front de deux carioles. Double capacité de passage, donc double revenus !;;;;;;;;;;;;x
-CT_route_L1;Dirt path;Chemin de terre;;;;;;;;;;;;x
-CT_route_L1_desc;ENGLISH;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rôle de voie de transport.;;;;;;;;;;;;x
-CT_route_L2;Stoned path;Chemin empierré;;;;;;;;;;;;x
-CT_route_L2_desc;ENGLISH;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
-CT_route_L3;Paved road;Route pavée;;;;;;;;;;;;x
-CT_route_L3_desc;ENGLISH;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
-CT_fleuve_L1;River pontoon;Ponton fluvial;;;;;;;;;;;;x
-CT_fleuve_L1_desc;ENGLISH;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
-CT_fleuve_L2;River stoned deck;Quai fluvial;;;;;;;;;;;;x
-CT_fleuve_L2_desc;ENGLISH;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
-CT_fleuve_L3;River harbour;Port fluvial;;;;;;;;;;;;x
-CT_fleuve_L3_desc;ENGLISH;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
-TP_pont_L1;Ford;Gué;;;;;;;;;;;;x
-TP_pont_L1_desc;;Un passage à gué a été aménagé à l'endroit ou le lit de la rivière est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prélever un droit de péage, bien que faible.;;;;;;;;;;;;x
-TP_pont_L2;Wooden bridge;Pont en bois;;;;;;;;;;;;x
-TP_pont_L2_desc;;Le passage étant relativement emprunté, permettre le franchissement de la rivière en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prélever un droit de passage plus élevé qu'auparavant.;;;;;;;;;;;;x
-TP_pont_L3;Stone bridge;Pont en pierre;;;;;;;;;;;;x
-TP_pont_L3_desc;;Le pont en pierre est solide et permet un passage aisé que l'on soit à pied ou que l'on roule. Une halte pour alléger sa bourse au péage reste néanmoins indispensable.;;;;;;;;;;;;x
-TP_col_L1;PASS : trail;COL : sentier;;;;;;;;;;;;x
-TP_col_L1_desc;;Le petit sentier qui méne au col est l'unique et indispensable passage au travers la montagne à des lieues à la ronde. Les paysans complètent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
-TP_col_L2;PASS : gravel path;COL : chemin empierré;;;;;;;;;;;;x
-TP_col_L2_desc;;Le sentier menant au col est à présent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
-TP_relais_L1;Moutain shelter;Abri de montagne;;;;;;;;;;;;x
-TP_relais_L1_desc;;Cette construction assez sommaire permet aux voyageurs et marchands une halte au sommet du col pour passer la nuit ou laisser passer le mauvais temps.;;;;;;;;;;;;x
-TP_relais_L2;Mountain refuge;Refuge de montagne;;;;;;;;;;;;x
-TP_relais_L2_desc;;Cette auberge de montagne installée au passage du col offre une halte au chaud et le couvert aux marchands désireux de franchir la montagne.;;;;;;;;;;;;x
-TP_route_L1;Dirt path;Chemin de terre;;;;;;;;;;;;x
-TP_route_L1_desc;ENGLISH;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rôle de voie de transport.;;;;;;;;;;;;x
-TP_route_L2;Stoned path;Chemin empierré;;;;;;;;;;;;x
-TP_route_L2_desc;ENGLISH;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
-TP_route_L3;Paved road;Route pavée;;;;;;;;;;;;x
-TP_route_L3_desc;ENGLISH;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
-TP_fleuve_L1;River pontoon;Ponton fluvial;;;;;;;;;;;;x
-TP_fleuve_L1_desc;ENGLISH;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
-TP_fleuve_L2;River stoned deck;Quai fluvial;;;;;;;;;;;;x
-TP_fleuve_L2_desc;ENGLISH;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
-TP_fleuve_L3;River harbour;Port fluvial;;;;;;;;;;;;x
-TP_fleuve_L3_desc;ENGLISH;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
+CA_pont_L1;Infrastructure: Ford;GuÃ©;;;;;;;;;;;;x
+CA_pont_L1_desc;The discovery of a point in the river where the riverbed is shallow enough to cross has led to an increase in traffic through these parts. The local lord could impose a minor toll to ford the river, but it is unlikely this alone will be profitable in the long run.;Un passage Ã  guÃ© a Ã©tÃ© amÃ©nagÃ© Ã  l'endroit ou le lit de la riviÃ¨re est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prÃ©lever un droit de pÃ©age, bien que faible.;;;;;;;;;;;;x
+CA_pont_L2;Infrastructure: Wooden Bridge;Pont en bois;;;;;;;;;;;;x
+CA_pont_L2_desc;The construction of a wooden bridge over the ford has made it easier for peasants and merchants to bring their goods to market, and a strategically-placed toll booth has allowed the local lord to profit as well.;Le passage Ã©tant relativement empruntÃ©, permettre le franchissement de la riviÃ¨re en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prÃ©lever un droit de passage plus Ã©levÃ© qu'auparavant.;;;;;;;;;;;;x
+CA_pont_L3;Infrastructure: Stone Bridge;Pont en pierre;;;;;;;;;;;;x
+CA_pont_L3_desc;After a few unfortunate accidents, the wooden bridge has been repaired and reinforced with stones to prevent another collapse. Both people and heavy carts can safely pass, further affirming this region's importance as a (taxable!) trade route.;Le pont en pierre est solide et permet un passage aisÃ© que l'on soit Ã  pied ou que l'on roule. Une halte pour allÃ©ger sa bourse au pÃ©age reste nÃ©anmoins indispensable.;;;;;;;;;;;;x
+CA_col_L1;Infrastructure: Mountain Trail;COL : sentier;;;;;;;;;;;;x
+CA_col_L1_desc;This small pass through the mountains is the only path able to be traversed by large caravans, making it indispensible to trade in this region. Some of the peasants here make a living guiding dusty travelers through the treacherous terrain, and we too can profit doubly by taxing both the peasants and the merchants.;Le petit sentier qui mÃ©ne au col est l'unique et indispensable passage au travers la montagne Ã  des lieues Ã  la ronde. Les paysans complÃ tent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
+CA_col_L2;Infrastructure: Mountain Road;COL : chemin empierrÃ©;;;;;;;;;;;;x
+CA_col_L2_desc;Clearing a larger trail through the mountain and surfacing it with gravel allows the passage of more and larger trade caravans, resulting in greater profits for everyone.;Le sentier menant au col est Ã  prÃ©sent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
+CA_route_L1;Infrastructure: Dirt Trail;Chemin de terre;;;;;;;;;;;;x
+CA_route_L1_desc;The roads more travelled by peasants and merchants are often more worn, leaving clear trails for strangers to the province to follow as they bring their goods to market. Clearing the trails and expanding them make travel a little easier and attract more (taxable!) traffic.;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rÃ´le de voie de transport.;;;;;;;;;;;;x
+CA_route_L2;Infrastructure: Gravel Road;Chemin empierrÃ©;;;;;;;;;;;;x
+CA_route_L2_desc;The primitive dirt road that passed through these parts is no longer enough to facilitate travel through these parts. A booming economy requires better roads, and surfacing them with gravel will improve travel by foot, horse, as well as cart.;L'ancien chemin de terre n'Ã©tait plus suffisant pour les marchands qui passaient par lÃ . Le renforcement de la route avec des pierres permet au moins d'Ã©viter les orniÃ¨res, ennemies hÃ©rÃ©ditaires des roues de chariots !;;;;;;;;;;;;x
+CA_route_L3;Infrastructure: Paved Road;Route pavÃ©e;;;;;;;;;;;;x
+CA_route_L3_desc;The growing importance of this region as an economic center requires the expansion and construction of more evenly paved roads to facilitate the droves of merchants that pass through every year.;Toujours plus de marchands empruntent la route, il est temps de l'Ã©largir et d'en renforcer la structure. \nL'entretien permettra de prÃ©texter plus de taxes de pÃ©age.;;;;;;;;;;;;x
+CA_fleuve_L1;Infrastructure: Ferry;Ponton fluvial;;;;;;;;;;;;x
+CA_fleuve_L1_desc;Local peasants make a living ferrying small groups of merchants travelling through these parts (and then of course, pass on a portion of the payment to the local lord). It is a safer alternative to travelling by land... until one of the boats springs a leak.;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opÃ©ration de chargement.;;;;;;;;;;;;x
+CA_fleuve_L2;Infrastructure: Trading Quay;Quai fluvial;;;;;;;;;;;;x
+CA_fleuve_L2_desc;The establishment of a wharf on the banks of the river allows for a significant number of rivercraft to ferry goods across otherwise unfriendly water.;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
+CA_fleuve_L3;Infrastructure: Inland Trading Port;Port fluvial;;;;;;;;;;;;x
+CA_fleuve_L3_desc;Establishing a small port where merchants can rest and then transport larger volumes of goods on sturdier boats has attracted more traffic through these parts.;Un petit port a Ã©tÃ© ici amÃ©nagÃ©. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bÃªtes de sommes peuvent y Ãªtre louÃ©es pour la halage.;;;;;;;;;;;;x
+CT_pont_L1;Infrastructure: Ford;GuÃ©;;;;;;;;;;;;x
+CT_pont_L1_desc;The discovery of a point in the river where the riverbed is shallow enough to cross has led to an increase in traffic through these parts. The local burghers could impose a minor toll to ford the river, but it is unlikely this alone will be profitable in the long run.;Un passage Ã  guÃ© a Ã©tÃ© amÃ©nagÃ© Ã  l'endroit ou le lit de la riviÃ¨re est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prÃ©lever un droit de pÃ©age, bien que faible.;;;;;;;;;;;;x
+CT_pont_L2;Infrastructure: Wooden Bridge;Pont en bois;;;;;;;;;;;;x
+CT_pont_L2_desc;The construction of a wooden bridge over the ford has made it easier for peasants and merchants to bring their goods to market, and a strategically-placed toll booth has allowed the locals to profit as well.;Le passage Ã©tant relativement empruntÃ©, permettre le franchissement de la riviÃ¨re en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prÃ©lever un droit de passage plus Ã©levÃ© qu'auparavant.;;;;;;;;;;;;x
+CT_pont_L3;Infrastucture: Stone Bridge;Pont en pierre;;;;;;;;;;;;x
+CT_pont_L3_desc;After a few unfortunate accidents, the wooden bridge has been repaired and reinforced with stones to prevent another collapse. Both people and heavy carts can safely pass, further affirming this region's importance as a (taxable!) trade route.;Le pont en pierre est solide et permet un passage aisÃ© que l'on soit Ã  pied ou que l'on roule. Une halte pour allÃ©ger sa bourse au pÃ©age reste nÃ©anmoins indispensable.;;;;;;;;;;;;x
+CT_col_L1;Infrastructure: Mountain Pass;COL : sentier;;;;;;;;;;;;x
+CT_col_L1_desc;This small pass through the mountains is the only path able to be traversed by large caravans, making it indispensible to trade in this region. Some of the peasants here make a living guiding dusty travelers through the treacherous terrain, and we too can profit doubly by taxing both the peasants and the merchants.;Le petit sentier qui mÃ©ne au col est l'unique et indispensable passage au travers la montagne Ã  des lieues Ã  la ronde. Les paysans complÃ tent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
+CT_col_L2;Infrastructure: Mountain Trail;COL : chemin empierrÃ©;;;;;;;;;;;;x
+CT_col_L2_desc;Clearing a larger trail through the mountain and surfacing it with gravel allows the passage of more and larger trade caravans, resulting in greater profits for everyone.;Le sentier menant au col est Ã  prÃ©sent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
+CT_relais_L1;Infrastructure: Mountain Tavern;Abri de montagne;;;;;;;;;;;;x
+CT_relais_L1_desc;A tavern where travelers can safely rest after a long day's travel... for a price.;Cette construction assez sommaire permet aux voyageurs et marchands une halte au sommet du col pour passer la nuit ou laisser passer le mauvais temps.;;;;;;;;;;;;x
+CT_relais_L2;Infrastructure: Mountain Inn;Refuge de montagne;;;;;;;;;;;;x
+CT_relais_L2_desc;The local inn not only offers warm drink and a hot soup at the end of a day's travel, but also relatively comfortable beds for tired merchants willing to pay for such comforts.;Cette auberge de montagne installÃ©e au passage du col offre une halte au chaud et le couvert aux marchands dÃ©sireux de franchir la montagne.;;;;;;;;;;;;x
+CT_relais_L3;Infrastructure: Mountain Hamlet;Relais de montagne;;;;;;;;;;;;x
+CT_relais_L3_desc;A small hamlet has sprung up around the local resting area and the peasants make a living tending to weary travellers passing through the high mountain pass.;Ce relais permet d'herberger et nourrir tous les marchand dÃ©sireux de passer la montagne avec leur marchandises. L'acceuil y est chaleureux pour peu que l'on paye correctement son dÃ».;;;;;;;;;;;;x
+CT_oasis_L1;Infrastructure: Sheltered Oasis;Petite Oasis;;;;;;;;;;;;x
+CT_oasis_L1_desc;A sheltered oasis outside of town allows nomads and merchants to take shelter from the elements and the harsh desert nights.;Cette petite oasis, quasi inhabitÃ©e permet aux nomades de faire halte pour remplir leurs outres, se protÃ©ger d'une tempÃªte de sable.;;;;;;;;;;;;x
+CT_oasis_L2;Infrastructure: Oasis Hamlet;Oasis moyenne;;;;;;;;;;;;x
+CT_oasis_L2_desc;A small hamlet has sprung up around this oft-frequented oasis and the peasants make a living tending to needs of weary travellers.;Cette oasis est plus grande que la moyenne et hÃ©berge quelques habitants permanents. Les caravanes y font halte pour se ravitailler en eau et nourriture, au prix de quelques piÃ¨ces nÃ©anmoins.;;;;;;;;;;;;x
+CT_oasis_L3;Infrastructure: Oasis Town;Oasis verdoyante;;;;;;;;;;;;x
+CT_oasis_L3_desc;This oasis town, now irrigated by the waters of the oasis itself, supports a small town offering most of the comforts of home to travellers battered by the desert winds.;Cette grande oasis dÃ©tient suffisamment d'eau pour irriguer jardins et cultures au beau milieu du dÃ©sert. Cette une halte agrÃ©able pour tous voyageur et une halte indispensable pour tout marchand ou caravanes souhaitant se ravitaller en eau et nourriture, voire mÃªme y commercer un peu avant de repartir sur Ã  travers le dÃ©sert.;;;;;;;;;;;;x
+CT_pont_fluvial_L1;Trade and Commerce: Ferry;Bac;;;;;;;;;;;;x
+CT_pont_fluvial_L1_desc;The ferryman transports people and goods from one side of the river to the other for a modest price, facilitating a trickle of trade through these parts.;Le passage du fleuve se fait ici Ã  l'aide d'un bac moyennant un prix modique.;;;;;;;;;;;;x
+CT_pont_fluvial_L2;Trade and Commerce: Towed Ferry;Bac tractÃ©;;;;;;;;;;;;x
+CT_pont_fluvial_L2_desc;AS the current is much stronger here, a series of mechanisms are needed to ensure a steady passage from one bank of the river to the other.;Le courant Ã©tant plus fort ici, le bac est tractÃ© par un mÃ©canisme de cordes et chaÃ®nes permettant une traversÃ©e sereine y compris en pÃ©riode de hautes eaux.;;;;;;;;;;;;x
+CT_pont_fluvial_L3;Trade and Commerce: Floating Bridge;Pont flottant;;;;;;;;;;;;x
+CT_pont_fluvial_L3_desc;For lack of the proper engineering knowledge by the locals to build a fixed bridge, a series of floating logs tied together with thick ropes are the only safe means of facilitating foot traffic across the river.;Un ensemble de rondins encordÃ©es forment une passerelle sur les eaux permettant un franchissement rapide et aisÃ© du fleuve;;;;;;;;;;;;x
+CT_pont_fluvial_L4;Trade and Commerce: Fixed Wooden Bridge;Pont fixe en bois;;;;;;;;;;;;x
+CT_pont_fluvial_L4_desc;The local authorities have elected to hire an engineer to build a sturdy and durable wooden bridge spanning the river. People are now less wary to cross over and a steady stream of merchants regularly flock into the city.;Rien ne vaut un pont permanent et rÃ©sistant pour passer le fleuve en sÃ©curitÃ© et... rÃ©clamer une bonne somme pour ledit passage.;;;;;;;;;;;;x
+CT_pont_fluvial_L5;Trade and Commerce: Stone Bridge;Grand pont de pierre;;;;;;;;;;;;x
+CT_pont_fluvial_L5_desc;After a few unfortunate accidents, the wooden bridge has been repaired and reinforced with stones to prevent another collapse. Both people and heavy carts can safely pass, provided they pay a modest toll.;L'ancien pont de bois a finalement laissÃ© place Ã  un fier et solide pont en pierre. La citÃ© a bien entendu pris soin d'y instaurer un pÃ©age d'un montant tout aussi peu commun aux alentours que de ponts de cette envergure.;;;;;;;;;;;;x
+CT_pont_fluvial_L6;Trade and Commerce: Expanded Stone Bridge;Pont de pierre double;;;;;;;;;;;;x
+CT_pont_fluvial_L6_desc;Expanding the bridge to double its width as well as strengthen the foundations has also doubled the traffic... and the taxes!;En sus d'Ãªtre en pierre, ce pont permet mÃªme le passage de front de deux carioles. Double capacitÃ© de passage, donc double revenus !;;;;;;;;;;;;x
+CT_route_L1;Infrastructure: Dirt Trail;Chemin de terre;;;;;;;;;;;;x
+CT_route_L1_desc;The roads more travelled by peasants and merchants are often more worn, leaving clear trails for strangers to the province to follow as they bring their goods to market. Clearing the trails and expanding them make travel a little easier and attract more (taxable!) traffic.;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rÃ´le de voie de transport.;;;;;;;;;;;;x
+CT_route_L2;Infrastructure: Gravel Road;Chemin empierrÃ©;;;;;;;;;;;;x
+CT_route_L2_desc;The primitive dirt road that passed through these parts is no longer enough to facilitate travel through these parts. A booming economy requires better roads, and surfacing them with gravel will improve travel by foot, horse, as well as cart.;L'ancien chemin de terre n'Ã©tait plus suffisant pour les marchands qui passaient par lÃ . Le renforcement de la route avec des pierres permet au moins d'Ã©viter les orniÃ¨res, ennemies hÃ©rÃ©ditaires des roues de chariots !;;;;;;;;;;;;x
+CT_route_L3;Infrastructure: Paved Road;Route pavÃ©e;;;;;;;;;;;;x
+CT_route_L3_desc;The growing importance of this region as an economic center requires the expansion and construction of more evenly paved roads to facilitate the droves of merchants that pass through every year.;Toujours plus de marchands empruntent la route, il est temps de l'Ã©largir et d'en renforcer la structure. \nL'entretien permettra de prÃ©texter plus de taxes de pÃ©age.;;;;;;;;;;;;x
+CT_fleuve_L1;Infrastructure: Ferry;Ponton fluvial;;;;;;;;;;;;x
+CT_fleuve_L1_desc;Local peasants make a living ferrying small groups of merchants travelling through these parts (and then of course, pass on a portion of the payment to the local lord). It is a safer alternative to travelling by land... until one of the boats springs a leak.;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opÃ©ration de chargement.;;;;;;;;;;;;x
+CT_fleuve_L2;Infrastructure: Trading Quay;Quai fluvial;;;;;;;;;;;;x
+CT_fleuve_L2_desc;The establishment of a wharf on the banks of the river allows for a significant number of rivercraft to ferry goods across otherwise unfriendly water.;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
+CT_fleuve_L3;Infrastructure: Inland Trading Port;Port fluvial;;;;;;;;;;;;x
+CT_fleuve_L3_desc;Establishing a small port where merchants can rest and then transport larger volumes of goods on sturdier boats has attracted more traffic through these parts.;Un petit port a Ã©tÃ© ici amÃ©nagÃ©. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bÃªtes de sommes peuvent y Ãªtre louÃ©es pour la halage.;;;;;;;;;;;;x
+TP_pont_L1;Infrastructure: Ford;GuÃ©;;;;;;;;;;;;x
+TP_pont_L1_desc;The discovery of a point in the river where the riverbed is shallow enough to cross has led to an increase in traffic through these parts. The local burghers could impose a minor toll to ford the river, but it is unlikely this alone will be profitable in the long run.;Un passage Ã  guÃ© a Ã©tÃ© amÃ©nagÃ© Ã  l'endroit ou le lit de la riviÃ¨re est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prÃ©lever un droit de pÃ©age, bien que faible.;;;;;;;;;;;;x
+TP_pont_L2;Infrastructure: Wooden Bridge;Pont en bois;;;;;;;;;;;;x
+TP_pont_L2_desc;The construction of a wooden bridge over the ford has made it easier for peasants and merchants to bring their goods to market, and a strategically-placed toll booth has allowed the locals to profit as well.;Le passage Ã©tant relativement empruntÃ©, permettre le franchissement de la riviÃ¨re en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prÃ©lever un droit de passage plus Ã©levÃ© qu'auparavant.;;;;;;;;;;;;x
+TP_pont_L3;Infrastructure: Stone Bridge;Pont en pierre;;;;;;;;;;;;x
+TP_pont_L3_desc;After a few unfortunate accidents, the wooden bridge has been repaired and reinforced with stones to prevent another collapse. Both people and heavy carts can safely pass, further affirming this region's importance as a (taxable!) trade route.;Le pont en pierre est solide et permet un passage aisÃ© que l'on soit Ã  pied ou que l'on roule. Une halte pour allÃ©ger sa bourse au pÃ©age reste nÃ©anmoins indispensable.;;;;;;;;;;;;x;;;;;;;;;;;;x
+TP_col_L1;Infrastructure: Mountain Pass;COL : sentier;;;;;;;;;;;;x
+TP_col_L1_desc;This small pass through the mountains is the only path able to be traversed by large caravans, making it indispensible to trade in this region. Some of the peasants here make a living guiding dusty travelers through the treacherous terrain, and we too can profit doubly by taxing both the peasants and the merchants.;Le petit sentier qui mÃ©ne au col est l'unique et indispensable passage au travers la montagne Ã  des lieues Ã  la ronde. Les paysans complÃ tent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
+TP_col_L2;Infrastructure: Mountain Trail;COL : chemin empierrÃ©;;;;;;;;;;;;x
+TP_col_L2_desc;Clearing a larger trail through the mountain and surfacing it with gravel allows the passage of more and larger trade caravans, resulting in greater profits for everyone.;Le sentier menant au col est Ã  prÃ©sent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
+TP_relais_L1;Infrastructure: Mountain Tavern;Abri de montagne;;;;;;;;;;;;x
+TP_relais_L1_desc;A tavern where travelers can safely rest after a long day's travel... for a price.;Cette construction assez sommaire permet aux voyageurs et marchands une halte au sommet du col pour passer la nuit ou laisser passer le mauvais temps.;;;;;;;;;;;;x
+TP_relais_L2;Infrastructure: Mountain Inn;Refuge de montagne;;;;;;;;;;;;x
+TP_relais_L2_desc;The local inn not only offers warm drink and a hot soup at the end of a day's travel, but also relatively comfortable beds for tired merchants willing to pay for such comforts.;Cette auberge de montagne installÃ©e au passage du col offre une halte au chaud et le couvert aux marchands dÃ©sireux de franchir la montagne.;;;;;;;;;;;;x
+TP_route_L1;Infrastructure: Dirt Trail;Chemin de terre;;;;;;;;;;;;x
+TP_route_L1_desc;The roads more travelled by peasants and merchants are often more worn, leaving clear trails for strangers to the province to follow as they bring their goods to market. Clearing the trails and expanding them make travel a little easier and attract more (taxable!) traffic.;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rÃ´le de voie de transport.;;;;;;;;;;;;x
+TP_route_L2;Infrastructure Gravel Road;Chemin empierrÃ©;;;;;;;;;;;;x
+TP_route_L2_desc;The primitive dirt road that passed through these parts is no longer enough to facilitate travel through these parts. A booming economy requires better roads, and surfacing them with gravel will improve travel by foot, horse, as well as cart.;L'ancien chemin de terre n'Ã©tait plus suffisant pour les marchands qui passaient par lÃ . Le renforcement de la route avec des pierres permet au moins d'Ã©viter les orniÃ¨res, ennemies hÃ©rÃ©ditaires des roues de chariots !;;;;;;;;;;;;x
+TP_route_L3;Infrastructure: Paved Road;Route pavÃ©e;;;;;;;;;;;;x
+TP_route_L3_desc;The growing importance of this region as an economic center requires the expansion and construction of more evenly paved roads to facilitate the droves of merchants that pass through every year.;Toujours plus de marchands empruntent la route, il est temps de l'Ã©largir et d'en renforcer la structure. \nL'entretien permettra de prÃ©texter plus de taxes de pÃ©age.;;;;;;;;;;;;x
+TP_fleuve_L1;Infrastructure: Ferry;Ponton fluvial;;;;;;;;;;;;x
+TP_fleuve_L1_desc;Local peasants make a living ferrying small groups of merchants travelling through these parts (and then of course, pass on a portion of the payment to the local lord). It is a safer alternative to travelling by land... until one of the boats springs a leak.;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opÃ©ration de chargement.;;;;;;;;;;;;x
+TP_fleuve_L2;Infrastructure: Trading Quay;Quai fluvial;;;;;;;;;;;;x
+TP_fleuve_L2_desc;The establishment of a wharf on the banks of the river allows for a significant number of rivercraft to ferry goods across otherwise unfriendly water.;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
+TP_fleuve_L3;Infrastructure: Inland Trading Port;Port fluvial;;;;;;;;;;;;x
+TP_fleuve_L3_desc;Establishing a small port where merchants can rest and then transport larger volumes of goods on sturdier boats has attracted more traffic through these parts.;Un petit port a Ã©tÃ© ici amÃ©nagÃ©. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bÃªtes de sommes peuvent y Ãªtre louÃ©es pour la halage.;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-tr_port_fluvial_1;Fluvial landing stage;Débarcadère fluvial;;;;;;;;;;;;x
-tr_port_fluvial_1_desc;Fluvial landing stage;Ce ponton en bois permet l'arraisonnement des gabares et autres barques marchandes. Seul inconvénient le peu de place qu'il possède et l'écot à payer en sus !;;;;;;;;;;;;x
-tr_port_fluvial_2;Fluvial harbour;Port fluvial;;;;;;;;;;;;x
-tr_port_fluvial_2_desc;Fluvial harbour;Le port permet le va et vient incessant des denrées et autres marchandises. Avec le trafic incessant rentre l'argent.;;;;;;;;;;;;x
-tr_port_fluvial_3;Great fluvial harbour;Grand port fluvial;;;;;;;;;;;;x
-tr_port_fluvial_3_desc;Great fluvial harbour;Cet endroit est une vraie fourmilière où se rencontre porteurs, marchands, bourgeois et coquins à la recherche d'un petit larçin.;;;;;;;;;;;;x
-tr_port_maritime_1;Maritime landing stage;Débarcadère maritime;;;;;;;;;;;;x
-tr_port_maritime_1_desc;Maritime landing stage;Cet endroit est l'embryon du commerce maritime. Sans lui pas de commerce !;;;;;;;;;;;;x
-tr_port_maritime_2;Maritime harbour;Port maritime;;;;;;;;;;;;x
-tr_port_maritime_2_desc;Maritime harbour;Le port possède de nombreux quais où les voiles des marchands viennent se protéger des pirates et déverser leur précieuse cargaison.;;;;;;;;;;;;x
-tr_port_maritime_3;Great maritime landing stage;Grand port maritime;;;;;;;;;;;;x
-tr_port_maritime_3_desc;Great maritime landing stage;Ce port possède suffisament de quais pour accueillir une flotte complète de navires débordant de biens.;;;;;;;;;;;;x
-tr_relais_route_1;Toll;Péage;;;;;;;;;;;;x
-tr_relais_route_1_desc;Toll;Le malheur des marchands et le bonheur des bourgmestres. Ici, il faudra payer pour passer.;;;;;;;;;;;;x
-tr_relais_route_2;Road stance;Relais routier;;;;;;;;;;;;x
-tr_relais_route_2_desc;Road stance;Les caravanes s'arrêtent là afin de permettre à leurs membres de se reposer. Celà génèrent des revenus forts lucratifs.;;;;;;;;;;;;x
-tr_relais_route_3;Trade stance;Relais commercial;;;;;;;;;;;;x
-tr_relais_route_3_desc;Trade stance;La quintessence de la route commerciale : auberges, échoppes, entrepôts et droit de douane se mélangent ici.;;;;;;;;;;;;x
-tr_entrepot_1;Merchandises warehouse;Entrepôt à marchandises;;;;;;;;;;;;x
-tr_entrepot_1_desc;Merchandises warehouse;Il est important de pouvoir garder les marchandises quelquepart. Ce petit entrepôt s'en chargera.;;;;;;;;;;;;x
-tr_entrepot_2;Merchandises hall;Halle à marchandises;;;;;;;;;;;;x
-tr_entrepot_2_desc;Merchandises hall;Un lieu regroupant divers entrepôts où dorment les futurs achats du marché.;;;;;;;;;;;;x
-tr_bureau_1;Barter office;Bureau d'échange;;;;;;;;;;;;x
-tr_bureau_1_desc;Barter office;C'est là que se trouve la tête du commerce. Un lieu où seuls les hommes de confiance ont accès.;;;;;;;;;;;x
-tr_bureau_2;Commercial office;Bureau de commerce;;;;;;;;;;;;x
-tr_bureau_2_desc;Commercial office;Ce lieu est le centre décisionnaire de la toile commerciale. Les marchands tremblent à l'idée d'en offenser son dirigeant.;;;;;;;;;;;;x
-tr_garnison_1;Tradepost's guard;Garde du comptoir;;;;;;;;;;;;x
-tr_garnison_1_desc;Tradepost's guard;Un petit bâtiment où se regroupent des soldats chargés des tâches policières intrinsèques au commerce.;;;;;;;;;;;;x
-tr_garnison_2;Reinforced guard;Garde renforcée;;;;;;;;;;;;x
-tr_garnison_2_desc;Reinforced guard;Un lieu imposant qui domine sévèrement la place du marché.;;;;;;;;;;;;x
-tr_garnison_3;Garrison;Garnison;;;;;;;;;;;;x
-tr_garnison_3_desc;Garrison;Tout malandrin devra se préparer à voir surgir de cet endoit moults protecteurs du commerce.;;;;;;;;;;;;x
+tr_port_fluvial_1;Inland Trading Quay;DÃ©barcadÃ¨re fluvial;;;;;;;;;;;;x
+tr_port_fluvial_1_desc;The establishment of a wharf on the banks of the river allows for a significant number of rivercraft to ferry goods across otherwise unfriendly water.;Ce ponton en bois permet l'arraisonnement des gabares et autres barques marchandes. Seul inconvÃ©nient le peu de place qu'il possÃ¨de et l'Ã©cot Ã  payer en sus !;;;;;;;;;;;;x
+tr_port_fluvial_2;Inland Trading Port;Port fluvial;;;;;;;;;;;;x
+tr_port_fluvial_2_desc;Establishing a small port where merchants can rest and then transport larger volumes of goods on sturdier boats has attracted more traffic through these parts.;Le port permet le va et vient incessant des denrÃ©es et autres marchandises. Avec le trafic incessant rentre l'argent.;;;;;;;;;;;;x
+tr_port_fluvial_3;Inland Trading Harbor;Grand port fluvial;;;;;;;;;;;;x
+tr_port_fluvial_3_desc;A considerably busy and populated harbor serves as a hub where merchants can transport goods further downstream to the cities or sell their goods at the market that has sprung up within the trading post itself.;Cet endroit est une vraie fourmiliÃ¨re oÃ¹ se rencontre porteurs, marchands, bourgeois et coquins Ã  la recherche d'un petit larÃ§in.;;;;;;;;;;;;x
+tr_port_maritime_1;Maritime Trading Quay;DÃ©barcadÃ¨re maritime;;;;;;;;;;;;x
+tr_port_maritime_1_desc;The establishment of a wharf along the coast allows for a significant number of small vessels to dock before unloading their goods.;Cet endroit est l'embryon du commerce maritime. Sans lui pas de commerce !;;;;;;;;;;;;x
+tr_port_maritime_2;Maritime Trading Port;Port maritime;;;;;;;;;;;;x
+tr_port_maritime_2_desc;Establishing a small port where merchants can rest and then transport larger volumes of goods to their warehouses or further inland has been a significant boon to trade.;Le port possÃ¨de de nombreux quais oÃ¹ les voiles des marchands viennent se protÃ©ger des pirates et dÃ©verser leur prÃ©cieuse cargaison.;;;;;;;;;;;;x
+tr_port_maritime_3;Maritime Trading Harbor;Grand port maritime;;;;;;;;;;;;x
+tr_port_maritime_3_desc;A considerably busy and populated harbor serves as a hub where merchants can transport goods further inland to the cities or sell their goods at the market that has sprung up within the trading post itself.;Ce port possÃ¨de suffisament de quais pour accueillir une flotte complÃ¨te de navires dÃ©bordant de biens.;;;;;;;;;;;;x
+tr_relais_route_1;Toll Booths;PÃ©age;;;;;;;;;;;;x
+tr_relais_route_1_desc;Tolls are collected here.;Le malheur des marchands et le bonheur des bourgmestres. Ici, il faudra payer pour passer.;;;;;;;;;;;;x
+tr_relais_route_2;Travelers' Inn;Relais routier;;;;;;;;;;;;x
+tr_relais_route_2_desc;Weary travellers can rest their bones here.;Les caravanes s'arrÃªtent lÃ  afin de permettre Ã  leurs membres de se reposer. CelÃ  gÃ©nÃ¨rent des revenus forts lucratifs.;;;;;;;;;;;;x
+tr_relais_route_3;Market Square;Relais commercial;;;;;;;;;;;;x
+tr_relais_route_3_desc;Goods can be sold here at the trading post in the market.;La quintessence de la route commerciale : auberges, Ã©choppes, entrepÃ´ts et droit de douane se mÃ©langent ici.;;;;;;;;;;;;x
+tr_entrepot_1;Merchandise Depot;EntrepÃ´t Ã  marchandises;;;;;;;;;;;;x
+tr_entrepot_1_desc;A small storage for merchants to store their goods under lock and key.;Il est important de pouvoir garder les marchandises quelquepart. Ce petit entrepÃ´t s'en chargera.;;;;;;;;;;;;x
+tr_entrepot_2;Merchandise Warehouse;Halle Ã  marchandises;;;;;;;;;;;;x
+tr_entrepot_2_desc;A large storage for merchants to store their goods under lock and key, guarded by menacing-looking characters..;Un lieu regroupant divers entrepÃ´ts oÃ¹ dorment les futurs achats du marchÃ©.;;;;;;;;;;;;x
+tr_bureau_1;Office of the Exchequer;Bureau d'Ã©change;;;;;;;;;;;;x
+tr_bureau_1_desc;Essentially the closest person to the central authority governing the trade post, strict regulations are enforced from the busy offices located here.;C'est lÃ  que se trouve la tÃªte du commerce. Un lieu oÃ¹ seuls les hommes de confiance ont accÃ¨s.;;;;;;;;;;;x
+tr_bureau_2;Office of Commerce;Bureau de commerce;;;;;;;;;;;;x
+tr_bureau_2_desc;The central authority at the trading post, the Office holds the power to ruin noncompliant merchants and enforce order.;Ce lieu est le centre dÃ©cisionnaire de la toile commerciale. Les marchands tremblent Ã  l'idÃ©e d'en offenser son dirigeant.;;;;;;;;;;;;x
+tr_garnison_1;Mercenary Guards;Garde du comptoir;;;;;;;;;;;;x
+tr_garnison_1_desc;Hiring a few mercenaries to guard the warehouses have staved off petty crimes to a certain degree... as long as such characters are paid well.;Un petit bÃ¢timent oÃ¹ se regroupent des soldats chargÃ©s des tÃ¢ches policiÃ¨res intrinsÃ¨ques au commerce.;;;;;;;;;;;;x
+tr_garnison_2;Guard Barracks;Garde renforcÃ©e;;;;;;;;;;;;x
+tr_garnison_2_desc;More money means better guards that can be more regularly paid and better armed to deal with thieves, thugs, and occasionally pirates.;Un lieu imposant qui domine sÃ©vÃ¨rement la place du marchÃ©.;;;;;;;;;;;;x
+tr_garnison_3;Trading Post Garrison;Garnison;;;;;;;;;;;;x
+tr_garnison_3_desc;A sizeable garrison maintains peace and order, so that trade may flourish.;Tout malandrin devra se prÃ©parer Ã  voir surgir de cet endoit moults protecteurs du commerce.;;;;;;;;;;;;x
