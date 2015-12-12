@@ -26,8 +26,7 @@ character_event = {
 	ai_chance = { factor = 0 }
 	trigger = { ai = no }
 	set_global_flag = running_SWMH	
-		#set_global_flag = paix_de_dieu 
-		#narrative_event = { id = L3T.0011 days = 2555 } #7 years ATM
+		set_global_flag = paix_de_dieu 
 	}
 #	option = {	
 #	name = "L3T.0010B"	
@@ -35,15 +34,13 @@ character_event = {
 #	trigger = { ai = no }
 #	set_global_flag = running_LCDA	
 		#set_global_flag = paix_de_dieu 
-		#narrative_event = { id = L3T.0011 days = 1800 } #5 years ATM
 #	}
 	option = {
 	name = "L3T.0010C"	
 	ai_chance = { factor = 0 }
 	trigger = { ai = no }
 	set_global_flag = running_VANILLA	
-		#set_global_flag = paix_de_dieu 
-		#narrative_event = { id = L3T.0011 days = 2555 } #7 years ATM
+		set_global_flag = paix_de_dieu 
 	}
 	option = {
 	name = "L3T.0010D"	
@@ -52,40 +49,30 @@ character_event = {
 	}
 }
 
-#narrative_event = {
- #   id = L3T.0014
-#	title = "L3T.0014"
-#	desc = "DESCL3T.0014"
-#	picture = GFX_evt_market
-#
-#	trigger = {
-#			NOT = {	
-#			has_global_flag = paix_de_dieu
-#			has_global_flag = paix_de_dieu_cleared
-#			}
-#			religion = catholic
-#			controls_religion = yes # Let it happen for the Pope - he's always around
-#			}
-#		
-#	mean_time_to_happen = { days = 1 }	
-#
-#	option = {
-#	name = "L3T.0014A"	
-#	set_global_flag = paix_de_dieu 
-#	narrative_event = { id = L3T.0011 days = 2555 } #7 years ATM
-#	}
-#}
-
 # Fin paix de Dieu
 narrative_event = {
     id = L3T.0011
 	hide_window = yes
 
-	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = paix_de_dieu_cleared }
+		has_global_flag = paix_de_dieu
+		had_global_flag = { flag = paix_de_dieu days = 1825 } #5 years
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = { factor = 1.90	had_global_flag = { flag = paix_de_dieu days = 1825 } } #5years
+		modifier = { factor = 1.40	had_global_flag = { flag = paix_de_dieu days = 2190 } } #6years
+		modifier = { factor = 1.00	had_global_flag = { flag = paix_de_dieu days = 2555 } } #7years #ideal year
+		modifier = { factor = 0.90	had_global_flag = { flag = paix_de_dieu days = 2920 } } #8years
+		modifier = { factor = 0.80	had_global_flag = { flag = paix_de_dieu days = 3285 } } #9years
+	}
 	
 	immediate = {	
 	clr_global_flag = paix_de_dieu
-	set_global_flag = paix_de_dieu_cleared	}
+	set_global_flag = paix_de_dieu_cleared
+	}
 }
 
 # Boost IA
@@ -106,11 +93,9 @@ character_event = {
 		tier = baron
 		}
 		
-	mean_time_to_happen = { days = 1 }	
+	mean_time_to_happen = { days = 10 }	
 
 	option = {
-#	set_global_flag = paix_de_dieu 
-	#narrative_event = { id = L3T.0011 days = 2555 } #7 years ATM
 	name = "L3T.0012A"
 	set_character_flag = start_bonus_given  
 	random_list = {
@@ -128,7 +113,7 @@ character_event = {
 	}
 
 }
-# Détection de la carte
+# Choix langue
 character_event = {
     id = L3T.15
 	title = "L3T.15"
