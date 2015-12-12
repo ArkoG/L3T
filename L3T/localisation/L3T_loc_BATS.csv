@@ -89,8 +89,11 @@ CA_BOIS_bois_L3;Timber: Lumber Mill;BOIS : Exploitation Forestière;;;;;;;;;;;;x;
 CA_BOIS_bois_L3_desc;The construction of lumber mills have greatly increased productivity and lessened the logistical burden of hauling uncut logs to the cities for processing. Small villages springing up next to these facilities provide more labor and support for the hundreds of loggers employed throughout the province.;;;;;;;;;;;;;x;
 #CHARBON DE BOIS (foret);;;;;;;;;;;;;;;x
 CA_BOIS_charbon_L1;Charcoal: Colliers' Huts;CHARBON DE BOIS : Charbonnière Improvisée;;;;;;;;;;;;x;
+CA_BOIS_charbon_L1_desc;;;;;;;;;;;;;;x;
 CA_BOIS_charbon_L2;Charcoal: Coal-firing Kilns;CHARBON DE BOIS : Charbonnière Permanente;;;;;;;;;;;;x;
+CA_BOIS_charbon_L2_desc;;;;;;;;;;;;;;x;
 CA_BOIS_charbon_L3;Charcoal: Seigneurial Kilns;CHARBON DE BOIS : Charbonnière Seigneuriale;;;;;;;;;;;;x;
+CA_BOIS_charbon_L3_desc;;;;;;;;;;;;;;x;
 #CARRIERE pierre (montagne + côteau);;;;;;;;;;;;;;;x
 CA_CARR_pierre_L1;Stone: Open-cast Quarry;PIERRE : Carrière sommaire;;;;;;;;;;;;x;
 CA_CARR_pierre_L1_desc;Stone is mined here in significant quantities, but surveyors have discovered veins that run deep into the soil. Perhaps an expansion of operations underground might be in order.;L'exploitation consiste surtout à casser des rochers plus gros dans un éboulis ou un affleurement rocheux d'une colline. On y extrait péniblement roches et remblais qui seront utilisés localement.;;;;;;;;;;;;x;
@@ -114,7 +117,9 @@ CA_FISH_peche_L3;Fishing: Fishing Harbor;PECHE : Port;;;;;;;;;;;;x;
 CA_FISH_peche_L3_desc;The quay has been expanded into a bustling harbor and the fishing industry is booming here.;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;;;;;;;;;;;;x;
 #FISH pisciculture (terres);;;;;;;;;;;;;;;x
 CA_FISH_pisci_L1;Freshwater Fish: Artificial Lake;PISCICULTURE : Élevage en Rivière;;;;;;;;;;;;x;
+CA_FISH_pisci_L1_desc;;;;;;;;;;;;;;x;
 CA_FISH_pisci_L2;Freshwater Fish: Fish Farms;PISCICULTURE : Étang Aménagé;;;;;;;;;;;;x;
+CA_FISH_pisci_L2_desc;;;;;;;;;;;;;;x;
 #CA_FISH_pisci_L3;PISCICULTURE : Ferme Piscicole;PISCICULTURE : Ferme Piscicole;Ferme Piscicole;;;;;;;;;;;x;
 CA_AGRI_moulin_L1;Flour: Horse Mill;;;;;;;;;;;;;x
 CA_AGRI_moulin_L1_desc;;;;;;;;;;;;;;x
@@ -207,11 +212,11 @@ CT_AGRI_verger_L3;Fruits: Communal Orchards;FRUITS : Vergers Communaux;;;;;;;;;;
 CT_AGRI_verger_L3_desc;The communal government has expanded the majority of the fruit orchards in this province. Thousands of laborers now toil in the groves harvesting fruit from trees bending under their own weight to send to market.;Les vergers couvrent à présent une bonne partie des côteaux et les arbres plient sous le poids de leurs fruits abondants.;;;;;;;;;;;;x;
 #ELEVAGE bovin;;;;;;;;;;;;;;;x
 CT_ELEV_bovin_L1;Cattle: Pasturages;BETAIL : Pré;;;;;;;;;;;;x;
-CT_ELEV_ovin_L1a_desc;Putting cattle out to pasture on the vast grazing lands in this province forms the foundation of a stable economy, but land use is inefficient and there is more than enough land to support larger herds.;Un pré pour les bovins a été délimité.;;;;;;;;;;;;x;
-CT_ELEV_bovin_L2;Cattle: Enclosures;BETAIL : Enclos à ovins;;;;;;;;;;;;x;
-CT_ELEV_ovin_L2a_desc;Enclosing cattle herds allows more efficient use of grazing lands as well as better protection from predators and rustlers.;Sur le pré, un ensemble de barrière formant un enclos a été établi.;;;;;;;;;;;;x;
+CT_ELEV_bovin_L1_desc;Putting cattle out to pasture on the vast grazing lands in this province forms the foundation of a stable economy, but land use is inefficient and there is more than enough land to support larger herds.;Un pré pour les bovins a été délimité.;;;;;;;;;;;;x;
+CT_ELEV_bovin_L2;Cattle: Enclosures;BETAIL : Enclos à bovins;;;;;;;;;;;;x;
+CT_ELEV_bovin_L2_desc;Enclosing cattle herds allows more efficient use of grazing lands as well as better protection from predators and rustlers.;Sur le pré, un ensemble de barrières formant un enclos a été établi.;;;;;;;;;;;;x;
 CT_ELEV_bovin_L3;Cattle: Cattle Pens;BETAIL : Étable;;;;;;;;;;;;x;
-CT_ELEV_ovin_L3a_desc;Keeping the cattle penned reduces the risk of losing them to theft or predators. The establishment of proper infrastructure for the breeding and cultivation of large herds of cattle has delivered significant returns.;Une étable accueillant les bêtes pour la nuit a été batie.;;;;;;;;;;;;x;
+CT_ELEV_bovin_L3_desc;Keeping the cattle penned reduces the risk of losing them to theft or predators. The establishment of proper infrastructure for the breeding and cultivation of large herds of cattle has delivered significant returns.;Une étable accueillant les bêtes pour la nuit a été batie.;;;;;;;;;;;;x;
 #BOIS (plaine + foret );;;;;;;;;;;;;;;x
 CT_BOIS_bois_L1;Timber: Woodcutters' Lodges;BOIS : Site de Coupe;;;;;;;;;;;;x;
 CT_BOIS_bois_L1_desc;Small lodges support a few dozen lumberjacks at a time as they chip slowly at the woodlands of the region, supplying only barely what is needed to sustain local industries.;;;;;;;;;;;;;x;
@@ -221,29 +226,43 @@ CT_BOIS_bois_L3;Timber: Lumber Mill;BOIS : Exploitation ForestiÃ¨re;;;;;;;;;;;;x
 CT_BOIS_bois_L3_desc;The construction of lumber mills have greatly increased productivity and lessened the logistical burden of hauling uncut logs to the cities for processing. Small villages springing up next to these facilities provide more labor and support for the hundreds of loggers employed throughout the province.;;;;;;;;;;;;;x;
 #CHARBON DE BOIS (foret);;;;;;;;;;;;;;;x
 CT_BOIS_charbon_L1;Charcoal: Colliers' Huts;CHARBON DE BOIS : Charbonnière Improvisée;;;;;;;;;;;;x;
+CT_BOIS_charbon_L1_desc;;;;;;;;;;;;;;x;
 CT_BOIS_charbon_L2;Charcoal: Coal-firing Kilns;CHARBON DE BOIS : Charbonnière Permanente;;;;;;;;;;;;x;
+CT_BOIS_charbon_L2_desc;;;;;;;;;;;;;;x;
 CT_BOIS_charbon_L3;Charcoal: Communal Kilns: Charbonnière Seigneuriale;CHARBON DE BOIS : Charbonnière Communnale;;;;;;;;;;;;x;
+CT_BOIS_charbon_L3_desc;;;;;;;;;;;;;;x;
 #CARRIERE pierre (montagne + côteau);;;;;;;;;;;;;;;x
 CT_CARR_pierre_L1;Stone: Open-cast Quarry;PIERRE : Carrière sommaire;;;;;;;;;;;;x;
-CA_CARR_pierre_L1_desc;Stone is mined here in significant quantities, but surveyors have discovered veins that run deep into the soil. Perhaps an expansion of operations underground might be in order.;L'exploitation consiste surtout à casser des rochers plus gros dans un éboulis ou un affleurement rocheux d'une colline. On y extrait péniblement roches et remblais qui seront utilisés localement.;;;;;;;;;;;;x;
+CT_CARR_pierre_L1_desc;Stone is mined here in significant quantities, but surveyors have discovered veins that run deep into the soil. Perhaps an expansion of operations underground might be in order.;L'exploitation consiste surtout à casser des rochers plus gros dans un éboulis ou un affleurement rocheux d'une colline. On y extrait péniblement roches et remblais qui seront utilisés localement.;;;;;;;;;;;;x;
 CT_CARR_pierre_L2;Stone: Shallow Shaft Mining;PIERRE : Front de taille;;;;;;;;;;;;x;
-CA_CARR_pierre_L2_desc;The construction of a shaft extending deep underground allows for more stone to be extracted in blocks and lifted to the surface by ingenious elevators and sturdy cranes.;L'intensification de l'extraction a formé cette paroi verticale ouverte dans ce flanc de plateau, permettant d'extraire de la pierre en gros bloc qui pourront donner une belle pierre de taille.;;;;;;;;;;;;x;
+CT_CARR_pierre_L2_desc;The construction of a shaft extending deep underground allows for more stone to be extracted in blocks and lifted to the surface by ingenious elevators and sturdy cranes.;L'intensification de l'extraction a formé cette paroi verticale ouverte dans ce flanc de plateau, permettant d'extraire de la pierre en gros bloc qui pourront donner une belle pierre de taille.;;;;;;;;;;;;x;
 CT_CARR_pierre_L3;Stone: Extensive Shaft Mining;PIERRE : Grande Carrière;;;;;;;;;;;;x;
-CA_CARR_pierre_L3_desc;The construction of an extensive tunnel network and the machinery needed to lift large blocks of stone to the surface have greatly increased productivity to supply the construction of fortifications and cathedrals, but also make mining much more dangerous and a few lives are claimed every year.;Ce site carrier fournit l'ensemble de la région en pierre de qualité qui sert notamment à l'édification de fortifications ou contructions telles les églises et cathédrales.;;;;;;;;;;;;x;
+CT_CARR_pierre_L3_desc;The construction of an extensive tunnel network and the machinery needed to lift large blocks of stone to the surface have greatly increased productivity to supply the construction of fortifications and cathedrals, but also make mining much more dangerous and a few lives are claimed every year.;Ce site carrier fournit l'ensemble de la région en pierre de qualité qui sert notamment à l'édification de fortifications ou contructions telles les églises et cathédrales.;;;;;;;;;;;;x;
 #MINE minerai sel(montagne + côteau + désert);;;;;;;;;;;;;;;x
 CT_MINE_sel_L1;Salt: Brine Pits;SEL : Puits de Saumure;;;;;;;;;;;;x;
+CT_MINE_sel_L1_desc;;;;;;;;;;;;;;x;
 CT_MINE_sel_L2;Salt: Salt Furnace;SEL : Chaudière;;;;;;;;;;;;x;
+CT_MINE_sel_L2_desc;;;;;;;;;;;;;;x;
 CT_MINE_sel_L3;Salt: Salt Mine;SEL : Saline;;;;;;;;;;;;x;
+CT_MINE_sel_L3_desc;;;;;;;;;;;;;;x;
 CT_MINE_sel_L4;Salt: Expanded Salt Mines;SEL : Saline Fortifiée;;;;;;;;;;;;x;
+CT_MINE_sel_L4_desc;;;;;;;;;;;;;;x;
 CT_MINE_sel_L5;Salt: Major Salt Mines;SEL : Grande Saline;;;;;;;;;;;;x;
+CT_MINE_sel_L5_desc;;;;;;;;;;;;;;x;
 #MINE minerai or(désert);;;;;;;;;;;;;;;x
 CT_MINE_or_L1;Gold: Open-cast Mine;OR : Mine sommaire;;;;;;;;;;;;;x
+CT_MINE_or_L1_desc;;;;;;;;;;;;;;x;
 CT_MINE_or_L2;Gold: Shallow Shaft Mining;OR : Petite excavation;;;;;;;;;;;;;x
+CT_MINE_or_L2_desc;;;;;;;;;;;;;;x;
 CT_MINE_or_L3;Gold: Extensive Shaft Mining;OR : Grande mine;;;;;;;;;;;;;x
+CT_MINE_or_L3_desc;;;;;;;;;;;;;;x;
 #MINE minerai cuivre(désert);;;;;;;;;;;;;;;x
 CT_MINE_cuivre_L1;Copper: Open-cast Mine;CUIVRE : Mine sommaire;;;;;;;;;;;;;x
+CT_MINE_cuivre_L1_desc;;;;;;;;;;;;;;x;
 CT_MINE_cuivre_L2;Copper: Shallow Shaft Mining;CUIVRE : Petite excavation;;;;;;;;;;;;;x
+CT_MINE_cuivre_L2_desc;;;;;;;;;;;;;;x;
 CT_MINE_cuivre_L3;Copper: Extensive Shaft Mining;CUIVRE : Grande mine;;;;;;;;;;;;;x
+CT_MINE_cuivre_L3_desc;;;;;;;;;;;;;;x;
 #FISH pêche (côtes);;;;;;;;;;;;;;;x
 CT_FISH_peche_L1;Fishing: Fishing Piers;PECHE : Ponton;;;;;;;;;;;;x;
 CT_FISH_peche_L1_desc;A small pier has been constructed to accommodate the emergence of a small fishing village. Some fish are caught here, but the waters are still teeming with wildlife and could yield even more were there more infrastructure to support local fishing.;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;;;;;;;;;;;;x;
@@ -253,16 +272,26 @@ CT_FISH_peche_L3;Fishing: Fishing Harbor;PECHE : Port;;;;;;;;;;;;x;
 CT_FISH_peche_L3_desc;The quay has been expanded into a bustling harbor and the fishing industry is booming here.;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;;;;;;;;;;;;x;
 #VIN (coteaux);;;;;;;;;;;;;;x;
 CT_chai_L1;Wine: Cultivated Vineyards;VIN : Chai Modeste;;;;;;;;;;;;x;
+CT_chai_L1_desc;;;;;;;;;;;;;;x;
 CT_chai_L2;Wine: Modest Winery;VIN : Chai Agrandi;;;;;;;;;;;;x;
+CT_chai_L2_desc;;;;;;;;;;;;;;x;
 CT_chai_L3;Wine: Expanded Winery;VIN : Grand Chai;;;;;;;;;;;;x;
+CT_chai_L3_desc;;;;;;;;;;;;;;x;
 CT_chai_L4;Wine: Reputable Winery;VIN : Chai Réputé;;;;;;;;;;;;x;
+CT_chai_L4_desc;;;;;;;;;;;;;;x;
 CT_chai_L5;Wine: Famed Winery;VIN : Chai de Haute Renommée;;;;;;;;;;;;x;
+CT_chai_L5_desc;;;;;;;;;;;;;;x;
 #BIERE;;;;;;;;;;;;;;x;
 CT_brasserie_L1;Beer: Cultivated Hops;BIERE : Brasserie Modeste;;;;;;;;;;;;x;
+CT_brasserie_L1_desc;;;;;;;;;;;;;;x;
 CT_brasserie_L2;Beer: Modest Brewery;BIERE : Brasserie Agrandie;;;;;;;;;;;;x;
+CT_brasserie_L2_desc;;;;;;;;;;;;;;x;
 CT_brasserie_L3;Beer: Expanded Brewery;BIERE : Grande Brasserie;;;;;;;;;;;;x;
+CT_brasserie_L3_desc;;;;;;;;;;;;;;x;
 CT_brasserie_L4;Beer: Reputable Brewery;BIERE : Brasserie Réputée;;;;;;;;;;;;x;
+CT_brasserie_L4_desc;;;;;;;;;;;;;;x;
 CT_brasserie_L5;Beer: Famed Brewery;BIERE : Brasserie de Haute Renommée;;;;;;;;;;;;x;
+CT_brasserie_L5_desc;;;;;;;;;;;;;;x;
 #;x;x;;;;;;;;;;;;x
 #;x;DEBUT AJOUT MOUCHI;;;;;;;;;;;;x
 CT_AGRI_moulin_L1;Flour: Water-powered Mill;FARINE : Moulin à aubes;;;;;;;;;;;;x
@@ -362,62 +391,97 @@ CT_saline_L5_desc;;;;;;;;;;;;;;x
 TP_AGRI_cereale_L1;Cereals: Land Clearance;CEREALES : Plaine Défrichée;;;;;;;;;;;;x;
 TP_AGRI_cereale_L1_desc;This land has been cleared and prepared for the large-scale cultivation of cereals.;Ce terrain a été défriché et devrait bientôt pouvoir produire des céréales.;;;;;;;;;;;x
 TP_AGRI_cereale_L2;Cereals: Cultivated Fields;CEREALES : Champs Cultivés;;;;;;;;;;;;x;
-CT_AGRI_cereale_L2_desc;This land supports the large-scale cultivation of multiple crops of cereals according to the rhythm of the seasons.;Ce terrain comporte maintenant plusieurs champs cultivés où se succèdent les assolements triennaux céréaliers au fil des saisons.;;;;;;;;;;;;x;
+TP_AGRI_cereale_L2_desc;This land supports the large-scale cultivation of multiple crops of cereals according to the rhythm of the seasons.;Ce terrain comporte maintenant plusieurs champs cultivés où se succèdent les assolements triennaux céréaliers au fil des saisons.;;;;;;;;;;;;x;
 TP_AGRI_cereale_L3;Cereals: Farming Estates;CEREALES : Exploitation Agricole;;;;;;;;;;;;x;
-CT_AGRI_cereale_L3_desc;The local communal government holds authority over multiple estates upon which laborers toil to cultivate a vast surplus of cereals.;Ce qui était naguère un tas de broussailles est maintenant une exploitation agricole où la culture de la céréale est menée de main de maître.;;;;;;;;;;;;x;
+TP_AGRI_cereale_L3_desc;The local communal government holds authority over multiple estates upon which laborers toil to cultivate a vast surplus of cereals.;Ce qui était naguère un tas de broussailles est maintenant une exploitation agricole où la culture de la céréale est menée de main de maître.;;;;;;;;;;;;x;
 #FERME MARAICHERE (plaine);;;;;;;;;;;;;;;x
 TP_AGRI_maraichage_L1;Vegetables: Vegetable Garden;MARAICHAGE : Potagers;;;;;;;;;;;;x;
+TP_AGRI_maraichage_L1_desc;;;;;;;;;;;;;;x;
 TP_AGRI_maraichage_L2;Vegetables: Vegetable Farm;MARAICHAGE : Ferme Maraîchère;;;;;;;;;;;;x;
+TP_AGRI_maraichage_L2_desc;;;;;;;;;;;;;;x;
 TP_AGRI_maraichage_L3;Vegetables: Crop Rotation;MARAICHAGE : Exploitation Maraîchère;;;;;;;;;;;;x;
+TP_AGRI_maraichage_L3_desc;;;;;;;;;;;;;;x;
+;;;;;;;;;;;;;;x;
 #VIGNOBLE (côteau);;;;;;;;;;;;;;;x
 TP_AGRI_vigne_L1;Vineyards: Parcelled Land;VIGNE : Parcelles;;;;;;;;;;;;x;
+TP_AGRI_vigne_L1_desc;;;;;;;;;;;;;;x;
 TP_AGRI_vigne_L2;Vineyards: Modest Vineyards;VIGNE : Petit Vignoble;;;;;;;;;;;;x;
+TP_AGRI_vigne_L2_desc;;;;;;;;;;;;;;x;
 TP_AGRI_vigne_L3;Vineyards: Expanded Vineyards;VIGNE : Grand Vignoble;;;;;;;;;;;;x;
+TP_AGRI_vigne_L3_desc;;;;;;;;;;;;;;x;
+;;;;;;;;;;;;;;x;
 #ELEVAGE ovin;;;;;;;;;;;;;;;x
 TP_ELEV_ovin_L1;Cheese: Pasturages;BETAIL : Pâturages;;;;;;;;;;;;x;
-TP_ELEV_ovin_L1a_desc;Putting sheep out to pasture on the vast grazing lands in this province forms the foundation of a stable economy, but land use is inefficient and there is more than enough land to support larger herds.;Un endroit propice à la consommation de l'herbe, un met de choix pour les ovins sous la houlette des bergers et bergères venant des hameaux alentours.;;;;;;;;;;;;x;
+TP_ELEV_ovin_L1_desc;Putting sheep out to pasture on the vast grazing lands in this province forms the foundation of a stable economy, but land use is inefficient and there is more than enough land to support larger herds.;Un endroit propice à la consommation de l'herbe, un met de choix pour les ovins sous la houlette des bergers et bergères venant des hameaux alentours.;;;;;;;;;;;;x;
 TP_ELEV_ovin_L2;Cheese: Enclosures;BETAIL : Enclos à ovins;;;;;;;;;;;;x;
-TP_ELEV_ovin_L2a_desc;Enclosing sheep herds allows more efficient use of grazing lands as well as better protection from predators and rustlers.;Un ensemble d'enclos a été construit de manière à concentrer davantage la production ovine et en faciliter la surveillance.;;;;;;;;;;;;x;
+TP_ELEV_ovin_L2_desc;Enclosing sheep herds allows more efficient use of grazing lands as well as better protection from predators and rustlers.;Un ensemble d'enclos a été construit de manière à concentrer davantage la production ovine et en faciliter la surveillance.;;;;;;;;;;;;x;
 TP_ELEV_ovin_L3;Cheese: Sheep Pens;BETAIL : Bergerie;;;;;;;;;;;;x;
-TP_ELEV_ovin_L3a_desc;Keeping the sheep penned reduces the risk of losing them to theft or predators. The establishment of proper infrastructure for the breeding and cultivation of large herds of sheep has delivered significant returns.;La bergerie accueillent les ovins pour la nuit et permet la fabrication de fromages.;;;;;;;;;;;;x;
+TP_ELEV_ovin_L3_desc;Keeping the sheep penned reduces the risk of losing them to theft or predators. The establishment of proper infrastructure for the breeding and cultivation of large herds of sheep has delivered significant returns.;La bergerie accueillent les ovins pour la nuit et permet la fabrication de fromages.;;;;;;;;;;;;x;
 #CHARBON DE BOIS (foret);;;;;;;;;;;;;;;x
 TP_BOIS_charbon_L1;Charcoal: Colliers' Huts;CHARBON DE BOIS : Charbonnière Improvisée;;;;;;;;;;;;x;
+TP_BOIS_charbon_L1_desc;;;;;;;;;;;;;;x;
 TP_BOIS_charbon_L2;Charcoal: Coal-firing Kilns;CHARBON DE BOIS : Charbonnière Permanente;;;;;;;;;;;;x;
+TP_BOIS_charbon_L2_desc;;;;;;;;;;;;;;x;
 TP_BOIS_charbon_L3;Charcoal: Seigneurial Kilns;CHARBON DE BOIS : Charbonnière Seigneuriale;;;;;;;;;;;;x;
+TP_BOIS_charbon_L3_desc;;;;;;;;;;;;;;x;
 #FISH pisciculture (terres);;;;;;;;;;;;;;;x
 TP_FISH_pisci_L1;Freshwater Fish: Artificial Lake;PISCICULTURE : Élevage en Rivière;;;;;;;;;;;;x;
+TP_FISH_pisci_L1_desc;;;;;;;;;;;;;;x;
 TP_FISH_pisci_L2;Freshwater Fish: Fish Farms;PISCICULTURE : Étang Aménagé;;;;;;;;;;;;x;
+TP_FISH_pisci_L2_desc;;;;;;;;;;;;;;x;
 TP_FISH_pisci_L3;Freshwater Fish: Fishery;PISCICULTURE : Ferme Piscicole;;;;;;;;;;;;x;
+TP_FISH_pisci_L3_desc;;;;;;;;;;;;;;x;
 #VIN;;;;;;;;;;;;;;;x
 TP_chai_L1;Wine: Cultivated Vineyards;VIN : Chai Modeste;;;;;;;;;;;;x;
+TP_chai_L1_desc;;;;;;;;;;;;;;x;
 TP_chai_L2;Wine: Modest Winery;VIN : Chai Agrandi;;;;;;;;;;;;x;
+TP_chai_L2_desc;;;;;;;;;;;;;;x;
 TP_chai_L3;Wine: Expanded Winery;VIN : Grand Chai;;;;;;;;;;;;x;
+TP_chai_L3_desc;;;;;;;;;;;;;;x;
 TP_chai_L4;Wine: Reputable Winery;VIN : Chai Réputé;;;;;;;;;;;;x;
+TP_chai_L4_desc;;;;;;;;;;;;;;x;
 TP_chai_L5;Wine: Famed Winery;VIN : Chai de Haute Renommée;;;;;;;;;;;;x;
+TP_chai_L5_desc;;;;;;;;;;;;;;x;
 #BIERE;;;;;;;;;;;;;;x;
 TP_brasserie_L1;Beer: Cultivated Hops;BIERE : Brasserie Modeste;;;;;;;;;;;;x;
+TP_brasserie_L1_desc;;;;;;;;;;;;;;x;
 TP_brasserie_L2;Beer: Modest Brewery;BIERE : Brasserie Agrandie;;;;;;;;;;;;x;
+TP_brasserie_L2_desc;;;;;;;;;;;;;;x;
 TP_brasserie_L3;Beer: Expanded Brewery;BIERE : Grande Brasserie;;;;;;;;;;;;x;
+TP_brasserie_L3_desc;;;;;;;;;;;;;;x;
 TP_brasserie_L4;Beer: Reputable Brewery;BIERE : Brasserie Réputée;;;;;;;;;;;;x;
+TP_brasserie_L4_desc;;;;;;;;;;;;;;x;
 TP_brasserie_L5;Beer: Famed Brewery;BIERE : Brasserie de Haute Renommée;;;;;;;;;;;;x;
+TP_brasserie_L5_desc;;;;;;;;;;;;;;x;
 #CIDRE;;;;;;;;;;;;;;;x
 TP_presse_L1;Cider: Fruit Press;CIDRE : Pressoir;;;;;;;;;;;;x;
+TP_presse_L1_desc;;;;;;;;;;;;;;x;
 TP_presse_L2;Cider: Cider Mill;CIDRE : Grande Presse;;;;;;;;;;;;x;
+TP_presse_L2_desc;;;;;;;;;;;;;;x;
 TP_presse_L3;Cider: Brewery;CIDRE : Cidrerie;;;;;;;;;;;;x;
+TP_presse_L3_desc;;;;;;;;;;;;;;x;
 #PEAUX;;;;;;;;;;;;;;;x
 CT_COMM_peaux_L1;Furs: Furrier's Workshop;PEAUX : Atelier du Pelletier;;;;;;;;;;;;x;
+CT_COMM_peaux_L1_desc;;;;;;;;;;;;;;x;
 CT_COMM_peaux_L2;Furs: Fur Trader Stall;PEAUX : Petite Echoppe;;;;;;;;;;;;x;
+CT_COMM_peaux_L2_desc;;;;;;;;;;;;;;x;
 CT_COMM_peaux_L3;Furs: Renowned Fur Merchant;PEAUX : Echoppe Renommée;;;;;;;;;;;;x;
+CT_COMM_peaux_L3_desc;;;;;;;;;;;;;;x;
 #JOYAUX;;;;;;;;;;;;;;;x
 CT_COMM_joyaux_L1;Jewelry: Jewellers' Workshop;JOYAUX : Atelier;;;;;;;;;;;;x;
+CT_COMM_joyaux_L1_desc;;;;;;;;;;;;;;x;
 CT_COMM_joyaux_L2;Jewelry: Luxury Trader Stall;JOYAUX : Petite Echoppe;;;;;;;;;;;;x;
+CT_COMM_joyaux_L2_desc;;;;;;;;;;;;;;x;
 CT_COMM_joyaux_L3;Jewelry: Renowned Luxury Merchant;JOYAUX : Echoppe Renommée;;;;;;;;;;;;x;
+CT_COMM_joyaux_L3_desc;;;;;;;;;;;;;;x;
 #EPICES;;;;;;;;;;;;;;;x
 CT_COMM_epices_L1;Spices: Modest Spice Mercant;EPICES : Petit Etal;;;;;;;;;;;;x;
+CT_COMM_epices_L1_desc;;;;;;;;;;;;;;x;
 CT_COMM_epices_L2;Spices: Established Spice Merchant;EPICES : Boutique;;;;;;;;;;;;x;
+CT_COMM_epices_L2_desc;;;;;;;;;;;;;;x;
 CT_COMM_epices_L3;Spices: Eastern Trading Company;EPICES : Marchand;;;;;;;;;;;;x;
+CT_COMM_epices_L3_desc;;;;;;;;;;;;;;x;
 #;x;x;;;;;;;;;;;;x
-#;x;DEBUT AJOUT MOUCHI;;;;;;;;;;;;x
 TP_AGRI_moulin_L1;Flour: Water-powered Mill;FARINE : Moulin à aubes;;;;;;;;;;;;x
 TP_AGRI_moulin_L1_desc;A modest watermill placed along the bank of the river.;Un modeste moulin à eau placé le long de la rive.;;;;;;;;;;;;x
 TP_AGRI_moulin_L2;Flour: Waterwheel Mill;FARINE : Moulin à noria;;;;;;;;;;;;x
@@ -443,7 +507,6 @@ TP_four_L2_desc;;;;;;;;;;;;;;x
 TP_four_L3;Glass: Expanded Glass Manufactory;;;;;;;;;;;;;x
 TP_four_L3_desc;;;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
-#;x;FIN AJOUT MOUCHI;;;;;;;;;;;;x
 #NIVEAU COMMERCIAL;;;;;;;;;;;;;;x;
 #COMPTOIR_L1;COMMERCIAL PLACE;PLACE COMMERCIALE;;;;;;;;;;;;;x
 #COMPTOIR_L1_desc;;Cette ville est reliée à un itinéraire commmercial, qu'il s'agisse d'un comptoir patricien ou d'une route terrestre ou fluviale. Cette situation privilégiée permet un meilleur développement de nos infrastructures commerciales.;;;;;;;;;;;;;x

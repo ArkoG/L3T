@@ -9,6 +9,7 @@ castle = {
 
 #ETOFFE
 CA_atelier_L1 = {
+	desc = CA_atelier_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -36,12 +37,14 @@ CA_atelier_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_atelier_L2 = {
+	desc = CA_atelier_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_ELEV_ovin_L2a }
 	upgrades_from = CA_atelier_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_atelier_L3 = {
+	desc = CA_atelier_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_ELEV_ovin_L3a }
 	upgrades_from = CA_atelier_L2
@@ -50,6 +53,7 @@ CA_atelier_L3 = {
 
 #DRAP
 CA_draperie_L1 = {
+	desc = CA_draperie_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -74,12 +78,14 @@ CA_draperie_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_draperie_L2 = {
+	desc = CA_draperie_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_ELEV_ovin_L2a }
 	upgrades_from = CA_draperie_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_draperie_L3 = {
+	desc = CA_draperie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_ELEV_ovin_L3a }
 	upgrades_from = CA_draperie_L2
@@ -88,6 +94,7 @@ CA_draperie_L3 = {
 
 #PLANCHE
 CA_scierie_L1 = {
+	desc = CA_scierie_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -112,12 +119,14 @@ CA_scierie_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_scierie_L2 = {
+	desc = CA_scierie_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_BOIS_bois_L2 }
 	upgrades_from = CA_scierie_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_scierie_L3 = {
+	desc = CA_scierie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_BOIS_bois_L3 }
 	upgrades_from = CA_scierie_L2
@@ -126,6 +135,7 @@ CA_scierie_L3 = {
 
 #VERRE
 CA_four_L1 = {
+	desc = CA_four_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -150,12 +160,14 @@ CA_four_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_four_L2 = {
+	desc = CA_four_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_BOIS_charbon_L2 }
 	upgrades_from = CA_four_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_four_L3 = {
+	desc = CA_four_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_BOIS_charbon_L3 }
 	upgrades_from = CA_four_L2
@@ -164,6 +176,7 @@ CA_four_L3 = {
 
 #PIERRE TAILLE
 CA_pierre_taille_L1 = {
+	desc = CA_pierre_taille_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -188,12 +201,14 @@ CA_pierre_taille_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_pierre_taille_L2 = {
+	desc = CA_pierre_taille_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_CARR_pierre_L2 }
 	upgrades_from = CA_pierre_taille_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_pierre_taille_L3 = {
+	desc = CA_pierre_taille_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_CARR_pierre_L3 }
 	upgrades_from = CA_pierre_taille_L2
@@ -202,6 +217,7 @@ CA_pierre_taille_L3 = {
 
 #METAL
 CA_fonderie_L1 = {
+	desc = CA_fonderie_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -226,12 +242,14 @@ CA_fonderie_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_fonderie_L2 = {
+	desc = CA_fonderie_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_MINE_minerai_L2 }
 	upgrades_from = CA_fonderie_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_fonderie_L3 = {
+	desc = CA_fonderie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_MINE_minerai_L3 }
 	upgrades_from = CA_fonderie_L2
@@ -240,6 +258,7 @@ CA_fonderie_L3 = {
 
 #OUTIL
 CA_outilleur_L1 = {
+	desc = CA_outilleur_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -264,12 +283,14 @@ CA_outilleur_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_outilleur_L2 = {
+	desc = CA_outilleur_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_fonderie_L2 }
 	upgrades_from = CA_outilleur_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_outilleur_L3 = {
+	desc = CA_outilleur_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_fonderie_L3 }
 	upgrades_from = CA_outilleur_L2
@@ -277,6 +298,7 @@ CA_outilleur_L3 = {
 }
 
 CA_armurerie_L1 = {
+	desc = CA_armurerie_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -301,12 +323,14 @@ CA_armurerie_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	garrison_size = 0.1 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_armurerie_L2 = {
+	desc = CA_armurerie_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_fonderie_L2 }
 	upgrades_from = CA_armurerie_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	garrison_size = 0.2 ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_armurerie_L3 = {
+	desc = CA_armurerie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_fonderie_L3 }
 	upgrades_from = CA_armurerie_L2
@@ -324,6 +348,7 @@ city = {
 
 #BIERE
 CT_brasserie_L1 = {
+	desc = CT_brasserie_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -348,12 +373,14 @@ CT_brasserie_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_brasserie_L2 = {
+	desc = CT_brasserie_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_AGRI_cereale_L2 }
 	upgrades_from = CT_brasserie_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_brasserie_L3 = {
+	desc = CT_brasserie_L3_desc
 	trigger = {
 		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_biere_Q1
@@ -363,6 +390,7 @@ CT_brasserie_L3 = {
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_brasserie_L4 = {
+	desc = CT_brasserie_L4_desc
 	trigger = {
 		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_biere_Q2
@@ -373,6 +401,7 @@ CT_brasserie_L4 = {
 		gold_cost = 125.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_brasserie_L5 = {
+	desc = CT_brasserie_L5_desc
 	trigger = {
 		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_biere_Q3
@@ -384,6 +413,7 @@ CT_brasserie_L5 = {
 
 #VIN
 CT_chai_L1 = {
+	desc = CT_chai_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -408,12 +438,14 @@ CT_chai_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_chai_L2 = {
+	desc = CT_chai_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { TP_AGRI_vigne_L2 }
 	upgrades_from = CT_chai_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_chai_L3 = {
+	desc = CT_chai_L3_desc
 	trigger = {
 		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_vin_Q1
@@ -423,6 +455,7 @@ CT_chai_L3 = {
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_chai_L4 = {
+	desc = CT_chai_L4_desc
 	trigger = {
 		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_vin_Q2
@@ -433,6 +466,7 @@ CT_chai_L4 = {
 		gold_cost = 125.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_chai_L5 = {
+	desc = CT_chai_L5_desc
 	trigger = {
 		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_vin_Q3
@@ -445,6 +479,7 @@ CT_chai_L5 = {
 
 #CUIR
 CT_tannerie_L1 = {
+	desc = CT_tannerie_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -469,18 +504,21 @@ CT_tannerie_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_tannerie_L2 = {
+	desc = CT_tannerie_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_ELEV_bovin_L2 }
 	upgrades_from = CT_tannerie_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_tannerie_L3 = {
+	desc = CT_tannerie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_ELEV_bovin_L3 }
 	upgrades_from = CT_tannerie_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_tannerie_L4 = {
+	desc = CT_tannerie_L4_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_ELEV_bovin_L3 } #à remplacer par pré-requis de trait
 	prerequisites = { CITE_L2 }
@@ -488,6 +526,7 @@ CT_tannerie_L4 = {
 		gold_cost = 125.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_tannerie_L5 = {
+	desc = CT_tannerie_L5_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_ELEV_bovin_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = CT_tannerie_L4
@@ -496,6 +535,7 @@ CT_tannerie_L5 = {
 
 #PLANCHE
 CT_scierie_L1 = {
+	desc = CT_scierie_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -520,18 +560,21 @@ CT_scierie_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_scierie_L2 = {
+	desc = CT_scierie_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_BOIS_bois_L2 }
 	upgrades_from = CT_scierie_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_scierie_L3 = {
+	desc = CT_scierie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_BOIS_bois_L3 }
 	upgrades_from = CT_scierie_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_scierie_L4 = {
+	desc = CT_scierie_L4_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_BOIS_bois_L3 } #à remplacer par pré-requis de trait
 	prerequisites = { CITE_L2 }
@@ -539,6 +582,7 @@ CT_scierie_L4 = {
 		gold_cost = 125.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_scierie_L5 = {
+	desc = CT_scierie_L5_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_BOIS_bois_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = CT_scierie_L4
@@ -547,6 +591,7 @@ CT_scierie_L5 = {
 
 #VERRE
 CT_four_L1 = {
+	desc = CT_four_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -571,18 +616,21 @@ CT_four_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_four_L2 = {
+	desc = CT_four_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_BOIS_charbon_L2 }
 	upgrades_from = CT_four_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_four_L3 = {
+	desc = CT_four_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_BOIS_charbon_L3 }
 	upgrades_from = CT_four_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_four_L4 = {
+	desc = CT_four_L4_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_BOIS_charbon_L3 } #à remplacer par pré-requis de trait
 	prerequisites = { CITE_L2 }
@@ -590,6 +638,7 @@ CT_four_L4 = {
 		gold_cost = 125.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_four_L5 = {
+	desc = CT_four_L5_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_BOIS_charbon_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = CT_four_L4
@@ -598,6 +647,7 @@ CT_four_L5 = {
 
 #PIERRE TAILLE
 CT_pierre_taille_L1 = {
+	desc = CT_pierre_taille_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -622,18 +672,21 @@ CT_pierre_taille_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_pierre_taille_L2 = {
+	desc = CT_pierre_taille_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_CARR_pierre_L2 }
 	upgrades_from = CT_pierre_taille_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_pierre_taille_L3 = {
+	desc = CT_pierre_taille_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_CARR_pierre_L3 }
 	upgrades_from = CT_pierre_taille_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_pierre_taille_L4 = {
+	desc = CT_pierre_taille_L4_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_CARR_pierre_L3 } #à remplacer par pré-requis de trait
 	prerequisites = { CITE_L2 }
@@ -641,6 +694,7 @@ CT_pierre_taille_L4 = {
 		gold_cost = 125.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_pierre_taille_L5 = {
+	desc = CT_pierre_taille_L5_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_CARR_pierre_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = CT_pierre_taille_L4
@@ -649,6 +703,7 @@ CT_pierre_taille_L5 = {
 
 #SEL RAFFINE #vente, vocation commerciale
 CT_sel_raffine_L1 = {
+	desc = CT_sel_raffine_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -673,18 +728,21 @@ CT_sel_raffine_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_sel_raffine_L2 = {
+	desc = CT_sel_raffine_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_MINE_sel_L2 }
 	upgrades_from = CT_sel_raffine_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_sel_raffine_L3 = {
+	desc = CT_sel_raffine_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_MINE_sel_L3 }
 	upgrades_from = CT_sel_raffine_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_sel_raffine_L4 = {
+	desc = CT_sel_raffine_L4_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_MINE_sel_L3 } #à remplacer par pré-requis de trait
 	prerequisites = { CITE_L2 }
@@ -692,6 +750,7 @@ CT_sel_raffine_L4 = {
 		gold_cost = 125.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_sel_raffine_L5 = {
+	desc = CT_sel_raffine_L5_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_MINE_sel_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = CT_sel_raffine_L4
@@ -700,6 +759,7 @@ CT_sel_raffine_L5 = {
 
 #SALINE #salaison, vocation industrielle
 CT_saline_L1 = {
+	desc = CT_saline_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -724,18 +784,21 @@ CT_saline_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_saline_L2 = {
+	desc = CT_saline_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_MINE_sel_L2 }
 	upgrades_from = CT_saline_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_saline_L3 = {
+	desc = CT_saline_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_MINE_sel_L3 }
 	upgrades_from = CT_saline_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_saline_L4 = {
+	desc = CT_saline_L4_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_MINE_sel_L3 } #à remplacer par pré-requis de trait
 	prerequisites = { CITE_L2 }
@@ -743,6 +806,7 @@ CT_saline_L4 = {
 		gold_cost = 125.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_saline_L5 = {
+	desc = CT_saline_L5_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_MINE_sel_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = CT_saline_L4
@@ -760,6 +824,7 @@ temple = {
 
 #CIDRE
 TP_presse_L1 = {
+	desc = TP_presse_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -783,11 +848,13 @@ TP_presse_L1 = {
 		gold_cost = 50.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_presse_L2 = {
+	desc = TP_presse_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_presse_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_presse_L3 = {
+	desc = TP_presse_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_presse_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.4	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -795,6 +862,7 @@ TP_presse_L3 = {
 
 #VERRE
 TP_four_L1 = {
+	desc = TP_four_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		OR = {
@@ -819,12 +887,14 @@ TP_four_L1 = {
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_four_L2 = {
+	desc = TP_four_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { TP_BOIS_charbon_L2 }
 	upgrades_from = TP_four_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_four_L3 = {
+	desc = TP_four_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { TP_BOIS_charbon_L3 }
 	upgrades_from = TP_four_L2
