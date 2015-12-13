@@ -121,17 +121,17 @@ CA_FISH_pisci_L1_desc;;;;;;;;;;;;;;x;
 CA_FISH_pisci_L2;Freshwater Fish: Fish Farms;PISCICULTURE : Étang Aménagé;;;;;;;;;;;;x;
 CA_FISH_pisci_L2_desc;;;;;;;;;;;;;;x;
 #CA_FISH_pisci_L3;PISCICULTURE : Ferme Piscicole;PISCICULTURE : Ferme Piscicole;Ferme Piscicole;;;;;;;;;;;x;
-CA_AGRI_moulin_L1;Flour: Horse Mill;;;;;;;;;;;;;x
+CA_AGRI_moulin_L1;Flour: Horse Mill;FARINE : Meule de pierre;;;;;;;;;;;;x
 CA_AGRI_moulin_L1_desc;;;;;;;;;;;;;;x
-CA_AGRI_moulin_L2;Flour: Windmill;;;;;;;;;;;;;x
+CA_AGRI_moulin_L2;Flour: Windmill;FARINE : Moulin à vent;;;;;;;;;;;;x
 CA_AGRI_moulin_L2_desc;;;;;;;;;;;;;;x
-CA_AGRI_moulin_L3;Flour: Watermill;;;;;;;;;;;;;x
+CA_AGRI_moulin_L3;Flour: Watermill;FARINE : Grand Moulin;;;;;;;;;;;;x
 CA_AGRI_moulin_L3_desc;;;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L1;Bread: Clay Kiln;;;;;;;;;;;;;x
+CA_AGRI_boulangerie_L1;Bread: Clay Kiln;PAIN : Four commun;;;;;;;;;;;;x
 CA_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L2;Bread: Bakery;;;;;;;;;;;;;x
+CA_AGRI_boulangerie_L2;Bread: Bakery;PAIN : Four en pierre;;;;;;;;;;;;x
 CA_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L3;Bread: Bakers' Guild;;;;;;;;;;;;;x
+CA_AGRI_boulangerie_L3;Bread: Bakers' Guild;PAIN : Boulanger;;;;;;;;;;;;x
 CA_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
 CA_FISH_fumoir_L1;Smoked Fish: Fishmonger's Smokehouse;;;;;;;;;;;;;x
 CA_FISH_fumoir_L1_desc;;;;;;;;;;;;;;x
@@ -157,11 +157,11 @@ CA_pierre_taille_L2;Worked Stone: Stonemason Camp;;;;;;;;;;;;;x
 CA_pierre_taille_L2_desc;;;;;;;;;;;;;;x
 CA_pierre_taille_L3;Worked Stone: Stonemasons' Guild;;;;;;;;;;;;;x
 CA_pierre_taille_L3_desc;;;;;;;;;;;;;;x
-CA_fonderie_L1;Iron: Smelter;;;;;;;;;;;;;x
+CA_fonderie_L1;Iron: Smelter;METAL : atelier de fonte;;;;;;;;;;;;x
 CA_fonderie_L1_desc;;;;;;;;;;;;;;x
-CA_fonderie_L2;Iron: Foundry;;;;;;;;;;;;;x
+CA_fonderie_L2;Iron: Foundry;METAL : fonderie;;;;;;;;;;;;x
 CA_fonderie_L2_desc;;;;;;;;;;;;;;x
-CA_fonderie_L3;Iron: Finery Forge;;;;;;;;;;;;;x
+CA_fonderie_L3;Iron: Finery Forge;METAL : grands fourneaux;;;;;;;;;;;;x
 CA_fonderie_L3_desc;;;;;;;;;;;;;;x
 CA_outilleur_L1;Tools: Catalan Forge;;;;;;;;;;;;;x
 CA_outilleur_L1_desc;;;;;;;;;;;;;;x
@@ -187,12 +187,12 @@ CA_draperie_L2;Textiles: Dyers' Manufactory;;;;;;;;;;;;;x
 CA_draperie_L2_desc;;;;;;;;;;;;;;x
 CA_draperie_L3;Textiles: Drapers' Guild;;;;;;;;;;;;;x
 CA_draperie_L3_desc;;;;;;;;;;;;;;x
-CA_ELEV_cheval_L1;Steppe Horses: Grazing Pastures;;;;;;;;;;;;;x
-CA_ELEV_cheval_L1_desc;;;;;;;;;;;;;;x
-CA_ELEV_cheval_L2;Steppe Horses: Horse Breeders;;;;;;;;;;;;;x
-CA_ELEV_cheval_L2_desc;;;;;;;;;;;;;;x
-CA_ELEV_cheval_L3;Steppe Horses: Equestrian Training Yard;;;;;;;;;;;;;x
-CA_ELEV_cheval_L3_desc;;;;;;;;;;;;;;x
+CA_ELEV_cheval_L1;Steppe Horses: Grazing Pastures;CHEVAUX : élevage;;;;;;;;;;;;x
+CA_ELEV_cheval_L1_desc;;Les chevaux ici pâturent librement et fournissent des bêtes de traits et plus rarement des montures.;;;;;;;;;;;;x
+CA_ELEV_cheval_L2;Steppe Horses: Horse Breeders;CHEVAUX : dressage;;;;;;;;;;;;x
+CA_ELEV_cheval_L2_desc;;Les animaux sont ici élevés pour servir de montures pour qui s'offrir les services d'un cheval;;;;;;;;;;;;x
+CA_ELEV_cheval_L3;Steppe Horses: Equestrian Training Yard;CHEVAUX : entraînement;;;;;;;;;;;;x
+CA_ELEV_cheval_L3_desc;;L'élevage et le dressage des chevaux n'a ici qu'un seul but : approvisionner la petite comme grande noblesse ou les plus fortunés. Les nobles bêtes servent à la chasse ou à la guerre.;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x;
 #;-Villes-;-Villes-;;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x;
@@ -229,7 +229,7 @@ CT_BOIS_charbon_L1;Charcoal: Colliers' Huts;CHARBON DE BOIS : Charbonnière Impro
 CT_BOIS_charbon_L1_desc;;;;;;;;;;;;;;x;
 CT_BOIS_charbon_L2;Charcoal: Coal-firing Kilns;CHARBON DE BOIS : Charbonnière Permanente;;;;;;;;;;;;x;
 CT_BOIS_charbon_L2_desc;;;;;;;;;;;;;;x;
-CT_BOIS_charbon_L3;Charcoal: Communal Kilns: Charbonnière Seigneuriale;CHARBON DE BOIS : Charbonnière Communnale;;;;;;;;;;;;x;
+CT_BOIS_charbon_L3;Charcoal: Communal Kilns;CHARBON DE BOIS : Charbonnière Communale;;;;;;;;;;;;x;
 CT_BOIS_charbon_L3_desc;;;;;;;;;;;;;;x;
 #CARRIERE pierre (montagne + côteau);;;;;;;;;;;;;;;x
 CT_CARR_pierre_L1;Stone: Open-cast Quarry;PIERRE : Carrière sommaire;;;;;;;;;;;;x;
