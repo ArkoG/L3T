@@ -120,7 +120,8 @@ CA_FISH_pisci_L1;Freshwater Fish: Artificial Lake;PISCICULTURE : Élevage en Rivi
 CA_FISH_pisci_L1_desc;;;;;;;;;;;;;;x;
 CA_FISH_pisci_L2;Freshwater Fish: Fish Farms;PISCICULTURE : Étang Aménagé;;;;;;;;;;;;x;
 CA_FISH_pisci_L2_desc;;;;;;;;;;;;;;x;
-#CA_FISH_pisci_L3;PISCICULTURE : Ferme Piscicole;PISCICULTURE : Ferme Piscicole;Ferme Piscicole;;;;;;;;;;;x;
+CA_FISH_pisci_L3;PISCICULTURE : Ferme Piscicole;PISCICULTURE : Ferme Piscicole;;;;;;;;;;;;x;
+CA_FISH_pisci_L3_desc;;;;;;;;;;;;;;x;
 CA_AGRI_moulin_L1;Flour: Horse Mill;FARINE : Meule de pierre;;;;;;;;;;;;x
 CA_AGRI_moulin_L1_desc;;;;;;;;;;;;;;x
 CA_AGRI_moulin_L2;Flour: Windmill;FARINE : Moulin à vent;;;;;;;;;;;;x
@@ -133,29 +134,29 @@ CA_AGRI_boulangerie_L2;Bread: Bakery;PAIN : Four en pierre;;;;;;;;;;;;x
 CA_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
 CA_AGRI_boulangerie_L3;Bread: Bakers' Guild;PAIN : Boulanger;;;;;;;;;;;;x
 CA_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
-CA_FISH_fumoir_L1;Smoked Fish: Fishmonger's Smokehouse;;;;;;;;;;;;;x
+CA_FISH_fumoir_L1;Smoked Fish: Fishmonger's Smokehouse;FUMAISON : atelier;;;;;;;;;;;;x
 CA_FISH_fumoir_L1_desc;;;;;;;;;;;;;;x
-CA_FISH_fumoir_L2;Smoked Fish: Curing Shed;;;;;;;;;;;;;x
+CA_FISH_fumoir_L2;Smoked Fish: Curing Shed;FUMAISON : atelier seigneurial;;;;;;;;;;;;x
 CA_FISH_fumoir_L2_desc;;;;;;;;;;;;;;x
-CA_FISH_fumoir_L3;Smoked Fish: Communal Smokehouse;;;;;;;;;;;;;x
+CA_FISH_fumoir_L3;Smoked Fish: Communal Smokehouse;FUMAISON : manufacture;;;;;;;;;;;;x
 CA_FISH_fumoir_L3_desc;;;;;;;;;;;;;;x
-CA_scierie_L1;Lumber: Man-powered Sawmill;;;;;;;;;;;;;x
+CA_scierie_L1;Lumber: Man-powered Sawmill;PLANCHE : atelier de sciage;;;;;;;;;;;;x
 CA_scierie_L1_desc;;;;;;;;;;;;;;x
-CA_scierie_L2;Lumber: Hydro-powered Sawmill;;;;;;;;;;;;;x
+CA_scierie_L2;Lumber: Hydro-powered Sawmill;PLANCHE : scierie;;;;;;;;;;;;x
 CA_scierie_L2_desc;;;;;;;;;;;;;;x
-CA_scierie_L3;Lumber: Carriage Sawmill;;;;;;;;;;;;;x
+CA_scierie_L3;Lumber: Carriage Sawmill;PLANCHE : grande scierie;;;;;;;;;;;;x
 CA_scierie_L3_desc;;;;;;;;;;;;;;x
-CA_four_L1;Glass: Glassmaker's Furnace;;;;;;;;;;;;;x
+CA_four_L1;Glass: Glassmaker's Furnace;VERRE : four;;;;;;;;;;;;x
 CA_four_L1_desc;;;;;;;;;;;;;;x
-CA_four_L2;Glass: Glass Manufactory;;;;;;;;;;;;;x
+CA_four_L2;Glass: Glass Manufactory;VERRE : atelier;;;;;;;;;;;;x
 CA_four_L2_desc;;;;;;;;;;;;;;x
-CA_four_L3;Glass: Forest Glass Manufactory;;;;;;;;;;;;;x
+CA_four_L3;Glass: Forest Glass Manufactory;VERRE : maître verrier;;;;;;;;;;;;x
 CA_four_L3_desc;;;;;;;;;;;;;;x
-CA_pierre_taille_L1;Worked Stone: Stonemasons Lodge;;;;;;;;;;;;;x
+CA_pierre_taille_L1;Worked Stone: Stonemasons Lodge;PIERRE : cour des tailleurs;;;;;;;;;;;;x
 CA_pierre_taille_L1_desc;;;;;;;;;;;;;;x
-CA_pierre_taille_L2;Worked Stone: Stonemason Camp;;;;;;;;;;;;;x
+CA_pierre_taille_L2;Worked Stone: Stonemason Camp;PIERRE : atelier de taille;;;;;;;;;;;;x
 CA_pierre_taille_L2_desc;;;;;;;;;;;;;;x
-CA_pierre_taille_L3;Worked Stone: Stonemasons' Guild;;;;;;;;;;;;;x
+CA_pierre_taille_L3;Worked Stone: Stonemasons' Guild;PIERRE : manufacture de taille;;;;;;;;;;;;x
 CA_pierre_taille_L3_desc;;;;;;;;;;;;;;x
 CA_fonderie_L1;Iron: Smelter;METAL : atelier de fonte;;;;;;;;;;;;x
 CA_fonderie_L1_desc;;;;;;;;;;;;;;x
@@ -163,29 +164,29 @@ CA_fonderie_L2;Iron: Foundry;METAL : fonderie;;;;;;;;;;;;x
 CA_fonderie_L2_desc;;;;;;;;;;;;;;x
 CA_fonderie_L3;Iron: Finery Forge;METAL : grands fourneaux;;;;;;;;;;;;x
 CA_fonderie_L3_desc;;;;;;;;;;;;;;x
-CA_outilleur_L1;Tools: Catalan Forge;;;;;;;;;;;;;x
-CA_outilleur_L1_desc;;;;;;;;;;;;;;x
-CA_outilleur_L2;Tools: Bloomery;;;;;;;;;;;;;x
-CA_outilleur_L2_desc;;;;;;;;;;;;;;x
-CA_outilleur_L3;Tools: Blast Furnace;;;;;;;;;;;;;x
-CA_outilleur_L3_desc;;;;;;;;;;;;;;x
-CA_armurerie_L1;Arms: Wrought Iron Weaponsmith;;;;;;;;;;;;;x
+CA_outilleur_L1;Tools: Catalan Forge;OUTILS : petit atelier;;;;;;;;;;;;x
+CA_outilleur_L1_desc;;On fabrique ici des petites métaliques tels des clous ou pièces d'assemblage;;;;;;;;;;;;x
+CA_outilleur_L2;Tools: Bloomery;OUTILS : forge;;;;;;;;;;;;x
+CA_outilleur_L2_desc;;On produit ici toutes sortes d'outils et ustensiles en métal;;;;;;;;;;;;x
+CA_outilleur_L3;Tools: Blast Furnace;OUTILS : grande forge;;;;;;;;;;;;x
+CA_outilleur_L3_desc;;On produit ici des outils en métal ou bis et métal robustes qui servent à nombre de corporations;;;;;;;;;;;;x
+CA_armurerie_L1;Arms: Wrought Iron Weaponsmith;ARMES : atelier;;;;;;;;;;;;x
 CA_armurerie_L1_desc;;;;;;;;;;;;;;x
-CA_armurerie_L2;Arms: Cast Iron Weaponsmith;;;;;;;;;;;;;x
+CA_armurerie_L2;Arms: Cast Iron Weaponsmith;ARMES : forge;;;;;;;;;;;;x
 CA_armurerie_L2_desc;;;;;;;;;;;;;;x
-CA_armurerie_L3;Arms: Steel Weaponsmith;;;;;;;;;;;;;x
+CA_armurerie_L3;Arms: Steel Weaponsmith;ARMES : fabrique;;;;;;;;;;;;x
 CA_armurerie_L3_desc;;;;;;;;;;;;;;x
-CA_atelier_L1;Spun Cloth: Weaver's Workshop;;;;;;;;;;;;;x
+CA_atelier_L1;Spun Cloth: Weaver's Workshop;TISSU : atelier;;;;;;;;;;;;x
 CA_atelier_L1_desc;;;;;;;;;;;;;;x
-CA_atelier_L2;Spun Cloth: Weavers' Manufactory;;;;;;;;;;;;;x
+CA_atelier_L2;Spun Cloth: Weavers' Manufactory;TISSU : tisserand;;;;;;;;;;;;x
 CA_atelier_L2_desc;;;;;;;;;;;;;;x
-CA_atelier_L3;Spun Cloth: Clothmakers' Guild;;;;;;;;;;;;;x
+CA_atelier_L3;Spun Cloth: Clothmakers' Guild;TISSU : fabrique;;;;;;;;;;;;x
 CA_atelier_L3_desc;;;;;;;;;;;;;;x
-CA_draperie_L1;Textiles: Dyer's Workshop;;;;;;;;;;;;;x
+CA_draperie_L1;Textiles: Dyer's Workshop;DRAP : atelier;;;;;;;;;;;;x
 CA_draperie_L1_desc;;;;;;;;;;;;;;x
-CA_draperie_L2;Textiles: Dyers' Manufactory;;;;;;;;;;;;;x
+CA_draperie_L2;Textiles: Dyers' Manufactory;DRAP : atelier teinturier;;;;;;;;;;;;x
 CA_draperie_L2_desc;;;;;;;;;;;;;;x
-CA_draperie_L3;Textiles: Drapers' Guild;;;;;;;;;;;;;x
+CA_draperie_L3;Textiles: Drapers' Guild;DRAP : drapier;;;;;;;;;;;;x
 CA_draperie_L3_desc;;;;;;;;;;;;;;x
 CA_ELEV_cheval_L1;Steppe Horses: Grazing Pastures;CHEVAUX : élevage;;;;;;;;;;;;x
 CA_ELEV_cheval_L1_desc;;Les chevaux ici pâturent librement et fournissent des bêtes de traits et plus rarement des montures.;;;;;;;;;;;;x
@@ -222,7 +223,7 @@ CT_BOIS_bois_L1;Timber: Woodcutters' Lodges;BOIS : Site de Coupe;;;;;;;;;;;;x;
 CT_BOIS_bois_L1_desc;Small lodges support a few dozen lumberjacks at a time as they chip slowly at the woodlands of the region, supplying only barely what is needed to sustain local industries.;;;;;;;;;;;;;x;
 CT_BOIS_bois_L2;Timber: Logging Camp;BOIS : Camp de Bûcherons;;;;;;;;;;;;x;
 CT_BOIS_bois_L2_desc;Larger camps of loggers have opened up and teams of lumberjacks are making their way deeper into the woods. Logs are piling up faster than the oxen can transport them back to the city.;;;;;;;;;;;;;x;
-CT_BOIS_bois_L3;Timber: Lumber Mill;BOIS : Exploitation ForestiÃ¨re;;;;;;;;;;;;x;
+CT_BOIS_bois_L3;Timber: Lumber Mill;BOIS : Exploitation Forestière;;;;;;;;;;;;x;
 CT_BOIS_bois_L3_desc;The construction of lumber mills have greatly increased productivity and lessened the logistical burden of hauling uncut logs to the cities for processing. Small villages springing up next to these facilities provide more labor and support for the hundreds of loggers employed throughout the province.;;;;;;;;;;;;;x;
 #CHARBON DE BOIS (foret);;;;;;;;;;;;;;;x
 CT_BOIS_charbon_L1;Charcoal: Colliers' Huts;CHARBON DE BOIS : Charbonnière Improvisée;;;;;;;;;;;;x;
@@ -304,84 +305,84 @@ CT_AGRI_moulin_L4;Flour: Expanded Urban Mill;FARINE : Grands moulins urbains;;;;
 CT_AGRI_moulin_L4_desc;The recent installations have expanded the mill in size and capacity, allowing the mill to produce flour in large quantities.;Les installations ici sont de taille et produisent une bonne farine en quantité.;;;;;;;;;;;;x
 CT_AGRI_moulin_L5;Flour: Great Urban Mill;FARINE: Grands moulins;;;;;;;;;;;;x
 CT_AGRI_moulin_L5_desc;This massive mill makes use of multiple wheels, and dedicated canal, and a sizeable workforce to produce an extremely fine flour, used only in the best bakeries in the city.;Le batiments massif qui accueille les moulins est alimenté par un canal dédié et équipé de grandes roues. La farine produite est très fine et très blanche.\n Elle fait le bonheur des maîtres boulangers et la fierté de la cité.;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L1;Bread: Bakers' Shops;;;;;;;;;;;;;x
+CT_AGRI_boulangerie_L1;Bread: Bakers' Shops;PAIN : Four commun;;;;;;;;;;;;x
 CT_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L2;Bread: Baker's Street;;;;;;;;;;;;;x
+CT_AGRI_boulangerie_L2;Bread: Baker's Street;PAIN : Four en pierre;;;;;;;;;;;;x
 CT_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L3;Bread: Baker's Guild;;;;;;;;;;;;;x
+CT_AGRI_boulangerie_L3;Bread: Baker's Guild;PAIN : Boulanger;;;;;;;;;;;;x
 CT_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
-CT_ELEV_boucherie_L1;Beef: Butcher Shops;;;;;;;;;;;;;x
-CT_ELEV_boucherie_L1_desc;;;;;;;;;;;;;;x
-CT_ELEV_boucherie_L2;Beef: Slaughterhouse;;;;;;;;;;;;;x
-CT_ELEV_boucherie_L2_desc;;;;;;;;;;;;;;x
-CT_ELEV_boucherie_L3;Butchers' Guild;;;;;;;;;;;;;x
-CT_ELEV_boucherie_L3_desc;;;;;;;;;;;;;;x
-CT_FISH_fumoir_L1;Smoked Fish: Fishmongers' Shops;;;;;;;;;;;;;x
+CT_ELEV_boucherie_L1;Beef: Butcher Shops;VIANDE : abattoir de rue;;;;;;;;;;;;x
+CT_ELEV_boucherie_L1_desc;;Le bétail est ici abattu et débité en grosses pièces pour être vendu;;;;;;;;;;;;x
+CT_ELEV_boucherie_L2;Beef: Slaughterhouse;VIANDE : abattoir;;;;;;;;;;;;x
+CT_ELEV_boucherie_L2_desc;;Le bétail de la région est tué et détaillé pour fournir les échoppes des boucher;;;;;;;;;;;;x
+CT_ELEV_boucherie_L3;Butchers' Guild;VIANDE : boucherie;;;;;;;;;;;;x
+CT_ELEV_boucherie_L3_desc;;Ce grand atelier procède à l'abattage et au découpage en gros ou détail du bétail;;;;;;;;;;;;x
+CT_FISH_fumoir_L1;Smoked Fish: Fishmongers' Shops;FUMAISON : atelier;;;;;;;;;;;;x
 CT_FISH_fumoir_L1_desc;;;;;;;;;;;;;;x
-CT_FISH_fumoir_L2;Smoked Fish: Communal Smokehouse;;;;;;;;;;;;;x
+CT_FISH_fumoir_L2;Smoked Fish: Communal Smokehouse;FUMAISON : atelier communal;;;;;;;;;;;;x
 CT_FISH_fumoir_L2_desc;;;;;;;;;;;;;;x
-CT_FISH_fumoir_L3;Smoked Fish: Fishmongers' Guild;;;;;;;;;;;;;x
+CT_FISH_fumoir_L3;Smoked Fish: Fishmongers' Guild;FUMAISON : manufacture;;;;;;;;;;;;x
 CT_FISH_fumoir_L3_desc;;;;;;;;;;;;;;x
-CT_tannerie_L1;Leather: Tanners' Shop;;;;;;;;;;;;;x
+CT_tannerie_L1;Leather: Tanners' Shop;CUIR : atelier de peaux;;;;;;;;;;;;x
 CT_tannerie_L1_desc;;;;;;;;;;;;;;x
-CT_tannerie_L2;Leather: Modest Tannery;;;;;;;;;;;;;x
+CT_tannerie_L2;Leather: Modest Tannery;CUIR : tanneur;;;;;;;;;;;;x
 CT_tannerie_L2_desc;;;;;;;;;;;;;;x
-CT_tannerie_L3;Leather: Expanded Tannery;;;;;;;;;;;;;x
+CT_tannerie_L3;Leather: Expanded Tannery;CUIR : fabrique;;;;;;;;;;;;x
 CT_tannerie_L3_desc;;;;;;;;;;;;;;x
-CT_tannerie_L4;Leather: Tanners' Commune;;;;;;;;;;;;;x
-CT_tannerie_L4_desc;;;;;;;;;;;;;;x
-CT_tannerie_L5;Leather: Tanners' Guild;;;;;;;;;;;;;x
-CT_tannerie_L5_desc;;;;;;;;;;;;;;x
-CT_scierie_L1;Lumber: Hydro-powered Sawmill;;;;;;;;;;;;;;x
+#CT_tannerie_L4;Leather: Tanners' Commune;;;;;;;;;;;;;x
+#CT_tannerie_L4_desc;;;;;;;;;;;;;;x
+#CT_tannerie_L5;Leather: Tanners' Guild;;;;;;;;;;;;;x
+#CT_tannerie_L5_desc;;;;;;;;;;;;;;x
+CT_scierie_L1;Lumber: Hydro-powered Sawmill;PLANCHE : atelier de sciage;;;;;;;;;;;;;x
 CT_scierie_L1_desc;;;;;;;;;;;;;;x
-CT_scierie_L2;Lumber: Water-wheeled Sawmill;;;;;;;;;;;;;x
+CT_scierie_L2;Lumber: Water-wheeled Sawmill;PLANCHE : scierie;;;;;;;;;;;;x
 CT_scierie_L2_desc;;;;;;;;;;;;;;x
-CT_scierie_L3;Lumber: Carriage Sawmill;;;;;;;;;;;;;x
+CT_scierie_L3;Lumber: Carriage Sawmill;PLANCHE : grande scierie;;;;;;;;;;;;x
 CT_scierie_L3_desc;;;;;;;;;;;;;;x
-CT_scierie_L4;Lumber: Modest Lumber Mill;;;;;;;;;;;;;x
-CT_scierie_L4_desc;;;;;;;;;;;;;;x
-CT_scierie_L5;Lumber: Expanded Lumber Mill;;;;;;;;;;;;;x
-CT_scierie_L5_desc;;;;;;;;;;;;;;x
-CT_four_L1;Glass: Glaziers' Shops;;;;;;;;;;;;;x
+#CT_scierie_L4;Lumber: Modest Lumber Mill;PLANCHE : grande scierie;;;;;;;;;;;;x
+#CT_scierie_L4_desc;;;;;;;;;;;;;;x
+#CT_scierie_L5;Lumber: Expanded Lumber Mill;PLANCHE : grande scierie;;;;;;;;;;;;x
+#CT_scierie_L5_desc;;;;;;;;;;;;;;x
+CT_four_L1;Glass: Glaziers' Shops;VERRE : atelier;;;;;;;;;;;;x
 CT_four_L1_desc;;;;;;;;;;;;;;x
-CT_four_L2;Glass: Modest Glass Manufactory;;;;;;;;;;;;;x
+CT_four_L2;Glass: Modest Glass Manufactory;VERRE : fabrique;;;;;;;;;;;;x
 CT_four_L2_desc;;;;;;;;;;;;;;x
-CT_four_L3;Glass: Expanded Glass Manufactory;;;;;;;;;;;;;x
+CT_four_L3;Glass: Expanded Glass Manufactory;VERRE : maître verrier;;;;;;;;;;;;x
 CT_four_L3_desc;;;;;;;;;;;;;;x
-CT_four_L4;Glass: Forest Glass Manufactory;;;;;;;;;;;;;x
-CT_four_L4_desc;;;;;;;;;;;;;;x
-CT_four_L5;Glass: Glaziers' Guild;;;;;;;;;;;;;x
-CT_four_L5_desc;;;;;;;;;;;;;;x
-CT_pierre_taille_L1;Worked Stone: Stonemasons Lodge;;;;;;;;;;;;;x
-CT_pierre_taille_L1_desc;;;;;;;;;;;;;;x
-CT_pierre_taille_L2;Worked Stone: Banker Masons' Workshop;;;;;;;;;;;;;x
-CT_pierre_taille_L2_desc;;;;;;;;;;;;;;x
-CT_pierre_taille_L3;Worked Stone: Stonecarvers' Workshop;;;;;;;;;;;;;x
-CT_pierre_taille_L3_desc;;;;;;;;;;;;;;x
-CT_pierre_taille_L4;Worked Stone: Stonemasons' Guild;;;;;;;;;;;;;x
-CT_pierre_taille_L4_desc;;;;;;;;;;;;;;x
-CT_pierre_taille_L5;Worked Stone: Freemasons' Guild;;;;;;;;;;;;;x
-CT_pierre_taille_L5_desc;;;;;;;;;;;;;;x
-CT_sel_raffine_L1;Refined Salt: Salt Panning Workshops;;;;;;;;;;;;;x
-CT_sel_raffine_L1_desc;;;;;;;;;;;;;;x
-CT_sel_raffine_L2;Refined Salt: Modest Salt Refinery;;;;;;;;;;;;;x
-CT_sel_raffine_L2_desc;;;;;;;;;;;;;;x
-CT_sel_raffine_L3;Refined Salt: Expanded Salt Refinery;;;;;;;;;;;;;x
-CT_sel_raffine_L3_desc;;;;;;;;;;;;;;x
-CT_sel_raffine_L4;Refined Salt: Urban Salt Refinery;;;;;;;;;;;;;x
-CT_sel_raffine_L4_desc;;;;;;;;;;;;;;x
-CT_sel_raffine_L5;Refined Salt: Major Urban Refinery;;;;;;;;;;;;;x
-CT_sel_raffine_L5_desc;;;;;;;;;;;;;;x
-CT_saline_L1;Salt: Brine Pits;;;;;;;;;;;;;x
-CT_saline_L1_desc;;;;;;;;;;;;;;x
-CT_saline_L2;Salt: Salt Furnace;;;;;;;;;;;;;x
-CT_saline_L2_desc;;;;;;;;;;;;;;x
-CT_saline_L3;Salt: Modest Salt Mines;;;;;;;;;;;;;x
-CT_saline_L3_desc;;;;;;;;;;;;;;x
-CT_saline_L4;Salt: Expanded Salt Mines;;;;;;;;;;;;;x
-CT_saline_L4_desc;;;;;;;;;;;;;;x
-CT_saline_L5;Major Urban Salt Mines;;;;;;;;;;;;;x
-CT_saline_L5_desc;;;;;;;;;;;;;;x
+#CT_four_L4;Glass: Forest Glass Manufactory;;;;;;;;;;;;;x
+#CT_four_L4_desc;;;;;;;;;;;;;;x
+#CT_four_L5;Glass: Glaziers' Guild;;;;;;;;;;;;;x
+#CT_four_L5_desc;;;;;;;;;;;;;;x
+CT_pierre_taille_L1;Worked Stone: Stonemasons Lodge;PIERRE : cour des tailleurs;;;;;;;;;;;;x
+CT_pierre_taille_L1_desc;;Les tailleurs de pierres se sont simplement installés dans un cour en ville entourée de quelques abris pour s'abriter et stocker leurs outils.;;;;;;;;;;;;x
+CT_pierre_taille_L2;Worked Stone: Banker Masons' Workshop;PIERRE : atelier de taille;;;;;;;;;;;;x
+CT_pierre_taille_L2_desc;;Ce petit atelier fabrique des pierres taillées ou ciselées de toutes tailles pour les constructions et ornements;;;;;;;;;;;;x
+CT_pierre_taille_L3;Worked Stone: Stonecarvers' Workshop;PIERRE : manufacture de taille;;;;;;;;;;;;x
+CT_pierre_taille_L3_desc;;Ce grand atelier fabrique massivement de la pierre taillées pour tout type de constructions.;;;;;;;;;;;;x
+#CT_pierre_taille_L4;Worked Stone: Stonemasons' Guild;;;;;;;;;;;;;x
+#CT_pierre_taille_L4_desc;;;;;;;;;;;;;;x
+#CT_pierre_taille_L5;Worked Stone: Freemasons' Guild;;;;;;;;;;;;;x
+#CT_pierre_taille_L5_desc;;;;;;;;;;;;;;x
+CT_sel_raffine_L1;Refined Salt: Salt Panning Workshops;SEL : petit étal;;;;;;;;;;;;x
+CT_sel_raffine_L1_desc;;Un simple étal proposant des sels de diverses qualités d'affinage;;;;;;;;;;;;x
+CT_sel_raffine_L2;Refined Salt: Modest Salt Refinery;SEL : boutique;;;;;;;;;;;;x
+CT_sel_raffine_L2_desc;;L'étal a ici fait place à un boutique plus organisée avec davantage de choix;;;;;;;;;;;;x
+CT_sel_raffine_L3;Refined Salt: Expanded Salt Refinery;SEL : marchand;;;;;;;;;;;;x
+CT_sel_raffine_L3_desc;;Ce marchand spécialisé dans le sel propose principalement la production du coin mais aussi quelques sels venus d'ailleurs aux parfums inattendus;;;;;;;;;;;;x
+#CT_sel_raffine_L4;Refined Salt: Urban Salt Refinery;;;;;;;;;;;;;x
+#CT_sel_raffine_L4_desc;;;;;;;;;;;;;;x
+#CT_sel_raffine_L5;Refined Salt: Major Urban Refinery;;;;;;;;;;;;;x
+#CT_sel_raffine_L5_desc;;;;;;;;;;;;;;x
+CT_saline_L1;Salt: Brine Pits;SALAISONS : petit atelier;;;;;;;;;;;;x
+CT_saline_L1_desc;;On produit ici divers produits conservés dans le sel;;;;;;;;;;;;x
+CT_saline_L2;Salt: Salt Furnace;SALAISONS : atelier;;;;;;;;;;;;x
+CT_saline_L2_desc;;Les salaisons produites ici sont de qualité et permettent de conserver viandes ou poissons très longtemps;;;;;;;;;;;;x
+CT_saline_L3;Salt: Modest Salt Mines;SALAISONS : manufacture;;;;;;;;;;;;x
+CT_saline_L3_desc;;On produit ici massivement divers produits conservés dans le sel. Les salaisons se vendent localement bien sûr mais font aussi le bonheur des marchands de passage qui achètent et revendent les salaisons lors de leurs périples;;;;;;;;;;;;x
+#CT_saline_L4;Salt: Expanded Salt Mines;;;;;;;;;;;;;x
+#CT_saline_L4_desc;;;;;;;;;;;;;;x
+#CT_saline_L5;Major Urban Salt Mines;;;;;;;;;;;;;x
+#CT_saline_L5_desc;;;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
 #;x;FIN AJOUT MOUCHI;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x;
@@ -422,7 +423,7 @@ TP_BOIS_charbon_L1;Charcoal: Colliers' Huts;CHARBON DE BOIS : Charbonnière Impro
 TP_BOIS_charbon_L1_desc;;;;;;;;;;;;;;x;
 TP_BOIS_charbon_L2;Charcoal: Coal-firing Kilns;CHARBON DE BOIS : Charbonnière Permanente;;;;;;;;;;;;x;
 TP_BOIS_charbon_L2_desc;;;;;;;;;;;;;;x;
-TP_BOIS_charbon_L3;Charcoal: Seigneurial Kilns;CHARBON DE BOIS : Charbonnière Seigneuriale;;;;;;;;;;;;x;
+TP_BOIS_charbon_L3;Charcoal: Seigneurial Kilns;CHARBON DE BOIS : Charbonnière de la paroisse;;;;;;;;;;;;x;
 TP_BOIS_charbon_L3_desc;;;;;;;;;;;;;;x;
 #FISH pisciculture (terres);;;;;;;;;;;;;;;x
 TP_FISH_pisci_L1;Freshwater Fish: Artificial Lake;PISCICULTURE : Élevage en Rivière;;;;;;;;;;;;x;
@@ -488,23 +489,23 @@ TP_AGRI_moulin_L2;Flour: Waterwheel Mill;FARINE : Moulin à noria;;;;;;;;;;;;x
 TP_AGRI_moulin_L2_desc;The watermill makes use of a massive wheel which serves to turn the grindstone ;Le moulin à eau est ici doté d'une immense roue appelée noria, bien plus efficace.;;;;;;;;;;;;x
 TP_AGRI_moulin_L3;Flour: Communal Mill;FARINE : Grand moulin citadin;;;;;;;;;;;;x
 TP_AGRI_moulin_L3_desc;The construction of a small canal to assure a regular flow of water to power the mill has increased its production.;L'installation au bord la rivière est ici alimentée par un petit canal dédié qui assure un débit régulier et ainsi une bien meilleure production.;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L1;Bread: Bakers' Shops;;;;;;;;;;;;;x
+TP_AGRI_boulangerie_L1;Bread: Bakers' Shops;PAIN : Four commun;;;;;;;;;;;;x
 TP_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L2;Bread: Baker's Street;;;;;;;;;;;;;x
+TP_AGRI_boulangerie_L2;Bread: Baker's Street;PAIN : Four en pierre;;;;;;;;;;;;x
 TP_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L3;Bread: Baker's Guild;;;;;;;;;;;;;x
+TP_AGRI_boulangerie_L3;Bread: Baker's Guild;PAIN : Boulanger;;;;;;;;;;;;x
 TP_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
-TP_FISH_fumoir_L1;Smoked Fish: Fishmongers' Shops;;;;;;;;;;;;;x
-TP_FISH_fumoir_L1_desc;;;;;;;;;;;;;;x
-TP_FISH_fumoir_L2;Smoked Fish: Communal Smokehouse;;;;;;;;;;;;;x
+TP_FISH_fumoir_L1;Smoked Fish: Fishmongers' Shops;FUMAISON : atelier;;;;;;;;;;;;x
+TP_FISH_fumoir_L1_desc;;On fume ici divers produits pour leur conservation, mais principalement du poisson;;;;;;;;;;;;x
+TP_FISH_fumoir_L2;Smoked Fish: Communal Smokehouse;FUMAISON : atelier communal;;;;;;;;;;;;x
 TP_FISH_fumoir_L2_desc;;;;;;;;;;;;;;x
-TP_FISH_fumoir_L3;Smoked Fish: Fishmongers' Guild;;;;;;;;;;;;;x
+TP_FISH_fumoir_L3;Smoked Fish: Fishmongers' Guild;FUMAISON : manufacture;;;;;;;;;;;;x
 TP_FISH_fumoir_L3_desc;;;;;;;;;;;;;;x
-TP_four_L1;Glass: Glaziers' Shops;;;;;;;;;;;;;x
-TP_four_L1_desc;;;;;;;;;;;;;;x
-TP_four_L2;Glass: Modest Glass Manufactory;;;;;;;;;;;;;x
+TP_four_L1;Glass: Glaziers' Shops;VERRE : atelier;;;;;;;;;;;;x
+TP_four_L1_desc;;On fabrique ici du verre brut qui demande ensuite a être retravaillé;;;;;;;;;;;;x
+TP_four_L2;Glass: Modest Glass Manufactory;VERRE : fabrique;;;;;;;;;;;;x
 TP_four_L2_desc;;;;;;;;;;;;;;x
-TP_four_L3;Glass: Expanded Glass Manufactory;;;;;;;;;;;;;x
+TP_four_L3;Glass: Expanded Glass Manufactory;VERRE : maître verrier;;;;;;;;;;;;x
 TP_four_L3_desc;;;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
 #NIVEAU COMMERCIAL;;;;;;;;;;;;;;x;
