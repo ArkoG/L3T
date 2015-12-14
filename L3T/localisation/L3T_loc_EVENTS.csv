@@ -1,36 +1,36 @@
 L3T.0003;Choisir l'orientation du domaine -version féodale-;Choisir l'orientation du domaine -version féodale-;;;;;;;;;;;;x
-NAMEL3T.0003;Feudal Demesne;Domaine Seigneurial;;;;;;;;;;;;x
-DESCL3T.0003;We might choose how to developp this feudal demesne. \n\n ;Nous devons décider comment allons-nous développer ce domaine.\n\n     -Une Citadelle remplira aussi bien un rôle de poste frontière sur une de nos marches qu'un rôle de protection et de formation de troupes. C'est un site très bien défendu mais qui coûte cher à entretenir.\n     -Une Citée Fortifiée pourra abriter une population importante derrière ses hauts murs défendus par un château fort. Elle a l'étoffe d'une Capitale pour tout seigneur de notre rang !\n     -Le Bourg Féodal regroupe une communauté de paysans qui exploitent nos terres et vivent bien loin des préoccupation de la cour. Il permet l'exploitation des ressources locales, qui pourront être échangées ou vendues et... taxées pour venir remplir nos coffres.;;;;;;;;;;;;x
-L3T.0003A;This will be a citadel ! Said.;Ce sera une Citadelle ! J'ai dis.;;;;;;;;;;;;x
-L3T.0003B;Obviously a feudal village !;Un Bourg Féodal de toute évidence !;;;;;;;;;;;;x
-L3T.0003C;Let this be a beautiful and powerfull Fortified city !;Faisons-en une belle et puissante Citée Fortifiée !;;;;;;;;;;;;x
+NAMEL3T.0003;Feudal Land Administration;Domaine Seigneurial;;;;;;;;;;;;x
+DESCL3T.0003;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of the local nobility.  \n\nYou may choose to support the local military aristocracy, allowing you to develop this holding into a formidable fortress. It will be able to support and protect large numbers of highly-trained troops behind its thick walls, but maintaining them will forego any major economic development within this holding. \n\nChoosing instead to support the local landed aristocracy by granting them more control over the peasantry will allow the development of regional industries and production of raw resources. While this will limit the defensibility of [Root.Location.GetName], the economic benefits are considerable.;Nous devons décider comment allons-nous développer ce domaine.\n\n     -Une Citadelle remplira aussi bien un rôle de poste frontière sur une de nos marches qu'un rôle de protection et de formation de troupes. C'est un site très bien défendu mais qui coûte cher à entretenir.\n     -Une Citée Fortifiée pourra abriter une population importante derrière ses hauts murs défendus par un château fort. Elle a l'étoffe d'une Capitale pour tout seigneur de notre rang !\n     -Le Bourg Féodal regroupe une communauté de paysans qui exploitent nos terres et vivent bien loin des préoccupation de la cour. Il permet l'exploitation des ressources locales, qui pourront être échangées ou vendues et... taxées pour venir remplir nos coffres.;;;;;;;;;;;;x
+L3T.0003A;We shall support the military aristocracy!;Ce sera une Citadelle ! J'ai dis.;;;;;;;;;;;;x
+L3T.0003B;We shall support the landed aristocracy!;Un Bourg Féodal de toute évidence !;;;;;;;;;;;;x
+L3T.0003C;We shall save our resources to develop the administration!;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 L3T.0004;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;;;;;;;;;;;;x
-NAMEL3T.0004;City Demesne;Domaine Communal;;;;;;;;;;;;x
-DESCL3T.0004;;doit se voir assigner une voie de développement. \n\n     Cette cité peut être développée soit selon une orientation production, soit à caractère commercial. Dans les deux cas, cela constitue une source non négligeable de taxation ! \n;;;;;;;;;;;;x
-L3T.0004A;We might produce !;Produisons ! ;;;;;;;;;;;;x
-L3T.0004B;We might trade !;Commerçons ! ;;;;;;;;;;;;x
-NAMEL3T.0005;Our Beloved City;Notre Belle Cité;;;;;;;;;;;;x
+NAMEL3T.0004;Municipal Land Administration;Domaine Communal;;;;;;;;;;;;x
+DESCL3T.0004;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of the local burghers.  \n\nYou may choose to support the local tradesmen and merchants, allowing you to develop this city as a bustling center of commerce. \n\nChoosing instead to support the local craftsmen and artisans will allow the development of regional industries and production of goods. \n\nIn either case, the benefits are many and the profits even greater!;doit se voir assigner une voie de développement. \n\n     Cette cité peut être développée soit selon une orientation production, soit à caractère commercial. Dans les deux cas, cela constitue une source non négligeable de taxation ! \n;;;;;;;;;;;;x
+L3T.0004A;We shall support the craftsmen!;Produisons ! ;;;;;;;;;;;;x
+L3T.0004B;We shall support the merchants!;Commerçons ! ;;;;;;;;;;;;x
+NAMEL3T.0005;Thriving City;Notre Belle Cité;;;;;;;;;;;;x
 L3T.0005;upgrade grande cité;upgrade grande cité;;;;;;;;;;;;x
-DESCL3T.0005;This city is developping and overpasses another cape that opens news horizons.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
+DESCL3T.0005;Merchants and traders far and wide speak of this city's grandeur, as evident from its well-maintained streets, immense wealth, and the host of people who make a living inside its walls. As prosperous as it is, there are reports that economic and population growth show no signs of decline.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
 L3T.0005A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
-NAMEL3T.0002;Our Glorious City;Notre Glorieuse Cité;;;;;;;;;;;;x
+NAMEL3T.0002;Shining Jewel of [Root.Location.GetName];Notre Glorieuse Cité;;;;;;;;;;;;x
 L3T.0002;upgrade grande cité;upgrade grande cité;;;;;;;;;;;;x
-DESCL3T.0002;This city is developping and overpasses another cape that opens news horizons.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
+DESCL3T.0002;This city's splendour is a boon to the surrounding region and bestows upon it a prestige reserved for only the wealthiest and most beautiful cities in the world. New arrivals flock to the bustling markets every day and the city's districts sing out with the sounds of industry.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
 L3T.0002A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 L3T.0006;Choisir l'orientation du domaine -version écclésiale-;Choisir l'orientation du domaine -version écclésiale-;;;;;;;;;;;;x
-NAMEL3T.0006;Clergy Lands  ;Les Terres du Clergé ;;;;;;;;;;;;x
-DESCL3T.0006;Quel avenir lui réserver ? \n\n     Un Monastère constitue un conservatoire du savoir où l'on y instruit la jeunesse et compile nombre de connaissances anciennes ou nouvelles. La communauté religieuse se choisira une règle de vie monastique et pourra rejoindre un ordre monastique. \n     Une Citée Episcopale abritera les institutions religieuses locales et aura la mainmise sur les terres environnantes. \n     Une Commanderie, monastère dédié à un usage principalement militaire, assurera des troupes de qualités, notamment dans l'optique d'une guerre sainte ou juste pour mater ce prétentieux voisin !;en la province de [From.Location.GetName], quel avenir lui réserver ? \n\n     Un Monastère constitue un conservatoire du savoir où l'on y instruit la jeunesse et compile nombre de connaissances anciennes ou nouvelles. La communauté religieuse se choisira une règle de vie monastique et pourra rejoindre un ordre monastique. \n     Une Citée Episcopale abritera les institutions religieuses locales et aura la mainmise sur les terres environnantes. \n     Une Commanderie, monastère dédié à un usage principalement militaire, assurera des troupes de qualités, notamment dans l'optique d'une guerre sainte ou juste pour mater ce prétentieux voisin !;;;;;;;;;;;;x
-L3T.0006A;Implantons-y un Monastère;Implantons-y un Monastère;;;;;;;;;;;;x
-L3T.0006B;Laissons les à libre gestion du clergé local.;Laissons les à libre gestion du clergé local.;;;;;;;;;;;;x
-L3T.0006C;Accordons donc le statut de Commanderie.;Accordons donc le statut de Commanderie.;;;;;;;;;;;;x
+NAMEL3T.0006;Clerical Land Administration;Les Terres du Clergé ;;;;;;;;;;;;x
+DESCL3T.0006;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of local religious authorities. \n\n Choosing to support the local clergy will allow us to develop the proper infrastructure to encourage local industries in this province, although a portion of the control and the profits will be surrendered to the Church. \n\nAllotting some land to support a local monastic or military order, if they are available, will provide its own benefits in the form of services rendered by their members, but their autonomy does ensure much of the economic benefit will go to their coffers instead of yours.;en la province de [From.Location.GetName], quel avenir lui réserver ? \n\n     Un Monastère constitue un conservatoire du savoir où l'on y instruit la jeunesse et compile nombre de connaissances anciennes ou nouvelles. La communauté religieuse se choisira une règle de vie monastique et pourra rejoindre un ordre monastique. \n     Une Citée Episcopale abritera les institutions religieuses locales et aura la mainmise sur les terres environnantes. \n     Une Commanderie, monastère dédié à un usage principalement militaire, assurera des troupes de qualités, notamment dans l'optique d'une guerre sainte ou juste pour mater ce prétentieux voisin !;;;;;;;;;;;;x
+L3T.0006A;We shall support a monastic order.;Implantons-y un Monastère;;;;;;;;;;;;x
+L3T.0006B;We shall grant rights and privileges to the local clergy.;Laissons les à libre gestion du clergé local.;;;;;;;;;;;;x
+L3T.0006C;We shall open the use of our lands to a military order.;Accordons donc le statut de Commanderie.;;;;;;;;;;;;x
 L3T.0007;Choisir la règle monastique du domaine de type monastère;Choisir la règle monastique du domaine de type monastère;;;;;;;;;;;;x
-NAMEL3T.0007;Monastic life;Vie Monastique;;;;;;;;;;;;x
-DESCL3T.0007;Quelle règle monastique ce Monastère va-t-il adopter ? \n\n Ce choix conditionnera ensuite un éventuel rattachement à l'un des ordres monastiques de la même obédience, ordres présentant chacun leurs spécifités.;Quelle règle monastique le Monastère de [From.Location.GetName] va-t-il suivre ? \n\n Ce choix conditionnera ensuite un éventuel rattachement à l'un des ordres monastiques de la même obédience, ordres présentant chacun leurs spécifités.;;;;;;;;;;;;x
-L3T.0007A;Saint Benedict Rule;La Règle de Saint Benoît;;;;;;;;;;;;x
-L3T.0007B;Saint Augustine Rule ;La Règle de Saint Augustin;;;;;;;;;;;;x
-L3T.0007C;Saint Basil Rule;La Règle de Saint Basile;;;;;;;;;;;;x
+NAMEL3T.0007;Supporting a Monastery;Vie Monastique;;;;;;;;;;;;x
+DESCL3T.0007;As we have decided to support the establishment of a monastery in these parts, which monastic rule should we sponsor?;Quelle règle monastique le Monastère de [From.Location.GetName] va-t-il suivre ? \n\n Ce choix conditionnera ensuite un éventuel rattachement à l'un des ordres monastiques de la même obédience, ordres présentant chacun leurs spécifités.;;;;;;;;;;;;x
+L3T.0007A;The Rule of Saint Benedict;La Règle de Saint Benoît;;;;;;;;;;;;x
+L3T.0007B;The Rule of Saint Augustine;La Règle de Saint Augustin;;;;;;;;;;;;x
+L3T.0007C;The Rule of Saint Basil;La Règle de Saint Basile;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 #ECO.0020;unrelated stuff;route Vienne - Aoste;;;;;;;;;;;;x
 #DESCECO.0020;unrelated stuff;Le tracé de la principale route reliant les cités de Vienne et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans le développement de cette voie commerciale.;;;;;;;;;;;;x
@@ -42,33 +42,33 @@ L3T.0007C;Saint Basil Rule;La Règle de Saint Basile;;;;;;;;;;;;x
 #DESCECO.0022;unrelated stuff;Le tracé de la principale route reliant les cités de Lyon et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans ce domaine en bonne intelligence.;;;;;;;;;;;;x
 #ECO.0022A;unrelated stuff;Merci pour la leçon d'économie !;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-NAMEL3T.0010;Hello and welcome my Lord! ;Salutations Messire ! ;;;;;;;;;;;;x
+NAMEL3T.0010;Welcome, my Liege! ;Salutations Messire ! ;;;;;;;;;;;;x
 L3T.0010;MAP choice;Les cartes en main !;;;;;;;;;;;;x
-DESCL3T.0010;\n Please tell me what map your are playing alongside to L3T to adapt the game. ;\n Dis-moi sur quelle carte joues-tu pour adapter la partie ? ;;;;;;;;;;;;x
+DESCL3T.0010;\n Please tell me which map your are playing alongside L3T to adapt the game. This will seed the map with the appropriate terrain and resource modifiers.;\n Dis-moi sur quelle carte joues-tu pour adapter la partie ? ;;;;;;;;;;;;x
 L3T.0010A;Some What More Historic (SWMH);Some What More Historic (SWMH);;;;;;;;;;;;x
 L3T.0010B;La Couronne des Alpes (LCDA);La Couronne des Alpes (LCDA);;;;;;;;;;;;x
 L3T.0010C;Vanilla;Vanilla;;;;;;;;;;;;x
 L3T.15;Choose your language;Choix de la langue;;;;;;;;;;;;;x
-DESCL3T.15;Some parts of the mod are not translated from French yet (or maybe won't be)\n You can disable some of the unlocalized stuff (mostly some flavour events) by selecting you want to play the English version.;Une partie du contenu n'est pas traduit en langue angloise. Cet évènement introductif permet de désactiver une partie des contenus non traduits. \n Logiquement, si vous lisez ceci, cliquez sur "JOUER en français".;;;;;;;;;;;;;x
+DESCL3T.15;Some parts of the mod are not translated from French yet.\n You can disable some of the unlocalized stuff (mostly some flavour events) by selecting you want to play the English version.;Une partie du contenu n'est pas traduit en langue angloise. Cet évènement introductif permet de désactiver une partie des contenus non traduits. \n Logiquement, si vous lisez ceci, cliquez sur "JOUER en français".;;;;;;;;;;;;;x
 L3T.15A;FRENCH speaking version;L3T complet, en français;;;;;;;;;;;;x
 L3T.15B;ENGLISH speaking version;L3T partiel, en anglais;;;;;;;;;;;;x
 L3T.15C;IA choice;choix de l'AI;;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-DESCL3T.0101;Population grew in this province !;La population a cru autour du château. \n Les quelques maisonnées assemblées ici forment à présent un petit hameau !;;;;;;;;;;;;x
-DESCL3T.0102;Population grew in this province !;Le hameau a pris de l'importance au pied du château et forme à présent un village !;;;;;;;;;;;;x
-DESCL3T.0103;Population grew in this province !;Le village du château a pris de l'importance et attire toujours plus de nouveaux venus, artisans ou paysans et forme à présent un bourg !;;;;;;;;;;;;x
-DESCL3T.0104;Population grew in this province !;Le bourg formé plus tôt contre le château s'est développé et atteint désormais une populatation suffisante pour porter la dénomination de ville !;;;;;;;;;;;;x
-DESCL3T.0105;Population grew in this province !;Le château est désormais le coeur d'une ville suffisemmant populeuse et industrieuse pour porter le nom de cité !;;;;;;;;;;;;x
-DESCL3T.0106;Population grew in this province !;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un petit hameau !;;;;;;;;;;;;x
-DESCL3T.0107;Population grew in this province !;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un village !;;;;;;;;;;;;x
-DESCL3T.0108;Population grew in this province !;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un bourg !;;;;;;;;;;;;x
-DESCL3T.0109;Population grew in this province !;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une ville !;;;;;;;;;;;;x
-DESCL3T.0110;Population grew in this province !;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une cité !;;;;;;;;;;;;x
-DESCL3T.0111;Population grew in this province !;La population a cru autour du lieu de culte et forme à présent un petit hameau !;;;;;;;;;;;;x
-DESCL3T.0112;Population grew in this province !;La population a cru autour du lieu de culte et forme à présent un village !;;;;;;;;;;;;x
-DESCL3T.0113;Population grew in this province !;La population a cru autour du lieu de culte et forme à présent un bourg !;;;;;;;;;;;;x
-DESCL3T.0114;Population grew in this province !;La population a cru autour du lieu de culte et forme à présent une ville !;;;;;;;;;;;;x
-DESCL3T.0115;Population grew in this province !;La population a cru autour du lieu de culte et forme à présent une cité !;;;;;;;;;;;;x
+DESCL3T.0101;This settlement has grown! A little hamlet now thrives in this region and the peasants living here work ceaselessly under the wise rule of the local lord.;La population a cru autour du château. \n Les quelques maisonnées assemblées ici forment à présent un petit hameau !;;;;;;;;;;;;x
+DESCL3T.0102;A once insignificant hamlet populated by only a few dozen households has grown into a busy village!;Le hameau a pris de l'importance au pied du château et forme à présent un village !;;;;;;;;;;;;x
+DESCL3T.0103;The castle village has grown into a borough and now requires a local council led by some of the elders in order to oversee its day-to-day functions. The market too has grown and a small section of is now home to a handful of artisans.;Le village du château a pris de l'importance et attire toujours plus de nouveaux venus, artisans ou paysans et forme à présent un bourg !;;;;;;;;;;;;x
+DESCL3T.0104;A thriving town has grown from this borough, and the markets are well-stocked with goods harvested and made both locally and coming in from afar. The derelict elder council has evolved into a properly elected council capable of administering trade and justice, although the final word still lies with the lord of these lands.;Le bourg formé plus tôt contre le château s'est développé et atteint désormais une populatation suffisante pour porter la dénomination de ville !;;;;;;;;;;;;x
+DESCL3T.0105;A vast city now stands tall and proud at the foot of the castle keep, and its inhabitants prosper and reap the benefits of living in such an industrious and well-populated settlement.;Le château est désormais le coeur d'une ville suffisemmant populeuse et industrieuse pour porter le nom de cité !;;;;;;;;;;;;x
+DESCL3T.0106;This settlement has grown! A little hamlet now thrives in this region and the inhabitants living here work ceaselessly under the wise leadership of a local council.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un petit hameau !;;;;;;;;;;;;x
+DESCL3T.0107;Through a steady increase in trade and industry, this once insignificant hamlet populated by only a few dozen households has grown into a busy village!;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un village !;;;;;;;;;;;;x
+DESCL3T.0108;The village has grown into a borough and now requires a council led by the leaders of the most prominent merchant families in order to oversee its day-to-day functions. The borough is now also home to a handful of artisans, and caravans of merchants keep the market squares busy with activity.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un bourg !;;;;;;;;;;;;x
+DESCL3T.0109;A thriving town has grown from this borough and serves as a home for hundreds of traders, craftsmen, artisans, and laborers. Warehouses full of goods attract large numbers of merchants to come from near and far, and the traders here grow fat and wealthy.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une ville !;;;;;;;;;;;;x
+DESCL3T.0110;A most magnificent city has risen in [Root.Location.GetName] and offers refuge and opportunity for thousands of people residing within its walls. Wealthy merchants, skilled artisans, and a multitude of laborers feed the rapidly growing economy, funding massive projects and great works of art and culture. A great age is truly dawning upon us!;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une cité !;;;;;;;;;;;;x
+DESCL3T.0111;This settlement has grown! A little hamlet now thrives in this region and the peasants living here work ceaselessly under the wise guidance of the local cleric.;La population a cru autour du lieu de culte et forme à présent un petit hameau !;;;;;;;;;;;;x
+DESCL3T.0112;Through a steady increase in trade and industry, this once insignificant hamlet populated by only a few dozen households has grown into a busy village!;La population a cru autour du lieu de culte et forme à présent un village !;;;;;;;;;;;;x
+DESCL3T.0113;The village has grown into a borough and now requires a local council in order to oversee its day-to-day functions. The borough is now also home to a handful of artisans, and a steady stream of merchants keep the market squares busy.;La population a cru autour du lieu de culte et forme à présent un bourg !;;;;;;;;;;;;x
+DESCL3T.0114;A thriving town has grown from this borough and serves as a home for hundreds of traders, craftsmen, artisans, and laborers. Warehouses full of goods attract large numbers of merchants to come from near and far, and the religious authorities make a healthy profit from taxing trade and commerce.;La population a cru autour du lieu de culte et forme à présent une ville !;;;;;;;;;;;;x
+DESCL3T.0115;A most magnificent city has risen in [Root.Location.GetName] and offers refuge and opportunity for thousands of people residing within its walls. Wealthy merchants, skilled artisans, and a multitude of laborers feed the rapidly growing economy, funding massive projects and great works of art and culture. A great age is truly dawning upon us!;La population a cru autour du lieu de culte et forme à présent une cité !;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 DESCL3T.0015;;DESCL3T.0015 \n [From.Location.GetName];;;;;;;;;;;;x
 DESCL3T.00160;;DESCL3T.00160 \n [From.Location.GetName];;;;;;;;;;;;x
@@ -77,39 +77,39 @@ DESCL3T.0017;;DESCL3T.0017 \n [From.Location.GetName];;;;;;;;;;;;x
 DESCL3T.0018;;DESCL3T.0018 \n [From.Location.GetName];;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 XYLO.0001;Hire a forester;Embaucher un forestier;;;;;;;;;;;x;
-DESCXYLO.0001;My liege, you are clearly busy with managing the affairs of your people, might I suggest a member of your court that could fill the position of Forester?;Vous êtes très occupé à diriger vos gens et vos terres, aussi je me permets de vous proposer quelqu'un de votre Cour qui pourrait convenir pour le poste de Forestier.;;;;;;;;;;;;x
+DESCXYLO.0001;My liege, as you are clearly busy with managing the affairs of your people, might I suggest a member of your court that could fill the position of Forester?;Vous êtes très occupé à diriger vos gens et vos terres, aussi je me permets de vous proposer quelqu'un de votre Cour qui pourrait convenir pour le poste de Forestier.;;;;;;;;;;;;x
 XYLO.0001A;He will do nicely. Have him start immediately.;Il fera l'affaire, qu'il se présente à moi et s'attèle à la tâche.;;;;;;;;;;;;x
-XYLO.0001B;If one want a job done properly...;Je le choisirais moi même.;;;;;;;;;;;;x
+XYLO.0001B;If you want something done right... you have to do it yourself.;Je le choisirais moi même.;;;;;;;;;;;;x
 XYLO.0002;Forest Specialization1;Spécialisation des Forêts1;;;;;;;;;;;;x
-DESCXYLO.0002;After an evaluation of our domains, our Forester informs us that the forests of [From.Location.GetName] are both able to be used for hunting or for good lumber. \n Do we need to retain it to your private hunting pleasures or open it to exploitation ?;Après un inventaire de nos domaines, notre Forestier nous informe que les bois de [From.Location.GetName] sont giboyeux et abondent d'arbres de belle stature, quel développment privilègier ? \n \nDevons-nous en réserver l'usage à sa seigneurie pour son bon plaisir de chasse ou bien les faire exploiter par nos gens ?;;;;;;;;;;;;x
-XYLO.0002A;Go for a hunt !;Partons chasser !;;;;;;;;;;;;x
-XYLO.0002B;Lets those lazy peasents work for us !;Faisons-la exploiter par ces fainéants de paysans !;;;;;;;;;;;;x
-XYLO.0002C;Some wood, what else ?;Du bois, quoi d'autre ? ;;;;;;;;;;;;x
+DESCXYLO.0002;After an evaluation of our domains, our surveyors have informed us that the forests of [From.Location.GetName] are able to be used for either hunting or for harvesting lumber. \n Should we maintain it for your private hunting pleasure or begin sending peasants there to build a lumber camp?;Après un inventaire de nos domaines, notre Forestier nous informe que les bois de [From.Location.GetName] sont giboyeux et abondent d'arbres de belle stature, quel développment privilègier ? \n \nDevons-nous en réserver l'usage à sa seigneurie pour son bon plaisir de chasse ou bien les faire exploiter par nos gens ?;;;;;;;;;;;;x
+XYLO.0002A;I shall maintain these forests for my own personal enjoyment.;Partons chasser !;;;;;;;;;;;;x
+XYLO.0002B;Let us put these lazy peasants to good use!;Faisons-la exploiter par ces fainéants de paysans !;;;;;;;;;;;;x
+XYLO.0002C;I shall give the order to begin exploiting these resources.;Du bois, quoi d'autre ? ;;;;;;;;;;;;x
 XYLO.0003;Forest Specialization2;Spécialisation des Forêts2;;;;;;;;;;;;x
-DESCXYLO.0003;After an evaluation of our domain, our forester informs us that our forest of  [From.Location.GetName] are composed of beautiful trees that will make perfect building and artistical material. A prosperous business should be possible. Should we assume the exclusive exploitation rights?;Après inventaire et évaluation de nos domaines boisés, notre Forestier nous informe que les forêts de [From.Location.GetName] sont composées de belles futaies qui feront de bons matériaux de construction et d'artisanat. Une belle rentabilité doit pouvoir en être tirée. \n \nJe suppose que l'on va s'en arroger un droit d'exploitation exclusif ?;;;;;;;;;;;;x
-XYLO.0003A;Am I greedy ? So what ?!;Moi cupide ? Et alors ?!;;;;;;;;;;;;x
-XYLO.0003B;Let's be generous and leave the unprofitable activities for farmers!;Soyons généreux laissons les activités peu rentables aux paysans !;;;;;;;;;;;;x
+DESCXYLO.0003;After an evaluation of our domain, our forester informs us that our forest of  [From.Location.GetName] is composed of very many sturdy trees that would be perfect for construction and industry. Should we assume the exclusive land rights?;Après inventaire et évaluation de nos domaines boisés, notre Forestier nous informe que les forêts de [From.Location.GetName] sont composées de belles futaies qui feront de bons matériaux de construction et d'artisanat. Une belle rentabilité doit pouvoir en être tirée. \n \nJe suppose que l'on va s'en arroger un droit d'exploitation exclusif ?;;;;;;;;;;;;x
+#XYLO.0003A;Am I greedy ? So what ?!;Moi cupide ? Et alors ?!;;;;;;;;;;;;x
+XYLO.0003B;Let us be generous and leave the unprofitable activities for the farmers!;Soyons généreux laissons les activités peu rentables aux paysans !;;;;;;;;;;;;x
 XYLO.0004;Forest Specialization3;Spécialisation des Forêts3;;;;;;;;;;;;x
-DESCXYLO.0004;After an evaluation of our domain, our forester informs us that our forest of  [From.Location.GetName] would make an excellent framework for meditation and spirituel contemplation. Should we preserve these lands for such use or should we open them up to exploitation.;Suite à notre inventaire des nos bois, notre Forestier nous informe que les forêts de [From.Location.GetName] offrent un cadre excellent pour la pratique de la méditation et de l'ermitage. \n \n Devons-nous réserver ces domaines à cet usage ou les ouvrir à l'exploitation de ressources ?;;;;;;;;;;;;x
-XYLO.0004B;Glory to [Root.Religion.GetRandomGodName] !;Gloire à [Root.Religion.GetRandomGodName] !;;;;;;;;;;;;x
-XYLO.0004A;These trees will be a remarkable wooden frame to enlarge the house of the Lord ... or my palace. Only god knows !;Ces arbres feront un remarquable bois charpente pour agrandir la demeure du Seigneur...ou de mon palais. Dieu seul le sait !;;;;;;;;;;;;x
-XYLO.0004C;[Root.Religion.GetRandomGodName] made trees for wood isn't it ?;[Root.Religion.GetRandomGodName] a créé les arbres pour leur bois non ? ;;;;;;;;;;;;x
+DESCXYLO.0004;After an evaluation of our domain, our forester informs us that our forest of  [From.Location.GetName] would make an excellent refuge for meditation and spiritual contemplation. Should we preserve these lands for such use or should we open them up to development and industry?;Suite à notre inventaire des nos bois, notre Forestier nous informe que les forêts de [From.Location.GetName] offrent un cadre excellent pour la pratique de la méditation et de l'ermitage. \n \n Devons-nous réserver ces domaines à cet usage ou les ouvrir à l'exploitation de ressources ?;;;;;;;;;;;;x
+XYLO.0004B;These forests will be consecrated as a sanctuary for meditation. Glory to [Root.Religion.GetRandomGodName]!;Gloire à [Root.Religion.GetRandomGodName] !;;;;;;;;;;;;x
+XYLO.0004A;These trees will either form a sturdy wooden frame to enlarge the house of God ... or my palace. Only He knows!;Ces arbres feront un remarquable bois charpente pour agrandir la demeure du Seigneur...ou de mon palais. Dieu seul le sait !;;;;;;;;;;;;x
+XYLO.0004C;[Root.Religion.GetRandomGodName] made trees to be turned into wood, no?;[Root.Religion.GetRandomGodName] a créé les arbres pour leur bois non ? ;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 XYLO.0103;Timber sale to fill the coffers;Vente bois pour renflouer les caisses1;;;;;;;;;;;;x
 DESCXYLO.0103;Our treasury is nearly empty. We could chop down some forest plots from our hunting demesne, and sell the timber to replenish the treasury.;Nos finances sont au plus bas. Nous pourrions abattre quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres.;;;;;;;;;;;;x
-XYLO.0103A;It won't be necessary;Ce ne sera pas nécessaire.;;;;;;;;;;;;x
-XYLO.0103B;Let's cut some of those.;Procédons à une coupe.;;;;;;;;;;;;x
+XYLO.0103A;It need not come to that.;Ce ne sera pas nécessaire.;;;;;;;;;;;;x
+XYLO.0103B;Cutting down a small copse will suffice.;Procédons à une coupe.;;;;;;;;;;;;x
 XYLO.0104;Timber sale to fill the coffers;Vente bois pour renflouer les caisses2;;;;;;;;;;;;x
-DESCXYLO.0104;We barely got enough gold to cover the bottom of our coffers. Do we need to chop down more forest plots from our hunting demesne ?;Nos finances sont toujours au plus bas. Devons nous abattre à nouveau le bois de quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres ?;;;;;;;;;;;;x
-XYLO.0104A;Again ? No.;Encore ? Non.;;;;;;;;;;;;x
-XYLO.0104B;Let's go for it.;Allons-y;;;;;;;;;;;;x
+DESCXYLO.0104;We have barely enough gold to cover the bottom of our strongboxes. Do we need to chop down more forest plots from our hunting demesne to resolve our current financial difficulties?;Nos finances sont toujours au plus bas. Devons nous abattre à nouveau le bois de quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres ?;;;;;;;;;;;;x
+XYLO.0104A;Again? No.;Encore ? Non.;;;;;;;;;;;;x
+XYLO.0104B;I suppose we must...;Allons-y;;;;;;;;;;;;x
 XYLO.0105;Timber sale to fill the coffers;Vente bois pour renflouer les caisses3;;;;;;;;;;;;x
-DESCXYLO.0105;Our gold reserves is still hardly fit for a lord. Do we need to chop down more forest plots from our hunting demesne ?;Nos finances sont toujours au plus bas. Devons nous abattre à nouveau le bois de quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres ?;;;;;;;;;;;;x
-XYLO.0105A;Again ? No.;Encore ? Non.;;;;;;;;;;;;x
-XYLO.0105B;Let's go for it.;Allons-y;;;;;;;;;;;;x
+DESCXYLO.0105;The gold reserves are still hardly fit for a noble of your stature. Do we need to chop down more forest plots from the hunting demesne?;Nos finances sont toujours au plus bas. Devons nous abattre à nouveau le bois de quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres ?;;;;;;;;;;;;x
+XYLO.0105A;Yet again? No.;Encore ? Non.;;;;;;;;;;;;x
+XYLO.0105B;I suppose I have no choice.;Allons-y;;;;;;;;;;;;x
 XYLO.0106;To deforest a forest;La coupe de trop;;;;;;;;;;;;x
-DESCXYLO.0106;Cutting down so many trees to fill our coffers has led to dramatic reduction in the foilage… We will probably soon have to halt most of our activites….;Couper autant d'arbres pour renflouer nos caisses a conduit à une réduction dramatique de la couverture forestière... Nous allons probalement devoir cesser bientôt un certain nombre de nos activités...;;;;;;;;;;;;x
-XYLO.0106A;That is to say ?;C'est à dire ?;;;;;;;;;;;;x
+DESCXYLO.0106;Cutting down so many trees to fill our coffers has led to dramatic deforestation to the point of insustainability. We will probably soon have to issue a moratorium most of our forest industries...;Couper autant d'arbres pour renflouer nos caisses a conduit à une réduction dramatique de la couverture forestière... Nous allons probalement devoir cesser bientôt un certain nombre de nos activités...;;;;;;;;;;;;x
+XYLO.0106A;This is most unfortunate.;C'est à dire ?;;;;;;;;;;;;x
 DESCXYLO.0107;;Au regard de notre niveau de piété, et puisque nous en aurions la possibilité, nous pourrions faire don d'une partie de nos bois à l'Eglise. \nCela serait bénéfique pour le salut de notre âme et la réputation de notre famille.;;;;;;;;;;;;x
 XYLO.0107A;;Allons-y;;;;;;;;;;;;x
 XYLO.0107B;;L'enjeu me semble trop faible;;;;;;;;;;;;x
@@ -161,7 +161,7 @@ EVTDESC68010;Due to my somewhat lacking Stewardship skill, a Thieves' Guild has 
 EVTDESC68020;My less than perfect Diplomacy has allowed a Smugglers' Ring to appear in [Root.GetName].;Mes piètres talents de diplomate ont permis à un Cercle de contrebandiers de se créer à [Root.GetName].;;;;;;;;;;;;x
 EVTDESC68030;Due to my mediocre understanding of Martial matters, bands of robbers are roaming the countryside in [Root.GetName]. They are too craven to attack my castles though.;À cause de mon manque de discernement dans le domaine martial, des bandes de voleurs sillonnent les campagnes de [Root.GetName]. Ils sont cependant trop lâches pour attaquer mes châteaux.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-raids_pirates;Pirates' raids;Raids pirates;;;;;;;;;;;;x
+raids_pirates;Pirate Raids;Raids pirates;;;;;;;;;;;;x
 raids_pirates_desc;;Les raids des pirates ici sont réguliers. Face à l'inefficacité et l'impuissance du Seigneur ils prospèrent et ont probablement établi domicile non loin de là.;;;;;;;;;;;;x
 XYLO.02101;;établissement des pirates;;;;;;;;;;;;x
 DESCXYLO.02101;Due to our incapacity to rule so much lands, a band of pirates freely terrorize the coasts of [From.Location.GetName];Nous avons bien trop de terres à gérer... surtout au reagrd de nos compétences et notre incapacité à y maintenir l'ordre. Voilà une situation en or pour les roublards de tous poil ! Notamment semble-t-il cette bande de pirates qui sévit depuis quelques temps déjà et lancent des raids de plus en plus audacieux sur les côtes de [From.Location.GetName].;;;;;;;;;;;;x
