@@ -1,0 +1,254 @@
+059b75a (HEAD -> master, origin/master, origin/HEAD) Improve translate helper
+e614aa8 Fix bug with translate helper
+de42c75 bats FR loc
+7480bad uncomments some _desc
+4e259a9 Fix merge conflict
+5f9296b some additional loc for French
+837eed9 Improve translate helper
+4d14e46 Fix missing comment line
+a78cd68 Add missing desc to buildings
+f706cd6 Merge pull request #9 from dangitsdaaaaang/master
+ee2ee80 Fixed Province Modifier Errors + Added Loc
+408adf9 Merge remote-tracking branch 'refs/remotes/ArkoG/master'
+afc898a Merge pull request #8 from dangitsdaaaaang/master
+e16b779 Merge remote-tracking branch 'refs/remotes/ArkoG/master'
+f3e00a2 Buildings Convert to ANSI
+d5183b1 ANSI Conversion
+26e69a9 Validator pass
+0fa549b Fix bug with end of God peace
+52a0eff province fluviale SWMH part 1
+2122b36 missing closing bracket
+194f5ee clean introduction events
+eedb5ea saint localisations
+7ba04d1 Merge remote-tracking branch 'refs/remotes/ArkoG/master'
+e359700 Merge pull request #6 from dangitsdaaaaang/master
+2221feb Building Translations (~65% complete)
+1fcbaee Add translate helper
+affa96a Merge pull request #5 from dangitsdaaaaang/master
+e9c8004 Translation Update (~55% complete)
+f732295 Merge pull request #4 from dangitsdaaaaang/master
+97eaab1 Initial Translations (~40% complete)
+ac35859 Merge remote-tracking branch 'refs/remotes/ArkoG/master'
+ba66502 Add a diagnostic of English translation
+bb02b75 Limite flood de la fin prosp├®rit├®
+b218de1 plans mod
+023eaa6 Passage validator
+1ae287e fix bug interupted_by_war
+4b55621 ajout base nicknames
+dd7f1a4 some few localisation fixes
+e28c2b9 ajout de plusieurs events
+8b06a1a modif score
+f28bece localisation event activation ress
+6b8819d correction bugs
+d7e16c2 ajout event anti anglois ;)
+992b2be fix bugs
+d218b7f fix quelques bugs events
+81528ff event d'intro en narratif + tweak loc
+f1a9c63 ajustement mise en page event
+8bd4952 nouveau panel d'event ambition stewardship
+69f60df correction loc vanilla
+d7decbf new event pic carte
+38fdb58 ajout loc
+b3651e8 clean loc passe 3
+c926b07 Passage validator
+0aac1bc clean loc passe 2
+df59c9f clean localisation
+ba30193 fix bug trigger et desc cathedrale
+4878ea4 fix bug flag propserite
+3615b61 cath├®drales lite
+6b5bdeb fix bug chroniques
+3bc73a8 typo et flavour
+21ad904 flavor texts for population event (castle)
+9727d34 fix bug scope option chronique
+a5b985a ajout entr├®es chroniques r├®colte et p├¬che
+516005b ajoute des entr├®es de chronique pour la prosp├®rit├®
+4754d90 Fix bug option d'event
+ab1c4b6 Mise ├á jour de ID_list.txt
+61045b1 fix bug .lua
+d869ebc Merge branch 'master' of https://github.com/ArkoG/L3T
+b3dbf9b Passage au validator
+70a03f9 pond├®ration sp├®cialisations forets
+5207189 ajout potential CT moulin niv4
+533826f typo
+64ec160 code moulins urbains + loc
+085ba77 localisation biere & vins r├®putation
+4bb109a D├®place dossier defines
+0f4e314 brouillon d├®but chaine bi├¿re vins
+9aa46fc ajustement attribution vin  et bi├¿re
+7af9205 nouveaux modifiers bi├¿res vins de qualit├®
+c24cfca ajout ic├┤ne bi├¿re vins de qualit├®
+43a1cd3 nouvelles events  pics + oubli ReC
+347e1b2 pics obsol├¿tes
+1accd24 re position  icone route size
+b11879c minor_titles
+f2c64b2 petite modif loc
+678eaac factor borders_major_river pour inondation
+3212193 Fix bug cit├®s ├á double sp├®cialisation
+9dee6ec Fix bug CA_fleuve_L3
+8ec0f87 Enl├¿ve l'impact des ressources sur l'attribution des blocs
+b747168 Fix  le "bug" de localisation d'attribution des blocs
+1c7ad8d alignement icones route_size
+d446dcb modifier immersion eco
+cc45f80 d├®pendance Arkopack dans le .mod
+20f0a3d ajout factor focus+correction icones
+773da72 add number to name corrections
+7699028 correction add_number_to_name
+d73a80d ajout 2 events s├®cheresses inondations
+eeb7e67 modifiers secheresse inondation
+4f44b40 ajoute modifiers meteo inondation et secheresse
+ee2680d Retire localisation technologie
+7a94a1f Ajoute la localisation d'un modifier
+cf4a2e1 Fix bug minor titles
+96d3745 Optimise les events d'attributions de blocs
+45afd8d Met au propre le merge conflict
+51061ba Merge branch 'master' of https://github.com/ArkoG/L3T
+ad71321 ajout Chartres
+67c7bb0 Maj tableau des features
+dd34a83 Ajoute commentaires
+56597e2 Passage au validator
+fb5734a Optimise l'event d'attribution des fleuves
+a50c707 test localisation
+f12d48b r├®gionalisation des sp├®cialisations des for├¬ts
+fb38019 nouvelle pic moulin ├á eau
+8fa4848 ├®quilibrage
+9a3da02 Remplace le modifier de flag
+0725bc0 .
+e58f08c ajout d'un flag de transaction r├®cente
+687842f Cache les provinces continentales
+31f0e6f Fix bug calcul sph├¿re de commerce
+44a6c17 Prioritise les r├®publiques marchandes
+a404d5c loc don_foret
+29bdbfd je mets ├á jour les batiments mais je ne les mets pas dans le bon r├®pertoire lol
+55efaf8 correction oubli mine_filon
+21d576f extension fin industrie prosp├¿re pour guerre autres modifiers similaires
+3ad3c44 nouvelle event pic war themed
+8a45f59 religion_modifier de XYLO et LCDA
+e97ffc3 typo
+8cff809 r├®activ batiment fili├¿re bois d'origine
+85ffaac corrections requis fili├¿re bois
+eafe1ad icon route_size
+fb777f6 masque l'option LCDA
+2cee43e oubli minor_title forestier
+b3fe81d bug localisation noeud commerciaux
+c59473c correction bug {}
+4de0ce2 re pic
+46f1cd2 s├®paration noeud commercial majeur vs mineur
+57ecf46 nouvelle event pic city
+6198ba1 tweaks
+68338ab ajout commentaire
+bebd446 exclusion cit├®s industrielles pour les batiments de ress de luxe
+b8075f9 typo loc
+2960224 change modifier dans l'event + batiment
+aa56030 remplace modifier connexion_commericale3 en noeud_commercial + loc
+8b65fc4 ajustement renumerotation event
+1b4c551 r├® ajout crit├¿re forestier pour specialisations
+d18abdd re adds some XYLO events
+06f1354 retire test gov type
+8dfea53 sp├®cialisations for├¬ts
+35de9ba re adds Chartes foresti├¿res
+3663240 suppression placeholder ENGLISH
+88671fc ajout route_size
+b195862 ├®lagage et tri dans les routes
+706417d retire num├®rotation de tous les b├ótiments
+3e28fa6 Ajoute des fleuves en Inde
+1e63239 Fix bugs sur les routes
+7ad5dff Enl├¿ve les num├®ros aux b├ótiments de population
+52cd6e7 Fix bug avec les modifiers
+fbfaf78 Met un modifier pour les armes
+0fd0460 Enl├¿ve borders_major_river
+2946619 rivi├¿re Vanilla map
+dbd2f83 Adapte la sp├®cialisation des temples
+377903b Rajoute les b├ótiments de commerce
+0d84416 Ajoute de la localisation pour les routes
+703bf65 Change les effets de modifiers
+52cd8aa Met ├á jour la localisation de population
+6acd895 Augmente le crit├¿re de population
+5ebe919 Remets l'├®conomie du bois
+8c5f26c Ajoute les events d'immersion
+9f72930 Fix bug sp├®cialisation ch├óteau
+4e406ae Ajoute les events d'ambition
+97c8af9 Ajoute tableau de bord des features
+6a5e8ac Change le modifier de sph├¿re
+830b089 Am├®lioration sp├®cialisation f├®odale
+8ea067b Event pour avertir des routes sur son domaine
+a68a5a2 Correction de quelques erreurs de localisation
+34b2f90 Ajoute event avertissant route voisine
+c337b15 R├®├®crit un event sans variable
+bb60a70 Met ├á jour le sch├®ma de ECO
+65192e5 Fix bug de calcul taille sph├¿re
+e214f8a Change la distance entre les blocs A
+e88b342 Optimise la sp├®cialisation ch├óteau
+70736f5 Modifie sp├®cialisation ch├óteaux
+20927fd modif trigger attribution reliques
+0208aff Ajoute un comptage de routes
+62cb052 Ajoute des noeuds commerciaux
+2a30bf0 Fix bug avec l'attribution du blocA
+9715660 Ajoute le lien batiments INDustriels et routes
+5749e15 Petit oubli
+a41d569 Retarde le don du modifier de routes
+794eec8 Corrige un oubli dans CT_town_5
+ae6c925 Adapte les b├ótiments de population
+4268bb2 Prise en compte des provinces fluviales
+64243bb Fix bug de SWMH pr├®sent malgr├® la s├®lection
+40d2967 Supprime les anciennes routes
+008097b Ajoute du dynamisme aux routes
+77bad61 Nettoyage par passage du validator
+7ec2f1e Ajout d'un sch├®ma r├®sumant les ajouts ├á ECO
+c5443f7 Change l'attribution des routes
+76bff29 Attribue les blocsA aux provinces de cit├® commer├ºantes
+0c8a11a Sp├®cialisation des cit├®s selon les ressources
+b050dad Lancement de la sp├®cialisation des cit├®s non doubles retard├®
+a5d321f Fix le bug pour les autres types de domaines
+7dd87ee Fix bug du d├®compte des cit├®s
+efb6a59 isol├® localisation b├ótiments population
+3cbde60 Merge branch 'master' of https://github.com/ArkoG/L3T
+424a1b3 Ajoute bats de prod et de sp├®
+40bbaee petit ajout au pr├®c├®dent
+1916db5 adaptation modifier fleuve
+c6434b9 ajout modifiers province_fleuve
+1f8cfe0 Merge branch 'master' of https://github.com/ArkoG/L3T
+ec55a7f Maj du g├®n├®rateur de code de batiments
+c3fce77 r├®-ajout structure routi├¿res (ponts, cols, oasis)
+e56a443 ajout batiments vanilla
+b713b03 Retire les capable_only = yes des events de ressources
+14c0a59 Met sous forme de sch├®ma la demande de concession de ressources
+48bac78 Analyse le d├®compte des ressources
+8011bcf Ajoute un compteur de ressources
+14c971a R├®solution conflit + ajout global flag pour donn├® B
+af34e41 Corrige bug bloc C avec A
+e596fb3 events d├®sormais successifs
+c589a33 ajout attribution 25 bloc_A uniques
+14e1b8d j'ai remis le code initial
+3a53610 code test avec les mouchards
+f516c4a ajout du code pour les mouchards
+83c1968 Copie l'event B sur les suivants + remplace road par route
+e41c723 Ajoute des routes dynamiques
+4dab771 test sur la carte vanilla
+ade89ba simulation routes commerce dynamiques
+e4b36be Mise ├á jour du sch├®ma d'attribution des ressources
+b47e20e R├®introduction de mes modifications perdues
+4340903 Ajoute un script pour faire la jointure
+7302a98 attribution ressources (encore)
+e769b1b Mise ├á jour sch├®ma + correction oubli + nettoyage
+7ef81f7 tweaks ressources
+2297453 Corrige une erreur de calcul
+c0b84f1 Mets ├á jour la table de distribution des ressources
+96c3d04 ajustement attribution ressources
+ff5afbd individualisation modifiers de province.gfx
+b0b3a21 ajout reliques cach├®es et saint graal
+c0b0715 correction bug
+308113f ajout trigger au startup event
+16f32fe Add tool to generate code for buildings from a spreedsheet
+c953514 clean
+667c5e6 localisation pour les reliques
+f1fc609 ajustement event reliques
+1965a5c correction
+7901cee relaunch du mod
+ba5572c Add the old user guides
+ecf3b9f Merge pull request #3 from ArkoG/DEV
+5107273 (origin/DEV, DEV) Merge branch 'DEV' of https://github.com/ArkoG/L3T into DEV
+715743a Merge pull request #2 from NicolasGrosjean/DEV
+7db974e Merge pull request #1 from ArkoG/DEV
+9b41404 Add an excel tabsheet to calculate the repartition of ressources
+420fe49 f
+0c3ed14 :boom::camel: Added .gitattributes
