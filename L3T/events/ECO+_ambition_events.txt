@@ -51,6 +51,11 @@ character_event = {
 		character_event = { id = ECO.0312 days = 30 tooltip = TOOLTIPECO.0311A}
 		set_character_flag = epee
 		set_character_flag = epee_taken
+		# On met les flags des events Vanilla ici pour qu'ils n'interfèrent pas
+		# En mettant cela ici, on évite de changer les events Vanilla
+		set_character_flag = toy_army
+		set_character_flag = street_ruffians
+		set_character_flag = warrior_mentor
 	}
 	
 	# On n'est pas interessé
@@ -208,6 +213,10 @@ character_event = {
 		prestige = -10
 		custom_tooltip = { text = improve_martial_quit }
 		clr_character_flag = epee
+		# Retire les flags Vanille
+		clr_character_flag = toy_army
+		clr_character_flag = street_ruffians
+		clr_character_flag = warrior_mentor
 	}
 }
 
@@ -317,6 +326,10 @@ character_event = {
 		prestige = -20
 		custom_tooltip = { text = improve_martial_quit }
 		clr_character_flag = epee
+		# Retire les flags Vanille
+		clr_character_flag = toy_army
+		clr_character_flag = street_ruffians
+		clr_character_flag = warrior_mentor
 	}
 }
 
@@ -344,6 +357,10 @@ character_event = {
 		name = "ECO.0318A"
 		change_martial = 2
 		clr_character_flag = epee
+		# Retire les flags Vanille
+		clr_character_flag = toy_army
+		clr_character_flag = street_ruffians
+		clr_character_flag = warrior_mentor
 	}
 }
 
@@ -396,6 +413,11 @@ character_event = {
 		character_event = { id = ECO.0302 days = 30 tooltip = TOOLTIPECO.0301A}
 		set_character_flag = drap
 		set_character_flag = drap_taken
+		# On met les flags des events Vanilla ici pour qu'ils n'interfèrent pas
+		# En mettant cela ici, on évite de changer les events Vanilla
+		set_character_flag = the_inn
+		set_character_flag = the_garden
+		set_character_flag = the_survey
 	}
 	option = {
 		name = "ECO.0301B"
@@ -614,6 +636,10 @@ character_event = {
 		name = "ECO.0307A"
 		change_stewardship = 1
 		clr_character_flag = drap
+		# Retire les flags Vanille
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
 	}
 }
 
@@ -642,9 +668,9 @@ narrative_event = {
 		NOT = { has_character_flag = the_garden }
 		NOT = { has_character_flag = the_survey }
 		NOT = { has_character_flag = drap }
-		NOT = { has_character_flag = drap_taken }
 		war = no
 		NOT = { has_character_flag = cadastreux } #ne peut plus relancer cette session une fois entamée, même terminée
+		NOT = { has_character_flag = cadastreux_termine }
 		NOT = { has_character_flag = cadastreux_refuse }
 	}
 	
@@ -657,6 +683,11 @@ narrative_event = {
 		custom_tooltip = { text = TOOLTIPECO319 }
 		set_character_flag = cadastreux
 		hidden_tooltip = {	ROOT = { set_variable = { which = "cadastre" value = 1}}}
+		# On met les flags des events Vanilla ici pour qu'ils n'interfèrent pas
+		# En mettant cela ici, on évite de changer les events Vanilla
+		set_character_flag = the_inn
+		set_character_flag = the_garden
+		set_character_flag = the_survey
 	}
 	option = {
 		name = "ECO.319B"
@@ -1105,19 +1136,13 @@ narrative_event = {
 		OR = {
 			has_character_flag = chaine_cadastre_1_refusee
 			has_character_flag = chaine_cadastre_1_terminee
-			}
-		OR = {
 			has_character_flag = chaine_cadastre_2_refusee
 			has_character_flag = chaine_cadastre_2_terminee
-			}
-		OR = {
 			has_character_flag = chaine_cadastre_3_refusee
 			has_character_flag = chaine_cadastre_3_terminee
-			}
-		OR = {
 			has_character_flag = chaine_cadastre_4_refusee
 			has_character_flag = chaine_cadastre_4_terminee
-			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1132,12 +1157,18 @@ narrative_event = {
 		modifier = { factor = 0.80	has_character_flag = chaine_cadastre_4_terminee }		
 	}
 
-	immediate = {}
+	immediate = {
+	}
 	
 	#score maxi = 12	
 	option = { #nous avons beaucoup appris homme
 		name = "ECO.324A"
 		set_character_flag = cadastreux_termine		
+		clr_character_flag = cadastreux
+		# Retire les flags Vanille
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey		
 		trigger = { 
 			check_variable = { which = "cadastre" value = 10 }
 			is_female = no
@@ -1151,6 +1182,11 @@ narrative_event = {
 	option = { #nous avons beaucoup appris femme
 		name = "ECO.324A" 
 		set_character_flag = cadastreux_termine
+		clr_character_flag = cadastreux
+		# Retire les flags Vanille
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
 		trigger = { 
 			check_variable = { which = "cadastre" value = 10 }
 			is_female = yes
@@ -1164,6 +1200,11 @@ narrative_event = {
 	option = {
 		name = "ECO.324B" #j'ai appris homme
 		set_character_flag = cadastreux_termine
+		clr_character_flag = cadastreux
+		# Retire les flags Vanille
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
 		trigger = { 
 			check_variable = { which = "cadastre" value = 7 }
 			NOT = { check_variable = { which = "cadastre" value = 10 }}
@@ -1181,6 +1222,11 @@ narrative_event = {
 	option = {
 		name = "ECO.324B" #j'ai appris femme
 		set_character_flag = cadastreux_termine
+		clr_character_flag = cadastreux
+		# Retire les flags Vanille
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
 		trigger = { 
 			check_variable = { which = "cadastre" value = 7 }
 			NOT = { check_variable = { which = "cadastre" value = 10 }}
@@ -1198,6 +1244,11 @@ narrative_event = {
 	option = { 
 		name = "ECO.324C" #j'ai appris un peu homme
 		set_character_flag = cadastreux_termine
+		clr_character_flag = cadastreux
+		# Retire les flags Vanille
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
 		trigger = { 
 			check_variable = { which = "cadastre" value =  4 }
 			NOT = { check_variable = { which = "cadastre" value = 7 }}
@@ -1215,6 +1266,11 @@ narrative_event = {
 	option = { 
 		name = "ECO.324C" #j'ai appris un peu femme
 		set_character_flag = cadastreux_termine
+		clr_character_flag = cadastreux
+		# Retire les flags Vanille
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
 		trigger = { 
 			check_variable = { which = "cadastre" value =  4 }
 			NOT = { check_variable = { which = "cadastre" value = 7 }}
@@ -1232,6 +1288,11 @@ narrative_event = {
 	option = { 
 		name = "ECO.324D" #cela ne m'a rien appris
 		set_character_flag = cadastreux_termine
+		clr_character_flag = cadastreux
+		# Retire les flags Vanille
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
 		trigger = {
 			NOT = { check_variable = { which = "cadastre" value =  4 }}
 			}
@@ -1240,7 +1301,18 @@ narrative_event = {
 		name = "ECO.324E" #prolonger
 		trigger = {
 			NOT = { check_variable = { which = "cadastre" value =  10 }}
+			# Il existe un moyen de gagner des points
+			OR = {
+				NOT = { has_character_flag = chaine_cadastre_1_refusee }
+				NOT = { has_character_flag = chaine_cadastre_1_terminee }
+				NOT = { has_character_flag = chaine_cadastre_2_refusee }
+				NOT = { has_character_flag = chaine_cadastre_2_terminee }
+				NOT = { has_character_flag = chaine_cadastre_3_refusee }
+				NOT = { has_character_flag = chaine_cadastre_3_terminee }
+				NOT = { has_character_flag = chaine_cadastre_4_refusee }
+				NOT = { has_character_flag = chaine_cadastre_4_terminee }
 			}
+		}
 	}
 }
 character_event = { #aller plus loin ?
