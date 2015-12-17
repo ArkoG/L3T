@@ -30,7 +30,7 @@
 # 39 - Love 								- 40
 #
 # 45 - Relique
-# 46 - épi grisé
+# 108 - épi grisé
 # 47 - épi bleu
 # 48 - feuille rouge
 # 49 - feuille or
@@ -90,7 +90,7 @@
 #105 - ELEV boeuf brun
 #106 - ELEV boeuf brun
 #107 - ELEV boeuf brun
-#108 - ELEV boeuf brun
+# 46 - Cuir marron (silk road)
 #109 - ELEV boeuf brun
 #110 - ELEV boeuf brun
 #111 - ELEV boeuf brun
@@ -99,7 +99,7 @@
 #114 - BOIS feuille verte
 #115 - BOIS feuille verte
 #116 - BOIS feuille verte
-#117 - BOIS feuille verte
+#117 - VERRE gris bleu
 #118 - BOIS feuille verte
 #119 - BOIS feuille verte
 #119 - BOIS feuille verte
@@ -159,7 +159,7 @@ agriculture3_vin_Q3 = {icon = 150}
 elevage1		= {icon = 105}
 elevage2_laine	= {icon = 106}	elevage2_boeuf	= {icon = 109	local_tax_modifier = 0.01}	elevage2_fromage	= {icon = 112}  elevage2_cheval = {icon = 112}
 elevage4_drap	= {icon = 107}	elevage3_viande	= {icon = 110 levy_size = 0.05}
-elevage3_etoffe	= {icon = 108}	elevage3_cuir	= {icon = 111}
+elevage3_etoffe	= {icon = 46}	elevage3_cuir	= {icon = 111}
 
 foret1			= {icon = 113}
 foret2_expl		= {icon = 113} #caché
@@ -406,7 +406,7 @@ recolte_bonne = {
 }
 
 recolte_mauvaise = {
-	icon =  46 
+	icon =  108
 	local_revolt_risk =  0.05
 	tax_income = -0.2
 	local_tax_modifier = -0.02
