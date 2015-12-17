@@ -64,6 +64,23 @@
 # 81 - route_terrestre02
 # 82 - route_terrestre03
 
+# 79 - route_size5 (gold)
+# 80 - route_size4
+# 81 - route_size3
+# 82 - route_size2
+# 83 - route_size1
+# 84 - 
+# 85 - 
+# 86 - 
+# 87 - 
+# 88 - 
+# 89 - 
+# 90 - route_size5
+# 91 - route_size4
+# 92 - route_size3
+# 93 - route_size2
+# 94 - route_size1
+
 # 95 - placeholder AGRI épi sepia
 # 96 - placeholder ELEV bois
 # 97 - placeholder BOIS feuille sepia
@@ -157,9 +174,14 @@ agriculture3_vin_Q2 = {icon = 149}
 agriculture3_vin_Q3 = {icon = 150}
 			
 elevage1		= {icon = 105}
-elevage2_laine	= {icon = 106}	elevage2_boeuf	= {icon = 109	local_tax_modifier = 0.01}	elevage2_fromage	= {icon = 112}  elevage2_cheval = {icon = 112}
-elevage4_drap	= {icon = 107}	elevage3_viande	= {icon = 110 levy_size = 0.05}
-elevage3_etoffe	= {icon = 46}	elevage3_cuir	= {icon = 111}
+elevage2_laine	= {icon = 107}	
+elevage2_boeuf	= {icon = 106	local_tax_modifier = 0.01}	
+elevage2_fromage= {icon = 109}  
+elevage2_cheval = {icon = 112} #needs another additional icon
+elevage4_drap	= {icon = 112}	
+elevage3_viande	= {icon = 110 levy_size = 0.05}
+elevage3_etoffe	= {icon = 46}	
+elevage3_cuir	= {icon = 111}
 
 foret1			= {icon = 113}
 foret2_expl		= {icon = 113} #caché
@@ -174,17 +196,17 @@ pierre2_pierre_brute	= {icon = 121}
 pierre3_pierre_taille	= {local_build_time_modifier = -0.03 icon = 122}
 
 minerai1		= {icon = 123}
-minerai2_fer	= {icon = 124}	minerai2_sel_gemme		= {icon = 126 local_tax_modifier = 0.02}
-minerai3_metal	= {icon = 125}	minerai3_sel_raffine	= {icon = 128}
-minerai4_outils	= {icon = 124 local_build_time_modifier = -0.05}	minerai3_salaison		= {icon = 129}
+minerai2_fer	= {icon = 124}	minerai2_sel_gemme		= {icon = 128 local_tax_modifier = 0.02}
+minerai3_metal	= {icon = 125}	minerai3_sel_raffine	= {icon = 126}
+minerai4_outils	= {icon = 126 local_build_time_modifier = -0.05}	minerai3_salaison		= {icon = 129}
 minerai4_armes	= {icon = 127 levy_size = 0.05}
 
 minerai2_cuivre	= {icon = 143}
 minerai2_or	= {icon = 144}
 
-peche1					= {icon = 130}	pisci1			= {icon = 133}	
-peche2_poisson			= {icon = 131}	pisci2_poisson	= {icon = 134}
-peche_pisci3_fumaison	= {icon = 132 local_revolt_risk = -0.03}
+peche1					= {icon = 130}	pisci1			= {icon = 130}	
+peche2_poisson			= {icon = 131}	pisci2_poisson	= {icon = 131}
+peche_pisci3_fumaison	= {icon = 134 local_revolt_risk = -0.03}
 
 peaux2_fourrure	= {icon = 135 	tax_income = 0.2}
 joyaux2_bijoux	= {icon = 136 	tax_income = 0.1}
@@ -474,8 +496,8 @@ route_terrestre03 = { local_tax_modifier = 0.05	icon = 82 } #+5%
 #mouchards
 future_route = { icon = 80 }
 
-route_size1 = { icon = 94 local_tax_modifier = 0.02}
-route_size2 = { icon = 93 local_tax_modifier = 0.04}
-route_size3 = { icon = 92 local_tax_modifier = 0.07}
-route_size4 = { icon = 91 local_tax_modifier = 0.10}
-route_size5 = { icon = 90 local_tax_modifier = 0.15}
+route_size1 = { icon = 79 local_tax_modifier = 0.02}
+route_size2 = { icon = 80 local_tax_modifier = 0.04}
+route_size3 = { icon = 81 local_tax_modifier = 0.07}
+route_size4 = { icon = 82 local_tax_modifier = 0.10}
+route_size5 = { icon = 83 local_tax_modifier = 0.15}
