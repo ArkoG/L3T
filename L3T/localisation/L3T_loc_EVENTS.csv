@@ -1102,33 +1102,33 @@ ECO.0318A;;La gloire vous attend : vous et votre épée;;;;;;;;;;;;x
 #;x;VARIOUS FLAVOUR eVENTS;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
 #ECO.0200;;bonne récolte;;;;;;;;;;;;x
-DESCECO.0200;;Les rendements agricoles en [From.Location.GetName] ont été excellents cette année, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des paysans contents.;;;;;;;;;;;;x
-ECO.0200A;OK;Bien !;;;;;;;;;;;;x
+DESCECO.0200;The harvests in [From.Location.GetName] have been extraordinarily fruitful this year, generating more revenues and more happiness among the peasantry.;Les rendements agricoles en [From.Location.GetName] ont été excellents cette année, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des paysans contents.;;;;;;;;;;;;x
+ECO.0200A;What wonderful news!;Bien !;;;;;;;;;;;;x
 #ECO.0201;;mauvaise récolte;;;;;;;;;;;;x
-DESCECO.0201;;Les récoltes en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
-ECO.0201A;OK;Ces incapables de paysans...;;;;;;;;;;;;x
+DESCECO.0201;The harvests in [From.Location.GetName] have been unusually poor this year, generating less revenues and unrest among the peasantry.;Les récoltes en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
+ECO.0201A;These useless peasants...;Ces incapables de paysans...;;;;;;;;;;;;x
 #ECO.0202;;pêche abondante;;;;;;;;;;;;x
-DESCECO.0202;;La saison de pêche cette année en [From.Location.GetName] a été excellente, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des pêcheurs contents.;;;;;;;;;;;;x
-ECO.0202A;OK;Bien !;;;;;;;;;;;;x
+DESCECO.0202;The fishing season in [From.Location.GetName] have been extraordinarily fruitful this year, generating more revenues and more happiness among the peasantry.;La saison de pêche cette année en [From.Location.GetName] a été excellente, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des pêcheurs contents.;;;;;;;;;;;;x
+ECO.0202A;What wonderful news!;Bien !;;;;;;;;;;;;x
 #ECO.0203;;pêche médiocre;;;;;;;;;;;;x
-DESCECO.0203;;Les rendements de la pêche en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
-ECO.0203A;OK;Ces incapables de paysans...;;;;;;;;;;;;x
+DESCECO.0203;The fishing season in [From.Location.GetName] have been extraordinarily fruitful this year, generating less revenues and more unrest among the peasantry.;Les rendements de la pêche en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
+ECO.0203A;These useless peasants...;Ces incapables de paysans...;;;;;;;;;;;;x
 ECO.0204;;Accident à la mine;;;;;;;;;;;;x
-DESCECO.0204;;Mauvaise nouvelles en provenance d'une de nos mines de [From.Location.GetName] : certaines installations se sont éffondrées et pires des mineurs y ont perdus la vie.;;;;;;;;;;;;x
-ECO.0204A;OK;Cela va pas arranger nos affaires...;;;;;;;;;;;;x
+DESCECO.0204;Bad news from the mines in [From.Location.GetName]: one of the mining shafts has collapsed, trapping and killing a number of miners.;Mauvaise nouvelles en provenance d'une de nos mines de [From.Location.GetName] : certaines installations se sont éffondrées et pires des mineurs y ont perdus la vie.;;;;;;;;;;;;x
+ECO.0204A;What a tragic turn of events.;Cela va pas arranger nos affaires...;;;;;;;;;;;;x
 ECO.0205;;Nouveau filon à la mine;;;;;;;;;;;;x
-DESCECO.0205;;Le contremaître d'une de nos mines en [From.Location.GetName] nous informe qu'un nouveau filon a été découvert ! La productivité en sera améliorée pour un temps.;;;;;;;;;;;;x
-ECO.0205A;OK;Enfin une bonne nouvelle !;;;;;;;;;;;;x
+DESCECO.0205;The foreman of one of your mines in [From.Location.GetName] has reported that our workers have struck another lode! It is uncertain how long it will take to fully exploit it, but this is indeed a most fortunate discovery!;Le contremaître d'une de nos mines en [From.Location.GetName] nous informe qu'un nouveau filon a été découvert ! La productivité en sera améliorée pour un temps.;;;;;;;;;;;;x
+ECO.0205A;What wonderful news!;Enfin une bonne nouvelle !;;;;;;;;;;;;x
 ECO.0206;;Industrie prospère;;;;;;;;;;;;x
-DESCECO.0206;;Bonnes nouvelles en provenance de [From.Location.GetName]. \n Cela fait un bon moment que la province n'est plus en proie à la guerre.\n Cela permet à son industrie de prospérer.;;;;;;;;;;;;x
-ECO.0206A;OK;Bien !;;;;;;;;;;;;x
+DESCECO.0206;We have received a most warm commendation from the burghers of [From.Location.GetName]. Apparently this period of peace has allowed their industries to flourish!;Bonnes nouvelles en provenance de [From.Location.GetName]. \n Cela fait un bon moment que la province n'est plus en proie à la guerre.\n Cela permet à son industrie de prospérer.;;;;;;;;;;;;x
+ECO.0206A;I am merely doing my part.;Bien !;;;;;;;;;;;;x
 ECO.0207;;Industrie plus si prospère;;;;;;;;;;;;x
-DESCECO.0207;;Les ravages de la guerre et les forces mobilisées en [From.Location.GetName] font d'importants dommages à l'économie locale.;;;;;;;;;;;;x
-ECO.0207A;OK;C'est le prix à payer;;;;;;;;;;;;x
-DESCECO.0208;Bad news from [From.Location.GetName]. \nRecent rains have flooded a lot of lands. This will badly impact the local economy. Pray [This.Religion.GetRandomGodNameCap] to help us !;Mauvaises nouvelles en provenance de [From.Location.GetName]. \nLes pluies torrentielles qui s'y sont dernièrement abattues ont fait grossir les rivières, inondé des terres cultivées, mis à mal ponts et gués. Pour sûr, cela aura un impact sur l'économie locale, espérons que [This.Religion.GetRandomGodNameCap] nous aide à nous remettre sur pied rapidement. ;;;;;;;;;;;;x
-ECO.0208A;OK;Mettons-nous au travail !;;;;;;;;;;;;x
-DESCECO.0209;This year the weather is particulry dry in [From.Location.GetName]. \nLet's hope it won't affect too mush crops.;Situation inquiétante dans la province de [From.Location.GetName] \nEspérons que cela ne dure pas trop et ainsi n'affecte point trop nos récoltes. ;;;;;;;;;;;;x
-ECO.0209A;Is this a divine punishment ?;Est-ce une punition divine ? ;;;;;;;;;;;;x
+DESCECO.0207;We have received a formal letter of complaint from the burghers of [From.Location.GetName]. Apparently this period of war has caused their industries to suffer!;Les ravages de la guerre et les forces mobilisées en [From.Location.GetName] font d'importants dommages à l'économie locale.;;;;;;;;;;;;x
+ECO.0207A;Such is the price we must pay.;C'est le prix à payer;;;;;;;;;;;;x
+DESCECO.0208;Bad news from [From.Location.GetName]. \nRecent rains have flooded much of the farmlands in this province and ruined much of this season's harvest. This will badly impact the local economy. We must pray for [This.Religion.GetRandomGodNameCap] to help us !;Mauvaises nouvelles en provenance de [From.Location.GetName]. \nLes pluies torrentielles qui s'y sont dernièrement abattues ont fait grossir les rivières, inondé des terres cultivées, mis à mal ponts et gués. Pour sûr, cela aura un impact sur l'économie locale, espérons que [This.Religion.GetRandomGodNameCap] nous aide à nous remettre sur pied rapidement. ;;;;;;;;;;;;x
+ECO.0208A;What terrible news!;Mettons-nous au travail !;;;;;;;;;;;;x
+DESCECO.0209;This year the weather is particularly dry in [From.Location.GetName]. We can only hope that the situation will not worsen and affect the harvests.;Situation inquiétante dans la province de [From.Location.GetName] \nEspérons que cela ne dure pas trop et ainsi n'affecte point trop nos récoltes. ;;;;;;;;;;;;x
+ECO.0209A;Is this divine punishment ?;Est-ce une punition divine ? ;;;;;;;;;;;;x
 DESCECO.0210;;Cela fait plus de cinq années consécutives que la province de [Root.GetName] affiche un niveau de properité sans pareil.;;;;;;;;;;;;x
 ECO.0210A;;Nous récoltons le fruit de notre travail;;;;;;;;;;;;x
 CHRONICLE_PROSPERITE_A;;La province de [Root.GetName] s'illustre par une prosperité sans précédent dans le royaume et ce, pour plus de 5 années d'affilée.;;;;;;;;;;;;x
