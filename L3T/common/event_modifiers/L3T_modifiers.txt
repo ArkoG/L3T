@@ -161,8 +161,13 @@
 
 ###ECO+
 agriculture1			= {icon = 95 local_revolt_risk = -0.01} 
-agriculture2_cereales	= {icon = 96}	agriculture2_fruits	= {icon = 100}	agriculture2_legumes = {icon = 102}	agriculture2_vigne	= {icon = 103} 
-agriculture3_farine 	= {icon = 97}	agriculture3_cidre	= {icon = 101 garrison_size  = 0.05}				agriculture3_vin 	= {icon = 104 garrison_size  = 0.05}
+agriculture2_cereales	= {icon = 96}	
+agriculture2_fruits	= {icon = 100}	
+agriculture2_legumes = {icon = 102}	
+agriculture2_vigne	= {icon = 103} 
+agriculture3_farine 	= {icon = 97}	
+agriculture3_cidre	= {icon = 101 garrison_size  = 0.05}				
+agriculture3_vin 	= {icon = 104 garrison_size  = 0.05}
 agriculture3_biere		= {icon = 98}	
 agriculture4_pain 		= {icon = 99 local_revolt_risk = -0.05}
 
@@ -177,7 +182,7 @@ elevage1		= {icon = 105}
 elevage2_laine	= {icon = 107}	
 elevage2_boeuf	= {icon = 106	local_tax_modifier = 0.01}	
 elevage2_fromage= {icon = 109}  
-elevage2_cheval = {icon = 112} #needs another additional icon
+elevage2_cheval = {icon = 133} 
 elevage4_drap	= {icon = 112}	
 elevage3_viande	= {icon = 110 levy_size = 0.05}
 elevage3_etoffe	= {icon = 46}	
