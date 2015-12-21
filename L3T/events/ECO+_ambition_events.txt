@@ -381,7 +381,7 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		NOT = { has_global_flag = playing_english }
+		#NOT = { has_global_flag = playing_english }
 		OR = {
 			AND = {
 				has_focus = focus_business
