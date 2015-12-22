@@ -37,6 +37,25 @@
 #id = L3T.0018 #
 #id = L3T.0019 #
 
+###L3T_mod_selection_SWMH.txt
+#id = L3T.20 #SWMH - Coast
+#id = L3T.21 #SWMH - Land
+#id = L3T.22 #SWMH - Rivers
+#id = L3T.23 #SWMH - Cols (non attribué)
+#id = L3T.24 #SWMH - autre (non attribué)
+###L3T_mod_selection_VANI.txt
+#id = L3T.25 #Vanilla - Coast
+#id = L3T.26 #Vanilla - Land
+#id = L3T.27 #Vanilla - Rivers
+#id = L3T.28 #Vanilla - Cols (non attribué)
+#id = L3T.29 #Vanilla - autre (non attribué)
+###L3T_mod_selection_LCDA.txt
+#id = L3T.30 #LCDA - Coast
+#id = L3T.31 #LCDA - Land
+#id = L3T.32 #LCDA - Rivers
+#id = L3T.33 #LCDA - Cols (non attribué)
+#id = L3T.34 #LCDA - autre (non attribué)
+
 ###L3T_population.txt
 #id = L3T.0101 #upgrade population CA vers L1 #Féodal
 #id = L3T.0102 #upgrade population CA vers L2
@@ -63,20 +82,8 @@
 
 #List ID des events.
 #namespace = ECO
-
-###L3T_mod_selection_part2.txt
-#id = ECO.0009 #attribution provinces cotières SWMH 
-#id = ECO.0010 #attribution provinces cotières LCDA
-#id = ECO.0011 #attribution provinces continentales SWMH 
-#id = ECO.0012 #attribution provinces continentales LCDA
-#id = ECO.0013 #attribution routes fluviales SWMH
-#id = ECO.0014 #attribution routes fluviales LCDA
-#id = ECO.0017 #installe les provinces côtières Vanilla
-#id = ECO.0018 #installe les provinces terrestres VANILLA
-#id = ECO.0019 #installe les provinces fluviales VANILLA  
    
 ###ECO_init_RESSOURCES.txt
-
 ##Détection ressources
 #id = ECO.0001 #évaluation du potentiel économique -plaines- 
 #id = ECO.0002 #évaluation du potentiel économique -coteaux- 

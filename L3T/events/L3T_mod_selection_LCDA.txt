@@ -1,0 +1,66 @@
+namespace = L3T
+
+province_event = { #installe les provinces côtières LCDA
+    id = L3T.30
+	hide_window = yes
+	
+	trigger = {
+			has_global_flag = running_LCDA
+			NOT = { has_province_modifier = province_cotiere }
+			OR = {   
+			province_id = 1 #Nyon
+			province_id = 2 #Gex
+			province_id = 3 #Genève
+			province_id = 4 #Thonon
+			province_id = 5 #Abondance
+			province_id = 6 #Aigle
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
+	}
+}
+
+province_event = { #installe les provinces terrestres LCDA
+    id = L3T.31
+	hide_window = yes
+
+	trigger = {
+			has_global_flag = running_LCDA
+			NOT = { has_province_modifier = province_terrestre }
+			NOT = {   
+			province_id = 1 #Nyon
+			province_id = 2 #Gex
+			province_id = 3 #Genève
+			province_id = 4 #Thonon
+			province_id = 5 #Abondance
+			province_id = 6 #Aigle
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		add_province_modifier = {	name = province_terrestre  	duration = -1 hidden = yes }	
+	}
+}
+
+province_event = { #installe les provinces fluviales LCDA
+    id = L3T.32
+	hide_window = yes
+	
+	trigger = {
+			has_global_flag = running_LCDA
+			NOT = { has_province_modifier = province_fleuve }
+			OR = {   
+			province_id = 6 # Aigle
+			province_id = 28 # Martigny
+			}
+		}
+	mean_time_to_happen = { days = 10 }	
+
+immediate = {
+		add_province_modifier = {	name = province_fleuve  	duration = -1 }	
+	}
+}
