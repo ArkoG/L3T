@@ -1,0 +1,167 @@
+Le Sacre
+
+Analyse 1 :
+Le constat de départ est que la cathédrale est sous exploitée une fois construite.
+De plus le Sacre est absent du jeu. Cela présente donc une double opportunité.
+Cependant la nécessité de posséder une Cathédrale finie réserverait cette feature à la fin du jeu.
+Ce n'est pas historique : Pépin le Bref s'était fait sacré alors que le jeu est postérieur à son sacre.
+Conception 1 :
+Une solution est donc d'attribuer historiquement (donc en dur) à certains comtés le droit de sacrer.
+Un event attribuerait alors un modifier de province et construirait une cathédrale romane.
+Les cathédrales romanes de ces comtés seraient le lieu du sacre. Cependant comme historiquement, elles vont se détruire par des incendies.
+Elles laisseront alors la place à la construction des Cathédrales gothiques (comme historiquement).
+Comme les Cathédrales ont besoin de reliques, si le comté n'en a pas, une petite chasse à la relique pourra être organisée.
+
+Analyse 2 :
+Le souverain peut choisir de se sacrer où il veut. Le lieu du sacre doit donc avoir un impact.
+Conception 2 :
+Le souverain pourra choisir par décision où se sacrer. La liste des choix sera dominé par les anciens lieux de sacre.
+Il sera possible de sacrer même si la cathédrale romane a été détruite, mais le gain de prestige sera alors nul.
+Un bonus de relation est donné aux vassaux de la même culture que la province du sacre.
+Idéalement les lieux de sacres historiques initiaux devront donc se trouver à minima à un par culture.
+
+Analyse 3 [2]:
+Les Rois de France au Moyen Age et même jusqu'à la Révolution se sont tous sacrés.
+Cela était une prérogative pour affirmer son autorité. Le sacre avait lieu environ 6 semaines après la mort du Roi précédent.
+Ainsi certains rois ont été sacrés très jeunes, ce qui a necessité l'adaptation de l'épée et de la couronne qui était plus petite
+pour le petit Roi, mais qui était la vraie quand c'était au connétable de la porter.
+A contrario, les frondes dans le début du règne de Louis XIV n'auraient peut-être pas eu lieu s'il s'était fait sacré à 5 ans.
+Conception 3 :
+En temps de paix, la décision du Sacre est immédiate. Il n'y aura donc pas d'autre prérequis que la paix.
+Il y aura un event qui donnera un malus d'opinion aux vassaux si le Roi/Empereur n'est pas sacré alors qu'il est en paix.
+
+Analyse 4 :
+Si le sacre a lieu chez un vassal, cela fera participer le vassal.
+Conception 4 :
+Le vassal sera tout d'abord invité à choisir le montant de sa participation (typiquement 0, 10, 20 ou 30 sur 50).
+Cela correspond à des parties du sacre qu'il prend en charge. Il recevra donc les events relatifs à ces charges.
+Exemple de charges (idéalement 5 que l'on réparti entre le vassal et le souverain) : hébergement, décoration, costumes,
+attribution de rôle/place dans la cérémonie, apparat royal/impérial.
+Exemple d'events : 2 seigneurs ne peuvent pas se voir, 1 seigneur arrive dans un état déplorable à cause de la pluie,
+2 évêques se querellent pour porter les attributs royaux/impériaux
+On peut aussi y introduire un conflit entre les pairs pour la préséance sans pour autant entrer dans la mécanique complexe des pairs.
+
+Analyse 5 [1]:
+Les souverains sacraient leur(s) héritier(s) de leur vivant pour leur assurer une légitimité.
+Les historiens ne sont pas tous d'accord. Pour certains cela aurait permit de transformer le Royaume de France électif (pas au sens Ck2)
+en une primogéniture. Pour d'autres il n'y a jamais eu d'électif.
+Conception 5 :
+Dans le cas d'une autorité de la couronne strictement plus faible que haute et d'une succesion par primogéniture,
+le souverain peut faire sacrer son héritier. Cela lui apporte du prestige.
+Cependant le seigneur et les héritiers perdent des relations avec les vassaux.
+Pour un empereur, cela devrait peut être assorti d'un titre royal pour l'héritier.
+On peut y mettre l'anecdote du frère ainé de Louis VII tué par un cochon.
+
+Analyse 6 [2]:
+Le Pape peut intervenir dans la cérémonie du Sacre.
+En 754, Pépin a été sacré à Saint-Denis par le Pape.
+En 800, Charlemagne est couronné à Rome.
+En France il est le seul à permettre le transfert de la Sainte Ampoule pour un autre lieu que Reims.
+Le Pape est celui qui donne le titre de Roi ou d'Empereur à celui qui le crée.
+Conception 6 :
+Si l'Empire est voisin des Etats-Pontificaux, alors l'Empereur peut se faire sacrer à Rome.
+Si il y a une Cathédrale dans le Royaume/Empire, le Pape peut être invité ce qui améliore grandement le prestige.
+Le Pape (ou ses légats) donnent une couronne à celui qui crée un titre de Roi/Empereur.
+
+Analyse 7 :
+Le sacre doit être un moment d'interagir avec les 3 ordres (ce qui est le but du mod)
+Conception 7 :
+Le souverain prêtera serment. Cela engendra divers events pendant son règne où il sera confronté au dilemme de rompre son serment.
+[Cela prendra la forme d'une ambition.] (PAS NECESSAIREMENT ce qui permettra une compatibilité avec Way Of Life)
+[Un modifier sur le Roi/Empereur paraît plus approprié, comme cela il pourra avoir une autre ambition et un bonus avec ce modifier]
+Elle tournera autour d'une des 7 vertus.
+
+Analyse 8 [2]:
+Le sacre ne dure pas seulement le temps d'une messe mais dure plusieurs jours.
+En France le Roi fait de nombreuses visites religieuses dans les alentours du lieu de sacre dans les jours qui le précèdent.
+Il y a un festin royal après le sacre.
+Enfin à son retour à Paris il touche des malades (écrouelles)
+Conception 8 :
+On peut déclencher l'ouverture d'un banquet après le sacre.
+On peut rendre malade le souverain s'il décide de toucher trop de malade trop longtemps.
+
+Analyse 9 [3]:
+Le sacre en France a quelques particularités :
+ - l'onction est d'origine divine grâce à la Sainte Ampoule
+ - il est oint sur le front, privilège réservé aux évêques par le décrétale de 1204
+Conception 9 :
+Le sacre pour le Royaume de France bénéficiera d'un bonus de prestige/piété
+
+Autres : 
+- On pourra imaginer différents types de cérémonie de sacre dépendant de la religion, la culture, ... ou simplement du dynamisme.
+- La tradition tendra vers un type de cérémonie.
+- Historiquement il y a de nombreuses influences entre les royaumes, cela se voit au niveau des ordines. France <-> Angleterre et même Byzance.
+- La cérémonie des funérailles est tout autant importante. C'est à ce moment qu'est prononcé la célèbre phrase : "Le Roi est mort ! Vive le Roi !"
+
+Bibliographie :
+ [1] Wikipédia en français en anglais
+ [2] Vivat Rex, Richard A. Jackson, 1984
+ [3] Le sacre royal à l'époque de Saint Louis, Jacques Le Goff, Eric Palazzo, Jean-Claude Bonne, Marie-Noël Colette, 2001
+
+Flavours events de la conception 4 :
+ - hébergement : Le Palais devrait être amélioré avant le Sacre
+	-> Oui, rien n'est meilleur pour mes hôtes : scaled_wealth = -0.3
+	-> Non, il est bien comme cela : prestige = -20
+ - décoration : La Cathédrale doit être décoré pour le mieux avant le sacre
+	-> (REQUIERT elevage3_etoffe dans la province ou une province voisine) Les tisserands locaux feront des merveilles : scaled_wealth = -0.1
+	-> Faire le maximum : scaled_wealth = -0.3
+	-> Faire le minimum : prestige = -20
+ - costume (REQUIERT est un vassal) : Les seigneurs arrivent pour le sacre avec des malles bien remplies. Que mettront-ils le jour du sacre? Je peux essayer de les influencer.
+	-> Qu'ils s'habillent comme moi
+			- 10% add_trait = proud
+			- 20% lance l'event -> J'ai réussi à lancer une mode pour le Sacre prestige = 20
+			- 70% lance l'event -> Je n'ai pas réussi à lancer une mode pour le Sacre prestige = -10
+	-> Qu'ils s'habillent comme à la cour
+			- 50% lance l'event -> J'ai réussi à lancer une mode pour le Sacre prestige = 20
+			- 50% lance l'event -> Je n'ai pas réussi à lancer une mode pour le Sacre prestige = -10
+	-> Je n'en ai que faire : prestige = -10
+ - couronne (REQUIERT Roi/Empereur): Le Sacre est l'occasion de faire une nouvelle couronne
+	-> Non, l'ancienne me suffit : prestige = -10
+	-> Oui, je dois montrer à tous ma puissance -> lance l'event : La couronne est prête. Cependant au vue de sa légèreté, vous avez un doute, est-elle en or pur?
+			-> L'artisan est honnête : prestige = 20 + 50% add_trait = trusting
+			-> Que l'on coupe la couronne en 2 : lance l'event résultat :
+					- 50% Elle n'était pas en or pur, prestige = 10, add_trait = deceitful
+					- 50% Elle était en or pur, prestige = -10, add_trait paranoid
+			-> Que l'on appelle Archimède : lance l'event -> Eurekà : Archimède a démontré qu'elle est bien en or pur : prestige = 20
+ - offrande à l'Eglise (REQUIERT Roi/Empereur) : Je dois faire une offrande à l'Eglise pour mon Sacre, on m'a appris le montant de celle de mon prédécesseur.
+	-> Offrir davantage : scaled_wealth = -0.1 + 50% charitable
+	-> Faire comme mon prédécesseur : rien
+	-> Offrir moins : scaled_wealth = 0.1 + 50% greedy
+	
+Details sur les serments (conception 7)
+Il s'agit d'un event qui arrive pendant le sacre si le personnage sacré n'a pas le trait content (satisfait)
+	- Choix parmis 4 vertus que l'on ne possède pas et que l'on ne possède pas le vice associé
+		-> l'ordre des 7 vertus qui conditionnera l'affichage peut être défini par l'ordre sur les images des traits
+		-> set_character_flag = serment_X_sans_trait
+		-> 10% de chance d'acquérir le trait => set_character_flag = serment_X_avec_trait
+			-> event qui fera le changement de flag pour gérer le cas où le personnage acquiert le trait autrement
+	- Event de mise à l'épreuve avec un MTTH d'un an
+		-> bon choix => acquisition du trait si ne l'a pas déjà (et donc changement de flag)
+		-> mauvais choix (effets cachés) : remove_trait = X + event de serment rompu
+	- Si has_character_flag = serment_X_avec_trait AND NOT { trait = X } : event de serment rompu
+	- Event de serment rompu : remove_trait = X clr_character_flag = serment_X_avec_trait clr_character_flag = serment_X_sans_trait
+							   prestige = -50 piety = -50 + malus de relation avec les religieux (-10 sur 10 ans)
+	
+Event de mise à l'épreuve pour le trait charitable
+	Une crue sans précédent a balayé de nombreuses maisons de pauvres paysans.
+	Vraisemblablement leurs maisons n'étaient construites suffisament en hauteur par rapport à la rivière.
+		-> Aider financièrement les survivants : scaled_wealth = -5 piety = 50
+		-> Ils n'avaient qu'à construire plus haut : mauvais choix
+
+Lieux de Sacre :
+	France
+		-> Reims
+		-> Saint Denis
+	Pologne
+		-> Cracovie, cathédrale de Wavel
+	Suède
+		-> cathédrale de Bergen
+	
+A FAIRE pour arriver à une version prête à coder :
+ - Recherche des lieux de sacre
+ - Rechercher comment se passe le sacre ailleurs qu'en France
+ - Trouver des flavour events pour :
+		- chasse à la relique
+		- [FAIT EN PARTIE] events d'avant sacre pour le vassal et le Roi/Empereur 
+		- events de visites religieuses d'avant sacre pour le Roi/Empereur
+		- events du serment pour le règne après le sacre

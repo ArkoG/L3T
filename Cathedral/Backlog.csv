@@ -1,0 +1,23 @@
+Priority;State;Category;Name;Description;Prerequisites;Difficulties
+;Idea;Research;Roman Cathedral;Give roman cathedrals at the beginning of the game;;Many researches to do
+;Idea;Event;Roman Cathedral burning;Some Roman Cathedral disapeared with building. This is one reason of building gothic cathedral;Building name of roman cathedral;
+;Alpha done in beta 8;Event;Relic hunting;Search a relic to build a Cathedral;;
+;Idea;Research;Dynastic relic;Create a relic form an ancestor who is a Saint;;Integrate Sainthood mini-mod. Research on the creation of a relic on the Middle Ages Saint
+;Done;Ambition;Monument ambition;Megalomaniac ambition to build a monument;;
+;Idea;Decision;Start Cathedral;Start the building of a Cathedral.;Roman Cathedral burning.  Relic hunting.;Manage the IA case : only richer can do it
+;Alpha done in beta 8;Event;Loans;Loan money to fund the Cathedral;;
+;Idea;Research;Imaginative funding;People find imaginative way to finance the Cathedral;;
+;Idea;Event;Funding;Funding is irregular. If we can pay, we can loan (only once). Else the building is stopped;Loans. Imaginative funding;
+;Idea;Event;Steps;The building is splitted in steps;;
+;Done;Building;Buildings;The building progression is tagged by building steps;;The buildings must be adapted to the Sacre
+;Alpha done in beta 8;Event/Trait;Builders;Builders travel accros the Europe to build Cathedrals;;Research about the ligues, …
+;Alpha done in beta 8;Event/Trait;Artists;Artists decorate the Cathedrals;;Replace character by abstract characters?
+;Idea;Building;Big Cathedral;Megalomaniac want to have the bigger Cathedral;;How to integrate in the system?
+;Idea;Research;Cathedral collapse;Some parts of the Cathedral can be collapsed;Big Cathedral;Research the part of Cathedral which can be destroyed
+;Done;Event;Building course;Course to be the first to build a Cathedral;;
+;Idea;Event;Manœuvre;The manœuvre are the no skill workers. Have workers can do conflicts with local barons;;
+;Idea;Event;Ecclesiastical visit;Some ecclesiastics want to visit the building of the Cathedral;;
+;Idea;Event;Resources;Some resources are necessary for some steps of the building;Steps;
+;Alpha done in beta 8;Event;Rivality;The building of the Cathedral can create some rivality;Building course. Big Cathedral. Builders.;
+;Idea;GFX;Pictures;Pictures for the events, decisions, …;;
+;Idea;;After;The Cathedral must be stay in live after it is build;;
