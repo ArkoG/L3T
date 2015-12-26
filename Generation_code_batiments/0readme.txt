@@ -1,4 +1,12 @@
 UPDATE
+	26 décembre 2015 :
+		ajouts textes anglais
+		suppression colonnes inutiles
+		correction bug indentation dans le bloc potential
+		remplace les "," par des "." dans les colonnes à valeur numériques
+		ajoute des boîtes de dialogues d'avertissement d'existance du fichier
+		ajoute une boîte de dialogue d'information de la fin de la tâche
+
 	3 octobre 2015 :
 		nouvelle IHM
 		mise à jour 2.4
@@ -23,9 +31,10 @@ UTILISATION
 	
 REMARQUES SUR LE FONCTIONNEMENT
 	- mon programme est en fait un gros aspirateur de caractère organisé (je ne teste pas si ce qui est écrit a un sens)
+	- cepandant il remplace les "," par des "." dans les colonnes à valeur numériques
 	
 REMARQUES DE REQUIS:
-	- ne pas mettre des cases en pourcentage (remplacer 1.00% par 0.01)
+	- ne pas mettre des cases en pourcentage (remplacer 1.00% par 0.01 ou par 0,01)
 	- ne pas mettre de \n dans une case (cela est surtout valable pour la case description)
 	- mettre un batiment requis 1 avant de mettre un batiment requis 2
 	- l'effet 1 est necessaire; les autres peuvent être remplis ou non et dans n'importe quel ordre (par ex le 3 mais pas le 2)
