@@ -52,9 +52,9 @@ REPAIREVOLEUR = {
 	gold_cost = 0.0
 	tax_income = 2.0
 	build_time = 8
-	light_infantry = 10	#+
-	archers = 20		#+
-	light_cavalry = 10	#=total 40 voleurs !
+	light_infantry = 50	#+
+	archers = 100		#+
+	light_cavalry = 50	#=total 200 voleurs !
 	ai_creation_factor = 5
 	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -71,7 +71,7 @@ repaire_voleur_L1 = { #Cache de brigands
 	gold_cost = 10.0	build_time = 30		ai_creation_factor = 92
 	local_tax_modifier = 0.01
 	#garrison_size = 0.1
-	levy_size = 0.02
+	levy_size = 0.2
 	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 repaire_voleur_L2 = { #Repaire de brigands
@@ -83,8 +83,8 @@ repaire_voleur_L2 = { #Repaire de brigands
 	upgrades_from = repaire_voleur_L1
 	gold_cost = 45.0	build_time = 90		ai_creation_factor = 91
 	#local_tax_modifier = 0.01
-	garrison_size = 0.01
-	levy_size = 0.02
+	garrison_size = 0.1
+	levy_size = 0.2
 	fort_level = 0.1
 	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -97,8 +97,8 @@ repaire_voleur_L3 = { #Maison forte de brigands
 	upgrades_from = repaire_voleur_L2
 	gold_cost = 120.0	build_time = 180		ai_creation_factor = 90
 	local_tax_modifier = 0.03
-	garrison_size = 0.05
-	levy_size = 0.02
+	garrison_size = 0.5
+	levy_size = 0.2
 	fort_level = 0.2
 	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -111,8 +111,8 @@ repaire_voleur_L4 = { #Guilde de brigands
 	upgrades_from = repaire_voleur_L3
 	gold_cost = 100.0	build_time = 120		ai_creation_factor = 89
 	local_tax_modifier = 0.03
-	garrison_size = 0.01
-	levy_size = 0.02
+	garrison_size = 0.1
+	levy_size = 0.2
 	fort_level = 0.2
 	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -126,8 +126,8 @@ repaire_voleur_L5 = { #Fortin de brigands
 	upgrades_from = repaire_voleur_L4
 	gold_cost = 220.0	build_time = 360		ai_creation_factor = 87
 	local_tax_modifier = 0.05
-	garrison_size = 0.05
-	levy_size = 0.02
+	garrison_size = 0.5
+	levy_size = 0.2
 	fort_level = 1.0
 	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -181,9 +181,9 @@ caserne_brigands_L1 = { #Abri des malandrins
 	prerequisites = { repaire_voleur_L1 }
 	gold_cost = 100.0	build_time = 180 	ai_creation_factor = 90	
 	tax_income = 0.1 		#un brigand rapporte plus que ce qu'il ne coûte	
-	light_infantry = 5	#halved
-	archers = 20		#max car spécialisation
-	light_cavalry = 5	#halved	
+	light_infantry = 25	#halved
+	archers = 50		#max car spécialisation
+	light_cavalry = 15	#halved	
 	archers_offensive = 0.05 #amélioration par type de troupe
 	archers_defensive = 0.05
 	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -198,9 +198,9 @@ caserne_brigands_L2 = { #Gîte des malandrins
 	upgrades_from = caserne_brigands_L1
 	gold_cost = 100.0	build_time = 180 	ai_creation_factor = 89	
 	tax_income = 0.1
-	light_infantry = 10	#max car spécialisation
-	archers = 10		#halved
-	light_cavalry = 5	#halved
+	light_infantry = 20	#max car spécialisation
+	archers = 50		#halved
+	light_cavalry = 15	#halved
 	light_infantry_offensive = 0.05 #amélioration par type de troupe
 	light_infantry_defensive = 0.05
 	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -215,9 +215,9 @@ caserne_brigands_L3 = { #Caserne des malandrins
 	upgrades_from = caserne_brigands_L2
 	gold_cost = 100.0	build_time =  90 	ai_creation_factor = 88
 	tax_income = 0.1
-	light_infantry = 5	#halved
-	archers = 10		#halved
-	light_cavalry = 10	#max car spécialisation
+	light_infantry = 25	#halved
+	archers = 50		#halved
+	light_cavalry = 30	#max car spécialisation
 	light_cavalry_offensive = 0.05 #amélioration par type de troupe
 	light_cavalry_defensive = 0.05
 	add_number_to_name = no	extra_tech_building_start = 10.0
