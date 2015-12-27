@@ -170,9 +170,9 @@ XYLO.02101B;;Sacrebleu ! ;;;;;;;;;;;;x
 XYLO.02102;;suppression des pirates;;;;;;;;;;;;x
 DESCXYLO.02102;Pirates' raids ends in [From.Location.GetName].;En retrouvant un Domaine à la mesure de ce que nous pouvions maintenir en ordre et au prix d'une lutte longue et acharnée, nous avons finalement pu regagner le contrôle de nos terres et éradiquer les pirates qui ravageaient les côtes de [From.Location.GetName].;;;;;;;;;;;;x
 XYLO.02102A;Il était temps !;Il était temps !;;;;;;;;;;;;x
-DESC00401;;Sortis de nul part, un groupe de bandits nous attaquent ! \n Personne ne m'avait-il conseillé de m'occuper de la prolifération des bandits sur nos terres ? ;;;;;;;;;;;;x;
-XYLO.04013A;They are few enough to defeat alone..;Ils ne sont pas nombreux, je peux les vaincre seul...;;;;;;;;;;;;x;
-XYLO.04013B;Charge!;Chargez !;;;;;;;;;;;;x;
+DESCXYLO.0401;;Sortis de nul part, un groupe de bandits nous attaquent ! \n Personne ne m'avait-il conseillé de m'occuper de la prolifération des bandits sur nos terres ? ;;;;;;;;;;;;x;
+XYLO.0401A;They are few enough to defeat alone..;Ils ne sont pas nombreux, je peux les vaincre seul...;;;;;;;;;;;;x;
+XYLO.0401B;Charge!;Chargez !;;;;;;;;;;;;x;
 XYLO.0401C;Pay them .;Payer-les.;;;;;;;;;;;;x;
 bandits_installes;Well settlef bandits;Bandits bien installés;;;;;;;;;;;;x
 bandits_installes_desc;;Les voleurs, malandrins et autres bandes d'affreux ce sont installés durablement sur ces terres, s'affairant à leurs viles activités et avec des conséquences désastreuses.;;;;;;;;;;;;x
@@ -207,8 +207,8 @@ XYLO.0214;;x;;;;;;;;;;;;x
 DESCXYLO.0214;The bandits network of [From.Location.GetName] is now lead by a famous hoodlum !;Le réseau de bandits qui terrorisent la région de [From.Location.GetName] est paraît-il mené par un chef et s'est même construit une base d'où organiser son petit commerce et mener ses exactions. Il va falloir l'en déloger !;;;;;;;;;;;;x
 XYLO.0214A;Damn !;Enfer et damnation !!;;;;;;;;;;;;x
 creation_bandit;A bandit leader appears in the province\n;Un meneur de bandits apparait dans la province\n;;;;;;;;;;;x
-#XYLO.0216;;le chef des bandits reçoit un surnom;;;;;;;;;;;;x
-#DESCXYLO.0216;unused anymore;Comme tout bon criminel, je me dois de porter un nom à la mesure de ma réputation !;;;;;;;;;;;;x
+XYLO.02171;;;;;;;;;;;;;;x
+DESCXYLO.02171;;;;;;;;;;;;;;x
 DESCXYLO.02172;[From.Location.GetName] is now free from bandits' rule but will need time to recover.;Le propriétaire du Repaire de bandits ayant définitevement quitté les lieux, la province de [From.Location.GetName] va pouvoir se remettre de cette dure et éprouvante période pour sa population et son économie. Selon l'ampleur des dégâts, cela peut prendre quelques années avant un retour total à la normale.;;;;;;;;;;;;x
 XYLO.02172A;It is already a relief for us all !;C'est un déjà soulagement pour tous !;;;;;;;;;;;;x
 la_province_se_remet;Province recovers;La province se remet;;;;;;;;;;;;x

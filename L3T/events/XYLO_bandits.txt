@@ -198,9 +198,9 @@ province_event = {
 		clr_province_flag = chancelier_envoye
 		clr_province_flag = espion_envoye
 		clr_province_flag = marechal_envoye
-		remove_province_modifier = thieves_guild
-		remove_province_modifier = smugglers_ring
-		remove_province_modifier = highway_robber_band
+		if = { limit = { has_province_modifier = thieves_guild } remove_province_modifier = thieves_guild }
+		if = { limit = { has_province_modifier = smugglers_ring } remove_province_modifier = smugglers_ring }
+		if = { limit = { has_province_modifier = highway_robber_band } remove_province_modifier = highway_robber_band }
 		clr_province_flag = thieves_guild
 		clr_province_flag = smugglers_ring
 		clr_province_flag = highway_robber_band
@@ -228,7 +228,6 @@ province_event = {
 			has_province_flag = espion_envoye
 			has_province_flag = marechal_envoye
 		}
-		#has_empty_holding = yes
 		NOT = { owner = { any_demesne_province = { has_province_modifier = bandits_installes }}}
 		NOT = { has_province_flag = echec_contre_les_bandits }
 	}
@@ -267,9 +266,9 @@ province_event = {
 	option = {
 		name = XYLO.02131A
 		add_province_modifier = { name = bandits_installes	duration = -1 }#ne reste que ce marquage à ce stade
-		remove_province_modifier = thieves_guild
-		remove_province_modifier = smugglers_ring
-		remove_province_modifier = highway_robber_band
+		if = { limit = { has_province_modifier = thieves_guild } remove_province_modifier = thieves_guild }
+		if = { limit = { has_province_modifier = smugglers_ring } remove_province_modifier = smugglers_ring }
+		if = { limit = { has_province_modifier = highway_robber_band } remove_province_modifier = highway_robber_band }
 		clr_province_flag = thieves_guild
 		clr_province_flag = smugglers_ring
 		clr_province_flag = highway_robber_band
@@ -296,9 +295,9 @@ province_event = {
 	
 	option = {
 		name = XYLO.02132A
-		remove_province_modifier = thieves_guild
-		remove_province_modifier = smugglers_ring
-		remove_province_modifier = highway_robber_band
+		if = { limit = { has_province_modifier = thieves_guild } remove_province_modifier = thieves_guild }
+		if = { limit = { has_province_modifier = smugglers_ring } remove_province_modifier = smugglers_ring }
+		if = { limit = { has_province_modifier = highway_robber_band } remove_province_modifier = highway_robber_band }
 		clr_province_flag = thieves_guild
 		clr_province_flag = smugglers_ring
 		clr_province_flag = highway_robber_band
@@ -324,11 +323,7 @@ province_event = {
 	}
 
 	immediate = { 
-		set_province_flag = chef_bandit
-		build_holding = {
-			type = castle
-			holder = FROM # No holder
-		}
+		set_province_flag = chef_bandit		
 	}
 	
 	option = {
@@ -437,21 +432,15 @@ province_event = {
 # création fief + octroi au vilain
 character_event = {
     id = XYLO.0215
-	desc = "DESCXYLO.0215"
-	picture = "GFX_evt_council"
+	hide_window = yes
 	
 	is_triggered_only = yes
 	
 	option = {
-		liege = {
-			random_demesne_title = {
-				limit = {
-					can_be_given_away = yes
-					is_feudal = yes
-					is_capital = no
-					tier = baron
-				}
-				grant_title = ROOT
+		location = {
+			build_holding = {
+				type = castle
+				holder = ROOT
 			}
 		}
 	}	
@@ -460,13 +449,11 @@ character_event = {
 #Fief brigand
 character_event = {
     id = XYLO.0216
-	desc = "DESCXYLO.0216"
-	picture = GFX_evt_castle_construction
+	hide_window = yes
 	
 	is_triggered_only = yes
 		
 	option = { #dominante Fortification
-		name = "XYLO.0216A"	
 		ai_chance = { factor = 20 }
 		random_demesne_title = {
 			limit = {
@@ -490,7 +477,6 @@ character_event = {
 	}
 	
 	option = { #Dominante Caserne
-		name = "XYLO.0216B"	
 		ai_chance = { factor = 25 }
 		random_demesne_title = {
 			limit = {
@@ -514,7 +500,6 @@ character_event = {
 	}
 	
 	option = { #Dominante Réseau
-		name = "XYLO.0216C"	
 		ai_chance = { factor = 25 }
 		random_demesne_title = {
 			limit = {
@@ -538,7 +523,6 @@ character_event = {
 	}
 	
 	option = { #bigger
-		name = "XYLO.0216D"	
 		ai_chance = { factor = 30 }
 		random_demesne_title = {
 			limit = {
@@ -703,8 +687,7 @@ character_event = {
 		modifier = {	factor = 0.7	NOT = { intrigue = 10	}}	
 		modifier = {	factor = 0.5	NOT = { intrigue =  5	}}
 		modifier = {	factor = 0.5	any_demesne_province = { terrain = forest }}
-		modifier = {	factor = 0.5	any_demesne_province = { has_province_modifier = bandits_installes }}
-		}
+	}
 
 	immediate = { add_character_modifier = { name = mauvaise_rencontre_chasse duration = 200 hidden = yes} } #pour ne l'avoir qu'une seule fois par partie de chasse
 		
@@ -817,14 +800,8 @@ character_event = {
 			remove_building = reseau_provincial_L1
 			remove_building = reseau_provincial_L2
 			remove_building = reseau_provincial_L3
-			# destroy_landed_title = THIS
-			# destroy_landed_title = FROM
-			# destroy_castle = THIS
-			# destroy_holding = THIS
-			# remove_holding = FROM
-			# remove_holding = THIS
-			# remove_settlement = FROM
-			# remove_settlement = THIS
+			destroy_landed_title = THIS
+			destroy_settlement = THIS
 		}
 	}
 	
@@ -846,7 +823,7 @@ province_event = {
 		owner = {
 			NOT = {
 				any_vassal = {
-				trait = chef_malandrin
+					trait = chef_malandrin
 				}
 				war = yes
 			}
@@ -856,58 +833,61 @@ province_event = {
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
+	immediate = {
+		remove_province_modifier = bandits_installes
+	}
+		
 	option = {
 	name = XYLO.02172A #disparition des bandits dans la province.
-		clr_province_flag = chef_bandit
 		trigger = { # moins d'un an
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 365	}}
 		}
 		owner = { prestige = 10 }
-		#no recovery period
-		remove_province_modifier = bandits_installes
+		#no recovery period		
+		clr_province_flag = chef_bandit
 	}
+	
 	option = {
 	name = XYLO.02172A #disparition des bandits dans la province.
-		clr_province_flag = chef_bandit
 		trigger = {	# entre 1 et 2 ans
 			had_province_flag = {	flag = chef_bandit	days = 365	}
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 730	}}
 		}
 		owner = { prestige = 11 }
 		add_province_modifier = { name = la_province_se_remet duration = 730 } #2 ans		
-		remove_province_modifier = bandits_installes
+		clr_province_flag = chef_bandit
 	}
+	
 	option = {
 	name = XYLO.02172A #disparition des bandits dans la province.
-		clr_province_flag = chef_bandit
 		trigger = {	# entre 2 et 3 ans
 			had_province_flag = {	flag = chef_bandit	days = 730	}
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 1095	}}
 		}
 		owner = { prestige = 12 }
 		add_province_modifier = { name = la_province_se_remet duration = 1095 } #3 ans
-		remove_province_modifier = bandits_installes
+		clr_province_flag = chef_bandit
 	}
+	
 	option = {
 	name = XYLO.02172A #disparition des bandits dans la province.
-		clr_province_flag = chef_bandit
 		trigger = {	# entre 3 et 4 ans
 			had_province_flag = {	flag = chef_bandit	days = 1095	}
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 1460	}}
 		}
 		owner = { prestige = 13 }
 		add_province_modifier = { name = la_province_se_remet duration = 1460 } #4 ans
-		remove_province_modifier = bandits_installes
+		clr_province_flag = chef_bandit
 	}
+	
 	option = {
 	name = XYLO.02172A #disparition des bandits dans la province.
-		clr_province_flag = chef_bandit
 		trigger = {	# plus de 4 ans
 			had_province_flag = {	flag = chef_bandit	days = 1460	}
 		}
 		owner = { prestige = 14 }
 		add_province_modifier = { name = la_province_se_remet duration = 1825 } #5 ans		
-		remove_province_modifier = bandits_installes
+		clr_province_flag = chef_bandit
 	}
 }
