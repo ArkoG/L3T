@@ -16,6 +16,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron	
 			is_feudal = yes	
+			NOT = { has_building = REPAIREVOLEUR }
 			NOT = {	has_building = ca_town_1	}
 			num_of_buildings = 10
 		}
@@ -53,6 +54,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron	
 			is_feudal = yes	
+			NOT = { has_building = REPAIREVOLEUR }
 			has_building = ca_town_1
 			NOT = { has_building = ca_town_2 }
 			num_of_buildings = 15
@@ -68,6 +70,7 @@ option = {
 				tier = baron	
 				is_feudal = yes
 				num_of_buildings = 15
+				NOT = { has_building = REPAIREVOLEUR }
 				has_building = ca_town_1
 				NOT = { has_building = ca_town_2 }
 			}
@@ -92,6 +95,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron	
 			is_feudal = yes	
+			NOT = { has_building = REPAIREVOLEUR }
 			has_building = ca_town_2
 			NOT = { has_building = ca_town_3 }
 			num_of_buildings = 20
@@ -107,6 +111,7 @@ option = {
 				tier = baron	
 				is_feudal = yes
 				num_of_buildings = 20
+				NOT = { has_building = REPAIREVOLEUR }
 				has_building = ca_town_2
 				NOT = { has_building = ca_town_3 }
 			}
@@ -131,6 +136,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron	
 			is_feudal = yes	
+			NOT = { has_building = REPAIREVOLEUR }
 			has_building = ca_town_3
 			NOT = { has_building = ca_town_4 }
 			num_of_buildings = 25
@@ -146,6 +152,7 @@ option = {
 				tier = baron	
 				is_feudal = yes
 				num_of_buildings = 25
+				NOT = { has_building = REPAIREVOLEUR }
 				has_building = ca_town_3
 				NOT = { has_building = ca_town_4 }
 			}
@@ -173,6 +180,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron	
 			is_feudal = yes	
+			NOT = { has_building = REPAIREVOLEUR }
 			has_building = ca_town_4
 			NOT = { has_building = ca_town_5 }
 			num_of_buildings = 35
@@ -188,6 +196,7 @@ option = {
 				tier = baron	
 				is_feudal = yes
 				num_of_buildings = 35
+				NOT = { has_building = REPAIREVOLEUR }
 				has_building = ca_town_4
 				NOT = { has_building = ca_town_5 }
 			}
