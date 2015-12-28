@@ -443,6 +443,15 @@ character_event = {
 				holder = ROOT
 			}
 		}
+		create_title = {
+			tier = KING
+			landless = no
+			culture = THIS
+			name = "OUTLAW"
+			holder = THIS
+			ruler = "OUTLAW_TITLE"
+			ruler_female = "OUTLAW_TITLE"
+		}	
 	}	
 }
 
