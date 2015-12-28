@@ -169,7 +169,7 @@ CA_CARR_pierre_L1 = {
 	potential = {
 		OR = {
 			has_province_modifier = pierre1
-			has_province_modifier = pierre2_pierre_brute
+			#has_province_modifier = pierre2_pierre_brute
 			}
 		}
 	prerequisites = { BOURGFEODAL }
@@ -516,7 +516,7 @@ CT_CARR_pierre_L1 = {
 	potential = {
 		OR = {
 			has_province_modifier = pierre1
-			has_province_modifier = pierre2_pierre_brute
+			#has_province_modifier = pierre2_pierre_brute
 			}
 		}
 	prerequisites = { VOC_INDUSTRIELLE }
