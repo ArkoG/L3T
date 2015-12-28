@@ -24,14 +24,14 @@ CA_AGRI_cereale_L2 = {
 	desc = CA_AGRI_cereale_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_AGRI_cereale_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0	
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0	
 }
 CA_AGRI_cereale_L3 = {
 	desc = CA_AGRI_cereale_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 terrain = farmlands }
 	potential = { terrain = farmlands }
 		upgrades_from = CA_AGRI_cereale_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0	
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0	
 }
 
 #VERGER (côteaux)
@@ -49,13 +49,13 @@ CA_AGRI_verger_L2 = {
 	desc = CA_AGRI_verger_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_AGRI_verger_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_AGRI_verger_L3 = {
 	desc = CA_AGRI_verger_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_AGRI_verger_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #ELEVAGE ovin // pour laine
@@ -73,13 +73,13 @@ CA_ELEV_ovin_L2a = {
 	desc = CA_ELEV_ovin_L2a_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_ELEV_ovin_L1a
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_ELEV_ovin_L3a = {
 	desc = CA_ELEV_ovin_L3a_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_ELEV_ovin_L2a
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #ELEVAGE ovin // pour laine #alternate ALPAGE pour fromage
@@ -97,13 +97,13 @@ CA_ELEV_ovin_L2b = {
 	desc = CA_ELEV_ovin_L2b_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_ELEV_ovin_L1b
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_ELEV_ovin_L3b = { #voir si à limiter à L2
 	desc = CA_ELEV_ovin_L3b_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_ELEV_ovin_L2b
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #BUCHERONNAGE foret
@@ -124,14 +124,14 @@ CA_ELEV_ovin_L3b = { #voir si à limiter à L2
   	desc = CA_BOIS_bois_L2_desc
 	 trigger = { TECH_TRADE_PRACTICES = 0 }
 	 upgrades_from = CA_BOIS_bois_L1
-		 gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		 gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
  CA_BOIS_bois_L3 = {
   	desc = CA_BOIS_bois_L3_desc
 	 trigger = { TECH_TRADE_PRACTICES = 0 terrain = forest }
 	 potential = { terrain = forest }
 	 upgrades_from = CA_BOIS_bois_L2
-		 gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		 gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
 
 #CHARBONNIER foret
@@ -152,14 +152,14 @@ CA_ELEV_ovin_L3b = { #voir si à limiter à L2
    	desc = CA_BOIS_charbon_L2_desc
 	 trigger = { TECH_TRADE_PRACTICES = 0 }
 	 upgrades_from = CA_BOIS_charbon_L1
-		 gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		 gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
  CA_BOIS_charbon_L3 = {
    	desc = CA_BOIS_charbon_L3_desc
 	 trigger = { TECH_TRADE_PRACTICES = 0 terrain = forest }
 	 potential = { terrain = forest }
 	 upgrades_from = CA_BOIS_charbon_L2
-		 gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		 gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
 
 #CARRIERE pierre (montagne + côteau)
@@ -180,7 +180,7 @@ CA_CARR_pierre_L2 = {
   	desc = CA_CARR_pierre_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_CARR_pierre_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 		local_build_time_modifier = -0.02 #-2% cumul -3%
 }
 CA_CARR_pierre_L3 = {
@@ -188,7 +188,7 @@ CA_CARR_pierre_L3 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 terrain = mountain }
 	potential = { terrain = mountain }
 	upgrades_from = CA_CARR_pierre_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 		local_build_time_modifier = -0.02 #-2% cumul -5%
 }
 
@@ -208,7 +208,7 @@ CA_MINE_minerai_L2 = {
   	desc = CA_MINE_minerai_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_MINE_minerai_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 		disease_defence = -0.01 #respirer dans les mines c'est pas bon pour la santé
 		#troll_risk = 5.0
 }
@@ -217,7 +217,7 @@ CA_MINE_minerai_L3 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 terrain = hills }
 	potential = { terrain = hills }
 	upgrades_from = CA_MINE_minerai_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 		#balrog_risk = 5.0
 }
 
@@ -232,15 +232,15 @@ CA_FISH_peche_L1 = {
 			}
 		}
 	prerequisites = { BOURGFEODAL }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 50.0	build_time = 50	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_FISH_peche_L2 = {
   	desc = CA_FISH_peche_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_FISH_peche_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 100.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
-#CA_FISH_peche_L3 = {
+#CA_FISH_peche_L3 = { ##L3 is limited to Monasteries
 #	desc = CA_FISH_peche_L3_desc
 #	upgrades_from = CA_FISH_peche_L2
 #		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -263,7 +263,7 @@ CA_FISH_pisci_L2 = {
   	desc = CA_FISH_pisci_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_FISH_pisci_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 360	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 #CA_FISH_pisci_L3 = {
 #  	desc = CA_FISH_pisci_L3_desc
@@ -286,14 +286,14 @@ CA_AGRI_moulin_L2 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_AGRI_cereale_L2 }
 	upgrades_from = CA_AGRI_moulin_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_AGRI_moulin_L3 = {
  	desc = CA_AGRI_moulin_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_AGRI_cereale_L3 }
 	upgrades_from = CA_AGRI_moulin_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 
@@ -312,14 +312,14 @@ CA_AGRI_boulangerie_L2 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_AGRI_moulin_L2 }
 	upgrades_from = CA_AGRI_boulangerie_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_AGRI_boulangerie_L3 = {
  	desc = CA_AGRI_boulangerie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CA_AGRI_moulin_L3 }
 	upgrades_from = CA_AGRI_boulangerie_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #FUMAISON
@@ -338,13 +338,13 @@ CA_FISH_fumoir_L2 = {
  	desc = CA_FISH_fumoir_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_FISH_fumoir_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_FISH_fumoir_L3 = {
  	desc = CA_FISH_fumoir_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_FISH_fumoir_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #CHEVAL
@@ -362,13 +362,13 @@ CA_ELEV_cheval_L2 = {
  	desc = CA_ELEV_cheval_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_ELEV_cheval_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	light_cavalry = 10 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	light_cavalry = 10 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_ELEV_cheval_L3 = {
  	desc = CA_ELEV_cheval_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_ELEV_cheval_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	knights = 5 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	knights = 5 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 }
@@ -395,14 +395,14 @@ CT_AGRI_cereale_L2 = {
  	desc = CT_AGRI_cereale_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CT_AGRI_cereale_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_AGRI_cereale_L3 = {
  	desc = CT_AGRI_cereale_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 terrain = farmlands }
 	potential = { terrain = farmlands }
 		upgrades_from = CT_AGRI_cereale_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #VERGER (côteaux)
@@ -420,13 +420,13 @@ CT_AGRI_verger_L2 = {
  	desc = CT_AGRI_verger_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CT_AGRI_verger_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_AGRI_verger_L3 = {
  	desc = CT_AGRI_verger_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CT_AGRI_verger_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #ELEVAGE bovin // pour bêtes sur pied
@@ -443,13 +443,13 @@ CT_ELEV_bovin_L2 = {
  	desc = CT_ELEV_bovin_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CT_ELEV_bovin_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_ELEV_bovin_L3 = {
  	desc = CT_ELEV_bovin_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CT_ELEV_bovin_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #BUCHERONNAGE foret
@@ -470,14 +470,14 @@ CT_BOIS_bois_L2 = {
  	desc = CT_BOIS_bois_L2_desc
 	 trigger = { TECH_TRADE_PRACTICES = 0 }
 	 upgrades_from = CT_BOIS_bois_L1
-		 gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		 gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
 CT_BOIS_bois_L3 = {
  	desc = CT_BOIS_bois_L3_desc
 	 trigger = { TECH_TRADE_PRACTICES = 0 terrain = forest }
 	 potential = { terrain = forest }
 	 upgrades_from = CT_BOIS_bois_L2
-		 gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		 gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
 
 #CHARBONNIER foret
@@ -499,14 +499,14 @@ CT_BOIS_charbon_L2 = {
  	desc = CT_BOIS_charbon_L2_desc
 	 trigger = { TECH_TRADE_PRACTICES = 0 }
 	 upgrades_from = CT_BOIS_charbon_L1
-		 gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		 gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
  CT_BOIS_charbon_L3 = {
   	desc = CT_BOIS_charbon_L3_desc
 	 trigger = { TECH_TRADE_PRACTICES = 0 terrain = forest }
 	 potential = { terrain = forest }
 	 upgrades_from = CT_BOIS_charbon_L2
-		 gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		 gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
 
 #CARRIERE pierre (montagne + côteau)
@@ -527,7 +527,7 @@ CT_CARR_pierre_L2 = {
  	desc = CT_CARR_pierre_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CT_CARR_pierre_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 		local_build_time_modifier = -0.02 #-2% cumul -3%
 }
 CT_CARR_pierre_L3 = {
@@ -535,7 +535,7 @@ CT_CARR_pierre_L3 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 terrain = mountain }
 	potential = { terrain = mountain }
 	upgrades_from = CT_CARR_pierre_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 		local_build_time_modifier = -0.02 #-2% cumul -5%
 }
 
@@ -647,13 +647,13 @@ CT_FISH_peche_L2 = {
  	desc = CT_FISH_peche_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CT_FISH_peche_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_FISH_peche_L3 = {
  	desc = CT_FISH_peche_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CT_FISH_peche_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #FARINE
@@ -727,14 +727,14 @@ CT_AGRI_boulangerie_L2 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_AGRI_moulin_L2 }
 	upgrades_from = CT_AGRI_boulangerie_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_AGRI_boulangerie_L3 = {
 	desc = CT_AGRI_boulangerie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_AGRI_moulin_L3 }
 	upgrades_from = CT_AGRI_boulangerie_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #VIANDE
@@ -752,14 +752,14 @@ CT_ELEV_boucherie_L2 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_ELEV_bovin_L2 }
 	upgrades_from = CT_ELEV_boucherie_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_ELEV_boucherie_L3 = {
 	desc = CT_ELEV_boucherie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_ELEV_bovin_L3 }
 	upgrades_from = CT_ELEV_boucherie_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #FUMAISON
@@ -777,14 +777,14 @@ CT_FISH_fumoir_L2 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_FISH_peche_L2 }
 	upgrades_from = CT_FISH_fumoir_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_FISH_fumoir_L3 = {
 	desc = CT_FISH_fumoir_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_FISH_peche_L3 }
 	upgrades_from = CT_FISH_fumoir_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 }
@@ -811,14 +811,14 @@ TP_AGRI_cereale_L2 = {
 	desc = TP_AGRI_cereale_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_AGRI_cereale_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_cereale_L3 = {
 	desc = TP_AGRI_cereale_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 terrain = farmlands }
 	potential = { terrain = farmlands }
 		upgrades_from = TP_AGRI_cereale_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #FERME MARAICHERE (plaines)
@@ -836,13 +836,13 @@ TP_AGRI_maraichage_L2 = {
 	desc = TP_AGRI_maraichage_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_AGRI_maraichage_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_maraichage_L3 = {
 	desc = TP_AGRI_maraichage_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_AGRI_maraichage_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #VIGNOBLE (côteaux)
@@ -860,13 +860,13 @@ TP_AGRI_vigne_L2 = {
 	desc = TP_AGRI_vigne_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_AGRI_vigne_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_vigne_L3 = {
 	desc = TP_AGRI_vigne_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_AGRI_vigne_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #ELEVAGE ovin // pour fromage
@@ -884,13 +884,13 @@ TP_ELEV_ovin_L2 = {
 	desc = TP_ELEV_ovin_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_ELEV_ovin_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_ELEV_ovin_L3 = {
 	desc = TP_ELEV_ovin_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_ELEV_ovin_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #CHARBONNIER foret
@@ -911,14 +911,14 @@ TP_BOIS_charbon_L2 = {
 	desc = TP_BOIS_charbon_L2_desc
 	 trigger = { TECH_TRADE_PRACTICES = 0 }
 	 upgrades_from = TP_BOIS_charbon_L1
-		 gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		 gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
 TP_BOIS_charbon_L3 = {
 	desc = TP_BOIS_charbon_L3_desc
 	 trigger = { TECH_TRADE_PRACTICES = 0 terrain = forest }
 	 potential = { terrain = forest }
 	 upgrades_from = TP_BOIS_charbon_L2
-		 gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		 gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
 
 #FISH pisciculture (terres)
@@ -938,13 +938,13 @@ TP_FISH_pisci_L2 = {
 	desc = TP_FISH_pisci_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_FISH_pisci_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 365	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_FISH_pisci_L3 = {
 	desc = TP_FISH_pisci_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_FISH_pisci_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 250.0	build_time = 365	tax_income = 0.0.4	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #FARINE
@@ -962,14 +962,14 @@ TP_AGRI_moulin_L2 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { TP_AGRI_cereale_L2 }
 	upgrades_from = TP_AGRI_moulin_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_moulin_L3 = {
 	desc = TP_AGRI_moulin_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { TP_AGRI_cereale_L3 }
 	upgrades_from = TP_AGRI_moulin_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #PAIN
@@ -987,14 +987,14 @@ TP_AGRI_boulangerie_L2 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { TP_AGRI_moulin_L2 }
 	upgrades_from = TP_AGRI_boulangerie_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_boulangerie_L3 = {
 	desc = TP_AGRI_boulangerie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { TP_AGRI_moulin_L3 }
 	upgrades_from = TP_AGRI_boulangerie_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #FUMAISON
@@ -1012,14 +1012,14 @@ TP_FISH_fumoir_L2 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { TP_FISH_pisci_L2 }
 	upgrades_from = TP_FISH_fumoir_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_FISH_fumoir_L3 = {
 	desc = TP_FISH_fumoir_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { TP_FISH_pisci_L3 }
 	upgrades_from = TP_FISH_fumoir_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 ##TRANSFORMATIONS SUR PLACE (ou à emporter lol)
@@ -1090,7 +1090,7 @@ TP_brasserie_L2 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { TP_AGRI_cereale_L2 }
 	upgrades_from = TP_brasserie_L1
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_brasserie_L3 = {
 	desc = TP_brasserie_L3_desc
@@ -1100,7 +1100,7 @@ TP_brasserie_L3 = {
 	}
 	#prerequisites = { TP_AGRI_cereale_L3 }
 	upgrades_from = TP_brasserie_L2
-		gold_cost = 50.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 125.0	build_time = 150	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_brasserie_L4 = {
 	desc = TP_brasserie_L4_desc
@@ -1110,7 +1110,7 @@ TP_brasserie_L4 = {
 	}
 	#prerequisites = { TP_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = TP_brasserie_L3
-		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 365	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_brasserie_L5 = {
 	desc = TP_brasserie_L5_desc
@@ -1120,7 +1120,7 @@ TP_brasserie_L5 = {
 	}
 	#prerequisites = { TP_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = TP_brasserie_L4
-		gold_cost = 50.0	build_time = 100	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 200.0	build_time = 180	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 }
