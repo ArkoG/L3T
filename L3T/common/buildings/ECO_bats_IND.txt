@@ -767,7 +767,7 @@ CT_saline_L1 = {
 			has_province_modifier = minerai2_sel_gemme
 			AND = {
 				OR = {
-					has_province_modifier = route_fluviale
+					has_province_modifier = route_fluviale 
 					has_province_modifier = route_terrestre
 				}
 				any_neighbor_province = {
