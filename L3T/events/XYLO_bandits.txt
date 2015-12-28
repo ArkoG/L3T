@@ -443,6 +443,10 @@ character_event = {
 				holder = ROOT
 			}
 		}
+		any_demesne_title = {
+			limit = { tier = baron }
+			add_holding_modifier = { modifier = bandits_holding duration = -1 }
+		}
 		create_title = {
 			tier = KING
 			landless = no
@@ -794,6 +798,7 @@ character_event = {
 					has_building = reseau_provincial_L3
 				}
 			}
+			remove_holding_modifier = bandits_holding
 			remove_building = REPAIREVOLEUR
 			remove_building = repaire_voleur_L1
 			remove_building = repaire_voleur_L2
