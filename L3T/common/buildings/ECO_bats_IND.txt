@@ -279,7 +279,7 @@ CA_outilleur_L1 = {
 		}
 	}
 	#prerequisites = { CA_fonderie_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { CITADELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_outilleur_L2 = {
@@ -319,7 +319,7 @@ CA_armurerie_L1 = {
 		}
 	}
 	#prerequisites = { CA_fonderie_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FORT }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	garrison_size = 0.1 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_armurerie_L2 = {
@@ -762,6 +762,7 @@ CT_saline_L1 = {
 	desc = CT_saline_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
+	AND = {
 		OR = {
 			has_province_modifier = minerai2_sel_gemme
 			AND = {
@@ -777,6 +778,23 @@ CT_saline_L1 = {
 					}					
 				}
 			}			
+		}
+		OR = {
+			has_province_modifier = elevage3_viande
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = elevage3_viande
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
+		}
 		}
 	}
 	#prerequisites = { CT_MINE_sel_L1 }
