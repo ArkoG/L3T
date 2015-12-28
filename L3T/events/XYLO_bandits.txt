@@ -820,12 +820,9 @@ province_event = {
 	trigger = {
 		has_province_flag = chef_bandit
 		has_province_modifier = bandits_installes
-		owner = {
-			NOT = {
-				any_vassal = {
-					trait = chef_malandrin
-				}
-				war = yes
+		NOT = {
+			any_province_lord  = {
+				trait = chef_malandrin
 			}
 		}
 	}
