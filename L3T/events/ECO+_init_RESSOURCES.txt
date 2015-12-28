@@ -14,8 +14,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
-			#NOT = { has_province_flag = ressources_plaines_testees }
-			NOT = { has_province_flag = ressources_testees }
+			NOT = { has_province_flag = ressources_plaines_testees }
 			terrain = plains
 			NOT = { terrain = forest }
 			OR = {
@@ -27,26 +26,15 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 
 	immediate = {
-			set_province_flag = counted_resources
-			set_variable = { which = "resourceNb" value = 0 }
-			set_province_flag = ressources_testees
-			#set_province_flag = ressources_plaines_testees
+			set_province_flag = ressources_plaines_testees
 			random_list = {
-				80 = { add_province_modifier = { name = agriculture1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				80 = { add_province_modifier = { name = agriculture1	duration = -1	} }
 				20 = {}
 				}
 			random_list = {
-				30 = { add_province_modifier = { name = elevage1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				35 = { add_province_modifier = { name = foret1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				30 = { add_province_modifier = { name = elevage1		duration = -1	} }
+				35 = { add_province_modifier = { name = foret1			duration = -1	} }
 				35 = {}
-				}
-			if = { 
-				limit = { has_province_modifier = province_cotiere }
-				#set_province_flag = ressources_peche_testees
-				random_list = {
-					30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-					70 = {}
-					}
 				}
 			}
 }
@@ -57,8 +45,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
-			#NOT = { has_province_flag = ressources_coteaux_testees }
-			NOT = { has_province_flag = ressources_testees }
+			NOT = { has_province_flag = ressources_coteaux_testees }
 			terrain = hills
 			OR = {
 				has_province_modifier = province_terrestre 
@@ -69,34 +56,15 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 
 	immediate = {
-			set_province_flag = counted_resources
-			set_variable = { which = "resourceNb" value = 0 }
-			set_province_flag = ressources_testees
-			#set_province_flag = ressources_coteaux_testees
+			set_province_flag = ressources_coteaux_testees
 			random_list = {
-				20 = { add_province_modifier = { name = elevage1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				50 = { add_province_modifier = { name = agriculture1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				20 = { add_province_modifier = { name = elevage1		duration = -1	} }
+				50 = { add_province_modifier = { name = agriculture1	duration = -1	} }
 				30 = {}
 				}
 			random_list = {
-				70 = { add_province_modifier = { name = minerai1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				70 = { add_province_modifier = { name = minerai1		duration = -1	} }
 				30 = {}
-				}
-			if = {
-				limit = { has_province_modifier = province_cotiere }
-				#set_province_flag = ressources_peche_testees
-				random_list = {
-					30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-					70 = {}
-					}
-				}
-			if = {
-				limit = { has_province_modifier = province_terrestre }
-				set_province_flag = ressources_pisciculture_testees
-				random_list = {
-					35 = { add_province_modifier = { name = pisci1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-					65 = {}
-					}
 				}
 	}
 }
@@ -107,8 +75,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
-			#NOT = { has_province_flag = ressources_forets_testees }
-			NOT = { has_province_flag = ressources_testees }
+			NOT = { has_province_flag = ressources_forets_testees }
 			terrain = forest
 			OR = {
 				has_province_modifier = province_terrestre 
@@ -119,26 +86,14 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 
 	immediate = {
-			set_province_flag = counted_resources
-			set_variable = { which = "resourceNb" value = 0 }
-			set_province_flag = ressources_testees
-			#set_province_flag = ressources_forets_testees
+			set_province_flag = ressources_forets_testees
 			add_province_modifier = { name = foret1		duration = -1	}
-			 change_variable = { which = "resourceNb" value = 1 } 
 			random_list = {
-				 5 = { add_province_modifier = { name = elevage1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				10 = { add_province_modifier = { name = agriculture1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				10 = { add_province_modifier = { name = minerai1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				 5 = { add_province_modifier = { name = pierre1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				 5 = { add_province_modifier = { name = elevage1		duration = -1	} }
+				10 = { add_province_modifier = { name = agriculture1	duration = -1	} }
+				10 = { add_province_modifier = { name = minerai1		duration = -1	} }
+				 5 = { add_province_modifier = { name = pierre1			duration = -1	} }
 				70 = {}
-				}
-			if = { 
-				limit = { has_province_modifier = province_cotiere }
-				set_province_flag = ressources_peche_testees
-				random_list = {
-					30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-					70 = {}
-					}
 				}
 	}
 }
@@ -149,8 +104,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
-			#NOT = { has_province_flag = ressources_montagnes_testees }
-			NOT = { has_province_flag = ressources_testees }
+			NOT = { has_province_flag = ressources_montagnes_testees }
 			terrain = mountain
 			OR = {
 				has_province_modifier = province_terrestre 
@@ -161,26 +115,15 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 	
 	immediate = {
-			set_province_flag = counted_resources
-			set_variable = { which = "resourceNb" value = 0 }
-			set_province_flag = ressources_testees
-			#set_province_flag = ressources_montagnes_testees
+			set_province_flag = ressources_montagnes_testees
 			random_list = {
-				40 = { add_province_modifier = { name = elevage1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				25 = { add_province_modifier = { name = minerai1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				40 = { add_province_modifier = { name = elevage1	duration = -1	} }
+				25 = { add_province_modifier = { name = minerai1	duration = -1	} }
 				35 = {}
 				}
 			random_list = {
-				70 = { add_province_modifier = { name = pierre1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				70 = { add_province_modifier = { name = pierre1		duration = -1	} }
 				30 = {}
-				}
-			if = { 
-				limit = { has_province_modifier = province_cotiere }
-				#set_province_flag = ressources_peche_testees
-				random_list = {
-					30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-					70 = {}
-					}
 				}
 	}
 }
@@ -191,8 +134,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
-			#NOT = { has_province_flag = ressources_farmlands_testees }
-			NOT = { has_province_flag = ressources_testees }
+			NOT = { has_province_flag = ressources_farmlands_testees }
 			terrain = farmlands
 			OR = {
 				has_province_modifier = province_terrestre 
@@ -203,78 +145,66 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 	
 	immediate = {
-			set_province_flag = counted_resources
-			set_variable = { which = "resourceNb" value = 0 }
-			set_province_flag = ressources_testees
-			#set_province_flag = ressources_farmlands_testees
+			set_province_flag = ressources_farmlands_testees
 			add_province_modifier = { name = agriculture1		duration = -1	}
-			 change_variable = { which = "resourceNb" value = 1 } 
 			random_list = {
-				10 = { add_province_modifier = { name = elevage1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				 5 = { add_province_modifier = { name = foret1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				 5 = { add_province_modifier = { name = minerai1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				10 = { add_province_modifier = { name = pierre1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				10 = { add_province_modifier = { name = elevage1		duration = -1	} }
+				 5 = { add_province_modifier = { name = foret1			duration = -1	} }
+				 5 = { add_province_modifier = { name = minerai1		duration = -1	} }
+				10 = { add_province_modifier = { name = pierre1			duration = -1	} }
 				70 = {}
-				}
-			if = { 
-				limit = { has_province_modifier = province_cotiere }
-				#set_province_flag = ressources_peche_testees
-				random_list = {
-					30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-					70 = {}
-					}
 				}
 	}
 }
 
 ##évaluation du potentiel économique -côtes maritimes pêche-	
-#province_event = {
- #   id = ECO.0006
-#	hide_window = yes
-#
-#	trigger = {
-#			NOT = { 
-#				has_province_flag = ressources_peche_testees
-#				has_province_modifier = province_terrestre
-#				}
-#			has_province_modifier = province_cotiere
-#			}
-#
-#	mean_time_to_happen = { days = 20 }	
-#	
-#	immediate = {
-#			set_province_flag = ressources_peche_testees
-#			random_list = {
-#				30 = { add_province_modifier = { name = peche1	duration = -1	} }
-#				70 = {}
-#				}
-#	}
-#}
+province_event = {
+    id = ECO.0006
+	hide_window = yes
+
+	trigger = {
+			NOT = { 
+				has_province_flag = ressources_peche_testees
+				has_province_modifier = province_terrestre
+				}
+			has_province_modifier = province_cotiere
+			}
+
+	mean_time_to_happen = { days = 20 }	
+	
+	immediate = {
+			set_province_flag = ressources_peche_testees
+			random_list = {
+				30 = { add_province_modifier = { name = peche1	duration = -1	} }
+				70 = {}
+				}
+	}
+}
 
 ##évaluation du potentiel économique -coteaux non côtiers pisciculture-	
-#province_event = {
- #   id = ECO.0007
-#	hide_window = yes
-#
-#	trigger = {
-#			NOT = { 
-#				has_province_flag = ressources_pisciculture_testees
-#				has_province_modifier = province_cotiere
-#				}
-#			has_province_modifier = province_terrestre
-#				terrain = hills
-#			}
-#
-#	mean_time_to_happen = { days = 20 }
-#	
-#	immediate = {
-#			set_province_flag = ressources_pisciculture_testees
-#			random_list = {
-#				35 = { add_province_modifier = { name = pisci1	duration = -1	} }
-#				65 = {}
-#				}
-#	}
-#}
+province_event = {
+    id = ECO.0007
+	hide_window = yes
+
+	trigger = {
+			NOT = { 
+				has_province_flag = ressources_pisciculture_testees
+				has_province_modifier = province_cotiere
+				}
+			has_province_modifier = province_terrestre
+				terrain = hills
+			}
+
+	mean_time_to_happen = { days = 20 }
+	
+	immediate = {
+			set_province_flag = ressources_pisciculture_testees
+			random_list = {
+				35 = { add_province_modifier = { name = pisci1	duration = -1	} }
+				65 = {}
+				}
+	}
+}
 
 ##évaluation du potentiel économique -déserts-	
 province_event = {
@@ -282,8 +212,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
-			#NOT = { has_province_flag = ressources_deserts_testees }
-			NOT = { has_province_flag = ressources_testees }
+			NOT = { has_province_flag = ressources_deserts_testees }
 			terrain = desert
 			OR = {
 				has_province_modifier = province_terrestre 
@@ -294,25 +223,14 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 	
 	immediate = {
-			set_province_flag = counted_resources
-			set_variable = { which = "resourceNb" value = 0 }
-			set_province_flag = ressources_testees
-			#set_province_flag = ressources_deserts_testees
+			set_province_flag = ressources_deserts_testees
 			random_list = {
-				25 = { add_province_modifier = { name = pierre1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				25 = { add_province_modifier = { name = pierre1		duration = -1	} }
 				75 = {}
 				}
 			random_list = {
-				70 = { add_province_modifier = { name = minerai1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				70 = { add_province_modifier = { name = minerai1	duration = -1	} }
 				30 = {}
-				}
-			if = {
-				limit = { has_province_modifier = province_cotiere }
-				#set_province_flag = ressources_peche_testees
-				random_list = {
-					30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-					70 = {}
-					}
 				}
 	}
 }
@@ -323,8 +241,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
-			#NOT = { has_province_flag = ressources_steppe_testees }
-			NOT = { has_province_flag = ressources_testees }
+			NOT = { has_province_flag = ressources_steppe_testees }
 			terrain = steppe
 			OR = {
 				has_province_modifier = province_terrestre 
@@ -335,25 +252,14 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 	
 	immediate = {
-			set_province_flag = counted_resources
-			set_variable = { which = "resourceNb" value = 0 }
-			set_province_flag = ressources_testees
-			#set_province_flag = ressources_steppe_testees
+			set_province_flag = ressources_steppe_testees
 			random_list = {
-				30 = { add_province_modifier = { name = agriculture1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				30 = { add_province_modifier = { name = agriculture1	duration = -1	} }
 				70 = {}
 				}
 			random_list = {
-				90 = { add_province_modifier = { name = elevage1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				90 = { add_province_modifier = { name = elevage1	duration = -1	} }
 				10 = {}
-				}
-			if = {
-				limit = { has_province_modifier = province_cotiere }
-				#set_province_flag = ressources_peche_testees
-				random_list = {
-					30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-					70 = {}
-					}
 				}
 	}
 }
@@ -364,8 +270,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
-			#NOT = { has_province_flag = ressources_jungle_testees }
-			NOT = { has_province_flag = ressources_testees }
+			NOT = { has_province_flag = ressources_jungle_testees }
 			terrain = jungle
 			OR = {
 				has_province_modifier = province_terrestre 
@@ -376,25 +281,14 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 	
 	immediate = {
-			set_province_flag = counted_resources
-			set_variable = { which = "resourceNb" value = 0 }
-			set_province_flag = ressources_testees
-			#set_province_flag = ressources_jungle_testees
+			set_province_flag = ressources_jungle_testees
 			random_list = {
-				65 = { add_province_modifier = { name = foret1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				65 = { add_province_modifier = { name = foret1		duration = -1	} }
 				35 = {}
 				}
 			random_list = {
-				30 = { add_province_modifier = { name = minerai1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				30 = { add_province_modifier = { name = minerai1	duration = -1	} }
 				70 = {}
-				}
-			if = {
-				limit = { has_province_modifier = province_cotiere }
-				#set_province_flag = ressources_peche_testees
-				random_list = {
-					30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-					70 = {}
-					}
 				}
 	}
 }
@@ -405,8 +299,7 @@ province_event = {
 	hide_window = yes
 
 	trigger = {
-			#NOT = { has_province_flag = ressources_arctique_testees }
-			NOT = { has_province_flag = ressources_testees }
+			NOT = { has_province_flag = ressources_arctique_testees }
 			terrain = arctic
 			OR = {
 				has_province_modifier = province_terrestre 
@@ -417,26 +310,15 @@ province_event = {
 	mean_time_to_happen = { days = 10 }	
 	
 	immediate = {
-			set_province_flag = counted_resources
-			set_variable = { which = "resourceNb" value = 0 }
-			set_province_flag = ressources_testees
-			#set_province_flag = ressources_arctique_testees
+			set_province_flag = ressources_arctique_testees
 			random_list = {
-				60 = { add_province_modifier = { name = foret1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				60 = { add_province_modifier = { name = foret1		duration = -1	} }
 				40 = {}
 				}
 			random_list = {
-				15 = { add_province_modifier = { name = minerai1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				25 = { add_province_modifier = { name = elevage1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				15 = { add_province_modifier = { name = minerai1	duration = -1	} }
+				25 = { add_province_modifier = { name = elevage1	duration = -1	} }
 				60 = {}
-				}
-			if = {
-				limit = { has_province_modifier = province_cotiere }
-				#set_province_flag = ressources_peche_testees
-				random_list = {
-					30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-					70 = {}
-					}
 				}
 	}
 }
@@ -446,31 +328,30 @@ province_event = {
     id = ECO.0015
 	hide_window = yes
 
-	trigger = { #voir si possible en triggered
+	trigger = {
 		OR = { #tout a été testé
-
-			has_province_flag = ressources_testees 
-			#has_province_flag = ressources_plaines_testees
-			#has_province_flag = ressources_forets_testees
-			#has_province_flag = ressources_coteaux_testees
-			#has_province_flag = ressources_montagnes_testees
-			#has_province_flag = ressources_deserts_testees
-			#has_province_flag = ressources_arctique_testees
-			#has_province_flag = ressources_steppe_testees
-			#has_province_flag = ressources_jungle_testees
+			has_province_flag = ressources_plaines_testees
+			has_province_flag = ressources_forets_testees
+			has_province_flag = ressources_coteaux_testees
+			has_province_flag = ressources_montagnes_testees
+			#has_province_flag = ressources_peche_testees
+			#has_province_flag = ressources_pisciculture_testees
+			has_province_flag = ressources_deserts_testees
+			has_province_flag = ressources_arctique_testees
+			has_province_flag = ressources_steppe_testees
+			has_province_flag = ressources_jungle_testees
 			}
 		NOT = { #aucune ressource présente
-		#on peut aussi mettre une limite fonction de la variable "resourceNb"
-		#check_variable = { which = "resourceNb" value = 1 } #less than 1 ressource
 			has_province_modifier = agriculture1
 			has_province_modifier = elevage1
-			has_province_modifier = foret1			
+			has_province_modifier = foret1				
 			has_province_modifier = pierre1
 			has_province_modifier = minerai1
-			has_province_modifier = peche1				
-			has_province_modifier = pisci1
-			#has_province_modifier = pierre2_pierre_brute #not necessary, Pierre1 is hidden instead of removed
-			
+			#has_province_modifier = peche1				
+			#has_province_modifier = pisci1
+			#has_province_modifier = peche2_poisson				
+			#has_province_modifier = pisci2_poisson
+			has_province_modifier = pierre2_pierre_brute
 			#voir si autres ressources avancées à tester
 			}
 		}
@@ -478,17 +359,16 @@ province_event = {
 	mean_time_to_happen = { days = 150 }	
 	
 	immediate = { #suppression des flags pour réattribution
-			clr_province_flag = ressources_testees
-			#set_variable = { which = "resourceNb" value = 0 }#RàZ nécessaire ?
-			
-			#clr_province_flag = ressources_plaines_testees
-			#clr_province_flag = ressources_forets_testees
-			#clr_province_flag = ressources_coteaux_testees
-			#clr_province_flag = ressources_montagnes_testees
-			#clr_province_flag = ressources_deserts_testees
-			#clr_province_flag = ressources_arctique_testees
-			#clr_province_flag = ressources_steppe_testees	
-			#clr_province_flag = ressources_jungle_testees
+			clr_province_flag = ressources_plaines_testees
+			clr_province_flag = ressources_forets_testees
+			clr_province_flag = ressources_coteaux_testees
+			clr_province_flag = ressources_montagnes_testees
+			#clr_province_flag = ressources_peche_testees
+			#clr_province_flag = ressources_pisciculture_testees
+			clr_province_flag = ressources_deserts_testees
+			clr_province_flag = ressources_arctique_testees
+			clr_province_flag = ressources_steppe_testees	
+			clr_province_flag = ressources_jungle_testees
 	}
 }
 
@@ -791,7 +671,6 @@ province_event = {
 	option = {
 		name = "ECO.00130A"
 		remove_province_modifier = pierre1
-		add_province_modifier = { name = pierre1 duration = -1 hidden = yes } #now hidden instead of removed
 		add_province_modifier = { name = pierre2_pierre_brute duration = -1 }		
 	}
 }
