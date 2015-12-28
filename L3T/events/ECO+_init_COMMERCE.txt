@@ -195,34 +195,34 @@ namespace = ECO
 # }
 
 # Count the number of resources in the provinces (in order to choose later if it will be a land of commerce or production)
-province_event = {
-    id = ECO.0026
-	hide_window = yes
-	
-	trigger = {
-		OR = {
-			had_global_flag = { flag = running_SWMH days = 365 }			
-			had_global_flag = { flag = running_VANILLA days = 365 }
-			had_global_flag = { flag = running_LCDA days = 365 }
-		}
-		NOT = { has_province_flag = counted_resources }
-	}
-	
-	mean_time_to_happen = {	days = 10 }
-	
-	immediate = {
-		set_province_flag = counted_resources
-		set_variable = { which = "resourceNb" value = 0 }
-		
-		# Count resources of the province
-		if = { limit = { has_province_modifier = agriculture1} change_variable = { which = "resourceNb" value = 1 } }
-		if = { limit = { has_province_modifier = elevage1} change_variable = { which = "resourceNb" value = 1 } }
-		if = { limit = { has_province_modifier = foret1} change_variable = { which = "resourceNb" value = 1 } }
-		if = { limit = { has_province_modifier = pierre1} change_variable = { which = "resourceNb" value = 1 } }
-		if = { limit = { has_province_modifier = minerai1} change_variable = { which = "resourceNb" value = 1 } }
-		if = { limit = { has_province_modifier = peche1} change_variable = { which = "resourceNb" value = 1 } }
-		if = { limit = { has_province_modifier = pisci1} change_variable = { which = "resourceNb" value = 1 } }
-	}
-}
+#province_event = {
+ #   id = ECO.0026
+#	hide_window = yes
+#	
+#	trigger = {
+#		OR = {
+#			had_global_flag = { flag = running_SWMH days = 365 }			
+#			had_global_flag = { flag = running_VANILLA days = 365 }
+#			had_global_flag = { flag = running_LCDA days = 365 }
+#		}
+#		NOT = { has_province_flag = counted_resources }
+#	}
+#	
+#	mean_time_to_happen = {	days = 10 }
+#	
+#	immediate = {
+#		set_province_flag = counted_resources
+#		set_variable = { which = "resourceNb" value = 0 }
+#		 
+#		# Count resources of the province
+#		if = { limit = { has_province_modifier = agriculture1} change_variable = { which = "resourceNb" value = 1 } }
+#		if = { limit = { has_province_modifier = elevage1} change_variable = { which = "resourceNb" value = 1 } }
+#		if = { limit = { has_province_modifier = foret1} change_variable = { which = "resourceNb" value = 1 } }
+#		if = { limit = { has_province_modifier = pierre1} change_variable = { which = "resourceNb" value = 1 } }
+#		if = { limit = { has_province_modifier = minerai1} change_variable = { which = "resourceNb" value = 1 } }
+#		if = { limit = { has_province_modifier = peche1} change_variable = { which = "resourceNb" value = 1 } }
+#		if = { limit = { has_province_modifier = pisci1} change_variable = { which = "resourceNb" value = 1 } }
+#	}
+#}
 
 	
