@@ -7,7 +7,7 @@
  
 #Recensement des effets
 #	COSTING = 1 income 50po de coût
-#	    potential = { NOT = { has_building = FORT }}	#inutile car pas de mise à jour après chargement
+#	    potential = { NOT = { has_building = FEODAL_mil }}	#inutile car pas de mise à jour après chargement
 #	    potential = {FROM = { has_landed_title = b_annecy1 }}
 #
 #		trigger = { #marche pô !
@@ -15,10 +15,10 @@
 #				any_demesne_title = { 
 #					limit = { 
 #						tier = baron
-#						has_building = FORT  
+#						has_building = FEODAL_mil  
 #						NOT = {
-#							has_building = BOURGFEODAL 
-#							has_building = CITADELLE 
+#							has_building = FEODAL_prod 
+#							has_building = FEODAL_adm 
 #							}
 #					}
 #
@@ -87,11 +87,11 @@
  # Castle
 castle = {
 
-	FORT = { #défense et attaque, vocation militaire
-		desc = "FORT_desc"
+	FEODAL_mil = { #défense et attaque, vocation militaire
+		desc = "FEODAL_mil_desc"
 		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { CITADELLE BOURGFEODAL } # REPAIREVOLEUR	}
+		not_if_x_exists = { FEODAL_adm FEODAL_prod } # REPAIREVOLEUR	}
 		potential = { NOT = { religion_group = pagan_group } }		
 		gold_cost = 0.0
 		build_time = 8
@@ -107,11 +107,11 @@ castle = {
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
-	CITADELLE = { #capitale seigneuriale
-		desc = "CITADELLE_desc"
+	FEODAL_adm = { #capitale seigneuriale
+		desc = "FEODAL_adm_desc"
 		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { FORT BOURGFEODAL } #REPAIREVOLEUR	}
+		not_if_x_exists = { FEODAL_mil FEODAL_prod } #REPAIREVOLEUR	}
 		gold_cost = 0.0
 		build_time = 8
 		#fort_level = 1.0
@@ -125,11 +125,11 @@ castle = {
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
-	BOURGFEODAL = { #
-		desc = "BOURGFEODAL_desc"
+	FEODAL_prod = { #
+		desc = "FEODAL_prod_desc"
 		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { CITADELLE FORT } # REPAIREVOLEUR }	
+		not_if_x_exists = { FEODAL_adm FEODAL_mil } # REPAIREVOLEUR }	
 		gold_cost = 0.0
 		build_time = 8
 		fort_level = -1

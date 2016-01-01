@@ -32,7 +32,7 @@ CA_scierie_L1 = {
 		}
 	}
 	#prerequisites = { CA_BOIS_bois_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_scierie_L2 = {
@@ -73,7 +73,7 @@ CA_four_L1 = {
 		}
 	}
 	#prerequisites = { CA_BOIS_charbon_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_four_L2 = {
@@ -114,7 +114,7 @@ CA_pierre_taille_L1 = {
 		}
 	}
 	#prerequisites = { CA_CARR_pierre_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_pierre_taille_L2 = {
@@ -155,7 +155,7 @@ CA_fonderie_L1 = {
 		}
 	}
 	#prerequisites = { CA_MINE_minerai_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_fonderie_L2 = {
@@ -196,7 +196,7 @@ CA_outilleur_L1 = {
 		}
 	}
 	#prerequisites = { CA_fonderie_L1 }
-	prerequisites = { CITADELLE }
+	prerequisites = { FEODAL_adm }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_outilleur_L2 = {
@@ -236,7 +236,7 @@ CA_armurerie_L1 = {
 		}
 	}
 	#prerequisites = { CA_fonderie_L1 }
-	prerequisites = { FORT }
+	prerequisites = { FEODAL_mil }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	garrison_size = 0.1 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_armurerie_L2 = {

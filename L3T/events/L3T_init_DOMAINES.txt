@@ -31,9 +31,9 @@ narrative_event = {
 			holding_type = castle 
 			NOT = {
 				#has_building = REPAIREVOLEUR
-				has_building = FORT
-				has_building = BOURGFEODAL
-				has_building = CITADELLE
+				has_building = FEODAL_mil
+				has_building = FEODAL_prod
+				has_building = FEODAL_adm
 			}
 		}
 	}	
@@ -47,9 +47,9 @@ narrative_event = {
 				holding_type = castle
 				NOT = {
 					#has_building = REPAIREVOLEUR
-					has_building = FORT
-					has_building = BOURGFEODAL
-					has_building = CITADELLE
+					has_building = FEODAL_mil
+					has_building = FEODAL_prod
+					has_building = FEODAL_adm
 				}
 			}
 			set_title_flag = castle_to_specialize
@@ -79,7 +79,7 @@ narrative_event = {
 			limit = {
 				has_title_flag = castle_to_specialize
 			}
-			add_building = FORT
+			add_building = FEODAL_mil
 			clr_title_flag = castle_to_specialize
 		}
 	}
@@ -106,7 +106,7 @@ narrative_event = {
 			limit = {
 				has_title_flag = castle_to_specialize
 			}
-			add_building = BOURGFEODAL
+			add_building = FEODAL_prod
 			clr_title_flag = castle_to_specialize
 		}
 	}
@@ -134,7 +134,7 @@ narrative_event = {
 			limit = {
 				has_title_flag = castle_to_specialize
 			}
-			add_building = CITADELLE
+			add_building = FEODAL_adm
 			clr_title_flag = castle_to_specialize
 		}
 	}

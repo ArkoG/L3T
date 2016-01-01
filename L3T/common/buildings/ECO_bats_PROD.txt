@@ -16,7 +16,7 @@ CA_AGRI_cereale_L1 = {
 			has_province_modifier = agriculture1
 		NOT = { terrain = hills }
 		}
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 	#prerequisites = { ca_wall_1 } #double préreq fonctionne
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0	
 }
@@ -42,7 +42,7 @@ CA_AGRI_verger_L1 = {
 			has_province_modifier = agriculture1
 		terrain = hills
 		}
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_AGRI_verger_L2 = {
@@ -66,7 +66,7 @@ CA_ELEV_ovin_L1a = {
 			has_province_modifier = elevage1
 		NOT = { terrain = mountain }
 		}
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_ELEV_ovin_L2a = {
@@ -90,7 +90,7 @@ CA_ELEV_ovin_L1b = {
 			has_province_modifier = elevage1
 		terrain = mountain
 		}
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_ELEV_ovin_L2b = {
@@ -117,7 +117,7 @@ CA_ELEV_ovin_L3b = { #voir si à limiter à L2
 			 has_province_modifier = foret2_holy
 			 }
 		 }
-	 prerequisites = { BOURGFEODAL }	
+	 prerequisites = { FEODAL_prod }	
 		 gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
  CA_BOIS_bois_L2 = {
@@ -145,7 +145,7 @@ CA_ELEV_ovin_L3b = { #voir si à limiter à L2
 			 has_province_modifier = foret2_holy
 			 }
 		 }
-	 prerequisites = { BOURGFEODAL }
+	 prerequisites = { FEODAL_prod }
 		 gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
  CA_BOIS_charbon_L2 = {
@@ -172,7 +172,7 @@ CA_CARR_pierre_L1 = {
 			#has_province_modifier = pierre2_pierre_brute 
 			}
 		}
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 		local_build_time_modifier = -0.01 #-1%
 }
@@ -200,7 +200,7 @@ CA_MINE_minerai_L1 = {
 			has_province_modifier = minerai1
 		#NOT = { terrain = desert }
 		}
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 		disease_defence = -0.01 #respirer dans les mines c'est pas bon pour la santé
 }
@@ -231,7 +231,7 @@ CA_FISH_peche_L1 = {
 			has_province_modifier = peche2_poisson
 			}
 		}
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 50	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_FISH_peche_L2 = {
@@ -256,7 +256,7 @@ CA_FISH_pisci_L1 = {
 			has_province_modifier = pisci2_poisson
 			}
 		}
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_FISH_pisci_L2 = {
@@ -278,7 +278,7 @@ CA_AGRI_moulin_L1 = {
 	potential = {
 		has_province_modifier = agriculture2_cereales}
 	#prerequisites = { CA_AGRI_cereale_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_AGRI_moulin_L2 = {
@@ -304,7 +304,7 @@ CA_AGRI_boulangerie_L1 = {
 	potential = {
 		has_province_modifier = agriculture3_farine}
 	#prerequisites = { CA_AGRI_moulin_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_AGRI_boulangerie_L2 = {
@@ -331,7 +331,7 @@ CA_FISH_fumoir_L1 = {
 			has_province_modifier = peche2_poisson
 			has_province_modifier = pisci2_poisson
 		}}
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_FISH_fumoir_L2 = {
@@ -355,7 +355,7 @@ CA_ELEV_cheval_L1 = {
 		has_province_modifier = elevage1
 		terrain = steppe
 	}
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	horse_archers = 20 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_ELEV_cheval_L2 = {
