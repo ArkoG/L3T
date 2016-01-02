@@ -1,0 +1,726 @@
+CA_petit_L1 = { #petit truc
+	desc = CA_petit_L1_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	not_if_x_exists = { BOURG_FEODAL}
+	code gratuit (free code in English)
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	gold_cost = 70
+	prestige_cost = 30
+	build_time = 150
+	ai_creation_factor = 100
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.2
+	heavy_infantry = 40
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_b_L2 = { #B
+	desc = CA_b_L2_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = noeud_commercial_annexe
+	}
+	prerequisites = { 
+		MONASTERE
+	}
+	upgrades_from = CA_petit_L1
+	gold_cost = 150
+	prestige_cost = 60
+	build_time = 440
+	ai_creation_factor = 99
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 41
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_c_L3 = { #C
+	desc = CA_c_L3_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = trad_autre
+	}
+	upgrades_from = CA_b_L2
+	gold_cost = 180
+	prestige_cost = 70
+	build_time = 380
+	ai_creation_factor = 98
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 42
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_d_L4 = { #D
+	desc = CA_d_L4_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	upgrades_from = CA_c_L3
+	gold_cost = 190
+	prestige_cost = 90
+	build_time = 990
+	ai_creation_factor = 97
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 43
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_e_L5 = { #E
+	desc = CA_e_L5_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = noeud_commercial_annexe
+	}
+	prerequisites = { 
+		MONASTERE
+	}
+	upgrades_from = CA_d_L4
+	gold_cost = 200
+	prestige_cost = 120
+	build_time = 920
+	ai_creation_factor = 96
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 44
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_f_L1 = { #F
+	desc = CA_f_L1_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = trad_autre
+	}
+	upgrades_from = CA_e_L5
+	gold_cost = 270
+	prestige_cost = 0
+	build_time = 270
+	ai_creation_factor = 95
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 45
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_g_L2 = { #G
+	desc = CA_g_L2_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	upgrades_from = CA_f_L1
+	gold_cost = 160
+	prestige_cost = 0
+	build_time = 510
+	ai_creation_factor = 94
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 46
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_h_L3 = { #H
+	desc = CA_h_L3_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = noeud_commercial_annexe
+	}
+	prerequisites = { 
+		MONASTERE
+	}
+	upgrades_from = CA_g_L2
+	gold_cost = 310
+	prestige_cost = 0
+	build_time = 910
+	ai_creation_factor = 93
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 47
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_i_L4 = { #I
+	desc = CA_i_L4_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = trad_autre
+	}
+	upgrades_from = CA_h_L3
+	gold_cost = 360
+	prestige_cost = 0
+	build_time = 770
+	ai_creation_factor = 92
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 48
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_j_L5 = { #J
+	desc = CA_j_L5_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	upgrades_from = CA_i_L4
+	gold_cost = 650
+	prestige_cost = 120
+	build_time = 1750
+	ai_creation_factor = 91
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 49
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_k_L1 = { #K
+	desc = CA_k_L1_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = noeud_commercial_annexe
+	}
+	prerequisites = { 
+		MONASTERE
+	}
+	upgrades_from = CA_j_L5
+	gold_cost = 130
+	prestige_cost = 30
+	build_time = 150
+	ai_creation_factor = 90
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 50
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_l_L2 = { #L
+	desc = CA_l_L2_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = trad_autre
+	}
+	upgrades_from = CA_k_L1
+	gold_cost = 220
+	prestige_cost = 0
+	build_time = 370
+	ai_creation_factor = 89
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 51
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_m_L3 = { #M
+	desc = CA_m_L3_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	upgrades_from = CA_l_L2
+	gold_cost = 160
+	prestige_cost = 0
+	build_time = 320
+	ai_creation_factor = 88
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 52
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_n_L4 = { #N
+	desc = CA_n_L4_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = noeud_commercial_annexe
+	}
+	prerequisites = { 
+		MONASTERE
+	}
+	upgrades_from = CA_m_L3
+	gold_cost = 380
+	prestige_cost = 0
+	build_time = 820
+	ai_creation_factor = 87
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 53
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_o_L5 = { #O
+	desc = CA_o_L5_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = trad_autre
+	}
+	upgrades_from = CA_n_L4
+	gold_cost = 310
+	prestige_cost = 0
+	build_time = 770
+	ai_creation_factor = 86
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 54
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_p_L1 = { #P
+	desc = CA_p_L1_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	upgrades_from = CA_o_L5
+	gold_cost = 290
+	prestige_cost = 30
+	build_time = 330
+	ai_creation_factor = 85
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 55
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_q_L2 = { #Q
+	desc = CA_q_L2_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = noeud_commercial_annexe
+	}
+	prerequisites = { 
+		MONASTERE
+	}
+	upgrades_from = CA_p_L1
+	gold_cost = 330
+	prestige_cost = 60
+	build_time = 610
+	ai_creation_factor = 84
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 56
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_r_L3 = { #R
+	desc = CA_r_L3_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = trad_autre
+	}
+	upgrades_from = CA_q_L2
+	gold_cost = 480
+	prestige_cost = 0
+	build_time = 910
+	ai_creation_factor = 83
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 57
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L4 = { #S
+	desc = CA_s_L4_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	upgrades_from = CA_r_L3
+	gold_cost = 360
+	prestige_cost = 0
+	build_time = 770
+	ai_creation_factor = 82
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 58
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L5 = { #S
+	desc = CA_s_L5_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = noeud_commercial_annexe
+	}
+	prerequisites = { 
+		MONASTERE
+	}
+	upgrades_from = CA_s_L4
+	gold_cost = 590
+	prestige_cost = 0
+	build_time = 1460
+	ai_creation_factor = 81
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 59
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L1 = { #S
+	desc = CA_s_L1_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = trad_autre
+	}
+	upgrades_from = CA_s_L5
+	gold_cost = 130
+	prestige_cost = 0
+	build_time = 130
+	ai_creation_factor = 80
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 60
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L2 = { #S
+	desc = CA_s_L2_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	upgrades_from = CA_s_L1
+	gold_cost = 230
+	prestige_cost = 60
+	build_time = 440
+	ai_creation_factor = 79
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 61
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L3 = { #S
+	desc = CA_s_L3_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = noeud_commercial_annexe
+	}
+	prerequisites = { 
+		MONASTERE
+	}
+	upgrades_from = CA_s_L2
+	gold_cost = 180
+	prestige_cost = 70
+	build_time = 380
+	ai_creation_factor = 78
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 62
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L4 = { #S
+	desc = CA_s_L4_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = trad_autre
+	}
+	upgrades_from = CA_s_L3
+	gold_cost = 260
+	prestige_cost = 0
+	build_time = 550
+	ai_creation_factor = 77
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 63
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L5 = { #S
+	desc = CA_s_L5_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	upgrades_from = CA_s_L4
+	gold_cost = 310
+	prestige_cost = 0
+	build_time = 770
+	ai_creation_factor = 76
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 64
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L1 = { #S
+	desc = CA_s_L1_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = noeud_commercial_annexe
+	}
+	prerequisites = { 
+		MONASTERE
+	}
+	upgrades_from = CA_s_L5
+	gold_cost = 270
+	prestige_cost = 0
+	build_time = 270
+	ai_creation_factor = 75
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 65
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L2 = { #S
+	desc = CA_s_L2_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = trad_autre
+	}
+	upgrades_from = CA_s_L1
+	gold_cost = 230
+	prestige_cost = 0
+	build_time = 380
+	ai_creation_factor = 74
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 66
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L3 = { #S
+	desc = CA_s_L3_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	upgrades_from = CA_s_L2
+	gold_cost = 520
+	prestige_cost = 70
+	build_time = 1100
+	ai_creation_factor = 73
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 67
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L4 = { #S
+	desc = CA_s_L4_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = noeud_commercial_annexe
+	}
+	prerequisites = { 
+		MONASTERE
+	}
+	upgrades_from = CA_s_L3
+	gold_cost = 390
+	prestige_cost = 90
+	build_time = 920
+	ai_creation_factor = 72
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 68
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L5 = { #S
+	desc = CA_s_L5_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = trad_autre
+	}
+	upgrades_from = CA_s_L4
+	gold_cost = 590
+	prestige_cost = 0
+	build_time = 1460
+	ai_creation_factor = 71
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 69
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+CA_s_L1 = { #S
+	desc = CA_s_L1_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	potential = { 
+		terrain = hills
+		has_province_modifier = relique_mineure
+	}
+	prerequisites = { 
+		MONASTERE
+		FORT
+	}
+	upgrades_from = CA_s_L5
+	gold_cost = 260
+	prestige_cost = 0
+	build_time = 260
+	ai_creation_factor = 70
+	garrison_size = 0.1
+	fort_level = 0.1
+	local_tax_modifier = 0.1
+	heavy_infantry = 70
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
