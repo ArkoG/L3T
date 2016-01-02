@@ -260,7 +260,8 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 240
+		#months = 240
+		days = 10
 	}
 	
 	option = {
@@ -319,7 +320,8 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 6
+		#months = 6
+		days = 10
 	}
 
 	immediate = { 
@@ -455,7 +457,21 @@ character_event = {
 			holder = THIS
 			ruler = "OUTLAW_TITLE"
 			ruler_female = "OUTLAW_TITLE"
-		}	
+		}
+		FROM = {
+			owner = {
+				spawn_unit = { #Spawn 10% of the levies of the owner of the outlaw province
+					province = FROM
+					home = FROM
+					owner = ROOT
+					match_character = THIS
+					match_mult = 0.1
+					attrition = 1.0
+					reinforces = yes # Ne marche pas
+					disband_on_peace = yes # Ne marche pas
+				}
+			}
+		}
 	}	
 }
 
