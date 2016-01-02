@@ -1,0 +1,31 @@
+decisions = { 
+	refill_outlaw_levy = {
+		potential = {
+			trait = chef_malandrin
+		}
+	
+		allow = {
+			any_demesne_title = {
+				tier = baron
+				has_building = REPAIREVOLEUR
+				NOT = { has_title_flag = refill_outlaw_levy }
+			}
+		}
+	
+		effect = {
+			any_demesne_title = {
+				limit = { tier = BARON }
+				refill_holding_levy = yes
+				set_title_flag = refill_outlaw_levy
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
