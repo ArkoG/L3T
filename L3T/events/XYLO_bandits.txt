@@ -825,7 +825,8 @@ character_event = {
 	
 	option = {
 		name = XYLO.02171A
-		custom_tooltip = { text = bandit_parti } #rasons son repaire		
+		hidden_tooltip = { province_event = { id = XYLO.02172 days = 10 } }	
+		custom_tooltip = { text = bandit_parti } #rasons son repaire	
 	}
 }
 
@@ -835,19 +836,7 @@ province_event = {
 	desc = "DESCXYLO.02172"
 	picture = "GFX_evt_bandits"
 	
-	trigger = {
-		has_province_flag = chef_bandit
-		has_province_modifier = bandits_installes
-		NOT = {
-			any_province_lord  = {
-				trait = chef_malandrin
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 3
-	}
+	is_triggered_only = yes
 
 	immediate = {
 		remove_province_modifier = bandits_installes
@@ -904,5 +893,135 @@ province_event = {
 		owner = { prestige = 14 }
 		add_province_modifier = { name = la_province_se_remet duration = 1825 } #5 ans		
 		clr_province_flag = chef_bandit
+	}
+}
+
+# Succession after the death of the outlaw leader
+character_event = {
+	id = XYLO.0218
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = chef_malandrin
+	}
+	
+	immediate = {
+		random_list = {
+			80 = { # A new leader
+				random_list = {
+					70 = {
+						create_character = {
+							random_traits = yes
+							dynasty = NONE
+							female = no
+							age = 25
+							religion = ROOT
+							culture = ROOT
+							trait = chef_malandrin
+							attributes = {
+								martial = 12
+								intrigue = 15
+								stewardship = 10
+							}
+						}
+						new_character = {
+							ROOT = {
+								any_demesne_title = { # Give the King title to the new outlaw (the holding title will be inherited)
+									limit = { tier = KING }
+									grant_title = PREVPREV
+								}
+							}
+							random_list = {
+								#masculins
+								15 = { give_nickname = nick_lecureuil_noir	}
+								10 = { give_nickname = nick_le_hideux	}
+								10 = { give_nickname = nick_lecorcheur	}
+								 5 = { give_nickname = nick_linvincible	}
+								10 = { give_nickname = nick_le_terrible	}
+								 5 = { give_nickname = nick_le_nigaud	}
+								15 = { give_nickname = nick_le_sauvage	}
+								10 = { give_nickname = nick_le_ruse	}
+								10 = { give_nickname = nick_le_sordide	}
+								10 = { give_nickname = nick_le_jeune_loup	}
+								 5 = { give_nickname = nick_le_fourbe	}
+								10 = { give_nickname = nick_le_renard	}
+								10 = { give_nickname = nick_le_redoutable	}
+								15 = { give_nickname = nick_lindomptable	}
+								 5 = { give_nickname = nick_le_gueux	}
+								#neutres
+								10 = { give_nickname = nick_la_belette	}
+								10 = { give_nickname = nick_crocs_dargent	}
+								10 = { give_nickname = nick_patte_de_lievre	}
+								10 = { give_nickname = nick_bonne_fortune	}
+								10 = { give_nickname = nick_oeil_de_serpent	}
+								10 = { give_nickname = nick_brave_la_mort	}
+								10 = { give_nickname = nick_oeil_de_lynx	}
+							}
+						}
+					}
+
+					30 ={
+						create_character = {
+							random_traits = yes
+							dynasty = NONE
+							female = yes
+							age = 25
+							religion = ROOT
+							culture = ROOT
+							trait = chef_malandrin
+							attributes = {
+								martial = 8
+								intrigue = 17
+								stewardship = 12
+							}
+						}
+						new_character = {
+							ROOT = {
+								any_demesne_title = { # Give the King title to the new outlaw (the holding title will be inherited)
+									limit = { tier = KING }
+									grant_title = PREVPREV
+								}
+							}
+							random_list = {
+								#féminins
+								15 = { give_nickname = nick_la_vipere	}
+								10 = { give_nickname = nick_la_charmeuse	}
+								10 = { give_nickname = nick_la_maline	}
+								 5 = { give_nickname = nick_la_terrible	}
+								10 = { give_nickname = nick_la_rusee	}
+								 5 = { give_nickname = nick_la_nigaude	}
+								 5 = { give_nickname = nick_la_sordide	}
+								10 = { give_nickname = nick_la_fourbe	}
+								15 = { give_nickname = nick_la_renarde	}
+								10 = { give_nickname = nick_la_jeune_louve	}
+								15 = { give_nickname = nick_la_ribaude	}
+								10 = { give_nickname = nick_la_redoutable	}
+								10 = { give_nickname = nick_la_sauvage	}
+								 5 = { give_nickname = nick_la_terreur	}
+								#neutres
+								10 = { give_nickname = nick_la_belette	}
+								10 = { give_nickname = nick_crocs_dargent	}
+								10 = { give_nickname = nick_patte_de_lievre	}
+								10 = { give_nickname = nick_bonne_fortune	}
+								10 = { give_nickname = nick_oeil_de_serpent	}
+								10 = { give_nickname = nick_brave_la_mort	}
+								10 = { give_nickname = nick_oeil_de_lynx	}
+							}
+						}
+					}
+				}
+			}
+			20 = { # End of the outlaws
+				any_demesne_province = {
+					province_event = { id = XYLO.02171 days = 10 }					
+				}
+				any_demesne_title = { # Destroy the King title
+					limit = { tier = KING }
+					activate_title = { title = THIS status = no } 
+				}
+			}
+		}
 	}
 }
