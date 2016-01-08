@@ -743,35 +743,17 @@ character_event = {
 }
 
 # Suppression fief du bandit (cleanup)
-character_event = {
+province_event = {
 	id = XYLO.02171
 	desc = "DESCXYLO.02171"
 	picture = "GFX_evt_bandits"
 
-	only_rulers = yes
-
 	trigger = {
-		NOT = { trait = chef_malandrin }
-		any_demesne_title = {
-			tier = baron
+		has_province_flag = chef_bandit	
+		any_province_holding  = {
 			is_feudal = yes
-			OR = {
-				has_building = REPAIREVOLEUR
-				has_building = repaire_voleur_L1
-				has_building = repaire_voleur_L2
-				has_building = repaire_voleur_L3
-				has_building = repaire_voleur_L4
-				has_building = repaire_voleur_L5
-				has_building = fort_brigands_L1
-				has_building = fort_brigands_L2
-				has_building = fort_brigands_L3
-				has_building = caserne_brigands_L1
-				has_building = caserne_brigands_L2
-				has_building = caserne_brigands_L3
-				has_building = reseau_provincial_L1
-				has_building = reseau_provincial_L2
-				has_building = reseau_provincial_L3
-			}
+			owner = { NOT = { trait = chef_malandrin } }
+			has_building = REPAIREVOLEUR
 		}
 	}
 	
@@ -780,27 +762,11 @@ character_event = {
 	}
 
 	immediate = {
-		random_demesne_title = {
+		random_province_holding  = {
 			limit = {
-				tier = baron
 				is_feudal = yes
-				OR = {
-					has_building = REPAIREVOLEUR
-					has_building = repaire_voleur_L1
-					has_building = repaire_voleur_L2
-					has_building = repaire_voleur_L3
-					has_building = repaire_voleur_L4
-					has_building = repaire_voleur_L5
-					has_building = fort_brigands_L1
-					has_building = fort_brigands_L2
-					has_building = fort_brigands_L3
-					has_building = caserne_brigands_L1
-					has_building = caserne_brigands_L2
-					has_building = caserne_brigands_L3
-					has_building = reseau_provincial_L1
-					has_building = reseau_provincial_L2
-					has_building = reseau_provincial_L3
-				}
+				owner = { NOT = { trait = chef_malandrin } }
+				has_building = REPAIREVOLEUR
 			}
 			remove_holding_modifier = bandits_holding
 			remove_building = REPAIREVOLEUR
@@ -1014,12 +980,13 @@ character_event = {
 				}
 			}
 			20 = { # End of the outlaws
-				any_demesne_province = {
-					province_event = { id = XYLO.02171 days = 10 }					
-				}
 				any_demesne_title = { # Destroy the King title
 					limit = { tier = KING }
 					activate_title = { title = THIS status = no } 
+				}
+				any_demesne_title = { # Destroy the King title
+					limit = { NOT = { tier = KING } }
+					location = { province_event = { id = XYLO.02171 days = 10 }	}
 				}
 			}
 		}
