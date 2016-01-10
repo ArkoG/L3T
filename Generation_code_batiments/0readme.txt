@@ -35,7 +35,6 @@ REMARQUES SUR LE FONCTIONNEMENT
 	
 REMARQUES DE REQUIS:
 	- ne pas mettre des cases en pourcentage (remplacer 1.00% par 0.01 ou par 0,01)
-	- ne pas mettre de \n dans une case (cela est surtout valable pour la case description)
 	- mettre un batiment requis 1 avant de mettre un batiment requis 2
 	- l'effet 1 est necessaire; les autres peuvent être remplis ou non et dans n'importe quel ordre (par ex le 3 mais pas le 2)
 	- les batiments requis sont mis les uns à la suite des autres (comme si ils étaient dans un bloc AND)

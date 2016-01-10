@@ -1,3 +1,4 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -43,12 +44,12 @@ public class Main {
 				fichierLocalisation = new OutputStreamWriter(new FileOutputStream(fileLocalisation), ANSI);
 
 				// Lecture en délimitant par des ;
-				Scanner line = new Scanner(fichierLecture);
-				line.useDelimiter(Pattern.compile("[\n]"));				
+				BufferedReader br = new BufferedReader(fichierLecture);
+				String line;			
 
-				while (line.hasNext()) {					
+				while ((line = br.readLine()) != null) {					
 					lineNb ++;				
-					Scanner scanner = new Scanner(line.next());
+					Scanner scanner = new Scanner(line);
 					scanner.useDelimiter(Pattern.compile(";"));
 					
 					// Lecture d'un bâtiment
@@ -91,7 +92,7 @@ public class Main {
 					}
 					scanner.close();
 				}
-				line.close();
+				br.close();
 
 				// Ecriture
 				fichierCode.write(stockage.codeBatiments());
