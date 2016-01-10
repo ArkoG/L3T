@@ -1,15 +1,21 @@
 OUTLAWS TODO LIST
 - Manage the attack of the installed outlaws
-- See the events of end of outlaws (XYLO.0217*)
+- See the events of end of outlaws (XYLO.0217*) => merge
+	=> TEST with no buildings removal then the holding building (see if the outlaws buildings are there)
 - Change outlaw portrait (interface/portrait_properties but incompatible) OR put in DUKE
 - Make intervention during summer feast (see Robin Hood in legends_events)
 - Make intervention during great tournament (see Robin Hood in legends_events)
 - Test the case of war victory (the king title disapear?)
+- Events for pirates in provinces with trade post (see republic_trade_events)
+	-> apply it for both trade post and province owners
+	-> see gitl3tsynchro for examples
 - Add jobs for fight outlaws
 	-> add text to existing jobs
 	-> do events with these jobs
 - Add an ambition to expel outlaws
 	-> events chains
+- Increase prestige of the outlaw expulsion
+- Forbid the resource progression when outlaws are in the province
 
 TEST TODO
 - How the IA manage the outlaws
@@ -22,3 +28,11 @@ BUGS
 - Domain specialization events
 - Province moreless owned by the outlaws : we see it in the event picture (only when his title is greater than the real province owner?)
 	-> owner = { } is the outlaw?
+
+POTENTIAL BUG (i.e to investigate)
+XYLO.02120 and XYLO.02121 have not exactly the same triggers
+In some case, if we choose to do something, the failure is impossible.
+=> I think 
+	NOT = { owner = { any_demesne_province = { has_province_modifier = bandits_installes }}}
+will be replaced by
+	NOT = { has_province_modifier = bandits_installes }
