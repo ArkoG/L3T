@@ -1251,6 +1251,91 @@ province_event = {
 	}
 }
 
+#activation PEAUX
+province_event = {
+    id = ECO.00124
+	desc = "DESCECO.00124"
+	picture = GFX_evt_market
+	
+	trigger = {
+		NOT = { has_province_modifier = peaux2_fourrure }
+		any_province_lord  = {
+			is_ruler = yes
+			any_demesne_title = {
+				location = {	province_id = PREVPREVPREV	}
+				tier = baron
+				OR = {	
+					has_building = TR_import_joyaux_3
+					has_building = CT_import_joyaux_3
+					}
+				}
+			}
+	}
+		
+	mean_time_to_happen = { days = 360 }
+
+	option = {
+		name = "ECO.00124A"
+		add_province_modifier = { name = peaux2_fourrure duration = -1 }		
+	}
+}
+#activation JOYAUX
+province_event = {
+    id = ECO.00125
+	desc = "DESCECO.00125"
+	picture = GFX_evt_market
+	
+	trigger = {
+		NOT = { has_province_modifier = joyaux2_bijoux }
+		any_province_lord  = {
+			is_ruler = yes
+			any_demesne_title = {
+				location = {	province_id = PREVPREVPREV	}
+				tier = baron
+				OR = {	
+					has_building = TR_import_joyaux_3
+					has_building = CT_import_joyaux_3
+					}
+				}
+			}
+	}
+		
+	mean_time_to_happen = { days = 360 }
+
+	option = {
+		name = "ECO.00125A"
+		add_province_modifier = { name = joyaux2_bijoux duration = -1 }		
+	}
+}
+#activation EPICES
+province_event = {
+    id = ECO.00126
+	desc = "DESCECO.00126"
+	picture = GFX_evt_market
+	
+	trigger = {
+		NOT = { has_province_modifier = epices2_epices}
+		any_province_lord  = {
+			is_ruler = yes
+			any_demesne_title = {
+				location = {	province_id = PREVPREVPREV	}
+				tier = baron
+				OR = {	
+					has_building = TR_import_epices_3
+					has_building = CT_import_epices_3 
+					}
+				}
+			}
+	}
+		
+	mean_time_to_happen = { days = 360 }
+
+	option = {
+		name = "ECO.00126A"
+		add_province_modifier = { name = epices2_epices duration = -1 }		
+	}
+}
+
 #activation PIERRE TAILLE
 province_event = {
     id = ECO.00131

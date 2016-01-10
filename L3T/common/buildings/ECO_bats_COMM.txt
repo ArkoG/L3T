@@ -13,8 +13,9 @@ CT_COMM_peaux_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = { 
 		OR = {
-			has_province_modifier = noeud_commercial_primaire
-			has_province_modifier = noeud_commercial_annexe
+			has_province_modifier = peaux2_fourrure
+			#has_province_modifier = noeud_commercial_primaire
+			#has_province_modifier = noeud_commercial_annexe
 			}
 		}
 	not_if_x_exists = { CT_COMM_joyaux_L1 CT_COMM_epices_L1 VOC_INDUSTRIELLE }
@@ -42,8 +43,9 @@ CT_COMM_joyaux_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = { 
 		OR = {
-			has_province_modifier = noeud_commercial_primaire
-			has_province_modifier = noeud_commercial_annexe
+			has_province_modifier = joyaux2_bijoux
+			#has_province_modifier = noeud_commercial_primaire
+			#has_province_modifier = noeud_commercial_annexe
 			}
 		}
 	not_if_x_exists = { CT_COMM_peaux_L1 CT_COMM_epices_L1 VOC_INDUSTRIELLE }
@@ -72,8 +74,9 @@ CT_COMM_epices_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = { 
 		OR = {
-			has_province_modifier = noeud_commercial_primaire
-			has_province_modifier = noeud_commercial_annexe
+			has_province_modifier = epices2_epices
+			#has_province_modifier = noeud_commercial_primaire
+			#has_province_modifier = noeud_commercial_annexe
 			}
 		}
 	not_if_x_exists = { CT_COMM_peaux_L1 CT_COMM_joyaux_L1 VOC_INDUSTRIELLE }
@@ -97,6 +100,4 @@ CT_COMM_epices_L3 = {
 }
 
 }
-
-
 
