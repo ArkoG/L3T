@@ -1259,17 +1259,12 @@ province_event = {
 	
 	trigger = {
 		NOT = { has_province_modifier = peaux2_fourrure }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
+		any_province_holding = {
 				OR = {	
 					has_building = TR_import_joyaux_3
 					has_building = CT_import_joyaux_3
 					}
 				}
-			}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1287,17 +1282,12 @@ province_event = {
 	
 	trigger = {
 		NOT = { has_province_modifier = joyaux2_bijoux }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
+		any_province_holding = {
+				OR = {		
 					has_building = TR_import_joyaux_3
 					has_building = CT_import_joyaux_3
 					}
 				}
-			}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1315,17 +1305,12 @@ province_event = {
 	
 	trigger = {
 		NOT = { has_province_modifier = epices2_epices}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
+		any_province_holding = {
+				OR = {		
 					has_building = TR_import_epices_3
 					has_building = CT_import_epices_3 
 					}
 				}
-			}
 	}
 		
 	mean_time_to_happen = { days = 360 }
