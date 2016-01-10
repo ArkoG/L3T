@@ -1,7 +1,11 @@
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.nio.charset.Charset;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -11,6 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 public class Main {
+	public static String ANSI = "windows-1252";
 
 	public static void main(String[] args) {
 		JFrame frame = new JFrame();		
@@ -24,23 +29,28 @@ public class Main {
 			// Définition des fichiers
 			File fileCode = new File(nomFichierCode);
 			File fileLocalisation = new File(nomFichierLocalisation);
-			FileInputStream fichierLecture = null;
+			InputStreamReader fichierLecture = null;
 			FileWriter fichierCode = null;
-			FileWriter fichierLocalisation = null;
+			OutputStreamWriter fichierLocalisation = null;
 
-			StockageBat stockage = new StockageBat();		
+			StockageBat stockage = new StockageBat();
+			int lineNb = 0;
 
 			try {
 				// Ouverture des fichiers
-				fichierLecture = new FileInputStream(nomFichierLecture);
+				fichierLecture = new InputStreamReader(new FileInputStream(nomFichierLecture), ANSI);
 				fichierCode = new FileWriter(fileCode);
-				fichierLocalisation = new FileWriter(fileLocalisation);
+				fichierLocalisation = new OutputStreamWriter(new FileOutputStream(fileLocalisation), ANSI);
 
 				// Lecture en délimitant par des ;
-				Scanner scanner = new Scanner(fichierLecture);
-				scanner.useDelimiter(Pattern.compile("[;\n]"));
+				Scanner line = new Scanner(fichierLecture);
+				line.useDelimiter(Pattern.compile("[\n]"));				
 
-				while (scanner.hasNext()) {
+				while (line.hasNext()) {					
+					lineNb ++;				
+					Scanner scanner = new Scanner(line.next());
+					scanner.useDelimiter(Pattern.compile(";"));
+					
 					// Lecture d'un bâtiment
 					String tag = scanner.next();
 					String nomFR = scanner.next();
@@ -79,19 +89,20 @@ public class Main {
 								modifier_req, tech_req, niv_tech_req, ai_factor,
 								descriptionFR, descriptionENG, tech_start);
 					}
+					scanner.close();
 				}
-				scanner.close();
+				line.close();
 
 				// Ecriture
 				fichierCode.write(stockage.codeBatiments());
-				fichierLocalisation.write(stockage.localisationBatiments());
+				fichierLocalisation.append(stockage.localisationBatiments());
 				
 				JOptionPane.showMessageDialog(frame, "Les fichiers ont été correctement créés", "", JOptionPane.INFORMATION_MESSAGE);
 				
 				// Fermeture application
 				frame.dispose();
 			} catch (NoSuchElementException e) {	
-				throw new IllegalArgumentException("ERROR : une ligne est invalide");
+				throw new IllegalArgumentException("ERROR : nombre d'arguments insuffisants ligne " + lineNb);
 			} catch (Exception e) {
 				throw new IllegalArgumentException(e.getMessage());
 			} finally {
