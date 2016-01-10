@@ -113,7 +113,7 @@ province_event = {
 province_event = {
     id = ECO.0202
 	desc = "DESCECO.0202"
-	picture = GFX_evt_merchant_ship_at_sea_republic
+	picture = GFX_evt_L3T_fishing
 	
 	trigger = {
 		has_province_modifier = peche2_poisson
@@ -144,7 +144,7 @@ province_event = {
 					owner = { 		
 						chronicle = {
 							entry = PECHE_BONNE_CHRONIQUE
-							picture = GFX_evt_merchant_ship_at_sea_republic
+							picture = GFX_evt_L3T_fishing
 						}
 					}
 				}
