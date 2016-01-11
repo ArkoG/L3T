@@ -1261,8 +1261,8 @@ province_event = {
 		NOT = { has_province_modifier = peaux2_fourrure }
 		any_province_holding = {
 				OR = {	
-					has_building = TR_import_joyaux_3
-					has_building = CT_import_joyaux_3
+					has_building = TR_import_peaux_3
+					has_building = CT_import_peaux_3
 					}
 				}
 	}
