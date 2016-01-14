@@ -25,12 +25,12 @@ narrative_event = {
 			had_global_flag = { flag = running_VANILLA days = 180 }
 			had_global_flag = { flag = running_LCDA days = 180 }
 		}
-		#NOT = { trait = chef_malandrin }
+		NOT = { trait = chef_malandrin }
 		any_demesne_title = {
 			tier = baron
 			holding_type = castle 
 			NOT = {
-				#has_building = REPAIREVOLEUR
+				has_building = REPAIREVOLEUR
 				has_building = FORT
 				has_building = BOURGFEODAL
 				has_building = CITADELLE
@@ -46,7 +46,7 @@ narrative_event = {
 				tier = baron
 				holding_type = castle
 				NOT = {
-					#has_building = REPAIREVOLEUR
+					has_building = REPAIREVOLEUR
 					has_building = FORT
 					has_building = BOURGFEODAL
 					has_building = CITADELLE
