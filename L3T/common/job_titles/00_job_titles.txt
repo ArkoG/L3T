@@ -38,6 +38,7 @@ job_chancellor = {
 		}
 		
 		prisoner = no
+		NOT = { trait = chef_malandrin }
 		NOT = { trait = incapable }
 		NOT = { trait = in_hiding }
 	}
@@ -90,6 +91,7 @@ job_marshal = {
 		}
 		
 		prisoner = no
+		NOT = { trait = chef_malandrin }
 		NOT = { trait = incapable }
 		NOT = { trait = in_hiding }
 		NOT = { has_character_flag = guru }
@@ -138,6 +140,7 @@ job_treasurer = {
 			has_character_flag = special_treasurer
 		}
 		prisoner = no
+		NOT = { trait = chef_malandrin }
 		NOT = { trait = incapable }
 		NOT = { trait = in_hiding }
 		NOT = { has_character_flag = guru }
@@ -198,6 +201,7 @@ job_spymaster = {
 		}
 		
 		prisoner = no
+		NOT = { trait = chef_malandrin }
 		NOT = { trait = incapable }
 		NOT = { trait = in_hiding }
 		NOT = { has_character_flag = guru }
@@ -226,6 +230,7 @@ job_spiritual = {
 	
 	allow = {
 		prisoner = no
+		NOT = { trait = chef_malandrin }
 		NOT = { trait = incapable }
 		NOT = { trait = in_hiding }
 		liege = {
