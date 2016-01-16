@@ -1,4 +1,7 @@
 OUTLAWS TODO LIST
+- Prevent outlaw to become
+	> Commandant
+	> Councillor
 - Manage the attack of the installed outlaws
 - See the events of end of outlaws (XYLO.0217*) => merge
 	=> TEST with no buildings removal then the holding building (see if the outlaws buildings are there)
@@ -16,17 +19,19 @@ OUTLAWS TODO LIST
 	-> events chains
 - Increase prestige of the outlaw expulsion
 - Forbid the resource progression when outlaws are in the province
+- Use Cases Belli dejure_barony_claim to declare war
 
 TEST TODO
 - How the IA manage the outlaws
 	-> Declare war? Apparently not
-- Try with an Emperor : the outlaw is his vassal?
-	-> Suggestion give to the outlaw, the title of owner of the province
 - Have outlaws, wait 2 years (or more), kill the leader (several times if needed in order to have no successor), have new outlaws
 	
-BUGS
+BUGS (with Outlaw as King and independant rulers)
 - Province moreless owned by the outlaws : we see it in the event picture (only when his title is greater than the real province owner?)
 	-> owner = { } is the outlaw?
+	-> Suggestion give to the outlaw, the title of owner of the province
+- In Pomeranie, the pagan Duke gain the Outlaw King Title
+	=> Outlaws come back to vassals
 
 POTENTIAL BUG (i.e to investigate)
 XYLO.02120 and XYLO.02121 have not exactly the same triggers

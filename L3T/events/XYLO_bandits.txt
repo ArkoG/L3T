@@ -447,14 +447,13 @@ character_event = {
 			limit = { tier = baron }
 			add_holding_modifier = { modifier = bandits_holding duration = -1 }
 		}
-		create_title = {
-			tier = KING
-			landless = no
-			culture = THIS
-			name = "OUTLAW"
-			holder = THIS
-			ruler = "OUTLAW_TITLE"
-			ruler_female = "OUTLAW_TITLE"
+		# The outlaw is a vassal of the owner of the province
+		FROM = {
+			owner = {
+				ROOT = {
+					set_defacto_liege = PREV
+				}
+			}
 		}
 	}	
 }
