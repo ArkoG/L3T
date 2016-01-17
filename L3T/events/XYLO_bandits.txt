@@ -743,8 +743,8 @@ character_event = {
 
 # Suppression fief du bandit (cleanup)
 province_event = {
-	id = XYLO.02171
-	desc = "DESCXYLO.02171"
+	id = XYLO.0217
+	desc = "DESCXYLO.0217"
 	picture = "GFX_evt_bandits"
 
 	trigger = {
@@ -786,29 +786,11 @@ province_event = {
 			destroy_landed_title = THIS
 			destroy_settlement = THIS
 		}
-	}
-	
-	option = {
-		name = XYLO.02171A
-		hidden_tooltip = { province_event = { id = XYLO.02172 days = 10 } }	
-		custom_tooltip = { text = bandit_parti } #rasons son repaire	
-	}
-}
-
-# Suppression fief du bandit (cleanup)
-province_event = {
-	id = XYLO.02172
-	desc = "DESCXYLO.02172"
-	picture = "GFX_evt_bandits"
-	
-	is_triggered_only = yes
-
-	immediate = {
 		remove_province_modifier = bandits_installes
 	}
-		
+
 	option = {
-	name = XYLO.02172A #disparition des bandits dans la province.
+	name = XYLO.0217A #disparition des bandits dans la province.
 		trigger = { # moins d'un an
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 365	}}
 		}
@@ -818,7 +800,7 @@ province_event = {
 	}
 	
 	option = {
-	name = XYLO.02172A #disparition des bandits dans la province.
+	name = XYLO.0217A #disparition des bandits dans la province.
 		trigger = {	# entre 1 et 2 ans
 			had_province_flag = {	flag = chef_bandit	days = 365	}
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 730	}}
@@ -829,7 +811,7 @@ province_event = {
 	}
 	
 	option = {
-	name = XYLO.02172A #disparition des bandits dans la province.
+	name = XYLO.0217A #disparition des bandits dans la province.
 		trigger = {	# entre 2 et 3 ans
 			had_province_flag = {	flag = chef_bandit	days = 730	}
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 1095	}}
@@ -840,7 +822,7 @@ province_event = {
 	}
 	
 	option = {
-	name = XYLO.02172A #disparition des bandits dans la province.
+	name = XYLO.0217A #disparition des bandits dans la province.
 		trigger = {	# entre 3 et 4 ans
 			had_province_flag = {	flag = chef_bandit	days = 1095	}
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 1460	}}
@@ -851,7 +833,7 @@ province_event = {
 	}
 	
 	option = {
-	name = XYLO.02172A #disparition des bandits dans la province.
+	name = XYLO.0217A #disparition des bandits dans la province.
 		trigger = {	# plus de 4 ans
 			had_province_flag = {	flag = chef_bandit	days = 1460	}
 		}
@@ -978,7 +960,7 @@ character_event = {
 			}
 			20 = { # End of the outlaws
 				any_demesne_title = {
-					location = { province_event = { id = XYLO.02171 days = 10 }	}
+					location = { province_event = { id = XYLO.0217 days = 10 }	}
 				}
 			}
 		}
