@@ -1,5 +1,19 @@
 OUTLAWS TODO LIST
+- Add a -1 or -2 health to outlaw trait
+- Improve succession
+	-> Probability must depend on the death of the Outlaw
+		> Assassinated or died in battle => less probability to have a successor
 - Manage the attack (or other actions) against the installed outlaws (same as no-installed outlaws?)
+	-> The outlaws have an event to attack the baronnies if they are not in war (only cities and temple? even the province capital?)
+	-> The barony have for 1 year the modifier "Pillé" = -20% d'or
+		> Add a probability of building destruction? Typically 5%?
+	-> The owner of the province received an event informing it
+		> Loss of prestige (or piety if it is a temple)
+		> If he decided to do nothing (choice or in war), he also lost opinion with the baron (5 years)
+	-> The province owner decided to act
+		> Send army (i.e declare war)
+		> Send spys to assassinate the leader
+		> Send spys to confuse the outlaws
 - Change outlaw portrait (interface/portrait_properties but incompatible)
 - Make intervention during summer feast (see Robin Hood in legends_events)
 - Make intervention during great tournament (see Robin Hood in legends_events)
