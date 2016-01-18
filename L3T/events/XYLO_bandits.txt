@@ -452,6 +452,7 @@ character_event = {
 		any_demesne_title = {
 			limit = { tier = baron }
 			add_holding_modifier = { modifier = bandits_holding duration = -1 }
+			set_title_flag = outlaw_holding # Must be used because "has_holding_modifier" doesn't exists
 		}
 		# The outlaw is a vassal of the owner of the province
 		FROM = {
@@ -977,6 +978,111 @@ character_event = {
 					location = { province_event = { id = XYLO.0217 days = 10 }	}
 				}
 			}
+		}
+	}
+}
+
+# Looting of an holding
+province_event = {
+	id = XYLO.0219
+	desc = "DESCXYLO.0219"
+	picture = "GFX_evt_bandits"
+		
+	trigger = {
+		any_province_holding  = {
+			is_feudal = yes
+			owner = { trait = chef_malandrin }
+		}
+		# TODO : don't put it on the outlaw holding
+		# The holding has never been looted or more than 1 year ago
+		any_province_holding = {
+			NOT = { has_title_flag = outlaw_holding }
+			OR = { # Implement "has_holding_modifier = looted_holding" with 2 flags
+				NOT = { has_title_flag = looted_title }
+				had_title_flag = { flag = looted_title days = 365 }
+			}
+			# TODO : Test this implementation by running 2-3 years
+		}
+		
+	}
+
+	mean_time_to_happen = {
+		# months = 3
+		days = 10
+	}
+
+	immediate = { # BU
+		random_province_holding = { # TODO : try to link it with the looted Old God mechanism
+			# An holding of the province will be looted
+			limit = {
+				OR = { # Implement "has_holding_modifier = looted_holding" with 2 flags
+					NOT = { has_title_flag = looted_title }
+					had_title_flag = { flag = looted_title days = 365 }
+				}
+			}		
+			set_title_flag = current_looted_title
+			owner = { set_character_flag = looted_holding_lord }
+		}
+	}
+	
+	option = { # We must act
+		name = XYLO.0219A
+		trigger = { owner = { war = no } }
+		ai_chance = { factor = 100 }
+		# TODO: The event chain also activable by decision
+		# The holding is looted
+		random_province_holding = {
+			limit = { has_title_flag = current_looted_title }
+			clr_title_flag = current_looted_title
+			set_title_flag = looted_title
+			add_holding_modifier = { modifier = looted_holding duration = 365 }
+			
+			# The province owner loses piety if a temple is looted
+			if = {
+				limit = {
+					holding_type = temple
+				}
+				location = { owner = { piety = -20 } }
+				break = yes
+			}
+			
+			# The province owner loses prestige otherwise
+			location = { owner = { prestige = -20 } }
+		}
+	}
+
+	option = { # We have not the time for this
+		name = XYLO.0219B
+		ai_chance = { factor = 0 }
+		# The holder of the looted holding dislike the province owner
+		owner = {
+			random_vassal = {
+				limit = { has_character_flag = looted_holding_lord }
+				clr_character_flag = looted_holding_lord
+				opinion = {
+					who = PREV
+					modifier = loot_outlaw 
+					years = 5
+				}
+			}
+		}
+		# The holding is looted
+		random_province_holding = {
+			limit = { has_title_flag = current_looted_title }
+			clr_title_flag = current_looted_title
+			add_holding_modifier = { modifier = looted_holding duration = 365 }
+			
+			# The province owner loses piety if a temple is looted
+			if = {
+				limit = {
+					holding_type = temple
+				}
+				location = { owner = { piety = -20 } }
+				break = yes
+			}
+			
+			# The province owner loses prestige otherwise
+			location = { owner = { prestige = -20 } }
 		}
 	}
 }
