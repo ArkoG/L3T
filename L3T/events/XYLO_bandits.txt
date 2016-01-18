@@ -864,6 +864,13 @@ character_event = {
 	immediate = {
 		random_list = {
 			80 = { # A new leader
+				modifier = { # Less chance to have a successor he is killed maybe by the player
+					factor = 0.25
+					OR = {
+						death_reason = death_battle
+						death_reason = death_murder
+					}
+				}
 				random_list = {
 					70 = {
 						create_character = {
