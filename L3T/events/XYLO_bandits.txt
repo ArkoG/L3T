@@ -193,6 +193,10 @@ province_event = {
 			modifier = { factor = 0.9	has_empty_holding = no	} #sans base arrière possible, meilleures chances
 	}
 
+	immediate = {
+		hidden_tooltip = { remove_province_modifier = la_province_se_remet }
+	}
+	
 	option = { #REUSSITE
 		name = OK
 		clr_province_flag = chancelier_envoye
@@ -787,6 +791,7 @@ province_event = {
 			destroy_settlement = THIS
 		}
 		remove_province_modifier = bandits_installes
+		hidden_tooltip = { remove_province_modifier = la_province_se_remet }
 	}
 
 	option = {
