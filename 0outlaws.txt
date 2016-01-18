@@ -1,11 +1,7 @@
 OUTLAWS TODO LIST
-- Add a -1 or -2 health to outlaw trait
-- Improve succession
-	-> Probability must depend on the death of the Outlaw
-		> Assassinated or died in battle => less probability to have a successor
 - Manage the attack (or other actions) against the installed outlaws (same as no-installed outlaws?)
 	-> The outlaws have an event to attack the baronnies if they are not in war (only cities and temple? even the province capital?)
-	-> The barony have for 1 year the modifier "Pillé" = -20% d'or
+	-> The barony have for 1 year the modifier looted = -20% d'or OR bloodshed = -20% troupes
 		> Add a probability of building destruction? Typically 5%?
 	-> The owner of the province received an event informing it
 		> Loss of prestige (or piety if it is a temple)
@@ -45,6 +41,10 @@ TEST TODO
 - How the IA manage the outlaws
 	-> Now there is no management (i.e wait death and no successor)
 - Have outlaws, wait 2 years (or more), kill the leader (several times if needed in order to have no successor), have new outlaws
+
+BUG
+- Decision to have full quantity of troops for the outlaw
+	-> Scenario : 1)Have outlaws 2)Remove them rapidly 3)Have new outlaws
 
 POTENTIAL BUG (i.e to investigate)
 XYLO.02120 and XYLO.02121 have not exactly the same triggers

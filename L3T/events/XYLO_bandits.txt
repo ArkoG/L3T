@@ -64,11 +64,13 @@ province_event = {
 	option = { #je suis en guerre je ne peut rien faire pour le moment
 	trigger = { owner = { war = yes	} }
 		name = XYLO.0211A
+		owner = { prestige = -50 }
 		set_province_flag = echec_contre_les_bandits #ex inaction
 	}
 	option = { #nous devrions faire quelque chose
 		trigger = { owner = { war = no	} }
 		name = XYLO.0211B
+		owner = { prestige = -50 }
 		hidden_tooltip = {	province_event = { id = XYLO.0212 days = 10 }	}
 		custom_tooltip = { text = reunir_le_conseil	}
 	}
@@ -810,7 +812,7 @@ province_event = {
 			had_province_flag = {	flag = chef_bandit	days = 365	}
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 730	}}
 		}
-		owner = { prestige = 11 }
+		owner = { prestige = 20 }
 		add_province_modifier = { name = la_province_se_remet duration = 730 } #2 ans		
 		clr_province_flag = chef_bandit
 	}
@@ -821,7 +823,7 @@ province_event = {
 			had_province_flag = {	flag = chef_bandit	days = 730	}
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 1095	}}
 		}
-		owner = { prestige = 12 }
+		owner = { prestige = 30 }
 		add_province_modifier = { name = la_province_se_remet duration = 1095 } #3 ans
 		clr_province_flag = chef_bandit
 	}
@@ -832,7 +834,7 @@ province_event = {
 			had_province_flag = {	flag = chef_bandit	days = 1095	}
 			NOT = { had_province_flag = {	flag = chef_bandit	days = 1460	}}
 		}
-		owner = { prestige = 13 }
+		owner = { prestige = 40 }
 		add_province_modifier = { name = la_province_se_remet duration = 1460 } #4 ans
 		clr_province_flag = chef_bandit
 	}
@@ -842,7 +844,7 @@ province_event = {
 		trigger = {	# plus de 4 ans
 			had_province_flag = {	flag = chef_bandit	days = 1460	}
 		}
-		owner = { prestige = 14 }
+		owner = { prestige = 50 }
 		add_province_modifier = { name = la_province_se_remet duration = 1825 } #5 ans		
 		clr_province_flag = chef_bandit
 	}
