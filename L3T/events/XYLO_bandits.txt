@@ -989,33 +989,31 @@ province_event = {
 	picture = "GFX_evt_bandits"
 		
 	trigger = {
+		# There are outlaws in the province
 		any_province_holding  = {
 			is_feudal = yes
 			owner = { trait = chef_malandrin }
 		}
-		# TODO : don't put it on the outlaw holding
-		# The holding has never been looted or more than 1 year ago
+		# The holding has never been looted, or more than 1 year ago
 		any_province_holding = {
-			NOT = { has_title_flag = outlaw_holding }
-			OR = { # Implement "has_holding_modifier = looted_holding" with 2 flags
+			NOT = { has_title_flag = outlaw_holding } # ... and of course it is not the outlaw holding
+			OR = { # Implement "NOT = { has_holding_modifier = looted_holding }" for a 1 year modifier with 2 flags
 				NOT = { has_title_flag = looted_title }
 				had_title_flag = { flag = looted_title days = 365 }
 			}
-			# TODO : Test this implementation by running 2-3 years
 		}
-		
 	}
 
 	mean_time_to_happen = {
-		# months = 3
-		days = 10
+		months = 3
 	}
 
-	immediate = { # BU
+	immediate = {
 		random_province_holding = { # TODO : try to link it with the looted Old God mechanism
-			# An holding of the province will be looted
+			# The holding has never been looted, or more than 1 year ago ...
 			limit = {
-				OR = { # Implement "has_holding_modifier = looted_holding" with 2 flags
+				NOT = { has_title_flag = outlaw_holding } # ... and of course it is not the outlaw holding
+				OR = { # Implement "NOT = { has_holding_modifier = looted_holding }" for a 1 year modifier with 2 flags
 					NOT = { has_title_flag = looted_title }
 					had_title_flag = { flag = looted_title days = 365 }
 				}
@@ -1034,6 +1032,7 @@ province_event = {
 		random_province_holding = {
 			limit = { has_title_flag = current_looted_title }
 			clr_title_flag = current_looted_title
+			owner = { clr_character_flag = looted_holding_lord }
 			set_title_flag = looted_title
 			add_holding_modifier = { modifier = looted_holding duration = 365 }
 			
@@ -1070,6 +1069,7 @@ province_event = {
 		random_province_holding = {
 			limit = { has_title_flag = current_looted_title }
 			clr_title_flag = current_looted_title
+			set_title_flag = looted_title
 			add_holding_modifier = { modifier = looted_holding duration = 365 }
 			
 			# The province owner loses piety if a temple is looted
