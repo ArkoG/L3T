@@ -397,10 +397,8 @@ character_event = {
 		NOT = { has_character_flag = drap_taken }
 		NOT = { has_character_flag = cadastreux }
 		war = no
-		any_demesne_title = {	
-			tier = baron	
-			is_feudal = yes	
-			has_building = CA_draperie_L2
+		any_demesne_province = {
+			has_province_modifier = elevage4_drap
 		}
 	}
 	
