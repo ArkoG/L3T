@@ -504,18 +504,13 @@ province_event = {
 	trigger = {
 		has_province_modifier = agriculture1
 		NOT = { has_province_modifier = agriculture2_cereales }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_AGRI_cereale_L2
-					has_building = CT_AGRI_cereale_L2
-					has_building = TP_AGRI_cereale_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_AGRI_cereale_L2
+				has_building = CT_AGRI_cereale_L2
+				has_building = TP_AGRI_cereale_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -536,17 +531,12 @@ province_event = {
 	trigger = {
 		has_province_modifier = agriculture1
 		NOT = { has_province_modifier = agriculture2_fruits }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_AGRI_verger_L2
-					has_building = CT_AGRI_verger_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_AGRI_verger_L2
+				has_building = CT_AGRI_verger_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -567,13 +557,8 @@ province_event = {
 	trigger = {
 		has_province_modifier = agriculture1
 		NOT = { has_province_modifier = agriculture2_legumes }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = TP_AGRI_maraichage_L2
-			}
+		any_province_holding = {
+			has_building = TP_AGRI_maraichage_L2
 		}
 	}
 		
@@ -595,13 +580,8 @@ province_event = {
 	trigger = {
 		has_province_modifier = agriculture1
 		NOT = { has_province_modifier = agriculture2_vigne }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = TP_AGRI_vigne_L2
-			}
+		any_province_holding = {
+			has_building = TP_AGRI_vigne_L2
 		}
 	}
 		
@@ -623,13 +603,8 @@ province_event = {
 	trigger = {
 		has_province_modifier = elevage1
 		NOT = { has_province_modifier = elevage2_laine }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CA_ELEV_ovin_L2a #bourg féodal hors montagne
-			}
+		any_province_holding = {
+			has_building = CA_ELEV_ovin_L2a #bourg féodal hors montagne
 		}
 	}
 		
@@ -651,17 +626,12 @@ province_event = {
 	trigger = {
 		has_province_modifier = elevage1
 		NOT = { has_province_modifier = elevage2_fromage }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_ELEV_ovin_L2b #bourg féodal, alpage
-					has_building = TP_ELEV_ovin_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_ELEV_ovin_L2b #bourg féodal, alpage
+				has_building = TP_ELEV_ovin_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -682,13 +652,8 @@ province_event = {
 	trigger = {
 		has_province_modifier = elevage1
 		NOT = { has_province_modifier = elevage2_boeuf }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CT_ELEV_bovin_L2
-			}
+		any_province_holding = {
+			has_building = CT_ELEV_bovin_L2
 		}
 	}
 		
@@ -710,17 +675,12 @@ province_event = {
 	trigger = {
 		has_province_modifier = foret2_expl
 		NOT = { has_province_modifier = foret2_bois }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_BOIS_bois_L2
-					has_building = CT_BOIS_bois_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_BOIS_bois_L2
+				has_building = CT_BOIS_bois_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -741,18 +701,13 @@ province_event = {
 	trigger = {
 		has_province_modifier = foret2_expl
 		NOT = { has_province_modifier = foret2_charbon }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_BOIS_charbon_L2
-					has_building = CT_BOIS_charbon_L2
-					has_building = TP_BOIS_charbon_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_BOIS_charbon_L2
+				has_building = CT_BOIS_charbon_L2
+				has_building = TP_BOIS_charbon_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -773,17 +728,12 @@ province_event = {
 	trigger = {
 		has_province_modifier = pierre1
 		NOT = { has_province_modifier = pierre2_pierre_brute }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_CARR_pierre_L2
-					has_building = CT_CARR_pierre_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_CARR_pierre_L2
+				has_building = CT_CARR_pierre_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -805,13 +755,8 @@ province_event = {
 	trigger = {
 		has_province_modifier = minerai1
 		NOT = { has_province_modifier = minerai2_fer }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CA_MINE_minerai_L2
-			}
+		any_province_holding = {
+			has_building = CA_MINE_minerai_L2
 		}
 	}
 		
@@ -833,13 +778,8 @@ province_event = {
 	trigger = {
 		has_province_modifier = minerai1
 		NOT = { has_province_modifier = minerai2_sel_gemme }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-			tier = baron
-				has_building = CT_MINE_sel_L2
-			}
+		any_province_holding = {
+			has_building = CT_MINE_sel_L2
 		}
 	}
 		
@@ -861,17 +801,12 @@ province_event = {
 	trigger = {
 		has_province_modifier = peche1
 		NOT = { has_province_modifier = peche2_poisson }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_FISH_peche_L2
-					has_building = CT_FISH_peche_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_FISH_peche_L2
+				has_building = CT_FISH_peche_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -892,17 +827,12 @@ province_event = {
 	trigger = {
 		has_province_modifier = pisci1
 		NOT = { has_province_modifier = pisci2_poisson }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_FISH_pisci_L2
-					has_building = TP_FISH_pisci_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_FISH_pisci_L2
+				has_building = TP_FISH_pisci_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -930,18 +860,13 @@ province_event = {
 			has_province_modifier = agriculture3_biere_Q1
 			has_province_modifier = agriculture3_biere_Q2
 			has_province_modifier = agriculture3_biere_Q3
+		}
+		any_province_holding = {
+			OR = {	
+				has_building = CT_brasserie_L2
+				has_building = TP_brasserie_L2
 			}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CT_brasserie_L2
-					has_building = TP_brasserie_L2
-					}
-				}
-			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -969,18 +894,13 @@ province_event = {
 			has_province_modifier = agriculture3_vin_Q1
 			has_province_modifier = agriculture3_vin_Q2
 			has_province_modifier = agriculture3_vin_Q3			
+		}
+		any_province_holding = {
+			OR = {	
+				has_building = CT_chai_L2
+				has_building = TP_chai_L2
 			}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CT_chai_L2
-					has_building = TP_chai_L2
-					}
-				}
-			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1004,13 +924,8 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = agriculture2_fruits }
 		}
 		NOT = { has_province_modifier = agriculture3_cidre}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = TP_presse_L2
-			}
+		any_province_holding = {
+			has_building = TP_presse_L2
 		}
 	}
 		
@@ -1032,18 +947,13 @@ province_event = {
 	trigger = {
 		has_province_modifier = agriculture2_cereales
 		NOT = { has_province_modifier = agriculture3_farine }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_AGRI_moulin_L2
-					has_building = CT_AGRI_moulin_L2
-					has_building = TP_AGRI_moulin_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_AGRI_moulin_L2
+				has_building = CT_AGRI_moulin_L2
+				has_building = TP_AGRI_moulin_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1064,18 +974,13 @@ province_event = {
 	trigger = {
 		has_province_modifier = agriculture3_farine
 		NOT = { has_province_modifier = agriculture4_pain }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_AGRI_boulangerie_L2
-					has_building = CT_AGRI_boulangerie_L2
-					has_building = TP_AGRI_boulangerie_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_AGRI_boulangerie_L2
+				has_building = CT_AGRI_boulangerie_L2
+				has_building = TP_AGRI_boulangerie_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1096,13 +1001,8 @@ province_event = {
 	trigger = {
 		has_province_modifier = elevage2_boeuf
 		NOT = { has_province_modifier = elevage3_viande }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CT_ELEV_boucherie_L2
-			}
+		any_province_holding = {
+			has_building = CT_ELEV_boucherie_L2
 		}
 	}
 		
@@ -1127,18 +1027,13 @@ province_event = {
 			has_province_modifier = pisci2_poisson
 		}
 		NOT = { has_province_modifier = peche_pisci3_fumaison }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_FISH_fumoir_L2
-					has_building = CT_FISH_fumoir_L2
-					has_building = TP_FISH_fumoir_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_FISH_fumoir_L2
+				has_building = CT_FISH_fumoir_L2
+				has_building = TP_FISH_fumoir_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1163,13 +1058,8 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = elevage2_boeuf }
 		}
 		NOT = { has_province_modifier = elevage3_cuir}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CT_tannerie_L2
-			}
+		any_province_holding = {
+			has_building = CT_tannerie_L2
 		}
 	}
 		
@@ -1194,17 +1084,12 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = foret2_bois }
 		}
 		NOT = { has_province_modifier = foret3_planche}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_scierie_L2
-					has_building = CT_scierie_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_scierie_L2
+				has_building = CT_scierie_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1228,18 +1113,13 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = foret2_charbon }
 		}
 		NOT = { has_province_modifier = foret3_verre}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_four_L2
-					has_building = CT_four_L2
-					has_building = TP_four_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_four_L2
+				has_building = CT_four_L2
+				has_building = TP_four_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1260,11 +1140,11 @@ province_event = {
 	trigger = {
 		NOT = { has_province_modifier = peaux2_fourrure }
 		any_province_holding = {
-				OR = {	
-					has_building = TR_import_peaux_3
-					has_building = CT_import_peaux_3
-					}
-				}
+			OR = {	
+				has_building = TR_import_peaux_3
+				has_building = CT_import_peaux_3
+			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1283,11 +1163,11 @@ province_event = {
 	trigger = {
 		NOT = { has_province_modifier = joyaux2_bijoux }
 		any_province_holding = {
-				OR = {		
-					has_building = TR_import_joyaux_3
-					has_building = CT_import_joyaux_3
-					}
-				}
+			OR = {		
+				has_building = TR_import_joyaux_3
+				has_building = CT_import_joyaux_3
+			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1306,11 +1186,11 @@ province_event = {
 	trigger = {
 		NOT = { has_province_modifier = epices2_epices}
 		any_province_holding = {
-				OR = {		
-					has_building = TR_import_epices_3
-					has_building = CT_import_epices_3 
-					}
-				}
+			OR = {		
+				has_building = TR_import_epices_3
+				has_building = CT_import_epices_3 
+			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1333,17 +1213,12 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = pierre2_pierre_brute }
 		}
 		NOT = { has_province_modifier = pierre3_pierre_taille}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				OR = {	
-					has_building = CA_pierre_taille_L2
-					has_building = CT_pierre_taille_L2
-					}
-				}
+		any_province_holding = {
+			OR = {	
+				has_building = CA_pierre_taille_L2
+				has_building = CT_pierre_taille_L2
 			}
+		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
@@ -1367,13 +1242,8 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = minerai2_fer }
 		}
 		NOT = { has_province_modifier = minerai3_metal}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CA_fonderie_L2
-			}
+		any_province_holding = {
+			has_building = CA_fonderie_L2
 		}
 	}
 		
@@ -1429,13 +1299,8 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = minerai2_sel_gemme }
 		}
 		NOT = { has_province_modifier = minerai3_sel_raffine}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CT_sel_raffine_L2
-			}
+		any_province_holding = {
+			has_building = CT_sel_raffine_L2
 		}
 	}
 		
@@ -1460,13 +1325,8 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = minerai2_sel_gemme }
 		}
 		NOT = { has_province_modifier = minerai3_salaison}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CT_saline_L2
-			}
+		any_province_holding = {
+			has_building = CT_saline_L2
 		}
 	}
 		
@@ -1491,13 +1351,8 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = elevage2_laine }
 		}
 		NOT = { has_province_modifier = elevage3_etoffe}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CT_atelier_L2
-			}
+		any_province_holding = {
+			has_building = CT_atelier_L2
 		}
 	}
 		
@@ -1522,13 +1377,8 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = elevage3_etoffe }
 		}
 		NOT = { has_province_modifier = elevage4_drap}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CT_draperie_L2
-			}
+		any_province_holding = {
+			has_building = CT_draperie_L2
 		}
 	}
 		
@@ -1550,13 +1400,8 @@ province_event = {
 	trigger = {
 		has_province_modifier = elevage1
 		NOT = { has_province_modifier = elevage2_cheval }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CA_ELEV_cheval_L2
-			}
+		any_province_holding = {
+			has_building = CA_ELEV_cheval_L2
 		}
 	}
 		
@@ -1581,13 +1426,8 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = minerai3_metal }
 		}
 		NOT = { has_province_modifier = minerai4_armes}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CA_armurerie_L2
-			}
+		any_province_holding = {
+			has_building = CA_armurerie_L2
 		}
 	}
 		
@@ -1610,13 +1450,8 @@ province_event = {
 	trigger = {
 		has_province_modifier = minerai1
 		NOT = { has_province_modifier = minerai2_or }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CT_MINE_or_L2
-			}
+		any_province_holding = {
+			has_building = CT_MINE_or_L2
 		}
 	}
 		
@@ -1638,13 +1473,8 @@ province_event = {
 	trigger = {
 		has_province_modifier = minerai1
 		NOT = { has_province_modifier = minerai2_cuivre }
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron	
-				has_building = CT_MINE_cuivre_L2
-			}
+		any_province_holding = {
+			has_building = CT_MINE_cuivre_L2
 		}
 	}
 		
