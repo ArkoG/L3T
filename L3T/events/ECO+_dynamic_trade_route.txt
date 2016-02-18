@@ -1,8 +1,8 @@
-namespace = TRADE
+namespace = L3TRADE
 
 # Give the step B of the trade routes
 province_event = {
-    id = TRADE.0001
+    id = L3TRADE.0001
 	desc = "DESCSTEP"
 	picture = GFX_evt_market
 	
@@ -85,7 +85,7 @@ province_event = {
 				# Update the route size in previous blocs (here A)
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_A }
-					province_event = { id = TRADE.0008 days = 10}
+					province_event = { id = L3TRADE.0008 days = 10}
 				}
 				
 				add_province_modifier = { name = future_route duration = -1 }
@@ -94,12 +94,12 @@ province_event = {
 	}
 	
 	option = {
-		name = "TRADESTEPOK"
+		name = "L3TRADESTEPOK"
 		trigger = { has_province_flag = bloc_B }
 	}
 	
 	option = {
-		name = "TRADESTEPKO"
+		name = "L3TRADESTEPKO"
 		trigger = { 
 			NOT = {
 				has_province_flag = bloc_A
@@ -112,7 +112,7 @@ province_event = {
 	}
 
 	option = {
-		name = "TRADESTEPALREADY"
+		name = "L3TRADESTEPALREADY"
 		trigger = { 
 			OR = {
 				has_province_flag = bloc_A
@@ -125,9 +125,9 @@ province_event = {
 }
 
 # Give the step C of the trade routes
-# COPY-PASTE with adaptation of TRADE.0001
+# COPY-PASTE with adaptation of L3TRADE.0001
 province_event = {
-    id = TRADE.0002
+    id = L3TRADE.0002
 	desc = "DESCSTEP"
 	picture = GFX_evt_market
 	
@@ -204,7 +204,7 @@ province_event = {
 				
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_B }
-					province_event = { id = TRADE.0008 days = 10}
+					province_event = { id = L3TRADE.0008 days = 10}
 				}
 				
 				add_province_modifier = { name = future_route duration = -1 }
@@ -213,12 +213,12 @@ province_event = {
 	}
 		
 	option = {
-		name = "TRADESTEPOK"
+		name = "L3TRADESTEPOK"
 		trigger = { has_province_flag = bloc_C }
 	}
 	
 	option = {
-		name = "TRADESTEPKO"
+		name = "L3TRADESTEPKO"
 		trigger = { 
 			NOT = {
 				has_province_flag = bloc_A
@@ -231,7 +231,7 @@ province_event = {
 	}
 
 	option = {
-		name = "TRADESTEPALREADY"
+		name = "L3TRADESTEPALREADY"
 		trigger = { 
 			OR = {
 				has_province_flag = bloc_A
@@ -244,9 +244,9 @@ province_event = {
 }
 
 # Give the step D of the trade routes
-# COPY-PASTE with adaptation of TRADE.0001
+# COPY-PASTE with adaptation of L3TRADE.0001
 province_event = {
-    id = TRADE.0003
+    id = L3TRADE.0003
 	desc = "DESCSTEP"
 	picture = GFX_evt_market
 	
@@ -323,7 +323,7 @@ province_event = {
 				
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_C }
-					province_event = { id = TRADE.0008 days = 10}
+					province_event = { id = L3TRADE.0008 days = 10}
 				}
 				
 				add_province_modifier = { name = future_route duration = -1 }
@@ -332,12 +332,12 @@ province_event = {
 	}
 			
 	option = {
-		name = "TRADESTEPOK"
+		name = "L3TRADESTEPOK"
 		trigger = { has_province_flag = bloc_D }
 	}
 	
 	option = {
-		name = "TRADESTEPKO"
+		name = "L3TRADESTEPKO"
 		trigger = { 
 			NOT = {
 				has_province_flag = bloc_A
@@ -350,7 +350,7 @@ province_event = {
 	}
 
 	option = {
-		name = "TRADESTEPALREADY"
+		name = "L3TRADESTEPALREADY"
 		trigger = { 
 			OR = {
 				has_province_flag = bloc_A
@@ -363,9 +363,9 @@ province_event = {
 }
 
 # Give the step E of the trade routes
-# COPY-PASTE with adaptation of TRADE.0001
+# COPY-PASTE with adaptation of L3TRADE.0001
 province_event = {
-    id = TRADE.0004
+    id = L3TRADE.0004
 	desc = "DESCSTEP"
 	picture = GFX_evt_market
 	
@@ -428,7 +428,7 @@ province_event = {
 				
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_D }
-					province_event = { id = TRADE.0008 days = 10}
+					province_event = { id = L3TRADE.0008 days = 10}
 				}
 				
 				add_province_modifier = { name = future_route duration = -1 }
@@ -437,12 +437,12 @@ province_event = {
 	}
 		
 	option = {
-		name = "TRADESTEPOK"
+		name = "L3TRADESTEPOK"
 		trigger = { has_province_flag = bloc_E }
 	}
 	
 	option = {
-		name = "TRADESTEPKO"
+		name = "L3TRADESTEPKO"
 		trigger = { 
 			NOT = {
 				has_province_flag = bloc_A
@@ -455,7 +455,7 @@ province_event = {
 	}
 
 	option = {
-		name = "TRADESTEPALREADY"
+		name = "L3TRADESTEPALREADY"
 		trigger = { 
 			OR = {
 				has_province_flag = bloc_A
@@ -469,8 +469,8 @@ province_event = {
 
 # Give the route modifier
 province_event = {
-    id = TRADE.0005
-	desc = "DESCTRADE.0005"
+    id = L3TRADE.0005
+	desc = "DESCL3TRADE.0005"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -492,7 +492,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "TRADE.0005A"
+		name = "L3TRADE.0005A"
 		hidden_tooltip = {
 			remove_province_modifier = future_route
 			if = {
@@ -515,7 +515,7 @@ province_event = {
 							NOT = { has_global_flag = avert_player }
 						}
 						set_global_flag = avert_player
-						character_event = { id = TRADE.0009 days = 10}
+						character_event = { id = L3TRADE.0009 days = 10}
 					}
 				}
 				clr_global_flag = avert_player
@@ -526,7 +526,7 @@ province_event = {
 
 # Give the commercial node modifier
 province_event = {
-    id = TRADE.0006
+    id = L3TRADE.0006
 	hide_window = yes
 	
 	trigger = {
@@ -555,7 +555,7 @@ province_event = {
 
 # Update the modifier of the route size
 province_event = {
-    id = TRADE.0007
+    id = L3TRADE.0007
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -587,7 +587,7 @@ province_event = {
 # Update the route size variable for previous steps
 # REQUIRED : The caller (a next step, EX: C for B) has the same values in route_size and tmp
 province_event = {
-    id = TRADE.0008
+    id = L3TRADE.0008
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -603,7 +603,7 @@ province_event = {
 				set_variable = { which = "route_size" which = FROM}
 				change_variable = { which = "route_size" value = 1}
 				# Update the modifier
-				province_event = { id = TRADE.0007 days = 10}
+				province_event = { id = L3TRADE.0007 days = 10}
 			}
 			# Reset the route_size with the stored value
 			FROM = { set_variable = { which = "route_size" which = "tmp"} }
@@ -618,11 +618,11 @@ province_event = {
 				FROM = { set_variable = { which = "route_size" which = "tmp"} } # restore route_size value
 				set_variable = { which = "route_size" which = FROM}
 				change_variable = { which = "route_size" value = 1}
-				set_variable = { which = "tmp" which = "route_size"} #copy in tmp before to call TRADE.0008
+				set_variable = { which = "tmp" which = "route_size"} #copy in tmp before to call L3TRADE.0008
 				# Update previous steps
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_A }
-					province_event = { id = TRADE.0008 days = 10}
+					province_event = { id = L3TRADE.0008 days = 10}
 				}				
 			}
 			# Reset the route_size with the stored value
@@ -638,11 +638,11 @@ province_event = {
 				FROM = { set_variable = { which = "route_size" which = "tmp"} } # restore route_size value
 				set_variable = { which = "route_size" which = FROM}
 				change_variable = { which = "route_size" value = 1}
-				set_variable = { which = "tmp" which = "route_size"} #copy in tmp before to call TRADE.0008
+				set_variable = { which = "tmp" which = "route_size"} #copy in tmp before to call L3TRADE.0008
 				# Update previous steps
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_B }
-					province_event = { id = TRADE.0008 days = 10}
+					province_event = { id = L3TRADE.0008 days = 10}
 				}				
 			}
 			# Reset the route_size with the stored value
@@ -652,11 +652,11 @@ province_event = {
 		if = {
 			limit = { has_province_flag = bloc_D }
 				set_variable = { which = "route_size" value = 2}
-				set_variable = { which = "tmp" value = 2} #copy in tmp before to call TRADE.0008
+				set_variable = { which = "tmp" value = 2} #copy in tmp before to call L3TRADE.0008
 				# Update previous steps
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_C }
-					province_event = { id = TRADE.0008 days = 10}
+					province_event = { id = L3TRADE.0008 days = 10}
 				}				
 			# Reset the route_size with the stored value
 			FROM = { set_variable = { which = "route_size" which = "tmp"} }
@@ -666,28 +666,28 @@ province_event = {
 
 # Avert the player that the route building can be build on its demesne
 character_event = {
-    id = TRADE.0009
-	desc = "DESCTRADE.0009"
+    id = L3TRADE.0009
+	desc = "DESCL3TRADE.0009"
 	picture = GFX_evt_market
 
 	is_triggered_only = yes
 	hide_from = yes
 	
 	option = {
-		name = "TRADE.0009A"
+		name = "L3TRADE.0009A"
 	}
 }
 
 # Avert the player that a route is on its demesne
 character_event = {
-    id = TRADE.0010
-	desc = "DESCTRADE.0010"
+    id = L3TRADE.0010
+	desc = "DESCL3TRADE.0010"
 	picture = GFX_evt_market
 
 	is_triggered_only = yes	
 	hide_from = yes
 	
 	option = {
-		name = "TRADE.0010A"
+		name = "L3TRADE.0010A"
 	}
 }
