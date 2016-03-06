@@ -20,7 +20,7 @@ title_forestier = {
 		}
 		
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -51,7 +51,7 @@ title_veneur = {
 		}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -78,7 +78,7 @@ title_soigneur = {
 		}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
