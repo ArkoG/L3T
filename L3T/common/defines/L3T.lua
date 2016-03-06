@@ -31,5 +31,5 @@
 	NDefines.NReligion.CREATE_ANTIPOPE_PRESTIGE_COST = 1000
 	NDefines.NTechnology.IDEAL_YEAR_LEVEL_0 = 800
 	NDefines.NTechnology.IDEAL_YEAR_LEVEL_8 = 1650
-	NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER = 30
+	NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER = 45 				-- How many courtiers in a court to make it crowded and increase chance for disease.
 	NDefines.NAI.DOW_AGGRESSION_FACTOR = 0.25
