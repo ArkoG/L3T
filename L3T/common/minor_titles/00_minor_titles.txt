@@ -212,6 +212,12 @@ title_commander = {
 # SOFT: GRANTABLE - FULLY MODDABLE
 #######################################
 
+##################################
+# L3T modifications :
+#	- Change all the gain_effect to add a flag
+#	- Change all the lose_effect to clear this flag
+# It allows to simply check this flag instead of all the minor titles
+
 title_court_eunuch = {
 	dignity = 0.01
 	realm_in_name = yes
@@ -250,7 +256,7 @@ title_court_eunuch = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -291,7 +297,7 @@ title_court_dwarf = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -340,7 +346,7 @@ title_court_jester = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -389,7 +395,7 @@ title_keeper_of_swans = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -432,7 +438,7 @@ title_master_of_the_horse = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -477,7 +483,7 @@ title_master_of_the_hunt = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -519,7 +525,7 @@ title_high_almoner = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -559,7 +565,7 @@ title_cupbearer = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -610,7 +616,7 @@ title_seneschal = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -623,7 +629,7 @@ title_paramount_knight = {
 	monthly_prestige = 1.50
 
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -669,7 +675,7 @@ title_despot = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -711,7 +717,7 @@ title_sebastokrator = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -745,7 +751,7 @@ title_caesar = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -788,7 +794,7 @@ title_kouropalates = {
 	}
 		
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -828,7 +834,7 @@ title_anthypatos = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -869,7 +875,7 @@ title_imperial_eunuch = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -915,7 +921,7 @@ title_food_taster = {
 	}
 		
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -959,7 +965,7 @@ title_court_calligrapher = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -999,7 +1005,7 @@ title_court_musician = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1037,7 +1043,7 @@ title_court_poet = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1075,7 +1081,7 @@ title_chief_architect = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1127,7 +1133,7 @@ title_chief_qadi = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1165,7 +1171,7 @@ title_state_inquisitor = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1199,7 +1205,7 @@ title_high_admiral = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1233,7 +1239,7 @@ title_high_judge = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1266,7 +1272,7 @@ title_patrician_heir = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1309,7 +1315,7 @@ title_volva = {
 	}
 		
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1353,7 +1359,7 @@ title_lawspeaker = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1394,7 +1400,7 @@ title_drottseti = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1435,7 +1441,7 @@ title_court_skald = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1476,7 +1482,7 @@ title_marksman = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1516,7 +1522,7 @@ title_hirdman = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1567,7 +1573,7 @@ title_baghatur = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1616,7 +1622,7 @@ title_cherbi = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1665,7 +1671,7 @@ title_darkhan = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1705,7 +1711,7 @@ title_noyan = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1754,7 +1760,7 @@ title_behi = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1802,7 +1808,7 @@ title_master_of_the_eagle = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1844,7 +1850,7 @@ title_shahrwaraz = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1883,7 +1889,7 @@ title_kardarigan = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1922,7 +1928,7 @@ title_shahin = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1960,7 +1966,7 @@ title_pushtigban_salar = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -1999,7 +2005,7 @@ title_spahbod = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2035,7 +2041,7 @@ title_eran_ambaragbed = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2086,7 +2092,7 @@ title_champion = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2145,7 +2151,7 @@ title_master_of_the_blade = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2204,7 +2210,7 @@ title_master_of_the_bow = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2262,7 +2268,7 @@ title_venerable_elder = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2321,7 +2327,7 @@ title_yabgu = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2377,7 +2383,7 @@ title_ishad = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2432,7 +2438,7 @@ title_kundur = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2481,7 +2487,7 @@ title_master_of_the_royal_elephants = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2523,7 +2529,7 @@ title_royal_builder = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2562,7 +2568,7 @@ title_court_poet_india = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2598,7 +2604,7 @@ title_guru = {
 	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 
 	message = yes
 }
@@ -2615,7 +2621,7 @@ title_genghis = {
 	monthly_prestige = 1.50
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { remove_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 	
 	message = yes
 }
