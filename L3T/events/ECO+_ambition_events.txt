@@ -16,7 +16,7 @@ character_event = {
 	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
 	capable_only = yes
 	prisoner = no
-	is_female = no
+	only_men = yes
 	
 	trigger = {
 		NOT = { has_global_flag = playing_english }
