@@ -756,16 +756,64 @@ province_event = {
 		has_province_modifier = minerai1
 		NOT = { has_province_modifier = minerai2_fer }
 		any_province_holding = {
-			has_building = CA_MINE_minerai_L2
+			has_building = CA_MINE_minerai_L1 #lowered requirement to Level_1
 		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
 
+	immediate = {
+			#set_province_flag = mine_active   ###ou modifier hidden ?
+			set_variable = { which = "stock_minerai" value = 0 }
+
+
+	#stock initial = 20 (stock annuel moyen)x20/50ans
+	#
+	#
+	#
+	#
+	#	
+	#consos normales
+	#L1 consomme 10/an ; L2 consomme 20/an ; L3 consomme 30/an
+	#accident réduit les consos de 30%
+	#L1 consomme 7/an ; L2 consomme 14/an ; L3 consomme 20/an
+	#hausse de productivité majore 30% les consos (remplace ex flavour event nouveau filon)
+	#L1 consomme 13/an ; L2 consomme 26/an ; L3 consomme 40/an
+	#
+	#nouveau filon prolonge de XX le stock + alea
+	#decision d'investir prolonge de XX le stock + alea
+	#
+	#
+	#stock à zéro = mine inactive.
+	#définir seuil inactivité selon les valeurs à défalquer
+	#!!! voir les combinaisons de multiples
+	#	
+	#
+			random_list = {
+				05 = { change_variable = { which = "stock_minerai" value =  400 } } #20*20
+				05 = { change_variable = { which = "stock_minerai" value =  440 } } #20*22
+				05 = { change_variable = { which = "stock_minerai" value =  480 } }
+				05 = { change_variable = { which = "stock_minerai" value =  520 } }
+				10 = { change_variable = { which = "stock_minerai" value =  560 } }
+				10 = { change_variable = { which = "stock_minerai" value =  600 } }
+				10 = { change_variable = { which = "stock_minerai" value =  640 } }
+				25 = { change_variable = { which = "stock_minerai" value =  680 } }
+				30 = { change_variable = { which = "stock_minerai" value =  720 } }
+				30 = { change_variable = { which = "stock_minerai" value =  760 } } 
+				25 = { change_variable = { which = "stock_minerai" value =  800 } } 
+				10 = { change_variable = { which = "stock_minerai" value =  840 } }
+				10 = { change_variable = { which = "stock_minerai" value =  880 } }
+				10 = { change_variable = { which = "stock_minerai" value =  920 } }
+				05 = { change_variable = { which = "stock_minerai" value =  960 } }
+				05 = { change_variable = { which = "stock_minerai" value = 1000 } } #20*50
+				}
+			}
+
 	option = {
 		name = "ECO.00140A"
 		#remove_province_modifier = minerai1
-		add_province_modifier = { name = minerai2_fer duration = -1 }		
+		add_province_modifier = { name = minerai2_fer duration = -1 }
+		
 	}
 }
 
@@ -1131,75 +1179,82 @@ province_event = {
 	}
 }
 
-#activation PEAUX
-province_event = {
-    id = ECO.00124
-	desc = "DESCECO.00124"
-	picture = GFX_evt_market
-	
-	trigger = {
-		NOT = { has_province_modifier = peaux2_fourrure }
-		any_province_holding = {
-			OR = {	
-				has_building = TR_import_peaux_3
-				has_building = CT_import_peaux_3
-			}
-		}
-	}
-		
-	mean_time_to_happen = { days = 360 }
+###
+#the modifier will be given by the trade propection (targeted)decision
+#the modifier is a pre-req/trigger for the buildings
+#the potential for the decision is trade nodes and trade posts
+###
 
-	option = {
-		name = "ECO.00124A"
-		add_province_modifier = { name = peaux2_fourrure duration = -1 }		
-	}
-}
-#activation JOYAUX
-province_event = {
-    id = ECO.00125
-	desc = "DESCECO.00125"
-	picture = GFX_evt_market
-	
-	trigger = {
-		NOT = { has_province_modifier = joyaux2_bijoux }
-		any_province_holding = {
-			OR = {		
-				has_building = TR_import_joyaux_3
-				has_building = CT_import_joyaux_3
-			}
-		}
-	}
-		
-	mean_time_to_happen = { days = 360 }
 
-	option = {
-		name = "ECO.00125A"
-		add_province_modifier = { name = joyaux2_bijoux duration = -1 }		
-	}
-}
-#activation EPICES
-province_event = {
-    id = ECO.00126
-	desc = "DESCECO.00126"
-	picture = GFX_evt_market
-	
-	trigger = {
-		NOT = { has_province_modifier = epices2_epices}
-		any_province_holding = {
-			OR = {		
-				has_building = TR_import_epices_3
-				has_building = CT_import_epices_3 
-			}
-		}
-	}
-		
-	mean_time_to_happen = { days = 360 }
-
-	option = {
-		name = "ECO.00126A"
-		add_province_modifier = { name = epices2_epices duration = -1 }		
-	}
-}
+##activation PEAUX
+#province_event = {
+#    id = ECO.00124
+#	desc = "DESCECO.00124"
+#	picture = GFX_evt_market
+#	
+#	trigger = {
+#		NOT = { has_province_modifier = peaux2_fourrure }
+#		any_province_holding = {
+#			OR = {	
+#				has_building = TR_import_peaux_3
+#				has_building = CT_import_peaux_3
+#			}
+#		}
+#	}
+#		
+#	mean_time_to_happen = { days = 360 }
+#
+#	option = {
+#		name = "ECO.00124A"
+#		add_province_modifier = { name = peaux2_fourrure duration = -1 }		
+#	}
+#}
+##activation JOYAUX
+#province_event = {
+#    id = ECO.00125
+#	desc = "DESCECO.00125"
+#	picture = GFX_evt_market
+#	
+#	trigger = {
+#		NOT = { has_province_modifier = joyaux2_bijoux }
+#		any_province_holding = {
+#			OR = {		
+#				has_building = TR_import_joyaux_3
+#				has_building = CT_import_joyaux_3
+#			}
+#		}
+#	}
+#		
+#	mean_time_to_happen = { days = 360 }
+#
+#	option = {
+#		name = "ECO.00125A"
+#		add_province_modifier = { name = joyaux2_bijoux duration = -1 }		
+#	}
+#}
+##activation EPICES
+#province_event = {
+#    id = ECO.00126
+#	desc = "DESCECO.00126"
+#	picture = GFX_evt_market
+#	
+#	trigger = {
+#		NOT = { has_province_modifier = epices2_epices}
+#		any_province_holding = {
+#			OR = {		
+#				has_building = TR_import_epices_3
+#				has_building = CT_import_epices_3 
+#			}
+#		}
+#	}
+#		
+#	mean_time_to_happen = { days = 360 }
+#
+#	option = {
+#		name = "ECO.00126A"
+#		add_province_modifier = { name = epices2_epices duration = -1 }		
+#	}
+#}
 
 #activation PIERRE TAILLE
 province_event = {
