@@ -1,0 +1,49 @@
+# SWMH startup character (with a bit of flavor)
+
+1000235152 = {
+    name="SWMH"
+    dynasty = 0
+
+    religion = norse_pagan
+    culture = danish
+
+    diplomacy = 8
+    martial = 8
+    stewardship = 8
+    intrigue = 8
+    learning = 16
+
+    trait = brilliant_strategist
+    trait = patient
+    trait = diligent
+    trait = brave
+    trait = ambitious
+    trait = architect
+
+    disallow_random_traits = yes
+    
+    700.1.1 = {
+        birth = yes
+    }
+    769.1.1 = {
+        effect = { # Actually executed at the scenario start date, before Adapting History finishes when loading.
+
+            # Identify ourselves
+            set_global_flag = SWMH
+
+            # Give a starting prestige bonus to nomadic top lieges (in order to improve clan sentinment on day-1)
+            any_independent_ruler = {
+                limit = {
+                    is_nomadic = yes
+                }
+                prestige = 400
+            }
+
+            # Kill this character immediately before Adapting History finishes.
+            death = { death_reason = death_rabble }
+        }
+    }
+    1453.1.1 = { # Don't nominally-kill the character in history before the latest start date OR after the mod end date
+        death = yes
+    }
+}
