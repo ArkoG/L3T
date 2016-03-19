@@ -450,10 +450,37 @@ province_event = {
 		hidden_tooltip = {
 			random_list = {		
 				20 = { add_province_modifier = { name = meteo_secheresse duration =  30 }}
-				30 = { add_province_modifier = { name = meteo_secheresse duration =  50 }} 
+				29 = { add_province_modifier = { name = meteo_secheresse duration =  50 }} 
 				20 = { add_province_modifier = { name = meteo_secheresse duration =  70 }}
-				20 = { add_province_modifier = { name = meteo_secheresse duration =  90 }} 
-				10 = { add_province_modifier = { name = meteo_secheresse duration = 120 }}
+				18 = { add_province_modifier = { name = meteo_secheresse duration =  90 }} 
+				 8 = {
+					add_province_modifier = { name = meteo_secheresse duration = 120 }
+						random_list = {	
+									25 = { 
+										owner = {
+											chronicle = {
+												entry = CHRONICLE_SECHERESSE
+												picture = GFX_evt_ECO2
+											}
+										}
+									}
+									75 = {}						
+						}
+					}
+				 5 = { 
+					add_province_modifier = { name = meteo_secheresse duration = 150 }
+						random_list = {	
+									40 = { 
+										owner = {
+											chronicle = {
+												entry = CHRONICLE_SECHERESSE
+												picture = GFX_evt_ECO2
+											}
+										}
+									}
+									60 = {}						
+						}
+					}
 			}
 		}
 	}
