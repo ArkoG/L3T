@@ -352,21 +352,22 @@ province_event = {
 	trigger = {
 		NOT = { has_province_modifier = meteo_secheresse }
 		NOT = { has_province_modifier = meteo_inondation }
-		has_province_modifier = province_fleuve
+		#has_province_modifier = province_fleuve moved as a MTTH factor
 		#ajouter critère de technologie (efficacité accrue réduit le risque) #logistique ?
 		month = 9 #inondations d'automne
 		NOT = { month = 12 }
 	}
 		
 	mean_time_to_happen = { 
-		years = 10
-		modifier = { factor = 0.1	any_neighbor_province = { has_province_modifier = meteo_inondation } }
-		modifier = { factor = 0.95	owner = { NOT = { piety = 100 } } } #punition divine hahahaha !
-		modifier = { factor = 0.95	owner = { NOT = { piety = 200 } } }
-		modifier = { factor = 0.95	owner = { NOT = { piety = 300 } } }
+		years = 15
+		modifier = { factor = 0.15	any_neighbor_province = { has_province_modifier = meteo_inondation } }
+		modifier = { factor = 0.98	owner = { NOT = { piety = 100 } } } #punition divine hahahaha !
+		modifier = { factor = 0.97	owner = { NOT = { piety = 200 } } }
+		modifier = { factor = 0.96	owner = { NOT = { piety = 300 } } }
 		modifier = { factor = 0.95	owner = { NOT = { piety = 400 } } }
 		modifier = { factor = 0.95	owner = { NOT = { piety = 500 } } }
 		modifier = { factor = 0.90	borders_major_river = yes }
+		modifier = { factor = 0.90	has_province_modifier = province_fleuve }
 	}
 
 	option = {
@@ -426,20 +427,21 @@ province_event = {
 	trigger = {
 		NOT = { has_province_modifier = meteo_inondation }
 		NOT = { has_province_modifier = meteo_secheresse }
-		has_province_modifier = province_fleuve
+		#has_province_modifier = province_fleuve moved as a MTTH factor
 		#ajouter critère de technologie (efficacité accrue réduit le risque) #irrigation
 		month = 6 #été
 		NOT = { month = 10 }
 	}
 		
 	mean_time_to_happen = { 
-		years = 12
-		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = meteo_secheresse } }
-		modifier = { factor = 0.9	owner = { NOT = { piety = 100 } } } #punition divine hahahaha !
-		modifier = { factor = 0.9	owner = { NOT = { piety = 200 } } }
-		modifier = { factor = 0.9	owner = { NOT = { piety = 300 } } }
-		modifier = { factor = 0.9	owner = { NOT = { piety = 400 } } }
-		modifier = { factor = 0.9	owner = { NOT = { piety = 500 } } }
+		years = 15
+		modifier = { factor = 0.10	any_neighbor_province = { has_province_modifier = meteo_secheresse } }
+		modifier = { factor = 0.98	owner = { NOT = { piety = 100 } } } #punition divine hahahaha !
+		modifier = { factor = 0.96	owner = { NOT = { piety = 200 } } }
+		modifier = { factor = 0.94	owner = { NOT = { piety = 300 } } }
+		modifier = { factor = 0.92	owner = { NOT = { piety = 400 } } }
+		modifier = { factor = 0.90	owner = { NOT = { piety = 500 } } }
+		modifier = { factor = 1.20	has_province_modifier = province_fleuve }
 	}
 
 	option = {
