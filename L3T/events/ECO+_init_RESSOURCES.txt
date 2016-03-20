@@ -16,7 +16,13 @@ province_event = {
 	trigger = {
 			#NOT = { has_province_flag = ressources_plaines_testees }
 			NOT = { has_province_flag = ressources_testees }
-			terrain = plains
+			OR = {
+				terrain = plains
+				AND = {
+					terrain = coastal_desert
+					has_global_flag = running_SWMH
+				}
+			}
 			NOT = { terrain = forest }
 			OR = {
 				has_province_modifier = province_terrestre 

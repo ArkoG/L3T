@@ -826,9 +826,15 @@ TP_AGRI_maraichage_L1 = {
 	desc = TP_AGRI_maraichage_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
-			has_province_modifier = agriculture1
-		terrain = plains
+		has_province_modifier = agriculture1
+		OR = {
+			terrain = plains
+			AND = {
+				terrain = coastal_desert
+				has_global_flag = running_SWMH
+			}
 		}
+	}
 	prerequisites = { MONASTERE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -1079,8 +1085,7 @@ TP_brasserie_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
 		has_province_modifier = agriculture2_cereales
-		#terrain = plains
-		}
+	}
 	#prerequisites = { TP_AGRI_cereale_L1 }
 	prerequisites = { MONASTERE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
