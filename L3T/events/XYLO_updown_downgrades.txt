@@ -150,7 +150,11 @@ province_event = {
 		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1825 }} # 5 ans
 		owner = {
 			NOT = { has_character_flag = don_refuse }
-			 OR = { religion = catholic is_heresy_of = catholic }
+			religion = PREV
+			OR = { 
+				religion = catholic
+				is_heresy_of = catholic
+			}
 			NOT = { piety = 50 }
 		}
 	}
@@ -201,7 +205,11 @@ province_event = {
 		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1825 }} # 5 ans
 		owner = {
 			NOT = { has_character_flag = don_refuse }
-			 OR = { religion = catholic is_heresy_of = catholic }
+			religion = PREV
+			OR = { 
+				religion = catholic
+				is_heresy_of = catholic
+			}
 			NOT = { piety = 250 }
 			piety = 100
 		}
