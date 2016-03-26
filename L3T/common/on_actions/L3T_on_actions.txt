@@ -3,6 +3,11 @@ on_startup = {
 	    events = {
 			L3T.0010 #choix carte/map choice
 			L3T.15 #choix langue/language choice
+			
+			# Initialisation population building
+			L3T.1101
+			L3T.1102
+			L3T.1103
 		}
 }
 
