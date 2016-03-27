@@ -20,6 +20,15 @@ province_event = { #installe les provinces côtières LCDA
 
 immediate = {
 		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
+		province_event = { id = ECO.0001 days = 10 }
+		province_event = { id = ECO.0002 days = 10 }
+		province_event = { id = ECO.0003 days = 10 }
+		province_event = { id = ECO.0004 days = 10 }
+		province_event = { id = ECO.0005 days = 10 }
+		province_event = { id = ECO.0008 days = 10 }
+		province_event = { id = ECO.00080 days = 10 }
+		province_event = { id = ECO.00081 days = 10 }
+		province_event = { id = ECO.00082 days = 10 }
 	}
 }
 
@@ -43,6 +52,15 @@ province_event = { #installe les provinces terrestres LCDA
 
 immediate = {
 		add_province_modifier = {	name = province_terrestre  	duration = -1 hidden = yes }	
+		province_event = { id = ECO.0001 days = 10 }
+		province_event = { id = ECO.0002 days = 10 }
+		province_event = { id = ECO.0003 days = 10 }
+		province_event = { id = ECO.0004 days = 10 }
+		province_event = { id = ECO.0005 days = 10 }
+		province_event = { id = ECO.0008 days = 10 }
+		province_event = { id = ECO.00080 days = 10 }
+		province_event = { id = ECO.00081 days = 10 }
+		province_event = { id = ECO.00082 days = 10 }
 	}
 }
 
