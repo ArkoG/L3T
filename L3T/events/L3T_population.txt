@@ -3,11 +3,16 @@
 # Initialisation at starting
 character_event = {
 	id = L3T.1101
-	
 	hide_window = yes
+	ai = no
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = { has_global_flag = init_castle_population }
+	}
+	
 	immediate = {
+		set_global_flag = init_castle_population
 		any_title = {
 			limit = {
 				tier = baron
@@ -244,11 +249,16 @@ option = {
 # Initialisation at starting
 character_event = {
 	id = L3T.1102
-	
 	hide_window = yes
+	ai = no
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = { has_global_flag = init_city_population }
+	}
+	
 	immediate = {
+		set_global_flag = init_city_population
 		any_title = {
 			limit = {
 				tier = baron
@@ -493,11 +503,16 @@ option = {
 # Initialisation at starting
 character_event = {
 	id = L3T.1103
-	
 	hide_window = yes
+	ai = no
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = { has_global_flag = init_temple_population }
+	}
+	
 	immediate = {
+		set_global_flag = init_temple_population
 		any_title = {
 			limit = {
 				tier = baron
