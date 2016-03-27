@@ -38,23 +38,23 @@ character_event = {
 		}
 		set_global_flag = paix_de_dieu 
 	}
-	option = {	
-		name = "L3T.0010B"	
-		ai_chance = { factor = 0 }
-		trigger = {
-			ai = no
-			NOT = { has_global_flag = SWMH }
-		}
-		hidden_tooltip = {
-			any_province = {
-				province_event = { id = L3T.30 days = 10 }
-				province_event = { id = L3T.31 days = 10 }
-				province_event = { id = L3T.32 days = 10 }
-			}
-		}
-		set_global_flag = running_LCDA	
-		set_global_flag = paix_de_dieu 
-	}
+	# option = {	
+		# name = "L3T.0010B"	
+		# ai_chance = { factor = 0 }
+		# trigger = {
+			# ai = no
+			# NOT = { has_global_flag = SWMH }
+		# }
+		# hidden_tooltip = {
+			# any_province = {
+				# province_event = { id = L3T.30 days = 10 }
+				# province_event = { id = L3T.31 days = 10 }
+				# province_event = { id = L3T.32 days = 10 }
+			# }
+		# }
+		# set_global_flag = running_LCDA	
+		# set_global_flag = paix_de_dieu 
+	# }
 	option = {
 		name = "L3T.0010C"	
 		ai_chance = { factor = 0 }
