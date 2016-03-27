@@ -1,6 +1,4 @@
-
-#Evolution population	CASTLE 
-# Initialisation at starting
+# Initialisation of population buildings at starting
 character_event = {
 	id = L3T.1101
 	hide_window = yes
@@ -8,45 +6,102 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_global_flag = init_castle_population }
+		NOT = { has_global_flag = init_population }
 	}
 	
 	immediate = {
-		set_global_flag = init_castle_population
+		set_global_flag = init_population
 		any_title = {
-			limit = {
-				tier = baron
-				holding_type = castle
-			}
-			
+			limit = { tier = baron }
+			# Castles
 			if = {
-				limit = { num_of_buildings = 10 }
-				add_building = ca_town_1
+				limit = { holding_type = castle }
+				if = {
+					limit = { num_of_buildings = 10 }
+					add_building = ca_town_1
+				}
+				
+				if = {
+					limit = { num_of_buildings = 15 }
+					add_building = ca_town_2
+				}
+				
+				if = {
+					limit = { num_of_buildings = 20 }
+					add_building = ca_town_3
+				}
+				
+				if = {
+					limit = { num_of_buildings = 25 }
+					add_building = ca_town_4
+				}
+				
+				if = {
+					limit = { num_of_buildings = 35 }
+					add_building = ca_town_5
+				}
 			}
-			
+			# Cities	
 			if = {
-				limit = { num_of_buildings = 15 }
-				add_building = ca_town_2
+				limit = { holding_type = city }
+				if = {
+					limit = { num_of_buildings = 10 }
+					add_building = CT_town_1
+				}
+				
+				if = {
+					limit = { num_of_buildings = 15 }
+					add_building = CT_town_2
+				}
+				
+				if = {
+					limit = { num_of_buildings = 20 }
+					add_building = CT_town_3
+				}
+				
+				if = {
+					limit = { num_of_buildings = 25 }
+					add_building = CT_town_4
+				}
+				
+				if = {
+					limit = { num_of_buildings = 30 }
+					add_building = CT_town_5
+				}
 			}
-			
+			# Temples
 			if = {
-				limit = { num_of_buildings = 20 }
-				add_building = ca_town_3
-			}
-			
-			if = {
-				limit = { num_of_buildings = 25 }
-				add_building = ca_town_4
-			}
-			
-			if = {
-				limit = { num_of_buildings = 35 }
-				add_building = ca_town_5
+				limit = { holding_type = temple }			
+				if = {
+					limit = { num_of_buildings = 12 }
+					add_building = tp_town_1
+				}
+				
+				if = {
+					limit = { num_of_buildings = 17 }
+					add_building = tp_town_2
+				}
+				
+				if = {
+					limit = { num_of_buildings = 22 }
+					add_building = tp_town_3
+				}
+				
+				if = {
+					limit = { num_of_buildings = 26 }
+					add_building = tp_town_4
+				}
+				
+				if = {
+					limit = { num_of_buildings = 30 }
+					add_building = tp_town_5
+				}
 			}
 		}
 	}
 }
 
+#Evolution population	CASTLE 
 ##niveau 1	CASTLE
 
 character_event = {
@@ -246,53 +301,6 @@ option = {
 
 
 #Evolution population	CITY sligtly faster
-# Initialisation at starting
-character_event = {
-	id = L3T.1102
-	hide_window = yes
-	ai = no
-	is_triggered_only = yes
-	
-	trigger = {
-		NOT = { has_global_flag = init_city_population }
-	}
-	
-	immediate = {
-		set_global_flag = init_city_population
-		any_title = {
-			limit = {
-				tier = baron
-				holding_type = city	
-			}
-			
-			if = {
-				limit = { num_of_buildings = 10 }
-				add_building = CT_town_1
-			}
-			
-			if = {
-				limit = { num_of_buildings = 15 }
-				add_building = CT_town_2
-			}
-			
-			if = {
-				limit = { num_of_buildings = 20 }
-				add_building = CT_town_3
-			}
-			
-			if = {
-				limit = { num_of_buildings = 25 }
-				add_building = CT_town_4
-			}
-			
-			if = {
-				limit = { num_of_buildings = 30 }
-				add_building = CT_town_5
-			}
-		}
-	}
-}
-
 ##niveau 1	CITY 
 character_event = {
 	#title = "NAMEL3T.0106"
@@ -500,53 +508,6 @@ option = {
 }
 
 #Evolution population	TEMPLE sligtly slower 
-# Initialisation at starting
-character_event = {
-	id = L3T.1103
-	hide_window = yes
-	ai = no
-	is_triggered_only = yes
-	
-	trigger = {
-		NOT = { has_global_flag = init_temple_population }
-	}
-	
-	immediate = {
-		set_global_flag = init_temple_population
-		any_title = {
-			limit = {
-				tier = baron
-				holding_type = temple
-			}
-			
-			if = {
-				limit = { num_of_buildings = 12 }
-				add_building = tp_town_1
-			}
-			
-			if = {
-				limit = { num_of_buildings = 17 }
-				add_building = tp_town_2
-			}
-			
-			if = {
-				limit = { num_of_buildings = 22 }
-				add_building = tp_town_3
-			}
-			
-			if = {
-				limit = { num_of_buildings = 26 }
-				add_building = tp_town_4
-			}
-			
-			if = {
-				limit = { num_of_buildings = 30 }
-				add_building = tp_town_5
-			}
-		}
-	}
-}
-
 ##niveau 1	TEMPLE 
 character_event = {
 	#title = "NAMEL3T.0111"
