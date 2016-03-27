@@ -7,6 +7,10 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = { has_global_flag = population_startup_variable_assigned }
+	}
+	
 	immediate = {
 		any_title = {
 			limit = {
@@ -14,28 +18,58 @@ character_event = {
 				holding_type = castle
 			}
 			
+			set_variable = { which = "population"  value = 0 }
+			set_global_flag = { population_startup_variable_assigned }
+			
 			if = {
-				limit = { num_of_buildings = 10 }
+				limit = { 
+					num_of_buildings = 10 #a remplacer par variable pop
+					NOT = { num_of_buildings = 15}
+					}
+				character_event = { id = L3T.0101 days = 15}
 				add_building = ca_town_1
 			}
 			
 			if = {
-				limit = { num_of_buildings = 15 }
+				limit = { 
+					num_of_buildings = 15
+					NOT = { num_of_buildings = 20}
+					}
+				character_event = { id = L3T.0102 days = 15 }
+				add_building = ca_town_1
 				add_building = ca_town_2
 			}
 			
 			if = {
-				limit = { num_of_buildings = 20 }
+				limit = { 
+					num_of_buildings = 20
+					NOT = { num_of_buildings = 25}
+					}
+				character_event = { id = L3T.0103 days = 15 }
+				add_building = ca_town_1
+				add_building = ca_town_2
 				add_building = ca_town_3
 			}
 			
 			if = {
-				limit = { num_of_buildings = 25 }
+				limit = { 
+					num_of_buildings = 25
+					NOT = { num_of_buildings = 35 }
+					}
+				character_event = { id = L3T.0104 days = 15 }
+				add_building = ca_town_1
+				add_building = ca_town_2
+				add_building = ca_town_3
 				add_building = ca_town_4
 			}
 			
 			if = {
 				limit = { num_of_buildings = 35 }
+				character_event = { id = L3T.0105 days = 15 }
+				add_building = ca_town_1
+				add_building = ca_town_2
+				add_building = ca_town_3
+				add_building = ca_town_4
 				add_building = ca_town_5
 			}
 		}
