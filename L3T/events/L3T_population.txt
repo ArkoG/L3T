@@ -22,11 +22,11 @@ character_event = {
 			set_global_flag = { population_startup_variable_assigned }
 			
 			if = {
-				limit = {
+				limit = { 
 					num_of_buildings = 10 #a remplacer par variable pop
 					NOT = { num_of_buildings = 15}
 					}
-				owner = { character_event = { id = L3T.0101 days = 15} }
+				character_event = { id = L3T.0101 days = 15}
 				add_building = ca_town_1
 			}
 			
@@ -35,7 +35,7 @@ character_event = {
 					num_of_buildings = 15
 					NOT = { num_of_buildings = 20}
 					}
-				owner = { character_event = { id = L3T.0102 days = 15} }
+				character_event = { id = L3T.0102 days = 15 }
 				add_building = ca_town_1
 				add_building = ca_town_2
 			}
@@ -45,7 +45,7 @@ character_event = {
 					num_of_buildings = 20
 					NOT = { num_of_buildings = 25}
 					}
-				owner = { character_event = { id = L3T.0103 days = 15} }
+				character_event = { id = L3T.0103 days = 15 }
 				add_building = ca_town_1
 				add_building = ca_town_2
 				add_building = ca_town_3
@@ -56,7 +56,7 @@ character_event = {
 					num_of_buildings = 25
 					NOT = { num_of_buildings = 35 }
 					}
-				owner = { character_event = { id = L3T.0104 days = 15} }
+				character_event = { id = L3T.0104 days = 15 }
 				add_building = ca_town_1
 				add_building = ca_town_2
 				add_building = ca_town_3
@@ -64,10 +64,8 @@ character_event = {
 			}
 			
 			if = {
-				limit = { 
-					num_of_buildings = 35
-					}
-				owner = { character_event = { id = L3T.0105 days = 15} }
+				limit = { num_of_buildings = 35 }
+				character_event = { id = L3T.0105 days = 15 }
 				add_building = ca_town_1
 				add_building = ca_town_2
 				add_building = ca_town_3
@@ -79,6 +77,7 @@ character_event = {
 }
 
 ##niveau 1	CASTLE
+
 character_event = {
 	#title = "NAMEL3T.0101"
     	id = L3T.0101
@@ -88,8 +87,6 @@ character_event = {
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
-
-	is_triggered_only = yes
 	
 trigger = {
 		war = no
@@ -127,8 +124,6 @@ character_event = {
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
-
-	is_triggered_only = yes
 	
 trigger = {
 		war = no
@@ -168,8 +163,6 @@ character_event = {
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
-
-	is_triggered_only = yes
 	
 trigger = {
 		war = no
@@ -209,8 +202,6 @@ character_event = {
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
-
-	is_triggered_only = yes
 	
 trigger = {
 		war = no
@@ -250,8 +241,6 @@ character_event = {
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
-
-	is_triggered_only = yes
 
 	
 trigger = {
