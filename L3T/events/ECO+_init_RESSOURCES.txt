@@ -20,7 +20,7 @@ province_event = {
 				terrain = plains
 				AND = {
 					terrain = coastal_desert
-					has_global_flag = running_SWMH
+					has_global_flag = SWMH
 				}
 			}
 			NOT = { terrain = forest }
