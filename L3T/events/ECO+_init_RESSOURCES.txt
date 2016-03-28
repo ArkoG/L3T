@@ -25,10 +25,6 @@ province_event = {
 			}
 		}
 		NOT = { terrain = forest }
-		OR = {
-			has_province_modifier = province_terrestre 
-			has_province_modifier = province_cotiere
-		}
 	}
 
 	immediate = {
@@ -65,10 +61,6 @@ province_event = {
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
 		terrain = hills
-		OR = {
-			has_province_modifier = province_terrestre 
-			has_province_modifier = province_cotiere
-		}
 	}
 
 	immediate = {
@@ -112,10 +104,6 @@ province_event = {
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
 		terrain = forest
-		OR = {
-			has_province_modifier = province_terrestre 
-			has_province_modifier = province_cotiere
-		}
 	}
 
 	immediate = {
@@ -152,10 +140,6 @@ province_event = {
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
 		terrain = mountain
-		OR = {
-			has_province_modifier = province_terrestre 
-			has_province_modifier = province_cotiere
-		}
 	}
 	
 	immediate = {
@@ -192,10 +176,6 @@ province_event = {
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
 		terrain = farmlands
-		OR = {
-			has_province_modifier = province_terrestre 
-			has_province_modifier = province_cotiere
-		}
 	}
 	
 	immediate = {
@@ -232,10 +212,6 @@ province_event = {
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
 		terrain = desert
-		OR = {
-			has_province_modifier = province_terrestre 
-			has_province_modifier = province_cotiere
-		}
 	}
 	
 	immediate = {
@@ -271,10 +247,6 @@ province_event = {
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
 		terrain = steppe
-		OR = {
-			has_province_modifier = province_terrestre 
-			has_province_modifier = province_cotiere
-		}
 	}
 	
 	immediate = {
@@ -310,10 +282,6 @@ province_event = {
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
 		terrain = jungle
-		OR = {
-			has_province_modifier = province_terrestre 
-			has_province_modifier = province_cotiere
-		}
 	}
 	
 	immediate = {
@@ -349,10 +317,6 @@ province_event = {
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
 		terrain = arctic
-		OR = {
-			has_province_modifier = province_terrestre 
-			has_province_modifier = province_cotiere
-		}
 	}
 	
 	immediate = {
