@@ -1,0 +1,91 @@
+# Consommation stock mines de fer
+character_event = {
+	id = ECO.132
+	hide_window = yes
+	ai = no
+	is_triggered_only = yes
+	
+	trigger = {
+	#
+	}
+	
+	immediate = {
+		any_title = {
+			limit = { 
+				tier = baron
+				#is_feudal = yes
+				holding_type = castle
+				location = { 
+					has_province_modifier = minerai2_fer
+					check_variable = { which = "stock_minerai" value =  100 } #seuil pour éviter d'arriver en stock négatif (=conso maxi * 2 ans + marge sécurité)
+					}
+				}
+				
+			if = {
+				limit = {
+					has_building = CA_MINE_minerai_L1
+					NOT = {	has_building = CA_MINE_minerai_L2	}
+					NOT = {	has_building = CA_MINE_minerai_L3	}
+					}
+			owner = { character_event = { id = ECO.1391 days = 1 }}
+			location = { change_variable = { which = "stock_minerai" value =  -10 }}
+			}
+			if = {
+				limit = {			
+					has_building = CA_MINE_minerai_L2
+					NOT = {	has_building = CA_MINE_minerai_L3	}
+					}
+			owner = { character_event = { id = ECO.1392 days = 1 }}
+			location = { change_variable = { which = "stock_minerai" value =  -20 }}
+			}
+			if = {
+				limit = {			
+					has_building = CA_MINE_minerai_L3
+					}
+			owner = { character_event = { id = ECO.1393 days = 1 }}
+			location = { change_variable = { which = "stock_minerai" value =  -30 }}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = ECO.1391
+	desc = "DESCECO.1391"
+	picture = GFX_evt_castle_construction	
+	
+	ai = no
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+		#
+	}
+}
+character_event = {
+	id = ECO.1392
+	desc = "DESCECO.1392"
+	picture = GFX_evt_castle_construction	
+	
+	ai = no
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+		#
+	}
+}
+character_event = {
+	id = ECO.1393
+	desc = "DESCECO.1393"
+	picture = GFX_evt_castle_construction	
+	
+	ai = no
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+		#
+	}
+}
+			

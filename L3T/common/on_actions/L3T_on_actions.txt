@@ -11,6 +11,9 @@ on_startup = {
 
 #character
 on_yearly_pulse = {
+	events = {
+		ECO.132
+	}
 	
 	random_events = {
 		# Stewardship focus
@@ -19,6 +22,6 @@ on_yearly_pulse = {
 		1000 = ECO.322
 		1000 = ECO.323	
 
-
+		
 	}
 }
