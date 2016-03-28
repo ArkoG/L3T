@@ -69,17 +69,40 @@ province_event = { #installe les provinces fluviales LCDA
 	hide_window = yes
 	
 	is_triggered_only = yes
-	
-	trigger = {
-			has_global_flag = running_LCDA
-			NOT = { has_province_modifier = province_fleuve }
-			OR = {   
-			province_id = 6 # Aigle
-			province_id = 28 # Martigny
-			}
-		}
 
-immediate = {
-		add_province_modifier = {	name = province_fleuve  	duration = -1 }	
+	immediate = {
+		if = {
+			limit = {
+				OR = {   
+					province_id = 6 # Aigle
+					province_id = 28 # Martigny
+				}
+			}
+			add_province_modifier = { name = province_fleuve duration = -1 }
+		}
+		
+		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
+		if = {
+			limit = {
+				any_province_holding = {
+					count = 2
+					tier = baron
+					holding_type = city
+				}
+			}
+			# Priority for republics
+			if = {
+				limit = {
+					owner = {
+						is_republic = yes
+						NOT = { tier = baron }
+					}
+				}
+				province_event = { id = L3T.00041 days = 10 }
+				break = yes
+			}
+			# The other are delayed
+			province_event = { id = L3T.00041 days = 60 }
+		}	
 	}
 }

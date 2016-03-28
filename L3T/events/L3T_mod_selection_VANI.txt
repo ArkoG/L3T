@@ -7,8 +7,6 @@ province_event = { #installe les provinces côtières Vanilla
 	is_triggered_only = yes
 	
 	trigger = {
-			NOT = { has_province_modifier = province_cotiere }
-			NOT = { has_province_modifier = province_terrestre }
 			OR = {
 				port = yes
 			#mer caspienne
@@ -59,8 +57,6 @@ province_event = { #installe les provinces terrestres VANILLA
 	is_triggered_only = yes
 	
 	trigger = {
-			NOT = {	has_province_modifier = province_terrestre }
-			NOT = {	has_province_modifier = province_cotiere }
 			NOT = {
 				#OR = {
 					port = yes
@@ -112,20 +108,15 @@ province_event = { #installe les provinces fluviales VANILLA
 
 	is_triggered_only = yes
 	
-	trigger = {
-		NOT = { has_province_flag = checked_river }
-	}
-	
 	immediate = {
-		set_province_flag = checked_river
 		if = {
 			limit = {
 				OR = {
 				## India
-				AND = {
-					region = world_india
-					borders_major_river = yes
-				}			
+					AND = {
+						region = world_india
+						borders_major_river = yes
+					}			
 				##IRLANDE
 					province_id = 13 # Thomond
 					province_id = 9 # Connacht
@@ -567,5 +558,28 @@ province_event = { #installe les provinces fluviales VANILLA
 			}
 			add_province_modifier = {	name = province_fleuve  	duration = -1 }	
 		}
+		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
+		if = {
+			limit = {
+				any_province_holding = {
+					count = 2
+					tier = baron
+					holding_type = city
+				}
+			}
+			# Priority for republics
+			if = {
+				limit = {
+					owner = {
+						is_republic = yes
+						NOT = { tier = baron }
+					}
+				}
+				province_event = { id = L3T.00041 days = 10 }
+				break = yes
+			}
+			# The other are delayed
+			province_event = { id = L3T.00041 days = 60 }
+		}	
 	}
 }
