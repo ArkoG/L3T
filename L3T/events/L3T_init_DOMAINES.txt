@@ -21,9 +21,9 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
-			had_global_flag = { flag = SWMH days = 180 }			
-			had_global_flag = { flag = running_VANILLA days = 180 }
-			had_global_flag = { flag = running_LCDA days = 180 }
+			had_global_flag = { flag = SWMH days = 30 }			
+			had_global_flag = { flag = running_VANILLA days = 30 }
+			had_global_flag = { flag = running_LCDA days = 30 }
 		}
 		#NOT = { trait = chef_malandrin }
 		any_demesne_title = {
@@ -153,16 +153,16 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
-			had_global_flag = { flag = SWMH days = 730 }			
-			had_global_flag = { flag = running_VANILLA days = 730 }
-			had_global_flag = { flag = running_LCDA days = 730 }
+			had_global_flag = { flag = SWMH days = 360 }			
+			had_global_flag = { flag = running_VANILLA days = 360 }
+			had_global_flag = { flag = running_LCDA days = 360 }
 			AND = { # Priorité aux républiques
 				is_republic = yes
 				NOT = { tier = baron }
 				OR = {
-					had_global_flag = { flag = SWMH days = 180 }				
-					had_global_flag = { flag = running_VANILLA days = 180 }
-					had_global_flag = { flag = running_LCDA days = 180 }
+					had_global_flag = { flag = SWMH days = 60 }				
+					had_global_flag = { flag = running_VANILLA days = 60 }
+					had_global_flag = { flag = running_LCDA days = 60 }
 				}
 			}
 		}
@@ -575,9 +575,9 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
-			had_global_flag = { flag = SWMH days = 180 }			
-			had_global_flag = { flag = running_VANILLA days = 180 }
-			had_global_flag = { flag = running_LCDA days = 180 }
+			had_global_flag = { flag = SWMH days = 30 }			
+			had_global_flag = { flag = running_VANILLA days = 30 }
+			had_global_flag = { flag = running_LCDA days = 30 }
 		}
 		NOT = { religion_group = pagan_group }
 		any_demesne_title = {
