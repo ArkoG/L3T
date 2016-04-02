@@ -454,16 +454,16 @@ peche_mauvaise = {
 }
 
 ###Terrain et commerce
-mine_accident = {
+mine_productivite_moins = {
 	icon =  59 
-	local_revolt_risk =  0.05
-	tax_income = -0.2
+	#local_revolt_risk =  0.05
+	#tax_income = -0.2
 	local_tax_modifier = -0.01
 }
-mine_filon = {
+mine_productivite_plus = {
 	icon =  60
-	local_revolt_risk = -0.05
-	tax_income = 0.2
+	#local_revolt_risk = -0.05
+	#tax_income = 0.2
 	local_tax_modifier =  0.01
 }
 industrie_prospere = {
