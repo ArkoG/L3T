@@ -13,7 +13,6 @@ character_event = {
 		any_title = {
 			limit = { 
 				tier = baron
-				#is_feudal = yes
 				holding_type = castle
 				location = { 
 					has_province_modifier = minerai2_fer
@@ -21,7 +20,9 @@ character_event = {
 					}
 				}
 				
-			if = {
+		#conso de base	
+			#la mine est niveau 1
+			if = { 
 				limit = {
 					has_building = CA_MINE_minerai_L1
 					NOT = {	has_building = CA_MINE_minerai_L2	}
@@ -30,6 +31,7 @@ character_event = {
 			owner = { character_event = { id = ECO.1391 days = 1 }}
 			location = { change_variable = { which = "stock_minerai" value =  -10 }}
 			}
+			#la mine est niveau 2
 			if = {
 				limit = {			
 					has_building = CA_MINE_minerai_L2
@@ -38,12 +40,39 @@ character_event = {
 			owner = { character_event = { id = ECO.1392 days = 1 }}
 			location = { change_variable = { which = "stock_minerai" value =  -20 }}
 			}
+			#la mine est niveau 3
 			if = {
 				limit = {			
 					has_building = CA_MINE_minerai_L3
 					}
 			owner = { character_event = { id = ECO.1393 days = 1 }}
 			location = { change_variable = { which = "stock_minerai" value =  -30 }}
+			random_list = {
+				5 = { location = { change_variable = { which = "balrog_point" value =  1 }}}
+				95 = {}
+				}
+			}
+			
+		#adjonction effet productivite (cumulatif)	
+			#conso ralentie
+			if = {
+				limit = {			
+					location = { has_province_modifier = mine_productivite_moins }
+					}
+			owner = { character_event = { id = ECO.1394 days = 1 }}
+			location = { change_variable = { which = "stock_minerai" value =  5 }}
+			}
+			#conso majoree			
+			if = {
+				limit = {			
+					location = { has_province_modifier = mine_productivite_plus }
+					}
+			owner = { character_event = { id = ECO.1395 days = 1 }}
+			location = { change_variable = { which = "stock_minerai" value =  -5 }}
+			random_list = {
+				10 = { location = { change_variable = { which = "balrog_point" value =  1 }}}
+				90 = {}
+				}
 			}
 		}
 	}
@@ -59,7 +88,7 @@ character_event = {
 	
 	option = {
 		name = "OK"
-		#
+		#ROOT = { location = { change_variable = { which = "stock_minerai" value =  -10 }}}
 	}
 }
 character_event = {
@@ -72,7 +101,7 @@ character_event = {
 	
 	option = {
 		name = "OK"
-		#
+		#ROOT = { location = { change_variable = { which = "stock_minerai" value =  -10 }}}
 	}
 }
 character_event = {
@@ -85,7 +114,32 @@ character_event = {
 	
 	option = {
 		name = "OK"
-		#
+		#ROOT = { location = { change_variable = { which = "stock_minerai" value =  -10 }}}
 	}
 }
-			
+character_event = {
+	id = ECO.1394
+	desc = "DESCECO.1394"
+	picture = GFX_evt_castle_construction	
+	
+	ai = no
+	is_triggered_only = yes
+
+	option = {
+		name = "OK"
+		#ROOT = { location = { change_variable = { which = "stock_minerai" value =  -20 }}}
+	}
+}
+character_event = {
+	id = ECO.1395
+	desc = "DESCECO.13922"
+	picture = GFX_evt_castle_construction	
+	
+	ai = no
+	is_triggered_only = yes
+
+	option = {
+		name = "OK"
+		#ROOT = { location = { change_variable = { which = "stock_minerai" value =  -20 }}}
+	}
+}
