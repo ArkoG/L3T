@@ -643,7 +643,7 @@ province_event = {
 	immediate = {
 			#set_province_flag = mine_active   ###ou modifier hidden ?
 			set_variable = { which = "stock_minerai" value = 0 }
-
+			set_variable = { which = "balrog_point" value = 0 }
 
 	#stock initial = 20 (stock annuel moyen)x20/50ans
 	#
