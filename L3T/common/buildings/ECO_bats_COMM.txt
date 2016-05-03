@@ -7,12 +7,17 @@
 
 city = {
 
-
 #PELLETERIE
 CT_COMM_peaux_L1 = {
 	desc = CT_COMM_peaux_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = { has_province_modifier = noeud_commercial_primaire }
+	potential = { 
+		OR = {
+			has_province_modifier = peaux2_fourrure
+			#has_province_modifier = noeud_commercial_primaire
+			#has_province_modifier = noeud_commercial_annexe
+			}
+		}
 	not_if_x_exists = { CT_COMM_joyaux_L1 CT_COMM_epices_L1 VOC_INDUSTRIELLE }
 	prerequisites = { CITE_L2 }	
 	gold_cost = 150.0	build_time = 200	tax_income = 0.4	ai_creation_factor = 95	extra_tech_building_start = 100.0
@@ -20,13 +25,14 @@ CT_COMM_peaux_L1 = {
 CT_COMM_peaux_L2 = {
 	desc = CT_COMM_peaux_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = { has_province_modifier = noeud_commercial_primaire }
 	upgrades_from = CT_COMM_peaux_L1
 	gold_cost = 200.0	build_time = 150	tax_income = 0.6	ai_creation_factor = 94	extra_tech_building_start = 100.0
 }
 CT_COMM_peaux_L3 = {
 	desc = CT_COMM_peaux_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	# prerequisites = { COMPTOIR_L3 }
+	potential = { has_province_modifier = route_size3 }
 	upgrades_from = CT_COMM_peaux_L2
 	gold_cost = 250.0	build_time = 150	tax_income = 1.0	ai_creation_factor = 93	extra_tech_building_start = 100.0
 }
@@ -35,24 +41,29 @@ CT_COMM_peaux_L3 = {
 CT_COMM_joyaux_L1 = {
 	desc = CT_COMM_joyaux_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = { has_province_modifier = noeud_commercial_primaire }
+	potential = { 
+		OR = {
+			has_province_modifier = joyaux2_bijoux
+			#has_province_modifier = noeud_commercial_primaire
+			#has_province_modifier = noeud_commercial_annexe
+			}
+		}
 	not_if_x_exists = { CT_COMM_peaux_L1 CT_COMM_epices_L1 VOC_INDUSTRIELLE }
 	prerequisites = { CITE_L2 }
-	#prerequisites = { COMPTOIR_L1 }	
 	gold_cost = 150.0	build_time = 200	tax_income = 0.4	ai_creation_factor = 95	extra_tech_building_start = 100.0
 }
 CT_COMM_joyaux_L2 = {
 	desc = CT_COMM_joyaux_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = { has_province_modifier = noeud_commercial_primaire }
 	prerequisites = { CITE_L3 }
-	#prerequisites = { COMPTOIR_L2 }
 	upgrades_from = CT_COMM_joyaux_L1
 	gold_cost = 200.0	build_time = 150	tax_income = 0.6	ai_creation_factor = 94	extra_tech_building_start = 100.0
 }
 CT_COMM_joyaux_L3 = {
 	desc = CT_COMM_joyaux_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { COMPTOIR_L3 }
+	potential = { has_province_modifier = route_size3 }
 	upgrades_from = CT_COMM_joyaux_L2
 	gold_cost = 250.0	build_time = 150	tax_income = 1.0	ai_creation_factor = 93	extra_tech_building_start = 100.0
 }
@@ -61,29 +72,32 @@ CT_COMM_joyaux_L3 = {
 CT_COMM_epices_L1 = {
 	desc = CT_COMM_epices_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = { has_province_modifier = noeud_commercial_primaire }
+	potential = { 
+		OR = {
+			has_province_modifier = epices2_epices
+			#has_province_modifier = noeud_commercial_primaire
+			#has_province_modifier = noeud_commercial_annexe
+			}
+		}
 	not_if_x_exists = { CT_COMM_peaux_L1 CT_COMM_joyaux_L1 VOC_INDUSTRIELLE }
 	prerequisites = { CITE_L2 }
-	#prerequisites = { COMPTOIR_L1 }	
 	gold_cost = 150.0	build_time = 200	tax_income = 1.0	ai_creation_factor = 95	extra_tech_building_start = 100.0
 }
 CT_COMM_epices_L2 = {
 	desc = CT_COMM_epices_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	prerequisites = { CITE_L3 }
-	#prerequisites = { COMPTOIR_L2 }	
+	potential = { has_province_modifier = noeud_commercial_primaire }
+	prerequisites = { CITE_L3 }	
 	upgrades_from = CT_COMM_epices_L1
 	gold_cost = 250.0	build_time = 150	tax_income = 1.0	ai_creation_factor = 94	extra_tech_building_start = 100.0
 }
 CT_COMM_epices_L3 = {
 	desc = CT_COMM_epices_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { COMPTOIR_L3 }
+	potential = { has_province_modifier = route_size3 }
 	upgrades_from = CT_COMM_epices_L2
 	gold_cost = 350.0	build_time = 150	tax_income = 2.0	ai_creation_factor = 93	extra_tech_building_start = 100.0
 }
 
 }
-
-
 

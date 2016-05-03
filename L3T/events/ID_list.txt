@@ -90,8 +90,8 @@
 #id = ECO.0003 #évaluation du potentiel économique -forets- 
 #id = ECO.0004 #évaluation du potentiel économique -montagnes- 
 #id = ECO.0005 #évaluation du potentiel économique -t.arables- 
-#id = ECO.0006 #évaluation du potentiel économique -peche- 
-#id = ECO.0007 #évaluation du potentiel économique -pisci- 
+#[COMMENTE] id = ECO.0006 #évaluation du potentiel économique -peche- 
+#[COMMENTE] id = ECO.0007 #évaluation du potentiel économique -pisci- 
 #id = ECO.0008 #évaluation du potentiel économique -désert- 
 #id = ECO.00080 #évaluation du potentiel économique -steppe- 
 #id = ECO.00081 #évaluation du potentiel économique -jungle-
@@ -126,6 +126,10 @@
 #id = ECO.00122 #activation pour commerce -foret -planche-
 #id = ECO.00123 #activation pour commerce -foret -verre- 
 
+#id = ECO.124 #activation pour commerce -luxe -peaux-
+#id = ECO.125 #activation pour commerce -luxe -joyaux-
+#id = ECO.126 #activation pour commerce -luxe -epices-
+
 #id = ECO.00130 #activation pour commerce -pierre- 
 #id = ECO.00131 #activation pour commerce -pierre taille- 
 
@@ -150,7 +154,7 @@
 #[COMMENTE] id = ECO.0023 #centre commercial1 test
 #[COMMENTE] id = ECO.0024 #centre commercial2 test
 #[COMMENTE] id = ECO.0025 #centre commercial3 test
-#id = ECO.0026 #calcul du nombre de ressources
+#[COMMENTE] id = ECO.0026 #calcul du nombre de ressources
 
 ###ECO+_immersion.txt
 
@@ -216,19 +220,19 @@
 #id = ECO.0323 #Le seigneur a préféré un produit étranger !!!à renuméroter!!!
 
 ################################################
-# TRADE dynamic trade route by Arko and Mouchi #
+# L3TRADE dynamic trade route by Arko and Mouchi #
 ################################################
 
-#id = TRADE.0001 #Step B attribution
-#id = TRADE.0002 #Step C attribution
-#id = TRADE.0003 #Step D attribution
-#id = TRADE.0004 #Step E attribution
-#id = TRADE.0005 #Route modifier attribution
-#id = TRADE.0006 #Annex comercial node attribution
-#id = TRADE.0007 #Update the modifier of the route size
-#id = TRADE.0008 #Update the route size variable for previous steps
-#id = TRADE.0009 #Avert the player that the route building can be build on its demesne
-#id = TRADE.0010 #Avert the player that a route is on its demesne
+#id = L3TRADE.0001 #Step B attribution
+#id = L3TRADE.0002 #Step C attribution
+#id = L3TRADE.0003 #Step D attribution
+#id = L3TRADE.0004 #Step E attribution
+#id = L3TRADE.0005 #Route modifier attribution
+#id = L3TRADE.0006 #Annex comercial node attribution
+#id = L3TRADE.0007 #Update the modifier of the route size
+#id = L3TRADE.0008 #Update the route size variable for previous steps
+#id = L3TRADE.0009 #Avert the player that the route building can be build on its demesne
+#id = L3TRADE.0010 #Avert the player that a route is on its demesne
 
 ######################################################
 # [ReC][Reliques et Cathédrales]  par Arko et Mouchi #

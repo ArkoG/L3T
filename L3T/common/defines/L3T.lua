@@ -9,9 +9,10 @@
 -- INFANT_DEATH_CHANCE ex 0.0
 -- IDEAL_YEAR_LEVEL_0 ex 700
 -- IDEAL_YEAR_LEVEL_8 ex 1500
--- CROWDED ex 50
--- DOW ex 0.5
+-- CROWDED ex 75
+-- DOW ex 0.75
 	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_STEWARDSHIP_MULT = 0.25
+	NDefines.NDiplomacy.TRANSFER_VASSAL_INTERACTION_ENABLED = 0
 	NDefines.NCharacter.BASE_NR_OF_CHILDREN_PER_COUPLE = 3
 	NDefines.NCharacter.EXTRA_NR_OF_CHILDREN_FOR_PLAYERS = 0
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_0 = 300					-- Natural deaths per decade out of 10000 people: Age 0-9
@@ -27,9 +28,8 @@
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_100 = 8000			-- Natural deaths per decade out of 10000 people: Age 100+
 	NDefines.NCharacter.FERTILITY_BASE_MULT = 0.70						-- Base fertility multiplier to adjust the base chance of impregnation
 	NDefines.NCharacter.INFANT_DEATH_CHANCE = 0.05
+	NDefines.NReligion.CREATE_ANTIPOPE_PRESTIGE_COST = 1000
 	NDefines.NTechnology.IDEAL_YEAR_LEVEL_0 = 800
 	NDefines.NTechnology.IDEAL_YEAR_LEVEL_8 = 1650
-	NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER = 30
+	NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER = 45 				-- How many courtiers in a court to make it crowded and increase chance for disease.
 	NDefines.NAI.DOW_AGGRESSION_FACTOR = 0.25
-	NDefines.NDiplomacy.TRANSFER_VASSAL_INTERACTION_ENABLED = 0
-	NDefines.NReligion.CREATE_ANTIPOPE_PRESTIGE_COST = 1000

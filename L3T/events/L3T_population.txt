@@ -223,7 +223,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron	
 			is_republic = yes
-			is_patrician = no			
+			holding_type = city		
 			NOT = {	has_building = CT_town_1	}
 			num_of_buildings = 10
 		}
@@ -237,7 +237,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_republic = yes
-				is_patrician = no		
+				holding_type = city	
 				NOT = {	has_building = CT_town_1	}
 				num_of_buildings = 10
 			}
@@ -262,7 +262,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron	
 			is_republic = yes
-			is_patrician = no	
+			holding_type = city	
 			has_building = CT_town_1
 			NOT = { has_building = CT_town_2 }
 			num_of_buildings = 15
@@ -277,7 +277,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_republic = yes
-				is_patrician = no	
+				holding_type = city	
 				num_of_buildings = 15
 				has_building = CT_town_1
 				NOT = { has_building = CT_town_2 }
@@ -303,7 +303,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron	
 			is_republic = yes
-			is_patrician = no		
+			holding_type = city		
 			has_building = CT_town_2
 			NOT = { has_building = CT_town_3 }
 			num_of_buildings = 20
@@ -318,7 +318,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_republic = yes
-				is_patrician = no	
+				holding_type = city	
 				num_of_buildings = 20
 				has_building = CT_town_2
 				NOT = { has_building = CT_town_3 }
@@ -344,7 +344,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron	
 			is_republic = yes
-			is_patrician = no		
+			holding_type = city			
 			has_building = CT_town_3
 			NOT = { has_building = CT_town_4 }
 			num_of_buildings = 25
@@ -359,7 +359,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_republic = yes
-				is_patrician = no	
+				holding_type = city		
 				num_of_buildings = 25
 				has_building = CT_town_3
 						NOT = { has_building = CT_town_4 }
@@ -388,7 +388,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron	
 			is_republic = yes
-			is_patrician = no		
+			holding_type = city		
 			has_building = CT_town_4
 			NOT = { has_building = CT_town_5 }
 			num_of_buildings = 30
@@ -403,7 +403,7 @@ option = {
 			limit = {	
 				tier = baron	
 				is_republic = yes
-				is_patrician = no	
+				holding_type = city	
 				num_of_buildings = 30
 				has_building = CT_town_4
 				NOT = { has_building = CT_town_5 }

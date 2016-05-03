@@ -7,90 +7,7 @@
 
 castle = {
 
-#ETOFFE
-CA_atelier_L1 = {
-	desc = CA_atelier_L1_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		OR = {
-			# Has the resource
-			has_province_modifier = elevage2_laine
-			
-			# Or is on a route and e neighboor on the route has the resource
-			AND = {
-				OR = {
-					has_province_modifier = route_fluviale
-					has_province_modifier = route_terrestre
-				}
-				any_neighbor_province = {
-					has_province_modifier = elevage2_laine
-					OR = {
-						has_province_modifier = route_fluviale
-						has_province_modifier = route_terrestre
-					}					
-				}
-			}			
-		}
-	}
-	#prerequisites = { CA_ELEV_ovin_L1a }
-	prerequisites = { BOURGFEODAL }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-CA_atelier_L2 = {
-	desc = CA_atelier_L2_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { CA_ELEV_ovin_L2a }
-	upgrades_from = CA_atelier_L1
-		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-CA_atelier_L3 = {
-	desc = CA_atelier_L3_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { CA_ELEV_ovin_L3a }
-	upgrades_from = CA_atelier_L2
-		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-
-#DRAP
-CA_draperie_L1 = {
-	desc = CA_draperie_L1_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		OR = {
-			has_province_modifier = elevage3_etoffe
-			AND = {
-				OR = {
-					has_province_modifier = route_fluviale
-					has_province_modifier = route_terrestre
-				}
-				any_neighbor_province = {
-					has_province_modifier = elevage3_etoffe
-					OR = {
-						has_province_modifier = route_fluviale
-						has_province_modifier = route_terrestre
-					}					
-				}
-			}			
-		}
-	}
-	#prerequisites = { CA_ELEV_ovin_L1a }
-	prerequisites = { BOURGFEODAL }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-CA_draperie_L2 = {
-	desc = CA_draperie_L2_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { CA_ELEV_ovin_L2a }
-	upgrades_from = CA_draperie_L1
-		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-CA_draperie_L3 = {
-	desc = CA_draperie_L3_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { CA_ELEV_ovin_L3a }
-	upgrades_from = CA_draperie_L2
-		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
-}
+#Etoffe et DRAP moved to city
 
 #PLANCHE
 CA_scierie_L1 = {
@@ -115,7 +32,7 @@ CA_scierie_L1 = {
 		}
 	}
 	#prerequisites = { CA_BOIS_bois_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_scierie_L2 = {
@@ -156,7 +73,7 @@ CA_four_L1 = {
 		}
 	}
 	#prerequisites = { CA_BOIS_charbon_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_four_L2 = {
@@ -197,7 +114,7 @@ CA_pierre_taille_L1 = {
 		}
 	}
 	#prerequisites = { CA_CARR_pierre_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_pierre_taille_L2 = {
@@ -238,7 +155,7 @@ CA_fonderie_L1 = {
 		}
 	}
 	#prerequisites = { CA_MINE_minerai_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_fonderie_L2 = {
@@ -279,7 +196,7 @@ CA_outilleur_L1 = {
 		}
 	}
 	#prerequisites = { CA_fonderie_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_adm }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_outilleur_L2 = {
@@ -319,7 +236,7 @@ CA_armurerie_L1 = {
 		}
 	}
 	#prerequisites = { CA_fonderie_L1 }
-	prerequisites = { BOURGFEODAL }
+	prerequisites = { FEODAL_mil }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	garrison_size = 0.1 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_armurerie_L2 = {
@@ -345,6 +262,84 @@ CA_armurerie_L3 = {
 
 city = {
 
+#ETOFFE
+CT_atelier_L1 = {
+	desc = CT_atelier_L1_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = {
+		OR = {
+			# Has the resource
+			has_province_modifier = elevage2_laine
+			
+			# Or is on a route and e neighboor on the route has the resource
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = elevage2_laine
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
+		}
+	}
+	prerequisites = { VOC_INDUSTRIELLE }
+		gold_cost = 100.0	build_time = 90	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_atelier_L2 = {
+	desc = CT_atelier_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_atelier_L1
+		gold_cost = 150.0	build_time = 120	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_atelier_L3 = {
+	desc = CT_atelier_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_atelier_L2
+		gold_cost = 200.0	build_time = 365	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#DRAP
+CT_draperie_L1 = {
+	desc = CT_draperie_L1_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = {
+		OR = {
+			has_province_modifier = elevage3_etoffe
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = elevage3_etoffe
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
+		}
+	}
+	prerequisites = { VOC_INDUSTRIELLE }
+		gold_cost = 150.0	build_time = 120	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_draperie_L2 = {
+	desc = CT_draperie_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_draperie_L1
+		gold_cost = 200.0	build_time = 365	tax_income = 0.3	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_draperie_L3 = {
+	desc = CT_draperie_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_draperie_L2
+		gold_cost = 350.0	build_time = 450	tax_income = 0.5	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+}
 
 #BIERE
 CT_brasserie_L1 = {
@@ -766,11 +761,27 @@ CT_saline_L1 = {
 			has_province_modifier = minerai2_sel_gemme
 			AND = {
 				OR = {
-					has_province_modifier = route_fluviale
+					has_province_modifier = route_fluviale 
 					has_province_modifier = route_terrestre
 				}
 				any_neighbor_province = {
 					has_province_modifier = minerai2_sel_gemme
+					OR = {
+						has_province_modifier = route_fluviale
+						has_province_modifier = route_terrestre
+					}					
+				}
+			}			
+		}
+		OR = {
+			has_province_modifier = elevage3_viande
+			AND = {
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}
+				any_neighbor_province = {
+					has_province_modifier = elevage3_viande
 					OR = {
 						has_province_modifier = route_fluviale
 						has_province_modifier = route_terrestre

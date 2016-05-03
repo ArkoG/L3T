@@ -47,7 +47,7 @@ REPAIREVOLEUR = {
 		FROM = {trait = chef_malandrin }
 		TECH_TRADE_PRACTICES = 0
 	}
-	not_if_x_exists = { FORT CITADELLE BOURGFEODAL }
+	not_if_x_exists = { FEODAL_adm FEODAL_mil FEODAL_prod }
 	potential = { NOT = { religion_group = pagan_group } }		
 	gold_cost = 0.0
 	tax_income = 2.0
@@ -66,7 +66,7 @@ repaire_voleur_L1 = { #Cache de brigands
 		FROM = {trait = chef_malandrin }
 		TECH_TRADE_PRACTICES = 0
 	}
-	not_if_x_exists = { FORT CITADELLE BOURGFEODAL }
+	not_if_x_exists = { FEODAL_adm FEODAL_mil FEODAL_prod }
 	prerequisites = { REPAIREVOLEUR }
 	gold_cost = 10.0	build_time = 30		ai_creation_factor = 92
 	local_tax_modifier = 0.01
@@ -139,7 +139,7 @@ fort_brigands_L1 = { #Palissade
 		FROM = {trait = chef_malandrin }
 		TECH_TRADE_PRACTICES = 0
 	}
-	not_if_x_exists = { FORT CITADELLE BOURGFEODAL }
+	not_if_x_exists = { FEODAL_adm FEODAL_mil FEODAL_prod }
 	prerequisites = { REPAIREVOLEUR repaire_voleur_L2 }
 	gold_cost = 50.0	build_time = 90	fort_level = 0.1	ai_creation_factor = 90
 	tax_income = -0.1
@@ -177,7 +177,7 @@ caserne_brigands_L1 = { #Abri des malandrins
 		FROM = {trait = chef_malandrin }
 		TECH_TRADE_PRACTICES = 0
 	}
-	not_if_x_exists = { FORT CITADELLE BOURGFEODAL }
+	not_if_x_exists = { FEODAL_adm FEODAL_mil FEODAL_prod }
 	prerequisites = { repaire_voleur_L1 }
 	gold_cost = 100.0	build_time = 180 	ai_creation_factor = 90	
 	tax_income = 0.1 		#un brigand rapporte plus que ce qu'il ne coûte	
@@ -230,7 +230,7 @@ reseau_provincial_L1 = {
 		FROM = {trait = chef_malandrin }
 		TECH_TRADE_PRACTICES = 0
 	}
-	not_if_x_exists = { FORT CITADELLE BOURGFEODAL }
+	not_if_x_exists = { FEODAL_adm FEODAL_mil FEODAL_prod }
 	prerequisites = { repaire_voleur_L1 }
 	gold_cost = 50.0	build_time = 180	ai_creation_factor = 90
 	tax_income = 0.2

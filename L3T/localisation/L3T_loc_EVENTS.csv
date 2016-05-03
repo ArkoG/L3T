@@ -1,9 +1,9 @@
 L3T.0003;Choisir l'orientation du domaine -version féodale-;Choisir l'orientation du domaine -version féodale-;;;;;;;;;;;;x
 NAMEL3T.0003;Feudal Land Administration;Domaine Seigneurial;;;;;;;;;;;;x
-DESCL3T.0003;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of the local nobility.  \n\nYou may choose to support the local military aristocracy, allowing you to develop this holding into a formidable fortress. It will be able to support and protect large numbers of highly-trained troops behind its thick walls, but maintaining them will forego any major economic development within this holding. \n\nChoosing instead to support the local landed aristocracy by granting them more control over the peasantry will allow the development of regional industries and production of raw resources. While this will limit the defensibility of [Root.Location.GetName], the economic benefits are considerable.;Nous devons décider comment allons-nous développer ce domaine.\n\n     -Une Citadelle remplira aussi bien un rôle de poste frontière sur une de nos marches qu'un rôle de protection et de formation de troupes. C'est un site très bien défendu mais qui coûte cher à entretenir.\n     -Une Citée Fortifiée pourra abriter une population importante derrière ses hauts murs défendus par un château fort. Elle a l'étoffe d'une Capitale pour tout seigneur de notre rang !\n     -Le Bourg Féodal regroupe une communauté de paysans qui exploitent nos terres et vivent bien loin des préoccupation de la cour. Il permet l'exploitation des ressources locales, qui pourront être échangées ou vendues et... taxées pour venir remplir nos coffres.;;;;;;;;;;;;x
-L3T.0003A;We shall support the military aristocracy!;Ce sera une Citadelle ! J'ai dis.;;;;;;;;;;;;x
+DESCL3T.0003;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of the local nobility.  \n\nYou may choose to support the local military aristocracy, allowing you to develop this holding into a formidable fortress. It will be able to support and protect large numbers of highly-trained troops behind its thick walls, but maintaining them will forego any major economic development within this holding. \n\nChoosing instead to support the local landed aristocracy by granting them more control over the peasantry will allow the development of regional industries and production of raw resources. While this will limit the defensibility of [Root.Location.GetName], the economic benefits are considerable.;Nous devons décider comment allons-nous développer ce domaine.\n\n     -Une Forteresse remplira aussi bien un rôle de poste frontière sur une de nos marches qu'un rôle de protection et de formation de troupes. C'est un site très bien défendu mais qui coûte cher à entretenir.\n     -Une Citée féodale pourra abriter une population importante derrière ses hauts murs défendus par un château fort. Elle a l'étoffe d'une Capitale pour tout seigneur de notre rang !\n     -Le Bourg Féodal regroupe une communauté de paysans qui exploitent nos terres et vivent bien loin des préoccupation de la cour. Il permet l'exploitation des ressources locales, qui pourront être échangées ou vendues et... taxées pour venir remplir nos coffres.;;;;;;;;;;;;x
+L3T.0003A;We shall support the military aristocracy!;Ce sera une Forteresse avant tout !;;;;;;;;;;;;x
 L3T.0003B;We shall support the landed aristocracy!;Un Bourg Féodal de toute évidence !;;;;;;;;;;;;x
-L3T.0003C;We shall save our resources to develop the administration!;Ce sera une citée fortifiée..;;;;;;;;;;;x
+L3T.0003C;We shall save our resources to develop the administration!;Ce sera une Cité fortifiée. J'ai dis.;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 L3T.0004;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;;;;;;;;;;;;x
 NAMEL3T.0004;Municipal Land Administration;Domaine Communal;;;;;;;;;;;;x
@@ -81,7 +81,7 @@ DESCXYLO.0001;My liege, as you are clearly busy with managing the affairs of you
 XYLO.0001A;He will do nicely. Have him start immediately.;Il fera l'affaire, qu'il se présente à moi et s'attèle à la tâche.;;;;;;;;;;;;x
 XYLO.0001B;If you want something done right... you have to do it yourself.;Je le choisirais moi même.;;;;;;;;;;;;x
 XYLO.0002;Forest Specialization1;Spécialisation des Forêts1;;;;;;;;;;;;x
-DESCXYLO.0002;After an evaluation of our domains, our surveyors have informed us that the forests of [From.Location.GetName] are able to be used for either hunting or for harvesting lumber. \n Should we maintain it for your private hunting pleasure or begin sending peasants there to build a lumber camp?;Après un inventaire de nos domaines, notre Forestier nous informe que les bois de [From.Location.GetName] sont giboyeux et abondent d'arbres de belle stature, quel développment privilègier ? \n \nDevons-nous en réserver l'usage à sa seigneurie pour son bon plaisir de chasse ou bien les faire exploiter par nos gens ?;;;;;;;;;;;;x
+DESCXYLO.0002;After an evaluation of our domains, our surveyors have informed us that the forests of [From.Location.GetName] are able to be used for either hunting or for harvesting lumber. \n Should we maintain it for your private hunting pleasure or begin sending peasants there to build a lumber camp?;Après un inventaire de nos domaines, notre Forestier nous informe que les bois de [From.Location.GetName] sont giboyeux et abondent d'arbres de belle stature, quel développement privilègier ? \n \nDevons-nous en réserver l'usage à sa seigneurie pour son bon plaisir de chasse ou bien les faire exploiter par nos gens ?;;;;;;;;;;;;x
 XYLO.0002A;I shall maintain these forests for my own personal enjoyment.;Partons chasser !;;;;;;;;;;;;x
 XYLO.0002B;Let us put these lazy peasants to good use!;Faisons-la exploiter par ces fainéants de paysans !;;;;;;;;;;;;x
 XYLO.0002C;I shall give the order to begin exploiting these resources.;Du bois, quoi d'autre ? ;;;;;;;;;;;;x
@@ -155,11 +155,6 @@ XYLO.0305B;;Nous ne pouvons nous le permettre.;;;;;;;;;;;;x
 XYLO.0305C;;Supprimons la charte existante ça leur apprendra !;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;EVENTS BANDITS;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
-EVTDESC68001;The peasants of [Root.GetName] are slowly starting to respect my rule again. I should keep my demesne small enough to manage.;Les paysans de [Root.GetName] recommencent progressivement à respecter mon autorité. Je devrais maintenir mon domaine à une taille gérable.;;;;;;;;;;;;x
-EVTDESC68010;Due to my somewhat lacking Stewardship skill, a Thieves' Guild has been established in [Root.GetName].;Mon inaptitude pour l’intendance a entraîné l’établissement d’une Guilde de voleurs à [Root.GetName].;;;;;;;;;;;;x
-EVTDESC68020;My less than perfect Diplomacy has allowed a Smugglers' Ring to appear in [Root.GetName].;Mes piètres talents de diplomate ont permis à un Cercle de contrebandiers de se créer à [Root.GetName].;;;;;;;;;;;;x
-EVTDESC68030;Due to my mediocre understanding of Martial matters, bands of robbers are roaming the countryside in [Root.GetName]. They are too craven to attack my castles though.;À cause de mon manque de discernement dans le domaine martial, des bandes de voleurs sillonnent les campagnes de [Root.GetName]. Ils sont cependant trop lâches pour attaquer mes châteaux.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 raids_pirates;Pirate Raids;Raids pirates;;;;;;;;;;;;x
 raids_pirates_desc;;Les raids des pirates ici sont réguliers. Face à l'inefficacité et l'impuissance du Seigneur ils prospèrent et ont probablement établi domicile non loin de là.;;;;;;;;;;;;x
@@ -261,16 +256,16 @@ XYLO.01151;x;;;;;;;;;;;;;x
 XYLO.01152;x;;;;;;;;;;;;;x
 XYLO.01153;x;;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-DESCTRADE.0005;The regularity of the merchant caravans passing through [From.Location.GetName] has established a major trade route passing through this province.;Une route s'est développée dans la province de [From.Location.GetName], dans notre domaine.\nOn devrait développer notre infrastructure pour tirer parti de cette manne.;;;;;;;;;;;;x
-TRADE.0005A;This can only bring good to our realm.;J'en prends note;;;;;;;;;;;;x
-DESCTRADE.0009;A new trade route has emerged in [Root.Location.GetName], just at the edge of our borders. If we were to develop our infrastructure further to connect our lands to it, we could surely attract merchants here as well.;Une route s'est développée dans la province de [From.Location.GetName], juste à côté de notre domaine.\nOn devrait développer notre infrastructure pour accueillir également les marchands.;;;;;;;;;;;;x
-TRADE.0009A;Apparently our roads need some work.;J'en prends note;;;;;;;;;;;;x
-DESCTRADE.0010;The development of a great city in the province of [Root.Location.GetName] has attracted traders from far and wide and established it as a center of commerce. Perhaps we should invest in our infrastructure to facilitate the passage of trade through these lands and increase our coffers even more!;Le développement d'une cité dans la province de [From.Location.GetName] a fait de celle-ci un centre de commerce.\nOn devrait aménager davantage pour profiter de cette manne.;;;;;;;;;;;;x
-TRADE.0010A;What a fortunate turn of events!;J'en prends note;;;;;;;;;;;;x
+DESCL3TRADE.0005;The regularity of the merchant caravans passing through [From.Location.GetName] has established a major trade route passing through this province.;Une route s'est développée dans la province de [From.Location.GetName], dans notre domaine.\nOn devrait développer notre infrastructure pour tirer parti de cette manne.;;;;;;;;;;;;x
+L3TRADE.0005A;This can only bring good to our realm.;J'en prends note;;;;;;;;;;;;x
+DESCL3TRADE.0009;A new trade route has emerged in [Root.Location.GetName], just at the edge of our borders. If we were to develop our infrastructure further to connect our lands to it, we could surely attract merchants here as well.;Une route s'est développée dans la province de [From.Location.GetName], juste à côté de notre domaine.\nOn devrait développer notre infrastructure pour accueillir également les marchands.;;;;;;;;;;;;x
+L3TRADE.0009A;Apparently our roads need some work.;J'en prends note;;;;;;;;;;;;x
+DESCL3TRADE.0010;The development of a great city in the province of [Root.Location.GetName] has attracted traders from far and wide and established it as a center of commerce. Perhaps we should invest in our infrastructure to facilitate the passage of trade through these lands and increase our coffers even more!;Le développement d'une cité dans la province de [From.Location.GetName] a fait de celle-ci un centre de commerce.\nOn devrait aménager davantage pour profiter de cette manne.;;;;;;;;;;;;x
+L3TRADE.0010A;What a fortunate turn of events!;J'en prends note;;;;;;;;;;;;x
 DESCSTEP;Having been informed by our contacts that many reputable merchants were looking into establishing a presence in [From.Location.GetName], our steward has been investigating whether such reports are true.;Des marchands évaluent la possibilité de passer par la province de [From.Location.GetName] pour mener à bien leur affaire.\nS'ils choisissent cette province, on devrait l'aménager davantage pour profiter de cette manne.;;;;;;;;;;;;x
-TRADESTEPOK;A most fortuitous development! The first of the merchants have arrived in [From.Location.GetName]!;Les marchands ont trouvé la province de [From.Location.GetName] intéressante.;;;;;;;;;;;;x
-TRADESTEPKO;Apparently the merchants have pursued other ventures elsewhere. To the devil with them!;Les marchands refusent de passer par [From.Location.GetName]. Qu'ils aillent en enfer!;;;;;;;;;;;;x
-TRADESTEPALREADY;Traders have been already passing by [From.Location.GetName] for quite some time.;Les marchands passent déjà par [From.Location.GetName].;;;;;;;;;;;;x
+L3TRADESTEPOK;A most fortuitous development! The first of the merchants have arrived in [From.Location.GetName]!;Les marchands ont trouvé la province de [From.Location.GetName] intéressante.;;;;;;;;;;;;x
+L3TRADESTEPKO;Apparently the merchants have pursued other ventures elsewhere. To the devil with them!;Les marchands refusent de passer par [From.Location.GetName]. Qu'ils aillent en enfer!;;;;;;;;;;;;x
+L3TRADESTEPALREADY;Traders have been already passing by [From.Location.GetName] for quite some time.;Les marchands passent déjà par [From.Location.GetName].;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 REC.0151;Confirmation relique;x;;;;;;;;;;;;x
 DESCREC.0151;It has been reported that a holy relic has been found in the province of [From.Location.GetName]. This object is revered by the the faithful of the Church and would draw in pilgrims from far and wide.;On nous a rapporté que la province de [From.Location.GetName] abrite une Sainte Relique répertoriée par l'Eglise Catholique. Cet objet revêt une grande importance pour les fidèles de cette religion. Elle peut faire l'objet d'un culte particulier voire donner lieu à des pélérinages.;;;;;;;;;;;;;x
@@ -941,6 +936,15 @@ ECO.00122A;OK;OK;;;;;;;;;;;;x
 ECO.00123;activation VERRE;activation VERRE;;;;;;;;;;;;x
 DESCECO.00123;Our glaziers have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of glass.;\nLa ressource "Verre" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
 ECO.00123A;OK;OK;;;;;;;;;;;;x
+ECO.00124;;activation PEAUX;;;;;;;;;;;;x
+DESCECO.00124;;activation PEAUX [From.Location.GetName];;;;;;;;;;;;x
+ECO.00124A;OK;OK;;;;;;;;;;;;x
+ECO.00125;;activation JOYAUX;;;;;;;;;;;;x
+DESCECO.00125;;activation JOYAUX [From.Location.GetName];;;;;;;;;;;;x
+ECO.00125A;OK;OK;;;;;;;;;;;;x
+ECO.00126;;activation EPICES;;;;;;;;;;;;x
+DESCECO.00126;;activation EPICES [From.Location.GetName];;;;;;;;;;;;x
+ECO.00126A;OK;OK;;;;;;;;;;;;x
 ECO.00131;activation PIERRE TAILLE;activation PIERRE TAILLE;;;;;;;;;;;;x
 DESCECO.00131;Our stonemasons have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of worked stone.;\nLa ressource "Pierre de taille" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
 ECO.00131A;OK;OK;;;;;;;;;;;;x
@@ -1137,6 +1141,7 @@ PECHE_MAUVAISE_CHRONIQUE;The fishing season has been particularly poor this year
 RECOLTE_BONNE_CHRONIQUE;The harvest has been particularly fruitful this year in [Root.GetName], and our barns and storehouses are overflowing.;Les abondantes récoltes en cette année sur les terres de [Root.GetName] ont rempli les panses et gonflé les stocks. ;;;;;;;;;;;;x
 RECOLTE_MAUVAISE_CHRONIQUE;The harvests has been particularly poor this year in [Root.GetName], and it is feared many will not survive the winter.;La médiocrité des récoltes de l'année sur les terres de [Root.GetName] a engendré une période de disette l'hiver qui a suivi.;;;;;;;;;;;;x 
 chronique_prosperite_custom;This deserves to be inscribed in the chronicles of our house.;Cela vaut une inscription aux annales du royaume. \n;;;;;;;;;;;;x
+CHRONICLE_SECHERESSE;The drought in [Root.GetName] that year that lasts for months marked in memories as a period of starving and peasants' discontent.;Une sécheresse a sévit dans la province de [Root.GetName] pendant des mois et a durement affecté les récoltes de l'année. Chacun garde un mauvais souvenir de cette période de disette.;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
 DESCECO.319;;La propriété foncière est à la base des beaucoup de taxes que nous percevons. Le fief ou fisc est souvent composé de terres ou sinon de droits et redevances divers.\nCela semble une bonne piste à explorer pour améliorer nos compétences d'intendance et améliorer nos rentrées fiscales.;;;;;;;;;;;;x
 ECO.319A;;Voilà qui sonne comme une évidence !;;;;;;;;;;;;x

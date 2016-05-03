@@ -79,8 +79,14 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA39000"
-		trigger = { owner = { NOT = { religion = ROOT } } }
+		name = {
+			text = "EVTOPTA39000"
+			trigger = { owner = { NOT = { religion = ROOT } } }
+		}
+		name = {
+			text = "EVTOPTB39000"
+			trigger = { owner = { religion = ROOT } }
+		}
 		if = {
 			limit = { 
 				ruler = { is_parent_religion = ROOT }
@@ -118,58 +124,8 @@ province_event = {
 					any_vassal = {
 						limit = {
 							OR = {
-								is_parent_religion = FROM
-								religion = FROM
-							}
-						}
-						character_event = { id = 39400 days = 2 }
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = "EVTOPTB39000"
-		trigger = { owner = { religion = ROOT } }
-		if = {
-			limit = { 
-				ruler = { is_parent_religion = ROOT }
-			}
-			ruler = { piety = -10 }
-		}
-		if = {
-			limit = {
-				owner = {
-					top_liege = {
-						NOT = {
-							any_realm_province = {
+								is_parent_religion = ROOT
 								religion = ROOT
-								has_province_modifier = heretic_stronghold
-							}
-						}
-					}
-				}
-			}
-			add_province_modifier = {
-				name = heretic_stronghold
-				duration = -1
-			}
-		}
-		# News spread
-		hidden_tooltip = {
-			owner = {
-				top_liege = {
-					if = {
-						limit = {
-							NOT = { character = PREV }
-						}
-						character_event = { id = 39400 days = 2 }
-					}
-					any_vassal = {
-						limit = {
-							OR = {
-								is_parent_religion = FROM
-								religion = FROM
 							}
 						}
 						character_event = { id = 39400 days = 2 }
@@ -3761,10 +3717,12 @@ character_event = {
 				factor = 5
 				is_reformed_religion = no
 				primary_title = { has_law = tribal_organization_4 }  # Need it to reform government
-				OR = {
-					capital_scope = {
-						port = yes
-						capital_holding = {
+				capital_holding = {
+					OR = {
+						AND = {
+							location = {
+								port = yes
+							}
 							OR = {
 								AND = {
 									holding_type = tribal
@@ -3773,17 +3731,11 @@ character_event = {
 								holding_type = city
 							}
 						}
-					}
-					capital_scope = {
-						capital_holding = {
-							OR = {
-								AND = {
-									holding_type = tribal
-									has_building = tb_hillfort_4
-								}
-								holding_type = castle
-							}
+						AND = {
+							holding_type = tribal
+							has_building = tb_hillfort_4
 						}
+						holding_type = castle
 					}
 				}
 			}
@@ -4027,10 +3979,12 @@ character_event = {
 				factor = 5
 				is_reformed_religion = no
 				primary_title = { has_law = tribal_organization_4 }  # Need it to reform government
-				OR = {
-					capital_scope = {
-						port = yes
-						capital_holding = {
+				capital_holding = {
+					OR = {
+						AND = {
+							location = {
+								port = yes
+							}
 							OR = {
 								AND = {
 									holding_type = tribal
@@ -4039,17 +3993,11 @@ character_event = {
 								holding_type = city
 							}
 						}
-					}
-					capital_scope = {
-						capital_holding = {
-							OR = {
-								AND = {
-									holding_type = tribal
-									has_building = tb_hillfort_4
-								}
-								holding_type = castle
-							}
+						AND = {
+							holding_type = tribal
+							has_building = tb_hillfort_4
 						}
+						holding_type = castle
 					}
 				}
 			}
@@ -4279,7 +4227,6 @@ character_event = {
 letter_event = {
 	id = 39617
 	desc = EVTDESC_39617
-	picture = GFX_evt_bishop
 	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
@@ -4450,10 +4397,6 @@ character_event = {
 		liege = {
 			character_event = { id = 39602 }
 		}
-	}
-	
-	option = {
-		name = OK
 	}
 }
 
@@ -4714,10 +4657,6 @@ character_event = {
 			letter_event = { id = 39604 }
 		}
 	}
-	
-	option = {
-		name = OK
-	}
 }
 
 # Liege informed of Chaplain's failure (hidden)
@@ -4731,10 +4670,6 @@ character_event = {
 		liege = {
 			letter_event = { id = 39607 }
 		}
-	}
-	
-	option = {
-		name = OK
 	}
 }
 
@@ -4750,10 +4685,6 @@ character_event = {
 			letter_event = { id = 39606 }
 		}
 	}
-	
-	option = {
-		name = OK
-	}
 }
 
 # Liege informed Chaplain imprisoned after converting courtier (hidden)
@@ -4768,10 +4699,6 @@ character_event = {
 			character_event = { id = 39608 }
 		}
 	}
-	
-	option = {
-		name = OK
-	}
 }
 
 # Liege informed Chaplain banished after quarrel (hidden)
@@ -4785,10 +4712,6 @@ character_event = {
 		liege = {
 			letter_event = { id = 39609 }
 		}
-	}
-	
-	option = {
-		name = OK
 	}
 }
 
@@ -4826,7 +4749,7 @@ narrative_event = {
 				}
 				num_title_realm_provs = {
 					who = ROOT
-					num = 6
+					value = 6
 				}
 			}
 		}
@@ -4901,7 +4824,7 @@ narrative_event = {
 					}
 					num_title_realm_provs = {
 						who = ROOT
-						num = 6
+						value = 6
 					}
 				}
 			}
@@ -5380,17 +5303,13 @@ narrative_event = {
 			112 = { # Paris
 				NOT = { owner = { religion_group = christian } }
 			}
-			AND = {
-				119 = { # Cologne
-					religion_group = christian
-					NOT = { owner = { religion_group = christian } }
-				}
+			119 = { # Cologne
+				religion_group = christian
+				NOT = { owner = { religion_group = christian } }
 			}
-			AND = {
-				257 = { # Braunschweig
-					religion_group = christian
-					NOT = { owner = { religion_group = christian } }
-				}
+			257 = { # Braunschweig
+				religion_group = christian
+				NOT = { owner = { religion_group = christian } }
 			}
 		}
 	}

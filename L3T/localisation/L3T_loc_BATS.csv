@@ -175,18 +175,6 @@ CA_armurerie_L2;Arms: Cast Iron Weaponsmith;ARMES : forge;;;;;;;;;;;;x
 CA_armurerie_L2_desc;;;;;;;;;;;;;;x
 CA_armurerie_L3;Arms: Steel Weaponsmith;ARMES : fabrique;;;;;;;;;;;;x
 CA_armurerie_L3_desc;;;;;;;;;;;;;;x
-CA_atelier_L1;Spun Cloth: Weaver's Workshop;TISSU : atelier;;;;;;;;;;;;x
-CA_atelier_L1_desc;;;;;;;;;;;;;;x
-CA_atelier_L2;Spun Cloth: Weavers' Manufactory;TISSU : tisserand;;;;;;;;;;;;x
-CA_atelier_L2_desc;;;;;;;;;;;;;;x
-CA_atelier_L3;Spun Cloth: Clothmakers' Guild;TISSU : fabrique;;;;;;;;;;;;x
-CA_atelier_L3_desc;;;;;;;;;;;;;;x
-CA_draperie_L1;Textiles: Dyer's Workshop;DRAP : atelier;;;;;;;;;;;;x
-CA_draperie_L1_desc;;;;;;;;;;;;;;x
-CA_draperie_L2;Textiles: Dyers' Manufactory;DRAP : atelier teinturier;;;;;;;;;;;;x
-CA_draperie_L2_desc;;;;;;;;;;;;;;x
-CA_draperie_L3;Textiles: Drapers' Guild;DRAP : drapier;;;;;;;;;;;;x
-CA_draperie_L3_desc;;;;;;;;;;;;;;x
 CA_ELEV_cheval_L1;Steppe Horses: Grazing Pastures;CHEVAUX : élevage;;;;;;;;;;;;x
 CA_ELEV_cheval_L1_desc;;Les chevaux ici pâturent librement et fournissent des bêtes de traits et plus rarement des montures.;;;;;;;;;;;;x
 CA_ELEV_cheval_L2;Steppe Horses: Horse Breeders;CHEVAUX : dressage;;;;;;;;;;;;x
@@ -196,6 +184,18 @@ CA_ELEV_cheval_L3_desc;;L'élevage et le dressage des chevaux n'a ici qu'un seul 
 #;;;;;;;;;;;;;;x;
 #;-Villes-;-Villes-;;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x;
+CT_atelier_L1;Spun Cloth: Weaver's Workshop;TISSU : atelier;;;;;;;;;;;;x
+CT_atelier_L1_desc;;;;;;;;;;;;;;x
+CT_atelier_L2;Spun Cloth: Weavers' Manufactory;TISSU : tisserand;;;;;;;;;;;;x
+CT_atelier_L2_desc;;;;;;;;;;;;;;x
+CT_atelier_L3;Spun Cloth: Clothmakers' Guild;TISSU : fabrique;;;;;;;;;;;;x
+CT_atelier_L3_desc;;;;;;;;;;;;;;x
+CT_draperie_L1;Textiles: Dyer's Workshop;DRAP : atelier;;;;;;;;;;;;x
+CT_draperie_L1_desc;;;;;;;;;;;;;;x
+CT_draperie_L2;Textiles: Dyers' Manufactory;DRAP : atelier teinturier;;;;;;;;;;;;x
+CT_draperie_L2_desc;;;;;;;;;;;;;;x
+CT_draperie_L3;Textiles: Drapers' Guild;DRAP : drapier;;;;;;;;;;;;x
+CT_draperie_L3_desc;;;;;;;;;;;;;;x
 #FERME CEREALIERE (plaine et terres arables);;;;;;;;;;;;;;;x
 CT_AGRI_cereale_L1;Cereals: Land Clearance;CEREALES : Plaine Défrichée;;;;;;;;;;;;x;
 CT_AGRI_cereale_L1_desc;This land has been cleared and prepared for the large-scale cultivation of cereals.;Ce terrain a été défriché et devrait bientôt pouvoir produire des céréales.;;;;;;;;;;;x
@@ -515,16 +515,6 @@ TP_four_L3_desc;;;;;;;;;;;;;;x
 #COMPTOIR_L3;COMMERCIAL CENTRE;CENTRE DE COMMERCE;;;;;;;;;;;;;x
 #COMPTOIR_L3_desc;;Cette cité se trouve au carrefour de pas moins de trois routes commerciales. Il peut s'agir de comptoirs patriciens ou de routes terrestres ou fluviales. Cette situation privilégiée permet un meilleur développement de nos infrastructures commerciales.;;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x;
-ca_town_1;Population: Hamlet;Hameau;;;;;;;;;;;;x
-ca_town_1_desc;Requires §Y10§! buildings.;Requiert §Y10§! bâtiments au total.;;;;;;;;;;;;x
-ca_town_2;Population: Village;Village;;;;;;;;;;;;x
-ca_town_2_desc;Requires §Y15§! buildings.;Requiert §Y15§! bâtiments au total.;;;;;;;;;;;;x
-ca_town_3;Population: Borough;Bourg;;;;;;;;;;;;x
-ca_town_3_desc;Requires §Y20§! buildings.;Requiert §Y20§! bâtiments au total.;;;;;;;;;;;;x
-ca_town_4;Population: Town;Ville;;;;;;;;;;;;x
-ca_town_4_desc;Requires §Y25§! buildings.;Requiert §Y25§! bâtiments au total.;;;;;;;;;;;;x
-ca_town_5;Population: City;Cité;;;;;;;;;;;;x
-ca_town_5_desc;Requires §Y35§! buildings.;Requiert §Y35§! bâtiments au total;;;;;;;;;;;;x
 CT_town_1;Population: Hamlet;Hameau;;;;;;;;;;;;x
 CT_town_1_desc;Requires §Y10§! buildings.;Requiert §Y10§! bâtiments au total.;;;;;;;;;;;;x
 CT_town_2;Population: Village;Village;;;;;;;;;;;;x
@@ -535,16 +525,7 @@ CT_town_4;Population: Town;Ville;;;;;;;;;;;;x
 CT_town_4_desc;Requires §Y25§! buildings.;Requiert §Y25§! bâtiments au total.;;;;;;;;;;;;x
 CT_town_5;Population: City;Cité;;;;;;;;;;;;x
 ct_town_5_desc;Requires §Y30§! buildings.;Requiert §Y30§! bâtiments au total;;;;;;;;;;;;x
-tp_town_1;Population: Hamlet;Hameau;;;;;;;;;;;;x
-tp_town_1_desc;Requires §Y12§! buildings.;Requiert §Y12§! bâtiments au total.;;;;;;;;;;;;x
-tp_town_2;Population: Village;Village;;;;;;;;;;;;x
-tp_town_2_desc;Requires §Y17§! buildings.;Requiert §Y17§! bâtiments au total.;;;;;;;;;;;;x
-tp_town_3;Population: Borough;Bourg;;;;;;;;;;;;x
-tp_town_3_desc;Requires §Y22§! buildings.;Requiert §Y22§! bâtiments au total.;;;;;;;;;;;;x
-tp_town_4;Population: Town;Ville;;;;;;;;;;;;x
-tp_town_4_desc;Requires §Y26§! buildings.;Requiert §Y26§! bâtiments au total.;;;;;;;;;;;;x
-tp_town_5;Population: City;Cité;;;;;;;;;;;;x
-tp_town_5_desc;Requires §Y30§! buildings.;Requiert §Y30§! bâtiments au total;;;;;;;;;;;;x
+#;ca_town_X and tp_town_X were moved in zz_L3T_change_localisation;;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 ca_cathedrale_01;Cathedral, Building site overture;Cathédrale, Ouverture du chantier;;;;;;;;;;;;x
 cathedrale_01_desc;When constructing a cathedral one must make decisions;Pour construire la cathédrale il faut en prendre la §Ydécision§!;;;;;;;;;;;;x
@@ -610,24 +591,24 @@ tp_guilde_fresquiste;;Guilde de fresquistes;;;;;;;;;;;;x
 tp_guilde_verrier;;Guilde de verriers;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-FORT;Specialization: Citadel;CITADELLE;;;;;;;;;;;;x
-FORT_desc;Designating this holding as a §YCitadel§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
-FORT_muslim;Specialization: Kasbah;CITADELLE;;;;;;;;;;;;x
-FORT_muslim_desc;Designating this holding as a §YKasbah§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
-FORT_zoroastrian_group;Specialization: Kalat;CITADELLE;;;;;;;;;;;;x
-FORT_zoroastrian_group_desc;Designating this holding as a §YKalat§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
-FORT_pagan_group;Specialization: Stronghold;CITADELLE;;;;;;;;;;;;x
-FORT_pagan_group_desc;Designating this holding as a §YStronghold§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
-BOURGFEODAL;Specialization: Feudal Manor;BOURG FÉODAL ;;;;;;;;;;;;x
-BOURGFEODAL_muslim;Specialization: Iqta Estate;BOURG FORTIFIÉ;;;;;;;;;;;;x
-BOURGFEODAL_zoroastrian_group;Specialization: Dihqan Estate;BOURG FORTIFIÉ ;;;;;;;;;;;;x
-BOURGFEODAL_pagan_group;Specialization: Clan Village;COMMUNAUTÉ PAYSANNE ;;;;;;;;;;;;x
-BOURGFEODAL_desc;Designating this holding as a §YFeudal Manor§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The manorial system places the peasants of the land as serfs bound to serve and pay tributes to a local lord in exchange for protection.;Le Bourg Féodal est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
-BOURGFEODAL_muslim_desc;Designating this holding as an §YIqta Estate§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The iqta system considers the peasants of the land as freemen in theory, but a strong muqta could easily assert his authority over them to yield greater benefits.;Le Bourg Fortifié est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
-BOURGFEODAL_zoroastrian_group_desc;Designating this holding as a §YDihqan Estate§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The traditional landowning dihqan class has always ruled over the peasantry with a firm hand, ensuring the prosperity of the realm.;Le Bourg Fortifié est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
-BOURGFEODAL_pagan_group_desc;Designating this holding as a §YClan Village§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The traditional clan chiefs have always ruled over their kin with a firm hand, ensuring the prosperity of the realm.;Le Communauté Paysanne est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
-CITADELLE;Specialization: Administrative Center;CITE FORTIFIEE ;;;;;;;;;;;;x
-CITADELLE_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
+FEODAL_mil;Specialization: Citadel;FORTERESSE;;;;;;;;;;;;x
+FEODAL_mil_desc;Designating this holding as a §YCitadel§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
+FEODAL_mil_muslim;Specialization: Kasbah;FORTERESSE;;;;;;;;;;;;x
+FEODAL_mil_muslim_desc;Designating this holding as a §YKasbah§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
+FEODAL_mil_zoroastrian_group;Specialization: Kalat;FORTERESSE;;;;;;;;;;;;x
+FEODAL_mil_zoroastrian_group_desc;Designating this holding as a §YKalat§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
+FEODAL_mil_pagan_group;Specialization: Stronghold;FORTERESSE;;;;;;;;;;;;x
+FEODAL_mil_pagan_group_desc;Designating this holding as a §YStronghold§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
+FEODAL_prod;Specialization: Feudal Manor;BOURG FÉODAL ;;;;;;;;;;;;x
+FEODAL_prod_muslim;Specialization: Iqta Estate;BOURG FORTIFIÉ;;;;;;;;;;;;x
+FEODAL_prod_zoroastrian_group;Specialization: Dihqan Estate;BOURG FORTIFIÉ ;;;;;;;;;;;;x
+FEODAL_prod_pagan_group;Specialization: Clan Village;COMMUNAUTÉ PAYSANNE ;;;;;;;;;;;;x
+FEODAL_prod_desc;Designating this holding as a §YFeudal Manor§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The manorial system places the peasants of the land as serfs bound to serve and pay tributes to a local lord in exchange for protection.;Le Bourg Féodal est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+FEODAL_prod_muslim_desc;Designating this holding as an §YIqta Estate§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The iqta system considers the peasants of the land as freemen in theory, but a strong muqta could easily assert his authority over them to yield greater benefits.;Le Bourg Fortifié est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+FEODAL_prod_zoroastrian_group_desc;Designating this holding as a §YDihqan Estate§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The traditional landowning dihqan class has always ruled over the peasantry with a firm hand, ensuring the prosperity of the realm.;Le Bourg Fortifié est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+FEODAL_prod_pagan_group_desc;Designating this holding as a §YClan Village§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets. n/The traditional clan chiefs have always ruled over their kin with a firm hand, ensuring the prosperity of the realm.;Le Communauté Paysanne est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+FEODAL_adm;Specialization: Administrative Center;CITE FÉODALE ;;;;;;;;;;;;x
+FEODAL_adm_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
 CITE_L1;Urban Commune;BOURG COMMUNAL ;;;;;;;;;;;;x
 CITE_L1_muslim;Medina Quarter;BOURG URBAIN ;;;;;;;;;;;;x
 CITE_L1_zoroastrian_group;Market Town;BOURG URBAIN ;;;;;;;;;;;;x

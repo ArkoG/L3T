@@ -12,9 +12,10 @@ character_event = {
 	desc = "DESCXYLO.0001"
 	picture = GFX_evt_XYLO_forest2
 
+	capable_only = yes
+
 	trigger = {
 			is_ruler = yes
-			capable_only = yes
 #			OR = {
 #				religion = catholic
 #				is_heresy_of = catholic

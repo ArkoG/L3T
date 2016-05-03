@@ -31,9 +31,9 @@ narrative_event = {
 			holding_type = castle 
 			NOT = {
 				has_building = REPAIREVOLEUR
-				has_building = FORT
-				has_building = BOURGFEODAL
-				has_building = CITADELLE
+				has_building = FEODAL_mil
+				has_building = FEODAL_prod
+				has_building = FEODAL_adm
 			}
 		}
 	}	
@@ -47,9 +47,9 @@ narrative_event = {
 				holding_type = castle
 				NOT = {
 					has_building = REPAIREVOLEUR
-					has_building = FORT
-					has_building = BOURGFEODAL
-					has_building = CITADELLE
+					has_building = FEODAL_mil
+					has_building = FEODAL_prod
+					has_building = FEODAL_adm
 				}
 			}
 			set_title_flag = castle_to_specialize
@@ -79,7 +79,7 @@ narrative_event = {
 			limit = {
 				has_title_flag = castle_to_specialize
 			}
-			add_building = FORT
+			add_building = FEODAL_mil
 			clr_title_flag = castle_to_specialize
 		}
 	}
@@ -106,7 +106,7 @@ narrative_event = {
 			limit = {
 				has_title_flag = castle_to_specialize
 			}
-			add_building = BOURGFEODAL
+			add_building = FEODAL_prod
 			clr_title_flag = castle_to_specialize
 		}
 	}
@@ -134,7 +134,7 @@ narrative_event = {
 			limit = {
 				has_title_flag = castle_to_specialize
 			}
-			add_building = CITADELLE
+			add_building = FEODAL_adm
 			clr_title_flag = castle_to_specialize
 		}
 	}
@@ -349,7 +349,7 @@ narrative_event = {
 							NOT = { has_global_flag = avert_player } # assure that the player is averted only once
 						}
 						set_global_flag = avert_player
-						character_event = { id = TRADE.0010 days = 10}
+						character_event = { id = L3TRADE.0010 days = 10}
 					}
 						
 					# Avert the player that the route building can be build on its demesne
@@ -360,7 +360,7 @@ narrative_event = {
 								NOT = { has_global_flag = avert_player }
 							}
 							set_global_flag = avert_player
-							character_event = { id = TRADE.0009 days = 10}
+							character_event = { id = L3TRADE.0009 days = 10}
 						}
 					}
 					clr_global_flag = avert_player
@@ -466,7 +466,7 @@ province_event = {
 								NOT = { has_global_flag = avert_player } # assure that the player is averted only once
 							}
 							set_global_flag = avert_player
-							character_event = { id = TRADE.0010 days = 10}
+							character_event = { id = L3TRADE.0010 days = 10}
 						}	
 						
 						# Avert the player that the route building can be build on its demesne
@@ -477,7 +477,7 @@ province_event = {
 									NOT = { has_global_flag = avert_player }
 								}
 								set_global_flag = avert_player
-								character_event = { id = TRADE.0009 days = 10}
+								character_event = { id = L3TRADE.0009 days = 10}
 							}
 						}
 						clr_global_flag = avert_player
