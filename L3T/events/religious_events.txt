@@ -23,14 +23,14 @@ province_event = {
 	picture = "GFX_evt_stone_church"
 	border = "GFX_event_normal_frame_religion"
 	
+	lacks_dlc = "Sons of Abraham"
+	
 	trigger = {
 		is_heretic = no
 		has_heresies = yes
 		NOT = { province_id = 333 } # Rome
 		NOT = { province_id = 497 } # Thrace
 		NOT = { province_id = 719 } # Mecca
-		
-		NOT = { has_dlc = "Sons of Abraham" }
 	}
 	
 	mean_time_to_happen = {
@@ -42,6 +42,13 @@ province_event = {
 		modifier = {
 			factor = 2.0
 			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			has_game_rule = {
+				name = religious_conversion
+				value = slower
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -153,12 +160,19 @@ character_event = {
 		name = "EVTOPTA39400"
 		trigger = {
 			NOT = { religion = FROM }
+			religion_group = FROM
 		}
 	}
 	option = {
 		name = "EXCELLENT"
 		trigger = {
 			religion = FROM
+		}
+	}
+	option = {
+		name = "EVTOPTB39400"
+		trigger = {
+			NOT = { religion_group = FROM }
 		}
 	}
 }
@@ -170,9 +184,10 @@ character_event = {
 	picture = GFX_evt_heretic
 	border = GFX_event_normal_frame_religion
 	
+	min_age = 16
 	only_playable = yes
 	only_men = yes
-	
+	lacks_dlc = "Sons of Abraham"
 	religion_group = christian
 	
 	trigger = {
@@ -181,8 +196,6 @@ character_event = {
 			religion = catholic
 			religion = fraticelli
 		}
-		
-		NOT = { has_dlc = "Sons of Abraham" }
 		
 		any_playable_ruler = {
 			religion = ROOT
@@ -265,9 +278,10 @@ character_event = {
 	picture = GFX_evt_heretic
 	border = GFX_event_normal_frame_religion
 	
+	min_age = 16
 	only_playable = yes
 	only_men = yes
-	
+	lacks_dlc = "Sons of Abraham"
 	religion_group = christian
 	
 	trigger = {
@@ -276,8 +290,6 @@ character_event = {
 			religion = catholic
 			religion = fraticelli
 		}
-		
-		NOT = { has_dlc = "Sons of Abraham" }
 		
 		any_playable_ruler = {
 			religion = ROOT
@@ -353,9 +365,10 @@ character_event = {
 	picture = GFX_evt_heretic
 	border = GFX_event_normal_frame_religion
 	
+	min_age = 16
 	only_playable = yes
 	only_men = yes
-	
+	lacks_dlc = "Sons of Abraham"
 	religion_group = christian
 	
 	trigger = {
@@ -364,8 +377,6 @@ character_event = {
 			religion = catholic
 			religion = fraticelli
 		}
-		
-		NOT = { has_dlc = "Sons of Abraham" }
 
 		any_playable_ruler = {
 			religion = ROOT
@@ -512,14 +523,16 @@ character_event = {
 	picture = GFX_evt_spymaster
 	border = GFX_event_normal_frame_religion
 
+	min_age = 16
+	only_capable = yes
+	prisoner = no
 	only_rulers = yes
+	religion_group = christian
+	lacks_dlc = "Sons of Abraham"
 	
 	trigger = {
 		independent = no
 		is_heretic = no
-		religion_group = christian
-		
-		NOT = { has_dlc = "Sons of Abraham" }
 		
 		liege = {
 			religion = ROOT
@@ -587,6 +600,8 @@ province_event = {
 	picture = "GFX_evt_stone_church"
 	border = "GFX_event_normal_frame_religion"
 	
+	lacks_dlc = "Sons of Abraham"
+	
 	trigger = {
 		is_heretic = no
 		has_heresies = yes
@@ -594,8 +609,6 @@ province_event = {
 		NOT = { province_id = 333 } # Rome
 		NOT = { province_id = 497 } # Thrace
 		NOT = { province_id = 719 } # Mecca
-		
-		NOT = { has_dlc = "Sons of Abraham" }
 		
 		any_neighbor_province = {
 			has_owner = yes
@@ -612,6 +625,13 @@ province_event = {
 		modifier = {
 			factor = 2.0
 			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			has_game_rule = {
+				name = religious_conversion
+				value = slower
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -674,11 +694,9 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	lacks_dlc = "Sons of Abraham"
 	
 	trigger = {
-		
-		NOT = { has_dlc = "Sons of Abraham" }
-	
 		is_heretic = no
 		OR = {
 			is_ruler = no
@@ -689,7 +707,7 @@ character_event = {
 		}
 		
 		can_change_religion = yes
-		NOT = { trait = in_hiding }
+		NOT = { is_inaccessible_trigger = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -743,11 +761,10 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	lacks_dlc = "Sons of Abraham"
 	
 	trigger = {
 		is_ruler = no
-		
-		NOT = { has_dlc = "Sons of Abraham" }
 		
 		is_heretic = yes
 		employer = {
@@ -1030,6 +1047,7 @@ narrative_event = {
 	only_playable = yes
 	only_men = yes
 	religion_group = christian
+	has_global_flag = christian_crusades_unlocked
 	
 	trigger = {
 		OR = {
@@ -1043,7 +1061,6 @@ narrative_event = {
 		
 		NOT = { is_title_active = d_knights_hospitaler }
 		
-		has_global_flag = christian_crusades_unlocked
 		
 		OR = {
 			year = 1113	# Historical
@@ -1104,6 +1121,7 @@ narrative_event = {
 			}
 			set_defacto_liege = THIS
 			wealth = 500
+			set_government_type = feudal_government
 		}
 		
 		religion_authority = {
@@ -1144,6 +1162,7 @@ narrative_event = {
 	only_playable = yes
 	only_men = yes
 	religion_group = christian
+	has_global_flag = christian_crusades_unlocked
 	
 	trigger = {
 		OR = {
@@ -1158,7 +1177,6 @@ narrative_event = {
 		NOT = { year = 1312 }
 		NOT = { is_title_active = d_knights_templar }
 	
-		has_global_flag = christian_crusades_unlocked
 		
 		OR = {
 			year = 1118	# Historical
@@ -1205,6 +1223,7 @@ narrative_event = {
 			}
 			set_defacto_liege = THIS
 			wealth = 600
+			set_government_type = feudal_government
 		}
 		
 		religion_authority = {
@@ -1245,6 +1264,7 @@ narrative_event = {
 	only_playable = yes
 	only_men = yes
 	religion_group = christian
+	has_global_flag = christian_crusades_unlocked
 	
 	trigger = {
 		OR = {
@@ -1257,8 +1277,6 @@ narrative_event = {
 		is_heretic = no
 		
 		NOT = { is_title_active = d_teutonic_order }
-		
-		has_global_flag = christian_crusades_unlocked
 		
 		OR = {
 			year = 1192	# Historical
@@ -1297,6 +1315,7 @@ narrative_event = {
 			}
 			set_defacto_liege = THIS
 			wealth = 500
+			set_government_type = feudal_government
 		}
 		
 		religion_authority = {
@@ -1336,8 +1355,10 @@ character_event = {
 	picture = "GFX_evt_battle"
 	border = "GFX_event_normal_frame_religion"
 	
-	only_rulers = yes
+	min_age = 16
+	only_playable = yes
 	religion_group = christian
+	war = no
 	
 	trigger = {
 		controls_religion = yes
@@ -1347,7 +1368,6 @@ character_event = {
 		}
 		
 		wealth = 500
-		war = no
 		any_playable_ruler = {
 			religion = ROOT
 			NOT = { wealth = 500 }
@@ -1454,9 +1474,12 @@ character_event = {
 	picture = GFX_evt_pope
 	border = "GFX_event_normal_frame_religion"
 	
-	only_rulers = yes
-	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	only_playable = yes
 	religion_group = christian
+	war = no
 	
 	trigger = {
 		controls_religion = yes
@@ -1464,7 +1487,6 @@ character_event = {
 			religion = catholic
 			religion = fraticelli
 		}
-		war = no
 		
 		any_independent_ruler = {
 			religion = ROOT
@@ -1583,6 +1605,7 @@ character_event = {
 	border = "GFX_event_normal_frame_religion"
 	
 	min_age = 16
+	only_men = yes
 	only_playable = yes
 	religion_group = christian
 	
@@ -1870,10 +1893,11 @@ character_event = {
 	picture = GFX_evt_heretic
 	border = GFX_event_normal_frame_religion
 	
+	religion = orthodox
+	
 	is_triggered_only = yes
 	
 	trigger = {
-		religion = orthodox
 		in_command = no
 		num_of_prisoners = 1
 		religion_authority = 0.02
@@ -1952,8 +1976,13 @@ character_event = {
 	picture = GFX_evt_heretic
 	border = GFX_event_normal_frame_religion
 	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	only_men = yes
 	only_playable = yes
 	religion_group = christian
+	war = no
 	
 	trigger = {
 		controls_religion = yes
@@ -1962,7 +1991,6 @@ character_event = {
 			religion = fraticelli
 		}
 		
-		war = no
 		religion_authority = 0.20
 
 		any_playable_ruler = {
@@ -2161,11 +2189,15 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	only_playable = yes
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	only_men = yes
+	religion = orthodox
+	war = no
 	
 	trigger = {
-		religion = orthodox
 		controls_religion = yes
-		war = no
 		religion_authority = 0.20
 
 		any_playable_ruler = {
@@ -2465,7 +2497,6 @@ character_event = {
 				years = 5
 			}
 		}
-	
 		# Beginning add L3T
 		religion_authority = {
 			modifier = achat_indulgence
@@ -2554,8 +2585,7 @@ character_event = {
 			}
 			
 			piety = 50
-		}
-		
+		}		
 		FROM = {
 			opinion = {
 				who = ROOT
@@ -2568,7 +2598,7 @@ character_event = {
 			modifier = achat_indulgence
 			years = 5
 		}
-		# End add L3T
+		# end add L3T
 #		clr_character_flag  = ask_for_indulgence	
 	}
 	option = {
@@ -2616,7 +2646,7 @@ character_event = {
 			modifier = achat_indulgence
 			years = 5
 		}
-		# End add L3T
+		# end add L3T
 #		clr_character_flag  = ask_for_indulgence	
 	}
 	option = {
@@ -2796,7 +2826,7 @@ character_event = {
 				modifier = refused_making_repentance
 				years = 5
 			}
-		}
+		}		
 		# Beginning add L3T
 		# No effect !
 		# End add L3T
@@ -2814,8 +2844,13 @@ character_event = {
 	picture = GFX_evt_bishop
 	border = GFX_event_normal_frame_religion
 	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	only_men = yes
 	only_playable = yes
 	religion_group = christian
+	war = no
 	
 	trigger = {
 		controls_religion = yes
@@ -2824,7 +2859,6 @@ character_event = {
 			religion = fraticelli
 		}
 	
-		war = no
 		religion_authority = 0.30
 		prestige = 20
 
@@ -2997,8 +3031,12 @@ character_event = {
 	picture = GFX_evt_bishop
 	border = GFX_event_normal_frame_religion
 
-	only_playable = yes
-	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	only_men = yes
+	only_playable = yes	
+	war = no
 	religion_group = christian
 	
 	trigger = {
@@ -3008,7 +3046,6 @@ character_event = {
 			religion = fraticelli
 		}
 	
-		war = no
 		any_vassal = {
 			tier = baron
 			is_theocracy = yes
@@ -3095,9 +3132,10 @@ character_event = {
 	min_age = 16
 	only_playable = yes
 	prisoner = no
+	only_capable = yes
+	religion = orthodox
 
 	trigger = {
-		religion = orthodox
 		is_heretic = no
 		NOT = {
 			has_character_flag = commisioned_icon
@@ -3146,9 +3184,10 @@ character_event = {
 	min_age = 16
 	only_playable = yes
 	prisoner = no
+	only_capable = yes
+	religion = orthodox
 
 	trigger = {
-		religion = orthodox
 		is_heretic = no
 		NOT = {
 			has_character_flag = commisioned_icon
@@ -3198,9 +3237,10 @@ character_event = {
 	min_age = 16
 	only_playable = yes
 	prisoner = no
+	only_capable = yes
+	religion = orthodox
 
 	trigger = {
-		religion = orthodox
 		is_heretic = no
 		NOT = {
 			has_character_flag = commisioned_icon
@@ -3250,9 +3290,10 @@ character_event = {
 	min_age = 16
 	only_playable = yes
 	prisoner = no
+	only_capable = yes
+	religion = orthodox
 
 	trigger = {
-		religion = orthodox
 		is_heretic = no
 		NOT = {
 			has_character_flag = commisioned_icon
@@ -3302,9 +3343,10 @@ character_event = {
 	min_age = 16
 	only_playable = yes
 	prisoner = no
+	only_capable = yes
+	religion = orthodox
 
 	trigger = {
-		religion = orthodox
 		is_heretic = no
 		NOT = {
 			has_character_flag = commisioned_icon
@@ -3353,10 +3395,11 @@ character_event = {
 	border = "GFX_event_normal_frame_religion"
 	
 	min_age = 16
+	only_capable = yes
 	only_men = yes
+	religion_group = christian
 
 	trigger = {
-		religion_group = christian
 		is_heretic = no
 		NOT = {	has_character_modifier = true_christian_knight	}
 		NOT = { trait = cynical }
@@ -3504,6 +3547,13 @@ province_event = {
 					has_owner = yes
 					religion = ROOT
 				}
+			}
+		}
+		modifier = {
+			factor = 3
+			has_game_rule = {
+				name = religious_conversion
+				value = slower
 			}
 		}
 	}
@@ -4230,7 +4280,7 @@ character_event = {
 		}
 		create_random_priest = {
 			random_traits = yes
-			dynasty = random
+			dynasty = none
 			culture = ROOT
 			religion = FROM
 			female = no
@@ -4388,7 +4438,7 @@ letter_event = {
 		}
 		create_random_priest = {
 			random_traits = yes
-			dynasty = random
+			dynasty = none
 			culture = ROOT
 			religion = FROM
 			female = no
@@ -4937,9 +4987,11 @@ narrative_event = {
 							owner = PREV
 							#leader = THIS
 							match_character = PREVPREV
-							match_mult = 0.1
+							match_mult = 0.15
 							attrition = 0.5
 							cannot_inherit = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
 						}
 					}
 					create_character = {
@@ -4958,9 +5010,11 @@ narrative_event = {
 							owner = PREV
 							#leader = THIS
 							match_character = PREVPREV
-							match_mult = 0.1
+							match_mult = 0.15
 							attrition = 0.5
 							cannot_inherit = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
 						}
 					}
 					create_character = {
@@ -4979,9 +5033,11 @@ narrative_event = {
 							owner = PREV
 							#leader = THIS
 							match_character = PREVPREV
-							match_mult = 0.1
+							match_mult = 0.15
 							attrition = 0.5
 							cannot_inherit = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
 						}
 					}
 					create_character = {
@@ -5000,9 +5056,11 @@ narrative_event = {
 							owner = PREV
 							#leader = THIS
 							match_character = PREVPREV
-							match_mult = 0.1
+							match_mult = 0.15
 							attrition = 0.5
 							cannot_inherit = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
 						}
 					}
 					create_character = {
@@ -5021,9 +5079,11 @@ narrative_event = {
 							owner = PREV
 							#leader = THIS
 							match_character = PREVPREV
-							match_mult = 0.1
+							match_mult = 0.15
 							attrition = 0.5
 							cannot_inherit = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
 						}
 					}
 					create_character = {
@@ -5042,9 +5102,11 @@ narrative_event = {
 							owner = PREV
 							#leader = THIS
 							match_character = PREVPREV
-							match_mult = 0.1
+							match_mult = 0.15
 							attrition = 0.5
 							cannot_inherit = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
 						}
 					}
 					create_character = {
@@ -5063,10 +5125,12 @@ narrative_event = {
 							owner = PREV
 							#leader = THIS
 							match_character = PREVPREV
-							match_mult = 0.15
+							match_mult = 0.2
 							attrition = 0.0
 							cannot_inherit = yes
 							disband_on_peace = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
 						}
 					}
 					create_character = {
@@ -5085,10 +5149,12 @@ narrative_event = {
 							owner = PREV
 							#leader = THIS
 							match_character = PREVPREV
-							match_mult = 0.15
+							match_mult = 0.2
 							attrition = 0.0
 							cannot_inherit = yes
 							disband_on_peace = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
 						}
 					}
 					create_character = {
@@ -5107,10 +5173,12 @@ narrative_event = {
 							owner = PREV
 							#leader = THIS
 							match_character = PREVPREV
-							match_mult = 0.15
+							match_mult = 0.2
 							attrition = 0.0
 							cannot_inherit = yes
 							disband_on_peace = yes
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
 						}
 					}
 					war = {
@@ -5171,9 +5239,9 @@ narrative_event = {
 	only_playable = yes
 	min_age = 16
 	only_men = yes
+	religion = catholic
 	
 	trigger = {
-		religion = catholic
 		controls_religion = yes
 		year = 1090
 		
@@ -5223,10 +5291,10 @@ narrative_event = {
 	only_playable = yes
 	min_age = 16
 	only_men = yes
+	religion = catholic
 	
 	trigger = {
 		year = 900
-		religion = catholic
 		controls_religion = yes
 		NOT = { has_global_flag = christian_crusades_unlocked }
 		
@@ -5292,10 +5360,10 @@ narrative_event = {
 	only_playable = yes
 	min_age = 16
 	only_men = yes
+	religion = catholic
 	
 	trigger = {
 		year = 900
-		religion = catholic
 		controls_religion = yes
 		NOT = { has_global_flag = christian_crusades_unlocked }
 		
@@ -5348,10 +5416,10 @@ narrative_event = {
 	only_playable = yes
 	min_age = 16
 	only_men = yes
+	religion = catholic
 	
 	trigger = {
 		year = 900
-		religion = catholic
 		controls_religion = yes
 		NOT = { has_global_flag = christian_crusades_unlocked }
 		
@@ -5414,7 +5482,6 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
-	only_men = yes
 	religion_group = muslim
 	
 	trigger = {
@@ -5462,7 +5529,6 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
-	only_men = yes
 	religion_group = muslim
 	
 	trigger = {
@@ -5512,7 +5578,6 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
-	only_men = yes
 	religion_group = muslim
 	
 	trigger = {
@@ -5562,7 +5627,6 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
-	only_men = yes
 	religion_group = muslim
 	
 	trigger = {
@@ -5620,7 +5684,6 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
-	only_men = yes
 	religion_group = muslim
 	
 	trigger = {
@@ -5678,9 +5741,9 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
+	religion_group = pagan_group
 	
 	trigger = {
-		religion_group = pagan_group
 		controls_religion = yes
 		
 		NOT = { has_global_flag = pagan_ghws_unlocked }
@@ -5847,7 +5910,7 @@ character_event = {
 
 	hide_window = yes
 
-	only_rulers = yes
+	only_playable = yes
 	
 	trigger = {
 		k_papal_state = {
@@ -5885,7 +5948,7 @@ character_event = {
 
 	hide_window = yes
 
-	only_rulers = yes
+	only_playable = yes
 	
 	trigger = {
 		d_fraticelli = {
