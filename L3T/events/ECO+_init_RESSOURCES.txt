@@ -12,11 +12,13 @@ namespace = ECO
 province_event = {
     id = ECO.0001
 	hide_window = yes
-
-	is_triggered_only = yes
 	
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
+		OR = {
+			has_province_modifier = province_cotiere
+			has_province_modifier = province_terrestre
+		}
 		OR = {
 			terrain = plains
 			AND = {
@@ -26,6 +28,8 @@ province_event = {
 		}
 		NOT = { terrain = forest }
 	}
+	
+	mean_time_to_happen = { days = 10 }
 
 	immediate = {
 		set_province_flag = counted_resources
@@ -55,13 +59,17 @@ province_event = {
 province_event = {
     id = ECO.0002
 	hide_window = yes
-
-	is_triggered_only = yes
 	
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
+		OR = {
+			has_province_modifier = province_cotiere
+			has_province_modifier = province_terrestre
+		}
 		terrain = hills
 	}
+	
+	mean_time_to_happen = { days = 10 }
 
 	immediate = {
 		set_province_flag = counted_resources
@@ -98,13 +106,17 @@ province_event = {
 province_event = {
     id = ECO.0003
 	hide_window = yes
-
-	is_triggered_only = yes
 	
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
+		OR = {
+			has_province_modifier = province_cotiere
+			has_province_modifier = province_terrestre
+		}
 		terrain = forest
 	}
+	
+	mean_time_to_happen = { days = 10 }
 
 	immediate = {
 		set_province_flag = counted_resources
@@ -134,13 +146,17 @@ province_event = {
 province_event = {
     id = ECO.0004
 	hide_window = yes
-
-	is_triggered_only = yes
 	
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
+		OR = {
+			has_province_modifier = province_cotiere
+			has_province_modifier = province_terrestre
+		}
 		terrain = mountain
 	}
+	
+	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_province_flag = counted_resources
@@ -170,13 +186,17 @@ province_event = {
 province_event = {
     id = ECO.0005
 	hide_window = yes
-
-	is_triggered_only = yes
 	
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
+		OR = {
+			has_province_modifier = province_cotiere
+			has_province_modifier = province_terrestre
+		}
 		terrain = farmlands
 	}
+	
+	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_province_flag = counted_resources
@@ -206,13 +226,17 @@ province_event = {
 province_event = {
     id = ECO.0008
 	hide_window = yes
-
-	is_triggered_only = yes
 	
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
+		OR = {
+			has_province_modifier = province_cotiere
+			has_province_modifier = province_terrestre
+		}
 		terrain = desert
 	}
+	
+	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_province_flag = counted_resources
@@ -241,13 +265,17 @@ province_event = {
 province_event = {
     id = ECO.00080
 	hide_window = yes
-
-	is_triggered_only = yes
 	
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
+		OR = {
+			has_province_modifier = province_cotiere
+			has_province_modifier = province_terrestre
+		}
 		terrain = steppe
 	}
+	
+	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_province_flag = counted_resources
@@ -276,13 +304,17 @@ province_event = {
 province_event = {
     id = ECO.00081
 	hide_window = yes
-
-	is_triggered_only = yes
 	
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
+		OR = {
+			has_province_modifier = province_cotiere
+			has_province_modifier = province_terrestre
+		}
 		terrain = jungle
 	}
+	
+	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_province_flag = counted_resources
@@ -311,13 +343,17 @@ province_event = {
 province_event = {
     id = ECO.00082
 	hide_window = yes
-
-	is_triggered_only = yes
 	
 	trigger = {
 		NOT = { has_province_flag = ressources_testees }
+		OR = {
+			has_province_modifier = province_cotiere
+			has_province_modifier = province_terrestre
+		}
 		terrain = arctic
 	}
+	
+	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_province_flag = counted_resources
