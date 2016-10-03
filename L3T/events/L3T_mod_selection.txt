@@ -14,38 +14,68 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { 
-			has_global_flag = running_SWMH
+		NOT = {
 			has_global_flag = running_LCDA	
 			has_global_flag = running_VANILLA
+			# The SWMH flag is already given when creating history
+			had_global_flag = { flag = SWMH days = 2 }
 		}			
 	}
 	
 	option = {	
-	name = "L3T.0010A"	
-	ai_chance = { factor = 0 }
-	trigger = { ai = no }
-	set_global_flag = running_SWMH	
+		name = "L3T.0010A"	
+		ai_chance = { factor = 0 }
+		trigger = {
+			ai = no
+			has_global_flag = SWMH
+		}
+		hidden_tooltip = {
+			any_province = {
+				province_event = { id = L3T.20 days = 10 }
+				province_event = { id = L3T.21 days = 10 }
+				province_event = { id = L3T.22 days = 10 }
+			}
+		}
 		set_global_flag = paix_de_dieu 
 	}
-#	option = {	
-#	name = "L3T.0010B"	
-#	ai_chance = { factor = 0 }
-#	trigger = { ai = no }
-#	set_global_flag = running_LCDA	
-		#set_global_flag = paix_de_dieu 
-#	}
+	# option = {	
+		# name = "L3T.0010B"	
+		# ai_chance = { factor = 0 }
+		# trigger = {
+			# ai = no
+			# NOT = { has_global_flag = SWMH }
+		# }
+		# hidden_tooltip = {
+			# any_province = {
+				# province_event = { id = L3T.30 days = 10 }
+				# province_event = { id = L3T.31 days = 10 }
+				# province_event = { id = L3T.32 days = 10 }
+			# }
+		# }
+		# set_global_flag = running_LCDA	
+		# set_global_flag = paix_de_dieu 
+	# }
 	option = {
-	name = "L3T.0010C"	
-	ai_chance = { factor = 0 }
-	trigger = { ai = no }
-	set_global_flag = running_VANILLA	
+		name = "L3T.0010C"	
+		ai_chance = { factor = 0 }
+		trigger = {
+			ai = no
+			NOT = { has_global_flag = SWMH }
+		}
+		hidden_tooltip = {
+			any_province = {
+				province_event = { id = L3T.25 days = 10 }
+				province_event = { id = L3T.26 days = 10 }
+				province_event = { id = L3T.27 days = 10 }
+			}
+		}
+		set_global_flag = running_VANILLA	
 		set_global_flag = paix_de_dieu 
 	}
 	option = {
-	name = "L3T.0010D"	
-	trigger = { ai = yes }
-	ai_chance = { factor = 100 }
+		name = "L3T.0010D"	
+		trigger = { ai = yes }
+		ai_chance = { factor = 100 }
 	}
 }
 
@@ -83,7 +113,7 @@ character_event = {
 
 	trigger = {
 		OR = {
-			has_global_flag = running_SWMH
+			has_global_flag = SWMH
 			has_global_flag = running_LCDA
 			has_global_flag = running_VANILLA
 			}

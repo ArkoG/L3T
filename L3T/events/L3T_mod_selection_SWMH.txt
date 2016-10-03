@@ -4,8 +4,9 @@ province_event = { #installe les provinces côtières SWMH
     id = L3T.20
 	hide_window = yes
 
+	is_triggered_only = yes
+	
 	trigger = {
-			has_global_flag = running_SWMH
 			NOT = { has_province_modifier = province_cotiere }
 			NOT = { has_province_modifier = province_terrestre }
 			OR = {
@@ -35,9 +36,8 @@ province_event = { #installe les provinces côtières SWMH
 				province_id = 623 #Kerder
 			}
 		}
-	mean_time_to_happen = { days = 10 }	
 
-immediate = {
+	immediate = {
 		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
 	}
 }
@@ -46,8 +46,9 @@ province_event = { #installe les provinces terrestres SWMH
     id = L3T.21
 	hide_window = yes
 
+	is_triggered_only = yes
+	
 	trigger = {
-			has_global_flag = running_SWMH
 			NOT = {	has_province_modifier = province_terrestre }
 			NOT = {	has_province_modifier = province_cotiere }
 			NOT = {
@@ -79,9 +80,8 @@ province_event = { #installe les provinces terrestres SWMH
 					#}
 			}
 		}
-	mean_time_to_happen = { days = 10 }	
 
-immediate = {
+	immediate = {
 		add_province_modifier = {	name = province_terrestre  	duration = -1 hidden = yes }	
 	}
 }
@@ -90,15 +90,9 @@ province_event = { #installe les routes fluviales SWMH
     id = L3T.22
 	hide_window = yes
 
-	trigger = {
-		has_global_flag = running_SWMH
-		NOT = { has_province_flag = checked_river }
-	}
-	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes
 	
 	immediate = {
-		set_province_flag = checked_river
 		if = {
 			limit = {
 				OR = {
@@ -701,6 +695,29 @@ province_event = { #installe les routes fluviales SWMH
 				}
 			}
 			add_province_modifier = {	name = province_fleuve  	duration = -1 }	
-		}
+		}	
+		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
+		if = {
+			limit = {
+				any_province_holding = {
+					count = 2
+					tier = baron
+					holding_type = city
+				}
+			}
+			# Priority for republics
+			if = {
+				limit = {
+					owner = {
+						is_republic = yes
+						NOT = { tier = baron }
+					}
+				}
+				province_event = { id = L3T.00041 days = 10 }
+				break = yes
+			}
+			# The other are delayed
+			province_event = { id = L3T.00041 days = 60 }
+		}	
 	}
 }

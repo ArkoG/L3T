@@ -72,6 +72,7 @@
 #id = L3T.0113 #upgrade population TP vers L3
 #id = L3T.0114 #upgrade population TP vers L4
 #id = L3T.0115 #upgrade population TP vers L5
+#id = L3T.1101 #initialisation population buildings
 
 #[NON INCLUS] id = L3T.2000-2999 #Amis_Ennemis
 
@@ -89,9 +90,7 @@
 #id = ECO.0002 #évaluation du potentiel économique -coteaux- 
 #id = ECO.0003 #évaluation du potentiel économique -forets- 
 #id = ECO.0004 #évaluation du potentiel économique -montagnes- 
-#id = ECO.0005 #évaluation du potentiel économique -t.arables- 
-#[COMMENTE] id = ECO.0006 #évaluation du potentiel économique -peche- 
-#[COMMENTE] id = ECO.0007 #évaluation du potentiel économique -pisci- 
+#id = ECO.0005 #évaluation du potentiel économique -t.arables-
 #id = ECO.0008 #évaluation du potentiel économique -désert- 
 #id = ECO.00080 #évaluation du potentiel économique -steppe- 
 #id = ECO.00081 #évaluation du potentiel économique -jungle-
@@ -132,6 +131,13 @@
 
 #id = ECO.00130 #activation pour commerce -pierre- 
 #id = ECO.00131 #activation pour commerce -pierre taille- 
+
+#id = ECO.132 #décompte minerai on_action
+#id = ECO.133 #décompte minerai alerte1
+#id = ECO.134 #décompte minerai alerte2
+#id = ECO.132 #décompte minerai de décision
+
+#id = ECO.139 #décompte minerai mouchard
 
 #id = ECO.00140 #activation pour commerce -minerai -minerai fer- 
 #id = ECO.00141 #activation pour commerce -minerai -sel gemme- 

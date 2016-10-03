@@ -3,6 +3,9 @@ on_startup = {
 	    events = {
 			L3T.0010 #choix carte/map choice
 			L3T.15 #choix langue/language choice
+			
+			# Initialisation population building
+			L3T.1101
 		}
 }
 
@@ -14,7 +17,9 @@ on_yearly_pulse = {
 		1000 = ECO.320
 		3000 = ECO.321
 		1000 = ECO.322
-		1000 = ECO.323		
+		1000 = ECO.323	
+
+
 	}
 }
 

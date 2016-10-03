@@ -379,6 +379,7 @@ character_event = {
 	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
 	capable_only = yes
 	prisoner = no
+	min_age = 16
 	
 	trigger = {
 		#NOT = { has_global_flag = playing_english }
@@ -651,6 +652,7 @@ narrative_event = {
 	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
 	capable_only = yes
 	prisoner = no
+	min_age = 16
 	
 	trigger = {
 		NOT = { has_global_flag = playing_english }

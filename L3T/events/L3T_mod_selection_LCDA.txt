@@ -4,8 +4,9 @@ province_event = { #installe les provinces côtières LCDA
     id = L3T.30
 	hide_window = yes
 	
+	is_triggered_only = yes
+	
 	trigger = {
-			has_global_flag = running_LCDA
 			NOT = { has_province_modifier = province_cotiere }
 			OR = {   
 			province_id = 1 #Nyon
@@ -16,9 +17,8 @@ province_event = { #installe les provinces côtières LCDA
 			province_id = 6 #Aigle
 			}
 		}
-	mean_time_to_happen = { days = 10 }	
 
-immediate = {
+	immediate = {
 		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
 	}
 }
@@ -26,9 +26,10 @@ immediate = {
 province_event = { #installe les provinces terrestres LCDA
     id = L3T.31
 	hide_window = yes
-
+	
+	is_triggered_only = yes
+	
 	trigger = {
-			has_global_flag = running_LCDA
 			NOT = { has_province_modifier = province_terrestre }
 			NOT = {   
 			province_id = 1 #Nyon
@@ -39,9 +40,8 @@ province_event = { #installe les provinces terrestres LCDA
 			province_id = 6 #Aigle
 			}
 		}
-	mean_time_to_happen = { days = 10 }	
 
-immediate = {
+	immediate = {
 		add_province_modifier = {	name = province_terrestre  	duration = -1 hidden = yes }	
 	}
 }
@@ -50,17 +50,41 @@ province_event = { #installe les provinces fluviales LCDA
     id = L3T.32
 	hide_window = yes
 	
-	trigger = {
-			has_global_flag = running_LCDA
-			NOT = { has_province_modifier = province_fleuve }
-			OR = {   
-			province_id = 6 # Aigle
-			province_id = 28 # Martigny
-			}
-		}
-	mean_time_to_happen = { days = 10 }	
+	is_triggered_only = yes
 
-immediate = {
-		add_province_modifier = {	name = province_fleuve  	duration = -1 }	
+	immediate = {
+		if = {
+			limit = {
+				OR = {   
+					province_id = 6 # Aigle
+					province_id = 28 # Martigny
+				}
+			}
+			add_province_modifier = { name = province_fleuve duration = -1 }
+		}
+		
+		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
+		if = {
+			limit = {
+				any_province_holding = {
+					count = 2
+					tier = baron
+					holding_type = city
+				}
+			}
+			# Priority for republics
+			if = {
+				limit = {
+					owner = {
+						is_republic = yes
+						NOT = { tier = baron }
+					}
+				}
+				province_event = { id = L3T.00041 days = 10 }
+				break = yes
+			}
+			# The other are delayed
+			province_event = { id = L3T.00041 days = 60 }
+		}	
 	}
 }

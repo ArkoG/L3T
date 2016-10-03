@@ -21,9 +21,9 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
-			had_global_flag = { flag = running_SWMH days = 180 }			
-			had_global_flag = { flag = running_VANILLA days = 180 }
-			had_global_flag = { flag = running_LCDA days = 180 }
+			had_global_flag = { flag = SWMH days = 30 }			
+			had_global_flag = { flag = running_VANILLA days = 30 }
+			had_global_flag = { flag = running_LCDA days = 30 }
 		}
 		NOT = { trait = chef_malandrin }
 		any_demesne_title = {
@@ -153,16 +153,16 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
-			had_global_flag = { flag = running_SWMH days = 730 }			
-			had_global_flag = { flag = running_VANILLA days = 730 }
-			had_global_flag = { flag = running_LCDA days = 730 }
+			had_global_flag = { flag = SWMH days = 360 }			
+			had_global_flag = { flag = running_VANILLA days = 360 }
+			had_global_flag = { flag = running_LCDA days = 360 }
 			AND = { # Priorité aux républiques
 				is_republic = yes
 				NOT = { tier = baron }
 				OR = {
-					had_global_flag = { flag = running_SWMH days = 180 }				
-					had_global_flag = { flag = running_VANILLA days = 180 }
-					had_global_flag = { flag = running_LCDA days = 180 }
+					had_global_flag = { flag = SWMH days = 60 }				
+					had_global_flag = { flag = running_VANILLA days = 60 }
+					had_global_flag = { flag = running_LCDA days = 60 }
 				}
 			}
 		}
@@ -376,126 +376,100 @@ province_event = {
     id = L3T.00041
 	hide_window = yes
 	
-	trigger = {
-		NOT = { has_province_flag = check_double_city }
-		OR = { 		
-			had_global_flag = { flag = running_SWMH days = 360 }				
-			had_global_flag = { flag = running_VANILLA days = 360 }
-			had_global_flag = { flag = running_LCDA days = 360 }
-			owner = { # Priorités aux républiques	
-				is_republic = yes
-				NOT = { tier = baron }
-			}
-		}
-	}
-	
-	mean_time_to_happen = {	days = 100 }
+	is_triggered_only = yes
 	
 	immediate = {
-		set_province_flag = check_double_city
-		
-		# S'il y a plus de 2 cités (supérieur ou égal)
-		if = {
+		# Une cité sera commerçante
+		random_province_holding = {
 			limit = {
-				any_province_holding = {
-					count = 2
-					tier = baron
-					holding_type = city
+				tier = baron
+				holding_type = city
+				NOT = {
+					has_building = CITE_L1
+					has_building = VOC_INDUSTRIELLE
+					has_building = VOC_COMMERCIALE
 				}
 			}
+			add_building = CITE_L1
+			add_building = VOC_COMMERCIALE
 			
-			# Une cité sera commerçante
-			random_province_holding = {
+			# La province devient le départ d'une route si elle est distance au moins 3 d'un autre
+			if =  {
 				limit = {
-					tier = baron
-					holding_type = city
-					NOT = {
-						has_building = CITE_L1
-						has_building = VOC_INDUSTRIELLE
-						has_building = VOC_COMMERCIALE
+					location = {
+						NOT = {
+							any_neighbor_province = {
+								OR = {
+									has_province_flag = bloc_A
+									has_province_flag = neighbor_bloc_A
+									has_province_flag = neighbor_neighbor_bloc_A
+								}
+							}
+						}
 					}
 				}
-				add_building = CITE_L1
-				add_building = VOC_COMMERCIALE
-				
-				# La province devient le départ d'une route si elle est distance au moins 3 d'un autre
-				if =  {
-					limit = {
-						location = {
-							NOT = {
-								any_neighbor_province = {
-									OR = {
-										has_province_flag = bloc_A
-										has_province_flag = neighbor_bloc_A
-										has_province_flag = neighbor_neighbor_bloc_A
-									}
+				location = {
+					set_province_flag = bloc_A
+					any_neighbor_province = {
+						set_province_flag = neighbor_bloc_A
+						any_neighbor_province = {
+							limit = {
+								NOT = {
+									has_province_flag = neighbor_bloc_A									
+									has_province_flag = neighbor_neighbor_bloc_A
+									has_province_flag = bloc_A
 								}
 							}
+							set_province_flag = neighbor_neighbor_bloc_A
 						}
 					}
-					location = {
-						set_province_flag = bloc_A
-						any_neighbor_province = {
-							set_province_flag = neighbor_bloc_A
-							any_neighbor_province = {
-								limit = {
-									NOT = {
-										has_province_flag = neighbor_bloc_A									
-										has_province_flag = neighbor_neighbor_bloc_A
-										has_province_flag = bloc_A
-									}
-								}
-								set_province_flag = neighbor_neighbor_bloc_A
-							}
+					add_province_modifier = { name = route_size1 duration = -1 }
+					add_province_modifier = { name = noeud_commercial_primaire duration = -1 }
+					set_variable = { which = "route_size" value = 1 }
+					if = {
+						limit = { has_province_modifier = province_fleuve }
+						add_province_modifier = { name = route_fluviale duration = -1 }
+					}
+					if = {
+						limit = { NOT = { has_province_modifier = province_fleuve } }
+						add_province_modifier = { name = route_terrestre duration = -1 }
+					}
+					# Avert the player that a route is on its demesne
+					any_province_lord = {
+						limit = {
+							ai = no
+							NOT = { has_global_flag = avert_player } # assure that the player is averted only once
 						}
-						add_province_modifier = { name = route_size1 duration = -1 }
-						add_province_modifier = { name = noeud_commercial_primaire duration = -1 }
-						set_variable = { which = "route_size" value = 1 }
-						if = {
-							limit = { has_province_modifier = province_fleuve }
-							add_province_modifier = { name = route_fluviale duration = -1 }
-						}
-						if = {
-							limit = { NOT = { has_province_modifier = province_fleuve } }
-							add_province_modifier = { name = route_terrestre duration = -1 }
-						}
-						# Avert the player that a route is on its demesne
+						set_global_flag = avert_player
+						character_event = { id = L3TRADE.0010 days = 10}
+					}	
+					
+					# Avert the player that the route building can be build on its demesne
+					any_neighbor_province = {
 						any_province_lord = {
 							limit = {
 								ai = no
-								NOT = { has_global_flag = avert_player } # assure that the player is averted only once
+								NOT = { has_global_flag = avert_player }
 							}
 							set_global_flag = avert_player
-							character_event = { id = L3TRADE.0010 days = 10}
-						}	
-						
-						# Avert the player that the route building can be build on its demesne
-						any_neighbor_province = {
-							any_province_lord = {
-								limit = {
-									ai = no
-									NOT = { has_global_flag = avert_player }
-								}
-								set_global_flag = avert_player
-								character_event = { id = L3TRADE.0009 days = 10}
-							}
+							character_event = { id = L3TRADE.0009 days = 10}
 						}
-						clr_global_flag = avert_player
 					}
+					clr_global_flag = avert_player
 				}
 			}
-			
-			# Les autres productrices
-			any_province_holding = {
-				if = {
-					limit = {
-						tier = baron
-						holding_type = city
-						NOT = { has_building = VOC_COMMERCIALE }
-					}
-					add_building = CITE_L1
-					add_building = VOC_INDUSTRIELLE
+		}
+		
+		# Les autres productrices
+		any_province_holding = {
+			if = {
+				limit = {
+					tier = baron
+					holding_type = city
+					NOT = { has_building = VOC_COMMERCIALE }
 				}
+				add_building = CITE_L1
+				add_building = VOC_INDUSTRIELLE
 			}
 		}
 	}
@@ -601,9 +575,9 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
-			had_global_flag = { flag = running_SWMH days = 180 }			
-			had_global_flag = { flag = running_VANILLA days = 180 }
-			had_global_flag = { flag = running_LCDA days = 180 }
+			had_global_flag = { flag = SWMH days = 30 }			
+			had_global_flag = { flag = running_VANILLA days = 30 }
+			had_global_flag = { flag = running_LCDA days = 30 }
 		}
 		NOT = { religion_group = pagan_group }
 		any_demesne_title = {
