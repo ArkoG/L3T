@@ -33,14 +33,6 @@
             # Identify ourselves
             set_global_flag = SWMH
 
-            # Give a starting prestige bonus to nomadic top lieges (in order to improve clan sentinment on day-1)
-            any_independent_ruler = {
-                limit = {
-                    is_nomadic = yes
-                }
-                prestige = 400
-            }
-
             # Kill this character immediately before Adapting History finishes.
             death = { death_reason = death_rabble }
         }
