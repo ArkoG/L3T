@@ -43,6 +43,10 @@ NDiplomacy = {
 	GAVELKIND_MAX_SIZE_BONUS = 0.30,			-- Max demesne size bonus from Gavelkind
 	DEMESNE_MAX_SIZE_JAIN_BONUS = 3,			-- Followers of the Jain religion have extra demesne
 	
+	GAME_RULE_DEMESNE_SIZE_HALF = 0.5,			-- Divider to decrease max demesne size when using "demesne size: half" game rule
+	GAME_RULE_DEMESNE_SIZE_QUARTERED = 0.25,	-- Divider to decrease max demesne size when using "demesne size: quartered" game rule
+	GAME_RULE_DEMESNE_SIZE_UNLIMITED = 10500,	-- Demesne size when using "demesne size: unlimited" game rule
+	
 	VASSAL_BASE_LIMIT = 1.0,					-- Base Vassal Limit
 	VASSAL_LIMIT_DUKE_MULT = 10.0, 				-- Extra Vassal Limit from the ruler's rank
 	VASSAL_LIMIT_KING_MULT = 20.0, 				-- Extra Vassal Limit from the ruler's rank
@@ -55,6 +59,10 @@ NDiplomacy = {
 	VASSAL_LIMIT_TAX_MULTIPLIER = 1,			-- Used for tax penalty calculation for being over vassal limit.
 	VASSAL_LIMIT_TAX_BASE = 4,					-- Used for tax penalty calculation for being over vassal limit.
 	VASSAL_LIMIT_COUNT_BARONS = 0,				-- If set to 1, baron-tier vassals will also count towards vassal limit.
+	
+	GAME_RULE_VASSAL_LIMIT_HALF = 0.5,			-- Divider to decrease vassal limit when using "vassal limit: half" game rule
+	GAME_RULE_VASSAL_LIMIT_QUARTERED = 0.25,	-- Divider to decrease max vassal limit when using "vassal limit: quartered" game rule
+	GAME_RULE_VASSAL_LIMIT_UNLIMITED = 5000,	-- Vassal limit when using "vassal limit: unlimited" game rule
 	
 	CONCLAVE_VASSAL_LIMIT_DUKE_MULT = 8.0, 				-- Extra Vassal Limit from the ruler's rank
 	CONCLAVE_VASSAL_LIMIT_KING_MULT = 15.0, 				-- Extra Vassal Limit from the ruler's rank
@@ -1033,7 +1041,8 @@ NReligion = {
 	ELECTOR_TRAITS_FACTOR = 1.0,					-- Effect of personality traits that the church likes
 	HERESY_TAKEOVER_PROVINCES = 5,					-- The number of provinces a heresy needs MORE than the current norm for it to become the new Orthodoxy
 	PAPAL_SUCCESSION_PASS_ON_HOLDINGS = 1,			-- Set to zero if holdings shouldn't be passed on
-	PAPAL_SUCCESSION_LOSE_MINOR_TITLES = 1			-- Set to zero if minor religious titles should be lost
+	PAPAL_SUCCESSION_LOSE_MINOR_TITLES = 1,			-- Set to zero if minor religious titles should be lost
+	AUTHORITY_FROM_PIETY_CAP = 0.25,				-- Maxmimum boost to religious authority due to head's piety
 },
 
 NEconomy = {
@@ -1346,7 +1355,7 @@ NMilitary = {
 	ARCHERS_PHASE_SKIRMISH_DEFENSE = 1.5,
 	ARCHERS_PHASE_MELEE_DEFENSE = 1.5,
 	ARCHERS_PHASE_PURSUE_DEFENSE = 2.25,
-	ARCHERS_GRAPHICAL_FACTOR = 1,
+	ARCHERS_GRAPHICAL_FACTOR = 0.1,
 	
 	SPECIAL_TROOPS_MORALE = 5,
 	SPECIAL_TROOPS_MAINTENANCE = 2,
@@ -1356,7 +1365,7 @@ NMilitary = {
 	SPECIAL_TROOPS_PHASE_SKIRMISH_DEFENSE = 1,
 	SPECIAL_TROOPS_PHASE_MELEE_DEFENSE = 1,
 	SPECIAL_TROOPS_PHASE_PURSUE_DEFENSE = 1,
-	SPECIAL_TROOPS_GRAPHICAL_FACTOR = 15.0,
+	SPECIAL_TROOPS_GRAPHICAL_FACTOR = 2,
 
 	GALLEYS_MORALE = 1,
 	GALLEYS_MAINTENANCE = 300,
