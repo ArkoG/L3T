@@ -1,31 +1,31 @@
-L3T.0003;Choisir l'orientation du domaine -version féodale-;Choisir l'orientation du domaine -version féodale-;;;;;;;;;;;;x
+L3T.0003;Choose the demesne orientation -feodal version-;Choisir l'orientation du domaine -version féodale-;;;;;;;;;;;;x
 NAMEL3T.0003;Feudal Land Administration;Domaine Seigneurial;;;;;;;;;;;;x
 DESCL3T.0003;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of the local nobility.  \n\nYou may choose to support the local military aristocracy, allowing you to develop this holding into a formidable fortress. It will be able to support and protect large numbers of highly-trained troops behind its thick walls, but maintaining them will forego any major economic development within this holding. \n\nChoosing instead to support the local landed aristocracy by granting them more control over the peasantry will allow the development of regional industries and production of raw resources. While this will limit the defensibility of [Root.Location.GetName], the economic benefits are considerable.;Nous devons décider comment allons-nous développer ce domaine.\n\n     -Une Forteresse remplira aussi bien un rôle de poste frontière sur une de nos marches qu'un rôle de protection et de formation de troupes. C'est un site très bien défendu mais qui coûte cher à entretenir.\n     -Une Citée féodale pourra abriter une population importante derrière ses hauts murs défendus par un château fort. Elle a l'étoffe d'une Capitale pour tout seigneur de notre rang !\n     -Le Bourg Féodal regroupe une communauté de paysans qui exploitent nos terres et vivent bien loin des préoccupation de la cour. Il permet l'exploitation des ressources locales, qui pourront être échangées ou vendues et... taxées pour venir remplir nos coffres.;;;;;;;;;;;;x
 L3T.0003A;We shall support the military aristocracy!;Ce sera une Forteresse avant tout !;;;;;;;;;;;;x
 L3T.0003B;We shall support the landed aristocracy!;Un Bourg Féodal de toute évidence !;;;;;;;;;;;;x
 L3T.0003C;We shall save our resources to develop the administration!;Ce sera une Cité fortifiée. J'ai dis.;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-L3T.0004;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;;;;;;;;;;;;x
+L3T.0004;The city of $HOLDING$ Choose the demesne orientation -city version-;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;;;;;;;;;;;;x
 NAMEL3T.0004;Municipal Land Administration;Domaine Communal;;;;;;;;;;;;x
 DESCL3T.0004;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of the local burghers.  \n\nYou may choose to support the local tradesmen and merchants, allowing you to develop this city as a bustling center of commerce. \n\nChoosing instead to support the local craftsmen and artisans will allow the development of regional industries and production of goods. \n\nIn either case, the benefits are many and the profits even greater!;doit se voir assigner une voie de développement. \n\n     Cette cité peut être développée soit selon une orientation production, soit à caractère commercial. Dans les deux cas, cela constitue une source non négligeable de taxation ! \n;;;;;;;;;;;;x
 L3T.0004A;We shall support the craftsmen!;Produisons ! ;;;;;;;;;;;;x
 L3T.0004B;We shall support the merchants!;Commerçons ! ;;;;;;;;;;;;x
 NAMEL3T.0005;Thriving City;Notre Belle Cité;;;;;;;;;;;;x
-L3T.0005;upgrade grande cité;upgrade grande cité;;;;;;;;;;;;x
+L3T.0005;upgrade big city;upgrade grande cité;;;;;;;;;;;;x
 DESCL3T.0005;Merchants and traders far and wide speak of this city's grandeur, as evident from its well-maintained streets, immense wealth, and the host of people who make a living inside its walls. As prosperous as it is, there are reports that economic and population growth show no signs of decline.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
 L3T.0005A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
 NAMEL3T.0002;Shining Jewel of [Root.Location.GetName];Notre Glorieuse Cité;;;;;;;;;;;;x
-L3T.0002;upgrade grande cité;upgrade grande cité;;;;;;;;;;;;x
+L3T.0002;upgrade big city;upgrade grande cité;;;;;;;;;;;;x
 DESCL3T.0002;This city's splendour is a boon to the surrounding region and bestows upon it a prestige reserved for only the wealthiest and most beautiful cities in the world. New arrivals flock to the bustling markets every day and the city's districts sing out with the sounds of industry.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
 L3T.0002A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-L3T.0006;Choisir l'orientation du domaine -version écclésiale-;Choisir l'orientation du domaine -version écclésiale-;;;;;;;;;;;;x
+L3T.0006;Choose demesne orientation -church version-;Choisir l'orientation du domaine -version écclésiale-;;;;;;;;;;;;x
 NAMEL3T.0006;Clerical Land Administration;Les Terres du Clergé ;;;;;;;;;;;;x
 DESCL3T.0006;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of local religious authorities. \n\n Choosing to support the local clergy will allow us to develop the proper infrastructure to encourage local industries in this province, although a portion of the control and the profits will be surrendered to the Church. \n\nAllotting some land to support a local monastic or military order, if they are available, will provide its own benefits in the form of services rendered by their members, but their autonomy does ensure much of the economic benefit will go to their coffers instead of yours.;en la province de [From.Location.GetName], quel avenir lui réserver ? \n\n     Un Monastère constitue un conservatoire du savoir où l'on y instruit la jeunesse et compile nombre de connaissances anciennes ou nouvelles. La communauté religieuse se choisira une règle de vie monastique et pourra rejoindre un ordre monastique. \n     Une Citée Episcopale abritera les institutions religieuses locales et aura la mainmise sur les terres environnantes. \n     Une Commanderie, monastère dédié à un usage principalement militaire, assurera des troupes de qualités, notamment dans l'optique d'une guerre sainte ou juste pour mater ce prétentieux voisin !;;;;;;;;;;;;x
 L3T.0006A;We shall support a monastic order.;Implantons-y un Monastère;;;;;;;;;;;;x
 L3T.0006B;We shall grant rights and privileges to the local clergy.;Laissons les à libre gestion du clergé local.;;;;;;;;;;;;x
 L3T.0006C;We shall open the use of our lands to a military order.;Accordons donc le statut de Commanderie.;;;;;;;;;;;;x
-L3T.0007;Choisir la règle monastique du domaine de type monastère;Choisir la règle monastique du domaine de type monastère;;;;;;;;;;;;x
+L3T.0007;Choose the monastic rule for the demesne;Choisir la règle monastique du domaine de type monastère;;;;;;;;;;;;x
 NAMEL3T.0007;Supporting a Monastery;Vie Monastique;;;;;;;;;;;;x
 DESCL3T.0007;As we have decided to support the establishment of a monastery in these parts, which monastic rule should we sponsor?;Quelle règle monastique le Monastère de [From.Location.GetName] va-t-il suivre ? \n\n Ce choix conditionnera ensuite un éventuel rattachement à l'un des ordres monastiques de la même obédience, ordres présentant chacun leurs spécifités.;;;;;;;;;;;;x
 L3T.0007A;The Rule of Saint Benedict;La Règle de Saint Benoît;;;;;;;;;;;;x
@@ -119,40 +119,40 @@ XYLO.0108B;May God accept this offering and see the devotion of my soul.;Pour le
 XYLO.0108A;Perhaps a different offering would be more worthy of the Church.;Je trouverai d'autres moyens;;;;;;;;;;;;x
 XYLO.0108C;Who said anything about a concession?;Et contre quelque or ?;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-XYLO.0201;;Achat v1;;;;;;;;;;;x;
+XYLO.0201;Purchase v1;Achat v1;;;;;;;;;;;x;
 DESCXYLO.0201;The treasury is brimming with coin, but rather than rest on our laurels, we should consider investing in expanding our forest domain. Should some of our gold be used to plant and manage new plots of trees?;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelque or dans cette voie ?;;;;;;;;;;;;x
 XYLO.0201A;Trees are a safe investment, no? Make the necessary arrangements.;Tentons cela.;;;;;;;;;;;;x
 XYLO.0201B;An interesting proposition, but I will consider it another time.;Repassez demain.;;;;;;;;;;;;x
 XYLO.0201C;What nonsense! There will be no wasting my coin on silly plants.;Débordent, débordent, c'est vite dit. Non.;;;;;;;;;;;;x
-XYLO.0202;;Achat v2;;;;;;;;;;;x;
+XYLO.0202;Purchase v2;Achat v2;;;;;;;;;;;x;
 DESCXYLO.0202;Our steward reports that we have excess gold that may be better used managing and expanding the woodlands in our demesne so that we may reap the benefits later on.;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelques pièces dans cette voie ?;;;;;;;;;;;;x
 XYLO.0202A;This seems like a sensible proposition.;Allons-y.;;;;;;;;;;;;x
 XYLO.0202B;Not tonight, my head is hurting.;Pas ce soir, j'ai mal à la tête.;;;;;;;;;;;;x
 XYLO.0202C;Excess gold? There is no such thing, much less for wasting on a few trees.;Débordent ? Qui prétend cela ? Non.;;;;;;;;;;;;x
-XYLO.0203;;Achat v3;;;;;;;;;;;x;
+XYLO.0203;Purchase v3;Achat v3;;;;;;;;;;;x;
 DESCXYLO.0203;Our steward reports that our coffers are overflowing with gold and it would be advisable to spend some of it on expanding our forest domain. Would you like to invest in replanting some of the old forests?;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelques pièces dans cette politique ?;;;;;;;;;;;;x
 XYLO.0203A;This appears to me to be a sound investment. So be it!;Cela me paraît un bon investissement.;;;;;;;;;;;;x
 XYLO.0203B;I will decide on this matter another day.;Je dois réfléchir.;;;;;;;;;;;;x
 XYLO.0203C;I do recall having already said no to this foolish idea.;N'ai-je pas déjà dit non ?;;;;;;;;;;;;x
 XYLO.0302;forest charter related stuff;RR foret;;;;;;;;;;;;x
-DESCXYLO.0302;;En nous réservant presque l'exclusivité des droits d'exploitation de nos forêts, cela crée un mécontentement croissant parmi la population. Nous pourrions par exemple accorder une licence forestière pour une courte durée durée afin de calmer les vélléités des villageois dans la province de [From.Location.GetName].;;;;;;;;;;;;x
-XYLO.0302A;;Il nous faut agir avant que ça ne dégénère.;;;;;;;;;;;;x
-XYLO.0302B;;Faisons un geste.;;;;;;;;;;;;x
+DESCXYLO.0302;By reserving for us the almost exclusive exploitation rights of our forests, we create a growing discontent among the population. We could for example give a logging license for a short time to calm the inclinations of the villagers in the province of [From.Location.GetName].;En nous réservant presque l'exclusivité des droits d'exploitation de nos forêts, cela crée un mécontentement croissant parmi la population. Nous pourrions par exemple accorder une licence forestière pour une courte durée durée afin de calmer les vélléités des villageois dans la province de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.0302A;We must act before it degenerates.;Il nous faut agir avant que ça ne dégénère.;;;;;;;;;;;;x
+XYLO.0302B;Let's make a gesture.;Faisons un geste.;;;;;;;;;;;;x
 XYLO.0302C;And ? ;Et alors ?;;;;;;;;;;;;x
 XYLO.0303;;RR général + foret;;;;;;;;;;;;x
-DESCXYLO.0303;;La révolte gronde en [From.Location.GetName] ! L'exploitation de la forêt à vos seules fins semble être l'un des objets des revendications et qui vient s'ajouter à d'autres causes. Relâcher un peu de pression pendant un temps sur ce point en proposant un licence forestière pourrait calmer la population.;;;;;;;;;;;;x
-XYLO.0303A;;Soyons efficace, et dans la durée !;;;;;;;;;;;;x
-XYLO.0303B;;Tentons cela pour le moment.;;;;;;;;;;;;x
-XYLO.0303C;;Ce n'est pas la cause principale.;;;;;;;;;;;;x
-XYLO.0304;;demande d'upgrade de la licence;;;;;;;;;;;;x
-DESCXYLO.0304;;Les villageois prétendent peiner à survivre car ils ne peuvent profiter que d'une trop infime part des richeses de la forêt. Ils implorent votre bonté pour l'octroi d'une charte leur ouvrant des droits supplémentaires sur la forêt de [From.Location.GetName]. Que décidez-vous ?;;;;;;;;;;;;x
+DESCXYLO.0303;The resistance is growing in [From.Location.GetName]! The exploitation of the forest at your sole purpose seems to be one of the objects of claims, which is in addition to other causes. Relax a little pressure for a time on this point by proposing a forest license could calm the population.;La révolte gronde en [From.Location.GetName] ! L'exploitation de la forêt à vos seules fins semble être l'un des objets des revendications et qui vient s'ajouter à d'autres causes. Relâcher un peu de pression pendant un temps sur ce point en proposant un licence forestière pourrait calmer la population.;;;;;;;;;;;;x
+XYLO.0303A;Let's be efficient, and over time!;Soyons efficace, et dans la durée !;;;;;;;;;;;;x
+XYLO.0303B;Try this yet.;Tentons cela pour le moment.;;;;;;;;;;;;x
+XYLO.0303C;This is not the main cause.;Ce n'est pas la cause principale.;;;;;;;;;;;;x
+XYLO.0304;Asking a licence upgrading;demande d'upgrade de la licence;;;;;;;;;;;;x
+DESCXYLO.0304;Villagers claim to struggle to survive because they can not enjoy that a too small part of the wealth of the forest. They implore your mercy for the granting of a charter opening them additional rights on the forest [From.Location.GetName]. What do you decide?;Les villageois prétendent peiner à survivre car ils ne peuvent profiter que d'une trop infime part des richesses de la forêt. Ils implorent votre bonté pour l'octroi d'une charte leur ouvrant des droits supplémentaires sur la forêt de [From.Location.GetName]. Que décidez-vous ?;;;;;;;;;;;;x
 XYLO.0304A;Granted;Accordé.;;;;;;;;;;;;x
 XYLO.0304B;I govern !;JE gouverne !;;;;;;;;;;;;x
-XYLO.0305;;demande d'upgrade de la licence;;;;;;;;;;;;x
-DESCXYLO.0305;;La licence forestière accordée ne suffit pas au peuple de [From.Location.GetName]. Il est toujours inquiet des restrictions qui persistent, il demande une charte lui garantissant plus de droits et sur une plus longue durée. Que faisons-nous ?;;;;;;;;;;;;x
+XYLO.0305;Asking a licence upgrading;demande d'upgrade de la licence;;;;;;;;;;;;x
+DESCXYLO.0305;The granted logging license is not enough for the people of [From.Location.GetName]. It is always concerned about the restrictions that persist, it requests a charter guaranteeing more rights and for a longer duration. What do we do ?;La licence forestière accordée ne suffit pas au peuple de [From.Location.GetName]. Il est toujours inquiet des restrictions qui persistent, il demande une charte lui garantissant plus de droits et sur une plus longue durée. Que faisons-nous ?;;;;;;;;;;;;x
 XYLO.0305A;Granted;Accordé.;;;;;;;;;;;;x
-XYLO.0305B;;Nous ne pouvons nous le permettre.;;;;;;;;;;;;x
-XYLO.0305C;;Supprimons la charte existante ça leur apprendra !;;;;;;;;;;;;x
+XYLO.0305B;We can not afford it.;Nous ne pouvons nous le permettre.;;;;;;;;;;;;x
+XYLO.0305C;Delete the existing charter, that will teach them!;Supprimons la charte existante ça leur apprendra !;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;EVENTS BANDITS;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
