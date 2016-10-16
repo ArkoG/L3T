@@ -19,7 +19,6 @@ character_event = {
 	only_men = yes
 	
 	trigger = {
-		NOT = { has_global_flag = playing_english }
 		OR = {
 			AND = {
 				has_focus = focus_war
@@ -382,7 +381,6 @@ character_event = {
 	min_age = 16
 	
 	trigger = {
-		#NOT = { has_global_flag = playing_english }
 		OR = {
 			AND = {
 				has_focus = focus_business
@@ -655,7 +653,6 @@ narrative_event = {
 	min_age = 16
 	
 	trigger = {
-		NOT = { has_global_flag = playing_english }
 		OR = {
 			AND = {
 				has_focus = focus_business

@@ -13,7 +13,6 @@ province_event = {
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
-		NOT = { has_global_flag = playing_english }
 		OR = {
 			has_province_modifier = foret2_chasse
 			has_province_modifier = foret2_holy	
@@ -63,7 +62,6 @@ province_event = {
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
-		NOT = { has_global_flag = playing_english }
 		OR = {
 			has_province_modifier = foret2_chasse
 			has_province_modifier = foret2_holy	
@@ -113,7 +111,6 @@ province_event = {
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
-		NOT = { has_global_flag = playing_english }
 		OR = {
 			has_province_modifier = foret2_chasse
 			has_province_modifier = foret2_holy	
@@ -155,7 +152,6 @@ province_event = {
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
-		NOT = { has_global_flag = playing_english }
 		OR = {
 			has_province_modifier = foret2_chasse
 			has_province_modifier = foret2_holy	
