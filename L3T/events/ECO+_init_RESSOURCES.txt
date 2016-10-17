@@ -1225,13 +1225,8 @@ province_event = {
 			any_neighbor_province = { has_province_modifier = minerai3_metal }
 		}
 		NOT = { has_province_modifier = minerai4_outils}
-		any_province_lord  = {
-			is_ruler = yes
-			any_demesne_title = {
-				location = {	province_id = PREVPREVPREV	}
-				tier = baron
-				has_building = CA_outilleur_L2
-			}
+		any_province_holding = {
+			has_building = CA_outilleur_L2
 		}
 	}
 		
