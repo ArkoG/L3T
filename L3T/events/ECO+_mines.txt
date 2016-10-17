@@ -1,8 +1,8 @@
-# Consommation stock mines de fer
+# Consommation stock mines de fer pour toutes les mines du monde d'un coup
 character_event = {
 	id = ECO.132
 	hide_window = yes
-	ai = no
+	ai = no # Pour que l'event soit lever qu'une seule fois par an
 	is_triggered_only = yes
 	
 	trigger = {
@@ -16,8 +16,11 @@ character_event = {
 				holding_type = castle
 				location = { 
 					has_province_modifier = minerai2_fer
-					check_variable = { which = "stock_minerai" value =  100 } #seuil pour éviter d'arriver en stock négatif (=conso maxi * 2 ans + marge sécurité)
+					NOT = { has_province_modifier = mine_collapsed }
+					NOT = { owner = { has_character_flag = recharge_mine_encours }}
+					#check_variable = { which = "stock_minerai" value =  49 } #seuil pour éviter d'arriver en stock négatif (=conso maxi * 1 ans + marge sécurité)
 					}
+				NOT = { owner = { has_character_flag = alerte_mine_2_recue }}
 				}
 				
 		#conso de base	
@@ -74,72 +77,154 @@ character_event = {
 				90 = {}
 				}
 			}
+
+		#Alerte1
+			if = { 
+				limit = {
+					has_building = CA_MINE_minerai_L1
+					NOT = {	has_building = CA_MINE_minerai_L2	}
+					NOT = {	has_building = CA_MINE_minerai_L3	}
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  100 }}} #conso base*10ans
+					NOT = { owner = { has_character_flag = alerte_mine_1_recue }}
+					}
+			owner = { character_event = { id = ECO.133 days = 1 }}
+			owner = { set_character_flag = alerte_mine_1_recue }
+			}
+			if = { 
+				limit = {
+					has_building = CA_MINE_minerai_L2
+					NOT = {	has_building = CA_MINE_minerai_L3	}
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  200 }}} #conso base*10ans
+					NOT = { owner = { has_character_flag = alerte_mine_1_recue }}
+				}
+			owner = { character_event = { id = ECO.133 days = 1 }}
+			owner = { set_character_flag = alerte_mine_1_recue }
+			}
+			if = { 
+				limit = {
+					has_building = CA_MINE_minerai_L3
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  300 }}} #conso base*10ans
+					NOT = { owner = { has_character_flag = alerte_mine_1_recue }}
+				}
+			owner = { character_event = { id = ECO.133 days = 1 }}
+			owner = { set_character_flag = alerte_mine_1_recue }
+			}
+		#Alerte2
+			if = { 
+				limit = {
+					has_building = CA_MINE_minerai_L1
+					NOT = {	has_building = CA_MINE_minerai_L2	}
+					NOT = {	has_building = CA_MINE_minerai_L3	}
+					NOT = { location = { check_variable = { which = "stock_minerai" value =   50 }}} #conso base*5ans
+					NOT = { owner = { has_character_flag = alerte_mine_2_recue }}
+				}
+			owner = { character_event = { id = ECO.134 days = 1 }}
+			owner = { set_character_flag = alerte_mine_2_recue }
+			}
+			if = { 
+				limit = {
+					has_building = CA_MINE_minerai_L2
+					NOT = {	has_building = CA_MINE_minerai_L3	}
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  100 }}} #conso base*5ans
+					NOT = { owner = { has_character_flag = alerte_mine_2_recue }}
+				}
+			owner = { character_event = { id = ECO.134 days = 1 }}
+			owner = { set_character_flag = alerte_mine_2_recue }
+			}
+			if = { 
+				limit = {
+					has_building = CA_MINE_minerai_L3
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  150 }}} #conso base*5ans
+					NOT = { owner = { has_character_flag = alerte_mine_2_recue }}
+				}
+			owner = { character_event = { id = ECO.134 days = 1 }}
+			owner = { add_character_flag = alerte_mine_2_recue }
+			}
+		#arret de la mine
+			if = { 
+				limit = {
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  49 }}} #
+					#NOT = { owner = { has_character_flag = recharge_mine_encours }}
+				}
+			owner = { character_event = { id = ECO.135 days = 1 }}
+			location = { set_variable = { which = "stock_minerai" value = 0 }}
+			}
 		}
 	}
 }
+#events alertes
+character_event = { #10ans de stock
+	id = ECO.133
+	desc = "DESCECO.133"
+	picture = GFX_evt_castle_construction	
+	ai = no
+	is_triggered_only = yes
 
+	option = { 
+		name = "ECO.133A"
+	}
+}
+character_event = { #5ans de stock
+	id = ECO.134
+	desc = "DESCECO.134"
+	picture = GFX_evt_castle_construction	
+	ai = no
+	is_triggered_only = yes
+
+	option = { #débloquera décision en prio avec un flag
+		name = "ECO.134A" #ajouter option pour lancer la décision directement ?
+	}
+}
+character_event = { #stock à zéro
+	id = ECO.135
+	desc = "DESCECO.135"
+	picture = GFX_evt_castle_construction	
+	ai = no
+	is_triggered_only = yes
+
+	option = { 
+		name = "ECO.135A" 
+	}
+}
+
+#mouchards
 character_event = {
 	id = ECO.1391
 	desc = "DESCECO.1391"
 	picture = GFX_evt_castle_construction	
-	
 	ai = no
 	is_triggered_only = yes
-	
-	option = {
-		name = "OK"
-		#ROOT = { location = { change_variable = { which = "stock_minerai" value =  -10 }}}
-	}
+	option = { name = "OK" }
 }
 character_event = {
 	id = ECO.1392
 	desc = "DESCECO.1392"
 	picture = GFX_evt_castle_construction	
-	
 	ai = no
 	is_triggered_only = yes
-	
-	option = {
-		name = "OK"
-		#ROOT = { location = { change_variable = { which = "stock_minerai" value =  -10 }}}
-	}
+	option = { name = "OK" }
 }
 character_event = {
 	id = ECO.1393
 	desc = "DESCECO.1393"
 	picture = GFX_evt_castle_construction	
-	
 	ai = no
 	is_triggered_only = yes
-	
-	option = {
-		name = "OK"
-		#ROOT = { location = { change_variable = { which = "stock_minerai" value =  -10 }}}
-	}
+	option = { name = "OK" }
 }
 character_event = {
 	id = ECO.1394
 	desc = "DESCECO.1394"
 	picture = GFX_evt_castle_construction	
-	
 	ai = no
 	is_triggered_only = yes
-
-	option = {
-		name = "OK"
-		#ROOT = { location = { change_variable = { which = "stock_minerai" value =  -20 }}}
-	}
+	option = { name = "OK" }
 }
 character_event = {
 	id = ECO.1395
 	desc = "DESCECO.13922"
 	picture = GFX_evt_castle_construction	
-	
 	ai = no
 	is_triggered_only = yes
-
-	option = {
-		name = "OK"
-		#ROOT = { location = { change_variable = { which = "stock_minerai" value =  -20 }}}
-	}
+	option = { name = "OK" }
 }
