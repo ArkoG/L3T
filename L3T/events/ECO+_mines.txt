@@ -16,12 +16,10 @@ character_event = {
 				holding_type = castle
 				location = { 
 					has_province_modifier = minerai2_fer
-					NOT = { has_province_modifier = mine_collapsed }
+					#NOT = { has_province_modifier = mine_collapsed } # MODIFIER NOT DEFINED
 					NOT = { has_province_flag = recharge_mine_encours }
-					NOT = { has_province_flag = alerte_mine_2_recue }
-					#check_variable = { which = "stock_minerai" value =  49 } #seuil pour éviter d'arriver en stock négatif (=conso maxi * 1 ans + marge sécurité)
-					}
-				
+					NOT = { has_province_modifier = mine_stop }
+					}				
 				}
 				
 		#conso de base	
@@ -144,11 +142,11 @@ character_event = {
 		#arret de la mine
 			if = { 
 				limit = {
-					NOT = { location = { check_variable = { which = "stock_minerai" value =  49 }}} #
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  1 }}} # inférieur ou égal à 0
 					#NOT = { location = { has_province_flag = recharge_mine_encours }}
 				}
 			owner = { character_event = { id = ECO.135 days = 1 }}
-			location = { set_variable = { which = "stock_minerai" value = 0 }}
+			location = { add_province_modifier = { name = mine_stop duration = -1 } }
 			}
 		}
 	}
