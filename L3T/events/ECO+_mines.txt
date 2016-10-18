@@ -17,10 +17,11 @@ character_event = {
 				location = { 
 					has_province_modifier = minerai2_fer
 					NOT = { has_province_modifier = mine_collapsed }
-					NOT = { owner = { has_character_flag = recharge_mine_encours }}
+					NOT = { has_province_flag = recharge_mine_encours }
+					NOT = { has_province_flag = alerte_mine_2_recue }
 					#check_variable = { which = "stock_minerai" value =  49 } #seuil pour éviter d'arriver en stock négatif (=conso maxi * 1 ans + marge sécurité)
 					}
-				NOT = { owner = { has_character_flag = alerte_mine_2_recue }}
+				
 				}
 				
 		#conso de base	
@@ -85,29 +86,29 @@ character_event = {
 					NOT = {	has_building = CA_MINE_minerai_L2	}
 					NOT = {	has_building = CA_MINE_minerai_L3	}
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  100 }}} #conso base*10ans
-					NOT = { owner = { has_character_flag = alerte_mine_1_recue }}
+					NOT = { location = { has_province_flag = alerte_mine_1_recue }}
 					}
 			owner = { character_event = { id = ECO.133 days = 1 }}
-			owner = { set_character_flag = alerte_mine_1_recue }
+			location = { set_province_flag = alerte_mine_1_recue }
 			}
 			if = { 
 				limit = {
 					has_building = CA_MINE_minerai_L2
 					NOT = {	has_building = CA_MINE_minerai_L3	}
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  200 }}} #conso base*10ans
-					NOT = { owner = { has_character_flag = alerte_mine_1_recue }}
+					NOT = { location = { has_province_flag = alerte_mine_1_recue }}
 				}
 			owner = { character_event = { id = ECO.133 days = 1 }}
-			owner = { set_character_flag = alerte_mine_1_recue }
+			location = { set_province_flag = alerte_mine_1_recue }
 			}
 			if = { 
 				limit = {
 					has_building = CA_MINE_minerai_L3
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  300 }}} #conso base*10ans
-					NOT = { owner = { has_character_flag = alerte_mine_1_recue }}
+					NOT = { location = { has_province_flag = alerte_mine_1_recue }}
 				}
 			owner = { character_event = { id = ECO.133 days = 1 }}
-			owner = { set_character_flag = alerte_mine_1_recue }
+			location = { set_province_flag = alerte_mine_1_recue }
 			}
 		#Alerte2
 			if = { 
@@ -116,35 +117,35 @@ character_event = {
 					NOT = {	has_building = CA_MINE_minerai_L2	}
 					NOT = {	has_building = CA_MINE_minerai_L3	}
 					NOT = { location = { check_variable = { which = "stock_minerai" value =   50 }}} #conso base*5ans
-					NOT = { owner = { has_character_flag = alerte_mine_2_recue }}
+					NOT = { location = { has_province_flag = alerte_mine_2_recue }}
 				}
 			owner = { character_event = { id = ECO.134 days = 1 }}
-			owner = { set_character_flag = alerte_mine_2_recue }
+			location = { set_province_flag = alerte_mine_2_recue }
 			}
 			if = { 
 				limit = {
 					has_building = CA_MINE_minerai_L2
 					NOT = {	has_building = CA_MINE_minerai_L3	}
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  100 }}} #conso base*5ans
-					NOT = { owner = { has_character_flag = alerte_mine_2_recue }}
+					NOT = { location = { has_province_flag = alerte_mine_2_recue }}
 				}
 			owner = { character_event = { id = ECO.134 days = 1 }}
-			owner = { set_character_flag = alerte_mine_2_recue }
+			location = { set_province_flag = alerte_mine_2_recue }
 			}
 			if = { 
 				limit = {
 					has_building = CA_MINE_minerai_L3
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  150 }}} #conso base*5ans
-					NOT = { owner = { has_character_flag = alerte_mine_2_recue }}
+					NOT = { location = { has_province_flag = alerte_mine_2_recue }}
 				}
 			owner = { character_event = { id = ECO.134 days = 1 }}
-			owner = { add_character_flag = alerte_mine_2_recue }
+			location = { set_province_flag = alerte_mine_2_recue }
 			}
 		#arret de la mine
 			if = { 
 				limit = {
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  49 }}} #
-					#NOT = { owner = { has_character_flag = recharge_mine_encours }}
+					#NOT = { location = { has_province_flag = recharge_mine_encours }}
 				}
 			owner = { character_event = { id = ECO.135 days = 1 }}
 			location = { set_variable = { which = "stock_minerai" value = 0 }}
