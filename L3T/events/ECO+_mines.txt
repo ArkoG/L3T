@@ -30,7 +30,7 @@ character_event = {
 					NOT = {	has_building = CA_MINE_minerai_L2	}
 					NOT = {	has_building = CA_MINE_minerai_L3	}
 					}
-			owner = { character_event = { id = ECO.1391 days = 1 }}
+			location = { province_event = { id = ECO.1391 days = 1 }}
 			location = { change_variable = { which = "stock_minerai" value =  -10 }}
 			}
 			#la mine est niveau 2
@@ -39,7 +39,7 @@ character_event = {
 					has_building = CA_MINE_minerai_L2
 					NOT = {	has_building = CA_MINE_minerai_L3	}
 					}
-			owner = { character_event = { id = ECO.1392 days = 1 }}
+			location = { province_event = { id = ECO.1392 days = 1 }}
 			location = { change_variable = { which = "stock_minerai" value =  -20 }}
 			}
 			#la mine est niveau 3
@@ -47,7 +47,7 @@ character_event = {
 				limit = {			
 					has_building = CA_MINE_minerai_L3
 					}
-			owner = { character_event = { id = ECO.1393 days = 1 }}
+			location = { province_event = { id = ECO.1393 days = 1 }}
 			location = { change_variable = { which = "stock_minerai" value =  -30 }}
 			random_list = {
 				5 = { location = { change_variable = { which = "balrog_point" value =  1 }}}
@@ -61,7 +61,7 @@ character_event = {
 				limit = {			
 					location = { has_province_modifier = mine_productivite_moins }
 					}
-			owner = { character_event = { id = ECO.1394 days = 1 }}
+			location = { province_event = { id = ECO.1394 days = 1 }}
 			location = { change_variable = { which = "stock_minerai" value =  5 }}
 			}
 			#conso majoree			
@@ -69,7 +69,7 @@ character_event = {
 				limit = {			
 					location = { has_province_modifier = mine_productivite_plus }
 					}
-			owner = { character_event = { id = ECO.1395 days = 1 }}
+			location = { province_event = { id = ECO.1395 days = 1 }}
 			location = { change_variable = { which = "stock_minerai" value =  -5 }}
 			random_list = {
 				10 = { location = { change_variable = { which = "balrog_point" value =  1 }}}
@@ -86,7 +86,7 @@ character_event = {
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  100 }}} #conso base*10ans
 					NOT = { location = { has_province_flag = alerte_mine_1_recue }}
 					}
-			owner = { character_event = { id = ECO.133 days = 1 }}
+			location = { province_event = { id = ECO.133 days = 1 }}
 			location = { set_province_flag = alerte_mine_1_recue }
 			}
 			if = { 
@@ -96,7 +96,7 @@ character_event = {
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  200 }}} #conso base*10ans
 					NOT = { location = { has_province_flag = alerte_mine_1_recue }}
 				}
-			owner = { character_event = { id = ECO.133 days = 1 }}
+			location = { province_event = { id = ECO.133 days = 1 }}
 			location = { set_province_flag = alerte_mine_1_recue }
 			}
 			if = { 
@@ -105,7 +105,7 @@ character_event = {
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  300 }}} #conso base*10ans
 					NOT = { location = { has_province_flag = alerte_mine_1_recue }}
 				}
-			owner = { character_event = { id = ECO.133 days = 1 }}
+			location = { province_event = { id = ECO.133 days = 1 }}
 			location = { set_province_flag = alerte_mine_1_recue }
 			}
 		#Alerte2
@@ -117,7 +117,7 @@ character_event = {
 					NOT = { location = { check_variable = { which = "stock_minerai" value =   50 }}} #conso base*5ans
 					NOT = { location = { has_province_flag = alerte_mine_2_recue }}
 				}
-			owner = { character_event = { id = ECO.134 days = 1 }}
+			location = { province_event = { id = ECO.134 days = 1 }}
 			location = { set_province_flag = alerte_mine_2_recue }
 			}
 			if = { 
@@ -127,7 +127,7 @@ character_event = {
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  100 }}} #conso base*5ans
 					NOT = { location = { has_province_flag = alerte_mine_2_recue }}
 				}
-			owner = { character_event = { id = ECO.134 days = 1 }}
+			location = { province_event = { id = ECO.134 days = 1 }}
 			location = { set_province_flag = alerte_mine_2_recue }
 			}
 			if = { 
@@ -136,7 +136,7 @@ character_event = {
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  150 }}} #conso base*5ans
 					NOT = { location = { has_province_flag = alerte_mine_2_recue }}
 				}
-			owner = { character_event = { id = ECO.134 days = 1 }}
+			location = { province_event = { id = ECO.134 days = 1 }}
 			location = { set_province_flag = alerte_mine_2_recue }
 			}
 		#arret de la mine
@@ -145,14 +145,14 @@ character_event = {
 					NOT = { location = { check_variable = { which = "stock_minerai" value =  1 }}} # inférieur ou égal à 0
 					#NOT = { location = { has_province_flag = recharge_mine_encours }}
 				}
-			owner = { character_event = { id = ECO.135 days = 1 }}
+			location = { province_event = { id = ECO.135 days = 1 }}
 			location = { add_province_modifier = { name = mine_stop duration = -1 } }
 			}
 		}
 	}
 }
 #events alertes
-character_event = { #10ans de stock
+province_event = { #10ans de stock
 	id = ECO.133
 	desc = "DESCECO.133"
 	picture = GFX_evt_castle_construction	
@@ -163,7 +163,7 @@ character_event = { #10ans de stock
 		name = "ECO.133A"
 	}
 }
-character_event = { #5ans de stock
+province_event = { #5ans de stock
 	id = ECO.134
 	desc = "DESCECO.134"
 	picture = GFX_evt_castle_construction	
@@ -174,7 +174,7 @@ character_event = { #5ans de stock
 		name = "ECO.134A" #ajouter option pour lancer la décision directement ?
 	}
 }
-character_event = { #stock à zéro
+province_event = { #stock à zéro
 	id = ECO.135
 	desc = "DESCECO.135"
 	picture = GFX_evt_castle_construction	
@@ -187,7 +187,7 @@ character_event = { #stock à zéro
 }
 
 #mouchards
-character_event = {
+province_event = {
 	id = ECO.1391
 	desc = "DESCECO.1391"
 	picture = GFX_evt_castle_construction	
@@ -195,7 +195,7 @@ character_event = {
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
-character_event = {
+province_event = {
 	id = ECO.1392
 	desc = "DESCECO.1392"
 	picture = GFX_evt_castle_construction	
@@ -203,7 +203,7 @@ character_event = {
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
-character_event = {
+province_event = {
 	id = ECO.1393
 	desc = "DESCECO.1393"
 	picture = GFX_evt_castle_construction	
@@ -211,7 +211,7 @@ character_event = {
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
-character_event = {
+province_event = {
 	id = ECO.1394
 	desc = "DESCECO.1394"
 	picture = GFX_evt_castle_construction	
@@ -219,7 +219,7 @@ character_event = {
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
-character_event = {
+province_event = {
 	id = ECO.1395
 	desc = "DESCECO.1395"
 	picture = GFX_evt_castle_construction	
