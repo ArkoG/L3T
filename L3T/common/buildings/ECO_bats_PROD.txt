@@ -198,7 +198,8 @@ CA_MINE_minerai_L1 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	is_active_trigger = { NOT = { has_province_modifier = mine_stop } }
 	potential = {
-			has_province_modifier = minerai1
+		has_province_modifier = minerai1
+		NOT = { has_province_modifier = no_more_mines }
 		#NOT = { terrain = desert }
 		}
 	prerequisites = { FEODAL_prod }

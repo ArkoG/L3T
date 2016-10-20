@@ -1,23 +1,50 @@
+# WARNING: scripted triggers are not functions in the programming langages
+# 		   they are only macro: a way to avoid copy/paste
+#		   In particular take attention of:
+#				- The scopes
+#				- The OR blocs
+
+is_active_fonderie_by_neighbor = {
+	AND = { # Use AND because it will be use in a OR bloc
+		OR = {
+			has_province_modifier = route_fluviale
+			has_province_modifier = route_terrestre
+		}
+		any_neighbor_province = {
+			has_province_modifier = minerai2_fer
+			NOT = { has_province_modifier = mine_stop }
+			OR = {
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre
+			}					
+		}
+	}
+}
+
 is_active_fonderie = {
 	OR = {
 		AND = {
 			has_province_modifier = minerai2_fer
 			NOT = { has_province_modifier = mine_stop }
 		}
-		AND = {
+		is_active_fonderie_by_neighbor = yes			
+	}
+}
+
+is_active_outil_ou_armes_neighbor = {
+	AND = { # Use AND because it will be use in a OR bloc
+		OR = {
+			has_province_modifier = route_fluviale
+			has_province_modifier = route_terrestre
+		}
+		any_neighbor_province = {
+			has_province_modifier = minerai3_metal
+			is_active_fonderie = yes
 			OR = {
 				has_province_modifier = route_fluviale
 				has_province_modifier = route_terrestre
-			}
-			any_neighbor_province = {
-				has_province_modifier = minerai2_fer
-				NOT = { has_province_modifier = mine_stop }
-				OR = {
-					has_province_modifier = route_fluviale
-					has_province_modifier = route_terrestre
-				}					
-			}
-		}			
+			}					
+		}
 	}
 }
 
@@ -27,19 +54,6 @@ is_active_outil_ou_armes = {
 			has_province_modifier = minerai3_metal
 			is_active_fonderie = yes
 		}
-		AND = {
-			OR = {
-				has_province_modifier = route_fluviale
-				has_province_modifier = route_terrestre
-			}
-			any_neighbor_province = {
-				has_province_modifier = minerai3_metal
-				is_active_fonderie = yes
-				OR = {
-					has_province_modifier = route_fluviale
-					has_province_modifier = route_terrestre
-				}					
-			}
-		}			
+		is_active_outil_ou_armes_neighbor = yes			
 	}
 }

@@ -196,8 +196,8 @@ province_event = {
 	}
 
 	mean_time_to_happen = { 
-		#months = 6
-		days = 10
+		months = 6
+		#days = 10 #TESTING MTTH
 		modifier = { factor = 2	owner = { has_character_flag = refused_closing_mine } }
 	}
 
@@ -205,6 +205,7 @@ province_event = {
 		name = "ECO.136A"
 		# Close the mines
 		remove_province_modifier = minerai1
+		add_province_modifier = { name = no_more_mines duration = 200 hidden = yes }
 		custom_tooltip = { text = TOOLTIPECO136 }
 		hidden_tooltip = { 
 			any_province_holding = {
@@ -230,8 +231,30 @@ province_event = {
 		hidden_tooltip = { subtract_variable = { which = "resourceNb" value = 1 } }
 		province_event = { id = ECO.0015 days = 10 }
 		
-		# Remove the modifier
-		province_event = { id = ECO.137 days = 180 }
+		# Remove the stop_mine and minerai2_fer modifier with a delay
+		province_event = { id = ECO.137 days = 100 }
+		
+		# Close the foundries if necessary
+		# In the province ...
+		if = {
+			limit = {
+				any_province_holding = {
+					has_building = CA_fonderie_L1
+				}
+				is_active_fonderie_by_neighbor = no 
+			}
+			province_event = { id = ECO.138 days = 10 }
+		}
+		# ... and its neighbors
+		any_neighbor_province = {
+			limit = {
+				any_province_holding = {
+					has_building = CA_fonderie_L1
+				}
+				is_active_fonderie_by_neighbor = no 
+			}
+			province_event = { id = ECO.138 days = 10 }
+		}
 	}
 	
 	option = { 
@@ -247,7 +270,7 @@ province_event = {
 	}
 }
 
-# Remove "stop_mine"
+# Remove mine_stop and minerai2_fer modifier
 province_event = {
 	id = ECO.137
 	hide_window = yes
@@ -255,6 +278,145 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = mine_stop
+		if = { limit = { has_province_modifier = minerai2_fer } remove_province_modifier = minerai2_fer }
+	}
+}
+
+# Close foundries
+province_event = {
+	id = ECO.138
+	desc = "DESCECO.138"
+	picture = GFX_evt_castle_construction
+	is_triggered_only = yes
+	
+	option = {
+		name = "ECO.138A"
+		# Close the foundries
+		hidden_tooltip = {
+			add_province_modifier = { name = no_more_foundries duration = 200 hidden = yes }
+			any_province_holding = {
+				if = {
+					limit = { has_building = CA_fonderie_L1}
+					owner = { wealth = 25 }
+					remove_building = CA_fonderie_L1
+				}
+				if = {
+					limit = { has_building = CA_fonderie_L2}
+					owner = { wealth = 38 }
+					remove_building = CA_fonderie_L2
+				}
+				if = {
+					limit = { has_building = CA_fonderie_L3}
+					owner = { wealth = 50 }
+					remove_building = CA_fonderie_L3
+				}
+			}
+		}
+		
+		# Remove the minerai3_metal modifier with a delay if necessary
+		province_event = { id = ECO.139 days = 100 }
+		
+		# Close the tool and weapons maker if necessary
+		# In the province ...
+		if = {
+			limit = {
+				any_province_holding = {
+					OR = {
+						has_building = CA_outilleur_L1
+						has_building = CA_armurerie_L1
+					}
+				}
+				is_active_outil_ou_armes_neighbor = no
+			}
+			province_event = { id = ECO.1401 days = 10 }
+		}
+		# ... and its neighbors
+		any_neighbor_province = {
+			limit = {
+				any_province_holding = {
+					OR = {
+						has_building = CA_outilleur_L1
+						has_building = CA_armurerie_L1
+					}
+				}
+				is_active_outil_ou_armes_neighbor = no
+			}
+			province_event = { id = ECO.1401 days = 10 }
+		}
+	}
+}
+
+# Remove minerai3_metal modifier
+province_event = {
+	id = ECO.139
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { limit = { has_province_modifier = minerai3_metal } remove_province_modifier = minerai3_metal }
+	}
+}
+
+# Close tool and weapon makers
+province_event = {
+	id = ECO.1401
+	desc = "DESCECO.1401"
+	picture = GFX_evt_castle_construction
+	is_triggered_only = yes
+	
+	option = {
+		name = "ECO.1401A"
+		# Close the tool and weapon makers
+		hidden_tooltip = { 
+			add_province_modifier = { name = no_more_tools_weapons duration = 200 hidden = yes }
+			any_province_holding = {
+				if = {
+					limit = { has_building = CA_outilleur_L1}
+					owner = { wealth = 25 }
+					remove_building = CA_outilleur_L1
+				}
+				if = {
+					limit = { has_building = CA_outilleur_L2}
+					owner = { wealth = 38 }
+					remove_building = CA_outilleur_L2
+				}
+				if = {
+					limit = { has_building = CA_outilleur_L3}
+					owner = { wealth = 50 }
+					remove_building = CA_outilleur_L3
+				}
+				if = {
+					limit = { has_building = CA_armurerie_L1}
+					owner = { wealth = 25 }
+					remove_building = CA_armurerie_L1
+				}
+				if = {
+					limit = { has_building = CA_armurerie_L2}
+					owner = { wealth = 38 }
+					remove_building = CA_armurerie_L2
+				}
+				if = {
+					limit = { has_building = CA_armurerie_L3}
+					owner = { wealth = 50 }
+					remove_building = CA_armurerie_L3
+				}
+			}
+		}
+		
+		# Remove the minerai4_outils and minerai4_armes modifiers with a delay if necessary
+		province_event = { id = ECO.1402 days = 100 }
+	}
+}
+
+# Remove minerai4_outils and minerai4_armes modifiers
+province_event = {
+	id = ECO.1402
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { limit = { has_province_modifier = minerai4_outils } remove_province_modifier = minerai4_outils }
+		if = { limit = { has_province_modifier = minerai4_armes } remove_province_modifier = minerai4_armes }
 	}
 }
 

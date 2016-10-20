@@ -153,6 +153,7 @@ CA_fonderie_L1 = {
 				}
 			}			
 		}
+		NOT = { has_province_modifier = no_more_foundries }
 	}
 	is_active_trigger = { is_active_fonderie = yes }
 	#prerequisites = { CA_MINE_minerai_L1 }
@@ -198,6 +199,7 @@ CA_outilleur_L1 = {
 				}
 			}			
 		}
+		NOT = { has_province_modifier = no_more_tools_weapons }
 	}
 	#prerequisites = { CA_fonderie_L1 }
 	prerequisites = { FEODAL_adm }
