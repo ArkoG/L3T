@@ -156,7 +156,6 @@ province_event = { #10ans de stock
 	id = ECO.133
 	desc = "DESCECO.133"
 	picture = GFX_evt_castle_construction	
-	ai = no
 	is_triggered_only = yes
 
 	option = { 
@@ -167,7 +166,6 @@ province_event = { #5ans de stock
 	id = ECO.134
 	desc = "DESCECO.134"
 	picture = GFX_evt_castle_construction	
-	ai = no
 	is_triggered_only = yes
 
 	option = { #débloquera décision en prio avec un flag
@@ -178,11 +176,85 @@ province_event = { #stock à zéro
 	id = ECO.135
 	desc = "DESCECO.135"
 	picture = GFX_evt_castle_construction	
-	ai = no
 	is_triggered_only = yes
 
 	option = { 
 		name = "ECO.135A" 
+	}
+}
+
+# Close mines
+province_event = {
+	id = ECO.136
+	desc = "DESCECO.136"
+	picture = GFX_evt_castle_construction
+
+	trigger = {
+		has_province_modifier = mine_stop
+		has_province_modifier = minerai1 # Be sure that we don't wait the disparition of the mine_stop modifier
+		NOT = { owner = { has_character_flag = refused_closing_mine_ever } }
+	}
+
+	mean_time_to_happen = { 
+		#months = 6
+		days = 10
+		modifier = { factor = 2	owner = { has_character_flag = refused_closing_mine } }
+	}
+
+	option = { 
+		name = "ECO.136A"
+		# Close the mines
+		remove_province_modifier = minerai1
+		custom_tooltip = { text = TOOLTIPECO136 }
+		hidden_tooltip = { 
+			any_province_holding = {
+				if = {
+					limit = { has_building = CA_MINE_minerai_L1}
+					owner = { wealth = 35 }
+					remove_building = CA_MINE_minerai_L1
+				}
+				if = {
+					limit = { has_building = CA_MINE_minerai_L2}
+					owner = { wealth = 53 }
+					remove_building = CA_MINE_minerai_L2
+				}
+				if = {
+					limit = { has_building = CA_MINE_minerai_L3}
+					owner = { wealth = 100 }
+					remove_building = CA_MINE_minerai_L3
+				}
+			}
+		}
+		
+		# Give again resources if necessary
+		hidden_tooltip = { subtract_variable = { which = "resourceNb" value = 1 } }
+		province_event = { id = ECO.0015 days = 10 }
+		
+		# Remove the modifier
+		province_event = { id = ECO.137 days = 180 }
+	}
+	
+	option = { 
+		name = "ECO.136B"
+		custom_tooltip = { text = TOOLTIPECO136B }
+		owner = { set_character_flag = refused_closing_mine_moment }
+	}
+	
+	option = { 
+		name = "ECO.136C"
+		custom_tooltip = { text = TOOLTIPECO136C }
+		owner = { set_character_flag = refused_closing_mine_ever }
+	}
+}
+
+# Remove "stop_mine"
+province_event = {
+	id = ECO.137
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		remove_province_modifier = mine_stop
 	}
 }
 
@@ -191,7 +263,6 @@ province_event = {
 	id = ECO.1391
 	desc = "DESCECO.1391"
 	picture = GFX_evt_castle_construction	
-	ai = no
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
@@ -199,7 +270,6 @@ province_event = {
 	id = ECO.1392
 	desc = "DESCECO.1392"
 	picture = GFX_evt_castle_construction	
-	ai = no
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
@@ -207,7 +277,6 @@ province_event = {
 	id = ECO.1393
 	desc = "DESCECO.1393"
 	picture = GFX_evt_castle_construction	
-	ai = no
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
@@ -215,7 +284,6 @@ province_event = {
 	id = ECO.1394
 	desc = "DESCECO.1394"
 	picture = GFX_evt_castle_construction	
-	ai = no
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
@@ -223,7 +291,6 @@ province_event = {
 	id = ECO.1395
 	desc = "DESCECO.1395"
 	picture = GFX_evt_castle_construction	
-	ai = no
 	is_triggered_only = yes
 	option = { name = "OK" }
 }

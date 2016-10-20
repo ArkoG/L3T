@@ -956,6 +956,13 @@ DESCECO.134;News of our mines in [Root.GetName].\nThe very small amounts of [Roo
 ECO.134A;OK;Nous en prenons acte;;;;;;;;;;;;x
 DESCECO.135;A message from [Root.GetName].\nOur mining operations have ceased to function because of no ore to exploit.;Un message en provenance de [Root.GetName]. \n Nos installations minières ont cessé de fonctionner faute de minerai à exploiter.;;;;;;;;;;;;x
 ECO.135A;Is it too late to revive them ?;Est-t-il donc trop tard ?;;;;;;;;;;;;x
+DESCECO.136;The mines in the province of [Root.GetName] are stopped because there is no more ore.\nIt is time to close them in order to boost the local economy.\nSomeone could yet find a new vein.;Les mines de la province de [Root.GetName] sont arrêtées faute de minerai.\nIl est temps de les fermer afin de relancer l'économie locale.\nQuelqu'un pourrait cependant trouver un nouveau filon.;;;;;;;;;;;;x
+TOOLTIPECO136;The mines are closed.\nBy selling what is recoverable, each owner gets 50% of the initial investment.;Les mines sont fermées.\nEn vendant ce qui est récupérable, chaque propriétaire récupère 50% de la mise de départ.;;;;;;;;;;;;x
+ECO.136A;Close them on.;Fermez-les de suite.;;;;;;;;;;;;x
+ECO.136B;Leave them for now.;Laissez-les pour le moment.;;;;;;;;;;;;x
+TOOLTIPECO136B;Later we will offer again to close them.;On vous reproposera plus tard de les fermer.;;;;;;;;;;;;x
+ECO.136C;How does this affect me?;En quoi cela me concerne?;;;;;;;;;;;;x
+TOOLTIPECO136C;We will no longer offer your character to close them.\nHowever, we can offer it again to your successor.;On ne proposera plus à votre personnage de les fermer.\nOn pourra cependant le proposer à nouveau à votre successeur.;;;;;;;;;;;;x
 stock_minerai;Iron ore;minerai de fer;;;;;;;;;;;;x
 DESCECO.1391;News of our mines in [Root.GetName].\nThe amount of available [Root.stock_minerai.GetName] is estimated at [Root.stock_minerai.GetValue] units.\nQuantity impacted by -10 units.;Des nouvelles de nos mines de [Root.GetName]. \n La quantité de [Root.stock_minerai.GetName] encore disponible est évaluée à [Root.stock_minerai.GetValue] unités. \nQuantité impactée de -10 unités.;;;;;;;;;;;;x
 DESCECO.1392;News of our mines in [Root.GetName].\nThe amount of available [Root.stock_minerai.GetName] is estimated at [Root.stock_minerai.GetValue] units.\nQuantity impacted by -20 units.;Des nouvelles de nos mines de [Root.GetName]. \n La quantité de [Root.stock_minerai.GetName] encore disponible est évaluée à [Root.stock_minerai.GetValue] unités. \nQuantité impactée de -20 unités.;;;;;;;;;;;;x
