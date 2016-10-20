@@ -196,6 +196,7 @@ CA_CARR_pierre_L3 = {
 CA_MINE_minerai_L1 = {
   	desc = CA_MINE_minerai_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	is_active_trigger = { NOT = { has_province_modifier = mine_stop } }
 	potential = {
 			has_province_modifier = minerai1
 		#NOT = { terrain = desert }
@@ -207,6 +208,7 @@ CA_MINE_minerai_L1 = {
 CA_MINE_minerai_L2 = {
   	desc = CA_MINE_minerai_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	is_active_trigger = { NOT = { has_province_modifier = mine_stop } }
 	upgrades_from = CA_MINE_minerai_L1
 		gold_cost = 105.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 		disease_defence = -0.01 #respirer dans les mines c'est pas bon pour la santé
@@ -215,6 +217,7 @@ CA_MINE_minerai_L2 = {
 CA_MINE_minerai_L3 = {
   	desc = CA_MINE_minerai_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 terrain = hills }
+	is_active_trigger = { NOT = { has_province_modifier = mine_stop } }
 	potential = { terrain = hills }
 	upgrades_from = CA_MINE_minerai_L2
 		gold_cost = 200.0	build_time = 100	tax_income = 0.4	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0

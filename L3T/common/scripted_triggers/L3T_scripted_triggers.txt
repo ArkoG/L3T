@@ -1,0 +1,45 @@
+is_active_fonderie = {
+	OR = {
+		AND = {
+			has_province_modifier = minerai2_fer
+			NOT = { has_province_modifier = mine_stop }
+		}
+		AND = {
+			OR = {
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre
+			}
+			any_neighbor_province = {
+				has_province_modifier = minerai2_fer
+				NOT = { has_province_modifier = mine_stop }
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}					
+			}
+		}			
+	}
+}
+
+is_active_outil_ou_armes = {
+	OR = {
+		AND = {
+			has_province_modifier = minerai3_metal
+			is_active_fonderie = yes
+		}
+		AND = {
+			OR = {
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre
+			}
+			any_neighbor_province = {
+				has_province_modifier = minerai3_metal
+				is_active_fonderie = yes
+				OR = {
+					has_province_modifier = route_fluviale
+					has_province_modifier = route_terrestre
+				}					
+			}
+		}			
+	}
+}

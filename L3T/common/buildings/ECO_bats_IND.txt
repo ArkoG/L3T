@@ -154,6 +154,7 @@ CA_fonderie_L1 = {
 			}			
 		}
 	}
+	is_active_trigger = { is_active_fonderie = yes }
 	#prerequisites = { CA_MINE_minerai_L1 }
 	prerequisites = { FEODAL_prod }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -161,6 +162,7 @@ CA_fonderie_L1 = {
 CA_fonderie_L2 = {
 	desc = CA_fonderie_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	is_active_trigger = { is_active_fonderie = yes }
 	#prerequisites = { CA_MINE_minerai_L2 }
 	upgrades_from = CA_fonderie_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -168,6 +170,7 @@ CA_fonderie_L2 = {
 CA_fonderie_L3 = {
 	desc = CA_fonderie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	is_active_trigger = { is_active_fonderie = yes }
 	#prerequisites = { CA_MINE_minerai_L3 }
 	upgrades_from = CA_fonderie_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -177,6 +180,7 @@ CA_fonderie_L3 = {
 CA_outilleur_L1 = {
 	desc = CA_outilleur_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	is_active_trigger = { is_active_outil_ou_armes = yes }
 	potential = {
 		OR = {
 			has_province_modifier = minerai3_metal
@@ -202,6 +206,7 @@ CA_outilleur_L1 = {
 CA_outilleur_L2 = {
 	desc = CA_outilleur_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	is_active_trigger = { is_active_outil_ou_armes = yes }
 	#prerequisites = { CA_fonderie_L2 }
 	upgrades_from = CA_outilleur_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -209,6 +214,7 @@ CA_outilleur_L2 = {
 CA_outilleur_L3 = {
 	desc = CA_outilleur_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	is_active_trigger = { is_active_outil_ou_armes = yes }
 	#prerequisites = { CA_fonderie_L3 }
 	upgrades_from = CA_outilleur_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -217,6 +223,7 @@ CA_outilleur_L3 = {
 CA_armurerie_L1 = {
 	desc = CA_armurerie_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	is_active_trigger = { is_active_outil_ou_armes = yes }
 	potential = {
 		OR = {
 			has_province_modifier = minerai3_metal
@@ -242,6 +249,7 @@ CA_armurerie_L1 = {
 CA_armurerie_L2 = {
 	desc = CA_armurerie_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	is_active_trigger = { is_active_outil_ou_armes = yes }
 	#prerequisites = { CA_fonderie_L2 }
 	upgrades_from = CA_armurerie_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	garrison_size = 0.2 ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -249,6 +257,7 @@ CA_armurerie_L2 = {
 CA_armurerie_L3 = {
 	desc = CA_armurerie_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
+	is_active_trigger = { is_active_outil_ou_armes = yes }
 	#prerequisites = { CA_fonderie_L3 }
 	upgrades_from = CA_armurerie_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	garrison_size = 0.3 ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
