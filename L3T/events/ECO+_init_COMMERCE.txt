@@ -220,6 +220,7 @@ namespace = ECO
 #		if = { limit = { has_province_modifier = foret1} change_variable = { which = "resourceNb" value = 1 } }
 #		if = { limit = { has_province_modifier = pierre1} change_variable = { which = "resourceNb" value = 1 } }
 #		if = { limit = { has_province_modifier = minerai1} change_variable = { which = "resourceNb" value = 1 } }
+#		if = { limit = { has_province_modifier = minerai1_sel} change_variable = { which = "resourceNb" value = 1 } }
 #		if = { limit = { has_province_modifier = peche1} change_variable = { which = "resourceNb" value = 1 } }
 #		if = { limit = { has_province_modifier = pisci1} change_variable = { which = "resourceNb" value = 1 } }
 #	}

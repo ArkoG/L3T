@@ -548,7 +548,7 @@ CT_MINE_sel_L1 = {
  	desc = CT_MINE_sel_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
-			has_province_modifier = minerai1		
+			has_province_modifier = minerai1_sel		
 		}
 	prerequisites = { VOC_INDUSTRIELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0

@@ -218,10 +218,15 @@ pierre2_pierre_brute	= {icon = 121}
 pierre3_pierre_taille	= {local_build_time_modifier = -0.03 icon = 122}
 
 minerai1		= {icon = 123}
-minerai2_fer	= {icon = 124}	minerai2_sel_gemme		= {icon = 128 local_tax_modifier = 0.02}
-minerai3_metal	= {icon = 125}	minerai3_sel_raffine	= {icon = 126}
-minerai4_outils	= {icon = 126 local_build_time_modifier = -0.05}	minerai3_salaison		= {icon = 129}
+minerai2_fer	= {icon = 124}	
+minerai3_metal	= {icon = 125}	
+minerai4_outils	= {icon = 126 local_build_time_modifier = -0.05}	
 minerai4_armes	= {icon = 127 levy_size = 0.05}
+
+minerai1_sel			= {icon = 123}
+minerai2_sel_gemme		= {icon = 128 local_tax_modifier = 0.02}
+minerai3_sel_raffine	= {icon = 126}
+minerai3_salaison		= {icon = 129}
 
 minerai2_cuivre	= {icon = 143}
 minerai2_or	= {icon = 144}
