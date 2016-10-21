@@ -200,7 +200,7 @@ CA_MINE_minerai_L1 = {
 	potential = {
 		has_province_modifier = minerai1
 		NOT = { has_province_modifier = no_more_mines }
-		#NOT = { terrain = desert }
+		NOT = { terrain = desert }
 		}
 	prerequisites = { FEODAL_prod }
 		gold_cost = 70.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
