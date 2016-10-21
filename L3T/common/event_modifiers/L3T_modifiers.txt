@@ -484,16 +484,12 @@ no_more_mines = { icon = 1} # hidden
 no_more_foundries = { icon = 1} # hidden
 no_more_tools_weapons = { icon = 1} # hidden
 mine_productivite_moins = {
-	icon =  169 
-	#local_revolt_risk =  0.05
-	#tax_income = -0.2
-	local_tax_modifier = -0.01
+	icon =  169
+	tax_income = -0.2
 }
 mine_productivite_plus = {
 	icon =  170
-	#local_revolt_risk = -0.05
-	#tax_income = 0.2
-	local_tax_modifier =  0.01
+	tax_income = 0.2
 }
 industrie_prospere = {
 	icon =  138
