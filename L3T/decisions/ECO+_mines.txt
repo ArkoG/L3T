@@ -1,0 +1,40 @@
+decisions = {
+	prospect = {
+		potential = {
+			any_demesne_province = {
+				has_province_flag = alerte_mine_1_recue
+				NOT = { has_province_flag = prospection }
+			}
+		}
+		allow = {
+			wealth = 15
+		}
+		effect = {
+			wealth = -7.5
+			custom_tooltip = { text = prospectTooltip }
+			hidden_tooltip = {
+				random_demesne_province = {
+					limit = {
+						has_province_flag = alerte_mine_1_recue
+						NOT = { has_province_flag = prospection }
+					}
+					set_province_flag = prospection
+					province_event = { id = ECO.1403 days = 360 }
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 2
+				any_demesne_province = {
+					has_province_flag = alerte_mine_2_recue
+					NOT = { has_province_flag = prospection }
+				}
+			}
+		}
+	}
+}

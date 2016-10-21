@@ -192,6 +192,7 @@ province_event = {
 	trigger = {
 		has_province_modifier = mine_stop
 		has_province_modifier = minerai1 # Be sure that we don't wait the disparition of the mine_stop modifier
+		NOT = { has_province_flag = prospection } # The ruler doesn't search to use again the mines with new minerals
 		NOT = { owner = { has_character_flag = refused_closing_mine_ever } }
 	}
 
@@ -417,6 +418,58 @@ province_event = {
 	immediate = {
 		if = { limit = { has_province_modifier = minerai4_outils } remove_province_modifier = minerai4_outils }
 		if = { limit = { has_province_modifier = minerai4_armes } remove_province_modifier = minerai4_armes }
+	}
+}
+
+# Prospection : computation results
+province_event = {
+	id = ECO.1403
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			50 = { province_event = { id = ECO.1404 days = 10 } }
+			50 = { province_event = { id = ECO.1405 days = 10 } }
+		}
+	}
+}
+
+# Prospection : positive results
+province_event = {
+	id = ECO.1404
+	desc = "DESCECO.1404"
+	picture = GFX_evt_castle_construction
+	is_triggered_only = yes
+	
+	option = {
+		name = "ECO.1404A"
+		clr_province_flag = prospection
+		if = { limit = { has_province_flag = alerte_mine_1_recue } clr_province_flag = alerte_mine_1_recue }
+		if = { limit = { has_province_flag = alerte_mine_2_recue } clr_province_flag = alerte_mine_2_recue }
+		if = { limit = { has_province_modifier = mine_stop } remove_province_modifier = mine_stop }
+		custom_tooltip = { text = newMineralFound }
+		hidden_tooltip = { change_variable = { which = "stock_minerai" value =  750 } }
+	}
+}
+
+# Prospection : negative results
+province_event = {
+	id = ECO.1405
+	desc = "DESCECO.1405"
+	picture = GFX_evt_castle_construction
+	is_triggered_only = yes
+	
+	option = {
+		name = "ECO.1405A"
+		owner = { wealth = -7.5 }
+		custom_tooltip = { text = prospectTooltip }
+		hidden_tooltip = { province_event = { id = ECO.1403 days = 360 } }
+	}
+	
+	option = {
+		name = "ECO.1405B"
+		clr_province_flag = prospection
 	}
 }
 
