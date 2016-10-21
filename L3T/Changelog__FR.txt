@@ -8,8 +8,18 @@ RELEASE BETA 0.92 (?? ??? 2016)
 
 MAJEUR :
 -mise à jour pour la version 2.6.2 du jeu
+-limitation du stock de minerai de fer
+	-> attribution aléatoire d'un stock de minerai à l'ouverture de la mine de fer
+	-> modification des coûts de constructions et des revenus des mines de fer
+	-> modification des effets d'immersion des mines
+	-> affichage des alertes quand le stock de minerai est faible
+	-> ajout d'un malus de taxe quand le stock de minerai est épuisé
+	-> désactivation des effets des bâtiments de production de fer et des industries dépendantes (métal, outils et armes) en cas de défaut d'approvisionement
+	-> limitation des mines de fer aux provinces qui ne sont pas des désert
+	-> ajout d'une décision pour prospecter et donc augmenter le stock de minerai
 
 MINEUR et DIVERS :
+-séparation du sel des autres minerais
 -retrait de l'event de choix de langue en début de partie
 -réduction du temps avant la spécialisation des domaines
 -[Optimisation] spécialisation des doubles cités (plusieurs cités dans une province) dès le de début et non plus par MTTH
