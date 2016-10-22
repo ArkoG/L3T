@@ -1,0 +1,18 @@
+#####rewrites some vanilla .gfx entries
+
+spriteTypes = {
+### from province.gfx
+	spriteType = {
+		name = "GFX_modifier_icons"
+		texturefile = "gfx\\interface\\modifier_icons_arko.tga"
+		noOfFrames = 180
+		loadType = "INGAME"
+	}
+
+### from buildview.gfx
+	spriteType = {
+		name = "GFX_buildview_level" #cathedrales
+		texturefile = "gfx\\interface\\buildview_level.dds"
+		noOfFrames = 12
+	}
+}
