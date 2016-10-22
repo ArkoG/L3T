@@ -205,7 +205,7 @@ province_event = {
 	
 	trigger = {
 		has_province_modifier = minerai2_fer
-		NOT = { has_province_modifier = mine_productivite_moins }
+		any_province_holding = { NOT = { has_holding_modifier = mine_productivite_moins } }
 		#ajouter critère de technologie (efficacité accrue réduit le risque)
 		month = 6 #pour avoir juilliet et août, beaucoup d'accidents l'été #à voir ce qu'on mettre comme critère plutot qu'un mois de l'année.
 		NOT = { month = 8 }
@@ -222,11 +222,66 @@ province_event = {
 		name = "ECO.0204A"
 		hidden_tooltip = {	
 			random_list = {
-				10 = { add_province_modifier = { name = mine_productivite_moins duration = 200 } }
-				15 = { add_province_modifier = { name = mine_productivite_moins duration = 300 } }	
-				50 = { add_province_modifier = { name = mine_productivite_moins duration = 400 } }
-				15 = { add_province_modifier = { name = mine_productivite_moins duration = 500 } }
-				10 = { add_province_modifier = { name = mine_productivite_moins duration = 600 } }
+				10 = {
+					any_province_holding = {
+						limit = { 
+							OR = {
+								has_building = CA_MINE_minerai_L1
+								has_building = CT_MINE_or_L1
+								has_building = CT_MINE_cuivre_L1
+							}
+						}
+						add_holding_modifier = { name = mine_productivite_moins duration = 200 }
+					}
+				}
+				15 = {
+					any_province_holding = {
+						limit = { 
+							OR = {
+								has_building = CA_MINE_minerai_L1
+								has_building = CT_MINE_or_L1
+								has_building = CT_MINE_cuivre_L1
+							}
+						}
+						add_holding_modifier = { name = mine_productivite_moins duration = 300 }
+					}
+				}
+				50 = {
+					any_province_holding = {
+						limit = { 
+							OR = {
+								has_building = CA_MINE_minerai_L1
+								has_building = CT_MINE_or_L1
+								has_building = CT_MINE_cuivre_L1
+							}
+						}
+						add_holding_modifier = { name = mine_productivite_moins duration = 400 }
+					}
+				}
+				15 = {
+					any_province_holding = {
+						limit = { 
+							OR = {
+								has_building = CA_MINE_minerai_L1
+								has_building = CT_MINE_or_L1
+								has_building = CT_MINE_cuivre_L1
+							}
+						}
+						add_holding_modifier = { name = mine_productivite_moins duration = 500 }
+					}
+				}
+				10 = {
+					any_province_holding = {
+						limit = { 
+							OR = {
+								has_building = CA_MINE_minerai_L1
+								has_building = CT_MINE_or_L1
+								has_building = CT_MINE_cuivre_L1
+							}
+						}
+						add_holding_modifier = { name = mine_productivite_moins duration = 600 }
+					}
+				}
 			}
 		}	
 	}
@@ -239,7 +294,7 @@ province_event = {
 	
 	trigger = {
 		has_province_modifier = minerai2_fer
-		NOT = { has_province_modifier = mine_productivite_plus }
+		any_province_holding = { NOT = { has_holding_modifier = mine_productivite_plus } }
 		month = 6 #pour avoir juilliet et août #à voir ce qu'on mettre comme critère plutot qu'un mois de l'année.
 		NOT = { month = 8 }
 	}
@@ -256,11 +311,66 @@ province_event = {
 		name = "ECO.0205A"
 		hidden_tooltip = {
 			random_list = {
-				10 = { add_province_modifier = { name = mine_productivite_plus duration = 200 } }			
-				15 = { add_province_modifier = { name = mine_productivite_plus duration = 300 } }	
-				50 = { add_province_modifier = { name = mine_productivite_plus duration = 400 } }
-				15 = { add_province_modifier = { name = mine_productivite_plus duration = 500 } }
-				10 = { add_province_modifier = { name = mine_productivite_plus duration = 600 } }
+				10 = {
+					any_province_holding = {
+						limit = { 
+							OR = {
+								has_building = CA_MINE_minerai_L1
+								has_building = CT_MINE_or_L1
+								has_building = CT_MINE_cuivre_L1
+							}
+						}
+						add_holding_modifier = { name = mine_productivite_plus duration = 200 }
+					}
+				}
+				15 = {
+					any_province_holding = {
+						limit = { 
+							OR = {
+								has_building = CA_MINE_minerai_L1
+								has_building = CT_MINE_or_L1
+								has_building = CT_MINE_cuivre_L1
+							}
+						}
+						add_holding_modifier = { name = mine_productivite_plus duration = 300 }
+					}
+				}
+				50 = {
+					any_province_holding = {
+						limit = { 
+							OR = {
+								has_building = CA_MINE_minerai_L1
+								has_building = CT_MINE_or_L1
+								has_building = CT_MINE_cuivre_L1
+							}
+						}
+						add_holding_modifier = { name = mine_productivite_plus duration = 400 }
+					}
+				}
+				15 = {
+					any_province_holding = {
+						limit = { 
+							OR = {
+								has_building = CA_MINE_minerai_L1
+								has_building = CT_MINE_or_L1
+								has_building = CT_MINE_cuivre_L1
+							}
+						}
+						add_holding_modifier = { name = mine_productivite_plus duration = 500 }
+					}
+				}
+				10 = {
+					any_province_holding = {
+						limit = { 
+							OR = {
+								has_building = CA_MINE_minerai_L1
+								has_building = CT_MINE_or_L1
+								has_building = CT_MINE_cuivre_L1
+							}
+						}
+						add_holding_modifier = { name = mine_productivite_plus duration = 600 }
+					}
+				}
 			}
 		}
 	}
@@ -316,7 +426,7 @@ province_event = {
 		OR = {
 			has_province_modifier = recolte_bonne
 			has_province_modifier = peche_bonne
-			has_province_modifier = mine_productivite_plus
+			any_province_holding = { has_holding_modifier = mine_productivite_plus }
 			has_province_modifier = industrie_prospere
 			}
 		owner = { war = yes }
@@ -333,7 +443,7 @@ province_event = {
 		name = "ECO.0207A"
 		if = { limit = { has_province_modifier = recolte_bonne} remove_province_modifier = recolte_bonne }
 		if = { limit = { has_province_modifier = peche_bonne} remove_province_modifier = peche_bonne }
-		if = { limit = { has_province_modifier = mine_productivite_plus} remove_province_modifier = mine_productivite_plus }
+		any_province_holding = { limit = { has_holding_modifier = mine_productivite_plus} remove_holding_modifier = mine_productivite_plus }
 		if = { limit = { has_province_modifier = industrie_prospere} remove_province_modifier = industrie_prospere }
 		clr_province_flag = industrie_prospere_A
 		clr_province_flag = industrie_prospere_B

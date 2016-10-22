@@ -58,17 +58,13 @@ character_event = {
 		#adjonction effet productivite (cumulatif)	
 			#conso ralentie
 			if = {
-				limit = {			
-					location = { has_province_modifier = mine_productivite_moins }
-					}
+				limit = { has_holding_modifier = mine_productivite_moins }
 			location = { province_event = { id = ECO.1394 days = 1 }}
 			location = { change_variable = { which = "stock_minerai" value =  5 }}
 			}
 			#conso majoree			
 			if = {
-				limit = {			
-					location = { has_province_modifier = mine_productivite_plus }
-					}
+				limit = { has_holding_modifier = mine_productivite_plus }
 			location = { province_event = { id = ECO.1395 days = 1 }}
 			location = { change_variable = { which = "stock_minerai" value =  -5 }}
 			random_list = {
