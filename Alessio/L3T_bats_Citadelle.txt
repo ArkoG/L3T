@@ -1,0 +1,126 @@
+### ébauche bâtiments de capitale pour L3T  ALessio ###
+castle = {
+	CA_chambre_1 = {# chambre du sénéchal 
+		desc = CA_chambre_1_desc
+		prerequisites = { CITADELLE }
+		trigger = { TECH_MAJESTY = 3 }
+		gold_cost = 50
+		build_time = 365
+		tax_income = 2
+		ai_creation_factor = 100
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+
+	CA_chambre_2 = { # chambre des comptes 
+		desc = CA_chambre_2_desc
+		trigger = { TECH_MAJESTY = 5 }
+		prerequisites = { CITADELLE CA_tresor CA_archives_2  }
+		upgrades_from = CA_chambre_1
+		gold_cost = 250
+		build_time = 547
+		tax_income = 4
+		# stewardship = 1
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+
+	CA_tresor = { # salle du trésor
+		desc = CA_tresor_desc
+		trigger = { TECH_MAJESTY = 3 }
+		prerequisites = {CA_chambre_1 CITADELLE }
+		gold_cost = 75
+		build_time = 365
+		tax_income = 0.5
+		fort_level = 0.2
+		garrison_size = 0.01
+		ai_creation_factor = 100
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+
+	CA_archives_1 = { # salle des archives
+		desc = CA_archives_1_desc
+		trigger = { TECH_MAJESTY = 4 }
+		prerequisites = {CA_chambre_1 CITADELLE }
+		gold_cost = 75
+		build_time = 365
+		# stewardship = 1
+		local_tax_modifier = 0.25
+		# tech_growth_modifier_economy = 0.05
+		ai_creation_factor = 100
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+	 
+	CA_archives_2 = { # grande salle des archives
+		desc = CA_archives_2_desc
+		trigger = { TECH_MAJESTY = 5 }
+		prerequisites = {CA_chambre_1 CITADELLE CA_tresor }
+		upgrades_from = CA_archives_1
+		gold_cost = 150
+		build_time = 520
+		tax_income = 0.50
+		# tech_growth_modifier_economy = 0.05
+		ai_creation_factor = 100
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+	 
+	CA_cour_justice = { # cour de justice
+		desc = CA_cour_justice_desc
+		trigger = { TECH_MAJESTY = 4 }
+		prerequisites = { CITADELLE }
+		gold_cost = 150
+		build_time = 465
+		# monthly_character_prestige = 0.20
+		# tech_growth_modifier_culture = 0.05
+		# diplomacy = 1
+		ai_creation_factor = 98
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+	 
+	CA_chancellerie = {
+		desc = CA_chancellerie_desc
+		trigger = { TECH_LEGALISM = 3 }
+		prerequisites = { CITADELLE }
+		gold_cost = 75
+		build_time = 365 
+		# diplomacy = 1
+		# stewardship = 1
+		ai_creation_factor = 98
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+	 
+	CA_chap_seign = { # chapelle seigneuriale
+		desc = CA_chap_seign_desc
+		trigger = { TECH_RELIGIOUS_CUSTOMS = 3 }
+		prerequisites = { CITADELLE }
+		gold_cost = 150 
+		build_time = 460
+		# monthly_character_piety = 0.25 
+		# church_opinion = 5 
+		ai_creation_factor = 90
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+	 
+	CA_chap_seign_2 = { # chapelle seigneuriale et reliquaire dynastique
+		desc = CA_chap_seign_2_desc 
+		trigger = { TECH_RELIGIOUS_CUSTOMS = 4 }
+		prerequisites = { CITADELLE }
+		upgrades_from = CA_chap_seign
+		gold_cost = 200
+		build_time = 460
+		# monthly_character_piety = 0.10 
+		# monthly_character_prestige = 0.10 
+		tax_income = 0.05
+		# dynasty_opinion = 5
+		ai_creation_factor = 80
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+}
