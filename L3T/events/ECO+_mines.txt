@@ -201,6 +201,21 @@ province_event = {
 
 	option = { 
 		name = "ECO.136A"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor =  2
+				owner = { NOT = { wealth = 0 } }
+			}
+			modifier = {
+				factor =  2
+				owner = { trait = slothful }
+			}
+			modifier = {
+				factor =  0.5
+				owner = { NOT = { trait = diligent } }
+			}
+		}
 		# Close the mines
 		remove_province_modifier = minerai1
 		add_province_modifier = { name = no_more_mines duration = 200 hidden = yes }
@@ -257,12 +272,30 @@ province_event = {
 	
 	option = { 
 		name = "ECO.136B"
+		ai_chance = {
+			factor = 50			
+			modifier = {
+				factor =  2
+				owner = { stewardship = 8 }
+			}			
+			modifier = {
+				factor =  0.25
+				owner = { stewardship = 14 }
+			}
+		}
 		custom_tooltip = { text = TOOLTIPECO136B }
 		owner = { set_character_flag = refused_closing_mine_moment }
 	}
 	
 	option = { 
 		name = "ECO.136C"
+		ai_chance = {
+			factor = 20						
+			modifier = {
+				factor =  5
+				owner = { stewardship = 14 }
+			}
+		}
 		custom_tooltip = { text = TOOLTIPECO136C }
 		owner = { set_character_flag = refused_closing_mine_ever }
 	}
