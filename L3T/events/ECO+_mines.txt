@@ -224,17 +224,29 @@ province_event = {
 			any_province_holding = {
 				if = {
 					limit = { has_building = CA_MINE_minerai_L1}
-					owner = { wealth = 35 }
+					random_list = {
+						20 = { owner = { wealth = 28 } }
+						60 = { owner = { wealth = 35 } }
+						20 = { owner = { wealth = 42 } }
+					}
 					remove_building = CA_MINE_minerai_L1
 				}
 				if = {
 					limit = { has_building = CA_MINE_minerai_L2}
-					owner = { wealth = 53 }
+					random_list = {
+						20 = { owner = { wealth = 42 } }
+						60 = { owner = { wealth = 53 } }
+						20 = { owner = { wealth = 63 } }
+					}
 					remove_building = CA_MINE_minerai_L2
 				}
 				if = {
 					limit = { has_building = CA_MINE_minerai_L3}
-					owner = { wealth = 100 }
+					random_list = {
+						20 = { owner = { wealth = 80 } }
+						60 = { owner = { wealth = 100 } }
+						20 = { owner = { wealth = 120 } }
+					}
 					remove_building = CA_MINE_minerai_L3
 				}
 			}
@@ -328,17 +340,29 @@ province_event = {
 			any_province_holding = {
 				if = {
 					limit = { has_building = CA_fonderie_L1}
-					owner = { wealth = 25 }
+					random_list = {
+						20 = { owner = { wealth = 20 } }
+						60 = { owner = { wealth = 25 } }
+						20 = { owner = { wealth = 30 } }
+					}
 					remove_building = CA_fonderie_L1
 				}
 				if = {
 					limit = { has_building = CA_fonderie_L2}
-					owner = { wealth = 38 }
+					random_list = {
+						20 = { owner = { wealth = 30 } }
+						60 = { owner = { wealth = 38 } }
+						20 = { owner = { wealth = 45 } }
+					}
 					remove_building = CA_fonderie_L2
 				}
 				if = {
 					limit = { has_building = CA_fonderie_L3}
-					owner = { wealth = 50 }
+					random_list = {
+						20 = { owner = { wealth = 40 } }
+						60 = { owner = { wealth = 50 } }
+						20 = { owner = { wealth = 60 } }
+					}
 					remove_building = CA_fonderie_L3
 				}
 			}
@@ -403,32 +427,56 @@ province_event = {
 			any_province_holding = {
 				if = {
 					limit = { has_building = CA_outilleur_L1}
-					owner = { wealth = 25 }
+					random_list = {
+						20 = { owner = { wealth = 20 } }
+						60 = { owner = { wealth = 25 } }
+						20 = { owner = { wealth = 30 } }
+					}
 					remove_building = CA_outilleur_L1
 				}
 				if = {
 					limit = { has_building = CA_outilleur_L2}
-					owner = { wealth = 38 }
+					random_list = {
+						20 = { owner = { wealth = 30 } }
+						60 = { owner = { wealth = 38 } }
+						20 = { owner = { wealth = 45 } }
+					}
 					remove_building = CA_outilleur_L2
 				}
 				if = {
 					limit = { has_building = CA_outilleur_L3}
-					owner = { wealth = 50 }
+					random_list = {
+						20 = { owner = { wealth = 40 } }
+						60 = { owner = { wealth = 50 } }
+						20 = { owner = { wealth = 60 } }
+					}
 					remove_building = CA_outilleur_L3
 				}
 				if = {
 					limit = { has_building = CA_armurerie_L1}
-					owner = { wealth = 25 }
+					random_list = {
+						20 = { owner = { wealth = 20 } }
+						60 = { owner = { wealth = 25 } }
+						20 = { owner = { wealth = 30 } }
+					}
 					remove_building = CA_armurerie_L1
 				}
 				if = {
 					limit = { has_building = CA_armurerie_L2}
-					owner = { wealth = 38 }
+					random_list = {
+						20 = { owner = { wealth = 30 } }
+						60 = { owner = { wealth = 38 } }
+						20 = { owner = { wealth = 45 } }
+					}
 					remove_building = CA_armurerie_L2
 				}
 				if = {
 					limit = { has_building = CA_armurerie_L3}
-					owner = { wealth = 50 }
+					random_list = {
+						20 = { owner = { wealth = 40 } }
+						60 = { owner = { wealth = 50 } }
+						20 = { owner = { wealth = 60 } }
+					}
 					remove_building = CA_armurerie_L3
 				}
 			}
