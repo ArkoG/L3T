@@ -151,7 +151,7 @@ character_event = {
 province_event = { #10ans de stock
 	id = ECO.133
 	desc = "DESCECO.133"
-	picture = GFX_evt_castle_construction	
+	picture = GFX_evt_L3T_mine	
 	is_triggered_only = yes
 
 	option = { 
@@ -162,7 +162,7 @@ province_event = { #10ans de stock
 province_event = { #5ans de stock
 	id = ECO.134
 	desc = "DESCECO.134"
-	picture = GFX_evt_castle_construction	
+	picture = GFX_evt_L3T_mine	
 	is_triggered_only = yes
 
 	option = { #débloquera décision en prio avec un flag
@@ -172,7 +172,7 @@ province_event = { #5ans de stock
 province_event = { #stock à zéro
 	id = ECO.135
 	desc = "DESCECO.135"
-	picture = GFX_evt_castle_construction	
+	picture = GFX_evt_L3T_mine	
 	is_triggered_only = yes
 
 	option = { 
@@ -184,7 +184,7 @@ province_event = { #stock à zéro
 province_event = {
 	id = ECO.136
 	desc = "DESCECO.136"
-	picture = GFX_evt_castle_construction
+	picture = GFX_evt_L3T_mine
 
 	trigger = {
 		has_province_modifier = mine_stop
@@ -329,7 +329,7 @@ province_event = {
 province_event = {
 	id = ECO.138
 	desc = "DESCECO.138"
-	picture = GFX_evt_castle_construction
+	picture = GFX_evt_L3T_forge
 	is_triggered_only = yes
 	
 	option = {
@@ -416,7 +416,7 @@ province_event = {
 province_event = {
 	id = ECO.1401
 	desc = "DESCECO.1401"
-	picture = GFX_evt_castle_construction
+	picture = GFX_evt_L3T_forge
 	is_triggered_only = yes
 	
 	option = {
@@ -517,7 +517,7 @@ province_event = {
 province_event = {
 	id = ECO.1404
 	desc = "DESCECO.1404"
-	picture = GFX_evt_castle_construction
+	picture = GFX_evt_L3T_mine
 	is_triggered_only = yes
 	
 	option = {
@@ -535,7 +535,7 @@ province_event = {
 province_event = {
 	id = ECO.1405
 	desc = "DESCECO.1405"
-	picture = GFX_evt_castle_construction
+	picture = GFX_evt_L3T_mine
 	is_triggered_only = yes
 	
 	option = {
@@ -555,35 +555,35 @@ province_event = {
 province_event = {
 	id = ECO.1391
 	desc = "DESCECO.1391"
-	picture = GFX_evt_castle_construction	
+	picture = GFX_evt_L3T_mine	
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
 province_event = {
 	id = ECO.1392
 	desc = "DESCECO.1392"
-	picture = GFX_evt_castle_construction	
+	picture = GFX_evt_L3T_mine	
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
 province_event = {
 	id = ECO.1393
 	desc = "DESCECO.1393"
-	picture = GFX_evt_castle_construction	
+	picture = GFX_evt_L3T_mine	
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
 province_event = {
 	id = ECO.1394
 	desc = "DESCECO.1394"
-	picture = GFX_evt_castle_construction	
+	picture = GFX_evt_L3T_mine	
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
 province_event = {
 	id = ECO.1395
 	desc = "DESCECO.1395"
-	picture = GFX_evt_castle_construction	
+	picture = GFX_evt_L3T_mine	
 	is_triggered_only = yes
 	option = { name = "OK" }
 }
