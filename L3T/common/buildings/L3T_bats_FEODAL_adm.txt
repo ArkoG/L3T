@@ -2,7 +2,7 @@
 castle = {
 	CA_chambre_1 = {# chambre du sénéchal 
 		desc = CA_chambre_1_desc
-		prerequisites = { CITADELLE }
+		prerequisites = { FEODAL_adm }
 		trigger = { TECH_MAJESTY = 3 }
 		gold_cost = 50
 		build_time = 365
@@ -15,7 +15,7 @@ castle = {
 	CA_chambre_2 = { # chambre des comptes 
 		desc = CA_chambre_2_desc
 		trigger = { TECH_MAJESTY = 5 }
-		prerequisites = { CITADELLE CA_tresor CA_archives_2  }
+		prerequisites = { FEODAL_adm CA_tresor CA_archives_2  }
 		upgrades_from = CA_chambre_1
 		gold_cost = 250
 		build_time = 547
@@ -29,7 +29,7 @@ castle = {
 	CA_tresor = { # salle du trésor
 		desc = CA_tresor_desc
 		trigger = { TECH_MAJESTY = 3 }
-		prerequisites = {CA_chambre_1 CITADELLE }
+		prerequisites = {CA_chambre_1 FEODAL_adm }
 		gold_cost = 75
 		build_time = 365
 		tax_income = 0.5
@@ -43,7 +43,7 @@ castle = {
 	CA_archives_1 = { # salle des archives
 		desc = CA_archives_1_desc
 		trigger = { TECH_MAJESTY = 4 }
-		prerequisites = {CA_chambre_1 CITADELLE }
+		prerequisites = {CA_chambre_1 FEODAL_adm }
 		gold_cost = 75
 		build_time = 365
 		# stewardship = 1
@@ -57,7 +57,7 @@ castle = {
 	CA_archives_2 = { # grande salle des archives
 		desc = CA_archives_2_desc
 		trigger = { TECH_MAJESTY = 5 }
-		prerequisites = {CA_chambre_1 CITADELLE CA_tresor }
+		prerequisites = {CA_chambre_1 FEODAL_adm CA_tresor }
 		upgrades_from = CA_archives_1
 		gold_cost = 150
 		build_time = 520
@@ -71,7 +71,7 @@ castle = {
 	CA_cour_justice = { # cour de justice
 		desc = CA_cour_justice_desc
 		trigger = { TECH_MAJESTY = 4 }
-		prerequisites = { CITADELLE }
+		prerequisites = { FEODAL_adm }
 		gold_cost = 150
 		build_time = 465
 		# monthly_character_prestige = 0.20
@@ -85,7 +85,7 @@ castle = {
 	CA_chancellerie = {
 		desc = CA_chancellerie_desc
 		trigger = { TECH_LEGALISM = 3 }
-		prerequisites = { CITADELLE }
+		prerequisites = { FEODAL_adm }
 		gold_cost = 75
 		build_time = 365 
 		# diplomacy = 1
@@ -98,7 +98,7 @@ castle = {
 	CA_chap_seign = { # chapelle seigneuriale
 		desc = CA_chap_seign_desc
 		trigger = { TECH_RELIGIOUS_CUSTOMS = 3 }
-		prerequisites = { CITADELLE }
+		prerequisites = { FEODAL_adm }
 		gold_cost = 150 
 		build_time = 460
 		# monthly_character_piety = 0.25 
@@ -111,7 +111,7 @@ castle = {
 	CA_chap_seign_2 = { # chapelle seigneuriale et reliquaire dynastique
 		desc = CA_chap_seign_2_desc 
 		trigger = { TECH_RELIGIOUS_CUSTOMS = 4 }
-		prerequisites = { CITADELLE }
+		prerequisites = { FEODAL_adm }
 		upgrades_from = CA_chap_seign
 		gold_cost = 200
 		build_time = 460
