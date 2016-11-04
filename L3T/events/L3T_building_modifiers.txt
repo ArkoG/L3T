@@ -18,8 +18,7 @@ character_event = {
 	}
 	
 	immediate = {
-		#FROM = { holder_scope = { character_event = { id = L3T.203 days = 365 } } }
-		FROM = { holder_scope = { character_event = { id = L3T.203 days = 10 } } }
+		FROM = { holder_scope = { character_event = { id = L3T.203 days = 365 } } }
 	}
 }
 
@@ -72,5 +71,375 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chapelle
+	}
+}
+
+# Give the chapelle2 modifier 460 days after starting the building
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.205
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			is_feudal = yes
+			has_building = CA_chap_seign_2
+		}
+		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle2 } } }
+	}
+	
+	immediate = {
+		FROM = { holder_scope = { character_event = { id = L3T.207 days = 460 } } }
+	}
+}
+
+# Give the chapelle2 modifier to the new holder and remove it to the old
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.206
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { has_building = CA_chap_seign_2 }		
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = chapelle2 }
+			}
+			character_event = { id = L3T.207 days = 1 }
+		}
+		if = {
+			limit = { 
+				FROMFROM = { has_character_modifier = chapelle2 }
+			}
+			FROMFROM = { character_event = { id = L3T.208 days = 1 } }
+		}
+	}
+}
+
+# Give the chapelle2 modifier
+character_event = {
+	id = L3T.207
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_character_modifier = { name = chapelle2 duration = -1 }
+	}
+}
+
+# Remove the chapelle2 modifier
+character_event = {
+	id = L3T.208
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = chapelle2
+	}
+}
+
+# Give the chambre modifier 547 days after starting the building
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.209
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			is_feudal = yes
+			has_building = CA_chambre_2
+		}
+		NOT = { FROM = { holder_scope = { has_character_modifier = chambre } } }
+	}
+	
+	immediate = {
+		FROM = { holder_scope = { character_event = { id = L3T.211 days = 547 } } }
+	}
+}
+
+# Give the chambre modifier to the new holder and remove it to the old
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.210
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { has_building = CA_chambre_2 }		
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = chambre }
+			}
+			character_event = { id = L3T.211 days = 1 }
+		}
+		if = {
+			limit = { 
+				FROMFROM = { has_character_modifier = chambre }
+			}
+			FROMFROM = { character_event = { id = L3T.212 days = 1 } }
+		}
+	}
+}
+
+# Give the chambre modifier
+character_event = {
+	id = L3T.211
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_character_modifier = { name = chambre duration = -1 }
+	}
+}
+
+# Remove the chambre modifier
+character_event = {
+	id = L3T.212
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = chambre
+	}
+}
+
+# Give the archives modifier 365 days after starting the building
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.213
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			is_feudal = yes
+			has_building = CA_archives_1
+		}
+		NOT = { FROM = { holder_scope = { has_character_modifier = archives } } }
+	}
+	
+	immediate = {
+		FROM = { holder_scope = { character_event = { id = L3T.215 days = 365 } } }
+	}
+}
+
+# Give the archives modifier to the new holder and remove it to the old
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.214
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { has_building = CA_archives_1 }		
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = archives }
+			}
+			character_event = { id = L3T.215 days = 1 }
+		}
+		if = {
+			limit = { 
+				FROMFROM = { has_character_modifier = archives }
+			}
+			FROMFROM = { character_event = { id = L3T.216 days = 1 } }
+		}
+	}
+}
+
+# Give the archives modifier
+character_event = {
+	id = L3T.215
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_character_modifier = { name = archives duration = -1 }
+	}
+}
+
+# Remove the archives modifier
+character_event = {
+	id = L3T.216
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = archives
+	}
+}
+
+# Give the cour_justice modifier 465 days after starting the building
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.217
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			is_feudal = yes
+			has_building = CA_cour_justice
+		}
+		NOT = { FROM = { holder_scope = { has_character_modifier = cour_justice } } }
+	}
+	
+	immediate = {
+		FROM = { holder_scope = { character_event = { id = L3T.219 days = 465 } } }
+	}
+}
+
+# Give the cour_justice modifier to the new holder and remove it to the old
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.218
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { has_building = CA_cour_justice }		
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = cour_justice }
+			}
+			character_event = { id = L3T.219 days = 1 }
+		}
+		if = {
+			limit = { 
+				FROMFROM = { has_character_modifier = cour_justice }
+			}
+			FROMFROM = { character_event = { id = L3T.220 days = 1 } }
+		}
+	}
+}
+
+# Give the cour_justice modifier
+character_event = {
+	id = L3T.219
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_character_modifier = { name = cour_justice duration = -1 }
+	}
+}
+
+# Remove the cour_justice modifier
+character_event = {
+	id = L3T.220
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = cour_justice
+	}
+}
+
+# Give the chancellerie modifier 365 days after starting the building
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.221
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			is_feudal = yes
+			has_building = CA_chancellerie
+		}
+		NOT = { FROM = { holder_scope = { has_character_modifier = chancellerie } } }
+	}
+	
+	immediate = {
+		FROM = { holder_scope = { character_event = { id = L3T.223 days = 365 } } }
+	}
+}
+
+# Give the chancellerie modifier to the new holder and remove it to the old
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.222
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { has_building = CA_chancellerie }		
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = chancellerie }
+			}
+			character_event = { id = L3T.223 days = 1 }
+		}
+		if = {
+			limit = { 
+				FROMFROM = { has_character_modifier = chancellerie }
+			}
+			FROMFROM = { character_event = { id = L3T.224 days = 1 } }
+		}
+	}
+}
+
+# Give the chancellerie modifier
+character_event = {
+	id = L3T.223
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_character_modifier = { name = chancellerie duration = -1 }
+	}
+}
+
+# Remove the chancellerie modifier
+character_event = {
+	id = L3T.224
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = chancellerie
 	}
 }
