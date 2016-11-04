@@ -181,7 +181,11 @@ CA_fonderie_L3 = {
 CA_outilleur_L1 = {
 	desc = CA_outilleur_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	is_active_trigger = { is_active_outil_ou_armes = yes }
+	is_active_trigger = {
+		is_active_outil_ou_armes = yes
+		is_capital = yes
+		capital_holding = { title = FROMFROM }
+	}
 	potential = {
 		OR = {
 			has_province_modifier = minerai3_metal
@@ -208,7 +212,11 @@ CA_outilleur_L1 = {
 CA_outilleur_L2 = {
 	desc = CA_outilleur_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	is_active_trigger = { is_active_outil_ou_armes = yes }
+	is_active_trigger = {
+		is_active_outil_ou_armes = yes
+		is_capital = yes
+		capital_holding = { title = FROMFROM }
+	}
 	#prerequisites = { CA_fonderie_L2 }
 	upgrades_from = CA_outilleur_L1
 		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -216,7 +224,11 @@ CA_outilleur_L2 = {
 CA_outilleur_L3 = {
 	desc = CA_outilleur_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	is_active_trigger = { is_active_outil_ou_armes = yes }
+	is_active_trigger = {
+		is_active_outil_ou_armes = yes
+		is_capital = yes
+		capital_holding = { title = FROMFROM }
+	}
 	#prerequisites = { CA_fonderie_L3 }
 	upgrades_from = CA_outilleur_L2
 		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0

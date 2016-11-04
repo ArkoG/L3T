@@ -4,6 +4,10 @@ castle = {
 		desc = CA_chambre_1_desc
 		prerequisites = { FEODAL_adm }
 		trigger = { TECH_MAJESTY = 3 }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		gold_cost = 50
 		build_time = 365
 		tax_income = 2
@@ -16,6 +20,10 @@ castle = {
 		desc = CA_chambre_2_desc
 		trigger = { TECH_MAJESTY = 5 }
 		prerequisites = { FEODAL_adm CA_tresor CA_archives_2  }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		upgrades_from = CA_chambre_1
 		gold_cost = 250
 		build_time = 547
@@ -30,6 +38,10 @@ castle = {
 		desc = CA_tresor_desc
 		trigger = { TECH_MAJESTY = 3 }
 		prerequisites = {CA_chambre_1 FEODAL_adm }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		gold_cost = 75
 		build_time = 365
 		tax_income = 0.5
@@ -44,6 +56,10 @@ castle = {
 		desc = CA_archives_1_desc
 		trigger = { TECH_MAJESTY = 4 }
 		prerequisites = {CA_chambre_1 FEODAL_adm }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		gold_cost = 75
 		build_time = 365
 		stewardship = 1  # Given by modifier 
@@ -58,6 +74,10 @@ castle = {
 		desc = CA_archives_2_desc
 		trigger = { TECH_MAJESTY = 5 }
 		prerequisites = {CA_chambre_1 FEODAL_adm CA_tresor }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		upgrades_from = CA_archives_1
 		gold_cost = 150
 		build_time = 520
@@ -72,6 +92,10 @@ castle = {
 		desc = CA_cour_justice_desc
 		trigger = { TECH_MAJESTY = 4 }
 		prerequisites = { FEODAL_adm }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		gold_cost = 150
 		build_time = 465
 		monthly_character_prestige = 0.20  # Given by modifier
@@ -86,6 +110,10 @@ castle = {
 		desc = CA_chancellerie_desc
 		trigger = { TECH_LEGALISM = 3 }
 		prerequisites = { FEODAL_adm }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		gold_cost = 75
 		build_time = 365 
 		diplomacy = 1  # Given by modifier 
@@ -99,6 +127,10 @@ castle = {
 		desc = CA_chap_seign_desc
 		trigger = { TECH_RELIGIOUS_CUSTOMS = 3 }
 		prerequisites = { FEODAL_adm }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		gold_cost = 150 
 		build_time = 460
 		monthly_character_piety = 0.25  # Given by modifier
@@ -112,6 +144,10 @@ castle = {
 		desc = CA_chap_seign_2_desc 
 		trigger = { TECH_RELIGIOUS_CUSTOMS = 4 }
 		prerequisites = { FEODAL_adm }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		upgrades_from = CA_chap_seign
 		gold_cost = 200
 		build_time = 460
