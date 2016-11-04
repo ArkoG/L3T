@@ -24,3 +24,31 @@ on_yearly_pulse = {
 		
 	}
 }
+
+# ROOT = Builder, FROM = The Holding Title
+on_holding_building_start = {
+	events = {
+		L3T.201
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder = {
+	events = {
+		L3T.202
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_inheritance = {
+	events = {
+		L3T.202
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_usurpation = {
+	events = {
+		L3T.202
+	}
+}

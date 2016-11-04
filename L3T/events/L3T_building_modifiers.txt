@@ -1,0 +1,76 @@
+namespace = L3T
+
+# Give the chapelle modifier 1 year after starting the building
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.201
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			is_feudal = yes
+			has_building = CA_chap_seign
+		}
+		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle } } }
+	}
+	
+	immediate = {
+		#FROM = { holder_scope = { character_event = { id = L3T.203 days = 365 } } }
+		FROM = { holder_scope = { character_event = { id = L3T.203 days = 10 } } }
+	}
+}
+
+# Give the chapelle modifier to the new holder and remove it to the old
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.202
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { has_building = CA_chap_seign }		
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = chapelle }
+			}
+			character_event = { id = L3T.203 days = 1 }
+		}
+		if = {
+			limit = { 
+				FROMFROM = { has_character_modifier = chapelle }
+			}
+			FROMFROM = { character_event = { id = L3T.204 days = 1 } }
+		}
+	}
+}
+
+# Give the chapelle modifier
+character_event = {
+	id = L3T.203
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_character_modifier = { name = chapelle duration = -1 }
+	}
+}
+
+# Remove the chapelle modifier
+character_event = {
+	id = L3T.204
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = chapelle
+	}
+}
