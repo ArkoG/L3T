@@ -59,6 +59,7 @@ character_event = {
 	
 	immediate = {
 		add_character_modifier = { name = chapelle duration = -1 }
+		set_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -71,6 +72,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chapelle
+		clr_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -133,6 +135,7 @@ character_event = {
 	
 	immediate = {
 		add_character_modifier = { name = chapelle2 duration = -1 }
+		set_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -145,6 +148,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chapelle2
+		clr_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -207,6 +211,7 @@ character_event = {
 	
 	immediate = {
 		add_character_modifier = { name = chambre duration = -1 }
+		set_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -219,6 +224,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chambre
+		clr_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -281,6 +287,7 @@ character_event = {
 	
 	immediate = {
 		add_character_modifier = { name = archives duration = -1 }
+		set_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -293,6 +300,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = archives
+		clr_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -355,6 +363,7 @@ character_event = {
 	
 	immediate = {
 		add_character_modifier = { name = cour_justice duration = -1 }
+		set_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -367,6 +376,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = cour_justice
+		clr_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -429,6 +439,7 @@ character_event = {
 	
 	immediate = {
 		add_character_modifier = { name = chancellerie duration = -1 }
+		set_character_flag = feodal_adm_modifier
 	}
 }
 
@@ -441,5 +452,92 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chancellerie
+		clr_character_flag = feodal_adm_modifier
+	}
+}
+
+character_event = {
+	id = L3T.225
+	desc = "DESCL3T.225"
+	picture = GFX_evt_castle_construction
+	
+	is_triggered_only = yes
+	
+	only_rulers  = yes
+	has_character_flag = feodal_adm_modifier
+	
+	trigger = {
+		OR = {
+			AND = {
+				NOT = { capital_holding = { has_building = CA_chap_seign } }
+				has_character_modifier = chapelle
+			}
+			AND = {
+				NOT = { capital_holding = { has_building = CA_chap_seign_2 } }
+				has_character_modifier = chapelle2
+			}
+			AND = {
+				NOT = { capital_holding = { has_building = CA_chambre_2 } }
+				has_character_modifier = chambre
+			}
+			AND = {
+				NOT = { capital_holding = { has_building = CA_archives_1 } }
+				has_character_modifier = archives
+			}
+			AND = {
+				NOT = { capital_holding = { has_building = CA_cour_justice } }
+				has_character_modifier = cour_justice
+			}
+			AND = {
+				NOT = { capital_holding = { has_building = CA_chancellerie } }
+				has_character_modifier = chancellerie
+			}
+		}
+	}
+	
+	option = {
+		name = "L3T.225A"
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_chap_seign } }
+				has_character_modifier = chapelle
+			}
+			remove_character_modifier = chapelle
+		}
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_chap_seign_2 } }
+				has_character_modifier = chapelle2
+			}
+			remove_character_modifier = chapelle2
+		}
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_chambre_2 } }
+				has_character_modifier = chambre
+			}
+			remove_character_modifier = chambre
+		}
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_archives_1 } }
+				has_character_modifier = archives
+			}
+			remove_character_modifier = archives
+		}
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_cour_justice } }
+				has_character_modifier = cour_justice
+			}
+			remove_character_modifier = cour_justice
+		}
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_chancellerie } }
+				has_character_modifier = chancellerie
+			}
+			remove_character_modifier = chancellerie
+		}
 	}
 }
