@@ -1,0 +1,70 @@
+depopulated_1 = {
+	city_tax_modifier = -0.20
+	castle_tax_modifier = -0.20
+	temple_tax_modifier = -0.20
+	tribal_tax_modifier = -0.20
+	levy_size = -0.2
+	garrison_size = -0.2
+	supply_limit = -2
+	icon = 1
+#	major = yes
+	disease_defence = 0.05
+}
+depopulated_2 = {
+	city_tax_modifier = -0.40
+	castle_tax_modifier = -0.40
+	temple_tax_modifier = -0.40
+	tribal_tax_modifier = -0.40
+	levy_size = -0.4
+	garrison_size = -0.4
+	supply_limit = -4
+	icon = 2
+#	major = yes
+	disease_defence = 0.1
+}
+depopulated_3 = {
+	city_tax_modifier = -0.60
+	castle_tax_modifier = -0.60
+	temple_tax_modifier = -0.60
+	tribal_tax_modifier = -0.60
+	levy_size = -0.6
+	garrison_size = -0.6
+	supply_limit = -6
+	icon = 3
+#	major = yes
+	disease_defence = 0.25
+}
+
+prosperity_modifier_1 = {
+	local_tax_modifier = 0.1
+	levy_reinforce_rate = 0.2
+	local_revolt_risk = -0.01
+	disease_defence = -0.1
+	
+#	major = yes
+	icon = 4
+}
+prosperity_modifier_2 = {
+	local_tax_modifier = 0.2
+	levy_reinforce_rate = 0.4
+	local_revolt_risk = -0.015
+	supply_limit = 1
+	local_build_cost_modifier = -0.025
+	local_build_time_modifier = -0.025
+	disease_defence = -0.15
+	
+#	major = yes
+	icon = 5
+}
+prosperity_modifier_3 = {
+	local_tax_modifier = 0.3
+	levy_reinforce_rate = 0.6
+	local_revolt_risk = -0.02
+	supply_limit = 2
+	local_build_cost_modifier = -0.05
+	local_build_time_modifier = -0.05
+	disease_defence = -0.20
+	
+#	major = yes
+	icon = 6
+}
