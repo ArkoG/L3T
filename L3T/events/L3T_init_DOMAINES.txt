@@ -336,11 +336,11 @@ narrative_event = {
 					set_variable = { which = "route_size" value = 1 }
 					if = {
 						limit = { has_province_modifier = province_fleuve }
-						add_province_modifier = { name = route_fluviale duration = -1 }
+						add_province_modifier = { name = route_fluviale duration = -1 hidden = yes }
 					}
 					if = {
 						limit = { NOT = { has_province_modifier = province_fleuve } }
-						add_province_modifier = { name = route_terrestre duration = -1 }
+						add_province_modifier = { name = route_terrestre duration = -1 hidden = yes }
 					}
 					# Avert the player that a route is on its demesne
 					any_province_lord = {
@@ -428,11 +428,11 @@ province_event = {
 					set_variable = { which = "route_size" value = 1 }
 					if = {
 						limit = { has_province_modifier = province_fleuve }
-						add_province_modifier = { name = route_fluviale duration = -1 }
+						add_province_modifier = { name = route_fluviale duration = -1 hidden = yes}
 					}
 					if = {
 						limit = { NOT = { has_province_modifier = province_fleuve } }
-						add_province_modifier = { name = route_terrestre duration = -1 }
+						add_province_modifier = { name = route_terrestre duration = -1 hidden = yes}
 					}
 					# Avert the player that a route is on its demesne
 					any_province_lord = {
