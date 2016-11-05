@@ -480,6 +480,7 @@ character_event = {
 	}
 }
 
+# Remove the feodal_adm_modifier
 character_event = {
 	id = L3T.225
 	desc = "DESCL3T.225"
@@ -563,5 +564,137 @@ character_event = {
 			}
 			remove_character_modifier = chancellerie
 		}
+	}
+}
+
+# Add the feodal_adm_modifier
+character_event = {
+	id = L3T.226
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	only_rulers  = yes
+	
+	trigger = {
+		capital_holding = { is_feudal = yes }
+		OR = {
+			AND = {
+				capital_holding = { has_building = CA_chap_seign }
+				NOT = { has_character_modifier = chapelle }
+			}
+			AND = {
+				capital_holding = { has_building = CA_chap_seign_2 }
+				NOT = { has_character_modifier = chapelle2 }
+			}
+			AND = {
+				capital_holding = { has_building = CA_chambre_2 }
+				NOT = { has_character_modifier = chambre }
+			}
+			AND = {
+				capital_holding = { has_building = CA_archives_1 }
+				NOT = { has_character_modifier = archives }
+			}
+			AND = {
+				capital_holding = { has_building = CA_cour_justice }
+				NOT = { has_character_modifier = cour_justice }
+			}
+			AND = {
+				capital_holding = { has_building = CA_chancellerie }
+				NOT = { has_character_modifier = chancellerie }
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_chap_seign }
+				NOT = { has_character_modifier = chapelle }
+			}
+			character_event = { id = L3T.203 days = 365 }
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_chap_seign_2 }
+				NOT = { has_character_modifier = chapelle2 }
+			}
+			character_event = { id = L3T.207 days = 460 }
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_chambre_2 }
+				NOT = { has_character_modifier = chambre }
+			}
+			character_event = { id = L3T.211 days = 547 }
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_archives_1 }
+				NOT = { has_character_modifier = archives }
+			}
+			character_event = { id = L3T.215 days = 365 }
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_cour_justice }
+				NOT = { has_character_modifier = cour_justice }
+			}
+			character_event = { id = L3T.219 days = 465 }
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_chancellerie }
+				NOT = { has_character_modifier = chancellerie }
+			}
+			character_event = { id = L3T.223 days = 365 }
+		}
+	}
+}
+
+# Wait a little before to alert that it can be a good idea to move the capital
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.227
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	ai = no
+	
+	immediate = {
+		FROM = { location = { province_event = { id = L3T.228 days = 30 } } }
+	}
+}
+
+# Pass by the province to localize its name
+province_event = {
+	id = L3T.228
+		
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		capital_holding = {
+			is_feudal = yes
+			has_building = FEODAL_adm
+		}
+	}
+	
+	immediate = {
+		holder_scope = { character_event = { id = L3T.229 days = 1 } }
+	}
+}
+
+# Alert that it can be a good idea to move the capital
+character_event = {
+	id = L3T.229
+	desc = "DESCL3T.229"
+	picture = GFX_evt_castle_construction
+		
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
 	}
 }
