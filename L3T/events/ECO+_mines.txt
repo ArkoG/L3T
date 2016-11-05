@@ -79,7 +79,7 @@ character_event = {
 					has_building = CA_MINE_minerai_L1
 					NOT = {	has_building = CA_MINE_minerai_L2	}
 					NOT = {	has_building = CA_MINE_minerai_L3	}
-					NOT = { location = { check_variable = { which = "stock_minerai" value =  100 }}} #conso base*10ans
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  180 }}} #conso base*10ans
 					NOT = { location = { has_province_flag = alerte_mine_1_recue }}
 					}
 			location = { province_event = { id = ECO.133 days = 1 }}
@@ -89,7 +89,7 @@ character_event = {
 				limit = {
 					has_building = CA_MINE_minerai_L2
 					NOT = {	has_building = CA_MINE_minerai_L3	}
-					NOT = { location = { check_variable = { which = "stock_minerai" value =  200 }}} #conso base*10ans
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  280 }}} #conso base*10ans
 					NOT = { location = { has_province_flag = alerte_mine_1_recue }}
 				}
 			location = { province_event = { id = ECO.133 days = 1 }}
@@ -98,7 +98,7 @@ character_event = {
 			if = { 
 				limit = {
 					has_building = CA_MINE_minerai_L3
-					NOT = { location = { check_variable = { which = "stock_minerai" value =  300 }}} #conso base*10ans
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  380 }}} #conso base*10ans
 					NOT = { location = { has_province_flag = alerte_mine_1_recue }}
 				}
 			location = { province_event = { id = ECO.133 days = 1 }}
@@ -110,7 +110,7 @@ character_event = {
 					has_building = CA_MINE_minerai_L1
 					NOT = {	has_building = CA_MINE_minerai_L2	}
 					NOT = {	has_building = CA_MINE_minerai_L3	}
-					NOT = { location = { check_variable = { which = "stock_minerai" value =   50 }}} #conso base*5ans
+					NOT = { location = { check_variable = { which = "stock_minerai" value =   100 }}} #conso base*5ans
 					NOT = { location = { has_province_flag = alerte_mine_2_recue }}
 				}
 			location = { province_event = { id = ECO.134 days = 1 }}
@@ -120,7 +120,7 @@ character_event = {
 				limit = {
 					has_building = CA_MINE_minerai_L2
 					NOT = {	has_building = CA_MINE_minerai_L3	}
-					NOT = { location = { check_variable = { which = "stock_minerai" value =  100 }}} #conso base*5ans
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  150 }}} #conso base*5ans
 					NOT = { location = { has_province_flag = alerte_mine_2_recue }}
 				}
 			location = { province_event = { id = ECO.134 days = 1 }}
@@ -129,7 +129,7 @@ character_event = {
 			if = { 
 				limit = {
 					has_building = CA_MINE_minerai_L3
-					NOT = { location = { check_variable = { which = "stock_minerai" value =  150 }}} #conso base*5ans
+					NOT = { location = { check_variable = { which = "stock_minerai" value =  200 }}} #conso base*5ans
 					NOT = { location = { has_province_flag = alerte_mine_2_recue }}
 				}
 			location = { province_event = { id = ECO.134 days = 1 }}
