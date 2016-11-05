@@ -527,7 +527,13 @@ province_event = {
 		if = { limit = { has_province_flag = alerte_mine_2_recue } clr_province_flag = alerte_mine_2_recue }
 		if = { limit = { has_province_modifier = mine_stop } remove_province_modifier = mine_stop }
 		custom_tooltip = { text = newMineralFound }
-		hidden_tooltip = { change_variable = { which = "stock_minerai" value =  750 } }
+		hidden_tooltip = {
+			random_list = {
+				30 = { change_variable = { which = "stock_minerai" value =  450 }}
+				30 = { change_variable = { which = "stock_minerai" value =  650 }}
+				30 = { change_variable = { which = "stock_minerai" value =  850 }}
+				}
+		}
 	}
 }
 
@@ -540,7 +546,7 @@ province_event = {
 	
 	option = {
 		name = "ECO.1405A"
-		owner = { wealth = -7.5 }
+		#owner = { wealth = -7.5 }
 		custom_tooltip = { text = prospectTooltip }
 		hidden_tooltip = { province_event = { id = ECO.1403 days = 360 } }
 	}
