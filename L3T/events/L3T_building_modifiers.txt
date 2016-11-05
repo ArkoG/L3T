@@ -31,7 +31,10 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { has_building = CA_chap_seign }		
+		FROM = {
+			is_feudal = yes
+			has_building = CA_chap_seign
+		}
 	}
 	
 	immediate = {
@@ -106,8 +109,11 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
-	trigger = {
-		FROM = { has_building = CA_chap_seign_2 }		
+	trigger = {	
+		FROM = {
+			is_feudal = yes
+			has_building = CA_chap_seign_2
+		}
 	}
 	
 	immediate = {
@@ -183,7 +189,10 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { has_building = CA_chambre_2 }		
+		FROM = {
+			is_feudal = yes
+			has_building = CA_chambre_2
+		}
 	}
 	
 	immediate = {
@@ -259,7 +268,10 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { has_building = CA_archives_1 }		
+		FROM = {
+			is_feudal = yes
+			has_building = CA_archives_1
+		}
 	}
 	
 	immediate = {
@@ -335,7 +347,10 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { has_building = CA_cour_justice }		
+		FROM = {
+			is_feudal = yes
+			has_building = CA_cour_justice
+		}
 	}
 	
 	immediate = {
@@ -411,7 +426,10 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { has_building = CA_chancellerie }		
+		FROM = {
+			is_feudal = yes
+			has_building = CA_chancellerie
+		}
 	}
 	
 	immediate = {
