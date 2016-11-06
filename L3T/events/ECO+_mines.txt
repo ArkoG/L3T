@@ -499,7 +499,7 @@ province_event = {
 	}
 }
 
-# Prospection : computation results
+# Choose prospection place
 province_event = {
 	id = ECO.14030
 	desc = "DESCECO.14030"
@@ -510,14 +510,14 @@ province_event = {
 		name = "ECO.14030A" #around in the province
 		trigger = { owner = { wealth = 20 }}
 		ai_chance = { factor = 75 }					
-		province_event = { id = ECO.14031 days = 15 }
+		province_event = { id = ECO.14031 days = 360 }
 		owner = { wealth = -20 }
 		}
 		
 	option = {
 		name = "ECO.14030B"
 		ai_chance = { factor = 25 }	#in same place
-		province_event = { id = ECO.14032 days = 15 }
+		province_event = { id = ECO.14032 days = 360 }
 		hidden_tooltip = {
 			random_list = {
 				20 = { change_variable = { which = "balrog_point" value =  3 }}
@@ -527,8 +527,9 @@ province_event = {
 		}
 }
 
+# Prospection around in the province : computation results 
 province_event = {
-	id = ECO.14031 #around in the province
+	id = ECO.14031
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -539,8 +540,10 @@ province_event = {
 		}
 	}
 }
+
+# Prospection in same place : computation results 
 province_event = {
-	id = ECO.14032	#in same place
+	id = ECO.14032
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -595,7 +598,7 @@ province_event = {
 		name = "ECO.1405A"
 		#owner = { wealth = -7.5 }
 		custom_tooltip = { text = prospectTooltip }
-		hidden_tooltip = { province_event = { id = ECO.1403 days = 360 }}
+		hidden_tooltip = { province_event = { id = ECO.14030 days = 30 }}
 	}
 	option = {
 		name = "ECO.1405B"
