@@ -395,10 +395,10 @@ province_event = {
 		
 	mean_time_to_happen = { 
 		years = 15
-		modifier = { factor = 1.50	owner = { stewardship = 13 } }
-		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
-		modifier = { factor = 0.50	owner = { war = yes } }	
-		modifier = { factor = 0.80	owner = { has_focus = focus_war } }	
+		modifier = { factor = 0.60	owner = { stewardship = 13 } }
+		modifier = { factor = 1.50	owner = { NOT = { stewardship = 9 } } }
+		modifier = { factor = 2.00	owner = { war = yes } }	
+		modifier = { factor = 0.75	owner = { has_focus = focus_business } }
 	}
 
 	option = {
