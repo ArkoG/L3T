@@ -209,6 +209,8 @@ province_event = {
 		#ajouter critère de technologie (efficacité accrue réduit le risque)
 		month = 6 #pour avoir juilliet et août, beaucoup d'accidents l'été #à voir ce qu'on mettre comme critère plutot qu'un mois de l'année.
 		NOT = { month = 8 }
+		NOT = { has_province_flag = alerte_mine_1_recue }
+		NOT = { has_province_flag = prospection }
 	}
 		
 	mean_time_to_happen = { 
@@ -286,7 +288,7 @@ province_event = {
 		}	
 	}
 }
-# Nouveau filon découvert à la mine
+# Amelioration productivité de la mine
 province_event = {
     id = ECO.0205
 	desc = "DESCECO.0205"
@@ -297,6 +299,8 @@ province_event = {
 		any_province_holding = { NOT = { has_holding_modifier = mine_productivite_plus } }
 		month = 6 #pour avoir juilliet et août #à voir ce qu'on mettre comme critère plutot qu'un mois de l'année.
 		NOT = { month = 8 }
+		NOT = { has_province_flag = alerte_mine_1_recue }
+		NOT = { has_province_flag = prospection }
 	}
 		
 	mean_time_to_happen = {
@@ -373,6 +377,52 @@ province_event = {
 				}
 			}
 		}
+	}
+}
+#Nouveau filon à la mine
+province_event = {
+    id = ECO.0213
+	desc = "DESCECO.0213"
+	title = "ECO.0203_title"
+	picture = GFX_evt_L3T_mine
+	
+	trigger = {
+		has_province_modifier = minerai2_fer
+		NOT = { has_province_flag = nouveau_filon }
+		NOT = { has_province_flag = alerte_mine_1_recue }
+		NOT = { has_province_flag = prospection }
+	}
+		
+	mean_time_to_happen = { 
+		years = 15
+		modifier = { factor = 1.50	owner = { stewardship = 13 } }
+		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
+		modifier = { factor = 0.50	owner = { war = yes } }	
+		modifier = { factor = 0.80	owner = { has_focus = focus_war } }	
+	}
+
+	option = {
+		name = "ECO.0213A"
+	
+		hidden_tooltip = {
+			add_province_flag = { name = nouveau_filon duration = 11000 } #30ans
+			random_list = {		
+				05 = { change_variable = { which = "stock_minerai" value =  300 } } #15ans de stock à conso=20
+				05 = { change_variable = { which = "stock_minerai" value =  500 } } #25ans de stock à conso=20
+				05 = { change_variable = { which = "stock_minerai" value =  700 } } #35ans de stock à conso=20
+				}
+			random_list = {		
+				85 = {}
+				15 = {
+					owner = { 		
+						chronicle = {
+							entry = NOUVEAU_FILON_CHRONIQUE
+							picture = GFX_evt_L3T_mine
+						}
+					}
+				}
+			}
+		}		
 	}
 }
 
