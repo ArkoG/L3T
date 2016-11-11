@@ -754,22 +754,22 @@ province_event = {
 	#	
 	#
 			random_list = {
-				05 = { change_variable = { which = "stock_minerai" value =  400 } } #20*20
-				05 = { change_variable = { which = "stock_minerai" value =  440 } } #20*22
-				05 = { change_variable = { which = "stock_minerai" value =  480 } }
-				05 = { change_variable = { which = "stock_minerai" value =  520 } }
-				10 = { change_variable = { which = "stock_minerai" value =  560 } }
-				10 = { change_variable = { which = "stock_minerai" value =  600 } }
-				10 = { change_variable = { which = "stock_minerai" value =  640 } }
-				25 = { change_variable = { which = "stock_minerai" value =  680 } }
-				30 = { change_variable = { which = "stock_minerai" value =  720 } }
-				30 = { change_variable = { which = "stock_minerai" value =  760 } } 
-				25 = { change_variable = { which = "stock_minerai" value =  800 } } 
-				10 = { change_variable = { which = "stock_minerai" value =  840 } }
-				10 = { change_variable = { which = "stock_minerai" value =  880 } }
-				10 = { change_variable = { which = "stock_minerai" value =  920 } }
-				05 = { change_variable = { which = "stock_minerai" value =  960 } }
-				05 = { change_variable = { which = "stock_minerai" value = 1000 } } #20*50
+				05 = { change_variable = { which = "stock_minerai" value =  900 } } #45ans si conso 20
+				05 = { change_variable = { which = "stock_minerai" value = 1200 } } #
+				05 = { change_variable = { which = "stock_minerai" value = 1500 } }
+				05 = { change_variable = { which = "stock_minerai" value = 1800 } }
+				10 = { change_variable = { which = "stock_minerai" value = 2100 } }
+				10 = { change_variable = { which = "stock_minerai" value = 2400 } }
+				10 = { change_variable = { which = "stock_minerai" value = 2700 } }
+				25 = { change_variable = { which = "stock_minerai" value = 3000 } }
+				30 = { change_variable = { which = "stock_minerai" value = 3300 } }
+				30 = { change_variable = { which = "stock_minerai" value = 3600 } } 
+				25 = { change_variable = { which = "stock_minerai" value = 3900 } } 
+				10 = { change_variable = { which = "stock_minerai" value = 4200 } }
+				10 = { change_variable = { which = "stock_minerai" value = 4500 } }
+				10 = { change_variable = { which = "stock_minerai" value = 4800 } }
+				05 = { change_variable = { which = "stock_minerai" value = 5100 } }
+				05 = { change_variable = { which = "stock_minerai" value = 5400 } } #270ans si conso 20
 				}
 			}
 

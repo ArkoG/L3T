@@ -579,9 +579,9 @@ province_event = {
 		custom_tooltip = { text = newMineralFound }
 		hidden_tooltip = {
 			random_list = {
-				30 = { change_variable = { which = "stock_minerai" value =  450 }}
-				30 = { change_variable = { which = "stock_minerai" value =  650 }}
-				30 = { change_variable = { which = "stock_minerai" value =  850 }}
+				30 = { change_variable = { which = "stock_minerai" value =  1000 }} #50ans de stock à conso=20
+				30 = { change_variable = { which = "stock_minerai" value =  2000 }} #100ans de stock à conso=20
+				30 = { change_variable = { which = "stock_minerai" value =  3000 }} #150ans de stock à conso=20
 				}
 		}
 	}
