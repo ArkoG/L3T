@@ -388,7 +388,7 @@ province_event = {
 	
 	trigger = {
 		has_province_modifier = minerai2_fer
-		NOT = { has_province_flag = nouveau_filon }
+		NOT = { has_province_modifier = nouveau_filon }
 		NOT = { has_province_flag = alerte_mine_1_recue }
 		NOT = { has_province_flag = prospection }
 	}
@@ -405,7 +405,7 @@ province_event = {
 		name = "ECO.0213A"
 	
 		hidden_tooltip = {
-			add_province_flag = { name = nouveau_filon duration = 11000 } #30ans
+			add_province_modifier = { name = nouveau_filon duration = 11000 hidden = yes } #30ans
 			random_list = {		
 				05 = { change_variable = { which = "stock_minerai" value =  300 } } #15ans de stock à conso=20
 				05 = { change_variable = { which = "stock_minerai" value =  500 } } #25ans de stock à conso=20
