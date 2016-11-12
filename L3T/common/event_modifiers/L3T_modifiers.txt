@@ -47,7 +47,7 @@
 # 69 - Bed					- 70
 #end of vanilla 2.6.x
 
-# 71>>78 - not used -reserved for future vanilla additions
+  # 71>>78 - not used -reserved for future vanilla additions
 
 # 79 - ###totoro mouchard
 # 80 - depopulation vanilla 1
@@ -61,69 +61,55 @@
 # 88 - tradition chrétienne
 # 89 - tradition musulmane
 # 90 - tradition autre (pagan)
-# 91 - not used
-# 92 - not used
+  # 91 - not used
+  # 92 - not used
 # 93 - AGRI épi bleu
 # 94 - AGRI épi grisé
 # 95 - AGRI épi doré
 # 96 - AGRI épi orangé
-# 97 AGRI Farine
-# 98 AGRI Bière
-# 99 AGRI Pain
-#100 AGRI Fruits
-
-
-###START not verified
-#101 - placeholder AGRI épi doré
-#102 - placeholder ELEV boeuf brun
-#103 - épi bleu
-#104 - placeholder PIER
-#105 - placeholder MINE
-#106 - placeholder FISH poisson bleu
-
-#108 - not used
-
-#101 - AGRI épi doré
-#102 - AGRI épi doré
-#103 - AGRI épi doré
-#104 - AGRI épi doré
-#105 - ELEV boeuf brun
+# 97 - AGRI Farine
+# 98 - AGRI Bière
+# 99 - AGRI Pain
+#100 - AGRI Fruits
+#101 - AGRI Cidre (verre gris)
+#102 - AGRI legumes
+#103 - AGRI vigne
+#104 - AGRI vin
+#105 - ELEV boeuf marron
 #106 - ELEV boeuf brun
-#107 - ELEV boeuf brun
-
-#108 - not used
-
-#109 - ELEV boeuf brun
-#110 - ELEV boeuf brun
-#111 - ELEV boeuf brun
-#112 - ELEV boeuf brun
-#113 - BOIS feuille verte
-#114 - BOIS feuille verte
-#115 - BOIS feuille verte
-#116 - BOIS feuille verte
-#117 - VERRE gris bleu
-#118 - BOIS feuille verte
-#119 - BOIS feuille verte
-#119 - BOIS feuille verte
-#120 - PIER rouage gris
-#121 - PIER hache bleu
-#122 - PIER hache bleu
-#123 - MINE rouage bleu argent
-#124 - MINE rouage bleu argent
-#125 - MINE minerais anno
-#126 - MINE rouage bleu argent
+#107 - ELEV laine (toile bleue)
+#108 - ELEV toile (toile brun rose)
+#109 - ELEV fromage
+#110 - ELEV viande boeuf brun
+#111 - ELEV cuir (toile marron)
+#112 - ELEV draps (toile rouge)
+#113 - BOIS foret feuille verte
+#114 - BOIS bois brut (bois marrom foncé)
+#115 - BOIS charbon de bois (feuille bleue)
+#116 - BOIS planches (bois marrom clair)
+#117 - BOIS verre (verre transparent)
+#118 - BOIS foret chasse
+#119 - BOIS foret holy
+#120 - PIER rouage gris potentiel
+#121 - PIER hache bleu pierre active
+#122 - PIER hache rose pierre de taille
+#123 - MINE rouage bleu argent (potentiel)
+#124 - MINE rouage bleu foncé (actif)
+#125 - MINE rouage gris foncé (métal)
+#126 - MINE rouage vert (provisoire outils)
 #127 - MINE armes
-#128 - MINE rouage bleu argent
-#129 - MINE rouage bleu argent
+#128 - MINE gemme de sel
+#126 - MINE rouage vert (provisoire sel raffiné)
+#129 - MINE jambon (salaisons)
 #130 - FISH poisson bleu
 #131 - FISH poisson bleu
-#132 - FISH poisson bleu
-#133 - FISH poisson bleu
-#134 - FISH poisson fumé
-
-###END not verified
-
-
+#132 - FISH poisson fumé
+#133 - ELEV poney
+  #134 - not used
+  #135 - not used
+#136 - LUXE fourrure (pièces bleues)
+#137 - LUXE bijoux (pièces or)
+#138 - LUXE epices (pièces oranges)
 #139 - côte maritime
 #140 - route fluviale
 #141 - route terrestre
@@ -142,7 +128,7 @@
 #154 - LCDA ordre2
 #155 - Relique
 #156 - silk road (unused ?)
-#157 - not used
+  #157 - not used
 #158 - feuille rouge
 #159 - feuille or
 #160 - feuille violette
@@ -152,7 +138,7 @@
 #164 - poisson bleu
 #165 - poisson grisé
 #166 - sainte grenade pourpre halo vert foncé
-#167 - not used
+  #167 - not used
 #168 - Rouage rouge brisé
 #169 - Rouage halo rouge
 #170 - Rouage halo vert
@@ -164,8 +150,8 @@
 #176 - parchemin + sceau + plume //rouge
 #177 - riviére inondation
 #178 - rivière asséchée
-#179 - not used
-#180 - not used
+  #179 - not used
+  #180 - not used
 
 ###ECO+
 agriculture1			= {icon = 95 local_revolt_risk = -0.01} 
@@ -193,7 +179,7 @@ elevage2_fromage= {icon = 109}
 elevage2_cheval = {icon = 133} 
 elevage4_drap	= {icon = 112}	
 elevage3_viande	= {icon = 110 levy_size = 0.05}
-elevage3_etoffe	= {icon = 46}	
+elevage3_etoffe	= {icon = 108}	
 elevage3_cuir	= {icon = 111}
 
 foret1			= {icon = 113}
@@ -224,7 +210,7 @@ minerai2_or	= {icon = 144}
 
 peche1					= {icon = 130}	pisci1			= {icon = 130}	
 peche2_poisson			= {icon = 131}	pisci2_poisson	= {icon = 131}
-peche_pisci3_fumaison	= {icon = 134 local_revolt_risk = -0.03}
+peche_pisci3_fumaison	= {icon = 132 local_revolt_risk = -0.03}
 
 peaux2_fourrure	= {icon = 135 	tax_income = 0.2}
 joyaux2_bijoux	= {icon = 136 	tax_income = 0.1}
