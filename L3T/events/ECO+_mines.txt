@@ -30,7 +30,7 @@ character_event = {
 					NOT = {	has_building = CA_MINE_minerai_L2	}
 					NOT = {	has_building = CA_MINE_minerai_L3	}
 					}
-			location = { province_event = { id = ECO.1391 days = 1 }}
+			#location = { province_event = { id = ECO.1391 days = 1 }} #mouchard
 			location = { change_variable = { which = "stock_minerai" value =  -10 }}
 			}
 			#la mine est niveau 2
@@ -39,7 +39,7 @@ character_event = {
 					has_building = CA_MINE_minerai_L2
 					NOT = {	has_building = CA_MINE_minerai_L3	}
 					}
-			location = { province_event = { id = ECO.1392 days = 1 }}
+			#location = { province_event = { id = ECO.1392 days = 1 }} #mouchard
 			location = { change_variable = { which = "stock_minerai" value =  -20 }}
 			}
 			#la mine est niveau 3
@@ -47,7 +47,7 @@ character_event = {
 				limit = {			
 					has_building = CA_MINE_minerai_L3
 					}
-			location = { province_event = { id = ECO.1393 days = 1 }}
+			#location = { province_event = { id = ECO.1393 days = 1 }} #mouchard
 			location = { change_variable = { which = "stock_minerai" value =  -30 }}
 			random_list = {
 				5 = { location = { change_variable = { which = "balrog_point" value =  1 }}}
@@ -59,13 +59,13 @@ character_event = {
 			#conso ralentie
 			if = {
 				limit = { has_holding_modifier = mine_productivite_moins }
-			location = { province_event = { id = ECO.1394 days = 1 }}
+			#location = { province_event = { id = ECO.1394 days = 1 }} #mouchard
 			location = { change_variable = { which = "stock_minerai" value =  5 }}
 			}
 			#conso majoree			
 			if = {
 				limit = { has_holding_modifier = mine_productivite_plus }
-			location = { province_event = { id = ECO.1395 days = 1 }}
+			#location = { province_event = { id = ECO.1395 days = 1 }} #mouchard
 			location = { change_variable = { which = "stock_minerai" value =  -5 }}
 			random_list = {
 				10 = { location = { change_variable = { which = "balrog_point" value =  1 }}}
