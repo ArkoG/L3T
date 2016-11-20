@@ -535,8 +535,8 @@ province_event = {
 
 	immediate = {
 		random_list = {
-			65 = { province_event = { id = ECO.1404 days = 10 } } #succes
-			35 = { province_event = { id = ECO.1405 days = 10 } } #echec
+			35 = { province_event = { id = ECO.1404 days = 10 } } #succes
+			65 = { province_event = { id = ECO.1405 days = 10 } } #echec
 		}
 	}
 }
@@ -549,14 +549,14 @@ province_event = {
 
 	immediate = {
 		random_list = {
-			35 = { #succes
+			65 = { #succes
 				province_event = { id = ECO.1404 days = 10 }
 				random_list = {
 					10 = { change_variable = { which = "balrog_point" value =  5 }}
 					90 = {}
 					}
 				}
-			65 = {  #echec
+			35 = {  #echec
 				province_event = { id = ECO.1405 days = 10 }
 			}
 		}
