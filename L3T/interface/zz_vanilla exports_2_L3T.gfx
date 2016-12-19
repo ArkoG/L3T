@@ -1,6 +1,21 @@
 #####rewrites some vanilla .gfx entries
 
 spriteTypes = {
+
+### from buildview.gfx
+	spriteType = {
+		name = "GFX_buildview_level" #cathedrales
+		texturefile = "gfx\\interface\\buildview_level.dds"
+		noOfFrames = 12
+	}
+
+### from frontend.gfx
+	spriteType = {
+		name = "GFX_dlc_alert_frame"
+		texturefile = "gfx\\interface\\dlc_alert_frame_L3T.dds" #alternate with L3T version name
+		allwaystransparent = yes
+	}
+	
 ### from province.gfx
 	spriteType = {
 		name = "GFX_modifier_icons"
@@ -14,10 +29,6 @@ spriteTypes = {
 		noOfFrames = 8
 	}
 
-### from buildview.gfx
-	spriteType = {
-		name = "GFX_buildview_level" #cathedrales
-		texturefile = "gfx\\interface\\buildview_level.dds"
-		noOfFrames = 12
-	}
+
+	
 }

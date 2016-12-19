@@ -1,0 +1,868 @@
+body {
+margin-top:0px; margin-bottom:0px;padding:0; background-color:#EAE9D8; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/Page-BgTexture.jpg'); background-repeat:repeat-x; background-attachment:fixed; background-position:top left
+}
+
+.Main{position:relative; width:100%; overflow:hidden; left:0; top:0}
+
+.cleared{float:none; clear:both; margin:0; padding:0; border:none; font-size:1px}
+
+form{padding:0 !important; margin:0 !important}
+
+table.position{position:relative; width:100%; table-layout:fixed}
+
+.Sheet{position:relative; z-index:0; margin:0 auto; width:1000px; min-width:15px; min-height:15px}
+
+.Sheet-body{position:relative; z-index:1; padding:6px}
+
+.Sheet-tr, .Sheet-tl, .Sheet-br, .Sheet-bl, .Sheet-tc, .Sheet-bc, .Sheet-cr, .Sheet-cl{position:absolute; z-index:-1}
+
+.Sheet-tr, .Sheet-tl, .Sheet-br, .Sheet-bl{width:26px; height:26px; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/Sheet-s.png')}
+
+.Sheet-tl{top:0; left:0; clip:rect(auto,13px,13px,auto)}
+
+.Sheet-tr{top:0; right:0; clip:rect(auto,auto,13px,13px)}
+
+.Sheet-bl{bottom:0; left:0; clip:rect(13px,13px,auto,auto)}
+
+.Sheet-br{bottom:0; right:0; clip:rect(13px,auto,auto,13px)}
+
+.Sheet-tc, .Sheet-bc{left:13px; right:13px; height:26px; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/Sheet-h.png')}
+
+.Sheet-tc{top:0; clip:rect(auto,auto,13px,auto)}
+
+.Sheet-bc{bottom:0; clip:rect(13px,auto,auto,auto)}
+
+.Sheet-cr, .Sheet-cl{top:13px; bottom:13px; width:26px; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/Sheet-v.png')}
+
+.Sheet-cr{right:0; clip:rect(auto,auto,auto,13px)}
+
+.Sheet-cl{left:0; clip:rect(auto,13px,auto,auto)}
+
+.Sheet-cc{position:absolute; z-index:-1; top:13px; left:13px; right:13px; bottom:13px; background-color:#FFF}
+
+.Sheet{margin-top:1px !important}
+
+div.Header{margin:0 auto; position:relative; z-index:0; width:988px; height:125px}
+
+div.Header-jpeg{position:absolute; z-index:-1; top:0; left:0; width:988px; height:125px; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/Header.jpg'); background-repeat:no-repeat; background-position:center center}
+
+.logo{display:block; position:absolute; left:{LogoLeft}
+px; 
+top:{LogoTop}
+px; 
+width:{LogoWidth}
+px}
+
+h1.logo-name{display:block; text-align:{HorizontalAlign}
+}
+
+h1.logo-name, h1.logo-name a, h1.logo-name a:link, h1.logo-name a:visited, h1.logo-name a:hover{{LogoNameFont}
+padding:0; 
+margin:0; 
+color:{NameFontColor}
+!important}
+
+.logo-text{display:block; text-align:{HorizontalAlign}
+}
+
+.logo-text, .logo-text a{{LogoSloganFont}
+padding:0; 
+margin:0; 
+color:{TextFontColor}
+!important}
+
+.artmenu a, .artmenu a:link, .artmenu a:visited, .artmenu a:hover{text-align:left; text-decoration:none; outline:none; letter-spacing:normal; word-spacing:normal}
+
+.artmenu, .artmenu ul{margin:0; padding:0; border:0; list-style-type:none; display:block}
+
+.artmenu li{margin:0; padding:0; border:0; display:block; float:left; position:relative; z-index:5; background:none}
+
+.artmenu li:hover{z-index:10000; white-space:normal}
+
+.artmenu li li{float:none}
+
+.artmenu ul{visibility:hidden; position:absolute; z-index:10; left:0; top:0; background:none}
+
+.artmenu li:hover>ul{visibility:visible; top:100%}
+
+.artmenu li li:hover>ul{top:0; left:100%}
+
+.artmenu:after, .artmenu ul:after{content:"."; height:0; display:block; visibility:hidden; overflow:hidden; clear:both}
+.artmenu, .artmenu ul{min-height:0}
+
+.artmenu ul{background-image:url(../images/spacer.gif); padding:10px 30px 30px 30px; margin:-10px 0 0 -30px}
+
+.artmenu ul ul{padding:30px 30px 30px 10px; margin:-30px 0 0 -10px}
+
+ul.artmenu{float:right}
+
+.artmenu{padding:4px 2px 0px 2px}
+
+.nav{position:relative; height:29px; z-index:100}
+
+.nav .l, .nav .r{position:absolute; z-index:-1; top:0; height:29px; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/nav.png'); color:#2b2b2b}
+
+.nav .l{left:0; right:0px}
+
+.nav .r{right:0; width:988px; clip:rect(auto,auto,auto,988px)}
+
+.artmenu ul li{clear:both}
+
+.artmenu a{position:relative; display:block; overflow:hidden; height:25px; cursor:pointer; text-decoration:none; margin-right:0px; margin-left:0px}
+
+.artmenu a .r, .artmenu a .l{position:absolute; display:block; height:75px; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/MenuItem.png')}
+
+.artmenu a .l{left:0; right:4px}
+
+.artmenu a .r{width:408px; right:0; clip:rect(auto,auto,auto,404px)}
+
+.artmenu a .t{font-family:Arial,Helvetica,Sans-Serif; font-size:14px; color:#FFF; padding:0 4px; margin:0 3px; line-height:25px; text-align:center}
+
+.artmenu a:hover .l, .artmenu a:hover .r{top:-25px}
+
+.artmenu li:hover>a .l, .artmenu li:hover>a .r{top:-25px}
+
+.artmenu li:hover a .l, .artmenu li:hover a .r{top:-25px}
+.artmenu a:hover .t{color:#FFF}
+
+.artmenu li:hover a .t{color:#FFF}
+
+.artmenu li:hover>a .t{color:#FFF}
+
+.artmenu a.active .l, .artmenu a.active .r{top:-50px}
+
+.artmenu a.active .t{color:#000}
+
+.artmenu ul a{display:block; text-align:center; white-space:nowrap; height:20px; width:230px; overflow:hidden; line-height:20px; margin-right:auto; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/subitem-bg.png'); background-position:left top; background-repeat:repeat-x; border-width:0px; border-style:solid}
+
+.nav ul.artmenu ul span, .nav ul.artmenu ul span span{display:inline; float:none; margin:inherit; padding:inherit; background-image:none; text-align:inherit; text-decoration:inherit}
+
+.artmenu ul a, .artmenu ul a:link, .artmenu ul a:visited, .artmenu ul a:hover, .artmenu ul a:active, .nav ul.artmenu ul span, .nav ul.artmenu ul span span{text-align:left; text-indent:12px; text-decoration:none; line-height:20px; color:#FFF; font-family:Arial,Helvetica,Sans-Serif; font-size:12px; font-style:normal; font-weight:normal}
+
+.artmenu ul ul a{margin-left:auto}
+
+.artmenu ul li a:hover{color:#FFF; background-position:0 -20px}
+
+.artmenu ul li:hover>a{color:#FFF; background-position:0 -20px}
+
+.nav .artmenu ul li a:hover span, .nav .artmenu ul li a:hover span span{color:#FFF}
+
+.nav .artmenu ul li:hover>a span, .nav .artmenu ul li:hover>a span span{color:#FFF}
+
+.contentLayout{position:relative; margin-bottom:0px; width:988px}
+
+.Block{position:relative; z-index:0; margin:0 auto; min-width:11px; min-height:11px}
+
+.Block-body{position:relative; z-index:1; padding:0px}
+
+.Block-tr, .Block-tl, .Block-br, .Block-bl, .Block-tc, .Block-bc, .Block-cr, .Block-cl{position:absolute; z-index:-1}
+
+.Block-tr, .Block-tl, .Block-br, .Block-bl{width:10px; height:10px}
+
+.Block-tl{top:0; left:0; clip:rect(auto,5px,5px,auto)}
+
+.Block-tr{top:0; right:0; clip:rect(auto,auto,5px,5px)}
+
+.Block-bl{bottom:0; left:0; clip:rect(5px,5px,auto,auto)}
+
+.Block-br{bottom:0; right:0; clip:rect(5px,auto,auto,5px)}
+
+.Block-tc, .Block-bc{left:5px; right:5px; height:10px}
+
+.Block-tc{top:0; clip:rect(auto,auto,5px,auto)}
+
+.Block-bc{bottom:0; clip:rect(5px,auto,auto,auto)}
+
+.Block-cr, .Block-cl{top:5px; bottom:5px; width:10px}
+
+.Block-cr{right:0; clip:rect(auto,auto,auto,5px)}
+
+.Block-cl{left:0; clip:rect(auto,5px,auto,auto)}
+
+.Block-cc{position:absolute; z-index:-1; top:5px; left:5px; right:5px; bottom:5px}
+
+.Block{margin-left:3px; margin-right:3px; margin-bottom:0px; margin-top:0px}
+
+.BlockHeader{position:relative; z-index:0; height:22px; padding-left:4px; padding-right:4px; padding-bottom:0px; padding-top:10px; margin-bottom:2px}
+
+.BlockHeader .t{height:30px; color:#FFF; font-family:Arial,Helvetica,Sans-Serif; font-size:12px; font-style:normal; font-weight:bold; white-space:nowrap; padding:0 4px; line-height:22px}
+
+.BlockHeader .l, .BlockHeader .r{display:block; position:absolute; z-index:-1; height:22px; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/BlockHeader.png')}
+
+.BlockHeader .l{left:0; right:4px}
+
+.BlockHeader .r{width:994px; right:0; clip:rect(auto,auto,auto,990px)}
+
+.BlockContent{position:relative; z-index:0; margin:0 auto; min-width:1px; min-height:1px; background-color:#eeeddb; padding:0px}
+
+.BlockContent-body{position:relative; z-index:1; padding:0px; margin-left:3px; margin-right:3px; margin-top:0px; margin-bottom:2px; color:#2E2E2E; font-family:Arial,Helvetica,Sans-Serif; font-size:12px}
+
+.BlockContent-body a:link{color:#1A1A1A; font-family:Arial,Helvetica,Sans-Serif; text-decoration:underline}
+
+.BlockContent-body a:visited, .BlockContent-body a.visited{color:#1A1A1A; font-family:Arial,Helvetica,Sans-Serif; text-decoration:underline}
+
+.BlockContent-body a:hover, .BlockContent-body a.hover{color:#960603; font-family:Arial,Helvetica,Sans-Serif; text-decoration:underline}
+
+.BlockContent-body ul{list-style-type:none; color:#404040; margin:0; padding:0}
+
+.BlockContent-body li{font-family:Arial,Helvetica,Sans-Serif; font-size:12px; text-decoration:none}
+
+.BlockContent-body ul li{padding:0px 0 0px 15px; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/BlockContentBullets.png'); background-repeat:no-repeat; margin:0.5em 0 0.5em 0; line-height:1.2em}
+
+.Post{position:relative; z-index:0; margin:0 auto; min-width:1px; min-height:1px}
+
+.Post-body{position:relative; z-index:1; padding-left:3px; padding-right:3px; padding-top:2px; padding-bottom:2px}
+
+.Post{margin-top:5px;margin-left:5px;margin-right:0px;margin-bottom:5px;}
+
+a img{border:0}
+
+.article img, img.article{border:dashed 1px #C4C4C4; margin:9px; margin-top:0px; margin-bottom:3px; margin-left:0px}
+
+.metadata-icons img{border:none; vertical-align:middle; margin:2px}
+
+.article table, table.article{border-collapse:collapse; margin:1px; width:auto}
+
+.article table, table.article .article tr, .article th, .article td{background-color:Transparent}
+
+.article th{text-align:center; vertical-align:middle; padding:7px}
+
+.PostHeaderIcon-wrapper{text-decoration:none; margin:0.2em 0; padding:0; font-weight:normal; font-style:normal; letter-spacing:normal; word-spacing:normal; font-variant:normal; text-decoration:none; font-variant:normal; text-transform:none; text-align:left; text-indent:0; line-height:inherit; font-family:Arial,Helvetica,Sans-Serif; font-size:16px; font-style:normal; font-weight:bold; text-align:left; color:#7D0503}
+
+.PostHeaderIcon-wrapper, .PostHeaderIcon-wrapper a, .PostHeaderIcon-wrapper a:link, .PostHeaderIcon-wrapper a:visited, .PostHeaderIcon-wrapper a:hover{font-family:Arial,Helvetica,Sans-Serif; font-size:16px; font-style:normal; font-weight:bold; text-align:left; color:#7D0503}
+
+.TitreArticlesH1 {font-size:18px; }
+
+.TitreRubriquesH1 {font-size:19px; }
+
+.TitreRechercheH1 {font-size:20px; }
+
+.PiedPageH3 {font-size:13px; display: inline; color:#EEEEEE}; 
+
+.PostHeaderIcon-wrapper img{border:0; vertical-align:middle; margin:0; padding:0}
+
+.PostHeader a:link{ font-family:Arial,Helvetica,Sans-Serif;  text-decoration:none;  text-align:left;  color:#960603}
+
+.PostHeader a:visited, .PostHeader a.visited{ font-family:Arial,Helvetica,Sans-Serif;  text-decoration:none;  text-align:left;  color:#960603}
+
+.PostHeader a:hover, .PostHeader a.hovered{ font-family:Arial,Helvetica,Sans-Serif;  text-decoration:none;  text-align:left;  color:#E60805}
+
+.H2PostHeader a:link{ font-family:Arial,Helvetica,Sans-Serif;  text-decoration:none;  text-align:left;  color:#960603; font-size:16px;}
+
+.H2PostHeader a:visited, .PostHeader a.visited{ font-family:Arial,Helvetica,Sans-Serif;  text-decoration:none;  text-align:left;  color:#960603 ; font-size:16px;}
+
+.H2PostHeader a:hover, .PostHeader a.hovered{ font-family:Arial,Helvetica,Sans-Serif;  text-decoration:none;  text-align:left;  color:#E60805; font-size:16px;}
+
+.PostMetadataHeader{padding-left:3px; padding-right:0px; padding-top:0px; padding-bottom:0px; background-color:#F3F2E8}
+
+.PostHeaderIcons{padding:1px}
+
+.PostHeaderIcons, .PostHeaderIcons a, .PostHeaderIcons a:link, .PostHeaderIcons a:visited, .PostHeaderIcons a:hover{font-family:Arial,Helvetica,Sans-Serif; font-size:11px; color:#383838}
+
+.PostHeaderIcons a, .PostHeaderIcons a:link, .PostHeaderIcons a:visited, .PostHeaderIcons a:hover{margin:0}
+
+.PostHeaderIcons a:link{font-family:Arial,Helvetica,Sans-Serif; text-decoration:underline; color:#A00603}
+
+.PostHeaderIcons a:visited, .PostHeaderIcons a.visited{font-family:Arial,Helvetica,Sans-Serif; text-decoration:underline; color:#A00603}
+
+.PostHeaderIcons a:hover, .PostHeaderIcons a.hover{font-family:Arial,Helvetica,Sans-Serif; text-decoration:none; color:#320201}
+
+body{ font-family:Arial,Helvetica,Sans-Serif;  font-size:12px;  font-style:normal;  font-weight:normal;  color:#404040}
+
+.PostContent{ font-family:Arial,Helvetica,Sans-Serif;  font-size:12px;  font-style:normal;  font-weight:normal;  text-align:justify;  color:#404040; padding-top: 5px;}
+
+a{ font-family:Arial,Helvetica,Sans-Serif;  font-style:normal;  font-weight:bold;  text-decoration:none;  color:#AF0604}
+
+a:link { font-family:Arial,Helvetica,Sans-Serif;  font-style:normal;  font-weight:bold;  text-decoration:none;  color:#AF0604}
+
+a:visited, a.visited { font-family:Arial,Helvetica,Sans-Serif;  font-style:normal;  font-weight:bold;  text-decoration:none;  color:#AF0604}
+
+a:hover, a.hover{ font-family:Arial,Helvetica,Sans-Serif;  font-style:normal;  font-weight:bold;  text-decoration:none;  color:#AF0604}
+
+h1, h2, h3, h4, h5, h6, 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited{ font-weight:normal;  font-style:normal;  text-decoration:none}
+
+h1, h1 a, h1 a:link, h1 a:visited, h1 a:hover{ font-family:Arial,Helvetica,Sans-Serif;  font-size:18px;  font-style:normal;  font-weight:bold;  text-align:left;  color:#595959}
+
+h2, h2 a, h2 a:link, h2 a:visited, h2 a:hover{ font-family:Arial,Helvetica,Sans-Serif;  font-size:14px;  font-style:normal;  font-weight:bold;  text-align:left;  color:#AF0604}
+
+h3, h3 a, h3 a:link, h3 a:visited, h3 a:hover{ font-family:Arial,Helvetica,Sans-Serif;  font-size:13px;  font-style:normal;  font-weight:bold;  text-align:left;  color:#595959}
+
+h4, h4 a, h4 a:link, h4 a:visited, h4 a:hover{ font-family:Arial,Helvetica,Sans-Serif;  font-size:12px;  font-style:normal;  font-weight:bold;  text-align:left;  color:#CD0804}
+
+h5, h5 a, h5 a:link, h5 a:visited, h5 a:hover{ font-family:Arial,Helvetica,Sans-Serif;  font-size:12px;  font-style:normal;  font-weight:bold;  text-align:left;  color:#292929}
+
+h6, h6 a, h6 a:link, h6 a:visited, h6 a:hover{ font-family:Arial,Helvetica,Sans-Serif;  font-size:12px;  font-style:normal;  font-weight:bold;  text-align:left;  color:#292929}
+
+ul{list-style-type:none; color:#404040; margin:0; padding:0}
+
+li{font-family:Arial,Helvetica,Sans-Serif; font-size:12px}
+
+.Post ul li{padding:0px 0 0px 12px; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/PostBullets.png'); background-repeat:no-repeat; margin:0.5em 0 0.5em 0; line-height:1.2em}
+
+blockquote p{color:#292929; font-family:Arial,Helvetica,Sans-Serif; font-style:italic; font-weight:normal; text-align:justify}
+
+blockquote{margin:10px 10px 10px 50px; padding:5px 5px 5px 37px; background-color:#f9f8e5; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/PostQuote.png'); background-position:left top; background-repeat:no-repeat}
+
+.Button{position:relative; display:inline-block; width:auto; outline:none; border:none; background:none; line-height:12px; margin:0; padding:0; overflow:visible; cursor:default; text-decoration:none !important; z-index:0}
+
+*:first-child+html .Button{display:list-item; list-style-type:none; float:left}
+
+.Button .btn{display:block; position:relative; float:left; height:12px; overflow:hidden; white-space:nowrap; width:auto; color:#828282}
+
+.Button .btn .t{display:block; height:12px; font-family:Arial,Helvetica,Sans-Serif; font-size:9px; white-space:nowrap; text-align:left; padding:0 5px; line-height:12px; text-decoration:none !important}
+
+input, select{font-family:Arial,Helvetica,Sans-Serif; font-size:10px; border-spacing:0px; margin:0px; padding:0px}
+
+.Button .hover, .Button:hover{color:#000; text-decoration:none !important}
+
+.Button .active{color:#FFF}
+
+.Button .btn .l, .Button .btn .r{display:block; position:absolute; z-index:-1; height:12px; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/Button.png')}
+
+.Button .btn .l{left:0; right:0px}
+
+.Button .btn .r{width:401px; right:0; clip:rect(auto,auto,auto,401px)}
+
+.Button .btn.hover .l, .Button .btn.hover .r, .Button .btn:hover .l, .Button .btn:hover .r{top:-20px}
+
+.Button .btn.active .l, .Button .btn.active .r{top:-40px}
+
+.Footer{position:relative; z-index:0; overflow:hidden; width:988px; margin:5px auto 0px auto}
+
+.Footer .Footer-inner{height:1%; position:relative; z-index:0; padding:10px; text-align:center}
+
+.Footer .Footer-background{position:absolute; z-index:-1; background-repeat:no-repeat; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/Footer.png'); width:988px; height:150px; bottom:0; left:0}
+
+.rss-tag-icon{position:relative; display:block; float:left; background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/livemarks.png'); background-position:center right; background-repeat:no-repeat; margin:0 5px 0 0; height:25px; width:25px}
+
+.Footer .Footer-text p{margin:0}
+
+.Footer .Footer-text{display:inline-block; color:#FFF; font-family:Arial,Helvetica,Sans-Serif; font-size:11px}
+
+.Footer .Footer-text a:link{text-decoration:none; color:#B2B2B2; font-family:Arial,Helvetica,Sans-Serif; text-decoration:underline}
+
+.Footer .Footer-text a:visited{text-decoration:none; color:#999; font-family:Arial,Helvetica,Sans-Serif; text-decoration:underline}
+
+.Footer .Footer-text a:hover{text-decoration:none; color:#CF8A30; font-family:Arial,Helvetica,Sans-Serif; text-decoration:none}
+
+.page-footer, .page-footer a, .page-footer a:link, .page-footer a:visited, .page-footer a:hover{font-family:Arial; font-size:10px; letter-spacing:normal; word-spacing:normal; font-style:normal; font-weight:normal; text-decoration:underline; color:#A56E27}
+
+.page-footer{margin:1em; text-align:center; text-decoration:none; color:#666}
+
+.contentLayout .sidebar1{position:relative; margin:0; padding:0; padding-top:0px; border:0; float:left; overflow:hidden; width:249px}
+
+.contentLayout .content{position:relative; margin:0; padding:0; border:0; float:left; overflow:hidden; width:738px}
+.contentLayout .content-wide{position:relative; margin:0; padding:0; border:0; float:left; overflow:hidden; width:987px}
+
+.contentLayout li{float:none}
+
+table.moduletable th{font-size:140%; padding:.5em 0em}
+
+#footer{text-align:center}
+
+.breadcrumbs{}
+
+.contentpaneopen span.small, .contentpaneopen td.createdate, .contentpaneopen td.modifydate{font-size:75%; padding-bottom:1em}
+
+.column_separator{padding-left:2px}
+
+.pagination span{padding:2px}
+
+.pagination a{padding:2px}
+
+div.offline{background:#fffebb; width:100%; position:absolute; top:0; left:0; font-size:1.2em; padding:5px}
+
+span.pathway{}
+
+table.moduletable th, legend{margin:0; font-weight:bold; font-family:Helvetica,Arial,sans-serif; font-size:1.5em; padding-left:0px; margin-bottom:10px; text-align:left}
+
+.invalid{border-color:#f00}
+
+label.invalid{color:#f00}
+
+.ol-foreground{background-color:#f6f6f6}
+
+.ol-background{background-color:#666}
+
+.ol-textfont{font-family:Arial,Helvetica,sans-serif; font-size:10px}
+
+.ol-captionfont{font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#f6f6f6; font-weight:bold}
+
+.ol-captionfont a{color:#0B55C4; text-decoration:none; font-size:12px}
+
+span.article_separator{display:none}
+
+.column_separator{}
+
+td.buttonheading img{border:none}
+
+.clr{clear:both}
+
+div#maindivider{border-top:1px solid #ddd; margin-bottom:10px; overflow:hidden; height:1px}
+
+table.blog span.article_separator{display:none}
+
+.contentpaneopen_edit{float:left}
+
+table.contenttoc{margin:5px; border:1px solid #ccc; padding:5px; float:right}
+
+table.contenttoc td{padding:0 5px}
+
+td.sectiontableheader{background:#efefef; color:#333; font-weight:bold; padding:4px; border-right:1px solid #fff}
+
+tr.sectiontableentry0 td, 
+tr.sectiontableentry1 td, 
+tr.sectiontableentry2 td{}
+
+td.sectiontableentry0, 
+td.sectiontableentry1, 
+td.sectiontableentry2{}
+
+table.contentpaneopen, table.contentpane{margin:0; padding:0; width:auto}
+
+table.contentpaneopen li{margin-bottom:5px}
+
+table.contentpaneopen fieldset{border:0; border-top:1px solid #ddd}
+
+table.contentpaneopen h3{margin-top:25px}
+
+table.contentpaneopen h4{font-family:Arial,Helvetica,sans-serif; color:#333}
+
+.highlight{background-color:#fffebb}
+
+table.user1user2 div.moduletable{margin-bottom:0px}
+
+div.moduletable, div.module{margin-bottom:0px}
+
+div.module_menu h3{font-family:Helvetica,Arial,sans-serif; font-size:12px; font-weight:bold; color:#eee; margin:-23px -4px 5px -5px; padding-left:10px; padding-bottom:2px}
+
+div.module_menu{margin:0; padding:0; margin-bottom:15px}
+
+div.module_menu div div div{padding:10px; padding-top:30px; padding-bottom:15px; width:auto}
+
+div.module_menu div div div div{background:none; padding:0}
+
+div.module_menu ul{margin:10px 0; padding-left:20px}
+
+div.module_menu ul li a:link, div.module_menu ul li a:visited{font-weight:bold}
+
+#leftcolumn div.module{padding:0 10px}
+
+#leftcolumn div.module table{width:auto}
+
+table.adminform textarea{width:540px; height:400px; font-size:1em; color:#009}
+
+div.search input{width:145px; border:1px solid #ccc; margin:15px 0 10px 0}
+
+form#form-login{text-align:left}
+
+form#form-login fieldset{border:0 none; margin:0; padding:0.2em}
+
+form#form-login ul{list-style-type:none; margin:0; padding:0}
+
+form#form-login ul li{background-image:none; padding:0}
+
+#modlgn_username, #modlgn_passwd{width:90%}
+
+#form-login-username, #form-login-password, #form-login-remember{display:block; margin:0}
+
+form#com-form-login{text-align:left}
+
+form#com-form-login fieldset{border:0 none; margin:0; padding:0.2em}
+
+form#com-form-login ul{list-style-type:none; margin:0; padding:0}
+
+form#com-form-login ul li{background-image:none; padding:0}
+
+div.mosimage{margin:5px}
+
+div.mosimage_caption{font-size:.90em; color:#666}
+
+div.caption{padding:0 10px 0 10px}
+
+div.caption img{border:1px solid #CCC}
+
+div.caption p{font-size:.90em; color:#666; text-align:center}
+
+table.paramlist{margin-top:5px}
+
+table.paramlist td.paramlist_key{width:128px; text-align:left; height:30px}
+
+div.message{font-weight:bold; font-size:14px; color:#c30; text-align:center; width:auto; background-color:#f9f9f9; border:solid 1px #d5d5d5; margin:3px 0px 10px; padding:3px 20px}
+
+.banneritem img{display:block; margin-left:auto; margin-right:auto}
+
+.banneritem_text{padding:4px; font-size:11px}
+
+.bannerfooter_text{padding:4px; font-size:11px; background-color:#f7f7f7; text-align:right}
+
+.pagination span{padding:2px}
+
+.pagination a{padding:2px}
+
+.pollstableborder{margin-top:8px}
+
+.pollstableborder td{text-align:left}
+
+span.description{display:block; padding-left:30px}
+
+fieldset{border:1px solid #ccc; margin-top:15px; padding:15px}
+
+legend{margin:0; padding:0 10px}
+
+td.key{border-bottom:1px solid #eee; color:#666}
+
+.tool-tip{float:left; background:#ffc; border:1px solid #d4d5aa; padding:5px; max-width:200px}
+
+.tool-title{padding:0; margin:0; font-size:100%; font-weight:bold; margin-top:-15px; padding-top:15px; padding-bottom:5px; background:url(../../system/images/selector-arrow.png) no-repeat}
+
+.tool-text{font-size:100%; margin:0}
+
+#system-message{margin-bottom:20px}
+
+#system-message dd.message ul{background:#c3d2e5 url(../../system/images/notice-info.png) 4px center no-repeat; border-top:3px solid #de7a7b; border-bottom:3px solid #de7a7b; margin:0px; padding-left:40px; text-indent:0px}
+
+#system-message dd.error ul{color:#c00; background:#e6c0c0 url(../../system/images/notice-alert.png) 4px center no-repeat; border-top:3px solid #DE7A7B; border-bottom:3px solid #DE7A7B; margin:0px; padding-left:40px; text-indent:0px}
+
+#system-message dd.notice ul{color:#c00; background:#efe7b8 url(../../system/images/notice-note.png) 4px center no-repeat; border-top:3px solid #f0dc7e; border-bottom:3px solid #f0dc7e; margin:0px; padding-left:40px; text-indent:0px}
+
+#syndicate{float:left; padding-left:25px}
+
+#component-contact table td{padding:2px 0}
+
+.breadcrumbs img{margin:0px; padding:0px; border:0px}
+
+.mceToolbarTop{white-space:normal}
+
+.mceEditor{background:none}
+
+#archive-list{list-style-type:none; margin:0px; padding:0px}
+
+#archive-list li{list-style-type:none; background-image:none; margin-left:0px; padding-left:0px}
+
+#navigation{text-align:center}
+
+.article h3 img{border:none; display:inline; margin:0; padding:0}
+
+.Footer-text .moduletable{border:none; margin:0; padding:0}
+
+.menu_homehisto{background-color:#fffaf1; padding:3px}
+
+.menu_homehisto  a:link, a:visited, a.visited, a:hover, a.hover{color:#939393; }
+
+.menu_homearticlesrecents{background-color:#fff8e8; padding:3px}
+
+.menu_homearticlesrecents   a:link, a:visited, a.visited, a:hover, a.hover{color:#939393}
+
+.menu_homederniersjeux{background-color:#f7f7f0; padding:3px}
+
+.menu_homederniersjeux  a:link, a:visited, a.visited, a:hover, a.hover{color:#939393}
+
+.menu_homedernieresrevues{background-color:#f6f6f3; padding:3px}
+
+.menu_homedernieresrevues  a:link, a:visited, a.visited, a:hover, a.hover{color:#939393}
+
+
+.titres_derniers_articles{  font-family:Arial,Helvetica,Sans-Serif;   font-size:16px;   font-style:normal;   font-weight:bold;   text-align:left;   color:#828282}
+
+
+.publicite{background-color:#hhhhhh; border:none; margin:10px; padding:10px}
+
+.lien_commentaires img, img.lien_commentaires{ border:dashed 0px #fff}
+
+.bs_opacitylayer{background-image:url('http://www.histoire-pour-tous.fr/images/articles/noel_boules.jpg'); padding-top:10px; padding-bottom:10px; background-repeat:no-repeat}
+
+/* Round.css*/
+DIV#toolbar-box {
+	BACKGROUND: #f7f7f7
+}
+DIV#element-box {
+	BACKGROUND: #fff
+}
+DIV#element-box DIV.section-box DIV.mround {
+	BACKGROUND: #fbfbfb
+}
+DIV.tround {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 6px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+DIV.bround {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 6px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+DIV.mround {
+	BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 0px
+}
+DIV#toolbar-box DIV.mround {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DIV#element-box DIV.mround {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 5px
+}
+DIV#submenu-box DIV.tround {
+	BACKGROUND: url(../images/j_border.png) repeat-x 0px 0px
+}
+DIV#submenu-box DIV.tround DIV.tround {
+	BACKGROUND: url(../images/j_crn_tr_dark.png) no-repeat 100% 0px
+}
+DIV#submenu-box DIV.tround DIV.tround DIV.tround {
+	BACKGROUND: url(../images/j_crn_tl_dark.png) no-repeat 0px 0px
+}
+DIV#submenu-box DIV.bround {
+	BACKGROUND: url(../images/j_border.png) repeat-x 0px 100%
+}
+DIV#submenu-box DIV.bround DIV.bround {
+	BACKGROUND: url(../images/j_crn_br_dark.png) no-repeat 100% 0px
+}
+DIV#submenu-box DIV.bround DIV.bround DIV.bround {
+	BACKGROUND: url(../images/j_crn_bl_dark.png) no-repeat 0px 0px
+}
+DIV#toolbar-box {
+	BACKGROUND: #fbfbfb
+}
+DIV#element-box DIV.section-box {
+	BACKGROUND: #fbfbfb
+}
+DIV#toolbar-box DIV.tround {
+	BACKGROUND: url(../images/j_border.png) repeat-x 0px 0px
+}
+DIV#element-box DIV.section-box DIV.tround {
+	BACKGROUND: url(../images/j_border.png) repeat-x 0px 0px
+}
+DIV#toolbar-box DIV.tround DIV.tround {
+	BACKGROUND: url(../images/j_crn_tr_med.png) no-repeat 100% 0px
+}
+DIV#element-box DIV.section-box DIV.tround DIV.tround {
+	BACKGROUND: url(../images/j_crn_tr_med.png) no-repeat 100% 0px
+}
+DIV#toolbar-box DIV.tround DIV.tround DIV.tround {
+	BACKGROUND: url(../images/j_crn_tl_med.png) no-repeat 0px 0px
+}
+DIV#element-box DIV.section-box DIV.tround DIV.tround DIV.tround {
+	BACKGROUND: url(../images/j_crn_tl_med.png) no-repeat 0px 0px
+}
+DIV#toolbar-box DIV.bround {
+	BACKGROUND: url(../images/j_border.png) repeat-x 0px 100%
+}
+DIV#element-box DIV.section-box DIV.bround {
+	BACKGROUND: url(../images/j_border.png) repeat-x 0px 100%
+}
+DIV#toolbar-box DIV.bround DIV.bround {
+	BACKGROUND: url(../images/j_crn_br_med.png) no-repeat 100% 0px
+}
+DIV#element-box DIV.section-box DIV.bround DIV.bround {
+	BACKGROUND: url(../images/j_crn_br_med.png) no-repeat 100% 0px
+}
+DIV#toolbar-box DIV.bround DIV.bround DIV.bround {
+	BACKGROUND: url(../images/j_crn_bl_med.png) no-repeat 0px 0px
+}
+DIV#element-box DIV.section-box DIV.bround DIV.bround DIV.bround {
+	BACKGROUND: url(../images/j_crn_bl_med.png) no-repeat 0px 0px
+}
+DIV#element-box DIV.tround {
+	BACKGROUND: url(../images/j_border.png) repeat-x 0px 0px
+}
+DIV#element-box DIV.tround DIV.tround {
+	BACKGROUND: url(../images/j_crn_tr_light.png) no-repeat 100% 0px
+}
+DIV#element-box DIV.tround DIV.tround DIV.tround {
+	BACKGROUND: url(../images/j_crn_tl_light.png) no-repeat 0px 0px
+}
+DIV#element-box DIV.bround {
+	BACKGROUND: url(../images/j_border.png) repeat-x 0px 100%
+}
+DIV#element-box DIV.bround DIV.bround {
+	BACKGROUND: url(../images/j_crn_br_light.png) no-repeat 100% 0px
+}
+DIV#element-box DIV.bround DIV.bround DIV.bround {
+	BACKGROUND: url(../images/j_crn_bl_light.png) no-repeat 0px 0px
+}
+
+.lirelasuite a:link, .lirelasuite a:visited, .lirelasuite a:hover, .lirelasuite a.link, .lirelasuite a.visited, .lirelasuite a.hover
+{
+	color:#af0604;
+}
+
+/* Tooltips */
+.custom-tip {
+	color: #fff;
+	width: 280px;
+	z-index: 13000;
+}
+ 
+.custom-title {
+	font-weight: bold;
+	font-size: 11px;
+	margin: 0;
+	color: #ff3f3f;
+	padding: 8px 8px 4px;
+	background-color:#3f3f3f;
+}
+ 
+.custom-text {
+	font-size: 11px;
+	padding: 4px 8px 8px;
+	background-color:#3f3f3f;
+}
+
+/* Publicité */
+.PostPubHaut{
+position:relative; z-index:0; margin:0 auto; min-width:1px; min-height:1px;
+margin-top:5px;margin-left:7px;margin-right:0px;margin-bottom:0px; padding: 0px;
+}
+
+/* Espaces dans les articles */
+.article P
+{
+padding: 0px;
+padding-bottom: 10px;
+margin: 0px; 
+}
+
+.Post-bodyArticles
+{
+margin:10px;
+margin-bottom:0px;
+background-color:#f8f8f8;
+}
+
+.ResultatsRecherche
+{
+margin:10px;
+background-color:#f8f8f8;
+}
+
+.InnerArticles
+{
+/*background-image:url('http://www.histoire-pour-tous.fr/templates/HistoirePourTousV2/images/content-bg.jpg');*/
+background-color:#fff4e0;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 13px;
+padding-bottom: 10px;
+margin:7px;
+font-size: 13px;
+line-height: 1.35em;
+}
+
+
+.ContentArticles img, img.ContentArticles{border:dashed 0px #C4C4C4; margin:0px; padding:8px; padding-top:4px;padding-bottom:0px;}
+
+
+.TitreArticlesH1Articles
+{
+margin-bottom:5px;
+margin-left:0px;
+}
+
+.PostHeaderIconsArticles
+{
+margin-bottom:10px;
+}
+
+.PostMetadataHeaderArticles
+{
+background-color:#ffffff;
+padding-left:3px;
+}
+
+// Related items
+
+.relateditems_similaire ul{color:#404040;}
+
+.relateditems_similaire li{font-family:Arial,Helvetica,Sans-Serif; font-size:12px; text-decoration:none}
+
+/*.moduletable_similaire
+ {
+ margin-top:5px;
+ margin-left:15px;
+ margin-right:10px;
+ margin-bottom:10px;
+ padding: 10px;
+ background-color:#f8f8f8;
+ }*/
+ 
+ .relateditems_similaire 
+ {
+  /*margin-top:10px;
+  */
+  margin: 0px;
+  margin-left:7px;
+  margin-bottom: 0px;
+  padding: 4px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  background-color:#efefef;
+  background-image:none;  
+}
+
+ .relateditems_similaire h3
+ {
+ padding-left:5px;
+ padding-right:5px;
+ background-color:#ffffff;
+ display: inline;
+ font-size: 16px;
+ }
+ 
+ .relateditems_similaire  ul li
+ {
+   background-image:none;
+   /*list-style-type: circle;*/
+ }
+ 
+ .forumtopic_similaire
+ {
+   margin: 0px;
+   margin-bottom: 0px;
+   margin-right:7px;
+   padding: 4px;
+   padding-left: 10px;
+   padding-top: 10px;
+   padding-bottom: 15px;
+   background-color:#efefef;
+   height: 100%;
+   vertical-align: top;
+   font-family:Arial,Helvetica,Sans-Serif; 
+   font-size:12px;
+   text-decoration:none
+ }
+ 
+ .forumtopic_similaire h3
+ {
+ padding-left:5px;
+ padding-right:5px;
+ background-color:#ffffff;
+ display: inline;
+ font-size: 16px;
+ }
+
+ a:visited
+ {
+ 	color: #af0604;
+} 
+ 
+ a:hover
+ {
+ 	color: #939393;
+ }
+ 
+ .contentpane_categories,  .contentpane_categories a:link,  .contentpane_categories a:visited
+ {
+ background-color:#fff4e0;
+ color: #7d0503;
+ }
+ 
+ .gn_news a:link, .gn_news a:visited, .gn_news a:hover, .gn_news a.link, .gn_news a.visited, .gn_news a.hover
+ {
+font-weight:normal;
+text-decoration:underline;
+ }
+ 
+ .gn_opacitylayer div
+ {
+ height:105px;
+ }
+
