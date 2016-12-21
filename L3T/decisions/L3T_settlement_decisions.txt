@@ -41,6 +41,7 @@ settlement_decisions = {
 			}
 		}
 		allow = {
+			NOT = { has_holding_modifier = recent_construction }
 			FROM = {
 				wealth = 100
 				higher_tier_than = COUNT # Duke, King or Emperor
@@ -413,6 +414,7 @@ settlement_decisions = {
 			has_building = FEODAL_adm
 		}
 		allow = {
+			NOT = { has_holding_modifier = recent_construction }
 			FROM = { wealth = 100 }
 		}
 		effect = {
@@ -542,6 +544,7 @@ settlement_decisions = {
 			}
 		}
 		allow = {
+			NOT = { has_holding_modifier = recent_construction }
 			FROM = { wealth = 100 }
 		}
 		effect = {
@@ -847,6 +850,7 @@ settlement_decisions = {
 			has_building = FEODAL_mil
 		}
 		allow = {
+			NOT = { has_holding_modifier = recent_construction }
 			FROM = { wealth = 100 }
 		}
 		effect = {

@@ -106,3 +106,22 @@ character_event = {
 		}
 	}
 }
+
+# Add a holding modifier after starting to build
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.302
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = { 
+			if = {
+				limit = { has_holding_modifier = recent_construction }
+				remove_holding_modifier = recent_construction
+			}
+			add_holding_modifier = { name = recent_construction duration = 365  hidden = yes }
+		}
+	}
+}
