@@ -1,0 +1,108 @@
+namespace = L3T
+
+# Remove the FEODAL_adm dependancies and choose a new specialization
+character_event = {
+	id = L3T.301
+	desc = "DESCL3T.301"
+	picture = GFX_evt_castle_construction
+
+	is_triggered_only = yes
+	
+	# Choice: spe mil
+	option = {
+		name = "L3T.0003A" # Get same localisation than the initialisation
+		FROM = {
+			add_building = FEODAL_mil
+			
+			# Convert outilleur to armurerie
+			custom_tooltip = { text = TOOLTIPL3T301A }
+			hidden_tooltip = {
+				if = {
+					limit = { has_building = CA_outilleur_L3}
+					remove_building = CA_outilleur_L3
+					add_building = CA_armurerie_L3
+				}
+				if = {
+					limit = { has_building = CA_outilleur_L2}
+					remove_building = CA_outilleur_L2
+					add_building = CA_armurerie_L2
+				}
+				if = {
+					limit = { has_building = CA_outilleur_L1}
+					remove_building = CA_outilleur_L1
+					add_building = CA_armurerie_L1
+				}
+			}
+			# Remove weapons if there is no more producer
+			location = {
+				if = {
+					limit = {						 
+						has_province_modifier = minerai4_outils
+						NOT = {
+							any_province_holding = {
+								is_feudal = yes
+								has_building = CA_outilleur_L2
+							}
+						}
+					}
+					remove_province_modifier = minerai4_outils
+				}					
+			}
+		}
+	}
+	
+	# Choice: spe prod
+	option = {
+		name = "L3T.0003B" # Get same localisation than the initialisation
+		FROM = {
+			add_building = FEODAL_prod
+			
+			# Sell the weapon production buildings
+			custom_tooltip = { text = TOOLTIPL3T301B }
+			hidden_tooltip = {
+				if = {
+					limit = { has_building = CA_outilleur_L3}
+					random_list = {
+						20 = { owner = { wealth = 40 } }
+						60 = { owner = { wealth = 50 } }
+						20 = { owner = { wealth = 60 } }
+					}
+					remove_building = CA_outilleur_L3
+				}
+				if = {
+					limit = { has_building = CA_outilleur_L2}
+					random_list = {
+						20 = { owner = { wealth = 30 } }
+						60 = { owner = { wealth = 38 } }
+						20 = { owner = { wealth = 45 } }
+					}
+					remove_building = CA_outilleur_L2
+				}
+				if = {
+					limit = { has_building = CA_outilleur_L1}
+					random_list = {
+						20 = { owner = { wealth = 20 } }
+						60 = { owner = { wealth = 25 } }
+						20 = { owner = { wealth = 30 } }
+					}
+					remove_building = CA_outilleur_L1
+				}
+			}
+			# Remove weapons if there is no more producer
+			location = {
+				if = {
+					limit = {						 
+						has_province_modifier = minerai4_outils
+						NOT = {
+							any_province_holding = {
+								is_feudal = yes
+								has_building = CA_outilleur_L2
+							}
+						}
+					}
+					remove_province_modifier = minerai4_outils
+				}					
+			}
+		}
+	}
+}

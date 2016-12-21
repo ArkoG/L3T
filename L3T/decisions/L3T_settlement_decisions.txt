@@ -1,0 +1,910 @@
+# Settlement decisions are possible vs _all_ settlements and are shown in the Settlement Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [capital/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all]
+# ai_target_filter = [capital/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all] (which settlements for which the AI evaluates the decision.)
+#	owned: all settlements owned by the AI
+#	vassal_owned: all settlements owned by direct vassal rulers of the AI's employer
+#	sub_realm_owned: all settlements below the AI's employer
+#	realm_owned: all settlements in the same top realm as the AI
+#	dynasty_owned: all settlements owned by members of the same dynasty
+#	all: all settlements (Avoid if possible. VERY CPU-HEAVY!)
+
+settlement_decisions = {
+	set_adm_spe = {
+		only_rulers = yes
+		filter = owned # capital create some logs in error.log
+		ai_target_filter = owned # same thing
+		
+		from_potential = {
+			is_ruler = yes
+		}
+		
+		potential = {
+			holder_scope = { character = FROM }
+			is_capital = yes
+			is_feudal = yes
+			# Is the capital (is_capital = yes is equivalent?)
+			FROM = { capital_holding = { title = ROOT } }
+			OR = {
+				has_building = FEODAL_mil
+				AND = {
+					has_building = FEODAL_prod
+					# There is another settlement with FEODAL_prod in the province
+					location = {
+						any_province_holding = {
+							NOT = { title = ROOT }
+							is_feudal = yes
+							has_building = FEODAL_prod
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			FROM = {
+				wealth = 100
+				higher_tier_than = COUNT # Duke, King or Emperor
+			}
+		}
+		effect = {
+			FROM = { wealth = -100 }
+			if = {
+				limit = { has_building = FEODAL_mil }
+				remove_building = FEODAL_mil
+				
+				# Convert armurerie to outilleur
+				if = {
+					limit = { has_building = CA_armurerie_L3}
+					remove_building = CA_armurerie_L3
+					add_building = CA_outilleur_L3
+				}
+				if = {
+					limit = { has_building = CA_armurerie_L2}
+					remove_building = CA_armurerie_L2
+					add_building = CA_outilleur_L2
+				}
+				if = {
+					limit = { has_building = CA_armurerie_L1}
+					remove_building = CA_armurerie_L1
+					add_building = CA_outilleur_L1
+				}
+				# Remove weapons if there is no more producer
+				location = {
+					if = {
+						limit = {						 
+							has_province_modifier = minerai4_armes
+							NOT = {
+								any_province_holding = {
+									is_feudal = yes
+									has_building = CA_armurerie_L2
+								}
+							}
+						}
+						remove_province_modifier = minerai4_armes
+					}					
+				}
+			}
+			if = {
+				limit = { has_building = FEODAL_prod }
+				remove_building = FEODAL_prod
+				# Move the production buildings in the other settlement
+				custom_tooltip = { text = TOOLTIPdelocalize }
+				hidden_tooltip = {
+					location = {
+						random_province_holding = {
+							limit = {
+								NOT = { title = ROOT }
+								is_feudal = yes
+								has_building = FEODAL_prod
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_scierie_L3 } }
+								ROOT = { remove_building = CA_scierie_L3 }
+								add_building = CA_scierie_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_scierie_L2 } }
+								ROOT = { remove_building = CA_scierie_L2 }
+								add_building = CA_scierie_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_scierie_L1 } }
+								ROOT = { remove_building = CA_scierie_L1 }
+								add_building = CA_scierie_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_four_L3 } }
+								ROOT = { remove_building = CA_four_L3 }
+								add_building = CA_four_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_four_L2 } }
+								ROOT = { remove_building = CA_four_L2 }
+								add_building = CA_four_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_four_L1 } }
+								ROOT = { remove_building = CA_four_L1 }
+								add_building = CA_four_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_pierre_taille_L3 } }
+								ROOT = { remove_building = CA_pierre_taille_L3 }
+								add_building = CA_pierre_taille_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_pierre_taille_L2 } }
+								ROOT = { remove_building = CA_pierre_taille_L2 }
+								add_building = CA_pierre_taille_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_pierre_taille_L1 } }
+								ROOT = { remove_building = CA_pierre_taille_L1 }
+								add_building = CA_pierre_taille_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_fonderie_L3 } }
+								ROOT = { remove_building = CA_fonderie_L3 }
+								add_building = CA_fonderie_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_fonderie_L2 } }
+								ROOT = { remove_building = CA_fonderie_L2 }
+								add_building = CA_fonderie_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_fonderie_L1 } }
+								ROOT = { remove_building = CA_fonderie_L1 }
+								add_building = CA_fonderie_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_ELEV_cheval_L3 } }
+								ROOT = { remove_building = CA_ELEV_cheval_L3 }
+								add_building = CA_ELEV_cheval_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_ELEV_cheval_L2 } }
+								ROOT = { remove_building = CA_ELEV_cheval_L2 }
+								add_building = CA_ELEV_cheval_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_ELEV_cheval_L1 } }
+								ROOT = { remove_building = CA_ELEV_cheval_L1 }
+								add_building = CA_ELEV_cheval_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_FISH_fumoir_L3} }
+								ROOT = { remove_building = CA_FISH_fumoir_L3 }
+								add_building = CA_FISH_fumoir_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_FISH_fumoir_L2 } }
+								ROOT = { remove_building = CA_FISH_fumoir_L2 }
+								add_building = CA_FISH_fumoir_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_FISH_fumoir_L1 } }
+								ROOT = { remove_building = CA_FISH_fumoir_L1 }
+								add_building = CA_FISH_fumoir_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_boulangerie_L3 } }
+								ROOT = { remove_building = CA_AGRI_boulangerie_L3 }
+								add_building = CA_AGRI_boulangerie_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_boulangerie_L2 } }
+								ROOT = { remove_building = CA_AGRI_boulangerie_L2 }
+								add_building = CA_AGRI_boulangerie_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_boulangerie_L1 } }
+								ROOT = { remove_building = CA_AGRI_boulangerie_L1 }
+								add_building = CA_AGRI_boulangerie_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_moulin_L3 } }
+								ROOT = { remove_building = CA_AGRI_moulin_L3 }
+								add_building = CA_AGRI_moulin_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_moulin_L2 } }
+								ROOT = { remove_building = CA_AGRI_moulin_L2 }
+								add_building = CA_AGRI_moulin_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_moulin_L1 } }
+								ROOT = { remove_building = CA_AGRI_moulin_L1 }
+								add_building = CA_AGRI_moulin_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_FISH_pisci_L2 } }
+								ROOT = { remove_building = CA_FISH_pisci_L2}
+								add_building = CA_FISH_pisci_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_FISH_pisci_L1 } }
+								ROOT = { remove_building = CA_FISH_pisci_L1 }
+								add_building = CA_FISH_pisci_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_FISH_peche_L2 } }
+								ROOT = { remove_building = CA_FISH_peche_L2 }
+								add_building = CA_FISH_peche_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_FISH_peche_L1 } }
+								ROOT = { remove_building = CA_FISH_peche_L1 }
+								add_building = CA_FISH_peche_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_MINE_minerai_L3 } }
+								ROOT = { remove_building = CA_MINE_minerai_L3 }
+								add_building = CA_MINE_minerai_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_MINE_minerai_L2 } }
+								ROOT = { remove_building = CA_MINE_minerai_L2 }
+								add_building = CA_MINE_minerai_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_MINE_minerai_L1 } }
+								ROOT = { remove_building = CA_MINE_minerai_L1 }
+								add_building = CA_MINE_minerai_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_CARR_pierre_L3 } }
+								ROOT = { remove_building = CA_CARR_pierre_L3 }
+								add_building = CA_CARR_pierre_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_CARR_pierre_L2 } }
+								ROOT = { remove_building = CA_CARR_pierre_L2 }
+								add_building = CA_CARR_pierre_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_CARR_pierre_L1 } }
+								ROOT = { remove_building = CA_CARR_pierre_L1 }
+								add_building = CA_CARR_pierre_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_BOIS_charbon_L3 } }
+								ROOT = { remove_building = CA_BOIS_charbon_L3 }
+								add_building = CA_BOIS_charbon_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_BOIS_charbon_L2 } }
+								ROOT = { remove_building = CA_BOIS_charbon_L2 }
+								add_building = CA_BOIS_charbon_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_BOIS_charbon_L1 } }
+								ROOT = { remove_building = CA_BOIS_charbon_L1 }
+								add_building = CA_BOIS_charbon_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_BOIS_bois_L3 } }
+								ROOT = { remove_building = CA_BOIS_bois_L3 }
+								add_building = CA_BOIS_bois_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_BOIS_bois_L2 } }
+								ROOT = { remove_building = CA_BOIS_bois_L2 }
+								add_building = CA_BOIS_bois_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_BOIS_bois_L1 } }
+								ROOT = { remove_building = CA_BOIS_bois_L1 }
+								add_building = CA_BOIS_bois_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_ELEV_ovin_L3b } }
+								ROOT = { remove_building = CA_ELEV_ovin_L3b }
+								add_building = CA_ELEV_ovin_L3b
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_ELEV_ovin_L2b } }
+								ROOT = { remove_building = CA_ELEV_ovin_L2b }
+								add_building = CA_ELEV_ovin_L2b
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_ELEV_ovin_L1b } }
+								ROOT = { remove_building = CA_ELEV_ovin_L1b }
+								add_building = CA_ELEV_ovin_L1b
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_ELEV_ovin_L3a } }
+								ROOT = { remove_building = CA_ELEV_ovin_L3a }
+								add_building = CA_ELEV_ovin_L3a
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_ELEV_ovin_L2a } }
+								ROOT = { remove_building = CA_ELEV_ovin_L2a }
+								add_building = CA_ELEV_ovin_L2a
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_ELEV_ovin_L1a } }
+								ROOT = { remove_building = CA_ELEV_ovin_L1a }
+								add_building = CA_ELEV_ovin_L1a
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_verger_L3 } }
+								ROOT = { remove_building = CA_AGRI_verger_L3 }
+								add_building = CA_AGRI_verger_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_verger_L2 } }
+								ROOT = { remove_building = CA_AGRI_verger_L2 }
+								add_building = CA_AGRI_verger_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_verger_L1 } }
+								ROOT = { remove_building = CA_AGRI_verger_L1 }
+								add_building = CA_AGRI_verger_L1
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_cereale_L3 } }
+								ROOT = { remove_building = CA_AGRI_cereale_L3 }
+								add_building = CA_AGRI_cereale_L3
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_cereale_L2 } }
+								ROOT = { remove_building = CA_AGRI_cereale_L2 }
+								add_building = CA_AGRI_cereale_L2
+							}
+							if = {
+								limit = { ROOT = { has_building = CA_AGRI_cereale_L1 } }
+								ROOT = { remove_building = CA_AGRI_cereale_L1 }
+								add_building = CA_AGRI_cereale_L1
+							}
+						}
+					}
+				}
+			}
+			
+			# In both cases, add FEODAL_adm spe
+			add_building = FEODAL_adm
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = { # Not if this settlement is not allowed
+				factor = 0
+				NOT = { is_allowed_holding_type = FROM }
+			}
+			
+			modifier = { # Not if existing capital is preferred
+				factor = 0
+				defacto_liege_title = {
+					is_preferred_holding_type = FROM
+				}
+			}
+			
+			modifier = { # Not if this settlement is not preferred and another settlement is
+				factor = 0
+				NOT = { is_preferred_holding_type = FROM }
+				defacto_liege_title = {
+					any_direct_de_jure_vassal_title = {
+						holder = FROM
+						is_preferred_holding_type = FROM
+					}
+				}
+			}
+		}
+	}
+	
+	remove_adm_spe = {
+		only_rulers = yes
+		filter = owned
+		ai_target_filter = owned
+		
+		from_potential = {
+			is_ruler = yes
+		}
+		
+		potential = {
+			holder_scope = { character = FROM }
+			is_feudal = yes
+			# Is not the capital
+			NOT = { FROM = { capital_holding = { title = ROOT } } }
+			has_building = FEODAL_adm
+		}
+		allow = {
+			FROM = { wealth = 100 }
+		}
+		effect = {
+			FROM = { wealth = -100 }
+			remove_building = FEODAL_adm
+			
+			# Sell administrative buildings
+			hidden_tooltip = {
+				if = {
+					limit = { has_building = CA_chambre_2 }
+					random_list = {
+						20 = { owner = { wealth = 100 } }
+						60 = { owner = { wealth = 125 } }
+						20 = { owner = { wealth = 150 } }
+					}
+					remove_building = CA_chambre_2
+				}
+				if = {
+					limit = { has_building = CA_archives_2 }
+					random_list = {
+						20 = { owner = { wealth = 60 } }
+						60 = { owner = { wealth = 75 } }
+						20 = { owner = { wealth = 90 } }
+					}
+					remove_building = CA_archives_2
+				}
+				if = {
+					limit = { has_building = CA_archives_1 }
+					random_list = {
+						20 = { owner = { wealth = 30 } }
+						60 = { owner = { wealth = 38 } }
+						20 = { owner = { wealth = 45 } }
+					}
+					remove_building = CA_archives_1
+				}
+				if = {
+					limit = { has_building = CA_tresor }
+					random_list = {
+						20 = { owner = { wealth = 30 } }
+						60 = { owner = { wealth = 38 } }
+						20 = { owner = { wealth = 45 } }
+					}
+					remove_building = CA_tresor
+				}
+				if = {
+					limit = { has_building = CA_chambre_1 }
+					random_list = {
+						20 = { owner = { wealth = 20 } }
+						60 = { owner = { wealth = 25 } }
+						20 = { owner = { wealth = 30 } }
+					}
+					remove_building = CA_chambre_1
+				}
+				if = {
+					limit = { has_building = CA_cour_justice }
+					random_list = {
+						20 = { owner = { wealth = 60 } }
+						60 = { owner = { wealth = 75 } }
+						20 = { owner = { wealth = 90 } }
+					}
+					remove_building = CA_cour_justice
+				}
+				if = {
+					limit = { has_building = CA_chancellerie }
+					random_list = {
+						20 = { owner = { wealth = 30 } }
+						60 = { owner = { wealth = 38 } }
+						20 = { owner = { wealth = 45 } }
+					}
+					remove_building = CA_chancellerie
+				}
+				if = {
+					limit = { has_building = CA_chap_seign_2 }
+					random_list = {
+						20 = { owner = { wealth = 80 } }
+						60 = { owner = { wealth = 100 } }
+						20 = { owner = { wealth = 120 } }
+					}
+					remove_building = CA_chap_seign_2
+				}
+				if = {
+					limit = { has_building = CA_chap_seign }
+					random_list = {
+						20 = { owner = { wealth = 60 } }
+						60 = { owner = { wealth = 75 } }
+						20 = { owner = { wealth = 90 } }
+					}
+					remove_building = CA_chap_seign
+				}
+			}
+			
+			# Clean character modifiers if necessary
+			FROM = { character_event = { id = L3T.225 days = 10 } }
+			
+			# Choose the new spe and remove dependancy buildings
+			FROM = { character_event = { id = L3T.301 days = 1 } }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	set_spe_mil_from_prod = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = owned
+		
+		from_potential = {
+			is_ruler = yes
+		}
+		
+		potential = {
+			FROM = { ai = no }
+			holder_scope = { character = FROM }
+			is_feudal = yes
+			has_building = FEODAL_prod
+			# There is another settlement with FEODAL_prod in the province
+			location = {
+				any_province_holding = {
+					NOT = { title = ROOT }
+					is_feudal = yes
+					has_building = FEODAL_prod
+				}
+			}
+		}
+		allow = {
+			FROM = { wealth = 100 }
+		}
+		effect = {
+			FROM = { wealth = -100 }
+			# Move the production buildings in the other settlement
+			custom_tooltip = { text = TOOLTIPdelocalize }
+			hidden_tooltip = {
+				location = {
+					random_province_holding = {
+						limit = {
+							NOT = { title = ROOT }
+							is_feudal = yes
+							has_building = FEODAL_prod
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_scierie_L3 } }
+							ROOT = { remove_building = CA_scierie_L3 }
+							add_building = CA_scierie_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_scierie_L2 } }
+							ROOT = { remove_building = CA_scierie_L2 }
+							add_building = CA_scierie_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_scierie_L1 } }
+							ROOT = { remove_building = CA_scierie_L1 }
+							add_building = CA_scierie_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_four_L3 } }
+							ROOT = { remove_building = CA_four_L3 }
+							add_building = CA_four_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_four_L2 } }
+							ROOT = { remove_building = CA_four_L2 }
+							add_building = CA_four_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_four_L1 } }
+							ROOT = { remove_building = CA_four_L1 }
+							add_building = CA_four_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_pierre_taille_L3 } }
+							ROOT = { remove_building = CA_pierre_taille_L3 }
+							add_building = CA_pierre_taille_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_pierre_taille_L2 } }
+							ROOT = { remove_building = CA_pierre_taille_L2 }
+							add_building = CA_pierre_taille_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_pierre_taille_L1 } }
+							ROOT = { remove_building = CA_pierre_taille_L1 }
+							add_building = CA_pierre_taille_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_fonderie_L3 } }
+							ROOT = { remove_building = CA_fonderie_L3 }
+							add_building = CA_fonderie_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_fonderie_L2 } }
+							ROOT = { remove_building = CA_fonderie_L2 }
+							add_building = CA_fonderie_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_fonderie_L1 } }
+							ROOT = { remove_building = CA_fonderie_L1 }
+							add_building = CA_fonderie_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_ELEV_cheval_L3 } }
+							ROOT = { remove_building = CA_ELEV_cheval_L3 }
+							add_building = CA_ELEV_cheval_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_ELEV_cheval_L2 } }
+							ROOT = { remove_building = CA_ELEV_cheval_L2 }
+							add_building = CA_ELEV_cheval_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_ELEV_cheval_L1 } }
+							ROOT = { remove_building = CA_ELEV_cheval_L1 }
+							add_building = CA_ELEV_cheval_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_FISH_fumoir_L3} }
+							ROOT = { remove_building = CA_FISH_fumoir_L3 }
+							add_building = CA_FISH_fumoir_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_FISH_fumoir_L2 } }
+							ROOT = { remove_building = CA_FISH_fumoir_L2 }
+							add_building = CA_FISH_fumoir_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_FISH_fumoir_L1 } }
+							ROOT = { remove_building = CA_FISH_fumoir_L1 }
+							add_building = CA_FISH_fumoir_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_boulangerie_L3 } }
+							ROOT = { remove_building = CA_AGRI_boulangerie_L3 }
+							add_building = CA_AGRI_boulangerie_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_boulangerie_L2 } }
+							ROOT = { remove_building = CA_AGRI_boulangerie_L2 }
+							add_building = CA_AGRI_boulangerie_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_boulangerie_L1 } }
+							ROOT = { remove_building = CA_AGRI_boulangerie_L1 }
+							add_building = CA_AGRI_boulangerie_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_moulin_L3 } }
+							ROOT = { remove_building = CA_AGRI_moulin_L3 }
+							add_building = CA_AGRI_moulin_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_moulin_L2 } }
+							ROOT = { remove_building = CA_AGRI_moulin_L2 }
+							add_building = CA_AGRI_moulin_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_moulin_L1 } }
+							ROOT = { remove_building = CA_AGRI_moulin_L1 }
+							add_building = CA_AGRI_moulin_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_FISH_pisci_L2 } }
+							ROOT = { remove_building = CA_FISH_pisci_L2}
+							add_building = CA_FISH_pisci_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_FISH_pisci_L1 } }
+							ROOT = { remove_building = CA_FISH_pisci_L1 }
+							add_building = CA_FISH_pisci_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_FISH_peche_L2 } }
+							ROOT = { remove_building = CA_FISH_peche_L2 }
+							add_building = CA_FISH_peche_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_FISH_peche_L1 } }
+							ROOT = { remove_building = CA_FISH_peche_L1 }
+							add_building = CA_FISH_peche_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_MINE_minerai_L3 } }
+							ROOT = { remove_building = CA_MINE_minerai_L3 }
+							add_building = CA_MINE_minerai_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_MINE_minerai_L2 } }
+							ROOT = { remove_building = CA_MINE_minerai_L2 }
+							add_building = CA_MINE_minerai_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_MINE_minerai_L1 } }
+							ROOT = { remove_building = CA_MINE_minerai_L1 }
+							add_building = CA_MINE_minerai_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_CARR_pierre_L3 } }
+							ROOT = { remove_building = CA_CARR_pierre_L3 }
+							add_building = CA_CARR_pierre_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_CARR_pierre_L2 } }
+							ROOT = { remove_building = CA_CARR_pierre_L2 }
+							add_building = CA_CARR_pierre_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_CARR_pierre_L1 } }
+							ROOT = { remove_building = CA_CARR_pierre_L1 }
+							add_building = CA_CARR_pierre_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_BOIS_charbon_L3 } }
+							ROOT = { remove_building = CA_BOIS_charbon_L3 }
+							add_building = CA_BOIS_charbon_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_BOIS_charbon_L2 } }
+							ROOT = { remove_building = CA_BOIS_charbon_L2 }
+							add_building = CA_BOIS_charbon_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_BOIS_charbon_L1 } }
+							ROOT = { remove_building = CA_BOIS_charbon_L1 }
+							add_building = CA_BOIS_charbon_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_BOIS_bois_L3 } }
+							ROOT = { remove_building = CA_BOIS_bois_L3 }
+							add_building = CA_BOIS_bois_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_BOIS_bois_L2 } }
+							ROOT = { remove_building = CA_BOIS_bois_L2 }
+							add_building = CA_BOIS_bois_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_BOIS_bois_L1 } }
+							ROOT = { remove_building = CA_BOIS_bois_L1 }
+							add_building = CA_BOIS_bois_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_ELEV_ovin_L3b } }
+							ROOT = { remove_building = CA_ELEV_ovin_L3b }
+							add_building = CA_ELEV_ovin_L3b
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_ELEV_ovin_L2b } }
+							ROOT = { remove_building = CA_ELEV_ovin_L2b }
+							add_building = CA_ELEV_ovin_L2b
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_ELEV_ovin_L1b } }
+							ROOT = { remove_building = CA_ELEV_ovin_L1b }
+							add_building = CA_ELEV_ovin_L1b
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_ELEV_ovin_L3a } }
+							ROOT = { remove_building = CA_ELEV_ovin_L3a }
+							add_building = CA_ELEV_ovin_L3a
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_ELEV_ovin_L2a } }
+							ROOT = { remove_building = CA_ELEV_ovin_L2a }
+							add_building = CA_ELEV_ovin_L2a
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_ELEV_ovin_L1a } }
+							ROOT = { remove_building = CA_ELEV_ovin_L1a }
+							add_building = CA_ELEV_ovin_L1a
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_verger_L3 } }
+							ROOT = { remove_building = CA_AGRI_verger_L3 }
+							add_building = CA_AGRI_verger_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_verger_L2 } }
+							ROOT = { remove_building = CA_AGRI_verger_L2 }
+							add_building = CA_AGRI_verger_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_verger_L1 } }
+							ROOT = { remove_building = CA_AGRI_verger_L1 }
+							add_building = CA_AGRI_verger_L1
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_cereale_L3 } }
+							ROOT = { remove_building = CA_AGRI_cereale_L3 }
+							add_building = CA_AGRI_cereale_L3
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_cereale_L2 } }
+							ROOT = { remove_building = CA_AGRI_cereale_L2 }
+							add_building = CA_AGRI_cereale_L2
+						}
+						if = {
+							limit = { ROOT = { has_building = CA_AGRI_cereale_L1 } }
+							ROOT = { remove_building = CA_AGRI_cereale_L1 }
+							add_building = CA_AGRI_cereale_L1
+						}
+					}
+				}
+			}
+			# Change the specialization building
+			remove_building = FEODAL_prod
+			add_building = FEODAL_mil
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	set_spe_prod_from_mil = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = owned
+		
+		from_potential = {
+			is_ruler = yes
+		}
+		
+		potential = {
+			FROM = { ai = no }
+			holder_scope = { character = FROM }
+			is_feudal = yes
+			has_building = FEODAL_mil
+		}
+		allow = {
+			FROM = { wealth = 100 }
+		}
+		effect = {
+			FROM = { wealth = -100 }
+			remove_building = FEODAL_mil
+			add_building = FEODAL_prod
+			# Sell the weapon production buildings
+			custom_tooltip = { text = TOOLTIPL3T301B }
+			hidden_tooltip = {
+				if = {
+					limit = { has_building = CA_armurerie_L3}
+					random_list = {
+						20 = { owner = { wealth = 40 } }
+						60 = { owner = { wealth = 50 } }
+						20 = { owner = { wealth = 60 } }
+					}
+					remove_building = CA_armurerie_L3
+				}
+				if = {
+					limit = { has_building = CA_armurerie_L2}
+					random_list = {
+						20 = { owner = { wealth = 30 } }
+						60 = { owner = { wealth = 38 } }
+						20 = { owner = { wealth = 45 } }
+					}
+					remove_building = CA_armurerie_L2
+				}
+				if = {
+					limit = { has_building = CA_armurerie_L1}
+					random_list = {
+						20 = { owner = { wealth = 20 } }
+						60 = { owner = { wealth = 25 } }
+						20 = { owner = { wealth = 30 } }
+					}
+					remove_building = CA_armurerie_L1
+				}
+				# Remove weapons if there is no more producer
+				location = {
+					if = {
+						limit = {						 
+							has_province_modifier = minerai4_armes
+							NOT = {
+								any_province_holding = {
+									is_feudal = yes
+									has_building = CA_armurerie_L2
+								}
+							}
+						}
+						remove_province_modifier = minerai4_armes
+					}					
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
