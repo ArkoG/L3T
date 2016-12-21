@@ -130,10 +130,7 @@ narrative_event = {
 				independent = yes
 			}
 		}
-		random_demesne_title = {
-			limit = {
-				has_title_flag = castle_to_specialize
-			}
+		capital_holding = {
 			add_building = FEODAL_adm
 			clr_title_flag = castle_to_specialize
 		}
