@@ -349,7 +349,7 @@ castle = {
 	ca_barracks_3 = {
 		desc = ca_barracks_1_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		prerequisites = { ca_wall_2 }
+		prerequisites = { ca_wall_2 FEODAL_mil }
 		upgrades_from = ca_barracks_2
 		gold_cost = 200
 		build_time = 730
