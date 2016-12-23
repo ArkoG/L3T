@@ -51,23 +51,62 @@ settlement_decisions = {
 			FROM = { wealth = -100 }
 			if = {
 				limit = { has_building = FEODAL_mil }
-				remove_building = FEODAL_mil
-				
-				# Convert armurerie to outilleur
-				if = {
-					limit = { has_building = CA_armurerie_L3}
-					remove_building = CA_armurerie_L3
-					add_building = CA_outilleur_L3
-				}
-				if = {
-					limit = { has_building = CA_armurerie_L2}
-					remove_building = CA_armurerie_L2
-					add_building = CA_outilleur_L2
-				}
-				if = {
-					limit = { has_building = CA_armurerie_L1}
-					remove_building = CA_armurerie_L1
-					add_building = CA_outilleur_L1
+				custom_tooltip = { text = TOOLTIPfromMilToAdm }
+				hidden_tooltip = {
+					# Convert armurerie to outilleur
+					if = {
+						limit = { has_building = CA_armurerie_L3}
+						remove_building = CA_armurerie_L3
+						add_building = CA_outilleur_L3
+					}
+					if = {
+						limit = { has_building = CA_armurerie_L2}
+						remove_building = CA_armurerie_L2
+						add_building = CA_outilleur_L2
+					}
+					if = {
+						limit = { has_building = CA_armurerie_L1}
+						remove_building = CA_armurerie_L1
+						add_building = CA_outilleur_L1
+					}
+					# Sell high level barracks
+					if = {
+						limit = { has_building = ca_barracks_3}
+						random_list = {
+							20 = { owner = { wealth = 80 } }
+							60 = { owner = { wealth = 100 } }
+							20 = { owner = { wealth = 120 } }
+						}
+						remove_building = ca_barracks_3
+					}
+					if = {
+						limit = { has_building = ca_barracks_4}
+						random_list = {
+							20 = { owner = { wealth = 120 } }
+							60 = { owner = { wealth = 150 } }
+							20 = { owner = { wealth = 180 } }
+						}
+						remove_building = ca_barracks_4
+					}
+					if = {
+						limit = { has_building = ca_barracks_5}
+						random_list = {
+							20 = { owner = { wealth = 160 } }
+							60 = { owner = { wealth = 200 } }
+							20 = { owner = { wealth = 240 } }
+						}
+						remove_building = ca_barracks_5
+					}
+					if = {
+						limit = { has_building = ca_barracks_6}
+						random_list = {
+							20 = { owner = { wealth = 200 } }
+							60 = { owner = { wealth = 250 } }
+							20 = { owner = { wealth = 300 } }
+						}
+						remove_building = ca_barracks_6
+					}
+					remove_building = FEODAL_mil
 				}
 				# Remove weapons if there is no more producer
 				location = {
@@ -87,7 +126,6 @@ settlement_decisions = {
 			}
 			if = {
 				limit = { has_building = FEODAL_prod }
-				remove_building = FEODAL_prod
 				# Move the production buildings in the other settlement
 				custom_tooltip = { text = TOOLTIPdelocalize }
 				hidden_tooltip = {
@@ -361,6 +399,7 @@ settlement_decisions = {
 						}
 					}
 				}
+				remove_building = FEODAL_prod
 			}
 			
 			# In both cases, add FEODAL_adm spe
@@ -855,10 +894,8 @@ settlement_decisions = {
 		}
 		effect = {
 			FROM = { wealth = -100 }
-			remove_building = FEODAL_mil
-			add_building = FEODAL_prod
-			# Sell the weapon production buildings
-			custom_tooltip = { text = TOOLTIPL3T301B }
+			# Sell the weapon production buildings and high level barracks
+			custom_tooltip = { text = TOOLTIPfromMilToProd }
 			hidden_tooltip = {
 				if = {
 					limit = { has_building = CA_armurerie_L3}
@@ -887,6 +924,42 @@ settlement_decisions = {
 					}
 					remove_building = CA_armurerie_L1
 				}
+				if = {
+					limit = { has_building = ca_barracks_3}
+					random_list = {
+						20 = { owner = { wealth = 80 } }
+						60 = { owner = { wealth = 100 } }
+						20 = { owner = { wealth = 120 } }
+					}
+					remove_building = ca_barracks_3
+				}
+				if = {
+					limit = { has_building = ca_barracks_4}
+					random_list = {
+						20 = { owner = { wealth = 120 } }
+						60 = { owner = { wealth = 150 } }
+						20 = { owner = { wealth = 180 } }
+					}
+					remove_building = ca_barracks_4
+				}
+				if = {
+					limit = { has_building = ca_barracks_5}
+					random_list = {
+						20 = { owner = { wealth = 160 } }
+						60 = { owner = { wealth = 200 } }
+						20 = { owner = { wealth = 240 } }
+					}
+					remove_building = ca_barracks_5
+				}
+				if = {
+					limit = { has_building = ca_barracks_6}
+					random_list = {
+						20 = { owner = { wealth = 200 } }
+						60 = { owner = { wealth = 250 } }
+						20 = { owner = { wealth = 300 } }
+					}
+					remove_building = ca_barracks_6
+				}
 				# Remove weapons if there is no more producer
 				location = {
 					if = {
@@ -903,6 +976,8 @@ settlement_decisions = {
 					}					
 				}
 			}
+			remove_building = FEODAL_mil
+			add_building = FEODAL_prod
 		}
 		revoke_allowed = {
 			always = no
