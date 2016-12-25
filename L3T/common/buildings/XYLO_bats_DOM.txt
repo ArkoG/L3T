@@ -12,6 +12,7 @@ castle = {
 		
 		archers = 20
 		
+		add_number_to_name = no			
 		ai_creation_factor = 80
 		extra_tech_building_start = 100.0
 	}
@@ -19,12 +20,15 @@ castle = {
 	desc = "CA_chasse_L2_desc"
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = CA_chasse_L1
-		gold_cost = 160.0
+		gold_cost = 120.0
 		build_time = 200
 		
 		light_infantry = 10
 		archers = 10
+		tax_income = -0.1
+		liege_prestige = 0.25
 		
+		add_number_to_name = no			
 		ai_creation_factor = 70
 		extra_tech_building_start = 100.0
 	}
@@ -32,12 +36,15 @@ castle = {
 	desc = "CA_chasse_L3_desc"
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = CA_chasse_L2
-		gold_cost = 250.0
+		gold_cost = 180.0
 		build_time = 350
 		
 		light_infantry = 15
 		archers = 10
+		tax_income = -0.2
+		liege_prestige = 0.25
 		
+		add_number_to_name = no			
 		ai_creation_factor = 70
 		extra_tech_building_start = 100.0
 	}
@@ -57,6 +64,7 @@ temple = {
 		tax_income = 0.1
 		disease_defence = 0.05
 		
+		add_number_to_name = no			
 		ai_creation_factor = 80
 		extra_tech_building_start = 100.0
 	}
@@ -64,12 +72,13 @@ temple = {
 	desc = "TP_herboriste_L1_desc"
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = TP_herboriste_L1
-		gold_cost = 150.0
+		gold_cost = 120.0
 		build_time = 250
 		
 		tax_income = 0.1
 		disease_defence = 0.10
 		
+		add_number_to_name = no			
 		ai_creation_factor = 70
 		extra_tech_building_start = 100.0
 	}
@@ -81,8 +90,9 @@ temple = {
 		gold_cost = 120.0
 		build_time = 250
 		
-		liege_piety = 0.05
+		liege_piety = 0.25
 		
+		add_number_to_name = no			
 		ai_creation_factor = 75
 		extra_tech_building_start = 100.0
 	}

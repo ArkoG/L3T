@@ -1,0 +1,63 @@
+decisions = {
+	prospect = {
+	
+		is_high_prio = yes
+		
+		potential = {
+			any_demesne_province = {
+				has_province_flag = alerte_mine_1_recue
+				NOT = { has_province_flag = prospection }
+			}
+		}
+		allow = {
+			wealth = 100
+		}
+		effect = {
+			wealth = -50
+			custom_tooltip = { text = prospectTooltip }
+			hidden_tooltip = {
+				random_demesne_province = {
+					limit = {
+						has_province_flag = alerte_mine_1_recue
+						NOT = { has_province_flag = prospection }
+					}
+					set_province_flag = prospection
+					province_event = { id = ECO.14030 days = 30 }
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 2
+				any_demesne_province = {
+					has_province_flag = alerte_mine_2_recue
+					NOT = { has_province_flag = prospection }
+				}
+			}
+			modifier = {
+				factor =  2
+				stewardship = 10
+			}
+			modifier = {
+				factor =  2
+				trait = diligent
+			}
+			modifier = {
+				factor =  2
+				wealth = 150
+			}
+			modifier = {
+				factor =  0.5
+				trait = slothful
+			}
+			modifier = {
+				factor =  0.5
+				NOT = { wealth = 100 }
+			}
+		}
+	}
+}

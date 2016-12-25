@@ -4,29 +4,24 @@
 
 CHANGELOG
 
-RELEASE BETA 0.92 (?? ??? 2016)
+RELEASE BETA 0.92 (20th november 2016) 
+version name : BALROG1
 
 MAJOR :
 -2.6.2 update
 -complete translation
-- limit the iron ore stock
-	-> attribute randomly an iron ore stock when openning a mine
-	-> modify gold cost and tax income for the iron mines
-	-> modify the mine immersion effects
-	-> display alerts when the iron ore stock is low
-	-> add a tax malus when the iron ore stock is null
-	-> disable the effects for the iron production buildings and dependant industries (metal, tools and weapons) in case of no supply
-	-> limit the iron mines to non desert provinces
-	-> add one decision to prospect and so increase the iron ore stock
+-limit the iron ore stockpile
+-modifications, improvements, new events, balancing of iron related stuff
+-addition of a decision for prospecting iron ore
 
 VARIOUS and MINOR :
 -separate salt from other other ores
--remove language choice event at the game start
+-optimization of initialization events (specialisations, modifiers)
 -time reduction before the demesne specialization
--[Optimization] specialization of the double cities (several cities in a province) from the start instead to use MTTH
--[Optimization] distribuion of the terrestrial, coastal and river modifiers from the start instead to use MTTH
--usage of the flag given by the SWMH mod
--rename the route buildings (prefix them by Infrastrucutre)
+-various graphic modifications (icons, event pictures...)
+-prosperity/depopulation major modifiers are now classed as "normal"
+-trade related modifiers are now classed as "major"
+
 
 RELEASE BETA 0.91 (28th march 2016)
 

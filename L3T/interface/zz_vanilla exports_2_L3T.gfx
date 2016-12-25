@@ -1,13 +1,6 @@
 #####rewrites some vanilla .gfx entries
 
 spriteTypes = {
-### from province.gfx
-	spriteType = {
-		name = "GFX_modifier_icons"
-		texturefile = "gfx\\interface\\modifier_icons_arko.tga"
-		noOfFrames = 180
-		loadType = "INGAME"
-	}
 
 ### from buildview.gfx
 	spriteType = {
@@ -15,4 +8,27 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\buildview_level.dds"
 		noOfFrames = 12
 	}
+
+### from frontend.gfx
+	spriteType = {
+		name = "GFX_dlc_alert_frame"
+		texturefile = "gfx\\interface\\dlc_alert_frame_L3T.dds" #alternate with L3T version name
+		allwaystransparent = yes
+	}
+	
+### from province.gfx
+	spriteType = {
+		name = "GFX_modifier_icons"
+		texturefile = "gfx\\interface\\modifier_icons_arko.tga"
+		noOfFrames = 180
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_major_modifiers_strip"
+		texturefile = "gfx\\interface\\major_modifiers_strip_L3T.dds"
+		noOfFrames = 8
+	}
+
+
+	
 }

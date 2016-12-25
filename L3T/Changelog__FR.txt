@@ -4,28 +4,39 @@
 
 NOTES DE CHANGEMENT
 
-RELEASE BETA 0.92 (?? ??? 2016)
+DEV BETA 0.92 (-- ------ ----)
+version name : BALROG2
+
+MAJEUR :
+-
+
+MINEUR et DIVERS :
+-supprime la numérotation des bâtiments forestiers (chasse, herboriste)
+-ajustements et équilibrage des bâtiments forestiers (la loge de chasse a désormais un coût de fonctionnement mais donne du prestige)
+-
+-
+-
+-
+
+
+RELEASE BETA 0.92 (20 novembre 2016) 
+version name : BALROG1
 
 MAJEUR :
 -mise à jour pour la version 2.6.2 du jeu
 -limitation du stock de minerai de fer
-	-> attribution aléatoire d'un stock de minerai à l'ouverture de la mine de fer
-	-> modification des coûts de constructions et des revenus des mines de fer
-	-> modification des effets d'immersion des mines
-	-> affichage des alertes quand le stock de minerai est faible
-	-> ajout d'un malus de taxe quand le stock de minerai est épuisé
-	-> désactivation des effets des bâtiments de production de fer et des industries dépendantes (métal, outils et armes) en cas de défaut d'approvisionement
-	-> limitation des mines de fer aux provinces qui ne sont pas des désert
-	-> ajout d'une décision pour prospecter et donc augmenter le stock de minerai
+-modifications, améliorations, nouveaux events, équilibrages sur la filière du fer
+-ajout d'une décision de prospection du fer
 
 MINEUR et DIVERS :
 -séparation du sel des autres minerais
--retrait de l'event de choix de langue en début de partie
+-traduction complète du mod en anglais
+-optimisation des events d'intialisation (spécialisation, modificateurs)
 -réduction du temps avant la spécialisation des domaines
--[Optimisation] spécialisation des doubles cités (plusieurs cités dans une province) dès le de début et non plus par MTTH
--[Optimisation] distribution des modificateurs de provinces terrestres, cotières et fluviale dès le de début et non plus par MTTH
--utilisation du flag donné directement car le mod SWMH
--renommage des bâtiments des routes (désormais préfixées par COMMERCE)
+-diverses modifications graphiques (icônes, nouvelles images pour les évènements...)
+-le modificateur majeur de prospérité/dépopulation est désormais un modificateur de province simple
+-les modificateurs relatifs aux routes de commerces sont désormais de type "majeur"
+
 
 RELEASE BETA 0.91 (28 mars 2016)
 
