@@ -40,7 +40,7 @@ character_event = {
 						has_province_modifier = minerai4_outils
 						NOT = {
 							any_province_holding = {
-								is_feudal = yes
+								holding_type = castle 
 								has_building = CA_outilleur_L2
 							}
 						}
@@ -95,7 +95,7 @@ character_event = {
 						has_province_modifier = minerai4_outils
 						NOT = {
 							any_province_holding = {
-								is_feudal = yes
+								holding_type = castle 
 								has_building = CA_outilleur_L2
 							}
 						}

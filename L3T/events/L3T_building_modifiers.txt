@@ -11,7 +11,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_chap_seign
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle } } }
@@ -32,7 +32,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_chap_seign
 		}
 	}
@@ -91,7 +91,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_chap_seign_2
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle2 } } }
@@ -112,7 +112,7 @@ character_event = {
 	
 	trigger = {	
 		FROM = {
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_chap_seign_2
 		}
 	}
@@ -171,7 +171,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_chambre_2
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chambre } } }
@@ -192,7 +192,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_chambre_2
 		}
 	}
@@ -251,7 +251,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_archives_1
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = archives } } }
@@ -272,7 +272,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_archives_1
 		}
 	}
@@ -331,7 +331,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_cour_justice
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = cour_justice } } }
@@ -352,7 +352,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_cour_justice
 		}
 	}
@@ -411,7 +411,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_chancellerie
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chancellerie } } }
@@ -432,7 +432,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			is_feudal = yes
+			holding_type = castle 
 			has_building = CA_chancellerie
 		}
 	}
@@ -577,7 +577,7 @@ character_event = {
 	only_rulers  = yes
 	
 	trigger = {
-		capital_holding = { is_feudal = yes }
+		capital_holding = { holding_type = castle  }
 		OR = {
 			AND = {
 				capital_holding = { has_building = CA_chap_seign }
@@ -676,7 +676,7 @@ province_event = {
 
 	trigger = {
 		capital_holding = {
-			is_feudal = yes
+			holding_type = castle 
 			has_building = FEODAL_adm
 		}
 	}
