@@ -38,7 +38,17 @@ narrative_event = {
 		}
 	}	
 		
-	mean_time_to_happen = { months = 9 }
+	mean_time_to_happen = {
+		months = 9
+		modifier = {
+			factor = 0.01
+			OR = {
+				had_global_flag = { flag = SWMH days = 360 }			
+				had_global_flag = { flag = running_VANILLA days = 360 }
+				had_global_flag = { flag = running_LCDA days = 360 }
+			}
+		}
+	}
 
 	immediate = {
 		random_demesne_title = {
@@ -178,6 +188,14 @@ narrative_event = {
 	mean_time_to_happen = {
 		months = 9
 		modifier = { factor = 0.1	NOT = { tier = baron }	}
+		modifier = {
+			factor = 0.01
+			OR = {
+				had_global_flag = { flag = SWMH days = 720 }			
+				had_global_flag = { flag = running_VANILLA days = 720 }
+				had_global_flag = { flag = running_LCDA days = 720 }
+			}
+		}
 	}
 
 	immediate = {
@@ -587,7 +605,17 @@ narrative_event = {
 		}
 	}	
 
-	mean_time_to_happen = { months = 9 }
+	mean_time_to_happen = {
+		months = 9 
+		modifier = {
+			factor = 0.01
+			OR = {
+				had_global_flag = { flag = SWMH days = 360 }			
+				had_global_flag = { flag = running_VANILLA days = 360 }
+				had_global_flag = { flag = running_LCDA days = 360 }
+			}
+		}
+	}
 	
 	immediate = {
 		random_demesne_title = {
