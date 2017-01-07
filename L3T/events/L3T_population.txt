@@ -118,7 +118,7 @@ trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
-			is_feudal = yes	
+			holding_type = castle 
 			NOT = {	has_building = ca_town_1	}
 			num_of_buildings = 10
 		}
@@ -131,7 +131,7 @@ option = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				is_feudal = yes	
+				holding_type = castle 	
 				NOT = {	has_building = ca_town_1	}
 				num_of_buildings = 10
 			}
@@ -155,7 +155,7 @@ trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
-			is_feudal = yes	
+			holding_type = castle 	
 			has_building = ca_town_1
 			NOT = { has_building = ca_town_2 }
 			num_of_buildings = 15
@@ -169,7 +169,7 @@ option = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				is_feudal = yes
+				holding_type = castle 
 				num_of_buildings = 15
 				has_building = ca_town_1
 				NOT = { has_building = ca_town_2 }
@@ -194,7 +194,7 @@ trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
-			is_feudal = yes	
+			holding_type = castle 	
 			has_building = ca_town_2
 			NOT = { has_building = ca_town_3 }
 			num_of_buildings = 20
@@ -208,7 +208,7 @@ option = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				is_feudal = yes
+				holding_type = castle 
 				num_of_buildings = 20
 				has_building = ca_town_2
 				NOT = { has_building = ca_town_3 }
@@ -233,7 +233,7 @@ trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
-			is_feudal = yes	
+			holding_type = castle 	
 			has_building = ca_town_3
 			NOT = { has_building = ca_town_4 }
 			num_of_buildings = 25
@@ -247,7 +247,7 @@ option = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				is_feudal = yes
+				holding_type = castle 
 				num_of_buildings = 25
 				has_building = ca_town_3
 				NOT = { has_building = ca_town_4 }
@@ -275,7 +275,7 @@ trigger = {
 		
 		any_demesne_title = {	
 			tier = baron	
-			is_feudal = yes	
+			holding_type = castle 	
 			has_building = ca_town_4
 			NOT = { has_building = ca_town_5 }
 			num_of_buildings = 35
@@ -289,7 +289,7 @@ option = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				is_feudal = yes
+				holding_type = castle 
 				num_of_buildings = 35
 				has_building = ca_town_4
 				NOT = { has_building = ca_town_5 }
@@ -315,8 +315,7 @@ character_event = {
 trigger = {
 		war = no
 		any_demesne_title = {	
-			tier = baron	
-			is_republic = yes
+			tier = baron
 			holding_type = city		
 			NOT = {	has_building = CT_town_1	}
 			num_of_buildings = 10
@@ -329,8 +328,7 @@ option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
-				tier = baron	
-				is_republic = yes
+				tier = baron
 				holding_type = city	
 				NOT = {	has_building = CT_town_1	}
 				num_of_buildings = 10
@@ -354,8 +352,7 @@ character_event = {
 trigger = {
 		war = no
 		any_demesne_title = {	
-			tier = baron	
-			is_republic = yes
+			tier = baron
 			holding_type = city	
 			has_building = CT_town_1
 			NOT = { has_building = CT_town_2 }
@@ -369,8 +366,7 @@ option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
-				tier = baron	
-				is_republic = yes
+				tier = baron
 				holding_type = city	
 				num_of_buildings = 15
 				has_building = CT_town_1
@@ -395,8 +391,7 @@ character_event = {
 trigger = {
 		war = no
 		any_demesne_title = {	
-			tier = baron	
-			is_republic = yes
+			tier = baron
 			holding_type = city		
 			has_building = CT_town_2
 			NOT = { has_building = CT_town_3 }
@@ -410,8 +405,7 @@ option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
-				tier = baron	
-				is_republic = yes
+				tier = baron
 				holding_type = city	
 				num_of_buildings = 20
 				has_building = CT_town_2
@@ -436,8 +430,7 @@ character_event = {
 trigger = {
 		war = no
 		any_demesne_title = {	
-			tier = baron	
-			is_republic = yes
+			tier = baron
 			holding_type = city			
 			has_building = CT_town_3
 			NOT = { has_building = CT_town_4 }
@@ -451,8 +444,7 @@ option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
-				tier = baron	
-				is_republic = yes
+				tier = baron
 				holding_type = city		
 				num_of_buildings = 25
 				has_building = CT_town_3
@@ -480,8 +472,7 @@ trigger = {
 		primary_title = { higher_tier_than = BARON }
 		
 		any_demesne_title = {	
-			tier = baron	
-			is_republic = yes
+			tier = baron
 			holding_type = city		
 			has_building = CT_town_4
 			NOT = { has_building = CT_town_5 }
@@ -495,8 +486,7 @@ option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
-				tier = baron	
-				is_republic = yes
+				tier = baron
 				holding_type = city	
 				num_of_buildings = 30
 				has_building = CT_town_4
@@ -523,7 +513,7 @@ trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
-			is_theocracy = yes	
+			holding_type = temple	
 			NOT = {	has_building = tp_town_1	}
 			num_of_buildings = 12
 		}
@@ -536,7 +526,7 @@ option = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				is_theocracy = yes	
+				holding_type = temple	
 				NOT = {	has_building = tp_town_1	}
 				num_of_buildings = 12
 			}
@@ -560,7 +550,7 @@ trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
-			is_theocracy = yes	
+			holding_type = temple	
 			has_building = tp_town_1
 			NOT = { has_building = tp_town_2 }
 			num_of_buildings = 17
@@ -574,7 +564,7 @@ option = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				is_theocracy = yes
+				holding_type = temple
 				num_of_buildings = 17
 				has_building = tp_town_1
 				NOT = {	has_building = tp_town_2	}
@@ -599,7 +589,7 @@ trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
-			is_theocracy = yes	
+			holding_type = temple	
 			has_building = tp_town_2
 			NOT = { has_building = tp_town_3 }
 			num_of_buildings = 22
@@ -613,7 +603,7 @@ option = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				is_theocracy = yes
+				holding_type = temple
 				num_of_buildings = 22
 				has_building = tp_town_2
 				NOT = {	has_building = tp_town_3	}
@@ -638,7 +628,7 @@ trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
-			is_theocracy = yes	
+			holding_type = temple	
 			has_building = tp_town_3
 			NOT = { has_building = tp_town_4 }
 			num_of_buildings = 26
@@ -652,7 +642,7 @@ option = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				is_theocracy = yes
+				holding_type = temple
 				num_of_buildings = 26
 				has_building = tp_town_3
 				NOT = {	has_building = tp_town_4	}
@@ -680,7 +670,7 @@ trigger = {
 		
 		any_demesne_title = {	
 			tier = baron	
-			is_theocracy = yes	
+			holding_type = temple	
 			has_building = tp_town_4
 			NOT = { has_building = tp_town_5 }
 			num_of_buildings = 30
@@ -694,7 +684,7 @@ option = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				is_theocracy = yes
+				holding_type = temple
 				num_of_buildings = 30
 				has_building = tp_town_4
 				NOT = {	has_building = tp_town_5	}
