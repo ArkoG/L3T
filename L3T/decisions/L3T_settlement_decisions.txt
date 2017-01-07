@@ -25,26 +25,31 @@ settlement_decisions = {
 			is_feudal = yes
 			# Is the capital (is_capital = yes is equivalent?)
 			FROM = { capital_holding = { title = ROOT } }
-			OR = {
-				has_building = FEODAL_mil
-				AND = {
-					has_building = FEODAL_prod
-					# There is another settlement with FEODAL_prod in the province
-					location = {
-						any_province_holding = {
-							NOT = { title = ROOT }
-							is_feudal = yes
-							has_building = FEODAL_prod
-						}
-					}
-				}
-			}
 		}
 		allow = {
 			NOT = { has_holding_modifier = recent_construction }
 			FROM = {
 				wealth = 100
 				higher_tier_than = COUNT # Duke, King or Emperor
+			}
+			OR = {
+				has_building = FEODAL_mil
+				AND = {
+					has_building = FEODAL_prod
+					# There is another settlement with FEODAL_prod in the province
+					custom_tooltip = {
+						text = TOOLTIPanotherPROD
+						hidden_tooltip = {
+							location = {
+								any_province_holding = {
+									NOT = { title = ROOT }
+									is_feudal = yes
+									has_building = FEODAL_prod
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		effect = {
@@ -573,18 +578,23 @@ settlement_decisions = {
 			holder_scope = { character = FROM }
 			is_feudal = yes
 			has_building = FEODAL_prod
-			# There is another settlement with FEODAL_prod in the province
-			location = {
-				any_province_holding = {
-					NOT = { title = ROOT }
-					is_feudal = yes
-					has_building = FEODAL_prod
-				}
-			}
 		}
 		allow = {
 			NOT = { has_holding_modifier = recent_construction }
 			FROM = { wealth = 100 }
+			# There is another settlement with FEODAL_prod in the province
+			custom_tooltip = {
+				text = TOOLTIPanotherPROD
+				hidden_tooltip = {
+					location = {
+						any_province_holding = {
+							NOT = { title = ROOT }
+							is_feudal = yes
+							has_building = FEODAL_prod
+						}
+					}
+				}
+			}
 		}
 		effect = {
 			FROM = { wealth = -100 }
