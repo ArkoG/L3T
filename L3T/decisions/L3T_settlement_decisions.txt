@@ -25,6 +25,11 @@ settlement_decisions = {
 			holding_type = castle 
 			# Is the capital (is_capital = yes is equivalent?)
 			FROM = { capital_holding = { title = ROOT } }
+			# Has a specialization but not the FEODAL_adm
+			OR = {
+				has_building = FEODAL_mil
+				has_building = FEODAL_prod
+			}
 		}
 		allow = {
 			NOT = { has_holding_modifier = recent_construction }
