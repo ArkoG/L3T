@@ -453,8 +453,6 @@ settlement_decisions = {
 		potential = {
 			holder_scope = { character = FROM }
 			holding_type = castle 
-			# Is not the capital (move this condition to a IA factor?)
-			NOT = { FROM = { capital_holding = { title = ROOT } } }
 			has_building = FEODAL_adm
 		}
 		allow = {
@@ -561,6 +559,11 @@ settlement_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			
+			modifier = { # IA removes FEODAL_adm only if it is not in the capital
+				factor = 0
+				FROM = { capital_holding = { title = ROOT } }
+			}
 		}
 	}
 	
