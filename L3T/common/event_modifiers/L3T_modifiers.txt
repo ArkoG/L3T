@@ -47,22 +47,23 @@
 # 69 - Bed					- 70
 #end of vanilla 2.6.x
 
-  # 71>>78 - not used -reserved for future vanilla additions
+  # 71>>90 - not used -reserved for future vanilla additions
 
-# 79 - ###totoro mouchard
-# 80 - depopulation vanilla 1
-# 81 - depopulation vanilla 2
-# 82 - depopulation vanilla 3
-# 83 - prosperite vanilla 1
-# 84 - prosperite vanilla 2
-# 85 - prosperite vanilla 3
-# 86 - coffre vert positif (not used)
-# 87 - coffre rouge négatif (not used)
-# 88 - tradition chrétienne
-# 89 - tradition musulmane
-# 90 - tradition autre (pagan)
-  # 91 - not used
-  # 92 - not used
+# 79 - 
+# 80 - 
+# 81 - 
+# 82 - 
+# 83 - 
+# 84 - 
+# 85 - 
+# 86 - 
+# 87 - 
+# 88 - 
+# 89 - 
+# 90 - 
+
+# 91 - coffre vert positif (not used)
+# 92 - coffre rouge négatif (not used)
 # 93 - AGRI épi bleu
 # 94 - AGRI épi grisé
 # 95 - AGRI épi doré
@@ -152,6 +153,31 @@
 #178 - rivière asséchée
   #179 - not used
   #180 - not used
+
+
+#188 - tradition chrétienne
+#189 - tradition musulmane
+#190 - tradition autre (voir si tuile)
+#191 - déclin tradition chrétienne
+#192 - déclin tradition musulmane
+#193 - déclin tradition autre (voir si tuile)
+#194 - depopulation vanilla 1
+#195 - depopulation vanilla 2
+#196 - depopulation vanilla 3
+#197 - prosperite vanilla 1
+#198 - prosperite vanilla 2
+#199 - prosperite vanilla 3 
+#200 - Totoro sama
+#201 - spe FEODAL 1 -village féodal
+#202 - spe FEODAL 2 -forteresse
+#203 - spe FEODAL 3 -cité féodale
+#204 - spe TEMPLE 1 -monastère
+#205 - spe TEMPLE 2 -cité épiscopale
+#206 - spe CITE 1 -cité production
+#207 - spe CITE 2 -cité commerce
+
+# 208 - 220
+
 
 ###ECO+
 agriculture1			= {icon = 95 local_revolt_risk = -0.01} 
@@ -252,7 +278,7 @@ a_deja_recu_fresque = {icon = 155}  # hidden
 a_offert_vitrail = {icon = 155}  # hidden
 a_deja_recu_vitrail = {icon = 155}  # hidden
 
-totoro = {icon = 79} #mouchard :p
+totoro = {icon = 200} #mouchard :p
 
 chantier_stop = {
 	local_build_time_modifier = 1.00 #+100%
@@ -302,12 +328,12 @@ loge_modifier = {
 ##########
 chantier_cathedrale = { icon = 170 }
 
-trad_chretienne = { icon = 88 } #flag
-trad_musulmane = { icon = 89 } #flag
-trad_autre = { icon = 90 } #flag
+trad_chretienne = { icon = 188 } #flag
+trad_musulmane = { icon = 189 } #flag
+trad_autre = { icon = 190 } #flag
 
-minorite_chretienne = { icon = 88 }
-minorite_musulmane = { icon = 89 }
+minorite_chretienne = { icon = 191 }
+minorite_musulmane = { icon = 192 }
 
 ##########
 boost_opinion_bourgeois	= {	town_opinion	= 25	icon = 173	}
