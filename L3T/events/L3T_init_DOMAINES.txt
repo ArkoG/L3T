@@ -90,6 +90,7 @@ narrative_event = {
 				has_title_flag = castle_to_specialize
 			}
 			add_building = FEODAL_mil
+			add_holding_modifier = { name = feodal_mil duration = -1 }	
 			clr_title_flag = castle_to_specialize
 		}
 	}
@@ -117,6 +118,7 @@ narrative_event = {
 				has_title_flag = castle_to_specialize
 			}
 			add_building = FEODAL_prod
+			add_holding_modifier = { name = feodal_prod duration = -1 }
 			clr_title_flag = castle_to_specialize
 		}
 	}
@@ -142,6 +144,7 @@ narrative_event = {
 		}
 		capital_holding = {
 			add_building = FEODAL_adm
+			add_holding_modifier = { name = feodal_adm duration = -1 }
 			clr_title_flag = castle_to_specialize
 		}
 	}
@@ -239,6 +242,7 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_INDUSTRIELLE
+			add_holding_modifier = { name = voc_indus duration = -1 }
 			clr_title_flag = city_to_specialize
 		}
 	}
@@ -308,6 +312,7 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
+			add_holding_modifier = { name = voc_comm duration = -1 }
 			# La province devient le départ d'une route	si possible
 			location = {
 				if = {
@@ -407,6 +412,7 @@ province_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
+			add_holding_modifier = { name = voc_comm duration = -1 }
 			
 			# La province devient le départ d'une route si elle est distance au moins 3 d'un autre
 			if =  {
@@ -485,6 +491,7 @@ province_event = {
 				}
 				add_building = CITE_L1
 				add_building = VOC_INDUSTRIELLE
+				add_holding_modifier = { name = voc_indus duration = -1 }
 			}
 		}
 	}
@@ -652,6 +659,7 @@ narrative_event = {
 				has_title_flag = temple_to_specialize
 			}
 			add_building = MONASTERE
+			add_holding_modifier = { name = monastere duration = -1 }
 		}
 	}
 	
@@ -667,6 +675,8 @@ narrative_event = {
 				has_title_flag = temple_to_specialize
 			}
 			add_building = CITEEPISCOPALE
+			add_holding_modifier = { name = episcopale duration = -1 }
+			
 		}
 	}
 	
@@ -684,6 +694,7 @@ narrative_event = {
 				has_title_flag = temple_to_specialize
 			}
 			add_building = MONASTERE
+			add_holding_modifier = { name = monastere duration = -1 }
 			add_building = COMMANDERIE
 		}
 	}
