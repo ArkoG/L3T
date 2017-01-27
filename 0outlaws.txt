@@ -20,12 +20,13 @@ OUTLAWS TODO LIST
 		> Duration/time
 		> Build new buildings
 		> Succession
-		> Looting (and other events)
+		> Looting (and other events like an attack during huntig)
 	-> Decreasing
 		> Events
 		> Succession
 	-> If so few power => disapearing
 	-> If so great power => feodal leader/mercenary band
+- Make wounded or killed the bandit in the attack during hunting
 - Change outlaw portrait (interface/portrait_properties but incompatible)
 - Make intervention during summer feast (see Robin Hood in legends_events)
 - Make intervention during great tournament (see Robin Hood in legends_events)
@@ -37,7 +38,7 @@ OUTLAWS TODO LIST
 	-> do events with these jobs
 - Add an ambition to expel outlaws
 	-> events chains
-- Increase prestige of the outlaw expulsion
+- Increase prestige of the outlaw expulsion (20-50 seems reasonnable)
 - Forbid the resource progression when outlaws are in the province (Wait update of the resources)
 - Use Cases Belli dejure_barony_claim to declare war
 
@@ -57,3 +58,32 @@ In some case, if we choose to do something, the failure is impossible.
 	NOT = { owner = { any_demesne_province = { has_province_modifier = bandits_installes }}}
 will be replaced by
 	NOT = { has_province_modifier = bandits_installes }
+	
+SLACK : gitl3tsynchro 9th January 2016
+it would be cool to get a pirate holding made from a tradepost but it is impossible
+maybe it could just be some random trade event like republics usualy get
+ship attack, tavern fight, stolen goods...
+
+For example
+- pirates attacks => loss of ships => less money (instantly + modifier)
+- pirates kidnapping => pay a ransom (edited)
+- pirate raiding => destruction of a building
+
+yes, and maybe a few ones that can affect a bit more durably the T_P
+
+-goods stolen in our warehouse, gold loss
+-a warehouse was burnt, gold loss + neg modifier (trade value or income%)
+pirates raiding can target various things with various results :
+-the TP garrison was attacked, garrison building loses one level
+-burnt ship in harbour +  neg modifier (trade value or income%)
+but also good issues like avoid pirate sabotage (intrigue gain)
+etc.
+
+[About avoid pirate sabotage]
+nothing complex. maybe we could have :
+-if low intrigue, you detect nothing >> sabotage occurs
+-if medium intrigue >> you heard some rumors of a sabotage, giving some chances to avoid it
+-if high intrigue >> you intercept some sabotage plans, giving some better chances to avoid it
+-if you are an intrigue God >> you intercept the authors beforehand and hang them publicly (or something less cruel )
+on the fly ideas
+if you hang them it could also discourage furhter pirate actions or provicate something bigger
