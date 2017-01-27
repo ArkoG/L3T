@@ -284,6 +284,8 @@ province_event = {
 		clr_province_flag = highway_robber_band
 		clr_province_flag = tentative_contre_bandits
 		clr_province_flag = echec_contre_les_bandits
+		
+		hidden_tooltip = {	province_event = { id = XYLO.0214 days = 100 }	}
 	}
 }
 
@@ -321,15 +323,13 @@ province_event = {
 	id = XYLO.0214
 	desc = "DESCXYLO.0214"
 	picture = "GFX_evt_bandits"
-		
+	
+	is_triggered_only = yes
+	
 	trigger = {
 		has_province_modifier = bandits_installes
 		NOT = { has_province_flag = chef_bandit }
 		has_empty_holding = yes
-	}
-	
-	mean_time_to_happen = {
-		months = 6
 	}
 
 	immediate = { 
