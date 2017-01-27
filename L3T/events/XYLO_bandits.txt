@@ -481,7 +481,7 @@ character_event = {
 		random_demesne_title = {
 			limit = {
 				tier = baron
-				is_feudal = yes
+				holding_type = castle 
 				NOT = {
 					has_building = REPAIREVOLEUR
 					has_building = FEODAL_adm
@@ -504,7 +504,7 @@ character_event = {
 		random_demesne_title = {
 			limit = {
 				tier = baron
-				is_feudal = yes
+				holding_type = castle 
 				NOT = {
 					has_building = REPAIREVOLEUR
 					has_building = FEODAL_adm
@@ -527,7 +527,7 @@ character_event = {
 		random_demesne_title = {
 			limit = {
 				tier = baron
-				is_feudal = yes
+				holding_type = castle 
 				NOT = {
 					has_building = REPAIREVOLEUR
 					has_building = FEODAL_adm
@@ -550,7 +550,7 @@ character_event = {
 		random_demesne_title = {
 			limit = {
 				tier = baron
-				is_feudal = yes
+				holding_type = castle 
 				NOT = {
 					has_building = REPAIREVOLEUR
 					has_building = FEODAL_adm
@@ -765,7 +765,7 @@ province_event = {
 	trigger = {
 		has_province_flag = chef_bandit	
 		any_province_holding  = {
-			is_feudal = yes
+			holding_type = castle
 			owner = { NOT = { trait = chef_malandrin } }
 			has_building = REPAIREVOLEUR
 		}
@@ -778,7 +778,7 @@ province_event = {
 	immediate = {
 		random_province_holding  = {
 			limit = {
-				is_feudal = yes
+				holding_type = castle 
 				owner = { NOT = { trait = chef_malandrin } }
 				has_building = REPAIREVOLEUR
 			}
@@ -999,7 +999,7 @@ province_event = {
 	trigger = {
 		# There are outlaws in the province
 		any_province_holding  = {
-			is_feudal = yes
+			holding_type = castle 
 			owner = { trait = chef_malandrin }
 		}
 		# The holding has never been looted, or more than 1 year ago
