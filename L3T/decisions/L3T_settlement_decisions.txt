@@ -592,6 +592,7 @@ settlement_decisions = {
 			has_building = FEODAL_prod
 		}
 		allow = {
+			location = { NOT = { religion_group = pagan_group } }
 			NOT = { has_holding_modifier = recent_construction }
 			FROM = { wealth = 100 }
 			# There is another settlement with FEODAL_prod in the province
