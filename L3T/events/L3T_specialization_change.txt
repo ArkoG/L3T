@@ -123,7 +123,7 @@ character_event = {
 				limit = { has_holding_modifier = recent_construction }
 				remove_holding_modifier = recent_construction
 			}
-			add_holding_modifier = { name = recent_construction duration = 365 hidden_yes }
+			add_holding_modifier = { name = recent_construction duration = 365 hidden=yes }
 		}
 	}
 }
