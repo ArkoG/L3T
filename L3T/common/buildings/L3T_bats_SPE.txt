@@ -281,6 +281,7 @@ temple = {
 		local_tax_modifier = 0.25
 		ai_creation_factor = 5	
 		start = { always = no }
+		add_number_to_name = no
 		}
 	REGLE_DE_2 = { 
 		desc = "REGLE_DE_2_desc"	
@@ -291,7 +292,8 @@ temple = {
 		build_time = 8	
 		tech_growth_modifier = 0.1
 		ai_creation_factor = 5	
-		start = { always = no }	
+		start = { always = no }
+		add_number_to_name = no
 		}
 	REGLE_DE_3 = {
 		desc = "REGLE_DE_3_desc"	
@@ -302,6 +304,7 @@ temple = {
 		build_time = 8	
 		ai_creation_factor = 5	
 		start = { always = no }
+		add_number_to_name = no
 		}
 
 	#ORDRE_MONACAL_1 = { desc = "ORDRE_MONACAL_1_desc"	prerequisites = {REGLE_DE_1}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
