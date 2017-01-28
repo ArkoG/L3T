@@ -125,10 +125,10 @@ character_event = {
 	immediate = {
 		FROM = { 
 			if = {
-				limit = { has_holding_modifier = recent_construction }
-				remove_holding_modifier = recent_construction
+				limit = { has_title_flag = recent_construction }
+				clr_title_flag = recent_construction
 			}
-			add_holding_modifier = { name = recent_construction duration = 365 hidden=yes }
+			set_title_flag = recent_construction
 		}
 	}
 }

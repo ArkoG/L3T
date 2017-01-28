@@ -32,7 +32,13 @@ settlement_decisions = {
 			}
 		}
 		allow = {
-			NOT = { has_holding_modifier = recent_construction }
+			custom_tooltip = {
+				text = TOOLTIP_recent_construction
+				OR = {
+					NOT = { has_title_flag = recent_construction }
+					had_title_flag = { flag = recent_construction years = 1 }
+				}
+			}
 			FROM = {
 				wealth = 100
 				higher_tier_than = COUNT # Duke, King or Emperor
@@ -464,7 +470,13 @@ settlement_decisions = {
 			has_building = FEODAL_adm
 		}
 		allow = {
-			NOT = { has_holding_modifier = recent_construction }
+			custom_tooltip = {
+				text = TOOLTIP_recent_construction
+				OR = {
+					NOT = { has_title_flag = recent_construction }
+					had_title_flag = { flag = recent_construction years = 1 }
+				}
+			}
 			FROM = { wealth = 100 }
 		}
 		effect = {
@@ -592,8 +604,14 @@ settlement_decisions = {
 			has_building = FEODAL_prod
 		}
 		allow = {
+			custom_tooltip = {
+				text = TOOLTIP_recent_construction
+				OR = {
+					NOT = { has_title_flag = recent_construction }
+					had_title_flag = { flag = recent_construction years = 1 }
+				}
+			}
 			location = { NOT = { religion_group = pagan_group } }
-			NOT = { has_holding_modifier = recent_construction }
 			FROM = { wealth = 100 }
 			# There is another settlement with FEODAL_prod in the province
 			custom_tooltip = {
@@ -914,7 +932,13 @@ settlement_decisions = {
 			has_building = FEODAL_mil
 		}
 		allow = {
-			NOT = { has_holding_modifier = recent_construction }
+			custom_tooltip = {
+				text = TOOLTIP_recent_construction
+				OR = {
+					NOT = { has_title_flag = recent_construction }
+					had_title_flag = { flag = recent_construction years = 1 }
+				}
+			}
 			FROM = { wealth = 100 }
 		}
 		effect = {
