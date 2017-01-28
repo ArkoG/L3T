@@ -84,9 +84,15 @@ narrative_event = {
 				}
 			}
 		}
-		trigger = { NOT = { religion_group = pagan_group } }
+		trigger = {
+			any_demesne_title = {			
+				location = { NOT = { religion_group = pagan_group } }
+				has_title_flag = castle_to_specialize
+			}
+		}
 		random_demesne_title = {
 			limit = {
+				location = { NOT = { religion_group = pagan_group } }
 				has_title_flag = castle_to_specialize
 			}
 			add_building = FEODAL_mil
@@ -600,11 +606,11 @@ narrative_event = {
 			had_global_flag = { flag = SWMH days = 30 }			
 			had_global_flag = { flag = running_VANILLA days = 30 }
 			had_global_flag = { flag = running_LCDA days = 30 }
-		}
-		NOT = { religion_group = pagan_group }
+		}		
 		any_demesne_title = {
 			tier = baron
 			holding_type = temple
+			location = { NOT = { religion_group = pagan_group } }
 			NOT = {
 				has_building = MONASTERE
 				has_building = CITEEPISCOPALE
@@ -629,6 +635,7 @@ narrative_event = {
 			limit = {
 				tier = baron
 				holding_type = temple
+				location = { NOT = { religion_group = pagan_group } }
 				NOT = {
 					has_building = MONASTERE
 					has_building = CITEEPISCOPALE
@@ -653,9 +660,15 @@ narrative_event = {
 				}
 			}
 		}
-		trigger = { religion_group = christian }
+		trigger = {
+			any_demesne_title = {
+				location = { religion_group = christian }
+				has_title_flag = temple_to_specialize
+			}
+		}
 		random_demesne_title = {
 			limit = {
+				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
 			}
 			add_building = MONASTERE
@@ -669,9 +682,16 @@ narrative_event = {
 			factor = 40
 			modifier = { factor = 100	NOT = { tier = baron }	}
 			modifier = { factor = 0.7	tier = baron }
-		}	
+		}
+		trigger = {
+			any_demesne_title = {
+				location = { NOT = { religion_group = pagan_group } }
+				has_title_flag = temple_to_specialize
+			}
+		}
 		random_demesne_title = {
 			limit = {
+				location = { NOT = { religion_group = pagan_group } }
 				has_title_flag = temple_to_specialize
 			}
 			add_building = CITEEPISCOPALE
@@ -688,9 +708,15 @@ narrative_event = {
 			modifier = { factor = 1.5	martial = 15	}
 			modifier = { factor = 0.5	NOT = { martial = 10 }	}
 		}
-		trigger = { religion = catholic }
+		trigger = {
+			any_demesne_title = {
+				location = { religion = catholic }
+				has_title_flag = temple_to_specialize
+			}
+		}
 		random_demesne_title = {
 			limit = {
+				location = { religion = catholic }
 				has_title_flag = temple_to_specialize
 			}
 			add_building = MONASTERE
