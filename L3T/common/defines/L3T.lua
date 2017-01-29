@@ -33,3 +33,5 @@
 	NDefines.NTechnology.IDEAL_YEAR_LEVEL_8 = 1650
 	NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER = 45 				-- How many courtiers in a court to make it crowded and increase chance for disease.
 	NDefines.NAI.DOW_AGGRESSION_FACTOR = 0.25
+	NDefines.NEconomy.BUILDING_COST_MULT = 0.0						-- Increase to the build cost of all buildings that cost GOLD
+	NDefines.NTechnology.IDEAL_YEAR_LEVEL_0 = 800 					-- the chance to get a progress to this level will increase after this date and decrease before it
