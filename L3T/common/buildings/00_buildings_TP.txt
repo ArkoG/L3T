@@ -14,6 +14,43 @@
 
 # Temple
 temple = {
+
+#new tags
+tp_training_grounds_L1 = { #Porte de guet
+	desc = tp_training_grounds_L1_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	prerequisites = { 
+		CITEEPISCOPALE
+	}
+	gold_cost = 80
+
+	build_time = 130
+	ai_creation_factor = 97
+	fort_level = 0.1
+	tax_income = -0.1
+	light_infantry = 10
+	add_number_to_name = no
+
+	extra_tech_building_start = 3
+}
+
+tp_training_grounds_L2 = { #Porte en pierre
+	desc = tp_training_grounds_L2_desc
+	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	upgrades_from = tp_training_grounds_L1
+	gold_cost = 270
+
+	build_time = 550
+	ai_creation_factor = 96
+	fort_level = 0.3
+	tax_income = -0.1
+	pikemen = 10
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+#vanilla
 	tp_wall_q_1 = {	
 		desc = tp_wall_q_1_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
@@ -360,17 +397,17 @@ temple = {
 	tp_town_1 = {
 		desc = tp_town_1_desc
 		prerequisites = {xxx}
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
 		gold_cost = 100
 		build_time = 365
 		tax_income = 2
 		ai_creation_factor = 98
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 1
 	}
 	tp_town_2 = {
 		desc = tp_town_2_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
 		prerequisites = { tp_wall_1 xxx }
 		upgrades_from = tp_town_1
 		gold_cost = 120
@@ -378,43 +415,43 @@ temple = {
 		tax_income = 2
 		ai_creation_factor = 96
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 1
 	}
 	tp_town_3 = {
 		desc = tp_town_3_desc
 		prerequisites = {tp_wall_2 xxx}
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 1 }
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
 		upgrades_from = tp_town_2
 		gold_cost = 200
 		build_time = 730
 		tax_income = 2
 		ai_creation_factor = 95
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 1
 	}
 	tp_town_4 = {
 		desc = tp_town_4_desc
 		prerequisites = {xxx}
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 3 }
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
 		upgrades_from = tp_town_3
 		gold_cost = 300
 		build_time = 1095
 		tax_income = 2
 		ai_creation_factor = 94
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 1
 	}
 	tp_town_5 = {
 		desc = tp_town_4_desc
 		prerequisites = {xxx}
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 5 }
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
 		upgrades_from = tp_town_4
 		gold_cost = 400
 		build_time = 2190
 		tax_income = 2
 		ai_creation_factor = 93
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 1
 	}
 
 ##utilise en prebuild jusqu au niveau 4	

@@ -15,141 +15,229 @@
 castle = {
 	# Wall quality, gives fortlevel
 	##utilise en prebuild jusqu au niveau 1
-	ca_wall_q_1 = {
-		desc = ca_wall_q_1_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
-		gold_cost = 50
-		build_time = 182
-		fort_level = 0.5
-		ai_creation_factor = 80
-		add_number_to_name = no		
-		extra_tech_building_start = 1.0
-	}
-	ca_wall_q_2 = {
-		desc = ca_wall_q_2_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 1 }
-		upgrades_from = ca_wall_q_1
-		prerequisites = { ca_wall_1 }
-		gold_cost = 50
-		build_time = 182
-		fort_level = 0.5
-		ai_creation_factor = 79
-		add_number_to_name = no
-		extra_tech_building_start = 0.6
-	}
-	ca_wall_q_3 = {
-		desc = ca_wall_q_3_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 3 }
-		upgrades_from = ca_wall_q_2
-		gold_cost = 50
-		build_time = 182
-		fort_level = 0.5
-		ai_creation_factor = 78
-		add_number_to_name = no		
-		extra_tech_building_start = 0.2
-	}
-	ca_wall_q_4 = {
-		desc = ca_wall_q_4_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 5 }
-		upgrades_from = ca_wall_q_3
-		gold_cost = 100
-		build_time = 365
-		fort_level = 1.0
-		ai_creation_factor = 77
-		add_number_to_name = no		
-		extra_tech_building_start = 0.2
-	}
-	ca_wall_q_5 = {
-		desc = ca_wall_q_5_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 7 }
-		upgrades_from = ca_wall_q_4
-		gold_cost = 100
-		build_time = 365
-		fort_level = 1.0
-		ai_creation_factor = 76
-		add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
 	
-	#Walls, gives fortlevel, levysize and income
-	##utilise en prebuild jusqu au niveau 6
-	ca_wall_1 = {
-		desc = ca_wall_1_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
-		gold_cost = 50
-		build_time = 365
-		fort_level = 0.5
-		levy_size = 0.025
-		tax_income = 0.2
-		ai_creation_factor = 90
-		add_number_to_name = no		
-		extra_tech_building_start = 1.0
+	#recycled tags for history files
+ca_wall_q_1 = { #Fossé
+	desc = ca_wall_q_1_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	gold_cost = 100
+	#prestige_cost = 0
+	build_time = 180
+	ai_creation_factor = 99
+	fort_level = 0.1
+	add_number_to_name = no
+
+	extra_tech_building_start = 2
+}
+
+ca_wall_q_2 = { #Fossé avec piques
+	desc = ca_wall_q_2_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	upgrades_from = ca_wall_q_1
+	gold_cost = 90
+	#prestige_cost = 0
+	build_time = 260
+	ai_creation_factor = 98
+	fort_level = 0.2
+	add_number_to_name = no
+
+	extra_tech_building_start = 3
+}
+
+ca_wall_q_3 = { #Fossé inondé
+	desc = ca_wall_q_3_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	upgrades_from = ca_wall_q_2
+	gold_cost = 150
+	#prestige_cost = 0
+	build_time = 480
+	ai_creation_factor = 97
+	fort_level = 0.4
+	add_number_to_name = no
+
+	extra_tech_building_start = 4
+}
+
+ca_wall_q_4 = { #Douves
+	desc = ca_wall_q_4_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	prerequisites = { 
+		FEODAL_mil
 	}
-	ca_wall_2 = {
-		desc = ca_wall_2_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
-		upgrades_from = ca_wall_1
-		gold_cost = 50
-		build_time = 547 #1.5y
-		fort_level = 0.5
-		levy_size = 0.025
-		tax_income = 0.2
-		ai_creation_factor = 89
-		add_number_to_name = no		
-		extra_tech_building_start = 0.2
+	upgrades_from = ca_wall_q_3
+	gold_cost = 310
+	#prestige_cost = 0
+	build_time = 1100
+	ai_creation_factor = 96
+	fort_level = 0.3
+	add_number_to_name = no
+
+	extra_tech_building_start = 5
+}
+
+ca_wall_1 = { #Talus défensif
+	desc = ca_wall_1_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	gold_cost = 160
+	#prestige_cost = 0
+	build_time = 270
+	ai_creation_factor = 100
+	fort_level = 0.1
+	add_number_to_name = no
+
+	extra_tech_building_start = 1
+}
+
+ca_wall_2 = { #Palissade en bois
+	desc = ca_wall_2_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	upgrades_from = ca_wall_1
+	gold_cost = 200
+	#prestige_cost = 0
+	build_time = 550
+	ai_creation_factor = 99
+	fort_level = 0.5
+	tax_income = -0.2
+	add_number_to_name = no
+
+	extra_tech_building_start = 2
+}
+
+ca_wall_3 = { #Enceinte de pierre
+	desc = ca_wall_3_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	upgrades_from = ca_wall_2
+	gold_cost = 400
+	#prestige_cost = 0
+	build_time = 910
+	ai_creation_factor = 98
+	fort_level = 1.2
+	tax_income = -0.6
+	add_number_to_name = no
+
+	extra_tech_building_start = 3
+}
+
+ca_wall_4 = { #Enceinte épaisse
+	desc = ca_wall_4_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	not_if_x_exists = { FEODAL_prod}
+	upgrades_from = ca_wall_3
+	gold_cost = 360
+	#prestige_cost = 0
+	build_time = 770
+	ai_creation_factor = 97
+	fort_level = 0.5
+	tax_income = -0.3
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+ca_wall_5 = { #Grande enceinte
+	desc = ca_wall_5_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	prerequisites = { 
+		FEODAL_mil
 	}
-	ca_wall_3 = {
-		desc = ca_wall_3_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 4 }
-		upgrades_from = ca_wall_2
-		gold_cost = 100
-		build_time = 730 #2y
-		fort_level = 1.0
-		levy_size = 0.05
-		tax_income = 0.2
-		ai_creation_factor = 88
-		add_number_to_name = no
-		extra_tech_building_start = 0.2
+	upgrades_from = ca_wall_4
+	gold_cost = 590
+	#prestige_cost = 0
+	build_time = 1460
+	ai_creation_factor = 96
+	fort_level = 0.7
+	tax_income = -0.4
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+ca_con_wall_6 = { #Murs Théodosiens
+	desc = ca_con_wall_6_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	potential = { 
+		FROMFROM = { title = b_constantinople }
 	}
-	ca_wall_4 = {
-		desc = ca_wall_4_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 6 }
-		upgrades_from = ca_wall_3
-		gold_cost = 150
-		build_time = 1095 #3y
-		fort_level = 1.0
-		levy_size = 0.05
-		tax_income = 0.2
-		ai_creation_factor = 87
-		add_number_to_name = no
-		extra_tech_building_start = 0.2
+	upgrades_from = ca_wall_5
+	gold_cost = 450
+	prestige_cost = 120
+	build_time = 1230
+	ai_creation_factor = 90
+	fort_level = 1.0
+	tax_income = -0.5
+	add_number_to_name = no
+
+	extra_tech_building_start = 0.0
+}
+
+#new tags
+ca_tour_L1 = { #Tours en rondins
+	desc = ca_tour_L1_desc
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	gold_cost = 170
+
+	build_time = 270
+	ai_creation_factor = 98
+	fort_level = 0.2
+	tax_income = -0.1
+	archers = 10
+	add_number_to_name = no
+
+	extra_tech_building_start = 2
+}
+
+ca_tour_L2 = { #Tours en pierre
+	desc = ca_tour_L2_desc
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	upgrades_from = ca_tour_L1
+	gold_cost = 220
+
+	build_time = 550
+	ai_creation_factor = 97
+	fort_level = 0.3
+	tax_income = -0.1
+	archers = 20
+	add_number_to_name = no
+
+	extra_tech_building_start = 3
+}
+
+ca_tour_L3 = { #Tours en pierre maçonnées
+	desc = ca_tour_L3_desc
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	not_if_x_exists = { FEODAL_prod}
+	upgrades_from = ca_tour_L2
+	gold_cost = 250
+
+	build_time = 480
+	ai_creation_factor = 96
+	fort_level = 0.2
+	tax_income = -0.1
+	archers = 10
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+ca_tour_L4 = { #Tours rondes
+	desc = ca_tour_L4_desc
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	prerequisites = { 
+		FEODAL_mil
 	}
-	ca_wall_5 = {
-		desc = ca_wall_5_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 8 }
-		upgrades_from = ca_wall_4
-		gold_cost = 150
-		build_time = 1460 #4y
-		fort_level = 1.5
-		levy_size = 0.1
-		tax_income = 0.5
-		ai_creation_factor = 86
-		add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	ca_con_wall_6 = { # Theodosian Walls
-		potential = {
-			FROMFROM = { title = b_constantinople }
-		}
-		desc = ca_con_wall_6_desc
-		upgrades_from = ca_wall_5
-		gold_cost = 150
-		build_time = 1460 #4y
-		fort_level = 4.0
-		ai_creation_factor = 86
-		add_number_to_name = no
-		extra_tech_building_start = 0.0
-	}
+	upgrades_from = ca_tour_L3
+	gold_cost = 290
+	prestige_cost = 90
+	build_time = 690
+	ai_creation_factor = 95
+	fort_level = 0.3
+	tax_income = -0.2
+	archers = 20
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+###end new L3T for now
 
 	#Keeps, gives levy and garrison size
 	##utilise en prebuild jusqu au niveau 2
@@ -161,7 +249,7 @@ castle = {
 		levy_size = 0.05
 		garrison_size = 0.05
 		ai_creation_factor = 102
-		add_number_to_name = no		
+		#add_number_to_name = no		
 		extra_tech_building_start = 1.0
 	}
 	ca_keep_2 = {
@@ -174,8 +262,8 @@ castle = {
 		levy_size = 0.1
 		garrison_size = 0.1
 		ai_creation_factor = 101
-		add_number_to_name = no
-		extra_tech_building_start = 2.0
+		#add_number_to_name = no
+		extra_tech_building_start = 3.0
 	}
 	ca_keep_3 = {
 		desc = ca_keep_1_desc
@@ -187,8 +275,8 @@ castle = {
 		levy_size = 0.15
 		garrison_size = 0.15
 		ai_creation_factor = 100
-		add_number_to_name = no		
-		extra_tech_building_start = 1.0
+		#add_number_to_name = no		
+		extra_tech_building_start = 4.0
 	}
 	ca_keep_4 = {	
 		desc = ca_keep_1_desc
@@ -199,8 +287,8 @@ castle = {
 		levy_size = 0.2
 		garrison_size = 0.2
 		ai_creation_factor = 99
-		add_number_to_name = no
-		extra_tech_building_start = 0.2
+		#add_number_to_name = no
+		extra_tech_building_start = 5.0
 	}
 	ca_keep_5 = {
 		desc = ca_keep_1_desc
@@ -211,8 +299,8 @@ castle = {
 		levy_size = 0.25
 		garrison_size = 0.2
 		ai_creation_factor = 98
-		add_number_to_name = no
-		extra_tech_building_start = 0.2
+		#add_number_to_name = no
+		extra_tech_building_start = 6.0
 	}
 	ca_keep_6 = {
 		desc = ca_keep_1_desc
@@ -223,8 +311,8 @@ castle = {
 		levy_size = 0.3
 		garrison_size = 0.2
 		ai_creation_factor = 97
-		add_number_to_name = no		
-		extra_tech_building_start = 0.2
+		#add_number_to_name = no		
+		extra_tech_building_start = 6.0
 	}
 	
 	# Militia barracks, gives light infantry and archers.
@@ -280,45 +368,53 @@ castle = {
 
 	#Training grounds, gives morale and reinforce rate
 	##utilise en prebuild jusqu au niveau 1
-	ca_training_grounds_1 = {
-		desc = ca_training_grounds_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		land_morale = 0.1
-		levy_reinforce_rate = 0.1
-		retinuesize = 20
-		ai_creation_factor = 89
-		#add_number_to_name = no
-		extra_tech_building_start = 1.2
-	}
-	ca_training_grounds_2 = {
-		desc = ca_training_grounds_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
-		upgrades_from = ca_training_grounds_1
-		gold_cost = 250
-		build_time = 1095
-		land_morale = 0.15
-		levy_reinforce_rate = 0.15
-		retinuesize = 20
-		ai_creation_factor = 88
+#vanilla rewrite	
+ca_training_grounds_1 = { #Porte de guet
+	desc = ca_training_grounds_1_desc
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	gold_cost = 80
+
+	build_time = 130
+	ai_creation_factor = 97
+	fort_level = 0.1
+	tax_income = -0.1
+	light_infantry = 10
+	add_number_to_name = no
+
+	extra_tech_building_start = 3
+}
+
+ca_training_grounds_2 = { #Porte en pierre
+	desc = ca_training_grounds_2_desc
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	not_if_x_exists = { FEODAL_prod}
+	upgrades_from = ca_training_grounds_1
+	gold_cost = 270
+
+	build_time = 550
+	ai_creation_factor = 96
+	fort_level = 0.4
+	tax_income = -0.1
+	pikemen = 20
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+#	ca_training_grounds_3 = {
+#		desc = ca_training_grounds_1_desc
+#		trigger = { TECH_CASTLE_CONSTRUCTION = 6 }
+#		upgrades_from = ca_training_grounds_2
+#		gold_cost = 300
+#		build_time = 2190
+#		land_morale = 0.2
+#		levy_reinforce_rate = 0.2
+#		retinuesize = 20
+#		ai_creation_factor = 88
 		#add_number_to_name = no		
-		extra_tech_building_start = 0.5
-	}
-	ca_training_grounds_3 = {
-		desc = ca_training_grounds_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 6 }
-		upgrades_from = ca_training_grounds_2
-		gold_cost = 300
-		build_time = 2190
-		land_morale = 0.2
-		levy_reinforce_rate = 0.2
-		retinuesize = 20
-		ai_creation_factor = 88
-		#add_number_to_name = no		
-		extra_tech_building_start = 0.2
-	}
+#		extra_tech_building_start = 0.2
+#	}
+
+#vanilla
 	
 	# Barracks, gives heavy infantry and pikemen
 	##utilise en prebuild jusqu au niveau 2
@@ -471,6 +567,8 @@ castle = {
 	
 	#Castle town, gives income
 	##utilise en prebuild jusqu au niveau 3
+	
+#L3T stuff - event only
 	ca_town_1 = {
 		desc = ca_town_1_desc
 		prerequisites = {xxx}
@@ -480,11 +578,11 @@ castle = {
 		tax_income = 2
 		ai_creation_factor = 100
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 10
 	}
 	ca_town_2 = {
 		desc = ca_town_2_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
 		prerequisites = {xxx}
 		upgrades_from = ca_town_1
 		gold_cost = 120
@@ -492,44 +590,110 @@ castle = {
 		tax_income = 2
 		ai_creation_factor = 99
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 10
 	}
 	ca_town_3 = {
 		desc = ca_town_3_desc
 		prerequisites = {xxx}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
 		upgrades_from = ca_town_2
 		gold_cost = 200
 		build_time = 730
 		tax_income = 2
 		ai_creation_factor = 98
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 10
 	}
 	ca_town_4 = {
 		desc = ca_town_4_desc
 		prerequisites = {xxx}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 6 }
 		upgrades_from = ca_town_3
 		gold_cost = 300
 		build_time = 1095
 		tax_income = 2
 		ai_creation_factor = 97
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 10
 	}
 	ca_town_5 = {
 		desc = ca_town_4_desc
 		prerequisites = {xxx}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 6 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 8 }
 		upgrades_from = ca_town_4
 		gold_cost = 400
 		build_time = 2190
 		tax_income = 2
 		ai_creation_factor = 96
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 10
 	}
+	
+	#new tags
+ca_eglise_L1 = { #Oratoire
+	desc = ca_eglise_L1_desc
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	gold_cost = 100
+
+	build_time = 180
+	ai_creation_factor = 101
+	liege_piety = 0.01
+	add_number_to_name = no
+
+	extra_tech_building_start = 0
+}
+
+ca_eglise_L2 = { #Chapelle
+	desc = ca_eglise_L2_desc
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	prerequisites = { 
+		ca_town_1
+	}
+	upgrades_from = ca_eglise_L1
+	gold_cost = 140
+
+	build_time = 370
+	ai_creation_factor = 100
+	liege_piety = 0.01
+	add_number_to_name = no
+
+	extra_tech_building_start = 1
+}
+
+ca_eglise_L3 = { #Église
+	desc = ca_eglise_L3_desc
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	prerequisites = { 
+		ca_town_2
+	}
+	upgrades_from = ca_eglise_L2
+	gold_cost = 290
+
+	build_time = 680
+	ai_creation_factor = 99
+	liege_piety = 0.02
+	add_number_to_name = no
+
+	extra_tech_building_start = 2
+}
+
+ca_eglise_L4 = { #Grande église
+	desc = ca_eglise_L4_desc
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	prerequisites = { 
+		ca_town_3
+	}
+	upgrades_from = ca_eglise_L3
+	gold_cost = 390
+	prestige_cost = 90
+	build_time = 920
+	ai_creation_factor = 98
+	liege_piety = 0.03
+	add_number_to_name = no
+
+	extra_tech_building_start = 3
+}
+##vanilla
 
 	#shipyard
 	##utilise en prebuild jusqu au niveau 4 

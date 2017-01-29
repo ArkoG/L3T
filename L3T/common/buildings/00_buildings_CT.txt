@@ -13,6 +13,9 @@
 
 # City
 city = {
+
+
+#vanilla
 ##utilise en prebuild jusqu au niveau 1
 	ct_wall_q_1 = {
 		desc = ct_wall_q_1_desc
@@ -202,79 +205,98 @@ city = {
 		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
+	
 ##utilise en prebuild jusqu au niveau 2	
-	ct_training_grounds_1 = {
-		desc = ct_training_grounds_1_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
-		gold_cost = 150
-		build_time = 547
-		levy_size = 0.05
-		garrison_size = 0.05
-		ai_creation_factor = 98
-		#add_number_to_name = no
-		extra_tech_building_start = 0.6
+ct_training_grounds_1 = { #Porte en pierre
+	desc = ct_training_grounds_1_desc
+	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	gold_cost = 90
+
+	build_time = 130
+	ai_creation_factor = 97
+	fort_level = 0.2
+	tax_income = -0.1
+	light_infantry = 10
+	add_number_to_name = no
+
+	extra_tech_building_start = 3
+}
+
+ct_training_grounds_2 = { #Porte gardée
+	desc = ct_training_grounds_2_desc
+	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	prerequisites = { 
+		CITE_L2
 	}
-	ct_training_grounds_2 = {
-		desc = ct_training_grounds_1_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
-		prerequisites = { ct_wall_1 }
-		upgrades_from = ct_training_grounds_1
-		gold_cost = 200
-		build_time = 730
-		levy_size = 0.075
-		garrison_size = 0.1
-		ai_creation_factor = 97
-		#add_number_to_name = no
-		extra_tech_building_start = 1.2
-	} 
-	ct_training_grounds_3 = {
-		desc = ct_training_grounds_1_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
-		upgrades_from = ct_training_grounds_2
-		gold_cost = 300
-		build_time = 1095
-		levy_size = 0.1
-		garrison_size = 0.15
-		ai_creation_factor = 96
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	} 
-	ct_training_grounds_4 = {
-		desc = ct_training_grounds_1_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 4 }
-		upgrades_from = ct_training_grounds_3
-		gold_cost = 400
-		build_time = 1460
-		levy_size = 0.125
-		garrison_size = 0.2
-		ai_creation_factor = 95
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	} 
-	ct_training_grounds_5 = {
-		desc = ct_training_grounds_1_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 6 }
-		upgrades_from = ct_training_grounds_4
-		gold_cost = 500
-		build_time = 2190
-		levy_size = 0.15
-		garrison_size = 0.25
-		ai_creation_factor = 94
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
+	upgrades_from = ct_training_grounds_1
+	gold_cost = 190
+
+	build_time = 380
+	ai_creation_factor = 96
+	fort_level = 0.2
+	tax_income = -0.1
+	pikemen = 20
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+ct_training_grounds_3 = { #Porte de  la ville
+	desc = ct_training_grounds_3_desc
+	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	prerequisites = { 
+		CITE_L3
 	}
-	ct_training_grounds_6 = {
-		desc = ct_training_grounds_1_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 8 }
-		upgrades_from = ct_training_grounds_5
-		gold_cost = 500
-		build_time = 2190
-		levy_size = 0.15
-		garrison_size = 0.25
-		ai_creation_factor = 93
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
+	upgrades_from = ct_training_grounds_2
+	gold_cost = 270
+	prestige_cost = 70
+	build_time = 570
+	ai_creation_factor = 95
+	fort_level = 0.4
+	tax_income = -0.2
+	pikemen = 20
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+#	ct_training_grounds_4 = {
+#		desc = ct_training_grounds_1_desc
+#		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 4 }
+#
+#		gold_cost = 400
+#		build_time = 1460
+#		levy_size = 0.125
+#		garrison_size = 0.2
+#		ai_creation_factor = 95
+#		#add_number_to_name = no
+#		extra_tech_building_start = 0.2
+#	} 
+#	ct_training_grounds_5 = {
+#		desc = ct_training_grounds_1_desc
+#		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 6 }
+#		upgrades_from = ct_training_grounds_4
+#		gold_cost = 500
+#		build_time = 2190
+#		levy_size = 0.15
+#		garrison_size = 0.25
+#		ai_creation_factor = 94
+#		#add_number_to_name = no
+#		extra_tech_building_start = 0.2
+#	}
+#	ct_training_grounds_6 = {
+#		desc = ct_training_grounds_1_desc
+#		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 8 }
+#		upgrades_from = ct_training_grounds_5
+#		gold_cost = 500
+#		build_time = 2190
+#		levy_size = 0.15
+#		garrison_size = 0.25
+#		ai_creation_factor = 93
+#		#add_number_to_name = no
+#		extra_tech_building_start = 0.2
+#	}
+
 ##utilise en prebuild jusqu au niveau 3	
 	ct_barracks_1 = {
 		desc = ct_barracks_1_desc
@@ -590,7 +612,7 @@ city = {
 
 	ct_university_1 = {
 		desc = ct_university_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 2 }
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
 		gold_cost = 600
 		build_time = 1095
 		
@@ -599,11 +621,11 @@ city = {
 		
 		ai_creation_factor = 90
 		#add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10
 	}
 	ct_university_2 = {
 		desc = ct_university_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 4 }
+		trigger = { TECH_CITY_CONSTRUCTION = 5 }
 		upgrades_from = ct_university_1
 		gold_cost = 800
 		build_time = 2190
@@ -613,7 +635,7 @@ city = {
 		
 		ai_creation_factor = 89
 		#add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10
 	}
 	ct_university_3 = {
 		desc = ct_university_1_desc
@@ -627,73 +649,155 @@ city = {
 		
 		ai_creation_factor = 88
 		#add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10
 	}
 	
 	#City town, gives income
-	CT_town_1 = {
-		desc = CT_town_1_desc
+#L3T stuff - event only
+	ct_town_1 = {
+		desc = ct_town_1_desc
 		prerequisites = {xxx}
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		gold_cost = 100
 		build_time = 365
 		tax_income = 0.4
 		ai_creation_factor = 100
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 1
 	}
 	
-	CT_town_2 = {
-		desc = CT_town_2_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 1 }
+	ct_town_2 = {
+		desc = ct_town_2_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		prerequisites = {xxx}
-		upgrades_from = CT_town_1
+		upgrades_from = ct_town_1
 		gold_cost = 120
 		build_time = 547
 		tax_income = 0.8
 		ai_creation_factor = 99
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 1
 	}
 	
-	CT_town_3 = {
-		desc = CT_town_3_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+	ct_town_3 = {
+		desc = ct_town_3_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		prerequisites = {xxx}
-		upgrades_from = CT_town_2
+		upgrades_from = ct_town_2
 		gold_cost = 200
 		build_time = 730
 		tax_income = 1.2
 		ai_creation_factor = 98
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 1
 	}
 	
-	CT_town_4 = {
-		desc = CT_town_4_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 5 }
+	ct_town_4 = {
+		desc = ct_town_4_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		prerequisites = {xxx}
-		upgrades_from = CT_town_3
+		upgrades_from = ct_town_3
 		gold_cost = 300
 		build_time = 1095
 		tax_income = 1.6
 		ai_creation_factor = 97
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 1
 	}
 	
-	CT_town_5 = {
-		desc = CT_town_4_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 6 }
+	ct_town_5 = {
+		desc = ct_town_4_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		prerequisites = {xxx}
-		upgrades_from = CT_town_4
+		upgrades_from = ct_town_4
 		gold_cost = 400
 		build_time = 2190
 		tax_income = 2 #total 6.0
 		ai_creation_factor = 96
 		add_number_to_name = no
-		extra_tech_building_start = 10.0
+		extra_tech_building_start = 1
 	}
+#city church new tag
+ct_eglise_L1 = { #Oratoire
+	desc = ct_eglise_L1_desc
+	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	gold_cost = 100
+
+	build_time = 180
+	ai_creation_factor = 101
+	liege_piety = 0.01
+	add_number_to_name = no
+
+	extra_tech_building_start = 0
+}
+
+ct_eglise_L2 = { #Chapelle
+	desc = ct_eglise_L2_desc
+	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	prerequisites = { 
+		ct_town_1
+	}
+	upgrades_from = ct_eglise_L1
+	gold_cost = 140
+
+	build_time = 370
+	ai_creation_factor = 100
+	liege_piety = 0.01
+	add_number_to_name = no
+
+	extra_tech_building_start = 1
+}
+
+ct_eglise_L3 = { #Église
+	desc = ct_eglise_L3_desc
+	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	prerequisites = { 
+		ct_town_2
+	}
+	upgrades_from = ct_eglise_L2
+	gold_cost = 290
+
+	build_time = 680
+	ai_creation_factor = 99
+	liege_piety = 0.02
+	add_number_to_name = no
+
+	extra_tech_building_start = 2
+}
+
+ct_eglise_L4 = { #Grande église
+	desc = ct_eglise_L4_desc
+	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	prerequisites = { 
+		ct_town_3
+	}
+	upgrades_from = ct_eglise_L3
+	gold_cost = 390
+	prestige_cost = 90
+	build_time = 920
+	ai_creation_factor = 98
+	liege_piety = 0.03
+	add_number_to_name = no
+
+	extra_tech_building_start = 3
+}
+
+ct_eglise_L5 = { #Basilique
+	desc = ct_eglise_L5_desc
+	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	prerequisites = { 
+		ct_town_4
+	}
+	upgrades_from = ct_eglise_L4
+	gold_cost = 650
+	prestige_cost = 120
+	build_time = 1750
+	ai_creation_factor = 97
+	liege_piety = 0.05
+	add_number_to_name = no
+
+	extra_tech_building_start = 4
+}
 
 }
 
