@@ -2,25 +2,73 @@ CODE;ENGLISH;FRENCH;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;POPULATION BUILDINGS;;;;;;;;;;;;x
 ca_town_1;Population: Hamlet;Hameau;;;;;;;;;;;;x
-ca_town_1_desc;Requires §Y10§! buildings.;Requiert §Y10§! bâtiments au total.;;;;;;;;;;;;x
+ca_town_1_desc;Requires §Y10§! buildings. Next population level requires §Y15§! buildings. ;Requiert §Y10§! bâtiments au total. Le prochain niveau de population requiert §Y15§! bâtiments.;;;;;;;;;;;;x
 ca_town_2;Population: Village;Village;;;;;;;;;;;;x
-ca_town_2_desc;Requires §Y15§! buildings.;Requiert §Y15§! bâtiments au total.;;;;;;;;;;;;x
+ca_town_2_desc;Requires §Y15§! buildings. Next population level requires §Y20§! buildings. ;Requiert §Y15§! bâtiments au total. Le prochain niveau de population requiert §Y20§! bâtiments.;;;;;;;;;;;;x
 ca_town_3;Population: Borough;Bourg;;;;;;;;;;;;x
-ca_town_3_desc;Requires §Y20§! buildings.;Requiert §Y20§! bâtiments au total.;;;;;;;;;;;;x
+ca_town_3_desc;Requires §Y20§! buildings. Next population level requires §Y25§! buildings. ;Requiert §Y20§! bâtiments au total. Le prochain niveau de population requiert §Y25§! bâtiments.;;;;;;;;;;;;x
 ca_town_4;Population: Town;Ville;;;;;;;;;;;;x
-ca_town_4_desc;Requires §Y25§! buildings.;Requiert §Y25§! bâtiments au total.;;;;;;;;;;;;x
+ca_town_4_desc;Requires §Y25§! buildings. Next population level requires §Y35§! buildings. ;Requiert §Y25§! bâtiments au total. Le prochain niveau de population requiert §Y35§! bâtiments.;;;;;;;;;;;;x
 ca_town_5;Population: City;Cité;;;;;;;;;;;;x
-ca_town_5_desc;Requires §Y35§! buildings.;Requiert §Y35§! bâtiments au total;;;;;;;;;;;;x
+ca_town_5_desc;Requires §Y35§! buildings. ;Requiert §Y35§! bâtiments au total. ;;;;;;;;;;;;x
 tp_town_1;Population: Hamlet;Hameau;;;;;;;;;;;;x
-tp_town_1_desc;Requires §Y12§! buildings.;Requiert §Y12§! bâtiments au total.;;;;;;;;;;;;x
+tp_town_1_desc;Requires §Y12§! buildings. Next population level requires §Y17§! buildings. ;Requiert §Y12§! bâtiments au total. Le prochain niveau de population requiert §Y17§! bâtiments.;;;;;;;;;;;;x
 tp_town_2;Population: Village;Village;;;;;;;;;;;;x
-tp_town_2_desc;Requires §Y17§! buildings.;Requiert §Y17§! bâtiments au total.;;;;;;;;;;;;x
+tp_town_2_desc;Requires §Y17§! buildings. Next population level requires §Y22§! buildings. ;Requiert §Y17§! bâtiments au total. Le prochain niveau de population requiert §Y22§! bâtiments.;;;;;;;;;;;;x
 tp_town_3;Population: Borough;Bourg;;;;;;;;;;;;x
-tp_town_3_desc;Requires §Y22§! buildings.;Requiert §Y22§! bâtiments au total.;;;;;;;;;;;;x
+tp_town_3_desc;Requires §Y22§! buildings. Next population level requires §Y26§! buildings. ;Requiert §Y22§! bâtiments au total. Le prochain niveau de population requiert §Y26§! bâtiments.;;;;;;;;;;;;x
 tp_town_4;Population: Town;Ville;;;;;;;;;;;;x
-tp_town_4_desc;Requires §Y26§! buildings.;Requiert §Y26§! bâtiments au total.;;;;;;;;;;;;x
+tp_town_4_desc;Requires §Y26§! buildings. Next population level requires §Y30§! buildings. ;Requiert §Y26§! bâtiments au total. Le prochain niveau de population requiert §Y30§! bâtiments.;;;;;;;;;;;;x
 tp_town_5;Population: City;Cité;;;;;;;;;;;;x
-tp_town_5_desc;Requires §Y30§! buildings.;Requiert §Y30§! bâtiments au total;;;;;;;;;;;;x
+tp_town_5_desc;Requires §Y30§! buildings.;Requiert §Y30§! bâtiments au total. ;;;;;;;;;;;;x
+ct_town_1;Population: Hamlet;Hameau;;;;;;;;;;;;x
+ct_town_1_desc;Requires §Y10§! buildings. Next population level requires §Y15§! buildings. ;Requiert §Y10§! bâtiments au total. Le prochain niveau de population requiert §Y15§! bâtiments.;;;;;;;;;;;;x
+ct_town_2;Population: Village;Village;;;;;;;;;;;;x
+ct_town_2_desc;Requires §Y15§! buildings. Next population level requires §Y20§! buildings. ;Requiert §Y15§! bâtiments au total. Le prochain niveau de population requiert §Y20§! bâtiments.;;;;;;;;;;;;x
+ct_town_3;Population: Borough;Bourg;;;;;;;;;;;;x
+ct_town_3_desc;Requires §Y20§! buildings. Next population level requires §Y25§! buildings. ;Requiert §Y20§! bâtiments au total. Le prochain niveau de population requiert §Y25§! bâtiments.;;;;;;;;;;;;x
+ct_town_4;Population: Town;Ville;;;;;;;;;;;;x
+ct_town_4_desc;Requires §Y25§! buildings. Next population level requires §Y30§! buildings. ;Requiert §Y25§! bâtiments au total. Le prochain niveau de population requiert §Y30§! bâtiments.;;;;;;;;;;;;x
+ct_town_5;Population: City;Cité;;;;;;;;;;;;x
+ct_town_5_desc;Requires §Y30§! buildings.;Requiert §Y30§! bâtiments au total.;;;;;;;;;;;;x
+#;;OTHER REPLACEMENTS OF VANILLA TAGS FOR BATS;;;;;;;;;;;;x
+ca_wall_q_1;Ditch;Fossé;;;;;;;;;;;;;x
+ca_wall_q_1_desc;_;Un simple fossé ceinturant les lieux, basique mais c'est toujours mieux que rien.;;;;;;;;;;;;;x
+ca_wall_q_2;Ditch ans spikes;Fossé avec piques;;;;;;;;;;;;;x
+ca_wall_q_2_desc;_;Qui s'y frotte s'y pique ! ;;;;;;;;;;;;;x
+ca_wall_q_3;Flooded ditch;Fossé inondé;;;;;;;;;;;;;x
+ca_wall_q_3_desc;_;Un grand fossé entourant nos défenses et empli d'eaux brunâtres.;;;;;;;;;;;;;x
+ca_wall_q_4;Moats;Douves;;;;;;;;;;;;;x
+ca_wall_q_4_desc;_;Un fossé profond et large rempli d'eau.;;;;;;;;;;;;;x
+ca_wall_1;Earth bank;Talus défensif;;;;;;;;;;;;;x
+ca_wall_1_desc;_;De la terre et des pierres amassées pour former une défense assez sommaire mais qui permet néanmoins de ralentir l'ennemi.;;;;;;;;;;;;;x
+ca_wall_2;Wooden palissade;Palissade en bois;;;;;;;;;;;;;x
+ca_wall_2_desc;_;Une palissade de rondins alignés au somment taillé en pointe. Une défense efficace contre les bêtes et les bandits mais beaucoup plus vulnérables à des soldats entraînés.;;;;;;;;;;;;;x
+ca_wall_3;Stone walls;Enceinte de pierre;;;;;;;;;;;;;x
+ca_wall_3_desc;_;Une enceinte de pierre taillées et maçonnées  qui représente une défense digne et suffisante pour la plupart des seigneurs.;;;;;;;;;;;;;x
+ca_wall_4;Thick stone walls;Enceinte épaisse;;;;;;;;;;;;;x
+ca_wall_4_desc;_;Une véritable enceinte faite pour résister à l'ennemi et au machines de siège.;;;;;;;;;;;;;x
+ca_wall_5;Great walls;Grande enceinte;;;;;;;;;;;;;x
+ca_wall_5_desc;_;Des murs en pierre bien épais, hérissés de créneaux et de tours. Qui oserait s'en prendre à nous derrière nos solides murailles ?;;;;;;;;;;;;;x
+ca_con_wall_6;Theodesian walls;Murs Théodosiens;;;;;;;;;;;;;x
+ca_con_wall_6_desc;_;Les murs théodosiens ont été érigés pendant le règne de l'empereur Théodose II au début du Ve siècle. Ces murs comptent parmi les plus formidables fortifications jamais construites par l'Homme.;;;;;;;;;;;;;x
+ca_training_grounds_1;Wooden gate;Porte de guet;;;;;;;;;;;;;x
+ca_training_grounds_1_desc;_;Des planches et poutres assemblées afin de sécuriser le domaine. Cette porte est surmontée d'une vigie donnant une vue imprenable sur la région.;;;;;;;;;;;;;x
+ca_training_grounds_2;Stone gate;Porte en pierre;;;;;;;;;;;;;x
+ca_training_grounds_2_desc;_;Une structure de pierres assemblées afin de contrôler les entrées et sorties et se barricader en cas d'attaque.;;;;;;;;;;;;;x
+ct_training_grounds_1;Stone gate;Porte en pierre;;;;;;;;;;;;;x
+ct_training_grounds_1_desc;_;Des planches et poutres assemblées afin de sécuriser le domaine. Cette porte est surmontée d'une vigie donnant une vue imprenable sur la région.;;;;;;;;;;;;;x
+ct_training_grounds_2;Guarded gate;Porte gardée;;;;;;;;;;;;;x
+ct_training_grounds_2_desc;_;Une structure de pierres assemblées afin de contrôler les entrées et sorties et se barricader en cas d'attaque.;;;;;;;;;;;;;x
+ct_training_grounds_3;City gate;Porte de  la ville;;;;;;;;;;;;;x
+ct_training_grounds_3_desc;_;Une porte renforcée avec des factionnaires en poste.;;;;;;;;;;;;;x
+#;;temp to preven vanilla silliness;;;;;;;;;;;;x
+ca_keep_1;Keep;Donjon;Bergfried;;Torreón;;;;;;;;;x
+ca_keep_2;Keep;Donjon;Bergfried;;Torreón;;;;;;;;;x
+ca_keep_3;Keep;Donjon;Bergfried;;Torreón;;;;;;;;;x
+ca_keep_4;Keep;Donjon;Bergfried;;Torreón;;;;;;;;;x
+ca_keep_5;Keep;Donjon;Bergfried;;Torreón;;;;;;;;;x
+ca_keep_6;Keep;Donjon;Bergfried;;Torreón;;;;;;;;;x
 #;;MINOR TITLE;;;;;;;;;;;;x
 title_master_of_the_hunt;Master of the Hunt;Maître de Chasse;Jägermeister;;Maestro de caza;;;;;;;;;x
 title_master_of_the_hunt_desc;In an era when hunting was an opportunity to demonstrate horsemanship and martial prowess the hunt was serious business. The master of the hunt was a position of importance.;La chasse permet d’afficher ses talents de cavalier et de guerrier, et jouit d’une grande popularité. Maître de chasse est un titre important.;In einem Zeitalter, in dem Jagen als Möglichkeit galt, die eigene Reit- und Kriegskunst unter Beweis zu stellen, war die Jagd ein ernsthaftes Geschäft. Demnach war das Amt des Jägermeisters sehr wichtig.;;En una época en la que cazar era una oportunidad de demostrar las habilidades marciales y de equitación, la caza era algo serio. Así pues, ser maestro de caza era un cargo importante.;;;;;;;;;x
