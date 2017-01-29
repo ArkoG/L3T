@@ -46,27 +46,27 @@ character_event = {
 				limit = { holding_type = city }
 				if = {
 					limit = { num_of_buildings = 10 }
-					add_building = CT_town_1
+					add_building = ct_town_1
 				}
 				
 				if = {
 					limit = { num_of_buildings = 15 }
-					add_building = CT_town_2
+					add_building = ct_town_2
 				}
 				
 				if = {
 					limit = { num_of_buildings = 20 }
-					add_building = CT_town_3
+					add_building = ct_town_3
 				}
 				
 				if = {
 					limit = { num_of_buildings = 25 }
-					add_building = CT_town_4
+					add_building = ct_town_4
 				}
 				
 				if = {
 					limit = { num_of_buildings = 30 }
-					add_building = CT_town_5
+					add_building = ct_town_5
 				}
 			}
 			# Temples
@@ -317,7 +317,7 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron
 			holding_type = city		
-			NOT = {	has_building = CT_town_1	}
+			NOT = {	has_building = ct_town_1	}
 			num_of_buildings = 10
 		}
 	}
@@ -330,10 +330,10 @@ option = {
 			limit = {	
 				tier = baron
 				holding_type = city	
-				NOT = {	has_building = CT_town_1	}
+				NOT = {	has_building = ct_town_1	}
 				num_of_buildings = 10
 			}
-			add_building = CT_town_1
+			add_building = ct_town_1
 		}
 	}
 }
@@ -354,8 +354,8 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron
 			holding_type = city	
-			has_building = CT_town_1
-			NOT = { has_building = CT_town_2 }
+			has_building = ct_town_1
+			NOT = { has_building = ct_town_2 }
 			num_of_buildings = 15
 		}
 	}
@@ -369,10 +369,10 @@ option = {
 				tier = baron
 				holding_type = city	
 				num_of_buildings = 15
-				has_building = CT_town_1
-				NOT = { has_building = CT_town_2 }
+				has_building = ct_town_1
+				NOT = { has_building = ct_town_2 }
 			}
-			add_building = CT_town_2
+			add_building = ct_town_2
 		}
 	}
 }
@@ -393,8 +393,8 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron
 			holding_type = city		
-			has_building = CT_town_2
-			NOT = { has_building = CT_town_3 }
+			has_building = ct_town_2
+			NOT = { has_building = ct_town_3 }
 			num_of_buildings = 20
 		}
 	}
@@ -408,10 +408,10 @@ option = {
 				tier = baron
 				holding_type = city	
 				num_of_buildings = 20
-				has_building = CT_town_2
-				NOT = { has_building = CT_town_3 }
+				has_building = ct_town_2
+				NOT = { has_building = ct_town_3 }
 			}
-			add_building = CT_town_3
+			add_building = ct_town_3
 		}
 	}
 }
@@ -432,8 +432,8 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron
 			holding_type = city			
-			has_building = CT_town_3
-			NOT = { has_building = CT_town_4 }
+			has_building = ct_town_3
+			NOT = { has_building = ct_town_4 }
 			num_of_buildings = 25
 		}
 	}
@@ -447,10 +447,10 @@ option = {
 				tier = baron
 				holding_type = city		
 				num_of_buildings = 25
-				has_building = CT_town_3
-						NOT = { has_building = CT_town_4 }
+				has_building = ct_town_3
+						NOT = { has_building = ct_town_4 }
 			}
-			add_building = CT_town_4
+			add_building = ct_town_4
 		}
 	}
 }
@@ -474,8 +474,8 @@ trigger = {
 		any_demesne_title = {	
 			tier = baron
 			holding_type = city		
-			has_building = CT_town_4
-			NOT = { has_building = CT_town_5 }
+			has_building = ct_town_4
+			NOT = { has_building = ct_town_5 }
 			num_of_buildings = 30
 		}
 	}
@@ -489,10 +489,10 @@ option = {
 				tier = baron
 				holding_type = city	
 				num_of_buildings = 30
-				has_building = CT_town_4
-				NOT = { has_building = CT_town_5 }
+				has_building = ct_town_4
+				NOT = { has_building = ct_town_5 }
 			}
-			add_building = CT_town_5
+			add_building = ct_town_5
 		}
 	}
 }
