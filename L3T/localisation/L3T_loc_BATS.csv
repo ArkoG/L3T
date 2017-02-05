@@ -586,7 +586,7 @@ FEODAL_mil_muslim;Specialization: Kasbah;FORTERESSE;;;;;;;;;;;;x
 FEODAL_mil_muslim_desc;Designating this holding as a §YKasbah§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
 FEODAL_mil_zoroastrian_group;Specialization: Kalat;FORTERESSE;;;;;;;;;;;;x
 FEODAL_mil_zoroastrian_group_desc;Designating this holding as a §YKalat§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
-FEODAL_mil_pagan_group;Specialization: Stronghold;FORTERESSE;;;;;;;;;;;;x
+FEODAL_mil_pagan_group;Specialization: Stronghold;FORT;;;;;;;;;;;;x
 FEODAL_mil_pagan_group_desc;Designating this holding as a §YStronghold§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
 FEODAL_prod;Specialization: Feudal Manor;BOURG FÉODAL;;;;;;;;;;;;x
 FEODAL_prod_muslim;Specialization: Iqta Estate;BOURG FORTIFIÉ;;;;;;;;;;;;x
@@ -598,6 +598,10 @@ FEODAL_prod_zoroastrian_group_desc;Designating this holding as a §YDihqan Estate
 FEODAL_prod_pagan_group_desc;Designating this holding as a §YClan Village§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets.\nThe traditional clan chiefs have always ruled over their kin with a firm hand, ensuring the prosperity of the realm.;Le Communauté Paysanne est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
 FEODAL_adm;Specialization: Administrative Center;CITÉ FÉODALE;;;;;;;;;;;;x
 FEODAL_adm_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
+FEODAL_adm_muslim;Specialization: Administrative Center;CITÉ FORTIFIÉE;;;;;;;;;;;;x
+FEODAL_adm_muslim_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
+FEODAL_adm_zoroastrian_group;Specialization: Administrative Center;CITÉ FORTIFIÉE;;;;;;;;;;;;x
+FEODAL_adm_zoroastrian_group_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
 CITE_L1;Urban Commune;BOURG COMMUNAL ;;;;;;;;;;;;x
 CITE_L1_muslim;Medina Quarter;BOURG URBAIN ;;;;;;;;;;;;x
 CITE_L1_zoroastrian_group;Market Town;BOURG URBAIN ;;;;;;;;;;;;x
@@ -817,6 +821,16 @@ ca_eglise_L3;Church;Église;;;;;;;;;;;;;x
 ca_eglise_L3_desc;_;;;;;;;;;;;;;;x
 ca_eglise_L4;Great church;Grande église;;;;;;;;;;;;;x
 ca_eglise_L4_desc;_;;;;;;;;;;;;;;x
+ca_eglise_L1_muslim;Small mosque;Petite mosquée;;;;;;;;;;;;;x
+ca_eglise_L1_muslim_desc;_;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
+ca_eglise_L2_muslim;Mosque;Mosquée;;;;;;;;;;;;;x
+ca_eglise_L2_muslim_desc;_;;;;;;;;;;;;;;x
+ca_eglise_L3_muslim;Domed mosque;Mosquée à dôme;;;;;;;;;;;;;x
+ca_eglise_L3_muslim_desc;_;;;;;;;;;;;;;;x
+ca_eglise_L4_muslim;Great mosque;Grande mosquée;;;;;;;;;;;;;x
+ca_eglise_L4_muslim_desc;_;;;;;;;;;;;;;;x
+ca_eglise_L5_muslim;Magnifiscent mosque;Magnifique mosquée;;;;;;;;;;;;;x
+ca_eglise_L5_muslim_desc;_;;;;;;;;;;;;;;x
 ct_eglise_L1;Oratory;Oratoire;;;;;;;;;;;;;x
 ct_eglise_L1_desc;_;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
 ct_eglise_L2;Chapel;Chapelle;;;;;;;;;;;;;x
@@ -827,3 +841,13 @@ ct_eglise_L4;Great church;Grande église;;;;;;;;;;;;;x
 ct_eglise_L4_desc;_;;;;;;;;;;;;;;x
 ct_eglise_L5;Basilica;Basilique;;;;;;;;;;;;;x
 ct_eglise_L5_desc;_;;;;;;;;;;;;;;x
+ct_eglise_L1_muslim;Small mosque;Petite mosquée;;;;;;;;;;;;;x
+ct_eglise_L1_muslim_desc;_;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
+ct_eglise_L2_muslim;Mosque;Mosquée;;;;;;;;;;;;;x
+ct_eglise_L2_muslim_desc;_;;;;;;;;;;;;;;x
+ct_eglise_L3_muslim;Domed mosque;Mosquée à dôme;;;;;;;;;;;;;x
+ct_eglise_L3_muslim_desc;_;;;;;;;;;;;;;;x
+ct_eglise_L4_muslim;Great mosque;Grande mosquée;;;;;;;;;;;;;x
+ct_eglise_L4_muslim_desc;_;;;;;;;;;;;;;;x
+ct_eglise_L5_muslim;Magnifiscent mosque;Magnifique mosquée;;;;;;;;;;;;;x
+ct_eglise_L5_muslim_desc;_;;;;;;;;;;;;;;x

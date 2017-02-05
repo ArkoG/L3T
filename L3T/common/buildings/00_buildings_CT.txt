@@ -721,7 +721,12 @@ ct_training_grounds_3 = { #Porte de  la ville
 ct_eglise_L1 = { #Oratoire
 	desc = ct_eglise_L1_desc
 	trigger = { TECH_CITY_CONSTRUCTION = 0 }
-	potential = { religion_group = christian }
+	potential = { 
+		OR = {
+			religion_group = christian
+			religion_group = muslim
+			}
+		}
 	gold_cost = 100
 
 	build_time = 180
