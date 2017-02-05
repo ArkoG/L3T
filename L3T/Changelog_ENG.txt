@@ -16,7 +16,11 @@ VARIOUS and MINOR :
 -
 
 BUGFIXES :
--
+-fixed a bug where a temple holding can receive two specializations
+-fixed an interface on main screen if you don't use Arkopack Interface mod alongside with L3T
+-neutralized some vanilla localisation for muslim buildings tags
+-increased the temple specialization event MTTH to lower the risk of duplicated specialization in one holding
+-added muslim specific localisation to castle and city temple buildings
 
 RELEASE BETA 0.93 (4th february 2017)
 version name : BALROG2
@@ -33,7 +37,7 @@ VARIOUS and MINOR :
 -forbids to change specialization if a building construction has been launched for less than one year
 -the Administrative Center is disabled and loses its depending buildings if the holding or the county loses its capital status
 -adds character modifiers to give the beneficial effects of some buildings from the Administrative Center spec
--fixss the forest buildings accounting (hunting and herboristery)
+-fixes the forest buildings accounting (hunting and herboristery)
 -adjusts and balances forest buildings (now the hunting lodge has a monthly cost but gives prestige)
 
 RELEASE BETA 0.92.1 (20th november 2016) 
