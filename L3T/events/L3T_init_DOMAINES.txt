@@ -63,11 +63,12 @@ narrative_event = {
 				}
 			}
 			set_title_flag = castle_to_specialize
+			#set_variable = { which = "specNB" value = 0 } #debug
 		}
 	}
 	
 	option = {
-		name = "L3T.0003A"	
+		name = "L3T.0003A"	#MIL
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -86,23 +87,24 @@ narrative_event = {
 		}
 		trigger = {
 			any_demesne_title = {			
-				location = { NOT = { religion_group = pagan_group } }
+				#location = { NOT = { religion_group = pagan_group } } #dealt through gov_type instead of religion
 				has_title_flag = castle_to_specialize
 			}
 		}
 		random_demesne_title = {
 			limit = {
-				location = { NOT = { religion_group = pagan_group } }
+				#location = { NOT = { religion_group = pagan_group } } #dealt through gov_type instead of religion
 				has_title_flag = castle_to_specialize
 			}
 			add_building = FEODAL_mil
+			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = feodal_mil duration = -1 }	
 			clr_title_flag = castle_to_specialize
 		}
 	}
 	
 	option = {
-		name = "L3T.0003B"	
+		name = "L3T.0003B"	#ECO
 		ai_chance = { 
 			factor = 50
 			modifier = {
@@ -124,13 +126,14 @@ narrative_event = {
 				has_title_flag = castle_to_specialize
 			}
 			add_building = FEODAL_prod
+			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = feodal_prod duration = -1 }
 			clr_title_flag = castle_to_specialize
 		}
 	}
 
 	option = {
-		name = "L3T.0003C"
+		name = "L3T.0003C" #ADM
 		trigger = {
 			higher_tier_than = COUNT # Duke, King or Emperor
 			capital_holding = {
@@ -150,6 +153,7 @@ narrative_event = {
 		}
 		capital_holding = {
 			add_building = FEODAL_adm
+			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = feodal_adm duration = -1 }
 			clr_title_flag = castle_to_specialize
 		}
@@ -220,6 +224,7 @@ narrative_event = {
 				}
 			}
 			set_title_flag = city_to_specialize
+			#set_variable = { which = "specNB" value = 0 } #debug
 		}
 	}
 	
@@ -248,6 +253,7 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_INDUSTRIELLE
+			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = voc_indus duration = -1 }
 			clr_title_flag = city_to_specialize
 		}
@@ -318,6 +324,7 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
+			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = voc_comm duration = -1 }
 			# La province devient le départ d'une route	si possible
 			location = {
@@ -418,6 +425,7 @@ province_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
+			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = voc_comm duration = -1 }
 			
 			# La province devient le départ d'une route si elle est distance au moins 3 d'un autre
@@ -497,6 +505,7 @@ province_event = {
 				}
 				add_building = CITE_L1
 				add_building = VOC_INDUSTRIELLE
+				#change_variable = { which = "specNB" value = 1 } #debug
 				add_holding_modifier = { name = voc_indus duration = -1 }
 			}
 		}
@@ -515,15 +524,15 @@ narrative_event = {
 	#prisoner = no
 	
 	trigger = {
-		OR = {
-		   NOT = { religion_group = pagan_group }
-		   religion = west_african_pagan
-		   religion = west_african_pagan_reformed
-		}
+		#OR = { #dealt through gov_type instead of religion
+		#   NOT = { religion_group = pagan_group }
+		#   religion = west_african_pagan
+		#   religion = west_african_pagan_reformed
+		#}
 		any_demesne_title = {
 			tier = baron
 			holding_type = city
-			num_of_buildings = 35 #à changer une fois testé
+			num_of_buildings = 25 #à changer une fois testé
 			has_building = CITE_L1
 			
 			NOT = { has_building = CITE_L2 }
@@ -538,7 +547,7 @@ narrative_event = {
 			limit = {
 				tier = baron
 				holding_type = city
-				num_of_buildings = 35 #à changer une fois testé -25-
+				num_of_buildings = 25 #à changer une fois testé -25-
 				NOT = { has_building = CITE_L2 }
 			}
 			add_building = CITE_L2
@@ -566,7 +575,7 @@ narrative_event = {
 		any_demesne_title = {
 			tier = baron
 			holding_type = city
-			num_of_buildings = 55 #à changer une fois testé
+			num_of_buildings = 45 #à changer une fois testé
 			has_building = CITE_L2
 			
 			NOT = { has_building = CITE_L3 }
@@ -581,7 +590,7 @@ narrative_event = {
 			limit = {
 				tier = baron
 				holding_type = city
-				num_of_buildings = 55 #à changer une fois testé -25-
+				num_of_buildings = 45 #à changer une fois testé -25-
 				NOT = { has_building = CITE_L3 }
 			}
 			add_building = CITE_L3
@@ -621,7 +630,7 @@ narrative_event = {
 	mean_time_to_happen = {
 		months = 9 
 		modifier = {
-			factor = 0.01
+			factor = 0.5
 			OR = {
 				had_global_flag = { flag = SWMH days = 360 }			
 				had_global_flag = { flag = running_VANILLA days = 360 }
@@ -642,6 +651,7 @@ narrative_event = {
 				}
 			}
 			set_title_flag = temple_to_specialize
+			set_variable = { which = "specNB" value = 0 } #debug
 		}
 	}
 	
@@ -673,6 +683,7 @@ narrative_event = {
 			}
 			add_building = MONASTERE
 			add_holding_modifier = { name = monastere duration = -1 }
+			change_variable = { which = "specNB" value = 1 } #debug
 		}
 	}
 	
@@ -696,34 +707,35 @@ narrative_event = {
 			}
 			add_building = CITEEPISCOPALE
 			add_holding_modifier = { name = episcopale duration = -1 }
-			
+			change_variable = { which = "specNB" value = 1 } #debug			
 		}
 	}
-	
-	option = {
-		name = "L3T.0006C"	
-		ai_chance = {
-			factor = 20
-			modifier = { factor = 2.5	martial = 20	}
-			modifier = { factor = 1.5	martial = 15	}
-			modifier = { factor = 0.5	NOT = { martial = 10 }	}
-		}
-		trigger = {
-			any_demesne_title = {
-				location = { religion = catholic }
-				has_title_flag = temple_to_specialize
-			}
-		}
-		random_demesne_title = {
-			limit = {
-				location = { religion = catholic }
-				has_title_flag = temple_to_specialize
-			}
-			add_building = MONASTERE
-			add_holding_modifier = { name = monastere duration = -1 }
-			add_building = COMMANDERIE
-		}
-	}
+
+###useless for now	
+#	option = {
+#		name = "L3T.0006C"	
+#		ai_chance = {
+#			factor = 20
+#			modifier = { factor = 2.5	martial = 20	}
+#			modifier = { factor = 1.5	martial = 15	}
+##			modifier = { factor = 0.5	NOT = { martial = 10 }	}
+#		}
+#		trigger = {
+#			any_demesne_title = {
+#				location = { religion = catholic }
+#				has_title_flag = temple_to_specialize
+#			}
+#		}
+#		random_demesne_title = {
+#			limit = {
+#				location = { religion = catholic }
+#				has_title_flag = temple_to_specialize
+#			}
+#			add_building = MONASTERE
+#			add_holding_modifier = { name = monastere duration = -1 }
+#			add_building = COMMANDERIE
+#		}
+#	}
 }
 
 #Attribution règle
