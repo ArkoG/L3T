@@ -611,6 +611,7 @@ narrative_event = {
 	prisoner = no
 		
 	trigger = {
+		NOT = { has_title_flag = temple_to_specialize }
 		OR = {
 			had_global_flag = { flag = SWMH days = 30 }			
 			had_global_flag = { flag = running_VANILLA days = 30 }
@@ -681,9 +682,17 @@ narrative_event = {
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
 			}
-			add_building = MONASTERE
-			add_holding_modifier = { name = monastere duration = -1 }
-			change_variable = { which = "specNB" value = 1 } #debug
+			if = {
+				limit = {
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+					}
+				}
+				add_building = MONASTERE
+				add_holding_modifier = { name = monastere duration = -1 }
+				change_variable = { which = "specNB" value = 1 } #debug
+			}
 		}
 	}
 	
@@ -705,9 +714,17 @@ narrative_event = {
 				location = { NOT = { religion_group = pagan_group } }
 				has_title_flag = temple_to_specialize
 			}
-			add_building = CITEEPISCOPALE
-			add_holding_modifier = { name = episcopale duration = -1 }
-			change_variable = { which = "specNB" value = 1 } #debug			
+			if = {
+				limit = {
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+					}
+				}
+				add_building = CITEEPISCOPALE
+				add_holding_modifier = { name = episcopale duration = -1 }
+				change_variable = { which = "specNB" value = 1 } #debug			
+			}
 		}
 	}
 
