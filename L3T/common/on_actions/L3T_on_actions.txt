@@ -2,9 +2,11 @@
 on_startup = {
 	    events = {
 			L3T.0010 #choix carte/map choice
-			
-			# Initialisation population building
-			L3T.1101
+
+			#Initialisation population building
+			L3T.1101 
+			#AI money start bonus
+			L3T.0012 
 		}
 }
 
@@ -15,6 +17,26 @@ on_yearly_pulse = {
 		L3T.225
 		L3T.226
 		#RIP.10030 #vanilla on_province_major_modifier event
+		
+		##population events
+		 #castle
+		L3T.0101
+		L3T.0102
+		L3T.0103
+		L3T.0104
+		L3T.0105
+		 #city
+		L3T.0106
+		L3T.0107
+		L3T.0108
+		L3T.0109
+		L3T.0110
+		 #temple
+		L3T.0111
+		L3T.0112
+		L3T.0113
+		L3T.0114
+		L3T.0115
 	}
 	
 	random_events = {
