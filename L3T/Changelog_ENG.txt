@@ -14,13 +14,15 @@ MAJOR :
 
 VARIOUS and MINOR :
 -
+-
 
 BUGFIXES :
--fixed a bug where a temple holding can receive two specializations
--fixed an interface on main screen if you don't use Arkopack Interface mod alongside with L3T
--neutralized some vanilla localisation for muslim buildings tags
--increased the temple specialization event MTTH to lower the risk of duplicated specialization in one holding
 -added muslim specific localisation to castle and city temple buildings
+-increased the temple specialization event MTTH to lower the risk of duplicated specialization in one holding
+-neutralized some vanilla localisation for muslim buildings tags
+-fixed an interface on main screen if you don't use Arkopack Interface mod alongside with L3T
+-optimisation : population events are now triggered yearly from on_action file instead of regular MTTH
+-
 
 RELEASE BETA 0.93 (4th february 2017)
 version name : BALROG2
