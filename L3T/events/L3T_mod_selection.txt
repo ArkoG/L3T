@@ -30,7 +30,7 @@ character_event = {
 			has_global_flag = SWMH
 		}
 		hidden_tooltip = {
-			any_province = {
+			any_province = { #SWMH coasts, land, rivers
 				province_event = { id = L3T.20 days = 10 }
 				province_event = { id = L3T.21 days = 10 }
 				province_event = { id = L3T.22 days = 10 }
@@ -43,7 +43,7 @@ character_event = {
 		# ai_chance = { factor = 0 }
 		# trigger = {
 			# ai = no
-			# NOT = { has_global_flag = SWMH }
+			# NOT = { has_global_flag = LCDA }
 		# }
 		# hidden_tooltip = {
 			# any_province = {
@@ -63,7 +63,7 @@ character_event = {
 			NOT = { has_global_flag = SWMH }
 		}
 		hidden_tooltip = {
-			any_province = {
+			any_province = { #vanilla coasts, land, rivers
 				province_event = { id = L3T.25 days = 10 }
 				province_event = { id = L3T.26 days = 10 }
 				province_event = { id = L3T.27 days = 10 }
@@ -105,28 +105,28 @@ narrative_event = {
 	}
 }
 
-# Boost IA
+# Boost IA non feudal
 character_event = {
     id = L3T.0012
 	desc = "DESCL3T.0012"
 	picture = GFX_evt_market
+	hide_window = yes
+	
+	is_triggered_only = yes
 
 	trigger = {
-		OR = {
-			has_global_flag = SWMH
-			has_global_flag = running_LCDA
-			has_global_flag = running_VANILLA
-			}
 		NOT = { has_character_flag = start_bonus_given }
 		ai = yes
 		is_feudal = no
+		is_patrician = no
+		NOT = { tier = count }
 		tier = baron
-		}
+	}
 		
-	mean_time_to_happen = { days = 10 }	
+	#mean_time_to_happen = { days = 10 }	
 
-	option = {
-	name = "L3T.0012A"
+	immediate = {
+	#name = "L3T.0012A"
 	set_character_flag = start_bonus_given  
 	random_list = {
 		16 = { wealth = 35	}
