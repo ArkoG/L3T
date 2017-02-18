@@ -941,3 +941,26 @@ narrative_event = {
 		# }
 	# }
 # }
+
+# Init built holding (on_action)
+# ROOT = Builder, FROM = Title
+character_event = {
+	id = L3T.9
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { FROM = { holding_type = castle } }
+			narrative_event = { id = L3T.0003 days = 1 }
+		}
+		if = {
+			limit = { FROM = { holding_type = city } }
+			narrative_event = { id = L3T.0004 days = 1 }
+		}
+		if = {
+			limit = { FROM = { holding_type = temple } }
+			narrative_event = { id = L3T.0006 days = 1 }
+		}
+	}
+}

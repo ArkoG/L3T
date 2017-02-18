@@ -101,3 +101,10 @@ on_new_holder_usurpation = {
 		L3T.227
 	}
 }
+
+# ROOT = Builder, FROM = Title
+on_settlement_construction_completed = {
+	events = {
+		L3T.9
+	}
+}
