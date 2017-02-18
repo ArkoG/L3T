@@ -86,14 +86,12 @@ narrative_event = {
 			}
 		}
 		trigger = {
-			any_demesne_title = {			
-				#location = { NOT = { religion_group = pagan_group } } #dealt through gov_type instead of religion
+			any_demesne_title = {
 				has_title_flag = castle_to_specialize
 			}
 		}
 		random_demesne_title = {
 			limit = {
-				#location = { NOT = { religion_group = pagan_group } } #dealt through gov_type instead of religion
 				has_title_flag = castle_to_specialize
 			}
 			add_building = FEODAL_mil
