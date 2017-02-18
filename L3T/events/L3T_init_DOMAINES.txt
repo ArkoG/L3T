@@ -41,7 +41,7 @@ narrative_event = {
 	mean_time_to_happen = {
 		months = 9
 		modifier = {
-			factor = 0.01
+			factor = 0.5
 			OR = {
 				had_global_flag = { flag = SWMH days = 360 }			
 				had_global_flag = { flag = running_VANILLA days = 360 }
@@ -202,7 +202,7 @@ narrative_event = {
 		months = 9
 		modifier = { factor = 0.1	NOT = { tier = baron }	}
 		modifier = {
-			factor = 0.01
+			factor = 0.5
 			OR = {
 				had_global_flag = { flag = SWMH days = 720 }			
 				had_global_flag = { flag = running_VANILLA days = 720 }
@@ -631,7 +631,7 @@ narrative_event = {
 	mean_time_to_happen = {
 		months = 9 
 		modifier = {
-			factor = 0.5
+			factor = 0.7
 			OR = {
 				had_global_flag = { flag = SWMH days = 360 }			
 				had_global_flag = { flag = running_VANILLA days = 360 }
