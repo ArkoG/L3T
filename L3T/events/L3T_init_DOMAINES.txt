@@ -608,8 +608,7 @@ narrative_event = {
 	capable_only = yes
 	prisoner = no
 		
-	trigger = {
-		NOT = { has_title_flag = temple_to_specialize }
+	trigger = {		
 		OR = {
 			had_global_flag = { flag = SWMH days = 30 }			
 			had_global_flag = { flag = running_VANILLA days = 30 }
@@ -619,6 +618,7 @@ narrative_event = {
 			tier = baron
 			holding_type = temple
 			location = { NOT = { religion_group = pagan_group } }
+			NOT = { has_title_flag = temple_to_specialize }
 			NOT = {
 				has_building = MONASTERE
 				has_building = CITEEPISCOPALE
