@@ -689,7 +689,7 @@ narrative_event = {
 				}
 				add_building = MONASTERE
 				add_holding_modifier = { name = monastere duration = -1 }
-				change_variable = { which = "specNB" value = 1 } #debug
+				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 			}
 		}
 	}
@@ -721,7 +721,7 @@ narrative_event = {
 				}
 				add_building = CITEEPISCOPALE
 				add_holding_modifier = { name = episcopale duration = -1 }
-				change_variable = { which = "specNB" value = 1 } #debug			
+				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
 			}
 		}
 	}
