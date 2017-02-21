@@ -720,12 +720,27 @@ narrative_event = {
 					}
 				}
 				add_building = CITEEPISCOPALE
-				add_holding_modifier = { name = episcopale duration = -1 }
+				if = {
+					limit = { location = { religion_group = christian }} #//christian specific icon
+					add_holding_modifier = { name = episcopale duration = -1 }
+					}
+				if = {
+					limit = { location = { religion_group = muslim }} #//muslim specific icon
+					add_holding_modifier = { name = episco_muslim duration = -1 }
+					}
+				if = {
+					limit = { #other non pagan religions //jewish, zoro, indian
+						location = { NOT = {religion_group = christian }}
+						location = { NOT = {religion_group = muslim }}
+						}
+						add_holding_modifier = { name = episcopale duration = -1 
+						hidden = yes
+						}
+					}
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
 			}
 		}
 	}
-
 ###useless for now	
 #	option = {
 #		name = "L3T.0006C"	
@@ -751,6 +766,7 @@ narrative_event = {
 #			add_building = COMMANDERIE
 #		}
 #	}
+
 }
 
 #Attribution règle

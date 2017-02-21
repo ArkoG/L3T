@@ -172,9 +172,10 @@
 #202 - spe FEODAL 2 -forteresse
 #203 - spe FEODAL 3 -cité féodale
 #204 - spe TEMPLE 1 -monastère
-#205 - spe TEMPLE 2 -cité épiscopale
+#205 - spe TEMPLE 2a -cité épiscopale
 #206 - spe CITE 1 -cité production
 #207 - spe CITE 2 -cité commerce
+#208 - spe TEMPLE 2b -centre religieux musulman
 
 # 208 - 220
 
@@ -566,6 +567,9 @@ monastere = {icon = 204 }
 episcopale = {icon = 205 }
 voc_indus = {icon = 206 }
 voc_comm = {icon = 207 }
+episco_muslim = {icon = 208 }
+ 
+ 
 
 ###
 #MAJOR_MODIFIERS_icon_strip_L3T
