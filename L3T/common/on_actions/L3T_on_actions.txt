@@ -1,12 +1,12 @@
 #character
 on_startup = {
 	    events = {
-			L3T.0010 #choix carte/map choice
+			L3T.10 #choix carte/map choice
 
 			#Initialisation population building
 			L3T.1101 
 			#AI money start bonus
-			L3T.0012
+			L3T.12
 		}	
 }
 
@@ -20,23 +20,23 @@ on_yearly_pulse = {
 		
 		##population events
 		 #castle
-		L3T.0101
-		L3T.0102
-		L3T.0103
-		L3T.0104
-		L3T.0105
+		L3T.101
+		L3T.102
+		L3T.103
+		L3T.104
+		L3T.105
 		 #city
-		L3T.0106
-		L3T.0107
-		L3T.0108
-		L3T.0109
-		L3T.0110
+		L3T.106
+		L3T.107
+		L3T.108
+		L3T.109
+		L3T.110
 		 #temple
-		L3T.0111
-		L3T.0112
-		L3T.0113
-		L3T.0114
-		L3T.0115
+		L3T.111
+		L3T.112
+		L3T.113
+		L3T.114
+		L3T.115
 	}
 	
 	random_events = {

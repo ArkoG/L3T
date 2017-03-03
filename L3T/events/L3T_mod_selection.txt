@@ -2,9 +2,9 @@ namespace = L3T
 
 # Détection de la carte
 character_event = {
-    id = L3T.0010
-	title = "L3T.0010"
-	desc = "DESCL3T.0010"
+    id = L3T.10
+	title = "L3T.10"
+	desc = "DESCL3T.10"
 	picture = GFX_evt_CK1
 	major = yes
 	hide_new = yes
@@ -23,7 +23,7 @@ character_event = {
 	}
 	
 	option = {	
-		name = "L3T.0010A"	
+		name = "L3T.10A"	
 		ai_chance = { factor = 0 }
 		trigger = {
 			ai = no
@@ -39,7 +39,7 @@ character_event = {
 		set_global_flag = paix_de_dieu 
 	}
 	# option = {	
-		# name = "L3T.0010B"	
+		# name = "L3T.10B"	
 		# ai_chance = { factor = 0 }
 		# trigger = {
 			# ai = no
@@ -56,7 +56,7 @@ character_event = {
 		# set_global_flag = paix_de_dieu 
 	# }
 	option = {
-		name = "L3T.0010C"	
+		name = "L3T.10C"	
 		ai_chance = { factor = 0 }
 		trigger = {
 			ai = no
@@ -73,7 +73,7 @@ character_event = {
 		set_global_flag = paix_de_dieu 
 	}
 	option = {
-		name = "L3T.0010D"	
+		name = "L3T.10D"	
 		trigger = { ai = yes }
 		ai_chance = { factor = 100 }
 	}
@@ -81,7 +81,7 @@ character_event = {
 
 # Fin paix de Dieu
 narrative_event = {
-    id = L3T.0011
+    id = L3T.11
 	hide_window = yes
 
 	trigger = {
@@ -107,8 +107,8 @@ narrative_event = {
 
 # Boost IA non feudal
 character_event = {
-    id = L3T.0012
-	desc = "DESCL3T.0012"
+    id = L3T.12
+	desc = "DESCL3T.12"
 	picture = GFX_evt_market
 	hide_window = yes
 	
@@ -126,7 +126,7 @@ character_event = {
 	#mean_time_to_happen = { days = 10 }	
 
 	immediate = {
-	#name = "L3T.0012A"
+	#name = "L3T.12A"
 	set_character_flag = start_bonus_given  
 	random_list = {
 		16 = { wealth = 35	}

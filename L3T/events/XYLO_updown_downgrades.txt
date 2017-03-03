@@ -11,8 +11,8 @@ namespace = XYLO
 # downgrade serie for bankruptcy - niv2 >> niv1 -domaine de chasse.
 #première coupe
 province_event = { 
-    id = XYLO.0103
-	desc = "DESCXYLO.0103"
+    id = XYLO.103
+	desc = "DESCXYLO.103"
 	picture = GFX_evt_XYLO_forest5
 
 	trigger = {
@@ -30,11 +30,11 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0103A"	
+		name = "XYLO.103A"	
 		ai_chance = { factor = 65 }
 	}
 option = {
-		name = "XYLO.0103B"	
+		name = "XYLO.103B"	
 		ai_chance = { factor = 35 }
 		set_province_flag = cut_once
 		owner = { wealth = 75 }
@@ -43,8 +43,8 @@ option = {
 
 #seconde coupe
 province_event = { 
-    id = XYLO.0104
-	desc = "DESCXYLO.0104"
+    id = XYLO.104
+	desc = "DESCXYLO.104"
 	picture = GFX_evt_XYLO_forest5
 
 	trigger = {
@@ -62,11 +62,11 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0104A"	
+		name = "XYLO.104A"	
 		ai_chance = { factor = 75 }
 	}
 option = {
-		name = "XYLO.0104B"	
+		name = "XYLO.104B"	
 		ai_chance = { factor = 25 }
 		clr_province_flag = cut_once
 		set_province_flag = cut_twice
@@ -76,8 +76,8 @@ option = {
 
 #troisième coupe AKA la coupe de trop
 province_event = {
-    id = XYLO.0105
-	desc = "DESCXYLO.0105"
+    id = XYLO.105
+	desc = "DESCXYLO.105"
 	picture = GFX_evt_XYLO_forest5
 
 	trigger = {
@@ -95,11 +95,11 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0105A"	
+		name = "XYLO.105A"	
 		ai_chance = { factor = 90 }
 	}
 option = {
-		name = "XYLO.0105B"	
+		name = "XYLO.105B"	
 		ai_chance = { factor = 10 }
 		clr_province_flag = cut_twice
 		set_province_flag = cut_third
@@ -107,10 +107,10 @@ option = {
 		}
 }
 
-#csqs de XYLO.0105
+#csqs de XYLO.105
 province_event = {
-    id = XYLO.0106
-	desc = "DESCXYLO.0106"
+    id = XYLO.106
+	desc = "DESCXYLO.106"
 	picture = GFX_evt_XYLOforestcut
 
 	trigger = {
@@ -127,7 +127,7 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0106A"	
+		name = "XYLO.106A"	
 		clr_province_flag = cut_twice
 		clr_province_flag = cut_third
 		set_province_flag = forest_razed
@@ -141,8 +141,8 @@ option = {
 
 # downgrade -don de terres boisées à l'Eglise- v1
 province_event = { 
-    id = XYLO.0107
-	desc = "DESCXYLO.0107"
+    id = XYLO.107
+	desc = "DESCXYLO.107"
 	picture = GFX_evt_XYLO_forest1
 
 	trigger = {
@@ -164,19 +164,19 @@ province_event = {
 	immediate = { set_province_flag = transaction_forestiere_recente }	
 	
 	option = {
-		name = "XYLO.0107A"	 #non
+		name = "XYLO.107A"	 #non
 		ai_chance = { factor = 60 }
 		owner = { set_character_flag = don_refuse }
 	}
 	option = {
-		name = "XYLO.0107B"	#oui
+		name = "XYLO.107B"	#oui
 		ai_chance = { factor = 40 }
 		remove_province_modifier = foret_up
 		owner = { piety = 75 }
 		religion_authority = { modifier = don_foret		years = 5 }
 		}
 	option = {
-		name = "XYLO.0107C"	#vente
+		name = "XYLO.107C"	#vente
 		ai_chance = { factor = 40 }
 		trigger = { 
 			owner = { 
@@ -196,8 +196,8 @@ province_event = {
 
 # downgrade -don de terres boisées à l'Eglise- v2
 province_event = { 
-    id = XYLO.0108
-	desc = "DESCXYLO.0108"
+    id = XYLO.108
+	desc = "DESCXYLO.108"
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
@@ -220,19 +220,19 @@ province_event = {
 	immediate = { set_province_flag = transaction_forestiere_recente }	 	
 	
 	option = {
-		name = "XYLO.0108A"	 #non
+		name = "XYLO.108A"	 #non
 		ai_chance = { factor = 60 }
 		owner = { set_character_flag = don_refuse }
 	}
 	option = {
-		name = "XYLO.0108B"	#oui
+		name = "XYLO.108B"	#oui
 		ai_chance = { factor = 40 }
 		remove_province_modifier = foret_up
 		owner = { piety = 90 }
 		religion_authority = { modifier = don_foret		years = 7 }
 		}
 	option = {
-		name = "XYLO.0108C"	#vente
+		name = "XYLO.108C"	#vente
 		ai_chance = { factor = 20 }
 		trigger = { 
 			owner = { 

@@ -80,11 +80,11 @@ province_event = { #installe les provinces fluviales LCDA
 						NOT = { tier = baron }
 					}
 				}
-				province_event = { id = L3T.00041 days = 10 }
+				province_event = { id = L3T.41 days = 10 }
 				break = yes
 			}
 			# The other are delayed
-			province_event = { id = L3T.00041 days = 60 }
+			province_event = { id = L3T.41 days = 60 }
 		}	
 	}
 }

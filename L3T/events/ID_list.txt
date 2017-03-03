@@ -11,31 +11,31 @@
 ###L3T_init_DOMAINES.txt
 
 ##décider de l'avenir d'un domaine 
-#id = L3T.0003 #domaine Féodal 
-#id = L3T.0004 #domaine Communal  
-#id = L3T.00041 #domaine Communal province à double cité  
-#id = L3T.0006 #domaine Ecclésial 
-#id = L3T.0007 #attribution règle monastique
+#id = L3T.3 #domaine Féodal 
+#id = L3T.4 #domaine Communal  
+#id = L3T.41 #domaine Communal province à double cité  
+#id = L3T.6 #domaine Ecclésial 
+#id = L3T.7 #attribution règle monastique
 #[COMMENTE] id = L3T.0008 #attribution ordre militaire
 #id = L3T.9 #Init built holding (on_action)
 
 ##upgrades 
-#id = L3T.0005 #upgrade CITE GRANDE L1  vers L2
-#id = L3T.0002 #upgrade CITE GRANDE L2  vers L1
+#id = L3T.5 #upgrade CITE GRANDE L1  vers L2
+#id = L3T.2 #upgrade CITE GRANDE L2  vers L1
 
 ###L3T_mod_selection.txt
-#id = L3T.0010 #détection de la carte + paix de Dieu
-#id = L3T.0011 #fin paix de Dieu
-#id = L3T.0012 #boost IA
-#[LIBRE] id = L3T.0013 #
-#[LIBRE] id = L3T.0014 #
+#id = L3T.10 #détection de la carte + paix de Dieu
+#id = L3T.11 #fin paix de Dieu
+#id = L3T.12 #boost IA
+#[LIBRE] id = L3T.13 #
+#[LIBRE] id = L3T.14 #
 
 ###[NON INCLUS] L3T_minorite.txt
-#id = L3T.0015 #event initial
-#id = L3T.0016 #check annuel religion
-#id = L3T.0017 #marquage conversion depuis
-#id = L3T.0018 #
-#id = L3T.0019 #
+#id = L3T.15 #event initial
+#id = L3T.16 #check annuel religion
+#id = L3T.17 #marquage conversion depuis
+#id = L3T.18 #
+#id = L3T.19 #
 
 ###L3T_mod_selection_SWMH.txt
 #id = L3T.20 #SWMH - Coast
@@ -57,21 +57,21 @@
 #id = L3T.34 #LCDA - autre (non attribué)
 
 ###L3T_population.txt
-#id = L3T.0101 #upgrade population CA vers L1 #Féodal
-#id = L3T.0102 #upgrade population CA vers L2
-#id = L3T.0103 #upgrade population CA vers L3
-#id = L3T.0104 #upgrade population CA vers L4
-#id = L3T.0105 #upgrade population CA vers L5 
-#id = L3T.0106 #upgrade population CT vers L1 #Bourgeois
-#id = L3T.0107 #upgrade population CT vers L2
-#id = L3T.0108 #upgrade population CT vers L3
-#id = L3T.0109 #upgrade population CT vers L4
-#id = L3T.0110 #upgrade population CT vers L5
-#id = L3T.0111 #upgrade population TP vers L1 #Religieux
-#id = L3T.0112 #upgrade population TP vers L2
-#id = L3T.0113 #upgrade population TP vers L3
-#id = L3T.0114 #upgrade population TP vers L4
-#id = L3T.0115 #upgrade population TP vers L5
+#id = L3T.101 #upgrade population CA vers L1 #Féodal
+#id = L3T.102 #upgrade population CA vers L2
+#id = L3T.103 #upgrade population CA vers L3
+#id = L3T.104 #upgrade population CA vers L4
+#id = L3T.105 #upgrade population CA vers L5 
+#id = L3T.106 #upgrade population CT vers L1 #Bourgeois
+#id = L3T.107 #upgrade population CT vers L2
+#id = L3T.108 #upgrade population CT vers L3
+#id = L3T.109 #upgrade population CT vers L4
+#id = L3T.110 #upgrade population CT vers L5
+#id = L3T.111 #upgrade population TP vers L1 #Religieux
+#id = L3T.112 #upgrade population TP vers L2
+#id = L3T.113 #upgrade population TP vers L3
+#id = L3T.114 #upgrade population TP vers L4
+#id = L3T.115 #upgrade population TP vers L5
 #id = L3T.1101 #initialisation population buildings
 
 ###L3T_building_modifiers.txt
@@ -121,51 +121,51 @@
    
 ###ECO_init_RESSOURCES.txt
 ##Détection ressources
-#id = ECO.0001 #évaluation du potentiel économique -plaines- 
-#id = ECO.0002 #évaluation du potentiel économique -coteaux- 
-#id = ECO.0003 #évaluation du potentiel économique -forets- 
-#id = ECO.0004 #évaluation du potentiel économique -montagnes- 
-#id = ECO.0005 #évaluation du potentiel économique -t.arables-
-#id = ECO.0008 #évaluation du potentiel économique -désert- 
-#id = ECO.00080 #évaluation du potentiel économique -steppe- 
-#id = ECO.00081 #évaluation du potentiel économique -jungle-
-#id = ECO.00082 #évaluation du potentiel économique -arctique-  
-#id = ECO.0015 #reroll pour les malchanceux (voir détection ressources)
+#id = ECO.1 #évaluation du potentiel économique -plaines- 
+#id = ECO.2 #évaluation du potentiel économique -coteaux- 
+#id = ECO.3 #évaluation du potentiel économique -forets- 
+#id = ECO.4 #évaluation du potentiel économique -montagnes- 
+#id = ECO.5 #évaluation du potentiel économique -t.arables-
+#id = ECO.8 #évaluation du potentiel économique -désert- 
+#id = ECO.80 #évaluation du potentiel économique -steppe- 
+#id = ECO.81 #évaluation du potentiel économique -jungle-
+#id = ECO.82 #évaluation du potentiel économique -arctique-  
+#id = ECO.15 #reroll pour les malchanceux (voir détection ressources)
 
 ##activation ressources
-#id = ECO.00100 #activation pour commerce -agriculture -céréales 
-#id = ECO.00101 #activation pour commerce -agriculture -fruits
-#id = ECO.00102 #activation pour commerce -agriculture -légumes
-#id = ECO.00103 #activation pour commerce -agriculture -vigne
+#id = ECO.100 #activation pour commerce -agriculture -céréales 
+#id = ECO.101 #activation pour commerce -agriculture -fruits
+#id = ECO.102 #activation pour commerce -agriculture -légumes
+#id = ECO.103 #activation pour commerce -agriculture -vigne
 
-#id = ECO.00104 # LIBRE
+#id = ECO.104 # LIBRE
 
-#id = ECO.00105 #activation pour commerce -agriculture -bière
-#id = ECO.00106 #activation pour commerce -agriculture -vin
-#id = ECO.00107 #activation pour commerce -agriculture -farine 
-#id = ECO.00108 #activation pour commerce -agriculture -cidre 
-#id = ECO.00109 #activation pour commerce -agriculture -pain
+#id = ECO.105 #activation pour commerce -agriculture -bière
+#id = ECO.106 #activation pour commerce -agriculture -vin
+#id = ECO.107 #activation pour commerce -agriculture -farine 
+#id = ECO.108 #activation pour commerce -agriculture -cidre 
+#id = ECO.109 #activation pour commerce -agriculture -pain
 
-#id = ECO.00110 #activation pour commerce -elevage -ovin laine-
-#id = ECO.00111 #activation pour commerce -elevage -ovin fromage-
-#id = ECO.00112 #activation pour commerce -elevage -bovin bétail-
-#id = ECO.00113 #activation pour commerce -elevage -bovin cuir-
-#id = ECO.00114 #activation pour commerce -elevage -bovin viande-
-#id = ECO.00115 #activation pour commerce -elevage -etoffe-
-#id = ECO.00116 #activation pour commerce -elevage -drap-
-#id = ECO.00117 #activation pour commerce -elevage -cheval- 
+#id = ECO.110 #activation pour commerce -elevage -ovin laine-
+#id = ECO.111 #activation pour commerce -elevage -ovin fromage-
+#id = ECO.112 #activation pour commerce -elevage -bovin bétail-
+#id = ECO.113 #activation pour commerce -elevage -bovin cuir-
+#id = ECO.114 #activation pour commerce -elevage -bovin viande-
+#id = ECO.115 #activation pour commerce -elevage -etoffe-
+#id = ECO.116 #activation pour commerce -elevage -drap-
+#id = ECO.117 #activation pour commerce -elevage -cheval- 
 
-#id = ECO.00120 #activation pour commerce -foret -bois- 
-#id = ECO.00121 #activation pour commerce -foret -charbon-
-#id = ECO.00122 #activation pour commerce -foret -planche-
-#id = ECO.00123 #activation pour commerce -foret -verre- 
+#id = ECO.120 #activation pour commerce -foret -bois- 
+#id = ECO.121 #activation pour commerce -foret -charbon-
+#id = ECO.122 #activation pour commerce -foret -planche-
+#id = ECO.123 #activation pour commerce -foret -verre- 
 
 #id = ECO.124 #activation pour commerce -luxe -peaux-
 #id = ECO.125 #activation pour commerce -luxe -joyaux-
 #id = ECO.126 #activation pour commerce -luxe -epices-
 
-#id = ECO.00130 #activation pour commerce -pierre- 
-#id = ECO.00131 #activation pour commerce -pierre taille- 
+#id = ECO.130 #activation pour commerce -pierre- 
+#id = ECO.131 #activation pour commerce -pierre taille- 
 
 #id = ECO.132 #décompte minerai on_action
 #id = ECO.133 #décompte minerai alerte1
@@ -186,72 +186,72 @@
 
 #id = ECO.1391-5 #décompte minerai mouchard
 
-#id = ECO.00140 #activation pour commerce -minerai -minerai fer- 
-#id = ECO.00141 #activation pour commerce -minerai -sel gemme- 
-#id = ECO.00142 #activation pour commerce -minerai -or
-#id = ECO.00143 #activation pour commerce -minerai -cuivre
-#id = ECO.00144 #activation pour commerce -minerai -metal-
-#id = ECO.00145 #activation pour commerce -minerai -outils-
-#id = ECO.00146 #activation pour commerce -minerai -sel raffine-
-#id = ECO.00147 #activation pour commerce -minerai -salaison-
-#id = ECO.00148 #activation pour commerce -minerai -armes-
+#id = ECO.140 #activation pour commerce -minerai -minerai fer- 
+#id = ECO.141 #activation pour commerce -minerai -sel gemme- 
+#id = ECO.142 #activation pour commerce -minerai -or
+#id = ECO.143 #activation pour commerce -minerai -cuivre
+#id = ECO.144 #activation pour commerce -minerai -metal-
+#id = ECO.145 #activation pour commerce -minerai -outils-
+#id = ECO.146 #activation pour commerce -minerai -sel raffine-
+#id = ECO.147 #activation pour commerce -minerai -salaison-
+#id = ECO.148 #activation pour commerce -minerai -armes-
 
-#id = ECO.00150 #activation pour commerce -peche -poisson-
-#id = ECO.00151 #activation pour commerce -pisciculture -poisson-
-#id = ECO.00152 #activation pour commerce -peche/pisciculture -fumaison-
+#id = ECO.150 #activation pour commerce -peche -poisson-
+#id = ECO.151 #activation pour commerce -pisciculture -poisson-
+#id = ECO.152 #activation pour commerce -peche/pisciculture -fumaison-
 
 
 ###ECO+_init_COMMERCE.txt
 
 ##Détection route commerciales
-#[COMMENTE] id = ECO.0023 #centre commercial1 test
-#[COMMENTE] id = ECO.0024 #centre commercial2 test
-#[COMMENTE] id = ECO.0025 #centre commercial3 test
-#[COMMENTE] id = ECO.0026 #calcul du nombre de ressources
+#[COMMENTE] id = ECO.23 #centre commercial1 test
+#[COMMENTE] id = ECO.24 #centre commercial2 test
+#[COMMENTE] id = ECO.25 #centre commercial3 test
+#[COMMENTE] id = ECO.26 #calcul du nombre de ressources
 
 ###ECO+_immersion.txt
 
 ##Récoltes
-#id = ECO.0200 #bonne récolte
-#id = ECO.0201 #mauvaise récolte
+#id = ECO.200 #bonne récolte
+#id = ECO.201 #mauvaise récolte
 ##Peches
-#id = ECO.0202 #bonne pêche
-#id = ECO.0203 #mauvaise pêche
+#id = ECO.202 #bonne pêche
+#id = ECO.203 #mauvaise pêche
 ##Mine
-#id = ECO.0204 #baisse productivité de la mine
-#id = ECO.0205 #amelioration productivité de la mine
-#id = ECO.0213 #nouveau filon découvert + notif chronique
+#id = ECO.204 #baisse productivité de la mine
+#id = ECO.205 #amelioration productivité de la mine
+#id = ECO.213 #nouveau filon découvert + notif chronique
 
 ##Industrie
-#id = ECO.0206 #industrie prospère
-#id = ECO.0207 #fin industrie prospère
+#id = ECO.206 #industrie prospère
+#id = ECO.207 #fin industrie prospère
 ##Meteo
-#id = ECO.0208 #inondation
-#id = ECO.0209 #sécheresse
+#id = ECO.208 #inondation
+#id = ECO.209 #sécheresse
 
-#id = ECO.0210 #prospérité  5ans - notif chronique
-#id = ECO.0211 #prospérité 10ans - notif chronique
-#id = ECO.0212 #prospérité 15ans - notif chronique
+#id = ECO.210 #prospérité  5ans - notif chronique
+#id = ECO.211 #prospérité 10ans - notif chronique
+#id = ECO.212 #prospérité 15ans - notif chronique
 
-#id = ECO.0213 #voir #Mine
+#id = ECO.213 #voir #Mine
 
 ##ambition_events.txt
-#id = ECO.0301 #Début chaîne d'event "acheter pour revendre"
-#id = ECO.0302 #Choix de l'achat
-#id = ECO.0303 #Vente laine
-#id = ECO.0304 #Vente étoffe
-#id = ECO.0305 #Vente drap
-#id = ECO.0306 #Gestion des invendus
-#id = ECO.0307 #Fin de la chaîne
+#id = ECO.301 #Début chaîne d'event "acheter pour revendre"
+#id = ECO.302 #Choix de l'achat
+#id = ECO.303 #Vente laine
+#id = ECO.304 #Vente étoffe
+#id = ECO.305 #Vente drap
+#id = ECO.306 #Gestion des invendus
+#id = ECO.307 #Fin de la chaîne
 
-#id = ECO.0311 #Début chaîne d'event "fabriquer une épée légendaire"
-#id = ECO.0312 #Envoi d'un serviteur
-#id = ECO.0313 #Une femme vient vous voir
-#id = ECO.0314 #Nouveau serviteur ou abandon
-#id = ECO.0315 #Plan trouvé
-#id = ECO.0316 #Essai de l'épée
-#id = ECO.0317 #Equilibrage épée ou abandon
-#id = ECO.0318 #Fin de la chaîne
+#id = ECO.311 #Début chaîne d'event "fabriquer une épée légendaire"
+#id = ECO.312 #Envoi d'un serviteur
+#id = ECO.313 #Une femme vient vous voir
+#id = ECO.314 #Nouveau serviteur ou abandon
+#id = ECO.315 #Plan trouvé
+#id = ECO.316 #Essai de l'épée
+#id = ECO.317 #Equilibrage épée ou abandon
+#id = ECO.318 #Fin de la chaîne
 
 #id = ECO.319 #flag chaînes cadastre
 #id = ECO.320 #conflits de parcelles
@@ -271,25 +271,25 @@
 #id = ECO.3252 #rédiger un cadastre complet suites
 
 ##Vin & bière
-#id = ECO.0320 #Bière ou vin au banquet ? !!!à renuméroter!!!
-#id = ECO.0321 #Bonne réputation pour le vignoble !!!à renuméroter!!!
-#id = ECO.0322 #Bonne réputation pour la brasserie !!!à renuméroter!!!
-#id = ECO.0323 #Le seigneur a préféré un produit étranger !!!à renuméroter!!!
+#id = ECO.320 #Bière ou vin au banquet ? !!!à renuméroter!!!
+#id = ECO.321 #Bonne réputation pour le vignoble !!!à renuméroter!!!
+#id = ECO.322 #Bonne réputation pour la brasserie !!!à renuméroter!!!
+#id = ECO.323 #Le seigneur a préféré un produit étranger !!!à renuméroter!!!
 
 ################################################
 # L3TRADE dynamic trade route by Arko and Mouchi #
 ################################################
 
-#id = L3TRADE.0001 #Step B attribution
-#id = L3TRADE.0002 #Step C attribution
-#id = L3TRADE.0003 #Step D attribution
-#id = L3TRADE.0004 #Step E attribution
-#id = L3TRADE.0005 #Route modifier attribution
-#id = L3TRADE.0006 #Annex comercial node attribution
-#id = L3TRADE.0007 #Update the modifier of the route size
-#id = L3TRADE.0008 #Update the route size variable for previous steps
-#id = L3TRADE.0009 #Avert the player that the route building can be build on its demesne
-#id = L3TRADE.0010 #Avert the player that a route is on its demesne
+#id = L3TRADE.1 #Step B attribution
+#id = L3TRADE.2 #Step C attribution
+#id = L3TRADE.3 #Step D attribution
+#id = L3TRADE.4 #Step E attribution
+#id = L3TRADE.5 #Route modifier attribution
+#id = L3TRADE.6 #Annex comercial node attribution
+#id = L3TRADE.7 #Update the modifier of the route size
+#id = L3TRADE.8 #Update the route size variable for previous steps
+#id = L3TRADE.9 #Avert the player that the route building can be build on its demesne
+#id = L3TRADE.10 #Avert the player that a route is on its demesne
 
 ######################################################
 # [ReC][Reliques et Cathédrales]  par Arko et Mouchi #
@@ -301,15 +301,15 @@
 
  
 ##ReC_events_reliques.txt
-#id = REC.0101 >> REC.0125 # initialisation Reliques
-#id = REC.0126 >> REC.0130 # initialisation Reliques à découvrir
-#id = REC.0131 >> REC.0135 # confirmation Reliques à découvrir (cachée)
-#id = REC.0136 # initialisation Relique Graal
-#id = REC.0137 # confirmation Relique Graal (cachée)
+#id = REC.101 >> REC.125 # initialisation Reliques
+#id = REC.126 >> REC.130 # initialisation Reliques à découvrir
+#id = REC.131 >> REC.135 # confirmation Reliques à découvrir (cachée)
+#id = REC.136 # initialisation Relique Graal
+#id = REC.137 # confirmation Relique Graal (cachée)
 #libres ID 138 >> 150
-#id = REC.0151 >> REC.175 # confirmation relique CATHOLIQUES et MUSULMANS
-#id = REC.0176 # fausse relique (catholique)
-#id = REC.0177 # maintenance doublon pré-attribution reliques
+#id = REC.151 >> REC.175 # confirmation relique CATHOLIQUES et MUSULMANS
+#id = REC.176 # fausse relique (catholique)
+#id = REC.177 # maintenance doublon pré-attribution reliques
 
 ##[NON INCLUS]ReC_events_generaux.txt
 #id = REC.0301 # recruter un maitre batisseur
@@ -511,76 +511,76 @@
 #namespace = XYLO
 
 ###XYLO_specialisation.txt   
-#id = XYLO.0001 # initialisation Recruter un forestier
-#id = XYLO.0002 # initialisation Forêts féodales
-#id = XYLO.0003 # initialisation Forêts communales
-#id = XYLO.0004 # initialisation Forêts cléricales
+#id = XYLO.1 # initialisation Recruter un forestier
+#id = XYLO.2 # initialisation Forêts féodales
+#id = XYLO.3 # initialisation Forêts communales
+#id = XYLO.4 # initialisation Forêts cléricales
 
 ###[NON INCLUS] XYLO_champis.txt
 #des champignons !
-#id = XYLO.0111  # découverte sylvestre
-#id = XYLO.01121 # bolet + cueillette or not cueillette ?
-#id = XYLO.01122 # chanterelle + cueillette or not cueillette ?
-#id = XYLO.01123 # mystérieux + cueillette or not cueillette ?
-#id = XYLO.0113  # cueillette et choix
-#id = XYLO.01131 # l'apporter à mon soigneur pour examen
-#id = XYLO.01132 # l'apporter à mon maître-queue pour le cuisiner
-#id = XYLO.01133 # le donner à manger mon cheval
-#id = XYLO.01134 # l'apporter à l'ermite qui vit pas loin pour examen
-#id = XYLO.01141 # vénéneux
-#id = XYLO.01142 # comestible
-#id = XYLO.01143 # mystérieux
-#id = XYLO.01151 # potion fortifiante
-#id = XYLO.01152 # potion de soin (blessure)
-#id = XYLO.01153 # potion de soin (maladie)
+#id = XYLO.111  # découverte sylvestre
+#id = XYLO.1121 # bolet + cueillette or not cueillette ?
+#id = XYLO.1122 # chanterelle + cueillette or not cueillette ?
+#id = XYLO.1123 # mystérieux + cueillette or not cueillette ?
+#id = XYLO.113  # cueillette et choix
+#id = XYLO.1131 # l'apporter à mon soigneur pour examen
+#id = XYLO.1132 # l'apporter à mon maître-queue pour le cuisiner
+#id = XYLO.1133 # le donner à manger mon cheval
+#id = XYLO.1134 # l'apporter à l'ermite qui vit pas loin pour examen
+#id = XYLO.1141 # vénéneux
+#id = XYLO.1142 # comestible
+#id = XYLO.1143 # mystérieux
+#id = XYLO.1151 # potion fortifiante
+#id = XYLO.1152 # potion de soin (blessure)
+#id = XYLO.1153 # potion de soin (maladie)
 
 ###[NON INCLUS] XYLO_bandits.txt
 #des bandits !
-#id = XYLO.02101 # raids pirates
-#id = XYLO.02102 # suppression raids pirates
-#id = XYLO.0211  # renforcement des bandits avec le temps (at war+ + ou durée modificateurs)
-#id = XYLO.0212  # envoyer un conseiller (not at war) ou ne rien faire.
-#id = XYLO.02120 # réussite //fin
-#id = XYLO.02121 # échec
-#id = XYLO.0213  # recherche site + marquage
-#id = XYLO.0214  # création perso + création fief
-#id = XYLO.0215  # octroi fief
-#id = XYLO.0216  # remplissage fief
-#id = XYLO.0217  # clean à la mort du bandit
+#id = XYLO.2101 # raids pirates
+#id = XYLO.2102 # suppression raids pirates
+#id = XYLO.211  # renforcement des bandits avec le temps (at war+ + ou durée modificateurs)
+#id = XYLO.212  # envoyer un conseiller (not at war) ou ne rien faire.
+#id = XYLO.2120 # réussite //fin
+#id = XYLO.2121 # échec
+#id = XYLO.213  # recherche site + marquage
+#id = XYLO.214  # création perso + création fief
+#id = XYLO.215  # octroi fief
+#id = XYLO.216  # remplissage fief
+#id = XYLO.217  # clean à la mort du bandit
 # si échec ou inaction apparition d'un domaine dédié. voir event construction de bâtiments.
 #suppresion des modif classiques, modif cumulés à la place.
 
 
 ###décision # organiser une expédition
-#id = XYLO.02141 # succès expédition, pas de résurgence avant un certain temps
-#id = XYLO.02142 # échec expédition, ne peut pas retenter avant un certain temps
-#id = XYLO.0220 # divers expédition ajoute points échec/succès
-#id = XYLO.0221 # divers expédition ajoute points échec/succès
-#id = XYLO.0222 # divers expédition ajoute points échec/succès
+#id = XYLO.2141 # succès expédition, pas de résurgence avant un certain temps
+#id = XYLO.2142 # échec expédition, ne peut pas retenter avant un certain temps
+#id = XYLO.220 # divers expédition ajoute points échec/succès
+#id = XYLO.221 # divers expédition ajoute points échec/succès
+#id = XYLO.222 # divers expédition ajoute points échec/succès
 
 #id = XYLO.2000-2999 #Chasse spéciale
 
 ### XYLO_updown_downgrades.txt
-#id = XYLO.0101 # libre
-#id = XYLO.0102 # libre
-#id = XYLO.0103 # downgrade serie for bankruptcy -première coupe
-#id = XYLO.0104 # downgrade serie for bankruptcy -seconde coupe  
-#id = XYLO.0105 # downgrade serie for bankruptcy -troisième coupe AKA la coupe de trop
-#id = XYLO.0106 # downgrade serie for bankruptcy -retrait foret niv2 -ajout foret amoindrie
-#id = XYLO.0107 # downgrade -don église v1
-#id = XYLO.0108 # downgrade -don église v2
+#id = XYLO.101 # libre
+#id = XYLO.102 # libre
+#id = XYLO.103 # downgrade serie for bankruptcy -première coupe
+#id = XYLO.104 # downgrade serie for bankruptcy -seconde coupe  
+#id = XYLO.105 # downgrade serie for bankruptcy -troisième coupe AKA la coupe de trop
+#id = XYLO.106 # downgrade serie for bankruptcy -retrait foret niv2 -ajout foret amoindrie
+#id = XYLO.107 # downgrade -don église v1
+#id = XYLO.108 # downgrade -don église v2
 
 ### XYLO_updown_upgrades.txt
-#id = XYLO.0201 # upgrade achat v1
-#id = XYLO.0202 # upgrade achat v2
-#id = XYLO.0203 # upgrade achat v3
+#id = XYLO.201 # upgrade achat v1
+#id = XYLO.202 # upgrade achat v2
+#id = XYLO.203 # upgrade achat v3
 
 ### XYLO_chartes.txt
-#id = XYLO.0301 # -libre-
-#id = XYLO.0302 # Loi forestière -agir contre la révolte (4% ou +)
-#id = XYLO.0303 # Loi forestière -agir contre la révolte (9% ou +)
-#id = XYLO.0304 # Loi forestière -simple demande
-#id = XYLO.0305 # Loi forestière -demande d'upgrade
+#id = XYLO.301 # -libre-
+#id = XYLO.302 # Loi forestière -agir contre la révolte (4% ou +)
+#id = XYLO.303 # Loi forestière -agir contre la révolte (9% ou +)
+#id = XYLO.304 # Loi forestière -simple demande
+#id = XYLO.305 # Loi forestière -demande d'upgrade
 
 #[NON INCLUS] 
 #Divers flavour

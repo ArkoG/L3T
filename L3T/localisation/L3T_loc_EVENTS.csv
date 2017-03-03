@@ -1,36 +1,36 @@
-L3T.0003;Choose the demesne orientation -feodal version-;Choisir l'orientation du domaine -version féodale-;;;;;;;;;;;;x
-NAMEL3T.0003;Feudal Land Administration;Domaine seigneurial;;;;;;;;;;;;x
-DESCL3T.0003;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of the local nobility.  \n\nYou may choose to support the local military aristocracy, allowing you to develop this holding into a formidable fortress. It will be able to support and protect large numbers of highly-trained troops behind its thick walls, but maintaining them will forego any major economic development within this holding. \n\nChoosing instead to support the local landed aristocracy by granting them more control over the peasantry will allow the development of regional industries and production of raw resources. While this will limit the defensibility of [Root.Location.GetName], the economic benefits are considerable.;Nous devons décider comment allons-nous développer ce domaine.\n\n     -Une Forteresse remplira aussi bien un rôle de poste frontière sur une de nos marches qu'un rôle de protection et de formation de troupes. C'est un site très bien défendu mais qui coûte cher à entretenir.\n     -Une Citée féodale pourra abriter une population importante derrière ses hauts murs défendus par un château fort. Elle a l'étoffe d'une Capitale pour tout seigneur de notre rang !\n     -Le Bourg Féodal regroupe une communauté de paysans qui exploitent nos terres et vivent bien loin des préoccupation de la cour. Il permet l'exploitation des ressources locales, qui pourront être échangées ou vendues et... taxées pour venir remplir nos coffres.;;;;;;;;;;;;x
-L3T.0003A;We shall support the military aristocracy!;Ce sera une Forteresse avant tout !;;;;;;;;;;;;x
-L3T.0003B;We shall support the landed aristocracy!;Un Bourg Féodal de toute évidence !;;;;;;;;;;;;x
-L3T.0003C;We shall save our resources to develop the administration!;Ce sera une Cité féodale. J'ai dis.;;;;;;;;;;;x
+L3T.3;Choose the demesne orientation -feodal version-;Choisir l'orientation du domaine -version féodale-;;;;;;;;;;;;x
+NAMEL3T.3;Feudal Land Administration;Domaine seigneurial;;;;;;;;;;;;x
+DESCL3T.3;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of the local nobility.  \n\nYou may choose to support the local military aristocracy, allowing you to develop this holding into a formidable fortress. It will be able to support and protect large numbers of highly-trained troops behind its thick walls, but maintaining them will forego any major economic development within this holding. \n\nChoosing instead to support the local landed aristocracy by granting them more control over the peasantry will allow the development of regional industries and production of raw resources. While this will limit the defensibility of [Root.Location.GetName], the economic benefits are considerable.;Nous devons décider comment allons-nous développer ce domaine.\n\n     -Une Forteresse remplira aussi bien un rôle de poste frontière sur une de nos marches qu'un rôle de protection et de formation de troupes. C'est un site très bien défendu mais qui coûte cher à entretenir.\n     -Une Citée féodale pourra abriter une population importante derrière ses hauts murs défendus par un château fort. Elle a l'étoffe d'une Capitale pour tout seigneur de notre rang !\n     -Le Bourg Féodal regroupe une communauté de paysans qui exploitent nos terres et vivent bien loin des préoccupation de la cour. Il permet l'exploitation des ressources locales, qui pourront être échangées ou vendues et... taxées pour venir remplir nos coffres.;;;;;;;;;;;;x
+L3T.3A;We shall support the military aristocracy!;Ce sera une Forteresse avant tout !;;;;;;;;;;;;x
+L3T.3B;We shall support the landed aristocracy!;Un Bourg Féodal de toute évidence !;;;;;;;;;;;;x
+L3T.3C;We shall save our resources to develop the administration!;Ce sera une Cité féodale. J'ai dis.;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-L3T.0004;The city of $HOLDING$ Choose the demesne orientation -city version-;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;;;;;;;;;;;;x
-NAMEL3T.0004;Municipal Land Administration;Domaine communal;;;;;;;;;;;;x
-DESCL3T.0004;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of the local burghers.  \n\nYou may choose to support the local tradesmen and merchants, allowing you to develop this city as a bustling center of commerce. \n\nChoosing instead to support the local craftsmen and artisans will allow the development of regional industries and production of goods. \n\nIn either case, the benefits are many and the profits even greater!;Ce domaine doit se voir assigner une voie de développement. \n\n     Cette cité peut être développée soit selon une orientation production, soit à caractère commercial. Dans les deux cas, cela constitue une source non négligeable de taxation ! \n;;;;;;;;;;;;x
-L3T.0004A;We shall support the craftsmen!;Produisons ! ;;;;;;;;;;;;x
-L3T.0004B;We shall support the merchants!;Commerçons ! ;;;;;;;;;;;;x
-NAMEL3T.0005;Thriving City;Notre belle cité;;;;;;;;;;;;x
-L3T.0005;upgrade big city;upgrade grande cité;;;;;;;;;;;;x
-DESCL3T.0005;Merchants and traders far and wide speak of this city's grandeur, as evident from its well-maintained streets, immense wealth, and the host of people who make a living inside its walls. As prosperous as it is, there are reports that economic and population growth show no signs of decline.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
-L3T.0005A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
-NAMEL3T.0002;Shining Jewel of [Root.Location.GetName];Notre Glorieuse Cité;;;;;;;;;;;;x
-L3T.0002;upgrade big city;upgrade grande cité;;;;;;;;;;;;x
-DESCL3T.0002;This city's splendour is a boon to the surrounding region and bestows upon it a prestige reserved for only the wealthiest and most beautiful cities in the world. New arrivals flock to the bustling markets every day and the city's districts sing out with the sounds of industry.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
-L3T.0002A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
+L3T.4;The city of $HOLDING$ Choose the demesne orientation -city version-;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;;;;;;;;;;;;x
+NAMEL3T.4;Municipal Land Administration;Domaine communal;;;;;;;;;;;;x
+DESCL3T.4;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of the local burghers.  \n\nYou may choose to support the local tradesmen and merchants, allowing you to develop this city as a bustling center of commerce. \n\nChoosing instead to support the local craftsmen and artisans will allow the development of regional industries and production of goods. \n\nIn either case, the benefits are many and the profits even greater!;Ce domaine doit se voir assigner une voie de développement. \n\n     Cette cité peut être développée soit selon une orientation production, soit à caractère commercial. Dans les deux cas, cela constitue une source non négligeable de taxation ! \n;;;;;;;;;;;;x
+L3T.4A;We shall support the craftsmen!;Produisons ! ;;;;;;;;;;;;x
+L3T.4B;We shall support the merchants!;Commerçons ! ;;;;;;;;;;;;x
+NAMEL3T.5;Thriving City;Notre belle cité;;;;;;;;;;;;x
+L3T.5;upgrade big city;upgrade grande cité;;;;;;;;;;;;x
+DESCL3T.5;Merchants and traders far and wide speak of this city's grandeur, as evident from its well-maintained streets, immense wealth, and the host of people who make a living inside its walls. As prosperous as it is, there are reports that economic and population growth show no signs of decline.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
+L3T.5A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
+NAMEL3T.2;Shining Jewel of [Root.Location.GetName];Notre Glorieuse Cité;;;;;;;;;;;;x
+L3T.2;upgrade big city;upgrade grande cité;;;;;;;;;;;;x
+DESCL3T.2;This city's splendour is a boon to the surrounding region and bestows upon it a prestige reserved for only the wealthiest and most beautiful cities in the world. New arrivals flock to the bustling markets every day and the city's districts sing out with the sounds of industry.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
+L3T.2A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-L3T.0006;Choose demesne orientation -church version-;Choisir l'orientation du domaine -version ecclésiale-;;;;;;;;;;;;x
-NAMEL3T.0006;Clerical Land Administration;Les Terres du Clergé ;;;;;;;;;;;;x
-DESCL3T.0006;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of local religious authorities. \n\n Choosing to support the local clergy will allow us to develop the proper infrastructure to encourage local industries in this province, although a portion of the control and the profits will be surrendered to the Church. \n\nAllotting some land to support a local monastic or military order, if they are available, will provide its own benefits in the form of services rendered by their members, but their autonomy does ensure much of the economic benefit will go to their coffers instead of yours.;Nous devons décider de l'avenir de ce domaine en la province de [From.Location.GetName]. Que choisirons-nous ? \n\n     Un Monastère constitue un conservatoire du savoir où l'on y instruit la jeunesse et compile nombre de connaissances anciennes ou nouvelles. La communauté religieuse se choisira une règle de vie monastique et pourra rejoindre un ordre monastique. \n     Une Citée Episcopale abritera les institutions religieuses locales et aura la mainmise sur les terres environnantes. \n     Une Commanderie, monastère dédié à un usage principalement militaire, assurera des troupes de qualités, notamment dans l'optique d'une guerre sainte ou juste pour mater ce prétentieux voisin !;;;;;;;;;;;;x
-L3T.0006A;We shall support a monastic order.;Implantons-y un Monastère;;;;;;;;;;;;x
-L3T.0006B;We shall grant rights and privileges to the local clergy.;Laissons les à libre gestion du clergé local.;;;;;;;;;;;;x
-L3T.0006C;We shall open the use of our lands to a military order.;Accordons donc le statut de Commanderie.;;;;;;;;;;;;x
-L3T.0007;Choose the monastic rule for the demesne;Choisir la règle monastique du domaine de type monastère;;;;;;;;;;;;x
-NAMEL3T.0007;Supporting a Monastery;Vie Monastique;;;;;;;;;;;;x
-DESCL3T.0007;As we have decided to support the establishment of a monastery in these parts, which monastic rule should we sponsor?;Quelle règle monastique le Monastère de [From.Location.GetName] va-t-il suivre ? \n\n Ce choix conditionnera ensuite un éventuel rattachement à l'un des ordres monastiques de la même obédience, ordres présentant chacun leurs spécificités.;;;;;;;;;;;;x
-L3T.0007A;The Rule of Saint Benedict;La Règle de Saint Benoît;;;;;;;;;;;;x
-L3T.0007B;The Rule of Saint Augustine;La Règle de Saint Augustin;;;;;;;;;;;;x
-L3T.0007C;The Rule of Saint Basil;La Règle de Saint Basile;;;;;;;;;;;;x
+L3T.6;Choose demesne orientation -church version-;Choisir l'orientation du domaine -version ecclésiale-;;;;;;;;;;;;x
+NAMEL3T.6;Clerical Land Administration;Les Terres du Clergé ;;;;;;;;;;;;x
+DESCL3T.6;Your steward reports that a settlement in the province of [Root.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of local religious authorities. \n\n Choosing to support the local clergy will allow us to develop the proper infrastructure to encourage local industries in this province, although a portion of the control and the profits will be surrendered to the Church. \n\nAllotting some land to support a local monastic or military order, if they are available, will provide its own benefits in the form of services rendered by their members, but their autonomy does ensure much of the economic benefit will go to their coffers instead of yours.;Nous devons décider de l'avenir de ce domaine en la province de [From.Location.GetName]. Que choisirons-nous ? \n\n     Un Monastère constitue un conservatoire du savoir où l'on y instruit la jeunesse et compile nombre de connaissances anciennes ou nouvelles. La communauté religieuse se choisira une règle de vie monastique et pourra rejoindre un ordre monastique. \n     Une Citée Episcopale abritera les institutions religieuses locales et aura la mainmise sur les terres environnantes. \n     Une Commanderie, monastère dédié à un usage principalement militaire, assurera des troupes de qualités, notamment dans l'optique d'une guerre sainte ou juste pour mater ce prétentieux voisin !;;;;;;;;;;;;x
+L3T.6A;We shall support a monastic order.;Implantons-y un Monastère;;;;;;;;;;;;x
+L3T.6B;We shall grant rights and privileges to the local clergy.;Laissons les à libre gestion du clergé local.;;;;;;;;;;;;x
+L3T.6C;We shall open the use of our lands to a military order.;Accordons donc le statut de Commanderie.;;;;;;;;;;;;x
+L3T.7;Choose the monastic rule for the demesne;Choisir la règle monastique du domaine de type monastère;;;;;;;;;;;;x
+NAMEL3T.7;Supporting a Monastery;Vie Monastique;;;;;;;;;;;;x
+DESCL3T.7;As we have decided to support the establishment of a monastery in these parts, which monastic rule should we sponsor?;Quelle règle monastique le Monastère de [From.Location.GetName] va-t-il suivre ? \n\n Ce choix conditionnera ensuite un éventuel rattachement à l'un des ordres monastiques de la même obédience, ordres présentant chacun leurs spécificités.;;;;;;;;;;;;x
+L3T.7A;The Rule of Saint Benedict;La Règle de Saint Benoît;;;;;;;;;;;;x
+L3T.7B;The Rule of Saint Augustine;La Règle de Saint Augustin;;;;;;;;;;;;x
+L3T.7C;The Rule of Saint Basil;La Règle de Saint Basile;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 DESCL3T.225;The administration set in an Administrative Center is no longer functional.;L'administration qui a été mis en place dans une CITÉ FÉODALE n'est plus fonctionnelle.;;;;;;;;;;;;x
 L3T.225A;We lose benefits;Nous en perdons les avantages;;;;;;;;;;;;x
@@ -40,139 +40,133 @@ DESCL3T.301;Removing and selling administrative buildings give us between §Y40%§
 TOOLTIPL3T301A;The tool manufacturing will be replaced by a weapon production;La production d'outils sera remplacée par une production d'armes.;;;;;;;;;;;;x
 TOOLTIPL3T301B;The tool manufacturing buildings will be sold between §Y40%§! and §Y60%§! of their building cost.;Les bâtiments de production d'outils seront vendus entre §Y40%§! et §Y60%§! de leur coût de construction.;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-#ECO.0020;unrelated stuff;route Vienne - Aoste;;;;;;;;;;;;x
-#DESCECO.0020;unrelated stuff;Le tracé de la principale route reliant les cités de Vienne et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans le développement de cette voie commerciale.;;;;;;;;;;;;x
-#ECO.0021A;unrelated stuff;Merci pour la leçon de géographie !;;;;;;;;;;;;x
-#ECO.0021;unrelated stuff;L'Axe Vienne - Aoste;;;;;;;;;;;;x
-#DESCECO.0021;unrelated stuff;Le tracé de la principale route reliant les cités de Vienne et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans le développement de cette voie commerciale.;;;;;;;;;;;;x
-#ECO.0021A;unrelated stuff;Merci pour la leçon de géographie !;;;;;;;;;;;;x
-#ECO.0022;unrelated stuff;L'Axe Lyon - Aoste;;;;;;;;;;;;x
-#DESCECO.0022;unrelated stuff;Le tracé de la principale route reliant les cités de Lyon et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans ce domaine en bonne intelligence.;;;;;;;;;;;;x
-#ECO.0022A;unrelated stuff;Merci pour la leçon d'économie !;;;;;;;;;;;;x
+#ECO.20;unrelated stuff;route Vienne - Aoste;;;;;;;;;;;;x
+#DESCECO.20;unrelated stuff;Le tracé de la principale route reliant les cités de Vienne et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans le développement de cette voie commerciale.;;;;;;;;;;;;x
+#ECO.21A;unrelated stuff;Merci pour la leçon de géographie !;;;;;;;;;;;;x
+#ECO.21;unrelated stuff;L'Axe Vienne - Aoste;;;;;;;;;;;;x
+#DESCECO.21;unrelated stuff;Le tracé de la principale route reliant les cités de Vienne et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans le développement de cette voie commerciale.;;;;;;;;;;;;x
+#ECO.21A;unrelated stuff;Merci pour la leçon de géographie !;;;;;;;;;;;;x
+#ECO.22;unrelated stuff;L'Axe Lyon - Aoste;;;;;;;;;;;;x
+#DESCECO.22;unrelated stuff;Le tracé de la principale route reliant les cités de Lyon et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans ce domaine en bonne intelligence.;;;;;;;;;;;;x
+#ECO.22A;unrelated stuff;Merci pour la leçon d'économie !;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-NAMEL3T.0010;Welcome, my Liege! ;Salutations Messire ! ;;;;;;;;;;;;x
-L3T.0010;MAP choice;Les cartes en main !;;;;;;;;;;;;x
-DESCL3T.0010;\n Please tell me which map your are playing alongside L3T to adapt the game. This will seed the map with the appropriate terrain and resource modifiers.;\n Dis-moi sur quelle carte joues-tu pour adapter la partie ? ;;;;;;;;;;;;x
-L3T.0010A;Some What More Historic (SWMH);Some What More Historic (SWMH);;;;;;;;;;;;x
-L3T.0010B;La Couronne des Alpes (LCDA);La Couronne des Alpes (LCDA);;;;;;;;;;;;x
-L3T.0010C;Vanilla;Vanilla;;;;;;;;;;;;x
+NAMEL3T.10;Welcome, my Liege! ;Salutations Messire ! ;;;;;;;;;;;;x
+L3T.10;MAP choice;Les cartes en main !;;;;;;;;;;;;x
+DESCL3T.10;\n Please tell me which map your are playing alongside L3T to adapt the game. This will seed the map with the appropriate terrain and resource modifiers.;\n Dis-moi sur quelle carte joues-tu pour adapter la partie ? ;;;;;;;;;;;;x
+L3T.10A;Some What More Historic (SWMH);Some What More Historic (SWMH);;;;;;;;;;;;x
+L3T.10B;La Couronne des Alpes (LCDA);La Couronne des Alpes (LCDA);;;;;;;;;;;;x
+L3T.10C;Vanilla;Vanilla;;;;;;;;;;;;x
 L3T.15;Choose your language;Choix de la langue;;;;;;;;;;;;;x
 DESCL3T.15;Some parts of the mod are not translated from French yet.\n You can disable some of the unlocalized stuff (mostly some flavour events) by selecting you want to play the English version.;Une partie du contenu n'est pas traduit en langue angloise. Cet évènement introductif permet de désactiver une partie des contenus non traduits. \n Logiquement, si vous lisez ceci, cliquez sur "JOUER en français".;;;;;;;;;;;;;x
 L3T.15A;FRENCH speaking version;L3T complet, en français;;;;;;;;;;;;x
 L3T.15B;ENGLISH speaking version;L3T partiel, en anglais;;;;;;;;;;;;x
 L3T.15C;IA choice;choix de l'AI;;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-DESCL3T.0101;This settlement has grown! A little hamlet now thrives in this region and the peasants living here work ceaselessly under the wise rule of the local lord.;La population a cru autour du château. \n Les quelques maisonnées assemblées ici forment à présent un petit hameau !;;;;;;;;;;;;x
-DESCL3T.0102;A once insignificant hamlet populated by only a few dozen households has grown into a busy village!;Le hameau a pris de l'importance au pied du château et forme à présent un village !;;;;;;;;;;;;x
-DESCL3T.0103;The castle village has grown into a borough and now requires a local council led by some of the elders in order to oversee its day-to-day functions. The market too has grown and a small section of is now home to a handful of artisans.;Le village du château a pris de l'importance et attire toujours plus de nouveaux venus, artisans ou paysans et forme à présent un bourg !;;;;;;;;;;;;x
-DESCL3T.0104;A thriving town has grown from this borough, and the markets are well-stocked with goods harvested and made both locally and coming in from afar. The derelict elder council has evolved into a properly elected council capable of administering trade and justice, although the final word still lies with the lord of these lands.;Le bourg formé plus tôt contre le château s'est développé et atteint désormais une population suffisante pour porter la dénomination de ville !;;;;;;;;;;;;x
-DESCL3T.0105;A vast city now stands tall and proud at the foot of the castle keep, and its inhabitants prosper and reap the benefits of living in such an industrious and well-populated settlement.;Le château est désormais le cœur d'une ville suffisamment populeuse et industrieuse pour porter le nom de cité !;;;;;;;;;;;;x
-DESCL3T.0106;This settlement has grown! A little hamlet now thrives in this region and the inhabitants living here work ceaselessly under the wise leadership of a local council.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un petit hameau !;;;;;;;;;;;;x
-DESCL3T.0107;Through a steady increase in trade and industry, this once insignificant hamlet populated by only a few dozen households has grown into a busy village!;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un village !;;;;;;;;;;;;x
-DESCL3T.0108;The village has grown into a borough and now requires a council led by the leaders of the most prominent merchant families in order to oversee its day-to-day functions. The borough is now also home to a handful of artisans, and caravans of merchants keep the market squares busy with activity.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un bourg !;;;;;;;;;;;;x
-DESCL3T.0109;A thriving town has grown from this borough and serves as a home for hundreds of traders, craftsmen, artisans, and laborers. Warehouses full of goods attract large numbers of merchants to come from near and far, and the traders here grow fat and wealthy.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une ville !;;;;;;;;;;;;x
-DESCL3T.0110;A most magnificent city has risen in [Root.Location.GetName] and offers refuge and opportunity for thousands of people residing within its walls. Wealthy merchants, skilled artisans, and a multitude of laborers feed the rapidly growing economy, funding massive projects and great works of art and culture. A great age is truly dawning upon us!;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une cité !;;;;;;;;;;;;x
-DESCL3T.0111;This settlement has grown! A little hamlet now thrives in this region and the peasants living here work ceaselessly under the wise guidance of the local cleric.;La population a cru autour du lieu de culte et forme à présent un petit hameau !;;;;;;;;;;;;x
-DESCL3T.0112;Through a steady increase in trade and industry, this once insignificant hamlet populated by only a few dozen households has grown into a busy village!;La population a cru autour du lieu de culte et forme à présent un village !;;;;;;;;;;;;x
-DESCL3T.0113;The village has grown into a borough and now requires a local council in order to oversee its day-to-day functions. The borough is now also home to a handful of artisans, and a steady stream of merchants keep the market squares busy.;La population a cru autour du lieu de culte et forme à présent un bourg !;;;;;;;;;;;;x
-DESCL3T.0114;A thriving town has grown from this borough and serves as a home for hundreds of traders, craftsmen, artisans, and laborers. Warehouses full of goods attract large numbers of merchants to come from near and far, and the religious authorities make a healthy profit from taxing trade and commerce.;La population a cru autour du lieu de culte et forme à présent une ville !;;;;;;;;;;;;x
-DESCL3T.0115;A most magnificent city has risen in [Root.Location.GetName] and offers refuge and opportunity for thousands of people residing within its walls. Wealthy merchants, skilled artisans, and a multitude of laborers feed the rapidly growing economy, funding massive projects and great works of art and culture. A great age is truly dawning upon us!;La population a cru autour du lieu de culte et forme à présent une cité !;;;;;;;;;;;;x
-#;;;;;;;;;;;;;;x
-DESCL3T.0015;;DESCL3T.0015 \n [From.Location.GetName];;;;;;;;;;;;x
-DESCL3T.00160;;DESCL3T.00160 \n [From.Location.GetName];;;;;;;;;;;;x
-DESCL3T.00161;;DESCL3T.00161 \n [From.Location.GetName];;;;;;;;;;;;x
-DESCL3T.0017;;DESCL3T.0017 \n [From.Location.GetName];;;;;;;;;;;;x
-DESCL3T.0018;;DESCL3T.0018 \n [From.Location.GetName];;;;;;;;;;;;x
+DESCL3T.101;This settlement has grown! A little hamlet now thrives in this region and the peasants living here work ceaselessly under the wise rule of the local lord.;La population a cru autour du château. \n Les quelques maisonnées assemblées ici forment à présent un petit hameau !;;;;;;;;;;;;x
+DESCL3T.102;A once insignificant hamlet populated by only a few dozen households has grown into a busy village!;Le hameau a pris de l'importance au pied du château et forme à présent un village !;;;;;;;;;;;;x
+DESCL3T.103;The castle village has grown into a borough and now requires a local council led by some of the elders in order to oversee its day-to-day functions. The market too has grown and a small section of is now home to a handful of artisans.;Le village du château a pris de l'importance et attire toujours plus de nouveaux venus, artisans ou paysans et forme à présent un bourg !;;;;;;;;;;;;x
+DESCL3T.104;A thriving town has grown from this borough, and the markets are well-stocked with goods harvested and made both locally and coming in from afar. The derelict elder council has evolved into a properly elected council capable of administering trade and justice, although the final word still lies with the lord of these lands.;Le bourg formé plus tôt contre le château s'est développé et atteint désormais une population suffisante pour porter la dénomination de ville !;;;;;;;;;;;;x
+DESCL3T.105;A vast city now stands tall and proud at the foot of the castle keep, and its inhabitants prosper and reap the benefits of living in such an industrious and well-populated settlement.;Le château est désormais le cœur d'une ville suffisamment populeuse et industrieuse pour porter le nom de cité !;;;;;;;;;;;;x
+DESCL3T.106;This settlement has grown! A little hamlet now thrives in this region and the inhabitants living here work ceaselessly under the wise leadership of a local council.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un petit hameau !;;;;;;;;;;;;x
+DESCL3T.107;Through a steady increase in trade and industry, this once insignificant hamlet populated by only a few dozen households has grown into a busy village!;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un village !;;;;;;;;;;;;x
+DESCL3T.108;The village has grown into a borough and now requires a council led by the leaders of the most prominent merchant families in order to oversee its day-to-day functions. The borough is now also home to a handful of artisans, and caravans of merchants keep the market squares busy with activity.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un bourg !;;;;;;;;;;;;x
+DESCL3T.109;A thriving town has grown from this borough and serves as a home for hundreds of traders, craftsmen, artisans, and laborers. Warehouses full of goods attract large numbers of merchants to come from near and far, and the traders here grow fat and wealthy.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une ville !;;;;;;;;;;;;x
+DESCL3T.110;A most magnificent city has risen in [Root.Location.GetName] and offers refuge and opportunity for thousands of people residing within its walls. Wealthy merchants, skilled artisans, and a multitude of laborers feed the rapidly growing economy, funding massive projects and great works of art and culture. A great age is truly dawning upon us!;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une cité !;;;;;;;;;;;;x
+DESCL3T.111;This settlement has grown! A little hamlet now thrives in this region and the peasants living here work ceaselessly under the wise guidance of the local cleric.;La population a cru autour du lieu de culte et forme à présent un petit hameau !;;;;;;;;;;;;x
+DESCL3T.112;Through a steady increase in trade and industry, this once insignificant hamlet populated by only a few dozen households has grown into a busy village!;La population a cru autour du lieu de culte et forme à présent un village !;;;;;;;;;;;;x
+DESCL3T.113;The village has grown into a borough and now requires a local council in order to oversee its day-to-day functions. The borough is now also home to a handful of artisans, and a steady stream of merchants keep the market squares busy.;La population a cru autour du lieu de culte et forme à présent un bourg !;;;;;;;;;;;;x
+DESCL3T.114;A thriving town has grown from this borough and serves as a home for hundreds of traders, craftsmen, artisans, and laborers. Warehouses full of goods attract large numbers of merchants to come from near and far, and the religious authorities make a healthy profit from taxing trade and commerce.;La population a cru autour du lieu de culte et forme à présent une ville !;;;;;;;;;;;;x
+DESCL3T.115;A most magnificent city has risen in [Root.Location.GetName] and offers refuge and opportunity for thousands of people residing within its walls. Wealthy merchants, skilled artisans, and a multitude of laborers feed the rapidly growing economy, funding massive projects and great works of art and culture. A great age is truly dawning upon us!;La population a cru autour du lieu de culte et forme à présent une cité !;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-XYLO.0001;Hire a forester;Embaucher un forestier;;;;;;;;;;;x;
-DESCXYLO.0001;My liege, as you are clearly busy with managing the affairs of your people, might I suggest a member of your court that could fill the position of Forester?;Vous êtes très occupé à diriger vos gens et vos terres, aussi je me permets de vous proposer quelqu'un de votre Cour qui pourrait convenir pour le poste de Forestier.;;;;;;;;;;;;x
-XYLO.0001A;He will do nicely. Have him start immediately.;Il fera l'affaire, qu'il se présente à moi et s'attèle à la tâche.;;;;;;;;;;;;x
-XYLO.0001B;If you want something done right... you have to do it yourself.;Je le choisirais moi même.;;;;;;;;;;;;x
-XYLO.0002;Forest Specialization1;Spécialisation des Forêts1;;;;;;;;;;;;x
-DESCXYLO.0002;After an evaluation of our domains, our surveyors have informed us that the forests of [From.Location.GetName] are able to be used for either hunting or for harvesting lumber. \n Should we maintain it for your private hunting pleasure or begin sending peasants there to build a lumber camp?;Après un inventaire de nos domaines, notre Forestier nous informe que les bois de [From.Location.GetName] sont giboyeux et abondent d'arbres de belle stature, quel développement privilégier ? \n \nDevons-nous en réserver l'usage à sa seigneurie pour son bon plaisir de chasse ou bien les faire exploiter par nos gens ?;;;;;;;;;;;;x
-XYLO.0002A;I shall maintain these forests for my own personal enjoyment.;Partons chasser !;;;;;;;;;;;;x
-XYLO.0002B;Let us put these lazy peasants to good use!;Faisons-la exploiter par ces fainéants de paysans !;;;;;;;;;;;;x
-XYLO.0002C;I shall give the order to begin exploiting these resources.;Du bois, quoi d'autre ? ;;;;;;;;;;;;x
-XYLO.0003;Forest Specialization2;Spécialisation des Forêts2;;;;;;;;;;;;x
-DESCXYLO.0003;After an evaluation of our domain, our forester informs us that our forest of  [From.Location.GetName] is composed of very many sturdy trees that would be perfect for construction and industry. Should we assume the exclusive land rights?;Après inventaire et évaluation de nos domaines boisés, notre Forestier nous informe que les forêts de [From.Location.GetName] sont composées de belles futaies qui feront de bons matériaux de construction et d'artisanat. Une belle rentabilité doit pouvoir en être tirée. \n \nJe suppose que l'on va s'en arroger un droit d'exploitation exclusif ?;;;;;;;;;;;;x
-#XYLO.0003A;Am I greedy ? So what ?!;Moi cupide ? Et alors ?!;;;;;;;;;;;;x
-XYLO.0003B;Let us be generous and leave the unprofitable activities for the farmers!;Soyons généreux laissons les activités peu rentables aux paysans !;;;;;;;;;;;;x
-XYLO.0004;Forest Specialization3;Spécialisation des Forêts3;;;;;;;;;;;;x
-DESCXYLO.0004;After an evaluation of our domain, our forester informs us that our forest of  [From.Location.GetName] would make an excellent refuge for meditation and spiritual contemplation. Should we preserve these lands for such use or should we open them up to development and industry?;Suite à notre inventaire des nos bois, notre Forestier nous informe que les forêts de [From.Location.GetName] offrent un cadre excellent pour la pratique de la méditation et de l'ermitage. \n \n Devons-nous réserver ces domaines à cet usage ou les ouvrir à l'exploitation de ressources ?;;;;;;;;;;;;x
-XYLO.0004B;These forests will be consecrated as a sanctuary for meditation. Glory to [Root.Religion.GetRandomGodName]!;Gloire à [Root.Religion.GetRandomGodName] !;;;;;;;;;;;;x
-XYLO.0004A;These trees will either form a sturdy wooden frame to enlarge the house of God ... or my palace. Only He knows!;Ces arbres feront un remarquable bois charpente pour agrandir la demeure du Seigneur...ou de mon palais. Dieu seul le sait !;;;;;;;;;;;;x
-XYLO.0004C;[Root.Religion.GetRandomGodName] made trees to be turned into wood, no?;[Root.Religion.GetRandomGodName] a créé les arbres pour leur bois non ? ;;;;;;;;;;;;x
+XYLO.1;Hire a forester;Embaucher un forestier;;;;;;;;;;;x;
+DESCXYLO.1;My liege, as you are clearly busy with managing the affairs of your people, might I suggest a member of your court that could fill the position of Forester?;Vous êtes très occupé à diriger vos gens et vos terres, aussi je me permets de vous proposer quelqu'un de votre Cour qui pourrait convenir pour le poste de Forestier.;;;;;;;;;;;;x
+XYLO.1A;He will do nicely. Have him start immediately.;Il fera l'affaire, qu'il se présente à moi et s'attèle à la tâche.;;;;;;;;;;;;x
+XYLO.1B;If you want something done right... you have to do it yourself.;Je le choisirais moi même.;;;;;;;;;;;;x
+XYLO.2;Forest Specialization1;Spécialisation des Forêts1;;;;;;;;;;;;x
+DESCXYLO.2;After an evaluation of our domains, our surveyors have informed us that the forests of [From.Location.GetName] are able to be used for either hunting or for harvesting lumber. \n Should we maintain it for your private hunting pleasure or begin sending peasants there to build a lumber camp?;Après un inventaire de nos domaines, notre Forestier nous informe que les bois de [From.Location.GetName] sont giboyeux et abondent d'arbres de belle stature, quel développement privilégier ? \n \nDevons-nous en réserver l'usage à sa seigneurie pour son bon plaisir de chasse ou bien les faire exploiter par nos gens ?;;;;;;;;;;;;x
+XYLO.2A;I shall maintain these forests for my own personal enjoyment.;Partons chasser !;;;;;;;;;;;;x
+XYLO.2B;Let us put these lazy peasants to good use!;Faisons-la exploiter par ces fainéants de paysans !;;;;;;;;;;;;x
+XYLO.2C;I shall give the order to begin exploiting these resources.;Du bois, quoi d'autre ? ;;;;;;;;;;;;x
+XYLO.3;Forest Specialization2;Spécialisation des Forêts2;;;;;;;;;;;;x
+DESCXYLO.3;After an evaluation of our domain, our forester informs us that our forest of  [From.Location.GetName] is composed of very many sturdy trees that would be perfect for construction and industry. Should we assume the exclusive land rights?;Après inventaire et évaluation de nos domaines boisés, notre Forestier nous informe que les forêts de [From.Location.GetName] sont composées de belles futaies qui feront de bons matériaux de construction et d'artisanat. Une belle rentabilité doit pouvoir en être tirée. \n \nJe suppose que l'on va s'en arroger un droit d'exploitation exclusif ?;;;;;;;;;;;;x
+#XYLO.3A;Am I greedy ? So what ?!;Moi cupide ? Et alors ?!;;;;;;;;;;;;x
+XYLO.3B;Let us be generous and leave the unprofitable activities for the farmers!;Soyons généreux laissons les activités peu rentables aux paysans !;;;;;;;;;;;;x
+XYLO.4;Forest Specialization3;Spécialisation des Forêts3;;;;;;;;;;;;x
+DESCXYLO.4;After an evaluation of our domain, our forester informs us that our forest of  [From.Location.GetName] would make an excellent refuge for meditation and spiritual contemplation. Should we preserve these lands for such use or should we open them up to development and industry?;Suite à notre inventaire des nos bois, notre Forestier nous informe que les forêts de [From.Location.GetName] offrent un cadre excellent pour la pratique de la méditation et de l'ermitage. \n \n Devons-nous réserver ces domaines à cet usage ou les ouvrir à l'exploitation de ressources ?;;;;;;;;;;;;x
+XYLO.4B;These forests will be consecrated as a sanctuary for meditation. Glory to [Root.Religion.GetRandomGodName]!;Gloire à [Root.Religion.GetRandomGodName] !;;;;;;;;;;;;x
+XYLO.4A;These trees will either form a sturdy wooden frame to enlarge the house of God ... or my palace. Only He knows!;Ces arbres feront un remarquable bois charpente pour agrandir la demeure du Seigneur...ou de mon palais. Dieu seul le sait !;;;;;;;;;;;;x
+XYLO.4C;[Root.Religion.GetRandomGodName] made trees to be turned into wood, no?;[Root.Religion.GetRandomGodName] a créé les arbres pour leur bois non ? ;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-XYLO.0103;Timber sale to fill the coffers;Vente bois pour renflouer les caisses1;;;;;;;;;;;;x
-DESCXYLO.0103;Our treasury is nearly empty. We could chop down some forest plots from our hunting demesne, and sell the timber to replenish the treasury.;Nos finances sont au plus bas. Nous pourrions abattre quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres.;;;;;;;;;;;;x
-XYLO.0103A;It need not come to that.;Ce ne sera pas nécessaire.;;;;;;;;;;;;x
-XYLO.0103B;Cutting down a small copse will suffice.;Procédons à une coupe.;;;;;;;;;;;;x
-XYLO.0104;Timber sale to fill the coffers;Vente bois pour renflouer les caisses2;;;;;;;;;;;;x
-DESCXYLO.0104;We have barely enough gold to cover the bottom of our strongboxes. Do we need to chop down more forest plots from our hunting demesne to resolve our current financial difficulties?;Nos finances sont toujours au plus bas. Devons nous abattre à nouveau le bois de quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres ?;;;;;;;;;;;;x
-XYLO.0104A;Again? No.;Encore ? Non.;;;;;;;;;;;;x
-XYLO.0104B;I suppose we must...;Allons-y;;;;;;;;;;;;x
-XYLO.0105;Timber sale to fill the coffers;Vente bois pour renflouer les caisses3;;;;;;;;;;;;x
-DESCXYLO.0105;The gold reserves are still hardly fit for a noble of your stature. Do we need to chop down more forest plots from the hunting demesne?;Nos finances sont toujours au plus bas. Devons nous abattre à nouveau le bois de quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres ?;;;;;;;;;;;;x
-XYLO.0105A;Yet again? No.;Encore ? Non.;;;;;;;;;;;;x
-XYLO.0105B;I suppose I have no choice.;Allons-y;;;;;;;;;;;;x
-XYLO.0106;To deforest a forest;La coupe de trop;;;;;;;;;;;;x
-DESCXYLO.0106;Cutting down so many trees to fill our coffers has led to dramatic deforestation to the point of insustainability. We will probably soon have to issue a moratorium most of our forest industries...;Couper autant d'arbres pour renflouer nos caisses a conduit à une réduction dramatique de la couverture forestière... Nous allons probablement devoir cesser bientôt un certain nombre de nos activités...;;;;;;;;;;;;x
-XYLO.0106A;This is most unfortunate.;C'est à dire ?;;;;;;;;;;;;x
-DESCXYLO.0107;Considering your great piety and devotion to God, perhaps we should consider making a donation of a portion our woodland demesne to the Church. This would greatly benefit the standing of our immortal soul and the reputation of our House.;Au regard de notre niveau de piété, et puisque nous en aurions la possibilité, nous pourrions faire don d'une partie de nos bois à l'Eglise. \nCela serait bénéfique pour le salut de notre âme et la réputation de notre famille.;;;;;;;;;;;;x
-XYLO.0107B;So be it.;Allons-y;;;;;;;;;;;;x
-XYLO.0107A;The cost outweighs the benefit. We shall not.;L'enjeu me semble trop faible;;;;;;;;;;;;x
-XYLO.0107C;Perhaps I seek a different "benefit".;Et si nous essayions d'en retirer quelques profits ?;;;;;;;;;;;;x
-DESCXYLO.0108;Our forest domains are great and prosperous, and God has surely seen fit to bless us. Perhaps we should extend a token of appreciation by ceding a part of that land to be used by our Holy Mother Church.;Nos forêts sont grandes et nous pourrions en céder une partie à l'Eglise. \nCela serait bon pour le salut de notre âme et renforcerait notre très sainte Mère l'Eglise.;;;;;;;;;;;;x
-XYLO.0108B;May God accept this offering and see the devotion of my soul.;Pour le salut de notre âme !;;;;;;;;;;;;x
-XYLO.0108A;Perhaps a different offering would be more worthy of the Church.;Je trouverai d'autres moyens;;;;;;;;;;;;x
-XYLO.0108C;Who said anything about a concession?;Et contre quelque or ?;;;;;;;;;;;;x
+XYLO.103;Timber sale to fill the coffers;Vente bois pour renflouer les caisses1;;;;;;;;;;;;x
+DESCXYLO.103;Our treasury is nearly empty. We could chop down some forest plots from our hunting demesne, and sell the timber to replenish the treasury.;Nos finances sont au plus bas. Nous pourrions abattre quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres.;;;;;;;;;;;;x
+XYLO.103A;It need not come to that.;Ce ne sera pas nécessaire.;;;;;;;;;;;;x
+XYLO.103B;Cutting down a small copse will suffice.;Procédons à une coupe.;;;;;;;;;;;;x
+XYLO.104;Timber sale to fill the coffers;Vente bois pour renflouer les caisses2;;;;;;;;;;;;x
+DESCXYLO.104;We have barely enough gold to cover the bottom of our strongboxes. Do we need to chop down more forest plots from our hunting demesne to resolve our current financial difficulties?;Nos finances sont toujours au plus bas. Devons nous abattre à nouveau le bois de quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres ?;;;;;;;;;;;;x
+XYLO.104A;Again? No.;Encore ? Non.;;;;;;;;;;;;x
+XYLO.104B;I suppose we must...;Allons-y;;;;;;;;;;;;x
+XYLO.105;Timber sale to fill the coffers;Vente bois pour renflouer les caisses3;;;;;;;;;;;;x
+DESCXYLO.105;The gold reserves are still hardly fit for a noble of your stature. Do we need to chop down more forest plots from the hunting demesne?;Nos finances sont toujours au plus bas. Devons nous abattre à nouveau le bois de quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres ?;;;;;;;;;;;;x
+XYLO.105A;Yet again? No.;Encore ? Non.;;;;;;;;;;;;x
+XYLO.105B;I suppose I have no choice.;Allons-y;;;;;;;;;;;;x
+XYLO.106;To deforest a forest;La coupe de trop;;;;;;;;;;;;x
+DESCXYLO.106;Cutting down so many trees to fill our coffers has led to dramatic deforestation to the point of insustainability. We will probably soon have to issue a moratorium most of our forest industries...;Couper autant d'arbres pour renflouer nos caisses a conduit à une réduction dramatique de la couverture forestière... Nous allons probablement devoir cesser bientôt un certain nombre de nos activités...;;;;;;;;;;;;x
+XYLO.106A;This is most unfortunate.;C'est à dire ?;;;;;;;;;;;;x
+DESCXYLO.107;Considering your great piety and devotion to God, perhaps we should consider making a donation of a portion our woodland demesne to the Church. This would greatly benefit the standing of our immortal soul and the reputation of our House.;Au regard de notre niveau de piété, et puisque nous en aurions la possibilité, nous pourrions faire don d'une partie de nos bois à l'Eglise. \nCela serait bénéfique pour le salut de notre âme et la réputation de notre famille.;;;;;;;;;;;;x
+XYLO.107B;So be it.;Allons-y;;;;;;;;;;;;x
+XYLO.107A;The cost outweighs the benefit. We shall not.;L'enjeu me semble trop faible;;;;;;;;;;;;x
+XYLO.107C;Perhaps I seek a different "benefit".;Et si nous essayions d'en retirer quelques profits ?;;;;;;;;;;;;x
+DESCXYLO.108;Our forest domains are great and prosperous, and God has surely seen fit to bless us. Perhaps we should extend a token of appreciation by ceding a part of that land to be used by our Holy Mother Church.;Nos forêts sont grandes et nous pourrions en céder une partie à l'Eglise. \nCela serait bon pour le salut de notre âme et renforcerait notre très sainte Mère l'Eglise.;;;;;;;;;;;;x
+XYLO.108B;May God accept this offering and see the devotion of my soul.;Pour le salut de notre âme !;;;;;;;;;;;;x
+XYLO.108A;Perhaps a different offering would be more worthy of the Church.;Je trouverai d'autres moyens;;;;;;;;;;;;x
+XYLO.108C;Who said anything about a concession?;Et contre quelque or ?;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-XYLO.0201;Purchase v1;Achat v1;;;;;;;;;;;x;
-DESCXYLO.0201;The treasury is brimming with coin, but rather than rest on our laurels, we should consider investing in expanding our forest domain. Should some of our gold be used to plant and manage new plots of trees?;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelque or dans cette voie ?;;;;;;;;;;;;x
-XYLO.0201A;Trees are a safe investment, no? Make the necessary arrangements.;Tentons cela.;;;;;;;;;;;;x
-XYLO.0201B;An interesting proposition, but I will consider it another time.;Repassez demain.;;;;;;;;;;;;x
-XYLO.0201C;What nonsense! There will be no wasting my coin on silly plants.;Débordent, débordent, c'est vite dit. Non.;;;;;;;;;;;;x
-XYLO.0202;Purchase v2;Achat v2;;;;;;;;;;;x;
-DESCXYLO.0202;Our steward reports that we have excess gold that may be better used managing and expanding the woodlands in our demesne so that we may reap the benefits later on.;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelques pièces dans cette voie ?;;;;;;;;;;;;x
-XYLO.0202A;This seems like a sensible proposition.;Allons-y.;;;;;;;;;;;;x
-XYLO.0202B;Not tonight, my head is hurting.;Pas ce soir, j'ai mal à la tête.;;;;;;;;;;;;x
-XYLO.0202C;Excess gold? There is no such thing, much less for wasting on a few trees.;Débordent ? Qui prétend cela ? Non.;;;;;;;;;;;;x
-XYLO.0203;Purchase v3;Achat v3;;;;;;;;;;;x;
-DESCXYLO.0203;Our steward reports that our coffers are overflowing with gold and it would be advisable to spend some of it on expanding our forest domain. Would you like to invest in replanting some of the old forests?;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelques pièces dans cette politique ?;;;;;;;;;;;;x
-XYLO.0203A;This appears to me to be a sound investment. So be it!;Cela me paraît un bon investissement.;;;;;;;;;;;;x
-XYLO.0203B;I will decide on this matter another day.;Je dois réfléchir.;;;;;;;;;;;;x
-XYLO.0203C;I do recall having already said no to this foolish idea.;N'ai-je pas déjà dit non ?;;;;;;;;;;;;x
-XYLO.0302;forest charter related stuff;RR foret;;;;;;;;;;;;x
-DESCXYLO.0302;By reserving for us the almost exclusive exploitation rights of our forests, we create a growing discontent among the population. We could for example give a logging license for a short time to calm the inclinations of the villagers in the province of [From.Location.GetName].;En nous réservant presque l'exclusivité des droits d'exploitation de nos forêts, cela crée un mécontentement croissant parmi la population. Nous pourrions par exemple accorder une licence forestière pour une courte durée afin de calmer les velléités des villageois dans la province de [From.Location.GetName].;;;;;;;;;;;;x
-XYLO.0302A;We must act before it degenerates.;Il nous faut agir avant que ça ne dégénère.;;;;;;;;;;;;x
-XYLO.0302B;Let's make a gesture.;Faisons un geste.;;;;;;;;;;;;x
-XYLO.0302C;And ? ;Et alors ?;;;;;;;;;;;;x
-XYLO.0303;;RR général + foret;;;;;;;;;;;;x
-DESCXYLO.0303;The resistance is growing in [From.Location.GetName]! The exploitation of the forest at your sole purpose seems to be one of the objects of claims, which is in addition to other causes. Relax a little pressure for a time on this point by proposing a forest license could calm the population.;La révolte gronde en [From.Location.GetName] ! L'exploitation de la forêt à vos seules fins semble être l'un des objets des revendications et qui vient s'ajouter à d'autres causes. Relâcher un peu de pression pendant un temps sur ce point en proposant un licence forestière pourrait calmer la population.;;;;;;;;;;;;x
-XYLO.0303A;Let's be efficient, and over time!;Soyons efficace, et dans la durée !;;;;;;;;;;;;x
-XYLO.0303B;Try this yet.;Tentons cela pour le moment.;;;;;;;;;;;;x
-XYLO.0303C;This is not the main cause.;Ce n'est pas la cause principale.;;;;;;;;;;;;x
-XYLO.0304;Asking a licence upgrading;demande d'upgrade de la licence;;;;;;;;;;;;x
-DESCXYLO.0304;Villagers claim to struggle to survive because they can not enjoy that a too small part of the wealth of the forest. They implore your mercy for the granting of a charter opening them additional rights on the forest [From.Location.GetName]. What do you decide?;Les villageois prétendent peiner à survivre car ils ne peuvent profiter que d'une trop infime part des richesses de la forêt. Ils implorent votre bonté pour l'octroi d'une charte leur ouvrant des droits supplémentaires sur la forêt de [From.Location.GetName]. Que décidez-vous ?;;;;;;;;;;;;x
-XYLO.0304A;Granted;Accordé.;;;;;;;;;;;;x
-XYLO.0304B;I govern !;JE gouverne !;;;;;;;;;;;;x
-XYLO.0305;Asking a licence upgrading;demande d'upgrade de la licence;;;;;;;;;;;;x
-DESCXYLO.0305;The granted logging license is not enough for the people of [From.Location.GetName]. It is always concerned about the restrictions that persist, it requests a charter guaranteeing more rights and for a longer duration. What do we do ?;La licence forestière accordée ne suffit pas au peuple de [From.Location.GetName]. Il est toujours inquiet des restrictions qui persistent, il demande une charte lui garantissant plus de droits et sur une plus longue durée. Que faisons-nous ?;;;;;;;;;;;;x
-XYLO.0305A;Granted;Accordé.;;;;;;;;;;;;x
-XYLO.0305B;We can not afford it.;Nous ne pouvons nous le permettre.;;;;;;;;;;;;x
-XYLO.0305C;Delete the existing charter, that will teach them!;Supprimons la charte existante ça leur apprendra !;;;;;;;;;;;;x
+XYLO.201;Purchase v1;Achat v1;;;;;;;;;;;x;
+DESCXYLO.201;The treasury is brimming with coin, but rather than rest on our laurels, we should consider investing in expanding our forest domain. Should some of our gold be used to plant and manage new plots of trees?;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelque or dans cette voie ?;;;;;;;;;;;;x
+XYLO.201A;Trees are a safe investment, no? Make the necessary arrangements.;Tentons cela.;;;;;;;;;;;;x
+XYLO.201B;An interesting proposition, but I will consider it another time.;Repassez demain.;;;;;;;;;;;;x
+XYLO.201C;What nonsense! There will be no wasting my coin on silly plants.;Débordent, débordent, c'est vite dit. Non.;;;;;;;;;;;;x
+XYLO.202;Purchase v2;Achat v2;;;;;;;;;;;x;
+DESCXYLO.202;Our steward reports that we have excess gold that may be better used managing and expanding the woodlands in our demesne so that we may reap the benefits later on.;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelques pièces dans cette voie ?;;;;;;;;;;;;x
+XYLO.202A;This seems like a sensible proposition.;Allons-y.;;;;;;;;;;;;x
+XYLO.202B;Not tonight, my head is hurting.;Pas ce soir, j'ai mal à la tête.;;;;;;;;;;;;x
+XYLO.202C;Excess gold? There is no such thing, much less for wasting on a few trees.;Débordent ? Qui prétend cela ? Non.;;;;;;;;;;;;x
+XYLO.203;Purchase v3;Achat v3;;;;;;;;;;;x;
+DESCXYLO.203;Our steward reports that our coffers are overflowing with gold and it would be advisable to spend some of it on expanding our forest domain. Would you like to invest in replanting some of the old forests?;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelques pièces dans cette politique ?;;;;;;;;;;;;x
+XYLO.203A;This appears to me to be a sound investment. So be it!;Cela me paraît un bon investissement.;;;;;;;;;;;;x
+XYLO.203B;I will decide on this matter another day.;Je dois réfléchir.;;;;;;;;;;;;x
+XYLO.203C;I do recall having already said no to this foolish idea.;N'ai-je pas déjà dit non ?;;;;;;;;;;;;x
+XYLO.302;forest charter related stuff;RR foret;;;;;;;;;;;;x
+DESCXYLO.302;By reserving for us the almost exclusive exploitation rights of our forests, we create a growing discontent among the population. We could for example give a logging license for a short time to calm the inclinations of the villagers in the province of [From.Location.GetName].;En nous réservant presque l'exclusivité des droits d'exploitation de nos forêts, cela crée un mécontentement croissant parmi la population. Nous pourrions par exemple accorder une licence forestière pour une courte durée afin de calmer les velléités des villageois dans la province de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.302A;We must act before it degenerates.;Il nous faut agir avant que ça ne dégénère.;;;;;;;;;;;;x
+XYLO.302B;Let's make a gesture.;Faisons un geste.;;;;;;;;;;;;x
+XYLO.302C;And ? ;Et alors ?;;;;;;;;;;;;x
+XYLO.303;;RR général + foret;;;;;;;;;;;;x
+DESCXYLO.303;The resistance is growing in [From.Location.GetName]! The exploitation of the forest at your sole purpose seems to be one of the objects of claims, which is in addition to other causes. Relax a little pressure for a time on this point by proposing a forest license could calm the population.;La révolte gronde en [From.Location.GetName] ! L'exploitation de la forêt à vos seules fins semble être l'un des objets des revendications et qui vient s'ajouter à d'autres causes. Relâcher un peu de pression pendant un temps sur ce point en proposant un licence forestière pourrait calmer la population.;;;;;;;;;;;;x
+XYLO.303A;Let's be efficient, and over time!;Soyons efficace, et dans la durée !;;;;;;;;;;;;x
+XYLO.303B;Try this yet.;Tentons cela pour le moment.;;;;;;;;;;;;x
+XYLO.303C;This is not the main cause.;Ce n'est pas la cause principale.;;;;;;;;;;;;x
+XYLO.304;Asking a licence upgrading;demande d'upgrade de la licence;;;;;;;;;;;;x
+DESCXYLO.304;Villagers claim to struggle to survive because they can not enjoy that a too small part of the wealth of the forest. They implore your mercy for the granting of a charter opening them additional rights on the forest [From.Location.GetName]. What do you decide?;Les villageois prétendent peiner à survivre car ils ne peuvent profiter que d'une trop infime part des richesses de la forêt. Ils implorent votre bonté pour l'octroi d'une charte leur ouvrant des droits supplémentaires sur la forêt de [From.Location.GetName]. Que décidez-vous ?;;;;;;;;;;;;x
+XYLO.304A;Granted;Accordé.;;;;;;;;;;;;x
+XYLO.304B;I govern !;JE gouverne !;;;;;;;;;;;;x
+XYLO.305;Asking a licence upgrading;demande d'upgrade de la licence;;;;;;;;;;;;x
+DESCXYLO.305;The granted logging license is not enough for the people of [From.Location.GetName]. It is always concerned about the restrictions that persist, it requests a charter guaranteeing more rights and for a longer duration. What do we do ?;La licence forestière accordée ne suffit pas au peuple de [From.Location.GetName]. Il est toujours inquiet des restrictions qui persistent, il demande une charte lui garantissant plus de droits et sur une plus longue durée. Que faisons-nous ?;;;;;;;;;;;;x
+XYLO.305A;Granted;Accordé.;;;;;;;;;;;;x
+XYLO.305B;We can not afford it.;Nous ne pouvons nous le permettre.;;;;;;;;;;;;x
+XYLO.305C;Delete the existing charter, that will teach them!;Supprimons la charte existante ça leur apprendra !;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;EVENTS BANDITS;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 raids_pirates;Pirate Raids;Raids pirates;;;;;;;;;;;;x
 raids_pirates_desc;The raids of the pirates here are regular. Faced with the inefficiency and impotence of the Lord they thrive and probably have established home not far away.;Les raids des pirates ici sont réguliers. Face à l'inefficacité et l'impuissance du Seigneur ils prospèrent et ont probablement établi domicile non loin de là.;;;;;;;;;;;;x
-XYLO.02101;Pirate establishment;Établissement des pirates;;;;;;;;;;;;x
-DESCXYLO.02101;Due to our incapacity to rule so much lands, a band of pirates freely terrorize the coasts of [From.Location.GetName];Nous avons bien trop de terres à gérer... surtout au regard de nos compétences et notre incapacité à y maintenir l'ordre. Voilà une situation en or pour les roublards de tout poil ! Notamment semble-t-il cette bande de pirates qui sévit depuis quelques temps déjà et lancent des raids de plus en plus audacieux sur les côtes de [From.Location.GetName].;;;;;;;;;;;;x
-XYLO.02101A;Gottferdom ! ;Gottferdom ! ;;;;;;;;;;;;x
-XYLO.02101B;;Sacrebleu ! ;;;;;;;;;;;;x
-XYLO.02102;Pirate deletion;Suppression des pirates;;;;;;;;;;;;x
-DESCXYLO.02102;Pirates' raids ends in [From.Location.GetName].;En retrouvant un Domaine à la mesure de ce que nous pouvions maintenir en ordre et au prix d'une lutte longue et acharnée, nous avons finalement pu regagner le contrôle de nos terres et éradiquer les pirates qui ravageaient les côtes de [From.Location.GetName].;;;;;;;;;;;;x
-XYLO.02102A;It was time !;Il était temps !;;;;;;;;;;;;x
+XYLO.2101;Pirate establishment;Établissement des pirates;;;;;;;;;;;;x
+DESCXYLO.2101;Due to our incapacity to rule so much lands, a band of pirates freely terrorize the coasts of [From.Location.GetName];Nous avons bien trop de terres à gérer... surtout au regard de nos compétences et notre incapacité à y maintenir l'ordre. Voilà une situation en or pour les roublards de tout poil ! Notamment semble-t-il cette bande de pirates qui sévit depuis quelques temps déjà et lancent des raids de plus en plus audacieux sur les côtes de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.2101A;Gottferdom ! ;Gottferdom ! ;;;;;;;;;;;;x
+XYLO.2101B;;Sacrebleu ! ;;;;;;;;;;;;x
+XYLO.2102;Pirate deletion;Suppression des pirates;;;;;;;;;;;;x
+DESCXYLO.2102;Pirates' raids ends in [From.Location.GetName].;En retrouvant un Domaine à la mesure de ce que nous pouvions maintenir en ordre et au prix d'une lutte longue et acharnée, nous avons finalement pu regagner le contrôle de nos terres et éradiquer les pirates qui ravageaient les côtes de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.2102A;It was time !;Il était temps !;;;;;;;;;;;;x
 DESC00401;Out of nowhere, a group of bandits attacked us!\nNobody had advised me to take care of the proliferation of bandits on our land?;Sortis de nul part, un groupe de bandits nous attaquent ! \n Personne ne m'avait-il conseillé de m'occuper de la prolifération des bandits sur nos terres ? ;;;;;;;;;;;;x;
 XYLO.04013A;They are few enough to defeat alone..;Ils ne sont pas nombreux, je peux les vaincre seul...;;;;;;;;;;;;x;
 XYLO.04013B;Charge!;Chargez !;;;;;;;;;;;;x;
@@ -181,39 +175,39 @@ bandits_installes;Well settlef bandits;Bandits bien installés;;;;;;;;;;;;x
 bandits_installes_desc;;Les voleurs, malandrins et autres bandes d'affreux ce sont installés durablement sur ces terres, s'affairant à leurs viles activités et avec des conséquences désastreuses.;;;;;;;;;;;;x
 chef_malandrin;Bandit leader;Meneur de bandits;;;;;;;;;;;;x
 chef_malandrin_desc;Bandits in [From.Location.GetName] are now installed for some times and tend to reinforce. Maybe it is time to act against them ?;Ce personnage est à la tête d'une bande de malfrats toujours plus influents pillant et volant dans la région. Il serait peut être temps de s'en débarrasser non ?;;;;;;;;;;;;x
-XYLO.0211;;renforcement des bandits;;;;;;;;;;;;x
-DESCXYLO.0211;;Les bandits qui terrorisent la campagne et perturbent le commerce sont à présent installés depuis un certain temps dans la région de [From.Location.GetName]. \nPeut-être faudrait-il tenter de les disperser avant que la situation ne s'aggrave ?;;;;;;;;;;;;x
-XYLO.0211A;War is raging, there is nothing we can do;La guerre fait rage, nous ne pouvons rien faire;;;;;;;;;;;;x
-XYLO.0211B;Let's decide what to do.;Décidons au plus vite de ce qu'il convient de faire.;;;;;;;;;;;;x
+XYLO.211;;renforcement des bandits;;;;;;;;;;;;x
+DESCXYLO.211;;Les bandits qui terrorisent la campagne et perturbent le commerce sont à présent installés depuis un certain temps dans la région de [From.Location.GetName]. \nPeut-être faudrait-il tenter de les disperser avant que la situation ne s'aggrave ?;;;;;;;;;;;;x
+XYLO.211A;War is raging, there is nothing we can do;La guerre fait rage, nous ne pouvons rien faire;;;;;;;;;;;;x
+XYLO.211B;Let's decide what to do.;Décidons au plus vite de ce qu'il convient de faire.;;;;;;;;;;;;x
 reunir_le_conseil;Convocate the Council;Nous réunissons le Conseil afin de prendre une décision.;;;;;;;;;;;;x
-XYLO.0212;send a councilor;envoyer un conseiller;;;;;;;;;;;;x
-DESCXYLO.0212;How will we try to eliminate the bandits that terrorize [From.Location.GetName];Au regard de la situation, par quel moyen pourrions-nous nous débarrasser de ces bandits qui empoisonnent l'économie et la vie de nos gens de la région de [From.Location.GetName] ?;;;;;;;;;;;;x
-XYLO.0212A;Try negociating;Tentons de négocier;;;;;;;;;;;;x
-XYLO.0212B;Try destabilize them;Tentons de les déstabiliser;;;;;;;;;;;;x
-XYLO.0212C;Try to defeat them;Tentons de les mater;;;;;;;;;;;;x
-XYLO.0212D;Don't worry they will leave one day...;Il n'y pas de quoi s'alarmer, ils partiront bien un jour...;;;;;;;;;;;;x
+XYLO.212;send a councilor;envoyer un conseiller;;;;;;;;;;;;x
+DESCXYLO.212;How will we try to eliminate the bandits that terrorize [From.Location.GetName];Au regard de la situation, par quel moyen pourrions-nous nous débarrasser de ces bandits qui empoisonnent l'économie et la vie de nos gens de la région de [From.Location.GetName] ?;;;;;;;;;;;;x
+XYLO.212A;Try negociating;Tentons de négocier;;;;;;;;;;;;x
+XYLO.212B;Try destabilize them;Tentons de les déstabiliser;;;;;;;;;;;;x
+XYLO.212C;Try to defeat them;Tentons de les mater;;;;;;;;;;;;x
+XYLO.212D;Don't worry they will leave one day...;Il n'y pas de quoi s'alarmer, ils partiront bien un jour...;;;;;;;;;;;;x
 envoi_chancelier;Chancelor sent;Notre Chancelier est missionné pour tenter de trouver une issue acceptable pour les deux camps.;;;;;;;;;;;;x
 envoi_espion;Spymaster sent;Notre maître-espion va tenter disperser les bandits par la ruse.;;;;;;;;;;;;x
 envoi_marechal;Marshal sent;Notre maréchal part accompagné de ses hommes tenter de réduire les bandits.;;;;;;;;;;;;x
 laisser_faire;We do nothing, hoping the situation will settle down quietly...;Nous ne faisons rien. En espérant que la situation se tasse sans trop de heurts...;;;;;;;;;;;;x
-XYLO.02120;;Réussite;;;;;;;;;;;;x
-DESCXYLO.02120;Victory ! \n Bandits left [From.Location.GetName] but the province needs to recover.;Notre démarche n'a pas été vaine et nous avons pu démanteler ce nid de bandits qui empoisonnait la région de [From.Location.GetName].\n Espérons que la région s'en remette assez rapidement...;;;;;;;;;;;;x
-XYLO.02121;;Echec;;;;;;;;;;;;x
-DESCXYLO.02121;Fail ! \n Bandits will now probably re-inforce their presence in [From.Location.GetName]...;Malgré tous nos efforts, nous ne sommes pas parvenus à nous débarrasser des fauteurs de troubles de la région de [From.Location.GetName].\n Pillages, vols et destructions restent le lot quotidien des populations locales. Il est à redouter à présent que cette entreprise qui a déjà bien trop duré ne cesse de prospérer et ne conteste encore plus ouvertement notre autorité.;;;;;;;;;;;;x
-XYLO.02131;;Fief libre + échec;;;;;;;;;;;;x
-DESCXYLO.02131;As expected, the bandits in [From.Location.GetName] continue to proliferate.;Comme nous devions le craindre, les bandits ont continué de plus belles leurs méfaits et ont désormais la mainmise sur une bonne partie de l'économie de [From.Location.GetName].;;;;;;;;;;;;x
-XYLO.02131A;Wonderfull news... ;Super nouvelle... ;;;;;;;;;;;;x
-XYLO.02132;;Pas de Fief libre + échec;;;;;;;;;;;;x
-DESCXYLO.02132;Bandits left [From.Location.GetName]. The province had become too poor for them haha !;Les malandrins ont fini par quitter [From.Location.GetName].\n A croire qu'à force de pillages et vols, la province est devenue trop pauvre pour eux...;;;;;;;;;;;;x
-XYLO.02132A;Well, for us either sadly...;Elle n'en est pas moins pauvre pour nous...;;;;;;;;;;;;x
-XYLO.0214;;x;;;;;;;;;;;;x
-DESCXYLO.0214;The bandits network of [From.Location.GetName] is now lead by a famous hoodlum !;Le réseau de bandits qui terrorisent la région de [From.Location.GetName] est paraît-il mené par un chef et s'est même construit une base d'où organiser son petit commerce et mener ses exactions. Il va falloir l'en déloger !;;;;;;;;;;;;x
-XYLO.0214A;Damn !;Enfer et damnation !!;;;;;;;;;;;;x
+XYLO.2120;;Réussite;;;;;;;;;;;;x
+DESCXYLO.2120;Victory ! \n Bandits left [From.Location.GetName] but the province needs to recover.;Notre démarche n'a pas été vaine et nous avons pu démanteler ce nid de bandits qui empoisonnait la région de [From.Location.GetName].\n Espérons que la région s'en remette assez rapidement...;;;;;;;;;;;;x
+XYLO.2121;;Echec;;;;;;;;;;;;x
+DESCXYLO.2121;Fail ! \n Bandits will now probably re-inforce their presence in [From.Location.GetName]...;Malgré tous nos efforts, nous ne sommes pas parvenus à nous débarrasser des fauteurs de troubles de la région de [From.Location.GetName].\n Pillages, vols et destructions restent le lot quotidien des populations locales. Il est à redouter à présent que cette entreprise qui a déjà bien trop duré ne cesse de prospérer et ne conteste encore plus ouvertement notre autorité.;;;;;;;;;;;;x
+XYLO.2131;;Fief libre + échec;;;;;;;;;;;;x
+DESCXYLO.2131;As expected, the bandits in [From.Location.GetName] continue to proliferate.;Comme nous devions le craindre, les bandits ont continué de plus belles leurs méfaits et ont désormais la mainmise sur une bonne partie de l'économie de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.2131A;Wonderfull news... ;Super nouvelle... ;;;;;;;;;;;;x
+XYLO.2132;;Pas de Fief libre + échec;;;;;;;;;;;;x
+DESCXYLO.2132;Bandits left [From.Location.GetName]. The province had become too poor for them haha !;Les malandrins ont fini par quitter [From.Location.GetName].\n A croire qu'à force de pillages et vols, la province est devenue trop pauvre pour eux...;;;;;;;;;;;;x
+XYLO.2132A;Well, for us either sadly...;Elle n'en est pas moins pauvre pour nous...;;;;;;;;;;;;x
+XYLO.214;;x;;;;;;;;;;;;x
+DESCXYLO.214;The bandits network of [From.Location.GetName] is now lead by a famous hoodlum !;Le réseau de bandits qui terrorisent la région de [From.Location.GetName] est paraît-il mené par un chef et s'est même construit une base d'où organiser son petit commerce et mener ses exactions. Il va falloir l'en déloger !;;;;;;;;;;;;x
+XYLO.214A;Damn !;Enfer et damnation !!;;;;;;;;;;;;x
 creation_bandit;A bandit leader appears in the province\n;Un meneur de bandits apparait dans la province\n;;;;;;;;;;;x
-#XYLO.0216;;le chef des bandits reçoit un surnom;;;;;;;;;;;;x
-#DESCXYLO.0216;unused anymore;Comme tout bon criminel, je me dois de porter un nom à la mesure de ma réputation !;;;;;;;;;;;;x
-DESCXYLO.02172;[From.Location.GetName] is now free from bandits' rule but will need time to recover.;Le propriétaire du Repaire de bandits ayant définitivement quitté les lieux, la province de [From.Location.GetName] va pouvoir se remettre de cette dure et éprouvante période pour sa population et son économie. Selon l'ampleur des dégâts, cela peut prendre quelques années avant un retour total à la normale.;;;;;;;;;;;;x
-XYLO.02172A;It is already a relief for us all !;C'est un déjà soulagement pour tous !;;;;;;;;;;;;x
+#XYLO.216;;le chef des bandits reçoit un surnom;;;;;;;;;;;;x
+#DESCXYLO.216;unused anymore;Comme tout bon criminel, je me dois de porter un nom à la mesure de ma réputation !;;;;;;;;;;;;x
+DESCXYLO.2172;[From.Location.GetName] is now free from bandits' rule but will need time to recover.;Le propriétaire du Repaire de bandits ayant définitivement quitté les lieux, la province de [From.Location.GetName] va pouvoir se remettre de cette dure et éprouvante période pour sa population et son économie. Selon l'ampleur des dégâts, cela peut prendre quelques années avant un retour total à la normale.;;;;;;;;;;;;x
+XYLO.2172A;It is already a relief for us all !;C'est un déjà soulagement pour tous !;;;;;;;;;;;;x
 la_province_se_remet;Province recovers;La province se remet;;;;;;;;;;;;x
 la_province_se_remet_desc;Province recovers from bandits' rule;Après une occupation prolongée par un chef bandit et les méfaits qu'il a fait subir à cette province, il faut du temps pour que son économie se redresse.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
@@ -221,71 +215,71 @@ la_province_se_remet_desc;Province recovers from bandits' rule;Après une occupat
 #;;x;;;;;;;;;;;;x
 #;;MUSHROOM HUNT;;;;;;;;;;;;x
 #;x;;;;;;;;;;;;;x
-XYLO.0111;x;DECOUVERTE;;;;;;;;;;;;x
-DESCXYLO.0111;x;Au détour d'un chemin, nous apercevons dans un recoin ombragé une masse sombre dont la forme rappelle celle d'un champignon mais... d'une taille plutôt conséquente qui attire le regard.\n Que décidons-nous ?;;;;;;;;;;;;x
-XYLO.0111A;x;Je suis là pour chasser ! ;;;;;;;;;;;;x
-XYLO.0111B;x;Allons voir de plus près...;;;;;;;;;;;;x
-XYLO.01121;x;Approach and identify 1;;;;;;;;;;;;x
-DESCXYLO.01121;x;De plus près, il s'agit effectivement d'un champignon. Qui plus est d'une espèce plutôt bien connue : un Bolet. Mais celui-ci mesure plus de deux coudées... une taille des plus surprenantes.\n Allons-nous céder à la tentation ou retourner à notre occupation première, à savoir la chasse ?;;;;;;;;;;;;x
-XYLO.01121A;x;Vaut mieux le laisser ici...;;;;;;;;;;;;x
-XYLO.01121B;x;Cueillons-le ! ;;;;;;;;;;;;x
-XYLO.01122;x;Approach and identify 2;;;;;;;;;;;;x
-DESCXYLO.01122;x;Eh bien voici probablement la plus énorme chanterelle jamais vue ! De la taille d'un chien de chasse par sa hauteur, l'on peine à l'enlacer par des bras d'homme, ce spécimen est des plus étonnants !  Allons-nous céder à notre curiosité et cueillir ce beau morceau ? ;;;;;;;;;;;;;x
-XYLO.01122A;x;Cela ne me dit rien qui vaille... ;;;;;;;;;;;;x
-XYLO.01122B;x;Cueillons-la ! ;;;;;;;;;;;;x
-XYLO.01123;x;Approach and identify 3;;;;;;;;;;;;x
-DESCXYLO.01123;;Comme suspecté, il s'agit bel et bien d'un champignon... mais d'un genre assez bizarre voire inconnu. Arrivant à hauteur du poitrail de mon cheval, un chapeau plutôt plat, d'un vert légèrement luisant et dégageant une suave odeur anisée... \n Allons-nous l'emporter ? ;;;;;;;;;;;;;x
-XYLO.01123A;x;Passons notre chemin plutôt;;;;;;;;;;;;x
-XYLO.01123B;x;Cueillons ce trophée ! ;;;;;;;;;;;;x
-XYLO.0113;x;et maintenant ?;;;;;;;;;;;;x
-DESCXYLO.0113;x;Nous sommes à présent en possession l'encombrant champignon aux dimensions hors normes.\n Reste à savoir ce que nous voulons en faire... ;;;;;;;;;;;;x
-XYLO.0113A;x;L'emmener. Mon soigneur l'examinera.;;;;;;;;;;;;x
-XYLO.0113B;x;Rapportons notre trouvaille à nos cuisiniers pour le souper ! ;;;;;;;;;;;;x
-XYLO.0113C;x;Donnez-en à manger mon cheval.;;;;;;;;;;;;x
-XYLO.0113D;x;Je connais un ermite qui vit non loin. Je vais aller le lui montrer.;;;;;;;;;;;;x
-XYLO.01131;x;;;;;;;;;;;;;x
-DESCXYLO.01131;x;;;;;;;;;;;;;x
-XYLO.01131A;x;;;;;;;;;;;;;x
-XYLO.01131B;x;;;;;;;;;;;;;x
-XYLO.01131C;x;;;;;;;;;;;;;x
-XYLO.01132;x;;;;;;;;;;;;;x
-DESCXYLO.01132;x;;;;;;;;;;;;;x
-XYLO.01132A;x;;;;;;;;;;;;;x
+XYLO.111;x;DECOUVERTE;;;;;;;;;;;;x
+DESCXYLO.111;x;Au détour d'un chemin, nous apercevons dans un recoin ombragé une masse sombre dont la forme rappelle celle d'un champignon mais... d'une taille plutôt conséquente qui attire le regard.\n Que décidons-nous ?;;;;;;;;;;;;x
+XYLO.111A;x;Je suis là pour chasser ! ;;;;;;;;;;;;x
+XYLO.111B;x;Allons voir de plus près...;;;;;;;;;;;;x
+XYLO.1121;x;Approach and identify 1;;;;;;;;;;;;x
+DESCXYLO.1121;x;De plus près, il s'agit effectivement d'un champignon. Qui plus est d'une espèce plutôt bien connue : un Bolet. Mais celui-ci mesure plus de deux coudées... une taille des plus surprenantes.\n Allons-nous céder à la tentation ou retourner à notre occupation première, à savoir la chasse ?;;;;;;;;;;;;x
+XYLO.1121A;x;Vaut mieux le laisser ici...;;;;;;;;;;;;x
+XYLO.1121B;x;Cueillons-le ! ;;;;;;;;;;;;x
+XYLO.1122;x;Approach and identify 2;;;;;;;;;;;;x
+DESCXYLO.1122;x;Eh bien voici probablement la plus énorme chanterelle jamais vue ! De la taille d'un chien de chasse par sa hauteur, l'on peine à l'enlacer par des bras d'homme, ce spécimen est des plus étonnants !  Allons-nous céder à notre curiosité et cueillir ce beau morceau ? ;;;;;;;;;;;;;x
+XYLO.1122A;x;Cela ne me dit rien qui vaille... ;;;;;;;;;;;;x
+XYLO.1122B;x;Cueillons-la ! ;;;;;;;;;;;;x
+XYLO.1123;x;Approach and identify 3;;;;;;;;;;;;x
+DESCXYLO.1123;;Comme suspecté, il s'agit bel et bien d'un champignon... mais d'un genre assez bizarre voire inconnu. Arrivant à hauteur du poitrail de mon cheval, un chapeau plutôt plat, d'un vert légèrement luisant et dégageant une suave odeur anisée... \n Allons-nous l'emporter ? ;;;;;;;;;;;;;x
+XYLO.1123A;x;Passons notre chemin plutôt;;;;;;;;;;;;x
+XYLO.1123B;x;Cueillons ce trophée ! ;;;;;;;;;;;;x
+XYLO.113;x;et maintenant ?;;;;;;;;;;;;x
+DESCXYLO.113;x;Nous sommes à présent en possession l'encombrant champignon aux dimensions hors normes.\n Reste à savoir ce que nous voulons en faire... ;;;;;;;;;;;;x
+XYLO.113A;x;L'emmener. Mon soigneur l'examinera.;;;;;;;;;;;;x
+XYLO.113B;x;Rapportons notre trouvaille à nos cuisiniers pour le souper ! ;;;;;;;;;;;;x
+XYLO.113C;x;Donnez-en à manger mon cheval.;;;;;;;;;;;;x
+XYLO.113D;x;Je connais un ermite qui vit non loin. Je vais aller le lui montrer.;;;;;;;;;;;;x
+XYLO.1131;x;;;;;;;;;;;;;x
+DESCXYLO.1131;x;;;;;;;;;;;;;x
+XYLO.1131A;x;;;;;;;;;;;;;x
+XYLO.1131B;x;;;;;;;;;;;;;x
+XYLO.1131C;x;;;;;;;;;;;;;x
+XYLO.1132;x;;;;;;;;;;;;;x
+DESCXYLO.1132;x;;;;;;;;;;;;;x
+XYLO.1132A;x;;;;;;;;;;;;;x
 intoxication_champignon;Intoxication au champignon;Intoxication au champignon;;;;;;;;;;;;x
 intoxication_champignon_desc;Intoxication au champignon;Le champignon n'était visiblement pas des plus comestibles ! Espérons qu'il ne soit point mortel.;;;;;;;;;;;;x
 death_intoxication;;Intoxication au champignon;;;;;;;;;;;;x
 death_intoxication_desc;;De mauvais champignons ont eu sa peau !;;;;;;;;;;;;x
-XYLO.01133;x;;;;;;;;;;;;;x
-DESCXYLO.01133;x;;;;;;;;;;;;;x
-XYLO.01133A;x;;;;;;;;;;;;;x
-XYLO.01134;x;;;;;;;;;;;;;x
-XYLO.01141;x;;;;;;;;;;;;;x
-XYLO.01142;x;;;;;;;;;;;;;x
-XYLO.01143;x;;;;;;;;;;;;;x
-XYLO.01151;x;;;;;;;;;;;;;x
-XYLO.01152;x;;;;;;;;;;;;;x
-XYLO.01153;x;;;;;;;;;;;;;x
+XYLO.1133;x;;;;;;;;;;;;;x
+DESCXYLO.1133;x;;;;;;;;;;;;;x
+XYLO.1133A;x;;;;;;;;;;;;;x
+XYLO.1134;x;;;;;;;;;;;;;x
+XYLO.1141;x;;;;;;;;;;;;;x
+XYLO.1142;x;;;;;;;;;;;;;x
+XYLO.1143;x;;;;;;;;;;;;;x
+XYLO.1151;x;;;;;;;;;;;;;x
+XYLO.1152;x;;;;;;;;;;;;;x
+XYLO.1153;x;;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-DESCL3TRADE.0005;The regularity of the merchant caravans passing through [From.Location.GetName] has established a major trade route passing through this province.;Une route s'est développée dans la province de [From.Location.GetName], dans notre domaine.\nOn devrait développer notre infrastructure pour tirer parti de cette manne.;;;;;;;;;;;;x
-L3TRADE.0005A;This can only bring good to our realm.;J'en prends note;;;;;;;;;;;;x
-DESCL3TRADE.0009;A new trade route has emerged in [Root.Location.GetName], just at the edge of our borders. If we were to develop our infrastructure further to connect our lands to it, we could surely attract merchants here as well.;Une route s'est développée dans la province de [From.Location.GetName], juste à côté de notre domaine.\nOn devrait développer notre infrastructure pour accueillir également les marchands.;;;;;;;;;;;;x
-L3TRADE.0009A;Apparently our roads need some work.;J'en prends note;;;;;;;;;;;;x
-DESCL3TRADE.0010;The development of a great city in the province of [Root.Location.GetName] has attracted traders from far and wide and established it as a center of commerce. Perhaps we should invest in our infrastructure to facilitate the passage of trade through these lands and increase our coffers even more!;Le développement d'une cité dans la province de [From.Location.GetName] a fait de celle-ci un centre de commerce.\nOn devrait aménager davantage pour profiter de cette manne.;;;;;;;;;;;;x
-L3TRADE.0010A;What a fortunate turn of events!;J'en prends note;;;;;;;;;;;;x
+DESCL3TRADE.5;The regularity of the merchant caravans passing through [From.Location.GetName] has established a major trade route passing through this province.;Une route s'est développée dans la province de [From.Location.GetName], dans notre domaine.\nOn devrait développer notre infrastructure pour tirer parti de cette manne.;;;;;;;;;;;;x
+L3TRADE.5A;This can only bring good to our realm.;J'en prends note;;;;;;;;;;;;x
+DESCL3TRADE.9;A new trade route has emerged in [Root.Location.GetName], just at the edge of our borders. If we were to develop our infrastructure further to connect our lands to it, we could surely attract merchants here as well.;Une route s'est développée dans la province de [From.Location.GetName], juste à côté de notre domaine.\nOn devrait développer notre infrastructure pour accueillir également les marchands.;;;;;;;;;;;;x
+L3TRADE.9A;Apparently our roads need some work.;J'en prends note;;;;;;;;;;;;x
+DESCL3TRADE.10;The development of a great city in the province of [Root.Location.GetName] has attracted traders from far and wide and established it as a center of commerce. Perhaps we should invest in our infrastructure to facilitate the passage of trade through these lands and increase our coffers even more!;Le développement d'une cité dans la province de [From.Location.GetName] a fait de celle-ci un centre de commerce.\nOn devrait aménager davantage pour profiter de cette manne.;;;;;;;;;;;;x
+L3TRADE.10A;What a fortunate turn of events!;J'en prends note;;;;;;;;;;;;x
 DESCSTEP;Having been informed by our contacts that many reputable merchants were looking into establishing a presence in [From.Location.GetName], our steward has been investigating whether such reports are true.;Des marchands évaluent la possibilité de passer par la province de [From.Location.GetName] pour mener à bien leur affaire.\nS'ils choisissent cette province, on devrait l'aménager davantage pour profiter de cette manne.;;;;;;;;;;;;x
 L3TRADESTEPOK;A most fortuitous development! The first of the merchants have arrived in [From.Location.GetName]!;Les marchands ont trouvé la province de [From.Location.GetName] intéressante.;;;;;;;;;;;;x
 L3TRADESTEPKO;Apparently the merchants have pursued other ventures elsewhere. To the devil with them!;Les marchands refusent de passer par [From.Location.GetName]. Qu'ils aillent en enfer!;;;;;;;;;;;;x
 L3TRADESTEPALREADY;Traders have been already passing by [From.Location.GetName] for quite some time.;Les marchands passent déjà par [From.Location.GetName].;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-REC.0151;Confirmation relique;x;;;;;;;;;;;;x
-DESCREC.0151;It has been reported that a holy relic has been found in the province of [From.Location.GetName]. This object is revered by the the faithful of the Church and would draw in pilgrims from far and wide.;On nous a rapporté que la province de [From.Location.GetName] abrite une Sainte Relique répertoriée par l'Eglise Catholique. Cet objet revêt une grande importance pour les fidèles de cette religion. Elle peut faire l'objet d'un culte particulier voire donner lieu à des pèlerinages.;;;;;;;;;;;;;x
-REC.0151A;Hallelujah!;Hallelujah ! ;;;;;;;;;;;;x
-REC.0151B;This could be interesting...;Cela peut avoir son intérêt...;;;;;;;;;;;;x
-REC.0151C;OK;D'accord;;;;;;;;;;;;x
-REC.0176;False relic;Fausse relique;;;;;;;;;;;;x
-DESCREC.0176;La relique récemment découverte dans un monastère isolé de [From.Location.GetName] s'est avérée ne pas être authentique. C'est assez dommageable car en ces temps troublés, un signe du Seigneur aurait été le bienvenu.;La relique récemment découverte dans un monastère isolé de [From.Location.GetName] s'est avérée ne pas être authentique. C'est assez dommageable car en ces temps troublés, un signe du Seigneur aurait été le bienvenu.;;;;;;;;;;;;x
-REC.0176A;From what this letter says, it is a vile counterfeit...;Une immonde contrefaçon d'après ce document...;;;;;;;;;;;;x
-REC.0176B;It is maybe not so necessary to spread the news...;Nul besoin de répandre la nouvelle peut-être...;;;;;;;;;;;;x
+REC.151;Confirmation relique;x;;;;;;;;;;;;x
+DESCREC.151;It has been reported that a holy relic has been found in the province of [From.Location.GetName]. This object is revered by the the faithful of the Church and would draw in pilgrims from far and wide.;On nous a rapporté que la province de [From.Location.GetName] abrite une Sainte Relique répertoriée par l'Eglise Catholique. Cet objet revêt une grande importance pour les fidèles de cette religion. Elle peut faire l'objet d'un culte particulier voire donner lieu à des pèlerinages.;;;;;;;;;;;;;x
+REC.151A;Hallelujah!;Hallelujah ! ;;;;;;;;;;;;x
+REC.151B;This could be interesting...;Cela peut avoir son intérêt...;;;;;;;;;;;;x
+REC.151C;OK;D'accord;;;;;;;;;;;;x
+REC.176;False relic;Fausse relique;;;;;;;;;;;;x
+DESCREC.176;La relique récemment découverte dans un monastère isolé de [From.Location.GetName] s'est avérée ne pas être authentique. C'est assez dommageable car en ces temps troublés, un signe du Seigneur aurait été le bienvenu.;La relique récemment découverte dans un monastère isolé de [From.Location.GetName] s'est avérée ne pas être authentique. C'est assez dommageable car en ces temps troublés, un signe du Seigneur aurait été le bienvenu.;;;;;;;;;;;;x
+REC.176A;From what this letter says, it is a vile counterfeit...;Une immonde contrefaçon d'après ce document...;;;;;;;;;;;;x
+REC.176B;It is maybe not so necessary to spread the news...;Nul besoin de répandre la nouvelle peut-être...;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 REC.0301;Recruit a Parlier;Recruter un Parlier;;;;;;;;;;;;x
 DESCREC.0301;The construction of the Cathedral requires hiring a Parlier. Fortunately, knowing your very busy, we have drawn some candidates for you to hold this office.;Le chantier de la Cathédrale requiert d'engager un Maître Bâtisseur. Heureusement, vous sachant très occupé, nous avons quelques candidats à vous proposer pour tenir cet office.;;;;;;;;;;;;x
@@ -861,103 +855,103 @@ bourse_soulagee;There we go! That ought to come lighten our purse;Voilà qui devr
 bourse_remplie;Some trinkets in addition to the treasure is never bad.;Quelques pièces venant s'ajouter au trésor ne font jamais de mal.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
-ECO.00100;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
-DESCECO.00100;The cultivation of cereals has yielded such bountiful harvests over the past few years that [From.Location.GetName] is now considered a major grower of cereals.;Les cultures céréalières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00100A;OK;OK;;;;;;;;;;;;x
-ECO.00101;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
-DESCECO.00101;Our fruit orchards have yielded such bountiful harvests over the past few years that [From.Location.GetName] is now considered a major grower of fruits.;Les productions de nos vergers en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00101A;OK;OK;;;;;;;;;;;;x
-ECO.00102;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
-DESCECO.00102;Our vegetable farms have yielded such bountiful harvests over the past few years that [From.Location.GetName] is now considered a major grower of vegetables.;Les activités maraîchères en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00102A;OK;OK;;;;;;;;;;;;x
-ECO.00103;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
-DESCECO.00103;Our vineyards has yielded such bountiful harvests over the past few years that [From.Location.GetName] is now considered a major grower of grapes to be sold to the wineries.;Les activités viticoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans  les villes de la région.;;;;;;;;;;;;x
-ECO.00103A;OK;OK;;;;;;;;;;;;x
-ECO.00105;BEER activation;activation BIERE;;;;;;;;;;;;x
-DESCECO.00105;The breweries in [From.Location.GetName] have produced beer of such quality and in such quantities that word has spread to the surrounding lands, attracting many prominent merchants here.;Les brassins produits en [From.Location.GetName] commencent à avoir une plutôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
-ECO.00105A;What luck!;Fort bien !;;;;;;;;;;;;x
-ECO.00106;WINE activation;activation VIN;;;;;;;;;;;;x
-DESCECO.00106;The wineries in [From.Location.GetName] have become renowned for the great quality of its wine, attracting many prominent merchants here.;Les crus qui sortent de nos chais en [From.Location.GetName] commencent à avoir une plutôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
-ECO.00106A;Be sure to save some for my cellars!;Fort bien !;;;;;;;;;;;;x
-ECO.00110;BREEDING activation;activation ELEVAGE;;;;;;;;;;;;x
-DESCECO.00110;The herds have multiplied and yielded such large volumes of wool over the past few years that [From.Location.GetName] is now considered a major producer of wool.;La production de laine en [From.Location.GetName] est suffisamment importante pour être vendue et transportée pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00110A;OK;OK;;;;;;;;;;;;x
-ECO.00112;BREEDING activation;activation ELEVAGE;;;;;;;;;;;;x
-DESCECO.00112;The herds have multiplied over the past few years and now [From.Location.GetName] is now known for its brilliantly verdant pastures and herds of fat, well-fed cattle.;Les activités d'élevage en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00112A;OK;OK;;;;;;;;;;;;x
-ECO.00111;BREEDING activation;activation ELEVAGE;;;;;;;;;;;;x
-DESCECO.00111;The herds have multiplied and yielded such large volumes of cheese and milk over the past few years that [From.Location.GetName] is now considered a major producer of dairy.;Les productions fromagères en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00111A;OK;OK;;;;;;;;;;;;x
-ECO.00120;FOREST activation;activation FORET;;;;;;;;;;;;x
-DESCECO.00120;The felling of this province's extensive forests has yielded a surplus of wood to be used in construction and industry over the past few years that [From.Location.GetName] is now considered a major producer of timber.;Les produits de la coupe de bois en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00120A;OK;OK;;;;;;;;;;;;x
-ECO.00121;FOREST activation;activation FORET;;;;;;;;;;;;x
-DESCECO.00121;The clearing of this province's extensive forests has yielded a surplus of wood to be used as fuel over the past few years that [From.Location.GetName] is now considered a major producer of charcoal.;La production de charbon de bois en [From.Location.GetName] est devenue suffisamment importante pour être vendue et transportée pour alimenter dans les villes de la région en combustible.;;;;;;;;;;;;x
-ECO.00121A;OK;OK;;;;;;;;;;;;x
-ECO.00130;STONE activation;activation PIERRE;;;;;;;;;;;;x
-DESCECO.00130;Our quarries have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of quarried stone.;Les activités de nos carrières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00130A;OK;OK;;;;;;;;;;;;x
-ECO.00140;ORE activation;activation MINERAI;;;;;;;;;;;;x
-DESCECO.00140;Our mines have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of raw ore.;Les activités d'exploitation de nos ressources minières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00140A;OK;OK;;;;;;;;;;;;x
-ECO.00141;ORE activation;activation MINERAI;;;;;;;;;;;;x
-DESCECO.00141;Our salt mines have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of unrefined salt.;Les produits de l'exploitation de sel en [From.Location.GetName] sont suffisamment importantes pour en permettre la vente et le transports vers les villes de la région.;;;;;;;;;;;;x
-ECO.00141A;OK;OK;;;;;;;;;;;;x
-ECO.0015;FISHING activation;activation PECHE;;;;;;;;;;;;x
-DESCECO.00150;The fishing villages have caught such large volumes of fish in these waters over the past few years that [From.Location.GetName] is now considered a major producer of fish.;Les activités de pêche en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00150A;OK;OK;;;;;;;;;;;;x
-ECO.00151;FISH FARMING activation;activation PISCICULTURE;;;;;;;;;;;;x
-DESCECO.00151;The fish farms here have cultivated such large volumes of fish over the past few years that [From.Location.GetName] is now considered a major producer of freshwater fish.;Les activités piscicoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
-ECO.00151A;OK;OK;;;;;;;;;;;;x
-ECO.00142;GOLD activation;activation OR;;;;;;;;;;;;x
-DESCECO.00142;Our gold mines have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of gold.;La production d'or en [From.Location.GetName] est désormais suffisante pour en permettre l'export par caravane à destination des les villes de la région.;;;;;;;;;;;;x
-ECO.00142A;OK;OK;;;;;;;;;;;;x
-ECO.00143;CUPPER activation;activation CUIVRE;;;;;;;;;;;;x
-DESCECO.00143;Our copper mines have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of copper.;La production de cuivre en [From.Location.GetName] permet à présent d'approvisionner caravanes, marchands et artisans.;;;;;;;;;;;x
-ECO.00143A;OK;OK;;;;;;;;;;;;x
+ECO.100;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.100;The cultivation of cereals has yielded such bountiful harvests over the past few years that [From.Location.GetName] is now considered a major grower of cereals.;Les cultures céréalières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.100A;OK;OK;;;;;;;;;;;;x
+ECO.101;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.101;Our fruit orchards have yielded such bountiful harvests over the past few years that [From.Location.GetName] is now considered a major grower of fruits.;Les productions de nos vergers en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.101A;OK;OK;;;;;;;;;;;;x
+ECO.102;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.102;Our vegetable farms have yielded such bountiful harvests over the past few years that [From.Location.GetName] is now considered a major grower of vegetables.;Les activités maraîchères en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.102A;OK;OK;;;;;;;;;;;;x
+ECO.103;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.103;Our vineyards has yielded such bountiful harvests over the past few years that [From.Location.GetName] is now considered a major grower of grapes to be sold to the wineries.;Les activités viticoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans  les villes de la région.;;;;;;;;;;;;x
+ECO.103A;OK;OK;;;;;;;;;;;;x
+ECO.105;BEER activation;activation BIERE;;;;;;;;;;;;x
+DESCECO.105;The breweries in [From.Location.GetName] have produced beer of such quality and in such quantities that word has spread to the surrounding lands, attracting many prominent merchants here.;Les brassins produits en [From.Location.GetName] commencent à avoir une plutôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
+ECO.105A;What luck!;Fort bien !;;;;;;;;;;;;x
+ECO.106;WINE activation;activation VIN;;;;;;;;;;;;x
+DESCECO.106;The wineries in [From.Location.GetName] have become renowned for the great quality of its wine, attracting many prominent merchants here.;Les crus qui sortent de nos chais en [From.Location.GetName] commencent à avoir une plutôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
+ECO.106A;Be sure to save some for my cellars!;Fort bien !;;;;;;;;;;;;x
+ECO.110;BREEDING activation;activation ELEVAGE;;;;;;;;;;;;x
+DESCECO.110;The herds have multiplied and yielded such large volumes of wool over the past few years that [From.Location.GetName] is now considered a major producer of wool.;La production de laine en [From.Location.GetName] est suffisamment importante pour être vendue et transportée pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.110A;OK;OK;;;;;;;;;;;;x
+ECO.112;BREEDING activation;activation ELEVAGE;;;;;;;;;;;;x
+DESCECO.112;The herds have multiplied over the past few years and now [From.Location.GetName] is now known for its brilliantly verdant pastures and herds of fat, well-fed cattle.;Les activités d'élevage en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.112A;OK;OK;;;;;;;;;;;;x
+ECO.111;BREEDING activation;activation ELEVAGE;;;;;;;;;;;;x
+DESCECO.111;The herds have multiplied and yielded such large volumes of cheese and milk over the past few years that [From.Location.GetName] is now considered a major producer of dairy.;Les productions fromagères en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.111A;OK;OK;;;;;;;;;;;;x
+ECO.120;FOREST activation;activation FORET;;;;;;;;;;;;x
+DESCECO.120;The felling of this province's extensive forests has yielded a surplus of wood to be used in construction and industry over the past few years that [From.Location.GetName] is now considered a major producer of timber.;Les produits de la coupe de bois en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.120A;OK;OK;;;;;;;;;;;;x
+ECO.121;FOREST activation;activation FORET;;;;;;;;;;;;x
+DESCECO.121;The clearing of this province's extensive forests has yielded a surplus of wood to be used as fuel over the past few years that [From.Location.GetName] is now considered a major producer of charcoal.;La production de charbon de bois en [From.Location.GetName] est devenue suffisamment importante pour être vendue et transportée pour alimenter dans les villes de la région en combustible.;;;;;;;;;;;;x
+ECO.121A;OK;OK;;;;;;;;;;;;x
+ECO.130;STONE activation;activation PIERRE;;;;;;;;;;;;x
+DESCECO.130;Our quarries have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of quarried stone.;Les activités de nos carrières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.130A;OK;OK;;;;;;;;;;;;x
+ECO.140;ORE activation;activation MINERAI;;;;;;;;;;;;x
+DESCECO.140;Our mines have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of raw ore.;Les activités d'exploitation de nos ressources minières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.140A;OK;OK;;;;;;;;;;;;x
+ECO.141;ORE activation;activation MINERAI;;;;;;;;;;;;x
+DESCECO.141;Our salt mines have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of unrefined salt.;Les produits de l'exploitation de sel en [From.Location.GetName] sont suffisamment importantes pour en permettre la vente et le transports vers les villes de la région.;;;;;;;;;;;;x
+ECO.141A;OK;OK;;;;;;;;;;;;x
+ECO.15;FISHING activation;activation PECHE;;;;;;;;;;;;x
+DESCECO.150;The fishing villages have caught such large volumes of fish in these waters over the past few years that [From.Location.GetName] is now considered a major producer of fish.;Les activités de pêche en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.150A;OK;OK;;;;;;;;;;;;x
+ECO.151;FISH FARMING activation;activation PISCICULTURE;;;;;;;;;;;;x
+DESCECO.151;The fish farms here have cultivated such large volumes of fish over the past few years that [From.Location.GetName] is now considered a major producer of freshwater fish.;Les activités piscicoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.151A;OK;OK;;;;;;;;;;;;x
+ECO.142;GOLD activation;activation OR;;;;;;;;;;;;x
+DESCECO.142;Our gold mines have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of gold.;La production d'or en [From.Location.GetName] est désormais suffisante pour en permettre l'export par caravane à destination des les villes de la région.;;;;;;;;;;;;x
+ECO.142A;OK;OK;;;;;;;;;;;;x
+ECO.143;CUPPER activation;activation CUIVRE;;;;;;;;;;;;x
+DESCECO.143;Our copper mines have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of copper.;La production de cuivre en [From.Location.GetName] permet à présent d'approvisionner caravanes, marchands et artisans.;;;;;;;;;;;x
+ECO.143A;OK;OK;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
-ECO.00107;FLOUR activation;activation FARINE;;;;;;;;;;;;x
-DESCECO.00107;The grain mills have incrased their production so much over the past few years that [From.Location.GetName] now produces a significant amount of flour to be used in large-scale production of bread..;\nLa ressource "Farine" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00107A;OK;OK;;;;;;;;;;;;x
-ECO.00108;CIDER activation;activation CIDRE;;;;;;;;;;;;x
-DESCECO.00108;The cideries in [From.Location.GetName] have produced cider of such quality and in such quantities that word has spread to the surrounding lands, attracting many prominent merchants here.;\nLa ressource "Cidre" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00108A;OK;OK;;;;;;;;;;;;x
-ECO.00109;BREAD activation;activation PAIN;;;;;;;;;;;;x
-DESCECO.00109;Our bakeries have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of bread to feed the masses in the cities and villages.;\nLa ressource "Pain" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00109A;OK;OK;;;;;;;;;;;;x
-ECO.00113;LEATHER activation;activation CUIR;;;;;;;;;;;;x
-DESCECO.00113;Our tanners have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of leather for armor and various crafts.;\nLe soin apporté à la sélection des peaux et l'expertise acquise dans les techniques de tannage ont fait la réputation des cuirs produit dans la province de [From.Location.GetName]. Leur renommée dépasse le simple cercle local et des colis de produits voyagent de plus en plus loin.;;;;;;;;;;;;x
-ECO.00113A;OK;Bien, bien !;;;;;;;;;;;;x
-ECO.00114;MEAT activation;activation VIANDE;;;;;;;;;;;;x
-DESCECO.00114;Our butchers have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of beef to be sold in the cities.;\nLa ressource "Viande" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00114A;OK;OK;;;;;;;;;;;;x
-ECO.00115;CLOTH activation;activation ETOFFE;;;;;;;;;;;;x
-DESCECO.00115;Our wool spinners have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of spun cloth;\nLa ressource "Etoffe" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00115A;OK;OK;;;;;;;;;;;;x
-ECO.00116;SHEET activation;activation DRAP;;;;;;;;;;;;x
-DESCECO.00116;Our textile workers have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of textiles.;Des nouvelles en provenance de [From.Location.GetName],\n Les étoffes tissées avec soin sur nos terres permettent la production de draps de grande qualité. Cela devait faire la fierté, et pourquoi pas la richesse de la province ! ;;;;;;;;;;;;x
-ECO.00116A;OK;OK;;;;;;;;;;;;x
-ECO.00117;HORSE activation;activation CHEVAL;;;;;;;;;;;;x
-DESCECO.00117;The herds have multiplied over the past few years and now [From.Location.GetName] is now known for its herds of strong and sturdy mounts.;\nLa ressource "Cheval" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00117A;OK;OK;;;;;;;;;;;;x
-ECO.00122;PLANK activation;activation PLANCHE;;;;;;;;;;;;x
-DESCECO.00122;Our lumber mills have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of lumber.;\nLa ressource "Planche" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00122A;OK;OK;;;;;;;;;;;;x
-ECO.00123;GLASS activation;activation VERRE;;;;;;;;;;;;x
-DESCECO.00123;Our glaziers have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of glass.;\nLa ressource "Verre" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00123A;OK;OK;;;;;;;;;;;;x
-ECO.00124;SKIN activation;activation PEAUX;;;;;;;;;;;;x
-DESCECO.00124;Skins, luxury goods from the North, are now found on the shelves of [From.Location.GetName].;Des peaux, produits de luxe venant du Nord, se retrouvent désormais sur les étales de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00124A;OK;OK;;;;;;;;;;;;x
-ECO.00125;Jewels, luxury goods from the East, are now found on the shelves of [From.Location.GetName].;activation JOYAUX;;;;;;;;;;;;x
-DESCECO.00125;JEWEL activation;Des joyaux, produits de luxe venant d'Orient, se retrouvent désormais sur les étales de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00125A;OK;OK;;;;;;;;;;;;x
-ECO.00126;SPICE activation;activation EPICES;;;;;;;;;;;;x
-DESCECO.00126;Spices, luxury goods from the East, are now found on the shelves of [From.Location.GetName].;Des épices, produits de luxe venant d'Orient, se retrouvent désormais sur les étales de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00126A;OK;OK;;;;;;;;;;;;x
-ECO.00131;CHIPPED STONE activation;activation PIERRE TAILLE;;;;;;;;;;;;x
-DESCECO.00131;Our stonemasons have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of worked stone.;\nLa ressource "Pierre de taille" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00131A;OK;OK;;;;;;;;;;;;x
+ECO.107;FLOUR activation;activation FARINE;;;;;;;;;;;;x
+DESCECO.107;The grain mills have incrased their production so much over the past few years that [From.Location.GetName] now produces a significant amount of flour to be used in large-scale production of bread..;\nLa ressource "Farine" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.107A;OK;OK;;;;;;;;;;;;x
+ECO.108;CIDER activation;activation CIDRE;;;;;;;;;;;;x
+DESCECO.108;The cideries in [From.Location.GetName] have produced cider of such quality and in such quantities that word has spread to the surrounding lands, attracting many prominent merchants here.;\nLa ressource "Cidre" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.108A;OK;OK;;;;;;;;;;;;x
+ECO.109;BREAD activation;activation PAIN;;;;;;;;;;;;x
+DESCECO.109;Our bakeries have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of bread to feed the masses in the cities and villages.;\nLa ressource "Pain" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.109A;OK;OK;;;;;;;;;;;;x
+ECO.113;LEATHER activation;activation CUIR;;;;;;;;;;;;x
+DESCECO.113;Our tanners have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of leather for armor and various crafts.;\nLe soin apporté à la sélection des peaux et l'expertise acquise dans les techniques de tannage ont fait la réputation des cuirs produit dans la province de [From.Location.GetName]. Leur renommée dépasse le simple cercle local et des colis de produits voyagent de plus en plus loin.;;;;;;;;;;;;x
+ECO.113A;OK;Bien, bien !;;;;;;;;;;;;x
+ECO.114;MEAT activation;activation VIANDE;;;;;;;;;;;;x
+DESCECO.114;Our butchers have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of beef to be sold in the cities.;\nLa ressource "Viande" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.114A;OK;OK;;;;;;;;;;;;x
+ECO.115;CLOTH activation;activation ETOFFE;;;;;;;;;;;;x
+DESCECO.115;Our wool spinners have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of spun cloth;\nLa ressource "Etoffe" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.115A;OK;OK;;;;;;;;;;;;x
+ECO.116;SHEET activation;activation DRAP;;;;;;;;;;;;x
+DESCECO.116;Our textile workers have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of textiles.;Des nouvelles en provenance de [From.Location.GetName],\n Les étoffes tissées avec soin sur nos terres permettent la production de draps de grande qualité. Cela devait faire la fierté, et pourquoi pas la richesse de la province ! ;;;;;;;;;;;;x
+ECO.116A;OK;OK;;;;;;;;;;;;x
+ECO.117;HORSE activation;activation CHEVAL;;;;;;;;;;;;x
+DESCECO.117;The herds have multiplied over the past few years and now [From.Location.GetName] is now known for its herds of strong and sturdy mounts.;\nLa ressource "Cheval" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.117A;OK;OK;;;;;;;;;;;;x
+ECO.122;PLANK activation;activation PLANCHE;;;;;;;;;;;;x
+DESCECO.122;Our lumber mills have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of lumber.;\nLa ressource "Planche" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.122A;OK;OK;;;;;;;;;;;;x
+ECO.123;GLASS activation;activation VERRE;;;;;;;;;;;;x
+DESCECO.123;Our glaziers have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of glass.;\nLa ressource "Verre" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.123A;OK;OK;;;;;;;;;;;;x
+ECO.124;SKIN activation;activation PEAUX;;;;;;;;;;;;x
+DESCECO.124;Skins, luxury goods from the North, are now found on the shelves of [From.Location.GetName].;Des peaux, produits de luxe venant du Nord, se retrouvent désormais sur les étales de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.124A;OK;OK;;;;;;;;;;;;x
+ECO.125;Jewels, luxury goods from the East, are now found on the shelves of [From.Location.GetName].;activation JOYAUX;;;;;;;;;;;;x
+DESCECO.125;JEWEL activation;Des joyaux, produits de luxe venant d'Orient, se retrouvent désormais sur les étales de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.125A;OK;OK;;;;;;;;;;;;x
+ECO.126;SPICE activation;activation EPICES;;;;;;;;;;;;x
+DESCECO.126;Spices, luxury goods from the East, are now found on the shelves of [From.Location.GetName].;Des épices, produits de luxe venant d'Orient, se retrouvent désormais sur les étales de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.126A;OK;OK;;;;;;;;;;;;x
+ECO.131;CHIPPED STONE activation;activation PIERRE TAILLE;;;;;;;;;;;;x
+DESCECO.131;Our stonemasons have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of worked stone.;\nLa ressource "Pierre de taille" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.131A;OK;OK;;;;;;;;;;;;x
 DESCECO.133;News of our mines in [Root.GetName]. \nThe available amount of [Root.stock_minerai.GetName] seem to run out. Should we act?;Des nouvelles de nos mines de [Root.GetName]. \n Les quantités de [Root.stock_minerai.GetName] disponibles semblent s'épuiser. Ne devrions-nous point agir ?;;;;;;;;;;;;x
 ECO.133A;OK;Nous en prenons note;;;;;;;;;;;;x
 TOOLTIPECO133;We can take the §Ydecision§! to prospect;Nous pouvons prendre la §Ydécision§! de prospecter;;;;;;;;;;;;x
@@ -991,193 +985,193 @@ DESCECO.1392;News of our mines in [Root.GetName].\nThe amount of available [Root
 DESCECO.1393;News of our mines in [Root.GetName].\nThe amount of available [Root.stock_minerai.GetName] is estimated at [Root.stock_minerai.GetValue] units.\nQuantity impacted by -30 units.;Des nouvelles de nos mines de [Root.GetName]. \n La quantité de [Root.stock_minerai.GetName] encore disponible est évaluée à [Root.stock_minerai.GetValue] unités. \nQuantité impactée de -30 unités.;;;;;;;;;;;;x
 DESCECO.1394;News of our mines in [Root.GetName].\nThe amount of available [Root.stock_minerai.GetName] is estimated at [Root.stock_minerai.GetValue] units.\nQuantity impacted by +5 units.;Des nouvelles de nos mines de [Root.GetName]. \n La quantité de [Root.stock_minerai.GetName] encore disponible est évaluée à [Root.stock_minerai.GetValue] unités. \nQuantité impactée de  +5 unités.;;;;;;;;;;;;x
 DESCECO.1395;News of our mines in [Root.GetName].\nThe amount of available [Root.stock_minerai.GetName] is estimated at [Root.stock_minerai.GetValue] units.\nQuantity impacted by -5 units.;Des nouvelles de nos mines de [Root.GetName]. \n La quantité de [Root.stock_minerai.GetName] encore disponible est évaluée à [Root.stock_minerai.GetValue] unités. \nQuantité impactée de  -5 unités.;;;;;;;;;;;;x
-ECO.00144;METAL activation;activation METAL;;;;;;;;;;;;x
-DESCECO.00144;Our iron smelters have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of iron.;\nLa ressource "Métal" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00144A;OK;OK;;;;;;;;;;;;x
-ECO.00145;TOOLS activation;activation OUTILS;;;;;;;;;;;;x
-DESCECO.00145;Our forges have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of tools.;\nLa ressource "Outils" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
-ECO.00145A;OK;OK;;;;;;;;;;;;x
-ECO.00146;REFINED SALT activation;activation SEL RAFFINE;;;;;;;;;;;;x
-DESCECO.00146;Our salt refineries have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of refined salt.;Des nouvelles en provenance de[From.Location.GetName],\nLe sel extrait et transformer dans la province est produit en quantités suffisantes pour être échangé ou vendu à bon prix au delà du périmètre de nos terres.;;;;;;;;;;;;x
-ECO.00146A;OK;OK;;;;;;;;;;;;x
-ECO.00147;SALTING activation;activation SALAISON;;;;;;;;;;;;x
-DESCECO.00147;Our butchers have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of cured meats.;Des nouvelles en provenance de [From.Location.GetName],\nLa conservation de la viande est devenu une tradition locale et les quantités produites vont attirer les négociations et acheteurs d'ici ou d'ailleurs.;;;;;;;;;;;;x
-ECO.00147A;OK;OK;;;;;;;;;;;;x
-ECO.00148;WEAPONS activation;activation ARMES;;;;;;;;;;;;x
-DESCECO.00148;Our armsmiths have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of weapons.;Des nouvelles en provenance de [From.Location.GetName],\nLe métal forgé sert ici à fabriquer pièces d'armures, boucliers, armes tranchantes ou contendantes. Bien que leur usage soit réservé à la classe militaire, ces objets s'arrachent à bon prix et c'est donc une bonne d'en produire sur nos terres.;;;;;;;;;;;;x
+ECO.144;METAL activation;activation METAL;;;;;;;;;;;;x
+DESCECO.144;Our iron smelters have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of iron.;\nLa ressource "Métal" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.144A;OK;OK;;;;;;;;;;;;x
+ECO.145;TOOLS activation;activation OUTILS;;;;;;;;;;;;x
+DESCECO.145;Our forges have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of tools.;\nLa ressource "Outils" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.145A;OK;OK;;;;;;;;;;;;x
+ECO.146;REFINED SALT activation;activation SEL RAFFINE;;;;;;;;;;;;x
+DESCECO.146;Our salt refineries have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of refined salt.;Des nouvelles en provenance de[From.Location.GetName],\nLe sel extrait et transformer dans la province est produit en quantités suffisantes pour être échangé ou vendu à bon prix au delà du périmètre de nos terres.;;;;;;;;;;;;x
+ECO.146A;OK;OK;;;;;;;;;;;;x
+ECO.147;SALTING activation;activation SALAISON;;;;;;;;;;;;x
+DESCECO.147;Our butchers have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of cured meats.;Des nouvelles en provenance de [From.Location.GetName],\nLa conservation de la viande est devenu une tradition locale et les quantités produites vont attirer les négociations et acheteurs d'ici ou d'ailleurs.;;;;;;;;;;;;x
+ECO.147A;OK;OK;;;;;;;;;;;;x
+ECO.148;WEAPONS activation;activation ARMES;;;;;;;;;;;;x
+DESCECO.148;Our armsmiths have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of weapons.;Des nouvelles en provenance de [From.Location.GetName],\nLe métal forgé sert ici à fabriquer pièces d'armures, boucliers, armes tranchantes ou contendantes. Bien que leur usage soit réservé à la classe militaire, ces objets s'arrachent à bon prix et c'est donc une bonne d'en produire sur nos terres.;;;;;;;;;;;;x
 des_armes;;Des armes, bleues comme la terre, \nDes qu'il faut se garder au chaud au fond de l'âme, \nDans les yeux, dans le cœur, dans les bras d'une femme, \nQu'on garde au fond de soi comme on garde un mystère, \nDes armes au secret des jours, \nSous l'herbe, dans le ciel et puis dans l'écriture, \ndes qui vous font rêver très tard dans les lectures, \net qui mettent la poésie dans les discours, \ndes armes, des armes, des armes;;;;;;;;;;;;x
-ECO.00148A;OK;Bien;;;;;;;;;;;;x
-ECO.00152;SMOKING activation;activation FUMAISON;;;;;;;;;;;;x
-DESCECO.00152;Our smokehouses have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of smoked fish.;Des nouvelles en provenance de [From.Location.GetName],\nLes poissons sont ici en fumaison ce qui améliore leur conservation et en permet donc l'export. Des réserves de nourriture pour l'hiver ou les longs voyages sont toujours les bienvenues.;;;;;;;;;;;;x
-ECO.00152A;OK;OK;;;;;;;;;;;;x
-ECO.0301;Buy to sell;Acheter pour vendre;;;;;;;;;;;;x
-DESCECO.0301;My steward has suggested that I could use my authority to secure a limited amount of goods at a lower price and then sell them back to the market at a higher price.;Une occasion pour améliorer mon intendance se présente.\n Je pourrais user de mon pouvoir pour acheter des tissus à prix réduit et les revendre à prix exorbitant.;;;;;;;;;;;;x
-ECO.0301A;This seems like a good idea.;C'est une bonne idée;;;;;;;;;;;;x
-TOOLTIPECO.0301A;You set out to find a merchant from which to buy "wholesale" goods.;Vous partez à la recherche de commerçants à intimider.;;;;;;;;;;;;x
-ECO.0301B;This sounds like a waste of time;C'est une mauvaise idée;;;;;;;;;;;;x
-ECO.0302;What to buy?;Que faut-il acheter ?;;;;;;;;;;;;x
-DESCECO.0302;As you make your way through the busy market square with your entourage, you note the merchants talking, bargaining, peddling their wares with only the hope of profit in their eyes. Many wares catch my attention, but in the end, investing in textiles seems to be the most sensible approach.;En parcourant les rues et places bondées de marchands et chalands qui se bousculent, parlent, marchandent en échangent soit or, soit jurons, je repère plusieurs étals plus intéressants. \n Le textile semble être un bon choix, mais que choisir alors ? \n;;;;;;;;;;;;x
-ECO.0302A;I shall purchase 10 sacks of wool.;Acheter 10 sacs de laine;;;;;;;;;;;;x
-TOOLTIPECO.0302A;Wool is the raw material at the foundation of the entiretextile industry in this region.;Le laine est la base de toute l'industrie textile de la région.;;;;;;;;;;;;x
-ECO.0302B;I shall purchase 10 rolls of spun cloth.;Acheter 10 rouleaux d'étoffe;;;;;;;;;;;;x
-TOOLTIPECO.0302B;Spun cloth can be made into any article of clothing that one desires.;Avec les étoffes, on pourra tisser ce que l'on veut.;;;;;;;;;;;;x
-ECO.0302C;I shall purchase 10 finished textiles.;Acheter 10 draps tout faits;;;;;;;;;;;;x
-TOOLTIPECO.0302C;These clothes are similar to my own, so of course people would want to buy them!;Les gens voudront me ressembler et les acheter.;;;;;;;;;;;;x
-ECO.0303;Sale;Vente;;;;;;;;;;;;x
-DESCECO.0303;You leave the business of selling the goods to your steward, who leaves for the market with ten sacks of wool. A day passes with various merchants passing by the stall to evaluate the suppleness and fineness of the wool. At last, your steward returns to report on your business venture.;Les clients affluent et s'agglutinent autour de mon étal pour voir, toucher, palper le moelleux et la finesse de la laine qui leur est présentée.\n J'espère en tirer un bon prix et écouler mon stock.;;;;;;;;;;;;x
-ECO.0303A;Give me the report, I want to see it for myself!;J'ai fini de vendre les sacs de laine;;;;;;;;;;;;x
-TOOLTIPECO.0303A;I have not sold a single sack!;Je n'ai rien vendu;;;;;;;;;;;;x
-TOOLTIPECO.0303B;I have only managed to sell one sack.;Je n'ai vendu qu'un sac;;;;;;;;;;;;x
-TOOLTIPECO.0303C;I have only managed to sell two sacks.;Je n'ai vendu que 2 sacs;;;;;;;;;;;;x
-TOOLTIPECO.0303D;I have only managed to sell three sacks;Je n'ai vendu que 3 sacs;;;;;;;;;;;;x
-TOOLTIPECO.0303E;I have only managed to sell four sacks;Je n'ai vendu que 4 sacs;;;;;;;;;;;;x
-TOOLTIPECO.0303F;I have only managed to sell five sacks;Je n'ai vendu que 5 sacs;;;;;;;;;;;;x
-TOOLTIPECO.0303G;I have managed to sell six sacks!;J'ai réussi à vendre 6 sacs;;;;;;;;;;;;x
-TOOLTIPECO.0303H;I have managed to sell seven sacks!;J'ai réussi à vendre 7 sacs;;;;;;;;;;;;x
-TOOLTIPECO.0303I;I have managed to sell eight sacks!;J'ai réussi à vendre 8 sacs;;;;;;;;;;;;x
-TOOLTIPECO.0303J;I have managed to sell nine sacks!;J'ai réussi à vendre 9 sacs;;;;;;;;;;;;x
-ECO.0304;Sale;Vente;;;;;;;;;;;;x
-DESCECO.0304;You leave the business of selling the goods to your steward, who leaves for the market with ten rolls of spun cloth. A day passes with various "connoisseurs" passing by the stall to evaluate the fineness and quality of the cloths. At last, your steward returns to report on your business venture.;Les clients se pressent pour voir mes marchandises. Certains en bons connaisseurs -ou pour s'en donner l'air- font mine d'examiner avec forte attention et soin la finesse et le détail du tissage des étoffes. J'espère malgré ces simagrées leur vendre à prix d'or.;;;;;;;;;;;;x
-ECO.0304A;Give me the report, I want to see it for myself!;J'ai fini de vendre les rouleaux d'étoffes;;;;;;;;;;;;x
-TOOLTIPECO.0304A;I have not sold a single roll of cloth!;Je n'ai pas vendu le moindre rouleau;;;;;;;;;;;;x
-TOOLTIPECO.0304B;I have only managed to sell one roll.;Je n'ai vendu qu'un rouleau;;;;;;;;;;;;x
-TOOLTIPECO.0304C;I have only managed to sell two rolls.;Je n'ai vendu que 2 rouleaux;;;;;;;;;;;;x
-TOOLTIPECO.0304D;I have only managed to sell three rolls.;Je n'ai vendu que 3 rouleaux;;;;;;;;;;;;x
-TOOLTIPECO.0304E;I have only managed to sell four rolls.;Je n'ai vendu que 4 rouleaux;;;;;;;;;;;;x
-TOOLTIPECO.0304F;I have only managed to sell five rolls.;Je n'ai vendu que 5 rouleaux;;;;;;;;;;;;x
-TOOLTIPECO.0304G;I have managed to sell six rolls;J'ai réussi à vendre 6 rouleaux;;;;;;;;;;;;x
-TOOLTIPECO.0304H;I have managed to sell seven rolls;J'ai réussi à vendre 7 rouleaux;;;;;;;;;;;;x
-TOOLTIPECO.0304I;I have managed to sell eight rolls;J'ai réussi à vendre 8 rouleaux;;;;;;;;;;;;x
-TOOLTIPECO.0304J;I have managed to sell nine rolls;J'ai réussi à vendre 9 rouleaux;;;;;;;;;;;;x
-ECO.0305;Sale;Vente;;;;;;;;;;;;x
-DESCECO.0305;You leave the business of selling the goods to your steward, who leaves for the market with ten finished textiles. A day passes with various "connoisseurs" passing by the stall to evaluate the fineness and detail of the clothes. At last, your steward returns to report on your business venture.;Les acheteurs de draps ne sont guère les plus faciles à convaincre. Comptant sur la qualité des produits et un peu de belles paroles je m'attèle à la tâche ardue pour tenter de vendre mes draps et ce au meilleur prix pour au moins récupérer sur mon investissement.;;;;;;;;;;;;x
-ECO.0305A;Give me the report, I want to see it for myself!;J'ai fini de vendre les draps;;;;;;;;;;;;x
-TOOLTIPECO.0305A;I could not manage to sell a single one!;Je n'ai point vendu de drap;;;;;;;;;;;;x
-TOOLTIPECO.0305B;I have only managed to sell a single one.;Je n'ai vendu qu'une pièce drap;;;;;;;;;;;;x
-TOOLTIPECO.0305C;I have only managed to sell two.;Je n'ai vendu que 2 pièces de draps;;;;;;;;;;;;x
-TOOLTIPECO.0305D;I have only managed to sell three.;Je n'ai vendu que 3 pièces de draps;;;;;;;;;;;;x
-TOOLTIPECO.0305E;I have only managed to sell four.;Je n'ai vendu que 4 pièces de draps;;;;;;;;;;;;x
-TOOLTIPECO.0305F;I have only managed to sell five.;Je n'ai vendu que 5 pièces de draps;;;;;;;;;;;;x
-TOOLTIPECO.0305G;I have managed to sell six!;J'ai réussi à vendre 6 pièces de draps;;;;;;;;;;;;x
-TOOLTIPECO.0305H;I have managed to sell seven!;J'ai réussi à vendre 7 pièces de draps;;;;;;;;;;;;x
-TOOLTIPECO.0305I;I have managed to sell eight!;J'ai réussi à vendre 8 pièces de draps;;;;;;;;;;;;x
-TOOLTIPECO.0305J;I have managed to sell nine!;J'ai réussi à vendre 9 pièces de draps;;;;;;;;;;;;x
-ECO.0306;Unsold;Les invendus;;;;;;;;;;;;x
-DESCECO.0306;A number of my purchases remain unsold and now the question of how to dispose of them must be addressed, for lack of any more interested buyers.;Certains de mes achats me sont restés sur les bras faute de suffisamment d'acheteurs.\n Que vais-je bien pouvoir en faire ?;;;;;;;;;;;;x
-ECO.0306A;Burn them, of course! We can't be casting pearls before swine.;Les brûler, pardi!;;;;;;;;;;;;x
-TOOLTIPECO.0306A;The flames grow slightly out of control and almost burn down a house.;Les flammes s'élèvent et manquent de brûler une maison.;;;;;;;;;;;;x
-ECO.0306B;Let us donate them to the poor.;Les donner aux nécessiteux;;;;;;;;;;;;x
-TOOLTIPECO.0306B;There is talk of some rather well-dressed beggars in town the next day.;Jacquouille la fripouille est désormais habillé en Jacques-Henri.;;;;;;;;;;;;x
-ECO.0307;End of the company;Fin de l'entreprise;;;;;;;;;;;;x
-DESCECO.0307;This was a most enriching enterprise and you have learned much from it.;Ce fut une entreprise enrichissante où vous avez beaucoup appris.;;;;;;;;;;;;x
-ECO.0307A;However, I wish to pursue other things.;Je ne m'y essayerais plus.;;;;;;;;;;;;x
-ECO.0311;Legendary sword;Epée légendaire;;;;;;;;;;;;x
-DESCECO.0311;All Great men had a sword worthy of their greatness.\nIf I had such a sword, it might help me to leave my mark in History.\nThis is an opportunity to improve my military skills.;Les grands hommes avaient tous une épée digne de leur grandeur.\nSi j'avais une telle épée, elle pourrait m'aider à laisser ma marque dans l'Histoire.\nVoilà une occasion d'améliorer ma compétence militaire.;;;;;;;;;;;;x
-ECO.0311A;It is a good idea;C'est une bonne idée;;;;;;;;;;;;x
-TOOLTIPECO.0311A;I'll get a servant to help me;Je vais chercher un serviteur pour m'aider;;;;;;;;;;;;x
-ECO.0311B;It is a good idea;C'est une mauvaise idée;;;;;;;;;;;;x
-ECO.0312;Send a servant;Envoi d'un serviteur;;;;;;;;;;;;x
-DESCECO.0312;I found a volunteer to go in search of the plan of a legendary sword.\nWhere do I send it?;J'ai trouvé un volontaire pour partir à la recherche du plan d'une épée légendaire. \nOù vais-je l'envoyer ?;;;;;;;;;;;;x
-ECO.0312A;At Aix-la-Chapelle, there must be the plan of Joyeuse;A Aix-La-Chapelle, il doit y avoir le plan de Joyeuse;;;;;;;;;;;;x
-TOOLTIPECO.0312A;This quest can be dangerous for him;Cette quête pourrait être dangereuse pour lui;;;;;;;;;;;;x
-TOOLTIPECO.0312B;It brings me back plan;Il me ramène le plan;;;;;;;;;;;;x
-ECO.0312B;At Reims, there must be the plan of Almace;A Reims, il doit y avoir le plan de Almace;;;;;;;;;;;;x
-ECO.0312C;At Rocamadour, there must be the plan of Durandal;A Rocamadour, il doit y avoir le plan de Durandal;;;;;;;;;;;;x
-ECO.0313;A woman comes;Une femme vient;;;;;;;;;;;;x
-DESCECO.0313;A woman presents to you, she said her husband did not return?\nYou ask why it is your problem.\nShe answers that you have sent, long ago, searching the plan of a legendary sword.\nWhat say?;Une femme se présente à vous, elle dit que son mari n'est pas revenu ? \nVous lui demandez en quoi est-ce votre problème.\nElle vous répond que vous l'avez envoyé, il y a longtemps, chercher le plan d'une épée légendaire.\n Que lui répondre ?;;;;;;;;;;;;x
-ECO.0313A;He will come back;Il va revenir;;;;;;;;;;;;x
-TOOLTIPECO.0313A;You lie to her;Vous lui mentez;;;;;;;;;;;;x
-ECO.0313B;He must have been killed by bandits or eaten by wolves;Il a du être tué par des bandits ou mangé par les loups;;;;;;;;;;;;x
-TOOLTIPECO.0313B;You sympathize;Vous compatissez;;;;;;;;;;;;x
-ECO.0313C;He's a thief;C'est un voleur;;;;;;;;;;;;x
-TOOLTIPECO.0313C;You require repair;Vous exigez réparation;;;;;;;;;;;;x
-ECO.0314;What to do ?;Que faire ?;;;;;;;;;;;;x
-DESCECO.0314;The servant you have sent for a legendary sword plan is not come back.\nDo you want to send another?;Le serviteur que vous avez envoyé chercher un plan d'épée légendaire n'est pas revenu.\nDevez-vous en envoyer un autre ?;;;;;;;;;;;;x
-ECO.0314A;Look for someone else to send;Chercher quelqu'un d'autre à envoyer;;;;;;;;;;;;x
-TOOLTIPECO.0314A;You search for a new candidate;Vous chercher un nouveau candidat;;;;;;;;;;;;x
-ECO.0314B;Give up the quest;Abandonner la quête;;;;;;;;;;;;x
-ECO.0315;Found plan;Plan trouvé;;;;;;;;;;;;x
-DESCECO.0315;Your servant returned with a plan for a legendary sword.;Votre serviteur est revenu avec le plan d'une épée légendaire.;;;;;;;;;;;;x
-ECO.0315A;Forging the Sword;Forger l'épée;;;;;;;;;;;;x
-TOOLTIPECO.0315A;The blacksmith is hard at work;Le forgeron est à pied d'œuvre;;;;;;;;;;;;x
-ECO.0316;Try the sword;Essayer l'épée;;;;;;;;;;;;x
-DESCECO.0316;The blacksmith ended the sword.\nBecause you do not trust him, you want to try the sword.\nBut on whom?;Le forgeron a fini l'épée.\nComme vous ne lui faites pas confiance, vous voulez essayer l'épée.\nMais sur qui ?;;;;;;;;;;;;x
-ECO.0316A;A straw man;Un bonhomme de paille;;;;;;;;;;;;x
-TOOLTIPECO.0316AA;The straw man is defeated;Le bonhomme de paille est vaincu;;;;;;;;;;;;x
-TOOLTIPECO.0316AB;The straw man refuses to die;;Le bonhomme de paille refuse de mourir;;;;;;;;;;;;x
-ECO.0316B;A condemned to death;Un condamné à mort;;;;;;;;;;;;x
-TOOLTIPECO.0316BA;The executioner admire me;Le bourreau m'admire;;;;;;;;;;;;x
-TOOLTIPECO.0316BB;The condemned only loses an arm;Le condamné perd seulement un bras;;;;;;;;;;;;x
-ECO.0317;Unbalanced sword;Epée déséquilibrée;;;;;;;;;;;;x
-DESCECO.0317;The blacksmith worked poorly. He tells you that your sword will be a 2.0 legendary sword but he needs more time.;Le forgeron a mal travaillé. Il vous dit que votre épée sera une épée légendaire 2.0 mais qu'il faut lui accorder encore un peu de temps.;;;;;;;;;;;;x
-ECO.0317A;He convinced me;Il m'a convaincu;;;;;;;;;;;;x
-TOOLTIPECO.0317A;The sword is forged again;L'épée est reforgée;;;;;;;;;;;;x
-ECO.0317B;I give up;J'abandonne;;;;;;;;;;;;x
-ECO.0318;Success;Succès;;;;;;;;;;;;x
-DESCECO.0318;The sword is perfect.\nI learned a lot from this experience.;L'épée est parfaite.\nJ'ai beaucoup appris de cette expérience.;;;;;;;;;;;;x
-ECO.0318A;Glory awaits you: you and your sword;La gloire vous attend : vous et votre épée;;;;;;;;;;;;x
+ECO.148A;OK;Bien;;;;;;;;;;;;x
+ECO.152;SMOKING activation;activation FUMAISON;;;;;;;;;;;;x
+DESCECO.152;Our smokehouses have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of smoked fish.;Des nouvelles en provenance de [From.Location.GetName],\nLes poissons sont ici en fumaison ce qui améliore leur conservation et en permet donc l'export. Des réserves de nourriture pour l'hiver ou les longs voyages sont toujours les bienvenues.;;;;;;;;;;;;x
+ECO.152A;OK;OK;;;;;;;;;;;;x
+ECO.301;Buy to sell;Acheter pour vendre;;;;;;;;;;;;x
+DESCECO.301;My steward has suggested that I could use my authority to secure a limited amount of goods at a lower price and then sell them back to the market at a higher price.;Une occasion pour améliorer mon intendance se présente.\n Je pourrais user de mon pouvoir pour acheter des tissus à prix réduit et les revendre à prix exorbitant.;;;;;;;;;;;;x
+ECO.301A;This seems like a good idea.;C'est une bonne idée;;;;;;;;;;;;x
+TOOLTIPECO.301A;You set out to find a merchant from which to buy "wholesale" goods.;Vous partez à la recherche de commerçants à intimider.;;;;;;;;;;;;x
+ECO.301B;This sounds like a waste of time;C'est une mauvaise idée;;;;;;;;;;;;x
+ECO.302;What to buy?;Que faut-il acheter ?;;;;;;;;;;;;x
+DESCECO.302;As you make your way through the busy market square with your entourage, you note the merchants talking, bargaining, peddling their wares with only the hope of profit in their eyes. Many wares catch my attention, but in the end, investing in textiles seems to be the most sensible approach.;En parcourant les rues et places bondées de marchands et chalands qui se bousculent, parlent, marchandent en échangent soit or, soit jurons, je repère plusieurs étals plus intéressants. \n Le textile semble être un bon choix, mais que choisir alors ? \n;;;;;;;;;;;;x
+ECO.302A;I shall purchase 10 sacks of wool.;Acheter 10 sacs de laine;;;;;;;;;;;;x
+TOOLTIPECO.302A;Wool is the raw material at the foundation of the entiretextile industry in this region.;Le laine est la base de toute l'industrie textile de la région.;;;;;;;;;;;;x
+ECO.302B;I shall purchase 10 rolls of spun cloth.;Acheter 10 rouleaux d'étoffe;;;;;;;;;;;;x
+TOOLTIPECO.302B;Spun cloth can be made into any article of clothing that one desires.;Avec les étoffes, on pourra tisser ce que l'on veut.;;;;;;;;;;;;x
+ECO.302C;I shall purchase 10 finished textiles.;Acheter 10 draps tout faits;;;;;;;;;;;;x
+TOOLTIPECO.302C;These clothes are similar to my own, so of course people would want to buy them!;Les gens voudront me ressembler et les acheter.;;;;;;;;;;;;x
+ECO.303;Sale;Vente;;;;;;;;;;;;x
+DESCECO.303;You leave the business of selling the goods to your steward, who leaves for the market with ten sacks of wool. A day passes with various merchants passing by the stall to evaluate the suppleness and fineness of the wool. At last, your steward returns to report on your business venture.;Les clients affluent et s'agglutinent autour de mon étal pour voir, toucher, palper le moelleux et la finesse de la laine qui leur est présentée.\n J'espère en tirer un bon prix et écouler mon stock.;;;;;;;;;;;;x
+ECO.303A;Give me the report, I want to see it for myself!;J'ai fini de vendre les sacs de laine;;;;;;;;;;;;x
+TOOLTIPECO.303A;I have not sold a single sack!;Je n'ai rien vendu;;;;;;;;;;;;x
+TOOLTIPECO.303B;I have only managed to sell one sack.;Je n'ai vendu qu'un sac;;;;;;;;;;;;x
+TOOLTIPECO.303C;I have only managed to sell two sacks.;Je n'ai vendu que 2 sacs;;;;;;;;;;;;x
+TOOLTIPECO.303D;I have only managed to sell three sacks;Je n'ai vendu que 3 sacs;;;;;;;;;;;;x
+TOOLTIPECO.303E;I have only managed to sell four sacks;Je n'ai vendu que 4 sacs;;;;;;;;;;;;x
+TOOLTIPECO.303F;I have only managed to sell five sacks;Je n'ai vendu que 5 sacs;;;;;;;;;;;;x
+TOOLTIPECO.303G;I have managed to sell six sacks!;J'ai réussi à vendre 6 sacs;;;;;;;;;;;;x
+TOOLTIPECO.303H;I have managed to sell seven sacks!;J'ai réussi à vendre 7 sacs;;;;;;;;;;;;x
+TOOLTIPECO.303I;I have managed to sell eight sacks!;J'ai réussi à vendre 8 sacs;;;;;;;;;;;;x
+TOOLTIPECO.303J;I have managed to sell nine sacks!;J'ai réussi à vendre 9 sacs;;;;;;;;;;;;x
+ECO.304;Sale;Vente;;;;;;;;;;;;x
+DESCECO.304;You leave the business of selling the goods to your steward, who leaves for the market with ten rolls of spun cloth. A day passes with various "connoisseurs" passing by the stall to evaluate the fineness and quality of the cloths. At last, your steward returns to report on your business venture.;Les clients se pressent pour voir mes marchandises. Certains en bons connaisseurs -ou pour s'en donner l'air- font mine d'examiner avec forte attention et soin la finesse et le détail du tissage des étoffes. J'espère malgré ces simagrées leur vendre à prix d'or.;;;;;;;;;;;;x
+ECO.304A;Give me the report, I want to see it for myself!;J'ai fini de vendre les rouleaux d'étoffes;;;;;;;;;;;;x
+TOOLTIPECO.304A;I have not sold a single roll of cloth!;Je n'ai pas vendu le moindre rouleau;;;;;;;;;;;;x
+TOOLTIPECO.304B;I have only managed to sell one roll.;Je n'ai vendu qu'un rouleau;;;;;;;;;;;;x
+TOOLTIPECO.304C;I have only managed to sell two rolls.;Je n'ai vendu que 2 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.304D;I have only managed to sell three rolls.;Je n'ai vendu que 3 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.304E;I have only managed to sell four rolls.;Je n'ai vendu que 4 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.304F;I have only managed to sell five rolls.;Je n'ai vendu que 5 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.304G;I have managed to sell six rolls;J'ai réussi à vendre 6 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.304H;I have managed to sell seven rolls;J'ai réussi à vendre 7 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.304I;I have managed to sell eight rolls;J'ai réussi à vendre 8 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.304J;I have managed to sell nine rolls;J'ai réussi à vendre 9 rouleaux;;;;;;;;;;;;x
+ECO.305;Sale;Vente;;;;;;;;;;;;x
+DESCECO.305;You leave the business of selling the goods to your steward, who leaves for the market with ten finished textiles. A day passes with various "connoisseurs" passing by the stall to evaluate the fineness and detail of the clothes. At last, your steward returns to report on your business venture.;Les acheteurs de draps ne sont guère les plus faciles à convaincre. Comptant sur la qualité des produits et un peu de belles paroles je m'attèle à la tâche ardue pour tenter de vendre mes draps et ce au meilleur prix pour au moins récupérer sur mon investissement.;;;;;;;;;;;;x
+ECO.305A;Give me the report, I want to see it for myself!;J'ai fini de vendre les draps;;;;;;;;;;;;x
+TOOLTIPECO.305A;I could not manage to sell a single one!;Je n'ai point vendu de drap;;;;;;;;;;;;x
+TOOLTIPECO.305B;I have only managed to sell a single one.;Je n'ai vendu qu'une pièce drap;;;;;;;;;;;;x
+TOOLTIPECO.305C;I have only managed to sell two.;Je n'ai vendu que 2 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.305D;I have only managed to sell three.;Je n'ai vendu que 3 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.305E;I have only managed to sell four.;Je n'ai vendu que 4 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.305F;I have only managed to sell five.;Je n'ai vendu que 5 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.305G;I have managed to sell six!;J'ai réussi à vendre 6 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.305H;I have managed to sell seven!;J'ai réussi à vendre 7 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.305I;I have managed to sell eight!;J'ai réussi à vendre 8 pièces de draps;;;;;;;;;;;;x
+TOOLTIPECO.305J;I have managed to sell nine!;J'ai réussi à vendre 9 pièces de draps;;;;;;;;;;;;x
+ECO.306;Unsold;Les invendus;;;;;;;;;;;;x
+DESCECO.306;A number of my purchases remain unsold and now the question of how to dispose of them must be addressed, for lack of any more interested buyers.;Certains de mes achats me sont restés sur les bras faute de suffisamment d'acheteurs.\n Que vais-je bien pouvoir en faire ?;;;;;;;;;;;;x
+ECO.306A;Burn them, of course! We can't be casting pearls before swine.;Les brûler, pardi!;;;;;;;;;;;;x
+TOOLTIPECO.306A;The flames grow slightly out of control and almost burn down a house.;Les flammes s'élèvent et manquent de brûler une maison.;;;;;;;;;;;;x
+ECO.306B;Let us donate them to the poor.;Les donner aux nécessiteux;;;;;;;;;;;;x
+TOOLTIPECO.306B;There is talk of some rather well-dressed beggars in town the next day.;Jacquouille la fripouille est désormais habillé en Jacques-Henri.;;;;;;;;;;;;x
+ECO.307;End of the company;Fin de l'entreprise;;;;;;;;;;;;x
+DESCECO.307;This was a most enriching enterprise and you have learned much from it.;Ce fut une entreprise enrichissante où vous avez beaucoup appris.;;;;;;;;;;;;x
+ECO.307A;However, I wish to pursue other things.;Je ne m'y essayerais plus.;;;;;;;;;;;;x
+ECO.311;Legendary sword;Epée légendaire;;;;;;;;;;;;x
+DESCECO.311;All Great men had a sword worthy of their greatness.\nIf I had such a sword, it might help me to leave my mark in History.\nThis is an opportunity to improve my military skills.;Les grands hommes avaient tous une épée digne de leur grandeur.\nSi j'avais une telle épée, elle pourrait m'aider à laisser ma marque dans l'Histoire.\nVoilà une occasion d'améliorer ma compétence militaire.;;;;;;;;;;;;x
+ECO.311A;It is a good idea;C'est une bonne idée;;;;;;;;;;;;x
+TOOLTIPECO.311A;I'll get a servant to help me;Je vais chercher un serviteur pour m'aider;;;;;;;;;;;;x
+ECO.311B;It is a good idea;C'est une mauvaise idée;;;;;;;;;;;;x
+ECO.312;Send a servant;Envoi d'un serviteur;;;;;;;;;;;;x
+DESCECO.312;I found a volunteer to go in search of the plan of a legendary sword.\nWhere do I send it?;J'ai trouvé un volontaire pour partir à la recherche du plan d'une épée légendaire. \nOù vais-je l'envoyer ?;;;;;;;;;;;;x
+ECO.312A;At Aix-la-Chapelle, there must be the plan of Joyeuse;A Aix-La-Chapelle, il doit y avoir le plan de Joyeuse;;;;;;;;;;;;x
+TOOLTIPECO.312A;This quest can be dangerous for him;Cette quête pourrait être dangereuse pour lui;;;;;;;;;;;;x
+TOOLTIPECO.312B;It brings me back plan;Il me ramène le plan;;;;;;;;;;;;x
+ECO.312B;At Reims, there must be the plan of Almace;A Reims, il doit y avoir le plan de Almace;;;;;;;;;;;;x
+ECO.312C;At Rocamadour, there must be the plan of Durandal;A Rocamadour, il doit y avoir le plan de Durandal;;;;;;;;;;;;x
+ECO.313;A woman comes;Une femme vient;;;;;;;;;;;;x
+DESCECO.313;A woman presents to you, she said her husband did not return?\nYou ask why it is your problem.\nShe answers that you have sent, long ago, searching the plan of a legendary sword.\nWhat say?;Une femme se présente à vous, elle dit que son mari n'est pas revenu ? \nVous lui demandez en quoi est-ce votre problème.\nElle vous répond que vous l'avez envoyé, il y a longtemps, chercher le plan d'une épée légendaire.\n Que lui répondre ?;;;;;;;;;;;;x
+ECO.313A;He will come back;Il va revenir;;;;;;;;;;;;x
+TOOLTIPECO.313A;You lie to her;Vous lui mentez;;;;;;;;;;;;x
+ECO.313B;He must have been killed by bandits or eaten by wolves;Il a du être tué par des bandits ou mangé par les loups;;;;;;;;;;;;x
+TOOLTIPECO.313B;You sympathize;Vous compatissez;;;;;;;;;;;;x
+ECO.313C;He's a thief;C'est un voleur;;;;;;;;;;;;x
+TOOLTIPECO.313C;You require repair;Vous exigez réparation;;;;;;;;;;;;x
+ECO.314;What to do ?;Que faire ?;;;;;;;;;;;;x
+DESCECO.314;The servant you have sent for a legendary sword plan is not come back.\nDo you want to send another?;Le serviteur que vous avez envoyé chercher un plan d'épée légendaire n'est pas revenu.\nDevez-vous en envoyer un autre ?;;;;;;;;;;;;x
+ECO.314A;Look for someone else to send;Chercher quelqu'un d'autre à envoyer;;;;;;;;;;;;x
+TOOLTIPECO.314A;You search for a new candidate;Vous chercher un nouveau candidat;;;;;;;;;;;;x
+ECO.314B;Give up the quest;Abandonner la quête;;;;;;;;;;;;x
+ECO.315;Found plan;Plan trouvé;;;;;;;;;;;;x
+DESCECO.315;Your servant returned with a plan for a legendary sword.;Votre serviteur est revenu avec le plan d'une épée légendaire.;;;;;;;;;;;;x
+ECO.315A;Forging the Sword;Forger l'épée;;;;;;;;;;;;x
+TOOLTIPECO.315A;The blacksmith is hard at work;Le forgeron est à pied d'œuvre;;;;;;;;;;;;x
+ECO.316;Try the sword;Essayer l'épée;;;;;;;;;;;;x
+DESCECO.316;The blacksmith ended the sword.\nBecause you do not trust him, you want to try the sword.\nBut on whom?;Le forgeron a fini l'épée.\nComme vous ne lui faites pas confiance, vous voulez essayer l'épée.\nMais sur qui ?;;;;;;;;;;;;x
+ECO.316A;A straw man;Un bonhomme de paille;;;;;;;;;;;;x
+TOOLTIPECO.316AA;The straw man is defeated;Le bonhomme de paille est vaincu;;;;;;;;;;;;x
+TOOLTIPECO.316AB;The straw man refuses to die;;Le bonhomme de paille refuse de mourir;;;;;;;;;;;;x
+ECO.316B;A condemned to death;Un condamné à mort;;;;;;;;;;;;x
+TOOLTIPECO.316BA;The executioner admire me;Le bourreau m'admire;;;;;;;;;;;;x
+TOOLTIPECO.316BB;The condemned only loses an arm;Le condamné perd seulement un bras;;;;;;;;;;;;x
+ECO.317;Unbalanced sword;Epée déséquilibrée;;;;;;;;;;;;x
+DESCECO.317;The blacksmith worked poorly. He tells you that your sword will be a 2.0 legendary sword but he needs more time.;Le forgeron a mal travaillé. Il vous dit que votre épée sera une épée légendaire 2.0 mais qu'il faut lui accorder encore un peu de temps.;;;;;;;;;;;;x
+ECO.317A;He convinced me;Il m'a convaincu;;;;;;;;;;;;x
+TOOLTIPECO.317A;The sword is forged again;L'épée est reforgée;;;;;;;;;;;;x
+ECO.317B;I give up;J'abandonne;;;;;;;;;;;;x
+ECO.318;Success;Succès;;;;;;;;;;;;x
+DESCECO.318;The sword is perfect.\nI learned a lot from this experience.;L'épée est parfaite.\nJ'ai beaucoup appris de cette expérience.;;;;;;;;;;;;x
+ECO.318A;Glory awaits you: you and your sword;La gloire vous attend : vous et votre épée;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
 #;x;NOW HIDDEN EVENTS;;;;;;;;;;;;x
-#ECO.0020;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
-#DESCECO.0020;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
-#ECO.0020A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
-#ECO.0021;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
-#DESCECO.0021;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
-#ECO.0021A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
-#ECO.0022;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
-#DESCECO.0022;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
-#ECO.0022A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
-#ECO.0020;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
-#DESCECO.0020;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
-#ECO.0020A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
-#ECO.0021;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
-#DESCECO.0021;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
-#ECO.0021A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
-#ECO.0022;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
-#DESCECO.0022;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
-#ECO.0022A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.20;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.20;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.20A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.21;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.21;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.21A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.22;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.22;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.22A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.20;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.20;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.20A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.21;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.21;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.21A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.22;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.22;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.22A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
 #;x;VARIOUS FLAVOUR eVENTS;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
-#ECO.0200;;bonne récolte;;;;;;;;;;;;x
-DESCECO.0200;The harvests in [From.Location.GetName] have been extraordinarily fruitful this year, generating more revenues and more happiness among the peasantry.;Les rendements agricoles en [From.Location.GetName] ont été excellents cette année, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des paysans contents.;;;;;;;;;;;;x
-ECO.0200A;What wonderful news!;Bien !;;;;;;;;;;;;x
-#ECO.0201;;mauvaise récolte;;;;;;;;;;;;x
-DESCECO.0201;The harvests in [From.Location.GetName] have been unusually poor this year, generating less revenues and unrest among the peasantry.;Les récoltes en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
-ECO.0201A;These useless peasants...;Ces incapables de paysans...;;;;;;;;;;;;x
-#ECO.0202;;pêche abondante;;;;;;;;;;;;x
-DESCECO.0202;The fishing season in [From.Location.GetName] have been extraordinarily fruitful this year, generating more revenues and more happiness among the peasantry.;La saison de pêche cette année en [From.Location.GetName] a été excellente, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des pêcheurs contents.;;;;;;;;;;;;x
-ECO.0202A;What wonderful news!;Bien !;;;;;;;;;;;;x
-#ECO.0203;;pêche médiocre;;;;;;;;;;;;x
-DESCECO.0203;The fishing season in [From.Location.GetName] have been extraordinarily fruitful this year, generating less revenues and more unrest among the peasantry.;Les rendements de la pêche en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
-ECO.0203A;These useless peasants...;Ces incapables de paysans...;;;;;;;;;;;;x
-ECO.0204;Accident at the mine;Accident à la mine;;;;;;;;;;;;x
-DESCECO.0204;Bad news from the mines in [From.Location.GetName]: one of the mining shafts has collapsed, trapping and killing a number of miners.;Mauvaise nouvelles en provenance d'une de nos mines de [From.Location.GetName] : certaines installations se sont effondrées et pires des mineurs y ont perdus la vie.;;;;;;;;;;;;x
-ECO.0204A;What a tragic turn of events.;Cela va pas arranger nos affaires...;;;;;;;;;;;;x
-ECO.0205;New vein in the mine;Nouveau filon à la mine;;;;;;;;;;;;x
-DESCECO.0205;The foreman of one of your mines in [From.Location.GetName] has reported that our workers have struck another lode! It is uncertain how long it will take to fully exploit it, but this is indeed a most fortunate discovery!;Le contremaître d'une de nos mines en [From.Location.GetName] nous informe qu'un nouveau filon a été découvert ! La productivité en sera améliorée pour un temps.;;;;;;;;;;;;x
-ECO.0205A;What wonderful news!;Enfin une bonne nouvelle !;;;;;;;;;;;;x
-ECO.0206;Thriving industry;Industrie prospère;;;;;;;;;;;;x
-DESCECO.0206;We have received a most warm commendation from the burghers of [From.Location.GetName]. Apparently this period of peace has allowed their industries to flourish!;Bonnes nouvelles en provenance de [From.Location.GetName]. \n Cela fait un bon moment que la province n'est plus en proie à la guerre.\n Cela permet à son industrie de prospérer.;;;;;;;;;;;;x
-ECO.0206A;I am merely doing my part.;Bien !;;;;;;;;;;;;x
-ECO.0207;No more prosperous industry;Industrie plus si prospère;;;;;;;;;;;;x
-DESCECO.0207;We have received a formal letter of complaint from the burghers of [From.Location.GetName]. Apparently this period of war has caused their industries to suffer!;Les ravages de la guerre et les forces mobilisées en [From.Location.GetName] font d'importants dommages à l'économie locale.;;;;;;;;;;;;x
-ECO.0207A;Such is the price we must pay.;C'est le prix à payer;;;;;;;;;;;;x
-ECO.0208_title;Flooding;Inondations;;;;;;;;;;;;x
-DESCECO.0208;Bad news from [From.Location.GetName]. \nRecent rains have flooded much of the farmlands in this province and ruined much of this season's harvest. This will badly impact the local economy. We must pray for [This.Religion.GetRandomGodNameCap] to help us !;Mauvaises nouvelles en provenance de [From.Location.GetName]. \nLes pluies torrentielles qui s'y sont dernièrement abattues ont fait grossir les rivières, inondé des terres cultivées, mis à mal ponts et gués. Pour sûr, cela aura un impact sur l'économie locale, espérons que [This.Religion.GetRandomGodNameCap] nous aide à nous remettre sur pied rapidement. ;;;;;;;;;;;;x
-ECO.0208A;What terrible news!;Mettons-nous au travail !;;;;;;;;;;;;x
-ECO.0209_title;Drought;Sécheresse;;;;;;;;;;;;x
-DESCECO.0209;This year the weather is particularly dry in [From.Location.GetName]. We can only hope that the situation will not worsen and affect the harvests.;Situation inquiétante dans la province de [From.Location.GetName] \nEspérons que cela ne dure pas trop et ainsi n'affecte point trop nos récoltes. ;;;;;;;;;;;;x
-ECO.0209A;Is this divine punishment ?;Est-ce une punition divine ? ;;;;;;;;;;;;x
-DESCECO.0210;It has been reported that the province of [Root.GetName] has enjoyed five years of prosperity without equal.;Cela fait plus de cinq années consécutives que la province de [Root.GetName] affiche un niveau de prospérité sans pareil.;;;;;;;;;;;;x
-ECO.0210A;We shall reap the fruits of our labor!;Nous récoltons le fruit de notre travail;;;;;;;;;;;;x
+#ECO.200;;bonne récolte;;;;;;;;;;;;x
+DESCECO.200;The harvests in [From.Location.GetName] have been extraordinarily fruitful this year, generating more revenues and more happiness among the peasantry.;Les rendements agricoles en [From.Location.GetName] ont été excellents cette année, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des paysans contents.;;;;;;;;;;;;x
+ECO.200A;What wonderful news!;Bien !;;;;;;;;;;;;x
+#ECO.201;;mauvaise récolte;;;;;;;;;;;;x
+DESCECO.201;The harvests in [From.Location.GetName] have been unusually poor this year, generating less revenues and unrest among the peasantry.;Les récoltes en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
+ECO.201A;These useless peasants...;Ces incapables de paysans...;;;;;;;;;;;;x
+#ECO.202;;pêche abondante;;;;;;;;;;;;x
+DESCECO.202;The fishing season in [From.Location.GetName] have been extraordinarily fruitful this year, generating more revenues and more happiness among the peasantry.;La saison de pêche cette année en [From.Location.GetName] a été excellente, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des pêcheurs contents.;;;;;;;;;;;;x
+ECO.202A;What wonderful news!;Bien !;;;;;;;;;;;;x
+#ECO.203;;pêche médiocre;;;;;;;;;;;;x
+DESCECO.203;The fishing season in [From.Location.GetName] have been extraordinarily fruitful this year, generating less revenues and more unrest among the peasantry.;Les rendements de la pêche en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
+ECO.203A;These useless peasants...;Ces incapables de paysans...;;;;;;;;;;;;x
+ECO.204;Accident at the mine;Accident à la mine;;;;;;;;;;;;x
+DESCECO.204;Bad news from the mines in [From.Location.GetName]: one of the mining shafts has collapsed, trapping and killing a number of miners.;Mauvaise nouvelles en provenance d'une de nos mines de [From.Location.GetName] : certaines installations se sont effondrées et pires des mineurs y ont perdus la vie.;;;;;;;;;;;;x
+ECO.204A;What a tragic turn of events.;Cela va pas arranger nos affaires...;;;;;;;;;;;;x
+ECO.205;New vein in the mine;Nouveau filon à la mine;;;;;;;;;;;;x
+DESCECO.205;The foreman of one of your mines in [From.Location.GetName] has reported that our workers have struck another lode! It is uncertain how long it will take to fully exploit it, but this is indeed a most fortunate discovery!;Le contremaître d'une de nos mines en [From.Location.GetName] nous informe qu'un nouveau filon a été découvert ! La productivité en sera améliorée pour un temps.;;;;;;;;;;;;x
+ECO.205A;What wonderful news!;Enfin une bonne nouvelle !;;;;;;;;;;;;x
+ECO.206;Thriving industry;Industrie prospère;;;;;;;;;;;;x
+DESCECO.206;We have received a most warm commendation from the burghers of [From.Location.GetName]. Apparently this period of peace has allowed their industries to flourish!;Bonnes nouvelles en provenance de [From.Location.GetName]. \n Cela fait un bon moment que la province n'est plus en proie à la guerre.\n Cela permet à son industrie de prospérer.;;;;;;;;;;;;x
+ECO.206A;I am merely doing my part.;Bien !;;;;;;;;;;;;x
+ECO.207;No more prosperous industry;Industrie plus si prospère;;;;;;;;;;;;x
+DESCECO.207;We have received a formal letter of complaint from the burghers of [From.Location.GetName]. Apparently this period of war has caused their industries to suffer!;Les ravages de la guerre et les forces mobilisées en [From.Location.GetName] font d'importants dommages à l'économie locale.;;;;;;;;;;;;x
+ECO.207A;Such is the price we must pay.;C'est le prix à payer;;;;;;;;;;;;x
+ECO.208_title;Flooding;Inondations;;;;;;;;;;;;x
+DESCECO.208;Bad news from [From.Location.GetName]. \nRecent rains have flooded much of the farmlands in this province and ruined much of this season's harvest. This will badly impact the local economy. We must pray for [This.Religion.GetRandomGodNameCap] to help us !;Mauvaises nouvelles en provenance de [From.Location.GetName]. \nLes pluies torrentielles qui s'y sont dernièrement abattues ont fait grossir les rivières, inondé des terres cultivées, mis à mal ponts et gués. Pour sûr, cela aura un impact sur l'économie locale, espérons que [This.Religion.GetRandomGodNameCap] nous aide à nous remettre sur pied rapidement. ;;;;;;;;;;;;x
+ECO.208A;What terrible news!;Mettons-nous au travail !;;;;;;;;;;;;x
+ECO.209_title;Drought;Sécheresse;;;;;;;;;;;;x
+DESCECO.209;This year the weather is particularly dry in [From.Location.GetName]. We can only hope that the situation will not worsen and affect the harvests.;Situation inquiétante dans la province de [From.Location.GetName] \nEspérons que cela ne dure pas trop et ainsi n'affecte point trop nos récoltes. ;;;;;;;;;;;;x
+ECO.209A;Is this divine punishment ?;Est-ce une punition divine ? ;;;;;;;;;;;;x
+DESCECO.210;It has been reported that the province of [Root.GetName] has enjoyed five years of prosperity without equal.;Cela fait plus de cinq années consécutives que la province de [Root.GetName] affiche un niveau de prospérité sans pareil.;;;;;;;;;;;;x
+ECO.210A;We shall reap the fruits of our labor!;Nous récoltons le fruit de notre travail;;;;;;;;;;;;x
 CHRONICLE_PROSPERITE_A;The province of [Root.GetName] has been blessed with unprecedented prosperity for the past five consecutive years. Nobles, burghers, clerics, and peasants alike all thrive here, much to the benefit of the realm.;La province de [Root.GetName] s'illustre par une prospérité sans précédent dans le royaume et ce, pour plus de 5 années d'affilée.;;;;;;;;;;;;x
-DESCECO.0211;Your steward is pleased to report that the province of [Root.GetName] has enjoyed ten years of prosperity, and industry and artisanry are thriving.;Cela fait désormais près de dix ans que l'industrie et l'artisanat de la province de [Root.GetName] jouissent d'une prospérité sans précédent. \nQui plus est, cela nous rapporte !;;;;;;;;;;;;x
-ECO.0211A;Peace in our time!;La paix c'est la prospérité !;;;;;;;;;;;;x
+DESCECO.211;Your steward is pleased to report that the province of [Root.GetName] has enjoyed ten years of prosperity, and industry and artisanry are thriving.;Cela fait désormais près de dix ans que l'industrie et l'artisanat de la province de [Root.GetName] jouissent d'une prospérité sans précédent. \nQui plus est, cela nous rapporte !;;;;;;;;;;;;x
+ECO.211A;Peace in our time!;La paix c'est la prospérité !;;;;;;;;;;;;x
 CHRONICLE_PROSPERITE_B;The province of [Root.GetName] has been blessed with unprecedented prosperity for the past ten consecutive years. Nobles, burghers, clerics, and peasants alike all thrive here, much to the benefit of the realm.;La province de [Root.GetName] s'illustre par une prospérité sans précédent dans le royaume et ce, pour plus de 10 années d'affilée. ;;;;;;;;;;;;x
-DESCECO.0212;Political stability and peace are the key ingredients to a truly prosperous realm. We have especially seen our wise rule bear fruit in [Root.GetName], where commerce and industry have reached new heights, as has the gold our coffers.;La stabilité politique et la paix sont les amies de la prospérité. \n Cela se ressent particulièrement sur les terres de [Root.GetName]. Cela nous apporte expérience, sagesse et emplit nos coffres, ce qui est toujours bon à prendre.;;;;;;;;;;;;x
-ECO.0212A;Patience truly is a virtue.;Voilà le bénéfice de la patience;;;;;;;;;;;;x
+DESCECO.212;Political stability and peace are the key ingredients to a truly prosperous realm. We have especially seen our wise rule bear fruit in [Root.GetName], where commerce and industry have reached new heights, as has the gold our coffers.;La stabilité politique et la paix sont les amies de la prospérité. \n Cela se ressent particulièrement sur les terres de [Root.GetName]. Cela nous apporte expérience, sagesse et emplit nos coffres, ce qui est toujours bon à prendre.;;;;;;;;;;;;x
+ECO.212A;Patience truly is a virtue.;Voilà le bénéfice de la patience;;;;;;;;;;;;x
 CHRONICLE_PROSPERITE_C;The province of [Root.GetName] has been blessed with unprecedented prosperity for the past fifteen consecutive years. Nobles, burghers, clerics, and peasants alike all thrive here, much to the benefit of the realm.;La province de [Root.GetName] s'illustre par une prospérité sans précédent dans le royaume et ce, pour plus de 15 années d'affilée. ;;;;;;;;;;;;x
 PECHE_BONNE_CHRONIQUE;The fishing season has been particularly fruitful this year in [Root.GetName].;La saison de pêche a été particulièrement fructueuse cette année dans la province de [Root.GetName]. ;;;;;;;;;;;;x
 PECHE_MAUVAISE_CHRONIQUE;The fishing season has been particularly poor this year in [Root.GetName].;Une très mauvaise saison de pêche sur les côtes de [Root.GetName] a affamé nos gens. ;;;;;;;;;;;;x
@@ -1185,9 +1179,9 @@ RECOLTE_BONNE_CHRONIQUE;The harvest has been particularly fruitful this year in 
 RECOLTE_MAUVAISE_CHRONIQUE;The harvests has been particularly poor this year in [Root.GetName], and it is feared many will not survive the winter.;La médiocrité des récoltes de l'année sur les terres de [Root.GetName] a engendré une période de disette l'hiver qui a suivi.;;;;;;;;;;;;x 
 chronique_prosperite_custom;This deserves to be inscribed in the chronicles of our house.;Cela vaut une inscription aux annales du royaume. \n;;;;;;;;;;;;x
 CHRONICLE_SECHERESSE;The drought in [Root.GetName] that year that lasts for months marked in memories as a period of starving and peasants' discontent.;Une sécheresse a sévit dans la province de [Root.GetName] pendant des mois et a durement affecté les récoltes de l'année. Chacun garde un mauvais souvenir de cette période de disette.;;;;;;;;;;;;x
-ECO.0203_title;New vein found;Nouveau filon trouvé;;;;;;;;;;;;x
-DESCECO.0213;Miners in the [Root.GetName] province have found some new mineral veins to exploit. That would bring some additional years of exploitation of our mines.;Les mineurs de la province de [Root.GetName] ont découvert de nouvelles veines de minerai. Cela devrait prolonger la durée de vie de nos mines. ;;;;;;;;;;;;x
-ECO.0213A;Excellent!;Excellent !;;;;;;;;;;;;x
+ECO.203_title;New vein found;Nouveau filon trouvé;;;;;;;;;;;;x
+DESCECO.213;Miners in the [Root.GetName] province have found some new mineral veins to exploit. That would bring some additional years of exploitation of our mines.;Les mineurs de la province de [Root.GetName] ont découvert de nouvelles veines de minerai. Cela devrait prolonger la durée de vie de nos mines. ;;;;;;;;;;;;x
+ECO.213A;Excellent!;Excellent !;;;;;;;;;;;;x
 NOUVEAU_FILON_CHRONIQUE;This year saw the miners of [Root.GetName] province discovering new veins of mineral.;Cette année a vu les mineurs de la province de [Root.GetName] découvrir un nouveau filon de minerai dans nos mines.;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
 DESCECO.319;Land ownership is the basis of many taxes we collect. The fee or tax is often composed of land or otherwise of various fees and charges.\nThis seems a good avenue to explore to improve our stewardship skills and improve our tax revenues.;La propriété foncière est à la base des beaucoup de taxes que nous percevons. Le fief ou fisc est souvent composé de terres ou sinon de droits et redevances divers.\nCela semble une bonne piste à explorer pour améliorer nos compétences d'intendance et améliorer nos rentrées fiscales.;;;;;;;;;;;;x

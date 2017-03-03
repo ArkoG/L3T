@@ -8,8 +8,8 @@ namespace = XYLO
 
 # charte forestière - RR du uniquement au type d'exploitation
 province_event = {
-    id = XYLO.0302
-	desc = "DESCXYLO.0302"
+    id = XYLO.302
+	desc = "DESCXYLO.302"
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
@@ -30,7 +30,7 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0302A"	#agissons !
+		name = "XYLO.302A"	#agissons !
 		ai_chance = { factor = 20 }
 		add_province_modifier = {
 			name = loi_forestiere_L2 
@@ -38,7 +38,7 @@ option = {
 			}
 	}
 option = {
-		name = "XYLO.0302B"	#tentons de relâcher un peu la tension
+		name = "XYLO.302B"	#tentons de relâcher un peu la tension
 		ai_chance = { factor = 45 }
 		add_province_modifier = {
 			name = loi_forestiere_L1 
@@ -46,7 +46,7 @@ option = {
 			}
 	}	
 option = {
-		name = "XYLO.0302C"	#et alors ?
+		name = "XYLO.302C"	#et alors ?
 		ai_chance = { factor = 35 }
 		add_province_modifier = {
 			name = peasants_upset #paysans inquiets
@@ -57,8 +57,8 @@ option = {
 
 # charte forestière - RR à causes multiples
 province_event = {
-    id = XYLO.0303
-	desc = "DESCXYLO.0303"
+    id = XYLO.303
+	desc = "DESCXYLO.303"
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
@@ -79,7 +79,7 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0303A"	#ça sent le pâté, tapons fort !
+		name = "XYLO.303A"	#ça sent le pâté, tapons fort !
 		ai_chance = { factor = 20 }
 		add_province_modifier = {
 			name = loi_forestiere_L2 
@@ -87,7 +87,7 @@ option = {
 			}
 	}
 option = {
-		name = "XYLO.0303B"	#faisons un geste
+		name = "XYLO.303B"	#faisons un geste
 		ai_chance = { factor = 45 }
 		add_province_modifier = {
 			name = loi_forestiere_L1 
@@ -95,7 +95,7 @@ option = {
 			}
 	}	
 option = {
-		name = "XYLO.0303C"	#ce n'est pas la cause réelle
+		name = "XYLO.303C"	#ce n'est pas la cause réelle
 		ai_chance = { factor = 35 }
 		add_province_modifier = {
 			name = peasants_upset #paysans inquiets
@@ -106,8 +106,8 @@ option = {
 
 # charte forestière - demande simple de charte
 province_event = {
-    id = XYLO.0304
-	desc = "DESCXYLO.0304"
+    id = XYLO.304
+	desc = "DESCXYLO.304"
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
@@ -128,7 +128,7 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0304A"	#accordé
+		name = "XYLO.304A"	#accordé
 		ai_chance = { factor = 50 }
 		add_province_modifier = {
 			name = loi_forestiere_L1 
@@ -136,7 +136,7 @@ option = {
 			}
 	}
 option = {
-		name = "XYLO.0304B"	#envoyez la milice
+		name = "XYLO.304B"	#envoyez la milice
 		ai_chance = { factor = 50 }
 		add_province_modifier = {
 			name = peasants_upset #paysans inquiets
@@ -147,8 +147,8 @@ option = {
 
 # charte forestière - demande d'extension de charte en qualité
 province_event = {
-    id = XYLO.0305
-	desc = "DESCXYLO.0305"
+    id = XYLO.305
+	desc = "DESCXYLO.305"
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
@@ -166,7 +166,7 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0305A"	#accordé
+		name = "XYLO.305A"	#accordé
 		ai_chance = { factor = 25 }
 		add_province_modifier = {
 			name = loi_forestiere_L2
@@ -176,7 +176,7 @@ option = {
 		remove_province_modifier = peasants_upset
 	}
 option = {
-		name = "XYLO.0305B"	#non
+		name = "XYLO.305B"	#non
 		ai_chance = { factor = 60 }
 		add_province_modifier = {
 			name = peasants_upset #paysans inquiets
@@ -184,7 +184,7 @@ option = {
 			}
 	}
 option = {
-		name = "XYLO.0305C"	#non et je vais leur retirer leurs droits actuels
+		name = "XYLO.305C"	#non et je vais leur retirer leurs droits actuels
 		ai_chance = { factor = 15 }
 		add_province_modifier = {
 			name = peasants_upset #paysans inquiets

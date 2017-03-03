@@ -11,8 +11,8 @@ namespace = ECO
 
 #Récoltes agricoles -Bonne récolte
 province_event = {
-    id = ECO.0200
-	desc = "DESCECO.0200"
+    id = ECO.200
+	desc = "DESCECO.200"
 	picture = GFX_evt_ECO1
 	
 	trigger = {
@@ -41,7 +41,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0200A"
+		name = "ECO.200A"
 		add_province_modifier = { name = recolte_bonne duration = 300 }	
 		hidden_tooltip = {
 			random_list = {		
@@ -61,8 +61,8 @@ province_event = {
 
 #Récoltes agricoles -Mauvaise récolte
 province_event = {
-    id = ECO.0201
-	desc = "DESCECO.0201"
+    id = ECO.201
+	desc = "DESCECO.201"
 	picture = GFX_evt_ECO3
 	
 	trigger = {
@@ -91,7 +91,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0201A"
+		name = "ECO.201A"
 		add_province_modifier = { name = recolte_mauvaise duration = 300 }
 		hidden_tooltip = {
 			random_list = {		
@@ -111,8 +111,8 @@ province_event = {
 
 #Pêche -Pêche abondante
 province_event = {
-    id = ECO.0202
-	desc = "DESCECO.0202"
+    id = ECO.202
+	desc = "DESCECO.202"
 	picture = GFX_evt_L3T_fishing
 	
 	trigger = {
@@ -135,7 +135,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0202A"
+		name = "ECO.202A"
 		add_province_modifier = { name = peche_bonne duration = 300 }
 		hidden_tooltip = {
 			random_list = {		
@@ -155,8 +155,8 @@ province_event = {
 
 #Pêche -Pêche peu fructueuse
 province_event = {
-    id = ECO.0203
-	desc = "DESCECO.0203"
+    id = ECO.203
+	desc = "DESCECO.203"
 	picture = GFX_evt_merchant_ship_at_sea_republic
 	
 	trigger = {
@@ -179,7 +179,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0203A"
+		name = "ECO.203A"
 		add_province_modifier = { name = peche_mauvaise duration = 300 }	
 		hidden_tooltip = {
 			random_list = {		
@@ -199,8 +199,8 @@ province_event = {
 
 # Accident à la mine
 province_event = {
-    id = ECO.0204
-	desc = "DESCECO.0204"
+    id = ECO.204
+	desc = "DESCECO.204"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -221,7 +221,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0204A"
+		name = "ECO.204A"
 		hidden_tooltip = {	
 			random_list = {
 				10 = {
@@ -290,8 +290,8 @@ province_event = {
 }
 # Amelioration productivité de la mine
 province_event = {
-    id = ECO.0205
-	desc = "DESCECO.0205"
+    id = ECO.205
+	desc = "DESCECO.205"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -312,7 +312,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0205A"
+		name = "ECO.205A"
 		hidden_tooltip = {
 			random_list = {
 				10 = {
@@ -381,9 +381,9 @@ province_event = {
 }
 #Nouveau filon à la mine
 province_event = {
-    id = ECO.0213
-	desc = "DESCECO.0213"
-	title = "ECO.0203_title"
+    id = ECO.213
+	desc = "DESCECO.213"
+	title = "ECO.203_title"
 	picture = GFX_evt_L3T_mine
 	
 	trigger = {
@@ -402,7 +402,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0213A"
+		name = "ECO.213A"
 	
 		hidden_tooltip = {
 			add_province_modifier = { name = nouveau_filon duration = 11000 hidden = yes } #30ans
@@ -428,8 +428,8 @@ province_event = {
 
 #Industrie prospère
 province_event = {
-    id = ECO.0206
-	desc = "DESCECO.0206"
+    id = ECO.206
+	desc = "DESCECO.206"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -460,7 +460,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "ECO.0206A"
+		name = "ECO.206A"
 		add_province_modifier = { name = industrie_prospere duration = -1 }	
 		set_province_flag = industrie_prospere_A
 	}
@@ -468,8 +468,8 @@ province_event = {
 
 #Fin prospèrité à cause de la guerre
 province_event = {
-    id = ECO.0207
-	desc = "DESCECO.0207"
+    id = ECO.207
+	desc = "DESCECO.207"
 	picture = GFX_evt_L3T_war
 	
 	trigger = {
@@ -490,7 +490,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "ECO.0207A"
+		name = "ECO.207A"
 		if = { limit = { has_province_modifier = recolte_bonne} remove_province_modifier = recolte_bonne }
 		if = { limit = { has_province_modifier = peche_bonne} remove_province_modifier = peche_bonne }
 		any_province_holding = { limit = { has_holding_modifier = mine_productivite_plus} remove_holding_modifier = mine_productivite_plus }
@@ -504,9 +504,9 @@ province_event = {
 
 #Météo - inondation
 province_event = {
-    id = ECO.0208
-	title = "ECO.0208_title"
-	desc = "DESCECO.0208"
+    id = ECO.208
+	title = "ECO.208_title"
+	desc = "DESCECO.208"
 	picture = GFX_evt_ECO2 #plaine avec rivière
 	
 	trigger = {
@@ -531,7 +531,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0208A"
+		name = "ECO.208A"
 		trigger = { 
 			owner = { NOT = { realm_stewardship = 30 } }
 			}
@@ -546,7 +546,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "ECO.0208A"
+		name = "ECO.208A"
 		trigger = { 
 			owner = { realm_stewardship = 30 }
 			owner = { NOT = { realm_stewardship = 50 } }
@@ -562,7 +562,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "ECO.0208A"
+		name = "ECO.208A"
 		trigger = {
 			owner = { realm_stewardship = 50 }
 			}
@@ -579,9 +579,9 @@ province_event = {
 }
 #Météo - sécheresse
 province_event = {
-    id = ECO.0209
-	title = "ECO.0209_title"
-	desc = "DESCECO.0209"
+    id = ECO.209
+	title = "ECO.209_title"
+	desc = "DESCECO.209"
 	picture = GFX_evt_ECO2 #plaine avec rivière
 	
 	trigger = {
@@ -605,7 +605,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0209A"
+		name = "ECO.209A"
 		custom_tooltip = { text = meteo_secheresse_tooltip }
 		hidden_tooltip = {
 			random_list = {		
@@ -647,8 +647,8 @@ province_event = {
 }
 #Prospérité - notif chronique
 province_event = {
-    id = ECO.0210
-	desc = "DESCECO.0210"
+    id = ECO.210
+	desc = "DESCECO.210"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -665,7 +665,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0210A"
+		name = "ECO.210A"
 		custom_tooltip = { text = chronique_prosperite_custom }
 		hidden_tooltip = {
 			owner = {
@@ -681,8 +681,8 @@ province_event = {
 	}
 }
 province_event = {
-    id = ECO.0211
-	desc = "DESCECO.0211"
+    id = ECO.211
+	desc = "DESCECO.211"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -699,7 +699,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0211A"
+		name = "ECO.211A"
 		custom_tooltip = { text = chronique_prosperite_custom }
 		hidden_tooltip = {
 			owner = {
@@ -715,8 +715,8 @@ province_event = {
 	}
 }
 province_event = {
-    id = ECO.0212
-	desc = "DESCECO.0212"
+    id = ECO.212
+	desc = "DESCECO.212"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -733,7 +733,7 @@ province_event = {
 	}
 
 	option = {
-		name = "ECO.0212A"
+		name = "ECO.212A"
 		custom_tooltip = { text = chronique_prosperite_custom }
 		hidden_tooltip = {
 			owner = {
@@ -752,8 +752,8 @@ province_event = {
 ###!!!à renuméroter!!!
 ##biere ou vin que servir à nos hôtes ?
 #character_event = {
-#	id = ECO.0320
-#	desc = DESCECO.0320
+#	id = ECO.320
+#	desc = DESCECO.320
 #	picture = GFX_evt_feast
 #	border = GFX_event_normal_frame_diplomacy
 	
@@ -777,27 +777,27 @@ province_event = {
 #	mean_time_to_happen = { months = 4 }
 		
 #	option = { #servons du vin du royaume
-#		name = "ECO.0320A"
+#		name = "ECO.320A"
 #		set_character_flag = prefere_le_vin
 #		hidden_tooltip = {		
 #			random_realm_province = { 
 #				limit = { 
 #					has_province_modifier = agriculture3_vin
 #					}
-					#province_event = { id = ECO.0321 days = 5 } #la province reçoit un boost de réputation pour son vin
+					#province_event = { id = ECO.321 days = 5 } #la province reçoit un boost de réputation pour son vin
 #				}
 #		}
 #	}
 	
 #	option = { #servons de la bière du royaume
-#		name = "ECO.0320B"
+#		name = "ECO.320B"
 #		set_character_flag = prefere_la_biere
 #		hidden_tooltip = {
 #			random_realm_province = { 
 #				limit = { 
 #					has_province_modifier = agriculture3_biere
 #					}
-					#province_event = { id = ECO.0322 days = 5 } #la province reçoit un boost de réputation pour sa bière
+					#province_event = { id = ECO.322 days = 5 } #la province reçoit un boost de réputation pour sa bière
 #				}
 #			}
 #	}

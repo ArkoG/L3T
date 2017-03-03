@@ -10,7 +10,7 @@ namespace = ECO
 
 ##évaluation du potentiel économique -plaines-
 province_event = {
-    id = ECO.0001
+    id = ECO.1
 	hide_window = yes
 	
 	trigger = {
@@ -50,13 +50,13 @@ province_event = {
 				70 = {}
 			}
 		}
-		province_event = { id = ECO.0015 days = 10 }
+		province_event = { id = ECO.15 days = 10 }
 	}
 }
 
 ##évaluation du potentiel économique -coteaux-			
 province_event = {
-    id = ECO.0002
+    id = ECO.2
 	hide_window = yes
 	
 	trigger = {
@@ -103,13 +103,13 @@ province_event = {
 				65 = {}
 			}
 		}
-		province_event = { id = ECO.0015 days = 10 }
+		province_event = { id = ECO.15 days = 10 }
 	}
 }
 
 ##évaluation du potentiel économique -forets-
 province_event = {
-    id = ECO.0003
+    id = ECO.3
 	hide_window = yes
 	
 	trigger = {
@@ -149,13 +149,13 @@ province_event = {
 				70 = {}
 			}
 		}
-		province_event = { id = ECO.0015 days = 10 }
+		province_event = { id = ECO.15 days = 10 }
 	}
 }
 
 ##évaluation du potentiel économique -montagnes-	
 province_event = {
-    id = ECO.0004
+    id = ECO.4
 	hide_window = yes
 	
 	trigger = {
@@ -195,13 +195,13 @@ province_event = {
 				70 = {}
 			}
 		}
-		province_event = { id = ECO.0015 days = 10 }
+		province_event = { id = ECO.15 days = 10 }
 	}
 }
 
 ##évaluation du potentiel économique -terres arables-	
 province_event = {
-    id = ECO.0005
+    id = ECO.5
 	hide_window = yes
 	
 	trigger = {
@@ -241,13 +241,13 @@ province_event = {
 				70 = {}
 			}
 		}
-		province_event = { id = ECO.0015 days = 10 }
+		province_event = { id = ECO.15 days = 10 }
 	}
 }
 
 ##évaluation du potentiel économique -déserts-	
 province_event = {
-    id = ECO.0008
+    id = ECO.8
 	hide_window = yes
 	
 	trigger = {
@@ -286,13 +286,13 @@ province_event = {
 				70 = {}
 			}
 		}
-		province_event = { id = ECO.0015 days = 10 }
+		province_event = { id = ECO.15 days = 10 }
 	}
 }
 
 ##évaluation du potentiel économique -steppe-	
 province_event = {
-    id = ECO.00080
+    id = ECO.80
 	hide_window = yes
 	
 	trigger = {
@@ -324,13 +324,13 @@ province_event = {
 				70 = {}
 			}
 		}
-		province_event = { id = ECO.0015 days = 10 }
+		province_event = { id = ECO.15 days = 10 }
 	}
 }
 
 ##évaluation du potentiel économique -jungle-	
 province_event = {
-    id = ECO.00081
+    id = ECO.81
 	hide_window = yes
 	
 	trigger = {
@@ -369,13 +369,13 @@ province_event = {
 				70 = {}
 			}
 		}
-		province_event = { id = ECO.0015 days = 10 }
+		province_event = { id = ECO.15 days = 10 }
 	}
 }
 
 ##évaluation du potentiel économique -arctique-	
 province_event = {
-    id = ECO.00082
+    id = ECO.82
 	hide_window = yes
 	
 	trigger = {
@@ -415,13 +415,13 @@ province_event = {
 				70 = {}
 			}
 		}
-		province_event = { id = ECO.0015 days = 10 }
+		province_event = { id = ECO.15 days = 10 }
 	}
 }
 
 ##ré-évaluation si zéro ressource.	
 province_event = {
-    id = ECO.0015
+    id = ECO.15
 	hide_window = yes
 
 	is_triggered_only = yes
@@ -444,15 +444,15 @@ province_event = {
 	
 	immediate = { #suppression du flag pour réattribution
 		clr_province_flag = ressources_testees
-		province_event = { id = ECO.0001 days = 10 }
-		province_event = { id = ECO.0002 days = 10 }
-		province_event = { id = ECO.0003 days = 10 }
-		province_event = { id = ECO.0004 days = 10 }
-		province_event = { id = ECO.0005 days = 10 }
-		province_event = { id = ECO.0008 days = 10 }
-		province_event = { id = ECO.00080 days = 10 }
-		province_event = { id = ECO.00081 days = 10 }
-		province_event = { id = ECO.00082 days = 10 }
+		province_event = { id = ECO.1 days = 10 }
+		province_event = { id = ECO.2 days = 10 }
+		province_event = { id = ECO.3 days = 10 }
+		province_event = { id = ECO.4 days = 10 }
+		province_event = { id = ECO.5 days = 10 }
+		province_event = { id = ECO.8 days = 10 }
+		province_event = { id = ECO.80 days = 10 }
+		province_event = { id = ECO.81 days = 10 }
+		province_event = { id = ECO.82 days = 10 }
 	}
 }
 
@@ -461,8 +461,8 @@ province_event = {
 
 #activation AGRICULTURE -céréales
 province_event = {
-    id = ECO.00100
-	desc = "DESCECO.00100"
+    id = ECO.100
+	desc = "DESCECO.100"
 	picture = GFX_evt_ECO3
 	
 	trigger = {
@@ -480,15 +480,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00100A"
+		name = "ECO.100A"
 		add_province_modifier = { name = agriculture2_cereales duration = -1 }		
 	}
 }
 
 #activation AGRICULTURE -fruits
 province_event = {
-    id = ECO.00101
-	desc = "DESCECO.00101"
+    id = ECO.101
+	desc = "DESCECO.101"
 	picture = GFX_evt_ECO2
 	
 	trigger = {
@@ -505,15 +505,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00101A"
+		name = "ECO.101A"
 		add_province_modifier = { name = agriculture2_fruits duration = -1 }		
 	}
 }
 
 #activation AGRICULTURE -légumes
 province_event = {
-    id = ECO.00102
-	desc = "DESCECO.00102"
+    id = ECO.102
+	desc = "DESCECO.102"
 	picture = GFX_evt_ECO2
 	
 	trigger = {
@@ -527,15 +527,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00102A"
+		name = "ECO.102A"
 		add_province_modifier = { name = agriculture2_legumes duration = -1 }		
 	}
 }
 
 #activation AGRICULTURE -vigne
 province_event = {
-    id = ECO.00103
-	desc = "DESCECO.00103"
+    id = ECO.103
+	desc = "DESCECO.103"
 	picture = GFX_evt_L3T_vigne
 	
 	trigger = {
@@ -549,15 +549,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00103A"
+		name = "ECO.103A"
 		add_province_modifier = { name = agriculture2_vigne duration = -1 }		
 	}
 }
 
 #activation ELEVAGE -ovin laine
 province_event = {
-    id = ECO.00110
-	desc = "DESCECO.00110"
+    id = ECO.110
+	desc = "DESCECO.110"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -571,15 +571,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00110A"
+		name = "ECO.110A"
 		add_province_modifier = { name = elevage2_laine duration = -1 }		
 	}
 }
 
 #activation ELEVAGE -ovin fromage
 province_event = {
-    id = ECO.00111
-	desc = "DESCECO.00111"
+    id = ECO.111
+	desc = "DESCECO.111"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -596,15 +596,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00111A"
+		name = "ECO.111A"
 		add_province_modifier = { name = elevage2_fromage duration = -1 }		
 	}
 }
 
 #activation ELEVAGE -bovin bête sur pied
 province_event = {
-    id = ECO.00112
-	desc = "DESCECO.00112"
+    id = ECO.112
+	desc = "DESCECO.112"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -618,15 +618,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00112A"
+		name = "ECO.112A"
 		add_province_modifier = { name = elevage2_boeuf duration = -1 }		
 	}
 }
 
 #activation FORET -bois
 province_event = {
-    id = ECO.00120
-	desc = "DESCECO.00120"
+    id = ECO.120
+	desc = "DESCECO.120"
 	picture = GFX_evt_XYLO_forest5
 	
 	trigger = {
@@ -643,15 +643,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00120A"
+		name = "ECO.120A"
 		add_province_modifier = { name = foret2_bois duration = -1 }		
 	}
 }
 
 #activation FORET -charbon
 province_event = {
-    id = ECO.00121
-	desc = "DESCECO.00121"
+    id = ECO.121
+	desc = "DESCECO.121"
 	picture = GFX_evt_XYLO_forest5
 	
 	trigger = {
@@ -669,15 +669,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00121A"
+		name = "ECO.121A"
 		add_province_modifier = { name = foret2_charbon duration = -1 }		
 	}
 }
 
 #activation PIERRE
 province_event = {
-    id = ECO.00130
-	desc = "DESCECO.00130"
+    id = ECO.130
+	desc = "DESCECO.130"
 	picture = GFX_evt_REC4
 	
 	trigger = {
@@ -694,7 +694,7 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00130A"
+		name = "ECO.130A"
 		remove_province_modifier = pierre1
 		add_province_modifier = { name = pierre1 duration = -1 hidden = yes } #now hidden instead of removed
 		add_province_modifier = { name = pierre2_pierre_brute duration = -1 }		
@@ -703,8 +703,8 @@ province_event = {
 
 #activation MINERAI -fer
 province_event = {
-    id = ECO.00140
-	desc = "DESCECO.00140"
+    id = ECO.140
+	desc = "DESCECO.140"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -765,7 +765,7 @@ province_event = {
 			}
 
 	option = {
-		name = "ECO.00140A"
+		name = "ECO.140A"
 		#remove_province_modifier = minerai1
 		add_province_modifier = { name = minerai2_fer duration = -1 }
 		
@@ -774,8 +774,8 @@ province_event = {
 
 #activation MINERAI -sel
 province_event = {
-    id = ECO.00141
-	desc = "DESCECO.00141"
+    id = ECO.141
+	desc = "DESCECO.141"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -789,15 +789,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00141A"
+		name = "ECO.141A"
 		add_province_modifier = { name = minerai2_sel_gemme duration = -1 }		
 	}
 }
 
 #activation PECHE
 province_event = {
-    id = ECO.00150
-	desc = "DESCECO.00150"
+    id = ECO.150
+	desc = "DESCECO.150"
 	picture = GFX_evt_L3T_fishing
 	
 	trigger = {
@@ -814,7 +814,7 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00150A"
+		name = "ECO.150A"
 		remove_province_modifier = peche1
 		add_province_modifier = { name = peche1 duration = -1 hidden = yes } #now hidden instead of removed
 		add_province_modifier = { name = peche2_poisson duration = -1 }		
@@ -823,8 +823,8 @@ province_event = {
 
 #activation PISCICULTURE
 province_event = {
-    id = ECO.00151
-	desc = "DESCECO.00151"
+    id = ECO.151
+	desc = "DESCECO.151"
 	picture = GFX_evt_L3T_fishing
 	
 	trigger = {
@@ -841,7 +841,7 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00151A"
+		name = "ECO.151A"
 		remove_province_modifier = pisci1
 		add_province_modifier = { name = pisci1 duration = -1 hidden = yes } #now hidden instead of removed
 		add_province_modifier = { name = pisci2_poisson duration = -1 }		
@@ -850,8 +850,8 @@ province_event = {
 
 #activation BINOUSE
 province_event = {
-    id = ECO.00105
-	desc = "DESCECO.00105"
+    id = ECO.105
+	desc = "DESCECO.105"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -876,15 +876,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00105A"
+		name = "ECO.105A"
 		add_province_modifier = { name = agriculture3_biere duration = -1 }		
 	}
 }
 
 #activation VIN
 province_event = {
-    id = ECO.00106
-	desc = "DESCECO.00106"
+    id = ECO.106
+	desc = "DESCECO.106"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -909,15 +909,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00106A"
+		name = "ECO.106A"
 		add_province_modifier = { name = agriculture3_vin duration = -1 }		
 	}
 }
 
 #activation CIDRE
 province_event = {
-    id = ECO.00108
-	desc = "DESCECO.00108"
+    id = ECO.108
+	desc = "DESCECO.108"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -934,15 +934,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00108A"
+		name = "ECO.108A"
 		add_province_modifier = { name = agriculture3_cidre duration = -1 }		
 	}
 }
 
 #activation FARINE
 province_event = {
-    id = ECO.00107
-	desc = "DESCECO.00107"
+    id = ECO.107
+	desc = "DESCECO.107"
 	picture = GFX_evt_L3T_moulin
 	
 	trigger = {
@@ -960,15 +960,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00107A"
+		name = "ECO.107A"
 		add_province_modifier = { name = agriculture3_farine duration = -1 }		
 	}
 }
 
 #activation PAIN
 province_event = {
-    id = ECO.00109
-	desc = "DESCECO.00109"
+    id = ECO.109
+	desc = "DESCECO.109"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -986,15 +986,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00109A"
+		name = "ECO.109A"
 		add_province_modifier = { name = agriculture4_pain duration = -1 }		
 	}
 }
 
 #activation VIANDE
 province_event = {
-    id = ECO.00114
-	desc = "DESCECO.00114"
+    id = ECO.114
+	desc = "DESCECO.114"
 	picture = GFX_evt_L3T_boucherie
 	
 	trigger = {
@@ -1008,15 +1008,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00114A"
+		name = "ECO.114A"
 		add_province_modifier = { name = elevage3_viande duration = -1 }		
 	}
 }
 
 #activation FUMAISON
 province_event = {
-    id = ECO.00152
-	desc = "DESCECO.00152"
+    id = ECO.152
+	desc = "DESCECO.152"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1037,15 +1037,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00152A"
+		name = "ECO.152A"
 		add_province_modifier = { name = peche_pisci3_fumaison duration = -1 }		
 	}
 }
 
 #activation CUIR
 province_event = {
-    id = ECO.00113
-	desc = "DESCECO.00113"
+    id = ECO.113
+	desc = "DESCECO.113"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1062,15 +1062,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00113A"
+		name = "ECO.113A"
 		add_province_modifier = { name = elevage3_cuir duration = -1 }		
 	}
 }
 
 #activation PLANCHE
 province_event = {
-    id = ECO.00122
-	desc = "DESCECO.00122"
+    id = ECO.122
+	desc = "DESCECO.122"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1090,15 +1090,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00122A"
+		name = "ECO.122A"
 		add_province_modifier = { name = foret3_planche duration = -1 }		
 	}
 }
 
 #activation VERRE
 province_event = {
-    id = ECO.00123
-	desc = "DESCECO.00123"
+    id = ECO.123
+	desc = "DESCECO.123"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1119,7 +1119,7 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00123A"
+		name = "ECO.123A"
 		add_province_modifier = { name = foret3_verre duration = -1 }		
 	}
 }
@@ -1133,8 +1133,8 @@ province_event = {
 
 ##activation PEAUX
 #province_event = {
-#    id = ECO.00124
-#	desc = "DESCECO.00124"
+#    id = ECO.124
+#	desc = "DESCECO.124"
 #	picture = GFX_evt_market
 #	
 #	trigger = {
@@ -1150,14 +1150,14 @@ province_event = {
 #	mean_time_to_happen = { days = 360 }
 #
 #	option = {
-#		name = "ECO.00124A"
+#		name = "ECO.124A"
 #		add_province_modifier = { name = peaux2_fourrure duration = -1 }		
 #	}
 #}
 ##activation JOYAUX
 #province_event = {
-#    id = ECO.00125
-#	desc = "DESCECO.00125"
+#    id = ECO.125
+#	desc = "DESCECO.125"
 #	picture = GFX_evt_market
 #	
 #	trigger = {
@@ -1173,14 +1173,14 @@ province_event = {
 #	mean_time_to_happen = { days = 360 }
 #
 #	option = {
-#		name = "ECO.00125A"
+#		name = "ECO.125A"
 #		add_province_modifier = { name = joyaux2_bijoux duration = -1 }		
 #	}
 #}
 ##activation EPICES
 #province_event = {
-#    id = ECO.00126
-#	desc = "DESCECO.00126"
+#    id = ECO.126
+#	desc = "DESCECO.126"
 #	picture = GFX_evt_market
 #	
 #	trigger = {
@@ -1196,15 +1196,15 @@ province_event = {
 #	mean_time_to_happen = { days = 360 }
 #
 #	option = {
-#		name = "ECO.00126A"
+#		name = "ECO.126A"
 #		add_province_modifier = { name = epices2_epices duration = -1 }		
 #	}
 #}
 
 #activation PIERRE TAILLE
 province_event = {
-    id = ECO.00131
-	desc = "DESCECO.00131"
+    id = ECO.131
+	desc = "DESCECO.131"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1224,15 +1224,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00131A"
+		name = "ECO.131A"
 		add_province_modifier = { name = pierre3_pierre_taille duration = -1 }		
 	}
 }
 
 #activation METAL
 province_event = {
-    id = ECO.00144
-	desc = "DESCECO.00144"
+    id = ECO.144
+	desc = "DESCECO.144"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1249,15 +1249,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00144A"
+		name = "ECO.144A"
 		add_province_modifier = { name = minerai3_metal duration = -1 }		
 	}
 }
 
 #activation OUTILS
 province_event = {
-    id = ECO.00145
-	desc = "DESCECO.00145"
+    id = ECO.145
+	desc = "DESCECO.145"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1274,15 +1274,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00145A"
+		name = "ECO.145A"
 		add_province_modifier = { name = minerai4_outils duration = -1 }		
 	}
 }
 
 #activation SEL RAFFINE
 province_event = {
-    id = ECO.00146
-	desc = "DESCECO.00146"
+    id = ECO.146
+	desc = "DESCECO.146"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1299,15 +1299,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00146A"
+		name = "ECO.146A"
 		add_province_modifier = { name = minerai3_sel_raffine duration = -1 }		
 	}
 }
 
 #activation SALAISON
 province_event = {
-    id = ECO.00147
-	desc = "DESCECO.00147"
+    id = ECO.147
+	desc = "DESCECO.147"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1324,15 +1324,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00147A"
+		name = "ECO.147A"
 		add_province_modifier = { name = minerai3_salaison duration = -1 }		
 	}
 }
 
 #activation ETOFFE
 province_event = {
-    id = ECO.00115
-	desc = "DESCECO.00115"
+    id = ECO.115
+	desc = "DESCECO.115"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1349,15 +1349,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00115A"
+		name = "ECO.115A"
 		add_province_modifier = { name = elevage3_etoffe duration = -1 }		
 	}
 }
 
 #activation DRAP
 province_event = {
-    id = ECO.00116
-	desc = "DESCECO.00116"
+    id = ECO.116
+	desc = "DESCECO.116"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1374,15 +1374,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00116A"
+		name = "ECO.116A"
 		add_province_modifier = { name = elevage4_drap duration = -1 }		
 	}
 }
 
 #activation ELEVAGE -cheval
 province_event = {
-    id = ECO.00117
-	desc = "DESCECO.00117"
+    id = ECO.117
+	desc = "DESCECO.117"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1396,15 +1396,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00117A"
+		name = "ECO.117A"
 		add_province_modifier = { name = elevage2_cheval duration = -1 }		
 	}
 }
 
 # activation ARMES
 province_event = {
-    id = ECO.00148
-	desc = "DESCECO.00148"
+    id = ECO.148
+	desc = "DESCECO.148"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1421,7 +1421,7 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00148A"
+		name = "ECO.148A"
 		add_province_modifier = { name = minerai4_armes duration = -1 }	
 		custom_tooltip = { text = des_armes }
 	}
@@ -1429,8 +1429,8 @@ province_event = {
 
 #activation OR
 province_event = {
-    id = ECO.00142
-	desc = "DESCECO.00142"
+    id = ECO.142
+	desc = "DESCECO.142"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1444,15 +1444,15 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00142A"
+		name = "ECO.142A"
 		add_province_modifier = { name = minerai2_or duration = -1 }		
 	}
 }
 
 #activation CUIVRE
 province_event = {
-    id = ECO.00143
-	desc = "DESCECO.00143"
+    id = ECO.143
+	desc = "DESCECO.143"
 	picture = GFX_evt_market
 	
 	trigger = {
@@ -1466,7 +1466,7 @@ province_event = {
 	mean_time_to_happen = { days = 360 }
 
 	option = {
-		name = "ECO.00143A"
+		name = "ECO.143A"
 		add_province_modifier = { name = minerai2_cuivre duration = -1 }		
 	}
 }

@@ -8,8 +8,8 @@ namespace = ECO
 
 # Début chaîne d'event
 character_event = {
-	id = ECO.0311
-	desc = "DESCECO.0311"
+	id = ECO.311
+	desc = "DESCECO.311"
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
 	
@@ -46,8 +46,8 @@ character_event = {
 	
 	# La chaîne d'event commence
 	option = {
-		name = "ECO.0311A"
-		character_event = { id = ECO.0312 days = 30 tooltip = TOOLTIPECO.0311A}
+		name = "ECO.311A"
+		character_event = { id = ECO.312 days = 30 tooltip = TOOLTIPECO.311A}
 		set_character_flag = epee
 		set_character_flag = epee_taken
 		# On met les flags des events Vanilla ici pour qu'ils n'interfèrent pas
@@ -59,15 +59,15 @@ character_event = {
 	
 	# On n'est pas interessé
 	option = {
-		name = "ECO.0311B"
+		name = "ECO.311B"
 		custom_tooltip = { text = improve_martial_quit }
 	}
 }
 
 # Envoi d'un serviteur
 character_event = {
-	id = ECO.0312
-	desc = "DESCECO.0312"
+	id = ECO.312
+	desc = "DESCECO.312"
 	#picture = GFX_evt_battle
 	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_normal_frame_war
@@ -86,39 +86,39 @@ character_event = {
 	
 	# Aix la Chappelle
 	option = {
-		name = "ECO.0312A"
+		name = "ECO.312A"
 		wealth = -20
 		random_list = {
-			60 = { character_event = { id = ECO.0313 days = 30 tooltip = TOOLTIPECO.0312A} }
-			40 = { character_event = { id = ECO.0315 days = 30 tooltip = TOOLTIPECO.0312B} }
+			60 = { character_event = { id = ECO.313 days = 30 tooltip = TOOLTIPECO.312A} }
+			40 = { character_event = { id = ECO.315 days = 30 tooltip = TOOLTIPECO.312B} }
 		}
 	}
 	
 	# Reims
 	option = {
-		name = "ECO.0312B"
+		name = "ECO.312B"
 		wealth = -20
 		random_list = {
-			60 = { character_event = { id = ECO.0313 days = 30 tooltip = TOOLTIPECO.0312A} }
-			40 = { character_event = { id = ECO.0315 days = 30 tooltip = TOOLTIPECO.0312B} }
+			60 = { character_event = { id = ECO.313 days = 30 tooltip = TOOLTIPECO.312A} }
+			40 = { character_event = { id = ECO.315 days = 30 tooltip = TOOLTIPECO.312B} }
 		}
 	}
 	
 	# Rocamadour
 	option = {
-		name = "ECO.0312C"
+		name = "ECO.312C"
 		wealth = -20
 		random_list = {
-			60 = { character_event = { id = ECO.0313 days = 30 tooltip = TOOLTIPECO.0312A} }
-			40 = { character_event = { id = ECO.0315 days = 30 tooltip = TOOLTIPECO.0312B} }
+			60 = { character_event = { id = ECO.313 days = 30 tooltip = TOOLTIPECO.312A} }
+			40 = { character_event = { id = ECO.315 days = 30 tooltip = TOOLTIPECO.312B} }
 		}
 	}
 }
 
 # Une femme vient vous voir
 character_event = {
-	id = ECO.0313
-	desc = "DESCECO.0313"
+	id = ECO.313
+	desc = "DESCECO.313"
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
 	
@@ -136,7 +136,7 @@ character_event = {
 	
 	# Il va revenir
 	option = {
-		name = "ECO.0313A"
+		name = "ECO.313A"
 		random_list = {
 			20 = { 
 				if = {
@@ -146,12 +146,12 @@ character_event = {
 			}
 			80 = {}
 		}
-		character_event = { id = ECO.0314 days = 30 tooltip = TOOLTIPECO.0313A} 
+		character_event = { id = ECO.314 days = 30 tooltip = TOOLTIPECO.313A} 
 	}
 	
 	# Il est mort
 	option = {
-		name = "ECO.0313B"
+		name = "ECO.313B"
 		wealth = -20
 		random_list = {
 			10 = { 
@@ -162,12 +162,12 @@ character_event = {
 			}
 			90 = {}
 		}
-		character_event = { id = ECO.0314 days = 30 tooltip = TOOLTIPECO.0313B} 
+		character_event = { id = ECO.314 days = 30 tooltip = TOOLTIPECO.313B} 
 	}
 	
 	# C'est un voleur
 	option = {
-		name = "ECO.0313C"
+		name = "ECO.313C"
 		wealth = 5
 		random_list = {
 			30 = { 
@@ -178,14 +178,14 @@ character_event = {
 			}
 			70 = {}
 		}
-		character_event = { id = ECO.0314 days = 30 tooltip = TOOLTIPECO.0313C} 
+		character_event = { id = ECO.314 days = 30 tooltip = TOOLTIPECO.313C} 
 	}
 }
 
 # Nouveau serviteur ou abandon
 character_event = {
-	id = ECO.0314
-	desc = "DESCECO.0314"
+	id = ECO.314
+	desc = "DESCECO.314"
 	#picture = GFX_evt_battle
 	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_normal_frame_war
@@ -204,13 +204,13 @@ character_event = {
 	
 	# Chercher un autre serviteur à envoyer
 	option = {
-		name = "ECO.0314A"
-		character_event = { id = ECO.0312 days = 30 tooltip = TOOLTIPECO.0314A}
+		name = "ECO.314A"
+		character_event = { id = ECO.312 days = 30 tooltip = TOOLTIPECO.314A}
 	}
 	
 	# Abandonner
 	option = {
-		name = "ECO.0314B"
+		name = "ECO.314B"
 		prestige = -10
 		custom_tooltip = { text = improve_martial_quit }
 		clr_character_flag = epee
@@ -223,8 +223,8 @@ character_event = {
 
 # Plan trouvé
 character_event = {
-	id = ECO.0315
-	desc = "DESCECO.0315"
+	id = ECO.315
+	desc = "DESCECO.315"
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
 	
@@ -242,16 +242,16 @@ character_event = {
 	
 	# Forger l'épée
 	option = {
-		name = "ECO.0315A"
+		name = "ECO.315A"
 		wealth = -50
-		character_event = { id = ECO.0316 days = 30 tooltip = TOOLTIPECO.0315A}
+		character_event = { id = ECO.316 days = 30 tooltip = TOOLTIPECO.315A}
 	}	
 }
 
 # Essai de l'épée
 character_event = {
-	id = ECO.0316
-	desc = "DESCECO.0316"
+	id = ECO.316
+	desc = "DESCECO.316"
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
 	
@@ -269,16 +269,16 @@ character_event = {
 	
 	# Sur un bonhomme de paille
 	option = {
-		name = "ECO.0316A"
+		name = "ECO.316A"
 		wealth = -5
 		random_list = {
-			60 = { character_event = { id = ECO.0317 days = 30 tooltip = TOOLTIPECO.0316AA} }
-			40 = { character_event = { id = ECO.0318 days = 30 tooltip = TOOLTIPECO.0316AB} }
+			60 = { character_event = { id = ECO.317 days = 30 tooltip = TOOLTIPECO.316AA} }
+			40 = { character_event = { id = ECO.318 days = 30 tooltip = TOOLTIPECO.316AB} }
 		}
 	}	
 	
 	option = {
-		name = "ECO.0316B"
+		name = "ECO.316B"
 		random_list = {
 			50 = { 
 				if = {
@@ -289,16 +289,16 @@ character_event = {
 			50 = {}
 		}
 		random_list = {
-			60 = { character_event = { id = ECO.0317 days = 30 tooltip = TOOLTIPECO.0316BA} }
-			40 = { character_event = { id = ECO.0318 days = 30 tooltip = TOOLTIPECO.0316BB} }
+			60 = { character_event = { id = ECO.317 days = 30 tooltip = TOOLTIPECO.316BA} }
+			40 = { character_event = { id = ECO.318 days = 30 tooltip = TOOLTIPECO.316BB} }
 		}	
 	}
 }
 
 # Equilibrage épée ou abandon
 character_event = {
-	id = ECO.0317
-	desc = "DESCECO.0317"
+	id = ECO.317
+	desc = "DESCECO.317"
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
 	
@@ -316,14 +316,14 @@ character_event = {
 	
 	# Equilibrer l'épée
 	option = {
-		name = "ECO.0317A"
+		name = "ECO.317A"
 		wealth = -10
-		character_event = { id = ECO.0316 days = 30 tooltip = TOOLTIPECO.0317A}
+		character_event = { id = ECO.316 days = 30 tooltip = TOOLTIPECO.317A}
 	}
 	
 	# Abandonner
 	option = {
-		name = "ECO.0317B"
+		name = "ECO.317B"
 		prestige = -20
 		custom_tooltip = { text = improve_martial_quit }
 		clr_character_flag = epee
@@ -336,8 +336,8 @@ character_event = {
 
 # Fin de la chaîne
 character_event = {
-	id = ECO.0318
-	desc = "DESCECO.0318"
+	id = ECO.318
+	desc = "DESCECO.318"
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
 	
@@ -355,7 +355,7 @@ character_event = {
 	
 	# Succes
 	option = {
-		name = "ECO.0318A"
+		name = "ECO.318A"
 		change_martial = 2
 		clr_character_flag = epee
 		# Retire les flags Vanille
@@ -372,8 +372,8 @@ character_event = {
 ##Le textile
 # Event de choix de faire la suite ou pas
 character_event = {
-	id = ECO.0301
-	desc = "DESCECO.0301"
+	id = ECO.301
+	desc = "DESCECO.301"
 	picture = GFX_evt_carriage
 	border = GFX_event_normal_frame_economy
 	
@@ -408,8 +408,8 @@ character_event = {
 	}
 	
 	option = {
-		name = "ECO.0301A"
-		character_event = { id = ECO.0302 days = 30 tooltip = TOOLTIPECO.0301A}
+		name = "ECO.301A"
+		character_event = { id = ECO.302 days = 30 tooltip = TOOLTIPECO.301A}
 		set_character_flag = drap
 		set_character_flag = drap_taken
 		# On met les flags des events Vanilla ici pour qu'ils n'interfèrent pas
@@ -419,14 +419,14 @@ character_event = {
 		set_character_flag = the_survey
 	}
 	option = {
-		name = "ECO.0301B"
+		name = "ECO.301B"
 		custom_tooltip = { text = improve_stewardship_quit }
 	}
 }
 # Choix de l'achat
 character_event = {
-	id = ECO.0302
-	desc = "DESCECO.0302"
+	id = ECO.302
+	desc = "DESCECO.302"
 	picture = GFX_evt_market
 	border = GFX_event_normal_frame_economy
 	
@@ -444,29 +444,29 @@ character_event = {
 	
 	# Laine
 	option = {
-		name = "ECO.0302A"
+		name = "ECO.302A"
 		wealth = -10
-		character_event = { id = ECO.0303 days = 30 tooltip = TOOLTIPECO.0302A}
+		character_event = { id = ECO.303 days = 30 tooltip = TOOLTIPECO.302A}
 	}
 
 	# Etoffe
 	option = {
-		name = "ECO.0302B"
+		name = "ECO.302B"
 		wealth = -25
-		character_event = { id = ECO.0304 days = 30 tooltip = TOOLTIPECO.0302B}
+		character_event = { id = ECO.304 days = 30 tooltip = TOOLTIPECO.302B}
 	}
 	
 	# Drap
 	option = {
-		name = "ECO.0302C"
+		name = "ECO.302C"
 		wealth = -50
-		character_event = { id = ECO.0305 days = 30 tooltip = TOOLTIPECO.0302C}
+		character_event = { id = ECO.305 days = 30 tooltip = TOOLTIPECO.302C}
 	}
 }
 # Vente laine
 character_event = {
-	id = ECO.0303
-	desc = "DESCECO.0303"
+	id = ECO.303
+	desc = "DESCECO.303"
 	picture = GFX_evt_market
 	border = GFX_event_normal_frame_economy
 	
@@ -483,26 +483,26 @@ character_event = {
 	}
 	
 	option = {
-		name = "ECO.0303A"
+		name = "ECO.303A"
 		# Loi de Poisson simulant le nombre de ventes (espérance de 5; bornée à 9 (i.e retirage si plus grand))
 		random_list = {
-			1 = { character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303A} }
-			3 = { wealth = 2 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303B} }
-			9 = { wealth = 4 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303C} }
-			14 = { wealth = 6 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303D} }
-			18 = { wealth = 8 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303E} }
-			19 = { wealth = 10 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303F} }
-			15 = { wealth = 12 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303G} }
-			11 = { wealth = 14 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303H} }
-			6 = { wealth = 16 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303I} }
-			4 = { wealth = 18 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0303J} }	
+			1 = { character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303A} }
+			3 = { wealth = 2 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303B} }
+			9 = { wealth = 4 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303C} }
+			14 = { wealth = 6 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303D} }
+			18 = { wealth = 8 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303E} }
+			19 = { wealth = 10 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303F} }
+			15 = { wealth = 12 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303G} }
+			11 = { wealth = 14 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303H} }
+			6 = { wealth = 16 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303I} }
+			4 = { wealth = 18 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303J} }	
 		}	
 	}
 }
 # Vente étoffe
 character_event = {
-	id = ECO.0304
-	desc = "DESCECO.0304"
+	id = ECO.304
+	desc = "DESCECO.304"
 	picture = GFX_evt_market
 	border = GFX_event_normal_frame_economy
 	
@@ -519,26 +519,26 @@ character_event = {
 	}
 	
 	option = {
-		name = "ECO.0304A"
+		name = "ECO.304A"
 		# Loi de Poisson simulant le nombre de ventes (espérance de 5; bornée à 9 (i.e retirage si plus grand))
 		random_list = {
-			1 = { character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304A} }
-			3 = { wealth = 5 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304B} }
-			9 = { wealth = 10 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304C} }
-			14 = { wealth = 15 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304D} }
-			18 = { wealth = 20 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304E} }
-			19 = { wealth = 25 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304F} }
-			15 = { wealth = 30 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304G} }
-			11 = { wealth = 35 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304H} }
-			6 = { wealth = 40 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304I} }
-			4 = { wealth = 45 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0304J} }
+			1 = { character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304A} }
+			3 = { wealth = 5 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304B} }
+			9 = { wealth = 10 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304C} }
+			14 = { wealth = 15 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304D} }
+			18 = { wealth = 20 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304E} }
+			19 = { wealth = 25 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304F} }
+			15 = { wealth = 30 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304G} }
+			11 = { wealth = 35 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304H} }
+			6 = { wealth = 40 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304I} }
+			4 = { wealth = 45 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304J} }
 		}	
 	}
 }
 # Vente drap
 character_event = {
-	id = ECO.0305
-	desc = "DESCECO.0305"
+	id = ECO.305
+	desc = "DESCECO.305"
 	picture = GFX_evt_market
 	border = GFX_event_normal_frame_economy
 	
@@ -555,26 +555,26 @@ character_event = {
 	}
 	
 	option = {
-		name = "ECO.0305A"
+		name = "ECO.305A"
 		# Loi de Poisson simulant le nombre de ventes (espérance de 5; bornée à 9 (i.e retirage si plus grand))
 		random_list = {
-			1 = { character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305A} }
-			5 = { wealth = 10 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305B} }
-			12 = { wealth = 20 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305C} }
-			17 = { wealth = 30 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305D} }
-			19 = { wealth = 40 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305E} }
-			18 = { wealth = 50 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305F} }
-			13 = { wealth = 60 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305G} }
-			8 = { wealth = 70 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305H} }
-			5 = { wealth = 80 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305I} }
-			2 = { wealth = 90 character_event = { id = ECO.0306 days = 30 tooltip = TOOLTIPECO.0305J} }
+			1 = { character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305A} }
+			5 = { wealth = 10 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305B} }
+			12 = { wealth = 20 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305C} }
+			17 = { wealth = 30 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305D} }
+			19 = { wealth = 40 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305E} }
+			18 = { wealth = 50 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305F} }
+			13 = { wealth = 60 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305G} }
+			8 = { wealth = 70 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305H} }
+			5 = { wealth = 80 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305I} }
+			2 = { wealth = 90 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305J} }
 		}	
 	}
 }
 # Gestion des invendus
 character_event = {
-	id = ECO.0306
-	desc = "DESCECO.0306"
+	id = ECO.306
+	desc = "DESCECO.306"
 	picture = GFX_evt_market
 	border = GFX_event_normal_frame_economy
 	
@@ -592,7 +592,7 @@ character_event = {
 	
 	#Les bruler
 	option = {
-		name = "ECO.0306A"
+		name = "ECO.306A"
 		random_list = {		
 			50 = { 
 				if = {
@@ -602,12 +602,12 @@ character_event = {
 			}
 			50 = { prestige = 10 }
 		}
-		character_event = { id = ECO.0307 days = 30 tooltip = TOOLTIPECO.0306A}
+		character_event = { id = ECO.307 days = 30 tooltip = TOOLTIPECO.306A}
 	}
 	
 	#Les donner
 	option = {
-		name = "ECO.0306B"
+		name = "ECO.306B"
 		random_list = {		
 			50 = {
 				if = {
@@ -617,13 +617,13 @@ character_event = {
 			}
 			50 = { piety = 10 }
 		}
-		character_event = { id = ECO.0307 days = 30 tooltip = TOOLTIPECO.0306B}
+		character_event = { id = ECO.307 days = 30 tooltip = TOOLTIPECO.306B}
 	}
 }
 # Fin de la chaîne
 character_event = {
-	id = ECO.0307
-	desc = DESCECO.0307
+	id = ECO.307
+	desc = DESCECO.307
 	picture = GFX_evt_market
 	border = GFX_event_normal_frame_economy
 	
@@ -632,7 +632,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "ECO.0307A"
+		name = "ECO.307A"
 		change_stewardship = 1
 		clr_character_flag = drap
 		# Retire les flags Vanille

@@ -8,8 +8,8 @@ namespace = XYLO
 
 # embaucher un Forestier
 character_event = {
-    id = XYLO.0001
-	desc = "DESCXYLO.0001"
+    id = XYLO.1
+	desc = "DESCXYLO.1"
 	picture = GFX_evt_XYLO_forest2
 
 	capable_only = yes
@@ -54,7 +54,7 @@ character_event = {
 	}
 	
 option = {
-		name = "XYLO.0001A"	#trouvez moi quelqu'un
+		name = "XYLO.1A"	#trouvez moi quelqu'un
 		ai_chance = { factor = 100 }	
 						random_courtier = {
 									limit = {
@@ -81,7 +81,7 @@ option = {
 	}
 
 option = {
-		name = "XYLO.0001B" #je le choisirai	
+		name = "XYLO.1B" #je le choisirai	
 		ai_chance = { factor = 0 }	
 		set_character_flag = recrutement_forestier_repousse
 	}
@@ -89,8 +89,8 @@ option = {
 
 # spécialisation Forêts -pour les Féodaux
 province_event = {
-    id = XYLO.0002
-	desc = "DESCXYLO.0002"
+    id = XYLO.2
+	desc = "DESCXYLO.2"
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
@@ -122,7 +122,7 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0002A"	
+		name = "XYLO.2A"	
 		trigger = { region = world_europe }
 		ai_chance = {
 			factor = 70
@@ -135,7 +135,7 @@ option = {
 			}
 	}
 option = {
-		name = "XYLO.0002B"	
+		name = "XYLO.2B"	
 		trigger = { region = world_europe }
 		ai_chance = { 
 			factor = 30
@@ -149,7 +149,7 @@ option = {
 			}
 	}
 option = {
-		name = "XYLO.0002C"	
+		name = "XYLO.2C"	
 		trigger = { NOT = { region = world_europe }}
 		ai_chance = { factor = 30 }	
 		add_province_modifier = {
@@ -162,8 +162,8 @@ option = {
 
 # spécialisation Forêts -pour les Villes
 province_event = {
-    id = XYLO.0003
-	desc = "DESCXYLO.0003"
+    id = XYLO.3
+	desc = "DESCXYLO.3"
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
@@ -195,7 +195,7 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0003B"	
+		name = "XYLO.3B"	
 		ai_chance = { factor = 100 }	#choix économique uniquement
 		add_province_modifier = {
 			name = foret2_expl 
@@ -207,8 +207,8 @@ option = {
 
 # spécialisation -Forêts clericales
 province_event = {
-    id = XYLO.0004
-	desc = "DESCXYLO.0004"
+    id = XYLO.4
+	desc = "DESCXYLO.4"
 	picture = GFX_evt_XYLO_forest2
 
 	trigger = {
@@ -240,7 +240,7 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0004A"	
+		name = "XYLO.4A"	
 		trigger = { region = world_europe }
 		ai_chance = {
 			factor = 70
@@ -253,7 +253,7 @@ option = {
 			}
 	}
 option = {
-		name = "XYLO.0004B"	
+		name = "XYLO.4B"	
 		trigger = { region = world_europe }
 		ai_chance = { factor = 30 }	#à pondérer. choix privilégié si cité épiscopale
 		add_province_modifier = {
@@ -263,7 +263,7 @@ option = {
 			}		
 	}
 option = {
-		name = "XYLO.0004C"
+		name = "XYLO.4C"
 		trigger = { NOT = { region = world_europe }}
 		ai_chance = { factor = 30 }	#à pondérer. choix privilégié si cité épiscopale
 		add_province_modifier = {

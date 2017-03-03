@@ -251,7 +251,7 @@ province_event = {
 		
 		# Give again resources if necessary
 		hidden_tooltip = { subtract_variable = { which = "resourceNb" value = 1 } }
-		province_event = { id = ECO.0015 days = 10 }
+		province_event = { id = ECO.15 days = 10 }
 		
 		# Remove the stop_mine and minerai2_fer modifier with a delay
 		province_event = { id = ECO.137 days = 100 }

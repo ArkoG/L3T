@@ -10,8 +10,8 @@ namespace = XYLO
 
 #upgrade achat v1
 province_event = {
-    id = XYLO.0201
-	desc = "DESCXYLO.0201"
+    id = XYLO.201
+	desc = "DESCXYLO.201"
 	picture = GFX_evt_XYLO_forest1
 
 	trigger = {
@@ -32,7 +32,7 @@ province_event = {
 	}	
 
 	option = {
-		name = "XYLO.0201A"	
+		name = "XYLO.201A"	
 		ai_chance = { factor = 30 }
 		owner = { wealth = -350 }
 		clr_province_flag = forest_razed
@@ -43,12 +43,12 @@ province_event = {
 		set_province_flag = transaction_forestiere_recente
 	}
 	option = {
-		name = "XYLO.0201B"	
+		name = "XYLO.201B"	
 		ai_chance = { factor = 20 }
 		set_province_flag = offre_achat_repoussee
 		}
 	option = {
-		name = "XYLO.0201C"	
+		name = "XYLO.201C"	
 		ai_chance = { factor = 50 }
 		set_province_flag = offre_achat_refusee
 		set_province_flag = transaction_forestiere_recente 
@@ -57,8 +57,8 @@ province_event = {
 
 #upgrade achat v2
 province_event = { 
-    id = XYLO.0202
-	desc = "DESCXYLO.0202"
+    id = XYLO.202
+	desc = "DESCXYLO.202"
 	picture = GFX_evt_XYLO_forest1
 
 	trigger = {
@@ -79,7 +79,7 @@ province_event = {
 	}	
 
 	option = {
-		name = "XYLO.0202A"	
+		name = "XYLO.202A"	
 		ai_chance = { factor = 25 }
 		owner = { wealth = -450 }
 		clr_province_flag = forest_razed
@@ -90,12 +90,12 @@ province_event = {
 		set_province_flag = transaction_forestiere_recente	
 	}
 	option = {
-		name = "XYLO.0202B"	
+		name = "XYLO.202B"	
 		ai_chance = { factor = 15 }
 		set_province_flag = offre_achat_repoussee
 		}
 	option = {
-		name = "XYLO.0202C"	
+		name = "XYLO.202C"	
 		ai_chance = { factor = 60 }
 		set_province_flag = offre_achat_refusee
 		set_province_flag = transaction_forestiere_recente
@@ -104,8 +104,8 @@ province_event = {
 
 #upgrade achat v3
 province_event = { 
-    id = XYLO.0203
-	desc = "DESCXYLO.0203"
+    id = XYLO.203
+	desc = "DESCXYLO.203"
 	picture = GFX_evt_XYLO_forest1
 
 	trigger = {
@@ -126,7 +126,7 @@ province_event = {
 	}	
 
 option = {
-		name = "XYLO.0203A"	
+		name = "XYLO.203A"	
 		ai_chance = { factor = 35 }
 		owner = { wealth = -300 }
 		clr_province_flag = forest_razed
@@ -137,12 +137,12 @@ option = {
 		set_province_flag = transaction_forestiere_recente	
 	}
 option = {
-		name = "XYLO.0203B"	
+		name = "XYLO.203B"	
 		ai_chance = { factor = 20 }
 		set_province_flag = offre_achat_repoussee
 	}
 option = {
-		name = "XYLO.0203C"	
+		name = "XYLO.203C"	
 		ai_chance = { factor = 45 }
 		set_province_flag = offre_achat_refusee
 		set_province_flag = transaction_forestiere_recente

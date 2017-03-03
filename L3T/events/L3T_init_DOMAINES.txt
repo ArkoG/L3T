@@ -10,9 +10,9 @@ namespace = L3T
 
 #Domaine Féodal     
 narrative_event = {
-	title = "NAMEL3T.0003"
-    id = L3T.0003
-	desc = "DESCL3T.0003"
+	title = "NAMEL3T.3"
+    id = L3T.3
+	desc = "DESCL3T.3"
 	picture = GFX_evt_castle_construction
 	
 	only_rulers = yes
@@ -68,7 +68,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.0003A"	#MIL
+		name = "L3T.3A"	#MIL
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -102,7 +102,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.0003B"	#ECO
+		name = "L3T.3B"	#ECO
 		ai_chance = { 
 			factor = 50
 			modifier = {
@@ -131,7 +131,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = "L3T.0003C" #ADM
+		name = "L3T.3C" #ADM
 		trigger = {
 			higher_tier_than = COUNT # Duke, King or Emperor
 			capital_holding = {
@@ -160,9 +160,9 @@ narrative_event = {
 
 #Domaine Communal     
 narrative_event = {
-	title = "NAMEL3T.0004"
-	id = L3T.0004
-	desc = "DESCL3T.0004"
+	title = "NAMEL3T.4"
+	id = L3T.4
+	desc = "DESCL3T.4"
 	picture = GFX_evt_L3T_city
 	
 	only_rulers = yes
@@ -227,7 +227,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.0004A"	
+		name = "L3T.4A"	
 		ai_chance = { 
 			factor = 50			
 			modifier = {
@@ -258,7 +258,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.0004B"
+		name = "L3T.4B"
 		trigger = {
 			any_demesne_title = {
 				has_title_flag = city_to_specialize
@@ -380,7 +380,7 @@ narrative_event = {
 							NOT = { has_global_flag = avert_player } # assure that the player is averted only once
 						}
 						set_global_flag = avert_player
-						character_event = { id = L3TRADE.0010 days = 10}
+						character_event = { id = L3TRADE.10 days = 10}
 					}
 						
 					# Avert the player that the route building can be build on its demesne
@@ -391,7 +391,7 @@ narrative_event = {
 								NOT = { has_global_flag = avert_player }
 							}
 							set_global_flag = avert_player
-							character_event = { id = L3TRADE.0009 days = 10}
+							character_event = { id = L3TRADE.9 days = 10}
 						}
 					}
 					clr_global_flag = avert_player
@@ -404,7 +404,7 @@ narrative_event = {
 
 #domaine Communal province à double cité  
 province_event = {
-    id = L3T.00041
+    id = L3T.41
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -474,7 +474,7 @@ province_event = {
 							NOT = { has_global_flag = avert_player } # assure that the player is averted only once
 						}
 						set_global_flag = avert_player
-						character_event = { id = L3TRADE.0010 days = 10}
+						character_event = { id = L3TRADE.10 days = 10}
 					}	
 					
 					# Avert the player that the route building can be build on its demesne
@@ -485,7 +485,7 @@ province_event = {
 								NOT = { has_global_flag = avert_player }
 							}
 							set_global_flag = avert_player
-							character_event = { id = L3TRADE.0009 days = 10}
+							character_event = { id = L3TRADE.9 days = 10}
 						}
 					}
 					clr_global_flag = avert_player
@@ -512,9 +512,9 @@ province_event = {
 
 #upgrade CITE L1 vers L2
 narrative_event = {
-	title = "NAMEL3T.0005"
-	desc = "DESCL3T.0005"
-    id = L3T.0005
+	title = "NAMEL3T.5"
+	desc = "DESCL3T.5"
+    id = L3T.5
 	picture = GFX_evt_L3T_city
 	
 	only_rulers = yes
@@ -540,7 +540,7 @@ narrative_event = {
 	mean_time_to_happen = { days = 450 }	
 
 	option = {
-		name = "L3T.0005A"	
+		name = "L3T.5A"	
 		random_demesne_title = {
 			limit = {
 				tier = baron
@@ -555,9 +555,9 @@ narrative_event = {
 
 #upgrade CITE L2 vers L3
 narrative_event = {
-	title = "NAMEL3T.0002"
-	desc = "DESCL3T.0002"
-    id = L3T.0002
+	title = "NAMEL3T.2"
+	desc = "DESCL3T.2"
+    id = L3T.2
 	picture = GFX_evt_L3T_city
 	
 	only_rulers = yes
@@ -583,7 +583,7 @@ narrative_event = {
 	mean_time_to_happen = { days = 450 }	
 
 	option = {
-		name = "L3T.0002A"	
+		name = "L3T.2A"	
 		random_demesne_title = {
 			limit = {
 				tier = baron
@@ -599,9 +599,9 @@ narrative_event = {
 
 #Domaine Ecclésial     
 narrative_event = {
-	title = "NAMEL3T.0006"
-    id = L3T.0006
-	desc = "DESCL3T.0006"
+	title = "NAMEL3T.6"
+    id = L3T.6
+	desc = "DESCL3T.6"
 	picture = GFX_evt_monk
 	
 	only_rulers = yes
@@ -655,7 +655,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.0006A"	
+		name = "L3T.6A"	
 		ai_chance = {
 			factor = 40
 			#modifier = { factor =  10	learning = 20	}
@@ -695,7 +695,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.0006B"	
+		name = "L3T.6B"	
 		ai_chance = {
 			factor = 40
 			modifier = { factor = 100	NOT = { tier = baron }	}
@@ -743,7 +743,7 @@ narrative_event = {
 	}
 ###useless for now	
 #	option = {
-#		name = "L3T.0006C"	
+#		name = "L3T.6C"	
 #		ai_chance = {
 #			factor = 20
 #			modifier = { factor = 2.5	martial = 20	}
@@ -771,9 +771,9 @@ narrative_event = {
 
 #Attribution règle
 narrative_event = {
-	title = "NAMEL3T.0007"
-    id = L3T.0007
-	desc = "DESCL3T.0007"
+	title = "NAMEL3T.7"
+    id = L3T.7
+	desc = "DESCL3T.7"
 	picture = GFX_evt_monk
 	
 	only_rulers = yes
@@ -797,7 +797,7 @@ narrative_event = {
 	mean_time_to_happen = { months = 9 }	
 
 	option = {
-		name = "L3T.0007A"	
+		name = "L3T.7A"	
 		trigger = { religion = catholic }
 		random_demesne_title = {
 			limit = {
@@ -815,7 +815,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.0007B"	
+		name = "L3T.7B"	
 		trigger = { religion = catholic }
 		random_demesne_title = {
 			limit = {
@@ -833,7 +833,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.0007C"	
+		name = "L3T.7C"	
 		trigger = { religion = orthodox }
 		random_demesne_title = {
 			limit = {
@@ -968,15 +968,15 @@ character_event = {
 	immediate = {
 		if = {
 			limit = { FROM = { holding_type = castle } }
-			narrative_event = { id = L3T.0003 days = 1 }
+			narrative_event = { id = L3T.3 days = 1 }
 		}
 		if = {
 			limit = { FROM = { holding_type = city } }
-			narrative_event = { id = L3T.0004 days = 1 }
+			narrative_event = { id = L3T.4 days = 1 }
 		}
 		if = {
 			limit = { FROM = { holding_type = temple } }
-			narrative_event = { id = L3T.0006 days = 1 }
+			narrative_event = { id = L3T.6 days = 1 }
 		}
 	}
 }
