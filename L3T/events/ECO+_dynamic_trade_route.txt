@@ -51,7 +51,6 @@ province_event = {
 					has_province_flag = bloc_C
 					has_province_flag = bloc_D
 					has_province_flag = bloc_E
-					has_province_flag = bloc_F
 					
 					# To not give step B to distinct routes each other
 					any_neighbor_province = { has_province_flag = bloc_B }
@@ -178,7 +177,6 @@ province_event = {
 					has_province_flag = bloc_C
 					has_province_flag = bloc_D
 					has_province_flag = bloc_E
-					has_province_flag = bloc_F
 					any_neighbor_province = { has_province_flag = bloc_A }
 					any_neighbor_province = { has_province_flag = bloc_C }
 					any_neighbor_province = { has_province_flag = bloc_D }
@@ -297,7 +295,6 @@ province_event = {
 					has_province_flag = bloc_C
 					has_province_flag = bloc_D
 					has_province_flag = bloc_E
-					has_province_flag = bloc_F
 					any_neighbor_province = { has_province_flag = bloc_A }
 					any_neighbor_province = { has_province_flag = bloc_B }
 					any_neighbor_province = { has_province_flag = bloc_D }
@@ -416,7 +413,6 @@ province_event = {
 					has_province_flag = bloc_C
 					has_province_flag = bloc_D
 					has_province_flag = bloc_E
-					has_province_flag = bloc_F
 					any_neighbor_province = { has_province_flag = bloc_A }
 					any_neighbor_province = { has_province_flag = bloc_B }
 					any_neighbor_province = { has_province_flag = bloc_C }
