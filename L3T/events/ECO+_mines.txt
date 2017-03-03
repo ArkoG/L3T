@@ -196,7 +196,7 @@ province_event = {
 	mean_time_to_happen = { 
 		months = 6
 		#days = 10 #TESTING MTTH
-		modifier = { factor = 2	owner = { has_character_flag = refused_closing_mine } }
+		modifier = { factor = 2	owner = { has_character_flag = refused_closing_mine_moment } }
 	}
 
 	option = { 
