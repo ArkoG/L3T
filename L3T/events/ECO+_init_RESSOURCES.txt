@@ -32,7 +32,6 @@ province_event = {
 	mean_time_to_happen = { days = 10 }
 
 	immediate = {
-		set_province_flag = counted_resources
 		set_variable = { which = "resourceNb" value = 0 }
 		set_province_flag = ressources_testees
 		random_list = {
@@ -72,7 +71,6 @@ province_event = {
 	mean_time_to_happen = { days = 10 }
 
 	immediate = {
-		set_province_flag = counted_resources
 		set_variable = { which = "resourceNb" value = 0 }
 		set_province_flag = ressources_testees
 		random_list = {
@@ -126,7 +124,6 @@ province_event = {
 	mean_time_to_happen = { days = 10 }
 
 	immediate = {
-		set_province_flag = counted_resources
 		set_variable = { which = "resourceNb" value = 0 }
 		set_province_flag = ressources_testees
 		add_province_modifier = { name = foret1		duration = -1	}
@@ -173,7 +170,6 @@ province_event = {
 	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
-		set_province_flag = counted_resources
 		set_variable = { which = "resourceNb" value = 0 }
 		set_province_flag = ressources_testees
 		random_list = {
@@ -220,7 +216,6 @@ province_event = {
 	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
-		set_province_flag = counted_resources
 		set_variable = { which = "resourceNb" value = 0 }
 		set_province_flag = ressources_testees
 		add_province_modifier = { name = agriculture1		duration = -1	}
@@ -267,7 +262,6 @@ province_event = {
 	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
-		set_province_flag = counted_resources
 		set_variable = { which = "resourceNb" value = 0 }
 		set_province_flag = ressources_testees
 		random_list = {
@@ -313,7 +307,6 @@ province_event = {
 	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
-		set_province_flag = counted_resources
 		set_variable = { which = "resourceNb" value = 0 }
 		set_province_flag = ressources_testees
 		random_list = {
@@ -352,7 +345,6 @@ province_event = {
 	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
-		set_province_flag = counted_resources
 		set_variable = { which = "resourceNb" value = 0 }
 		set_province_flag = ressources_testees
 		random_list = {
@@ -398,7 +390,6 @@ province_event = {
 	mean_time_to_happen = { days = 10 }
 	
 	immediate = {
-		set_province_flag = counted_resources
 		set_variable = { which = "resourceNb" value = 0 }
 		set_province_flag = ressources_testees
 		random_list = {
