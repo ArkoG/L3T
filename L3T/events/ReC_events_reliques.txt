@@ -2247,7 +2247,7 @@ province_event = {
 		name = "REC.0151A"
 		trigger = { 
 			owner = {  OR = { religion = catholic  is_heresy_of = catholic } }
-			has_province_flag = vraie_relique107
+			has_province_flag = vraie_relique17
 			}
 		add_province_modifier = {	name = 	relique17	duration = -1	}
 		}
