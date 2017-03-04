@@ -154,7 +154,10 @@ ca_wall_5 = { #Grande enceinte
 
 ca_con_wall_6 = { #Murs Théodosiens
 	desc = ca_con_wall_6_desc
-	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CASTLE_CONSTRUCTION = 0
+		FROM = { prestige = 120 } #replaces prestige_cost
+	}
 	potential = { 
 		FROMFROM = { title = b_constantinople }
 	}
@@ -221,7 +224,10 @@ ca_tour_L3 = { #Tours en pierre maçonnées
 
 ca_tour_L4 = { #Tours rondes
 	desc = ca_tour_L4_desc
-	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CASTLE_CONSTRUCTION = 0
+		FROM = { prestige = 90 } #replaces prestige_cost
+	}
 	prerequisites = { 
 		FEODAL_mil
 	}
@@ -685,7 +691,10 @@ ca_eglise_L3 = { #Église
 
 ca_eglise_L4 = { #Grande église
 	desc = ca_eglise_L4_desc
-	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CASTLE_CONSTRUCTION = 0
+		FROM = { prestige = 90 } #replaces prestige_cost
+	}
 	prerequisites = { 
 		ca_town_3
 	}

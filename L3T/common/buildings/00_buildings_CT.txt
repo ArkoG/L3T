@@ -243,7 +243,10 @@ ct_training_grounds_2 = { #Porte gardée
 
 ct_training_grounds_3 = { #Porte de  la ville
 	desc = ct_training_grounds_3_desc
-	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CITY_CONSTRUCTION = 0
+		FROM = { prestige = 70} #replaces prestige_cost
+	}	
 	prerequisites = { 
 		CITE_L3
 	}
@@ -773,7 +776,10 @@ ct_eglise_L3 = { #Église
 
 ct_eglise_L4 = { #Grande église
 	desc = ct_eglise_L4_desc
-	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CITY_CONSTRUCTION = 0
+		FROM = { prestige = 90 } #replaces prestige_cost
+	}	
 	prerequisites = { 
 		ct_town_3
 	}
@@ -790,7 +796,10 @@ ct_eglise_L4 = { #Grande église
 
 ct_eglise_L5 = { #Basilique
 	desc = ct_eglise_L5_desc
-	trigger = { TECH_CITY_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CITY_CONSTRUCTION = 0
+		FROM = { prestige = 120 } #replaces prestige_cost
+	}	
 	prerequisites = { 
 		ct_town_4
 	}
