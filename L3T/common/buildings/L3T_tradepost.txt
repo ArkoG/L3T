@@ -1,133 +1,438 @@
 trade_post = {
 
-#LCDA/L3T 2.1 import
-#ADM bat, determines taxable base + scouting
-	tr_bureau_1 = { #bureau d'échange
-		desc = "tr_bureau_1_desc"
-		build_cost = 200
-		build_time = 365
-		ai_creation_factor = 88
-		scouting = yes
-		tax_income = 0.5
-		
+	TR_taverne_1 = { #Gargotte
+		desc = TR_taverne_1_desc
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		add_number_to_name = no	extra_tech_building_start = 10.0
-	}
-
-	tr_bureau_2 = { #bureau de commerce
-		desc = "tr_bureau_2_desc"
-		build_cost = 200
-		build_time = 365
-		upgrades_from = tr_bureau_1
-		ai_creation_factor = 88
-		scouting = yes
-		tax_income = 1.5
-		
-		trigger = { TECH_TRADE_PRACTICES = 0 }
-		add_number_to_name = no	extra_tech_building_start = 10.0
-	}
-
-#ECO bat, gives additional taxable base
-	tr_entrepot_1 = { #Dépôt
-		desc = "tr_entrepot_1_desc"
-		build_cost = 100
-		build_time = 182
-		ai_creation_factor = 90
-		tax_income = 0.4
-		
-		trigger = { TECH_TRADE_PRACTICES = 0 }
-		add_number_to_name = no	extra_tech_building_start = 10.0
-	}
-
-	tr_entrepot_2 = { #Entrepôt
-		desc = "tr_entrepot_2_desc"
-		build_cost = 150
-		build_time = 274
-		upgrades_from = tr_entrepot_1
-		ai_creation_factor = 89
-		tax_income = 0.6
-		
-		trigger = { TECH_TRADE_PRACTICES = 0 }
-		add_number_to_name = no	extra_tech_building_start = 10.0
-	}
-	
-#port maritime, gives taxable base and tredevalue
-tr_port_maritime_1 = { #débarcadère des marchands/maritime
-		desc = "tr_port_maritime_1_desc"
-		potential = { has_province_modifier = province_cotiere }
-		build_cost = 100
-		build_time = 182
-		ai_creation_factor = 100
-		tradevalue = 10
-		tax_income = 0.15
-		
-		trigger = { TECH_TRADE_PRACTICES = 0 }
-		add_number_to_name = no	extra_tech_building_start = 10.0
-	}
-
-	tr_port_maritime_2 = { #Port maritime
-		desc = "tr_port_maritime_2_desc"
-		build_cost = 150
-		build_time = 274
-		upgrades_from = tr_port_maritime_1
+		gold_cost = 100
+		 
+		build_time = 180
 		ai_creation_factor = 99
-		tradevalue = 15
-		tax_income = 0.15
-		
-		trigger = { TECH_TRADE_PRACTICES = 0 }
-		add_number_to_name = no	extra_tech_building_start = 10.0
+		tax_income = 0.1
+		garrison_size = 0.02
+		land_morale = 0.01
+		add_number_to_name = no
+
+		extra_tech_building_start = 2
 	}
 
-	tr_port_maritime_3 = { #Grand port maritime
-		desc = "tr_port_maritime_3_desc"
-		build_cost = 200
-		build_time = 365
-		upgrades_from = tr_port_maritime_2
+	TR_taverne_2 = { #Taverne
+		desc = TR_taverne_2_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		upgrades_from = TR_taverne_1
+		gold_cost = 150
+		 
+		build_time = 380
 		ai_creation_factor = 98
-		tradevalue = 20
 		tax_income = 0.2
-		
-		trigger = { TECH_TRADE_PRACTICES = 0 }
-		add_number_to_name = no	extra_tech_building_start = 10.0
+		garrison_size = 0.02
+		land_morale = 0.01
+		add_number_to_name = no
+
+		extra_tech_building_start = 4
 	}
-#garrison, gives garrison bonus + fort level
-	tr_garnison_1 = { #garde du comtpoir
-		desc = "tr_garnison_1_desc"
+
+	TR_taverne_3 = { #Auberge
+		desc = TR_taverne_3_desc
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		build_cost = 100
-		build_time = 182
-		ai_creation_factor = 91
+		upgrades_from = TR_taverne_2
+		gold_cost = 270
+		 
+		build_time = 640
+		ai_creation_factor = 97
+		tax_income = 0.2
+		garrison_size = 0.04
+		land_morale = 0.02
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_bureau_1 = { #Bureau d'échange
+		desc = TR_bureau_1_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		scouting=yes
+		gold_cost = 120
+		 
+		build_time = 180
+		ai_creation_factor = 99
+		local_tax_modifier = 0.02
+		tradevalue = 15
+		add_number_to_name = no
+
+		extra_tech_building_start = 4
+	}
+
+	TR_bureau_2 = { #Bureau de commerce
+		desc = TR_bureau_2_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		scouting=yes
+		upgrades_from = TR_bureau_1
+		gold_cost = 190
+		 
+		build_time = 380
+		ai_creation_factor = 98
+		local_tax_modifier = 0.03
+		tradevalue = 15
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_bureau_3 = { #Administration commerciale
+		desc = TR_bureau_3_desc
+		trigger = { 
+			TECH_TRADE_PRACTICES = 0
+			FROM = { prestige = 70 } #replaces prestige_cost
+		}
+		scouting=yes
+		prerequisites = { 
+			TR_port_maritime_1
+			TR_enceinte_2
+		}
+		upgrades_from = TR_bureau_2
+		gold_cost = 360
+		#prestige_cost = 70
+		build_time = 770
+		ai_creation_factor = 97
+		local_tax_modifier = 0.05
+		tech_growth_modifier = 0.05
+		tradevalue = 30
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_entrepot_1 = { #Dépôt de marchandises
+		desc = TR_entrepot_1_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		gold_cost = 100
+		 
+		build_time = 180
+		ai_creation_factor = 99
+		tax_income = 0.5
+		add_number_to_name = no
+
+		extra_tech_building_start = 4
+	}
+
+	TR_entrepot_2 = { #Entrepôt
+		desc = TR_entrepot_2_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		upgrades_from = TR_entrepot_1
+		gold_cost = 200
+		 
+		build_time = 550
+		ai_creation_factor = 98
+		tax_income = 1
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_entrepot_3 = { #Grands entrepôts
+		desc = TR_entrepot_3_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		upgrades_from = TR_entrepot_2
+		gold_cost = 270
+		 
+		build_time = 640
+		ai_creation_factor = 97
+		tax_income = 1
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_ress_biere_q_2 = { #Entrepôt à bières
+		desc = TR_ress_biere_q_2_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		not_if_x_exists = { TR_ress_biere_q_2}
+		potential = { 
+			OR = { 
+				has_province_modifier = agriculture3_biere_Q1  
+				has_province_modifier = agriculture3_biere_Q2  
+				has_province_modifier = agriculture3_biere_Q3 
+				}
+			}
+		prerequisites = { 
+			TR_entrepot_2
+			TR_bureau_2
+		}
+		gold_cost = 220
+		 
+		build_time = 550
+		ai_creation_factor = 98
+		tax_income = 1.5
+		monthly_character_prestige = 0.01
+		tradevalue = 10
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_ress_vin_q_2 = { #Entrepôt à vins
+		desc = TR_ress_vin_q_2_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		not_if_x_exists = { TR_ress_vin_q_2}
+		potential = {
+			OR = { 
+				has_province_modifier = agriculture3_vin_Q1
+				has_province_modifier = agriculture3_vin_Q2
+				has_province_modifier = agriculture3_vin_Q3
+				}
+			}
+		prerequisites = { 
+			TR_entrepot_2
+			TR_bureau_2
+		}
+		gold_cost = 220
+		 
+		build_time = 550
+		ai_creation_factor = 98
+		tax_income = 1.5
+		monthly_character_prestige = 0.01
+		tradevalue = 10
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_shipyard_1 = { #Petit chantier naval
+		desc = TR_shipyard_1_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		gold_cost = 100
+		 
+		build_time = 180
+		ai_creation_factor = 97
+		galleys = 2
+		tax_income = 0.5
+		add_number_to_name = no
+
+		extra_tech_building_start = 2
+	}
+
+	TR_shipyard_2 = { #Chantier naval
+		desc = TR_shipyard_2_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		upgrades_from = TR_shipyard_1
+		gold_cost = 220
+		 
+		build_time = 550
+		ai_creation_factor = 96
+		galleys = 3
+		tax_income = 0.5
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_shipyard_3 = { #Grand chantier naval
+		desc = TR_shipyard_3_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		upgrades_from = TR_shipyard_2
+		gold_cost = 210
+		 
+		build_time = 640
+		ai_creation_factor = 95
+		galleys = 5
+		tax_income = 0.5
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_cartographe_1 = { #Bureau des cartographes
+		desc = TR_cartographe_1_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		scouting=yes
+		gold_cost = 250
+		 
+		build_time = 270
+		ai_creation_factor = 96
+		local_tax_modifier = 0.02
+		tradevalue = 10
+		tech_growth_modifier = 0.05
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_cartographe_2 = { #Guilde des cartographes
+		desc = TR_cartographe_2_desc
+		trigger = {
+			TECH_TRADE_PRACTICES = 0
+			FROM = { prestige = 60 } #replaces prestige_cost
+			FROM = { has_nickname = nick_le_cartographe }
+		}
+		scouting=yes
+		gold_cost = 290
+		#prestige_cost = 60
+		build_time = 660
+		ai_creation_factor = 95
+		local_tax_modifier = 0.03
+		tradevalue = 10
+		tech_growth_modifier = 0.1
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_garnison_1 = { #Garde du comtpoir
+		desc = TR_garnison_1_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		gold_cost = 110
+		 
+		build_time = 180
+		ai_creation_factor = 95
 		retinuesize = 10
-		garrison_size = 1.0
-		fort_level = 0.5
-		
+		pikemen = 20
+		galleys = 1
+		add_number_to_name = no
 
-		add_number_to_name = no	extra_tech_building_start = 10.0
+		extra_tech_building_start = 10
 	}
 
-	tr_garnison_2 = { #garde renforcée
-		desc = "tr_garnison_2_desc"
-		trigger = { TECH_TRADE_PRACTICES = 0 }
-		build_cost = 150
-		build_time = 274
-		upgrades_from = tr_garnison_1
-		ai_creation_factor = 90
+	TR_garnison_2 = { #Garde renforcée
+		desc = TR_garnison_2_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { 
+			TR_enceinte_1
+		}
+		upgrades_from = TR_garnison_1
+		gold_cost = 150
+		 
+		build_time = 380
+		ai_creation_factor = 98
 		retinuesize = 10
-		garrison_size = 1.25
-		fort_level = 0.5
-		add_number_to_name = no	extra_tech_building_start = 10.0
+		pikemen = 30
+		galleys = 2
+		add_number_to_name = no
+
+		extra_tech_building_start = 2
 	}
 
-	tr_garnison_3 = { #garnison
-		desc = "tr_garnison_3_desc"
-		trigger = { TECH_TRADE_PRACTICES = 0 }
-		build_cost = 200
-		build_time = 365
-		upgrades_from = tr_garnison_2
-		ai_creation_factor = 89
+	TR_garnison_3 = { #Garnison du comptoir
+		desc = TR_garnison_3_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { 
+			TR_enceinte_2
+		}
+		upgrades_from = TR_garnison_2
+		gold_cost = 330
+		 
+		build_time = 640
+		ai_creation_factor = 97
 		retinuesize = 30
-		garrison_size = 1.5
+		pikemen = 50
+		galleys = 2
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_enceinte_1 = { #Palissade en bois
+		desc = TR_enceinte_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 110
+		 
+		build_time = 180
+		ai_creation_factor = 99
+		fort_level = 0.5
+		tax_income = -0.1
+		garrison_size = 0.5
+		add_number_to_name = no
+
+		extra_tech_building_start = 2
+	}
+
+	TR_enceinte_2 = { #Enceinte de pierre
+		desc = TR_enceinte_2_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { 
+			TR_garnison_1
+		}
+		upgrades_from = TR_enceinte_1
+		gold_cost = 220
+		 
+		build_time = 550
+		ai_creation_factor = 98
 		fort_level = 1
-		add_number_to_name = no	extra_tech_building_start = 10.0
+		tax_income = -0.2
+		garrison_size = 1
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_enceinte_3 = { #Enceinte épaisse
+		desc = TR_enceinte_3_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { 
+			TR_garnison_2
+		}
+		upgrades_from = TR_enceinte_2
+		gold_cost = 250
+		 
+		build_time = 480
+		ai_creation_factor = 97
+		fort_level = 1.5
+		tax_income = -0.2
+		garrison_size = 1.5
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_port_maritime_1 = { #Débarcadère marchand
+		desc = TR_port_maritime_1_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		gold_cost = 110
+		 
+		build_time = 180
+		ai_creation_factor = 97
+		tradevalue = 10
+		tax_income = 1
+		galleys = 1
+		add_number_to_name = no
+
+		extra_tech_building_start = 2
+	}
+
+	TR_port_maritime_2 = { #Port
+		desc = TR_port_maritime_2_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		prerequisites = { 
+			TR_bureau_1
+		}
+		upgrades_from = TR_port_maritime_1
+		gold_cost = 220
+		 
+		build_time = 550
+		ai_creation_factor = 96
+		tradevalue = 20
+		tax_income = 1.5
+		galleys = 2
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TR_port_maritime_3 = { #Grand port
+		desc = TR_port_maritime_3_desc
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		prerequisites = { 
+			TR_bureau_2
+		}
+		upgrades_from = TR_port_maritime_2
+		gold_cost = 480
+		 
+		build_time = 910
+		ai_creation_factor = 95
+		tradevalue = 20
+		tax_income = 2.5
+		galleys = 2
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
 	}
 }
