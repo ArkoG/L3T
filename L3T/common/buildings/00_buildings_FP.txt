@@ -38,10 +38,12 @@ family_palace = { #pure vanilla
 		ai_creation_factor = 104
 		
 		levy_size = 0.2
-		tax_income = 6
+		#tax_income = 6
+		tax_income = 4
 		max_tradeposts = 3
 		#add_number_to_name = no		
-		extra_tech_building_start = 2.0
+		#extra_tech_building_start = 2.0
+		extra_tech_building_start = 4.0
 	}
 	
 	# Palace
@@ -54,10 +56,12 @@ family_palace = { #pure vanilla
 		ai_creation_factor = 103
 		
 		levy_size = 0.3
-		tax_income = 8
+		#tax_income = 8
+		tax_income = 6
 		max_tradeposts = 3
 		#add_number_to_name = no		
-		extra_tech_building_start = 3.5
+		#extra_tech_building_start = 3.5
+		extra_tech_building_start = 10.0
 	}
 	
 	# Grand Palace
@@ -70,10 +74,12 @@ family_palace = { #pure vanilla
 		ai_creation_factor = 102
 		
 		levy_size = 0.4
-		tax_income = 10
+		#tax_income = 10
+		tax_income = 8
 		max_tradeposts = 3
 		#add_number_to_name = no		
-		extra_tech_building_start = 5.0
+		#extra_tech_building_start = 5.0
+		extra_tech_building_start = 10.0
 	}
 	
 	# Guard Barracks
@@ -119,7 +125,8 @@ family_palace = { #pure vanilla
 		heavy_infantry = 100
 		pikemen = 80
 		#add_number_to_name = no		
-		extra_tech_building_start = 4.0
+		#extra_tech_building_start = 4.0
+		extra_tech_building_start = 10.0		
 	}
 	
 	# Small Stable
@@ -163,7 +170,8 @@ family_palace = { #pure vanilla
 		light_cavalry = 105
 		knights = 45
 		#add_number_to_name = no		
-		extra_tech_building_start = 4.0
+		#extra_tech_building_start = 4.0
+		extra_tech_building_start = 10.0		
 	}
 	
 	# Bowyer
@@ -209,7 +217,8 @@ family_palace = { #pure vanilla
 		light_infantry = 120
 		archers = 120
 		#add_number_to_name = no		
-		extra_tech_building_start = 4.0
+		#extra_tech_building_start = 4.0
+		extra_tech_building_start = 10.0		
 	}
 	
 	# Map Room
@@ -303,7 +312,8 @@ family_palace = { #pure vanilla
 		levy_reinforce_rate = 0.3
 		retinuesize = 600
 		#add_number_to_name = no		
-		extra_tech_building_start = 4.0
+		#extra_tech_building_start = 4.0
+		extra_tech_building_start = 10.0		
 	}
 	
 	# Palace Garden
@@ -350,7 +360,8 @@ family_palace = { #pure vanilla
 		diplomacy = 1
 		monthly_character_prestige = 0.50
 		#add_number_to_name = no		
-		extra_tech_building_start = 4.0
+		#extra_tech_building_start = 4.0
+		extra_tech_building_start = 10.0		
 	}
 	
 	# Wine Cellar
@@ -397,7 +408,8 @@ family_palace = { #pure vanilla
 		martial = 1
 		monthly_character_prestige = 0.25
 		#add_number_to_name = no		
-		extra_tech_building_start = 4.0
+		#extra_tech_building_start = 4.0
+		extra_tech_building_start = 10.0		
 	}
 	
 	# Secluded Shrine
@@ -443,7 +455,8 @@ family_palace = { #pure vanilla
 		learning = 1
 		monthly_character_piety = 0.50
 		#add_number_to_name = no		
-		extra_tech_building_start = 4.0
+		#extra_tech_building_start = 4.0
+		extra_tech_building_start = 10.0		
 	}
 	
 	# Fortified Vault
@@ -469,10 +482,11 @@ family_palace = { #pure vanilla
 		prerequisites = { fp_mansion_2 }
 		ai_creation_factor = 99
 		
-		tax_income = 5
+		#tax_income = 5
 		intrigue = 1
 		#add_number_to_name = no		
-		extra_tech_building_start = 2.5
+		#extra_tech_building_start = 2.5
+		extra_tech_building_start = 4.0
 	}
 	
 	# Hidden Chamber
@@ -485,9 +499,10 @@ family_palace = { #pure vanilla
 		prerequisites = { fp_mansion_3 }
 		ai_creation_factor = 98
 		
-		tax_income = 6
+		#tax_income = 6
 		intrigue = 1
 		#add_number_to_name = no		
-		extra_tech_building_start = 4.0
+		#extra_tech_building_start = 4.0
+		extra_tech_building_start = 10.0		
 	}
 }
