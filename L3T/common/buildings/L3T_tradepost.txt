@@ -147,7 +147,7 @@ trade_post = {
 	TR_ress_biere_q_2 = { #Entrepôt à bières
 		desc = TR_ress_biere_q_2_desc
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { TR_ress_biere_q_2}
+		not_if_x_exists = { TR_ress_vin_q_2}
 		potential = {
 			has_province_modifier = province_cotiere 		
 			OR = { 
@@ -175,7 +175,7 @@ trade_post = {
 	TR_ress_vin_q_2 = { #Entrepôt à vins
 		desc = TR_ress_vin_q_2_desc
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { TR_ress_vin_q_2}
+		not_if_x_exists = { TR_ress_biere_q_2}
 		potential = {
 			has_province_modifier = province_cotiere 
 			OR = { 
