@@ -21,7 +21,7 @@ ca_wall_q_1 = { #Fossé
 	desc = ca_wall_q_1_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	gold_cost = 100
-	#prestige_cost = 0
+	 
 	build_time = 180
 	ai_creation_factor = 99
 	fort_level = 0.1
@@ -35,7 +35,7 @@ ca_wall_q_2 = { #Fossé avec piques
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	upgrades_from = ca_wall_q_1
 	gold_cost = 90
-	#prestige_cost = 0
+	 
 	build_time = 260
 	ai_creation_factor = 98
 	fort_level = 0.2
@@ -49,7 +49,7 @@ ca_wall_q_3 = { #Fossé inondé
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	upgrades_from = ca_wall_q_2
 	gold_cost = 150
-	#prestige_cost = 0
+	 
 	build_time = 480
 	ai_creation_factor = 97
 	fort_level = 0.4
@@ -66,7 +66,7 @@ ca_wall_q_4 = { #Douves
 	}
 	upgrades_from = ca_wall_q_3
 	gold_cost = 310
-	#prestige_cost = 0
+	 
 	build_time = 1100
 	ai_creation_factor = 96
 	fort_level = 0.3
@@ -79,7 +79,7 @@ ca_wall_1 = { #Talus défensif
 	desc = ca_wall_1_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	gold_cost = 160
-	#prestige_cost = 0
+	 
 	build_time = 270
 	ai_creation_factor = 100
 	fort_level = 0.1
@@ -93,7 +93,7 @@ ca_wall_2 = { #Palissade en bois
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	upgrades_from = ca_wall_1
 	gold_cost = 200
-	#prestige_cost = 0
+	 
 	build_time = 550
 	ai_creation_factor = 99
 	fort_level = 0.5
@@ -108,7 +108,7 @@ ca_wall_3 = { #Enceinte de pierre
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	upgrades_from = ca_wall_2
 	gold_cost = 400
-	#prestige_cost = 0
+	 
 	build_time = 910
 	ai_creation_factor = 98
 	fort_level = 1.2
@@ -124,7 +124,7 @@ ca_wall_4 = { #Enceinte épaisse
 	not_if_x_exists = { FEODAL_prod}
 	upgrades_from = ca_wall_3
 	gold_cost = 360
-	#prestige_cost = 0
+	 
 	build_time = 770
 	ai_creation_factor = 97
 	fort_level = 0.5
@@ -142,7 +142,7 @@ ca_wall_5 = { #Grande enceinte
 	}
 	upgrades_from = ca_wall_4
 	gold_cost = 590
-	#prestige_cost = 0
+	 
 	build_time = 1460
 	ai_creation_factor = 96
 	fort_level = 0.7
