@@ -4,7 +4,7 @@ trade_post = {
 		desc = TR_taverne_1_desc
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		gold_cost = 100
-		potential = { has_province_modifier = province_cotiere } 
+		potential = { port = yes FROM = { is_patrician = yes }}
 		build_time = 180
 		ai_creation_factor = 99
 		tax_income = 0.1
@@ -20,7 +20,7 @@ trade_post = {
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = TR_taverne_1
 		gold_cost = 150
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 380
 		ai_creation_factor = 98
 		tax_income = 0.2
@@ -36,7 +36,7 @@ trade_post = {
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = TR_taverne_2
 		gold_cost = 270
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 640
 		ai_creation_factor = 97
 		tax_income = 0.2
@@ -52,7 +52,7 @@ trade_post = {
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		scouting=yes
 		gold_cost = 120
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 180
 		ai_creation_factor = 99
 		local_tax_modifier = 0.02
@@ -68,7 +68,7 @@ trade_post = {
 		scouting=yes
 		upgrades_from = TR_bureau_1
 		gold_cost = 190
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }} 		 
 		build_time = 380
 		ai_creation_factor = 98
 		local_tax_modifier = 0.03
@@ -91,7 +91,7 @@ trade_post = {
 		}
 		upgrades_from = TR_bureau_2
 		gold_cost = 360
-		potential = { has_province_modifier = province_cotiere } 
+		potential = { port = yes FROM = { is_patrician = yes }} 
 		#prestige_cost = 70
 		build_time = 770
 		ai_creation_factor = 97
@@ -107,7 +107,7 @@ trade_post = {
 		desc = TR_entrepot_1_desc
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		gold_cost = 100
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }} 		 
 		build_time = 180
 		ai_creation_factor = 99
 		tax_income = 0.5
@@ -121,7 +121,7 @@ trade_post = {
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = TR_entrepot_1
 		gold_cost = 200
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 550
 		ai_creation_factor = 98
 		tax_income = 1
@@ -135,7 +135,7 @@ trade_post = {
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = TR_entrepot_2
 		gold_cost = 270
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 640
 		ai_creation_factor = 97
 		tax_income = 1
@@ -146,14 +146,15 @@ trade_post = {
 
 	TR_ress_biere_q_2 = { #Entrepôt à bières
 		desc = TR_ress_biere_q_2_desc
-		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { TR_ress_vin_q_2}
+		trigger = { TECH_TRADE_PRACTICES = 3 }
+		not_if_x_exists = { TR_ress_vin_q_2 }
 		potential = {
-			has_province_modifier = province_cotiere 		
+			port = yes
+			FROM = { is_patrician = yes } 		
 			OR = { 
 				has_province_modifier = agriculture3_biere_Q1  
-				has_province_modifier = agriculture3_biere_Q2  
-				has_province_modifier = agriculture3_biere_Q3 
+				#has_province_modifier = agriculture3_biere_Q2  #voir pour gradation avec plusieurs niveaux de bat
+				#has_province_modifier = agriculture3_biere_Q3 
 				}
 			}
 		prerequisites = { 
@@ -174,14 +175,15 @@ trade_post = {
 
 	TR_ress_vin_q_2 = { #Entrepôt à vins
 		desc = TR_ress_vin_q_2_desc
-		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { TR_ress_biere_q_2}
+		trigger = { TECH_TRADE_PRACTICES = 3 }
+		not_if_x_exists = { TR_ress_biere_q_2 }
 		potential = {
-			has_province_modifier = province_cotiere 
+			port = yes 
+			FROM = { is_patrician = yes }
 			OR = { 
 				has_province_modifier = agriculture3_vin_Q1
-				has_province_modifier = agriculture3_vin_Q2
-				has_province_modifier = agriculture3_vin_Q3
+				#has_province_modifier = agriculture3_vin_Q2
+				#has_province_modifier = agriculture3_vin_Q3
 				}
 			}
 		prerequisites = { 
@@ -204,7 +206,7 @@ trade_post = {
 		desc = TR_shipyard_1_desc
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		gold_cost = 100
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 180
 		ai_creation_factor = 97
 		galleys = 2
@@ -219,7 +221,7 @@ trade_post = {
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = TR_shipyard_1
 		gold_cost = 220
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }} 		 
 		build_time = 550
 		ai_creation_factor = 96
 		galleys = 3
@@ -234,7 +236,7 @@ trade_post = {
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = TR_shipyard_2
 		gold_cost = 210
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 640
 		ai_creation_factor = 95
 		galleys = 5
@@ -246,10 +248,10 @@ trade_post = {
 
 	TR_cartographe_1 = { #Bureau des cartographes
 		desc = TR_cartographe_1_desc
-		trigger = { TECH_TRADE_PRACTICES = 0 }
+		trigger = { TECH_TRADE_PRACTICES = 2 }
 		scouting=yes
 		gold_cost = 250
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 270
 		ai_creation_factor = 96
 		local_tax_modifier = 0.02
@@ -263,13 +265,14 @@ trade_post = {
 	TR_cartographe_2 = { #Guilde des cartographes
 		desc = TR_cartographe_2_desc
 		trigger = {
-			TECH_TRADE_PRACTICES = 0
+			TECH_TRADE_PRACTICES = 4
 			FROM = { prestige = 60 } #replaces prestige_cost
 			FROM = { has_nickname = nick_le_cartographe }
 		}
 		scouting=yes
+		upgrades_from = TR_cartographe_1
 		gold_cost = 290
-		potential = { has_province_modifier = province_cotiere } 
+		potential = { port = yes FROM = { is_patrician = yes }}
 		#prestige_cost = 60
 		build_time = 660
 		ai_creation_factor = 95
@@ -285,7 +288,7 @@ trade_post = {
 		desc = TR_garnison_1_desc
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		gold_cost = 110
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 180
 		ai_creation_factor = 95
 		retinuesize = 10
@@ -304,7 +307,7 @@ trade_post = {
 		}
 		upgrades_from = TR_garnison_1
 		gold_cost = 150
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}	 
 		build_time = 380
 		ai_creation_factor = 98
 		retinuesize = 10
@@ -323,7 +326,7 @@ trade_post = {
 		}
 		upgrades_from = TR_garnison_2
 		gold_cost = 330
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 640
 		ai_creation_factor = 97
 		retinuesize = 30
@@ -338,7 +341,7 @@ trade_post = {
 		desc = TR_enceinte_1_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
 		gold_cost = 110
-		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 180
 		ai_creation_factor = 99
 		fort_level = 0.5
@@ -351,13 +354,13 @@ trade_post = {
 
 	TR_enceinte_2 = { #Enceinte de pierre
 		desc = TR_enceinte_2_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
 		prerequisites = { 
 			TR_garnison_1
 		}
 		upgrades_from = TR_enceinte_1
 		gold_cost = 220
-		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 550
 		ai_creation_factor = 98
 		fort_level = 1
@@ -370,13 +373,13 @@ trade_post = {
 
 	TR_enceinte_3 = { #Enceinte épaisse
 		desc = TR_enceinte_3_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
 		prerequisites = { 
 			TR_garnison_2
 		}
 		upgrades_from = TR_enceinte_2
 		gold_cost = 250
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 480
 		ai_creation_factor = 97
 		fort_level = 1.5
@@ -391,7 +394,7 @@ trade_post = {
 		desc = TR_port_maritime_1_desc
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		gold_cost = 110
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 180
 		ai_creation_factor = 97
 		tradevalue = 10
@@ -410,7 +413,7 @@ trade_post = {
 		}
 		upgrades_from = TR_port_maritime_1
 		gold_cost = 220
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 550
 		ai_creation_factor = 96
 		tradevalue = 20
@@ -429,7 +432,7 @@ trade_post = {
 		}
 		upgrades_from = TR_port_maritime_2
 		gold_cost = 480
-		potential = { has_province_modifier = province_cotiere } 		 
+		potential = { port = yes FROM = { is_patrician = yes }}		 
 		build_time = 910
 		ai_creation_factor = 95
 		tradevalue = 20
