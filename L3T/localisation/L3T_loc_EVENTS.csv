@@ -188,18 +188,9 @@ XYLO.02120;Success;Réussite;;;;;;;;;;;;x
 DESCXYLO.02120;Victory ! \n Bandits left [From.Location.GetName] but the province needs to recover.;Notre démarche n'a pas été vaine et nous avons pu démanteler ce nid de bandits qui empoisonnait la région de [From.Location.GetName].\n Espérons que la région s'en remette assez rapidement...;;;;;;;;;;;;x
 XYLO.02121;Failure;Echec;;;;;;;;;;;;x
 DESCXYLO.02121;Fail ! \n Bandits will now probably re-inforce their presence in [From.Location.GetName]...;Malgré tous nos efforts, nous ne sommes pas parvenus à nous débarraser des fauteurs de troubles de la région de [From.Location.GetName].\n Pillages, vols et destructions restent le lot quotidien des populations locales. Il est à redouter à présent que cette entreprise qui a déjà bien trop duré ne cesse de prospérer et ne conteste encore plus ouvertement notre autorité.;;;;;;;;;;;;x
-XYLO.02131;Free holding and failure;Fief libre + échec;;;;;;;;;;;;x
-DESCXYLO.02131;As expected, the bandits in [From.Location.GetName] continue to proliferate.;Comme nous devions le craindre, les bandits ont continué de plus belles leurs méfaits et ont désormais la mainmise sur une bonne partie de l'économie de [From.Location.GetName].;;;;;;;;;;;;x
-XYLO.02131A;Wonderfull news... ;Super nouvelle... ;;;;;;;;;;;;x
-XYLO.02132;No free holding and failure;Pas de Fief libre + échec;;;;;;;;;;;;x
-DESCXYLO.02132;Bandits left [From.Location.GetName]. The province had become too poor for them haha !;Les malandrins ont fini par quitter [From.Location.GetName].\n A croire qu'à force de pillages et vols, la province est devenue trop pauvre pour eux...;;;;;;;;;;;;x
-XYLO.02132A;Well, for us either sadly...;Elle n'en est pas moins pauvre pour nous...;;;;;;;;;;;;x
-XYLO.0214;Landing;Installation;;;;;;;;;;;;x
-DESCXYLO.0214;The bandits network of [From.Location.GetName] is now lead by a famous hoodlum !;Le réseau de bandits qui terrorisent la région de [From.Location.GetName] est paraît-il mené par un chef et s'est même construit une base d'où organiser son petit commerce et mener ses exactions. Il va falloir l'en déloger !;;;;;;;;;;;;x
-XYLO.0214A;Damn !;Enfer et damnation !!;;;;;;;;;;;;x
-creation_bandit;A bandit leader appears in the province\n;Un meneur de bandits apparait dans la province\n;;;;;;;;;;;x
-DESCXYLO.0217;[Root.Location.GetName] is now free from bandits' rule but will need time to recover.;Le propriétaire du Repaire de bandits ayant définitevement quitté les lieux, la province de [Root.Location.GetName] va pouvoir se remettre de cette dure et éprouvante période pour sa population et son économie. Selon l'ampleur des dégâts, cela peut prendre quelques années avant un retour total à la normale.;;;;;;;;;;;;x
-XYLO.0217A;It is already a relief for us all !;C'est un déjà soulagement pour tous !;;;;;;;;;;;;x
+XYLO.0213;Free holding and failure;Fief libre + échec;;;;;;;;;;;;x
+DESCXYLO.0213;As expected, the bandits in [From.Location.GetName] continue to proliferate.;Comme nous devions le craindre, les bandits ont continué de plus belles leurs méfaits et ont désormais la mainmise sur une bonne partie de l'économie de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.0213A;Wonderfull news... ;Super nouvelle... ;;;;;;;;;;;;x
 la_province_se_remet;Province recovers;La province se remet;;;;;;;;;;;;x
 la_province_se_remet_desc;Province recovers from bandits' rule;Après une occupation prolongée par un chef bandit et les méfaits qu'il a fait subir à cette province, il faut du temps pour que son économie se redresse.;;;;;;;;;;;;x
 XYLO.0219;Looted holding;Baronnie pillée;;;;;;;;;;;;x

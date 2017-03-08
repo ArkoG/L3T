@@ -91,7 +91,7 @@ castle = {
 		desc = "FEODAL_mil_desc"
 		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { FEODAL_adm FEODAL_prod REPAIREVOLEUR }
+		not_if_x_exists = { FEODAL_adm FEODAL_prod }
 		potential = { NOT = { religion_group = pagan_group } }		
 		gold_cost = 0.0
 		build_time = 8
@@ -111,7 +111,7 @@ castle = {
 		desc = "FEODAL_adm_desc"
 		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { FEODAL_mil FEODAL_prod REPAIREVOLEUR }
+		not_if_x_exists = { FEODAL_mil FEODAL_prod }
 		gold_cost = 0.0
 		build_time = 8
 		#fort_level = 1.0
@@ -129,7 +129,7 @@ castle = {
 		desc = "FEODAL_prod_desc"
 		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		not_if_x_exists = { FEODAL_adm FEODAL_mil REPAIREVOLEUR }
+		not_if_x_exists = { FEODAL_adm FEODAL_mil }
 		gold_cost = 0.0
 		build_time = 8
 		fort_level = -1
