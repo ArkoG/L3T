@@ -213,11 +213,25 @@ province_event = {
 		clr_province_flag = tentative_contre_bandits
 		clr_province_flag = echec_contre_les_bandits
 		owner = { prestige = 50 }
-		random_list = {
-			10 = {	add_province_modifier = { name = la_province_se_remet duration =   90 } }#3 mois			
-			50 = {	add_province_modifier = { name = la_province_se_remet duration =  365 } }#1 an	
-			25 = {	add_province_modifier = { name = la_province_se_remet duration =  730 } }#2 ans	
-			15 = {	add_province_modifier = { name = la_province_se_remet duration = 1095 } }#3 ans
+		if = {
+			limit = { has_province_modifier = bandits_installes }
+			remove_province_modifier = bandits_installes }
+			random_list = {
+				10 = {	add_province_modifier = { name = la_province_se_remet duration = 1095 } }#3 ans			
+				50 = {	add_province_modifier = { name = la_province_se_remet duration = 1825 } }#5 ans	
+				25 = {	add_province_modifier = { name = la_province_se_remet duration = 2555 } }#7 ans	
+				15 = {	add_province_modifier = { name = la_province_se_remet duration = 3650 } }#10 ans
+			}
+			
+		}
+		if = { #ELSE
+			limit = { NOT = { has_province_modifier = bandits_installes } }
+			random_list = {
+				10 = {	add_province_modifier = { name = la_province_se_remet duration =   90 } }#3 mois			
+				50 = {	add_province_modifier = { name = la_province_se_remet duration =  365 } }#1 an	
+				25 = {	add_province_modifier = { name = la_province_se_remet duration =  730 } }#2 ans	
+				15 = {	add_province_modifier = { name = la_province_se_remet duration = 1095 } }#3 ans
+			}
 		}
 	}
 } #end of story
@@ -234,7 +248,6 @@ province_event = {
 			has_province_flag = espion_envoye
 			has_province_flag = marechal_envoye
 		}
-		NOT = { owner = { any_demesne_province = { has_province_modifier = bandits_installes }}}
 		NOT = { has_province_flag = echec_contre_les_bandits }
 	}
 
@@ -503,7 +516,11 @@ province_event = {
 		name = XYLO.0219A
 		trigger = { owner = { war = no } }
 		ai_chance = { factor = 100 }
-		# TODO: The event chain also activable by decision
+		
+		# Action
+		clr_province_flag = echec_contre_les_bandits # Need to be clear in order to use previous code
+		hidden_tooltip = { province_event = { id = XYLO.0212 days = 10 } }
+		
 		# The holding is looted
 		random_province_holding = {
 			limit = { has_title_flag = current_looted_title }
