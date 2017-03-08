@@ -13,10 +13,6 @@ province_event = {
 	picture = GFX_evt_burning_house
 	
 	trigger = {
-		has_game_rule = {
-			name = outlaws
-			value = on
-		}
 		NOT = { 
 			has_province_flag = tentative_contre_bandits
 			has_province_flag = echec_contre_les_bandits
@@ -650,10 +646,6 @@ province_event = {
 	#notification = yes
 	
 	trigger = {
-		has_game_rule = {
-			name = outlaws
-			value = on
-		}
 		owner = { 
 			wealth = 0
 			demesne_efficiency = 1.0
