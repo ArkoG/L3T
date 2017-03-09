@@ -1,8 +1,4 @@
 OUTLAWS TODO LIST
-- Succession, the successor is choosen in order
-	-> Legitimated heir (WARNING he can be titled, ...)
-	-> A courtier
-	-> A created character
 - Manage the attack (or other actions) against the installed outlaws (same as no-installed outlaws?)
 	-> The outlaws have an event to attack the baronnies if they are not in war (only cities and temple? even the province capital?)
 	-> The barony have for 1 year the modifier looted = -20% d'or OR bloodshed = -20% troupes
@@ -10,54 +6,29 @@ OUTLAWS TODO LIST
 	-> The owner of the province received an event informing it
 		> Loss of prestige (or piety if it is a temple)
 		> If he decided to do nothing (choice or in war), he also lost opinion with the baron (5 years)
-	-> The province owner decided to act
-		> Send army (i.e declare war)
-		> Send spys to assassinate the leader
-		> Send spys to confuse the outlaws
 - Scoring for the outlaw power
 	-> Increasing
 		> At the beginning
 		> Duration/time
-		> Build new buildings
-		> Succession
 		> Looting (and other events like an attack during huntig)
 	-> Decreasing
 		> Events
-		> Succession
 	-> If so few power => disapearing
-	-> If so great power => feodal leader/mercenary band
-- Make wounded or killed the bandit in the attack during hunting
+	-> If so great power => other action with bad effects
+- Make wounded or killed by the bandit in the attack during hunting
 - Change outlaw portrait (interface/portrait_properties but incompatible)
 - Make intervention during summer feast (see Robin Hood in legends_events)
 - Make intervention during great tournament (see Robin Hood in legends_events)
 - Events for pirates in provinces with trade post (see republic_trade_events)
 	-> apply it for both trade post and province owners
 	-> see gitl3tsynchro for examples (9th January)
-- Add jobs for fight outlaws (Bad Idea? IA will used it?)
-	-> add text to existing jobs
-	-> do events with these jobs
 - Add an ambition to expel outlaws
 	-> events chains
 - Increase prestige of the outlaw expulsion (20-50 seems reasonnable)
 - Forbid the resource progression when outlaws are in the province (Wait update of the resources)
-- Use Cases Belli dejure_barony_claim to declare war
 
 TEST TODO
-- How the IA manage the outlaws
-	-> Now there is no management (i.e wait death and no successor)
-- Have outlaws, wait 2 years (or more), kill the leader (several times if needed in order to have no successor), have new outlaws
-
-BUG
-- Decision to have full quantity of troops for the outlaw
-	-> Scenario : 1)Have outlaws 2)Remove them rapidly 3)Have new outlaws
-
-POTENTIAL BUG (i.e to investigate)
-XYLO.02120 and XYLO.02121 have not exactly the same triggers
-In some case, if we choose to do something, the failure is impossible.
-=> I think 
-	NOT = { owner = { any_demesne_province = { has_province_modifier = bandits_installes }}}
-will be replaced by
-	NOT = { has_province_modifier = bandits_installes }
+- How the IA manage the outlaws?
 	
 SLACK : gitl3tsynchro 9th January 2016
 it would be cool to get a pirate holding made from a tradepost but it is impossible
