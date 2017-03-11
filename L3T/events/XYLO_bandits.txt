@@ -357,7 +357,6 @@ province_event = {
 			name = raids_pirates
 			duration = -1
 		}
-		set_province_flag = raids_pirates
 	}
 
 	option = {
@@ -400,7 +399,6 @@ province_event = {
 	
 	immediate = {
 		remove_province_modifier = raids_pirates
-		clr_province_flag = raids_pirates
 	}
 
 	option = {
