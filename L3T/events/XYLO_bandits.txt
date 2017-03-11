@@ -215,7 +215,7 @@ province_event = {
 		owner = { prestige = 50 }
 		if = {
 			limit = { has_province_modifier = bandits_installes }
-			remove_province_modifier = bandits_installes }
+			remove_province_modifier = bandits_installes
 			random_list = {
 				10 = {	add_province_modifier = { name = la_province_se_remet duration = 1095 } }#3 ans			
 				50 = {	add_province_modifier = { name = la_province_se_remet duration = 1825 } }#5 ans	
