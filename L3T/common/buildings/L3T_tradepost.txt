@@ -64,7 +64,7 @@ trade_post = {
 
 	TR_bureau_2 = { #Bureau de commerce
 		desc = TR_bureau_2_desc
-		trigger = { TECH_TRADE_PRACTICES = 0 }
+		trigger = { TECH_TRADE_PRACTICES = 1 }
 		scouting=yes
 		upgrades_from = TR_bureau_1
 		gold_cost = 190
@@ -81,8 +81,9 @@ trade_post = {
 	TR_bureau_3 = { #Administration commerciale
 		desc = TR_bureau_3_desc
 		trigger = { 
-			TECH_TRADE_PRACTICES = 0
+			TECH_TRADE_PRACTICES = 2
 			FROM = { prestige = 70 } #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
 		}
 		scouting=yes
 		prerequisites = { 
@@ -118,7 +119,7 @@ trade_post = {
 
 	TR_entrepot_2 = { #Entrepôt
 		desc = TR_entrepot_2_desc
-		trigger = { TECH_TRADE_PRACTICES = 0 }
+		trigger = { TECH_TRADE_PRACTICES = 1 }
 		upgrades_from = TR_entrepot_1
 		gold_cost = 200
 		potential = { port = yes FROM = { is_patrician = yes }}		 
@@ -132,7 +133,7 @@ trade_post = {
 
 	TR_entrepot_3 = { #Grands entrepôts
 		desc = TR_entrepot_3_desc
-		trigger = { TECH_TRADE_PRACTICES = 0 }
+		trigger = { TECH_TRADE_PRACTICES = 2 }
 		upgrades_from = TR_entrepot_2
 		gold_cost = 270
 		potential = { port = yes FROM = { is_patrician = yes }}		 
@@ -267,6 +268,7 @@ trade_post = {
 		trigger = {
 			TECH_TRADE_PRACTICES = 4
 			FROM = { prestige = 60 } #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
 			FROM = { has_nickname = nick_le_cartographe }
 		}
 		scouting=yes

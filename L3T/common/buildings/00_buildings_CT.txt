@@ -246,6 +246,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 	trigger = { 
 		TECH_CITY_CONSTRUCTION = 0
 		FROM = { prestige = 70} #replaces prestige_cost
+		custom_tooltip = { text = TOOLTIP_prestige_building }
 	}	
 	prerequisites = { 
 		CITE_L3
@@ -779,6 +780,7 @@ ct_eglise_L4 = { #Grande église
 	trigger = { 
 		TECH_CITY_CONSTRUCTION = 0
 		FROM = { prestige = 90 } #replaces prestige_cost
+		custom_tooltip = { text = TOOLTIP_prestige_building }
 	}	
 	prerequisites = { 
 		ct_town_3
@@ -799,6 +801,7 @@ ct_eglise_L5 = { #Basilique
 	trigger = { 
 		TECH_CITY_CONSTRUCTION = 0
 		FROM = { prestige = 120 } #replaces prestige_cost
+		custom_tooltip = { text = TOOLTIP_prestige_building }
 	}	
 	prerequisites = { 
 		ct_town_4
