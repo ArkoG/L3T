@@ -154,7 +154,7 @@ character_event = {
 			holding_type = trade_post 
 			has_building = TR_bureau_3
 		}
-		NOT = { FROM = { holder_scope = { has_character_flag = BONUS_TR_bureau_35 } } }
+		NOT = { FROM = { holder_scope = { has_character_flag = BONUS_TR_bureau_3 } } }
 	}
 	
 	immediate = {
