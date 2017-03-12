@@ -3,8 +3,24 @@ namespace = L3T
 # Détection de la carte
 character_event = {
     id = L3T.10
-	title = "L3T.10"
-	desc = "DESCL3T.10"
+	title = "NAMEL3T.10"
+	#desc = "DESCL3T.10"
+	desc = {
+		trigger = { has_global_flag = running_LCDA }
+		text = DESCL3T.10_LCDA
+	}
+	desc = {
+		trigger = { has_global_flag = SWMH }
+		text = DESCL3T.10_SWMH
+	}	
+	desc = {
+		trigger = { 
+			NOT = { has_global_flag = SWMH }
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = DESCL3T.10_VANILLA
+	}
+	
 	picture = GFX_evt_CK1
 	major = yes
 	hide_new = yes
@@ -15,7 +31,7 @@ character_event = {
 	
 	trigger = {
 		NOT = {
-			has_global_flag = running_LCDA	
+			had_global_flag = { flag = running_LCDA days = 2 }
 			has_global_flag = running_VANILLA
 			# The SWMH flag is already given when creating history
 			had_global_flag = { flag = SWMH days = 2 }
@@ -23,14 +39,16 @@ character_event = {
 	}
 	
 	option = {	
-		name = "L3T.10A"	
+		#name = "L3T.10A"	
+		name = OK
 		ai_chance = { factor = 0 }
 		trigger = {
 			ai = no
 			has_global_flag = SWMH
 		}
+		#SWMH coasts, land, rivers
 		hidden_tooltip = {
-			any_province = { #SWMH coasts, land, rivers
+			any_province = { 
 				province_event = { id = L3T.20 days = 10 }
 				province_event = { id = L3T.21 days = 10 }
 				province_event = { id = L3T.22 days = 10 }
@@ -38,32 +56,37 @@ character_event = {
 		}
 		set_global_flag = paix_de_dieu 
 	}
-	# option = {	
+	option = {	
 		# name = "L3T.10B"	
-		# ai_chance = { factor = 0 }
-		# trigger = {
-			# ai = no
-			# NOT = { has_global_flag = LCDA }
-		# }
-		# hidden_tooltip = {
-			# any_province = {
-				# province_event = { id = L3T.30 days = 10 }
-				# province_event = { id = L3T.31 days = 10 }
-				# province_event = { id = L3T.32 days = 10 }
-			# }
-		# }
-		# set_global_flag = running_LCDA	
-		# set_global_flag = paix_de_dieu 
-	# }
+		name = OK
+		ai_chance = { factor = 0 }
+		trigger = {
+			ai = no
+			has_global_flag = running_LCDA
+		}
+		#LCDA coasts, land, rivers
+		hidden_tooltip = {
+			any_province = {
+				province_event = { id = L3T.30 days = 10 }
+				province_event = { id = L3T.31 days = 10 }
+				province_event = { id = L3T.32 days = 10 }
+			}
+		}
+		set_global_flag = running_LCDA	
+		set_global_flag = paix_de_dieu 
+	}
 	option = {
-		name = "L3T.10C"	
+		#name = "L3T.10C"	
+		name = OK
 		ai_chance = { factor = 0 }
 		trigger = {
 			ai = no
 			NOT = { has_global_flag = SWMH }
+			NOT = { has_global_flag = running_LCDA }			
 		}
+		#VANILLA coasts, land, rivers
 		hidden_tooltip = {
-			any_province = { #vanilla coasts, land, rivers
+			any_province = { 
 				province_event = { id = L3T.25 days = 10 }
 				province_event = { id = L3T.26 days = 10 }
 				province_event = { id = L3T.27 days = 10 }
