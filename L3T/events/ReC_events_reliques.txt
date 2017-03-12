@@ -2982,8 +2982,8 @@ province_event = {
 	mean_time_to_happen = { months = 6	}
 
 	immediate = {
-		set_global_flag = relique_achercher_03_confirmee
-		add_province_modifier = {	name = 	relique_achercher_03	duration = -1	hidden = yes }
+		set_global_flag = relique_achercher_02_confirmee
+		add_province_modifier = {	name = 	relique_achercher_02	duration = -1	hidden = yes }
 		}
 }
 province_event = {
