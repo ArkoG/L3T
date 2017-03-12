@@ -13,14 +13,14 @@ character_event = {
 			tier = baron	
 			holding_type = castle 
 			has_building = ca_tour_L4
+			NOT = { has_title_flag = BONUS_ca_tour_L4 }
 		}
-		NOT = { FROM = { holder_scope = { has_character_flag = BONUS_ca_tour_L4 } } }
 	}
 	
 	immediate = {
 		FROM = { 
-			holder_scope = { 
-				set_character_flag = BONUS_ca_tour_L4
+			set_title_flag = BONUS_ca_tour_L4
+			holder_scope = {
 				prestige = -90
 			}
 		}
@@ -36,14 +36,14 @@ character_event = {
 			tier = baron	
 			holding_type = castle 
 			has_building = ca_eglise_L4
+			NOT = { has_title_flag = BONUS_ca_eglise_L4 }
 		}
-		NOT = { FROM = { holder_scope = { has_character_flag = BONUS_ca_eglise_L4 } } }
 	}
 	
 	immediate = {
 		FROM = { 
-			holder_scope = { 
-				set_character_flag = BONUS_ca_eglise_L4
+			set_title_flag = BONUS_ca_eglise_L4
+			holder_scope = {
 				prestige = -90
 			}
 		}
@@ -59,14 +59,14 @@ character_event = {
 			tier = baron	
 			holding_type = castle 
 			has_building = ca_con_wall_6
+			NOT = { has_title_flag = BONUS_ca_con_wall_6 }
 		}
-		NOT = { FROM = { holder_scope = { has_character_flag = BONUS_ca_con_wall_6 } } }
 	}
 	
 	immediate = {
-		FROM = { 
-			holder_scope = { 
-				set_character_flag = BONUS_ca_con_wall_6
+		FROM = {
+			set_title_flag = BONUS_ca_con_wall_6
+			holder_scope = {
 				prestige = -120
 			}
 		}
@@ -83,14 +83,14 @@ character_event = {
 			tier = baron	
 			holding_type = city 
 			has_building = ct_training_grounds_3
+			NOT = { has_title_flag = BONUS_ct_training_grounds_3 }
 		}
-		NOT = { FROM = { holder_scope = { has_character_flag = BONUS_ct_training_grounds_3 } } }
 	}
 	
 	immediate = {
-		FROM = { 
-			holder_scope = { 
-				set_character_flag = BONUS_ct_training_grounds_3
+		FROM = {
+			set_title_flag = BONUS_ct_training_grounds_3
+			holder_scope = {
 				prestige = -70
 			}
 		}
@@ -106,14 +106,14 @@ character_event = {
 			tier = baron	
 			holding_type = city  
 			has_building = ct_eglise_L4
+			NOT = { has_title_flag = BONUS_ct_eglise_L4 }
 		}
-		NOT = { FROM = { holder_scope = { has_character_flag = BONUS_ct_eglise_L4 } } }
 	}
 	
 	immediate = {
-		FROM = { 
-			holder_scope = { 
-				set_character_flag = BONUS_ct_eglise_L4
+		FROM = {
+			set_title_flag = BONUS_ct_eglise_L4
+			holder_scope = {
 				prestige = -90
 			}
 		}
@@ -129,14 +129,14 @@ character_event = {
 			tier = baron	
 			holding_type = city  
 			has_building = ct_eglise_L5
+			NOT = { has_title_flag = BONUS_ct_eglise_L5 }
 		}
-		NOT = { FROM = { holder_scope = { has_character_flag = BONUS_ct_eglise_L5 } } }
 	}
 	
 	immediate = {
 		FROM = { 
-			holder_scope = { 
-				set_character_flag = BONUS_ct_eglise_L5
+			set_title_flag = BONUS_ct_eglise_L5
+			holder_scope = {
 				prestige = -120
 			}
 		}
@@ -151,16 +151,15 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = trade_post 
-			has_building = TR_bureau_3
+			location = { trade_post_has_building = TR_bureau_3 }
+			NOT = { has_title_flag = BONUS_TR_bureau_3 }
 		}
-		NOT = { FROM = { holder_scope = { has_character_flag = BONUS_TR_bureau_3 } } }
 	}
 	
 	immediate = {
 		FROM = { 
-			holder_scope = { 
-				set_character_flag = BONUS_TR_bureau_3
+			set_title_flag = BONUS_TR_bureau_3
+			holder_scope = {
 				prestige = -70
 			}
 		}
@@ -174,16 +173,15 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = trade_post  
-			has_building = TR_cartographe_2
+			location = { trade_post_has_building = TR_cartographe_2 }
+			NOT = { has_title_flag = BONUS_TR_cartographe_2 }
 		}
-		NOT = { FROM = { holder_scope = { has_character_flag = BONUS_TR_cartographe_2 } } }
 	}
 	
 	immediate = {
 		FROM = { 
-			holder_scope = { 
-				set_character_flag = BONUS_TR_cartographe_2
+			set_title_flag = BONUS_TR_cartographe_2
+			holder_scope = {
 				prestige = -60
 			}
 		}
