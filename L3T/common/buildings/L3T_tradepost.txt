@@ -82,8 +82,8 @@ trade_post = {
 		desc = TR_bureau_3_desc
 		trigger = { 
 			TECH_TRADE_PRACTICES = 2
-			FROM = { prestige = 70 } #replaces prestige_cost
-			custom_tooltip = { text = TOOLTIP_prestige_building }
+			#FROM = { prestige = 70 } #replaces prestige_cost
+			#custom_tooltip = { text = TOOLTIP_prestige_building }
 		}
 		scouting=yes
 		prerequisites = { 
@@ -91,7 +91,8 @@ trade_post = {
 			TR_enceinte_2
 		}
 		upgrades_from = TR_bureau_2
-		gold_cost = 360
+		#gold_cost = 360
+		gold_cost = 430
 		potential = { port = yes FROM = { is_patrician = yes }} 
 		#prestige_cost = 70
 		build_time = 770
@@ -267,15 +268,16 @@ trade_post = {
 		desc = TR_cartographe_2_desc
 		trigger = {
 			TECH_TRADE_PRACTICES = 4
-			FROM = { prestige = 60 } #replaces prestige_cost
-			custom_tooltip = { text = TOOLTIP_prestige_building }
+			#FROM = { prestige = 60 } #replaces prestige_cost
+			#custom_tooltip = { text = TOOLTIP_prestige_building }
 			FROM = { has_nickname = nick_le_cartographe }
 		}
 		scouting=yes
 		upgrades_from = TR_cartographe_1
-		gold_cost = 290
+		#gold_cost = 290
+		gold_cost = 350 #initial gold cost+prestige cost
 		potential = { port = yes FROM = { is_patrician = yes }}
-		#prestige_cost = 60
+		monthly_character_prestige = 0.05
 		build_time = 660
 		ai_creation_factor = 95
 		local_tax_modifier = 0.03

@@ -142,51 +142,52 @@ character_event = {
 		}
 	}
 }
-#holding_type = trade_post
-character_event = {
-	id = L3T.236
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		FROM = { 
-			tier = baron	
-			location = { trade_post_has_building = TR_bureau_3 }
-			NOT = { has_title_flag = BONUS_TR_bureau_3 }
-		}
-	}
-	
-	immediate = {
-		FROM = { 
-			set_title_flag = BONUS_TR_bureau_3
-			holder_scope = {
-				prestige = -70
-			}
-		}
-	}
-}
-character_event = {
-	id = L3T.237
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		FROM = { 
-			tier = baron	
-			location = { trade_post_has_building = TR_cartographe_2 }
-			NOT = { has_title_flag = BONUS_TR_cartographe_2 }
-		}
-	}
-	
-	immediate = {
-		FROM = { 
-			set_title_flag = BONUS_TR_cartographe_2
-			holder_scope = {
-				prestige = -60
-			}
-		}
-	}
-}
+
+#character_event = {
+#	id = L3T.236
+#	hide_window = yes
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#		FROM = { 
+#			tier = baron	
+#			location = { trade_post_has_building = TR_bureau_3 }
+#			NOT = { has_title_flag = BONUS_TR_bureau_3 }
+#		}
+#	}
+#	
+#	immediate = {
+#		FROM = { 
+#			set_title_flag = BONUS_TR_bureau_3
+#			holder_scope = {
+#				prestige = -70
+#			}
+#		}
+#	}
+#}
+#character_event = {
+#	id = L3T.237
+#	hide_window = yes
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#		FROM = { 
+#			tier = baron	
+#			location = { trade_post_has_building = TR_cartographe_2 }
+#			NOT = { has_title_flag = BONUS_TR_cartographe_2 }
+#		}
+#	}
+#	
+#	immediate = {
+#		FROM = { 
+#			set_title_flag = BONUS_TR_cartographe_2
+#			holder_scope = {
+#				prestige = -60
+#			}
+#		}
+#	}
+#}
+
 #holding_type = temple
 
 
