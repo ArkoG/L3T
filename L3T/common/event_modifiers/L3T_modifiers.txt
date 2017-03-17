@@ -45,27 +45,20 @@
 # 61 - Anchor				- 62
 # 63 - Jewish religion		- 64
 # 69 - Bed					- 70
-#end of vanilla 2.6.x
+# 71 - Wolf					- 72
+# 73 - Raven				- 74
+# 75 - Demon horns			- 76
+# 77 - Trident				- 78
+# 79 - Stars				- 80
+# 81 - Eye					- 82
+# 83 - Test-tubes			- 84
+# 85 - Science flask		- 86
+# 87 - Flower				- 88
+# 89 - Rats		 			- 90
+# 91 - Otter				- 92
+# 93 - Hedgehog				- 94
+#end of vanilla 2.7.x
 
-  # 71>>90 - not used -reserved for future vanilla additions
-
-# 79 - 
-# 80 - 
-# 81 - 
-# 82 - 
-# 83 - 
-# 84 - 
-# 85 - 
-# 86 - 
-# 87 - 
-# 88 - 
-# 89 - 
-# 90 - 
-
-# 91 - coffre vert positif (not used)
-# 92 - coffre rouge négatif (not used)
-# 93 - AGRI épi bleu
-# 94 - AGRI épi grisé
 # 95 - AGRI épi doré
 # 96 - AGRI épi orangé
 # 97 - AGRI Farine
@@ -106,8 +99,8 @@
 #131 - FISH poisson bleu
 #132 - FISH poisson fumé
 #133 - ELEV poney
-  #134 - not used
-  #135 - not used
+#134 - AGRI épi bleu
+#135 - AGRI épi grisé
 #136 - LUXE fourrure (pièces bleues)
 #137 - LUXE bijoux (pièces or)
 #138 - LUXE epices (pièces oranges)
@@ -239,9 +232,9 @@ peche1					= {icon = 130}	pisci1			= {icon = 130}
 peche2_poisson			= {icon = 131}	pisci2_poisson	= {icon = 131}
 peche_pisci3_fumaison	= {icon = 132 local_revolt_risk = -0.03}
 
-peaux2_fourrure	= {icon = 135 	tax_income = 0.2}
-joyaux2_bijoux	= {icon = 136 	tax_income = 0.1}
-epices2_epices	= {icon = 137 	tax_income = 0.3}
+peaux2_fourrure	= {icon = 136 	tax_income = 0.2}
+joyaux2_bijoux	= {icon = 137 	tax_income = 0.1}
+epices2_epices	= {icon = 138 	tax_income = 0.3}
 
 1connexion_commerciale = {icon = 1 } #hidden
 2connexion_commerciale = {icon = 1 } #hidden
@@ -453,14 +446,14 @@ illegal_cut = {}
 a_witch = {}
 
 recolte_bonne = {
-	icon = 93 
+	icon = 134 
 	local_revolt_risk = -0.05
 	tax_income = 0.2
 	local_tax_modifier =  0.01
 }
 
 recolte_mauvaise = {
-	icon =  94
+	icon =  135
 	local_revolt_risk =  0.05
 	tax_income = -0.2
 	local_tax_modifier = -0.02
