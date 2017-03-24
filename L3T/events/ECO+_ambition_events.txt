@@ -32,6 +32,7 @@ character_event = {
 		NOT = { has_character_flag = warrior_mentor }
 		NOT = { has_character_flag = epee }
 		NOT = { has_character_flag = epee_taken }
+		NOT = {has_artifact = legendary_sword_2_0 }
 		war = no
 		any_demesne_title = {	
 			tier = baron	
@@ -356,7 +357,7 @@ character_event = {
 	# Succes
 	option = {
 		name = "ECO.318A"
-		change_martial = 2
+		add_artifact = legendary_sword_2_0
 		clr_character_flag = epee
 		# Retire les flags Vanille
 		clr_character_flag = toy_army
