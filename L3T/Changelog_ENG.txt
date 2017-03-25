@@ -10,22 +10,21 @@ DEV BETA 0.94 (XX march 2017)
 version name : ------
 
 MAJOR :
--(update for 2.7 version of the game)
+-update for 2.7 version of the game
 -republic tradeposts buildings overhaul
 
 VARIOUS and MINOR :
 -added a muslim specific icon for religious center specialization
 -added some prestige requirement to buildings
 -improved starting event
--replaced +2 martial by the artifact "Legendary sword 2.0" at the end of ECO+ martial ambition event
+-improved the "Legendary sword" event chain, it now possibly gives an artefact in the end
+-added a muslim only alternate to the "legendary sword" event chain, with proper specific flavour and artefact to gain
 
 BUGFIXES :
 -added muslim specific localisation to castle and city temple buildings
--increased the temple specialization event MTTH to lower the risk of duplicated specialization in one holding
--neutralized some vanilla localisation for muslim buildings tags
--fixed an interface on main screen if you don't use Arkopack Interface mod alongside with L3T
--optimisation : population events are now triggered yearly from on_action file instead of regular MTTH
--
+-fixed a bug providing sometimes a double specialization on temple holdings
+-fixed an interface issue on main screen if you don't use Arkopack Interface mod alongside with L3T
+-optimisation of population events
 
 RELEASE BETA 0.93 (4th february 2017)
 version name : BALROG2
