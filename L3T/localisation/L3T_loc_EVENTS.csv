@@ -1074,20 +1074,28 @@ ECO.311A;It is a good idea;C'est une bonne idée;;;;;;;;;;;;x
 TOOLTIPECO.311A;I'll get a servant to help me;Je vais chercher un serviteur pour m'aider;;;;;;;;;;;;x
 ECO.311B;It is a bad idea;C'est une mauvaise idée;;;;;;;;;;;;x
 ECO.312;Send a servant;Envoi d'un serviteur;;;;;;;;;;;;x
-DESCECO.312;I found a volunteer to go in search of the plan of a legendary sword.\nWhere do I send it?;J'ai trouvé un volontaire pour partir à la recherche du plan d'une épée légendaire. \nOù vais-je l'envoyer ?;;;;;;;;;;;;x
-ECO.312A;At Aix-la-Chapelle, there must be the plan of Joyeuse;A Aix-La-Chapelle, il doit y avoir le plan de Joyeuse;;;;;;;;;;;;x
-TOOLTIPECO.312A;This quest can be dangerous for him;Cette quête pourrait être dangereuse pour lui;;;;;;;;;;;;x
-TOOLTIPECO.312B;It brings me back plan;Il me ramène le plan;;;;;;;;;;;;x
+DESCECO.312;I found a volunteer to go in search of the best forging techniques or even, find of the plan of a legendary sword.\n\nWhere do I send him?;J'ai trouvé un volontaire pour partir à la recherche des meilleures techniques de forge ou même qui sait, trouver le plan d'une épée légendaire. \n\nOù vais-je l'envoyer ?;;;;;;;;;;;;x
+ECO.312A;At Aix-la-Chapelle, there must be the plan of Joyeuse;A Aix-La-Chapelle, chercher les secrets de Joyeuse;;;;;;;;;;;;x
 ECO.312B;At Reims, there must be the plan of Almace;A Reims, il doit y avoir le plan de Almace;;;;;;;;;;;;x
-ECO.312C;At Rocamadour, there must be the plan of Durandal;A Rocamadour, il doit y avoir le plan de Durandal;;;;;;;;;;;;x
+ECO.312C;At Rocamadour, there must be the plan of Durandal;A Rocamadour, en quête du plan de Durandal;;;;;;;;;;;;x
+ECO.312D;At Dimašq, an exceptional steel is forged there;A Dimašq, l'on y travaille un acier exceptionnel dit-on;;;;;;;;;;;;x
+ECO.312E;At Makkah, breaking the secrets of Dhulfiqar;A Makkah, chercher les secrets de Dhû'l-fiqâr;;;;;;;;;;;;x
+TOOLTIPECO.312;This quest can be dangerous, but we hope for him to be successful and he brings the sword plan or solid informations about making one.;Cette quête pourrait être dangereuse pour lui, mais nous comptons sur de bonnes chances qu'il réussisse à nous ramener le plan ou de précieux renseignements.;;;;;;;;;;;;x
+#TOOLTIPECO.312A;This quest can be dangerous for him;Cette quête pourrait être dangereuse pour lui;;;;;;;;;;;;x
+#TOOLTIPECO.312B;He brings me back plan;Il me ramène le plan;;;;;;;;;;;;x
+TOOLTIPECO.JOYEUSE;§GJoyeuse§! is the famous sword of Charlemagne.;§GJoyeuse§! est la célèbre épée de Charlemagne.;;;;;;;;;;;;x
+TOOLTIPECO.ALMACE;§GAlmace§! is the sword of Turpin, bishop of Reims and companion of Roland in the Song of Roland.;§GAlmace§! est l'épée de Turpin, évêque de Reims et compagnon de Roland dans la Chanson de Roland.;;;;;;;;;;;;x
+TOOLTIPECO.DURANDAL;§GDurandal§! is the sword of Roland in the Song of Roland. It was forged by Munifican who spent 3 years crafting it.;§GDurandal§! est l'épée de Roland dans La Chanson de Roland. Elle fut forgée par Munifican qui mit pas moins de 3 ans à la fabriquer.;;;;;;;;;;;;x
+TOOLTIPECO.DAMAS;At Damascus is forged a steel from India. It is renowned as being high quality and a moiré pattern.;On travaille à Damas un acier venant d'Inde. \nIl est réputé pour sa qualité et ses motifs moirés.;;;;;;;;;;;;x
+TOOLTIPECO.ZULFIQAR;§GDhulfiqar§! is one of the 9 swords of Muhammad. \nHe gave it to Ali ibn Abi Talib during the battle of Uhud where he became one of the greatest heroes of Islam.;§GZulfikar§! est l'une des 9 épées de Muhammad. \nCelui-ci l'aurait donné à Ali ibn Abi Talib lors de la bataille de Uhud où il est l'un des plus grand héros de l'Islam.;;;;;;;;;;;;x
 ECO.313;A woman comes;Une femme vient;;;;;;;;;;;;x
 DESCECO.313;A woman presents to you, she said her husband did not return?\nYou ask why it is your problem.\nShe answers that you have sent, long ago, searching the plan of a legendary sword.\nWhat say?;Une femme se présente à vous, elle dit que son mari n'est pas revenu ? \nVous lui demandez en quoi est-ce votre problème.\nElle vous répond que vous l'avez envoyé, il y a longtemps, chercher le plan d'une épée légendaire.\n Que lui répondre ?;;;;;;;;;;;;x
 ECO.313A;He will come back;Il va revenir;;;;;;;;;;;;x
 TOOLTIPECO.313A;You lie to her;Vous lui mentez;;;;;;;;;;;;x
 ECO.313B;He must have been killed by bandits or eaten by wolves;Il a du être tué par des bandits ou mangé par les loups;;;;;;;;;;;;x
-TOOLTIPECO.313B;You sympathize;Vous compatissez;;;;;;;;;;;;x
+TOOLTIPECO.313B;You show compassion;Vous compatissez;;;;;;;;;;;;x
 ECO.313C;He's a thief;C'est un voleur;;;;;;;;;;;;x
-TOOLTIPECO.313C;You require repair;Vous exigez réparation;;;;;;;;;;;;x
+TOOLTIPECO.313C;You request reparation;Vous exigez réparation;;;;;;;;;;;;x
 ECO.314;What to do ?;Que faire ?;;;;;;;;;;;;x
 DESCECO.314;The servant you have sent for a legendary sword plan is not come back.\nDo you want to send another?;Le serviteur que vous avez envoyé chercher un plan d'épée légendaire n'est pas revenu.\nDevez-vous en envoyer un autre ?;;;;;;;;;;;;x
 ECO.314A;Look for someone else to send;Chercher quelqu'un d'autre à envoyer;;;;;;;;;;;;x
@@ -1100,19 +1108,21 @@ TOOLTIPECO.315A;The blacksmith is hard at work;Le forgeron est à pied d'œuvre;;;
 ECO.316;Try the sword;Essayer l'épée;;;;;;;;;;;;x
 DESCECO.316;The blacksmith ended the sword.\nBecause you do not trust him, you want to try the sword.\nBut on whom?;Le forgeron a fini l'épée.\nComme vous ne lui faites pas confiance, vous voulez essayer l'épée.\nMais sur qui ?;;;;;;;;;;;;x
 ECO.316A;A straw man;Un bonhomme de paille;;;;;;;;;;;;x
-TOOLTIPECO.316AA;The straw man is defeated;Le bonhomme de paille est vaincu;;;;;;;;;;;;x
-TOOLTIPECO.316AB;The straw man refuses to die;;Le bonhomme de paille refuse de mourir;;;;;;;;;;;;x
+TOOLTIPECO.316A;The straw man can fight, I'll win! I always win!;Le bonhomme de paille aura beau lutter, je sortirai vainqueur !;;;;;;;;;;;;x
+TOOLTIPECO.316AA;defeat the straw man.;vaincre le bonhomme de paille.;;;;;;;;;;;;x
+TOOLTIPECO.316AB;seeing the straw man refusing to die!;voir le bonhomme de paille refuser de mourir !;;;;;;;;;;;;x
 ECO.316B;A condemned to death;Un condamné à mort;;;;;;;;;;;;x
-TOOLTIPECO.316BA;The executioner admire me;Le bourreau m'admire;;;;;;;;;;;;x
-TOOLTIPECO.316BB;The condemned only loses an arm;Le condamné perd seulement un bras;;;;;;;;;;;;x
+TOOLTIPECO.316B;If the sword proved being well balanced, I'll gain the executioner's admiration, otherwise, the condemned may die quite slowly.;Si l'épée s'avère bien équilibrée, je devrais suscité l'admiration du bourreau, sinon je risque de seulement estropier le condamné.;;;;;;;;;;;;x
+TOOLTIPECO.316BA;gaining the executioner's admiration. (§Ysuccesful execution§!);gagner l'admiration du bourreau. (§YExécution réussie§!);;;;;;;;;;;;x
+TOOLTIPECO.316BB;maiming the condemned. (§Yfailed execution§!);rater ma cible et estropier le condamné. (§YExécution ratée§!);;;;;;;;;;;;x
 ECO.317;Unbalanced sword;Epée déséquilibrée;;;;;;;;;;;;x
 DESCECO.317;The blacksmith worked poorly. He tells you that your sword will be a 2.0 legendary sword but he needs more time.;Le forgeron a mal travaillé. Il vous dit que votre épée sera une épée légendaire 2.0 mais qu'il faut lui accorder encore un peu de temps.;;;;;;;;;;;;x
 ECO.317A;He convinced me;Il m'a convaincu;;;;;;;;;;;;x
 TOOLTIPECO.317A;The sword is forged again;L'épée est reforgée;;;;;;;;;;;;x
 ECO.317B;I give up;J'abandonne;;;;;;;;;;;;x
 ECO.318;Success;Succès;;;;;;;;;;;;x
-DESCECO.318;My new sword's blade is glowing in the light, its edge is balanced, its edge is sharp and cuts the air with a nice sounding whistle : this sword is perfect!\nI learned a lot from this experience and I feel ready to blunt it on my ennemies' bones.;Ma nouvelle épée a une lame éclatante sous la lumière, son poids est équilibré, son fil est acéré et tranche l'air dans un sifflement mélodieux : un modèle de perfection en somme!.\nJ'ai beaucoup appris de cette expérience et je me sens paré à user cette lame sur les os de mes adversaires.;;;;;;;;;;;;x
-ECO.318A;Glory awaits you: oyu and your sword;La gloire vous attend : vous et votre épée;;;;;;;;;;;;x
+DESCECO.318;My new sword's blade is glowing in the light, its edge is balanced, its edge is sharp and cuts the air with a nice sounding whistle : this sword is perfect!\nI learned a lot from this experience and I feel ready to blunt it on my ennemies' bones.;Ma nouvelle épée a une lame éclatante sous la lumière, son poids est équilibré, son fil est acéré et tranche l'air dans un sifflement mélodieux : un modèle de perfection en somme ! \nJ'ai beaucoup appris de cette expérience et je me sens paré à user cette lame sur les os de mes adversaires.;;;;;;;;;;;;x
+ECO.318A;By [Root.Religion.GetHighGodName], glory awaits us!;Par [Root.Religion.GetHighGodName], la gloire nous attend !;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
 #;x;NOW HIDDEN EVENTS;;;;;;;;;;;;x

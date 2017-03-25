@@ -33,7 +33,7 @@ character_event = {
 		NOT = { has_character_flag = epee }
 		NOT = { has_character_flag = epee_taken }
 		NOT = {has_artifact = legendary_sword_2_0 }
-		war = no
+		#war = no
 		any_demesne_title = {	
 			tier = baron	
 			holding_type = castle 	
@@ -43,6 +43,10 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 280
+		modifier = { factor = 0.9  NOT = { martial = 7 }}
+		modifier = { factor = 0.9  NOT = { martial = 6 }}		
+		modifier = { factor = 0.9  NOT = { martial = 5 }}
+		modifier = { factor = 2.0  war = yes }		
 	}
 	
 	# La chaîne d'event commence
@@ -87,31 +91,73 @@ character_event = {
 	
 	# Aix la Chappelle
 	option = {
+		trigger = { NOT = { religion_group = muslim }} 
 		name = "ECO.312A"
 		wealth = -20
-		random_list = {
-			60 = { character_event = { id = ECO.313 days = 30 tooltip = TOOLTIPECO.312A} }
-			40 = { character_event = { id = ECO.315 days = 30 tooltip = TOOLTIPECO.312B} }
+		custom_tooltip = { text = TOOLTIPECO.312 }
+		custom_tooltip = { text = TOOLTIPECO.JOYEUSE }
+		hidden_tooltip = {			
+			random_list = {
+				60 = { character_event = { id = ECO.313 days = 30 } } #removed tooltip from the random list, it caused a weird wording
+				40 = { character_event = { id = ECO.315 days = 30 } }
+			}
 		}
 	}
-	
 	# Reims
 	option = {
+		trigger = { NOT = { religion_group = muslim }} #non muslim only
 		name = "ECO.312B"
 		wealth = -20
-		random_list = {
-			60 = { character_event = { id = ECO.313 days = 30 tooltip = TOOLTIPECO.312A} }
-			40 = { character_event = { id = ECO.315 days = 30 tooltip = TOOLTIPECO.312B} }
+		custom_tooltip = { text = TOOLTIPECO.312 }
+		custom_tooltip = { text = TOOLTIPECO.ALMACE }
+		hidden_tooltip = {			
+			random_list = {
+				60 = { character_event = { id = ECO.313 days = 30 } }
+				40 = { character_event = { id = ECO.315 days = 30 } }
+			}
 		}
 	}
-	
 	# Rocamadour
 	option = {
+		trigger = { NOT = { religion_group = muslim }} #non muslim only
 		name = "ECO.312C"
 		wealth = -20
-		random_list = {
-			60 = { character_event = { id = ECO.313 days = 30 tooltip = TOOLTIPECO.312A} }
-			40 = { character_event = { id = ECO.315 days = 30 tooltip = TOOLTIPECO.312B} }
+		custom_tooltip = { text = TOOLTIPECO.312 }
+		custom_tooltip = { text = TOOLTIPECO.DURANDAL }
+		hidden_tooltip = {			
+			random_list = {
+				60 = { character_event = { id = ECO.313 days = 30 } }
+				40 = { character_event = { id = ECO.315 days = 30 } }
+			}
+		}
+	}
+   ###muslim only options	
+	#Damas
+	option = {
+		trigger = { religion_group = muslim } 
+		name = "ECO.312D"
+		wealth = -20
+		custom_tooltip = { text = TOOLTIPECO.312 }
+		custom_tooltip = { text = TOOLTIPECO.DAMAS }
+		hidden_tooltip = {			
+			random_list = {
+				60 = { character_event = { id = ECO.313 days = 30 } }
+				40 = { character_event = { id = ECO.315 days = 30 } }
+			}
+		}
+	}
+	#La Mecque
+	option = {
+		trigger = { religion_group = muslim } 
+		name = "ECO.312E"
+		wealth = -20
+		custom_tooltip = { text = TOOLTIPECO.312 }
+		custom_tooltip = { text = TOOLTIPECO.ZULFIQAR }
+		hidden_tooltip = {			
+			random_list = {
+				60 = { character_event = { id = ECO.313 days = 30 } }
+				40 = { character_event = { id = ECO.315 days = 30 } }
+			}
 		}
 	}
 }
@@ -272,27 +318,40 @@ character_event = {
 	option = {
 		name = "ECO.316A"
 		wealth = -5
-		random_list = {
-			60 = { character_event = { id = ECO.317 days = 30 tooltip = TOOLTIPECO.316AA} }
-			40 = { character_event = { id = ECO.318 days = 30 tooltip = TOOLTIPECO.316AB} }
-		}
+		custom_tooltip = { text = TOOLTIPECO.316A }
+		#hidden_tooltip = {
+			random_list = {
+				60 = { character_event = { id = ECO.317 days = 30 tooltip = TOOLTIPECO.316AA} }
+				40 = { character_event = { id = ECO.318 days = 30 tooltip = TOOLTIPECO.316AB} }
+			}
+		#}
 	}	
 	
 	option = {
+		custom_tooltip = { text = TOOLTIPECO.316B }
 		name = "ECO.316B"
 		random_list = {
 			50 = { 
+				custom_tooltip = { text = TOOLTIPECO.316BA }
 				if = {
 					limit = { NOT = { trait = cruel } }
 					add_trait = cruel
 				}
+				
 			}
-			50 = {}
+			
+			50 = {
+			custom_tooltip = { text = TOOLTIPECO.316BB }
+			}
 		}
-		random_list = {
-			60 = { character_event = { id = ECO.317 days = 30 tooltip = TOOLTIPECO.316BA} }
-			40 = { character_event = { id = ECO.318 days = 30 tooltip = TOOLTIPECO.316BB} }
-		}	
+		
+
+		hidden_tooltip = {
+			random_list = {
+				60 = { character_event = { id = ECO.317 days = 30 tooltip = TOOLTIPECO.316BA} }
+				40 = { character_event = { id = ECO.318 days = 30 tooltip = TOOLTIPECO.316BB} }
+			}
+		}
 	}
 }
 
@@ -353,16 +412,28 @@ character_event = {
 		}
 		has_character_flag = epee
 	}	
-	
-	# Succes
-	option = {
-		name = "ECO.318A"
-		add_artifact = legendary_sword_2_0
+
+	immediate = {
 		clr_character_flag = epee
 		# Retire les flags Vanille
 		clr_character_flag = toy_army
 		clr_character_flag = street_ruffians
 		clr_character_flag = warrior_mentor
+	}		
+	
+	# Succes
+	option = {
+		trigger = { NOT = { religion_group = muslim }}
+		name = "ECO.318A"
+		change_martial = 1
+		add_artifact = legendary_sword_2_0
+
+	}
+	option = {
+		trigger = { religion_group = muslim }
+		change_martial = 1
+		name = "ECO.318A"
+		add_artifact = sayf_al_islam
 	}
 }
 
@@ -406,6 +477,9 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 280
+		modifier = { factor = 0.9  NOT = { stewardship = 7 }}
+		modifier = { factor = 0.9  NOT = { stewardship = 6 }}		
+		modifier = { factor = 0.9  NOT = { stewardship = 5 }}	
 	}
 	
 	option = {
