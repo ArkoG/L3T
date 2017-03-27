@@ -600,8 +600,10 @@ narrative_event = {
 #Domaine Ecclésial     
 narrative_event = {
     id = L3T.6
+	picture = GFX_evt_monk
 	border = GFX_event_narrative_frame_religion
-
+	desc = "DESCL3T.6"
+	
 	title = { 
 		trigger = {	NOT = { religion_group = muslim } }
 		text = "NAMEL3T.6"
@@ -613,13 +615,13 @@ narrative_event = {
 	
 	desc = { 
 		trigger = {	NOT = {	religion_group = muslim	} }
-		text = "DESCL3T.6"
+		#text = "DESCL3T.6"
 		picture = GFX_evt_monk
 	}
 	
 	desc = { 
 		trigger = {	religion_group = muslim	}
-		text = "DESCL3T.6"
+		#text = "DESCL3T.6"
 		picture = GFX_evt_L3T_muslim_blue_dome
 	}
 	
