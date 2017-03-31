@@ -15,7 +15,6 @@ character_event = {
 			limit = { tier = baron }
 			# Castles
 			if = {
-				limit = { holding_type = castle }
 				if = {
 					limit = { num_of_buildings = 10 }
 					add_building = ca_town_1
@@ -43,7 +42,6 @@ character_event = {
 			}
 			# Cities	
 			if = {
-				limit = { holding_type = city }
 				if = {
 					limit = { num_of_buildings = 10 }
 					add_building = ct_town_1
@@ -70,8 +68,7 @@ character_event = {
 				}
 			}
 			# Temples
-			if = {
-				limit = { holding_type = temple }			
+			if = {		
 				if = {
 					limit = { num_of_buildings = 12 }
 					add_building = tp_town_1
