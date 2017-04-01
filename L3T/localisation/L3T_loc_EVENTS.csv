@@ -162,27 +162,23 @@ XYLO.305C;Delete the existing charter, that will teach them!;Supprimons la chart
 #;;EVENTS BANDITS;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 raids_pirates;Pirate Raids;Raids pirates;;;;;;;;;;;;x
-raids_pirates_desc;The raids of the pirates here are regular. Faced with the inefficiency and impotence of the Lord they thrive and probably have established home not far away.;Les raids des pirates ici sont réguliers. Face à l'inefficacité et l'impuissance du Seigneur ils prospèrent et ont probablement établi domicile non loin de là.;;;;;;;;;;;;x
-XYLO.2101;Pirate establishment;Établissement des pirates;;;;;;;;;;;;x
-DESCXYLO.2101;Due to our incapacity to rule so much lands, a band of pirates freely terrorize the coasts of [From.Location.GetName];Nous avons bien trop de terres à gérer... surtout au regard de nos compétences et notre incapacité à y maintenir l'ordre. Voilà une situation en or pour les roublards de tout poil ! Notamment semble-t-il cette bande de pirates qui sévit depuis quelques temps déjà et lancent des raids de plus en plus audacieux sur les côtes de [From.Location.GetName].;;;;;;;;;;;;x
+raids_pirates_desc;The pirate raids here are regular. Faced with the ineffectiveness and powerless of the Lord they prosper and have probably settled not far away.;Les raids des pirates ici sont réguliers. Face à l'inefficacité et l'impuissance du Seigneur ils prospèrent et ont probablement établi domicile non loin de là.;;;;;;;;;;;;x
+XYLO.2101;Pirate landing;établissement des pirates;;;;;;;;;;;;x
+DESCXYLO.2101;Due to our incapacity to rule so much lands, a band of pirates freely terrorize the coasts of [From.Location.GetName];Nous avons bien trop de terres à gérer... surtout au reagrd de nos compétences et notre incapacité à y maintenir l'ordre. Voilà une situation en or pour les roublards de tout poil ! Notamment semble-t-il cette bande de pirates qui sévit depuis quelques temps déjà et lancent des raids de plus en plus audacieux sur les côtes de [From.Location.GetName].;;;;;;;;;;;;x
 XYLO.2101A;Gottferdom ! ;Gottferdom ! ;;;;;;;;;;;;x
-XYLO.2101B;;Sacrebleu ! ;;;;;;;;;;;;x
-XYLO.2102;Pirate deletion;Suppression des pirates;;;;;;;;;;;;x
+XYLO.2101B;Damn it !;Sacrebleu ! ;;;;;;;;;;;;x
+XYLO.2102;Pirate end;suppression des pirates;;;;;;;;;;;;x
 DESCXYLO.2102;Pirates' raids ends in [From.Location.GetName].;En retrouvant un Domaine à la mesure de ce que nous pouvions maintenir en ordre et au prix d'une lutte longue et acharnée, nous avons finalement pu regagner le contrôle de nos terres et éradiquer les pirates qui ravageaient les côtes de [From.Location.GetName].;;;;;;;;;;;;x
 XYLO.2102A;It was time !;Il était temps !;;;;;;;;;;;;x
-DESC00401;Out of nowhere, a group of bandits attacked us!\nNobody had advised me to take care of the proliferation of bandits on our land?;Sortis de nul part, un groupe de bandits nous attaquent ! \n Personne ne m'avait-il conseillé de m'occuper de la prolifération des bandits sur nos terres ? ;;;;;;;;;;;;x;
-XYLO.04013A;They are few enough to defeat alone..;Ils ne sont pas nombreux, je peux les vaincre seul...;;;;;;;;;;;;x;
-XYLO.04013B;Charge!;Chargez !;;;;;;;;;;;;x;
-XYLO.0401C;Pay them .;Payer-les.;;;;;;;;;;;;x;
-bandits_installes;Well settlef bandits;Bandits bien installés;;;;;;;;;;;;x
-bandits_installes_desc;;Les voleurs, malandrins et autres bandes d'affreux ce sont installés durablement sur ces terres, s'affairant à leurs viles activités et avec des conséquences désastreuses.;;;;;;;;;;;;x
-chef_malandrin;Bandit leader;Meneur de bandits;;;;;;;;;;;;x
-chef_malandrin_desc;Bandits in [From.Location.GetName] are now installed for some times and tend to reinforce. Maybe it is time to act against them ?;Ce personnage est à la tête d'une bande de malfrats toujours plus influents pillant et volant dans la région. Il serait peut être temps de s'en débarrasser non ?;;;;;;;;;;;;x
-XYLO.211;;renforcement des bandits;;;;;;;;;;;;x
-DESCXYLO.211;;Les bandits qui terrorisent la campagne et perturbent le commerce sont à présent installés depuis un certain temps dans la région de [From.Location.GetName]. \nPeut-être faudrait-il tenter de les disperser avant que la situation ne s'aggrave ?;;;;;;;;;;;;x
+DESCXYLO.401;Out of nowhere, a group of bandits attack us! Had no one advised me to deal with the proliferation of bandits on our lands?;Sortis de nul part, un groupe de bandits nous attaquent ! \n Personne ne m'avait-il conseillé de m'occuper de la prolifération des bandits sur nos terres ? ;;;;;;;;;;;;x;
+XYLO.401A;They are few enough to defeat alone..;Ils ne sont pas nombreux, je peux les vaincre seul...;;;;;;;;;;;;x;
+XYLO.401B;Charge!;Chargez !;;;;;;;;;;;;x;
+XYLO.401C;Pay them .;Payer-les.;;;;;;;;;;;;x;
+XYLO.211;Bandit reinforcement;renforcement des bandits;;;;;;;;;;;;x
+DESCXYLO.211;The bandits who terrorize the countryside and disrupt the trade are now installed for some time in the region of [From.Location.GetName].\nPerhaps we should try to disperse them before the situation worsens.;Les bandits qui terrorisent la campagne et pertubent le commerce sont à présent installés depuis un certain temps dans la région de [From.Location.GetName]. \nPeut-être faudrait-il tenter de les disperser avant que la situation ne s'aggrave ?;;;;;;;;;;;;x
 XYLO.211A;War is raging, there is nothing we can do;La guerre fait rage, nous ne pouvons rien faire;;;;;;;;;;;;x
 XYLO.211B;Let's decide what to do.;Décidons au plus vite de ce qu'il convient de faire.;;;;;;;;;;;;x
-reunir_le_conseil;Convocate the Council;Nous réunissons le Conseil afin de prendre une décision.;;;;;;;;;;;;x
+reunir_le_conseil;Convoke the Council;Nous réunissons le Conseil afin de prendre une décision.;;;;;;;;;;;;x
 XYLO.212;send a councilor;envoyer un conseiller;;;;;;;;;;;;x
 DESCXYLO.212;How will we try to eliminate the bandits that terrorize [From.Location.GetName];Au regard de la situation, par quel moyen pourrions-nous nous débarrasser de ces bandits qui empoisonnent l'économie et la vie de nos gens de la région de [From.Location.GetName] ?;;;;;;;;;;;;x
 XYLO.212A;Try negociating;Tentons de négocier;;;;;;;;;;;;x
@@ -193,26 +189,19 @@ envoi_chancelier;Chancelor sent;Notre Chancelier est missionné pour tenter de tr
 envoi_espion;Spymaster sent;Notre maître-espion va tenter disperser les bandits par la ruse.;;;;;;;;;;;;x
 envoi_marechal;Marshal sent;Notre maréchal part accompagné de ses hommes tenter de réduire les bandits.;;;;;;;;;;;;x
 laisser_faire;We do nothing, hoping the situation will settle down quietly...;Nous ne faisons rien. En espérant que la situation se tasse sans trop de heurts...;;;;;;;;;;;;x
-XYLO.2120;;Réussite;;;;;;;;;;;;x
+XYLO.2120;Success;Réussite;;;;;;;;;;;;x
 DESCXYLO.2120;Victory ! \n Bandits left [From.Location.GetName] but the province needs to recover.;Notre démarche n'a pas été vaine et nous avons pu démanteler ce nid de bandits qui empoisonnait la région de [From.Location.GetName].\n Espérons que la région s'en remette assez rapidement...;;;;;;;;;;;;x
-XYLO.2121;;Echec;;;;;;;;;;;;x
-DESCXYLO.2121;Fail ! \n Bandits will now probably re-inforce their presence in [From.Location.GetName]...;Malgré tous nos efforts, nous ne sommes pas parvenus à nous débarrasser des fauteurs de troubles de la région de [From.Location.GetName].\n Pillages, vols et destructions restent le lot quotidien des populations locales. Il est à redouter à présent que cette entreprise qui a déjà bien trop duré ne cesse de prospérer et ne conteste encore plus ouvertement notre autorité.;;;;;;;;;;;;x
-XYLO.2131;;Fief libre + échec;;;;;;;;;;;;x
-DESCXYLO.2131;As expected, the bandits in [From.Location.GetName] continue to proliferate.;Comme nous devions le craindre, les bandits ont continué de plus belles leurs méfaits et ont désormais la mainmise sur une bonne partie de l'économie de [From.Location.GetName].;;;;;;;;;;;;x
-XYLO.2131A;Wonderfull news... ;Super nouvelle... ;;;;;;;;;;;;x
-XYLO.2132;;Pas de Fief libre + échec;;;;;;;;;;;;x
-DESCXYLO.2132;Bandits left [From.Location.GetName]. The province had become too poor for them haha !;Les malandrins ont fini par quitter [From.Location.GetName].\n A croire qu'à force de pillages et vols, la province est devenue trop pauvre pour eux...;;;;;;;;;;;;x
-XYLO.2132A;Well, for us either sadly...;Elle n'en est pas moins pauvre pour nous...;;;;;;;;;;;;x
-XYLO.214;;x;;;;;;;;;;;;x
-DESCXYLO.214;The bandits network of [From.Location.GetName] is now lead by a famous hoodlum !;Le réseau de bandits qui terrorisent la région de [From.Location.GetName] est paraît-il mené par un chef et s'est même construit une base d'où organiser son petit commerce et mener ses exactions. Il va falloir l'en déloger !;;;;;;;;;;;;x
-XYLO.214A;Damn !;Enfer et damnation !!;;;;;;;;;;;;x
-creation_bandit;A bandit leader appears in the province\n;Un meneur de bandits apparait dans la province\n;;;;;;;;;;;x
-#XYLO.216;;le chef des bandits reçoit un surnom;;;;;;;;;;;;x
-#DESCXYLO.216;unused anymore;Comme tout bon criminel, je me dois de porter un nom à la mesure de ma réputation !;;;;;;;;;;;;x
-DESCXYLO.2172;[From.Location.GetName] is now free from bandits' rule but will need time to recover.;Le propriétaire du Repaire de bandits ayant définitivement quitté les lieux, la province de [From.Location.GetName] va pouvoir se remettre de cette dure et éprouvante période pour sa population et son économie. Selon l'ampleur des dégâts, cela peut prendre quelques années avant un retour total à la normale.;;;;;;;;;;;;x
-XYLO.2172A;It is already a relief for us all !;C'est un déjà soulagement pour tous !;;;;;;;;;;;;x
+XYLO.2121;Failure;Echec;;;;;;;;;;;;x
+DESCXYLO.2121;Fail ! \n Bandits will now probably re-inforce their presence in [From.Location.GetName]...;Malgré tous nos efforts, nous ne sommes pas parvenus à nous débarraser des fauteurs de troubles de la région de [From.Location.GetName].\n Pillages, vols et destructions restent le lot quotidien des populations locales. Il est à redouter à présent que cette entreprise qui a déjà bien trop duré ne cesse de prospérer et ne conteste encore plus ouvertement notre autorité.;;;;;;;;;;;;x
+XYLO.213;Free holding and failure;Fief libre + échec;;;;;;;;;;;;x
+DESCXYLO.213;As expected, the bandits in [From.Location.GetName] continue to proliferate.;Comme nous devions le craindre, les bandits ont continué de plus belles leurs méfaits et ont désormais la mainmise sur une bonne partie de l'économie de [From.Location.GetName].;;;;;;;;;;;;x
+XYLO.213A;Wonderfull news... ;Super nouvelle... ;;;;;;;;;;;;x
 la_province_se_remet;Province recovers;La province se remet;;;;;;;;;;;;x
 la_province_se_remet_desc;Province recovers from bandits' rule;Après une occupation prolongée par un chef bandit et les méfaits qu'il a fait subir à cette province, il faut du temps pour que son économie se redresse.;;;;;;;;;;;;x
+XYLO.214;Looted holding;Baronnie pillée;;;;;;;;;;;;x
+DESCXYLO.214;An holding has been looted by bandits.;Un fief s'est fait pillé par des bandits.;;;;;;;;;;;;x
+XYLO.214A;We must act;Nous devons agir;;;;;;;;;;;;x
+XYLO.214B;I have no time for this;Je n'ai pas le temps pour cela;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #recoit_un_sobriquet;;Le personnage reçoit un surnom.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x

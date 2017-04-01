@@ -372,7 +372,7 @@ raids_pirates = {
 	local_build_cost_modifier = 0.25
 	icon = 19
 }
-bandits_renforces = {icon = 1 } #hidden	Pour déclencher events et ne plus avoir à gérer les 3 types de bandits.
+
 bandits_installes = { #cumul de tout le reste ;p
 	icon = 31
 	local_revolt_risk = 0.07
@@ -403,6 +403,16 @@ la_province_se_remet = { #
 	#temple_levy_size = -0.33
 }
 
+mauvaise_rencontre_chasse = {icon = 1 } #hidden Pour ne pas avoir plusieurs attaque de bandits lors d'une partie de chasse
+
+bandits_holding = { 
+	icon = 31
+}
+
+looted_holding = { 
+	icon = 22
+	local_tax_modifier = -0.20
+}
 
 ##########
 #DIFFERENTS MODIFICATEURS (prosperité, immersion, taille du domaine forestier, lois...)

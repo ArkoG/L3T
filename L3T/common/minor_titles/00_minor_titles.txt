@@ -2997,7 +2997,6 @@ title_councilmember_emperor = {
 	message = yes
 }
 
-
 ## Court Physician
 title_court_physician = {
 	is_high_prio = yes
@@ -3088,7 +3087,6 @@ title_court_physician = {
 	message = yes
 }
 
-
 #MNM hermetics apprentice
 title_hermetics_apprentice = {
 	is_high_prio = yes
@@ -3157,9 +3155,9 @@ title_hermetics_apprentice = {
 			}
 		}
 	}
-	lose_effect = { clr_character_flag = titre_mineur_detenu }
 	retire_effect = {
 	}
 
 	message = yes
 }
+

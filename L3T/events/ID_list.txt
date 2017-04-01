@@ -544,7 +544,7 @@
 #id = XYLO.1152 # potion de soin (blessure)
 #id = XYLO.1153 # potion de soin (maladie)
 
-###[NON INCLUS] XYLO_bandits.txt
+### XYLO_bandits.txt
 #des bandits !
 #id = XYLO.2101 # raids pirates
 #id = XYLO.2102 # suppression raids pirates
@@ -552,14 +552,8 @@
 #id = XYLO.212  # envoyer un conseiller (not at war) ou ne rien faire.
 #id = XYLO.2120 # réussite //fin
 #id = XYLO.2121 # échec
-#id = XYLO.213  # recherche site + marquage
-#id = XYLO.214  # création perso + création fief
-#id = XYLO.215  # octroi fief
-#id = XYLO.216  # remplissage fief
-#id = XYLO.217  # clean à la mort du bandit
-# si échec ou inaction apparition d'un domaine dédié. voir event construction de bâtiments.
-#suppresion des modif classiques, modif cumulés à la place.
-
+#id = XYLO.213  # Bandit installation
+#id = XYLO.214  # Looting of an holding
 
 ###décision # organiser une expédition
 #id = XYLO.2141 # succès expédition, pas de résurgence avant un certain temps
@@ -592,6 +586,6 @@
 #id = XYLO.304 # Loi forestière -simple demande
 #id = XYLO.305 # Loi forestière -demande d'upgrade
 
-#[NON INCLUS] 
+### XYLO_bandits.txt (encore)
 #Divers flavour
 #id = XYLO.0401 # attaque de bandits pendant une partie de chasse

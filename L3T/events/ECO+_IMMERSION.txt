@@ -25,6 +25,7 @@ province_event = {
 		NOT = { has_province_modifier = meteo_secheresse }
 		NOT = { has_province_modifier = recolte_bonne }
 		NOT = { has_province_modifier = recolte_mauvaise }
+		NOT = { has_province_modifier = bandits_installes }
 		month = 8 # pour avoir septembre, bilan des récoltes
 		NOT = { month = 9 }
 	}
@@ -87,6 +88,7 @@ province_event = {
 		modifier = { factor = 0.50	owner = { war = yes } }	
 		modifier = { factor = 0.50	has_province_modifier = meteo_secheresse }	
 		modifier = { factor = 0.85	any_neighbor_province = { has_province_modifier = meteo_secheresse } }
+		modifier = { factor = 0.50	has_province_modifier = bandits_installes }	
 		modifier = { factor = 0.80	owner = { has_focus = focus_war } }
 	}
 
@@ -119,6 +121,7 @@ province_event = {
 		has_province_modifier = peche2_poisson
 		NOT = { has_province_modifier = peche_bonne }
 		NOT = { has_province_modifier = peche_mauvaise }
+		NOT = { has_province_modifier = bandits_installes }
 		month = 8 #pour avoir septembre et octobre, bilan de la saison
 		NOT = { month = 10 }
 	}
@@ -176,6 +179,7 @@ province_event = {
 		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
 		modifier = { factor = 0.50	owner = { war = yes } }	
 		modifier = { factor = 0.80	owner = { has_focus = focus_war } }	
+		modifier = { factor = 0.50	has_province_modifier = bandits_installes }	
 	}
 
 	option = {
@@ -434,6 +438,7 @@ province_event = {
 	
 	trigger = {
 		NOT = { has_province_modifier = industrie_prospere }
+		NOT = { has_province_modifier = bandits_installes }
 		owner = { war = no }
 		OR = {
 			has_province_modifier = agriculture3_biere
@@ -487,6 +492,7 @@ province_event = {
 		modifier = { factor = 1.50	owner = { realm_martial = 50 } }
 		modifier = { factor = 0.60	owner = { NOT = { realm_martial = 30 } } }
 		modifier = { factor = 0.8	owner = { has_focus = focus_war } }
+		modifier = { factor = 0.50	has_province_modifier = bandits_installes }	
 	}
 	
 	option = {

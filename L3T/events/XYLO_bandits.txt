@@ -1,0 +1,579 @@
+#################################
+# XYLO KIT par Arko #
+#################################
+
+
+namespace = XYLO
+
+
+# Renforcement des bandits
+province_event = {
+	id = XYLO.211
+	desc = "DESCXYLO.211"
+	picture = GFX_evt_burning_house
+	
+	trigger = {
+		NOT = { 
+			has_province_flag = tentative_contre_bandits
+			has_province_flag = echec_contre_les_bandits
+		}
+		OR = {
+			has_province_modifier = thieves_guild
+			has_province_modifier = smugglers_ring
+			has_province_modifier = highway_robber_band
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {	factor = 0.5	owner = { war = yes	}	}
+		
+		modifier = {	factor = 0.7	terrain = forest	}
+		
+		modifier = {	factor = 0.7	had_province_flag =  {	flag = thieves_guild		days = 180	}	}
+		modifier = {	factor = 0.7	had_province_flag =  {	flag = smugglers_ring		days = 180	}	}
+		modifier = {	factor = 0.7	had_province_flag =  {	flag = highway_robber_band	days = 180	}	}
+		modifier = {	factor = 0.8	had_province_flag =  {	flag = thieves_guild		days = 135	}	}
+		modifier = {	factor = 0.8	had_province_flag =  {	flag = smugglers_ring		days = 135	}	}
+		modifier = {	factor = 0.8	had_province_flag =  {	flag = highway_robber_band	days = 135	}	}
+		modifier = {	factor = 0.9	had_province_flag =  {	flag = thieves_guild		days =  90	}	}
+		modifier = {	factor = 0.9	had_province_flag =  {	flag = smugglers_ring		days =  90	}	}
+		modifier = {	factor = 0.9	had_province_flag =  {	flag = highway_robber_band	days =  90	}	}		
+
+		modifier = {	factor = 0.7	NOT = { owner = { realm_stewardship = 15 } }	}
+		modifier = {	factor = 0.7	NOT = { owner = { realm_stewardship = 10 } }	}
+		modifier = {	factor = 0.7	NOT = { owner = { realm_stewardship =  5 } }	}
+		modifier = {	factor = 1.5	owner = { realm_stewardship = 20 }	}
+		modifier = {	factor = 2.0	owner = { realm_stewardship = 25 }	}
+
+		modifier = {	factor = 1.5	owner = { trait = ambitious }	}		
+		modifier = {	factor = 5.0	owner = { trait = just 		}	}		
+		modifier = {	factor = 0.5	owner = { trait = arbitrary }	}
+		modifier = {	factor = 0.7	owner = { trait = greedy 	}	}
+		modifier = {	factor = 0.7	owner = { trait = cruel 	}	}		
+		modifier = {	factor = 0.1	owner = { trait = slothful 	}	}
+		modifier = {	factor = 0.2	owner = { trait = incapable }	}
+		modifier = {	factor = 0.1	owner = { trait = infirm 	}	}
+	}
+	
+	immediate = {
+		set_province_flag = tentative_contre_bandits
+	}
+	
+	option = { #je suis en guerre je ne peut rien faire pour le moment
+	trigger = { owner = { war = yes	} }
+		name = XYLO.211A
+		owner = { prestige = -50 }
+		set_province_flag = echec_contre_les_bandits #ex inaction
+	}
+	option = { #nous devrions faire quelque chose
+		trigger = { owner = { war = no	} }
+		name = XYLO.211B
+		owner = { prestige = -50 }
+		hidden_tooltip = {	province_event = { id = XYLO.212 days = 10 }	}
+		custom_tooltip = { text = reunir_le_conseil	}
+	}
+}
+
+# choisir action ou ne rien faire
+province_event = {
+    id = XYLO.212
+	desc = "DESCXYLO.212"
+	picture = "GFX_evt_council"
+	
+	is_triggered_only = yes
+	
+	option = { #envoyer mon chancelier négocier
+		name = XYLO.212A
+		custom_tooltip = { text = envoi_chancelier }
+		FROM = { set_province_flag = chancelier_envoye }
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 2.5	owner = { diplomacy = 20	}}
+			modifier = { factor = 1.5	owner = { diplomacy = 15	}}
+			modifier = { factor = 0.5	owner = { NOT = { diplomacy = 10 }	}}
+		}
+	}
+	option = { #envoyer mon maitre espion les déstabiliser
+		name = XYLO.212B
+		custom_tooltip = { text = envoi_espion }
+		FROM = { set_province_flag = espion_envoye }
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 2.5	owner = { intrigue = 20	}}
+			modifier = { factor = 1.5	owner = { intrigue = 15	}}
+			modifier = { factor = 0.5	owner = { NOT = { intrigue = 10 }	}}
+		}
+	}
+	option = {  #envoyer mon maréchal et des hommes les déloger par la force
+		name = XYLO.212C
+		custom_tooltip = { text = envoi_marechal }
+		FROM = { set_province_flag = marechal_envoye }
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 2.5	owner = { martial = 20	}}
+			modifier = { factor = 1.5	owner = { martial = 15	}}
+			modifier = { factor = 0.5	owner = { NOT = { martial = 10 }	}}
+		}
+	}
+	option = { #ce n'est rien du tout
+		name = XYLO.212D
+		custom_tooltip = { text = laisser_faire }
+		FROM = { set_province_flag = echec_contre_les_bandits } 		#ex inaction_face_aux_bandits
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 4.5	owner = { trait = slothful	}}
+			modifier = { factor = 3.5	owner = { trait = incapable	}}
+			modifier = { factor = 2.5	owner = { trait = infirm	}}
+			modifier = { factor = 0.5	owner = { trait = ambitious	}}
+			modifier = { factor = 0.5	owner = { trait = just	}}
+		}
+	}
+}
+
+#REUSSITE
+province_event = { 
+    id = XYLO.2120
+	desc = "DESCXYLO.2120"
+	picture = "GFX_evt_bandits"
+	
+	trigger = {
+		OR = {
+			has_province_flag = chancelier_envoye
+			has_province_flag = espion_envoye
+			has_province_flag = marechal_envoye
+		}
+		NOT = { has_province_flag = echec_contre_les_bandits }
+	}
+
+	mean_time_to_happen = {
+			months = 7
+			
+			modifier = { factor = 3	has_province_flag = chancelier_envoye	} #on ne négocie pas avec les terroristes !
+			modifier = { factor = 2	has_province_flag = espion_envoye	} #n'est pas plus rusé qu'un renard qui veut
+			#modifier = { factor = 1.0	has_province_flag = marechal_envoye	} #chances préservées
+			
+			modifier = { factor = 1.3	NOT = { owner = { realm_diplomacy = 15 } }	}
+			modifier = { factor = 1.4	NOT = { owner = { realm_diplomacy = 10 } }	}
+			modifier = { factor = 1.5	NOT = { owner = { realm_diplomacy =  5 } }	}
+			modifier = { factor = 0.8	owner = { realm_diplomacy = 20 }	}
+			modifier = { factor = 0.7	owner = { realm_diplomacy = 25 }	}
+
+			modifier = { factor = 1.3	NOT = { owner = { realm_intrigue = 15 } }	}
+			modifier = { factor = 1.4	NOT = { owner = { realm_intrigue = 10 } }	}
+			modifier = { factor = 1.5	NOT = { owner = { realm_intrigue =  5 } }	}
+			modifier = { factor = 0.9	owner = { realm_intrigue = 20 }	}
+			modifier = { factor = 0.9	owner = { realm_intrigue = 25 }	}
+
+			modifier = { factor = 1.3	NOT = { owner = { realm_martial = 15 } }	}
+			modifier = { factor = 1.4	NOT = { owner = { realm_martial = 10 } }	}
+			modifier = { factor = 1.5	NOT = { owner = { realm_martial =  5 } }	}
+			modifier = { factor = 0.9	owner = { realm_martial = 20 }	}
+			modifier = { factor = 0.9	owner = { realm_martial = 25 }	}
+			
+			modifier = { factor =  0.5	NOT = { owner = { wealth =  100 } }	}
+			modifier = { factor =  0.8	NOT = { owner = { wealth =   50 } }	}
+			modifier = { factor =  1.1	NOT = { owner = { wealth =  -50 } }	}
+			modifier = { factor =  1.3	NOT = { owner = { wealth = -100 } }	}
+			modifier = { factor =  2.0	NOT = { owner = { wealth = -200 } }	}
+			modifier = { factor =  3.0	NOT = { owner = { wealth = -300 } }	}
+			modifier = { factor = 10.0	NOT = { owner = { wealth = -500 } }	}
+			
+			modifier = { factor = 1.3	terrain = forest	} #moins facile à déloger en foret
+			
+			modifier = { factor = 1.5	had_province_flag =  {	flag = thieves_guild		days = 360	}	} #ça traîne cette histoire non ?
+			modifier = { factor = 1.5	had_province_flag =  {	flag = smugglers_ring		days = 360	}	}
+			modifier = { factor = 1.5	had_province_flag =  {	flag = highway_robber_band	days = 360	}	}
+			modifier = { factor = 1.3	had_province_flag =  {	flag = thieves_guild		days = 270	}	}
+			modifier = { factor = 1.3	had_province_flag =  {	flag = smugglers_ring		days = 270	}	}
+			modifier = { factor = 1.3	had_province_flag =  {	flag = highway_robber_band	days = 270	}	}
+			modifier = { factor = 1.1	had_province_flag =  {	flag = thieves_guild		days = 180	}	}
+			modifier = { factor = 1.1	had_province_flag =  {	flag = smugglers_ring		days = 180	}	}
+			modifier = { factor = 1.1	had_province_flag =  {	flag = highway_robber_band	days = 180	}	}
+			
+			modifier = { factor = 0.9	has_empty_holding = no	} #sans base arrière possible, meilleures chances
+	}
+
+	immediate = {
+		hidden_tooltip = { remove_province_modifier = la_province_se_remet }
+	}
+	
+	option = { #REUSSITE
+		name = OK
+		clr_province_flag = chancelier_envoye
+		clr_province_flag = espion_envoye
+		clr_province_flag = marechal_envoye
+		if = { limit = { has_province_modifier = thieves_guild } remove_province_modifier = thieves_guild }
+		if = { limit = { has_province_modifier = smugglers_ring } remove_province_modifier = smugglers_ring }
+		if = { limit = { has_province_modifier = highway_robber_band } remove_province_modifier = highway_robber_band }
+		clr_province_flag = thieves_guild
+		clr_province_flag = smugglers_ring
+		clr_province_flag = highway_robber_band
+		clr_province_flag = tentative_contre_bandits
+		clr_province_flag = echec_contre_les_bandits
+		owner = { prestige = 50 }
+		if = {
+			limit = { has_province_modifier = bandits_installes }
+			remove_province_modifier = bandits_installes
+			random_list = {
+				10 = {	add_province_modifier = { name = la_province_se_remet duration = 1095 } }#3 ans			
+				50 = {	add_province_modifier = { name = la_province_se_remet duration = 1825 } }#5 ans	
+				25 = {	add_province_modifier = { name = la_province_se_remet duration = 2555 } }#7 ans	
+				15 = {	add_province_modifier = { name = la_province_se_remet duration = 3650 } }#10 ans
+			}
+			
+		}
+		if = { #ELSE
+			limit = { NOT = { has_province_modifier = bandits_installes } }
+			random_list = {
+				10 = {	add_province_modifier = { name = la_province_se_remet duration =   90 } }#3 mois			
+				50 = {	add_province_modifier = { name = la_province_se_remet duration =  365 } }#1 an	
+				25 = {	add_province_modifier = { name = la_province_se_remet duration =  730 } }#2 ans	
+				15 = {	add_province_modifier = { name = la_province_se_remet duration = 1095 } }#3 ans
+			}
+		}
+	}
+} #end of story
+
+#ECHEC
+province_event = {	
+    id = XYLO.2121
+	desc = "DESCXYLO.2121"
+	picture = "GFX_evt_bandits"
+	
+	trigger = {
+		OR = {
+			has_province_flag = chancelier_envoye
+			has_province_flag = espion_envoye
+			has_province_flag = marechal_envoye
+		}
+		NOT = { has_province_flag = echec_contre_les_bandits }
+	}
+
+	mean_time_to_happen = {
+		months = 3	
+		modifier = {	factor = 0.3	owner = { war = yes} }
+	}
+		
+	option = { #ECHEC
+		name = OK
+		clr_province_flag = chancelier_envoye
+		clr_province_flag = espion_envoye
+		clr_province_flag = marechal_envoye
+		clr_province_flag = tentative_contre_bandits
+		set_province_flag = echec_contre_les_bandits
+	}
+}
+
+# Bandit installation
+province_event = {
+	id = XYLO.213
+	desc = "DESCXYLO.213"
+	picture = "GFX_evt_bandits"
+
+	trigger = {
+		has_province_flag = echec_contre_les_bandits
+		NOT = { has_province_modifier = bandits_installes }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = XYLO.213A
+		add_province_modifier = { name = bandits_installes	duration = -1 }#ne reste que ce marquage à ce stade
+		if = { limit = { has_province_modifier = thieves_guild } remove_province_modifier = thieves_guild }
+		if = { limit = { has_province_modifier = smugglers_ring } remove_province_modifier = smugglers_ring }
+		if = { limit = { has_province_modifier = highway_robber_band } remove_province_modifier = highway_robber_band }
+		clr_province_flag = thieves_guild
+		clr_province_flag = smugglers_ring
+		clr_province_flag = highway_robber_band
+		clr_province_flag = tentative_contre_bandits
+		clr_province_flag = echec_contre_les_bandits
+	}
+}
+
+#Etablissement de raids_pirates dans une province
+province_event = {
+	id = XYLO.2101
+	desc = "DESCXYLO.2101"
+	
+	#notification = yes
+	
+ 	picture = GFX_evt_merchant_ship_at_sea_republic
+	
+	trigger = {
+		owner = {
+			OR = {
+				NOT = { wealth = 0 }
+				NOT = { demesne_efficiency = 1.0 }
+			}
+		}
+		NOT = { has_province_modifier = raids_pirates } 
+		NOT = { has_province_flag = tentative_contre_bandits }
+		NOT = { has_province_flag = echec_contre_les_bandits }
+		NOT = { has_province_modifier = bandits_installes }
+		has_province_modifier = province_cotiere
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		#lower if really bad demesne efficiency
+		modifier = {	factor = 0.8	NOT = { owner = { wealth = -75 } } }
+		
+		modifier = {	factor = 0.9	NOT = { owner = { demesne_efficiency = 0.9 } }	}
+		modifier = {	factor = 0.7	NOT = { owner = { demesne_efficiency = 0.7 } }	}
+		modifier = {	factor = 0.5	NOT = { owner = { demesne_efficiency = 0.5 } }	}
+		modifier = {	factor = 0.3	NOT = { owner = { demesne_efficiency = 0.3 } }	}
+		modifier = {	factor = 0.1	NOT = { owner = { demesne_efficiency = 0.1 } }	}
+
+		modifier = {	factor = 0.75	has_province_modifier = route_terrestre01 }
+		modifier = {	factor = 0.75	has_province_modifier = route_terrestre02 }
+		modifier = {	factor = 0.75	has_province_modifier = route_terrestre03 }
+		
+		#realm martial
+		modifier = {	factor = 0.7	NOT = { owner = { realm_martial = 15 } }	}
+		modifier = {	factor = 0.7	NOT = { owner = { realm_martial = 10 } }	}
+		modifier = {	factor = 0.7	NOT = { owner = { realm_martial =  5 } }	}
+		modifier = {	factor = 1.5	owner = { realm_martial = 20 }	}
+		modifier = {	factor = 2.0	owner = { realm_martial = 25 }	}
+
+		#traits affect this
+		modifier = { factor = 1.5	owner = { trait = ambitious }	}		
+		modifier = { factor = 5.0	owner = { trait = just }	}		
+		modifier = { factor = 0.5	owner = { trait = arbitrary }	}
+		modifier = { factor = 0.7	owner = { trait = greedy }	}
+		modifier = { factor = 0.7	owner = { trait = cruel }	}		
+		modifier = { factor = 0.1	owner = { trait = slothful }	}
+		modifier = { factor = 0.2	owner = { trait = incapable }	}
+		modifier = { factor = 0.1	owner = { trait = infirm }	}
+	}
+	
+	immediate = {
+		add_province_modifier = {
+			name = raids_pirates
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "XYLO.2101A"
+	}
+}
+
+# Destruction of raids_pirates in a province
+province_event = {
+	id = XYLO.2102
+	desc = "DESCXYLO.2102"
+	picture = GFX_evt_merchant_ship_at_sea_republic
+	
+	#notification = yes
+	
+	trigger = {
+		owner = { 
+			wealth = 0
+			demesne_efficiency = 1.0
+		}
+		has_province_modifier = raids_pirates
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.5
+			owner = { realm_martial = 20 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { realm_intrigue = 20 }
+		}
+	
+		modifier = {
+			factor = 0.75
+			owner = { trait = just }
+		}			
+	}
+	
+	immediate = {
+		remove_province_modifier = raids_pirates
+	}
+
+	option = {
+		name = "XYLO.2102A"
+	}
+}
+
+#Embuscade de bandits pendant la chasse
+character_event = {
+	id = XYLO.401
+	desc = "DESCXYLO.401"
+	picture = GFX_evt_bandits
+
+	only_rulers = yes
+	
+	trigger = {
+		has_character_modifier = holding_grand_hunt
+		any_demesne_province = {
+			OR = {
+				has_province_modifier = thieves_guild
+				has_province_modifier = smugglers_ring
+				has_province_modifier = highway_robber_band
+				has_province_modifier = bandits_installes			
+			}
+		}
+		NOT = { has_character_modifier = mauvaise_rencontre_chasse }
+	}
+	
+	mean_time_to_happen = {
+		days = 200
+		
+		modifier = {	factor = 2.0			intrigue = 25	}			
+		modifier = {	factor = 0.9	NOT = { intrigue = 20	}}	
+		modifier = {	factor = 0.8	NOT = { intrigue = 15	}}
+		modifier = {	factor = 0.7	NOT = { intrigue = 10	}}	
+		modifier = {	factor = 0.5	NOT = { intrigue =  5	}}
+		modifier = {	factor = 0.5	any_demesne_province = { terrain = forest }}
+	}
+
+	immediate = { add_character_modifier = { name = mauvaise_rencontre_chasse duration = 200 hidden = yes} } #pour ne l'avoir qu'une seule fois par partie de chasse
+		
+	option = {
+		name = "XYLO.401A" #fight alone
+		tooltip_info = martial
+		trigger = {
+			martial = 14
+		}
+		prestige = 30
+		random = {
+			chance = 30
+			add_trait = wounded
+			hidden_tooltip = { character_event = { id = 38280 } } #Notify Wounded
+		}		
+	}
+
+	option = {
+		name = "XYLO.401B" #fight
+		trigger = {
+			NOT = { martial = 14 }
+		}
+		prestige = 10
+		random = {
+			chance = 10
+			add_trait = wounded
+			hidden_tooltip = { character_event = { id = 38280 } } #Notify Wounded
+		}		
+	}
+
+	option = { #payez-les
+		name = "XYLO.401C"
+		scaled_wealth = -0.05
+		prestige = -10
+	}
+}
+
+# Looting of an holding
+province_event = {
+	id = XYLO.214
+	desc = "DESCXYLO.214"
+	picture = "GFX_evt_bandits"
+		
+	trigger = {
+		# There are outlaws in the province
+		has_province_modifier = bandits_installes
+		# The holding has never been looted, or more than 1 year ago
+		any_province_holding = {
+			OR = { # Implement "NOT = { has_holding_modifier = looted_holding }" for a 1 year modifier with 2 flags
+				NOT = { has_title_flag = looted_title }
+				had_title_flag = { flag = looted_title days = 365 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	immediate = {
+		random_province_holding = { # TODO : try to link it with the looted Old God mechanism
+			# The holding has never been looted, or more than 1 year ago
+			limit = {
+				OR = { # Implement "NOT = { has_holding_modifier = looted_holding }" for a 1 year modifier with 2 flags
+					NOT = { has_title_flag = looted_title }
+					had_title_flag = { flag = looted_title days = 365 }
+				}
+			}		
+			set_title_flag = current_looted_title
+			owner = { set_character_flag = looted_holding_lord }
+		}
+	}
+	
+	option = { # We must act
+		name = XYLO.214A
+		trigger = { owner = { war = no } }
+		ai_chance = { factor = 100 }
+		
+		# Action
+		clr_province_flag = echec_contre_les_bandits # Need to be clear in order to use previous code
+		hidden_tooltip = { province_event = { id = XYLO.212 days = 10 } }
+		
+		# The holding is looted
+		random_province_holding = {
+			limit = { has_title_flag = current_looted_title }
+			clr_title_flag = current_looted_title
+			owner = { clr_character_flag = looted_holding_lord }
+			set_title_flag = looted_title
+			add_holding_modifier = { modifier = looted_holding duration = 365 }
+			
+			# The province owner loses piety if a temple is looted
+			if = {
+				limit = {
+					holding_type = temple
+				}
+				location = { owner = { piety = -20 } }
+				break = yes
+			}
+			
+			# The province owner loses prestige otherwise
+			location = { owner = { prestige = -20 } }
+		}
+	}
+
+	option = { # We have not the time for this
+		name = XYLO.214B
+		ai_chance = { factor = 0 }
+		# The holder of the looted holding dislike the province owner
+		owner = {
+			random_vassal = {
+				limit = { has_character_flag = looted_holding_lord }
+				clr_character_flag = looted_holding_lord
+				opinion = {
+					who = PREV
+					modifier = loot_outlaw 
+					years = 5
+				}
+			}
+		}
+		# The holding is looted
+		random_province_holding = {
+			limit = { has_title_flag = current_looted_title }
+			clr_title_flag = current_looted_title
+			set_title_flag = looted_title
+			add_holding_modifier = { modifier = looted_holding duration = 365 }
+			
+			# The province owner loses piety if a temple is looted
+			if = {
+				limit = {
+					holding_type = temple
+				}
+				location = { owner = { piety = -20 } }
+				break = yes
+			}
+			
+			# The province owner loses prestige otherwise
+			location = { owner = { prestige = -20 } }
+		}
+	}
+}
