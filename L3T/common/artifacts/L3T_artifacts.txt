@@ -1,7 +1,9 @@
+###SLOTS
 slots = {
 	egg = 5
 }
 
+###ambition quests
 legendary_sword_2_0 = {
 	monthly_character_prestige = 0.5
 	martial = 2
@@ -29,12 +31,12 @@ sayf_al_islam = {
 	picture = "GFX_sayf_al_islam"
 	slot = weapon
 }
+
+###EGGS SERIE
 oeuf_1 = {
-#	voir effet(s)
+	monthly_character_piety = 0.1
 	quality = 1
-	active = { #indispensable ?
-		is_adult = yes #pertinent ?
-	}
+	active = { religion_group = christian }
 	indestructible = yes
 	flags = { easter }
 	stacking = no
@@ -42,11 +44,9 @@ oeuf_1 = {
 	slot = egg
 }
 oeuf_2 = {
-#	voir effet(s)
+	monthly_character_prestige = 0.1
 	quality = 1
-	active = { #indispensable ?
-		is_adult = yes #pertinent ?
-	}
+	active = { religion_group = christian }
 	indestructible = yes
 	flags = { easter }
 	stacking = no
@@ -54,11 +54,9 @@ oeuf_2 = {
 	slot = egg
 }
 oeuf_3 = {
-#	voir effet(s)
+	monthly_character_piety = 0.1
 	quality = 1
-	active = { #indispensable ?
-		is_adult = yes #pertinent ?
-	}
+	active = { religion_group = christian }
 	indestructible = yes
 	flags = { easter }
 	stacking = no
@@ -66,7 +64,7 @@ oeuf_3 = {
 	slot = egg
 }
 oeuf_4 = {
-#	voir effet(s)
+	monthly_character_prestige = 0.1
 	quality = 1
 	active = { #indispensable ?
 		is_adult = yes #pertinent ?
@@ -78,11 +76,10 @@ oeuf_4 = {
 	slot = egg
 }
 oeuf_5 = {
-#	voir effet(s)
+	monthly_character_piety = 0.05
+	monthly_character_prestige = 0.05
 	quality = 1
-	active = { #indispensable ?
-		is_adult = yes #pertinent ?
-	}
+	active = { religion_group = christian }
 	indestructible = yes
 	flags = { easter }
 	stacking = no
@@ -90,13 +87,16 @@ oeuf_5 = {
 	slot = egg
 }
 oeuf_united = {
-#	voir effet(s)
+	monthly_character_piety = 0.1
+	monthly_character_prestige = 0.1
+	short_reign_length = -5
+	vassal_opinion = 5
+	same_religion_opinion = 5
+	diplomacy = 1
 	quality = 3
-	active = { #indispensable ?
-		is_adult = yes #pertinent ?
-	}
+	active = { religion_group = christian }
 	indestructible = yes
-	flags = { easter regalia }
+	flags = { easter regalia religious christian unique }
 	stacking = no
 	picture = "GFX_oeuf_united"
 	slot = egg
