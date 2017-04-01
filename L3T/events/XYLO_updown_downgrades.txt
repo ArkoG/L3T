@@ -137,6 +137,7 @@ option = {
 			duration = 5500 #~15ans
 			}
 		}
+		owner = { clr_character_flag = canGetEasterEgg4 }
 }
 
 # downgrade -don de terres boisées à l'Eglise- v1
@@ -172,7 +173,10 @@ province_event = {
 		name = "XYLO.107B"	#oui
 		ai_chance = { factor = 40 }
 		remove_province_modifier = foret_up
-		owner = { piety = 75 }
+		owner = { 
+			piety = 75 
+			clr_character_flag = canGetEasterEgg4
+		}
 		religion_authority = { modifier = don_foret		years = 5 }
 		}
 	option = {
@@ -189,8 +193,11 @@ province_event = {
 				}
 			}
 		remove_province_modifier = foret_up
-		owner = { piety = -50 }
-		owner = { wealth = 150 }
+		owner = {
+			piety = -50 
+			wealth = 150 
+			clr_character_flag = canGetEasterEgg4
+		}
 		}
 }
 
@@ -228,7 +235,10 @@ province_event = {
 		name = "XYLO.108B"	#oui
 		ai_chance = { factor = 40 }
 		remove_province_modifier = foret_up
-		owner = { piety = 90 }
+		owner = {
+			piety = 90
+			clr_character_flag = canGetEasterEgg4
+		}
 		religion_authority = { modifier = don_foret		years = 7 }
 		}
 	option = {
@@ -245,7 +255,10 @@ province_event = {
 				}
 			}
 		remove_province_modifier = foret_up
-		owner = { piety = -150 }
-		owner = { wealth =  90 }
+		owner = {
+			piety = -150
+			wealth =  90
+			clr_character_flag = canGetEasterEgg4
+		}
 		}
 }

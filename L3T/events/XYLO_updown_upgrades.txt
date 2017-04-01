@@ -34,7 +34,10 @@ province_event = {
 	option = {
 		name = "XYLO.201A"	
 		ai_chance = { factor = 30 }
-		owner = { wealth = -350 }
+		owner = {
+			wealth = -350
+			set_character_flag = canGetEasterEgg4
+		}
 		clr_province_flag = forest_razed
 		add_province_modifier = {
 			name = foret_up 
