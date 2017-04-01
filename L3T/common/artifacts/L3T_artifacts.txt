@@ -66,9 +66,7 @@ oeuf_3 = {
 oeuf_4 = {
 	monthly_character_prestige = 0.1
 	quality = 1
-	active = { #indispensable ?
-		is_adult = yes #pertinent ?
-	}
+	active = { religion_group = christian }
 	indestructible = yes
 	flags = { easter }
 	stacking = no
