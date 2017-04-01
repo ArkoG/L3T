@@ -21,6 +21,7 @@ character_event = {
 	immediate = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
+		clr_character_flag = egg_found
 	}
 
 	option = {
@@ -43,11 +44,125 @@ character_event = {
 	immediate = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
+		clr_character_flag = egg_found
 	}
 
 	option = {
 		name = "L3T.402A"
 		piety = 10
+	}
+}
+
+# Give egg number 3
+character_event = {
+	id = L3T.405
+	desc = "DESCL3T.405"
+	picture = "GFX_evt_hunt"
+
+	min_age =  16
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = canGetEasterEgg3
+		OR = {
+			NOT = { has_character_flag = egg_found }
+			had_character_flag = {
+				flag = egg_found
+				days = 3
+			}
+		}
+		had_character_flag = {
+			flag = search_easter_eggs
+			days = 3
+		}
+		NOT = { has_artifact = oeuf_3 }
+		NOT = { has_artifact = oeuf_united }
+	}
+
+	immediate = {
+		set_character_flag = egg_found
+	}	
+
+	mean_time_to_happen = {
+		days = 10#0
+		
+		modifier = {
+			factor = 0.33
+			NOT = { has_character_flag = egg_found }
+		}	
+		
+		modifier = {
+			factor = 1.5
+			has_character_flag = egg_found
+		}		
+
+		modifier = {
+			factor = 0.75
+			trait = patient
+		}
+		modifier = {
+			factor = 0.9
+			trait = zealous
+		}
+		modifier = {
+			factor = 1.5
+			trait = wroth
+		}
+		modifier = {
+			factor = 1.25
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.25
+			trait = slothful
+		}
+	}
+
+	option = {
+		name = "L3T.405A"
+		trigger = { NOT = { trait = honest } }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		add_artifact = oeuf_3
+		add_trait = deceitful 
+	}
+
+	option = {
+		name = "L3T.405B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
+		add_artifact = oeuf_3
+		wealth = -10
+		piety = 5
+	}
+
+	option = {
+		name = "L3T.405B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		piety = 10
+		prestige = -10
 	}
 }
 
@@ -66,5 +181,6 @@ character_event = {
 	immediate = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
+		clr_character_flag = egg_found
 	}
 }
