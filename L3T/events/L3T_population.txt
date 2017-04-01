@@ -15,84 +15,78 @@ character_event = {
 			limit = { tier = baron }
 			# Castles
 			if = {
-				if = {
-					limit = { num_of_buildings = 10 }
-					add_building = ca_town_1
-				}
-				
-				if = {
-					limit = { num_of_buildings = 15 }
-					add_building = ca_town_2
-				}
-				
-				if = {
-					limit = { num_of_buildings = 20 }
-					add_building = ca_town_3
-				}
-				
-				if = {
-					limit = { num_of_buildings = 25 }
-					add_building = ca_town_4
-				}
-				
-				if = {
-					limit = { num_of_buildings = 35 }
-					add_building = ca_town_5
-				}
+				limit = { num_of_buildings = 10 }
+				add_building = ca_town_1
 			}
-			# Cities	
+			
 			if = {
-				if = {
-					limit = { num_of_buildings = 10 }
-					add_building = ct_town_1
-				}
-				
-				if = {
-					limit = { num_of_buildings = 15 }
-					add_building = ct_town_2
-				}
-				
-				if = {
-					limit = { num_of_buildings = 20 }
-					add_building = ct_town_3
-				}
-				
-				if = {
-					limit = { num_of_buildings = 25 }
-					add_building = ct_town_4
-				}
-				
-				if = {
-					limit = { num_of_buildings = 30 }
-					add_building = ct_town_5
-				}
+				limit = { num_of_buildings = 15 }
+				add_building = ca_town_2
 			}
-			# Temples
-			if = {		
-				if = {
-					limit = { num_of_buildings = 12 }
-					add_building = tp_town_1
-				}
-				
-				if = {
-					limit = { num_of_buildings = 17 }
-					add_building = tp_town_2
-				}
-				
-				if = {
-					limit = { num_of_buildings = 22 }
-					add_building = tp_town_3
-				}
-				
-				if = {
-					limit = { num_of_buildings = 26 }
-					add_building = tp_town_4
-				}
-				
-				if = {
-					limit = { num_of_buildings = 30 }
-					add_building = tp_town_5
-				}
+			
+			if = {
+				limit = { num_of_buildings = 20 }
+				add_building = ca_town_3
+			}
+			
+			if = {
+				limit = { num_of_buildings = 25 }
+				add_building = ca_town_4
+			}
+			
+			if = {
+				limit = { num_of_buildings = 35 }
+				add_building = ca_town_5
+			}
+			# Cities
+			if = {
+				limit = { num_of_buildings = 10 }
+				add_building = ct_town_1
+			}
+			
+			if = {
+				limit = { num_of_buildings = 15 }
+				add_building = ct_town_2
+			}
+			
+			if = {
+				limit = { num_of_buildings = 20 }
+				add_building = ct_town_3
+			}
+			
+			if = {
+				limit = { num_of_buildings = 25 }
+				add_building = ct_town_4
+			}
+			
+			if = {
+				limit = { num_of_buildings = 30 }
+				add_building = ct_town_5
+			}
+			# Temples	
+			if = {
+				limit = { num_of_buildings = 12 }
+				add_building = tp_town_1
+			}
+			
+			if = {
+				limit = { num_of_buildings = 17 }
+				add_building = tp_town_2
+			}
+			
+			if = {
+				limit = { num_of_buildings = 22 }
+				add_building = tp_town_3
+			}
+			
+			if = {
+				limit = { num_of_buildings = 26 }
+				add_building = tp_town_4
+			}
+			
+			if = {
+				limit = { num_of_buildings = 30 }
+				add_building = tp_town_5
 			}
 		}
 	}
