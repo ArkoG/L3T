@@ -22,6 +22,7 @@ character_event = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
 		clr_character_flag = egg_found
+		clr_character_flag = search_egg4
 	}
 
 	option = {
@@ -45,6 +46,7 @@ character_event = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
 		clr_character_flag = egg_found
+		clr_character_flag = search_egg4
 	}
 
 	option = {
@@ -55,8 +57,8 @@ character_event = {
 
 # Give egg number 3
 character_event = {
-	id = L3T.405
-	desc = "DESCL3T.405"
+	id = L3T.431
+	desc = "DESCL3T.431"
 	picture = "GFX_evt_hunt"
 
 	min_age =  16
@@ -77,6 +79,7 @@ character_event = {
 			flag = search_easter_eggs
 			days = 3
 		}
+		NOT = { has_character_flag = search_egg4 }
 		NOT = { has_artifact = oeuf_3 }
 		NOT = { has_artifact = oeuf_united }
 	}
@@ -121,7 +124,7 @@ character_event = {
 	}
 
 	option = {
-		name = "L3T.405A"
+		name = "L3T.431A"
 		trigger = { NOT = { trait = honest } }
 		ai_chance = {
 			factor = 30
@@ -135,7 +138,7 @@ character_event = {
 	}
 
 	option = {
-		name = "L3T.405B"
+		name = "L3T.431B"
 		ai_chance = {
 			factor = 30
 			modifier = {
@@ -149,7 +152,7 @@ character_event = {
 	}
 
 	option = {
-		name = "L3T.405B"
+		name = "L3T.431C"
 		ai_chance = {
 			factor = 30
 			modifier = {
@@ -163,8 +166,241 @@ character_event = {
 		}
 		piety = 10
 		prestige = -10
+		clr_character_flag = canGetEasterEgg3
 	}
 }
+
+# Search egg number 4
+character_event = {
+	id = L3T.441
+	desc = "DESCL3T.441"
+	picture = "GFX_evt_hunt"
+
+	min_age =  16
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = canGetEasterEgg4
+		OR = {
+			NOT = { has_character_flag = egg_found }
+			had_character_flag = {
+				flag = egg_found
+				days = 3
+			}
+		}
+		had_character_flag = {
+			flag = search_easter_eggs
+			days = 3
+		}
+		NOT = { has_character_flag = search_egg4 }
+		NOT = { has_artifact = oeuf_4 }
+		NOT = { has_artifact = oeuf_united }
+	}
+
+	mean_time_to_happen = {
+		days = 100
+		
+		modifier = {
+			factor = 0.33
+			NOT = { has_character_flag = egg_found }
+		}	
+		
+		modifier = {
+			factor = 1.5
+			has_character_flag = egg_found
+		}		
+
+		modifier = {
+			factor = 0.75
+			trait = patient
+		}
+		modifier = {
+			factor = 0.9
+			trait = zealous
+		}
+		modifier = {
+			factor = 1.5
+			trait = wroth
+		}
+		modifier = {
+			factor = 1.25
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.25
+			trait = slothful
+		}
+	}
+
+	option = {
+		name = "L3T.441A"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = patient
+			}
+			modifier = {
+				factor = 3
+				trait = humble
+			}
+		}
+		set_character_flag = search_egg4
+	}
+
+	option = {
+		name = "L3T.441B"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = wroth
+			}
+			modifier = {
+				factor = 10
+				trait = proud
+			}
+		}
+		clr_character_flag = canGetEasterEgg4
+	}
+}
+
+# Found egg 4 by oneself
+character_event = {
+	id = L3T.442
+	desc = "DESCL3T.442"
+	picture = "GFX_evt_hunt"
+
+	min_age =  16
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = search_egg4
+		has_character_flag = search_easter_eggs
+	}
+
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = "L3T.442A"
+		add_artifact = oeuf_4
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				learning = 15
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.442B"
+		trigger = { NOT = { trait = wroth } }
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 5
+				trait = patient
+			}
+		}
+		add_trait = patient
+	}
+
+	option = {
+		name = "L3T.442C"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = wroth
+			}
+		}
+		clr_character_flag = search_egg4
+		clr_character_flag = canGetEasterEgg4
+	}
+}
+
+# Someone else found egg 4
+character_event = {
+	id = L3T.443
+	desc = "DESCL3T.443"
+	picture = "GFX_evt_hunt"
+
+	min_age =  16
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = search_egg4
+		has_character_flag = search_easter_eggs
+	}
+
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = "L3T.443A"
+		add_artifact = oeuf_4
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				learning = 15
+			}
+		}
+		piety = -10
+	}
+
+	option = {
+		name = "L3T.443B"
+		add_artifact = oeuf_4
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				learning = 15
+			}
+			modifier = {
+				factor = 2
+				wealth = 50
+			}
+		}
+		wealth = -10
+		prestige = 10
+	}
+
+	option = {
+		name = "L3T.443C"
+		trigger = { NOT = { trait = wroth } }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = patient
+			}
+		}
+		add_trait = patient
+	}
+
+	option = {
+		name = "L3T.443D"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = wroth
+			}
+		}
+		clr_character_flag = search_egg4
+		clr_character_flag = canGetEasterEgg4
+	}
+
+}
+
 
 ###########################################
 # Flag management                         #
@@ -182,5 +418,6 @@ character_event = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
 		clr_character_flag = egg_found
+		clr_character_flag = search_egg4
 	}
 }
