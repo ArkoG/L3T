@@ -1,0 +1,97 @@
+decisions = {
+
+	easter_eggs = {
+		only_playable = yes
+		potential = {
+			is_playable = yes
+			age = 16
+			prisoner = no
+			religion_group = christian
+			NOT = {	has_character_flag = search_easter_eggs }
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			month = 2
+			NOT = { month = 4 }
+			wealth = 10
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			wealth = -10
+			set_character_flag = search_easter_eggs			
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+			hidden_tooltip = { character_event = { id = L3T.499 days = 150 } } # Safety catch flag clearing
+			# End
+			if = {
+				limit = {
+					OR = {
+						trait = zealous
+						trait = scholarly_theologian
+						trait = mastermind_theologian
+						trait = patient
+					}
+				}
+				hidden_tooltip = { character_event = { id = L3T.402 days = 90 } }
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							trait = zealous
+							trait = scholarly_theologian
+							trait = mastermind_theologian
+							trait = patient
+						}
+					}
+				}
+				hidden_tooltip = { character_event = { id = L3T.402 days = 45 } }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = { wealth = 25 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 }
+				NOT = { trait = patient }
+			}
+			modifier = {
+				factor = 0
+				trait = wroth
+			}
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 730
+					}
+				}
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,70 @@
+namespace = L3T
+
+#end if we go to war.
+character_event = {
+	id = L3T.401
+	desc = "DESCL3T.401"
+	picture = "GFX_evt_hunt"
+
+	min_age =  16
+	only_playable = yes
+	war = yes
+
+	trigger = {
+		has_character_flag = search_easter_eggs
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		clr_character_flag = search_easter_eggs
+		clr_character_flag = do_not_disturb
+	}
+
+	option = {
+		name = "L3T.401A"
+	}
+}
+
+#Normal end.
+character_event = {
+	id = L3T.402
+	desc = "DESCL3T.402"
+	picture = "GFX_evt_hunt"
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = search_easter_eggs
+	}
+
+	immediate = {
+		clr_character_flag = search_easter_eggs
+		clr_character_flag = do_not_disturb
+	}
+
+	option = {
+		name = "L3T.402A"
+		piety = 10
+	}
+}
+
+###########################################
+# Flag management                         #
+###########################################
+
+# Safety catch - clears character flags and modifiers
+character_event = {
+	id = L3T.499
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = search_easter_eggs
+		clr_character_flag = do_not_disturb
+	}
+}
