@@ -54,6 +54,891 @@ character_event = {
 	}
 }
 
+# Search egg number 2
+character_event = {
+	id = L3T.421
+	desc = "DESCL3T.421"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		NOT = { has_character_flag = egg_found }
+		NOT = { has_character_flag = doNotLikeMarket }
+		NOT = { has_character_flag = search_egg2 }
+		NOT = { has_character_flag = search_egg4 }
+		NOT = { has_artifact = oeuf_2 }
+		NOT = { has_artifact = oeuf_united }
+	}
+
+	mean_time_to_happen = {
+		days = 100	
+
+		modifier = {
+			factor = 0.75
+			trait = patient
+		}
+		modifier = {
+			factor = 0.9
+			trait = zealous
+		}
+		modifier = {
+			factor = 1.5
+			trait = wroth
+		}
+		modifier = {
+			factor = 1.25
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.25
+			trait = slothful
+		}
+	}
+
+	option = {
+		name = "L3T.421A"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = patient
+			}
+			modifier = {
+				factor = 3
+				trait = humble
+			}
+		}
+		set_character_flag = search_egg2
+	}
+
+	option = {
+		name = "L3T.421B"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = wroth
+			}
+			modifier = {
+				factor = 10
+				trait = proud
+			}
+		}
+		set_character_flag = doNotLikeMarket
+	}
+}
+
+# Buy an egg in a small market
+character_event = {
+	id = L3T.422
+	desc = "DESCL3T.422"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = search_egg2
+		has_character_flag = search_easter_eggs
+		NOT = {
+			any_demesne_province = {
+				OR = {
+					has_province_modifier = noeud_commercial_primaire
+					has_province_modifier = noeud_commercial_annexe
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = "L3T.422A"
+		wealth = -5
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 3
+					stewardship = 12
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			20 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			70 = {
+				modifier = {
+					factor = 3
+					NOT = { stewardship = 8 }
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422B"
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 3
+					learning = 12
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			20 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			70 = {
+				modifier = {
+					factor = 3
+					NOT = { learning = 8 }
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422C"
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 5
+					trait = genius
+				}
+				modifier = {
+					factor = 2
+					trait = quick
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			20 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			70 = {
+				modifier = {
+					factor = 5
+					trait = imbecile
+				}
+				modifier = {
+					factor = 2
+					trait = slow
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422D"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = greedy
+			}
+		}
+		clr_character_flag = search_egg2
+		set_character_flag = doNotLikeMarket
+	}
+}
+
+# Buy an egg in a medium market
+character_event = {
+	id = L3T.423
+	desc = "DESCL3T.423"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = search_egg2
+		has_character_flag = search_easter_eggs
+		any_demesne_province = {
+			has_province_modifier = noeud_commercial_annexe
+		}
+	}
+
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = "L3T.422A"
+		wealth = -5
+		random_list = {
+			20 = {
+				modifier = {
+					factor = 3
+					stewardship = 12
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			30 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			50 = {
+				modifier = {
+					factor = 3
+					NOT = { stewardship = 8 }
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422B"
+		wealth = -10
+		random_list = {
+			20 = {
+				modifier = {
+					factor = 3
+					learning = 12
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			30 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			50 = {
+				modifier = {
+					factor = 3
+					NOT = { learning = 8 }
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422C"
+		wealth = -5
+		random_list = {
+			20 = {
+				modifier = {
+					factor = 5
+					trait = genius
+				}
+				modifier = {
+					factor = 2
+					trait = quick
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			30 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			50 = {
+				modifier = {
+					factor = 5
+					trait = imbecile
+				}
+				modifier = {
+					factor = 2
+					trait = slow
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422D"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = greedy
+			}
+		}
+		clr_character_flag = search_egg2
+		set_character_flag = doNotLikeMarket
+	}
+}
+
+# Buy an egg in a big market
+character_event = {
+	id = L3T.424
+	desc = "DESCL3T.424"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = search_egg2
+		has_character_flag = search_easter_eggs
+		any_demesne_province = {
+			has_province_modifier = noeud_commercial_primaire
+		}
+		NOT = {
+			any_demesne_province = {
+				has_province_modifier = noeud_commercial_primaire
+				OR = {
+					has_province_modifier = route_size3
+					has_province_modifier = route_size4
+					has_province_modifier = route_size5
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = "L3T.422A"
+		wealth = -5
+		random_list = {
+			30 = {
+				modifier = {
+					factor = 3
+					stewardship = 12
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			30 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			40 = {
+				modifier = {
+					factor = 3
+					NOT = { stewardship = 8 }
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422B"
+		wealth = -10
+		random_list = {
+			30 = {
+				modifier = {
+					factor = 3
+					learning = 12
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			30 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			40 = {
+				modifier = {
+					factor = 3
+					NOT = { learning = 8 }
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422C"
+		wealth = -5
+		random_list = {
+			30 = {
+				modifier = {
+					factor = 5
+					trait = genius
+				}
+				modifier = {
+					factor = 2
+					trait = quick
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			30 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			40 = {
+				modifier = {
+					factor = 5
+					trait = imbecile
+				}
+				modifier = {
+					factor = 2
+					trait = slow
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422D"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = greedy
+			}
+		}
+		clr_character_flag = search_egg2
+		set_character_flag = doNotLikeMarket
+	}
+}
+
+# Buy an egg in a very big market
+character_event = {
+	id = L3T.425
+	desc = "DESCL3T.425"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = search_egg2
+		has_character_flag = search_easter_eggs
+		any_demesne_province = {
+			has_province_modifier = noeud_commercial_primaire
+			OR = {
+				has_province_modifier = route_size3
+				has_province_modifier = route_size4
+			}
+		}
+		NOT = {
+			any_demesne_province = {
+				has_province_modifier = noeud_commercial_primaire
+				has_province_modifier = route_size5
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = "L3T.422A"
+		wealth = -5
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 3
+					stewardship = 12
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			20 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			30 = {
+				modifier = {
+					factor = 3
+					NOT = { stewardship = 8 }
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422B"
+		wealth = -10
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 3
+					learning = 12
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			20 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			30 = {
+				modifier = {
+					factor = 3
+					NOT = { learning = 8 }
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422C"
+		wealth = -5
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 5
+					trait = genius
+				}
+				modifier = {
+					factor = 2
+					trait = quick
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			20 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			30 = {
+				modifier = {
+					factor = 5
+					trait = imbecile
+				}
+				modifier = {
+					factor = 2
+					trait = slow
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422D"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = greedy
+			}
+		}
+		clr_character_flag = search_egg2
+		set_character_flag = doNotLikeMarket
+	}
+}
+
+# Buy an egg in a huge market
+character_event = {
+	id = L3T.426
+	desc = "DESCL3T.426"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = search_egg2
+		has_character_flag = search_easter_eggs
+		any_demesne_province = {
+			has_province_modifier = noeud_commercial_primaire
+			has_province_modifier = route_size5
+		}
+	}
+
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = "L3T.422A"
+		wealth = -5
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 3
+					stewardship = 12
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			20 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			20 = {
+				modifier = {
+					factor = 3
+					NOT = { stewardship = 8 }
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422B"
+		wealth = -10
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 3
+					learning = 12
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			20 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			20 = {
+				modifier = {
+					factor = 3
+					NOT = { learning = 8 }
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422C"
+		wealth = -5
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 5
+					trait = genius
+				}
+				modifier = {
+					factor = 2
+					trait = quick
+				}
+				character_event = { id = L3T.427 days = 10 }
+			}
+			20 = {
+				character_event = { id = L3T.428 days = 10 }
+			}
+			20 = {
+				modifier = {
+					factor = 5
+					trait = imbecile
+				}
+				modifier = {
+					factor = 2
+					trait = slow
+				}
+				character_event = { id = L3T.429 days = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.422D"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = greedy
+			}
+		}
+		clr_character_flag = search_egg2
+		set_character_flag = doNotLikeMarket
+	}
+}
+
+# Egg number 4 bought
+character_event = {
+	id = L3T.427
+	desc = "DESCL3T.427"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	immediate = { clr_character_flag = search_egg2 }
+	
+	option = {
+		name = "L3T.427A"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = patient
+			}
+		}
+		add_artifact = oeuf_2
+	}
+	
+	option = {
+		name = "L3T.427B"
+		trigger = { NOT = { trait = humble } }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+		}
+		add_artifact = oeuf_2
+		if = {
+			limit = { NOT = { trait = proud } }
+			add_trait = proud
+		}
+	}
+}
+
+# Good egg bought
+character_event = {
+	id = L3T.428
+	desc = "DESCL3T.428"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	immediate = { clr_character_flag = search_egg2 }
+	
+	option = {
+		name = "L3T.428A"
+		trigger = { NOT = { trait = patient } }
+		if = {
+			limit = { NOT = { trait = wroth } }
+			add_trait = wroth
+		}
+	}
+	
+	option = {
+		name = "L3T.428B"
+		trigger = { NOT = { trait = wroth } }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = patient
+			}
+		}
+		if = {
+			limit = { NOT = { trait = patient } }
+			add_trait = patient
+		}
+	}
+	
+	option = {
+		name = "L3T.428C"
+		tooltip_info = deceitful
+		trigger = { trait = deceitful }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = deceitful
+			}
+		}
+		prestige = -20
+		add_artifact = oeuf_2
+	}
+	
+	option = {
+		name = "L3T.428C"
+		tooltip_info = intrigue
+		trigger = {
+			NOT = { trait = honest }
+			NOT = { trait = deceitful }
+			intrigue = 12
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		add_artifact = oeuf_2
+		add_trait = deceitful
+	}
+	
+	option = {
+		name = "L3T.428D"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				trait = content
+			}
+			modifier = {
+				factor = 0.1
+				trait = ambitious
+			}
+		}
+		if = {
+			limit = { trait = content }
+			add_trait = content
+		}
+		set_character_flag = doNotLikeMarket
+	}
+}
+
+# Bad egg bought
+character_event = {
+	id = L3T.429
+	desc = "DESCL3T.429"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	immediate = { clr_character_flag = search_egg2 }
+	
+	option = {
+		name = "L3T.429A"
+		trigger = { NOT = { trait = patient } }
+		if = {
+			limit = { NOT = { trait = wroth } }
+			add_trait = wroth
+		}
+	}
+	
+	option = {
+		name = "L3T.429B"
+		trigger = { NOT = { trait = wroth } }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = patient
+			}
+		}
+		if = {
+			limit = { NOT = { trait = patient } }
+			add_trait = patient
+		}
+	}
+	
+	option = {
+		name = "L3T.429C"
+		trigger = { NOT = { trait = arbitrary } }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = just
+			}
+		}
+		if = {
+			limit = { NOT = { trait = just } }
+			add_trait = just
+		}
+		wealth = 10
+		prestige = -10
+	}
+	
+	option = {
+		name = "L3T.429D"
+		trigger = { NOT = { trait = kind } }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				trait = cruel
+			}
+		}
+		if = {
+			limit = { NOT = { trait = cruel } }
+			add_trait = cruel
+		}
+		prestige = 10
+	}
+}
+
 # Give egg number 3
 character_event = {
 	id = L3T.431
@@ -67,6 +952,7 @@ character_event = {
 	trigger = {
 		has_character_flag = canGetEasterEgg3
 		NOT = { has_character_flag = egg_found }
+		NOT = { has_character_flag = search_egg2 }
 		NOT = { has_character_flag = search_egg4 }
 		NOT = { has_artifact = oeuf_3 }
 		NOT = { has_artifact = oeuf_united }
@@ -112,7 +998,10 @@ character_event = {
 			}
 		}
 		add_artifact = oeuf_3
-		add_trait = deceitful 
+		if = {
+			limit = { NOT = { trait = deceitful } }
+			add_trait = deceitful
+		}
 	}
 
 	option = {
@@ -164,6 +1053,7 @@ character_event = {
 			has_province_modifier = foret_up
 		}
 		NOT = { has_character_flag = doNotLikeForest }
+		NOT = { has_character_flag = search_egg2 }
 		NOT = { has_character_flag = search_egg4 }
 		NOT = { has_artifact = oeuf_4 }
 		NOT = { has_artifact = oeuf_united }
@@ -267,7 +1157,10 @@ character_event = {
 				trait = patient
 			}
 		}
-		add_trait = patient
+		if = {
+			limit = { NOT = { trait = patient } }
+			add_trait = patient
+		}
 	}
 
 	option = {
@@ -344,7 +1237,10 @@ character_event = {
 				trait = patient
 			}
 		}
-		add_trait = patient
+		if = {
+			limit = { NOT = { trait = patient } }
+			add_trait = patient
+		}
 	}
 
 	option = {
