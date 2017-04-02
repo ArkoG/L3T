@@ -71,7 +71,7 @@ letter_event = {
 letter_event = {
     id = L3T.502
 	desc = "DESCL3T.502"
-	picture = GFX_evt_L3T_city_visitor
+#	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
@@ -93,7 +93,7 @@ letter_event = {
 letter_event = {
     id = L3T.503
 	desc = "DESCL3T.503"
-	picture = GFX_evt_L3T_city_visitor
+#	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
@@ -115,7 +115,7 @@ letter_event = {
 letter_event = {
     id = L3T.504
 	desc = "DESCL3T.504"
-	picture = GFX_evt_L3T_city_visitor
+#	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
@@ -137,7 +137,7 @@ letter_event = {
 letter_event = {
     id = L3T.505
 	desc = "DESCL3T.505"
-	picture = GFX_evt_L3T_city_visitor
+#	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
@@ -159,7 +159,7 @@ letter_event = {
 letter_event = {
     id = L3T.506
 	desc = "DESCL3T.506"
-	picture = GFX_evt_L3T_city_visitor
+#	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
@@ -181,7 +181,7 @@ letter_event = {
 letter_event = {
     id = L3T.507
 	desc = "DESCL3T.507"
-	picture = GFX_evt_L3T_city_visitor
+#	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
@@ -203,7 +203,7 @@ letter_event = {
 letter_event = {
     id = L3T.508
 	desc = "DESCL3T.508"
-	picture = GFX_evt_L3T_city_visitor
+#	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
@@ -249,7 +249,7 @@ letter_event = {
 letter_event = {
     id = L3T.510
 	desc = "DESCL3T.510"
-	picture = GFX_evt_L3T_city_visitor
+#	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_letter_frame_religion
 	
 	#is_triggered_only = yes
@@ -261,7 +261,7 @@ letter_event = {
 		NOT = { has_artifact = oeuf_3 }
 		NOT = { has_artifact = oeuf_4 }
 		NOT = { has_artifact = oeuf_5 }
-		#NOT = { has_artifact = oeuf_united }
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
