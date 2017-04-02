@@ -1,0 +1,203 @@
+namespace = L3T
+
+#RUMEURS CHASSE AUX OEUFS
+
+letter_event = {
+    id = L3T.500
+	desc = "DESCL3T.500"
+	picture = GFX_evt_L3T_city_visitor
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = rumeur500_recue }
+		NOT = { has_character_flag = rumeur_recue_cette_annee }
+	}
+
+	option = {
+		name = "L3T.500A"	
+		set_character_flag = rumeur500_recue
+		set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+letter_event = {
+    id = L3T.501
+	desc = "DESCL3T.501"
+	picture = GFX_evt_L3T_city_visitor
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = rumeur501_recue }
+		NOT = { has_character_flag = rumeur_recue_cette_annee }
+	}
+
+	option = {
+		name = "L3T.501A"	
+		set_character_flag = rumeur501_recue
+		set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+letter_event = {
+    id = L3T.502
+	desc = "DESCL3T.502"
+	picture = GFX_evt_L3T_city_visitor
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = rumeur502_recue }
+		NOT = { has_character_flag = rumeur_recue_cette_annee }
+	}
+
+	option = {
+		name = "L3T.502A"	
+		set_character_flag = rumeur502_recue
+		set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+letter_event = {
+    id = L3T.503
+	desc = "DESCL3T.503"
+	picture = GFX_evt_L3T_city_visitor
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = rumeur503_recue }
+		NOT = { has_character_flag = rumeur_recue_cette_annee }
+	}
+
+	option = {
+		name = "L3T.503A"	
+		set_character_flag = rumeur503_recue
+		set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+letter_event = {
+    id = L3T.504
+	desc = "DESCL3T.504"
+	picture = GFX_evt_L3T_city_visitor
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = rumeur504_recue }
+		NOT = { has_character_flag = rumeur_recue_cette_annee }
+	}
+
+	option = {
+		name = "L3T.504A"	
+		set_character_flag = rumeur504_recue
+		set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+letter_event = {
+    id = L3T.505
+	desc = "DESCL3T.505"
+	picture = GFX_evt_L3T_city_visitor
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = rumeur505_recue }
+		NOT = { has_character_flag = rumeur_recue_cette_annee }
+	}
+
+	option = {
+		name = "L3T.505A"	
+		set_character_flag = rumeur505_recue
+		set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+letter_event = {
+    id = L3T.506
+	desc = "DESCL3T.506"
+	picture = GFX_evt_L3T_city_visitor
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = rumeur506_recue }
+		NOT = { has_character_flag = rumeur_recue_cette_annee }
+	}
+
+	option = {
+		name = "L3T.506A"	
+		set_character_flag = rumeur506_recue
+		set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+letter_event = {
+    id = L3T.507
+	desc = "DESCL3T.507"
+	picture = GFX_evt_L3T_city_visitor
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = rumeur507_recue }
+		NOT = { has_character_flag = rumeur_recue_cette_annee }
+	}
+
+	option = {
+		name = "L3T.507A"	
+		set_character_flag = rumeur507_recue
+		set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+letter_event = {
+    id = L3T.508
+	desc = "DESCL3T.508"
+	picture = GFX_evt_L3T_city_visitor
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = rumeur508_recue }
+		NOT = { has_character_flag = rumeur_recue_cette_annee }
+	}
+
+	option = {
+		name = "L3T.508A"	
+		set_character_flag = rumeur508_recue
+		set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+letter_event = {
+    id = L3T.509
+	desc = "DESCL3T.509"
+	picture = GFX_evt_L3T_city_visitor
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = rumeur509_recue }
+		NOT = { has_character_flag = rumeur_recue_cette_annee }
+	}
+
+	option = {
+		name = "L3T.509A"	
+		set_character_flag = rumeur509_recue
+		set_character_flag = rumeur_recue_cette_annee
+	}
+}
