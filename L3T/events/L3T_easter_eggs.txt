@@ -182,7 +182,6 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
-		has_character_flag = canGetEasterEgg4
 		OR = {
 			NOT = { has_character_flag = egg_found }
 			had_character_flag = {
@@ -194,6 +193,10 @@ character_event = {
 			flag = search_easter_eggs
 			days = 3
 		}
+		any_demesne_province = {
+			has_province_modifier = foret_up
+		}
+		NOT = { has_character_flag = doNotLikeForest }
 		NOT = { has_character_flag = search_egg4 }
 		NOT = { has_artifact = oeuf_4 }
 		NOT = { has_artifact = oeuf_united }
@@ -263,7 +266,7 @@ character_event = {
 				trait = proud
 			}
 		}
-		clr_character_flag = canGetEasterEgg4
+		set_character_flag = doNotLikeForest
 	}
 }
 
@@ -321,7 +324,7 @@ character_event = {
 			}
 		}
 		clr_character_flag = search_egg4
-		clr_character_flag = canGetEasterEgg4
+		set_character_flag = doNotLikeForest
 	}
 }
 
@@ -399,9 +402,8 @@ character_event = {
 			}
 		}
 		clr_character_flag = search_egg4
-		clr_character_flag = canGetEasterEgg4
+		set_character_flag = doNotLikeForest
 	}
-
 }
 
 
