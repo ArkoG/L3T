@@ -14,20 +14,12 @@ narrative_event = {
 	
 	trigger = {
 		has_character_flag = search_easter_eggs
-		AND = {
-			has_artifact = oeuf_1
-			has_artifact = oeuf_2
-			has_artifact = oeuf_3
-			has_artifact = oeuf_4
-			has_artifact = oeuf_5
-		}
-#		AND = { #a voir pour ne pas pouvoir assembler l'oeuf unique la même saison que celle où l'on a trouvé le 5éme et dernier oeuf
-#			had_character_flag = { flag = flag_oeuf1 days = 365 }
-#			had_character_flag = { flag = flag_oeuf2 days = 365 }
-#			had_character_flag = { flag = flag_oeuf3 days = 365 }
-#			had_character_flag = { flag = flag_oeuf4 days = 365 }
-#			had_character_flag = { flag = flag_oeuf5 days = 365 }
-#		}
+		has_artifact = oeuf_1
+		has_artifact = oeuf_2
+		has_artifact = oeuf_3
+		has_artifact = oeuf_4
+		has_artifact = oeuf_5
+		NOT = { has_character_flag = egg_found } # Not assemble the same year as a egg was found
 		NOT = { has_artifact = oeuf_united }
 	}
 
@@ -48,8 +40,8 @@ narrative_event = {
 				destroy_artifact = oeuf_3
 				destroy_artifact = oeuf_4
 				destroy_artifact = oeuf_5
-				}
 			}
+		}
 		add_artifact = oeuf_united
 	}
 }
