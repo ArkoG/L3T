@@ -2,23 +2,55 @@ namespace = L3T
 
 #RUMEURS CHASSE AUX OEUFS
 
-letter_event = {
+narrative_event = {
     id = L3T.500
+	title = NAMEL3T.500
 	desc = "DESCL3T.500"
 	picture = GFX_evt_L3T_city_visitor
+	#find proper easter egg event pic
+	#border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
 	
 	trigger = {
 		has_character_flag = search_easter_eggs
-		NOT = { has_character_flag = rumeur500_recue }
-		NOT = { has_character_flag = rumeur_recue_cette_annee }
+		AND = {
+			has_artifact = oeuf_1
+			has_artifact = oeuf_2
+			has_artifact = oeuf_3
+			has_artifact = oeuf_4
+			has_artifact = oeuf_5
+		}
+#		AND = { #a voir pour ne pas pouvoir assembler l'oeuf unique la même saison que celle où l'on a trouvé le 5éme et dernier oeuf
+#			had_character_flag = { flag = flag_oeuf1 days = 365 }
+#			had_character_flag = { flag = flag_oeuf2 days = 365 }
+#			had_character_flag = { flag = flag_oeuf3 days = 365 }
+#			had_character_flag = { flag = flag_oeuf4 days = 365 }
+#			had_character_flag = { flag = flag_oeuf5 days = 365 }
+#		}
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
-		name = "L3T.500A"	
-		set_character_flag = rumeur500_recue
-		set_character_flag = rumeur_recue_cette_annee
+		name = "L3T.500A"
+		add_character_modifier = { name = totoro duration = -1 } #MOUCHARD pour voir l'event pop
+		chronicle = {
+			entry = CHRONICLE_EGG_UNITED
+			portrait = [Root.GetID]
+			picture = GFX_evt_L3T_city_visitor
+			#find proper easter egg event pic
+		}
+		custom_tooltip = {
+			text = EGG_UNIFICATION
+			hidden_tooltip = {		
+				destroy_artifact = oeuf_1
+				destroy_artifact = oeuf_2
+				destroy_artifact = oeuf_3
+				destroy_artifact = oeuf_4
+				destroy_artifact = oeuf_5
+				}
+			}
+		add_artifact = oeuf_united
 	}
 }
 
@@ -26,6 +58,7 @@ letter_event = {
     id = L3T.501
 	desc = "DESCL3T.501"
 	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
 	
@@ -33,6 +66,7 @@ letter_event = {
 		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = rumeur501_recue }
 		NOT = { has_character_flag = rumeur_recue_cette_annee }
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
@@ -46,6 +80,7 @@ letter_event = {
     id = L3T.502
 	desc = "DESCL3T.502"
 	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
 	
@@ -53,6 +88,7 @@ letter_event = {
 		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = rumeur502_recue }
 		NOT = { has_character_flag = rumeur_recue_cette_annee }
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
@@ -66,6 +102,7 @@ letter_event = {
     id = L3T.503
 	desc = "DESCL3T.503"
 	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
 	
@@ -73,6 +110,7 @@ letter_event = {
 		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = rumeur503_recue }
 		NOT = { has_character_flag = rumeur_recue_cette_annee }
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
@@ -86,6 +124,7 @@ letter_event = {
     id = L3T.504
 	desc = "DESCL3T.504"
 	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
 	
@@ -93,6 +132,7 @@ letter_event = {
 		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = rumeur504_recue }
 		NOT = { has_character_flag = rumeur_recue_cette_annee }
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
@@ -106,6 +146,7 @@ letter_event = {
     id = L3T.505
 	desc = "DESCL3T.505"
 	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
 	
@@ -113,6 +154,7 @@ letter_event = {
 		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = rumeur505_recue }
 		NOT = { has_character_flag = rumeur_recue_cette_annee }
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
@@ -126,6 +168,7 @@ letter_event = {
     id = L3T.506
 	desc = "DESCL3T.506"
 	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
 	
@@ -133,6 +176,7 @@ letter_event = {
 		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = rumeur506_recue }
 		NOT = { has_character_flag = rumeur_recue_cette_annee }
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
@@ -146,6 +190,7 @@ letter_event = {
     id = L3T.507
 	desc = "DESCL3T.507"
 	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
 	
@@ -153,6 +198,7 @@ letter_event = {
 		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = rumeur507_recue }
 		NOT = { has_character_flag = rumeur_recue_cette_annee }
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
@@ -166,6 +212,7 @@ letter_event = {
     id = L3T.508
 	desc = "DESCL3T.508"
 	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
 	
@@ -173,6 +220,7 @@ letter_event = {
 		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = rumeur508_recue }
 		NOT = { has_character_flag = rumeur_recue_cette_annee }
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
@@ -186,18 +234,51 @@ letter_event = {
     id = L3T.509
 	desc = "DESCL3T.509"
 	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
 	
+
 	is_triggered_only = yes
 	
 	trigger = {
 		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = rumeur509_recue }
 		NOT = { has_character_flag = rumeur_recue_cette_annee }
+		NOT = { has_artifact = oeuf_united }
 	}
 
 	option = {
 		name = "L3T.509A"	
 		set_character_flag = rumeur509_recue
 		set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+###TEST EVENT
+letter_event = {
+    id = L3T.510
+	desc = "DESCL3T.510"
+	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
+	
+	#is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_artifact = oeuf_1 }
+		NOT = { has_artifact = oeuf_2 }
+		NOT = { has_artifact = oeuf_3 }
+		NOT = { has_artifact = oeuf_4 }
+		NOT = { has_artifact = oeuf_5 }
+		#NOT = { has_artifact = oeuf_united }
+	}
+
+	option = {
+		name = "HAPPY_EASTER"
+		add_artifact = oeuf_1
+		add_artifact = oeuf_2
+		add_artifact = oeuf_3
+		add_artifact = oeuf_4
+		add_artifact = oeuf_5
+		#add_artifact = oeuf_united
 	}
 }
