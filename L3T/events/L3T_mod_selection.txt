@@ -3,8 +3,21 @@ namespace = L3T
 # Détection de la carte
 character_event = {
     id = L3T.10
-	title = "NAMEL3T.10"
+	#title = "NAMEL3T.10"
 	#desc = "DESCL3T.10"
+	title = { 
+		trigger = {	religion_group = christian	}
+		text = "NAMEL3T.10_christian"
+	}
+	title = {
+		trigger = {	religion_group = muslim	}
+		text = "NAMEL3T.10_muslim"
+	}
+	title = { 
+		trigger = { NOT = { religion_group = muslim religion_group = christian }}
+		text = "NAMEL3T.10_other"
+	}
+
 	desc = {
 		trigger = { has_global_flag = running_LCDA }
 		text = DESCL3T.10_LCDA
@@ -130,8 +143,8 @@ narrative_event = {
 # Boost IA non feudal
 character_event = {
     id = L3T.12
-	desc = "DESCL3T.12"
-	picture = GFX_evt_market
+	#desc = "DESCL3T.12"
+	#picture = GFX_evt_market
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -161,6 +174,18 @@ character_event = {
 		 7 = { wealth = 125	}
 		 6 = { wealth = 137	}
 		 5 = { wealth = 148	}
+		}
+	random_list = {
+		16 = { piety = 15	}
+		14 = { piety = 20	}
+		13 = { piety = 25	}
+		12 = { piety = 30	}
+		10 = { piety = 35	}
+		 9 = { piety = 42	}
+		 8 = { piety = 57	}
+		 7 = { piety = 78	}
+		 6 = { piety = 82	}
+		 5 = { piety = 95	}
 		}
 	}
 

@@ -50,7 +50,9 @@ TOOLTIPL3T301B;The tool manufacturing buildings will be sold between §Y40%§! and
 #DESCECO.22;unrelated stuff;Le tracé de la principale route reliant les cités de Lyon et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans ce domaine en bonne intelligence.;;;;;;;;;;;;x
 #ECO.22A;unrelated stuff;Merci pour la leçon d'économie !;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-NAMEL3T.10;Welcome, my Liege! ;Salutations Messire ! ;;;;;;;;;;;;x
+NAMEL3T.10_christian;Welcome, my Lord!;Salutations Monseigneur ! ;;;;;;;;;;;;x
+NAMEL3T.10_muslim;Welcome, by 'Allah!;La bienvenue par 'Allah ! ;;;;;;;;;;;;x
+NAMEL3T.10_other;Welcome, my Lord!;Salutations ô Seigneur ! ;;;;;;;;;;;;x
 #L3T.10;MAP choice;Les cartes en main !;;;;;;;;;;;;x
 #DESCL3T.10;\n Please tell me which map your are playing alongside L3T to adapt the game. This will seed the map with the appropriate terrain and resource modifiers.;\n Dis-moi sur quelle carte joues-tu pour adapter la partie ? ;;;;;;;;;;;;x
 DESCL3T.10_SWMH;You've have chosen to play with the map from the excellent mod "SomeWhat More Historical", an excellent choice !\nWelcome to the world of the mod "The Three Towers" ! \nThe ressources distribution takes some time, please be patient.;Vous avez choisi de jouer avec la carte du mod "SomeWhat More Historical", un excellent choix ! \nBienvenue dans le monde du mod "Les Trois Tours" ! \nLa distribution des ressources intervient au bout de quelques temps.;;;;;;;;;;;;x
@@ -1218,6 +1220,7 @@ DESCECO.213;Miners in the [Root.GetName] province have found some new mineral ve
 ECO.213A;Excellent!;Excellent !;;;;;;;;;;;;x
 NOUVEAU_FILON_CHRONIQUE;This year saw the miners of [Root.GetName] province discovering new veins of mineral.;Cette année a vu les mineurs de la province de [Root.GetName] découvrir un nouveau filon de minerai dans nos mines.;;;;;;;;;;;;x
 #;x;x;;;;;;;;;;;;x
+NAMEECO.319;Cadastre;Le Cadastre;;;;;;;;;;;;x
 DESCECO.319;Land ownership is the basis of many taxes we collect. The fee or tax is often composed of land or otherwise of various fees and charges.\nThis seems a good avenue to explore to improve our stewardship skills and improve our tax revenues.;La propriété foncière est à la base des beaucoup de taxes que nous percevons. Le fief ou fisc est souvent composé de terres ou sinon de droits et redevances divers.\nCela semble une bonne piste à explorer pour améliorer nos compétences d'intendance et améliorer nos rentrées fiscales.;;;;;;;;;;;;x
 ECO.319A;That sounds obvious!;Voilà qui sonne comme une évidence !;;;;;;;;;;;;x
 TOOLTIPECO319;We will explore opportunities in this area.;Nous allons étudier les possibilités dans ce domaine.;;;;;;;;;;;;x
