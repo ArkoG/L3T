@@ -544,6 +544,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	##L3T	
 	TP_universite_mutazilite_1 = {
 		desc = TP_universite_mutazilite_desc
+		potential = { owner = { religion = sunni }}
 		trigger = { 
 			TECH_TEMPLE_CONSTRUCTION = 3
 			#FROM = { religion = sunni	NOT = { trait = ashari }}
@@ -566,7 +567,8 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	TP_universite_mutazilite_2 = {
 		desc = TP_universite_mutazilite_desc
-		trigger = { 
+		potential = { owner = { religion = sunni }}
+		trigger = {
 			TECH_TEMPLE_CONSTRUCTION = 5
 			#FROM = { religion = sunni	NOT = { trait = ashari }}
 			owner = { religion = sunni	trait = mutazilite }			
@@ -590,7 +592,8 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}	
 	TP_universite_asharite_1 = {
 		desc = TP_universite_asharite_desc
-		trigger = { 
+		potential = { owner = { religion = sunni }}
+		trigger = {
 			TECH_TEMPLE_CONSTRUCTION = 3
 			#FROM = { religion = sunni	trait = ashari }
 			owner = { religion = sunni	trait = ashari }
@@ -612,6 +615,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	TP_universite_asharite_2 = {
 		desc = TP_universite_asharite_desc
+		potential = { owner = { religion = sunni }}
 		trigger = {
 			TECH_TEMPLE_CONSTRUCTION = 5
 			#FROM = { religion = sunni	trait = ashari }
