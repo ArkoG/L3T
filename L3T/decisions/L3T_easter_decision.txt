@@ -8,6 +8,7 @@ decisions = {
 			prisoner = no
 			religion_group = christian
 			NOT = {	has_character_flag = search_easter_eggs }
+			NOT = { has_artifact = oeuf_united }
 		}
 		allow = {
 			war = no
