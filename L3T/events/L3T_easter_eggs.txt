@@ -21,6 +21,7 @@ character_event = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
 		clr_character_flag = egg_found
+		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
 	}
 
@@ -45,6 +46,7 @@ character_event = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
 		clr_character_flag = egg_found
+		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
 	}
 
@@ -65,6 +67,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = egg_found }
 		NOT = { has_character_flag = doNotLikeMarket }
 		NOT = { has_character_flag = search_egg2 }
@@ -74,7 +77,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 100	
+		days = 30	
 
 		modifier = {
 			factor = 0.75
@@ -154,82 +157,90 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = { days = 100 }
+	mean_time_to_happen = { days = 30 }
 
 	option = {
 		name = "L3T.422A"
 		wealth = -5
-		random_list = {
-			10 = {
-				modifier = {
-					factor = 3
-					stewardship = 12
+		hidden_tooltip = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 3
+						stewardship = 12
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			20 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			70 = {
-				modifier = {
-					factor = 3
-					NOT = { stewardship = 8 }
+				20 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.429 days = 10 }
+				70 = {
+					modifier = {
+						factor = 3
+						NOT = { stewardship = 8 }
+					}
+					character_event = { id = L3T.429 days = 10 }
+				}
 			}
 		}
 	}
 
 	option = {
 		name = "L3T.422B"
-		random_list = {
-			10 = {
-				modifier = {
-					factor = 3
-					learning = 12
+		wealth = -10
+		hidden_tooltip = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 3
+						learning = 12
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			20 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			70 = {
-				modifier = {
-					factor = 3
-					NOT = { learning = 8 }
+				20 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.429 days = 10 }
+				70 = {
+					modifier = {
+						factor = 3
+						NOT = { learning = 8 }
+					}
+					character_event = { id = L3T.429 days = 10 }
+				}
 			}
 		}
 	}
 
 	option = {
 		name = "L3T.422C"
-		random_list = {
-			10 = {
-				modifier = {
-					factor = 5
-					trait = genius
+		wealth = -5
+		hidden_tooltip = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 5
+						trait = genius
+					}
+					modifier = {
+						factor = 2
+						trait = quick
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					trait = quick
+				20 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			20 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			70 = {
-				modifier = {
-					factor = 5
-					trait = imbecile
+				70 = {
+					modifier = {
+						factor = 5
+						trait = imbecile
+					}
+					modifier = {
+						factor = 2
+						trait = slow
+					}
+					character_event = { id = L3T.429 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					trait = slow
-				}
-				character_event = { id = L3T.429 days = 10 }
 			}
 		}
 	}
@@ -243,7 +254,6 @@ character_event = {
 				trait = greedy
 			}
 		}
-		clr_character_flag = search_egg2
 		set_character_flag = doNotLikeMarket
 	}
 }
@@ -266,28 +276,30 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = { days = 100 }
+	mean_time_to_happen = { days = 30 }
 
 	option = {
 		name = "L3T.422A"
 		wealth = -5
-		random_list = {
-			20 = {
-				modifier = {
-					factor = 3
-					stewardship = 12
+		hidden_tooltip = {
+			random_list = {
+				20 = {
+					modifier = {
+						factor = 3
+						stewardship = 12
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			30 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			50 = {
-				modifier = {
-					factor = 3
-					NOT = { stewardship = 8 }
+				30 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.429 days = 10 }
+				50 = {
+					modifier = {
+						factor = 3
+						NOT = { stewardship = 8 }
+					}
+					character_event = { id = L3T.429 days = 10 }
+				}
 			}
 		}
 	}
@@ -295,23 +307,25 @@ character_event = {
 	option = {
 		name = "L3T.422B"
 		wealth = -10
-		random_list = {
-			20 = {
-				modifier = {
-					factor = 3
-					learning = 12
+		hidden_tooltip = {
+			random_list = {
+				20 = {
+					modifier = {
+						factor = 3
+						learning = 12
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			30 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			50 = {
-				modifier = {
-					factor = 3
-					NOT = { learning = 8 }
+				30 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.429 days = 10 }
+				50 = {
+					modifier = {
+						factor = 3
+						NOT = { learning = 8 }
+					}
+					character_event = { id = L3T.429 days = 10 }
+				}
 			}
 		}
 	}
@@ -319,31 +333,33 @@ character_event = {
 	option = {
 		name = "L3T.422C"
 		wealth = -5
-		random_list = {
-			20 = {
-				modifier = {
-					factor = 5
-					trait = genius
+		hidden_tooltip = {
+			random_list = {
+				20 = {
+					modifier = {
+						factor = 5
+						trait = genius
+					}
+					modifier = {
+						factor = 2
+						trait = quick
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					trait = quick
+				30 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			30 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			50 = {
-				modifier = {
-					factor = 5
-					trait = imbecile
+				50 = {
+					modifier = {
+						factor = 5
+						trait = imbecile
+					}
+					modifier = {
+						factor = 2
+						trait = slow
+					}
+					character_event = { id = L3T.429 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					trait = slow
-				}
-				character_event = { id = L3T.429 days = 10 }
 			}
 		}
 	}
@@ -357,7 +373,6 @@ character_event = {
 				trait = greedy
 			}
 		}
-		clr_character_flag = search_egg2
 		set_character_flag = doNotLikeMarket
 	}
 }
@@ -390,28 +405,30 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = { days = 100 }
+	mean_time_to_happen = { days = 30 }
 
 	option = {
 		name = "L3T.422A"
 		wealth = -5
-		random_list = {
-			30 = {
-				modifier = {
-					factor = 3
-					stewardship = 12
+		hidden_tooltip = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 3
+						stewardship = 12
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			30 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			40 = {
-				modifier = {
-					factor = 3
-					NOT = { stewardship = 8 }
+				30 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.429 days = 10 }
+				40 = {
+					modifier = {
+						factor = 3
+						NOT = { stewardship = 8 }
+					}
+					character_event = { id = L3T.429 days = 10 }
+				}
 			}
 		}
 	}
@@ -419,23 +436,25 @@ character_event = {
 	option = {
 		name = "L3T.422B"
 		wealth = -10
-		random_list = {
-			30 = {
-				modifier = {
-					factor = 3
-					learning = 12
+		hidden_tooltip = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 3
+						learning = 12
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			30 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			40 = {
-				modifier = {
-					factor = 3
-					NOT = { learning = 8 }
+				30 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.429 days = 10 }
+				40 = {
+					modifier = {
+						factor = 3
+						NOT = { learning = 8 }
+					}
+					character_event = { id = L3T.429 days = 10 }
+				}
 			}
 		}
 	}
@@ -443,31 +462,33 @@ character_event = {
 	option = {
 		name = "L3T.422C"
 		wealth = -5
-		random_list = {
-			30 = {
-				modifier = {
-					factor = 5
-					trait = genius
+		hidden_tooltip = {
+			random_list = {
+				30 = {
+					modifier = {
+						factor = 5
+						trait = genius
+					}
+					modifier = {
+						factor = 2
+						trait = quick
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					trait = quick
+				30 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			30 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			40 = {
-				modifier = {
-					factor = 5
-					trait = imbecile
+				40 = {
+					modifier = {
+						factor = 5
+						trait = imbecile
+					}
+					modifier = {
+						factor = 2
+						trait = slow
+					}
+					character_event = { id = L3T.429 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					trait = slow
-				}
-				character_event = { id = L3T.429 days = 10 }
 			}
 		}
 	}
@@ -481,7 +502,6 @@ character_event = {
 				trait = greedy
 			}
 		}
-		clr_character_flag = search_egg2
 		set_character_flag = doNotLikeMarket
 	}
 }
@@ -514,28 +534,30 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = { days = 100 }
+	mean_time_to_happen = { days = 30 }
 
 	option = {
 		name = "L3T.422A"
 		wealth = -5
-		random_list = {
-			50 = {
-				modifier = {
-					factor = 3
-					stewardship = 12
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 3
+						stewardship = 12
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			20 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			30 = {
-				modifier = {
-					factor = 3
-					NOT = { stewardship = 8 }
+				20 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.429 days = 10 }
+				30 = {
+					modifier = {
+						factor = 3
+						NOT = { stewardship = 8 }
+					}
+					character_event = { id = L3T.429 days = 10 }
+				}
 			}
 		}
 	}
@@ -543,23 +565,25 @@ character_event = {
 	option = {
 		name = "L3T.422B"
 		wealth = -10
-		random_list = {
-			50 = {
-				modifier = {
-					factor = 3
-					learning = 12
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 3
+						learning = 12
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			20 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			30 = {
-				modifier = {
-					factor = 3
-					NOT = { learning = 8 }
+				20 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.429 days = 10 }
+				30 = {
+					modifier = {
+						factor = 3
+						NOT = { learning = 8 }
+					}
+					character_event = { id = L3T.429 days = 10 }
+				}
 			}
 		}
 	}
@@ -567,31 +591,33 @@ character_event = {
 	option = {
 		name = "L3T.422C"
 		wealth = -5
-		random_list = {
-			50 = {
-				modifier = {
-					factor = 5
-					trait = genius
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 5
+						trait = genius
+					}
+					modifier = {
+						factor = 2
+						trait = quick
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					trait = quick
+				20 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			20 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			30 = {
-				modifier = {
-					factor = 5
-					trait = imbecile
+				30 = {
+					modifier = {
+						factor = 5
+						trait = imbecile
+					}
+					modifier = {
+						factor = 2
+						trait = slow
+					}
+					character_event = { id = L3T.429 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					trait = slow
-				}
-				character_event = { id = L3T.429 days = 10 }
 			}
 		}
 	}
@@ -605,7 +631,6 @@ character_event = {
 				trait = greedy
 			}
 		}
-		clr_character_flag = search_egg2
 		set_character_flag = doNotLikeMarket
 	}
 }
@@ -629,28 +654,30 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = { days = 100 }
+	mean_time_to_happen = { days = 30 }
 
 	option = {
 		name = "L3T.422A"
 		wealth = -5
-		random_list = {
-			60 = {
-				modifier = {
-					factor = 3
-					stewardship = 12
+		hidden_tooltip = {
+			random_list = {
+				60 = {
+					modifier = {
+						factor = 3
+						stewardship = 12
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			20 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			20 = {
-				modifier = {
-					factor = 3
-					NOT = { stewardship = 8 }
+				20 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.429 days = 10 }
+				20 = {
+					modifier = {
+						factor = 3
+						NOT = { stewardship = 8 }
+					}
+					character_event = { id = L3T.429 days = 10 }
+				}
 			}
 		}
 	}
@@ -658,23 +685,25 @@ character_event = {
 	option = {
 		name = "L3T.422B"
 		wealth = -10
-		random_list = {
-			60 = {
-				modifier = {
-					factor = 3
-					learning = 12
+		hidden_tooltip = {
+			random_list = {
+				60 = {
+					modifier = {
+						factor = 3
+						learning = 12
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			20 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			20 = {
-				modifier = {
-					factor = 3
-					NOT = { learning = 8 }
+				20 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.429 days = 10 }
+				20 = {
+					modifier = {
+						factor = 3
+						NOT = { learning = 8 }
+					}
+					character_event = { id = L3T.429 days = 10 }
+				}
 			}
 		}
 	}
@@ -682,31 +711,33 @@ character_event = {
 	option = {
 		name = "L3T.422C"
 		wealth = -5
-		random_list = {
-			60 = {
-				modifier = {
-					factor = 5
-					trait = genius
+		hidden_tooltip = {
+			random_list = {
+				60 = {
+					modifier = {
+						factor = 5
+						trait = genius
+					}
+					modifier = {
+						factor = 2
+						trait = quick
+					}
+					character_event = { id = L3T.427 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					trait = quick
+				20 = {
+					character_event = { id = L3T.428 days = 10 }
 				}
-				character_event = { id = L3T.427 days = 10 }
-			}
-			20 = {
-				character_event = { id = L3T.428 days = 10 }
-			}
-			20 = {
-				modifier = {
-					factor = 5
-					trait = imbecile
+				20 = {
+					modifier = {
+						factor = 5
+						trait = imbecile
+					}
+					modifier = {
+						factor = 2
+						trait = slow
+					}
+					character_event = { id = L3T.429 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					trait = slow
-				}
-				character_event = { id = L3T.429 days = 10 }
 			}
 		}
 	}
@@ -720,12 +751,11 @@ character_event = {
 				trait = greedy
 			}
 		}
-		clr_character_flag = search_egg2
 		set_character_flag = doNotLikeMarket
 	}
 }
 
-# Egg number 4 bought
+# Egg number 2 bought
 character_event = {
 	id = L3T.427
 	desc = "DESCL3T.427"
@@ -737,7 +767,7 @@ character_event = {
 
 	is_triggered_only = yes
 	
-	immediate = { clr_character_flag = search_egg2 }
+	immediate = { set_character_flag = egg_found }
 	
 	option = {
 		name = "L3T.427A"
@@ -781,8 +811,6 @@ character_event = {
 
 	is_triggered_only = yes
 	
-	immediate = { clr_character_flag = search_egg2 }
-	
 	option = {
 		name = "L3T.428A"
 		trigger = { NOT = { trait = patient } }
@@ -806,6 +834,11 @@ character_event = {
 			limit = { NOT = { trait = patient } }
 			add_trait = patient
 		}
+		character_event = { id = L3T.422 days = 10 }
+		character_event = { id = L3T.423 days = 10 }
+		character_event = { id = L3T.424 days = 10 }
+		character_event = { id = L3T.425 days = 10 }
+		character_event = { id = L3T.426 days = 10 }
 	}
 	
 	option = {
@@ -821,6 +854,7 @@ character_event = {
 		}
 		prestige = -20
 		add_artifact = oeuf_2
+		set_character_flag = egg_found
 	}
 	
 	option = {
@@ -841,6 +875,7 @@ character_event = {
 		prestige = -20
 		add_artifact = oeuf_2
 		add_trait = deceitful
+		set_character_flag = egg_found
 	}
 	
 	option = {
@@ -876,8 +911,6 @@ character_event = {
 
 	is_triggered_only = yes
 	
-	immediate = { clr_character_flag = search_egg2 }
-	
 	option = {
 		name = "L3T.429A"
 		trigger = { NOT = { trait = patient } }
@@ -901,6 +934,11 @@ character_event = {
 			limit = { NOT = { trait = patient } }
 			add_trait = patient
 		}
+		character_event = { id = L3T.422 days = 10 }
+		character_event = { id = L3T.423 days = 10 }
+		character_event = { id = L3T.424 days = 10 }
+		character_event = { id = L3T.425 days = 10 }
+		character_event = { id = L3T.426 days = 10 }
 	}
 	
 	option = {
@@ -919,6 +957,11 @@ character_event = {
 		}
 		wealth = 10
 		prestige = -10
+		character_event = { id = L3T.422 days = 10 }
+		character_event = { id = L3T.423 days = 10 }
+		character_event = { id = L3T.424 days = 10 }
+		character_event = { id = L3T.425 days = 10 }
+		character_event = { id = L3T.426 days = 10 }
 	}
 	
 	option = {
@@ -963,7 +1006,7 @@ character_event = {
 	}	
 
 	mean_time_to_happen = {
-		days = 100	
+		days = 30	
 
 		modifier = {
 			factor = 0.75
@@ -1048,6 +1091,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = egg_found }
 		any_demesne_province = {
 			has_province_modifier = foret_up
@@ -1060,7 +1104,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 100	
+		days = 30	
 
 		modifier = {
 			factor = 0.75
@@ -1132,7 +1176,7 @@ character_event = {
 		has_character_flag = search_easter_eggs
 	}
 
-	mean_time_to_happen = { days = 100 }
+	mean_time_to_happen = { days = 30 }
 
 	option = {
 		name = "L3T.442A"
@@ -1192,7 +1236,7 @@ character_event = {
 		has_character_flag = search_easter_eggs
 	}
 
-	mean_time_to_happen = { days = 100 }
+	mean_time_to_happen = { days = 30 }
 
 	option = {
 		name = "L3T.443A"
@@ -1274,6 +1318,7 @@ character_event = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
 		clr_character_flag = egg_found
+		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
 	}
 }
