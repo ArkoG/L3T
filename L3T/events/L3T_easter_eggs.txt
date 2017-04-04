@@ -859,7 +859,7 @@ character_event = {
 			factor = 30
 			modifier = {
 				factor = 2
-				trait = deceitful
+				intrigue = 15
 			}
 		}
 		prestige = -20
@@ -902,7 +902,7 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { trait = content }
+			limit = { NOT = { trait = content } }
 			add_trait = content
 		}
 		set_character_flag = doNotLikeMarket
