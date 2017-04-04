@@ -21,6 +21,7 @@ character_event = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
 		clr_character_flag = egg_found
+		clr_character_flag = search_egg1
 		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
 	}
@@ -46,6 +47,7 @@ character_event = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
 		clr_character_flag = egg_found
+		clr_character_flag = search_egg1
 		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
 	}
@@ -53,6 +55,136 @@ character_event = {
 	option = {
 		name = "L3T.402A"
 		piety = 10
+	}
+}
+
+# Search egg number 1
+character_event = {
+	id = L3T.411
+	desc = "DESCL3T.411"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = search_easter_eggs
+		location = {
+			any_province_holding = {
+				is_holy_site = ROOT
+			}
+		}
+		NOT = { has_character_flag = egg_found }
+		NOT = { has_character_flag = search_egg1 }
+		NOT = { has_character_flag = search_egg2 }
+		NOT = { has_character_flag = search_egg4 }
+		NOT = { has_artifact = oeuf_1 }
+		NOT = { has_artifact = oeuf_united }
+	}
+
+	mean_time_to_happen = {
+		days = 30	
+
+		modifier = {
+			factor = 0.75
+			trait = patient
+		}
+		modifier = {
+			factor = 0.9
+			trait = zealous
+		}
+		modifier = {
+			factor = 1.5
+			trait = wroth
+		}
+		modifier = {
+			factor = 1.25
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.25
+			trait = slothful
+		}
+	}
+	
+	option = {
+		name = "L3T.411A"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = patient
+			}
+			modifier = {
+				factor = 3
+				trait = humble
+			}
+		}
+		set_character_flag = search_egg1
+		#character_event = { id = L3T.412 days = 30 }
+	}
+	
+	option = {
+		name = "L3T.411B"
+		tooltip_info = deceitful
+		trigger = { trait = deceitful }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		religion_head  = {
+			opinion = { modifier = opinion_egg_pope who = ROOT years = 5 }
+		}
+		add_artifact = oeuf_1
+		set_character_flag = egg_found
+	}
+	
+	option = {
+		name = "L3T.411B"
+		tooltip_info = intrigue
+		trigger = {
+			NOT = { trait = honest }
+			NOT = { trait = deceitful }
+			intrigue = 12
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		religion_head  = {
+			opinion = { modifier = opinion_egg_pope who = ROOT years = 5 }
+		}
+		add_artifact = oeuf_1
+		add_trait = deceitful
+		set_character_flag = egg_found
+	}
+	
+	option = {
+		name = "L3T.411C"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				trait = content
+			}
+			modifier = {
+				factor = 0.1
+				trait = ambitious
+			}
+		}
+		if = {
+			limit = { NOT = { trait = content } }
+			add_trait = content
+		}
 	}
 }
 
@@ -70,6 +202,7 @@ character_event = {
 		has_character_flag = search_easter_eggs
 		NOT = { has_character_flag = egg_found }
 		NOT = { has_character_flag = doNotLikeMarket }
+		NOT = { has_character_flag = search_egg1 }
 		NOT = { has_character_flag = search_egg2 }
 		NOT = { has_character_flag = search_egg4 }
 		NOT = { has_artifact = oeuf_2 }
@@ -1005,6 +1138,7 @@ character_event = {
 	trigger = {
 		has_character_flag = canGetEasterEgg3
 		NOT = { has_character_flag = egg_found }
+		NOT = { has_character_flag = search_egg1 }
 		NOT = { has_character_flag = search_egg2 }
 		NOT = { has_character_flag = search_egg4 }
 		NOT = { has_artifact = oeuf_3 }
@@ -1107,6 +1241,7 @@ character_event = {
 			has_province_modifier = foret_up
 		}
 		NOT = { has_character_flag = doNotLikeForest }
+		NOT = { has_character_flag = search_egg1 }
 		NOT = { has_character_flag = search_egg2 }
 		NOT = { has_character_flag = search_egg4 }
 		NOT = { has_artifact = oeuf_4 }
@@ -1328,6 +1463,7 @@ character_event = {
 		clr_character_flag = search_easter_eggs
 		clr_character_flag = do_not_disturb
 		clr_character_flag = egg_found
+		clr_character_flag = search_egg1
 		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
 	}
