@@ -115,6 +115,11 @@ character_event = {
 			}
 		}
 		set_character_flag = search_egg2
+		character_event = { id = L3T.422 days = 30 }
+		character_event = { id = L3T.423 days = 30 }
+		character_event = { id = L3T.424 days = 30 }
+		character_event = { id = L3T.425 days = 30 }
+		character_event = { id = L3T.426 days = 30 }
 	}
 
 	option = {
@@ -157,7 +162,7 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = { days = 30 }
+	is_triggered_only = yes
 
 	option = {
 		name = "L3T.422A"
@@ -281,7 +286,7 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = { days = 30 }
+	is_triggered_only = yes
 
 	option = {
 		name = "L3T.422A"
@@ -410,7 +415,7 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = { days = 30 }
+	is_triggered_only = yes
 
 	option = {
 		name = "L3T.422A"
@@ -539,7 +544,7 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = { days = 30 }
+	is_triggered_only = yes
 
 	option = {
 		name = "L3T.422A"
@@ -659,7 +664,7 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = { days = 30 }
+	is_triggered_only = yes
 
 	option = {
 		name = "L3T.422A"
