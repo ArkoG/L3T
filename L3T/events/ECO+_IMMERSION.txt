@@ -528,6 +528,9 @@ province_event = {
 		modifier = { factor = 0.95	owner = { NOT = { piety = 500 } } }
 		modifier = { factor = 0.90	borders_major_river = yes }
 		modifier = { factor = 0.90	has_province_modifier = province_fleuve }
+		modifier = { factor = 1.50	terrain = desert }
+		modifier = { factor = 1.10	any_neighbor_province = { terrain = desert } }
+		modifier = { factor = 1.10	terrain = steppe }
 	}
 
 	option = {
@@ -602,7 +605,10 @@ province_event = {
 		modifier = { factor = 0.92	owner = { NOT = { piety = 400 } } }
 		modifier = { factor = 0.90	owner = { NOT = { piety = 500 } } }
 		modifier = { factor = 1.20	has_province_modifier = province_fleuve }
-	}
+		modifier = { factor = 0.50	terrain = desert }
+		modifier = { factor = 0.90	any_neighbor_province = { terrain = desert } }
+		modifier = { factor = 0.90	terrain = steppe }
+		}
 
 	option = {
 		name = "ECO.209A"
