@@ -62,7 +62,7 @@ character_event = {
 character_event = {
 	id = L3T.411
 	desc = "DESCL3T.411"
-	picture = "GFX_evt_market"
+	picture = "GFX_evt_REC2"
 
 	only_playable = yes
 	prisoner = no
@@ -70,10 +70,13 @@ character_event = {
 
 	trigger = {
 		has_character_flag = search_easter_eggs
-		location = {
-			any_province_holding = {
-				is_holy_site = ROOT
+		OR = {
+			location = {
+				any_province_holding = {
+					is_holy_site = ROOT
+				}
 			}
+			ai = yes # A AI cannot think to move to an holy site
 		}
 		NOT = { has_character_flag = egg_found }
 		NOT = { has_character_flag = search_egg1 }
@@ -123,7 +126,7 @@ character_event = {
 			}
 		}
 		set_character_flag = search_egg1
-		#character_event = { id = L3T.412 days = 30 }
+		hidden_tooltip = { religion_head  = { character_event = { id = L3T.412 days = 30 } } }
 	}
 	
 	option = {
@@ -203,6 +206,150 @@ character_event = {
 			}
 		}
 		set_character_flag = search_egg1
+	}
+}
+
+# Religous head takes a decision
+character_event = {
+	id = L3T.412
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			30 = {
+				modifier = {
+					factor = 2
+					opinion = { who = FROM value = 25 } 
+				}
+				modifier = {
+					factor = 2
+					opinion = { who = FROM value = 50 } 
+				}
+				modifier = {
+					factor = 2
+					opinion = { who = FROM value = 75 } 
+				}
+				modifier = {
+					factor = 2
+					trait = crusader
+				}
+				
+				FROM = { character_event = { id = L3T.413 days = 10 }} 
+			}
+			70 = {
+				modifier = {
+					factor = 2
+					NOT = { opinion = { who = FROM value = 0 } }
+				}
+				modifier = {
+					factor = 2
+					NOT = { opinion = { who = FROM value = -25 } }
+				}
+				FROM = { character_event = { id = L3T.414 days = 10 }} 
+			}
+		}
+	}
+}
+
+# Religous head accepts
+character_event = {
+	id = L3T.413
+	desc = "DESCL3T.413"
+	picture = "GFX_evt_pope"
+	
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.413A"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				trait = greedy
+			}
+			modifier = {
+				factor = 3
+				trait = charitable
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { wealth = 20 }
+			}
+			modifier = {
+				factor = 3
+				wealth = 100
+			}
+		}
+		wealth = -10
+		add_artifact = oeuf_1
+		set_character_flag = egg_found
+	}
+	
+	option = {
+		name = "L3T.413B"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				piety = 200
+			}
+		}
+		piety = -10
+		add_artifact = oeuf_1
+		set_character_flag = egg_found
+	}
+}
+
+# Relious head refuses
+character_event = {
+	id = L3T.414
+	desc = "DESCL3T.414"
+	picture = "GFX_evt_pope"
+	
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.414A"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 3
+				trait = content
+			}
+		}
+		prestige = -10
+	}
+	
+	option = {
+		name = "L3T.414B"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = deceitful
+			}
+		}
+		piety = -10
+		religion_head  = {
+			opinion = { modifier = opinion_egg_pope who = ROOT years = 10 }
+		}
+		add_artifact = oeuf_1
+		set_character_flag = egg_found
 	}
 }
 
