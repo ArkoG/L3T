@@ -110,6 +110,7 @@ character_event = {
 	
 	option = {
 		name = "L3T.411A"
+		trigger = { NOT = { trait = excommunicated } }
 		ai_chance = {
 			factor = 70
 			modifier = {
@@ -185,6 +186,23 @@ character_event = {
 			limit = { NOT = { trait = content } }
 			add_trait = content
 		}
+	}
+	
+	option = {
+		name = "L3T.411D"
+		trigger = { trait = excommunicated }
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = patient
+			}
+			modifier = {
+				factor = 3
+				trait = humble
+			}
+		}
+		set_character_flag = search_egg1
 	}
 }
 
