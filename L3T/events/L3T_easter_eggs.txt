@@ -24,6 +24,7 @@ character_event = {
 		clr_character_flag = search_egg1
 		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
+		clr_character_flag = search_egg5
 	}
 
 	option = {
@@ -50,6 +51,7 @@ character_event = {
 		clr_character_flag = search_egg1
 		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
+		clr_character_flag = search_egg5
 	}
 
 	option = {
@@ -82,6 +84,7 @@ character_event = {
 		NOT = { has_character_flag = search_egg1 }
 		NOT = { has_character_flag = search_egg2 }
 		NOT = { has_character_flag = search_egg4 }
+		NOT = { has_character_flag = search_egg5 }
 		NOT = { has_artifact = oeuf_1 }
 		NOT = { has_artifact = oeuf_united }
 	}
@@ -370,6 +373,7 @@ character_event = {
 		NOT = { has_character_flag = search_egg1 }
 		NOT = { has_character_flag = search_egg2 }
 		NOT = { has_character_flag = search_egg4 }
+		NOT = { has_character_flag = search_egg5 }
 		NOT = { has_artifact = oeuf_2 }
 		NOT = { has_artifact = oeuf_united }
 	}
@@ -1306,6 +1310,7 @@ character_event = {
 		NOT = { has_character_flag = search_egg1 }
 		NOT = { has_character_flag = search_egg2 }
 		NOT = { has_character_flag = search_egg4 }
+		NOT = { has_character_flag = search_egg5 }
 		NOT = { has_artifact = oeuf_3 }
 		NOT = { has_artifact = oeuf_united }
 	}
@@ -1409,6 +1414,7 @@ character_event = {
 		NOT = { has_character_flag = search_egg1 }
 		NOT = { has_character_flag = search_egg2 }
 		NOT = { has_character_flag = search_egg4 }
+		NOT = { has_character_flag = search_egg5 }
 		NOT = { has_artifact = oeuf_4 }
 		NOT = { has_artifact = oeuf_united }
 	}
@@ -1611,6 +1617,74 @@ character_event = {
 	}
 }
 
+# Search egg number 5
+character_event = {
+	id = L3T.451
+	desc = "DESCL3T.451"
+	picture = "GFX_evt_market"
+
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		has_character_flag = search_easter_eggs
+		NOT = { has_character_flag = egg_found }
+		NOT = { has_character_flag = search_egg1 }
+		NOT = { has_character_flag = search_egg2 }
+		NOT = { has_character_flag = search_egg4 }
+		NOT = { has_character_flag = search_egg5 }
+		NOT = { has_artifact = oeuf_5 }
+		NOT = { has_artifact = oeuf_united }
+	}
+
+	mean_time_to_happen = {
+		days = 30	
+
+		modifier = {
+			factor = 0.75
+			trait = patient
+		}
+		modifier = {
+			factor = 0.9
+			trait = zealous
+		}
+		modifier = {
+			factor = 1.5
+			trait = wroth
+		}
+		modifier = {
+			factor = 1.25
+			trait = cynical
+		}
+		modifier = {
+			factor = 1.25
+			trait = slothful
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_courtier = {
+						prisoner = no
+						is_ruler = no
+						has_artifact = oeuf_5
+					}
+				}
+			}
+			random_courtier = {
+				limit = {
+					prisoner = no
+					is_ruler = no
+					NOT = { dynasty = ROOT }
+				}
+				add_artifact = oeuf_5
+			}
+		}
+	}
+}
 
 ###########################################
 # Flag management                         #
@@ -1631,5 +1705,6 @@ character_event = {
 		clr_character_flag = search_egg1
 		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
+		clr_character_flag = search_egg5
 	}
 }
