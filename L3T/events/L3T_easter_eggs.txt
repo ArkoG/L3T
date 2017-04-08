@@ -145,7 +145,7 @@ character_event = {
 		}
 		prestige = -20
 		religion_head  = {
-			opinion = { modifier = opinion_egg_pope who = ROOT years = 5 }
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 		}
 		add_artifact = oeuf_1
 		set_character_flag = egg_found
@@ -168,7 +168,7 @@ character_event = {
 		}
 		prestige = -20
 		religion_head  = {
-			opinion = { modifier = opinion_egg_pope who = ROOT years = 5 }
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 		}
 		add_artifact = oeuf_1
 		add_trait = deceitful
@@ -349,7 +349,7 @@ character_event = {
 		}
 		piety = -10
 		religion_head  = {
-			opinion = { modifier = opinion_egg_pope who = ROOT years = 10 }
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 10 }
 		}
 		add_artifact = oeuf_1
 		set_character_flag = egg_found
@@ -1683,6 +1683,701 @@ character_event = {
 				add_artifact = oeuf_5
 			}
 		}
+		set_character_flag = search_egg5
+	}
+	
+	option = {
+		name = "L3T.451A"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 3
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 2
+				NOT = { wealth = 20 }
+			}
+		}
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			character_event = { id = L3T.452 days = 10 }
+		}
+	}
+	
+	option = {
+		name = "L3T.451B"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			character_event = { id = L3T.455 days = 10 }
+		}
+	}
+	
+	option = {
+		name = "L3T.451C"
+		tooltip_info = deceitful
+		trigger = { trait = deceitful }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+	}
+	
+	option = {
+		name = "L3T.451C"
+		tooltip_info = intrigue
+		trigger = {
+			NOT = { trait = honest }
+			NOT = { trait = deceitful }
+			intrigue = 12
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		add_trait = deceitful
+		set_character_flag = egg_found
+	}
+	
+	option = {
+		name = "L3T.451D"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				trait = content
+			}
+			modifier = {
+				factor = 0.1
+				trait = ambitious
+			}
+		}
+		if = {
+			limit = { NOT = { trait = content } }
+			add_trait = content
+		}
+	}
+}
+
+# Courtier thinks about giving the egg
+character_event = {
+	id = L3T.452
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					opinion = { who = FROM value = 50 } 
+				}
+				modifier = {
+					factor = 2
+					opinion = { who = FROM value = 75 } 
+				}
+				FROM = { character_event = { id = L3T.453 days = 10 } }
+			}
+			90 = {
+				modifier = {
+					factor = 2
+					NOT = { opinion = { who = FROM value = 0 } }
+				}
+				modifier = {
+					factor = 2
+					NOT = { opinion = { who = FROM value = -25 } }
+				}
+				FROM = { character_event = { id = L3T.454 days = 10 } }
+			}
+		}
+	}
+}
+
+# Courtier gives the egg
+character_event = {
+	id = L3T.453
+	desc = "DESCL3T.453"
+	picture = "GFX_evt_market"
+	
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.453A"
+		FROM = {
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+	}
+}
+
+# Courtier refuses to give the egg
+character_event = {
+	id = L3T.454
+	desc = "DESCL3T.454"
+	picture = "GFX_evt_market"
+	
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.454A"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				trait = arbitrary
+			}
+		}
+		FROM = {
+			imprison = ROOT
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+		if = {
+			limit = { NOT = { trait = arbitrary } }
+			add_trait = arbitrary
+		}
+	}
+	
+	option = {
+		name = "L3T.451B"
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			character_event = { id = L3T.455 days = 10 }
+		}
+	}
+	
+	option = {
+		name = "L3T.451C"
+		tooltip_info = deceitful
+		trigger = { trait = deceitful }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+	}
+	
+	option = {
+		name = "L3T.451C"
+		tooltip_info = intrigue
+		trigger = {
+			NOT = { trait = honest }
+			NOT = { trait = deceitful }
+			intrigue = 12
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		add_trait = deceitful
+		set_character_flag = egg_found
+	}
+}
+
+# Courtier thinks about selling the egg
+character_event = {
+	id = L3T.455
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			30 = {
+				modifier = {
+					factor = 2
+					opinion = { who = FROM value = 50 } 
+				}
+				modifier = {
+					factor = 2
+					opinion = { who = FROM value = 75 } 
+				}
+				FROM = { character_event = { id = L3T.456 days = 10 } }
+			}
+			30 = {
+				modifier = {
+					factor = 2
+					opinion = { who = FROM value = 0 } 
+				}
+				
+				FROM = { character_event = { id = L3T.457 days = 10 } }
+			}
+			40 = {
+				modifier = {
+					factor = 2
+					NOT = { opinion = { who = FROM value = 0 } }
+				}
+				modifier = {
+					factor = 2
+					NOT = { opinion = { who = FROM value = -25 } }
+				}
+				FROM = { character_event = { id = L3T.458 days = 10 } }
+			}
+		}
+	}
+}
+
+# Courtier sells the egg
+character_event = {
+	id = L3T.456
+	desc = "DESCL3T.456"
+	picture = "GFX_evt_market"
+	
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.456A"
+		FROM = {
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+		wealth = -15
+	}
+}
+
+# Courtier want more money
+character_event = {
+	id = L3T.457
+	desc = "DESCL3T.457"
+	picture = "GFX_evt_market"
+	
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.456A"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = { wealth = 30 }
+			}
+		}
+		FROM = {
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+		wealth = -30
+	}
+	
+	option = {
+		name = "L3T.457B"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 8
+				NOT = { wealth = 30 }
+			}
+		}
+		wealth = 10
+		piety = -10
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 2
+					opinion = { who = FROM value = 50 } 
+				}
+				modifier = {
+					factor = 2
+					NOT = { wealth = 10 }
+				}
+				character_event = { id = L3T.459 days = 10 }
+			}
+			50 = {}
+		}
+	}
+	
+	option = {
+		name = "L3T.451C"
+		tooltip_info = deceitful
+		trigger = { trait = deceitful }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+	}
+	
+	option = {
+		name = "L3T.451C"
+		tooltip_info = intrigue
+		trigger = {
+			NOT = { trait = honest }
+			NOT = { trait = deceitful }
+			intrigue = 12
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		add_trait = deceitful
+		set_character_flag = egg_found
+	}
+	
+	option = {
+		name = "L3T.454A"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				trait = arbitrary
+			}
+		}
+		FROM = {
+			imprison = ROOT
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+		if = {
+			limit = { NOT = { trait = arbitrary } }
+			add_trait = arbitrary
+		}
+	}
+}
+
+# Courtier refuse to sell the egg
+character_event = {
+	id = L3T.458
+	desc = "DESCL3T.458"
+	picture = "GFX_evt_market"
+	
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.457B"
+		ai_chance = {
+			factor = 80
+		}
+		wealth = 10
+		piety = -10
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 2
+						opinion = { who = FROM value = 50 } 
+					}
+					modifier = {
+						factor = 2
+						NOT = { wealth = 10 }
+					}
+					character_event = { id = L3T.459 days = 10 }
+				}
+				50 = {}
+			}
+		}
+	}
+	
+	option = {
+		name = "L3T.451C"
+		tooltip_info = deceitful
+		trigger = { trait = deceitful }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+	}
+	
+	option = {
+		name = "L3T.451C"
+		tooltip_info = intrigue
+		trigger = {
+			NOT = { trait = honest }
+			NOT = { trait = deceitful }
+			intrigue = 12
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				intrigue = 15
+			}
+		}
+		prestige = -20
+		random_courtier = {
+			limit = {
+				prisoner = no
+				is_ruler = no
+				has_artifact = oeuf_5
+			}
+			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		add_trait = deceitful
+		set_character_flag = egg_found
+	}
+	
+	option = {
+		name = "L3T.454A"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				trait = arbitrary
+			}
+		}
+		FROM = {
+			imprison = ROOT
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+		if = {
+			limit = { NOT = { trait = arbitrary } }
+			add_trait = arbitrary
+		}
+	}
+}
+
+# Courtier sells the egg finally by pressure
+character_event = {
+	id = L3T.459
+	desc = "DESCL3T.459"
+	picture = "GFX_evt_market"
+	
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.459A"
+		FROMFROM = {
+			random_artifact = {
+				limit = { has_artifact_flag = easter }
+				transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		set_character_flag = egg_found
+		wealth = -15
 	}
 }
 
