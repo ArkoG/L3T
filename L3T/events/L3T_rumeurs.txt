@@ -246,31 +246,31 @@ letter_event = {
 }
 
 ###TEST EVENT
-letter_event = {
-    id = L3T.510
-	desc = "DESCL3T.510"
+#letter_event = {
+#    id = L3T.510
+#	desc = "DESCL3T.510"
 #	picture = GFX_evt_L3T_city_visitor
-	border = GFX_event_letter_frame_religion
+#	border = GFX_event_letter_frame_religion
 	
 	#is_triggered_only = yes
 	
-	trigger = {
-		has_character_flag = search_easter_eggs
-		NOT = { has_artifact = oeuf_1 }
-		NOT = { has_artifact = oeuf_2 }
-		NOT = { has_artifact = oeuf_3 }
-		NOT = { has_artifact = oeuf_4 }
-		NOT = { has_artifact = oeuf_5 }
-		NOT = { has_artifact = oeuf_united }
-	}
+#	trigger = {
+#		has_character_flag = search_easter_eggs
+#		NOT = { has_artifact = oeuf_1 }
+#		NOT = { has_artifact = oeuf_2 }
+#		NOT = { has_artifact = oeuf_3 }
+#		NOT = { has_artifact = oeuf_4 }
+#		NOT = { has_artifact = oeuf_5 }
+#		NOT = { has_artifact = oeuf_united }
+#	}
 
-	option = {
-		name = "HAPPY_EASTER"
-		add_artifact = oeuf_1
-		add_artifact = oeuf_2
-		add_artifact = oeuf_3
-		add_artifact = oeuf_4
-		add_artifact = oeuf_5
+#	option = {
+#		name = "HAPPY_EASTER"
+#		add_artifact = oeuf_1
+#		add_artifact = oeuf_2
+#		add_artifact = oeuf_3
+#		add_artifact = oeuf_4
+#		add_artifact = oeuf_5
 		#add_artifact = oeuf_united
-	}
-}
+#	}
+#}
