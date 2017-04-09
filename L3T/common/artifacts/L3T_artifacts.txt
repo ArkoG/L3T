@@ -1,6 +1,6 @@
 ###SLOTS
 slots = {
-	slot_egg = 5
+	slot_egg = 10
 }
 
 ###ambition quests
@@ -97,5 +97,16 @@ oeuf_united = {
 	flags = { easter regalia religious christian unique }
 	stacking = no
 	picture = "GFX_oeuf_united"
+	slot = slot_egg
+}
+oeuf_herisson = {
+	monthly_character_piety = 0.05
+	monthly_character_prestige = 0.05
+	quality = 1
+	active = { religion_group = christian }
+	#indestructible = yes
+	flags = { easter }
+	stacking = no
+	picture = "GFX_oeuf_4"
 	slot = slot_egg
 }

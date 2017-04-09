@@ -553,6 +553,30 @@ chancellerie = {
 	diplomacy = 1
 }
 
+#EASTER EGG
+herisson_jardin = {
+	icon = 93
+	stewardship = 1
+}
+herisson_totem = { #symbolique d'opiniatreté
+	icon = 93
+	martial = 1
+}
+herisson_maudit_1 = { #fertility loss
+	icon = 94
+	fertility = -0.1
+}
+herisson_maudit_2 = { #piety loss
+	icon = 94
+	church_opinion = 20
+	monthly_character_piety = -0.1
+}
+herisson_maudit_3 = { #prestige loss
+	icon = 94
+	vassal_opinion = 10
+	monthly_character_prestige = -0.1
+}
+
 ### Specialization modifiers
 feodal_prod = {icon = 201 }
 feodal_mil = {icon = 202 }
