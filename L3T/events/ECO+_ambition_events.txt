@@ -13,7 +13,6 @@ character_event = {
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
 	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
 	capable_only = yes
 	prisoner = no
 	only_men = yes
@@ -32,8 +31,7 @@ character_event = {
 		NOT = { has_character_flag = warrior_mentor }
 		NOT = { has_character_flag = epee }
 		NOT = { has_character_flag = epee_taken }
-		NOT = {has_artifact = legendary_sword_2_0 }
-		#war = no
+		NOT = { has_artifact = legendary_sword_2_0 }
 		any_demesne_title = {	
 			tier = baron	
 			holding_type = castle 	
@@ -52,6 +50,13 @@ character_event = {
 	# La chaîne d'event commence
 	option = {
 		name = "ECO.311A"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
 		character_event = { id = ECO.312 days = 30 tooltip = TOOLTIPECO.311A}
 		set_character_flag = epee
 		set_character_flag = epee_taken
@@ -65,6 +70,13 @@ character_event = {
 	# On n'est pas interessé
 	option = {
 		name = "ECO.311B"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
 		custom_tooltip = { text = improve_martial_quit }
 	}
 }
@@ -73,7 +85,6 @@ character_event = {
 character_event = {
 	id = ECO.312
 	desc = "DESCECO.312"
-	#picture = GFX_evt_battle
 	picture = GFX_evt_L3T_city_visitor
 	border = GFX_event_normal_frame_war
 	
@@ -184,6 +195,13 @@ character_event = {
 	# Il va revenir
 	option = {
 		name = "ECO.313A"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = deceitful
+			}
+		}
 		random_list = {
 			20 = { 
 				if = {
@@ -199,6 +217,21 @@ character_event = {
 	# Il est mort
 	option = {
 		name = "ECO.313B"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				trait = charitable
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { wealth = 50 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { wealth = 20 }
+			}
+		}
 		wealth = -20
 		random_list = {
 			10 = { 
@@ -215,6 +248,13 @@ character_event = {
 	# C'est un voleur
 	option = {
 		name = "ECO.313C"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = arbitrary
+			}
+		}
 		wealth = 5
 		random_list = {
 			30 = { 
@@ -252,12 +292,26 @@ character_event = {
 	# Chercher un autre serviteur à envoyer
 	option = {
 		name = "ECO.314A"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = patient
+			}
+		}
 		character_event = { id = ECO.312 days = 30 tooltip = TOOLTIPECO.314A}
 	}
 	
 	# Abandonner
 	option = {
 		name = "ECO.314B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = wroth
+			}
+		}
 		prestige = -10
 		custom_tooltip = { text = improve_martial_quit }
 		clr_character_flag = epee
@@ -317,19 +371,31 @@ character_event = {
 	# Sur un bonhomme de paille
 	option = {
 		name = "ECO.316A"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = kind
+			}
+		}
 		wealth = -5
 		custom_tooltip = { text = TOOLTIPECO.316A }
-		#hidden_tooltip = {
-			random_list = {
-				60 = { character_event = { id = ECO.317 days = 30 tooltip = TOOLTIPECO.316AA} }
-				40 = { character_event = { id = ECO.318 days = 30 tooltip = TOOLTIPECO.316AB} }
-			}
-		#}
+		random_list = {
+			60 = { character_event = { id = ECO.317 days = 30 tooltip = TOOLTIPECO.316AA} }
+			40 = { character_event = { id = ECO.318 days = 30 tooltip = TOOLTIPECO.316AB} }
+		}
 	}	
 	
 	option = {
 		custom_tooltip = { text = TOOLTIPECO.316B }
 		name = "ECO.316B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = cruel
+			}
+		}
 		random_list = {
 			50 = { 
 				custom_tooltip = { text = TOOLTIPECO.316BA }
@@ -377,6 +443,13 @@ character_event = {
 	# Equilibrer l'épée
 	option = {
 		name = "ECO.317A"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = patient
+			}
+		}
 		wealth = -10
 		character_event = { id = ECO.316 days = 30 tooltip = TOOLTIPECO.317A}
 	}
@@ -384,6 +457,13 @@ character_event = {
 	# Abandonner
 	option = {
 		name = "ECO.317B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = wroth
+			}
+		}
 		prestige = -20
 		custom_tooltip = { text = improve_martial_quit }
 		clr_character_flag = epee
@@ -449,7 +529,6 @@ character_event = {
 	picture = GFX_evt_carriage
 	border = GFX_event_normal_frame_economy
 	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
 	capable_only = yes
 	prisoner = no
 	min_age = 16
@@ -484,6 +563,13 @@ character_event = {
 	
 	option = {
 		name = "ECO.301A"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
 		character_event = { id = ECO.302 days = 30 tooltip = TOOLTIPECO.301A}
 		set_character_flag = drap
 		set_character_flag = drap_taken
@@ -495,6 +581,13 @@ character_event = {
 	}
 	option = {
 		name = "ECO.301B"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
 		custom_tooltip = { text = improve_stewardship_quit }
 	}
 }
@@ -520,6 +613,13 @@ character_event = {
 	# Laine
 	option = {
 		name = "ECO.302A"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				NOT = { wealth = 25 }
+			}
+		}
 		wealth = -10
 		character_event = { id = ECO.303 days = 30 tooltip = TOOLTIPECO.302A}
 	}
@@ -527,6 +627,14 @@ character_event = {
 	# Etoffe
 	option = {
 		name = "ECO.302B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				wealth = 25
+				NOT = { wealth = 50 }
+			}
+		}
 		wealth = -25
 		character_event = { id = ECO.304 days = 30 tooltip = TOOLTIPECO.302B}
 	}
@@ -534,6 +642,13 @@ character_event = {
 	# Drap
 	option = {
 		name = "ECO.302C"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				wealth = 75
+			}
+		}
 		wealth = -50
 		character_event = { id = ECO.305 days = 30 tooltip = TOOLTIPECO.302C}
 	}
@@ -668,6 +783,13 @@ character_event = {
 	#Les bruler
 	option = {
 		name = "ECO.306A"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
 		random_list = {		
 			50 = { 
 				if = {
@@ -683,6 +805,13 @@ character_event = {
 	#Les donner
 	option = {
 		name = "ECO.306B"
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 2
+				trait = charitable
+			}
+		}
 		random_list = {		
 			50 = {
 				if = {
@@ -724,8 +853,7 @@ narrative_event = {
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_narrative_frame_economy
 	title = "NAMEECO.319"
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 	min_age = 16
@@ -755,6 +883,13 @@ narrative_event = {
 	
 	option = {
 		name = "ECO.319A"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
 		custom_tooltip = { text = TOOLTIPECO319 }
 		set_character_flag = cadastreux
 		hidden_tooltip = {	ROOT = { set_variable = { which = "cadastre" value = 1}}}
@@ -766,6 +901,13 @@ narrative_event = {
 	}
 	option = {
 		name = "ECO.319B"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
 		custom_tooltip = { text = improve_stewardship_quit } #d'autres moyens
 		set_character_flag = cadastreux_refuse #ne se le reverra pas proposé
 	}
@@ -778,7 +920,6 @@ character_event = { #régler les conflits de parcelles #acception/refus
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
 	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
 	capable_only = yes
 	prisoner = no
 
@@ -806,10 +947,24 @@ character_event = { #régler les conflits de parcelles #acception/refus
 	
 	option = {
 		name = "ECO.320A" #intérêt
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
 		character_event = { id = ECO.3201 days = 30 }
 	}
 	option = {
 		name = "ECO.320B" #pas intéressé
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
 		set_character_flag = chaine_cadastre_1_refusee
 	}
 }
@@ -819,7 +974,6 @@ character_event = { #régler les conflits de parcelle : sur le terrain
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
 	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
 	capable_only = yes
 	prisoner = no
 
@@ -827,11 +981,25 @@ character_event = { #régler les conflits de parcelle : sur le terrain
 		
 	option = {
 		name = "ECO.3201A" #partons nous même
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 3
+				trait = diligent
+			}
+		}
 		character_event = { id = ECO.3202 days = 20 tooltip = TOOLTIPECO3202A}
 		hidden_tooltip = { change_variable = { which = "cadastre" value = 1 }}
 	}
 	option = {
 		name = "ECO.3201B" #envoyer quelqu'un d'autre
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				trait = slothful
+			}
+		}
 		custom_tooltip = { text = TOOLTIPECO3202B }
 		set_character_flag = chaine_cadastre_1_terminee #fin prématurée
 	}
@@ -841,8 +1009,7 @@ character_event = { #faire les mesures
 	desc = "DESCECO.3202"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 
@@ -852,19 +1019,38 @@ character_event = { #faire les mesures
 		
 	option = {
 		name = "ECO.3202A" #augmenter les taxes
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				NOT = { wealth = 25 }
+			}
+		}
 		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 	}
 	option = {
 		name = "ECO.3202B" #faire preuve de clémence fiscale
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				trait = content
+			}
+		}
 		hidden_tooltip = { 
-		random_list = {
-			50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
-			50 = { }
-		}
-		random_list = {
-			50 = { add_trait = content }
-			50 = { }
-		}
+			random_list = {
+				50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
+				50 = { }
+			}
+			random_list = {
+				50 = {
+					if = {
+						limit = { NOT = { trait = content } }
+						add_trait = content
+					}
+				}
+				50 = { }
+			}
 		}
 	}
 }
@@ -874,8 +1060,7 @@ character_event = { #Inventaire des fiefs #acception/refus
 	desc = "DESCECO.321"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 
@@ -903,30 +1088,66 @@ character_event = { #Inventaire des fiefs #acception/refus
 	
 	option = {
 		name = "ECO.321A" #pas intéressé
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = ambitious
+			}
+		}
 		set_character_flag = chaine_cadastre_2_refusee
 	}
 	option = {
 		name = "ECO.321B" #intérêt #propres fiefs
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = shy
+			}
+		}
 		character_event = { id = ECO.3211 days = 30 tooltip = TOOLTIPECO32111}
 		hidden_tooltip = {
-		random_list = { 
-			2 = { set_character_flag = cadastre_chaine2_resultat2 }
-			2 = { set_character_flag = cadastre_chaine2_resultat3 }
-		}
+			random_list = { 
+				50 = { set_character_flag = cadastre_chaine2_resultat2 }
+				50 = { set_character_flag = cadastre_chaine2_resultat3 }
+			}
 		}
 	}
 	option = {
 		name = "ECO.321C" #intérêt #les autres fiefs
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = gregarious
+			}
+		}
 		character_event = { id = ECO.3211 days = 30 tooltip = TOOLTIPECO32112}
 		hidden_tooltip = {
-		random_list = {
-			2 = { set_character_flag = cadastre_chaine2_resultat2 }
-			2 = { set_character_flag = cadastre_chaine2_resultat3 }
-		}
+			random_list = {
+				50 = { set_character_flag = cadastre_chaine2_resultat2 }
+				50 = { set_character_flag = cadastre_chaine2_resultat3 }
+			}
 		}
 	}
 	option = {
 		name = "ECO.321D" #intérêt #outils ?
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				learning = 8
+			}
+			modifier = {
+				factor = 2
+				learning = 12
+			}
+		}
 		character_event = { id = ECO.3212 days = 30 tooltip = TOOLTIPECO3212}
 	}
 }
@@ -935,8 +1156,7 @@ character_event = { #outils/techniques
 	desc = "DESCECO.3212"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 
@@ -944,45 +1164,93 @@ character_event = { #outils/techniques
 		
 	option = {
 		name = "ECO.3212A" #meilleurs outils
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				wealth = 200
+			}			
+			modifier = {
+				factor = 0
+				NOT = { wealth = 120 }
+			}
+		}
 		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 2}}}
 		wealth = -120
 		character_event = { id = ECO.3211 days = 45 tooltip = TOOLTIPECO3211}
 		hidden_tooltip = {
-		random_list = {
-			30 = { set_character_flag = cadastre_chaine2_resultat1 }
-			70 = { set_character_flag = cadastre_chaine2_resultat2 }
-		}
+			random_list = {
+				30 = { set_character_flag = cadastre_chaine2_resultat1 }
+				70 = { set_character_flag = cadastre_chaine2_resultat2 }
+			}
 		}
 	}
 	option = {
 		name = "ECO.3212B" #meilleurs outils mais pas trop
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}			
+			modifier = {
+				factor = 0
+				NOT = { wealth = 80 }
+			}
+		}
 		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		wealth = -80
 		hidden_tooltip = {
-		random_list = { 
-			15 = { add_trait = greedy }
-			85 = {}
-		}
-		random_list = { #à masquer
-			20 = { set_character_flag = cadastre_chaine2_resultat1 }
-			60 = { set_character_flag = cadastre_chaine2_resultat2 }
-			20 = { set_character_flag = cadastre_chaine2_resultat3 }
-		}
+			random_list = { 
+				15 = {
+					if = {
+						limit = { NOT = { trait = greedy } }
+						add_trait = greedy
+					}
+				}
+				85 = {}
+			}
+			random_list = { #à masquer
+				20 = { set_character_flag = cadastre_chaine2_resultat1 }
+				60 = { set_character_flag = cadastre_chaine2_resultat2 }
+				20 = { set_character_flag = cadastre_chaine2_resultat3 }
+			}
 		}
 		character_event = { id = ECO.3211 days = 40 tooltip = TOOLTIPECO3211}
 	}
 	option = { #nous sommes déjà les meilleurs et ça couterait trop cher
 		name = "ECO.3212C" #radin et/ou fier
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+		}
 		hidden_tooltip = {
-		random_list = { 
-			15 = { add_trait = proud }
-			15 = { add_trait = greedy }
-			70 = {}
-		}
-		random_list = {
-			30 = { set_character_flag = cadastre_chaine2_resultat2 }
-			70 = { set_character_flag = cadastre_chaine2_resultat3 }
-		}
+			random_list = { 
+				15 = {
+					if = {
+						limit = { NOT = { trait = greedy } }
+						add_trait = greedy
+					}
+				}
+				15 = {
+					if = {
+						limit = { NOT = { trait = proud } }
+						add_trait = proud
+					}
+				}
+				70 = {}
+			}
+			random_list = {
+				30 = { set_character_flag = cadastre_chaine2_resultat2 }
+				70 = { set_character_flag = cadastre_chaine2_resultat3 }
+			}
 		}
 		character_event = { id = ECO.3211 days = 40 tooltip = TOOLTIPECO3211}
 	}
@@ -992,8 +1260,7 @@ character_event = { #résultats mesures
 	desc = "DESCECO.3211"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 
@@ -1021,8 +1288,7 @@ character_event = { #allons plus loin ? registre or not registre ?
 	desc = "DESCECO.3213"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 
@@ -1032,11 +1298,29 @@ character_event = { #allons plus loin ? registre or not registre ?
 		
 	option = {
 		name = "ECO.3213A" #tenons un registre
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 }
+			}
+		}
 		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		wealth = -50
 	}
 	option = {
 		name = "ECO.3213B" #inutile
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
 		prestige = 25
 	}
 }
@@ -1046,8 +1330,7 @@ character_event = { #cartographier nos fiefs ? #acception/refus
 	desc = "DESCECO.322"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 
@@ -1075,10 +1358,24 @@ character_event = { #cartographier nos fiefs ? #acception/refus
 	
 	option = {
 		name = "ECO.322A" #pas intéressé
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
 		set_character_flag = chaine_cadastre_3_refusee
 	}
 	option = {
 		name = "ECO.322B" #intérêt
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
 		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		character_event = { id = ECO.3221 days = 30 tooltip = TOOLTIPECO3221}
 	}
@@ -1088,8 +1385,7 @@ character_event = { #existant ou néant ?
 	desc = "DESCECO.3221"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 
@@ -1099,26 +1395,51 @@ character_event = { #existant ou néant ?
 		
 	option = {
 		name = "ECO.3221A" #se baser sur l'existant
-		hidden_tooltip = {
-		random_list = {
-		50 = {}
-		50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				learning = 12
+			}
+			modifier = {
+				factor = 0
+				NOT = { wealth = 40 }
+			}
 		}
+		hidden_tooltip = {
+			random_list = {
+				50 = {}
+				50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
+			}
 		}
 		wealth = -40
 	}
 	option = {
 		name = "ECO.3221B" #partir de zero
-		hidden_tooltip = {
-		random_list = {
-		50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
-		50 = { ROOT = { change_variable = { which = "cadastre" value = 2}}}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 80 }
+			}
 		}
+		hidden_tooltip = {
+			random_list = {
+				50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
+				50 = { ROOT = { change_variable = { which = "cadastre" value = 2}}}
+			}
 		}
 		wealth = -80
 	}
 	option = {
 		name = "ECO.3221C" #en fait non
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
 	}
 }
 #harmoniser les mesures ? #chaine 4
@@ -1127,8 +1448,7 @@ character_event = { #harmoniser les mesures ? #acception/refus
 	desc = "DESCECO.323"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 
@@ -1156,10 +1476,24 @@ character_event = { #harmoniser les mesures ? #acception/refus
 	
 	option = {
 		name = "ECO.323A" #pas intéressé
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
 		set_character_flag = chaine_cadastre_4_refusee
 	}
 	option = {
 		name = "ECO.323B" #intérêt
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
 		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		character_event = { id = ECO.3231 days = 30 tooltip = TOOLTIPECO3231}
 	}
@@ -1169,8 +1503,7 @@ character_event = { #harmoniser les mesures
 	desc = "DESCECO.3231"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 
@@ -1180,16 +1513,37 @@ character_event = { #harmoniser les mesures
 
 	option = {
 		name = "ECO.3231A" #sur notre capitale
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+		}
 		prestige = 50
 		wealth = 25		
 	}
 	option = {
 		name = "ECO.3231B" #sur le suzerain/voisin
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				NOT = { wealth = 50 }
+			}
+		}
 		prestige = -50
 		wealth = 65
 	}
 	option = {
 		name = "ECO.3231C" #peu importe seul le résultat compte
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = slothful
+			}
+		}
 		prestige = -25
 		wealth = 45		
 	}
@@ -1201,8 +1555,7 @@ narrative_event = {
 	desc = "DESCECO.324"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_narrative_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 	
@@ -1396,8 +1749,7 @@ character_event = { #aller plus loin ?
 	desc = "DESCECO.325"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 	
@@ -1422,10 +1774,24 @@ character_event = { #aller plus loin ?
 	
 	option = { #ça fluffy
 		name = "ECO.325A"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
 		set_character_flag = cadastre_finale_terminee
 	}
 	option = { #go
 		name = "ECO.325B"
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
 		character_event = { id = ECO.3251 days = 150 tooltip = TOOLTIPECO3251}
 		wealth = -150
 	}
@@ -1435,8 +1801,7 @@ character_event = { #
 	desc = "DESCECO.3251"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 	
@@ -1451,11 +1816,29 @@ character_event = { #
 	
 	option = { #nous avons assez dépensé
 		name = "ECO.3251A"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
 		set_character_flag = cadastre_finale_terminee
 		prestige = 50
 	}
 	option = { #investissons davantage
 		name = "ECO.3251B"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0
+				NOT = { wealth = 200 }
+			}
+		}
 		character_event = { id = ECO.3252 days = 200 tooltip = TOOLTIPECO3252}
 		wealth = -250
 	}
@@ -1465,8 +1848,7 @@ character_event = { #cadastre achevé
 	desc = "DESCECO.3252"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_normal_frame_economy
-	
-	ai = no ## POUR L'INSTANT: pour ne pas s'embeter avec la gestion pour l'IA
+
 	capable_only = yes
 	prisoner = no
 	
