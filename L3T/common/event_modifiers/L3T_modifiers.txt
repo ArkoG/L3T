@@ -558,9 +558,14 @@ herisson_jardin = {
 	icon = 93
 	stewardship = 1
 }
-herisson_totem = { #symbolique d'opiniatreté
+herisson_totem_1 = { #symbolique d'opiniatreté
 	icon = 93
 	martial = 1
+}
+herisson_totem_2 = { #symbole fédérateur
+	icon = 93
+	vassal_opinion = 5
+	monthly_character_prestige = 0.1
 }
 herisson_maudit_1 = { #fertility loss
 	icon = 94
@@ -573,7 +578,7 @@ herisson_maudit_2 = { #piety loss
 }
 herisson_maudit_3 = { #prestige loss
 	icon = 94
-	vassal_opinion = 10
+	vassal_opinion = -5
 	monthly_character_prestige = -0.1
 }
 
