@@ -1705,7 +1705,11 @@ character_event = {
 	desc = "DESCL3T.445"
 	picture = "GFX_evt_hunt"
 
-	is_triggered_only = yes 
+	trigger = {
+		has_artifact = oeuf_herisson
+	}
+	
+	mean_time_to_happen = { days = 90 }
 
 	option = {
 		name = "L3T.445A" #sentiment positif
