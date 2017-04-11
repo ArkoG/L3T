@@ -1491,7 +1491,7 @@ character_event = {
 	trigger = {
 		has_character_flag = search_egg4
 		has_character_flag = search_easter_eggs
-		NOT = { has_artifact = oeuf_herisson }
+		NOT = { has_character_flag = egg_found }
 	}
 
 	mean_time_to_happen = { days = 30 }
@@ -1552,7 +1552,7 @@ character_event = {
 	trigger = {
 		has_character_flag = search_egg4
 		has_character_flag = search_easter_eggs
-		NOT = { has_artifact = oeuf_herisson }
+		NOT = { has_character_flag = egg_found }
 	}
 
 	mean_time_to_happen = { days = 30 }
@@ -1633,7 +1633,7 @@ character_event = {
 	trigger = {
 		has_character_flag = search_egg4
 		has_character_flag = search_easter_eggs
-		NOT = { has_character_flag = herisson_trouve }
+		NOT = { has_character_flag = egg_found }
 		OR = {
 			has_game_rule = {
 				name = supernatural_events
