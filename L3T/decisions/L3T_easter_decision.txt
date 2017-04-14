@@ -76,12 +76,14 @@ decisions = {
 				hidden_tooltip = { character_event = { id = L3T.402 days = 61 } }
 			}
 			# Fire one event chain
-			random_list = {
-				20 = { character_event = { id = L3T.411 days = 10 } }
-				20 = { character_event = { id = L3T.421 days = 10 } }
-				20 = { character_event = { id = L3T.431 days = 10 } }
-				20 = { character_event = { id = L3T.441 days = 10 } }
-				20 = { character_event = { id = L3T.451 days = 10 } }
+			hidden_tooltip = {
+				random_list = {
+					20 = { character_event = { id = L3T.411 days = 10 } }
+					20 = { character_event = { id = L3T.421 days = 10 } }
+					20 = { character_event = { id = L3T.431 days = 10 } }
+					20 = { character_event = { id = L3T.441 days = 10 } }
+					20 = { character_event = { id = L3T.451 days = 10 } }
+				}
 			}
 		}
 		revoke_allowed = {
