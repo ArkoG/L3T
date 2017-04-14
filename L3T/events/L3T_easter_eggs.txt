@@ -69,6 +69,8 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	capable_only = yes
+	
+	is_triggered_only = yes
 
 	trigger = {
 		has_character_flag = search_easter_eggs
@@ -87,31 +89,6 @@ character_event = {
 		NOT = { has_character_flag = search_egg5 }
 		NOT = { has_artifact = oeuf_1 }
 		NOT = { has_artifact = oeuf_united }
-	}
-
-	mean_time_to_happen = {
-		days = 30	
-
-		modifier = {
-			factor = 0.75
-			trait = patient
-		}
-		modifier = {
-			factor = 0.9
-			trait = zealous
-		}
-		modifier = {
-			factor = 1.5
-			trait = wroth
-		}
-		modifier = {
-			factor = 1.25
-			trait = cynical
-		}
-		modifier = {
-			factor = 1.25
-			trait = slothful
-		}
 	}
 	
 	option = {
@@ -365,6 +342,8 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	capable_only = yes
+	
+	is_triggered_only = yes
 
 	trigger = {
 		has_character_flag = search_easter_eggs
@@ -376,31 +355,6 @@ character_event = {
 		NOT = { has_character_flag = search_egg5 }
 		NOT = { has_artifact = oeuf_2 }
 		NOT = { has_artifact = oeuf_united }
-	}
-
-	mean_time_to_happen = {
-		days = 30	
-
-		modifier = {
-			factor = 0.75
-			trait = patient
-		}
-		modifier = {
-			factor = 0.9
-			trait = zealous
-		}
-		modifier = {
-			factor = 1.5
-			trait = wroth
-		}
-		modifier = {
-			factor = 1.25
-			trait = cynical
-		}
-		modifier = {
-			factor = 1.25
-			trait = slothful
-		}
 	}
 
 	option = {
@@ -1330,6 +1284,8 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	capable_only = yes
+	
+	is_triggered_only = yes
 
 	trigger = {
 		has_character_flag = canGetEasterEgg3 #gain when one chooses the monastery spec
@@ -1344,31 +1300,6 @@ character_event = {
 
 	immediate = {
 		set_character_flag = egg_found
-	}	
-
-	mean_time_to_happen = {
-		days = 30	
-
-		modifier = {
-			factor = 0.75
-			trait = patient
-		}
-		modifier = {
-			factor = 0.9
-			trait = zealous
-		}
-		modifier = {
-			factor = 1.5
-			trait = wroth
-		}
-		modifier = {
-			factor = 1.25
-			trait = cynical
-		}
-		modifier = {
-			factor = 1.25
-			trait = slothful
-		}
 	}
 
 	option = {
@@ -1433,6 +1364,8 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	capable_only = yes
+	
+	is_triggered_only = yes
 
 	trigger = {
 		has_character_flag = search_easter_eggs
@@ -1448,31 +1381,6 @@ character_event = {
 		NOT = { has_artifact = oeuf_4 }
 		NOT = { has_artifact = oeuf_herisson }
 		NOT = { has_artifact = oeuf_united }
-	}
-
-	mean_time_to_happen = {
-		days = 30	
-
-		modifier = {
-			factor = 0.75
-			trait = patient
-		}
-		modifier = {
-			factor = 0.9
-			trait = zealous
-		}
-		modifier = {
-			factor = 1.5
-			trait = wroth
-		}
-		modifier = {
-			factor = 1.25
-			trait = cynical
-		}
-		modifier = {
-			factor = 1.25
-			trait = slothful
-		}
 	}
 
 	option = {
@@ -1984,6 +1892,8 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	capable_only = yes
+	
+	is_triggered_only = yes
 
 	trigger = {
 		has_character_flag = search_easter_eggs
@@ -1994,31 +1904,6 @@ character_event = {
 		NOT = { has_character_flag = search_egg5 }
 		NOT = { has_artifact = oeuf_5 }
 		NOT = { has_artifact = oeuf_united }
-	}
-
-	mean_time_to_happen = {
-		days = 30	
-
-		modifier = {
-			factor = 0.75
-			trait = patient
-		}
-		modifier = {
-			factor = 0.9
-			trait = zealous
-		}
-		modifier = {
-			factor = 1.5
-			trait = wroth
-		}
-		modifier = {
-			factor = 1.25
-			trait = cynical
-		}
-		modifier = {
-			factor = 1.25
-			trait = slothful
-		}
 	}
 	
 	immediate = {
