@@ -2658,3 +2658,47 @@ character_event = {
 		clr_character_flag = search_egg5
 	}
 }
+
+#Unification de l'Oeuf
+narrative_event = {
+    id = L3T.500
+	title = NAMEL3T.500
+	desc = "DESCL3T.500"
+	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = search_easter_eggs
+		has_artifact = oeuf_1
+		has_artifact = oeuf_2
+		has_artifact = oeuf_3
+		has_artifact = oeuf_4
+		has_artifact = oeuf_5
+		NOT = { has_character_flag = egg_found } # Not assemble the same year as a egg was found
+		NOT = { has_artifact = oeuf_united }
+	}
+
+	option = {
+		name = "L3T.500A"
+		add_character_modifier = { name = totoro duration = -1 } #MOUCHARD pour voir l'event pop
+		chronicle = {
+			entry = CHRONICLE_EGG_UNITED
+			portrait = [Root.GetID]
+			picture = GFX_evt_L3T_city_visitor
+			#find proper easter egg event pic
+		}
+		custom_tooltip = {
+			text = EGG_UNIFICATION
+			hidden_tooltip = {		
+				destroy_artifact = oeuf_1
+				destroy_artifact = oeuf_2
+				destroy_artifact = oeuf_3
+				destroy_artifact = oeuf_4
+				destroy_artifact = oeuf_5
+			}
+		}
+		add_artifact = oeuf_united
+	}
+}
