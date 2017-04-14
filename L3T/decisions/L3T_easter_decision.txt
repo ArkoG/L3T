@@ -37,6 +37,19 @@ decisions = {
 			set_character_flag = recent_minor_decision
 			set_character_flag = do_not_disturb
 			hidden_tooltip = { character_event = { id = L3T.499 days = 150 } } # Safety catch flag clearing
+			hidden_tooltip = { 
+				random_list = { 
+				10 = { if = { limit = { NOT = { has_character_flag = rumeur501_recue }}} character_event = { id = L3T.501 days = 15 }}
+				10 = { if = { limit = { NOT = { has_character_flag = rumeur502_recue }}} character_event = { id = L3T.502 days = 15 }}
+				10 = { if = { limit = { NOT = { has_character_flag = rumeur503_recue }}} character_event = { id = L3T.503 days = 15 }}
+				10 = { if = { limit = { NOT = { has_character_flag = rumeur504_recue }}} character_event = { id = L3T.504 days = 15 }}
+				10 = { if = { limit = { NOT = { has_character_flag = rumeur505_recue }}} character_event = { id = L3T.505 days = 15 }}
+				10 = { if = { limit = { NOT = { has_character_flag = rumeur506_recue }}} character_event = { id = L3T.506 days = 15 }}
+				10 = { if = { limit = { NOT = { has_character_flag = rumeur507_recue }}} character_event = { id = L3T.507 days = 15 }}
+				10 = { if = { limit = { NOT = { has_character_flag = rumeur508_recue }}} character_event = { id = L3T.508 days = 15 }}
+				10 = { if = { limit = { NOT = { has_character_flag = rumeur509_recue }}} character_event = { id = L3T.509 days = 15 }}
+				}
+			}
 			# End
 			if = {
 				limit = {
