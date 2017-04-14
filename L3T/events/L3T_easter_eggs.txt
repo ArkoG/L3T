@@ -1332,7 +1332,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
-		has_character_flag = canGetEasterEgg3
+		has_character_flag = canGetEasterEgg3 #gain when one chooses the monastery spec
 		NOT = { has_character_flag = egg_found }
 		NOT = { has_character_flag = search_egg1 }
 		NOT = { has_character_flag = search_egg2 }
@@ -1525,9 +1525,31 @@ character_event = {
 	}
 
 	mean_time_to_happen = { days = 30 }
+	
+	immediate = { 
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = {
+						name = supernatural_events
+						value = on
+					}
+					has_game_rule = {
+						name = supernatural_events
+						value = unrestricted
+					}
+				}
+			}
+			random_list = { 
+				75 = {} #default is true egg no need to flag it
+				25 = { set_character_flag = egg4_faux }
+			}
+		}
+	}
 
 	option = {
 		name = "L3T.442A"
+		trigger = { NOT = { has_character_flag = egg4_faux }}
 		add_artifact = oeuf_4
 		set_character_flag = egg_found
 		ai_chance = {
@@ -1539,6 +1561,29 @@ character_event = {
 		}
 	}
 
+	option = { # starts false egg variant
+		name = "L3T.442A" #uses same text as 442
+		trigger = { has_character_flag = egg4_faux }
+		add_artifact = oeuf_herisson
+		set_character_flag = egg_found
+		set_character_flag = herisson_trouve
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { learning = 15 }
+			}
+		}
+		hidden_tooltip = {
+			random_list = {
+				25 = { character_event = { id = L3T.445 days = 35 }} #false egg hatches
+				25 = { character_event = { id = L3T.445 days = 55 }} #false egg hatches
+				25 = { character_event = { id = L3T.445 days = 75 }} #false egg hatches
+				25 = { character_event = { id = L3T.445 days = 95 }} #false egg hatches
+			}
+		}
+	}
+	
 	option = {
 		name = "L3T.442B"
 		trigger = { NOT = { trait = wroth } }
@@ -1657,87 +1702,88 @@ character_event = {
 }
 
 # Found egg 4 by oneself -false egg-
-character_event = {
-	id = L3T.444
-	desc = "DESCL3T.444"
-	picture = "GFX_evt_hunt"
+#character_event = {
+#	id = L3T.444
+#	desc = "DESCL3T.444"
+#	picture = "GFX_evt_hunt"
 
-	only_playable = yes
-	prisoner = no
-	capable_only = yes
+##	only_playable = yes
+#	prisoner = no
+#	capable_only = yes
+#
+#	trigger = {
+#		has_character_flag = search_egg4
+#		has_character_flag = search_easter_eggs
+#		NOT = { has_character_flag = egg_found }
+#		OR = {
+#			has_game_rule = {
+#				name = supernatural_events
+#				value = on
+#			}
+#			has_game_rule = {
+#				name = supernatural_events
+#				value = unrestricted
+#			}
+#		}
+#	}
 
-	trigger = {
-		has_character_flag = search_egg4
-		has_character_flag = search_easter_eggs
-		NOT = { has_character_flag = egg_found }
-		OR = {
-			has_game_rule = {
-				name = supernatural_events
-				value = on
-			}
-			has_game_rule = {
-				name = supernatural_events
-				value = unrestricted
-			}
-		}
-	}
+#	mean_time_to_happen = { days = 90 }
 
-	mean_time_to_happen = { days = 90 }
+#	option = {
+#		name = "L3T.442A" #uses same text as 442
+#		add_artifact = oeuf_herisson
+#		set_character_flag = egg_found
+#		set_character_flag = herisson_trouve
+#		ai_chance = {
+#			factor = 50
+#			modifier = {
+#				factor = 2
+#				NOT = { learning = 15 }
+#			}
+#		}
+#		hidden_tooltip = {
+#			random_list = {
+#				25 = { character_event = { id = L3T.445 days = 35 }} #false egg hatches
+#				25 = { character_event = { id = L3T.445 days = 55 }} #false egg hatches
+#				25 = { character_event = { id = L3T.445 days = 75 }} #false egg hatches
+#				25 = { character_event = { id = L3T.445 days = 95 }} #false egg hatches
+#			}
+#		}
+#	}
 
-	option = {
-		name = "L3T.442A" #uses same text as 442
-		add_artifact = oeuf_herisson
-		set_character_flag = egg_found
-		set_character_flag = herisson_trouve
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 2
-				NOT = { learning = 15 }
-			}
-		}
-		hidden_tooltip = {
-			random_list = {
-				25 = { character_event = { id = L3T.445 days = 35 }} #false egg hatches
-				25 = { character_event = { id = L3T.445 days = 55 }} #false egg hatches
-				25 = { character_event = { id = L3T.445 days = 75 }} #false egg hatches
-				25 = { character_event = { id = L3T.445 days = 95 }} #false egg hatches
-			}
-		}
-	}
+#	option = {
+#		name = "L3T.442B" #uses same text as 442
+#		trigger = { NOT = { trait = wroth } }
+#		ai_chance = {
+#			factor = 40
+#			modifier = {
+#				factor = 5
+#				trait = patient
+#			}
+#		}
+#		if = {
+#			limit = { NOT = { trait = patient } }
+#			random_list = { 
+#				50 = { add_trait = patient }
+#				50 = {}
+#			}
+#		}
+#	}
+#
+#	option = {
+#		name = "L3T.442C" #uses same text as 442
+#		ai_chance = {
+#			factor = 10
+#			modifier = {
+#				factor = 5
+#				trait = wroth
+#			}
+#		}
+#		clr_character_flag = search_egg4
+#		set_character_flag = doNotLikeForest
+#	}
+#}
 
-	option = {
-		name = "L3T.442B" #uses same text as 442
-		trigger = { NOT = { trait = wroth } }
-		ai_chance = {
-			factor = 40
-			modifier = {
-				factor = 5
-				trait = patient
-			}
-		}
-		if = {
-			limit = { NOT = { trait = patient } }
-			random_list = { 
-				50 = { add_trait = patient }
-				50 = {}
-			}
-		}
-	}
-
-	option = {
-		name = "L3T.442C" #uses same text as 442
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				trait = wroth
-			}
-		}
-		clr_character_flag = search_egg4
-		set_character_flag = doNotLikeForest
-	}
-}
 # Found egg 4 by oneself -false egg false egg hatches
 character_event = {
 	id = L3T.445
