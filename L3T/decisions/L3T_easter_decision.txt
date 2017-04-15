@@ -85,6 +85,8 @@ decisions = {
 					20 = { character_event = { id = L3T.451 days = 10 } }
 				}
 			}
+			# Fire the unification egg
+			character_event = { id = L3T.500 days = 10 }
 		custom_tooltip = { text = egg_hunt_custom }
 		}
 		revoke_allowed = {
