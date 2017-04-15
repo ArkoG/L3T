@@ -2365,19 +2365,21 @@ character_event = {
 		}
 		wealth = 10
 		piety = -10
-		random_list = {
-			50 = {
-				modifier = {
-					factor = 2
-					opinion = { who = FROM value = 50 } 
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 2
+						opinion = { who = FROM value = 50 } 
+					}
+					modifier = {
+						factor = 2
+						NOT = { wealth = 10 }
+					}
+					character_event = { id = L3T.459 days = 10 }
 				}
-				modifier = {
-					factor = 2
-					NOT = { wealth = 10 }
-				}
-				character_event = { id = L3T.459 days = 10 }
+				50 = {}
 			}
-			50 = {}
 		}
 	}
 	
