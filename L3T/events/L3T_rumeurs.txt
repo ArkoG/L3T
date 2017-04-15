@@ -91,7 +91,17 @@ letter_event = {
 	
 	is_triggered_only = yes
 
-	option = { name = "L3T.508A"	set_character_flag = rumeur508_recue }
+	option = {
+		name = "L3T.508A"
+		trigger = { NOT = { has_character_flag = heard_one_ring_rumor }}
+		set_character_flag = rumeur508_recue
+		set_character_flag = heard_one_ring_rumor
+		}
+	option = {
+		name = "L3T.508B"
+		trigger = { has_character_flag = heard_one_ring_rumor }
+		set_character_flag = rumeur508_recue
+	}
 }
 
 letter_event = {
@@ -102,4 +112,44 @@ letter_event = {
 	is_triggered_only = yes
 
 	option = { name = "L3T.509A"	set_character_flag = rumeur509_recue }
+}
+
+letter_event = {
+    id = L3T.510
+	desc = "DESCL3T.510"
+	border = GFX_event_letter_frame_intrigue
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.510A"
+		trigger = { NOT = { has_character_flag = heard_one_ring_rumor }}
+		set_character_flag = rumeur510_recue
+		set_character_flag = heard_one_ring_rumor
+		}
+	option = {
+		name = "L3T.510B"
+		trigger = { has_character_flag = heard_one_ring_rumor }
+		set_character_flag = rumeur510_recue
+	}
+}
+
+letter_event = {
+    id = L3T.511
+	desc = "DESCL3T.511"
+	border = GFX_event_letter_frame_intrigue
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.511A"
+		trigger = { NOT = { has_character_flag = heard_one_ring_rumor }}
+		set_character_flag = rumeur511_recue
+		set_character_flag = heard_one_ring_rumor
+		}
+	option = {
+		name = "L3T.511B"
+		trigger = { has_character_flag = heard_one_ring_rumor }
+		set_character_flag = rumeur511_recue
+	}
 }
