@@ -1724,11 +1724,11 @@ character_event = {
 
 	title = { 
 		trigger = {	NOT = { has_character_flag = a_reussi_a_detruire_loeuf } }
-		text = "NAME447.MALEDICTION"
+		text = "NAME447.MALEDICTION" #with A&B&C options
 	}
 	title = {
 		trigger = {	has_character_flag = a_reussi_a_detruire_loeuf }
-		text = "NAME447.BENEDICTION"
+		text = "NAME447.BENEDICTION" #with D option
 	}
 
 	desc = { 
@@ -1736,19 +1736,19 @@ character_event = {
 			NOT = {	has_character_flag = a_tente_de_detruire_loeuf	}
 			NOT = {	has_character_flag = a_reussi_a_detruire_loeuf	}
 			}
-		text = "DESCL3T.447a"
+		text = "DESCL3T.447a" #with A&B options
 	}
 	desc = { 
 		trigger = {	
 			has_character_flag = a_tente_de_detruire_loeuf
 			}
-		text = "DESCL3T.447b"
+		text = "DESCL3T.447b" #with C option
 	}
 	desc = { 
 		trigger = {	
 			has_character_flag = a_reussi_a_detruire_loeuf
 			}
-		text = "DESCL3T.447c"
+		text = "DESCL3T.447c" #with D option
 	}
 	
 	immediate = { destroy_artifact = oeuf_herisson }
@@ -1788,13 +1788,14 @@ character_event = {
 	option = {
 		name = "L3T.447C" #aie aie aie aie
 		trigger = {	has_character_flag = a_tente_de_detruire_loeuf	}
-		hidden_tooltip = {
+		custom_tooltip = { text = tooltip_malediction_2 }
+		#hidden_tooltip = {
 			random_list = {
 				33 = { add_character_modifier = { modifier = herisson_maudit_1	duration = -1 }}
 				33 = { add_character_modifier = { modifier = herisson_maudit_2	duration = -1 }}
 				33 = { add_character_modifier = { modifier = herisson_maudit_3	duration = -1 }}
 			}
-		}
+		#}
 	}
 	option = {
 		name = "L3T.447D" #ouf
