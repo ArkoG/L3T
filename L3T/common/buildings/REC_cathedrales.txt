@@ -1,15 +1,14 @@
-#Reliques et Cathédrales - BATS
-#by ARKO
+#L3T // LES CATHEDRALES
+#by ARKO&Mouchi
 
- # Castle
+#Castle
 castle = {
-
 	ca_cathedrale_01 = {	#	Cathédrale : Ouverture du chantier
 		desc = cathedrale_01_desc
 		prerequisites = {XXX}
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 1
-			has_province_modifier = relique_generique
+			has_province_modifier = relique_generique #might become unecesary or being changed
 			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
 			religion_group = christian
 			}
@@ -193,7 +192,7 @@ castle = {
 		liege_prestige = 0.05
 	}
 	ca_cathedrale_10 = {	#	Cathédrale : Carillon
-		desc = cathedrale_10_desc
+		desc = ca_cathedrale_10_desc
 		prerequisites = {XXX}
 		upgrades_from = ca_cathedrale_09
 		trigger = { 
@@ -235,9 +234,517 @@ castle = {
 		liege_prestige = 0.05
 	}
 	ca_cathedrale_12 = {	#	Cathédrale
-		desc = cathedrale_final_desc
+		desc = cathedrale_12_desc
 		prerequisites = {XXX}
 		upgrades_from = ca_cathedrale_11
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 600		
+		build_time = 3650 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+}
+#CITY
+city = {
+	ct_cathedrale_01 = {	#	Cathédrale : Ouverture du chantier
+		desc = cathedrale_01_desc
+		prerequisites = {XXX}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 100		
+		build_time = 360 #1 an
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_02 = {	Cathédrale : Fondations
+		desc = cathedrale_02_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_01
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 600		
+		build_time = 1444 #5ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_03 = {	#	Proto-Cathédrale
+		desc = cathedrale_03_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_02
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 2700		
+		build_time = 7240 #ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_04 = {	#	Cathédrale : Portail
+		desc = cathedrale_04_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_03
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 900		
+		build_time = 1815 #ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_05 = {	#	Cathédrale : Nef Magnifique
+		desc = cathedrale_05_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_04
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 3000		
+		build_time = 7280 #ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_06 = {	#	Cathédrale : Transept
+		desc = cathedrale_06_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_05
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 1800	
+		build_time = 3650 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_07 = {	#	Cathédrale : Tour Nord
+		desc = cathedrale_07_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_06
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 1500		
+		build_time = 5490 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_08 = {	#	Cathédrale : Tour du Midi
+		desc = cathedrale_08_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_07
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 1500		
+		build_time = 5505 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_09 = {	#	Cathédrale : Grande Rosace
+		desc = cathedrale_09_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_08
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 700		
+		build_time = 1840 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_10 = {	#	Cathédrale : Carillon
+		desc = ct_cathedrale_10_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_09
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 700	
+		build_time = 1845 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_11 = {	#	Cathédrale : Flèche Céleste
+		desc = ct_cathedrale_11_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_10
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 900		
+		build_time = 1850 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	ct_cathedrale_12 = {	#	Cathédrale
+		desc = cathedrale_12_desc
+		prerequisites = {XXX}
+		upgrades_from = ct_cathedrale_11
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 600		
+		build_time = 3650 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+}
+#TEMPLE
+temple = {
+	tp_cathedrale_01 = {	#	Cathédrale : Ouverture du chantier
+		desc = cathedrale_01_desc
+		prerequisites = {XXX}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 100		
+		build_time = 360 #1 an
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_02 = {	Cathédrale : Fondations
+		desc = cathedrale_02_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_01
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 600		
+		build_time = 1444 #5ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_03 = {	#	Proto-Cathédrale
+		desc = cathedrale_03_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_02
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 2700		
+		build_time = 7240 #ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_04 = {	#	Cathédrale : Portail
+		desc = cathedrale_04_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_03
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 900		
+		build_time = 1815 #ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_05 = {	#	Cathédrale : Nef Magnifique
+		desc = cathedrale_05_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_04
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 3000		
+		build_time = 7280 #ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_06 = {	#	Cathédrale : Transept
+		desc = cathedrale_06_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_05
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 1800	
+		build_time = 3650 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_07 = {	#	Cathédrale : Tour Nord
+		desc = cathedrale_07_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_06
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 1500		
+		build_time = 5490 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_08 = {	#	Cathédrale : Tour du Midi
+		desc = cathedrale_08_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_07
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 1500		
+		build_time = 5505 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_09 = {	#	Cathédrale : Grande Rosace
+		desc = cathedrale_09_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_08
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 700		
+		build_time = 1840 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_10 = {	#	Cathédrale : Carillon
+		desc = tp_cathedrale_10_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_09
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 700	
+		build_time = 1845 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_11 = {	#	Cathédrale : Flèche Céleste
+		desc = cathedrale_11_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_10
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+			}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 900		
+		build_time = 1850 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+		liege_prestige = 0.05
+	}
+	tp_cathedrale_12 = {	#	Cathédrale
+		desc = cathedrale_12_desc
+		prerequisites = {XXX}
+		upgrades_from = tp_cathedrale_11
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 1
 			has_province_modifier = relique_generique
