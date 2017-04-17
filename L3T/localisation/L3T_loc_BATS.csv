@@ -515,9 +515,8 @@ TP_four_L3_desc;;;;;;;;;;;;;;x
 #COMPTOIR_L3;COMMERCIAL CENTRE;CENTRE DE COMMERCE;;;;;;;;;;;;;x
 #COMPTOIR_L3_desc;;Cette cité se trouve au carrefour de pas moins de trois routes commerciales. Il peut s'agir de comptoirs patriciens ou de routes terrestres ou fluviales. Cette situation privilégiée permet un meilleur développement de nos infrastructures commerciales.;;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x;
-#;;x;;;;;;;;;;;;x
+#;;CATHEDRAL;;;;;;;;;;;;x
 ca_cathedrale_01;Cathedral, Building site overture;Cathédrale, Ouverture du chantier;;;;;;;;;;;;x
-cathedrale_01_desc;When constructing a cathedral one must make decisions;Pour construire la cathédrale il faut en prendre la §Ydécision§!;;;;;;;;;;;;x
 ca_cathedrale_02;Cathedral, Foundations;Cathédrale, Fondations;;;;;;;;;;;;x
 ca_cathedrale_03;Proto-Cathedral;Proto-Cathédrale;;;;;;;;;;;;x
 ca_cathedrale_04;Cathedral, Portal;Cathédrale, Portail;;;;;;;;;;;;x
@@ -529,19 +528,6 @@ ca_cathedrale_09;Cathedral, Rose Window;Cathédrale, Grande Rosace;;;;;;;;;;;;x
 ca_cathedrale_10;Cathedral, Feudal Chapel;Cathédrale, Chapelle Seigneuriale;;;;;;;;;;;;x
 ca_cathedrale_11;Cathedral, Celestial Spire;Cathédrale, Flèche Céleste;;;;;;;;;;;;x
 ca_cathedrale_12;Cathedral;Cathédrale;;;;;;;;;;;;x
-cathedrale_final_desc;The cathedral's construction has been completed at last! Its shining marble edifice and intricate craftsmanship tower over the city, offering the populace a glimpse of Heaven. Pilgrims and sinners from far and wide flock here in droves, generously giving alms in hopes of salvation and gaining favor with God.;Cette cathédrale est enfin parachevée et fait rayonner la toute puissance divine sur les terres environnantes et par la même occasion procure au seigneur local la gloire et le fruit de la taxation du détenteur d'un tel édifice où affluent pèlerins et pécheurs en quête de salut.;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
-ca_loge;Workers' lodge;Loge des ouvriers;;;;;;;;;;;;x
-loge_desc;;La loge permet aux ouvriers de travailler plus efficacement l'hiver.\nElle permet également de former les ouvriers.;;;;;;;;;;;;x
-ca_hotel_pelerins;Pilgrim's inn;Auberge des pèlerins;;;;;;;;;;;;x
-hotel_pelerins_desc;;L'auberge permet d'accueillir davantage de pèlerins;;;;;;;;;;;;x
-ca_guilde_sculpteur;Sculptors' guild;Guilde de sculpteurs;;;;;;;;;;;;x
-guilde_sculpteur_desc;;La guilde de sculpteurs est une véritable organisation de sculpteurs.\nElle permet de gérer une activité rentable au delà de la construction de monuments.;;;;;;;;;;;;x
-ca_guilde_fresquiste;;Guilde de fresquistes;;;;;;;;;;;;x
-guilde_fresquiste_desc;;La guilde de fresquistes est une véritable organisation de fresquistes.\nElle permet de gérer une activité rentable au delà de la construction de monuments.;;;;;;;;;;;;x
-ca_guilde_verrier;Glassworkers' guild;Guilde de verriers;;;;;;;;;;;;x
-guilde_verrier_desc;;La guilde de verriers est une véritable organisation de verriers.\nElle permet de gérer une activité rentable au delà de la construction de monuments.;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
 ct_cathedrale_01;Cathedral, Building site overture;Cathédrale, Ouverture du chantier;;;;;;;;;;;;x
 ct_cathedrale_02;Cathedral, Fundations;Cathédrale, Fondations;;;;;;;;;;;;x
 ct_cathedrale_03;Proto-Cathedral;Proto-Cathédrale;;;;;;;;;;;;x
@@ -554,14 +540,6 @@ ct_cathedrale_09;Cathedral, Rose Window;Cathédrale, Grande Rosace;;;;;;;;;;;;x
 ct_cathedrale_10;Cathedral, Chime;Cathédrale, Carillon;;;;;;;;;;;;x
 ct_cathedrale_11;Cathedral, Celestial Spire;Cathédrale, Flèche Céleste;;;;;;;;;;;;x
 ct_cathedrale_12;Cathedral;Cathédrale;;;;;;;;;;;;x
-#ct_cathedrale_12_desc;This cathedral is finally completed and radiates divine omnipotence on the surrounding land also providing the local lord glory giving reason to the lords taxing in form of a building where pilgrims flock and sinners seek for salvation.;Cette cathédrale est enfin parachevée et fait rayonner la toute puissance divine sur les terres environnantes et par la même occasion procure au seigneur local la gloire et le fruit de la taxation du détenteur d'un tel édifice où affluent pèlerins et pécheurs en quête de salut.;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
-ct_loge;Workers' lodge;Loge des ouvriers;;;;;;;;;;;;x
-ct_hotel_pelerins;Pilgrim's inn;Auberge des pèlerins;;;;;;;;;;;;x
-ct_guilde_sculpteur;Sculptors' guild;Guilde de sculpteurs;;;;;;;;;;;;x
-ct_guilde_fresquiste;;Guilde de fresquistes;;;;;;;;;;;;x
-ct_guilde_verrier;Glassworkers' guild;Guilde de verriers;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
 tp_cathedrale_01;Cathedral, Building site overture;Cathédrale, Ouverture du chantier;;;;;;;;;;;;x
 tp_cathedrale_02;Cathedral, Foundations;Cathédrale, Fondations;;;;;;;;;;;;x
 tp_cathedrale_03;Proto-Cathedral;Proto-Cathédrale;;;;;;;;;;;;x
@@ -574,14 +552,44 @@ tp_cathedrale_09;Cathedral, Rose Window;Cathédrale, Grande Rosace;;;;;;;;;;;;x
 tp_cathedrale_10;Cathedral, Most Holy Chapel;Cathédrale, Très Sainte Chapelle;;;;;;;;;;;x;
 tp_cathedrale_11;Cathedral, Celestial Spire;Cathédrale, Flèche Céleste;;;;;;;;;;;;x
 tp_cathedrale_12;Cathedral;Cathédrale;;;;;;;;;;;;x
-#tp_cathedrale_12_desc;This cathedral is finally completed and radiates divine omnipotence on the surrounding land also providing the local lord glory giving reason to the lords taxing in form of a building where pilgrims flock and sinners seek for salvation.;Cette cathédrale est enfin parachevée et fait rayonner la toute puissance divine sur les terres environnantes et par la même occasion procure au seigneur local la gloire et le fruit de la taxation du détenteur d'un tel édifice où affluent pèlerins et pécheurs en quête de salut.;;;;;;;;;;;;x
-tp_loge;;Loge;;;;;;;;;;;;x
-tp_hotel_pelerins;;Auberge des pèlerins;;;;;;;;;;;;x
-tp_guilde_sculpteur;;Guilde de sculpteurs;;;;;;;;;;;;x
-tp_guilde_fresquiste;;Guilde de fresquistes;;;;;;;;;;;;x
-tp_guilde_verrier;;Guilde de verriers;;;;;;;;;;;;x
+#;;CATHEDRAL DESC;;;;;;;;;;;;x
+cathedrale_01_desc;When constructing a cathedral one must make decisions;Pour construire la cathédrale il faut en prendre la §Ydécision§!;;;;;;;;;;;;x
+cathedrale_02_desc;All the foundations of the cathedral are in place and the crypt to house the reliquary.;L'ensemble des fondations de la cathédrale est en place ainsi que la crypte qui accueillera le reliquaire.;;;;;;;;;;;;x
+cathedrale_03_desc;The entire temporary building is in place. The cathedral can accommodate the faithful. It's already a success. ;L'ensemble du bâtiment temporaire est en place. La cathédrale peut accueillir les fidèles. C'est déjà une belle réussite. ;;;;;;;;;;;;x
+cathedrale_04_desc;The Grand Portal, opening facing the west, bears all its magnificence by glowing golden in the dusk. A superb achievement.;Le Grand Portail, s'ouvrant face au couchant, arbore toute sa magnificence en se parant d'or au crépuscule. Une superbe réalisation.;;;;;;;;;;;;x
+cathedrale_05_desc;The immense vault of the nave is an architectural feat and the windows at each opening are magnificent.;L'immense voûte de la Nef est une prouesse architecturale et les vitraux qui en parent chaque ouverture sont magnifiques.;;;;;;;;;;;;x
+cathedrale_06_desc;The addition of the transept is now complete and it is still adding to superb feeling of the edifice.;L'ajout du Transept est à présent achevé et ne fait qu'ajouter encore à la superbe de l'édifice.;;;;;;;;;;;;x
+cathedrale_07_desc;The construction of the first tower seemed interminable as there is hardly a point where it meets the sky.;La construction de cette première Tour a semblé aussi interminable que l'on distingue à peine le point où elle rencontre le ciel.;;;;;;;;;;;;x
+cathedrale_08_desc;The second Tour majestically compliments the first. ;La seconde Tour complète magnifiquement la première. ;;;;;;;;;;;;x
+cathedrale_09_desc;The Rose Window that sits above the western portal is complete and proves once again how this building is grandiose.;La Grande Rosace qui trône au dessus du portail occidental est achevé et prouve une fois de plus combien cette édifice est grandiose.;;;;;;;;;;;;x
+ca_cathedrale_10_desc;The addition of a stately chapel will please the nobility immensely.;L'ajout de la Chapelle seigneuriale plaît immensément à la noblesse.;;;;;;;;;;;;x
+ct_cathedrale_10_desc;The addition of a Chime resounds the contribution of the city and thus its involvement in the work. The Citizens will be very grateful for this.;L'ajout du Carillon montre l'implication de la cité et donc sa contribution à l'œuvre. Les citoyens vont sont très reconnaissants pour cela.;;;;;;;;;;;;x
+tp_cathedrale_10_desc;The Addition of this Holy Chapel proves our devotion to the Lord and inspires great respect from all the ecclesiastical class.;L'ajout de cette Très Sainte Chapelle prouve notre dévotion au Seigneur et nous inspire le plus grand respect de la part de toute la classe ecclésiastique.;;;;;;;;;;;;x
+cathedrale_11_desc;The Cathedral's Spire faces heaven and continues to adds to the reputation of the building.;La Flèche de la cathédrale tutoie les cieux et ajoute encore au rayonnement de l'édifice.;;;;;;;;;;;;x
+cathedrale_12_desc;The cathedral's construction has been completed at last! Its shining marble edifice and intricate craftsmanship tower over the city, offering the populace a glimpse of Heaven. Pilgrims and sinners from far and wide flock here in droves, generously giving alms in hopes of salvation and gaining favor with God.;Cette cathédrale est enfin parachevée et fait rayonner la toute puissance divine sur les terres environnantes et par la même occasion procure au seigneur local la gloire et le fruit de la taxation du détenteur d'un tel édifice où affluent pèlerins et pécheurs en quête de salut.;;;;;;;;;;;;x
+#;;ANNEXES;;;;;;;;;;;;x;;;;;;;;;;;;x
+ca_loge;Workers' lodge;Loge des ouvriers;;;;;;;;;;;;x
+ca_hotel_pelerins;Pilgrim's inn;Auberge des pèlerins;;;;;;;;;;;;x
+ca_guilde_sculpteur;Sculptors' guild;Guilde de sculpteurs;;;;;;;;;;;;x
+ca_guilde_fresquiste;Fresquists' guild;Guilde de fresquistes;;;;;;;;;;;;x
+ca_guilde_verrier;Glassworkers' guild;Guilde de verriers;;;;;;;;;;;;x
+ct_loge;Workers' lodge;Loge des ouvriers;;;;;;;;;;;;x
+ct_hotel_pelerins;Pilgrim's inn;Auberge des pèlerins;;;;;;;;;;;;x
+ct_guilde_sculpteur;Sculptors' guild;Guilde de sculpteurs;;;;;;;;;;;;x
+ct_guilde_fresquiste;Fresquists' guild;Guilde de fresquistes;;;;;;;;;;;;x
+ct_guilde_verrier;Glassworkers' guild;Guilde de verriers;;;;;;;;;;;;xtp_loge;Workers' lodge;Loge des ouvriers;;;;;;;;;;;;x
+tp_hotel_pelerins;Pilgrim's inn;Auberge des pèlerins;;;;;;;;;;;;x
+tp_guilde_sculpteur;Sculptors' guild;Guilde de sculpteurs;;;;;;;;;;;;x
+tp_guilde_fresquiste;Fresquists' guild;Guilde de fresquistes;;;;;;;;;;;;x
+tp_guilde_verrier;Glassworkers' guild;Guilde de verriers;;;;;;;;;;;;x
+#;;ANNEXES DESC;;;;;;;;;;;;x;;;;;;;;;;;;x
+loge_desc;;La loge permet aux ouvriers de travailler plus efficacement l'hiver.\nElle permet également de former les ouvriers.;;;;;;;;;;;;x
+hotel_pelerins_desc;;L'auberge permet d'accueillir davantage de pèlerins;;;;;;;;;;;;x
+guilde_sculpteur_desc;;La guilde de sculpteurs est une véritable organisation de sculpteurs.\nElle permet de gérer une activité rentable au delà de la construction de monuments.;;;;;;;;;;;;x
+guilde_fresquiste_desc;;La guilde de fresquistes est une véritable organisation de fresquistes.\nElle permet de gérer une activité rentable au delà de la construction de monuments.;;;;;;;;;;;;x
+guilde_verrier_desc;;La guilde de verriers est une véritable organisation de verriers.\nElle permet de gérer une activité rentable au delà de la construction de monuments.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+#;;SPECIALISATIONS;;;;;;;;;;;;x
 FEODAL_mil;Specialization: Citadel;FORTERESSE;;;;;;;;;;;;x
 FEODAL_mil_desc;Designating this holding as a §YCitadel§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
 FEODAL_mil_muslim;Specialization: Kasbah;FORTERESSE;;;;;;;;;;;;x
