@@ -413,6 +413,7 @@ character_event = {
 				OR = {
 					has_province_modifier = noeud_commercial_primaire
 					has_province_modifier = noeud_commercial_annexe
+					has_trade_post = yes
 				}
 			}
 		}
@@ -538,7 +539,10 @@ character_event = {
 			}
 		}
 		any_demesne_province = {
-			has_province_modifier = noeud_commercial_annexe
+			OR = {
+				has_province_modifier = noeud_commercial_annexe
+				has_trade_post = yes
+			}
 		}
 	}
 
