@@ -85,15 +85,15 @@ character_event = {
 
 ### the event chains
 # Search egg number 1
-character_event = {
+narrative_event = {
 	id = L3T.411
 	#desc = "DESCL3T.411"
-	picture = "GFX_evt_REC2"
+	picture = GFX_evt_cathedral
 
 	desc = {
 		trigger = { location = { any_province_holding = { is_holy_site = ROOT }}}
 		text = "DESCL3T.411_holy_site"
-		picture = "GFX_evt_REC2"
+		picture = GFX_evt_cathedral
 	}
 	desc = {
 		trigger = { trait = pilgrim }
@@ -155,7 +155,7 @@ character_event = {
 		}
 		set_character_flag = search_egg1
 		set_character_flag = pious_hunt
-		hidden_tooltip = { religion_head  = { character_event = { id = L3T.412 days = 30 } } }
+		hidden_tooltip = { religion_head  = { character_event = { id = L3T.412 days = 15 } } }
 	}
 	
 	option = {
@@ -235,9 +235,9 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = content } }
-			random_list = { 
-				50 = { add_trait = content }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = content
 			}
 		}
 	}
@@ -262,9 +262,9 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = content } }
-			random_list = { 
-				50 = { add_trait = content }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = content
 			}
 		}
 		random_list = { 
