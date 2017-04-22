@@ -67,6 +67,16 @@ character_event = {
 		hidden_tooltip = { character_event = { id = L3T.499 days = 1 } } # pious/unpious_hunt option flag clearing
 	}
 	option = {
+		name = "L3T.402A"
+		trigger = { 
+			NOT = {
+				has_character_flag = pious_hunt
+				has_character_flag = not_that_pious_hunt
+			}
+		}
+		piety = 15
+		}
+	option = {
 		name = "L3T.402B"
 		trigger = { has_character_flag = not_that_pious_hunt }
 		hidden_tooltip = { character_event = { id = L3T.499 days = 1 } } # pious/unpious_hunt option flag clearing
