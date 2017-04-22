@@ -19,20 +19,36 @@ province_event = {
 			NOT = { has_province_modifier = relique03 }
 			NOT = { has_province_modifier = relique04 }
 			NOT = { has_province_modifier = relique05 }
-			NOT = { has_province_flag = relique }
-			}
+		}
+		NOT = { has_province_flag = relique }			
 	}
 
 	immediate = {
 		#name = "REC.999A" #
 		set_province_flag = relique
 		add_province_modifier = { name = relique_generique duration = -1 }
+
 		random_list = {
-		#if = { limit = { NOT = { has_province_modifier = relique01 } }
-		10 = {	add_province_modifier = { name = relique01 duration = -1 }
-			owner = { character_event = { id = REC.1001 days = 1 }}
-		}
-		90 = {}
+			#if = { limit = { NOT = { has_province_modifier = relique01 } }
+			10 = {	add_province_modifier = { name = relique01 duration = -1 }
+				owner = { character_event = { id = REC.1001 days = 1 }}
+			}
+			#if = { limit = { NOT = { has_province_modifier = relique02 } }
+			10 = {	add_province_modifier = { name = relique02 duration = -1 }
+				owner = { character_event = { id = REC.1001 days = 1 }}
+			}
+			#if = { limit = { NOT = { has_province_modifier = relique03 } }
+			10 = {	add_province_modifier = { name = relique03 duration = -1 }
+				owner = { character_event = { id = REC.1001 days = 1 }}
+			}
+			#if = { limit = { NOT = { has_province_modifier = relique04 } }
+			10 = {	add_province_modifier = { name = relique04 duration = -1 }
+				owner = { character_event = { id = REC.1001 days = 1 }}
+			}
+			#if = { limit = { NOT = { has_province_modifier = relique05 } }
+			10 = {	add_province_modifier = { name = relique05 duration = -1 }
+				owner = { character_event = { id = REC.1001 days = 1 }}
+			}
 		}
 	}
 }
