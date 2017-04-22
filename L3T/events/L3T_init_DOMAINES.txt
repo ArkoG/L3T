@@ -118,6 +118,10 @@ narrative_event = {
 					has_title_flag = castle_to_specialize
 				}
 			}
+			modifier = {
+				factor = 10
+				has_flag = crown_focus_province #pondération capitale économique
+			}
 		}
 		random_demesne_title = {
 			limit = {
