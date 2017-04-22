@@ -25,6 +25,8 @@ character_event = {
 		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
 		clr_character_flag = search_egg5
+		clr_character_flag = pious_hunt
+		clr_character_flag = not_that_pious_hunt
 	}
 
 	option = {
@@ -56,16 +58,39 @@ character_event = {
 
 	option = {
 		name = "L3T.402A"
-		piety = 10
+		trigger = { has_character_flag = pious_hunt }
+		random_list = {
+			10 = { piety = 10 }
+			10 = { piety = 15 }
+			10 = { piety = 20 }
+		}
+		hidden_tooltip = { character_event = { id = L3T.499 days = 1 } } # pious/unpious_hunt option flag clearing
+	}
+	option = {
+		name = "L3T.402B"
+		trigger = { has_character_flag = not_that_pious_hunt }
+		hidden_tooltip = { character_event = { id = L3T.499 days = 1 } } # pious/unpious_hunt option flag clearing
 	}
 }
 
+### the event chains
 # Search egg number 1
 character_event = {
 	id = L3T.411
-	desc = "DESCL3T.411"
+	#desc = "DESCL3T.411"
 	picture = "GFX_evt_REC2"
 
+	desc = {
+		trigger = { location = { any_province_holding = { is_holy_site = ROOT }}}
+		text = "DESCL3T.411_holy_site"
+		picture = "GFX_evt_REC2"
+	}
+	desc = {
+		trigger = { trait = pilgrim }
+		text = "DESCL3T.411_pilgrim"
+		picture = GFX_evt_pilgrims_epic_journey
+	}
+	
 	only_playable = yes
 	prisoner = no
 	capable_only = yes
@@ -80,7 +105,8 @@ character_event = {
 					is_holy_site = ROOT
 				}
 			}
-			ai = yes # A AI cannot think to move to an holy site
+			#ai = yes # A AI cannot think to move to an holy site
+			trait = pilgrim #this allows the AI to access the chain without cheat
 		}
 		NOT = { has_character_flag = egg_found }
 		NOT = { has_character_flag = search_egg1 }
@@ -104,8 +130,21 @@ character_event = {
 				factor = 3
 				trait = humble
 			}
+			modifier = {
+				factor = 1.5
+				trait = crusader
+			}
+			modifier = {
+				factor = 1.5
+				trait = pilgrim
+			}
+			modifier = {
+				factor = 1.5
+				trait = zealous
+			}
 		}
 		set_character_flag = search_egg1
+		set_character_flag = pious_hunt
 		hidden_tooltip = { religion_head  = { character_event = { id = L3T.412 days = 30 } } }
 	}
 	
@@ -119,6 +158,14 @@ character_event = {
 				factor = 2
 				intrigue = 15
 			}
+			modifier = {
+				factor = 2
+				trait = lustful #ai_greed = 20 / ai_zeal = -10
+			}
+			modifier = {
+				factor = 3
+				intrigue = greedy #ai_ambition = 15	/ ai_greed = 100
+			}
 		}
 		prestige = -20
 		religion_head  = {
@@ -126,6 +173,7 @@ character_event = {
 		}
 		add_artifact = oeuf_1
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 	}
 	
 	option = {
@@ -142,6 +190,14 @@ character_event = {
 				factor = 2
 				intrigue = 15
 			}
+			modifier = {
+				factor = 2
+				trait = lustful #ai_greed = 20 / ai_zeal = -10
+			}
+			modifier = {
+				factor = 3
+				intrigue = greedy #ai_ambition = 15	/ ai_greed = 100
+			}
 		}
 		prestige = -20
 		religion_head  = {
@@ -150,14 +206,16 @@ character_event = {
 		add_artifact = oeuf_1
 		add_trait = deceitful
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 	}
 	
 	option = {
-		name = "L3T.411C"
+		name = "L3T.411C1"
+		trigger = { NOT = { trait = pilgrim }}
 		ai_chance = {
 			factor = 10
 			modifier = {
-				factor = 2
+				factor = 3
 				trait = content
 			}
 			modifier = {
@@ -167,8 +225,43 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = content } }
-			add_trait = content
+			random_list = { 
+				50 = { add_trait = content }
+				50 = {}
+			}
 		}
+	}
+	option = {
+		name = "L3T.411C2"
+		trigger = { trait = pilgrim }
+		custom_tooltip = { text = custom_oeuf_laisse }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = content
+			}
+			modifier = {
+				factor = 0.1
+				trait = ambitious
+			}
+			modifier = {
+				factor = 2
+				trait = pilgrim
+			}
+		}
+		if = {
+			limit = { NOT = { trait = content } }
+			random_list = { 
+				50 = { add_trait = content }
+				50 = {}
+			}
+		}
+		random_list = { 
+			50 = { piety = 20 }
+			50 = {}
+		}
+		set_character_flag = pious_hunt
 	}
 	
 	option = {
@@ -184,8 +277,14 @@ character_event = {
 				factor = 3
 				trait = humble
 			}
+			modifier = {
+				factor = 2
+				trait = pilgrim
+			}
 		}
+		piety = 10
 		set_character_flag = search_egg1
+		set_character_flag = pious_hunt
 	}
 }
 
@@ -220,7 +319,10 @@ character_event = {
 					factor = 2
 					trait = crusader
 				}
-				
+				modifier = {
+					factor = 2
+					trait = pilgrim
+				}		
 				FROM = { character_event = { id = L3T.413 days = 10 }} 
 			}
 			70 = {
@@ -1317,6 +1419,7 @@ character_event = {
 			}
 		}
 		add_artifact = oeuf_3
+		set_character_flag = not_that_pious_hunt
 		if = {
 			limit = { NOT = { trait = deceitful } }
 			random_list = { 
@@ -1356,6 +1459,7 @@ character_event = {
 		piety = 10
 		prestige = -10
 		clr_character_flag = canGetEasterEgg3
+		set_character_flag = pious_hunt
 	}
 }
 
@@ -1958,6 +2062,7 @@ character_event = {
 		}
 		add_trait = deceitful
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 	}
 	
 	option = {
@@ -2134,6 +2239,7 @@ character_event = {
 			}
 		}
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 	}
 	
 	option = {
@@ -2169,6 +2275,7 @@ character_event = {
 		}
 		add_trait = deceitful
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 	}
 }
 
@@ -2335,6 +2442,7 @@ character_event = {
 			}
 		}
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 	}
 	
 	option = {
@@ -2370,6 +2478,7 @@ character_event = {
 		}
 		add_trait = deceitful
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 	}
 	
 	option = {
@@ -2467,6 +2576,7 @@ character_event = {
 			}
 		}
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 	}
 	
 	option = {
@@ -2502,6 +2612,7 @@ character_event = {
 		}
 		add_trait = deceitful
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 	}
 	
 	option = {
@@ -2558,6 +2669,7 @@ character_event = {
 			}
 		}
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 		wealth = -15
 	}
 }
@@ -2582,6 +2694,8 @@ character_event = {
 		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
 		clr_character_flag = search_egg5
+		clr_character_flag = pious_hunt
+		clr_character_flag = not_that_pious_hunt
 	}
 }
 
