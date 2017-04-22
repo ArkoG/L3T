@@ -32,22 +32,7 @@ province_event = {
 		10 = {	add_province_modifier = { name = relique01 duration = -1 }
 			owner = { character_event = { id = REC.1001 days = 1 }}
 		}
-		#if = { limit = { NOT = { has_province_modifier = relique02 } }
-		10 = {	add_province_modifier = { name = relique02 duration = -1 }
-			owner = { character_event = { id = REC.1001 days = 1 }}
-		}
-		#if = { limit = { NOT = { has_province_modifier = relique03 } }
-		10 = {	add_province_modifier = { name = relique03 duration = -1 }
-			owner = { character_event = { id = REC.1001 days = 1 }}
-		}
-		#if = { limit = { NOT = { has_province_modifier = relique04 } }
-		10 = {	add_province_modifier = { name = relique04 duration = -1 }
-			owner = { character_event = { id = REC.1001 days = 1 }}
-		}
-		#if = { limit = { NOT = { has_province_modifier = relique05 } }
-		10 = {	add_province_modifier = { name = relique05 duration = -1 }
-			owner = { character_event = { id = REC.1001 days = 1 }}
-		}
+		90 = {}
 		}
 	}
 }
