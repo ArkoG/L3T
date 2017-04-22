@@ -32,8 +32,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_chap_seign
 		}
 	}
@@ -113,8 +112,7 @@ character_event = {
 	
 	trigger = {	
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_chap_seign_2
 		}
 	}
@@ -194,8 +192,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_chambre_2
 		}
 	}
@@ -275,8 +272,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_archives_1
 		}
 	}
@@ -356,8 +352,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_cour_justice
 		}
 	}
@@ -437,8 +432,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_chancellerie
 		}
 	}
