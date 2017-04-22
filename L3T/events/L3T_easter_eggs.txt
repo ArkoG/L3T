@@ -1414,12 +1414,10 @@ character_event = {
 		NOT = { has_artifact = oeuf_united }
 	}
 
-	immediate = {
-		set_character_flag = egg_found
-	}
+	immediate = { set_character_flag = egg_found }
 
 	option = {
-		name = "L3T.431A"
+		name = "L3T.431A" #end+
 		trigger = { NOT = { trait = honest } }
 		ai_chance = {
 			factor = 30
@@ -1439,7 +1437,7 @@ character_event = {
 		}
 	}
 
-	option = {
+	option = { #offre d'achat
 		name = "L3T.431B"
 		ai_chance = {
 			factor = 30
@@ -1448,13 +1446,20 @@ character_event = {
 				trait = ambitious
 			}
 		}
-		add_artifact = oeuf_3
-		wealth = -10
-		piety = 5
+		#add_artifact = oeuf_3
+		#wealth = -10
+		#piety = 5
+		custom_tooltip = { text = custom_offre_dachat_oeuf3a } #offre 15po
+		hidden_tooltip = { 
+			random_list = {
+				10 = { character_event = { id = L3T.432 days = 1 }	wealth = -15 } #Monks accept
+				10 = { character_event = { id = L3T.433 days = 1 }} #Monks refuse
+			}
+		}
 	}
 
 	option = {
-		name = "L3T.431C"
+		name = "L3T.431C" #end-
 		ai_chance = {
 			factor = 30
 			modifier = {
@@ -1470,6 +1475,118 @@ character_event = {
 		prestige = -10
 		clr_character_flag = canGetEasterEgg3
 		set_character_flag = pious_hunt
+	}
+}
+letter_event = { #Monks accept
+	id = L3T.432
+	desc = "DESCL3T.432"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.432A" #end+
+		add_artifact = oeuf_3
+		#piety = 5
+	}
+}
+letter_event = { #Monks refuse
+	id = L3T.433
+	desc = "DESCL3T.433"
+	
+	is_triggered_only = yes
+
+	option = { #doubler l'offre à 30po
+		name = "L3T.433A" #Monks accept #end+
+		custom_tooltip = { text = custom_offre_dachat_oeuf3b } #offre 30po
+		character_event = { id = L3T.432 days = 1 }	
+		wealth = -30 
+	}
+	option = { #votre prix sera le mien
+		name = "L3T.433B"
+		trigger = { wealth = 30 }
+		custom_tooltip = { text = custom_offre_devente_oeuf3 }
+		hidden_tooltip = {
+			character_event = { id = L3T.434 days = 1 } #Monks make their offer
+		}
+	}
+	option = { #je ne peux proposer plus - abandon
+		name = "L3T.433C" #end-
+		custom_tooltip = { text = custom_abandon_oeuf3 }
+		trigger = { NOT = { wealth = 30 }}
+		piety = 10
+		prestige = -10
+		clr_character_flag = canGetEasterEgg3
+		set_character_flag = pious_hunt
+	}
+}
+letter_event = { #Monks make their offer
+	id = L3T.434
+	border = GFX_event_letter_frame_diplomacy
+	
+	desc = {
+		trigger = { NOT = { diplomacy = 8 }} #<7 range
+		text = "DESCL3T.434A"
+	}
+	desc = {
+		trigger = { 
+			AND = { #8/11 range
+				diplomacy = 8
+				NOT = { diplomacy = 12 }
+			}
+		}
+		text = "DESCL3T.434B"
+	}
+	desc = {
+		trigger = { 
+			AND = { #12/15 range
+				diplomacy = 12
+				NOT = { diplomacy = 16 }
+			}
+		}
+		text = "DESCL3T.434C"
+	}
+	desc = {
+		trigger = { diplomacy = 16 } #>15 range
+		text = "DESCL3T.434D"
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.434A"
+		trigger = { NOT = { diplomacy = 8 }} #<7 range
+		wealth = -40
+		add_artifact = oeuf_3
+	}
+	option = {
+		name = "L3T.434B"
+		trigger = { 
+			AND = { #8/11 range
+				diplomacy = 8
+				NOT = { diplomacy = 12 }
+			}
+		}
+		wealth = -35
+		add_artifact = oeuf_3
+	}
+	option = {
+		name = "L3T.434C"
+		tooltip_info = diplomacy
+		trigger = { 
+			AND = { #12/15 range
+				diplomacy = 12
+				NOT = { diplomacy = 16 }
+			}
+		}
+		wealth = -25
+		add_artifact = oeuf_3
+	}
+	option = {
+		name = "L3T.434D"
+		tooltip_info = diplomacy
+		trigger = { diplomacy = 16 } #>15 range
+		wealth = -20
+		add_artifact = oeuf_3
 	}
 }
 
