@@ -202,14 +202,12 @@ character_event = {
 				trait = deceitful
 			}
 		}
-		random_list = {
-			20 = { 
-				if = {
-					limit = { NOT = { trait = deceitful } }
-					add_trait = deceitful
-				}
+		if = {
+			limit = { NOT = { trait = deceitful } }
+			random = { 
+				chance = 20
+				add_trait = deceitful
 			}
-			80 = {}
 		}
 		character_event = { id = ECO.314 days = 30 tooltip = TOOLTIPECO.313A} 
 	}
@@ -233,14 +231,12 @@ character_event = {
 			}
 		}
 		wealth = -20
-		random_list = {
-			10 = { 
-				if = {
-					limit = { NOT = { trait = charitable } }
-					add_trait = charitable
-				}
+		if = {
+			limit = { NOT = { trait = charitable } }
+			random = { 
+				chance = 10
+				add_trait = charitable
 			}
-			90 = {}
 		}
 		character_event = { id = ECO.314 days = 30 tooltip = TOOLTIPECO.313B} 
 	}
@@ -256,14 +252,12 @@ character_event = {
 			}
 		}
 		wealth = 5
-		random_list = {
-			30 = { 
-				if = {
-					limit = { NOT = { trait = arbitrary } }
-					add_trait = arbitrary
-				}
+		if = {
+			limit = { NOT = { trait = arbitrary } }
+			random = { 
+				chance = 30
+				add_trait = arbitrary
 			}
-			70 = {}
 		}
 		character_event = { id = ECO.314 days = 30 tooltip = TOOLTIPECO.313C} 
 	}
@@ -1042,14 +1036,12 @@ character_event = { #faire les mesures
 				50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 				50 = { }
 			}
-			random_list = {
-				50 = {
-					if = {
-						limit = { NOT = { trait = content } }
-						add_trait = content
-					}
+			if = {
+				limit = { NOT = { trait = content } }
+				random = { 
+					chance = 50
+					add_trait = content
 				}
-				50 = { }
 			}
 		}
 	}
@@ -1643,10 +1635,10 @@ narrative_event = {
 			50 = { give_nickname = nick_larpenteur }
 			50 = { give_nickname = nick_le_cartographe }
 			}
-		random_list = {
-			50 = { change_stewardship = 1 }
-			50 = { }
-		}		
+		random = { 
+			chance = 50
+			change_stewardship = 1 
+		}
 	}
 	option = {
 		name = "ECO.324B" #j'ai appris femme
@@ -1665,9 +1657,9 @@ narrative_event = {
 			50 = { give_nickname = nick_larpenteuse }
 			50 = { give_nickname = nick_la_cartographe }
 			}
-		random_list = {
-			50 = { change_stewardship = 1 }
-			50 = { }
+		random = { 
+			chance = 50
+			change_stewardship = 1 
 		}
 	}
 	option = { 
@@ -1687,9 +1679,9 @@ narrative_event = {
 			50 = { give_nickname = nick_larpenteur }
 			50 = { give_nickname = nick_le_cartographe }
 			}
-		random_list = {
-			25 = { change_stewardship = 1 }
-			85 = { }
+		random = { 
+			chance = 25
+			change_stewardship = 1 
 		}
 	}
 	option = { 
@@ -1709,9 +1701,9 @@ narrative_event = {
 			50 = { give_nickname = nick_larpenteuse }
 			50 = { give_nickname = nick_la_cartographe }
 			}
-		random_list = {
-			25 = { change_stewardship = 1 }
-			85 = { }
+		random = { 
+			chance = 25
+			change_stewardship = 1 
 		}
 	}
 	option = { 

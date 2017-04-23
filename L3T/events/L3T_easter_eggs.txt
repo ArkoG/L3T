@@ -266,9 +266,9 @@ narrative_event = {
 				add_trait = content
 			}
 		}
-		random_list = { 
-			50 = { piety = 20 }
-			50 = {}
+		random = { 
+			chance = 50
+			piety = 20
 		}
 		set_character_flag = pious_hunt
 	}
@@ -1178,9 +1178,9 @@ character_event = {
 		add_artifact = oeuf_2
 		if = {
 			limit = { NOT = { trait = proud } }
-			random_list = { 
-				50 = { add_trait = proud }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = proud
 			}
 		}
 	}
@@ -1203,9 +1203,9 @@ character_event = {
 		trigger = { NOT = { trait = patient } }
 		if = {
 			limit = { NOT = { trait = wroth } }
-			random_list = { 
-				50 = { add_trait = wroth }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = wroth
 			}
 		}
 	}
@@ -1222,9 +1222,9 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = patient } }
-			random_list = { 
-				50 = { add_trait = patient }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = patient
 			}
 		}
 		character_event = { id = L3T.422 days = 10 }
@@ -1267,10 +1267,10 @@ character_event = {
 		}
 		prestige = -20
 		add_artifact = oeuf_2
-		random_list = { 
-				50 = { add_trait = deceitful }
-				50 = {}
-			}
+		random = { 
+			chance = 50
+			add_trait = deceitful
+		}
 		set_character_flag = egg_found
 	}
 	
@@ -1289,9 +1289,9 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = content } }
-			random_list = { 
-				50 = { add_trait = content }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = content
 			}
 		}
 		set_character_flag = doNotLikeMarket
@@ -1315,9 +1315,9 @@ character_event = {
 		trigger = { NOT = { trait = patient } }
 		if = {
 			limit = { NOT = { trait = wroth } }
-			random_list = { 
-				50 = { add_trait = wroth }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = wroth
 			}
 		}
 	}
@@ -1334,9 +1334,9 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = patient } }
-			random_list = { 
-				50 = { add_trait = patient }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = patient
 			}
 		}
 		character_event = { id = L3T.422 days = 10 }
@@ -1358,9 +1358,9 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = just } }
-			random_list = { 
-				50 = { add_trait = just }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = just
 			}
 		}
 		wealth = 10
@@ -1384,9 +1384,9 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = cruel } }
-			random_list = { 
-				75 = { add_trait = cruel }
-				25 = {}
+			random = { 
+				chance = 75
+				add_trait = cruel
 			}
 		}
 		prestige = 10
@@ -1432,9 +1432,9 @@ character_event = {
 		set_character_flag = not_that_pious_hunt
 		if = {
 			limit = { NOT = { trait = deceitful } }
-			random_list = { 
-				50 = { add_trait = deceitful }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = deceitful
 			}
 		}
 	}
@@ -1685,9 +1685,9 @@ character_event = {
 					}
 				}
 			}
-			random_list = { 
-				75 = {} #default is true egg no need to flag it
-				25 = { set_character_flag = egg4_faux }
+			random = { 
+				chance = 25
+				set_character_flag = egg4_faux #default is true egg no need to flag it
 			}
 		}
 	}
@@ -1741,9 +1741,9 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = patient } }
-			random_list = { 
-				50 = { add_trait = patient }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = patient
 			}
 		}
 	}
@@ -1825,9 +1825,9 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = patient } }
-			random_list = { 
-				50 = { add_trait = patient }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = patient
 			}
 		}
 	}
@@ -2210,9 +2210,9 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = content } }
-			random_list = { 
-				50 = { add_trait = content }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = content
 			}
 		}
 	}
@@ -2315,9 +2315,9 @@ character_event = {
 		set_character_flag = egg_found
 		if = {
 			limit = { NOT = { trait = arbitrary } }
-			random_list = { 
-				50 = { add_trait = arbitrary }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = arbitrary
 			}
 		}
 	}
@@ -2633,9 +2633,9 @@ character_event = {
 		set_character_flag = egg_found
 		if = {
 			limit = { NOT = { trait = arbitrary } }
-			random_list = { 
-				50 = { add_trait = arbitrary }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = arbitrary
 			}
 		}
 	}
@@ -2767,9 +2767,9 @@ character_event = {
 		set_character_flag = egg_found
 		if = {
 			limit = { NOT = { trait = arbitrary } }
-			random_list = { 
-				50 = { add_trait = arbitrary }
-				50 = {}
+			random = { 
+				chance = 50
+				add_trait = arbitrary
 			}
 		}
 	}
