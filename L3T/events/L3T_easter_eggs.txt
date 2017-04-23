@@ -154,7 +154,6 @@ narrative_event = {
 			}
 		}
 		set_character_flag = search_egg1
-		set_character_flag = pious_hunt
 		hidden_tooltip = { religion_head  = { character_event = { id = L3T.412 days = 15 } } }
 	}
 	
@@ -400,6 +399,7 @@ character_event = {
 		piety = -10
 		add_artifact = oeuf_1
 		set_character_flag = egg_found
+		set_character_flag = pious_hunt
 	}
 }
 
@@ -425,6 +425,7 @@ character_event = {
 			}
 		}
 		prestige = -10
+		set_character_flag = pious_hunt
 	}
 	
 	option = {
@@ -442,6 +443,7 @@ character_event = {
 		}
 		add_artifact = oeuf_1
 		set_character_flag = egg_found
+		set_character_flag = not_that_pious_hunt
 	}
 }
 
