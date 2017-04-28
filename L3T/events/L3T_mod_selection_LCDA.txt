@@ -10,11 +10,6 @@ province_event = { #installe les provinces côtières LCDA
 			NOT = { has_province_modifier = province_cotiere }
 			OR = {   
 			province_id = 1 #Nyon
-			province_id = 2 #Gex
-			province_id = 3 #Genève
-			province_id = 4 #Thonon
-			province_id = 5 #Abondance
-			province_id = 6 #Aigle
 			}
 		}
 
@@ -31,13 +26,8 @@ province_event = { #installe les provinces terrestres LCDA
 	
 	trigger = {
 			NOT = { has_province_modifier = province_terrestre }
-			NOT = {   
+			NOT = {  
 			province_id = 1 #Nyon
-			province_id = 2 #Gex
-			province_id = 3 #Genève
-			province_id = 4 #Thonon
-			province_id = 5 #Abondance
-			province_id = 6 #Aigle
 			}
 		}
 
