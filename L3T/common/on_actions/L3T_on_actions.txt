@@ -13,7 +13,9 @@ on_startup = {
 #character
 on_yearly_pulse = {
 	events = {
+		#décompte minerai
 		ECO.132
+		#feudal city bonus
 		L3T.225
 		L3T.226
 		#RIP.10030 #vanilla on_province_major_modifier event
@@ -51,6 +53,7 @@ on_yearly_pulse = {
 # ROOT = Builder, FROM = The Holding Title
 on_holding_building_start = {
 	events = {
+		#feudal city bonus
 		L3T.201
 		L3T.205
 		L3T.209
@@ -73,6 +76,7 @@ on_holding_building_start = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder = {
 	events = {
+		#feudal city bonus
 		L3T.202
 		L3T.206
 		L3T.210
@@ -86,6 +90,7 @@ on_new_holder = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_inheritance = {
 	events = {
+		#feudal city bonus
 		L3T.202
 		L3T.206
 		L3T.210
@@ -99,6 +104,7 @@ on_new_holder_inheritance = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_usurpation = {
 	events = {
+		#feudal city bonus
 		L3T.202
 		L3T.206
 		L3T.210
@@ -112,6 +118,6 @@ on_new_holder_usurpation = {
 # ROOT = Builder, FROM = Title
 on_settlement_construction_completed = {
 	events = {
-		L3T.9
+		L3T.9 #starts spec holding for the new built building
 	}
 }
