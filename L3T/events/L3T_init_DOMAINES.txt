@@ -140,9 +140,12 @@ narrative_event = {
 	option = {
 		name = "L3T.3C" #ADM
 		trigger = {
-			higher_tier_than = COUNT # Duke, King or Emperor
+			#higher_tier_than = COUNT # Duke, King or Emperor
 			capital_holding = {
 				has_title_flag = castle_to_specialize
+			}
+			holder_scope = {
+				num_of_count_titles = 2
 			}
 		}
 		ai_chance = {
@@ -151,6 +154,8 @@ narrative_event = {
 				factor =  10
 				higher_tier_than = DUKE # King or Emperor
 			}
+			modifier = { factor = 5	num_of_count_titles = 2 }
+			modifier = { factor = 5	num_of_count_titles = 4 }
 			modifier = {
 				factor =  10
 				independent = yes
