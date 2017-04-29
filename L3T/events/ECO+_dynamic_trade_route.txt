@@ -24,20 +24,45 @@ province_event = {
 				holding_type = city
 			}
 		}
-		modifier = {
-			factor = 0.1
-			any_province_holding = {
-				OR = {
-					has_building = CA_route_L1
-					has_building = CT_route_L1
-					has_building = TP_route_L1
-				}
-			}
-		}
-		modifier = {
+#		modifier = {
+#			factor = 0.1
+#			any_province_holding = {
+#				OR = {
+#					has_building = CA_route_L1
+#					has_building = CT_route_L1
+#					has_building = TP_route_L1
+#				}
+#			}
+#		}
+		#if multiplicative the combination of the 3 approaches the 0.1 from previous modifier
+		modifier = { factor = 0.5	any_province_holding = { has_building = CA_route_L1 }}
+ 		modifier = { factor = 0.5	any_province_holding = { has_building = CT_route_L1 }}
+		modifier = { factor = 0.5	any_province_holding = { has_building = TP_route_L1 }}
+		
+		modifier = { factor = 0.8	has_province_modifier = province_fleuve }
+		
+		modifier = { #LCDA only, a pass with a basic development can attract more easily the trade potential
 			factor = 0.5
-			has_province_modifier = province_fleuve
+				AND = {
+					has_province_modifier = great_pass
+					OR = {
+						any_province_holding = { has_building = CA_col_L1 }
+						any_province_holding = { has_building = CT_col_L1 }
+						any_province_holding = { has_building = TP_col_L1 }
+					}
+				}
 		}
+		modifier = { #LCDA only, a pass with a basic development can attract more easily the trade potential
+			factor = 0.75
+				AND = {
+					has_province_modifier = minor_pass
+					OR = {
+						any_province_holding = { has_building = CA_col_L1 }
+						any_province_holding = { has_building = CT_col_L1 }
+						any_province_holding = { has_building = TP_col_L1 }
+					}
+				}
+		}	
 	}
 
 	immediate = {
@@ -151,20 +176,45 @@ province_event = {
 				holding_type = city
 			}
 		}
-		modifier = {
-			factor = 0.1
-			any_province_holding = {
-				OR = {
-					has_building = CA_route_L1
-					has_building = CT_route_L1
-					has_building = TP_route_L1
-				}
-			}
-		}
-		modifier = {
+#		modifier = {
+#			factor = 0.1
+#			any_province_holding = {
+#				OR = {
+#					has_building = CA_route_L1
+#					has_building = CT_route_L1
+#					has_building = TP_route_L1
+#				}
+#			}
+#		}
+		#if multiplicative the combination of the 3 approaches the 0.1 from previous modifier
+		modifier = { factor = 0.5	any_province_holding = { has_building = CA_route_L1 }}
+ 		modifier = { factor = 0.5	any_province_holding = { has_building = CT_route_L1 }}
+		modifier = { factor = 0.5	any_province_holding = { has_building = TP_route_L1 }}
+		
+		modifier = { factor = 0.8	has_province_modifier = province_fleuve }
+		
+		modifier = { #LCDA only, a pass with a basic development can attract more easily the trade potential
 			factor = 0.5
-			has_province_modifier = province_fleuve
+				AND = {
+					has_province_modifier = great_pass
+					OR = {
+						any_province_holding = { has_building = CA_col_L1 }
+						any_province_holding = { has_building = CT_col_L1 }
+						any_province_holding = { has_building = TP_col_L1 }
+					}
+				}
 		}
+		modifier = { #LCDA only, a pass with a basic development can attract more easily the trade potential
+			factor = 0.75
+				AND = {
+					has_province_modifier = minor_pass
+					OR = {
+						any_province_holding = { has_building = CA_col_L1 }
+						any_province_holding = { has_building = CT_col_L1 }
+						any_province_holding = { has_building = TP_col_L1 }
+					}
+				}
+		}	
 	}
 
 	immediate = {
@@ -269,20 +319,45 @@ province_event = {
 				holding_type = city
 			}
 		}
-		modifier = {
-			factor = 0.1
-			any_province_holding = {
-				OR = {
-					has_building = CA_route_L1
-					has_building = CT_route_L1
-					has_building = TP_route_L1
-				}
-			}
-		}
-		modifier = {
+#		modifier = {
+#			factor = 0.1
+#			any_province_holding = {
+#				OR = {
+#					has_building = CA_route_L1
+#					has_building = CT_route_L1
+#					has_building = TP_route_L1
+#				}
+#			}
+#		}
+		#if multiplicative the combination of the 3 approaches the 0.1 from previous modifier
+		modifier = { factor = 0.5	any_province_holding = { has_building = CA_route_L1 }}
+ 		modifier = { factor = 0.5	any_province_holding = { has_building = CT_route_L1 }}
+		modifier = { factor = 0.5	any_province_holding = { has_building = TP_route_L1 }}
+		
+		modifier = { factor = 0.8	has_province_modifier = province_fleuve }
+		
+		modifier = { #LCDA only, a pass with a basic development can attract more easily the trade potential
 			factor = 0.5
-			has_province_modifier = province_fleuve
-		}		
+				AND = {
+					has_province_modifier = great_pass
+					OR = {
+						any_province_holding = { has_building = CA_col_L1 }
+						any_province_holding = { has_building = CT_col_L1 }
+						any_province_holding = { has_building = TP_col_L1 }
+					}
+				}
+		}
+		modifier = { #LCDA only, a pass with a basic development can attract more easily the trade potential
+			factor = 0.75
+				AND = {
+					has_province_modifier = minor_pass
+					OR = {
+						any_province_holding = { has_building = CA_col_L1 }
+						any_province_holding = { has_building = CT_col_L1 }
+						any_province_holding = { has_building = TP_col_L1 }
+					}
+				}
+		}	
 	}
 
 	immediate = {
@@ -387,20 +462,45 @@ province_event = {
 				holding_type = city
 			}
 		}
-		modifier = {
-			factor = 0.1
-			any_province_holding = {
-				OR = {
-					has_building = CA_route_L1
-					has_building = CT_route_L1
-					has_building = TP_route_L1
-				}
-			}
-		}
-		modifier = {
+#		modifier = {
+#			factor = 0.1
+#			any_province_holding = {
+#				OR = {
+#					has_building = CA_route_L1
+#					has_building = CT_route_L1
+#					has_building = TP_route_L1
+#				}
+#			}
+#		}
+		#if multiplicative the combination of the 3 approaches the 0.1 from previous modifier
+		modifier = { factor = 0.5	any_province_holding = { has_building = CA_route_L1 }}
+ 		modifier = { factor = 0.5	any_province_holding = { has_building = CT_route_L1 }}
+		modifier = { factor = 0.5	any_province_holding = { has_building = TP_route_L1 }}
+		
+		modifier = { factor = 0.8	has_province_modifier = province_fleuve }
+		
+		modifier = { #LCDA only, a pass with a basic development can attract more easily the trade potential
 			factor = 0.5
-			has_province_modifier = province_fleuve
+				AND = {
+					has_province_modifier = great_pass
+					OR = {
+						any_province_holding = { has_building = CA_col_L1 }
+						any_province_holding = { has_building = CT_col_L1 }
+						any_province_holding = { has_building = TP_col_L1 }
+					}
+				}
 		}
+		modifier = { #LCDA only, a pass with a basic development can attract more easily the trade potential
+			factor = 0.75
+				AND = {
+					has_province_modifier = minor_pass
+					OR = {
+						any_province_holding = { has_building = CA_col_L1 }
+						any_province_holding = { has_building = CT_col_L1 }
+						any_province_holding = { has_building = TP_col_L1 }
+					}
+				}
+		}	
 	}
 
 	immediate = {
@@ -485,6 +585,9 @@ province_event = {
 	
 	mean_time_to_happen = {
 		months = 10
+		modifier = { factor = 0.5	any_province_holding = { has_building = CA_route_L1 }}
+ 		modifier = { factor = 0.5	any_province_holding = { has_building = CT_route_L1 }}
+		modifier = { factor = 0.5	any_province_holding = { has_building = TP_route_L1 }}	
 	}
 	
 	option = {
