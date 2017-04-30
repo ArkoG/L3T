@@ -208,7 +208,10 @@ CT_relais_L2 = { #relais col
 }
 CT_relais_L3 = { #relais col
 	desc = "CT_relais_L3_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CONSTRUCTION = 2
+		has_province_modifier = great_pass
+		}
 	upgrades_from = CT_relais_L2
 		gold_cost = 120.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
