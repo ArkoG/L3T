@@ -724,7 +724,7 @@ province_event = {
 				}
 			}
 		}
-		modifier = { factor = 0.8	any_province_holding = {CT_pont_fluvial_L4 }}
+		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
 		modifier = { factor = 0.8	any_province_holding = { has_building = VOC_COMMERCIALE }}#there is a commercial city
  		modifier = { factor = 1.2	any_province_holding = { has_building = VOC_INDUSTRIELLE }}#not my business
 		modifier = { factor = 0.9	any_province_holding = { has_building = CITE_L2 }}#the bigger the better	
