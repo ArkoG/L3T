@@ -516,7 +516,14 @@ province_cotiere = { icon = 139 local_tax_modifier = 0.02 }
 province_fleuve = { icon = 140 }
 province_terrestre = { icon = 142 } # hidden
 
-
+great_pass = {
+	local_tax_modifier = 0.15
+	icon = 151
+}
+minor_pass = {
+	local_tax_modifier = 0.05
+	icon = 152
+}
 
 route_terrestre01 = { local_tax_modifier = 0.05	icon = 80 } #+5%
 route_terrestre02 = { local_tax_modifier = 0.05	icon = 81 } #+5%
