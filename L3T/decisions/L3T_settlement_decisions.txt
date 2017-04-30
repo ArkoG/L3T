@@ -41,8 +41,10 @@ settlement_decisions = {
 			}
 			FROM = {
 				wealth = 100
-				#higher_tier_than = COUNT # Duke, King or Emperor
-				holder_scope = { num_of_count_titles = 2 }
+				OR = {
+					higher_tier_than = COUNT # Duke, King or Emperor
+					holder_scope = { num_of_count_titles = 2 }
+				}
 			}
 			OR = {
 				has_building = FEODAL_mil

@@ -119,7 +119,7 @@ narrative_event = {
 				}
 			}
 			modifier = {
-				factor = 10
+				factor = 1.5
 				any_demesne_title = {
 					has_title_flag = castle_to_specialize
 					location = { has_province_flag = crown_focus_province } #pondération capitale économique
@@ -140,12 +140,12 @@ narrative_event = {
 	option = {
 		name = "L3T.3C" #ADM
 		trigger = {
-			#higher_tier_than = COUNT # Duke, King or Emperor
 			capital_holding = {
-				has_title_flag = castle_to_specialize
+					has_title_flag = castle_to_specialize
 			}
-			holder_scope = {
-				num_of_count_titles = 2
+			OR = {
+				higher_tier_than = COUNT # Duke, King or Emperor
+				holder_scope = { num_of_count_titles = 2 }
 			}
 		}
 		ai_chance = {
@@ -154,8 +154,9 @@ narrative_event = {
 				factor =  10
 				higher_tier_than = DUKE # King or Emperor
 			}
-			modifier = { factor = 5	num_of_count_titles = 2 }
-			modifier = { factor = 5	num_of_count_titles = 4 }
+			modifier = { factor = 1.2	num_of_count_titles = 2 }
+			modifier = { factor = 1.2	num_of_count_titles = 3 }
+			modifier = { factor = 1.1	num_of_count_titles = 4 }
 			modifier = {
 				factor =  10
 				independent = yes
