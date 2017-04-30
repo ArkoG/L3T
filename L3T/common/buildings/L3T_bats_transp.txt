@@ -18,11 +18,12 @@ CA_pont_L2 = { #pont en bois
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = CA_pont_L1
 	prerequisites = { ca_town_2 }
+	global_movement_speed = 0.02
 		gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_pont_L3 = { #pont de pierre
 	desc = "CA_pont_L3_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 2 }
 	upgrades_from = CA_pont_L2
 	prerequisites = { ca_town_3 }
 		gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.03	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -32,15 +33,29 @@ CA_pont_L3 = { #pont de pierre
 CA_col_L1 = { #chemin col
 	desc = "CA_col_L1_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
-	potential = {	terrain = mountain }
+	not_if_x_exists = { FEODAL_mil } #prod ou ADM only
+	potential = { terrain = mountain }
 	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_col_L2 = { #col route empierrée
 	desc = "CA_col_L2_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 2 }
 	upgrades_from = CA_col_L1
 	prerequisites = { ca_town_1 }
 		gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+CA_col_MIL = { #nid d'aigle
+	desc = "CA_col_MIL_desc"
+	trigger = { TECH_CONSTRUCTION = 2 }
+	prerequisites = { FEODAL_mil } #military only
+	potential = { terrain = mountain }
+	gold_cost = 150.0
+	build_time = 350
+	tax_income = -0.1
+	archers = 5
+	pikemen = 5
+	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #routes de commerces
@@ -68,12 +83,13 @@ CA_route_L2 = { #route pavée
 	upgrades_from = CA_route_L1
 	potential = { has_province_modifier = route_terrestre }
 	prerequisites = { ca_town_2 }
+	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 CA_route_L3 = { #grande route pavée avec péage
 	desc = "CA_route_L3_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 1 }
 	upgrades_from = CA_route_L2
 	potential = { has_province_modifier = route_terrestre }
 	prerequisites = { ca_town_3 }
@@ -104,12 +120,13 @@ CA_fleuve_L2 = { #petit port
 	upgrades_from = CA_fleuve_L1
 	potential = { has_province_modifier = route_fluviale }
 	prerequisites = { ca_town_2 }
+	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 CA_fleuve_L3 = { #port fluvial avec péage
 	desc = "CA_fleuve_L3_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 1 }
 	upgrades_from = CA_fleuve_L2
 	potential = { has_province_modifier = route_fluviale }
 	prerequisites = { ca_town_3 }
@@ -135,11 +152,12 @@ CT_pont_L2 = { #pont en bois
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = CT_pont_L1
 	prerequisites = { ct_town_2 }
+	global_movement_speed = 0.02
 		gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_pont_L3 = { #pont de pierre
 	desc = "CT_pont_L3_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 2 }
 	upgrades_from = CT_pont_L2
 	prerequisites = { ct_town_3 }
 		gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.03	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -154,7 +172,7 @@ CT_col_L1 = { #chemin col
 }
 CT_col_L2 = { #col route empierrée
 	desc = "CT_col_L2_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 2 }
 	upgrades_from = CT_col_L1
 	prerequisites = { ct_town_1 }
 	gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -227,6 +245,7 @@ CT_pont_fluvial_L3 = { #-pont flottant
 	desc = "CT_pont_fluvial_L3_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = CT_pont_fluvial_L2
+	global_movement_speed = 0.02
 		gold_cost = 250.0	build_time = 450	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_pont_fluvial_L4 = { #-pont en bois
@@ -234,17 +253,19 @@ CT_pont_fluvial_L4 = { #-pont en bois
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = CT_pont_fluvial_L3
 	prerequisites = { CITE_L2 }
+	global_movement_speed = 0.01
 	gold_cost = 425.0	build_time = 900	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_pont_fluvial_L5 = { #-pont en pierre
 	desc = "CT_pont_fluvial_L5_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 2 }
 	upgrades_from = CT_pont_fluvial_L4
+	global_movement_speed = 0.01
 		gold_cost = 650.0	build_time = 1800	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_pont_fluvial_L6 = { #-grand pont
 	desc = "CT_pont_fluvial_L6_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 4 }
 	upgrades_from = CT_pont_fluvial_L5
 	prerequisites = { CITE_L3 }
 	gold_cost = 250.0	build_time = 540	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -275,12 +296,13 @@ CT_route_L2 = { #route pavée
 	upgrades_from = CT_route_L1
 	potential = { has_province_modifier = route_terrestre }
 	prerequisites = { ct_town_2 }
+	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 CT_route_L3 = { #grande route pavée avec péage
 	desc = "CT_route_L3_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 1 }
 	upgrades_from = CT_route_L2
 	potential = { has_province_modifier = route_terrestre }
 	prerequisites = { ct_town_3 }
@@ -310,12 +332,13 @@ CT_fleuve_L2 = { #petit port
 	upgrades_from = CT_fleuve_L1
 	potential = { has_province_modifier = route_fluviale }
 	prerequisites = { ct_town_2 }
+	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 CT_fleuve_L3 = { #port fluvial avec péage
 	desc = "CT_fleuve_L3_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 1 }
 	upgrades_from = CT_fleuve_L2
 	potential = { has_province_modifier = route_fluviale }
 	prerequisites = { ct_town_3 }
@@ -341,11 +364,12 @@ TP_pont_L2 = { #pont en bois
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = TP_pont_L1
 	prerequisites = { tp_town_2 }
+	global_movement_speed = 0.02
 		gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_pont_L3 = { #pont de pierre
 	desc = "TP_pont_L3_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 2 }
 	upgrades_from = TP_pont_L2
 	prerequisites = { tp_town_3 }
 		gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.03	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -360,7 +384,7 @@ TP_col_L1 = { #chemin col
 }
 TP_col_L2 = { #col route empierrée
 	desc = "TP_col_L2_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 2 }
 	upgrades_from = TP_col_L1
 	prerequisites = { tp_town_1 }
 	gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -407,12 +431,13 @@ TP_route_L2 = { #route pavée
 	upgrades_from = TP_route_L1
 	potential = { has_province_modifier = route_terrestre }
 	prerequisites = { tp_town_2 }
+	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 TP_route_L3 = { #grande route pavée avec péage
 	desc = "TP_route_L3_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 1 }
 	upgrades_from = TP_route_L2
 	potential = { has_province_modifier = route_terrestre }
 	prerequisites = { tp_town_3 }
@@ -443,12 +468,13 @@ TP_fleuve_L2 = { #petit port
 	upgrades_from = TP_fleuve_L1
 	potential = { has_province_modifier = route_fluviale }
 	prerequisites = { tp_town_2 }
+	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 TP_fleuve_L3 = { #port fluvial avec péage
 	desc = "TP_fleuve_L3_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { TECH_CONSTRUCTION = 1 }
 	upgrades_from = TP_fleuve_L2
 	potential = { has_province_modifier = route_fluviale }
 	prerequisites = { tp_town_3 }
