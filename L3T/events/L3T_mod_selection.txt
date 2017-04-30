@@ -51,6 +51,12 @@ character_event = {
 		}			
 	}
 	
+	immediate = {
+		any_province = {
+			province_event = { id = L3T.28 days = 11 random = 10} #attribution cols
+		}
+	}
+	
 	option = {	
 		#name = "L3T.10A"	
 		name = OK

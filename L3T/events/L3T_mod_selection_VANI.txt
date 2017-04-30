@@ -565,3 +565,31 @@ province_event = { #installe les provinces fluviales VANILLA
 		}	
 	}
 }
+province_event = { #installe les cols -toute carte-
+    id = L3T.28
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = minor_pass }
+		NOT = { has_province_modifier = great_pass }
+		NOT = { any_neighbor_province = { has_province_modifier = great_pass }}
+		terrain = mountain
+		}
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { any_neighbor_province = { terrain = mountain }} #isolated mountains will receive a minor pass
+			}
+		add_province_modifier = { name = minor_pass	duration = -1 }
+		}
+		if = {
+			limit = { 
+				any_neighbor_province = { terrain = mountain }	
+			}
+		add_province_modifier = { name = great_pass	duration = -1 }
+		}
+	}
+}
