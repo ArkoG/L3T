@@ -69,8 +69,15 @@ CA_col_MIL = { #nid d'aigle
 CA_route_L1 = { #petit chemin de terre
 	desc = "CA_route_L1_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
-	potential = {
-		NOT = { has_province_modifier = province_fleuve }
+	potential = { NOT = { has_province_modifier = province_fleuve }}
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+CA_route_L2 = { #route pavée
+	desc = "CA_route_L2_desc"
+	upgrades_from = CA_route_L1
+	trigger = { 
+		TECH_CONSTRUCTION = 0
 		OR = {
 			has_province_modifier = route_terrestre
 			any_neighbor_province = {
@@ -81,14 +88,6 @@ CA_route_L1 = { #petit chemin de terre
 			}
 		}
 	}
-	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-
-CA_route_L2 = { #route pavée
-	desc = "CA_route_L2_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
-	upgrades_from = CA_route_L1
-	potential = { has_province_modifier = route_terrestre }
 	prerequisites = { ca_town_2 }
 	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -106,9 +105,16 @@ CA_route_L3 = { #grande route pavée avec péage
 CA_fleuve_L1 = { # petit quai
 	desc = "CA_fleuve_L1_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
-	potential = {
-		has_province_modifier = province_fleuve
-		OR = {			
+	potential = { has_province_modifier = province_fleuve }
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+CA_fleuve_L2 = { #petit port
+	desc = "CA_fleuve_L2_desc"
+	upgrades_from = CA_fleuve_L1
+	trigger = { 
+		TECH_CONSTRUCTION = 0
+		OR = {
 			has_province_modifier = route_fluviale
 			any_neighbor_province = {
 				OR = {
@@ -118,14 +124,6 @@ CA_fleuve_L1 = { # petit quai
 			}
 		}
 	}
-	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-
-CA_fleuve_L2 = { #petit port
-	desc = "CA_fleuve_L2_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
-	upgrades_from = CA_fleuve_L1
-	potential = { has_province_modifier = route_fluviale }
 	prerequisites = { ca_town_2 }
 	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -242,11 +240,7 @@ CT_oasis_L3 = { #oasis
 CT_pont_fluvial_L1 = { #-bac
 	desc = "CT_pont_fluvial_L1_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
-	potential = {	
-				has_province_modifier = province_fleuve
-				any_neighbor_province = { has_province_modifier = route_terrestre }
-				NOT = { has_province_modifier = route_fluviale }
-				}
+	potential = { has_province_modifier = province_fleuve }
 	prerequisites = { VOC_COMMERCIALE }	
 	gold_cost = 65.0	build_time = 95	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -291,8 +285,14 @@ CT_pont_fluvial_L6 = { #-grand pont
 CT_route_L1 = { #petit chemin de terre
 	desc = "CT_route_L1_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
-	potential = {
-		NOT = { has_province_modifier = province_fleuve }
+	potential = { NOT = { has_province_modifier = province_fleuve }}
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+CT_route_L2 = { #route pavée
+	desc = "CT_route_L2_desc"
+	trigger = { 
+		TECH_CONSTRUCTION = 0
 		OR = {
 			has_province_modifier = route_terrestre
 			any_neighbor_province = {
@@ -303,14 +303,7 @@ CT_route_L1 = { #petit chemin de terre
 			}
 		}
 	}
-	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-
-CT_route_L2 = { #route pavée
-	desc = "CT_route_L2_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = CT_route_L1
-	potential = { has_province_modifier = route_terrestre }
 	prerequisites = { ct_town_2 }
 	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -327,8 +320,14 @@ CT_route_L3 = { #grande route pavée avec péage
 CT_fleuve_L1 = { # petit quai
 	desc = "CT_fleuve_L1_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
-	potential = {
-		has_province_modifier = province_fleuve
+	potential = { has_province_modifier = province_fleuve }
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+CT_fleuve_L2 = { #petit port
+	desc = "CT_fleuve_L2_desc"
+	trigger = { 
+		TECH_CONSTRUCTION = 0
 		OR = {			
 			has_province_modifier = route_fluviale
 			any_neighbor_province = {
@@ -339,14 +338,7 @@ CT_fleuve_L1 = { # petit quai
 			}
 		}
 	}
-	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-
-CT_fleuve_L2 = { #petit port
-	desc = "CT_fleuve_L2_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = CT_fleuve_L1
-	potential = { has_province_modifier = route_fluviale }
 	prerequisites = { ct_town_2 }
 	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -432,26 +424,25 @@ TP_relais_L2 = { #relais col
 TP_route_L1 = { #petit chemin de terre
 	desc = "TP_route_L1_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
-	potential = {
-		NOT = { has_province_modifier = province_fleuve }
-		OR = {
-			has_province_modifier = route_terrestre
-			any_neighbor_province = {
-				OR = {
-					has_province_modifier = route_fluviale
-					has_province_modifier = route_terrestre
-				}
-			}
-		}
-	}
+	potential = { NOT = { has_province_modifier = province_fleuve }}
 	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 TP_route_L2 = { #route pavée
 	desc = "TP_route_L2_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CONSTRUCTION = 0
+		OR = {
+			has_province_modifier = route_terrestre
+			any_neighbor_province = {
+			OR = {
+				has_province_modifier = route_fluviale
+				has_province_modifier = route_terrestre
+			}
+			}
+		}
+	}
 	upgrades_from = TP_route_L1
-	potential = { has_province_modifier = route_terrestre }
 	prerequisites = { tp_town_2 }
 	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -469,8 +460,14 @@ TP_route_L3 = { #grande route pavée avec péage
 TP_fleuve_L1 = { # petit quai
 	desc = "TP_fleuve_L1_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
-	potential = {
-		has_province_modifier = province_fleuve
+	potential = { has_province_modifier = province_fleuve }
+	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+TP_fleuve_L2 = { #petit port
+	desc = "TP_fleuve_L2_desc"
+	trigger = { 
+		TECH_CONSTRUCTION = 0
 		OR = {
 			has_province_modifier = route_fluviale
 			any_neighbor_province = {
@@ -481,14 +478,7 @@ TP_fleuve_L1 = { # petit quai
 			}
 		}
 	}
-	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 99	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-
-TP_fleuve_L2 = { #petit port
-	desc = "TP_fleuve_L2_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = TP_fleuve_L1
-	potential = { has_province_modifier = route_fluviale }
 	prerequisites = { tp_town_2 }
 	global_movement_speed = 0.02
 	gold_cost = 75.0	build_time = 230	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -502,6 +492,7 @@ TP_fleuve_L3 = { #port fluvial avec péage
 	prerequisites = { tp_town_3 }
 	gold_cost = 150.0	build_time = 500	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
+
 }
 
 
