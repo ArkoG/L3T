@@ -32,9 +32,28 @@ province_event = {
 					has_building = VOC_COMMERCIALE
 				}
 		}
-		modifier = { factor = 0.6	any_province_holding = { has_building = CA_route_L1 }}
- 		modifier = { factor = 0.6	any_province_holding = { has_building = CT_route_L1 }}
-		modifier = { factor = 0.6	any_province_holding = { has_building = TP_route_L1 }}#cumul*0.216
+		modifier = { 
+			factor = 0.8
+			OR = {
+				any_province_holding = { has_building = CA_route_L1 }
+				any_province_holding = { has_building = CT_route_L1 }
+				any_province_holding = { has_building = TP_route_L1 }
+				any_province_holding = { has_building = CA_fleuve_L1 }
+				any_province_holding = { has_building = CT_fleuve_L1 }
+				any_province_holding = { has_building = TP_fleuve_L1 }
+				}
+		}
+		modifier = { 
+			factor = 0.6
+			OR = {
+				any_province_holding = { has_building = CA_route_L2 }
+				any_province_holding = { has_building = CT_route_L2 }
+				any_province_holding = { has_building = TP_route_L2 }
+				any_province_holding = { has_building = CA_fleuve_L2 }
+				any_province_holding = { has_building = CT_fleuve_L2 }
+				any_province_holding = { has_building = TP_fleuve_L2 }
+				}
+		}
 		modifier = {
 			factor = 0.9
 			any_province_holding = {
@@ -187,9 +206,28 @@ province_event = {
 					has_building = VOC_COMMERCIALE
 				}
 		}
-		modifier = { factor = 0.6	any_province_holding = { has_building = CA_route_L1 }}
- 		modifier = { factor = 0.6	any_province_holding = { has_building = CT_route_L1 }}
-		modifier = { factor = 0.6	any_province_holding = { has_building = TP_route_L1 }}#cumul*0.216
+		modifier = { 
+			factor = 0.8
+			OR = {
+				any_province_holding = { has_building = CA_route_L1 }
+				any_province_holding = { has_building = CT_route_L1 }
+				any_province_holding = { has_building = TP_route_L1 }
+				any_province_holding = { has_building = CA_fleuve_L1 }
+				any_province_holding = { has_building = CT_fleuve_L1 }
+				any_province_holding = { has_building = TP_fleuve_L1 }
+				}
+		}
+		modifier = { 
+			factor = 0.6
+			OR = {
+				any_province_holding = { has_building = CA_route_L2 }
+				any_province_holding = { has_building = CT_route_L2 }
+				any_province_holding = { has_building = TP_route_L2 }
+				any_province_holding = { has_building = CA_fleuve_L2 }
+				any_province_holding = { has_building = CT_fleuve_L2 }
+				any_province_holding = { has_building = TP_fleuve_L2 }
+				}
+		}
 		modifier = {
 			factor = 0.9
 			any_province_holding = {
@@ -333,9 +371,28 @@ province_event = {
 					has_building = VOC_COMMERCIALE
 				}
 		}
-		modifier = { factor = 0.6	any_province_holding = { has_building = CA_route_L1 }}
- 		modifier = { factor = 0.6	any_province_holding = { has_building = CT_route_L1 }}
-		modifier = { factor = 0.6	any_province_holding = { has_building = TP_route_L1 }}#cumul*0.216
+		modifier = { 
+			factor = 0.8
+			OR = {
+				any_province_holding = { has_building = CA_route_L1 }
+				any_province_holding = { has_building = CT_route_L1 }
+				any_province_holding = { has_building = TP_route_L1 }
+				any_province_holding = { has_building = CA_fleuve_L1 }
+				any_province_holding = { has_building = CT_fleuve_L1 }
+				any_province_holding = { has_building = TP_fleuve_L1 }
+				}
+		}
+		modifier = { 
+			factor = 0.6
+			OR = {
+				any_province_holding = { has_building = CA_route_L2 }
+				any_province_holding = { has_building = CT_route_L2 }
+				any_province_holding = { has_building = TP_route_L2 }
+				any_province_holding = { has_building = CA_fleuve_L2 }
+				any_province_holding = { has_building = CT_fleuve_L2 }
+				any_province_holding = { has_building = TP_fleuve_L2 }
+				}
+		}
 		modifier = {
 			factor = 0.9
 			any_province_holding = {
@@ -479,9 +536,28 @@ province_event = {
 					has_building = VOC_COMMERCIALE
 				}
 		}
-		modifier = { factor = 0.6	any_province_holding = { has_building = CA_route_L1 }}
- 		modifier = { factor = 0.6	any_province_holding = { has_building = CT_route_L1 }}
-		modifier = { factor = 0.6	any_province_holding = { has_building = TP_route_L1 }}#cumul*0.216
+		modifier = { 
+			factor = 0.8
+			OR = {
+				any_province_holding = { has_building = CA_route_L1 }
+				any_province_holding = { has_building = CT_route_L1 }
+				any_province_holding = { has_building = TP_route_L1 }
+				any_province_holding = { has_building = CA_fleuve_L1 }
+				any_province_holding = { has_building = CT_fleuve_L1 }
+				any_province_holding = { has_building = TP_fleuve_L1 }
+				}
+		}
+		modifier = { 
+			factor = 0.6
+			OR = {
+				any_province_holding = { has_building = CA_route_L2 }
+				any_province_holding = { has_building = CT_route_L2 }
+				any_province_holding = { has_building = TP_route_L2 }
+				any_province_holding = { has_building = CA_fleuve_L2 }
+				any_province_holding = { has_building = CT_fleuve_L2 }
+				any_province_holding = { has_building = TP_fleuve_L2 }
+				}
+		}
 		modifier = {
 			factor = 0.9
 			any_province_holding = {
@@ -596,13 +672,29 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 12
-		modifier = { factor = 0.9	any_province_holding = { has_building = CA_route_L1 }}
- 		modifier = { factor = 0.9	any_province_holding = { has_building = CT_route_L1 }}
-		modifier = { factor = 0.9	any_province_holding = { has_building = TP_route_L1 }}	
-		modifier = { factor = 0.9	any_province_holding = { has_building = CA_fleuve_L1 }}
- 		modifier = { factor = 0.9	any_province_holding = { has_building = CT_fleuve_L1 }}
-		modifier = { factor = 0.9	any_province_holding = { has_building = TP_fleuve_L1 }}	
+		months = 15
+		modifier = { 
+			factor = 0.9
+				OR = {
+					any_province_holding = { has_building = CA_route_L1 }
+					any_province_holding = { has_building = CT_route_L1 }
+					any_province_holding = { has_building = TP_route_L1 }
+					any_province_holding = { has_building = CA_fleuve_L1 }
+					any_province_holding = { has_building = CT_fleuve_L1 }
+					any_province_holding = { has_building = TP_fleuve_L1 }
+				}
+		}
+		modifier = { 
+			factor = 0.8
+				OR = {
+					any_province_holding = { has_building = CA_route_L2 }
+					any_province_holding = { has_building = CT_route_L2 }
+					any_province_holding = { has_building = TP_route_L2 }
+					any_province_holding = { has_building = CA_fleuve_L2 }
+					any_province_holding = { has_building = CT_fleuve_L2 }
+					any_province_holding = { has_building = TP_fleuve_L2 }
+				}
+		}
 		modifier = { #more connected
 			factor = 0.9
 			any_province_holding = {
