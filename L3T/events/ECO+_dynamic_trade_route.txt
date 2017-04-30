@@ -83,7 +83,7 @@ province_event = {
 				}
 			}
 		}
-		modifier = { factor = 0.8	any_province_holding = {CT_pont_fluvial_L4 }}
+		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
 		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
 	}
 
@@ -257,7 +257,7 @@ province_event = {
 				}
 			}
 		}
-		modifier = { factor = 0.8	any_province_holding = {CT_pont_fluvial_L4 }}
+		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
 		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
 	}
 
@@ -422,7 +422,7 @@ province_event = {
 				}
 			}
 		}
-		modifier = { factor = 0.8	any_province_holding = {CT_pont_fluvial_L4 }}
+		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
 		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
 	}
 
@@ -587,7 +587,7 @@ province_event = {
 				}
 			}
 		}
-		modifier = { factor = 0.8	any_province_holding = {CT_pont_fluvial_L4 }}
+		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
 		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
 	}
 
