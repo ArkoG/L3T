@@ -32,7 +32,13 @@ CA_pont_L3 = { #pont de pierre
 #col montagne seulement
 CA_col_L1 = { #chemin col
 	desc = "CA_col_L1_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CONSTRUCTION = 0
+		OR = { 
+			has_province_modifier = minor_pass
+			has_province_modifier = great_pass
+		}
+	}
 	not_if_x_exists = { FEODAL_mil } #prod ou ADM only
 	potential = { terrain = mountain }
 	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -53,6 +59,7 @@ CA_col_MIL = { #nid d'aigle
 	gold_cost = 150.0
 	build_time = 350
 	tax_income = -0.1
+	fort_level = 0.5
 	archers = 5
 	pikemen = 5
 	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -166,7 +173,13 @@ CT_pont_L3 = { #pont de pierre
 #col montagne seulement
 CT_col_L1 = { #chemin col
 	desc = "CT_col_L1_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CONSTRUCTION = 0
+		OR = { 
+			has_province_modifier = minor_pass
+			has_province_modifier = great_pass
+		}
+	}
 	potential = {	terrain = mountain }
 	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -378,7 +391,13 @@ TP_pont_L3 = { #pont de pierre
 #col montagne seulement
 TP_col_L1 = { #chemin col
 	desc = "TP_col_L1_desc"
-	trigger = { TECH_CONSTRUCTION = 0 }
+	trigger = { 
+		TECH_CONSTRUCTION = 0
+		OR = { 
+			has_province_modifier = minor_pass
+			has_province_modifier = great_pass
+		}
+	}
 	potential = {	terrain = mountain }
 	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.01	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
