@@ -54,7 +54,7 @@ CA_col_L2 = { #col route empierrée
 CA_col_MIL = { #nid d'aigle
 	desc = "CA_col_MIL_desc"
 	trigger = { TECH_CONSTRUCTION = 2 }
-	prerequisites = { FEODAL_mil } #military only
+	not_if_x_exists = { FEODAL_prod FEODAL_adm } #military only
 	potential = { terrain = mountain }
 	gold_cost = 150.0
 	build_time = 350
