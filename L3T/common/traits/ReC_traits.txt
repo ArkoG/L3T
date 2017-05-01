@@ -1,0 +1,10 @@
+# Trait donné aux batisseurs de cathédrale 
+# Trait retiré dès qu'il n'y a plus de chantier de la cathédrale
+batisseur_cathedrale = {
+	same_opinion = -10
+	church_opinion = 25
+	town_opinion = -10 #NE SEMBLE PLUS MARCHER (mais présent dans XYLO_trait)
+	ai_zeal = 10
+	
+	customizer = no
+}
