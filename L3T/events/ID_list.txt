@@ -349,7 +349,11 @@
 #List ID des events.
 #namespace = REC
 
- 
+##ReC_events_construction.txt
+#id = REC.1 # base progression
+#id = REC.2 # Give builder trait succession
+#id = REC.3 # Remove builder trait succession
+
 ##ReC_events_reliques.txt
 #id = REC.101 >> REC.125 # initialisation Reliques
 #id = REC.126 >> REC.130 # initialisation Reliques à découvrir
@@ -404,7 +408,6 @@
 #id = REC.1405 # surcoût (AR) défaut de conception
 #id = REC.1406 # surcoût (AR) coût mésestimé
 #id = REC.1407 # fournisseurs peu scrupuleux v2
-
 ##emprunts : financement progressif mais payant
 #souscription emprunts
 #id = REC.1408 # pré-prop emprunts
