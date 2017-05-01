@@ -9,8 +9,8 @@ namespace = REC
 #flag chantier cathedrale // Etape 1
 #Cathédrale, Ouverture du chantier
 province_event = {
-    id = REC.0201
-	desc = "DESCREC.0201"
+    id = REC.201
+	desc = "DESCREC.201"
 	picture = GFX_evt_REC5
 
 	is_triggered_only = yes		
@@ -30,7 +30,7 @@ province_event = {
 
 	#option unique flag province lieu du chantier
 	option = {
-		name = "REC.0201A"
+		name = "REC.201A"
 		capital_holding = {
 			if = {
 				limit = { holding_type = castle }
@@ -51,8 +51,8 @@ province_event = {
 ###bonus achèvement étapes cathedrale
 #Cathédrale, Fondations
 province_event = {
-    id = REC.0202
-	desc = "DESCREC.0202"
+    id = REC.202
+	desc = "DESCREC.202"
 	picture = GFX_evt_REC5
 
 	is_triggered_only = yes	
@@ -77,7 +77,7 @@ province_event = {
 	
 	#option unique one shot pieté
 	option = {
-		name = "REC.0202A"
+		name = "REC.202A"
 		owner = { piety = 200 }
 		capital_holding = {
 			if = {
@@ -97,8 +97,8 @@ province_event = {
 }
 #Proto-Cathédrale
 province_event = {
-    id = REC.0203
-	desc = "DESCREC.0203"
+    id = REC.203
+	desc = "DESCREC.203"
 	picture = GFX_evt_REC5
 
 	is_triggered_only = yes	
@@ -123,7 +123,7 @@ province_event = {
 
 	#option unique gain piété à vie
 	option = {
-		name = "REC.0203A"
+		name = "REC.203A"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = -1	} }
 		owner = { excommunicate = no }
 		capital_holding = {
@@ -144,8 +144,8 @@ province_event = {
 }
 #Cathédrale, Portail
 province_event = {
-    id = REC.0204
-	desc = "DESCREC.0204"
+    id = REC.204
+	desc = "DESCREC.204"
 	picture = GFX_evt_REC5
 
 	is_triggered_only = yes
@@ -170,7 +170,7 @@ province_event = {
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 7ans
 	option = {
-		name = "REC.0204A"	
+		name = "REC.204A"	
 		owner = { piety = 350 }
 		capital_holding = {
 			if = {
@@ -188,7 +188,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "REC.0204B"
+		name = "REC.204B"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 2555 }	}
 		capital_holding = {
 			if = {
@@ -208,8 +208,8 @@ province_event = {
 }
 #Cathédrale, Nef Magnifique
 province_event = {
-    id = REC.0205
-	desc = "DESCREC.0205"
+    id = REC.205
+	desc = "DESCREC.205"
 	picture = GFX_evt_REC5
 
 	is_triggered_only = yes	
@@ -234,7 +234,7 @@ province_event = {
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 20ans
 	option = {
-		name = "REC.0205A"	
+		name = "REC.205A"	
 		owner = { piety = 950 }
 		capital_holding = {
 			if = {
@@ -252,7 +252,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "REC.0205B"
+		name = "REC.205B"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 7300 }	}
 		capital_holding = {
 			if = {
@@ -272,8 +272,8 @@ province_event = {
 }
 #Cathédrale, Transept
 province_event = {
-    id = REC.0206
-	desc = "DESCREC.0206"
+    id = REC.206
+	desc = "DESCREC.206"
 	picture = GFX_evt_REC5
 
 	is_triggered_only = yes
@@ -298,7 +298,7 @@ province_event = {
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 10ans
 	option = {
-		name = "REC.0206A"	
+		name = "REC.206A"	
 		owner = { piety = 700 }
 		capital_holding = {
 			if = {
@@ -316,7 +316,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "REC.0206B"
+		name = "REC.206B"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 3650 }	}
 		capital_holding = {
 			if = {
@@ -336,8 +336,8 @@ province_event = {
 }
 #Cathédrale, Tour Nord
 province_event = {
-    id = REC.0207
-	desc = "DESCREC.0207"
+    id = REC.207
+	desc = "DESCREC.207"
 	picture = GFX_evt_REC5
 
 	is_triggered_only = yes	
@@ -361,7 +361,7 @@ province_event = {
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 15ans
 	option = {
-		name = "REC.0207A"	
+		name = "REC.207A"	
 		owner = { piety = 750 }
 		capital_holding = {
 			if = {
@@ -379,7 +379,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "REC.0207B"
+		name = "REC.207B"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 5475 }	}
 		capital_holding = {
 			if = {
@@ -399,8 +399,8 @@ province_event = {
 }
 #Cathédrale, Tour du Midi
 province_event = {
-    id = REC.0208
-	desc = "DESCREC.0208"
+    id = REC.208
+	desc = "DESCREC.208"
 	picture = GFX_evt_REC5
 
 	is_triggered_only = yes	
@@ -425,7 +425,7 @@ province_event = {
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 15ans
 	option = {
-		name = "REC.0208A"	
+		name = "REC.208A"	
 		owner = { piety = 750 }
 		capital_holding = {
 			if = {
@@ -443,7 +443,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "REC.0208B"
+		name = "REC.208B"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 5475 }	}
 		capital_holding = {
 			if = {
@@ -463,8 +463,8 @@ province_event = {
 }
 #Cathédrale, Grande Rosace
 province_event = {
-    id = REC.0209
-	desc = "DESCREC.0209"
+    id = REC.209
+	desc = "DESCREC.209"
 	picture = GFX_evt_REC5
 
 	is_triggered_only = yes	
@@ -488,7 +488,7 @@ province_event = {
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 5ans
 	option = {
-		name = "REC.0209A"	
+		name = "REC.209A"	
 		owner = { piety = 350 }
 		capital_holding = {
 			if = {
@@ -506,7 +506,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "REC.0209B"
+		name = "REC.209B"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 1825 }	}
 		capital_holding = {
 			if = {
@@ -631,8 +631,8 @@ province_event = {
 
 #Cathédrale, Flèche Céleste
 province_event = {
-    id = REC.0211
-	desc = "DESCREC.0211"
+    id = REC.211
+	desc = "DESCREC.211"
 	picture = GFX_evt_REC5
 
 	is_triggered_only = yes
@@ -657,7 +657,7 @@ province_event = {
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 5ans
 	option = {
-		name = "REC.0211A"	
+		name = "REC.211A"	
 		owner = { piety = 350 }
 		capital_holding = {
 			if = {
@@ -675,7 +675,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "REC.0211B"
+		name = "REC.211B"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 1825 }	}
 		capital_holding = {
 			if = {
@@ -695,10 +695,12 @@ province_event = {
 }
 #Cathédrale, Finalisation
 province_event = {
-    id = REC.0212
-	desc = "DESCREC.0212"
+    id = REC.212
+	desc = "DESCREC.212"
 	picture = GFX_evt_REC1
-	title = "NAMEREC.0212"
+	title = "NAMEREC.212"
+
+	is_triggered_only = yes
 	
 	trigger = {
 		capital_holding = {
@@ -720,7 +722,7 @@ province_event = {
 
 	#option unique gain piété à vie
 	option = {
-		name = "REC.0212A"	
+		name = "REC.212A"	
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = -1	} }
 		owner = { excommunicate = no }
 		capital_holding = {
