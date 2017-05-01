@@ -565,7 +565,8 @@ province_event = { #installe les provinces fluviales VANILLA
 		}	
 	}
 }
-province_event = { #installe les cols -toute carte-
+#pass attribution -all maps-
+province_event = { 
     id = L3T.28
 	hide_window = yes
 
@@ -584,12 +585,148 @@ province_event = { #installe les cols -toute carte-
 				NOT = { any_neighbor_province = { terrain = mountain }} #isolated mountains will receive a minor pass
 			}
 		add_province_modifier = { name = minor_pass	duration = -1 }
+		province_event = { id = L3T.29 days = 25 }
 		}
 		if = {
 			limit = { 
 				any_neighbor_province = { terrain = mountain }	
 			}
 		add_province_modifier = { name = great_pass	duration = -1 }
+		province_event = { id = L3T.29 days = 25 }
 		}
+	}
+}
+#notification pass    
+province_event = {
+    id = L3T.29
+
+#	title = { 
+#		trigger = { has_global_flag = running_LCDA }
+#		text = "NAMEL3T.29_LCDA"
+#	}
+
+	title = { 
+		trigger = { has_global_flag = running_LCDA }
+		text = "LCDA_col"
+	}
+	
+	title = { 
+		trigger = { NOT = { has_global_flag = running_LCDA }}
+		text = "NAMEL3T.29_noLCDA"
+	}
+	
+	desc = {
+		trigger = { 
+			has_province_modifier = great_pass
+			has_global_flag = running_LCDA
+			}
+		text = "DESCL3T.29_maj_extA"
+		picture = GFX_evt_LCDA_montagne1
+	}
+	desc = {
+		trigger = { 
+			has_province_modifier = great_pass
+			has_global_flag = running_LCDA
+			}
+		text = "DESCL3T.29_maj_extB"
+		picture = GFX_evt_LCDA_montagne1
+	}
+	desc = {
+		trigger = { 
+			has_province_modifier = great_pass
+			has_global_flag = running_LCDA
+			}
+		text = "DESCL3T.29_maj_extC"
+		picture = GFX_evt_LCDA_montagne1
+	}
+	desc = {
+		trigger = { 
+			has_province_modifier = great_pass
+			has_global_flag = running_LCDA
+			}
+		text = "DESCL3T.29_maj_extD"
+		picture = GFX_evt_LCDA_montagne1
+	}
+	
+	desc = {
+		trigger = { 
+			has_province_modifier = minor_pass
+			has_global_flag = running_LCDA
+			}
+		text = "DESCL3T.29_min_extA"
+		picture = GFX_evt_LCDA_montagne2
+	}	
+	desc = {
+		trigger = { 
+			has_province_modifier = minor_pass
+			has_global_flag = running_LCDA
+			}
+		text = "DESCL3T.29_min_extB"
+		picture = GFX_evt_LCDA_montagne2
+	}	
+	desc = {
+		trigger = { 
+			has_province_modifier = minor_pass
+			has_global_flag = running_LCDA
+			}
+		text = "DESCL3T.29_min_extC"
+		picture = GFX_evt_LCDA_montagne2
+	}	
+	desc = {
+		trigger = { 
+			has_province_modifier = minor_pass
+			has_global_flag = running_LCDA
+			}
+		text = "DESCL3T.29_min_extD"
+		picture = GFX_evt_LCDA_montagne2
+	}
+	
+	desc = {
+		trigger = { 
+			has_province_modifier = great_pass
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = "DESCL3T.29_maj"
+		picture = GFX_evt_LCDA_montagne1
+	}
+	
+	desc = {
+		trigger = { 
+			has_province_modifier = minor_pass
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = "DESCL3T.29_min"
+		picture = GFX_evt_LCDA_montagne2
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			25 = { set_province_flag = text_reponse_generique_A }
+			25 = { set_province_flag = text_reponse_generique_B }
+			25 = { set_province_flag = text_reponse_generique_C }
+			25 = { set_province_flag = text_reponse_generique_D }
+		}
+	}
+	option = {
+		name = "text_reponse_generique_A"	
+		trigger = { has_province_flag = text_reponse_generique_A }
+		remove_province_flag = text_reponse_generique_A
+	}
+	option = {
+		name = "text_reponse_generique_B"	
+		trigger = { has_province_flag = text_reponse_generique_B }
+		remove_province_flag = text_reponse_generique_B
+	}
+	option = {
+		name = "text_reponse_generique_C"	
+		trigger = { has_province_flag = text_reponse_generique_C }
+		remove_province_flag = text_reponse_generique_C
+	}
+	option = {
+		name = "text_reponse_generique_D"	
+		trigger = { has_province_flag = text_reponse_generique_D }
+		remove_province_flag = text_reponse_generique_D
 	}
 }
