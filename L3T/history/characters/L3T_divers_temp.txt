@@ -1,0 +1,22 @@
+###L3T
+##diverses petites maisons
+#range 98//...
+
+98	= {
+    name="Vuillerme"
+    dynasty = 0 #
+
+    religion = catholic
+    culture = frankish
+
+    
+    768.1.1 = { birth = yes }
+    768.1.1 = {
+        effect = { # Actually executed at the scenario start date, before Adapting History finishes when loading.
+            set_global_flag = running_L3T
+        }
+    }
+    1500.1.1 = { # Don't nominally-kill the character in history before the latest start date OR after the mod end date
+        death = yes
+    }
+}
