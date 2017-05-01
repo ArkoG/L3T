@@ -600,11 +600,6 @@ province_event = {
 province_event = {
     id = L3T.29
 
-#	title = { 
-#		trigger = { has_global_flag = running_LCDA }
-#		text = "NAMEL3T.29_LCDA"
-#	}
-
 	title = { 
 		trigger = { has_global_flag = running_LCDA }
 		text = "LCDA_col"
@@ -623,30 +618,30 @@ province_event = {
 		text = "DESCL3T.29_maj_extA"
 		picture = GFX_evt_LCDA_montagne1
 	}
-	desc = {
-		trigger = { 
-			has_province_modifier = great_pass
-			has_global_flag = running_LCDA
-			}
-		text = "DESCL3T.29_maj_extB"
-		picture = GFX_evt_LCDA_montagne1
-	}
-	desc = {
-		trigger = { 
-			has_province_modifier = great_pass
-			has_global_flag = running_LCDA
-			}
-		text = "DESCL3T.29_maj_extC"
-		picture = GFX_evt_LCDA_montagne1
-	}
-	desc = {
-		trigger = { 
-			has_province_modifier = great_pass
-			has_global_flag = running_LCDA
-			}
-		text = "DESCL3T.29_maj_extD"
-		picture = GFX_evt_LCDA_montagne1
-	}
+#	desc = {
+#		trigger = { 
+#			has_province_modifier = great_pass
+#			has_global_flag = running_LCDA
+#			}
+#		text = "DESCL3T.29_maj_extB"
+#		picture = GFX_evt_LCDA_montagne1
+#	}
+#	desc = {
+#		trigger = { 
+#			has_province_modifier = great_pass
+#			has_global_flag = running_LCDA
+#			}
+#		text = "DESCL3T.29_maj_extC"
+#		picture = GFX_evt_LCDA_montagne1
+#	}
+#	desc = {
+#		trigger = { 
+#			has_province_modifier = great_pass
+#			has_global_flag = running_LCDA
+#			}
+#		text = "DESCL3T.29_maj_extD"
+#		picture = GFX_evt_LCDA_montagne1
+#	}
 	
 	desc = {
 		trigger = { 
@@ -655,31 +650,31 @@ province_event = {
 			}
 		text = "DESCL3T.29_min_extA"
 		picture = GFX_evt_LCDA_montagne2
-	}	
-	desc = {
-		trigger = { 
-			has_province_modifier = minor_pass
-			has_global_flag = running_LCDA
-			}
-		text = "DESCL3T.29_min_extB"
-		picture = GFX_evt_LCDA_montagne2
-	}	
-	desc = {
-		trigger = { 
-			has_province_modifier = minor_pass
-			has_global_flag = running_LCDA
-			}
-		text = "DESCL3T.29_min_extC"
-		picture = GFX_evt_LCDA_montagne2
-	}	
-	desc = {
-		trigger = { 
-			has_province_modifier = minor_pass
-			has_global_flag = running_LCDA
-			}
-		text = "DESCL3T.29_min_extD"
-		picture = GFX_evt_LCDA_montagne2
 	}
+#	desc = {
+#		trigger = { 
+#			has_province_modifier = minor_pass
+#			has_global_flag = running_LCDA
+#			}
+#		text = "DESCL3T.29_min_extB"
+#		picture = GFX_evt_LCDA_montagne2
+#	}	
+#	desc = {
+#		trigger = { 
+#			has_province_modifier = minor_pass
+#			has_global_flag = running_LCDA
+#			}
+#		text = "DESCL3T.29_min_extC"
+#		picture = GFX_evt_LCDA_montagne2
+#	}	
+#	desc = {
+#		trigger = { 
+#			has_province_modifier = minor_pass
+#			has_global_flag = running_LCDA
+#			}
+#		text = "DESCL3T.29_min_extD"
+#		picture = GFX_evt_LCDA_montagne2
+#	}
 	
 	desc = {
 		trigger = { 
@@ -708,25 +703,83 @@ province_event = {
 			25 = { set_province_flag = text_reponse_generique_C }
 			25 = { set_province_flag = text_reponse_generique_D }
 		}
+		if = { 
+			limit = { 
+				owner = { NOT = { has_dynasty_flag = deja_chronique_col }}
+				has_global_flag = running_LCDA
+				has_province_modifier = great_pass
+				}
+			owner = {
+				chronicle = {
+					entry = CHRONICLE_COL
+					picture = GFX_evt_LCDA_montagne1
+				}
+			}
+		}
+		if = { 
+			limit = { 
+				owner = { NOT = { has_dynasty_flag = deja_chronique_col }}
+				has_global_flag = running_LCDA
+				has_province_modifier = minor_pass
+				}
+			owner = {
+				chronicle = {
+					entry = CHRONICLE_COL
+					picture = GFX_evt_LCDA_montagne2
+				}
+			}
+		}
 	}
 	option = {
 		name = "text_reponse_generique_A"	
 		trigger = { has_province_flag = text_reponse_generique_A }
 		remove_province_flag = text_reponse_generique_A
+		owner = { set_dynasty_flag = deja_chronique_col }
+		if = { 
+			limit = { 
+				owner = { 
+					NOT = { has_dynasty_flag = deja_chronique_col }}
+			}
+			custom_tooltip = { text = inscription_chroniques }
+		}
 	}
 	option = {
 		name = "text_reponse_generique_B"	
 		trigger = { has_province_flag = text_reponse_generique_B }
 		remove_province_flag = text_reponse_generique_B
+		owner = { set_dynasty_flag = deja_chronique_col }
+		if = { 
+			limit = { 
+				owner = { 
+					NOT = { has_dynasty_flag = deja_chronique_col }}
+			}
+			custom_tooltip = { text = inscription_chroniques }
+		}
 	}
 	option = {
 		name = "text_reponse_generique_C"	
 		trigger = { has_province_flag = text_reponse_generique_C }
 		remove_province_flag = text_reponse_generique_C
+		owner = { set_dynasty_flag = deja_chronique_col }
+		if = { 
+			limit = { 
+				owner = { 
+					NOT = { has_dynasty_flag = deja_chronique_col }}
+			}
+			custom_tooltip = { text = inscription_chroniques }
+		}
 	}
 	option = {
 		name = "text_reponse_generique_D"	
 		trigger = { has_province_flag = text_reponse_generique_D }
 		remove_province_flag = text_reponse_generique_D
+		owner = { set_dynasty_flag = deja_chronique_col }
+		if = { 
+			limit = { 
+				owner = { 
+					NOT = { has_dynasty_flag = deja_chronique_col }}
+			}
+			custom_tooltip = { text = inscription_chroniques }
+		}
 	}
 }
