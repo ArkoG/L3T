@@ -275,6 +275,12 @@ a_deja_recu_vitrail = {icon = 155}  # hidden
 
 totoro = {icon = 200} #mouchard :p
 
+chantier_cathedrale = {
+	icon = 170
+	local_build_time_modifier = 1.00 #+100%
+	local_build_cost_modifier = 1.00 #+100%
+}
+
 chantier_stop = {
 	local_build_time_modifier = 1.00 #+100%
 	local_revolt_risk = 0.01 #1% chantier stoppé cause grève ou arrêt "simple" : employés non payés
@@ -321,8 +327,6 @@ loge_modifier = {
 }
 
 ##########
-chantier_cathedrale = { icon = 170 }
-
 trad_chretienne = { icon = 188 } #flag
 trad_musulmane = { icon = 189 } #flag
 trad_autre = { icon = 190 } #flag
