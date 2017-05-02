@@ -51,9 +51,14 @@ character_event = {
 	
 	trigger = {
 		trait = batisseur_cathedrale
-		had_title_flag = { # The first rising will arrive more than 1 year after construction starting
-			flag = cathedral_construction
-			years = 1
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			capital_holding = {
+				had_title_flag = { # The first rising will arrive more than 1 year after construction starting
+					flag = cathedral_construction
+					years = 1
+				}
+			}
 		}
 	}
 
