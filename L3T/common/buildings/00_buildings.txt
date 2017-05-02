@@ -19,3 +19,32 @@
 
 # Family palace
 #now split to 00_buildings_FP.txt
+
+castle = {
+	XXX = {
+		desc = ca_wall_q_1_desc
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+		potential = { always = no }
+		gold_cost = 100
+		 
+		build_time = 180
+		ai_creation_factor = 99
+		fort_level = 0.1
+		add_number_to_name = no
+
+		extra_tech_building_start = 2
+	}
+	xxx = {
+		desc = ca_wall_q_1_desc
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+		potential = { always = no }
+		gold_cost = 100
+		 
+		build_time = 180
+		ai_creation_factor = 99
+		fort_level = 0.1
+		add_number_to_name = no
+
+		extra_tech_building_start = 2
+	}
+}
