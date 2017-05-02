@@ -350,20 +350,9 @@
 #namespace = REC
 
 ##ReC_events_construction.txt
-#id = REC.1 # base progression
-#id = REC.2 # Give builder trait succession
-#id = REC.3 # Remove builder trait succession
-
-##ReC_events_reliques.txt
-#id = REC.101 >> REC.125 # initialisation Reliques
-#id = REC.126 >> REC.130 # initialisation Reliques à découvrir
-#id = REC.131 >> REC.135 # confirmation Reliques à découvrir (cachée)
-#id = REC.136 # initialisation Relique Graal
-#id = REC.137 # confirmation Relique Graal (cachée)
-#libres ID 138 >> 150
-#id = REC.151 >> REC.175 # confirmation relique CATHOLIQUES et MUSULMANS
-#id = REC.176 # fausse relique (catholique)
-#id = REC.177 # maintenance doublon pré-attribution reliques
+#id = REC.1 # Give builder trait succession
+#id = REC.2 # Remove builder trait succession
+#id = REC.3 # base progression
 
 ##[NON INCLUS]ReC_events_generaux.txt
 #id = REC.0301 # recruter un maitre batisseur
