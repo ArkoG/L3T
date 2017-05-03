@@ -1015,3 +1015,73 @@ character_event = {
 		}
 	}
 }
+
+#event SoA
+character_event = {
+	id = L3T.13
+	desc = DESCL3T.13
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_religion
+	#hide_window = yes
+	
+	is_triggered_only = yes
+	#triggered from LCDA's soa_holy_order_event
+	#SoA.1024
+	#SoA.1054
+	#SoA.1154
+	#SoA.1354
+	#SoA.1654
+	#SoA.1754
+	#SoA.2654
+	#SoA.2754
+	
+	trigger = {
+		any_demesne_title = {
+				holding_type = temple
+				tier = baron
+				NOT = { num_of_buildings = 1 }
+					NOT = {
+						has_building = MONASTERE
+						has_building = COMMANDERIE
+						has_building = CITEEPISCOPALE
+					}
+				NOT = { has_title_flag = future_commanderie }
+		}
+	}
+
+	immediate = { 
+		random_demesne_title = {
+			limit = {
+				NOT = { has_title_flag = future_commanderie }
+				holding_type = temple
+				tier = baron
+				NOT = {
+					has_building = MONASTERE
+					has_building = COMMANDERIE
+					has_building = CITEEPISCOPALE
+				}				
+			}
+			set_title_flag = future_commanderie
+		}
+	}
+		
+	option = {
+		name = L3T.13A
+		custom_tooltip = { text = construction_commanderie } # ++++le modifier de holding qui va bien
+			hidden_tooltip = {
+				random_demesne_title = {
+					limit = {
+						holding_type = temple
+						tier = baron
+						has_title_flag = future_commanderie
+							NOT = {
+								has_building = MONASTERE
+								has_building = COMMANDERIE
+							}
+						}
+						add_building = MONASTERE
+						add_building = COMMANDERIE
+				}
+			}
+	}
+}

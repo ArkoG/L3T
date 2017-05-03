@@ -9,7 +9,6 @@
 # Cf [NON INCLUS] pour les fichiers d'events non inclus dans la version courante
 
 ###L3T_init_DOMAINES.txt
-
 ##décider de l'avenir d'un domaine 
 #id = L3T.3 #domaine Féodal 
 #id = L3T.4 #domaine Communal  
@@ -18,6 +17,7 @@
 #id = L3T.7 #attribution règle monastique
 #[COMMENTE] id = L3T.0008 #attribution ordre militaire
 #id = L3T.9 #Init built holding (on_action)
+#id = L3T.13 #Spec en Commanderie event SoA
 
 ##upgrades 
 #id = L3T.5 #upgrade CITE GRANDE L1  vers L2
@@ -27,7 +27,7 @@
 #id = L3T.10 #détection de la carte + paix de Dieu
 #id = L3T.11 #fin paix de Dieu
 #id = L3T.12 #boost IA
-#[LIBRE] id = L3T.13 #
+#id = L3T.13 #dans L3T_init_DOMAINES.txt
 #[LIBRE] id = L3T.14 #
 
 ###[NON INCLUS] L3T_minorite.txt
