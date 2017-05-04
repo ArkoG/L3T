@@ -1,0 +1,720 @@
+############################################
+# [ReC][Reliques et Cathédrales]  par Arko #
+############################################
+
+
+namespace = REC
+
+
+##économies, revenus bonus
+#dons de fidèles
+character_event = {
+    id = REC.1301
+	desc = "DESCREC.1301"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+		}
+		religion = catholic
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 2
+			has_character_flag = don_recu
+		}
+	}
+	
+	option = {
+		name = "REC.1301A"
+		set_character_flag = don_recu
+		custom_tooltip = { text = bourse_remplie }
+		hidden_tooltip = {
+			random_list = {
+				10 = { wealth = 45	}
+				25 = { wealth = 75	}
+				30 = { wealth = 120	}
+				25 = { wealth = 150	}
+				10 = { wealth = 175	}
+			}
+		}
+	}
+}
+
+#dons de pélerins
+character_event = {
+    id = REC.1302
+	desc = "DESCREC.1302"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+		}
+		religion = catholic
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 2
+			has_character_flag = don_recu
+		}
+	}
+	
+	option = {
+		name = "REC.1302A"
+		set_character_flag = don_recu
+		custom_tooltip = { text = bourse_remplie }
+		hidden_tooltip = {
+			random_list = {
+				10 = { wealth = 55	}
+				20 = { wealth = 85	}
+				40 = { wealth = 110	}
+				20 = { wealth = 130	}
+				10 = { wealth = 155	}
+			}
+		}
+	}
+}
+
+#soutien du pape
+character_event = {
+    id = REC.1303
+	desc = "DESCREC.1303"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+		}
+		religion = catholic
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 2
+			has_character_flag = don_recu
+		}
+	}
+	
+	option = {
+		name = "REC.1303A"
+		set_character_flag = don_recu
+		custom_tooltip = { text = bourse_remplie }
+		hidden_tooltip = {
+			random_list = {
+				50 = { wealth = 100	}
+				35 = { wealth = 200	}
+				15 = { wealth = 300	}
+			}
+		}
+	}
+}
+
+#soutien du clergé
+character_event = {
+    id = REC.1304
+	desc = "DESCREC.1304"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			capital_holding = {
+				holding_type = temple
+				has_building = tp_cathedrale_10
+			}
+		}
+		religion = catholic
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 5
+			has_character_flag = don_recu
+		}
+	}
+	
+	option = {
+		name = "REC.1304A"
+		set_character_flag = don_recu
+		custom_tooltip = { text = bourse_remplie }
+		hidden_tooltip = {
+			random_list = {
+				20 = { wealth = 55	}
+				40 = { wealth = 85	}
+				20 = { wealth = 110	}
+				10 = { wealth = 130	}
+				10 = { wealth = 155	}
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.1304B"
+		set_character_flag = don_recu
+		custom_tooltip = { text = bourse_remplie }
+		hidden_tooltip = {
+			random_list = {
+				10 = { wealth = 55	}
+				10 = { wealth = 85	}
+				20 = { wealth = 110	}
+				40 = { wealth = 130	}
+				20 = { wealth = 155	}
+			}
+		}
+	}
+}
+
+#soutien de marchands
+character_event = {
+    id = REC.1305
+	desc = "DESCREC.1305"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			capital_holding = {
+				holding_type = city
+				has_building = ct_cathedrale_10
+			}
+		}
+		religion = catholic
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 5
+			has_character_flag = don_recu
+		}
+	}
+	
+	option = {
+		name = "REC.1304A"
+		set_character_flag = don_recu
+		custom_tooltip = { text = bourse_remplie }
+		hidden_tooltip = {
+			random_list = {
+				10 = { wealth = 75	}
+				20 = { wealth = 95	}
+				40 = { wealth = 135	}
+				20 = { wealth = 165	}
+				 7 = { wealth = 195	}
+				 3 = { wealth = 225	}
+			}
+		}
+	}
+}
+#soutien de la noblesse v1 -en argent
+character_event = {
+    id = REC.1306
+	desc = "DESCREC.1306"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			capital_holding = {
+				holding_type = castle
+				has_building = ca_cathedrale_10
+			}
+		}
+		religion = catholic
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 5
+			has_character_flag = don_recu
+		}
+	}
+	
+	option = {
+		name = "REC.1306A"
+		set_character_flag = don_recu
+		custom_tooltip = { text = bourse_remplie }
+		hidden_tooltip = {
+			random_list = {
+				40 = { wealth = 35	}
+				30 = { wealth = 45	}
+				20 = { wealth = 55	}
+				10 = { wealth = 65	}
+			}
+		}
+	}
+}
+#soutien de la noblesse v2 -en nature
+character_event = {
+    id = REC.1307
+	desc = "DESCREC.1307"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			capital_holding = {
+				holding_type = castle
+				has_building = ca_cathedrale_10
+			}
+		}
+		religion = catholic
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 5
+			has_character_flag = don_recu
+		}
+	}
+	
+	option = { #vitraux
+		name = "REC.1307A"
+		set_character_flag = don_recu
+		custom_tooltip = { text = soutien_noble_nature1 }
+	}
+	
+	option = { #statue
+		name = "REC.1307B"
+		set_character_flag = don_recu
+		custom_tooltip = { text = soutien_noble_nature2 }
+	}
+	
+	option = { #set de gargouilles
+		name = "REC.1307C"
+		set_character_flag = don_recu
+		custom_tooltip = { text = soutien_noble_nature3 }
+	}
+}
+
+##surcoûts divers
+#extorsion AKA il ne fait pas bon être trop riche et stupide v1
+character_event = {
+    id = REC.1401
+	desc = "DESCREC.1401"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+		}
+		religion = catholic
+		NOT = { stewardship = 16 }
+		wealth = 250
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = { factor = 2	has_character_flag = surcout_recu }
+		modifier = { factor = 1.10	stewardship = 13 }
+		modifier = { factor = 1.20	stewardship = 14 }
+		modifier = { factor = 1.30	stewardship = 15 }
+		modifier = { factor = 1.40	stewardship = 16 }
+		modifier = { factor = 0.99	 NOT = { stewardship = 12 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 11 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 10 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 9 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 8 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 7 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 6 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 5 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 4 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 3 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 2 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 1 }}
+		modifier = { factor = 0.99	wealth = 300 }
+		modifier = { factor = 0.99	wealth = 350 }
+		modifier = { factor = 0.99	wealth = 400 }
+		modifier = { factor = 0.99	wealth = 450 }
+		modifier = { factor = 0.99	wealth = 500 }
+		modifier = { factor = 0.99	wealth = 550 }
+		modifier = { factor = 0.99	wealth = 600 }
+		modifier = { factor = 0.99	wealth = 650 }
+	}
+	
+	option = {
+		name = "REC.1401A"
+		set_character_flag = surcout_recu
+		custom_tooltip = { text = bourse_soulagee }
+		hidden_tooltip = {
+			random_list = {
+				35 = { wealth = -100 }
+				25 = { wealth = -120 }
+				20 = { wealth = -180 }
+				15 = { wealth = -220 }
+				 5 = { wealth = -250 }
+			}
+		}
+	}
+}
+#un fournisseur nous lâche
+character_event = {
+    id = REC.1402
+	desc = "DESCREC.1402"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+		}
+		religion = catholic
+		NOT = { stewardship = 16 }
+		wealth = 150
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = { factor = 2	has_character_flag = surcout_recu }
+		modifier = { factor = 1.15	stewardship = 13 }
+		modifier = { factor = 1.25	stewardship = 14 }
+		modifier = { factor = 1.35	stewardship = 15 }
+		modifier = { factor = 1.45	stewardship = 16 }
+		modifier = { factor = 0.99	 NOT = { stewardship = 12 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 11 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 10 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 9 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 8 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 7 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 6 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 5 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 4 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 3 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 2 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 1 }}
+	}
+
+	option = {
+		name = "REC.1402A"
+		set_character_flag = surcout_recu
+		custom_tooltip = { text = bourse_soulagee }
+		hidden_tooltip = {
+			random_list = {
+				30 = { wealth = -75	 }
+				25 = { wealth = -85	 }
+				20 = { wealth = -105 }
+				15 = { wealth = -125 }
+				 5 = { wealth = -145 }
+			}
+		}
+	}
+}
+#un fournisseur demande du lest
+character_event = {
+    id = REC.1403
+	desc = "DESCREC.1403"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+		}
+		NOT = {
+			any_demesne_province = {
+				has_province_modifier = chantier_down
+			}
+		}
+		religion = catholic
+		NOT = { stewardship = 14 }
+		wealth = 120
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = { factor = 2.00	has_character_flag = surcout_recu }
+		modifier = { factor = 1.05	stewardship = 11 }
+		modifier = { factor = 1.15	stewardship = 12 }
+		modifier = { factor = 1.25	stewardship = 13 }
+		modifier = { factor = 1.35	stewardship = 14 }
+		modifier = { factor = 0.99	 NOT = { stewardship = 10 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 9 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 8 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 7 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 6 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 5 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 4 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 3 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 2 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 1 }}
+	}
+
+	option = { #avance de paiement
+		name = "REC.1403A"
+		set_character_flag = surcout_recu
+		custom_tooltip = { text = bourse_soulagee }
+		hidden_tooltip = {
+		random_list = {
+			10 = { wealth = -35	}
+			25 = { wealth = -55	}
+			30 = { wealth = -65	}
+			25 = { wealth = -75	}
+			10 = { wealth = -85	}
+			}
+		}
+	}
+	
+	option = { #délai supplémentaire accordé
+		name = "REC.1403B"
+		set_character_flag = surcout_recu
+		hidden_tooltip = {
+			random_demesne_province = {
+				limit = { has_province_modifier = chantier_cathedrale }
+				random_list = {
+					50 = { add_province_modifier = { name = chantier_down	duration = 365 }} #1an
+					30 = { add_province_modifier = { name = chantier_down	duration = 730 }} #2ans
+					20 = { add_province_modifier = { name = chantier_down	duration = 1095 }} #3ans
+				}
+			}
+		}
+	}
+}
+
+#cargaison ransonnée  ///à compléter avec présence bandits de XYLO
+character_event = {
+    id = REC.1404
+	desc = "DESCREC.1404"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+		}
+		NOT = {
+			any_demesne_province = {
+				has_province_modifier = chantier_down
+			}
+		}
+		religion = catholic
+		NOT = { martial = 14 }
+		wealth = 200
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = { factor = 2.00	has_character_flag = surcout_recu }
+		modifier = { factor = 1.05	martial = 11 }
+		modifier = { factor = 1.15	martial = 12 }
+		modifier = { factor = 1.25	martial = 13 }
+		modifier = { factor = 1.35	martial = 14 }
+		modifier = { factor = 0.99	 NOT = { martial = 10 }}
+		modifier = { factor = 0.99	 NOT = { martial = 9 }}
+		modifier = { factor = 0.99	 NOT = { martial = 8 }}
+		modifier = { factor = 0.99	 NOT = { martial = 7 }}
+		modifier = { factor = 0.99	 NOT = { martial = 6 }}
+		modifier = { factor = 0.99	 NOT = { martial = 5 }}
+		modifier = { factor = 0.99	 NOT = { martial = 4 }}
+		modifier = { factor = 0.99	 NOT = { martial = 3 }}
+		modifier = { factor = 0.99	 NOT = { martial = 2 }}
+		modifier = { factor = 0.99	 NOT = { martial = 1 }}
+	}
+	
+	option = { #paiement ransom
+		name = "REC.1404A"
+		set_character_flag = surcout_recu
+		custom_tooltip = { text = bourse_soulagee }
+			hidden_tooltip = {
+			random_list = {
+				10 = { wealth = -50  }
+				25 = { wealth = -75  }
+				30 = { wealth = -100 }
+				25 = { wealth = -125 }
+				10 = { wealth = -150 }
+			}
+		}
+	}
+
+	option = { #tant pis pour celle-ci
+		name = "REC.1404B"
+		set_character_flag = surcout_recu
+		hidden_tooltip = {
+			random_demesne_province = {
+				limit = { has_province_modifier = chantier_cathedrale }
+				random_list = {
+					50 = { add_province_modifier = { name = chantier_down	duration = 365 }} #1an
+					30 = { add_province_modifier = { name = chantier_down	duration = 730 }} #2ans
+					20 = { add_province_modifier = { name = chantier_down	duration = 1095 }} #3ans
+				}
+			}
+		}
+	}
+}
+
+#suroût construction (AR) - défaut de conception
+character_event = {
+    id = REC.1405
+	desc = "DESCREC.1405"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = { has_province_modifier = chantier_cathedrale }
+		religion = catholic
+		# any_courtier = {
+			# has_minor_title = title_architecte
+			# NOT = { learning = 16 }
+		# }
+		wealth = 150
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = { factor = 2.00	has_character_flag = surcout_recu }
+		modifier = { factor = 1.10	learning = 11 }
+		modifier = { factor = 1.20	learning = 12 }
+		modifier = { factor = 1.30	learning = 13 }
+		modifier = { factor = 1.40	learning = 14 }
+		modifier = { factor = 1.50	learning = 15 }
+		modifier = { factor = 0.99	 NOT = { learning = 10 }}
+		modifier = { factor = 0.99	 NOT = { learning = 9 }}
+		modifier = { factor = 0.99	 NOT = { learning = 8 }}
+		modifier = { factor = 0.99	 NOT = { learning = 7 }}
+		modifier = { factor = 0.99	 NOT = { learning = 6 }}
+		modifier = { factor = 0.99	 NOT = { learning = 5 }}
+		modifier = { factor = 0.99	 NOT = { learning = 4 }}
+		modifier = { factor = 0.99	 NOT = { learning = 3 }}
+		modifier = { factor = 0.99	 NOT = { learning = 2 }}
+		modifier = { factor = 0.99	 NOT = { learning = 1 }}
+	}
+
+	option = {
+		name = "REC.1405A"
+		set_character_flag = surcout_recu
+		custom_tooltip = { text = bourse_soulagee }
+		hidden_tooltip = {
+			random_list = {
+				10 = { wealth = -50  }
+				25 = { wealth = -75  }
+				30 = { wealth = -100 }
+				25 = { wealth = -125 }
+				10 = { wealth = -150 }
+			}
+		}
+	}
+}
+
+#suroût construction (AR) - coût mésestimé
+character_event = {
+    id = REC.1406
+	desc = "DESCREC.1406"
+	picture = GFX_evt_REC1	
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+		}
+		religion = catholic
+		# any_courtier = { 
+			# has_minor_title = title_architecte
+			# NOT = { learning = 12 }
+		# }
+		wealth = 120
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = { factor = 2.00	has_character_flag = surcout_recu }
+		modifier = { factor = 1.05	learning = 9 }
+		modifier = { factor = 1.10	learning = 10 }
+		modifier = { factor = 1.15	learning = 11 }
+		modifier = { factor = 1.20	learning = 12 }
+		modifier = { factor = 0.99	 NOT = { learning = 8 }}
+		modifier = { factor = 0.99	 NOT = { learning = 7 }}
+		modifier = { factor = 0.99	 NOT = { learning = 6 }}
+		modifier = { factor = 0.99	 NOT = { learning = 5 }}
+		modifier = { factor = 0.99	 NOT = { learning = 4 }}
+		modifier = { factor = 0.99	 NOT = { learning = 3 }}
+		modifier = { factor = 0.99	 NOT = { learning = 2 }}
+		modifier = { factor = 0.99	 NOT = { learning = 1 }}
+	}
+	
+	option = {
+		name = "REC.1406A"
+		set_character_flag = surcout_recu
+		custom_tooltip = { text = bourse_soulagee }
+		hidden_tooltip = {
+		random_list = {
+			10 = { wealth = -40  }
+			25 = { wealth = -60  }
+			30 = { wealth = -80  }
+			25 = { wealth = -100 }
+			10 = { wealth = -120 }
+			}
+		}
+	}
+}
+#extorsion AKA il ne fait pas bon être trop riche et stupide v2 (pas si stupide cette fois)
+character_event = {
+    id = REC.1407
+	desc = "DESCREC.1407"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+		}
+		religion = catholic
+		stewardship = 16
+		wealth = 250
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = { factor = 2	has_character_flag = surcout_recu }
+		modifier = { factor = 0.99	stewardship = 16 }
+		modifier = { factor = 0.99	stewardship = 17 }
+		modifier = { factor = 0.99	stewardship = 18 }
+		modifier = { factor = 0.99	stewardship = 19 }
+		modifier = { factor = 0.99	stewardship = 20 }
+		modifier = { factor = 0.99	stewardship = 21 }
+		modifier = { factor = 0.99	stewardship = 22 }
+		modifier = { factor = 0.99	stewardship = 23 }
+		modifier = { factor = 0.99	wealth = 300 }
+		modifier = { factor = 0.99	wealth = 350 }
+		modifier = { factor = 0.99	wealth = 400 }
+		modifier = { factor = 0.99	wealth = 450 }
+		modifier = { factor = 0.99	wealth = 500 }
+		modifier = { factor = 0.99	wealth = 550 }
+		modifier = { factor = 0.99	wealth = 600 }
+		modifier = { factor = 0.99	wealth = 650 }
+	}
+	
+	option = {
+		name = "REC.1407A"
+		set_character_flag = surcout_recu
+	}
+}
