@@ -797,7 +797,7 @@ narrative_event = {
 #				has_title_flag = temple_to_specialize
 #			}
 #			add_building = MONASTERE
-#			add_holding_modifier = { name = monastere duration = -1 }
+#			add_holding_modifier = { name = commanderie duration = -1 }
 #			add_building = COMMANDERIE
 #		}
 #	}
@@ -1062,6 +1062,7 @@ character_event = {
 				}				
 			}
 			set_title_flag = future_commanderie
+			add_holding_modifier = { name = commanderie duration = -1 }
 		}
 	}
 		
