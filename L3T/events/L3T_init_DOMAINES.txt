@@ -1071,14 +1071,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	#triggered from LCDA's soa_holy_order_event
-	#SoA.1024
-	#SoA.1054
-	#SoA.1154
-	#SoA.1354
-	#SoA.1654
-	#SoA.1754
-	#SoA.2654
-	#SoA.2754
+	#SoA.1024 # The Knights Templar loan
+	#SoA.1054 # The Knights Templar humble request
+	#SoA.1154 #The Knights of St Jean / the Hospitallers humble request
+	#SoA.1354 # The Teutonic Order humble request
+	#SoA.1654 # The Brotherhood of the Holy Sepulchre  humble request
+	#SoA.2654 # The Order of Santiago
+	#SoA.2754 # The Order of Calatrava
 	
 	trigger = {
 		any_demesne_title = {

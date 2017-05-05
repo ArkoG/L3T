@@ -73,7 +73,7 @@
 #	heavy_infantry_offensive = 0.05
 #	heavy_infantry_defensive = 0.05
 #	knight_offensive = ?
-#	knight_offensive = ?
+#	knight_defensive = ?
 #	horse_archers_morale
 
 
@@ -270,7 +270,8 @@ temple = {
 			religion = catholic
 			}
 		prerequisites = { xxx }
-		is_active_trigger = { religion = catholic }
+		potential = { religion_group = christian }
+		is_active_trigger = { religion_group = christian }
 		gold_cost = 1000
 		build_time = 8
 		light_infantry = 20
@@ -284,9 +285,12 @@ temple = {
 	COMMANDERIE_L2 = { 
 		desc = "COMMANDERIE_desc"
 		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
-
+		prerequisites = { 
+			tp_wall_1				#vanilla wall
+			tp_training_grounds_L1 	#Porte de guet
+		}
 		upgrades_from = COMMANDERIE	
-		is_active_trigger = { religion = catholic }
+		is_active_trigger = { religion_group = christian }
 		gold_cost = 125
 		build_time = 750
 		#light_infantry = 10
@@ -310,7 +314,7 @@ temple = {
 			#}
 		}
 		upgrades_from = COMMANDERIE_L2
-		is_active_trigger = { religion = catholic }
+		is_active_trigger = { religion_group = christian }
 		gold_cost = 225
 		build_time = 500
 		light_infantry = 10
@@ -328,9 +332,10 @@ temple = {
 		trigger = { 
 			TECH_TEMPLE_CONSTRUCTION = 2
 			TECH_CASTLE_CONSTRUCTION = 2
-			}
+		}
+		prerequisites = { tp_town_2 }
 		upgrades_from = COMMANDERIE_L3
-		potential = { religion = catholic }
+		is_active_trigger = { religion_group = christian }
 		gold_cost = 125
 		build_time = 365
 		#light_infantry = 10
@@ -347,9 +352,9 @@ temple = {
 		trigger = { 
 			TECH_TEMPLE_CONSTRUCTION = 4
 			TECH_CASTLE_CONSTRUCTION = 4
-			}
+		}
 		upgrades_from = COMMANDERIE_L4
-		potential = { religion = catholic }
+		is_active_trigger = { religion_group = christian }
 		gold_cost = 200
 		build_time = 365
 		#light_infantry = 30
@@ -375,7 +380,7 @@ temple = {
 		ai_creation_factor = 5	
 		start = { always = no }
 		add_number_to_name = no
-		}
+	}
 	REGLE_DE_2 = { 
 		desc = "REGLE_DE_2_desc"	
 		prerequisites = { xxx }	
@@ -387,7 +392,7 @@ temple = {
 		ai_creation_factor = 5	
 		start = { always = no }
 		add_number_to_name = no
-		}
+	}
 	REGLE_DE_3 = {
 		desc = "REGLE_DE_3_desc"	
 		prerequisites = { xxx }	
@@ -398,7 +403,7 @@ temple = {
 		ai_creation_factor = 5	
 		start = { always = no }
 		add_number_to_name = no
-		}
+	}
 
 	#ORDRE_MONACAL_1 = { desc = "ORDRE_MONACAL_1_desc"	prerequisites = {REGLE_DE_1}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
 	#ORDRE_MONACAL_2 = { desc = "ORDRE_MONACAL_2_desc"	prerequisites = {REGLE_DE_2}	potential = { religion = catholic }	gold_cost = 0.0	build_time = 8	ai_creation_factor = 500	start = { always = no }	}
