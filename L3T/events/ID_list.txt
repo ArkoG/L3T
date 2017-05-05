@@ -13,22 +13,23 @@
 #id = L3T.3 #domaine Féodal 
 #id = L3T.4 #domaine Communal  
 #id = L3T.41 #domaine Communal province à double cité  
+#id = L3T.5 #upgrade CITE GRANDE L1  vers L2
+#id = L3T.2 #upgrade CITE GRANDE L2  vers L3
 #id = L3T.6 #domaine Ecclésial 
 #id = L3T.7 #attribution règle monastique
 #[COMMENTE] id = L3T.0008 #attribution ordre militaire
 #id = L3T.9 #Init built holding (on_action)
 #id = L3T.13 #Spec en Commanderie event SoA
 
-##upgrades 
-#id = L3T.5 #upgrade CITE GRANDE L1  vers L2
-#id = L3T.2 #upgrade CITE GRANDE L2  vers L3
+
 
 ###L3T_mod_selection.txt
 #id = L3T.10 #détection de la carte + paix de Dieu
 #id = L3T.11 #fin paix de Dieu
 #id = L3T.12 #boost IA
 #id = L3T.13 #dans L3T_init_DOMAINES.txt
-#[LIBRE] id = L3T.14 #
+
+###id = L3T.13 #adbication (provisoire, la localisation de la décision porte cet ID}
 
 ###[NON INCLUS] L3T_minorite.txt
 #id = L3T.15 #event initial
