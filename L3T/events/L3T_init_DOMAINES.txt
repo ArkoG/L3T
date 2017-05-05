@@ -692,9 +692,10 @@ narrative_event = {
 		name = "L3T.6A"	
 		ai_chance = {
 			factor = 40
-			#modifier = { factor =  10	learning = 20	}
-			#modifier = { factor =   2	learning = 15	}
-			#modifier = { factor = 0.8	NOT = { learning = 10 }	}
+			modifier = { factor =  5	learning = 20	}
+			modifier = { factor =   2	learning = 15	}
+			modifier = { factor = 0.75	NOT = { learning = 10 }	}
+			modifier = { factor = 1.25	NOT = { tier = count } }
 			modifier = {
 				factor = 3
 				any_demesne_title = {
@@ -733,8 +734,11 @@ narrative_event = {
 		name = "L3T.6B"	
 		ai_chance = {
 			factor = 40
-			modifier = { factor = 100	NOT = { tier = baron }	}
-			modifier = { factor = 0.7	tier = baron }
+			modifier = { factor = 0	holy_order = yes }
+			modifier = { factor = 5	tier = count }
+			modifier = { factor = 2	tier = duke }
+			modifier = { factor =  0.9	NOT = { learning = 15 } }
+			modifier = { factor = 0.75	NOT = { tier = count } }
 		}
 		trigger = {
 			any_demesne_title = {
@@ -776,31 +780,37 @@ narrative_event = {
 			}
 		}
 	}
-###useless for now	
-#	option = {
-#		name = "L3T.6C"	
-#		ai_chance = {
-#			factor = 20
-#			modifier = { factor = 2.5	martial = 20	}
-#			modifier = { factor = 1.5	martial = 15	}
-##			modifier = { factor = 0.5	NOT = { martial = 10 }	}
-#		}
-#		trigger = {
-#			any_demesne_title = {
-#				location = { religion = catholic }
-#				has_title_flag = temple_to_specialize
-#			}
-#		}
-#		random_demesne_title = {
-#			limit = {
-#				location = { religion = catholic }
-#				has_title_flag = temple_to_specialize
-#			}
-#			add_building = MONASTERE
-#			add_holding_modifier = { name = commanderie duration = -1 }
-#			add_building = COMMANDERIE
-#		}
-#	}
+
+	option = {
+		name = "L3T.6C"	
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 20	holy_order = yes }
+			modifier = { factor = 0.5 	any_demesne_title = { location = { NOT = { religion = catholic }}}}
+			modifier = { factor = 2.5	martial = 20 }
+			modifier = { factor = 1.5	martial = 15 }
+			modifier = { factor = 0.5	NOT = { martial = 10 } }
+		}
+		trigger = {
+			any_demesne_title = {
+				location = { religion_group = christian }
+				has_title_flag = temple_to_specialize
+			}
+		}
+		random_demesne_title = {
+			limit = {
+				location = { religion_group = christian }
+				has_title_flag = temple_to_specialize
+			}
+			add_building = MONASTERE
+			add_holding_modifier = { name = commanderie duration = -1 }
+			add_building = COMMANDERIE
+			random = {
+				chance = 20
+				add_building = COMMANDERIE_L2
+			}			
+		}
+	}
 
 }
 
@@ -816,8 +826,15 @@ narrative_event = {
 	prisoner = no
 		
 	trigger = {
-		religion_group = christian
 		any_demesne_title = {
+			location = {
+				OR = {
+					religion = catholic
+					is_heresy_of = catholic
+					religion = orthodox
+					is_heresy_of = orthodox
+				}
+			}
 			tier = baron
 			holding_type = temple
 			has_building = MONASTERE
@@ -831,9 +848,19 @@ narrative_event = {
 		
 	mean_time_to_happen = { months = 9 }	
 
+	#Regula Benedicti
 	option = {
 		name = "L3T.7A"	
-		trigger = { religion = catholic }
+		trigger = {
+			any_demesne_title = {
+				location = {
+					OR = {
+					religion = catholic
+					is_heresy_of = catholic
+					}
+				}
+			}
+		}
 		random_demesne_title = {
 			limit = {
 				tier = baron
@@ -848,10 +875,19 @@ narrative_event = {
 			add_building = REGLE_DE_1
 		}
 	}
-	
+	#Regula Augustini
 	option = {
 		name = "L3T.7B"	
-		trigger = { religion = catholic }
+		trigger = {
+			any_demesne_title = {
+				location = {
+					OR = {
+					religion = catholic
+					is_heresy_of = catholic
+					}
+				}
+			}
+		}
 		random_demesne_title = {
 			limit = {
 				tier = baron
@@ -866,10 +902,19 @@ narrative_event = {
 			add_building = REGLE_DE_2
 		}
 	}
-	
+	#Regula Basili
 	option = {
 		name = "L3T.7C"	
-		trigger = { religion = orthodox }
+		trigger = {
+			any_demesne_title = {
+				location = {
+					OR = {
+					religion = orthodox
+					is_heresy_of = orthodox
+					}
+				}
+			}
+		}
 		random_demesne_title = {
 			limit = {
 				tier = baron
@@ -1082,6 +1127,11 @@ character_event = {
 						}
 						add_building = MONASTERE
 						add_building = COMMANDERIE
+						random = {
+							chance = 40
+							add_building = COMMANDERIE_L2
+						}
+						set_character_flag = canGetEasterEgg3
 						clr_title_flag = future_commanderie
 				}
 			}
