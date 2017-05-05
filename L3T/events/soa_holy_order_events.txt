@@ -4220,7 +4220,12 @@ narrative_event = {
 	religion_group = christian
 	
 	trigger = {
-		year = 333 #LCDA	
+#LCDA
+		OR = { 
+			is_title_active = d_sunni
+			is_title_active = d_shiite
+		}
+#LCDA
 		NOT = {
 			is_title_active = d_holy_sepulchre
 		}
