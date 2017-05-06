@@ -1,0 +1,87 @@
+# Settlement decisions are possible vs _all_ settlements and are shown in the Settlement Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [capital/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all]
+# ai_target_filter = [capital/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all] (which settlements for which the AI evaluates the decision.)
+#	owned: all settlements owned by the AI
+#	vassal_owned: all settlements owned by direct vassal rulers of the AI's employer
+#	sub_realm_owned: all settlements below the AI's employer
+#	realm_owned: all settlements in the same top realm as the AI
+#	dynasty_owned: all settlements owned by members of the same dynasty
+#	all: all settlements (Avoid if possible. VERY CPU-HEAVY!)
+
+settlement_decisions = {
+	construire_cathedral_province = {
+		only_rulers = yes
+		filter = owned
+		ai_target_filter = owned
+		
+		from_potential = {
+			is_ruler = yes
+		}
+		
+		potential = {
+			holder_scope = { character = FROM }
+			is_capital = yes
+			FROM = { construire_cathedral_potential = yes }
+		}
+
+		allow = {
+			FROM = { construire_cathedral_allow = yes }
+		}
+		
+		effect = {
+			FROM = {
+				wealth = -100
+				add_trait = batisseur_cathedrale
+				random_artifact = {					
+					limit = { has_artifact_flag = relique }
+					destroy_artifact = yes
+				}
+				hidden_tooltip = { character_event = { id = REC.5 days = 10} }
+			}
+
+			location = {
+				custom_tooltip = { text = TOOLTIPCONSTRUIRECATHEDRALE }
+				hidden_tooltip = {
+					add_province_modifier = {
+						name = relique_generique
+						duration = -1
+					}
+					add_province_modifier = {
+						name = chantier_cathedrale
+						duration = -1
+					}
+					capital_holding = {
+						set_title_flag = cathedral_construction
+						random_list = {
+							25 = { set_variable = { which = cathedral value = 10 } }
+							25 = { set_variable = { which = cathedral value = 20 } }
+							25 = { set_variable = { which = cathedral value = 30 } }
+							25 = { set_variable = { which = cathedral value = 40 } }
+						}
+					}	
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.1 #Factors for an AI character to take the decision (1 = 100% chance)
+			modifier = {
+				factor = 10
+				yearly_income = 300
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { yearly_income = 200 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { yearly_income = 100 }
+			}
+		}
+	}
+}
