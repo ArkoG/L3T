@@ -249,7 +249,7 @@ province_event = {
 	}
 }
 
-# embaucher un Maître Bâtisseur (ex Parlier)
+# Recruit a Builder Master
 character_event = {
     id = REC.5
 	picture = GFX_evt_emissary
@@ -572,7 +572,7 @@ character_event = {
 	}
 }
 
-# Construction stopped because not directed
+# Construction stopped because not leaded
 province_event = {
     id = REC.6
 	desc = "DESCREC.6"
