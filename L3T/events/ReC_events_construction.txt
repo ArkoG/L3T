@@ -75,8 +75,9 @@ character_event = {
 					}
 				}
 			}
-			province_event = { id = REC.4 days = 10}
+			province_event = { id = REC.4 days = 30}
 		}
+		character_event = { id = REC.5 days = 10}
 	}
 }
 
@@ -248,13 +249,16 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		trait = batisseur_cathedrale
 		NOT = { any_courtier = { has_minor_title = title_batisseur } }
 		NOT = { any_vassal = { has_minor_title = title_batisseur } }
 		OR = { # Has not postponed the nomination during the last 2 years
 			NOT = { has_character_flag = recrutement_repousse }
 			had_character_flag = { flag = recrutement_repousse days = 800 }
 		}
+	}
+	
+	immediate = {
+		clr_character_flag = recrutement_repousse
 	}
 
 	option = {
