@@ -84,6 +84,7 @@ narrative_event = {
 					has_title_flag = castle_to_specialize
 				}
 			}
+			modifier = { factor = 2	holy_order = yes }
 		}
 		trigger = {
 			any_demesne_title = {
@@ -125,6 +126,7 @@ narrative_event = {
 					location = { has_province_flag = crown_focus_province } #pondération capitale économique
 				}
 			}
+			modifier = { factor = 0.5	holy_order = yes }
 		}
 		random_demesne_title = {
 			limit = {
