@@ -42,11 +42,11 @@ character_event = {
 	}
 }
 
-# Construction base progression
+# Construction base progression [character]
 character_event = {
     id = REC.3
-	desc = "DESCREC.3"
-	picture = GFX_evt_REC5
+	
+	hide_window = yes
 
 	is_triggered_only = yes		
 	
@@ -62,159 +62,173 @@ character_event = {
 			}
 		}
 	}
+	
+	immediate = {
+		# TODO : Manage the case it can be have several ones
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+				capital_holding = {
+					had_title_flag = { # The first rising will arrive more than 1 year after construction starting
+						flag = cathedral_construction
+						years = 1
+					}
+				}
+			}
+			province_event = { id = REC.4 days = 10}
+		}
+	}
+}
 
+# Construction base progression [province]
+province_event = {
+    id = REC.4
+	desc = "DESCREC.4"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes	
+	
 	# Pay correctly
 	option = {
-		name = "REC.3A"
-		trigger = { wealth = 100 }
+		name = "REC.4A"
+		trigger = { FROM = { wealth = 100 } }
 		ai_chance = {
 			factor = 70
 			modifier = {
 				factor = 2
-				trait = zealous
+				FROM = { trait = zealous }
 			}
 			modifier = {
 				factor = 2
-				trait = charitable
+				FROM = { trait = charitable }
 			}
 		}
-		wealth = -100
-		random_demesne_province = {
-			limit = { has_province_modifier = chantier_cathedrale }
-			capital_holding = {
-				# TODO : add flavour to increse/decrease/stop this progression
-				if = {
-					limit = { 
-						NOT = {
-							location = {
-								OR = { 
-									has_province_modifier = chantier_stop 
-									has_province_modifier = chantier_down
-								}
+		FROM = { wealth = -100 }
+		capital_holding = {
+			if = {
+				limit = { 
+					NOT = {
+						location = {
+							OR = { 
+								has_province_modifier = chantier_stop 
+								has_province_modifier = chantier_down
 							}
 						}
 					}
-					change_variable = { which = cathedral value = 100 }
 				}
-				if = {
-					limit = { location = { has_province_modifier = chantier_down } }
-					change_variable = { which = cathedral value = 90 }
-					location = { remove_province_modifier = chantier_down }
-				}
-				if = {
-					limit = { location = { has_province_modifier = chantier_stop } }
-					change_variable = { which = cathedral value = 80 }
-					location = { remove_province_modifier = chantier_stop }
-				}
+				change_variable = { which = cathedral value = 100 }
 			}
-			province_event = { id = REC.201 days = 10}
-			province_event = { id = REC.202 days = 10}
-			province_event = { id = REC.203 days = 10}
-			province_event = { id = REC.204 days = 10}
-			province_event = { id = REC.205 days = 10}
-			province_event = { id = REC.206 days = 10}
-			province_event = { id = REC.207 days = 10}
-			province_event = { id = REC.208 days = 10}
-			province_event = { id = REC.209 days = 10}
-			province_event = { id = REC.1210 days = 10}
-			province_event = { id = REC.2210 days = 10}
-			province_event = { id = REC.3210 days = 10}
-			province_event = { id = REC.211 days = 10}
-			province_event = { id = REC.212 days = 10}
+			if = {
+				limit = { location = { has_province_modifier = chantier_down } }
+				change_variable = { which = cathedral value = 90 }
+				location = { remove_province_modifier = chantier_down }
+			}
+			if = {
+				limit = { location = { has_province_modifier = chantier_stop } }
+				change_variable = { which = cathedral value = 80 }
+				location = { remove_province_modifier = chantier_stop }
+			}
 		}
+		province_event = { id = REC.201 days = 10}
+		province_event = { id = REC.202 days = 10}
+		province_event = { id = REC.203 days = 10}
+		province_event = { id = REC.204 days = 10}
+		province_event = { id = REC.205 days = 10}
+		province_event = { id = REC.206 days = 10}
+		province_event = { id = REC.207 days = 10}
+		province_event = { id = REC.208 days = 10}
+		province_event = { id = REC.209 days = 10}
+		province_event = { id = REC.1210 days = 10}
+		province_event = { id = REC.2210 days = 10}
+		province_event = { id = REC.3210 days = 10}
+		province_event = { id = REC.211 days = 10}
+		province_event = { id = REC.212 days = 10}
 	}
 
 	# Do some economy
 	option = {
-		name = "REC.3B"
-		trigger = { wealth = 75 }
+		name = "REC.4B"
+		trigger = { FROM = { wealth = 75 } }
 		ai_chance = {
 			factor = 20
 			modifier = {
 				factor = 5
-				NOT = { wealth = 100 }
+				FROM = { NOT = { wealth = 100 } }
 			}
 			modifier = {
 				factor = 3
-				trait = greedy
+				FROM = { trait = greedy }
 			}
 		}
-		wealth = -75
-		random_demesne_province = {
-			limit = { has_province_modifier = chantier_cathedrale }
-			capital_holding = {
-				# TODO : add flavour to increse/decrease/stop this progression
-				if = {
-					limit = {
-						NOT = {
-							location = {
-								OR = { 
-									has_province_modifier = chantier_stop 
-									has_province_modifier = chantier_down
-								}
+		FROM = { wealth = -75 }
+		capital_holding = {
+			if = {
+				limit = {
+					NOT = {
+						location = {
+							OR = { 
+								has_province_modifier = chantier_stop 
+								has_province_modifier = chantier_down
 							}
 						}
 					}
-					random_list = {
-						20 = { change_variable = { which = cathedral value = 85 } }
-						60 = { change_variable = { which = cathedral value = 75 } }
-						20 = { change_variable = { which = cathedral value = 65 } }
-					}
 				}
-				if = {
-					limit = { location = { has_province_modifier = chantier_down } }
-					change_variable = { which = cathedral value = 85 }
-					random_list = {
-						20 = { change_variable = { which = cathedral value = 80 } }
-						60 = { change_variable = { which = cathedral value = 70 } }
-						20 = { change_variable = { which = cathedral value = 60 } }
-					}
+				random_list = {
+					20 = { change_variable = { which = cathedral value = 85 } }
+					60 = { change_variable = { which = cathedral value = 75 } }
+					20 = { change_variable = { which = cathedral value = 65 } }
 				}
-				if = {
-					limit = { location = { has_province_modifier = chantier_stop } }
-					change_variable = { which = cathedral value = 75 }
-					random_list = {
-						20 = { change_variable = { which = cathedral value = 70 } }
-						60 = { change_variable = { which = cathedral value = 60 } }
-						20 = { change_variable = { which = cathedral value = 50 } }
-					}
-					location = { remove_province_modifier = chantier_stop }
-				}
-			}			
-			add_province_modifier = {
-				name = chantier_down
-				duration = -1
 			}
-			province_event = { id = REC.201 days = 10}
-			province_event = { id = REC.202 days = 10}
-			province_event = { id = REC.203 days = 10}
-			province_event = { id = REC.204 days = 10}
-			province_event = { id = REC.205 days = 10}
-			province_event = { id = REC.206 days = 10}
-			province_event = { id = REC.207 days = 10}
-			province_event = { id = REC.208 days = 10}
-			province_event = { id = REC.209 days = 10}
-			province_event = { id = REC.1210 days = 10}
-			province_event = { id = REC.2210 days = 10}
-			province_event = { id = REC.3210 days = 10}
-			province_event = { id = REC.211 days = 10}
-			province_event = { id = REC.212 days = 10}
+			if = {
+				limit = { location = { has_province_modifier = chantier_down } }
+				change_variable = { which = cathedral value = 85 }
+				random_list = {
+					20 = { change_variable = { which = cathedral value = 80 } }
+					60 = { change_variable = { which = cathedral value = 70 } }
+					20 = { change_variable = { which = cathedral value = 60 } }
+				}
+			}
+			if = {
+				limit = { location = { has_province_modifier = chantier_stop } }
+				change_variable = { which = cathedral value = 75 }
+				random_list = {
+					20 = { change_variable = { which = cathedral value = 70 } }
+					60 = { change_variable = { which = cathedral value = 60 } }
+					20 = { change_variable = { which = cathedral value = 50 } }
+				}
+				location = { remove_province_modifier = chantier_stop }
+			}
+		}			
+		add_province_modifier = {
+			name = chantier_down
+			duration = -1
 		}
+		province_event = { id = REC.201 days = 10}
+		province_event = { id = REC.202 days = 10}
+		province_event = { id = REC.203 days = 10}
+		province_event = { id = REC.204 days = 10}
+		province_event = { id = REC.205 days = 10}
+		province_event = { id = REC.206 days = 10}
+		province_event = { id = REC.207 days = 10}
+		province_event = { id = REC.208 days = 10}
+		province_event = { id = REC.209 days = 10}
+		province_event = { id = REC.1210 days = 10}
+		province_event = { id = REC.2210 days = 10}
+		province_event = { id = REC.3210 days = 10}
+		province_event = { id = REC.211 days = 10}
+		province_event = { id = REC.212 days = 10}
 	}
 	
 	# Stop financing
 	option = {
-		name = "REC.3C"
+		name = "REC.4C"
 		ai_chance = {
 			factor = 10
 		}
 		# TODO add flavour as consequences of that
-		random_demesne_province = {
-			limit = { has_province_modifier = chantier_cathedrale }
-			add_province_modifier = {
-				name = chantier_stop
-				duration = -1
-			}
+		add_province_modifier = {
+			name = chantier_stop
+			duration = -1
 		}
 	}
 }
