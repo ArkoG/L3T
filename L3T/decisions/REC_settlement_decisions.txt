@@ -11,11 +11,12 @@
 
 settlement_decisions = {
 	construire_cathedral_province = {
-		only_rulers = yes
+		only_playable = yes
 		filter = owned
-		ai_target_filter = owned
+		ai_target_filter = capital
 		
 		from_potential = {
+			ai = no
 			is_ruler = yes
 		}
 		
@@ -69,19 +70,7 @@ settlement_decisions = {
 		}
 		
 		ai_will_do = {
-			factor = 0.1 #Factors for an AI character to take the decision (1 = 100% chance)
-			modifier = {
-				factor = 10
-				yearly_income = 300
-			}
-			modifier = {
-				factor = 0.1
-				NOT = { yearly_income = 200 }
-			}
-			modifier = {
-				factor = 0
-				NOT = { yearly_income = 100 }
-			}
+			factor = 0
 		}
 	}
 }
