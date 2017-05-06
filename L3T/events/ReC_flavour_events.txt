@@ -580,10 +580,10 @@ character_event = {
 	trigger = {
 		any_demesne_province = { has_province_modifier = chantier_cathedrale }
 		religion = catholic
-		# any_courtier = {
-			# has_minor_title = title_architecte
-			# NOT = { learning = 16 }
-		# }
+		any_courtier = {
+			has_minor_title = title_batisseur
+			NOT = { learning = 16 }
+		}
 		wealth = 150
 	}
 	
@@ -636,10 +636,10 @@ character_event = {
 			has_province_modifier = chantier_cathedrale
 		}
 		religion = catholic
-		# any_courtier = { 
-			# has_minor_title = title_architecte
-			# NOT = { learning = 12 }
-		# }
+		any_courtier = { 
+			has_minor_title = title_batisseur
+			NOT = { learning = 12 }
+		}
 		wealth = 120
 	}
 	
