@@ -13,7 +13,13 @@ character_event = {
 	is_triggered_only = yes		
 	
 	trigger = {
-		FROM = { has_title_flag = cathedral_construction }
+		FROM = {
+			# FROM cannot be a capital_holding, it is a province title or a non capital holding
+			tier = count
+			location = {
+				has_province_modifier = chantier_cathedrale
+			}
+		}
 	}
 	
 	immediate = {
