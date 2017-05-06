@@ -736,7 +736,7 @@ narrative_event = {
 		name = "L3T.6B"	
 		ai_chance = {
 			factor = 40
-			modifier = { factor = 0	holy_order = yes }
+			#modifier = { factor = 0	holy_order = yes }
 			modifier = { factor = 5	tier = count }
 			modifier = { factor = 2	tier = duke }
 			modifier = { factor =  0.9	NOT = { learning = 15 } }
@@ -787,7 +787,7 @@ narrative_event = {
 		name = "L3T.6C"	
 		ai_chance = {
 			factor = 20
-			modifier = { factor = 20	holy_order = yes }
+			#modifier = { factor = 20	holy_order = yes }
 			modifier = { factor = 0.5 	any_demesne_title = { location = { NOT = { religion = catholic }}}}
 			modifier = { factor = 2.5	martial = 20 }
 			modifier = { factor = 1.5	martial = 15 }
@@ -1045,7 +1045,7 @@ narrative_event = {
 character_event = {
 	id = L3T.9
 	hide_window = yes
-	is_triggered_only = yes
+	is_triggered_only = yes 
 	
 	immediate = {
 		if = {
@@ -1071,8 +1071,8 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	#hide_window = yes
 	
-	is_triggered_only = yes
-	#triggered from LCDA's soa_holy_order_event
+	is_triggered_only = yes 
+#not called	#triggered from LCDA's soa_holy_order_event
 	#SoA.1024 # The Knights Templar loan
 	#SoA.1054 # The Knights Templar humble request
 	#SoA.1154 #The Knights of St Jean / the Hospitallers humble request
