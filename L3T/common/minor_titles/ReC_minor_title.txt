@@ -1,0 +1,45 @@
+############################################
+# [ReC][Reliques et Cathédrales]  par Arko #
+############################################
+
+#title_parlier = {
+
+
+title_batisseur = {
+	dignity = 0.05
+	realm_in_name = yes
+	show_as_title = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.02
+	monthly_prestige = 0.01
+	
+	allowed_to_hold = {
+		age = 16
+		is_female = no
+		#OR = {
+		#	stewardship = 16
+		#	AND = {
+		#		stewardship = 10
+		#		diplomacy = 6
+		#		}
+		#	AND = {
+		#		stewardship = 10
+		#		learning = 6
+		#		}
+		#	}
+		#is_feudal = no
+		NOT = { has_character_flag = titre_mineur_detenu }
+	}
+	
+	allowed_to_grant = {
+		religion = catholic
+		trait = batisseur_cathedrale
+	}
+	
+	gain_effect = { set_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
+
+	message = yes
+}

@@ -238,3 +238,310 @@ province_event = {
 		}
 	}
 }
+
+# embaucher un Maître Bâtisseur (ex Parlier)
+character_event = {
+    id = REC.5
+	desc = "DESCREC.5"
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+
+	trigger = {
+		trait = batisseur_cathedrale
+		NOT = { any_courtier = { has_minor_title = title_batisseur } }
+		NOT = { any_vassal = { has_minor_title = title_batisseur } }
+		OR = { # Has not postponed the nomination during the last 2 years
+			NOT = { has_character_flag = recrutement_repousse }
+			had_character_flag = { flag = recrutement_repousse days = 800 }
+		}
+	}
+
+	option = {
+		name = "REC.5A" #je le choisirai
+		ai_chance = { factor = 0 }	
+		set_character_flag = recrutement_repousse
+	}
+
+	option = {
+		name = "REC.5B"	#trouvez moi quelqu'un, n'importe qui.
+		
+		trigger = { 
+			OR = {
+				#trait = lunatic #irrationel
+				#trait = slow #débile
+				#trait = imbecile #débile
+				#trait = slothful #grosse fainéasse
+				NOT = { stewardship = 8 }
+				NOT = { diplomacy = 8 }
+				NOT = { learning = 8 }				
+			}
+		} 
+		
+		ai_chance = { factor = 100 }
+			
+		custom_tooltip = { text = recrutement_profil_sans }
+		hidden_tooltip = {
+			random_list = { #un gars correct, sans plus, mais gratos
+				33 = {
+					create_character = {
+						random_traits = yes
+						##dynasty = random
+						female = no
+						attributes = {
+							stewardship = 8 
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				33 = {
+					create_character = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 8
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				33 = {
+					create_character = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 8
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.5C"	#trouvez moi quelqu'un, dominante gestion
+		
+		trigger = { stewardship = 8 }
+
+		ai_chance = { factor = 100 }
+		
+		scaled_wealth = -0.2
+		
+		custom_tooltip = { text = recrutement_profil_intendance }
+		hidden_tooltip = {
+			random_list = { 
+				50 = {
+					create_random_steward = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							stewardship = 14
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_steward = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							stewardship = 10 						
+							diplomacy = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_steward = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							stewardship = 10 						
+							learning = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				 5 = {
+					create_random_steward = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire						
+							stewardship = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				 5 = {
+					create_random_steward = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire					
+							stewardship = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.5D"	#trouvez moi quelqu'un, dominante diplo
+		
+		trigger = { diplomacy = 8 }
+		
+		ai_chance = { factor = 100 }
+
+		scaled_wealth = -0.2
+		
+		custom_tooltip = { text = recrutement_profil_diplomatie }
+		hidden_tooltip = {			
+			random_list = { 
+				50 = {
+					create_random_diplomat = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 14
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_diplomat = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 10 						
+							stewardship = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_diplomat = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 10 						
+							learning = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				 5 = {
+					create_random_diplomat = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							stewardship = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire						
+							diplomacy = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				 5 = {
+					create_random_diplomat = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire					
+							diplomacy = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.5E"	#trouvez moi quelqu'un, dominante érudtion
+		
+		trigger = { learning = 8 }
+		
+		ai_chance = { factor = 100 }
+
+		scaled_wealth = -0.2
+		
+		custom_tooltip = { text = recrutement_profil_erudition }
+		hidden_tooltip = {			
+			random_list = { 
+				50 = {
+					create_random_priest = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 14
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_priest = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 10 						
+							stewardship = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_priest = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 10 						
+							diplomacy = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				5 = {
+					create_random_priest = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							stewardship = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire						
+							learning = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				5 = {
+					create_random_priest = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire					
+							learning = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+			}
+		}
+	}
+}
