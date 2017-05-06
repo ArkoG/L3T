@@ -89,6 +89,15 @@ province_event = {
 
 	is_triggered_only = yes	
 	
+	trigger = {
+		owner = {
+			OR = {
+				any_courtier = { has_minor_title = title_batisseur }
+				any_vassal = { has_minor_title = title_batisseur }
+			}
+		}
+	}
+	
 	# Pay correctly
 	option = {
 		name = "REC.4A"
@@ -243,28 +252,41 @@ province_event = {
 # embaucher un Maître Bâtisseur (ex Parlier)
 character_event = {
     id = REC.5
-	desc = "DESCREC.5"
 	picture = GFX_evt_emissary
+	
+	desc = {
+		trigger = { NOT = { has_character_flag = recrutement_repousse } }
+		text = "DESCREC.5"
+	}
+	desc = {
+		trigger = { has_character_flag = recrutement_repousse }
+		text = "DESCREC.5bis"
+	}
 	
 	is_triggered_only = yes
 
 	trigger = {
 		NOT = { any_courtier = { has_minor_title = title_batisseur } }
 		NOT = { any_vassal = { has_minor_title = title_batisseur } }
-		OR = { # Has not postponed the nomination during the last 2 years
-			NOT = { has_character_flag = recrutement_repousse }
-			had_character_flag = { flag = recrutement_repousse days = 800 }
-		}
-	}
-	
-	immediate = {
-		clr_character_flag = recrutement_repousse
 	}
 
 	option = {
 		name = "REC.5A" #je le choisirai
-		ai_chance = { factor = 0 }	
-		set_character_flag = recrutement_repousse
+		trigger = { NOT = { has_character_flag = recutement_suggestion } }
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { NOT = { has_character_flag = recrutement_repousse } }
+			set_character_flag = recrutement_repousse
+		}
+		if = {
+			limit = { has_character_flag = recrutement_repousse }
+			random_demesne_province = {
+				limit = {
+					has_province_modifier = chantier_cathedrale
+				}	
+				province_event = { id = REC.6 days = 40 }
+			}
+		}
 	}
 
 	option = {
@@ -546,6 +568,38 @@ character_event = {
 					new_character = { give_minor_title = title_batisseur }
 				}
 			}
+		}
+	}
+}
+
+# Construction stopped because not directed
+province_event = {
+    id = REC.6
+	desc = "DESCREC.6"
+	picture = GFX_evt_REC5
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { any_courtier = { has_minor_title = title_batisseur } }
+			NOT = { any_vassal = { has_minor_title = title_batisseur } }
+		}
+	}
+	
+	option = {
+		name = "REC.6A"
+		add_province_modifier = {
+			name = chantier_stop
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = "REC.6B"
+		owner = {
+			set_character_flag = recutement_suggestion
+			character_event = { id = REC.5  days = 10 }
 		}
 	}
 }
