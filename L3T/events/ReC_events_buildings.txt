@@ -96,8 +96,11 @@ province_event = {
 	#option unique gain piété à vie
 	option = {
 		name = "REC.203A"
-		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = -1	} }
-		owner = { excommunicate = no }
+		owner = { 
+			add_character_modifier = { name = en_odeur_de_saintete duration = -1 } 
+			excommunicate = no 
+			set_character_flag = has_made_cathedral_major_step
+		}
 		capital_holding = {
 			if = {
 				limit = { holding_type = castle }
@@ -114,6 +117,7 @@ province_event = {
 		}
 	}
 }
+
 #Cathédrale, Portail
 province_event = {
     id = REC.204
@@ -167,6 +171,7 @@ province_event = {
 		}
 	}
 }
+
 #Cathédrale, Nef Magnifique
 province_event = {
     id = REC.205
@@ -185,7 +190,10 @@ province_event = {
 	#choix piété one shot Vs gain mensuel + opinion boost pour 20ans
 	option = {
 		name = "REC.205A"	
-		owner = { piety = 950 }
+		owner = {
+			piety = 950
+			set_character_flag = has_made_cathedral_major_step
+		}
 		capital_holding = {
 			if = {
 				limit = { holding_type = castle }
@@ -201,9 +209,13 @@ province_event = {
 			}
 		}
 	}
+	
 	option = {
 		name = "REC.205B"
-		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 7300 }	}
+		owner = {
+			add_character_modifier = { name = en_odeur_de_saintete duration = 7300 }
+			set_character_flag = has_made_cathedral_major_step
+		}
 		capital_holding = {
 			if = {
 				limit = { holding_type = castle }
@@ -220,6 +232,7 @@ province_event = {
 		}
 	}
 }
+
 #Cathédrale, Transept
 province_event = {
     id = REC.206
@@ -238,7 +251,10 @@ province_event = {
 	#choix piété one shot Vs gain mensuel + opinion boost pour 10ans
 	option = {
 		name = "REC.206A"	
-		owner = { piety = 700 }
+		owner = {
+			piety = 700
+			set_character_flag = has_made_cathedral_major_step
+		}
 		capital_holding = {
 			if = {
 				limit = { holding_type = castle }
@@ -256,7 +272,10 @@ province_event = {
 	}
 	option = {
 		name = "REC.206B"
-		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 3650 }	}
+		owner = {
+			add_character_modifier = { name = en_odeur_de_saintete duration = 3650 }
+			set_character_flag = has_made_cathedral_major_step
+		}
 		capital_holding = {
 			if = {
 				limit = { holding_type = castle }
@@ -273,6 +292,7 @@ province_event = {
 		}
 	}
 }
+
 #Cathédrale, Tour Nord
 province_event = {
     id = REC.207
@@ -290,7 +310,10 @@ province_event = {
 	#choix piété one shot Vs gain mensuel + opinion boost pour 15ans
 	option = {
 		name = "REC.207A"	
-		owner = { piety = 750 }
+		owner = {
+			piety = 750
+			set_character_flag = has_made_cathedral_major_step
+		}
 		capital_holding = {
 			if = {
 				limit = { holding_type = castle }
@@ -308,7 +331,10 @@ province_event = {
 	}
 	option = {
 		name = "REC.207B"
-		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 5475 }	}
+		owner = {
+			add_character_modifier = { name = en_odeur_de_saintete duration = 5475 }
+			set_character_flag = has_made_cathedral_major_step
+		}
 		capital_holding = {
 			if = {
 				limit = { holding_type = castle }
@@ -325,6 +351,7 @@ province_event = {
 		}
 	}
 }
+
 #Cathédrale, Tour du Midi
 province_event = {
     id = REC.208
@@ -343,7 +370,10 @@ province_event = {
 	#choix piété one shot Vs gain mensuel + opinion boost pour 15ans
 	option = {
 		name = "REC.208A"	
-		owner = { piety = 750 }
+		owner = {
+			piety = 750
+			set_character_flag = has_made_cathedral_major_step
+		}
 		capital_holding = {
 			if = {
 				limit = { holding_type = castle }
@@ -361,7 +391,10 @@ province_event = {
 	}
 	option = {
 		name = "REC.208B"
-		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 5475 }	}
+		owner = {
+			add_character_modifier = { name = en_odeur_de_saintete duration = 5475 }
+			set_character_flag = has_made_cathedral_major_step
+		}
 		capital_holding = {
 			if = {
 				limit = { holding_type = castle }
@@ -378,6 +411,7 @@ province_event = {
 		}
 	}
 }
+
 #Cathédrale, Grande Rosace
 province_event = {
     id = REC.209
