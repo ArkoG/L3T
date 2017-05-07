@@ -1,0 +1,202 @@
+###sainthood relics
+
+ancestor_relic_0 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 1
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		any_dynasty_member =  original_owner
+	}
+	flags = { dynastic_relic }
+	stacking = no
+	picture = GFX_relic_box_simple
+	slot = relic
+}
+ancestor_relic_1 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 1
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		any_dynasty_member =  original_owner
+	}
+	flags = { dynastic_relic }
+	stacking = no
+	picture = GFX_relic_box_simple
+	slot = relic
+}
+ancestor_relic_2 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 2
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		any_dynasty_member =  original_owner
+	}
+	flags = { dynastic_relic }
+	stacking = no
+	picture = GFX_relic_box
+	slot = relic
+}
+ancestor_relic_3 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 2
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		any_dynasty_member =  original_owner
+	}
+	flags = { dynastic_relic }
+	stacking = no
+	picture = "GFX_relicbox_iron"
+	slot = relic
+}
+ancestor_relic_4 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 3
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		any_dynasty_member =  original_owner
+	}
+	flags = { dynastic_relic }
+	stacking = no
+	picture = "GFX_relicbox_iron"
+	slot = relic
+}
+ancestor_relic_5 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 3
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		any_dynasty_member =  original_owner
+	}
+	flags = { dynastic_relic }
+	stacking = no
+	picture = "GFX_saints_bone_femur"
+	slot = relic
+}
+ancestor_relic_6 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 4
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		any_dynasty_member =  original_owner
+	}
+	flags = { dynastic_relic }
+	stacking = no
+	picture = "GFX_saints_skull"
+	slot = relic
+}
+ancestor_relic_7 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 4
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		any_dynasty_member =  original_owner
+	}
+	flags = { dynastic_relic }
+	stacking = no
+	picture = "GFX_saints_skull"
+	slot = relic
+}
+ancestor_relic_8 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 5
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		any_dynasty_member =  original_owner
+	}
+	flags = { dynastic_relic }
+	stacking = no
+	picture = "GFX_pouch"
+	slot = relic
+}
+ancestor_relic_9 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 5
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		any_dynasty_member =  original_owner
+	}
+	flags = { dynastic_relic }
+	stacking = no
+	picture = "GFX_saints_bone_finger"
+	slot = relic
+}

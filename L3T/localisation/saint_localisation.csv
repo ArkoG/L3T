@@ -1,13 +1,40 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 saint;Saint;Saint;;Sankt;Santo;;;;;;;;;x
-saint_desc;This character is a Saint in one of the Christian denominations due to acts on Earth that have caused them to be recognised as a Saint in Heaven.;Ce personnage est un considÃ©rÃ© comme Saint parmi les ChrÃ©tiens. De part ces actes durant sa vie sur Terre, il pourra dÃ¨s lors Ãªtre considÃ©rÃ© comme Saint au Paradis.;;;;;;;;;;;;x
-EVTDESCAsaint_events.3;[Root.GetTitledFirstName], it is with my greatest condolences yet also pride that I write this letter to inform you that your Father, [From.From.GetTitledFirstName] has been recognised by the Church for his actions during his time on Earth so much so he is to be recognised as a Saint, I would ask for you to attend this ceremony which is to be held a few days from now.\n\nSigned,\nHis Holiness, [ThePope.GetTitledFirstName];[Root.GetTitledFirstName], c'est une immense tristesse qui accompagne mes condolÃ©ances mais je suis aussi empreint de fiertÃ© en vous Ã©crivant cette lettre pour vous faire part que votre dÃ©funt PÃ¨re, [From.From.GetTitledFirstName] par son dÃ©vouement et ses actes pieux, a Ã©tÃ© reconnu par la Sainte Ã‰glise comme Saint. Je vous demanderais donc de bien vouloir assister Ã  cette cÃ©rÃ©monie de canonisation qui aura lieu sous peu.\nSignÃ©,,\nSa SaintetÃ©, [ThePope.GetTitledFirstName];;;;;;;;;;;;x
-EVTDESCBsaint_events.3;[Root.GetTitledFirstName], it is with my greatest condolences yet also pride that I write this letter to inform you that your Mother, [From.From.GetTitledFirstName] has been recognised by the Church for her actions during her time on Earth so much so she is to be recognised as a Saint, I would ask for you to attend this ceremony which is to be held a few days from now.\n\nSigned,\nHis Holiness, [ThePope.GetTitledFirstName];[Root.GetTitledFirstName], c'est avec mes plus sincÃ¨res condolÃ©ances mais aussi une teinte de fiertÃ© que je vous Ã©cris cette lettre pour vous faire part que votre dÃ©funte MÃ¨re, [From.From.GetTitledFirstName] par sa dÃ©votion et sa grande piÃ©tÃ©, a Ã©tÃ© reconnue par notre Sainte MÃ¨re l'Ã‰glise comme Sainte. Je vous demanderais donc de bien vouloir assister Ã  cette cÃ©rÃ©monie de canonisation qui aura lieu sous peu.\nSignÃ©,,\nSa SaintetÃ©, [ThePope.GetTitledFirstName];;;;;;;;;;;;x
-EVTOPTAsaint_events.3;Of course I shall attend!;Impossible que je ne puisse y prÃ©tendre !;;;;;;;;;;;;x
-EVTTITLEsaint_events.4;Saint [From.From.GetFirstName] [From.From.GetOnlyDynastyName];Canonisation de [From.From.GetFirstName] [From.From.GetOnlyDynastyName];;;;;;;;;;;;x
-EVTOPTAsaint_events.4;Saint [From.From.GetFirstName] has made me proud, I hope I can live up to [FromFrom.GetHerHis] legacy;J'espÃ¨re pouvoir Ãªtre digne de l'hÃ©ritage de la lignÃ©e de [From.From.GetFirstName] !;;;;;;;;;;;;x
-EVTOPTBsaint_events.4;Saint [From.From.GetFirstName] has made the [FromFrom.GetOnlyDynastyName] proud;La dynastie [FromFrom.GetOnlyDynastyName] est fiÃ¨re de la canonisation de [From.From.GetFirstName];;;;;;;;;;;;x
-EVTOPTCsaint_events.4;Saint [From.From.GetFirstName] has made our dynasty proud;Notre dynastie est fiÃ¨re de la canonisation de [From.From.GetFirstName];;;;;;;;;;;;x
-SAINT;Saint;Sainte;;Sankt;Santo;;;;;;;;;x
+saint_desc;This character is a Saint in one of the Christian denominations due to acts on Earth that have caused them to be recognised as a Saint in Heaven.;Ce personnage est un considéré comme Saint parmi les Chrétiens. De part ces actes durant sa vie sur Terre, il pourra dès lors être considéré comme Saint au Paradis.;;;;;;;;;;;;x
+EVTOPTAsaint_events.1;Hallelujah !;Hallelujah !;;;;;;;;;;;;;x
+EVTDESCAsaint_events.3;[Root.GetTitledFirstName], it is with my greatest condolences yet also pride that I write this letter to inform you that your Father, [From.From.GetTitledFirstName] has been recognised by the Church for his actions during his time on Earth so much so he is to be recognised as a Saint, I would ask for you to attend this ceremony which is to be held a few days from now.\n\nSigned,\nHis Holiness, [ThePope.GetTitledFirstName];[Root.GetTitledFirstName], c'est une immense tristesse qui accompagne mes condoléances mais je suis aussi empreint de fierté en vous écrivant cette lettre pour vous faire part que votre défunt Père, [From.From.GetTitledFirstName] par son dévouement et ses actes pieux, a été reconnu par la Sainte Eglise comme Saint. Je vous demanderais donc de bien vouloir assister à cette cérémonie de canonisation qui aura lieu sous peu.\nSigné,\nSa Sainteté, [ThePope.GetTitledFirstName];;;;;;;;;;;;x
+EVTDESCBsaint_events.3;[Root.GetTitledFirstName], it is with my greatest condolences yet also pride that I write this letter to inform you that your Mother, [From.From.GetTitledFirstName] has been recognised by the Church for her actions during her time on Earth so much so she is to be recognised as a Saint, I would ask for you to attend this ceremony which is to be held a few days from now.\n\nSigned,\nHis Holiness, [ThePope.GetTitledFirstName];[Root.GetTitledFirstName], c'est avec mes plus sincères condoléances mais aussi une teinte de fierté que je vous écris cette lettre pour vous faire part que votre défunte Mère, [From.From.GetTitledFirstName] par sa dévotion et sa grande piété, a été reconnue par notre Sainte Mère l'Eglise comme Sainte. Je vous demanderais donc de bien vouloir assister à cette cérémonie de canonisation qui aura lieu sous peu.\nSigné,\nSa Sainteté, [ThePope.GetTitledFirstName];;;;;;;;;;;;x
+EVTOPTAsaint_events.3;Of course I shall attend!;Impossible que je ne puisse y prétendre !;;;;;;;;;;;;x
+EVTDESCsaint_events.4;[From.From.GetFirstName] [From.From.GetOnlyDynastyName] is now recognized as a Saint among the martyrs of our faith.;[From.From.GetFirstName] [From.From.GetOnlyDynastyName] est désormais un Saint reconnu qui a rejoint les martyrs de notre foi.;;;;;;;;;;;;x
+TITLE_masc_saint_events.4;Saint [From.From.GetFirstName];Saint [From.From.GetFirstName];;;;;;;;;;;;x
+TITLE_fem_saint_events.4;Saint [From.From.GetFirstName];Sainte [From.From.GetFirstName];;;;;;;;;;;;x
+EVTOPTAsaint_events.4;Saint [From.From.GetFirstName] has made me proud, I hope I can live up to [FromFrom.GetHerHis] legacy;J'espère pouvoir être digne de l'héritage de la lignée de [From.From.GetFirstName] !;;;;;;;;;;;;x
+EVTOPTBsaint_events.4;Saint [From.From.GetFirstName] has made the [FromFrom.GetOnlyDynastyName] proud;La dynastie [FromFrom.GetOnlyDynastyName] est fière de la canonisation de [From.From.GetFirstName];;;;;;;;;;;;x
+EVTOPTCsaint_events.4;Saint [From.From.GetFirstName] has made our dynasty proud;Notre dynastie est fière de la canonisation de [From.From.GetFirstName];;;;;;;;;;;;x
+SAINT_male;Saint;Saint;;Sankt;Santo;;;;;;;;;x
 SAINT_female;Saint;Sainte;;;Santa;;;;;;;;;x
-CHRONICLE_NEW_SAINT;[From.From.GetFirstNameWithNick] [From.From.GetOnlyDynastyName] was formally canonized as a Saint by [ThePope.GetTitledFirstName] on [GetDateText].;[GetDateText] est un jour glorieux et mÃ©morable, [ThePope.GetTitledFirstName] a canonisÃ© l'un des nÃ´tres, [From.From.GetFirstNameWithNick] [From.From.GetOnlyDynastyName] l'Ã©levant ainsi au rang de Saint. Son nom sera dÃ¨s lors cÃ©lÃ©brÃ© chaque annÃ©e Ã  cette mÃªme date.;;;;;;;;;;;;x
+CHRONICLE_NEW_SAINT;[From.From.GetFirstNameWithNick] [From.From.GetOnlyDynastyName] was formally canonized as a Saint by [ThePope.GetTitledFirstName] on [GetDateText].;En ce jour glorieux et mémorable jour du [GetDateText], [ThePope.GetTitledFirstName] a canonisé l'un des nôtres, [From.From.GetFirstNameWithNick] [From.From.GetOnlyDynastyName] l'élevant ainsi au rang de Saint. Son nom sera dès lors célébré chaque année à cette même date.;;;;;;;;;;;;x
+EVTDESCAsaint_events.5;;;;;;;;;;;;;x
+EVTOPTAsaint_events.5;Welcome back to your family humble ancestor!;Bon retour à la maison humble ancêtre !;;;;;;;;;;;x
+ancestor_relic_0;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_1;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_2;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_3;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_4;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_5;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_6;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_7;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_8;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_9;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_0_desc;desc [This.GetArtifactSourceCap][original_item_owner.GetTitledFirstName];;;;;;;;;;;;;x
+ancestor_relic_1_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_2_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_3_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_4_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_5_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_6_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_7_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_8_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+ancestor_relic_9_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
+new_saint;Recent sanctification;Sanctification récente;;;;;;;;;;;;x
+relique_ancetre;We receive a relic from an ancestor who was sanctified;Nous recevons une relique d'un ancêtre sanctifié;;;;;;;;;;;x

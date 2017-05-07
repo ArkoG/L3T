@@ -13,7 +13,7 @@ character_event = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
+				#has_dlc = "Sons of Abraham" #L3T
 			}
 		}
 		NOR = { # Traits which would block being made a saint
@@ -22,7 +22,7 @@ character_event = {
 			trait = mujahid
 			trait = excommunicated
 			trait = kinslayer
-			trait = homosexual
+			#trait = homosexual #L3T
 			trait = possessed
 			trait = bad_priest_christian
 			trait = hedonist
@@ -34,7 +34,7 @@ character_event = {
 			AND = {
 				OR = {
 					trait = celibate
-					trait = theologian
+					#trait = theologian
 					is_priest = yes
 					trait = pilgrim
 					trait = crusader
@@ -47,9 +47,10 @@ character_event = {
 	
 	immediate = {
 		random = {
-			chance = 10
+			#chance = 10 #TOTORO
+			chance = 10000 #TOTORO
 			modifier = {
-				factor = 1.2
+				factor = 1.1
 				is_priest = yes
 			}
 			modifier = {
@@ -57,7 +58,7 @@ character_event = {
 				trait = celibate
 			}
 			modifier = {
-				factor = 1.2
+				factor = 1.1
 				trait = theologian
 			}
 			modifier = {
@@ -65,7 +66,7 @@ character_event = {
 				trait = crusader
 			}
 			modifier = {
-				factor = 1.5
+				factor = 1.1
 				is_theocracy = yes
 			}
 			modifier = {
@@ -93,99 +94,45 @@ character_event = {
 				factor = 0.7
 				trait = inbred
 			}
+			#Piety
+			modifier = { factor = 1.05 piety = 5500 }
+			modifier = { factor = 1.10 piety = 6500 }
+			modifier = { factor = 1.15 piety = 7500 }
+			modifier = { factor = 1.25 piety = 8500 }
+			modifier = { factor = 1.35 piety = 9500 }
 			# Seven Sins
-			modifier = { 
-				factor = 0.80 
-				trait = lustful 
-			}
-            modifier = { 
-				factor = 0.85 
-				trait = gluttonous
-			}
-            modifier = { 
-				factor = 0.85 
-				trait = greedy 
-			}
-            modifier = { 
-				factor = 0.90 
-				trait = slothful 
-			}
-            modifier = { 
-				factor = 0.85
-				trait = envious
-			}
-            modifier = {
-				factor = 0.90 
-				trait = wroth 
-			}
-            modifier = { 
-				factor = 0.90 
-				trait = proud 
-			}
+			modifier = { factor = 0.80 trait = lustful }
+			modifier = { factor = 0.85 trait = gluttonous }
+			modifier = { factor = 0.85 trait = greedy }
+			modifier = { factor = 0.90 trait = slothful }
+			modifier = { factor = 0.85 trait = envious }
+			modifier = { factor = 0.90 trait = wroth }
+			modifier = { factor = 0.90  trait = proud }
 			# Seven Virtues
-			modifier = { 
-				factor = 1.25
-				trait = chaste
-			}
-			modifier = { 
-				factor = 1.15
-				trait = temperate
-			}
-            modifier = {
-				factor = 1.25
-				trait = charitable
-			}
-            modifier = { 
-				factor = 1.10 
-				trait = diligent
-			}
-            modifier = {
-				factor = 1.15 
-				trait = kind 
-			}
-            modifier = { 
-				factor = 1.25
-				trait = patient
-			}
-            modifier = {
-				factor = 1.25
-				trait = humble
-			}
+			modifier = { factor = 1.25 trait = chaste}
+			modifier = { factor = 1.15 trait = temperate }
+			modifier = { factor = 1.25 trait = charitable }
+			modifier = { factor = 1.10 trait = diligent }
+			modifier = { factor = 1.15 trait = kind }
+			modifier = { factor = 1.25 trait = patient }
+			modifier = { factor = 1.25 trait = humble }
+			
+			modifier = { factor = 1.05 NOT = { religion_authority = 0.5 }}
+			
 			modifier = {
-				factor = 0.85
+				factor = 0.75
 				trait = cynical
 			}
 			modifier = {
-				factor = 1.4
+				factor = 1.2
 				trait = zealous
 			}
-			# Piety
-			modifier = {
-				factor = 1.05
-				piety = 5500 
-			}
-            modifier = {
-				factor = 1.10 
-				piety = 6500 
-			}
-            modifier = {
-				factor = 1.15 
-				piety = 7500 
-			}
-            modifier = { 
-				factor = 1.25
-				piety = 8500 
-			}
-            modifier = { 
-				factor = 1.35 
-				piety = 9500
-			}
-			rightful_religious_head_scope = { character_event = { id = saint_events.2 days = 100 random = 150 } }
+			rightful_religious_head_scope = { character_event = { id = saint_events.2 days = 250 random = 100 } }
 		}
 	}
 	
 	option = {
-		name = "Ok"
+		name = EVTOPTAsaint_events.1 #L3T gave a proper ID and text 
 	}
 }
 
@@ -230,16 +177,26 @@ letter_event = {
 	option = {
 		name = EVTOPTAsaint_events.3
 		set_character_flag = new_saints_child
+	
 	}
 }
 
 # Inform all of Christendom
 narrative_event = {
 	id = saint_events.4
-	title = EVTTITLEsaint_events.4
+	#title = EVTTITLEsaint_events.4
 	desc = EVTDESCsaint_events.4
 	picture = GFX_evt_pope
-	birder = "GFX_event_narrative_frame_religion"
+	border = "GFX_event_narrative_frame_religion" #L3T fixed birder>>border
+
+	title = { #L3T 
+		trigger = { ROOT = { is_female = no } }
+		text = "TITLE_masc_saint_events.4"
+	}
+	title = { #L3T 
+		trigger = { ROOT = { is_female = yes } }
+		text = "TITLE_fem_saint_events.4"
+	}
 	
 	is_triggered_only = yes
 	major = yes
@@ -253,13 +210,18 @@ narrative_event = {
 		FROMFROM = {
 			if = { # For french and spanish localisations
 				limit = { is_female = no }
-				set_special_character_title = SAINT
+				set_special_character_title = SAINT_male #L3T changed tag for clarity sake
 			}
 			if = {
 				limit = { is_female = yes }
 				set_special_character_title = SAINT_female
 			}
 			add_trait = saint
+			set_dynasty_flag = saint_dynasty_member #L3T saint tracker on dynastic level
+		}
+		religion_authority = { #L3T 
+			modifier = new_saint
+			years = 20
 		}
 	}
 	
@@ -323,3 +285,49 @@ narrative_event = {
 		}
 	}
 }
+
+#L3T 
+# A relic from the ancestor is received by the head of the dynasty
+character_event = {
+	id = saint_events.5
+	border = "GFX_event_normal_frame_religion"
+	desc = "EVTDESCAsaint_events.5"
+	picture = GFX_evt_pope
+	
+	trigger = {
+		has_dynasty_flag = saint_dynasty_member
+		dynasty_head = { character = FROM }
+	}
+
+	mean_time_to_happen = {
+		days = 15 #TOTORO
+		#years = 60
+			modifier = { factor = 1.10 had_dynasty_flag = { flag = saint_dynasty_member days =  9125 }} #25 years
+			modifier = { factor = 0.95 had_dynasty_flag = { flag = saint_dynasty_member days = 10950 }} #30 years
+			modifier = { factor = 0.95 had_dynasty_flag = { flag = saint_dynasty_member days = 18250 }} #50 years	
+			modifier = { factor = 0.95 had_dynasty_flag = { flag = saint_dynasty_member days = 36500 }} #100 years
+			modifier = { factor = 0.10 had_dynasty_flag = { flag = saint_dynasty_member days = 37000 }}
+	}
+	
+	option = {
+		name = EVTOPTAsaint_events.5
+		clr_dynasty_flag = saint_dynasty_member
+		custom_tooltip = { text = relique_ancetre }
+		piety = 450
+		hidden_tooltip = {
+			random_list = {
+				10 = { add_artifact = ancestor_relic_0 }
+				10 = { add_artifact = ancestor_relic_1 }
+				10 = { add_artifact = ancestor_relic_2 }
+				10 = { add_artifact = ancestor_relic_3 }
+				10 = { add_artifact = ancestor_relic_4 }
+				10 = { add_artifact = ancestor_relic_5 }
+				10 = { add_artifact = ancestor_relic_6 }
+				10 = { add_artifact = ancestor_relic_7 }
+				10 = { add_artifact = ancestor_relic_8 }
+				10 = { add_artifact = ancestor_relic_9 }
+			}
+		}
+	}	
+}
+#L3T 
