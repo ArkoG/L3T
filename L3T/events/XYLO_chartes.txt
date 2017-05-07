@@ -40,7 +40,7 @@ option = {
 			name = loi_forestiere_L2 
 			duration = 1825 #5ans
 			}
-		remove_province_flag = refus_charte
+		clr_province_flag = refus_charte
 	}
 option = {
 		name = "XYLO.302B"	#tentons de relâcher un peu la tension
@@ -49,7 +49,7 @@ option = {
 			name = loi_forestiere_L1 
 			duration =  730 #2an
 			}
-		remove_province_flag = refus_charte
+		clr_province_flag = refus_charte
 	}	
 option = {
 		name = "XYLO.302C"	#et alors ?
@@ -96,7 +96,7 @@ option = {
 			name = loi_forestiere_L2 
 			duration = 1825 #5ans
 			}
-		remove_province_flag = refus_charte
+		clr_province_flag = refus_charte
 	}
 option = {
 		name = "XYLO.303B"	#faisons un geste
@@ -105,7 +105,7 @@ option = {
 			name = loi_forestiere_L1 
 			duration = 1095 #3ans
 			}
-		remove_province_flag = refus_charte
+		clr_province_flag = refus_charte
 	}	
 option = {
 		name = "XYLO.303C"	#ce n'est pas la cause réelle
@@ -152,7 +152,7 @@ option = {
 			name = loi_forestiere_L1 
 			duration = 1095 #3ans
 			}
-		remove_province_flag = refus_charte
+		clr_province_flag = refus_charte
 	}
 option = {
 		name = "XYLO.304B"	#envoyez la milice
@@ -198,7 +198,7 @@ option = {
 			}
 		remove_province_modifier = loi_forestiere_L1
 		remove_province_modifier = peasants_upset
-		remove_province_flag = refus_charte
+		clr_province_flag = refus_charte
 	}
 option = {
 		name = "XYLO.305B"	#non
@@ -207,7 +207,7 @@ option = {
 			name = peasants_upset #paysans inquiets
 			duration = 1095 #3ans
 			}
-		remove_province_flag = refus_charte
+		clr_province_flag = refus_charte
 	}
 option = {
 		name = "XYLO.305C"	#non et je vais leur retirer leurs droits actuels
