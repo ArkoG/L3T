@@ -300,7 +300,7 @@ narrative_event = {
 narrative_event = {
 	id = saint_events.5
 	title = EVTTITLEsaint_events.5
-	border = "GFX_event_normal_frame_religion"
+	border = "GFX_event_narrative_frame_religion"
 	desc = "EVTDESCAsaint_events.5"
 	picture = GFX_evt_pope
 	
@@ -319,6 +319,10 @@ narrative_event = {
 			modifier = { factor = 0.95 had_dynasty_flag = { flag = saint_dynasty_member days = 36500 }} #100 years
 			modifier = { factor = 0.10 had_dynasty_flag = { flag = saint_dynasty_member days = 37000 }}
 	}
+
+	
+
+#see more options : keep the relic at the castle, keep the relic in our necropolis, keep the relic in a monastery, refuse the relic
 	
 	option = {
 		name = EVTOPTAsaint_events.5
