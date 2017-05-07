@@ -1,0 +1,66 @@
+decisions = { 
+
+	commerce_luxe_node = { #
+
+		potential = {
+			always=no
+			#sub_directory to limit decision panel spam 
+			#to add
+			
+			#province is a commercial node
+			any_demesne_province = { 
+				OR = {	
+					has_province_modifier = noeud_commercial_primaire
+					has_province_modifier = noeud_commercial_annexe
+					}
+				}
+				
+			#province doesn't have already some luxury good trade yet
+			NOT = { 		
+				any_demesne_province = {	
+					OR = {				
+						has_province_modifier = peaux2_fourrure
+						has_province_modifier = joyaux2_bijoux
+						has_province_modifier = epices2_epices
+					}
+				}
+			}
+
+		}
+	
+		allow = {
+			wealth = 300
+			war = no #character is at peace
+		}
+	
+		effect = {
+			wealth = -375
+		
+			random_demesne_province = {
+				limit = {
+					OR = {
+						has_province_modifier = noeud_commercial_primaire
+						has_province_modifier = noeud_commercial_annexe
+						}
+					NOT = { 		
+						OR = {				
+							has_province_modifier = peaux2_fourrure
+							has_province_modifier = joyaux2_bijoux
+							has_province_modifier = epices2_epices
+							}
+						}
+					}
+					#launches event to choose what luxury good to import
+					set_province_flag = attn_spec_lux
+				}
+			}
+	
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
