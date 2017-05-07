@@ -1,4 +1,6 @@
 # Targetted decisions are possible vs _all_ other characters and shown are in the Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#     FROM is the decision taker
+#     ROOT is the targetted character
 #
 # filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] ('self' MUST be set for decisions targetting only the taker, the other filter types can be set to lessen CPU load)
 # ai_target_filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (which characters for which the AI evaluates the decision.)
@@ -32,6 +34,48 @@ targetted_decisions = {
 					limit = { has_province_modifier = chantier_cathedrale }
 					province_event = { id = REC.7  days = 1 }
 				}
+			}
+		}
+			
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	support_other_catherdral = {
+		only_playable = yes
+		filter = all
+		ai_target_filter = self
+		
+		from_potential = {
+			is_playable = yes
+		}
+		
+		potential = {
+			ai = yes
+			trait = batisseur_cathedrale
+		}
+		
+		allow = {
+			FROM = { wealth = 50 }
+		}
+		
+		effect = {
+			ROOT = { wealth = 50 }
+			FROM = {
+				wealth = -50
+				piety = 20
+			}
+			if = { # Give opinion bonus only once
+				limit = {
+					NOT = { has_character_flag = donation_@FROM }
+				}
+				opinion = { modifier = donation who = FROM years = 5 }
+				set_character_flag = donation_@FROM
 			}
 		}
 			
