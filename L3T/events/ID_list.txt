@@ -9,26 +9,24 @@
 # Cf [NON INCLUS] pour les fichiers d'events non inclus dans la version courante
 
 ###L3T_init_DOMAINES.txt
-
 ##décider de l'avenir d'un domaine 
 #id = L3T.3 #domaine Féodal 
 #id = L3T.4 #domaine Communal  
 #id = L3T.41 #domaine Communal province à double cité  
+#id = L3T.5 #upgrade CITE GRANDE L1  vers L2
+#id = L3T.2 #upgrade CITE GRANDE L2  vers L3
 #id = L3T.6 #domaine Ecclésial 
 #id = L3T.7 #attribution règle monastique
 #[COMMENTE] id = L3T.0008 #attribution ordre militaire
 #id = L3T.9 #Init built holding (on_action)
-
-##upgrades 
-#id = L3T.5 #upgrade CITE GRANDE L1  vers L2
-#id = L3T.2 #upgrade CITE GRANDE L2  vers L3
+#id = L3T.13 #Spec en Commanderie event SoA
 
 ###L3T_mod_selection.txt
 #id = L3T.10 #détection de la carte + paix de Dieu
 #id = L3T.11 #fin paix de Dieu
 #id = L3T.12 #boost IA gold+piety
-#[LIBRE] id = L3T.13 #
-#[LIBRE] id = L3T.14 #
+#id = L3T.13 #dans L3T_init_DOMAINES.txt
+###id = L3T.13 #adbication (provisoire, la localisation de la décision porte cet ID}
 
 ###[NON INCLUS] L3T_minorite.txt
 #id = L3T.15 #event initial
@@ -47,8 +45,8 @@
 #id = L3T.25 #Vanilla - Coast
 #id = L3T.26 #Vanilla - Land
 #id = L3T.27 #Vanilla - Rivers
-#id = L3T.28 #Vanilla - Cols (non attribué)
-#id = L3T.29 #Vanilla - autre (non attribué)
+#id = L3T.28 #Vanilla - Cols -toute carte-
+#id = L3T.29 #Vanilla - Cols -notification-
 ###L3T_mod_selection_LCDA.txt
 #id = L3T.30 #LCDA - Coast
 #id = L3T.31 #LCDA - Land

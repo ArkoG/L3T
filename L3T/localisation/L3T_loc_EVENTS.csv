@@ -66,6 +66,26 @@ DESCL3T.15;Some parts of the mod are not translated from French yet.\n You can d
 L3T.15A;FRENCH speaking version;L3T complet, en français;;;;;;;;;;;;x
 L3T.15B;ENGLISH speaking version;L3T partiel, en anglais;;;;;;;;;;;;x
 L3T.15C;IA choice;choix de l'AI;;;;;;;;;;;;;x
+NAMEL3T.29_LCDA;Welcome to the Alps!;Bienvenue dans les Alpes !;;;;;;;;;;;;;x
+NAMEL3T.29_noLCDA;Mountain's air;L'air de la montagne;;;;;;;;;;;;;x
+DESCL3T.29_maj_extA;ANGLAIS A FAIRE[Root.Location.GetName];Notre domaine d'influence comprend un col d'importance majeure dans la province de [Root.Location.GetName]. \n\nIl s'agit du [From.GetPassName] [From.GetPassDesc]. \n Profitons de l'avantage que cela peut nous procurer en l'utilisant à bon escient.;;;;;;;;;;;;x
+#DESCL3T.29_maj_extB;[Root.Location.GetName];Notre domaine d'influence comprend un col d'importance majeure dans la province de [Root.Location.GetName]. \n\nIl s'agit du [From.GetPassName] [From.GetPassDescB]. \n Profitons de l'avantage que cela peut nous procurer en l'utilisant à bon escient.;;;;;;;;;;;;x
+#DESCL3T.29_maj_extC;[Root.Location.GetName];Notre domaine d'influence comprend un col d'importance majeure dans la province de [Root.Location.GetName]. \n\nIl s'agit du [From.GetPassName] [From.GetPassDescC]. \n Profitons de l'avantage que cela peut nous procurer en l'utilisant à bon escient.;;;;;;;;;;;;x
+#DESCL3T.29_maj_extD;[Root.Location.GetName];Notre domaine d'influence comprend un col d'importance majeure dans la province de [Root.Location.GetName]. \n\nIl s'agit du [From.GetPassName] [From.GetPassDescD]. \n Profitons de l'avantage que cela peut nous procurer en l'utilisant à bon escient.;;;;;;;;;;;;x
+DESCL3T.29_min_extA;ANGLAIS A FAIRE;La province de [Root.Location.GetName] nous assure le contrôle du [From.GetPassName] [From.GetPassDesc]. \n\n Bien qu'il soit plutôt mineur, son altitude peu élevée peut être un avantage à exploiter.;;;;;;;;;;;;x
+#DESCL3T.29_min_extB;;La province de [Root.Location.GetName] nous assure le contrôle du [From.GetPassName] [From.GetPassDescB]. \n\n Bien qu'il soit plutôt mineur, son altitude peu élevée peut être un avantage à exploiter.;;;;;;;;;;;;x
+#DESCL3T.29_min_extC;;La province de [Root.Location.GetName] nous assure le contrôle du [From.GetPassName] [From.GetPassDescC]. \n\n Bien qu'il soit plutôt mineur, son altitude peu élevée peut être un avantage à exploiter.;;;;;;;;;;;;x
+#DESCL3T.29_min_extD;;La province de [Root.Location.GetName] nous assure le contrôle du [From.GetPassName] [From.GetPassDescD]. \n\n Bien qu'il soit plutôt mineur, son altitude peu élevée peut être un avantage à exploiter.;;;;;;;;;;;;x
+DESCL3T.29_maj;ANGLAIS A FAIRE[Root.Location.GetName];Notre domaine d'influence comprend un col d'importance majeure dans notre province de [Root.Location.GetName]. \n Profitons de l'avantage que cela peut nous procurer en l'utilisant à bon escient.;;;;;;;;;;;;x
+DESCL3T.29_min;ANGLAIS A FAIRE;La province de [Root.Location.GetName] nous assure le contrôle d'un col mineur. \n Tâchons de mettre cela à notre avantage.;;;;;;;;;;;;x
+CHRONICLE_COL;Our dynasty had possessions and a residence at this times in on of the valleys of [Root.Location.GetName].  \n In the heights, on one access to the [From.GetPassName] which links us to others valleys around.;Notre dynastie possède des biens et une résidence dans l'une des vallées de [Root.Location.GetName].  \n Dans les hauteurs l'on peut accéder notamment au [From.GetPassName] qui nous relie à d'autres vallées.;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+text_reponse_generique_A;Good !;Bien, bien...;;;;;;;;;;;;x
+text_reponse_generique_B;Excellent!;Excellent !;;;;;;;;;;;;x
+text_reponse_generique_C;OK;D'accord;;;;;;;;;;;;x
+text_reponse_generique_D;Alright it's noted;J'en prends note;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+inscription_chroniques;This information will be written in the Chronicles of our dynasty;Cette information sera consignée dans les Chroniques de notre Maison;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 DESCL3T.101;This settlement has grown! A little hamlet now thrives in this region and the peasants living here work ceaselessly under the wise rule of the local lord.;La population a cru autour du château. \n Les quelques maisonnées assemblées ici forment à présent un petit hameau !;;;;;;;;;;;;x
 DESCL3T.102;A once insignificant hamlet populated by only a few dozen households has grown into a busy village!;Le hameau a pris de l'importance au pied du château et forme à présent un village !;;;;;;;;;;;;x
@@ -131,7 +151,7 @@ DESCL3T.431;The monks of the Monastery that you founded learned your quest for E
 L3T.431A;The statutes of the foundation of the Monastery provide that it belongs to me;Les statuts de la fondation du Monastère prévoient qu'il m'appartient;;;;;;;;;;;x;
 L3T.431B;I will offer them to buy it;Je vais leur proposer de l'acheter;;;;;;;;;;;x;
 L3T.431C;I will just admire it;Je vais me contenter de l'admirer;;;;;;;;;;;x;
-custom_offre_dachat_oeuf3a;We propose 15 ducats to acquire the egg.\nMonks can accept or refuse this offer.;Nous offrons 15 ducats pour acquérir l'oeuf \nLes moines peuvent refuser ou accepter cette proposition.;;;;;;;;;;;;x
+custom_offre_dachat_oeuf3a;We propose 15 ducats to acquire the egg.\nMonks can accept or refuse this offer.;Nous offrons 15¤pour acquérir l'oeuf \nLes moines peuvent refuser ou accepter cette proposition.;;;;;;;;;;;;x
 DESCL3T.432;The monk looks at us looking a bit surprised, but soon a light smile appears on his face and he acquiesces.\nHe takes the money and gives us the precious egg.;Le moine nous regarde avec une pointe de surprise mais bientôt un léger sourire s'esquisse sur son visage et il nous lance un regard approbateur.\nIl nous remet l'oeuf si précieux en échange de la bourse.;;;;;;;;;;;;x
 L3T.432A;Excellent!;A nous l'oeuf !;;;;;;;;;;;;x
 DESCL3T.433;The monk, after a short reflexion time and consulting with the others, informs us of his refusal.\nLet's try another offer maybe?;Le moine opine du chef et après s'être concerté avec les autres nous informe de son refus.\nEssayons une autre offre peut être ?;;;;;;;;;;;;x
@@ -1278,10 +1298,10 @@ ECO.206A;I am merely doing my part.;Bien !;;;;;;;;;;;;x
 ECO.207;No more prosperous industry;Industrie plus si prospère;;;;;;;;;;;;x
 DESCECO.207;We have received a formal letter of complaint from the burghers of [From.Location.GetName]. Apparently this period of war has caused their industries to suffer!;Les ravages de la guerre et les forces mobilisées en [From.Location.GetName] font d'importants dommages à l'économie locale.;;;;;;;;;;;;x
 ECO.207A;Such is the price we must pay.;C'est le prix à payer;;;;;;;;;;;;x
-ECO.208_title;Flooding;Inondations;;;;;;;;;;;;x
+ECO.208_title;Flooding;Inondations en [From.Location.GetName];;;;;;;;;;;;x
 DESCECO.208;Bad news from [From.Location.GetName]. \nRecent rains have flooded much of the farmlands in this province and ruined much of this season's harvest. This will badly impact the local economy. We must pray for [This.Religion.GetRandomGodNameCap] to help us !;Mauvaises nouvelles en provenance de [From.Location.GetName]. \nLes pluies torrentielles qui s'y sont dernièrement abattues ont fait grossir les rivières, inondé des terres cultivées, mis à mal ponts et gués. Pour sûr, cela aura un impact sur l'économie locale, espérons que [This.Religion.GetRandomGodNameCap] nous aide à nous remettre sur pied rapidement. ;;;;;;;;;;;;x
 ECO.208A;What terrible news!;Mettons-nous au travail !;;;;;;;;;;;;x
-ECO.209_title;Drought;Sécheresse;;;;;;;;;;;;x
+ECO.209_title;Drought;Sécheresse en [From.Location.GetName];;;;;;;;;;;;x
 DESCECO.209;This year the weather is particularly dry in [From.Location.GetName]. We can only hope that the situation will not worsen and affect the harvests.;Situation inquiétante dans la province de [From.Location.GetName] \nEspérons que cela ne dure pas trop et ainsi n'affecte point trop nos récoltes. ;;;;;;;;;;;;x
 ECO.209A;Is this divine punishment ?;Est-ce une punition divine ? ;;;;;;;;;;;;x
 DESCECO.210;It has been reported that the province of [Root.GetName] has enjoyed five years of prosperity without equal.;Cela fait plus de cinq années consécutives que la province de [Root.GetName] affiche un niveau de prospérité sans pareil.;;;;;;;;;;;;x
@@ -1298,7 +1318,9 @@ PECHE_MAUVAISE_CHRONIQUE;The fishing season has been particularly poor this year
 RECOLTE_BONNE_CHRONIQUE;The harvest has been particularly fruitful this year in [Root.GetName], and our barns and storehouses are overflowing.;Les abondantes récoltes en cette année sur les terres de [Root.GetName] ont rempli les panses et gonflé les stocks. ;;;;;;;;;;;;x
 RECOLTE_MAUVAISE_CHRONIQUE;The harvests has been particularly poor this year in [Root.GetName], and it is feared many will not survive the winter.;La médiocrité des récoltes de l'année sur les terres de [Root.GetName] a engendré une période de disette l'hiver qui a suivi.;;;;;;;;;;;;x 
 chronique_prosperite_custom;This deserves to be inscribed in the chronicles of our house.;Cela vaut une inscription aux annales du royaume. \n;;;;;;;;;;;;x
-CHRONICLE_SECHERESSE;The drought in [Root.GetName] that year that lasts for months marked in memories as a period of starving and peasants' discontent.;Une sécheresse a sévit dans la province de [Root.GetName] pendant des mois et a durement affecté les récoltes de l'année. Chacun garde un mauvais souvenir de cette période de disette.;;;;;;;;;;;;x
+CHRONICLE_SECHERESSE_1;The drought in [Root.GetName] that year that lasts for months marked in memories as a period of starving and peasants' discontent.;Une sécheresse a sévi dans la province de [Root.GetName] pendant près de trois mois durant et a affecté les récoltes de l'année. Chacun garde un souvenir durable de cette période de disette.;;;;;;;;;;;;x
+CHRONICLE_SECHERESSE_2;The drought in [Root.GetName] that year that lasts for months marked in memories as a period of starving and peasants' discontent.;Une sécheresse a sévi dans la province de [Root.GetName] pendant une saison entière et a durement amoindri les récoltes de l'année. Chacun garde un mauvais souvenir de cette période de disette.;;;;;;;;;;;;x
+CHRONICLE_SECHERESSE_3;The drought in [Root.GetName] that year that lasts for months marked in memories as a period of starving and peasants' discontent.;La sécheresse cette année là qui a sévi dans la province de [Root.GetName] a duré presque la moitié de l'an et a durement affecté les récoltes. Cette période de disette restera gravée dans les esprits pour longtemps.;;;;;;;;;;;;x
 ECO.203_title;New vein found;Nouveau filon trouvé;;;;;;;;;;;;x
 DESCECO.213;Miners in the [Root.GetName] province have found some new mineral veins to exploit. That would bring some additional years of exploitation of our mines.;Les mineurs de la province de [Root.GetName] ont découvert de nouvelles veines de minerai. Cela devrait prolonger la durée de vie de nos mines. ;;;;;;;;;;;;x
 ECO.213A;Excellent!;Excellent !;;;;;;;;;;;;x

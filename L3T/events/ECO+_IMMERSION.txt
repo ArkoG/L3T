@@ -618,33 +618,46 @@ province_event = {
 				20 = { add_province_modifier = { name = meteo_secheresse duration =  30 }}
 				29 = { add_province_modifier = { name = meteo_secheresse duration =  50 }} 
 				20 = { add_province_modifier = { name = meteo_secheresse duration =  70 }}
-				18 = { add_province_modifier = { name = meteo_secheresse duration =  90 }} 
-				 8 = {
-					add_province_modifier = { name = meteo_secheresse duration = 120 }
+				18 = {
+					add_province_modifier = { name = meteo_secheresse duration = 90 }
 						random_list = {	
-									25 = { 
+									50 = { 
 										owner = {
 											chronicle = {
-												entry = CHRONICLE_SECHERESSE
+												entry = CHRONICLE_SECHERESSE_1
 												picture = GFX_evt_ECO2
 											}
 										}
 									}
-									75 = {}						
+									50 = {}						
+						}
+					}
+					8 = {
+					add_province_modifier = { name = meteo_secheresse duration = 120 }
+						random_list = {	
+									75 = { 
+										owner = {
+											chronicle = {
+												entry = CHRONICLE_SECHERESSE_2
+												picture = GFX_evt_ECO2
+											}
+										}
+									}
+									25 = {}						
 						}
 					}
 				 5 = { 
 					add_province_modifier = { name = meteo_secheresse duration = 150 }
 						random_list = {	
-									40 = { 
+									80 = { 
 										owner = {
 											chronicle = {
-												entry = CHRONICLE_SECHERESSE
+												entry = CHRONICLE_SECHERESSE_3
 												picture = GFX_evt_ECO2
 											}
 										}
 									}
-									60 = {}						
+									20 = {}						
 						}
 					}
 			}
