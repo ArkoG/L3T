@@ -128,16 +128,20 @@ character_event = {
 				factor = 1.2
 				trait = zealous
 			}
-			rightful_religious_head_scope = { character_event = { id = saint_events.2 
-			#days = 250 random = 100
-			days = 5
-			} }
+			rightful_religious_head_scope = { 
+				character_event = { 
+					id = saint_events.2 
+					#days = 250
+					#random = 100
+					days = 5
+				} 
+			}
 		}
 	}
 	
-	option = {
-		name = EVTOPTAsaint_events.1 #L3T gave a proper ID and text 
-	}
+	#option = {
+	#	name = EVTOPTAsaint_events.1 #L3T gave a proper ID and text 
+	#}
 }
 
 # Pope - Inform world of new saint
@@ -146,9 +150,10 @@ character_event = {
 	
 	is_triggered_only = yes
 	hide_window = yes
-	
-	option = {
-		name = "Ok"
+
+	immediate = {
+	#option = {
+		#name = "Ok"
 		FROM = {
 			any_child = {
 				letter_event = { id = saint_events.3 } # Inform children of ceremony
@@ -300,7 +305,7 @@ character_event = {
 	
 	trigger = {
 		has_dynasty_flag = saint_dynasty_member
-		dynasty_head = { character = FROM }
+		dynasty_head = yes
 	}
 
 	mean_time_to_happen = {
