@@ -120,20 +120,13 @@ narrative_event = {
 				}
 			}
 			modifier = {
-<<<<<<< HEAD
-				factor = 10
-=======
 				factor = 1.5
->>>>>>> refs/remotes/origin/master
 				any_demesne_title = {
 					has_title_flag = castle_to_specialize
 					location = { has_province_flag = crown_focus_province } #pondération capitale économique
 				}
 			}
-<<<<<<< HEAD
-=======
 			modifier = { factor = 0.5	holy_order = yes }
->>>>>>> refs/remotes/origin/master
 		}
 		random_demesne_title = {
 			limit = {
