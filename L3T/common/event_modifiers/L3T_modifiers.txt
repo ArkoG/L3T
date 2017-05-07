@@ -278,8 +278,14 @@ totoro = {icon = 200} #mouchard :p
 
 chantier_cathedrale = {
 	icon = 170
-	local_build_time_modifier = 1.00 #+100%
-	local_build_cost_modifier = 1.00 #+100%
+	local_build_time_modifier = 1.00 #+100% because workers are occupied
+	local_build_cost_modifier = 1.00 #+100% because workers are occupied
+}
+
+chantier_up = {
+	icon = 170
+	local_build_time_modifier = 0.1 # 10% like chantier_cathedrale
+	local_build_cost_modifier = 0.1 # 10% like chantier_cathedrale
 }
 
 chantier_down = {
@@ -294,6 +300,11 @@ chantier_stop = {
 	local_build_time_modifier = -0.8 # -80% to balance chantier_cathedrale
 	local_build_cost_modifier = -0.8 # -80% to balance chantier_cathedrale
 	local_revolt_risk = 0.02 #2% chantier stoppé cause grève ou arrêt "simple" : employés non payés
+}
+
+temp_wall = {
+	icon = 127
+	fort_level = 1
 }
 
 # No more used
@@ -325,10 +336,6 @@ chantier_down_rivalite_2 = { # Mis si le 1er existe déjà
 chantier_down_rivalite_3 = { # Mis si le 1er et le 2ème existent déjà
 	local_build_time_modifier = 0.10 #+10%
 	icon = 169
-}
-chantier_up = {
-	local_build_time_modifier = -0.10 #-10%
-	icon = 170
 }
 loge_modifier = {
 	local_build_time_modifier = -0.10 #-10%

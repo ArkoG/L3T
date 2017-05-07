@@ -718,3 +718,175 @@ character_event = {
 		set_character_flag = surcout_recu
 	}
 }
+
+# Build temporary wall
+character_event = {
+    id = REC.1501
+	desc = "DESCREC.1501"
+	picture = GFX_evt_REC4
+	
+	only_rulers = yes
+	
+	trigger = {
+		religion = catholic
+		OR = {
+			war = yes
+			any_liege = { war = yes }
+		}
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+		}
+		NOT = { has_character_flag = do_not_build_wall_from_cathedral }
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 2
+			trait = brave
+		}
+		modifier = {
+			factor = 0.5
+			trait = craven 
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				trait = defensive_leader
+				trait = unyielding_leader 
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				trait = skilled_tactician
+				trait = brilliant_strategist 
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.1501A"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				OR = {
+					trait = defensive_leader
+					trait = unyielding_leader 
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					trait = skilled_tactician
+					trait = brilliant_strategist 
+				}
+			}
+		}
+		random_demesne_province = {
+			limit = { has_province_modifier = chantier_cathedrale }
+			add_province_modifier = {
+				name = chantier_stop
+				duration = -1
+			}
+			province_event = { id = REC.1502 days = 60 }
+		}
+	}
+	
+	option = {
+		name = "REC.1501B"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+		}
+		set_character_flag = do_not_build_wall_from_cathedral
+	}
+}
+
+# Give temporary wall
+province_event = {
+	id = REC.1502
+	desc = "DESCREC.1502"
+	picture = GFX_evt_REC4
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.1502A"
+		capital_holding = {
+			add_holding_modifier = {
+				name = temp_wall
+				duration = -1
+			}
+		}
+		province_event = { id = REC.1503 days = 730 }
+	}
+}
+
+# Keep temporary wall ?
+province_event = {
+	id = REC.1503
+	desc = "DESCREC.1503"
+	picture = GFX_evt_REC4
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.1503A"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { owner = { wealth = 20 } }
+			}
+		}
+		owner = { wealth = -20 }
+		province_event = { id = REC.1503 days = 730 }
+	}
+	
+	option = {
+		name = "REC.1503B"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						war = yes
+						any_liege = { war = yes }
+					}
+				}
+			}
+		}
+		capital_holding = {
+			remove_holding_modifier = temp_wall
+		}
+		# Accelerate Cathedral construction
+		if = {
+			limit = {
+				NOT = { has_province_modifier = chantier_down }
+				NOT = { has_province_modifier = chantier_stop }
+			}
+			add_province_modifier = {
+				name = chantier_up
+				duration = -1
+			}
+		}
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
+		}
+		if = {
+			limit = { has_province_modifier = chantier_stop }
+			remove_province_modifier = chantier_stop
+			add_province_modifier = {
+				name = chantier_down
+				duration = -1
+			}
+		}
+	}
+}
