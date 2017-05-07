@@ -609,3 +609,279 @@ province_event = {
 		}
 	}
 }
+
+# Get construction progression [province]
+province_event = {
+    id = REC.7
+	hide_window = yes
+	
+	is_triggered_only = yes
+	immediate = { FROMFROM = { letter_event = { id = REC.8 days = 0 } } }
+}
+
+# Get construction progression [character]
+letter_event = {
+	id = REC.8
+	desc = "DESCREC.8"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			capital_holding = {
+				if = {
+					limit = { is_building_cathedral_step_1 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 100 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { is_building_cathedral_step_2 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 600 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { is_building_cathedral_step_3 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 2600 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { is_building_cathedral_step_4 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 3100 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { is_building_cathedral_step_5 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 5600 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { is_building_cathedral_step_6 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 6800 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { is_building_cathedral_step_7 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 8300 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { is_building_cathedral_step_8 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 9800 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { is_building_cathedral_step_9 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 10300 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { 
+						OR = {
+							is_building_cathedral_step_10_ca = yes
+							is_building_cathedral_step_10_ct = yes
+							is_building_cathedral_step_10_tp = yes
+						}
+					}
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 10800 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { is_building_cathedral_step_11 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 11300 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+				if = {
+					limit = { is_building_cathedral_step_12 = yes }
+					# requiredStepPoint = total required point for this step
+					set_variable = { which = requiredStepPoint value = 12000 }
+					# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+					set_variable = { which = ratio which = requiredStepPoint }
+					subtract_variable = { which = ratio which = cathedral }
+					divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+					set_variable = { which = cathedralYear1 value = 0}
+					while = {
+						limit = {
+							check_variable = { which = ratio value = 1 }
+						}
+						change_variable = { which = cathedralYear1 value = 1 }
+						subtract_variable = { which = ratio value = 1 }
+					}
+					# cathedralYear2 = cathedralYear1 + 1
+					set_variable = { which = cathedralYear2 which = cathedralYear1 }
+					change_variable = { which = cathedralYear2 value = 1 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.8A"
+	}
+}

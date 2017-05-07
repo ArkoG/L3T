@@ -1,0 +1,61 @@
+# Province scope
+defined_text = {
+	name = GetCathedralConstructionBuildingName
+
+	text = {
+		localisation_key = ca_cathedrale_01
+		trigger = { capital_holding = { is_building_cathedral_step_1 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_02
+		trigger = { capital_holding = { is_building_cathedral_step_2 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_03
+		trigger = { capital_holding = { is_building_cathedral_step_3 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_04
+		trigger = { capital_holding = { is_building_cathedral_step_4 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_05
+		trigger = { capital_holding = { is_building_cathedral_step_5 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_06
+		trigger = { capital_holding = { is_building_cathedral_step_6 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_07
+		trigger = { capital_holding = { is_building_cathedral_step_7 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_08
+		trigger = { capital_holding = { is_building_cathedral_step_8 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_09
+		trigger = { capital_holding = { is_building_cathedral_step_9 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_10
+		trigger = { capital_holding = { is_building_cathedral_step_10_ca = yes } }
+	}
+	text = {
+		localisation_key = ct_cathedrale_10
+		trigger = { capital_holding = { is_building_cathedral_step_10_ct = yes } }
+	}
+	text = {
+		localisation_key = tp_cathedrale_10
+		trigger = { capital_holding = { is_building_cathedral_step_10_tp = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_11
+		trigger = { capital_holding = { is_building_cathedral_step_11 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_12
+		trigger = { capital_holding = { is_building_cathedral_step_12 = yes } }
+	}
+}

@@ -90,3 +90,207 @@ construire_cathedral_allow = {
 		NOT = { any_liege = { war = yes } }
 	}
 }
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_1 = {
+	NOT = { 
+		OR = {
+			has_building = ca_cathedrale_01
+			has_building = ct_cathedrale_01
+			has_building = tp_cathedrale_01
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_2 = {
+	OR = {
+		has_building = ca_cathedrale_01
+		has_building = ct_cathedrale_01
+		has_building = tp_cathedrale_01
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_02
+			has_building = ct_cathedrale_02
+			has_building = tp_cathedrale_02
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_3 = {
+	OR = {
+		has_building = ca_cathedrale_02
+		has_building = ct_cathedrale_02
+		has_building = tp_cathedrale_02
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_03
+			has_building = ct_cathedrale_03
+			has_building = tp_cathedrale_03
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_4 = {
+	OR = {
+		has_building = ca_cathedrale_03
+		has_building = ct_cathedrale_03
+		has_building = tp_cathedrale_03
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_04
+			has_building = ct_cathedrale_04
+			has_building = tp_cathedrale_04
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_5 = {
+	OR = {
+		has_building = ca_cathedrale_04
+		has_building = ct_cathedrale_04
+		has_building = tp_cathedrale_04
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_05
+			has_building = ct_cathedrale_05
+			has_building = tp_cathedrale_05
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_6 = {
+	OR = {
+		has_building = ca_cathedrale_05
+		has_building = ct_cathedrale_05
+		has_building = tp_cathedrale_05
+	}
+	NOT = { 
+		OR = {
+			has_building = ca_cathedrale_06
+			has_building = ct_cathedrale_06
+			has_building = tp_cathedrale_06
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_7 = {
+	OR = {
+		has_building = ca_cathedrale_06
+		has_building = ct_cathedrale_06
+		has_building = tp_cathedrale_06
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_07
+			has_building = ct_cathedrale_07
+			has_building = tp_cathedrale_07
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_8 = {
+	OR = {
+		has_building = ca_cathedrale_07
+		has_building = ct_cathedrale_07
+		has_building = tp_cathedrale_07
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_08
+			has_building = ct_cathedrale_08
+			has_building = tp_cathedrale_08
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_9 = {
+	OR = {
+		has_building = ca_cathedrale_08
+		has_building = ct_cathedrale_08
+		has_building = tp_cathedrale_08
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_09
+			has_building = ct_cathedrale_09
+			has_building = tp_cathedrale_09
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_10_ca = {
+	OR = {
+		has_building = ca_cathedrale_09
+		has_building = ct_cathedrale_09
+		has_building = tp_cathedrale_09
+	}
+	holding_type = castle
+	NOT = { has_building = ca_cathedrale_10 }
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_10_ct = {
+	OR = {
+		has_building = ca_cathedrale_09
+		has_building = ct_cathedrale_09
+		has_building = tp_cathedrale_09
+	}
+	holding_type = city
+	NOT = { has_building = ct_cathedrale_10 }
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_10_tp = {
+	OR = {
+		has_building = ca_cathedrale_09
+		has_building = ct_cathedrale_09
+		has_building = tp_cathedrale_09
+	}
+	holding_type = temple
+	NOT = { has_building = tp_cathedrale_10 }
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_11 = {
+	OR = {
+		has_building = ca_cathedrale_10
+		has_building = ct_cathedrale_10
+		has_building = tp_cathedrale_10
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_11
+			has_building = ct_cathedrale_11
+			has_building = tp_cathedrale_11
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_12 = {
+	OR = {
+		has_building = ca_cathedrale_11
+		has_building = ct_cathedrale_11
+		has_building = tp_cathedrale_11
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_12
+			has_building = ct_cathedrale_12
+			has_building = tp_cathedrale_12
+		}
+	}
+}

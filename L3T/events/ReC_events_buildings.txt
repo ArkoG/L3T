@@ -17,13 +17,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			NOT = { 
-				OR = {
-					has_building = ca_cathedrale_01
-					has_building = ct_cathedrale_01
-					has_building = tp_cathedrale_01
-				}
-			}
+			is_building_cathedral_step_1 = yes
 			check_variable = { which = cathedral value = 100 }
 		}
 	}
@@ -59,18 +53,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_01
-				has_building = ct_cathedrale_01
-				has_building = tp_cathedrale_01
-			}
-			NOT = {
-				OR = {
-					has_building = ca_cathedrale_02
-					has_building = ct_cathedrale_02
-					has_building = tp_cathedrale_02
-				}
-			}
+			is_building_cathedral_step_2 = yes
 			check_variable = { which = cathedral value = 600 }
 		}
 	}
@@ -105,18 +88,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_02
-				has_building = ct_cathedrale_02
-				has_building = tp_cathedrale_02
-			}
-			NOT = {
-				OR = {
-					has_building = ca_cathedrale_03
-					has_building = ct_cathedrale_03
-					has_building = tp_cathedrale_03
-				}
-			}
+			is_building_cathedral_step_3 = yes
 			check_variable = { which = cathedral value = 2600 }
 		}
 	}
@@ -152,18 +124,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_03
-				has_building = ct_cathedrale_03
-				has_building = tp_cathedrale_03
-			}
-			NOT = {
-				OR = {
-					has_building = ca_cathedrale_04
-					has_building = ct_cathedrale_04
-					has_building = tp_cathedrale_04
-				}
-			}
+			is_building_cathedral_step_4 = yes
 			check_variable = { which = cathedral value = 3100 }
 		}
 	}
@@ -216,18 +177,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_04
-				has_building = ct_cathedrale_04
-				has_building = tp_cathedrale_04
-			}
-			NOT = {
-				OR = {
-					has_building = ca_cathedrale_05
-					has_building = ct_cathedrale_05
-					has_building = tp_cathedrale_05
-				}
-			}
+			is_building_cathedral_step_5 = yes
 			check_variable = { which = cathedral value = 5600 }
 		}
 	}
@@ -280,18 +230,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_05
-				has_building = ct_cathedrale_05
-				has_building = tp_cathedrale_05
-			}
-			NOT = { 
-				OR = {
-					has_building = ca_cathedrale_06
-					has_building = ct_cathedrale_06
-					has_building = tp_cathedrale_06
-				}
-			}
+			is_building_cathedral_step_6 = yes
 			check_variable = { which = cathedral value = 6800 }
 		}
 	}
@@ -343,18 +282,7 @@ province_event = {
 	is_triggered_only = yes	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_06
-				has_building = ct_cathedrale_06
-				has_building = tp_cathedrale_06
-			}
-			NOT = {
-				OR = {
-					has_building = ca_cathedrale_07
-					has_building = ct_cathedrale_07
-					has_building = tp_cathedrale_07
-				}
-			}
+			is_building_cathedral_step_7 = yes
 			check_variable = { which = cathedral value = 8300 }
 		}
 	}
@@ -407,18 +335,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_07
-				has_building = ct_cathedrale_07
-				has_building = tp_cathedrale_07
-			}
-			NOT = {
-				OR = {
-					has_building = ca_cathedrale_08
-					has_building = ct_cathedrale_08
-					has_building = tp_cathedrale_08
-				}
-			}
+			is_building_cathedral_step_8 = yes
 			check_variable = { which = cathedral value = 9800 }
 		}
 	}
@@ -470,18 +387,7 @@ province_event = {
 	is_triggered_only = yes	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_08
-				has_building = ct_cathedrale_08
-				has_building = tp_cathedrale_08
-			}
-			NOT = {
-				OR = {
-					has_building = ca_cathedrale_09
-					has_building = ct_cathedrale_09
-					has_building = tp_cathedrale_09
-				}
-			}
+			is_building_cathedral_step_9 = yes
 			check_variable = { which = cathedral value = 10300 }
 		}
 	}
@@ -535,13 +441,7 @@ province_event = {
 	is_triggered_only = yes	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_09
-				has_building = ct_cathedrale_09
-				has_building = tp_cathedrale_09
-			}
-			holding_type = castle
-			NOT = { has_building = ca_cathedrale_10 }
+			is_building_cathedral_step_10_ca = yes
 			check_variable = { which = cathedral value = 10800 }
 		}
 	}
@@ -569,13 +469,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_09
-				has_building = ct_cathedrale_09
-				has_building = tp_cathedrale_09
-			}
-			holding_type = city
-			NOT = { has_building = ct_cathedrale_10 }
+			is_building_cathedral_step_10_ct = yes
 			check_variable = { which = cathedral value = 10800 }
 		}
 	}
@@ -603,13 +497,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_09
-				has_building = ct_cathedrale_09
-				has_building = tp_cathedrale_09
-			}
-			holding_type = temple
-			NOT = { has_building = tp_cathedrale_10 }
+			is_building_cathedral_step_10_tp = yes
 			check_variable = { which = cathedral value = 10800 }
 		}
 	}
@@ -639,18 +527,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_10
-				has_building = ct_cathedrale_10
-				has_building = tp_cathedrale_10
-			}
-			NOT = {
-				OR = {
-					has_building = ca_cathedrale_11
-					has_building = ct_cathedrale_11
-					has_building = tp_cathedrale_11
-				}
-			}
+			is_building_cathedral_step_11 = yes
 			check_variable = { which = cathedral value = 11300 }
 		}
 	}
@@ -704,18 +581,7 @@ province_event = {
 	
 	trigger = {
 		capital_holding = {
-			OR = {
-				has_building = ca_cathedrale_11
-				has_building = ct_cathedrale_11
-				has_building = tp_cathedrale_11
-			}
-			NOT = {
-				OR = {
-					has_building = ca_cathedrale_12
-					has_building = ct_cathedrale_12
-					has_building = tp_cathedrale_12
-				}
-			}
+			is_building_cathedral_step_12 = yes
 			check_variable = { which = cathedral value = 12000 }
 		}
 	}
