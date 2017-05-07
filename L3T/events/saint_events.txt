@@ -57,6 +57,7 @@ character_event = {
 				factor = 1.2
 				trait = celibate
 			}
+			#TOTORO add a factor if the character has founded a monastery and retired to it afterward
 			modifier = {
 				factor = 1.1
 				trait = theologian
@@ -127,7 +128,10 @@ character_event = {
 				factor = 1.2
 				trait = zealous
 			}
-			rightful_religious_head_scope = { character_event = { id = saint_events.2 days = 250 random = 100 } }
+			rightful_religious_head_scope = { character_event = { id = saint_events.2 
+			#days = 250 random = 100
+			days = 5
+			} }
 		}
 	}
 	

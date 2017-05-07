@@ -10,15 +10,18 @@ ancestor_relic_0 = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
 			}
 		}
-		any_dynasty_member =  original_owner
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
 	}
+	allowed_gift = { always = no }
 	flags = { dynastic_relic }
 	stacking = no
 	picture = GFX_relic_box_simple
-	slot = relic
+	slot = slot_relique
 }
 ancestor_relic_1 = {
 	monthly_character_prestige = 0.2
@@ -30,15 +33,18 @@ ancestor_relic_1 = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
 			}
 		}
-		any_dynasty_member =  original_owner
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
 	}
+	allowed_gift = { always = no }
 	flags = { dynastic_relic }
 	stacking = no
 	picture = GFX_relic_box_simple
-	slot = relic
+	slot = slot_relique
 }
 ancestor_relic_2 = {
 	monthly_character_prestige = 0.2
@@ -50,15 +56,18 @@ ancestor_relic_2 = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
 			}
 		}
-		any_dynasty_member =  original_owner
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
 	}
+	allowed_gift = { always = no }
 	flags = { dynastic_relic }
 	stacking = no
 	picture = GFX_relic_box
-	slot = relic
+	slot = slot_relique
 }
 ancestor_relic_3 = {
 	monthly_character_prestige = 0.2
@@ -70,15 +79,18 @@ ancestor_relic_3 = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
 			}
 		}
-		any_dynasty_member =  original_owner
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
 	}
+	allowed_gift = { always = no }
 	flags = { dynastic_relic }
 	stacking = no
 	picture = "GFX_relicbox_iron"
-	slot = relic
+	slot = slot_relique
 }
 ancestor_relic_4 = {
 	monthly_character_prestige = 0.2
@@ -90,15 +102,18 @@ ancestor_relic_4 = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
 			}
 		}
-		any_dynasty_member =  original_owner
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
 	}
+	allowed_gift = { always = no }
 	flags = { dynastic_relic }
 	stacking = no
 	picture = "GFX_relicbox_iron"
-	slot = relic
+	slot = slot_relique
 }
 ancestor_relic_5 = {
 	monthly_character_prestige = 0.2
@@ -110,15 +125,18 @@ ancestor_relic_5 = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
 			}
 		}
-		any_dynasty_member =  original_owner
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
 	}
+	allowed_gift = { always = no }
 	flags = { dynastic_relic }
 	stacking = no
 	picture = "GFX_saints_bone_femur"
-	slot = relic
+	slot = slot_relique
 }
 ancestor_relic_6 = {
 	monthly_character_prestige = 0.2
@@ -130,15 +148,18 @@ ancestor_relic_6 = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
 			}
 		}
-		any_dynasty_member =  original_owner
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
 	}
+	allowed_gift = { always = no }
 	flags = { dynastic_relic }
 	stacking = no
 	picture = "GFX_saints_skull"
-	slot = relic
+	slot = slot_relique
 }
 ancestor_relic_7 = {
 	monthly_character_prestige = 0.2
@@ -150,15 +171,18 @@ ancestor_relic_7 = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
 			}
 		}
-		any_dynasty_member =  original_owner
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
 	}
+	allowed_gift = { always = no }
 	flags = { dynastic_relic }
 	stacking = no
 	picture = "GFX_saints_skull"
-	slot = relic
+	slot = slot_relique
 }
 ancestor_relic_8 = {
 	monthly_character_prestige = 0.2
@@ -170,15 +194,18 @@ ancestor_relic_8 = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
 			}
 		}
-		any_dynasty_member =  original_owner
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
 	}
+	allowed_gift = { always = no }
 	flags = { dynastic_relic }
 	stacking = no
 	picture = "GFX_pouch"
-	slot = relic
+	slot = slot_relique
 }
 ancestor_relic_9 = {
 	monthly_character_prestige = 0.2
@@ -190,13 +217,16 @@ ancestor_relic_9 = {
 			AND = {
 				religion = fraticelli
 				is_title_active = d_fraticelli
-				has_dlc = "Sons of Abraham"
 			}
 		}
-		any_dynasty_member =  original_owner
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
 	}
+	allowed_gift = { always = no }
 	flags = { dynastic_relic }
 	stacking = no
 	picture = "GFX_saints_bone_finger"
-	slot = relic
+	slot = slot_relique
 }

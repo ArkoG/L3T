@@ -1,6 +1,12 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+##STUFF;;;;;;;;;;;;;x
 saint;Saint;Saint;;Sankt;Santo;;;;;;;;;x
 saint_desc;This character is a Saint in one of the Christian denominations due to acts on Earth that have caused them to be recognised as a Saint in Heaven.;Ce personnage est un considéré comme Saint parmi les Chrétiens. De part ces actes durant sa vie sur Terre, il pourra dès lors être considéré comme Saint au Paradis.;;;;;;;;;;;;x
+SAINT_male;Saint;Saint;;Sankt;Santo;;;;;;;;;x
+SAINT_female;Saint;Sainte;;Sankt;Santa;;;;;;;;;x
+CHRONICLE_NEW_SAINT;[From.From.GetFirstNameWithNick] [From.From.GetOnlyDynastyName] was formally canonized as a Saint by [ThePope.GetTitledFirstName] on [GetDateText].;En ce [GetDateText], jour glorieux et mémorable, [ThePope.GetTitledFirstName] a canonisé l'un des nôtres, [From.From.GetFirstNameWithNick] [From.From.GetOnlyDynastyName] l'élevant ainsi au rang de Saint. Son nom sera dès lors célébré chaque année à cette même date.;;;;;;;;;;;;x
+new_saint;Recent canonization;Canonisation récente;;;;;;;;;;;;x
+##EVENTS;;;;;;;;;;;;;x
 EVTOPTAsaint_events.1;Hallelujah !;Hallelujah !;;;;;;;;;;;;;x
 EVTDESCAsaint_events.3;[Root.GetTitledFirstName], it is with my greatest condolences yet also pride that I write this letter to inform you that your Father, [From.From.GetTitledFirstName] has been recognised by the Church for his actions during his time on Earth so much so he is to be recognised as a Saint, I would ask for you to attend this ceremony which is to be held a few days from now.\n\nSigned,\nHis Holiness, [ThePope.GetTitledFirstName];[Root.GetTitledFirstName], c'est une immense tristesse qui accompagne mes condoléances mais je suis aussi empreint de fierté en vous écrivant cette lettre pour vous faire part que votre défunt Père, [From.From.GetTitledFirstName] par son dévouement et ses actes pieux, a été reconnu par la Sainte Eglise comme Saint. Je vous demanderais donc de bien vouloir assister à cette cérémonie de canonisation qui aura lieu sous peu.\nSigné,\nSa Sainteté, [ThePope.GetTitledFirstName];;;;;;;;;;;;x
 EVTDESCBsaint_events.3;[Root.GetTitledFirstName], it is with my greatest condolences yet also pride that I write this letter to inform you that your Mother, [From.From.GetTitledFirstName] has been recognised by the Church for her actions during her time on Earth so much so she is to be recognised as a Saint, I would ask for you to attend this ceremony which is to be held a few days from now.\n\nSigned,\nHis Holiness, [ThePope.GetTitledFirstName];[Root.GetTitledFirstName], c'est avec mes plus sincères condoléances mais aussi une teinte de fierté que je vous écris cette lettre pour vous faire part que votre défunte Mère, [From.From.GetTitledFirstName] par sa dévotion et sa grande piété, a été reconnue par notre Sainte Mère l'Eglise comme Sainte. Je vous demanderais donc de bien vouloir assister à cette cérémonie de canonisation qui aura lieu sous peu.\nSigné,\nSa Sainteté, [ThePope.GetTitledFirstName];;;;;;;;;;;;x
@@ -11,30 +17,27 @@ TITLE_fem_saint_events.4;Saint [From.From.GetFirstName];Sainte [From.From.GetFir
 EVTOPTAsaint_events.4;Saint [From.From.GetFirstName] has made me proud, I hope I can live up to [FromFrom.GetHerHis] legacy;J'espère pouvoir être digne de l'héritage de la lignée de [From.From.GetFirstName] !;;;;;;;;;;;;x
 EVTOPTBsaint_events.4;Saint [From.From.GetFirstName] has made the [FromFrom.GetOnlyDynastyName] proud;La dynastie [FromFrom.GetOnlyDynastyName] est fière de la canonisation de [From.From.GetFirstName];;;;;;;;;;;;x
 EVTOPTCsaint_events.4;Saint [From.From.GetFirstName] has made our dynasty proud;Notre dynastie est fière de la canonisation de [From.From.GetFirstName];;;;;;;;;;;;x
-SAINT_male;Saint;Saint;;Sankt;Santo;;;;;;;;;x
-SAINT_female;Saint;Sainte;;;Santa;;;;;;;;;x
-CHRONICLE_NEW_SAINT;[From.From.GetFirstNameWithNick] [From.From.GetOnlyDynastyName] was formally canonized as a Saint by [ThePope.GetTitledFirstName] on [GetDateText].;En ce jour glorieux et mémorable jour du [GetDateText], [ThePope.GetTitledFirstName] a canonisé l'un des nôtres, [From.From.GetFirstNameWithNick] [From.From.GetOnlyDynastyName] l'élevant ainsi au rang de Saint. Son nom sera dès lors célébré chaque année à cette même date.;;;;;;;;;;;;x
-EVTDESCAsaint_events.5;;;;;;;;;;;;;x
+EVTDESCAsaint_events.5;;Il y a désormais bien longtemps que notre ancêtre a reçu l'honneur suprême de notre Sainte Mère l'Église en rejoignant le Panthéon des Saints. \nAujourd'hui nous recevons de la part du Pape [ThePope.GetTitledFirstName] les restes du corps de notre Saint. \n Cette relique sera désormais celle de la famille [From.From.GetOnlyDynastyName] et nous apportera protection jusqu'à la fin des temps !;;;;;;;;;;;x
 EVTOPTAsaint_events.5;Welcome back to your family humble ancestor!;Bon retour à la maison humble ancêtre !;;;;;;;;;;;x
-ancestor_relic_0;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_1;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_2;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_3;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_4;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_5;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_6;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_7;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_8;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_9;relic [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_0_desc;desc [This.GetArtifactSourceCap][original_item_owner.GetTitledFirstName];;;;;;;;;;;;;x
-ancestor_relic_1_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_2_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_3_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_4_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_5_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_6_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_7_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_8_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-ancestor_relic_9_desc;desc [This.GetArtifactSourceCap];;;;;;;;;;;;;x
-new_saint;Recent sanctification;Sanctification récente;;;;;;;;;;;;x
-relique_ancetre;We receive a relic from an ancestor who was sanctified;Nous recevons une relique d'un ancêtre sanctifié;;;;;;;;;;;x
+relique_ancetre;We receive a relic from an ancestor who was canonized;Nous recevons une relique d'un ancêtre canonisé;;;;;;;;;;;x
+##RELICS;;;;;;;;;;;;;x
+ancestor_relic_0;Dynastic relic;Relique dynastique;;;;;;;;;;;;x
+ancestor_relic_1;Dynastic relic;Relique dynastique;;;;;;;;;;;;x
+ancestor_relic_2;Dynastic relic;Relique dynastique;;;;;;;;;;;;x
+ancestor_relic_3;Dynastic relic;Relique dynastique;;;;;;;;;;;;x
+ancestor_relic_4;Dynastic relic;Relique dynastique;;;;;;;;;;;;x
+ancestor_relic_5;Dynastic relic;Relique dynastique;;;;;;;;;;;;x
+ancestor_relic_6;Dynastic relic;Relique dynastique;;;;;;;;;;;;x
+ancestor_relic_7;Dynastic relic;Relique dynastique;;;;;;;;;;;;x
+ancestor_relic_8;Dynastic relic;Relique dynastique;;;;;;;;;;;;x
+ancestor_relic_9;Dynastic relic;Relique dynastique;;;;;;;;;;;;x
+ancestor_relic_0_desc;This relic is a body part from an illustrious character from a pious christian dynasty. \nIt was offered by the Pope himself as a testimony of the canonisation of that famous ancestor. \n It belongs to this dynasty to be actually of any valor.;;;;;;;;;;;;;x
+ancestor_relic_1_desc;This relic is a body part from an illustrious character from a pious christian dynasty. \nIt was offered by the Pope himself as a testimony of the canonisation of that famous ancestor. \n It belongs to this dynasty to be actually of any valor.;;;;;;;;;;;;;x
+ancestor_relic_2_desc;This relic is a body part from an illustrious character from a pious christian dynasty. \nIt was offered by the Pope himself as a testimony of the canonisation of that famous ancestor. \n It belongs to this dynasty to be actually of any valor.;;;;;;;;;;;;;x
+ancestor_relic_3_desc;This relic is a body part from an illustrious character from a pious christian dynasty. \nIt was offered by the Pope himself as a testimony of the canonisation of that famous ancestor. \n It belongs to this dynasty to be actually of any valor.;;;;;;;;;;;;;x
+ancestor_relic_4_desc;This relic is a body part from an illustrious character from a pious christian dynasty. \nIt was offered by the Pope himself as a testimony of the canonisation of that famous ancestor. \n It belongs to this dynasty to be actually of any valor.;;;;;;;;;;;;;x
+ancestor_relic_5_desc;This relic is a body part from an illustrious character from a pious christian dynasty. \nIt was offered by the Pope himself as a testimony of the canonisation of that famous ancestor. \n It belongs to this dynasty to be actually of any valor.;;;;;;;;;;;;;x
+ancestor_relic_6_desc;This relic is a body part from an illustrious character from a pious christian dynasty. \nIt was offered by the Pope himself as a testimony of the canonisation of that famous ancestor. \n It belongs to this dynasty to be actually of any valor.;;;;;;;;;;;;;x
+ancestor_relic_7_desc;This relic is a body part from an illustrious character from a pious christian dynasty. \nIt was offered by the Pope himself as a testimony of the canonisation of that famous ancestor. \n It belongs to this dynasty to be actually of any valor.;;;;;;;;;;;;;x
+ancestor_relic_8_desc;This relic is a body part from an illustrious character from a pious christian dynasty. \nIt was offered by the Pope himself as a testimony of the canonisation of that famous ancestor. \n It belongs to this dynasty to be actually of any valor.;;;;;;;;;;;;;x
+ancestor_relic_9_desc;This relic is a body part from an illustrious character from a pious christian dynasty. \nIt was offered by the Pope himself as a testimony of the canonisation of that famous ancestor. \n It belongs to this dynasty to be actually of any valor.;;;;;;;;;;;;;x
