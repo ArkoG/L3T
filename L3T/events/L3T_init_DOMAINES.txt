@@ -1125,16 +1125,16 @@ character_event = {
 								has_building = MONASTERE
 								has_building = COMMANDERIE
 							}
-						}
-						add_building = MONASTERE
-						add_building = COMMANDERIE
-						random = {
-							chance = 40
-							add_building = COMMANDERIE_L2
-						}
-						set_character_flag = canGetEasterEgg3
-						clr_title_flag = future_commanderie
+					}
+					add_building = MONASTERE
+					add_building = COMMANDERIE
+					random = {
+						chance = 40
+						add_building = COMMANDERIE_L2
+					}
+					clr_title_flag = future_commanderie
 				}
+				set_character_flag = canGetEasterEgg3
 			}
 	}
 }
