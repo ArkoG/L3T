@@ -305,7 +305,8 @@ character_event = {
 	
 	trigger = {
 		has_dynasty_flag = saint_dynasty_member
-		dynasty_head = yes
+		dynasty_head = { character = FROM }
+		#dynasty_head = yes #fonctionne pô
 	}
 
 	mean_time_to_happen = {
