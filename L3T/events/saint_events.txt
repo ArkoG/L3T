@@ -297,8 +297,9 @@ narrative_event = {
 
 #L3T 
 # A relic from the ancestor is received by the head of the dynasty
-character_event = {
+narrative_event = {
 	id = saint_events.5
+	title = EVTTITLEsaint_events.5
 	border = "GFX_event_normal_frame_religion"
 	desc = "EVTDESCAsaint_events.5"
 	picture = GFX_evt_pope
