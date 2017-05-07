@@ -1,0 +1,325 @@
+namespace = saint_events
+
+# Do you fit the criteria to be made a saint
+character_event = {
+	id = saint_events.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+				has_dlc = "Sons of Abraham"
+			}
+		}
+		NOR = { # Traits which would block being made a saint
+			trait = sayyid
+			trait = mirza
+			trait = mujahid
+			trait = excommunicated
+			trait = kinslayer
+			trait = homosexual
+			trait = possessed
+			trait = bad_priest_christian
+			trait = hedonist
+			any_claim = { title = k_papal_state } # Antipopes
+			any_claim = { title = d_fraticelli } # Antipopes
+		}
+		OR = { # Must be pious or good traits with less piety
+			piety = 5000
+			AND = {
+				OR = {
+					trait = celibate
+					trait = theologian
+					is_priest = yes
+					trait = pilgrim
+					trait = crusader
+					is_theocracy = yes
+				}
+				piety = 3000
+			}
+		}
+	}
+	
+	immediate = {
+		random = {
+			chance = 10
+			modifier = {
+				factor = 1.2
+				is_priest = yes
+			}
+			modifier = {
+				factor = 1.2
+				trait = celibate
+			}
+			modifier = {
+				factor = 1.2
+				trait = theologian
+			}
+			modifier = {
+				factor = 1.2
+				trait = crusader
+			}
+			modifier = {
+				factor = 1.5
+				is_theocracy = yes
+			}
+			modifier = {
+				factor = 0.8
+				trait = lunatic
+			}
+			modifier = {
+				factor = 0.6
+				OR = {
+					trait = sympathy_pagans
+					trait = sympathy_zoroastrianism
+					trait = sympathy_indian
+					trait = sympathy_islam
+				}
+			}
+			modifier = {
+				factor = 0.8
+				trait = sympathy_judaism # Closer to Christianity than other religions
+			}
+			modifier = {
+				factor = 0.95
+				trait = dwarf
+			}
+			modifier = {
+				factor = 0.7
+				trait = inbred
+			}
+			# Seven Sins
+			modifier = { 
+				factor = 0.80 
+				trait = lustful 
+			}
+            modifier = { 
+				factor = 0.85 
+				trait = gluttonous
+			}
+            modifier = { 
+				factor = 0.85 
+				trait = greedy 
+			}
+            modifier = { 
+				factor = 0.90 
+				trait = slothful 
+			}
+            modifier = { 
+				factor = 0.85
+				trait = envious
+			}
+            modifier = {
+				factor = 0.90 
+				trait = wroth 
+			}
+            modifier = { 
+				factor = 0.90 
+				trait = proud 
+			}
+			# Seven Virtues
+			modifier = { 
+				factor = 1.25
+				trait = chaste
+			}
+			modifier = { 
+				factor = 1.15
+				trait = temperate
+			}
+            modifier = {
+				factor = 1.25
+				trait = charitable
+			}
+            modifier = { 
+				factor = 1.10 
+				trait = diligent
+			}
+            modifier = {
+				factor = 1.15 
+				trait = kind 
+			}
+            modifier = { 
+				factor = 1.25
+				trait = patient
+			}
+            modifier = {
+				factor = 1.25
+				trait = humble
+			}
+			modifier = {
+				factor = 0.85
+				trait = cynical
+			}
+			modifier = {
+				factor = 1.4
+				trait = zealous
+			}
+			# Piety
+			modifier = {
+				factor = 1.05
+				piety = 5500 
+			}
+            modifier = {
+				factor = 1.10 
+				piety = 6500 
+			}
+            modifier = {
+				factor = 1.15 
+				piety = 7500 
+			}
+            modifier = { 
+				factor = 1.25
+				piety = 8500 
+			}
+            modifier = { 
+				factor = 1.35 
+				piety = 9500
+			}
+			rightful_religious_head_scope = { character_event = { id = saint_events.2 days = 100 random = 150 } }
+		}
+	}
+	
+	option = {
+		name = "Ok"
+	}
+}
+
+# Pope - Inform world of new saint
+character_event = {
+	id = saint_events.2
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	option = {
+		name = "Ok"
+		FROM = {
+			any_child = {
+				letter_event = { id = saint_events.3 } # Inform children of ceremony
+			}
+		}
+		narrative_event = { id = saint_events.4 days = 5 } # Announce to all of Christendom
+	}
+}
+
+# Inform heir of parent being made a Saint
+letter_event = {
+	id = saint_events.3
+	border = "GFX_event_letter_frame_religion"
+	
+	is_triggered_only = yes
+	
+	desc = { # Father
+		text = EVTDESCAsaint_events.3
+		trigger = {
+			FROMFROM = { is_female = no }
+		}
+	}
+	desc = { # Mother
+		text = EVTDESCBsaint_events.3
+		trigger = {
+			FROMFROM = { is_female = yes }
+		}
+	}
+	
+	option = {
+		name = EVTOPTAsaint_events.3
+		set_character_flag = new_saints_child
+	}
+}
+
+# Inform all of Christendom
+narrative_event = {
+	id = saint_events.4
+	title = EVTTITLEsaint_events.4
+	desc = EVTDESCsaint_events.4
+	picture = GFX_evt_pope
+	birder = "GFX_event_narrative_frame_religion"
+	
+	is_triggered_only = yes
+	major = yes
+	show_from_from = yes
+	
+	major_trigger = {
+		rightful_religious_head_scope = { character = FROM }
+	}
+	
+	immediate = {
+		FROMFROM = {
+			if = { # For french and spanish localisations
+				limit = { is_female = no }
+				set_special_character_title = SAINT
+			}
+			if = {
+				limit = { is_female = yes }
+				set_special_character_title = SAINT_female
+			}
+			add_trait = saint
+		}
+	}
+	
+	option = {
+		name = EVTOPTAsaint_events.4
+		trigger = {
+			has_character_flag = new_saints_child
+		}
+		tooltip = {
+			FROMFROM = {
+				add_trait = saint
+			}
+		}
+		prestige = 100
+		piety = 50
+		clr_character_flag = new_saints_child
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_NEW_SAINT
+				picture = GFX_evt_pope
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBsaint_events.4
+		trigger = {
+			NOT = { has_character_flag = new_saints_child }
+		}
+		tooltip = {
+			FROMFROM = {
+				add_trait = saint
+			}
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_NEW_SAINT
+				picture = GFX_evt_pope
+			}
+		}
+	}
+	option = {
+		name = EVTOPTCsaint_events.4
+		trigger = {
+			FROMFROM = { dynasty = ROOT }
+		}
+		tooltip = {
+			FROMFROM = {
+				add_trait = saint
+			}
+		}
+		prestige = 100
+		piety = 50
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_NEW_SAINT
+				picture = GFX_evt_pope
+			}
+		}
+	}
+}
