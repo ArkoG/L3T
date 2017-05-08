@@ -155,6 +155,20 @@ character_event = {
 	#option = {
 		#name = "Ok"
 		FROM = {
+			if = { # For french and spanish localisations
+				limit = { is_female = no }
+				set_special_character_title = SAINT_male #L3T changed tag for clarity sake
+			}
+			if = {
+				limit = { is_female = yes }
+				set_special_character_title = SAINT_female
+			}
+			add_trait = saint
+			set_dynasty_flag = saint_dynasty_member #L3T saint tracker on dynastic level
+			religion_authority = { #L3T 
+				modifier = new_saint
+				years = 20
+			}
 			any_child = {
 				letter_event = { id = saint_events.3 } # Inform children of ceremony
 			}
@@ -215,25 +229,6 @@ narrative_event = {
 		rightful_religious_head_scope = { character = FROM }
 	}
 	
-	immediate = {
-		FROMFROM = {
-			if = { # For french and spanish localisations
-				limit = { is_female = no }
-				set_special_character_title = SAINT_male #L3T changed tag for clarity sake
-			}
-			if = {
-				limit = { is_female = yes }
-				set_special_character_title = SAINT_female
-			}
-			add_trait = saint
-			set_dynasty_flag = saint_dynasty_member #L3T saint tracker on dynastic level
-		}
-		religion_authority = { #L3T 
-			modifier = new_saint
-			years = 20
-		}
-	}
-	
 	option = {
 		name = EVTOPTAsaint_events.4
 		trigger = {
@@ -259,6 +254,7 @@ narrative_event = {
 		name = EVTOPTBsaint_events.4
 		trigger = {
 			NOT = { has_character_flag = new_saints_child }
+			NOT = { dynasty = FROMFROM }
 		}
 		tooltip = {
 			FROMFROM = {
@@ -276,7 +272,8 @@ narrative_event = {
 	option = {
 		name = EVTOPTCsaint_events.4
 		trigger = {
-			FROMFROM = { dynasty = ROOT }
+			NOT = { has_character_flag = new_saints_child }
+			dynasty = FROMFROM
 		}
 		tooltip = {
 			FROMFROM = {
