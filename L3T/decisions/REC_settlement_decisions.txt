@@ -33,6 +33,7 @@ settlement_decisions = {
 		effect = {
 			FROM = {
 				wealth = -100
+				piety = 100
 				add_trait = batisseur_cathedrale
 				random_artifact = {					
 					limit = { has_artifact_flag = relique }
@@ -40,7 +41,12 @@ settlement_decisions = {
 				}
 				hidden_tooltip = { character_event = { id = REC.5 days = 10} }
 			}
-
+			
+			chronicle = {
+				entry = CHRONICLE_CATHEDRALE_BEGINS
+				picture = GFX_evt_cathedral
+			}
+			
 			location = {
 				custom_tooltip = { text = TOOLTIPCONSTRUIRECATHEDRALE }
 				hidden_tooltip = {
