@@ -132,7 +132,7 @@
 #164 - poisson bleu
 #165 - poisson grisé
 #166 - sainte grenade pourpre halo vert foncé
-  #167 - not used
+#167 - construction monument/cathedrale/holding
 #168 - Rouage rouge brisé
 #169 - Rouage halo rouge
 #170 - Rouage halo vert
@@ -277,7 +277,7 @@ a_deja_recu_vitrail = {icon = 155}  # hidden
 totoro = {icon = 200} #mouchard :p
 
 chantier_cathedrale = {
-	icon = 170
+	icon = 167
 	local_build_time_modifier = 1.00 #+100% because workers are occupied
 	local_build_cost_modifier = 1.00 #+100% because workers are occupied
 }
