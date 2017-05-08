@@ -14,10 +14,16 @@ decisions = {
 	
 		effect = {
 			wealth = -100
+			piety = 100
 			add_trait = batisseur_cathedrale
 			random_artifact = {					
 				limit = { has_artifact_flag = relique }
 				destroy_artifact = yes
+			}
+
+			chronicle = {
+				entry = CHRONICLE_CATHEDRALE_BEGINS
+				picture = GFX_evt_cathedral
 			}
 
 			capital_scope = {
