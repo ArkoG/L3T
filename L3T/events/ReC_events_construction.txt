@@ -60,6 +60,7 @@ character_event = {
 		trait = batisseur_cathedrale
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			has_siege = no
 			capital_holding = {
 				had_title_flag = { # The first rising will arrive more than 1 year after construction starting
 					flag = cathedral_construction
@@ -81,6 +82,7 @@ character_event = {
 					}
 				}
 			}
+			clr_province_flag = cathedral_siege_event
 			province_event = { id = REC.4 days = 30}
 		}
 		character_event = { id = REC.5 days = 10}

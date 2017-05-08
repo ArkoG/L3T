@@ -890,3 +890,99 @@ province_event = {
 		}
 	}
 }
+
+# Siege attacker to besieged Cathedral building province
+character_event = {
+	id = REC.1510
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		siege = { is_attacker = yes }
+		location = {
+			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_flag = cathedral_siege_event }
+		}
+	}
+	
+	immediate = {
+		location = { province_event = { id = REC.1511 days = 0 } }
+	}
+}
+
+# Besieged Cathedral building province
+province_event = {
+	id = REC.1511
+	desc = "DESCREC.1511"
+	picture = GFX_evt_siege
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_province_flag = cathedral_siege_event
+	}
+	
+	option = {
+		name = "REC.1511A"
+		ai_chance = {
+			factor = 50
+		}
+		add_province_modifier = {
+			name = chantier_stop
+			duration = -1
+		}
+		add_province_modifier = {
+			name = stone_siege_defence
+			duration = 365
+		}
+	}
+	
+	option = {
+		name = "REC.1511B"
+		trigger = {
+			capital_holding = {
+				NOT = { has_holding_modifier = temp_wall }
+			}
+		}
+		ai_chance = {
+			factor = 30
+		}
+		add_province_modifier = {
+			name = chantier_stop
+			duration = -1
+		}
+		capital_holding = {
+			add_holding_modifier = {
+				name = temp_wall_improvement
+				duration = 365
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.1511C"
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 3
+				owner = { trait = cynical }
+			}
+		}
+		capital_holding = {
+			add_holding_modifier = {
+				name = chantier_stop
+				duration = -1
+			}
+		}
+		if = {
+			limit = { NOT = { owner = { trait = cynical } } }
+			random = { 
+				chance = 40
+				owner = { add_trait = cynical }
+			}
+		}
+	}
+}

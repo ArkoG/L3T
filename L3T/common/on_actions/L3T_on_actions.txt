@@ -53,6 +53,13 @@ on_yearly_pulse = {
 	}
 }
 
+# character
+on_siege_pulse = {
+	events = {
+		REC.1510
+	}
+}
+
 # ROOT = Builder, FROM = The Holding Title
 on_holding_building_start = {
 	events = {
