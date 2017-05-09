@@ -79,4 +79,55 @@ settlement_decisions = {
 			factor = 0
 		}
 	}
+	
+	ask_construction_progession_settlement = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = capital
+		
+		from_potential = {
+			ai = no
+			trait = batisseur_cathedrale
+			OR = {
+				any_courtier = { has_minor_title = title_batisseur }
+				any_vassal = { has_minor_title = title_batisseur }
+			}
+		}
+		
+		potential = {
+			holder_scope = { character = FROM }
+			has_title_flag = cathedral_construction
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			FROM = {
+				if = {
+					limit = { any_courtier = { has_minor_title = title_batisseur } }
+					random_courtier = {
+						limit = { has_minor_title = title_batisseur }
+						character_event = { id = REC.9 days = 0 }
+					}
+				}
+				if = {
+					limit = { NOT = { any_courtier = { has_minor_title = title_batisseur } } }
+					random_vassal = {
+						limit = { has_minor_title = title_batisseur }
+						character_event = { id = REC.9 days = 0 }
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

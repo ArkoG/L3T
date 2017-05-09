@@ -621,7 +621,7 @@ province_event = {
 	immediate = { FROMFROM = { letter_event = { id = REC.8 days = 0 } } }
 }
 
-# Get construction progression [character]
+# Get construction progression [ruler]
 letter_event = {
 	id = REC.8
 	desc = "DESCREC.8"
@@ -886,4 +886,29 @@ letter_event = {
 	option = {
 		name = "REC.8A"
 	}
+}
+
+# Get construction progression [master builder]
+character_event = {
+    id = REC.9
+	hide_window = yes
+	
+	is_triggered_only = yes
+	immediate = {
+		FROMFROM = {
+			random_demesne_province = {
+				limit = { has_province_modifier = chantier_cathedrale }
+				province_event = { id = REC.10  days = 1 }
+			}
+		}
+	}
+}
+
+# Get construction progression [province 2]
+province_event = {
+    id = REC.10
+	hide_window = yes
+	
+	is_triggered_only = yes
+	immediate = { FROMFROMFROM = { letter_event = { id = REC.8 days = 0 } } }
 }
