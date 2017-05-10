@@ -62,6 +62,7 @@ character_event = {
 			has_province_modifier = chantier_cathedrale
 			has_siege = no
 			capital_holding = {
+				is_occupied = no
 				had_title_flag = { # The first rising will arrive more than 1 year after construction starting
 					flag = cathedral_construction
 					years = 1
