@@ -982,11 +982,13 @@ province_event = {
 				owner = { trait = cynical }
 			}
 		}
-		capital_holding = {
-			add_holding_modifier = {
-				name = chantier_stop
-				duration = -1
-			}
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
+		}
+		add_province_modifier = {
+			name = chantier_stop
+			duration = -1
 		}
 		if = {
 			limit = { NOT = { owner = { trait = cynical } } }
@@ -994,6 +996,78 @@ province_event = {
 				chance = 40
 				owner = { add_trait = cynical }
 			}
+		}
+	}
+}
+
+# War slows cathedral construction : supplying
+character_event = {
+	id = REC.1520
+	desc = "DESCREC.1520"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+
+	trigger = {
+		religion = catholic
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			has_siege = no
+			NOT = { has_province_modifier = chantier_stop }
+			capital_holding = { is_occupied = no }
+		}
+		OR = {
+			war = yes
+			any_liege = { war = yes }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 2
+			has_character_flag = war_slow_cathedral
+		}
+	}
+	
+	option = {
+		name = "REC.1520.A"
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+				has_siege = no
+			}
+			# Slow
+			if = { # Slow - > Stop
+				limit = { has_province_modifier = chantier_down }
+				add_province_modifier = {
+					name = chantier_stop
+					duration = -1
+				}
+			}
+			if = { # Normal -> Slow
+				limit = { NOT = { has_province_modifier = chantier_down } }
+				add_province_modifier = {
+					name = chantier_down
+					duration = -1
+				}
+			}
+			if = { # Clean Slow if we have put Stop
+				limit = { has_province_modifier = chantier_stop }
+				remove_province_modifier = chantier_down
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.1520.B"
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
+		}
+		add_province_modifier = {
+			name = chantier_stop
+			duration = -1
 		}
 	}
 }
