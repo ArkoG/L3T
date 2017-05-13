@@ -84,7 +84,7 @@ narrative_event = {
 					has_title_flag = castle_to_specialize
 				}
 			}
-			modifier = { factor = 2	holy_order = yes }
+			#modifier = { factor = 2	holy_order = yes }
 		}
 		trigger = {
 			any_demesne_title = {
@@ -104,6 +104,7 @@ narrative_event = {
 	
 	option = {
 		name = "L3T.3B"	#ECO
+		trigger = { holy_order = no }
 		ai_chance = { 
 			factor = 50
 			modifier = {
@@ -149,6 +150,7 @@ narrative_event = {
 				higher_tier_than = COUNT # Duke, King or Emperor
 				num_of_count_titles = 2
 			}
+			holy_order = no
 		}
 		ai_chance = {
 			factor = 50		
@@ -783,36 +785,36 @@ narrative_event = {
 		}
 	}
 
-	option = {
-		name = "L3T.6C"	
-		ai_chance = {
-			factor = 20
-			#modifier = { factor = 20	holy_order = yes }
-			modifier = { factor = 0.5 	any_demesne_title = { location = { NOT = { religion = catholic }}}}
-			modifier = { factor = 2.5	martial = 20 }
-			modifier = { factor = 1.5	martial = 15 }
-			modifier = { factor = 0.5	NOT = { martial = 10 } }
-		}
-		trigger = {
-			any_demesne_title = {
-				location = { religion_group = christian }
-				has_title_flag = temple_to_specialize
-			}
-		}
-		random_demesne_title = {
-			limit = {
-				location = { religion_group = christian }
-				has_title_flag = temple_to_specialize
-			}
-			add_building = MONASTERE
-			add_holding_modifier = { name = commanderie duration = -1 }
-			add_building = COMMANDERIE
-			random = {
-				chance = 20
-				add_building = COMMANDERIE_L2
-			}			
-		}
-	}
+#	option = {
+#		name = "L3T.6C"	
+#		ai_chance = {
+#			factor = 20
+#			#modifier = { factor = 20	holy_order = yes }
+#			modifier = { factor = 0.5 	any_demesne_title = { location = { NOT = { religion = catholic }}}}
+#			modifier = { factor = 2.5	martial = 20 }
+#			modifier = { factor = 1.5	martial = 15 }
+#			modifier = { factor = 0.5	NOT = { martial = 10 } }
+#		}
+#		trigger = {
+#			any_demesne_title = {
+#				location = { religion_group = christian }
+#				has_title_flag = temple_to_specialize
+#			}
+#		}
+#		random_demesne_title = {
+#			limit = {
+#				location = { religion_group = christian }
+#				has_title_flag = temple_to_specialize
+#			}
+#			add_building = MONASTERE
+#			add_holding_modifier = { name = commanderie duration = -1 }
+#			add_building = COMMANDERIE
+#			random = {
+#				chance = 20
+#				add_building = COMMANDERIE_L2
+#			}			
+#		}
+#	}
 
 }
 
@@ -1064,77 +1066,77 @@ character_event = {
 }
 
 #event SoA
-character_event = {
-	id = L3T.13
-	desc = DESCL3T.13
-	picture = GFX_evt_castle_construction
-	border = GFX_event_normal_frame_religion
-	#hide_window = yes
-	
-	is_triggered_only = yes 
-#not called	#triggered from LCDA's soa_holy_order_event
-	#SoA.1024 # The Knights Templar loan
-	#SoA.1054 # The Knights Templar humble request
-	#SoA.1154 #The Knights of St Jean / the Hospitallers humble request
-	#SoA.1354 # The Teutonic Order humble request
-	#SoA.1654 # The Brotherhood of the Holy Sepulchre  humble request
-	#SoA.2654 # The Order of Santiago
-	#SoA.2754 # The Order of Calatrava
-	
-	trigger = {
-		any_demesne_title = {
-				holding_type = temple
-				tier = baron
-				NOT = { num_of_buildings = 1 }
-					NOT = {
-						has_building = MONASTERE
-						has_building = COMMANDERIE
-						has_building = CITEEPISCOPALE
-					}
-				NOT = { has_title_flag = future_commanderie }
-		}
-	}
-
-	immediate = { 
-		random_demesne_title = {
-			limit = {
-				NOT = { has_title_flag = future_commanderie }
-				holding_type = temple
-				tier = baron
-				NOT = {
-					has_building = MONASTERE
-					has_building = COMMANDERIE
-					has_building = CITEEPISCOPALE
-				}				
-			}
-			set_title_flag = future_commanderie
-			add_holding_modifier = { name = commanderie duration = -1 }
-		}
-	}
-		
-	option = {
-		name = L3T.13A
-		custom_tooltip = { text = construction_commanderie } # ++++le modifier de holding qui va bien
-			hidden_tooltip = {
-				random_demesne_title = {
-					limit = {
-						holding_type = temple
-						tier = baron
-						has_title_flag = future_commanderie
-							NOT = {
-								has_building = MONASTERE
-								has_building = COMMANDERIE
-							}
-					}
-					add_building = MONASTERE
-					add_building = COMMANDERIE
-					random = {
-						chance = 40
-						add_building = COMMANDERIE_L2
-					}
-					clr_title_flag = future_commanderie
-				}
-				set_character_flag = canGetEasterEgg3
-			}
-	}
-}
+#character_event = {
+#	id = L3T.13
+#	desc = DESCL3T.13
+#	picture = GFX_evt_castle_construction
+#	border = GFX_event_normal_frame_religion
+#	#hide_window = yes
+#	
+#	is_triggered_only = yes 
+##not called	#triggered from LCDA's soa_holy_order_event
+#	#SoA.1024 # The Knights Templar loan
+#	#SoA.1054 # The Knights Templar humble request
+#	#SoA.1154 #The Knights of St Jean / the Hospitallers humble request
+#	#SoA.1354 # The Teutonic Order humble request
+#	#SoA.1654 # The Brotherhood of the Holy Sepulchre  humble request
+#	#SoA.2654 # The Order of Santiago
+#	#SoA.2754 # The Order of Calatrava
+#	
+#	trigger = {
+#		any_demesne_title = {
+#				holding_type = temple
+#				tier = baron
+#				NOT = { num_of_buildings = 1 }
+#					NOT = {
+#						has_building = MONASTERE
+#						has_building = COMMANDERIE
+#						has_building = CITEEPISCOPALE
+#					}
+#				NOT = { has_title_flag = future_commanderie }
+#		}
+#	}
+#
+#	immediate = { 
+#		random_demesne_title = {
+#			limit = {
+#				NOT = { has_title_flag = future_commanderie }
+#				holding_type = temple
+#				tier = baron
+#				NOT = {
+#					has_building = MONASTERE
+#					has_building = COMMANDERIE
+#					has_building = CITEEPISCOPALE
+#				}				
+#			}
+#			set_title_flag = future_commanderie
+#			add_holding_modifier = { name = commanderie duration = -1 }
+#		}
+#	}
+#		
+#	option = {
+#		name = L3T.13A
+#		custom_tooltip = { text = construction_commanderie } # ++++le modifier de holding qui va bien
+#			hidden_tooltip = {
+#				random_demesne_title = {
+#					limit = {
+#						holding_type = temple
+#						tier = baron
+#						has_title_flag = future_commanderie
+#							NOT = {
+#								has_building = MONASTERE
+#								has_building = COMMANDERIE
+#							}
+#					}
+#					add_building = MONASTERE
+#					add_building = COMMANDERIE
+#					random = {
+#						chance = 40
+#						add_building = COMMANDERIE_L2
+#					}
+#					clr_title_flag = future_commanderie
+#				}
+#				set_character_flag = canGetEasterEgg3
+#			}
+#	}
+#}
