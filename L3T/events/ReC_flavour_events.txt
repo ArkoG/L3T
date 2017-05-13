@@ -1029,7 +1029,21 @@ character_event = {
 		months = 60
 		modifier = {
 			factor = 2
-			has_character_flag = war_slow_cathedral
+			any_demesne_province = { has_province_flag = war_slow_cathedral }
+		}
+	}
+	
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+				NOT = { has_province_modifier = chantier_stop }
+				capital_holding = { 
+					is_occupied = no
+					has_siege = no
+				}
+			}
+			set_province_flag = war_slow_cathedral
 		}
 	}
 	
@@ -1113,11 +1127,25 @@ character_event = {
 		}
 	}
 	
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+				NOT = { has_province_modifier = chantier_stop }
+				capital_holding = { 
+					is_occupied = no
+					has_siege = no
+				}
+			}
+			set_province_flag = war_slow_cathedral
+		}
+	}
+	
 	mean_time_to_happen = {
 		months = 60
 		modifier = {
 			factor = 2
-			has_character_flag = war_slow_cathedral
+			any_demesne_province = { has_province_flag = war_slow_cathedral }
 		}
 	}
 	
@@ -1172,6 +1200,87 @@ character_event = {
 			add_province_modifier = {
 				name = chantier_stop
 				duration = -1
+			}
+		}
+	}
+}
+
+# End of war [On_action]
+# From = Attacker, Root = Defender
+character_event = {
+	id = REC.1522
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { trait = batisseur_cathedrale }
+			character_event = { id = REC.1523 days = 30}
+		}
+		From = {
+			if = {
+				limit = { trait = batisseur_cathedrale }
+				character_event = { id = REC.1523 days = 30}
+			}
+		}
+	}
+}
+
+# End of war [Builder]
+character_event = {
+	id = REC.1523
+	desc = "DESCREC.1523"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = catholic
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			has_province_flag = war_slow_cathedral
+			OR = {
+				has_province_modifier = chantier_down
+				has_province_modifier = chantier_stop
+			}
+			capital_holding = { 
+				is_occupied = no
+				has_siege = no
+			}
+		}
+		war = no
+		OR = {
+			top_liege = { character = ROOT }
+			any_liege = { war = no }
+		}
+	}
+	
+	option = {
+		name = "REC.1523A"
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+				has_province_flag = war_slow_cathedral
+				capital_holding = { 
+					is_occupied = no
+					has_siege = no
+				}
+			}
+			clr_province_flag = war_slow_cathedral
+			# Speed up
+			if = { # Slow - > Normal
+				limit = { has_province_modifier = chantier_down }
+				remove_province_modifier = chantier_down
+			}
+			if = { # Stop -> Slow
+				limit = { has_province_modifier = chantier_stop }
+				remove_province_modifier = chantier_stop
+				add_province_modifier = {
+					name = chantier_down
+					duration = -1
+				}
 			}
 		}
 	}

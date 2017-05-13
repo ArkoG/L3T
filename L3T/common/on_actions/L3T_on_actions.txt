@@ -60,6 +60,34 @@ on_siege_pulse = {
 	}
 }
 
+# From = Attacker, Root = Defender
+on_war_ended_victory = {
+	events = {
+		REC.1522
+	}
+}
+
+# From = Attacker, Root = Defender
+on_war_ended_whitepeace = {
+	events = {
+		REC.1522
+	}
+}
+
+# From = Attacker, Root = Defender
+on_war_ended_defeat = {
+	events = {
+		REC.1522
+	}
+}
+
+# From = Attacker, Root = Defender
+on_war_ended_invalid = {
+	events = {
+		REC.1522
+	}
+}
+
 # ROOT = Builder, FROM = The Holding Title
 on_holding_building_start = {
 	events = {
