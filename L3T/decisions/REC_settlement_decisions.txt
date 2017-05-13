@@ -39,12 +39,11 @@ settlement_decisions = {
 					limit = { has_artifact_flag = relique }
 					destroy_artifact = yes
 				}
+				chronicle = {
+					entry = CHRONICLE_CATHEDRALE_BEGINS
+					picture = GFX_evt_cathedral
+				}
 				hidden_tooltip = { character_event = { id = REC.5 days = 10} }
-			}
-			
-			chronicle = {
-				entry = CHRONICLE_CATHEDRALE_BEGINS
-				picture = GFX_evt_cathedral
 			}
 			
 			location = {
