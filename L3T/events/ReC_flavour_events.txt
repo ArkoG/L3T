@@ -737,6 +737,7 @@ character_event = {
 			has_province_modifier = chantier_cathedrale
 			NOT = { has_province_flag = wall_construction }
 			capital_holding = {
+				has_siege = no
 				NOT = { has_holding_modifier = temp_wall }
 			}
 		}
@@ -1012,9 +1013,11 @@ character_event = {
 		religion = catholic
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			has_siege = no
 			NOT = { has_province_modifier = chantier_stop }
-			capital_holding = { is_occupied = no }
+			capital_holding = { 
+				is_occupied = no
+				has_siege = no
+			}
 		}
 		OR = {
 			war = yes
@@ -1023,7 +1026,8 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 60
+		#months = 60
+		days = 10
 		modifier = {
 			factor = 2
 			has_character_flag = war_slow_cathedral
@@ -1031,11 +1035,15 @@ character_event = {
 	}
 	
 	option = {
-		name = "REC.1520.A"
+		name = "REC.1520A"
 		random_demesne_province = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
-				has_siege = no
+				NOT = { has_province_modifier = chantier_stop }
+				capital_holding = { 
+					is_occupied = no
+					has_siege = no
+				}
 			}
 			# Slow
 			if = { # Slow - > Stop
@@ -1060,14 +1068,24 @@ character_event = {
 	}
 	
 	option = {
-		name = "REC.1520.B"
-		if = {
-			limit = { has_province_modifier = chantier_down }
-			remove_province_modifier = chantier_down
-		}
-		add_province_modifier = {
-			name = chantier_stop
-			duration = -1
+		name = "REC.1520B"
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+				NOT = { has_province_modifier = chantier_stop }
+				capital_holding = { 
+					is_occupied = no
+					has_siege = no
+				}
+			}
+			if = {
+				limit = { has_province_modifier = chantier_down }
+				remove_province_modifier = chantier_down
+			}
+			add_province_modifier = {
+				name = chantier_stop
+				duration = -1
+			}
 		}
 	}
 }
