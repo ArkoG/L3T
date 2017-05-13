@@ -151,6 +151,13 @@ defined_text = {
 		trigger = {	
 			has_province_modifier = chantier_stop
 		}
+		weight_multiplier = {
+			factor = 1
+				modifier = {
+					factor = 100
+					has_province_modifier = chantier_stop
+				}
+		}
 	}
 }
 	
