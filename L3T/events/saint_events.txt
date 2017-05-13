@@ -47,8 +47,8 @@ character_event = {
 	
 	immediate = {
 		random = {
-			#chance = 10 #TOTORO
-			chance = 10000 #TOTORO
+			chance = 10
+			#chance = 10000 #Test
 			modifier = {
 				factor = 1.1
 				is_priest = yes
@@ -131,9 +131,9 @@ character_event = {
 			rightful_religious_head_scope = { 
 				character_event = { 
 					id = saint_events.2 
-					#days = 250
-					#random = 100
-					days = 5
+					days = 250
+					random = 100
+					#days = 5 #test
 				} 
 			}
 		}
@@ -200,7 +200,6 @@ letter_event = {
 	option = {
 		name = EVTOPTAsaint_events.3
 		set_character_flag = new_saints_child
-	
 	}
 }
 
@@ -208,7 +207,7 @@ letter_event = {
 narrative_event = {
 	id = saint_events.4
 	#title = EVTTITLEsaint_events.4
-	desc = EVTDESCsaint_events.4
+	#desc = EVTDESCsaint_events.4
 	picture = GFX_evt_pope
 	border = "GFX_event_narrative_frame_religion" #L3T fixed birder>>border
 
@@ -219,6 +218,15 @@ narrative_event = {
 	title = { #L3T 
 		trigger = { ROOT = { is_female = yes } }
 		text = "TITLE_fem_saint_events.4"
+	}
+
+	desc = { #L3T 
+		trigger = { ROOT = { is_female = no } }
+		text = "EVTDESCsaint_events.4H"
+	}
+	desc = { #L3T 
+		trigger = { ROOT = { is_female = yes } }
+		text = "EVTDESCsaint_events.4F"
 	}
 	
 	is_triggered_only = yes
@@ -303,13 +311,13 @@ narrative_event = {
 	
 	trigger = {
 		has_dynasty_flag = saint_dynasty_member
-		dynasty_head = { character = FROM }
+		dynasty_head = { character = ROOT }
 		#dynasty_head = yes #fonctionne pô
 	}
 
 	mean_time_to_happen = {
-		days = 15 #TOTORO
-		#years = 60
+		#days = 15 #test
+		years = 60
 			modifier = { factor = 1.10 had_dynasty_flag = { flag = saint_dynasty_member days =  9125 }} #25 years
 			modifier = { factor = 0.95 had_dynasty_flag = { flag = saint_dynasty_member days = 10950 }} #30 years
 			modifier = { factor = 0.95 had_dynasty_flag = { flag = saint_dynasty_member days = 18250 }} #50 years	
