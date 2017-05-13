@@ -1026,8 +1026,95 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		#months = 60
-		days = 10
+		months = 60
+		modifier = {
+			factor = 2
+			has_character_flag = war_slow_cathedral
+		}
+	}
+	
+	option = {
+		name = "REC.1520A"
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+				NOT = { has_province_modifier = chantier_stop }
+				capital_holding = { 
+					is_occupied = no
+					has_siege = no
+				}
+			}
+			# Slow
+			if = { # Slow - > Stop
+				limit = { has_province_modifier = chantier_down }
+				add_province_modifier = {
+					name = chantier_stop
+					duration = -1
+				}
+			}
+			if = { # Normal -> Slow
+				limit = { NOT = { has_province_modifier = chantier_down } }
+				add_province_modifier = {
+					name = chantier_down
+					duration = -1
+				}
+			}
+			if = { # Clean Slow if we have put Stop
+				limit = { has_province_modifier = chantier_stop }
+				remove_province_modifier = chantier_down
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.1520B"
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+				NOT = { has_province_modifier = chantier_stop }
+				capital_holding = { 
+					is_occupied = no
+					has_siege = no
+				}
+			}
+			if = {
+				limit = { has_province_modifier = chantier_down }
+				remove_province_modifier = chantier_down
+			}
+			add_province_modifier = {
+				name = chantier_stop
+				duration = -1
+			}
+		}
+	}
+}
+
+# War slows cathedral construction : labour
+character_event = {
+	id = REC.1521
+	desc = "DESCREC.1521"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+
+	trigger = {
+		religion = catholic
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
+			capital_holding = { 
+				is_occupied = no
+				has_siege = no
+			}
+		}
+		OR = {
+			war = yes
+			any_liege = { war = yes }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
 		modifier = {
 			factor = 2
 			has_character_flag = war_slow_cathedral
