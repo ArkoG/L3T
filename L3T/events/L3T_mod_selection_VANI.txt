@@ -602,7 +602,7 @@ province_event = {
 
 	title = { 
 		trigger = { has_global_flag = running_LCDA }
-		text = "LCDA_col"
+		text = "NAMEL3T.29_LCDA"
 	}
 	
 	title = { 
@@ -703,83 +703,83 @@ province_event = {
 			25 = { set_province_flag = text_reponse_generique_C }
 			25 = { set_province_flag = text_reponse_generique_D }
 		}
-		if = { 
-			limit = { 
-				owner = { NOT = { has_dynasty_flag = deja_chronique_col }}
-				has_global_flag = running_LCDA
-				has_province_modifier = great_pass
-				}
-			owner = {
-				chronicle = {
-					entry = CHRONICLE_COL
-					picture = GFX_evt_LCDA_montagne1
-				}
-			}
-		}
-		if = { 
-			limit = { 
-				owner = { NOT = { has_dynasty_flag = deja_chronique_col }}
-				has_global_flag = running_LCDA
-				has_province_modifier = minor_pass
-				}
-			owner = {
-				chronicle = {
-					entry = CHRONICLE_COL
-					picture = GFX_evt_LCDA_montagne2
-				}
-			}
-		}
+#		if = { 
+#			limit = { 
+#				owner = { NOT = { has_dynasty_flag = deja_chronique_col }}
+#				has_global_flag = running_LCDA
+#				has_province_modifier = great_pass
+#				}
+#			owner = {
+#				chronicle = {
+#					entry = CHRONICLE_COL
+#					picture = GFX_evt_LCDA_montagne1
+#				}
+#			}
+#		}
+#		if = { 
+#			limit = { 
+#				owner = { NOT = { has_dynasty_flag = deja_chronique_col }}
+#				has_global_flag = running_LCDA
+#				has_province_modifier = minor_pass
+#				}
+#			owner = {
+#				chronicle = {
+#					entry = CHRONICLE_COL
+#					picture = GFX_evt_LCDA_montagne2
+#				}
+#			}
+#		}
 	}
 	option = {
 		name = "text_reponse_generique_A"	
 		trigger = { has_province_flag = text_reponse_generique_A }
 		clr_province_flag = text_reponse_generique_A
-		owner = { set_dynasty_flag = deja_chronique_col }
-		if = { 
-			limit = { 
-				owner = { 
-					NOT = { has_dynasty_flag = deja_chronique_col }}
-			}
-			custom_tooltip = { text = inscription_chroniques }
-		}
+#		owner = { set_dynasty_flag = deja_chronique_col }
+#		if = { 
+#			limit = { 
+#				owner = { 
+#					NOT = { has_dynasty_flag = deja_chronique_col }}
+#			}
+#			custom_tooltip = { text = inscription_chroniques }
+#		}
 	}
 	option = {
 		name = "text_reponse_generique_B"	
 		trigger = { has_province_flag = text_reponse_generique_B }
 		clr_province_flag = text_reponse_generique_B
-		owner = { set_dynasty_flag = deja_chronique_col }
-		if = { 
-			limit = { 
-				owner = { 
-					NOT = { has_dynasty_flag = deja_chronique_col }}
-			}
-			custom_tooltip = { text = inscription_chroniques }
-		}
+#		owner = { set_dynasty_flag = deja_chronique_col }
+#		if = { 
+#			limit = { 
+#				owner = { 
+#					NOT = { has_dynasty_flag = deja_chronique_col }}
+#			}
+#			custom_tooltip = { text = inscription_chroniques }
+#		}
 	}
 	option = {
 		name = "text_reponse_generique_C"	
 		trigger = { has_province_flag = text_reponse_generique_C }
 		clr_province_flag = text_reponse_generique_C
-		owner = { set_dynasty_flag = deja_chronique_col }
-		if = { 
-			limit = { 
-				owner = { 
-					NOT = { has_dynasty_flag = deja_chronique_col }}
-			}
-			custom_tooltip = { text = inscription_chroniques }
-		}
+#		owner = { set_dynasty_flag = deja_chronique_col }
+#		if = { 
+#			limit = { 
+#				owner = { 
+#					NOT = { has_dynasty_flag = deja_chronique_col }}
+#			}
+#			custom_tooltip = { text = inscription_chroniques }
+#		}
 	}
 	option = {
 		name = "text_reponse_generique_D"	
 		trigger = { has_province_flag = text_reponse_generique_D }
 		clr_province_flag = text_reponse_generique_D
-		owner = { set_dynasty_flag = deja_chronique_col }
-		if = { 
-			limit = { 
-				owner = { 
-					NOT = { has_dynasty_flag = deja_chronique_col }}
-			}
-			custom_tooltip = { text = inscription_chroniques }
-		}
+#		owner = { set_dynasty_flag = deja_chronique_col }
+#		if = { 
+#			limit = { 
+#				owner = { 
+#					NOT = { has_dynasty_flag = deja_chronique_col }}
+#			}
+#			custom_tooltip = { text = inscription_chroniques }
+#		}
 	}
 }
