@@ -1,0 +1,68 @@
+#LCDA // CUSTOM LOCALISATION KEYS
+
+###PASS NAMES###
+defined_text = {
+	name = GetPassName
+
+	text = {
+		localisation_key = col_prov_1 #Nyon
+		trigger = { province_id = 1 }
+	}
+	text = {
+		localisation_key = col_prov_2 #Gex
+		trigger = { province_id = 2 }
+	}
+	text = {
+		localisation_key = col_prov_9 #trient
+		trigger = { province_id = 9 }
+	}
+	text = {
+		localisation_key = col_prov_8 #giffre
+		trigger = { province_id = 8 }
+	}
+	text = {
+		localisation_key = col_prov_10 #montjoie
+		trigger = { province_id = 10 }
+	}
+	text = {
+		localisation_key = col_prov_13 #albens
+		trigger = { province_id = 13 }
+	}
+	text = {
+		localisation_key = col_prov_18 #beaufort
+		trigger = { province_id = 18 }
+	}
+}
+###PASS DESC###
+defined_text = {
+	name = GetPassDesc
+	
+	text = {
+		localisation_key = col_minor_descA
+	}
+	text = {
+		localisation_key = col_major_descA
+	}
+
+	text = {
+		localisation_key = col_minor_descB
+	}
+	text = {
+		localisation_key = col_major_descB
+	}
+
+
+	text = {
+		localisation_key = col_minor_descC
+	}
+	text = {
+		localisation_key = col_major_descC
+	}
+
+	text = {
+		localisation_key = col_minor_descD
+	}
+	text = {
+		localisation_key = col_major_descD
+	}
+}
