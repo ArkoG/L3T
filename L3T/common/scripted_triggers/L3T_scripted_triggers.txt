@@ -27,7 +27,10 @@ is_active_fonderie = {
 			has_province_modifier = minerai2_fer
 			NOT = { has_province_modifier = mine_stop }
 		}
-		is_active_fonderie_by_neighbor = yes			
+		custom_tooltip = {
+			text = TOOLTIP_is_active_fonderie_by_neighbor
+			is_active_fonderie_by_neighbor = yes
+		}
 	}
 }
 
@@ -52,8 +55,14 @@ is_active_outil_ou_armes = {
 	OR = {
 		AND = {
 			has_province_modifier = minerai3_metal
-			is_active_fonderie = yes
+			custom_tooltip = {
+				text = TOOLTIP_is_active_fonderie
+				is_active_fonderie = yes
+			}
 		}
-		is_active_outil_ou_armes_neighbor = yes			
+		custom_tooltip = {
+			text = TOOLTIP_is_active_outil_ou_armes_neighbor
+			is_active_outil_ou_armes_neighbor = yes
+		}
 	}
 }
