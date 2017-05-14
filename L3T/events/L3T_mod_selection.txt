@@ -230,7 +230,8 @@ province_event = {
 #notification pass    
 province_event = {
     id = L3T.29
-
+	picture = GFX_evt_LCDA_montagne1
+	
 	title = { 
 		trigger = { has_global_flag = running_LCDA }
 		text = "NAMEL3T.29_LCDA"
