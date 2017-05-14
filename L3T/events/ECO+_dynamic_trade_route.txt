@@ -733,6 +733,7 @@ province_event = {
 	
 	option = {
 		name = "L3TRADE.5A"
+		custom_tooltip = { text = recoit_une_route_commerciale }
 		hidden_tooltip = {
 			remove_province_modifier = future_route
 			if = {
