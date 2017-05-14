@@ -28,6 +28,13 @@ character_event = {
 			factor = 2
 			has_character_flag = don_recu
 		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
+		}
 	}
 	
 	option = {
@@ -67,6 +74,13 @@ character_event = {
 			factor = 2
 			has_character_flag = don_recu
 		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
+		}
 	}
 	
 	option = {
@@ -105,6 +119,13 @@ character_event = {
 		modifier = {
 			factor = 2
 			has_character_flag = don_recu
+		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
 		}
 	}
 	
@@ -146,6 +167,13 @@ character_event = {
 		modifier = {
 			factor = 5
 			has_character_flag = don_recu
+		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
 		}
 	}
 	
@@ -205,6 +233,13 @@ character_event = {
 			factor = 5
 			has_character_flag = don_recu
 		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
+		}
 	}
 	
 	option = {
@@ -223,6 +258,7 @@ character_event = {
 		}
 	}
 }
+
 #soutien de la noblesse v1 -en argent
 character_event = {
     id = REC.1306
@@ -247,6 +283,13 @@ character_event = {
 		modifier = {
 			factor = 5
 			has_character_flag = don_recu
+		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
 		}
 	}
 	
@@ -275,6 +318,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 			capital_holding = {
 				holding_type = castle
 				has_building = ca_cathedrale_10
