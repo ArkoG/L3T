@@ -28,6 +28,13 @@ character_event = {
 			factor = 2
 			has_character_flag = don_recu
 		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
+		}
 	}
 	
 	option = {
@@ -67,6 +74,13 @@ character_event = {
 			factor = 2
 			has_character_flag = don_recu
 		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
+		}
 	}
 	
 	option = {
@@ -105,6 +119,13 @@ character_event = {
 		modifier = {
 			factor = 2
 			has_character_flag = don_recu
+		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
 		}
 	}
 	
@@ -146,6 +167,13 @@ character_event = {
 		modifier = {
 			factor = 5
 			has_character_flag = don_recu
+		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
 		}
 	}
 	
@@ -205,6 +233,13 @@ character_event = {
 			factor = 5
 			has_character_flag = don_recu
 		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
+		}
 	}
 	
 	option = {
@@ -223,6 +258,7 @@ character_event = {
 		}
 	}
 }
+
 #soutien de la noblesse v1 -en argent
 character_event = {
     id = REC.1306
@@ -247,6 +283,13 @@ character_event = {
 		modifier = {
 			factor = 5
 			has_character_flag = don_recu
+		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_stop
+			}
 		}
 	}
 	
@@ -275,6 +318,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 			capital_holding = {
 				holding_type = castle
 				has_building = ca_cathedrale_10
@@ -322,6 +366,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		NOT = { stewardship = 16 }
@@ -383,6 +428,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		NOT = { stewardship = 16 }
@@ -436,11 +482,8 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-		}
-		NOT = {
-			any_demesne_province = {
-				has_province_modifier = chantier_down
-			}
+			NOT = { has_province_modifier = chantier_down }
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		NOT = { stewardship = 14 }
@@ -508,11 +551,8 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-		}
-		NOT = {
-			any_demesne_province = {
-				has_province_modifier = chantier_down
-			}
+			NOT = { has_province_modifier = chantier_down }
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		NOT = { martial = 14 }
@@ -578,7 +618,10 @@ character_event = {
 	only_rulers = yes
 	
 	trigger = {
-		any_demesne_province = { has_province_modifier = chantier_cathedrale }
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
+		}
 		religion = catholic
 		any_courtier = {
 			has_minor_title = title_batisseur
@@ -634,6 +677,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		any_courtier = { 
@@ -686,6 +730,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		stewardship = 16
@@ -735,6 +780,7 @@ character_event = {
 		}
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 			NOT = { has_province_flag = wall_construction }
 			capital_holding = {
 				has_siege = no
@@ -915,6 +961,7 @@ character_event = {
 		siege = { is_attacker = yes }
 		location = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 			NOT = { has_province_flag = cathedral_siege_event }
 		}
 	}
