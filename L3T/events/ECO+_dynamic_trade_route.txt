@@ -920,8 +920,9 @@ character_event = {
 }
 
 # Avert the player that a route is on its demesne
-character_event = {
+narrative_event = {
     id = L3TRADE.10
+	title = NAME.L3TRADE.10
 	desc = "DESCL3TRADE.10"
 	picture = GFX_evt_market
 
