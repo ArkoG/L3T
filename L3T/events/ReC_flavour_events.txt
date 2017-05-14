@@ -366,6 +366,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		NOT = { stewardship = 16 }
@@ -427,6 +428,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		NOT = { stewardship = 16 }
@@ -480,11 +482,8 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-		}
-		NOT = {
-			any_demesne_province = {
-				has_province_modifier = chantier_down
-			}
+			NOT = { has_province_modifier = chantier_down }
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		NOT = { stewardship = 14 }
@@ -552,11 +551,8 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-		}
-		NOT = {
-			any_demesne_province = {
-				has_province_modifier = chantier_down
-			}
+			NOT = { has_province_modifier = chantier_down }
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		NOT = { martial = 14 }
@@ -622,7 +618,10 @@ character_event = {
 	only_rulers = yes
 	
 	trigger = {
-		any_demesne_province = { has_province_modifier = chantier_cathedrale }
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
+		}
 		religion = catholic
 		any_courtier = {
 			has_minor_title = title_batisseur
@@ -678,6 +677,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		any_courtier = { 
@@ -730,6 +730,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 		}
 		religion = catholic
 		stewardship = 16
