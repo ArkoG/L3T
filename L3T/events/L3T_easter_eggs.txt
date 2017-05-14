@@ -1455,8 +1455,8 @@ character_event = {
 		custom_tooltip = { text = custom_offre_dachat_oeuf3a } #offre 15po
 		hidden_tooltip = { 
 			random_list = {
-				10 = { character_event = { id = L3T.432 days = 1 }	wealth = -15 } #Monks accept
-				10 = { character_event = { id = L3T.433 days = 1 }} #Monks refuse
+				10 = { letter_event = { id = L3T.432 days = 1 }	wealth = -15 } #Monks accept
+				10 = { letter_event = { id = L3T.433 days = 1 }} #Monks refuse
 			}
 		}
 	}
@@ -1501,7 +1501,7 @@ letter_event = { #Monks refuse
 	option = { #doubler l'offre à 30po
 		name = "L3T.433A" #Monks accept #end+
 		custom_tooltip = { text = custom_offre_dachat_oeuf3b } #offre 30po
-		character_event = { id = L3T.432 days = 1 }	
+		letter_event = { id = L3T.432 days = 1 }	
 		wealth = -30 
 	}
 	option = { #votre prix sera le mien
@@ -1509,7 +1509,7 @@ letter_event = { #Monks refuse
 		trigger = { wealth = 30 }
 		custom_tooltip = { text = custom_offre_devente_oeuf3 }
 		hidden_tooltip = {
-			character_event = { id = L3T.434 days = 1 } #Monks make their offer
+			letter_event = { id = L3T.434 days = 1 } #Monks make their offer
 		}
 	}
 	option = { #je ne peux proposer plus - abandon
