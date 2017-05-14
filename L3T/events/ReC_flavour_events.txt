@@ -780,6 +780,7 @@ character_event = {
 		}
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 			NOT = { has_province_flag = wall_construction }
 			capital_holding = {
 				has_siege = no
@@ -960,6 +961,7 @@ character_event = {
 		siege = { is_attacker = yes }
 		location = {
 			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
 			NOT = { has_province_flag = cathedral_siege_event }
 		}
 	}
