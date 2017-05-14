@@ -1,0 +1,41 @@
+# Province scope
+defined_text = {
+	name = GetTypeRouteTerrestreFluvial
+
+	text = {
+		localisation_key = TYPE_route_terrestre
+		trigger = { NOT = { has_province_modifier = province_fleuve }}
+	}
+	text = {
+		localisation_key = TYPE_route_fluviale
+		trigger = { has_province_modifier = province_fleuve }
+	}
+}
+	
+	
+defined_text = {
+	name = GetRouteTypeModifier	
+
+	text = {
+		localisation_key = TYPE_modifier_route_terrestre
+		trigger = { NOT = { has_province_modifier = province_fleuve }}
+	}
+	text = {
+		localisation_key = TYPE_modifier_route_fluviale
+		trigger = { has_province_modifier = province_fleuve }
+	}
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

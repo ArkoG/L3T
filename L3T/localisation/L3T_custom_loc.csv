@@ -1,5 +1,5 @@
 #;;CUSTOM_LOCALISATION;;;;;;;;;;;;x
-
+#;;;;;;;;;;;;;;x
 #String_GetRelicName01;Saint Giles' Relic;relique de Saint Gilles;;;;;;;;;;;;x
 #String_GetRelicName02;Saint Aubert's Relic;relique de Saint Aubert;;;;;;;;;;;;x
 #String_GetRelicName03;Saint Boniface's Relic;relique de Saint Boniface;;;;;;;;;;;;x
@@ -39,3 +39,9 @@ col_major_descA;which ventures between snowy pikes;qui s'engouffre entre les cim
 col_major_descB;which is feared by most travellers;dont le passgage est redouté par nombre de voyageurs;;;;;;;;;;;;x
 col_major_descC;which lonely attraction is its pastures;qui n'est guère prisé que pour ces alpages proches;;;;;;;;;;;;x
 col_major_descD;where few actually dare venturing;où néanmoins peu osent s'aventurer;;;;;;;;;;;;x
+
+#;;ROUTES;;;;;;;;;;;;x
+TYPE_route_terrestre;land;terrestre;;;;;;;;;;;;x
+TYPE_route_fluviale;fluvial;fluviale;;;;;;;;;;;;x
+TYPE_modifier_route_terrestre;trade Route;route de commerce;;;;;;;;;;;;x
+TYPE_modifier_route_fluviale;river Trade Route;voie commerciale fluviale;;;;;;;;;;;;x
