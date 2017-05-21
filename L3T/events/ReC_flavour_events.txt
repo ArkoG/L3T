@@ -387,30 +387,52 @@ character_event = {
 			50 = { set_character_flag = { ruines_random_seed_2 }}
 			25 = { set_character_flag = { ruines_random_seed_3 }}
 		}
+		set_character_flag = ruines_pillees
 	}
 	
 	option = {
 		name = "REC.1308A" #le chantier repart
 		trigger = { has_character_flag = ruines_random_seed_1 }
-		set_character_flag = ruines_pillees
-		remove_province_modifier = chantier_down
+		random_demesne_province = { 
+			limit = { 
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_down
+			} 
+			remove_province_modifier = chantier_down
+		}
 	}
 	option = {
 		name = "REC.1308B" #insuffisant pour relancer mais on avance tout de même
 		trigger = { has_character_flag = ruines_random_seed_2 }
-		set_character_flag = ruines_pillees
-		hidden_tooltip = { 
+		hidden_tooltip = {
 			random_list = {
-				change_variable = { which = cathedral value = 30 }
-				change_variable = { which = cathedral value = 50 }
-				change_variable = { which = cathedral value = 70 }
+				random_demesne_province = { 
+					limit = { 
+						has_province_modifier = chantier_cathedrale
+						has_province_modifier = chantier_down
+					}
+						capital_holding = { change_variable = { which = cathedral value = 30 }}
+				}
+				random_demesne_province = { 
+					limit = { 
+						has_province_modifier = chantier_cathedrale
+						has_province_modifier = chantier_down
+					}
+						capital_holding = { change_variable = { which = cathedral value = 50 }}
+				}			
+				random_demesne_province = { 
+					limit = { 
+						has_province_modifier = chantier_cathedrale
+						has_province_modifier = chantier_down
+					}
+						capital_holding = { change_variable = { which = cathedral value =70 }}
+				}				
 			}
 		}
 	}
 	option = {
 		name = "REC.1308C" #vain
 		trigger = { has_character_flag = ruines_random_seed_3 }
-		set_character_flag = ruines_pillees
 	}
 }
 
