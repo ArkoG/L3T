@@ -36,3 +36,39 @@ TYPE_route_terrestre;land;terrestre;;;;;;;;;;;;x
 TYPE_route_fluviale;fluvial;fluviale;;;;;;;;;;;;x
 TYPE_modifier_route_terrestre;trade Route;route de commerce;;;;;;;;;;;;x
 TYPE_modifier_route_fluviale;river Trade Route;voie commerciale fluviale;;;;;;;;;;;;x
+
+#;;VARIOUS FLAVOUR;;;;;;;;;;;;x
+#;blablabla se passe GetTopographicalFlavour...;;;;;;;;;;;;x
+danslest;in the East of the province;dans l'Est de la province;;;;;;;;;;;;x
+danslouest;in the West of the province;dans l'Ouest de la province;;;;;;;;;;;;x
+danslenord;in the North of the province;dans le Nord de la province;;;;;;;;;;;;x
+danslesud;in the South of the province;dans le Sud de la province;;;;;;;;;;;;x
+plusaunord;northern from here;plus au Nord d'ici;;;;;;;;;;;;x
+plusausud;southern from here;plus au Sud d'ici;;;;;;;;;;;;x
+plusalest;eastern from here;plus à l'Est d'ici;;;;;;;;;;;;x
+plusalouest;western from here;plus à l'Ouest d'ici;;;;;;;;;;;;x
+nonloin;not far from here;non loin d'ici;;;;;;;;;;;;x
+pastresloin;not very far from here;pas très loin d'ici;;;;;;;;;;;;x
+aquelqueslieues;a few leagues from here;a quelques lieues d'ici;;;;;;;;;;;;x
+parlesmonts;beyond the mounts;au delà des monts;;;;;;;;;;;;x
+parlesbois;beyond the woods;au delà des bois;;;;;;;;;;;;x
+plusloinplaine;farther in the plain;plus loin dans la plaine;;;;;;;;;;;;x
+pardelalacote;beyond the hills;par delà le côteau;;;;;;;;;;;;x
+pardelalesdunes;beyond many dunes;par delà de nombreuses dunes;;;;;;;;;;;;x
+plusloinsurlacote;further following the coast;plus loin en suivant la côte;;;;;;;;;;;;x
+plusloinsurlacote_alt;further longing the coast;plus loin en longeant la côte;;;;;;;;;;;;x
+#;GetRouteRank;;;;;;;;;;;;x
+routecomtale;the Count's road;la route Comtale;;;;;;;;;;;;x
+routeducale;the ducal road;la route Ducale;;;;;;;;;;;;x
+routeduroi;the King's road;la route du Roi;;;;;;;;;;;;x
+routedesrois;the road of the Kings;la route des Rois;;;;;;;;;;;;x
+routeimperiale;the imperial route;la route impériale;;;;;;;;;;;;x
+theroute;the Long road;la Route longue;;;;;;;;;;;;x
+theway;the Great path;le chemin grand;;;;;;;;;;;;x
+DESCL3T.33;;Il faut pour cela emprunter [Location.GetRouteRank] et se rendre [Location.GetTopographicalFlavour] pour enfin trouver où se terrent ces vils gredins et les défaire une bonne fois pour toutes !;;;;;;;;;;;x
+
+
+
+
+
+

@@ -25,17 +25,140 @@ defined_text = {
 		trigger = { has_province_modifier = province_fleuve }
 	}
 }	
+
+#province/location scope
+
+#blablabla se passe GetTopographicalFlavour (par rapport à où l'on se trouve)
+defined_text = { 
+	name = GetTopographicalFlavour
+
+	text = {
+		localisation_key = danslest
+		trigger = {}
+	}
+	text = {
+		localisation_key = danslouest
+		trigger = {}
+	}
+	text = {
+		localisation_key = danslenord
+		trigger = {}
+	}
+	text = {
+		localisation_key = danslesud
+		trigger = {}
+	}	
+	text = {
+		localisation_key = plusaunord
+		trigger = {}
+	}	
+	text = {
+		localisation_key = plusausud
+		trigger = {}
+	}	
+	text = {
+		localisation_key = plusalest
+		trigger = {}
+	}	
+	text = {
+		localisation_key = plusalouest
+		trigger = {}
+	}	
+	text = {
+		localisation_key = nonloin
+		trigger = {}
+	}
+	text = {
+		localisation_key = pastresloin
+		trigger = {}
+	}
+	text = {
+		localisation_key = aquelqueslieues
+		trigger = {}
+	}
+	text = {
+		localisation_key = parlesmonts
+		trigger = { terrain = mountain }
+	}
+	text = {
+		localisation_key = parlesbois
+		trigger = { 
+			OR = {
+				terrain = forest
+				has_province_modifier = foret1
+			}
+		}
+	}
+	text = {
+		localisation_key = plusloinplaine
+		trigger = { terrain = plains }
+	}
+	text = {
+		localisation_key = pardelalacote
+		trigger = { terrain = hills }
+	}
+	text = {
+		localisation_key = pardelalesdunes
+		trigger = { terrain = desert }
+	}	
+	text = {
+		localisation_key = plusloinsurlacote
+		trigger = { has_province_modifier = province_cotiere }
+	}
+	text = {
+		localisation_key = plusloinsurlacote_alt
+		trigger = { has_province_modifier = province_cotiere }
+	}
+}	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+defined_text = { 
+	name = GetRouteRank
+
+	text = {
+		localisation_key = routecomtale
+		trigger = { 
+			owner = { 
+				tier = COUNT
+				NOT = { tier = DUKE }
+			}
+		}
+	}
+	text = {
+		localisation_key = routeducale
+		trigger = { 
+			owner = { 
+				tier = DUKE
+				NOT = { tier = KING }
+			}
+		}
+	}	
+	text = {
+		localisation_key = routeduroi
+		trigger = { 
+			owner = { 
+				tier = KING
+				NOT = { tier = EMPEROR }
+			}
+		}
+	}
+	text = {
+		localisation_key = routedesrois
+		trigger = { 
+			owner = { 
+				tier = KING
+				NOT = { tier = EMPEROR }
+			}
+		}
+	}
+	text = {
+		localisation_key = routeimperiale
+		trigger = { 
+			owner = { 
+				tier = EMPEROR
+			}
+		}
+	}
+	text = { localisation_key = theroute }
+	text = { localisation_key = theway }
+}
 	
