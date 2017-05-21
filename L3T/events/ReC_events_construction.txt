@@ -202,7 +202,6 @@ province_event = {
 			}
 			if = {
 				limit = { location = { has_province_modifier = chantier_down } }
-				change_variable = { which = cathedral value = 85 }
 				hidden_tooltip = {
 					random_list = {
 						20 = { change_variable = { which = cathedral value = 80 } }
@@ -213,7 +212,6 @@ province_event = {
 			}
 			if = {
 				limit = { location = { has_province_modifier = chantier_stop } }
-				change_variable = { which = cathedral value = 75 }
 				hidden_tooltip = {
 					random_list = {
 						20 = { change_variable = { which = cathedral value = 70 } }
