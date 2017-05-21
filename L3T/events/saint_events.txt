@@ -28,6 +28,7 @@ character_event = {
 			trait = hedonist
 			any_claim = { title = k_papal_state } # Antipopes
 			any_claim = { title = d_fraticelli } # Antipopes
+			death_suicide_trigger = yes #L3T
 		}
 		OR = { # Must be pious or good traits with less piety
 			piety = 5000
