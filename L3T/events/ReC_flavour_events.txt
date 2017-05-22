@@ -399,6 +399,7 @@ character_event = {
 				has_province_modifier = chantier_down
 			} 
 			remove_province_modifier = chantier_down
+			capital_holding = { change_variable = { which = cathedral value = 30 }}
 		}
 	}
 	option = {
@@ -411,9 +412,9 @@ character_event = {
 					has_province_modifier = chantier_down
 				}
 				random_list = {
+					capital_holding = { change_variable = { which = cathedral value = 20 }}
 					capital_holding = { change_variable = { which = cathedral value = 30 }}
 					capital_holding = { change_variable = { which = cathedral value = 50 }}
-					capital_holding = { change_variable = { which = cathedral value =70 }}
 				}
 			}
 		}
