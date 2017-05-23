@@ -693,11 +693,32 @@ province_event = {
 		
 	mean_time_to_happen = { days = 360 }
 
+	immediate = {
+		random_province_holding = {
+			limit = {
+				OR = {	
+					has_building = CA_CARR_pierre_L2
+					has_building = CT_CARR_pierre_L2
+				}
+			}
+			save_event_target_as = holding_pour_desc
+		}
+	}
+	
 	option = {
 		name = "ECO.130A"
 		remove_province_modifier = pierre1
 		add_province_modifier = { name = pierre1 duration = -1 hidden = yes } #now hidden instead of removed
-		add_province_modifier = { name = pierre2_pierre_brute duration = -1 }		
+		add_province_modifier = { name = pierre2_pierre_brute duration = -1 }
+		random_province_holding = {
+			limit = {
+				OR = {	
+					has_building = CA_CARR_pierre_L2
+					has_building = CT_CARR_pierre_L2
+				}
+			}
+			clear_event_target = holding_pour_desc
+		}		
 	}
 }
 
