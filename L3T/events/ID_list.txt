@@ -10,7 +10,7 @@
 
 ###L3T_init_DOMAINES.txt
 ##décider de l'avenir d'un domaine 
-#id = L3T.3 #domaine Féodal 
+#id = L3T.3 #domaine Féodal
 #id = L3T.4 #domaine Communal  
 #id = L3T.41 #domaine Communal province à double cité  
 #id = L3T.5 #upgrade CITE GRANDE L1  vers L2
@@ -41,20 +41,19 @@
 #id = L3T.20 #SWMH - Coast
 #id = L3T.21 #SWMH - Land
 #id = L3T.22 #SWMH - Rivers
-#id = L3T.23 #SWMH - Cols (non attribué)
-#id = L3T.24 #SWMH - autre (non attribué)
+
 ###L3T_mod_selection_VANI.txt
 #id = L3T.25 #Vanilla - Coast
 #id = L3T.26 #Vanilla - Land
 #id = L3T.27 #Vanilla - Rivers
-#id = L3T.28 #Vanilla - Cols -toute carte-
-#id = L3T.29 #Vanilla - Cols -notification-
+#id = L3T.28 #used in L3T_mod_selection.txt
+#id = L3T.29 #used in L3T_mod_selection.txt
+
 ###L3T_mod_selection_LCDA.txt
 #id = L3T.30 #LCDA - Coast
 #id = L3T.31 #LCDA - Land
 #id = L3T.32 #LCDA - Rivers
-#id = L3T.33 #LCDA - Cols (non attribué)
-#id = L3T.34 #LCDA - autre (non attribué)
+#id = L3T.33 #used in L3T_init_DOMAINES.txt
 
 ###L3T_population.txt
 #id = L3T.100 #initialisation population buildings en variable
@@ -75,6 +74,8 @@
 #id = L3T.115 #upgrade population TP vers L5
 #id = L3T.1101 #initialisation population buildings
 #id = L3T.1102 #check dev variable settlement decision
+#id = L3T.1103 #dev variable natural growth
+#id = L3T.1104-8 #dev changes notifs debug
 
 ###L3T_building_modifiers.txt
 #id = L3T.201 # Give the chapelle modifier 1 year after starting the building

@@ -14,7 +14,7 @@ character_event = {
 		any_title = {
 			limit = { tier = baron }
 			export_to_variable = { which = "developpement" value = num_of_buildings } #gives a random seed based on techs
-
+			
 			if = {
 				limit = {	
 					year = 1000
@@ -145,7 +145,208 @@ province_event = {
 		name = "OK"	
 	}
 }
-			
+character_event = {
+	id = L3T.1104
+	desc = "DESCL3T.1104"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	ai = no
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
+character_event = {
+	id = L3T.1105
+	desc = "DESCL3T.1105"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	ai = no
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
+character_event = {
+	id = L3T.1106
+	desc = "DESCL3T.1106"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	ai = no
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
+character_event = {
+	id = L3T.1107
+	desc = "DESCL3T.1107"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	ai = no
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
+character_event = {
+	id = L3T.1108
+	desc = "DESCL3T.1108"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	ai = no
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
+character_event = {
+	id = L3T.1103
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		#war = no
+		any_demesne_title = {
+			tier = baron
+			OR = { 
+				holding_type = castle
+				holding_type = temple
+				holding_type = city
+			}
+		}
+	}
+	
+	immediate = {
+		any_demesne_title = {
+			limit = { 
+				tier = baron
+				OR = { 
+					holding_type = castle
+					holding_type = temple
+					holding_type = city
+				}
+			}
+			if = {
+				limit = {
+					has_siege = no
+					is_occupied = no
+					location = { has_disease = no }
+				}
+				save_event_target_as = holding_dev #totoro
+				set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
+				change_variable = { which = "developpement" value = 1 } 
+				holder_scope = { character_event = { id = L3T.1104 days = 0 }} #totoro
+			}
+			if = {
+				limit = {
+					location = { has_disease = yes }
+				}
+				save_event_target_as = holding_dev #totoro
+				set_variable = { which = "developpementold" which = "developpement" }
+				change_variable = { which = "developpement" value = -1 }				
+				holder_scope = { character_event = { id = L3T.1105 days = 0 }} #totoro
+			}
+			if = {
+				limit = {
+					has_siege = no
+					is_occupied = yes
+					location = { has_disease = no }
+				}
+				save_event_target_as = holding_dev #totoro
+				set_variable = { which = "developpementold" which = "developpement" }
+				#change_variable = { which = "developpement" value = 1 } 
+				holder_scope = { character_event = { id = L3T.1106 days = 0 }} #totoro
+			}
+			if = {
+				limit = {
+					has_siege = yes
+					is_occupied = no
+					location = { has_disease = no }
+				}
+				set_variable = { which = "developpementold" which = "developpement" }
+				#change_variable = { which = "developpement" value = 1 } #totoro
+				save_event_target_as = holding_dev #totoro
+				holder_scope = { character_event = { id = L3T.1107 days = 0 }} #totoro
+			}		
+		}
+	}
+#	option = { #totoro
+#			trigger = {
+#				any_demesne_title = {
+#					tier = baron
+#					has_title_flag = dev_plus_1 
+#				}
+#			}
+#			random_demesne_title = { 
+#				limit = { tier = baron }
+#				#if = { 
+#					limit = { has_title_flag = dev_plus_1 }
+#					change_variable = { which = "developpement" value = 1 }
+#					#clr_title_flag = dev_plus_1
+#				#}
+#			}
+#			name = "plus_un"
+#		}
+#		option = {
+#			trigger = {
+#				any_demesne_title = {
+#					tier = baron
+#					has_title_flag =  dev_moins_1 
+#				}
+#			}
+#			random_demesne_title = { 
+#				limit = { tier = baron }
+#				#if = { 
+#					limit = { has_title_flag = dev_moins_1 }
+#					change_variable = { which = "developpement" value = -1 }
+#					#clr_title_flag = dev_moins_1
+#				#}
+#			}
+#			name = "moins_un"
+#		}
+}
+
 #Evolution population	CASTLE 
 ##niveau 1	CASTLE
 
