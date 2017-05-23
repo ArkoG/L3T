@@ -172,7 +172,20 @@ defined_text = {
 	text = { localisation_key = someoldtower }
 	text = { localisation_key = someoldpavedroute }	
 }
-	
+
+#title_scope
+defined_text = {
+	name = GetDeDapostrophe
+
+	text = {
+		localisation_key = get_d_apostrophe
+		trigger = { has_title_flag = needs_elision }
+	}
+	text = {
+		localisation_key = get_de
+		trigger = { NOT = { has_title_flag = needs_elision }}
+	}
+}
 	
 	
 	
