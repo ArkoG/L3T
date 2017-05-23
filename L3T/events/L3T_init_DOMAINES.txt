@@ -12,9 +12,19 @@ namespace = L3T
 narrative_event = {
 	title = "NAMEL3T.3"
     id = L3T.3
-	desc = "DESCL3T.3"
 	picture = GFX_evt_castle_construction
-	
+
+	desc = {
+		trigger = { capital_holding = { has_title_flag = castle_to_specialize }}
+		text = "DESCL3T.3.Cap"
+		picture = GFX_evt_castle_construction
+	}
+	desc = {
+		trigger = { NOT = { capital_holding = { has_title_flag = castle_to_specialize }}}
+		text = "DESCL3T.3.pasCap"
+		picture = GFX_evt_castle_construction
+	}
+
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
@@ -62,13 +72,50 @@ narrative_event = {
 					has_building = FEODAL_adm
 				}
 			}
+			save_event_target_as = holding_to_spec
 			set_title_flag = castle_to_specialize
 			#set_variable = { which = "specNB" value = 0 } #debug
 		}
 	}
-	
+
 	option = {
-		name = "L3T.3A"	#MIL
+		name = "L3T.3A" #ADM
+		custom_tooltip { text = custom_est_capitale }
+		trigger = {
+			capital_holding = {
+					has_title_flag = castle_to_specialize
+			}
+			OR = {
+				higher_tier_than = COUNT # Duke, King or Emperor
+				num_of_count_titles = 2
+			}
+			holy_order = no
+		}
+		ai_chance = {
+			factor = 50		
+			modifier = {
+				factor =  10
+				higher_tier_than = DUKE # King or Emperor
+			}
+			modifier = { factor = 1.2	num_of_count_titles = 2 }
+			modifier = { factor = 1.2	num_of_count_titles = 3 }
+			modifier = { factor = 1.1	num_of_count_titles = 4 }
+			modifier = {
+				factor =  10
+				independent = yes
+			}
+		}
+		capital_holding = {
+			add_building = FEODAL_adm
+			#change_variable = { which = "specNB" value = 1 } #debug
+			add_holding_modifier = { name = feodal_adm duration = -1 }
+			clr_title_flag = castle_to_specialize
+			clear_event_target = holding_to_spec
+		}
+	}
+
+	option = {
+		name = "L3T.3B"	#MIL
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -84,7 +131,6 @@ narrative_event = {
 					has_title_flag = castle_to_specialize
 				}
 			}
-			#modifier = { factor = 2	holy_order = yes }
 		}
 		trigger = {
 			any_demesne_title = {
@@ -99,11 +145,12 @@ narrative_event = {
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = feodal_mil duration = -1 }	
 			clr_title_flag = castle_to_specialize
+			clear_event_target = holding_to_spec
 		}
 	}
 	
 	option = {
-		name = "L3T.3B"	#ECO
+		name = "L3T.3C"	#ECO
 		trigger = { holy_order = no }
 		ai_chance = { 
 			factor = 50
@@ -137,40 +184,7 @@ narrative_event = {
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = feodal_prod duration = -1 }
 			clr_title_flag = castle_to_specialize
-		}
-	}
-
-	option = {
-		name = "L3T.3C" #ADM
-		trigger = {
-			capital_holding = {
-					has_title_flag = castle_to_specialize
-			}
-			OR = {
-				higher_tier_than = COUNT # Duke, King or Emperor
-				num_of_count_titles = 2
-			}
-			holy_order = no
-		}
-		ai_chance = {
-			factor = 50		
-			modifier = {
-				factor =  10
-				higher_tier_than = DUKE # King or Emperor
-			}
-			modifier = { factor = 1.2	num_of_count_titles = 2 }
-			modifier = { factor = 1.2	num_of_count_titles = 3 }
-			modifier = { factor = 1.1	num_of_count_titles = 4 }
-			modifier = {
-				factor =  10
-				independent = yes
-			}
-		}
-		capital_holding = {
-			add_building = FEODAL_adm
-			#change_variable = { which = "specNB" value = 1 } #debug
-			add_holding_modifier = { name = feodal_adm duration = -1 }
-			clr_title_flag = castle_to_specialize
+			clear_event_target = holding_to_spec
 		}
 	}
 }
@@ -238,6 +252,7 @@ narrative_event = {
 					has_building = VOC_COMMERCIALE
 				}
 			}
+			save_event_target_as = holding_to_spec
 			set_title_flag = city_to_specialize
 			#set_variable = { which = "specNB" value = 0 } #debug
 		}
@@ -271,6 +286,7 @@ narrative_event = {
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = voc_indus duration = -1 }
 			clr_title_flag = city_to_specialize
+			clear_event_target = holding_to_spec
 		}
 	}
 	
@@ -415,6 +431,7 @@ narrative_event = {
 				}
 			}
 			clr_title_flag = city_to_specialize	
+			clear_event_target = holding_to_spec
 		}
 	}
 }
@@ -617,7 +634,7 @@ narrative_event = {
 #Domaine Ecclésial     
 narrative_event = {
     id = L3T.6
-	picture = GFX_evt_monk
+	picture = GFX_evt_monastery_monks
 	border = GFX_event_narrative_frame_religion
 	#desc = "DESCL3T.6" #ne mettre que si tous les cas ne sont pas couverts par les triggers 
 	
@@ -633,7 +650,7 @@ narrative_event = {
 	desc = { 
 		trigger = {	NOT = {	religion_group = muslim	} }
 		text = "DESCL3T.6"
-		picture = GFX_evt_monk
+		picture = GFX_evt_monastery_monks
 	}
 	
 	desc = { 
@@ -689,6 +706,7 @@ narrative_event = {
 			}
 			set_title_flag = temple_to_specialize
 			set_variable = { which = "specNB" value = 0 } #debug
+			save_event_target_as = holding_to_spec
 		}
 	}
 	
@@ -699,7 +717,7 @@ narrative_event = {
 			modifier = { factor =  5	learning = 20	}
 			modifier = { factor =   2	learning = 15	}
 			modifier = { factor = 0.75	NOT = { learning = 10 }	}
-			modifier = { factor = 1.25	NOT = { tier = count } }
+			modifier = { factor = 2.25	NOT = { tier = count } }
 			modifier = {
 				factor = 3
 				any_demesne_title = {
@@ -719,6 +737,7 @@ narrative_event = {
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
 			}
+			#clear_event_target = holding_to_spec #is cleared by monastic rule event instead
 			if = {
 				limit = {
 					NOT = {
@@ -729,6 +748,21 @@ narrative_event = {
 				add_building = MONASTERE
 				add_holding_modifier = { name = monastere duration = -1 }
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
+				holder_scope = { narrative_event = { id = L3T.7 days = 0 }}
+			}
+			if = {
+				limit = {
+					location = {
+						OR = {
+							religion = orthodox
+							is_heresy_of = orthodox
+						}
+					}
+					NOT = { has_building = REGLE_DE_3 }
+				}
+				add_building = REGLE_DE_3 #saint-Basile
+				clear_event_target = holding_to_spec
+				clr_title_flag = temple_to_specialize
 			}
 		}
 		set_character_flag = canGetEasterEgg3
@@ -738,7 +772,6 @@ narrative_event = {
 		name = "L3T.6B"	
 		ai_chance = {
 			factor = 40
-			#modifier = { factor = 0	holy_order = yes }
 			modifier = { factor = 5	tier = count }
 			modifier = { factor = 2	tier = duke }
 			modifier = { factor =  0.9	NOT = { learning = 15 } }
@@ -755,6 +788,8 @@ narrative_event = {
 				location = { NOT = { religion_group = pagan_group } }
 				has_title_flag = temple_to_specialize
 			}
+			clear_event_target = holding_to_spec
+			clr_title_flag = temple_to_specialize
 			if = {
 				limit = {
 					NOT = {
@@ -763,59 +798,29 @@ narrative_event = {
 					}
 				}
 				add_building = CITEEPISCOPALE
-				if = {
-					limit = { location = { religion_group = christian }} #//christian specific icon
-					add_holding_modifier = { name = episcopale duration = -1 }
-					}
-				if = {
-					limit = { location = { religion_group = muslim }} #//muslim specific icon
-					add_holding_modifier = { name = episco_muslim duration = -1 }
-					}
-				if = {
-					limit = { #other non pagan religions //jewish, zoro, indian
-						location = { NOT = {religion_group = christian }}
-						location = { NOT = {religion_group = muslim }}
-						}
-						add_holding_modifier = { name = episcopale duration = -1 
-						hidden = yes
-						}
-					}
-				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
 			}
+			if = {
+				limit = { location = { religion_group = christian }} #//christian specific icon
+				add_holding_modifier = { name = episcopale duration = -1 }
+			}
+			if = {
+				limit = { location = { religion_group = muslim }} #//muslim specific icon
+				add_holding_modifier = { name = episco_muslim duration = -1 }
+			}
+			if = {
+				limit = { #other non pagan religions //jewish, zoro, indian
+					location = { NOT = {religion_group = christian }}
+					location = { NOT = {religion_group = muslim }}
+				}
+				add_holding_modifier = { 
+					name = episcopale
+					duration = -1
+					hidden = yes
+				}
+			}
+			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
 		}
 	}
-
-#	option = {
-#		name = "L3T.6C"	
-#		ai_chance = {
-#			factor = 20
-#			#modifier = { factor = 20	holy_order = yes }
-#			modifier = { factor = 0.5 	any_demesne_title = { location = { NOT = { religion = catholic }}}}
-#			modifier = { factor = 2.5	martial = 20 }
-#			modifier = { factor = 1.5	martial = 15 }
-#			modifier = { factor = 0.5	NOT = { martial = 10 } }
-#		}
-#		trigger = {
-#			any_demesne_title = {
-#				location = { religion_group = christian }
-#				has_title_flag = temple_to_specialize
-#			}
-#		}
-#		random_demesne_title = {
-#			limit = {
-#				location = { religion_group = christian }
-#				has_title_flag = temple_to_specialize
-#			}
-#			add_building = MONASTERE
-#			add_holding_modifier = { name = commanderie duration = -1 }
-#			add_building = COMMANDERIE
-#			random = {
-#				chance = 20
-#				add_building = COMMANDERIE_L2
-#			}			
-#		}
-#	}
-
 }
 
 #Attribution règle
@@ -828,15 +833,17 @@ narrative_event = {
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
-		
+	
+	is_triggered_only = yes 
+	
 	trigger = {
 		any_demesne_title = {
 			location = {
 				OR = {
 					religion = catholic
 					is_heresy_of = catholic
-					religion = orthodox
-					is_heresy_of = orthodox
+					#religion = orthodox
+					#is_heresy_of = orthodox
 				}
 			}
 			tier = baron
@@ -845,26 +852,26 @@ narrative_event = {
 			NOT = {
 				has_building = REGLE_DE_1
 				has_building = REGLE_DE_2				
-				has_building = REGLE_DE_3
+				#has_building = REGLE_DE_3
 			}
 		}
 	}
 		
-	mean_time_to_happen = { months = 9 }	
+	#mean_time_to_happen = { months = 9 }	
 
 	#Regula Benedicti
 	option = {
 		name = "L3T.7A"	
-		trigger = {
-			any_demesne_title = {
-				location = {
-					OR = {
-					religion = catholic
-					is_heresy_of = catholic
-					}
-				}
-			}
-		}
+#		trigger = {
+#			any_demesne_title = {
+#				location = {
+#					OR = {
+#					religion = catholic
+#					is_heresy_of = catholic
+#					}
+#				}
+#			}
+#		}
 		random_demesne_title = {
 			limit = {
 				tier = baron
@@ -873,25 +880,26 @@ narrative_event = {
 				NOT = {
 					has_building = REGLE_DE_1
 					has_building = REGLE_DE_2				
-					has_building = REGLE_DE_3
+					#has_building = REGLE_DE_3
 				}
 			}
 			add_building = REGLE_DE_1
+			clear_event_target = holding_to_spec
 		}
 	}
 	#Regula Augustini
 	option = {
 		name = "L3T.7B"	
-		trigger = {
-			any_demesne_title = {
-				location = {
-					OR = {
-					religion = catholic
-					is_heresy_of = catholic
-					}
-				}
-			}
-		}
+#		trigger = {
+#			any_demesne_title = {
+#				location = {
+#					OR = {
+#					religion = catholic
+#					is_heresy_of = catholic
+#					}
+#				}
+#			}
+#		}
 		random_demesne_title = {
 			limit = {
 				tier = baron
@@ -900,147 +908,43 @@ narrative_event = {
 				NOT = {
 					has_building = REGLE_DE_1
 					has_building = REGLE_DE_2				
-					has_building = REGLE_DE_3
+					#has_building = REGLE_DE_3
 				}
 			}
 			add_building = REGLE_DE_2
-		}
-	}
-	#Regula Basili
-	option = {
-		name = "L3T.7C"	
-		trigger = {
-			any_demesne_title = {
-				location = {
-					OR = {
-					religion = orthodox
-					is_heresy_of = orthodox
-					}
-				}
-			}
-		}
-		random_demesne_title = {
-			limit = {
-				tier = baron
-				holding_type = temple
-				has_building = MONASTERE
-				NOT = {
-					has_building = REGLE_DE_1
-					has_building = REGLE_DE_2				
-					has_building = REGLE_DE_3
-				}
-			}
-			add_building = REGLE_DE_3 #saint-Basile 
+			clear_event_target = holding_to_spec
 		}
 	}
 }
-
-#attribution ordre (militaire)
-# character_event = {
-    # id = L3T.0008
-	# desc = "DESCL3T.0008"
-	# picture = GFX_evt_monk
-	
-	# only_rulers = yes
-	# capable_only = yes
-	# prisoner = no
-		
-	# trigger = {
-		# any_demesne_title = {
-			# tier = baron
-			# holding_type = temple
-			# has_building = COMMANDERIE
-			# num_of_buildings = 100 #fic
-			# NOT = {
-				# has_building = ORDRE_MILIT_1
-				# has_building = ORDRE_MILIT_2				
-				# has_building = ORDRE_MILIT_3
-			# }
-		# }
-	# }
-		
-	# mean_time_to_happen = { months = 30 }	
-	        
-	# option = { #ajouter prérequis existence des ordres.
-		# name = "L3T.0008A"	
-		# trigger = { ai=no }
-		# random_demesne_title = {
-			# limit = {
-				# tier = baron
-				# holding_type = temple
-				# has_building = COMMANDERIE
-				# num_of_buildings = 100 #fic
-				# NOT = {
-					# has_building = ORDRE_MILIT_1
-					# has_building = ORDRE_MILIT_2				
-					# has_building = ORDRE_MILIT_3
-				# }
-			# }
-			# add_building = ORDRE_MILIT_1
-		# }
-	# }
-	
-	# option = {
-		# name = "L3T.0008B"	
-		# trigger = { ai=no }
-		# random_demesne_title = {
-			# limit = {
-				# tier = baron
-				# holding_type = temple
-				# has_building = COMMANDERIE
-				# num_of_buildings = 100 #fic
-				# NOT = {
-					# has_building = ORDRE_MILIT_1
-					# has_building = ORDRE_MILIT_2				
-					# has_building = ORDRE_MILIT_3
-				# }
-			# }
-			# add_building = ORDRE_MILIT_2
-		# }
-	# }
-
-	# option = {
-		# name = "L3T.0008C"	
-		# trigger = { ai=no }
-		# random_demesne_title = {
-			# limit = {
-				# tier = baron
-				# holding_type = temple
-				# has_building = COMMANDERIE
-				# num_of_buildings = 100 #fic
-				# NOT = {
-					# has_building = ORDRE_MILIT_1
-					# has_building = ORDRE_MILIT_2				
-					# has_building = ORDRE_MILIT_3
-				# }
-			# }
-			# add_building = ORDRE_MILIT_3
-		# }
-	# }
-
-	# option = {
-		# name = "L3T.0008C"	
-		# trigger = { ai=yes }
-		# random_demesne_title = {
-			# limit = {
-				# tier = baron
-				# holding_type = temple
-				# has_building = COMMANDERIE
-				# num_of_buildings = 100 #fic
-				# NOT = {
-					# has_building = ORDRE_MILIT_1
-					# has_building = ORDRE_MILIT_2				
-					# has_building = ORDRE_MILIT_3
-				# }
-			# }
-			# random_list = {
-				# 3 = { add_building = ORDRE_MILIT_1 }
-				# 3 = { add_building = ORDRE_MILIT_2 }
-				# 3 = { add_building = ORDRE_MILIT_3 }
-			# }
-		# }
-	# }
-# }
+	#Regula Basili #given by L3T.6
+#	option = {
+#		name = "L3T.7C"	
+#		trigger = {
+#			any_demesne_title = {
+#				location = {
+#					OR = {
+#						religion = orthodox
+#						is_heresy_of = orthodox
+#					}
+#				}
+#			}
+#		}
+#		random_demesne_title = {
+#			limit = {
+#				tier = baron
+#				holding_type = temple
+#				has_building = MONASTERE
+#				NOT = {
+#					has_building = REGLE_DE_1
+#					has_building = REGLE_DE_2				
+#					has_building = REGLE_DE_3
+#				}
+#			}
+#			add_building = REGLE_DE_3 #saint-Basile
+#			clear_event_target = holding_to_spec
+#		}
+#	}
+#}
 
 # Init built holding (on_action)
 # ROOT = Builder, FROM = Title
