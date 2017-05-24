@@ -57,6 +57,16 @@ character_event = {
 			province_event = { id = L3T.28 days = 25 random = 15} #attribution cols
 		}
 		set_global_flag = running_L3T
+		if = {
+			limit = { 
+				ai = no
+				has_game_rule = {
+					name = opus_francigenum
+					value = free
+				}
+			}
+			narrative_event = { id = REC.101 days = 10 }
+		}
 	}
 	
 	option = {	

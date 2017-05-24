@@ -57,6 +57,8 @@ relic_spawn_bonus_catholic_theocratie = {
 # ROOT is a potentiel ruler who wants to build a Cathedral
 construire_cathedral_potential = {
 	AND = {
+		has_global_flag = opus_francigenum
+		
 		# Catholic province ruler
 		religion = catholic
 		higher_tier_than = BARON # Count, Duke, King or Emperor
