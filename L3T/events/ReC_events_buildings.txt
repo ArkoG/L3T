@@ -92,6 +92,8 @@ province_event = {
 			check_variable = { which = cathedral value = 2600 }
 		}
 	}
+	
+	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
 
 	#option unique gain piété à vie
 	option = {
@@ -187,6 +189,8 @@ province_event = {
 		}
 	}
 
+	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+
 	#choix piété one shot Vs gain mensuel + opinion boost pour 20ans
 	option = {
 		name = "REC.205A"	
@@ -248,6 +252,8 @@ province_event = {
 		}
 	}
 
+	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+
 	#choix piété one shot Vs gain mensuel + opinion boost pour 10ans
 	option = {
 		name = "REC.206A"	
@@ -306,6 +312,8 @@ province_event = {
 			check_variable = { which = cathedral value = 8300 }
 		}
 	}
+
+	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 15ans
 	option = {
@@ -366,6 +374,8 @@ province_event = {
 			check_variable = { which = cathedral value = 9800 }
 		}
 	}
+
+	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 15ans
 	option = {
@@ -480,6 +490,8 @@ province_event = {
 		}
 	}
 
+	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+
 	#opinion boost féodaux pour +ou- 5ans
 	option = {
 		name = "REC.1210A"
@@ -508,6 +520,8 @@ province_event = {
 		}
 	}
 
+	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+
 	#opinion boost bourgeois pour +ou- 5ans
 	option = {
 		name = "REC.2210A"
@@ -535,6 +549,8 @@ province_event = {
 			check_variable = { which = cathedral value = 10800 }
 		}
 	}
+
+	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
 
 	#opinion boost éclésiastiques pour +ou- 5ans
 	option = {
@@ -619,6 +635,8 @@ province_event = {
 			check_variable = { which = cathedral value = 12000 }
 		}
 	}
+
+	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
 
 	#option unique gain piété à vie
 	option = {
