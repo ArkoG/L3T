@@ -540,6 +540,16 @@ province_event = { #installe les provinces fluviales VANILLA
 			}
 			add_province_modifier = {	name = province_fleuve  	duration = -1 }	
 		}
+		
+		# Old cathedral attribution
+		if = {
+			limit = {
+				religion_group = christian
+				capital_holding = { holding_type = temple }
+			}
+			province_event = { id = L3T.61 days = 10 }
+		}
+		
 		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
 		if = {
 			limit = {

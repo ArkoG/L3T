@@ -762,6 +762,26 @@ temple = {
 		liege_piety = 0.05
 		liege_prestige = 0.05
 	}
+		
+	tp_roman_cathedrale = {	# Cathédrale romane
+		desc = tp_roman_cathedrale_desc
+		prerequisites = {XXX}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			has_province_modifier = relique_generique
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+		}
+		not_if_x_exists = { FEODAL_mil  FEODAL_prod  MONASTERE  COMMANDERIE }
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 950		
+		build_time = 3650 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+		liege_piety = 0.05
+	}
 }
 	
 	

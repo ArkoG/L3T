@@ -712,9 +712,9 @@ narrative_event = {
 		
 	trigger = {		
 		OR = {
-			had_global_flag = { flag = SWMH days = 30 }			
-			had_global_flag = { flag = running_VANILLA days = 30 }
-			had_global_flag = { flag = running_LCDA days = 30 }
+			had_global_flag = { flag = SWMH days = 360 }			
+			had_global_flag = { flag = running_VANILLA days = 360 }
+			had_global_flag = { flag = running_LCDA days = 360 }
 		}		
 		any_demesne_title = {
 			tier = baron
@@ -733,9 +733,9 @@ narrative_event = {
 		modifier = {
 			factor = 0.7
 			OR = {
-				had_global_flag = { flag = SWMH days = 360 }			
-				had_global_flag = { flag = running_VANILLA days = 360 }
-				had_global_flag = { flag = running_LCDA days = 360 }
+				had_global_flag = { flag = SWMH days = 100 }			
+				had_global_flag = { flag = running_VANILLA days = 100 }
+				had_global_flag = { flag = running_LCDA days = 100 }
 			}
 		}
 	}
@@ -867,7 +867,77 @@ narrative_event = {
 					hidden = yes
 				}
 			}
+			# Romanesque Cathedral
+			if = {
+				limit = {
+					# No Roman Cathedral at 3 province distance
+					location = {
+						NOT = {
+							has_province_flag = roman_cathedral
+							any_neighbor_province = {
+								OR = {
+									has_province_flag = neighbor_roman_cathedral
+									has_province_flag = neighbor_neighbor_roman_cathedral
+								}
+							}
+						}
+					}
+				}
+				add_building = tp_roman_cathedrale
+				location = {
+					set_province_flag = roman_cathedral
+					any_neighbor_province = {
+						set_province_flag = neighbor_roman_cathedral
+						any_neighbor_province = {
+							limit = {
+								NOT = {
+									has_province_flag = neighbor_roman_cathedral									
+									has_province_flag = neighbor_neighbor_roman_cathedral
+									has_province_flag = roman_cathedral
+								}
+							}
+							set_province_flag = neighbor_neighbor_roman_cathedral
+						}
+					}
+				}
+			}
 			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
+		}
+	}
+}
+
+#old cathedral and spe in religious province
+province_event = {
+    id = L3T.61
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_province_modifier = {
+			name = relique_generique
+			duration = -1
+		}
+		capital_holding = {
+			add_building = tp_roman_cathedrale
+			add_building = CITEEPISCOPALE
+			change_variable = { which = "developpement" value = 10 }
+			add_holding_modifier = { name = episcopale duration = -1 }
+			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug	
+		}
+		set_province_flag = roman_cathedral
+		any_neighbor_province = {
+			set_province_flag = neighbor_roman_cathedral
+			any_neighbor_province = {
+				limit = {
+					NOT = {
+						has_province_flag = neighbor_roman_cathedral									
+						has_province_flag = neighbor_neighbor_roman_cathedral
+						has_province_flag = roman_cathedral
+					}
+				}
+				set_province_flag = neighbor_neighbor_roman_cathedral
+			}
 		}
 	}
 }
