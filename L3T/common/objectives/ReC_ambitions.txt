@@ -16,7 +16,7 @@ obj_build_something = {
 	allow = {
 		is_adult = yes
 		is_ruler = yes
-		religion = catholic
+		is_catholic_group = yes
 		NOT = { trait = incapable }
 		NOT = { has_character_flag = has_made_cathedral_major_step }
 		any_demesne_province = { has_province_modifier = chantier_cathedrale } # Add other monuments
