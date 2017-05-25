@@ -766,9 +766,9 @@ temple = {
 	tp_roman_cathedrale = {	# Cathédrale romane
 		desc = tp_roman_cathedrale_desc
 		prerequisites = {XXX}
+		potential = { has_province_modifier = relique_generique }
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 1
-			has_province_modifier = relique_generique
 			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
 			religion_group = christian
 		}
