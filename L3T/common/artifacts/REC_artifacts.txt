@@ -504,3 +504,20 @@ relique25 = {
 	#picture = "GFX_relic_box"
 	slot = slot_relique
 }
+relique26 = {
+	monthly_character_piety = 0.5
+	same_religion_opinion = 5
+	quality = 5
+	active = {
+		is_adult = yes
+		OR = { 
+			religion = catholic
+			is_heresy_of = catholic
+			}
+	}
+	flags = { religious christian relique adolphus }
+	allowed_gift = { always = no }
+	stacking = no
+	picture = "GFX_relique_adolphus"
+	slot = slot_relique
+}
