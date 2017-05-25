@@ -2,11 +2,15 @@
 # [ReC][Reliques et Cathédrales]  par Arko et Mouchi #
 ######################################################
 
+# Free Opus Francigenum
 narrative_event = {
     id = REC.101
-	title = "REC.101_title"
+	title = "OPUSFRANCIGENUM_title"
 	desc = "DESCREC.101"
 	picture = GFX_evt_REC5
+	major = yes
+	hide_new = yes
+	hide_from = yes
 
 	is_triggered_only = yes	
 	
@@ -15,7 +19,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "REC.101A"
+		name = "OPUSFRANCIGENUM.A"
 		trigger = {
 			NOT = {
 				any_artifact = {
@@ -26,7 +30,86 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "REC.101B"
+		name = "OPUSFRANCIGENUM.B"
+		trigger = {
+			any_artifact = {
+				has_artifact_flag = relique
+			}
+		}
+	}
+}
+
+# Historical or 50 years Opus Francigenum
+narrative_event = {
+	id = REC.102
+	title = "OPUSFRANCIGENUM_title"
+	desc = "DESCREC.102"
+	picture = GFX_evt_REC5
+	major = yes
+	hide_new = yes
+	hide_from = yes
+	
+	only_playable = yes
+	religion = catholic
+	
+	trigger = {
+		NOT = { has_global_flag = opus_francigenum }
+		OR = {
+			AND = {
+				year = 1130
+				has_game_rule = {
+					name = opus_francigenum
+					value = historical
+				}
+			}
+			AND = {
+				total_years_played = 50
+				has_game_rule = {
+					name = opus_francigenum
+					value = fiftyYears
+				}
+			}
+		}
+		controls_religion = yes # Let it happen for the Pope. He's always around.
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.5
+			year = 1140
+			has_game_rule = {
+				name = opus_francigenum
+				value = historical
+			}
+		}
+		modifier = {
+			factor = 0.5
+			total_years_played = 60
+			has_game_rule = {
+				name = opus_francigenum
+				value = fiftyYears
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = opus_francigenum
+	}
+	
+	option = {
+		name = "OPUSFRANCIGENUM.A"
+		trigger = {
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = relique
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "OPUSFRANCIGENUM.B"
 		trigger = {
 			any_artifact = {
 				has_artifact_flag = relique
