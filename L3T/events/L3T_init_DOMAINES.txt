@@ -80,7 +80,7 @@ narrative_event = {
 
 	option = {
 		name = "L3T.3A" #ADM
-		custom_tooltip { text = custom_est_capitale }
+		custom_tooltip = { text = custom_est_capitale }
 		trigger = {
 			capital_holding = {
 					has_title_flag = castle_to_specialize
