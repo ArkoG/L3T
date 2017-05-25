@@ -133,7 +133,7 @@ province_event = {
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
 	
-	ai = no
+	
 	is_triggered_only = yes
 	
 	trigger = {
@@ -151,7 +151,6 @@ character_event = {
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
 	
-	ai = no
 	is_triggered_only = yes
 	
 	trigger = {
@@ -170,7 +169,6 @@ character_event = {
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
 	
-	ai = no
 	is_triggered_only = yes
 	
 	trigger = {
@@ -189,7 +187,6 @@ character_event = {
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
 	
-	ai = no
 	is_triggered_only = yes
 	
 	trigger = {
@@ -208,26 +205,6 @@ character_event = {
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
 	
-	ai = no
-	is_triggered_only = yes
-	
-	trigger = {
-		has_global_flag = init_population
-	}
-	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
-	
-	option = {
-		name = "OK"	
-		clear_event_target = holding_dev 
-	}
-}
-character_event = {
-	id = L3T.1108
-	desc = "DESCL3T.1108"
-	picture = GFX_evt_castle_construction
-	border = GFX_event_normal_frame_economy
-	
-	ai = no
 	is_triggered_only = yes
 	
 	trigger = {
