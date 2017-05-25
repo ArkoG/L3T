@@ -383,9 +383,9 @@ character_event = {
 	
 	immediate = {
 		random_list = {
-			25 = { set_character_flag = { ruines_random_seed_1 }}
-			50 = { set_character_flag = { ruines_random_seed_2 }}
-			25 = { set_character_flag = { ruines_random_seed_3 }}
+			25 = { set_character_flag = ruines_random_seed_1 }
+			50 = { set_character_flag = ruines_random_seed_2 }
+			25 = { set_character_flag = ruines_random_seed_3 }
 		}
 		set_character_flag = ruines_pillees
 	}
