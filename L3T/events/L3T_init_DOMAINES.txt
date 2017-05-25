@@ -107,6 +107,7 @@ narrative_event = {
 		}
 		capital_holding = {
 			add_building = FEODAL_adm
+			change_variable = { which = "developpement" value = 20 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = feodal_adm duration = -1 }
 			clr_title_flag = castle_to_specialize
@@ -181,6 +182,7 @@ narrative_event = {
 				has_title_flag = castle_to_specialize
 			}
 			add_building = FEODAL_prod
+			change_variable = { which = "developpement" value = 10 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = feodal_prod duration = -1 }
 			clr_title_flag = castle_to_specialize
@@ -283,6 +285,7 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_INDUSTRIELLE
+			change_variable = { which = "developpement" value = 20 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = voc_indus duration = -1 }
 			clr_title_flag = city_to_specialize
@@ -355,6 +358,7 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
+			change_variable = { which = "developpement" value = 30 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = voc_comm duration = -1 }
 			# La province devient le départ d'une route	si possible
@@ -401,10 +405,36 @@ narrative_event = {
 					if = {
 						limit = { has_province_modifier = province_fleuve }
 						add_province_modifier = { name = route_fluviale duration = -1 hidden = yes }
+						owner = {
+							random_province_holding = {
+								limit = {
+									tier = baron
+									OR = {
+										holding_type = castle
+										holding_type = temple
+										holding_type = city
+									}
+								}
+								change_variable = { which = "developpement" value = 10 } #pour la route 
+							}
+						}
 					}
 					if = {
 						limit = { NOT = { has_province_modifier = province_fleuve } }
 						add_province_modifier = { name = route_terrestre duration = -1 hidden = yes }
+						owner = {
+							random_province_holding = {
+								limit = {
+									tier = baron
+									OR = {
+										holding_type = castle
+										holding_type = temple
+										holding_type = city
+									}
+								}
+								change_variable = { which = "developpement" value = 10 } #pour la route 
+							}
+						}
 					}
 					# Avert the player that a route is on its demesne
 					any_province_lord = {
@@ -428,6 +458,20 @@ narrative_event = {
 						}
 					}
 					clr_global_flag = avert_player
+					
+					#increases dev value in all the province demesne
+					random_province_holding = {
+						limit = {
+							tier = baron
+							OR = { 
+								holding_type = castle
+								holding_type = temple
+								holding_type = city
+							}
+						}
+						change_variable = { which = "developpement" value = 30 } #pour le noeud
+						change_variable = { which = "developpement" value = 10 } #pour le route size 1
+					}
 				}
 			}
 			clr_title_flag = city_to_specialize	
@@ -457,6 +501,7 @@ province_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
+			change_variable = { which = "developpement" value = 30 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = voc_comm duration = -1 }
 			
@@ -496,10 +541,36 @@ province_event = {
 					if = {
 						limit = { has_province_modifier = province_fleuve }
 						add_province_modifier = { name = route_fluviale duration = -1 hidden = yes}
+						owner = {
+							random_province_holding = {
+								limit = {
+									tier = baron
+									OR = {
+										holding_type = castle
+										holding_type = temple
+										holding_type = city
+									}
+								}
+								change_variable = { which = "developpement" value = 10 } #pour la route 
+							}
+						}
 					}
 					if = {
 						limit = { NOT = { has_province_modifier = province_fleuve } }
 						add_province_modifier = { name = route_terrestre duration = -1 hidden = yes}
+						owner = {
+							random_province_holding = {
+								limit = {
+									tier = baron
+									OR = {
+										holding_type = castle
+										holding_type = temple
+										holding_type = city
+									}
+								}
+								change_variable = { which = "developpement" value = 10 } #pour la route 
+							}
+						}
 					}
 					# Avert the player that a route is on its demesne
 					any_province_lord = {
@@ -523,6 +594,19 @@ province_event = {
 						}
 					}
 					clr_global_flag = avert_player
+					#increases dev value in all the province demesne
+					random_province_holding = {
+						limit = {
+							tier = baron
+							OR = { 
+								holding_type = castle
+								holding_type = temple
+								holding_type = city
+							}
+						}
+						change_variable = { which = "developpement" value = 30 } #pour le noeud principal
+						change_variable = { which = "developpement" value = 10 } #pour le route size 1
+					}
 				}
 			}
 		}
@@ -537,6 +621,7 @@ province_event = {
 				}
 				add_building = CITE_L1
 				add_building = VOC_INDUSTRIELLE
+				change_variable = { which = "developpement" value = 20 }
 				#change_variable = { which = "specNB" value = 1 } #debug
 				add_holding_modifier = { name = voc_indus duration = -1 }
 			}
@@ -746,6 +831,7 @@ narrative_event = {
 					}
 				}
 				add_building = MONASTERE
+				change_variable = { which = "developpement" value = 10 }
 				add_holding_modifier = { name = monastere duration = -1 }
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 				holder_scope = { narrative_event = { id = L3T.7 days = 0 }}
@@ -798,6 +884,7 @@ narrative_event = {
 					}
 				}
 				add_building = CITEEPISCOPALE
+				change_variable = { which = "developpement" value = 10 }
 			}
 			if = {
 				limit = { location = { religion_group = christian }} #//christian specific icon

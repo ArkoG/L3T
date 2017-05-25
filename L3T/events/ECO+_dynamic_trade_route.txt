@@ -739,10 +739,36 @@ province_event = {
 			if = {
 				limit = { has_province_modifier = province_fleuve }
 				add_province_modifier = { name = route_fluviale duration = -1 }
+				owner = {
+					random_province_holding = {
+						limit = {
+							tier = baron
+							OR = {
+								holding_type = castle
+								holding_type = temple
+								holding_type = city
+							}
+						}
+						change_variable = { which = "developpement" value = 10 } #pour la route 
+					}
+				}
 			}
 			if = {
 				limit = { NOT = { has_province_modifier = province_fleuve } }
 				add_province_modifier = { name = route_terrestre duration = -1 }
+				owner = {
+					random_province_holding = {
+						limit = {
+							tier = baron
+							OR = {
+								holding_type = castle
+								holding_type = temple
+								holding_type = city
+							}
+						}
+						change_variable = { which = "developpement" value = 10 } #pour la route 
+					}
+				}
 			}
 			
 			# If the player does not receive this event ...
@@ -791,6 +817,19 @@ province_event = {
 	
 	immediate = {
 		add_province_modifier = { name = noeud_commercial_annexe duration = -1 }
+		owner = {
+			random_demesne_title = {
+			limit = { 
+				tier = baron
+				OR = { 
+					holding_type = castle
+					holding_type = temple
+					holding_type = city
+				}
+			}
+			change_variable = { which = "developpement" value = 20 }
+			}
+		}
 	}
 }
 
