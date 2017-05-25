@@ -411,10 +411,12 @@ character_event = {
 					has_province_modifier = chantier_cathedrale
 					has_province_modifier = chantier_down
 				}
-				random_list = {
-					capital_holding = { change_variable = { which = cathedral value = 20 }}
-					capital_holding = { change_variable = { which = cathedral value = 30 }}
-					capital_holding = { change_variable = { which = cathedral value = 50 }}
+				capital_holding = {
+					random_list = {
+						10 = { change_variable = { which = cathedral value = 20 } }
+						10 = { change_variable = { which = cathedral value = 30 } }
+						10 = { change_variable = { which = cathedral value = 50 } }
+					}
 				}
 			}
 		}
