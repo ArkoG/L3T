@@ -873,6 +873,7 @@ narrative_event = {
 					# No Roman Cathedral at 3 province distance
 					location = {
 						NOT = {
+							had_global_flag = { flag = opus_francigenum days = 360 }
 							has_province_flag = roman_cathedral
 							any_neighbor_province = {
 								OR = {
