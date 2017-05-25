@@ -848,18 +848,70 @@ province_event = {
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 2 } }
 			add_province_modifier = { name = route_size2 duration = -1 }
+			owner = {
+				random_province_holding = {
+					limit = {
+						tier = baron
+						OR = {
+							holding_type = castle
+							holding_type = temple
+							holding_type = city
+						}
+					}
+					change_variable = { which = "developpement" value = 10 } #pour la route 
+				}
+			}
 		}
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 3 } }
 			add_province_modifier = { name = route_size3 duration = -1 }
+			owner = {
+				random_province_holding = {
+					limit = {
+						tier = baron
+						OR = {
+							holding_type = castle
+							holding_type = temple
+							holding_type = city
+						}
+					}
+					change_variable = { which = "developpement" value = 20 } #pour la route 
+				}
+			}
 		}
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 4 } }
 			add_province_modifier = { name = route_size4 duration = -1 }
+			owner = {
+				random_province_holding = {
+					limit = {
+						tier = baron
+						OR = {
+							holding_type = castle
+							holding_type = temple
+							holding_type = city
+						}
+					}
+					change_variable = { which = "developpement" value = 20 } #pour la route 
+				}
+			}
 		}
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 5 } }
 			add_province_modifier = { name = route_size5 duration = -1 }
+			owner = {
+				random_province_holding = {
+					limit = {
+						tier = baron
+						OR = {
+							holding_type = castle
+							holding_type = temple
+							holding_type = city
+						}
+					}
+					change_variable = { which = "developpement" value = 50 } #pour la route 
+				}
+			}
 		}
 	}
 }
