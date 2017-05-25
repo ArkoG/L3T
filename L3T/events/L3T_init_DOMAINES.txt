@@ -405,35 +405,30 @@ narrative_event = {
 					if = {
 						limit = { has_province_modifier = province_fleuve }
 						add_province_modifier = { name = route_fluviale duration = -1 hidden = yes }
-						owner = {
-							random_province_holding = {
-								limit = {
-									tier = baron
-									OR = {
-										holding_type = castle
-										holding_type = temple
-										holding_type = city
-									}
+						any_province_holding = {
+							limit = {
+								tier = baron
+								OR = {
+									holding_type = castle
+									holding_type = temple
+									holding_type = city
 								}
-								change_variable = { which = "developpement" value = 10 } #pour la route 
 							}
+							change_variable = { which = "developpement" value = 10 } #pour la route 
 						}
 					}
 					if = {
 						limit = { NOT = { has_province_modifier = province_fleuve } }
 						add_province_modifier = { name = route_terrestre duration = -1 hidden = yes }
-						owner = {
-							random_province_holding = {
-								limit = {
-									tier = baron
-									OR = {
-										holding_type = castle
-										holding_type = temple
-										holding_type = city
-									}
+						any_province_holding = {
+							limit = {
+								OR = {
+									holding_type = castle
+									holding_type = temple
+									holding_type = city
 								}
-								change_variable = { which = "developpement" value = 10 } #pour la route 
 							}
+							change_variable = { which = "developpement" value = 10 } #pour la route 
 						}
 					}
 					# Avert the player that a route is on its demesne
@@ -460,17 +455,15 @@ narrative_event = {
 					clr_global_flag = avert_player
 					
 					#increases dev value in all the province demesne
-					random_province_holding = {
+					any_province_holding = {
 						limit = {
-							tier = baron
 							OR = { 
 								holding_type = castle
 								holding_type = temple
 								holding_type = city
 							}
 						}
-						change_variable = { which = "developpement" value = 30 } #pour le noeud
-						change_variable = { which = "developpement" value = 10 } #pour le route size 1
+						change_variable = { which = "developpement" value = 40 } # 30 pour le noeud + 10 pour le route size 1
 					}
 				}
 			}
@@ -541,35 +534,29 @@ province_event = {
 					if = {
 						limit = { has_province_modifier = province_fleuve }
 						add_province_modifier = { name = route_fluviale duration = -1 hidden = yes}
-						owner = {
-							random_province_holding = {
-								limit = {
-									tier = baron
-									OR = {
-										holding_type = castle
-										holding_type = temple
-										holding_type = city
-									}
+						any_province_holding = {
+							limit = {
+								OR = {
+									holding_type = castle
+									holding_type = temple
+									holding_type = city
 								}
-								change_variable = { which = "developpement" value = 10 } #pour la route 
 							}
+							change_variable = { which = "developpement" value = 10 } #pour la route 
 						}
 					}
 					if = {
 						limit = { NOT = { has_province_modifier = province_fleuve } }
 						add_province_modifier = { name = route_terrestre duration = -1 hidden = yes}
-						owner = {
-							random_province_holding = {
-								limit = {
-									tier = baron
-									OR = {
-										holding_type = castle
-										holding_type = temple
-										holding_type = city
-									}
+						any_province_holding = {
+							limit = {
+								OR = {
+									holding_type = castle
+									holding_type = temple
+									holding_type = city
 								}
-								change_variable = { which = "developpement" value = 10 } #pour la route 
 							}
+							change_variable = { which = "developpement" value = 10 } #pour la route 
 						}
 					}
 					# Avert the player that a route is on its demesne
@@ -595,17 +582,15 @@ province_event = {
 					}
 					clr_global_flag = avert_player
 					#increases dev value in all the province demesne
-					random_province_holding = {
+					any_province_holding = {
 						limit = {
-							tier = baron
 							OR = { 
 								holding_type = castle
 								holding_type = temple
 								holding_type = city
 							}
 						}
-						change_variable = { which = "developpement" value = 30 } #pour le noeud principal
-						change_variable = { which = "developpement" value = 10 } #pour le route size 1
+						change_variable = { which = "developpement" value = 40 } # 30 pour le noeud principal + 10 pour le route size 1
 					}
 				}
 			}
