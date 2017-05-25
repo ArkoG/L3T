@@ -414,7 +414,7 @@ narrative_event = {
 									holding_type = city
 								}
 							}
-							change_variable = { which = "developpement" value = 10 } #pour la route 
+							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
 						}
 					}
 					if = {
@@ -428,7 +428,7 @@ narrative_event = {
 									holding_type = city
 								}
 							}
-							change_variable = { which = "developpement" value = 10 } #pour la route 
+							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
 						}
 					}
 					# Avert the player that a route is on its demesne
@@ -453,18 +453,6 @@ narrative_event = {
 						}
 					}
 					clr_global_flag = avert_player
-					
-					#increases dev value in all the province demesne
-					any_province_holding = {
-						limit = {
-							OR = { 
-								holding_type = castle
-								holding_type = temple
-								holding_type = city
-							}
-						}
-						change_variable = { which = "developpement" value = 40 } # 30 pour le noeud + 10 pour le route size 1
-					}
 				}
 			}
 			clr_title_flag = city_to_specialize	
@@ -542,7 +530,7 @@ province_event = {
 									holding_type = city
 								}
 							}
-							change_variable = { which = "developpement" value = 10 } #pour la route 
+							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
 						}
 					}
 					if = {
@@ -556,7 +544,7 @@ province_event = {
 									holding_type = city
 								}
 							}
-							change_variable = { which = "developpement" value = 10 } #pour la route 
+							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
 						}
 					}
 					# Avert the player that a route is on its demesne
@@ -581,17 +569,6 @@ province_event = {
 						}
 					}
 					clr_global_flag = avert_player
-					#increases dev value in all the province demesne
-					any_province_holding = {
-						limit = {
-							OR = { 
-								holding_type = castle
-								holding_type = temple
-								holding_type = city
-							}
-						}
-						change_variable = { which = "developpement" value = 40 } # 30 pour le noeud principal + 10 pour le route size 1
-					}
 				}
 			}
 		}
