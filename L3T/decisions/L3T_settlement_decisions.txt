@@ -1067,9 +1067,9 @@ settlement_decisions = {
 			}
 		}
 		effect = {
-			custom_tooltip = { text = check_dev }
+			custom_tooltip = { text = cust_check_dev }
 			#holder_scope = { province_event = { id = L3T.1102 days = 0 }}
-			FROM = { province_event = { id = L3T.1102 days = 0 }}
+			FROM = { province_event = { id = L3T.1102 days = 0 }} #hack to always be the recipient of the result. correct scope is "location" for the validator
 		}
 		revoke_allowed = {
 			always = no
