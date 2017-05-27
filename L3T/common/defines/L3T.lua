@@ -34,4 +34,4 @@
 	NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER = 45 				-- How many courtiers in a court to make it crowded and increase chance for disease.
 	NDefines.NAI.DOW_AGGRESSION_FACTOR = 0.25
 	NDefines.NEconomy.BUILDING_COST_MULT = 0.0						-- Increase to the build cost of all buildings that cost GOLD
-	NDefines.NGraphics.TREASURY_MODIFIER_ICON_FRAME = 209
+	NDefines.NGraphics.TREASURY_MODIFIER_ICON_FRAME = 182
