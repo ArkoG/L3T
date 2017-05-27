@@ -144,7 +144,7 @@ narrative_event = {
 			}
 			add_building = FEODAL_mil
 			#change_variable = { which = "specNB" value = 1 } #debug
-			add_holding_modifier = { name = feodal_mil duration = -1 }	
+			add_holding_modifier = { name = feodal_mil_L1 duration = -1 }	
 			clr_title_flag = castle_to_specialize
 			clear_event_target = holding_to_spec
 		}
