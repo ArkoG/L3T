@@ -167,3 +167,11 @@ on_settlement_construction_completed = {
 		L3T.9 #starts spec holding for the new built building
 	}
 }
+
+on_loot_settlement = { #seems it fires for the settlement owner
+	#random_events = {
+	#}
+	events = {
+		L3T.1108 #systématique ou non
+	}
+}
