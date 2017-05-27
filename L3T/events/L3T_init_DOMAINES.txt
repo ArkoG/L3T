@@ -109,7 +109,7 @@ narrative_event = {
 			add_building = FEODAL_adm
 			change_variable = { which = "developpement" value = 20 }
 			#change_variable = { which = "specNB" value = 1 } #debug
-			add_holding_modifier = { name = feodal_adm duration = -1 }
+			add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
 			clr_title_flag = castle_to_specialize
 			clear_event_target = holding_to_spec
 		}
@@ -184,7 +184,7 @@ narrative_event = {
 			add_building = FEODAL_prod
 			change_variable = { which = "developpement" value = 10 }
 			#change_variable = { which = "specNB" value = 1 } #debug
-			add_holding_modifier = { name = feodal_prod duration = -1 }
+			add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
 			clr_title_flag = castle_to_specialize
 			clear_event_target = holding_to_spec
 		}
@@ -287,7 +287,7 @@ narrative_event = {
 			add_building = VOC_INDUSTRIELLE
 			change_variable = { which = "developpement" value = 20 }
 			#change_variable = { which = "specNB" value = 1 } #debug
-			add_holding_modifier = { name = voc_indus duration = -1 }
+			add_holding_modifier = { name = voc_indus_L1 duration = -1 }
 			clr_title_flag = city_to_specialize
 			clear_event_target = holding_to_spec
 		}
@@ -360,7 +360,7 @@ narrative_event = {
 			add_building = VOC_COMMERCIALE
 			change_variable = { which = "developpement" value = 30 }
 			#change_variable = { which = "specNB" value = 1 } #debug
-			add_holding_modifier = { name = voc_comm duration = -1 }
+			add_holding_modifier = { name = voc_comm_L1 duration = -1 }
 			# La province devient le départ d'une route	si possible
 			location = {
 				if = {
@@ -484,7 +484,7 @@ province_event = {
 			add_building = VOC_COMMERCIALE
 			change_variable = { which = "developpement" value = 30 }
 			#change_variable = { which = "specNB" value = 1 } #debug
-			add_holding_modifier = { name = voc_comm duration = -1 }
+			add_holding_modifier = { name = voc_comm_L1 duration = -1 }
 			
 			# La province devient le départ d'une route si elle est distance au moins 3 d'un autre
 			if =  {
@@ -585,7 +585,7 @@ province_event = {
 				add_building = VOC_INDUSTRIELLE
 				change_variable = { which = "developpement" value = 20 }
 				#change_variable = { which = "specNB" value = 1 } #debug
-				add_holding_modifier = { name = voc_indus duration = -1 }
+				add_holding_modifier = { name = voc_indus_L1 duration = -1 }
 			}
 		}
 	}
@@ -681,30 +681,31 @@ province_event = {
 #Domaine Ecclésial     
 narrative_event = {
     id = L3T.6
-	picture = GFX_evt_monastery_monks
+	title = "NAMEL3T.6"
+	picture = GFX_evt_monk
 	border = GFX_event_narrative_frame_religion
-	#desc = "DESCL3T.6" #ne mettre que si tous les cas ne sont pas couverts par les triggers 
+	desc = "DESCL3T.6" #ne mettre que si tous les cas ne sont pas couverts par les triggers 
 	
-	title = { 
-		trigger = {	NOT = { religion_group = muslim } }
-		text = "NAMEL3T.6"
-	}
-	title = { 
-		trigger = {	religion_group = muslim	}
-		text = "NAMEL3T.6"
-	}
+#	title = { 
+#		trigger = {	NOT = { religion_group = muslim } }
+#		text = "NAMEL3T.6"
+#	}
+#	title = { 
+#		trigger = {	religion_group = muslim	}
+#		text = "NAMEL3T.6"
+#	}
 	
-	desc = { 
-		trigger = {	NOT = {	religion_group = muslim	} }
-		text = "DESCL3T.6"
-		picture = GFX_evt_monk
-	}
-	
-	desc = { 
-		trigger = {	religion_group = muslim	}
-		text = "DESCL3T.6"
-		picture = GFX_evt_L3T_muslim_blue_dome
-	}
+#	desc = { 
+#		trigger = {	NOT = {	religion_group = muslim	} }
+#		text = "DESCL3T.6"
+#		picture = GFX_evt_monk
+#	}
+#	
+#	desc = { 
+#		trigger = {	religion_group = muslim	}
+#		text = "DESCL3T.6"
+#		picture = GFX_evt_L3T_muslim_blue_dome
+#	}
 	
 	only_rulers = yes
 	capable_only = yes
@@ -719,7 +720,8 @@ narrative_event = {
 		any_demesne_title = {
 			tier = baron
 			holding_type = temple
-			location = { NOT = { religion_group = pagan_group } }
+			#location = { NOT = { religion_group = pagan_group } }
+			location = { religion_group = christian }
 			NOT = { has_title_flag = temple_to_specialize }
 			NOT = {
 				has_building = MONASTERE
@@ -745,7 +747,8 @@ narrative_event = {
 			limit = {
 				tier = baron
 				holding_type = temple
-				location = { NOT = { religion_group = pagan_group } }
+				#location = { NOT = { religion_group = pagan_group } }
+				location = { religion_group = christian }
 				NOT = {
 					has_building = MONASTERE
 					has_building = CITEEPISCOPALE
@@ -794,7 +797,7 @@ narrative_event = {
 				}
 				add_building = MONASTERE
 				change_variable = { which = "developpement" value = 10 }
-				add_holding_modifier = { name = monastere duration = -1 }
+				add_holding_modifier = { name = monastere_L1 duration = -1 }
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 				holder_scope = { narrative_event = { id = L3T.7 days = 0 }}
 			}
@@ -827,13 +830,15 @@ narrative_event = {
 		}
 		trigger = {
 			any_demesne_title = {
-				location = { NOT = { religion_group = pagan_group } }
+				#location = { NOT = { religion_group = pagan_group } }
+				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
 			}
 		}
 		random_demesne_title = {
 			limit = {
-				location = { NOT = { religion_group = pagan_group } }
+				#location = { NOT = { religion_group = pagan_group } }
+				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
 			}
 			clear_event_target = holding_to_spec
@@ -850,23 +855,24 @@ narrative_event = {
 			}
 			if = {
 				limit = { location = { religion_group = christian }} #//christian specific icon
-				add_holding_modifier = { name = episcopale duration = -1 }
+				add_holding_modifier = { name = episcopale_L1 duration = -1 }
 			}
-			if = {
-				limit = { location = { religion_group = muslim }} #//muslim specific icon
-				add_holding_modifier = { name = episco_muslim duration = -1 }
-			}
-			if = {
-				limit = { #other non pagan religions //jewish, zoro, indian
-					location = { NOT = {religion_group = christian }}
-					location = { NOT = {religion_group = muslim }}
-				}
-				add_holding_modifier = { 
-					name = episcopale
-					duration = -1
-					hidden = yes
-				}
-			}
+#			if = {
+#				limit = { location = { religion_group = muslim }} #//muslim specific icon
+#				add_holding_modifier = { name = episco_muslim duration = -1 }
+#			}
+#			if = {
+#				limit = { #other non pagan religions //jewish, zoro, indian
+#					location = { NOT = {religion_group = christian }}
+#					location = { NOT = {religion_group = muslim }}
+#				}
+#				add_holding_modifier = { 
+#					name = episcopale_L1
+#					duration = -1
+#					hidden = yes
+#				}
+#			}
+
 			# Romanesque Cathedral
 			if = {
 				limit = {
@@ -924,7 +930,7 @@ province_event = {
 			add_building = tp_roman_cathedrale
 			add_building = CITEEPISCOPALE
 			change_variable = { which = "developpement" value = 10 }
-			add_holding_modifier = { name = episcopale duration = -1 }
+			add_holding_modifier = { name = episcopale_L1 duration = -1 }
 			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug	
 		}
 		set_province_flag = roman_cathedral
