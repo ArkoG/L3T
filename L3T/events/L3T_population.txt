@@ -231,15 +231,7 @@ character_event = {
 	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
 	
 	immediate = { #i want to scope the settlement that fired this event
-		random_demesne_title = {
-			limit = { 
-				tier = baron
-				OR = { 
-					holding_type = castle
-					holding_type = temple
-					holding_type = city
-				}
-			}
+		FROM = {
 			save_event_target_as = holding_dev #totoro
 			set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
 			change_variable = { which = "developpement" value = -15 } 

@@ -168,7 +168,7 @@ on_settlement_construction_completed = {
 	}
 }
 
-on_loot_settlement = { #seems it fires for the settlement owner
+on_loot_settlement = { #seems it fires for the settlement owner, FROM is the settlement
 	#random_events = {
 	#}
 	events = {
