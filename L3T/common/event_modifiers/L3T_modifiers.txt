@@ -146,7 +146,9 @@
 #178 - rivière asséchée
   #179 - not used
   #180 - not used
-
+#181 - spe commanderie
+#182 - treasury icon
+#183 - spe TEMPLE 2b -centre religieux musulman
 
 #188 - tradition chrétienne
 #189 - tradition musulmane
@@ -168,9 +170,8 @@
 #205 - spe TEMPLE 2a -cité épiscopale
 #206 - spe CITE 1 -cité production
 #207 - spe CITE 2 -cité commerce
-#208 - spe TEMPLE 2b -centre religieux musulman
-#209 - treasury icon
-#210 - spe commanderie
+
+
 
 # 211 - 220
 
@@ -621,15 +622,51 @@ herisson_maudit_3 = { #prestige loss
 }
 
 ### Specialization modifiers
-feodal_prod = {icon = 201 }
-feodal_mil = {icon = 202 }
-feodal_adm = {icon = 203 }
-monastere = {icon = 204 }
-episcopale = {icon = 205 }
-voc_indus = {icon = 206 }
-voc_comm = {icon = 207 }
-episco_muslim = {icon = 208 }
-#commanderie = {icon = 210 }
+feodal_prod_L1 = {icon = 201 }
+feodal_prod_L2 = {icon = 202 }
+feodal_prod_L3 = {icon = 203 }
+feodal_prod_L4 = {icon = 204 }
+feodal_prod_L5 = {icon = 205 }
+
+feodal_mil_L1 = {icon = 206 }
+feodal_mil_L2 = {icon = 207 }
+feodal_mil_L3 = {icon = 208 }
+feodal_mil_L4 = {icon = 209 }
+feodal_mil_L5 = {icon = 210 }
+
+feodal_adm_L1 = {icon = 211 }
+feodal_adm_L2 = {icon = 212 }
+feodal_adm_L3 = {icon = 213 }
+feodal_adm_L4 = {icon = 214 }
+feodal_adm_L5 = {icon = 215 }
+
+monastere_L1 = {icon = 216 }
+monastere_L2 = {icon = 217 }
+monastere_L3 = {icon = 218 }
+monastere_L4 = {icon = 219 }
+monastere_L5 = {icon = 220 }
+
+episcopale_L1 = {icon = 221 }
+episcopale_L2 = {icon = 222 }
+episcopale_L3 = {icon = 223 }
+episcopale_L4 = {icon = 224 }
+episcopale_L5 = {icon = 225 }
+
+voc_indus_L1 = {icon = 226 }
+voc_indus_L2 = {icon = 227 }
+voc_indus_L3 = {icon = 228 }
+voc_indus_L4 = {icon = 229 }
+voc_indus_L5 = {icon = 230 }
+
+voc_comm_L1 = {icon = 231 }
+voc_comm_L2 = {icon = 232 }
+voc_comm_L3 = {icon = 233 }
+voc_comm_L4 = {icon = 234 }
+voc_comm_L5 = {icon = 235 }
+
+
+episco_muslim = {icon = 183 }
+#commanderie = {icon = 181 }
  
 
 ###

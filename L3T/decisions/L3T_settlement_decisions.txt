@@ -126,7 +126,7 @@ settlement_decisions = {
 						remove_building = ca_barracks_6
 					}
 					remove_building = FEODAL_mil
-					remove_holding_modifier = feodal_mil
+					remove_holding_modifier = feodal_mil_L1
 				}
 				# Remove weapons if there is no more producer
 				location = {
@@ -420,12 +420,12 @@ settlement_decisions = {
 					}
 				}
 				remove_building = FEODAL_prod
-				remove_holding_modifier = feodal_prod
+				remove_holding_modifier = feodal_prod_L1
 			}
 			
 			# In both cases, add FEODAL_adm spe
 			add_building = FEODAL_adm
-			add_holding_modifier = { name = feodal_adm duration = -1 }
+			add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
 		}
 		revoke_allowed = {
 			always = no
@@ -485,7 +485,7 @@ settlement_decisions = {
 		effect = {
 			FROM = { wealth = -100 }
 			remove_building = FEODAL_adm
-			remove_holding_modifier = feodal_adm
+			remove_holding_modifier = feodal_adm_L1
 			
 			# Sell administrative buildings
 			hidden_tooltip = {
@@ -907,9 +907,9 @@ settlement_decisions = {
 			}
 			# Change the specialization building
 			remove_building = FEODAL_prod
-			remove_holding_modifier = feodal_prod
+			remove_holding_modifier = feodal_prod_L1
 			add_building = FEODAL_mil
-			add_holding_modifier = { name = feodal_mil duration = -1 }			
+			add_holding_modifier = { name = feodal_mil_L1 duration = -1 }			
 		}
 		revoke_allowed = {
 			always = no
@@ -1029,9 +1029,9 @@ settlement_decisions = {
 				}
 			}
 			remove_building = FEODAL_mil
-			remove_holding_modifier = feodal_mil
+			remove_holding_modifier = feodal_mil_L1
 			add_building = FEODAL_prod			
-			add_holding_modifier = { name = feodal_prod duration = -1 }
+			add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
 		}
 		revoke_allowed = {
 			always = no
