@@ -14,7 +14,7 @@ character_event = {
 		any_title = {
 			limit = { tier = baron }
 			export_to_variable = { which = "developpement" value = num_of_buildings } #gives a random seed based on techs
-			
+
 			if = {
 				limit = {	
 					year = 1000
@@ -33,29 +33,39 @@ character_event = {
 					}
 				change_variable = { which = "developpement" value = 50 }
 			}
-
+			
 			# Castles
+			if = {
+				limit = { check_variable = { which = "developpement" value = 0 }}
+				holding_type = castle
+				set_variable = { which = "devnextstep" value = 100 }
+			}
+
 			if = {
 				#limit = { num_of_buildings = 10 }
 				limit = { check_variable = { which = "developpement" value = 100 }}
 				add_building = ca_town_1
+				set_variable = { which = "devnextstep" value = 150 }
 			}
 			
 			if = {
 				#limit = { num_of_buildings = 15 }
 				limit = { check_variable = { which = "developpement" value = 150 }}
+				set_variable = { which = "devnextstep" value = 200 }
 				add_building = ca_town_2
 			}
 			
 			if = {
 				#limit = { num_of_buildings = 20 }
 				limit = { check_variable = { which = "developpement" value = 200 }}
+				set_variable = { which = "devnextstep" value = 250 }
 				add_building = ca_town_3
 			}
 			
 			if = {
 				#limit = { num_of_buildings = 25 }
 				limit = { check_variable = { which = "developpement" value = 250 }}
+				set_variable = { which = "devnextstep" value = 350 }
 				add_building = ca_town_4
 			}
 			
@@ -64,59 +74,80 @@ character_event = {
 				limit = { check_variable = { which = "developpement" value = 350 }}
 				add_building = ca_town_5
 			}
+
 			# Cities
+			if = {
+				limit = { check_variable = { which = "developpement" value = 0 }}
+				holding_type = city
+				set_variable = { which = "devnextstep" value = 100 }
+			}
+			
 			if = {
 				#limit = { num_of_buildings = 10 }
 				limit = { check_variable = { which = "developpement" value = 100 }}
 				add_building = ct_town_1
+				set_variable = { which = "devnextstep" value = 150 }
 			}
 			
 			if = {
 				#limit = { num_of_buildings = 15 }
 				limit = { check_variable = { which = "developpement" value = 150 }}
 				add_building = ct_town_2
+				set_variable = { which = "devnextstep" value = 250 }
 			}
 			
 			if = {
 				#limit = { num_of_buildings = 20 }
-				limit = { check_variable = { which = "developpement" value = 200 }}
+				limit = { check_variable = { which = "developpement" value = 250 }}
 				add_building = ct_town_3
+				set_variable = { which = "devnextstep" value = 400 }
 			}
 			
 			if = {
 				#limit = { num_of_buildings = 25 }
-				limit = { check_variable = { which = "developpement" value = 250 }}
+				limit = { check_variable = { which = "developpement" value = 400 }}
 				add_building = ct_town_4
+				set_variable = { which = "devnextstep" value = 500 }
 			}
 			
 			if = {
 				#limit = { num_of_buildings = 30 }
-				limit = { check_variable = { which = "developpement" value = 300 }}
+				limit = { check_variable = { which = "developpement" value = 500 }}
 				add_building = ct_town_5
 			}
-			# Temples	
+			# Temples
+			if = {
+				limit = { check_variable = { which = "developpement" value = 0 }}
+				holding_type = temple
+				set_variable = { which = "devnextstep" value = 120 }
+			}
+			
 			if = {
 				#limit = { num_of_buildings = 12 }
 				limit = { check_variable = { which = "developpement" value = 120 }}
 				add_building = tp_town_1
+				set_variable = { which = "devnextstep" value = 170 }
 			}
 			
 			if = {
 				#limit = { num_of_buildings = 17 }
 				limit = { check_variable = { which = "developpement" value = 170 }}
 				add_building = tp_town_2
+				set_variable = { which = "devnextstep" value = 220 }
 			}
 			
 			if = {
 				#limit = { num_of_buildings = 22 }
 				limit = { check_variable = { which = "developpement" value = 220 }}
 				add_building = tp_town_3
+				set_variable = { which = "devnextstep" value = 260 }
 			}
 			
 			if = {
 				#limit = { num_of_buildings = 26 }
 				limit = { check_variable = { which = "developpement" value = 260 }}
 				add_building = tp_town_4
+				set_variable = { which = "devnextstep" value = 300 }
 			}
 			
 			if = {
@@ -369,6 +400,71 @@ character_event = {
 #			name = "moins_un"
 #		}
 }
+character_event = {
+	id = L3T.1110
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		location = { has_trade_post=yes } #province has a trade post
+		any_demesne_title = { holding_type = city } #I am a city holder
+	}
+	
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				holding_type = city
+				location = { has_trade_post=yes }
+			}
+			change_variable = { which = "developpement" value = 10 }
+			#if = {
+			#	limit = {
+			#		has_building = VOC_INDUSTRIELLE
+			#	}
+			#	change_variable = { which = "developpement" value = 10 }
+			#}
+			if = {
+				limit = {
+					has_building = VOC_COMMERCIALE
+				}
+				#change_variable = { which = "developpement" value = 30 }
+				change_variable = { which = "developpement" value = 20 } #only diff
+			}
+		}
+	}
+}
+character_event = {
+	id = L3T.1111
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		location = { hospital_level = 1 } #province has a hospital
+		any_demesne_title = {
+			OR = { 
+				holding_type = castle
+				holding_type = temple
+				holding_type = city
+			}
+		}
+	}
+	
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				OR = { 
+					holding_type = castle
+					holding_type = temple
+					holding_type = city
+				}
+				location = { hospital_level = 1 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+		}
+	}
+}
 
 #Evolution population	CASTLE 
 ##niveau 1	CASTLE
@@ -409,6 +505,7 @@ option = {
 				check_variable = { which = "developpement" value = 100 }
 			}
 			add_building = ca_town_1
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 150 } }
 		}
 	}
 }
@@ -448,10 +545,11 @@ option = {
 				holding_type = castle 
 				#num_of_buildings = 15
 				check_variable = { which = "developpement" value = 150 }
-				has_building = ca_town_1
+								has_building = ca_town_1
 				NOT = { has_building = ca_town_2 }
 			}
 			add_building = ca_town_2
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 200 }}
 		}
 	}
 }
@@ -495,6 +593,7 @@ option = {
 				NOT = { has_building = ca_town_3 }
 			}
 			add_building = ca_town_3
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 250 }}
 		}
 	}
 }
@@ -538,6 +637,7 @@ option = {
 				NOT = { has_building = ca_town_4 }
 			}
 			add_building = ca_town_4
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 350 }}
 		}
 	}
 }
@@ -627,6 +727,7 @@ option = {
 				check_variable = { which = "developpement" value = 100 }
 			}
 			add_building = ct_town_1
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 150 }}
 		}
 	}
 }
@@ -670,6 +771,7 @@ option = {
 				NOT = { has_building = ct_town_2 }
 			}
 			add_building = ct_town_2
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 250 }}
 		}
 	}
 }
@@ -713,6 +815,7 @@ option = {
 				NOT = { has_building = ct_town_3 }
 			}
 			add_building = ct_town_3
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 400 }}
 		}
 	}
 }
@@ -756,6 +859,7 @@ option = {
 				NOT = { has_building = ct_town_4 }
 			}
 			add_building = ct_town_4
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 500 }}
 		}
 	}
 }
@@ -844,6 +948,7 @@ option = {
 				check_variable = { which = "developpement" value = 120 }
 			}
 			add_building = tp_town_1
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 170 }}
 		}
 	}
 }
@@ -887,6 +992,7 @@ option = {
 				NOT = {	has_building = tp_town_2	}
 			}
 			add_building = tp_town_2
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 220 }}
 		}
 	}
 }
@@ -930,6 +1036,7 @@ option = {
 				NOT = {	has_building = tp_town_3	}
 			}
 			add_building = tp_town_3
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 260 }}
 		}
 	}
 }
@@ -973,6 +1080,7 @@ option = {
 				NOT = {	has_building = tp_town_4	}
 			}
 			add_building = tp_town_4
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 300 }}
 		}
 	}
 }
