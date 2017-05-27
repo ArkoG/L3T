@@ -292,6 +292,12 @@ character_event = {
 				}
 				save_event_target_as = holding_dev #totoro
 				set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
+				if = {
+					limit = {
+						holding_type = city
+					}
+					change_variable = { which = "developpement" value = 1 }
+				}
 				change_variable = { which = "developpement" value = 1 } 
 				holder_scope = { character_event = { id = L3T.1104 days = 0 }} #totoro
 			}
@@ -689,7 +695,7 @@ trigger = {
 			has_building = ct_town_2
 			NOT = { has_building = ct_town_3 }
 			#num_of_buildings = 20
-			check_variable = { which = "developpement" value = 200 }
+			check_variable = { which = "developpement" value = 250 }
 		}
 	}
 		
@@ -702,7 +708,7 @@ option = {
 				tier = baron
 				holding_type = city	
 				#num_of_buildings = 20
-				check_variable = { which = "developpement" value = 200 }
+				check_variable = { which = "developpement" value = 250 }
 				has_building = ct_town_2
 				NOT = { has_building = ct_town_3 }
 			}
@@ -732,7 +738,7 @@ trigger = {
 			has_building = ct_town_3
 			NOT = { has_building = ct_town_4 }
 			#num_of_buildings = 25
-			check_variable = { which = "developpement" value = 250 }
+			check_variable = { which = "developpement" value = 400 }
 		}
 	}
 		
@@ -745,7 +751,7 @@ option = {
 				tier = baron
 				holding_type = city		
 				#num_of_buildings = 25
-				check_variable = { which = "developpement" value = 250 }
+				check_variable = { which = "developpement" value = 400 }
 				has_building = ct_town_3
 				NOT = { has_building = ct_town_4 }
 			}
@@ -778,7 +784,7 @@ trigger = {
 			has_building = ct_town_4
 			NOT = { has_building = ct_town_5 }
 			#num_of_buildings = 30
-			check_variable = { which = "developpement" value = 300 }
+			check_variable = { which = "developpement" value = 500 }
 		}
 	}
 		
@@ -791,7 +797,7 @@ option = {
 				tier = baron
 				holding_type = city	
 				#num_of_buildings = 30
-				check_variable = { which = "developpement" value = 300 }
+				check_variable = { which = "developpement" value = 500 }
 				has_building = ct_town_4
 				NOT = { has_building = ct_town_5 }
 			}
