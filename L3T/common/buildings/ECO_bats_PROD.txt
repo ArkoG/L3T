@@ -308,7 +308,7 @@ CA_AGRI_boulangerie_L1 = {
 	potential = {
 		has_province_modifier = agriculture3_farine}
 	#prerequisites = { CA_AGRI_moulin_L1 }
-	prerequisites = { FEODAL_prod }
+	prerequisites = { FEODAL_adm } #great quantities in cities only
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_AGRI_boulangerie_L2 = {
@@ -359,7 +359,7 @@ CA_ELEV_cheval_L1 = {
 		has_province_modifier = elevage1
 		terrain = steppe
 	}
-	prerequisites = { FEODAL_prod }
+	prerequisites = { FEODAL_mil } #for knights and noble mostly
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	horse_archers = 20 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_ELEV_cheval_L2 = {
@@ -590,8 +590,9 @@ CT_MINE_or_L1 = {
 			has_province_modifier = minerai1
 			terrain = desert
 		}
-	prerequisites = { VOC_INDUSTRIELLE }
-		gold_cost = 60.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	#prerequisites = { VOC_INDUSTRIELLE }
+	not_if_x_exists = { CT_MINE_cuivre_L1 }
+		gold_cost = 60.0	build_time = 200	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_MINE_or_L2 = {
  	desc = CT_MINE_or_L2_desc
@@ -604,7 +605,7 @@ CT_MINE_or_L3 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 
 	upgrades_from = CT_MINE_or_L2
-		gold_cost = 120.0	build_time = 100	tax_income = 1.2	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 150	tax_income = 1.2	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 		local_tax_modifier = 0.02
 }
 
@@ -617,7 +618,8 @@ CT_MINE_cuivre_L1 = {
 			terrain = desert
 		}
 	#prerequisites = { VOC_INDUSTRIELLE }
-		gold_cost = 60.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	not_if_x_exists = { CT_MINE_or_L1 }
+		gold_cost = 60.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_MINE_cuivre_L2 = {
  	desc = CT_MINE_cuivre_L2_desc
@@ -630,7 +632,7 @@ CT_MINE_cuivre_L3 = {
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 
 	upgrades_from = CT_MINE_cuivre_L2
-		gold_cost = 150.0	build_time = 100	tax_income = 0.6	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 120.0	build_time = 150	tax_income = 0.6	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 		local_tax_modifier = 0.01
 }
 
@@ -989,7 +991,7 @@ TP_AGRI_boulangerie_L1 = {
 	potential = {
 		has_province_modifier = agriculture3_farine}
 	#prerequisites = { TP_AGRI_moulin_L1 }
-	prerequisites = { MONASTERE }
+	prerequisites = { CITEEPISCOPALE } #high production level in city only
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_boulangerie_L2 = {
