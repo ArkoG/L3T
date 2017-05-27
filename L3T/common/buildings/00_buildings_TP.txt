@@ -19,9 +19,10 @@ temple = {
 tp_training_grounds_L1 = { #Porte de guet
 	desc = tp_training_grounds_L1_desc
 	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
-	prerequisites = { 
-		CITEEPISCOPALE
-	}
+	#prerequisites = { 
+	#	CITEEPISCOPALE
+	#}
+	not_if_x_exists = { MONASTERE }
 	gold_cost = 80
 
 	build_time = 130

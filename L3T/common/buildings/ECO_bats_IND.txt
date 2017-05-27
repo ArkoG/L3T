@@ -878,7 +878,8 @@ TP_presse_L1 = {
 			}			
 		}
 	}
-	prerequisites = { CITEEPISCOPALE }
+	#prerequisites = { CITEEPISCOPALE }
+	not_if_x_exists = { MONASTERE }
 		gold_cost = 50.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_presse_L2 = {
@@ -917,7 +918,8 @@ TP_four_L1 = {
 		}
 	}
 	#prerequisites = { TP_BOIS_charbon_L1 }
-	prerequisites = { CITEEPISCOPALE }
+	#prerequisites = { CITEEPISCOPALE }
+	not_if_x_exists = { MONASTERE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_four_L2 = {
