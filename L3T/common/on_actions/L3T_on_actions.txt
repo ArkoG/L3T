@@ -177,3 +177,11 @@ on_character_convert_religion = {
 		REC.12
 	}
 }
+
+on_loot_settlement = { #seems it fires for the settlement owner, FROM is the settlement
+	#random_events = {
+	#}
+	events = {
+		L3T.1108 #systématique ou non
+	}
+}

@@ -414,7 +414,7 @@ CT_brasserie_L4 = {
 		has_province_modifier = agriculture3_biere_Q2
 	}
 	#prerequisites = { CT_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
-	prerequisites = { CITE_L2 }
+	#prerequisites = { CITE_L2 } #to replace with main building
 	upgrades_from = CT_brasserie_L3
 		gold_cost = 125.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -479,7 +479,7 @@ CT_chai_L4 = {
 		has_province_modifier = agriculture3_vin_Q2
 	}
 	#prerequisites = { TP_AGRI_vigne_L3 } #à remplacer par pré-requis de trait
-	prerequisites = { CITE_L2 }
+	#prerequisites = { CITE_L2 } #
 	upgrades_from = CT_chai_L3
 		gold_cost = 125.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }

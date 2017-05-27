@@ -225,9 +225,9 @@ ct_training_grounds_1 = { #Porte en pierre
 ct_training_grounds_2 = { #Porte gardée
 	desc = ct_training_grounds_2_desc
 	trigger = { TECH_CITY_CONSTRUCTION = 0 }
-	prerequisites = { 
-		CITE_L2
-	}
+	#prerequisites = { 
+	#	CITE_L2 #to replace with main building
+	#}
 	upgrades_from = ct_training_grounds_1
 	gold_cost = 190
 
@@ -248,9 +248,9 @@ ct_training_grounds_3 = { #Porte de  la ville
 		FROM = { prestige = 70} #replaces prestige_cost
 		custom_tooltip = { text = TOOLTIP_prestige_building }
 	}	
-	prerequisites = { 
-		CITE_L3
-	}
+	#prerequisites = { 
+	#	CITE_L3
+	#}
 	upgrades_from = ct_training_grounds_2
 	gold_cost = 270
 	#prestige_cost = 70

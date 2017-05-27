@@ -18,7 +18,7 @@ character_event = {
 
 		FROM = {
 			add_building = FEODAL_mil
-			add_holding_modifier = { name = feodal_mil duration = -1 }	
+			add_holding_modifier = { name = feodal_mil_L1 duration = -1 }	
 			
 			# Convert outilleur to armurerie
 			custom_tooltip = { text = TOOLTIPL3T301A }
@@ -62,7 +62,7 @@ character_event = {
 		name = "L3T.3B" # Get same localisation than the initialisation
 		FROM = {
 			add_building = FEODAL_prod
-			add_holding_modifier = { name = feodal_prod duration = -1 }
+			add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
 			
 			# Sell the weapon production buildings
 			custom_tooltip = { text = TOOLTIPL3T301B }
