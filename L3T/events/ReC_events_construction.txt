@@ -911,3 +911,216 @@ province_event = {
 	is_triggered_only = yes
 	immediate = { FROMFROMFROM = { letter_event = { id = REC.8 days = 0 } } }
 }
+
+# Check the builder religion after succession
+character_event = {
+	id = REC.11
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = { # Bad religion to continue construction
+				is_catholic_group = no
+				FROM = {
+					# FROM cannot be a capital_holding, it is a province title or a non capital holding
+					tier = count
+					location = {
+						has_province_modifier = chantier_cathedrale
+					}
+				}
+			}
+			AND = { # Good religion to start again construction
+				is_catholic_group = yes
+				FROM = {
+					# FROM cannot be a capital_holding, it is a province title or a non capital holding
+					tier = count
+					location = {
+						has_province_flag = chantier_cancelled_flag
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		# Stop construction
+		if = {
+			limit = { is_catholic_group = no }
+			FROM = { location = { province_event = {  id = REC.13 days = 10 } } }
+		}
+		
+		# Or start again construction
+		if = {
+			limit = { is_catholic_group = yes }
+			FROM = { location = { province_event = {  id = REC.15 days = 10 } } }
+		}
+	}
+}
+
+# Check the builder religion after conversion
+character_event = {
+	id = REC.12
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = { # Bad religion to continue construction
+				is_catholic_group = no
+				any_demesne_province = {
+					has_province_modifier = chantier_cathedrale
+				}
+			}
+			AND = { # Good religion to start again construction
+				is_catholic_group = yes
+				any_demesne_province = {
+					has_province_flag = chantier_cancelled_flag
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		# Stop construction
+		if = {
+			limit = { is_catholic_group = no }
+			any_demesne_province = {
+				limit = { has_province_modifier = chantier_cathedrale }
+				province_event = { id = REC.13 days = 10 }
+			}
+		}
+		
+		# Or start again construction
+		if = {
+			limit = { is_catholic_group = yes }
+			any_demesne_province = {
+				limit = { has_province_flag = chantier_cancelled_flag }
+				province_event = { id = REC.15 days = 10 }
+			}
+		}
+	}
+}
+
+# Province where the cathedral construction will be stopped
+province_event = {
+	id = REC.13
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	# This event is only useful to have the province in the FROM scope of REC.14
+	immediate = { owner = { character_event = { id = REC.14 days = 10 } } }
+}
+
+# Non catholic stop construction
+character_event = {
+	id = REC.14
+	desc = "DESCREC.14"
+	picture = GFX_evt_REC5
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.14A"
+		remove_trait = batisseur_cathedrale
+		FROM = {
+			remove_province_modifier = chantier_cathedrale
+			if = {
+				limit = { has_province_modifier = chantier_down }
+				remove_province_modifier = chantier_down
+			}
+			if = {
+				limit = { has_province_modifier = chantier_stop }
+				remove_province_modifier = chantier_stop
+			}
+			set_province_flag = chantier_cancelled_flag
+			custom_tooltip = { text = TOOLTIP_cathedral_cancel }
+			hidden_tooltip = {
+				random_list = {
+					25 = { add_province_modifier = { name = chantier_cancelled duration = 3650 } } # 10 years
+					25 = { add_province_modifier = { name = chantier_cancelled duration = 5475 } } # 15 years
+					25 = { add_province_modifier = { name = chantier_cancelled duration = 7300 } } # 20 years
+					25 = { add_province_modifier = { name = chantier_cancelled duration = 9125 } } # 25 years
+				}
+			}
+		}
+	}
+}
+
+# Province where the cathedral construction will be started again
+province_event = {
+	id = REC.15
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	# This event is only useful to have the province in the FROM scope of REC.14
+	immediate = { owner = { character_event = { id = REC.16 days = 10 } } }
+}
+
+# Catholic starts again construction
+character_event = {
+	id = REC.16
+	desc = "DESCREC.16"
+	picture = GFX_evt_REC5
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.16A"
+		trigger = { wealth = 75 }
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				trait = charitable
+			}
+		}
+		wealth = -75
+		add_trait = batisseur_cathedrale
+		FROM = {
+			clr_province_flag = chantier_cancelled_flag
+			if = {
+				limit = { has_province_modifier = chantier_cancelled }
+				remove_province_modifier = chantier_cancelled
+			}
+			add_province_modifier = { name = chantier_cathedrale duration = -1 }
+			add_province_modifier = { name = chantier_stop duration = -1 }
+		}
+	}
+		
+	option = {
+		name = "REC.16B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 3
+				trait = greedy
+			}
+		}
+		FROM = { province_event = { id = REC.17 days = 365 } }
+	}
+}
+
+# Province where the cathedral construction will be started again
+province_event = {
+	id = REC.17
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = chantier_cancelled_flag
+		owner = { is_catholic_group = yes }
+	}
+	
+	is_triggered_only = yes
+	
+	# This event is only useful to have the province in the FROM scope of REC.14
+	immediate = { owner = { character_event = { id = REC.16 days = 10 } } }
+}

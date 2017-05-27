@@ -302,6 +302,11 @@ chantier_stop = {
 	local_revolt_risk = 0.02 #2% chantier stoppé cause grève ou arrêt "simple" : employés non payés
 }
 
+chantier_cancelled = {
+	icon = 167
+	local_revolt_risk = 0.05
+}
+
 temp_wall = {
 	icon = 127
 	fort_level = 1
