@@ -262,7 +262,7 @@ CT_pont_fluvial_L4 = { #-pont en bois
 	desc = "CT_pont_fluvial_L4_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = CT_pont_fluvial_L3
-	prerequisites = { CITE_L2 }
+	#prerequisites = { CITE_L2 } #to replace with main building
 	global_movement_speed = 0.01
 	gold_cost = 425.0	build_time = 900	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -277,7 +277,7 @@ CT_pont_fluvial_L6 = { #-grand pont
 	desc = "CT_pont_fluvial_L6_desc"
 	trigger = { TECH_CONSTRUCTION = 4 }
 	upgrades_from = CT_pont_fluvial_L5
-	prerequisites = { CITE_L3 }
+	#prerequisites = { CITE_L3 }
 	gold_cost = 250.0	build_time = 540	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 

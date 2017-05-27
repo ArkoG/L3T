@@ -222,7 +222,7 @@ narrative_event = {
 			holding_type = city
 			NOT = {
 				has_building = CITE_L1
-				has_building = CITE_L2
+				#has_building = CITE_L2
 				has_building = VOC_INDUSTRIELLE
 				has_building = VOC_COMMERCIALE
 			}
@@ -249,7 +249,7 @@ narrative_event = {
 				holding_type = city
 				NOT = {
 					has_building = CITE_L1
-					has_building = CITE_L2
+					#has_building = CITE_L2
 					has_building = VOC_INDUSTRIELLE
 					has_building = VOC_COMMERCIALE
 				}
@@ -335,7 +335,7 @@ narrative_event = {
 				holding_type = city
 				NOT = {
 					has_building = CITE_L1
-					has_building = CITE_L2
+					#has_building = CITE_L2
 					has_building = VOC_INDUSTRIELLE
 					has_building = VOC_COMMERCIALE
 				}
@@ -592,90 +592,90 @@ province_event = {
 }
 
 #upgrade CITE L1 vers L2
-narrative_event = {
-	title = "NAMEL3T.5"
-	desc = "DESCL3T.5"
-    id = L3T.5
-	picture = GFX_evt_L3T_city
-	
-	only_rulers = yes
-	capable_only = yes
-	#prisoner = no
-	
-	trigger = {
-		#OR = { #dealt through gov_type instead of religion
-		#   NOT = { religion_group = pagan_group }
-		#   religion = west_african_pagan
-		#   religion = west_african_pagan_reformed
-		#}
-		any_demesne_title = {
-			tier = baron
-			holding_type = city
-			num_of_buildings = 25 #à changer une fois testé
-			has_building = CITE_L1
-			
-			NOT = { has_building = CITE_L2 }
-		}
-	}	
-		
-	mean_time_to_happen = { days = 450 }	
-
-	option = {
-		name = "L3T.5A"	
-		random_demesne_title = {
-			limit = {
-				tier = baron
-				holding_type = city
-				num_of_buildings = 25 #à changer une fois testé -25-
-				NOT = { has_building = CITE_L2 }
-			}
-			add_building = CITE_L2
-		}
-	}
-}
+#narrative_event = {
+#	title = "NAMEL3T.5"
+#	desc = "DESCL3T.5"
+#    id = L3T.5
+#	picture = GFX_evt_L3T_city
+#	
+#	only_rulers = yes
+#	capable_only = yes
+#	#prisoner = no
+#	
+#	trigger = {
+#		#OR = { #dealt through gov_type instead of religion
+#		#   NOT = { religion_group = pagan_group }
+#		#   religion = west_african_pagan
+#		#   religion = west_african_pagan_reformed
+#		#}
+#		any_demesne_title = {
+#			tier = baron
+#			holding_type = city
+#			num_of_buildings = 25 #à changer une fois testé
+#			has_building = CITE_L1
+#			
+#			NOT = { has_building = CITE_L2 }
+#		}
+#	}	
+#		
+#	mean_time_to_happen = { days = 450 }	
+#
+#	option = {
+#		name = "L3T.5A"	
+#		random_demesne_title = {
+#			limit = {
+#				tier = baron
+#				holding_type = city
+#				num_of_buildings = 25 #à changer une fois testé -25-
+#				NOT = { has_building = CITE_L2 }
+#			}
+#			add_building = CITE_L2
+#		}
+#	}
+#}
 
 #upgrade CITE L2 vers L3
-narrative_event = {
-	title = "NAMEL3T.2"
-	desc = "DESCL3T.2"
-    id = L3T.2
-	picture = GFX_evt_L3T_city
-	
-	only_rulers = yes
-	capable_only = yes
-	#prisoner = no
-		
-	trigger = {
-		OR = {
-		   NOT = { religion_group = pagan_group }
-		   religion = west_african_pagan
-		   religion = west_african_pagan_reformed
-		}
-		any_demesne_title = {
-			tier = baron
-			holding_type = city
-			num_of_buildings = 45 #à changer une fois testé
-			has_building = CITE_L2
-			
-			NOT = { has_building = CITE_L3 }
-		}
-	}	
-		
-	mean_time_to_happen = { days = 450 }	
-
-	option = {
-		name = "L3T.2A"	
-		random_demesne_title = {
-			limit = {
-				tier = baron
-				holding_type = city
-				num_of_buildings = 45 #à changer une fois testé -25-
-				NOT = { has_building = CITE_L3 }
-			}
-			add_building = CITE_L3
-		}
-	}
-}
+#narrative_event = {
+#	title = "NAMEL3T.2"
+#	desc = "DESCL3T.2"
+#    id = L3T.2
+#	picture = GFX_evt_L3T_city
+#	
+#	only_rulers = yes
+#	capable_only = yes
+#	#prisoner = no
+#		
+#	trigger = {
+#		OR = {
+#		   NOT = { religion_group = pagan_group }
+#		   religion = west_african_pagan
+#		   religion = west_african_pagan_reformed
+#		}
+#		any_demesne_title = {
+#			tier = baron
+#			holding_type = city
+#			num_of_buildings = 45 #à changer une fois testé
+#			has_building = CITE_L2
+#			
+#			NOT = { has_building = CITE_L3 }
+#		}
+#	}	
+#		
+#	mean_time_to_happen = { days = 450 }	
+#
+#	option = {
+#		name = "L3T.2A"	
+#		random_demesne_title = {
+#			limit = {
+#				tier = baron
+#				holding_type = city
+#				num_of_buildings = 45 #à changer une fois testé -25-
+#				NOT = { has_building = CITE_L3 }
+#			}
+#			add_building = CITE_L3
+#		}
+#	}
+#}
 
 
 #Domaine Ecclésial     
