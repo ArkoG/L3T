@@ -17,9 +17,11 @@ province_event = {
 
 	trigger = {
 		has_province_modifier = foret_up
-		NOT = { has_province_flag = cut_once }
-		NOT = { has_province_flag = cut_twice }
-		NOT = { has_province_flag = cut_third }
+		NOT = { check_variable = { which = "wood_cut" value = 1 }} #never cut yet
+		#NOT = { has_province_flag = cut_once }
+		#NOT = { has_province_flag = cut_twice }
+		#NOT = { has_province_flag = cut_third }
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1095 }} # 3 ans
 		owner = {
 			NOT = { wealth = -50 }
 		}
@@ -36,22 +38,30 @@ option = {
 option = {
 		name = "XYLO.103B"	
 		ai_chance = { factor = 35 }
-		set_province_flag = cut_once
+		#set_province_flag = cut_once
+		hidden_tooltip = {
+			#set_variable = { which = "wood_cut" value = 0 }
+			change_variable = { which = "wood_cut" value = 1 }
+		}
+		set_province_flag = transaction_forestiere_recente
 		owner = { wealth = 75 }
 		}
 }
 
 #seconde coupe
-province_event = { 
+province_event = {
     id = XYLO.104
 	desc = "DESCXYLO.104"
 	picture = GFX_evt_XYLO_forest5
 
 	trigger = {
 		has_province_modifier = foret_up
-		has_province_flag = cut_once
-		NOT = { has_province_flag = cut_twice }
-		NOT = { has_province_flag = cut_third }
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 365 }} # 1 an
+		check_variable = { which = "wood_cut" value = 1 } #cut at least once
+		NOT = { check_variable = { which = "wood_cut" value = 2 }} #but not twice
+		#has_province_flag = cut_once
+		#NOT = { has_province_flag = cut_twice }
+		#NOT = { has_province_flag = cut_third }
 		owner = {
 			NOT = { wealth = -50 }
 		}
@@ -63,14 +73,25 @@ province_event = {
 
 option = {
 		name = "XYLO.104A"	
-		ai_chance = { factor = 75 }
+		ai_chance = { factor = 65 }
 	}
 option = {
 		name = "XYLO.104B"	
 		ai_chance = { factor = 25 }
-		clr_province_flag = cut_once
-		set_province_flag = cut_twice
+		#clr_province_flag = cut_once
+		#set_province_flag = cut_twice
+		hidden_tooltip = { change_variable = { which = "wood_cut" value = 1 }}
+		set_province_flag = transaction_forestiere_recente
 		owner = { wealth = 65 }
+		}
+option = {
+		name = "XYLO.104C"	
+		ai_chance = { factor = 10 }
+		#clr_province_flag = cut_once
+		#set_province_flag = cut_twice
+		hidden_tooltip = { change_variable = { which = "wood_cut" value = 2 }} #total = 3
+		set_province_flag = transaction_forestiere_recente
+		owner = { wealth = 95 }
 		}
 }
 
@@ -82,9 +103,12 @@ province_event = {
 
 	trigger = {
 		has_province_modifier = foret_up
-		NOT = { has_province_flag = cut_once }
-		NOT = { has_province_flag = cut_third }
-		has_province_flag = cut_twice
+		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 365 }} # 1 an
+		check_variable = { which = "wood_cut" value = 2 } #cut at least twice
+		#NOT = { check_variable = { which = "wood_cut" value = 3 }} #but less than three
+		#NOT = { has_province_flag = cut_once }
+		#NOT = { has_province_flag = cut_third }
+		#has_province_flag = cut_twice
 		owner = {
 			NOT = { wealth = -50 }
 		}
@@ -94,17 +118,19 @@ province_event = {
 		months = 24
 	}	
 
-option = {
+	option = {
 		name = "XYLO.105A"	
 		ai_chance = { factor = 90 }
 	}
-option = {
+	option = {
 		name = "XYLO.105B"	
 		ai_chance = { factor = 10 }
-		clr_province_flag = cut_twice
-		set_province_flag = cut_third
+		#clr_province_flag = cut_twice
+		#set_province_flag = cut_third
+		hidden_tooltip = { change_variable = { which = "wood_cut" value = 1 }}
+		set_province_flag = transaction_forestiere_recente
 		owner = { wealth = 65 }
-		}
+	}
 }
 
 #csqs de XYLO.105
@@ -116,27 +142,42 @@ province_event = {
 	trigger = {
 		NOT = { has_province_flag = forest_razed }
 		has_province_modifier = foret_up
-		NOT = { has_province_flag = cut_once }
-		OR = { 
-		has_province_flag = cut_twice 
-		has_province_flag = cut_third }
+		check_variable = { which = "wood_cut" value = 3 } #cut at least three times
+		#NOT = { has_province_flag = cut_once }
+		#OR = { 
+		#has_province_flag = cut_twice 
+		#has_province_flag = cut_third
+		#}
 	}
 		
 	mean_time_to_happen = {
 		months = 15
+		modifier = {
+			factor = 0.7
+			check_variable = { which = "wood_cut" value = 4 }
+		}
 	}	
 
-option = {
+	option = {
 		name = "XYLO.106A"	
-		clr_province_flag = cut_twice
-		clr_province_flag = cut_third
+		#clr_province_flag = cut_twice
+		#clr_province_flag = cut_third
 		set_province_flag = forest_razed
 		remove_province_modifier =	foret_up
+		set_variable = { which = "wood_cut" value = 0 } #resets the variable
 		add_province_modifier = {
-			name = foret_poor 
+			name = foret_poor #can't be upgraded again yet
 			duration = 5500 #~15ans
-			}
 		}
+		if = {
+			limit = {
+				any_province_holding = {
+					has_building = CA_chasse_L3
+				}
+			}
+			remove_building = CA_chasse_L3
+		}
+	}
 }
 
 # downgrade -don de terres boisées à l'Eglise- v1
