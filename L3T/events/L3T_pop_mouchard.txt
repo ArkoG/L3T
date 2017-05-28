@@ -81,10 +81,44 @@ character_event = { #notification for 1108 on_loot_settlement decrease
 	
 	is_triggered_only = yes
 	
-	trigger = {
-		has_global_flag = init_population
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
 	}
-	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
+}
+character_event = { #notification for trade post CT productrice
+	id = L3T.11091
+	desc = "DESCL3T.11091"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
+character_event = { #notification for trade post CT commercante
+	id = L3T.11092
+	desc = "DESCL3T.11092"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
+character_event = { #notification for trade post CT commercante
+	id = L3T.11093
+	desc = "DESCL3T.11093"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
 	
 	option = {
 		name = "OK"	
