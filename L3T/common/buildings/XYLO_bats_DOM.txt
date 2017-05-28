@@ -34,7 +34,11 @@ castle = {
 	}
 	CA_chasse_L3 = { #manoir de chasse
 	desc = "CA_chasse_L3_desc"
-		trigger = { TECH_TRADE_PRACTICES = 0 }
+		trigger = { 
+			TECH_TRADE_PRACTICES = 0
+			has_province_modifier = foret_up #will be removed if downgraded
+		}
+		is_active_trigger = { has_province_modifier = foret_up } #desactivated if the forest is given #destroyed if forest is razed
 		upgrades_from = CA_chasse_L2
 		gold_cost = 180.0
 		build_time = 350
