@@ -1078,4 +1078,62 @@ settlement_decisions = {
 			factor = 0
 		}
 	}
+	switch_or_set_city_spec = { #totoro
+		only_rulers = yes
+		filter = all
+		ai_target_filter = owned
+		
+		from_potential = {
+			is_ruler = yes
+		}
+		
+		potential = {
+			FROM = { ai = no }
+			#holder_scope = { character = FROM }
+			holding_type = city
+			#OR = {
+			#	has_building = VOC_INDUSTRIELLE
+			#	has_building = VOC_COMMERCIALE
+			#}
+		}
+		
+		allow = {
+			FROM = { wealth = 10 }
+		}
+		
+		effect = {
+			FROM = { wealth = -10 }
+			if = {
+				limit = { has_building = VOC_INDUSTRIELLE}
+				remove_building = VOC_INDUSTRIELLE
+				remove_holding_modifier = voc_indus_L1
+				add_holding_modifier = { name = voc_comm_L1 duration = -1 }
+				add_building = VOC_COMMERCIALE
+			}
+			if = {
+				limit = { has_building = VOC_COMMERCIALE}
+				remove_building = VOC_COMMERCIALE
+				remove_holding_modifier = voc_comm_L1
+				add_holding_modifier = { name = voc_indus_L1 duration = -1 }
+				add_building = VOC_INDUSTRIELLE
+			}
+			if = {
+				limit = {		
+					NOT = {
+						has_building = VOC_INDUSTRIELLE
+						has_building = VOC_COMMERCIALE
+					}
+				}
+				add_building = CITE_L1
+				add_building = VOC_INDUSTRIELLE
+				add_holding_modifier = { name = voc_indus_L1 duration = -1 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }
