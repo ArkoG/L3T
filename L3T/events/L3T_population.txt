@@ -14,7 +14,7 @@ character_event = {
 		any_title = {
 			limit = { tier = baron }
 			export_to_variable = { which = "developpement" value = num_of_buildings } #gives a random seed based on techs
-
+			set_variable = { which = "devnextstep" value = 0 }
 			if = {
 				limit = {	
 					year = 1000
@@ -36,8 +36,8 @@ character_event = {
 			
 			# Castles
 			if = {
-				limit = { check_variable = { which = "developpement" value = 0 }}
 				holding_type = castle
+				limit = { check_variable = { which = "developpement" value = 0 }}
 				set_variable = { which = "devnextstep" value = 100 }
 			}
 
@@ -77,8 +77,9 @@ character_event = {
 
 			# Cities
 			if = {
-				limit = { check_variable = { which = "developpement" value = 0 }}
 				holding_type = city
+				limit = { check_variable = { which = "developpement" value = 0 }}
+
 				set_variable = { which = "devnextstep" value = 100 }
 			}
 			
@@ -117,8 +118,8 @@ character_event = {
 			}
 			# Temples
 			if = {
-				limit = { check_variable = { which = "developpement" value = 0 }}
 				holding_type = temple
+				limit = { check_variable = { which = "developpement" value = 0 }}
 				set_variable = { which = "devnextstep" value = 120 }
 			}
 			
