@@ -177,29 +177,6 @@ province_event = { #called by settlement_decision
 	}
 }
 
-character_event = { 
-	id = L3T.1108
-	desc = "DESCL3T.1108"
-	picture = GFX_evt_castle_construction
-	border = GFX_event_normal_frame_economy
-	
-	is_triggered_only = yes #called by on_loot_settlement
-	
-	trigger = {
-		has_global_flag = init_population
-	}
-	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
-	
-	immediate = { #i want to scope the settlement that fired this event
-		FROM = {
-			save_event_target_as = holding_dev #totoro
-			set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
-			change_variable = { which = "developpement" value = -15 } 
-			holder_scope = { character_event = { id = L3T.1109 days = 0 }} #totoro
-		}
-	}
-}
-
 character_event = {
 	id = L3T.1103
 	hide_window = yes
@@ -218,7 +195,7 @@ character_event = {
 	}
 	
 	immediate = {
-		random_demesne_title = {
+		any_demesne_title = {
 			limit = { 
 				tier = baron
 				OR = { 
@@ -312,6 +289,32 @@ character_event = {
 #			name = "moins_un"
 #		}
 }
+
+#called by on_loot_settlement
+character_event = { 
+	id = L3T.1108
+	desc = "DESCL3T.1108"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes 
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
+	
+	immediate = { #i want to scope the settlement that fired this event
+		FROM = {
+			save_event_target_as = holding_dev #totoro
+			set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
+			change_variable = { which = "developpement" value = -15 } 
+			holder_scope = { character_event = { id = L3T.1109 days = 0 }} #totoro
+		}
+	}
+}
+
+#trade post bonus
 character_event = {
 	id = L3T.1110
 	hide_window = yes
@@ -319,33 +322,41 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		location = { has_trade_post=yes } #province has a trade post
-		any_demesne_title = { holding_type = city } #I am a city holder
+		FROM = { 
+			has_trade_post=yes  #province has a trade post
+			any_province_holding = { 
+				holding_type = city
+				NOT = { has_title_flag = received_trade_post_devv_bonus }
+			} #I am a city holder
+		}
 	}
 	
 	immediate = {
-		any_demesne_title = {
-			limit = {
-				holding_type = city
-				location = { has_trade_post=yes }
-			}
-			change_variable = { which = "developpement" value = 10 }
-			#if = {
-			#	limit = {
-			#		has_building = VOC_INDUSTRIELLE
-			#	}
-			#	change_variable = { which = "developpement" value = 10 }
-			#}
-			if = {
+		FROM = {
+			any_province_holding = {
 				limit = {
-					has_building = VOC_COMMERCIALE
+					holding_type = city
+					location = { has_trade_post = yes }
+					NOT = { has_title_flag = received_trade_post_devv_bonus }
 				}
-				#change_variable = { which = "developpement" value = 30 }
-				change_variable = { which = "developpement" value = 20 } #only diff
+				save_event_target_as = holding_dev #totoro
+				#change_variable = { which = "developpement" value = 10 }
+				if = {
+					limit = { has_building = VOC_INDUSTRIELLE }
+					change_variable = { which = "developpement" value = 10 }
+					holder_scope = { character_event = { id = L3T.11091 days = 0 }} #totoro
+				}
+				if = {
+					limit = { has_building = VOC_COMMERCIALE }
+					change_variable = { which = "developpement" value = 30 }
+					holder_scope = { character_event = { id = L3T.11092 days = 0 }} #totoro
+					#change_variable = { which = "developpement" value = 20 } #only diff
+				}
 			}
 		}
 	}
 }
+#hospital bonus
 character_event = {
 	id = L3T.1111
 	hide_window = yes
@@ -353,27 +364,36 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		location = { hospital_level = 1 } #province has a hospital
-		any_demesne_title = {
-			OR = { 
-				holding_type = castle
-				holding_type = temple
-				holding_type = city
+		FROM = {
+			hospital_level = 1
+			any_province_holding = {
+				OR = {
+					holding_type = castle
+					holding_type = temple
+					holding_type = city
+				}
+				NOT = { has_title_flag = received_hospital_devv_bonus }
 			}
 		}
 	}
 	
 	immediate = {
-		any_demesne_title = {
-			limit = {
-				OR = { 
-					holding_type = castle
-					holding_type = temple
-					holding_type = city
+		FROM = {
+			any_province_holding = {
+				limit = {
+					OR = { 
+						holding_type = castle
+						holding_type = temple
+						holding_type = city
+					}
+					location = { hospital_level = 1 }
+					NOT = { has_title_flag = received_hospital_devv_bonus }
 				}
-				location = { hospital_level = 1 }
+				set_title_flag = received_hospital_devv_bonus
+				change_variable = { which = "developpement" value = 10 }
+				save_event_target_as = holding_dev #totoro
+				holder_scope = { character_event = { id = L3T.11093 days = 0 }} #totoro
 			}
-			change_variable = { which = "developpement" value = 10 }
 		}
 	}
 }
