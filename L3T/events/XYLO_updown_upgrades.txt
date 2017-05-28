@@ -18,8 +18,8 @@ province_event = {
 		has_province_modifier = foret1
 		NOT = { has_province_modifier = foret_up }
 		NOT = { has_province_modifier = foret_poor }
-		NOT = { has_province_flag = offre_achat_refusee }
-		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
+		owner = { NOT = { has_character_flag = offre_achat_refusee }} #never totaly refused
+		owner = { NOT = { had_character_flag = { flag = offre_achat_repoussee days = 500 }}} #had postponed at least for 500days
 		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1825 }} # 5 ans
 		owner = {
 			 wealth = 400
@@ -30,7 +30,11 @@ province_event = {
 	mean_time_to_happen = {
 		months = 30
 	}	
-
+	
+ #A = OK
+ #B = not yet, maybe later
+ #C = never (for the current holder)
+ 
 	option = {
 		name = "XYLO.201A"	
 		ai_chance = { factor = 30 }
@@ -40,17 +44,18 @@ province_event = {
 			name = foret_up 
 			duration = -1
 			}
+		set_variable = { which = "wood_cut" value = 0 }
 		set_province_flag = transaction_forestiere_recente
 	}
 	option = {
 		name = "XYLO.201B"	
 		ai_chance = { factor = 20 }
-		set_province_flag = offre_achat_repoussee
+		owner = { set_character_flag = offre_achat_repoussee }
 		}
 	option = {
 		name = "XYLO.201C"	
 		ai_chance = { factor = 50 }
-		set_province_flag = offre_achat_refusee
+		owner = { set_character_flag = offre_achat_refusee }
 		set_province_flag = transaction_forestiere_recente 
 		}
 }
@@ -65,8 +70,8 @@ province_event = {
 		has_province_modifier = foret1
 		NOT = { has_province_modifier = foret_up }
 		NOT = { has_province_modifier = foret_poor }
-		NOT = { has_province_flag = offre_achat_refusee }
-		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
+		owner = { NOT = { has_character_flag = offre_achat_refusee }} #never totaly refused
+		owner = { NOT = { had_character_flag = { flag = offre_achat_repoussee days = 500 }}} #had postponed at least for 500days
 		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1825 }} # 5 ans
 		owner = {
 			 wealth = 450
@@ -77,7 +82,11 @@ province_event = {
 	mean_time_to_happen = {
 		months = 35
 	}	
-
+	
+ #A = OK
+ #B = not yet, maybe later
+ #C = never (for the current holder)
+ 
 	option = {
 		name = "XYLO.202A"	
 		ai_chance = { factor = 25 }
@@ -87,17 +96,18 @@ province_event = {
 			name = foret_up 
 			duration = -1
 			}
+		set_variable = { which = "wood_cut" value = 0 }
 		set_province_flag = transaction_forestiere_recente	
 	}
 	option = {
 		name = "XYLO.202B"	
 		ai_chance = { factor = 15 }
-		set_province_flag = offre_achat_repoussee
+		owner = { set_character_flag = offre_achat_repoussee }
 		}
 	option = {
 		name = "XYLO.202C"	
 		ai_chance = { factor = 60 }
-		set_province_flag = offre_achat_refusee
+		owner = { set_character_flag = offre_achat_refusee }
 		set_province_flag = transaction_forestiere_recente
 		}
 }
@@ -112,8 +122,8 @@ province_event = {
 		has_province_modifier =  foret1
 		NOT = { has_province_modifier = foret_up }
 		NOT = { has_province_modifier = foret_poor }
-		NOT = { has_province_flag = offre_achat_refusee }
-		NOT = { had_province_flag = { flag = offre_achat_repoussee days = 400 }}
+		owner = { NOT = { has_character_flag = offre_achat_refusee }} #never totaly refused
+		owner = { NOT = { had_character_flag = { flag = offre_achat_repoussee days = 500 }}} #had postponed at least for 500days
 		NOT = { had_province_flag = { flag = transaction_forestiere_recente days = 1825 }} # 5 ans
 		owner = {
 			 wealth = 350
@@ -124,7 +134,11 @@ province_event = {
 	mean_time_to_happen = {
 		months = 40
 	}	
-
+	
+ #A = OK
+ #B = not yet, maybe later
+ #C = never (for the current holder)
+ 
 option = {
 		name = "XYLO.203A"	
 		ai_chance = { factor = 35 }
@@ -134,17 +148,18 @@ option = {
 			name = foret_up 
 			duration = -1
 			}
+		set_variable = { which = "wood_cut" value = 0 }
 		set_province_flag = transaction_forestiere_recente	
 	}
 option = {
 		name = "XYLO.203B"	
 		ai_chance = { factor = 20 }
-		set_province_flag = offre_achat_repoussee
+		owner = { set_character_flag = offre_achat_repoussee }
 	}
 option = {
 		name = "XYLO.203C"	
 		ai_chance = { factor = 45 }
-		set_province_flag = offre_achat_refusee
+		owner = { set_character_flag = offre_achat_refusee }
 		set_province_flag = transaction_forestiere_recente
 	}
 }
