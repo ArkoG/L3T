@@ -57,6 +57,17 @@
 #id = L3T.33 #used in L3T_init_DOMAINES.txt
 
 ###L3T_population.txt
+#id = L3T.1101 #initialisation dev variable (devv) buildings
+#id = L3T.1102 #check dev variable settlement decision
+#id = L3T.1103 #dev variable natural growth
+#id = L3T.1104 ##used in L3T_pop_mouchards.txt
+#id = L3T.1105 ##used in L3T_pop_mouchards.txt
+#id = L3T.1106 ##used in L3T_pop_mouchards.txt
+#id = L3T.1107 ##used in L3T_pop_mouchards.txt
+#id = L3T.1108 #devv on loot
+#id = L3T.1109 ##used in L3T_pop_mouchards.txt
+#id = L3T.1110 #gives dev bonus on trade_port (cities only)
+#id = L3T.1111 #gives dev bonus on hospital building (all holdings)
 #id = L3T.100 #initialisation population buildings en variable
 #id = L3T.101 #upgrade population CA vers L1 #Féodal
 #id = L3T.102 #upgrade population CA vers L2
@@ -74,13 +85,18 @@
 #id = L3T.114 #upgrade population TP vers L4
 #id = L3T.115 #upgrade population TP vers L5
 
-#id = L3T.1101 #initialisation population buildings
+###L3T_pop_mouchards.txt
+#id = L3T.1101 ##used in L3T_population.txt
 #id = L3T.1102 #check dev variable settlement decision
-#id = L3T.1103 #dev variable natural growth
-#id = L3T.1104-8 #dev changes notifs debug
-
-#id = L3T.1110 #gives dev bonus on trade_port (cities only)
-#id = L3T.1111 #gives dev bonus on hospital building (all holdings)
+#id = L3T.1103 ##used in L3T_population.txt
+#id = L3T.1104 #dev changes notifs debug
+#id = L3T.1105 #dev changes notifs debug
+#id = L3T.1106 #dev changes notifs debug
+#id = L3T.1107 #dev changes notifs debug
+#id = L3T.1108 ##used in L3T_population.txt
+#id = L3T.1109 #dev variable on loot settlement
+#id = L3T.1110 ##used in L3T_population.txt
+#id = L3T.1111 ##used in L3T_population.txt
 
 ###L3T_building_modifiers.txt
 #id = L3T.201 # Give the chapelle modifier 1 year after starting the building
