@@ -755,7 +755,7 @@ character_event = {
 		religion = catholic
 		any_courtier = { 
 			has_minor_title = title_batisseur
-			NOT = { learning = 12 }
+			NOT = { stewardship = 12 }
 		}
 		wealth = 120
 	}
@@ -763,18 +763,18 @@ character_event = {
 	mean_time_to_happen = {
 		months = 60
 		modifier = { factor = 2.00	has_character_flag = surcout_recu }
-		modifier = { factor = 1.05	learning = 9 }
-		modifier = { factor = 1.10	learning = 10 }
-		modifier = { factor = 1.15	learning = 11 }
-		modifier = { factor = 1.20	learning = 12 }
-		modifier = { factor = 0.99	 NOT = { learning = 8 }}
-		modifier = { factor = 0.99	 NOT = { learning = 7 }}
-		modifier = { factor = 0.99	 NOT = { learning = 6 }}
-		modifier = { factor = 0.99	 NOT = { learning = 5 }}
-		modifier = { factor = 0.99	 NOT = { learning = 4 }}
-		modifier = { factor = 0.99	 NOT = { learning = 3 }}
-		modifier = { factor = 0.99	 NOT = { learning = 2 }}
-		modifier = { factor = 0.99	 NOT = { learning = 1 }}
+		modifier = { factor = 1.05	stewardship = 9 }
+		modifier = { factor = 1.10	stewardship = 10 }
+		modifier = { factor = 1.15	stewardship = 11 }
+		modifier = { factor = 1.20	stewardship = 12 }
+		modifier = { factor = 0.99	 NOT = { stewardship = 8 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 7 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 6 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 5 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 4 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 3 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 2 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 1 }}
 	}
 	
 	option = {
@@ -834,6 +834,125 @@ character_event = {
 	option = {
 		name = "REC.1407A"
 		set_character_flag = surcout_recu
+	}
+}
+
+#panne de bois
+character_event = {
+    id = REC.1408
+	desc = "DESCREC.1408"
+	picture = GFX_evt_REC1
+	
+	only_rulers = yes
+	is_feudal = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
+			NOT = { has_province_modifier = chantier_down }
+			NOT = { had_province_flag = { flag = appro_bois_recent days = 1825 }} #5ans
+			NOT = { check_variable = { which = cathedral value = 2600 }} #raw wood is only required untilproto-cathedral, more advanced ressources can be required later 
+		}
+		is_catholic_group = yes
+		any_courtier = { 
+			has_minor_title = title_batisseur
+			NOT = { stewardship = 12 }
+		}
+		wealth = 50
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		
+		modifier = { 
+			factor = 0.9
+				any_demesne_province = {
+					has_province_modifier = chantier_cathedrale
+					had_province_flag = { flag = appro_bois_recent days = 2555 } #7ans
+				}
+		}
+		modifier = { factor = 1.05	stewardship = 9 }
+		modifier = { factor = 1.10	stewardship = 10 }
+		modifier = { factor = 1.15	stewardship = 11 }
+		modifier = { factor = 1.20	stewardship = 12 }
+		modifier = { factor = 0.99	 NOT = { stewardship = 8 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 7 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 6 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 5 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 4 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 3 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 2 }}
+		modifier = { factor = 0.99	 NOT = { stewardship = 1 }}
+	}
+
+	option = { #achat
+		name = "REC.1408A"
+		wealth = -50
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+			}
+			set_province_flag = appro_bois_recent
+		}
+	}
+	option = { #radin
+		name = "REC.1408D"
+		wealth = -50
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+			}
+			add_province_modifier = { name = chantier_down	duration = -1 }
+		}
+	}
+		
+	option = { #cela va ralentir le chantier
+		name = "REC.1408B"
+		trigger = {
+			OR = {
+				NOT = { 
+					any_demesne_province = { 
+						has_province_modifier = foret_up #doesn't have an upgraded forest in his demesne
+					}
+				}
+				any_demesne_province = { 
+					has_province_modifier = foret_up
+					check_variable = { which = "wood_cut" value = 3 } #does have an upgraded forest in his demesne but it will be razed soon
+				}
+			}
+		}
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+			}
+			add_province_modifier = { name = chantier_down	duration = -1 }
+		}
+	}
+	option = { #nous avons nos forets !
+		name = "REC.1408C"
+		custom_tooltip = { text = une_coupe_est_pratiquee }
+		trigger = {
+			any_demesne_province = { 
+				has_province_modifier = foret_up
+				NOT = { check_variable = { which = "wood_cut" value = 3 }} #does have an upgraded forest in his demesne that isn't cut more than twice
+			}
+		}
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = foret_up
+				NOT = { check_variable = { which = "wood_cut" value = 3 }}
+			}			
+			hidden_tooltip = {	
+				change_variable = { which = "wood_cut" value = 1 }
+			}
+		}
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+			}
+			set_province_flag = appro_bois_recent
+		}
 	}
 }
 
