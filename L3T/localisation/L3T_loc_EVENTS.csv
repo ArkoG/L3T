@@ -279,7 +279,8 @@ DESCXYLO.4;After an evaluation of our domain, our forester informs us that our f
 XYLO.4B;These forests will be consecrated as a sanctuary for meditation. Glory to [Root.Religion.GetRandomGodName]!;Gloire à [Root.Religion.GetRandomGodName] !;;;;;;;;;;;;x
 XYLO.4A;These trees will either form a sturdy wooden frame to enlarge the house of God ... or my palace. Only He knows!;Ces arbres feront un remarquable bois charpente pour agrandir la demeure du Seigneur...ou de mon palais. Dieu seul le sait !;;;;;;;;;;;;x
 XYLO.4C;[Root.Religion.GetRandomGodName] made trees to be turned into wood, no?;[Root.Religion.GetRandomGodName] a créé les arbres pour leur bois non ? ;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+
+
 XYLO.103;Timber sale to fill the coffers;Vente bois pour renflouer les caisses1;;;;;;;;;;;;x
 DESCXYLO.103;Our treasury is nearly empty. We could chop down some forest plots from our hunting demesne, and sell the timber to replenish the treasury.;Nos finances sont au plus bas. Nous pourrions abattre quelques parcelles de nos domaines de chasse afin de le vendre et renflouer un peu nos coffres.;;;;;;;;;;;;x
 XYLO.103A;It need not come to that.;Ce ne sera pas nécessaire.;;;;;;;;;;;;x
@@ -296,6 +297,8 @@ XYLO.105B;I suppose I have no choice.;Allons-y;;;;;;;;;;;;x
 XYLO.106;To deforest a forest;La coupe de trop;;;;;;;;;;;;x
 DESCXYLO.106;Cutting down so many trees to fill our coffers has led to dramatic deforestation to the point of insustainability. We will probably soon have to issue a moratorium most of our forest industries...;Couper autant d'arbres pour renflouer nos caisses a conduit à une réduction dramatique de la couverture forestière... Nous allons probablement devoir cesser bientôt un certain nombre de nos activités...;;;;;;;;;;;;x
 XYLO.106A;This is most unfortunate.;C'est à dire ?;;;;;;;;;;;;x
+une_coupe_est_pratiquee;Some wood is cut;Une coupe de bois est pratiquée;;;;;;;;;;;x
+
 DESCXYLO.107;Considering your great piety and devotion to God, perhaps we should consider making a donation of a portion our woodland demesne to the Church. This would greatly benefit the standing of our immortal soul and the reputation of our House.;Au regard de notre niveau de piété, et puisque nous en aurions la possibilité, nous pourrions faire don d'une partie de nos bois à l'Eglise. \nCela serait bénéfique pour le salut de notre âme et la réputation de notre famille.;;;;;;;;;;;;x
 XYLO.107B;So be it.;Allons-y;;;;;;;;;;;;x
 XYLO.107A;The cost outweighs the benefit. We shall not.;L'enjeu me semble trop faible;;;;;;;;;;;;x
@@ -304,7 +307,8 @@ DESCXYLO.108;Our forest domains are great and prosperous, and God has surely see
 XYLO.108B;May God accept this offering and see the devotion of my soul.;Pour le salut de notre âme !;;;;;;;;;;;;x
 XYLO.108A;Perhaps a different offering would be more worthy of the Church.;Je trouverai d'autres moyens;;;;;;;;;;;;x
 XYLO.108C;Who said anything about a concession?;Et contre quelque or ?;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+inactive_chasse_L3;The §YHunting Mansion§! building becomes inactive;Le bâtiment §YManoir de chasse§! devient inactif;;;;;;;;;;;x
+
 XYLO.201;Purchase v1;Achat v1;;;;;;;;;;;x;
 DESCXYLO.201;The treasury is brimming with coin, but rather than rest on our laurels, we should consider investing in expanding our forest domain. Should some of our gold be used to plant and manage new plots of trees?;Nos coffres débordent d'or. Agrandir nos possessions forestières peut être une option d'investissement intéressante. Souhaitez-vous investir quelque or dans cette voie ?;;;;;;;;;;;;x
 XYLO.201A;Trees are a safe investment, no? Make the necessary arrangements.;Tentons cela.;;;;;;;;;;;;x
@@ -606,7 +610,10 @@ REC.1406A;Argh...!;Argh...!;;;;;;;;;;;;x
 REC.1407;Unscrupulous suppliers v2;Fournisseurs peu scrupuleux v2 ;;;;;;;;;;;;x
 DESCREC.1407;One of our suppliers of stone for the construction of the Cathedral appeared this morning to post an increase in the rates -a crisis obliges it - it seems ...;Un de nos fournisseurs de pierres pour la construction de la Cathédrale, s'est présenté ce matin pour nous soumettre une augmentation de ces tarifs -crise oblige paraît-il-,...;;;;;;;;;;;;x
 REC.1407A;Arrest this cretin! Does he take me for a fool?;Arrestez ! Il me prend pour un jambon ? Virez-le sur le champs !;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+DESCREC.1408; ; ;;;;;;;;;;;;x
+REC.1408A; ; ;;;;;;;;;;;;x
+REC.1408B; ; ;;;;;;;;;;;;x
+
 DESCREC.1501;You find yourself at war as you build a Cathedral.\nWould not it be wise to use the stones of its construction to temporarily erect an additional wall?;Vous vous retrouvez en guerre alors que vous construisez une Cathédrale.\nNe serait-il pas judicieux d'utiliser les pierres de sa construction afin d'ériger provisoirement un mur supplémentaire ?;;;;;;;;;;;;x
 REC.1501A;Stop the construction and make a wall;Arrêtons le chantier et faisons un mur;;;;;;;;;;;;x
 REC.1501B;No need for a wall, God will protect us;Pas besoin de mur, Dieu nous protégera;;;;;;;;;;;;x

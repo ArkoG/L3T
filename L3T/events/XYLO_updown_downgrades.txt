@@ -39,7 +39,8 @@ option = {
 		name = "XYLO.103B"	
 		ai_chance = { factor = 35 }
 		#set_province_flag = cut_once
-		hidden_tooltip = {
+		custom_tooltip = { text = une_coupe_est_pratiquee }
+		hidden_tooltip = {	
 			#set_variable = { which = "wood_cut" value = 0 }
 			change_variable = { which = "wood_cut" value = 1 }
 		}
@@ -80,7 +81,10 @@ option = {
 		ai_chance = { factor = 25 }
 		#clr_province_flag = cut_once
 		#set_province_flag = cut_twice
-		hidden_tooltip = { change_variable = { which = "wood_cut" value = 1 }}
+		custom_tooltip = { text = une_coupe_est_pratiquee }
+		hidden_tooltip = {	 
+			change_variable = { which = "wood_cut" value = 1 }
+		}
 		set_province_flag = transaction_forestiere_recente
 		owner = { wealth = 65 }
 		}
@@ -89,7 +93,10 @@ option = {
 		ai_chance = { factor = 10 }
 		#clr_province_flag = cut_once
 		#set_province_flag = cut_twice
-		hidden_tooltip = { change_variable = { which = "wood_cut" value = 2 }} #total = 3
+		custom_tooltip = { text = une_coupe_est_pratiquee }
+		hidden_tooltip = {
+			change_variable = { which = "wood_cut" value = 2 }
+		} #total = 3
 		set_province_flag = transaction_forestiere_recente
 		owner = { wealth = 95 }
 		}
@@ -127,7 +134,10 @@ province_event = {
 		ai_chance = { factor = 10 }
 		#clr_province_flag = cut_twice
 		#set_province_flag = cut_third
-		hidden_tooltip = { change_variable = { which = "wood_cut" value = 1 }}
+		custom_tooltip = { text = une_coupe_est_pratiquee }
+		hidden_tooltip = {
+			change_variable = { which = "wood_cut" value = 1 }
+		}
 		set_province_flag = transaction_forestiere_recente
 		owner = { wealth = 65 }
 	}
@@ -153,7 +163,7 @@ province_event = {
 	mean_time_to_happen = {
 		months = 15
 		modifier = {
-			factor = 0.7
+			factor = 0.5
 			check_variable = { which = "wood_cut" value = 4 }
 		}
 	}	
@@ -164,7 +174,9 @@ province_event = {
 		#clr_province_flag = cut_third
 		set_province_flag = forest_razed
 		remove_province_modifier =	foret_up
-		set_variable = { which = "wood_cut" value = 0 } #resets the variable
+		hidden_tooltip = {	
+			set_variable = { which = "wood_cut" value = 0 } #resets the variable
+		}
 		add_province_modifier = {
 			name = foret_poor #can't be upgraded again yet
 			duration = 5500 #~15ans
@@ -234,7 +246,15 @@ province_event = {
 			piety = -50 
 			wealth = 150
 		}
+		if = {
+			limit = {
+				any_province_holding = {
+					has_building = CA_chasse_L3
+				}
+			}
+			custom_tooltip = { text = inactive_chasse_L3 }
 		}
+	}
 }
 
 # downgrade -don de terres boisées à l'Eglise- v2
@@ -292,5 +312,13 @@ province_event = {
 			piety = -150
 			wealth =  90
 		}
+		if = {
+			limit = {
+				any_province_holding = {
+					has_building = CA_chasse_L3
+				}
+			}
+			custom_tooltip = { text = inactive_chasse_L3 }
 		}
+	}
 }
