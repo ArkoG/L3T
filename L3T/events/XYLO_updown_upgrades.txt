@@ -44,7 +44,7 @@ province_event = {
 			name = foret_up 
 			duration = -1
 			}
-		set_variable = { which = "wood_cut" value = 0 }
+		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
 		set_province_flag = transaction_forestiere_recente
 	}
 	option = {
@@ -96,7 +96,7 @@ province_event = {
 			name = foret_up 
 			duration = -1
 			}
-		set_variable = { which = "wood_cut" value = 0 }
+		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
 		set_province_flag = transaction_forestiere_recente	
 	}
 	option = {
@@ -148,7 +148,7 @@ option = {
 			name = foret_up 
 			duration = -1
 			}
-		set_variable = { which = "wood_cut" value = 0 }
+		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
 		set_province_flag = transaction_forestiere_recente	
 	}
 option = {
