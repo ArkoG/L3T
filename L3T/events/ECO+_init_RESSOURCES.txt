@@ -479,9 +479,36 @@ province_event = {
 		
 	mean_time_to_happen = { days = 360 }
 
+	immediate = {
+		random_province_holding = {
+			limit = {
+				OR = {	
+					has_building = CA_AGRI_cereale_L2
+					has_building = CT_AGRI_cereale_L2
+					has_building = TP_AGRI_cereale_L2
+				}
+			}
+			set_title_flag = bonus_origin
+			save_event_target_as = holding_pour_desc
+		}
+	}
+
 	option = {
 		name = "ECO.100A"
-		add_province_modifier = { name = agriculture2_cereales duration = -1 }		
+		add_province_modifier = { name = agriculture2_cereales duration = -1 }
+		random_province_holding = {
+			limit = {
+				OR = {
+					has_building = CA_AGRI_cereale_L2
+					has_building = CT_AGRI_cereale_L2
+					has_building = TP_AGRI_cereale_L2
+				}
+				has_title_flag = bonus_origin
+			}
+			change_variable = { which = "developpement" value = 10 }
+			clear_event_target = holding_pour_desc
+			clr_title_flag = bonus_origin
+		}
 	}
 }
 
