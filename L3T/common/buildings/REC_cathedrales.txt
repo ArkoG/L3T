@@ -782,9 +782,23 @@ temple = {
 		extra_tech_building_start = 10.0
 		liege_piety = 0.05
 	}
+		
+	tp_constructing_roman_cathedrale = {	# Cathédrale romane
+		desc = tp_constructing_roman_cathedrale_desc
+		prerequisites = {XXX}
+		potential = { has_province_modifier = relique_generique }
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			FROM = {  OR = { religion = catholic  is_heresy_of = catholic } }
+			religion_group = christian
+		}
+		
+		is_active_trigger = { religion_group = christian }
+			
+		gold_cost = 950		
+		build_time = 3650 #10ans
+		ai_creation_factor = 5	
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+	}
 }
-	
-	
-	
-
-

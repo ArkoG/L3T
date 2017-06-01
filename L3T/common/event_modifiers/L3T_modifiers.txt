@@ -274,6 +274,11 @@ a_deja_recu_vitrail = {icon = 155}  # hidden
 
 totoro = {icon = 200} #mouchard :p
 
+romanesque_construction = {
+	icon = 167
+	local_tax_modifier  = -0.9 # -90%
+}
+
 chantier_cathedrale = {
 	icon = 167
 	local_build_time_modifier = 0.2 #+20% because workers are occupied
@@ -368,6 +373,7 @@ boost_opinion_bourgeois	= {	town_opinion	= 25	icon = 173	}
 boost_opinion_feodaux	= {	castle_opinion	= 25	icon = 172	}
 boost_opinion_ecclesia	= {	church_opinion	= 25	icon = 171	}
 en_odeur_de_saintete	= {	church_opinion	= 20	monthly_character_piety = 2.5	icon = 171	}
+stolen_relic 			= { church_opinion = -10 	icon = 26 }
 
 ##########
 emprunt_A = { icon = 176 } #T3% M150

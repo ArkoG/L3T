@@ -67,6 +67,10 @@ character_event = {
 			}
 			narrative_event = { id = REC.101 days = 10 }
 		}
+		if = {
+			limit = { ai = no }
+			set_variable = { which = "global_burns" value = 0 }
+		}
 	}
 	
 	option = {	

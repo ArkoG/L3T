@@ -1,0 +1,56 @@
+# Root is the bishop which can be at the origin of the apparition
+opus_francigenum_dynamic_apparition = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = opus_francigenum }
+			has_game_rule = {
+				name = opus_francigenum
+				value = dynamic
+			}
+		}
+		random = { 
+			chance = 5
+			modifier = {
+				factor = 2
+				year = 1140
+			}
+			modifier = {
+				factor = 2
+				check_variable = { which = "global_burns" value = 5 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { which = "global_burns" value = 10 }
+			}
+			modifier = {
+				factor = 2
+				learning = 15
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { learning = 10 }
+			}
+			modifier = {
+				factor = 2
+				trait = architect
+			}
+			modifier = {
+				factor = 2
+				trait = diligent
+			}
+			modifier = {
+				factor = 5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.1
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = erudite
+			}
+			set_global_flag = dynamic_opus_francigenum
+		}
+	}
+}
