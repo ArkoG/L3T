@@ -4,6 +4,14 @@
 #				- The scopes
 #				- The OR blocs
 
+
+is_catholic_group = {
+	OR = {
+		religion = catholic
+		is_heresy_of = catholic
+	}
+}
+
 relic_spawn_bonus_christian = {
 	AND = {
 		religion_group = christian
@@ -20,10 +28,7 @@ relic_spawn_bonus_muslim = {
 
 relic_spawn_bonus_catholic = {
 	AND = {
-		OR = {
-			religion = catholic
-			is_heresy_of = catholic
-		}
+		is_catholic_group = yes
 		is_landed = yes
 	}
 }

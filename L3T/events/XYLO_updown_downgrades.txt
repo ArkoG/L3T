@@ -204,10 +204,7 @@ province_event = {
 		owner = {
 			NOT = { has_character_flag = don_refuse }
 			religion = PREV
-			OR = { 
-				religion = catholic
-				is_heresy_of = catholic
-			}
+			is_catholic_group = yes
 			NOT = { piety = 50 }
 		}
 	}
@@ -269,10 +266,7 @@ province_event = {
 		owner = {
 			NOT = { has_character_flag = don_refuse }
 			religion = PREV
-			OR = { 
-				religion = catholic
-				is_heresy_of = catholic
-			}
+			is_catholic_group = yes
 			NOT = { piety = 250 }
 			piety = 100
 		}

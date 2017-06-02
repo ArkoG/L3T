@@ -965,12 +965,7 @@ narrative_event = {
 	trigger = {
 		any_demesne_title = {
 			location = {
-				OR = {
-					religion = catholic
-					is_heresy_of = catholic
-					#religion = orthodox
-					#is_heresy_of = orthodox
-				}
+				is_catholic_group = yes
 			}
 			tier = baron
 			holding_type = temple
@@ -991,10 +986,7 @@ narrative_event = {
 #		trigger = {
 #			any_demesne_title = {
 #				location = {
-#					OR = {
-#					religion = catholic
-#					is_heresy_of = catholic
-#					}
+#					is_catholic_group = yes
 #				}
 #			}
 #		}
@@ -1019,10 +1011,7 @@ narrative_event = {
 #		trigger = {
 #			any_demesne_title = {
 #				location = {
-#					OR = {
-#					religion = catholic
-#					is_heresy_of = catholic
-#					}
+#					is_catholic_group = yes
 #				}
 #			}
 #		}

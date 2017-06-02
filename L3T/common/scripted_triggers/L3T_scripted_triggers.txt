@@ -57,9 +57,3 @@ is_active_outil_ou_armes = {
 		is_active_outil_ou_armes_neighbor = yes			
 	}
 }
-is_catholic_group = {
-	OR = {
-		religion = catholic
-		is_heresy_of = catholic
-	}
-}
