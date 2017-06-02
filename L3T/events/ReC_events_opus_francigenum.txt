@@ -128,7 +128,7 @@ character_event = {
 	trigger = {
 		any_demesne_title = {
 			tier = baron
-			holding_type = castle
+			holding_type = temple
 			has_building = tp_roman_cathedrale
 		}
 	}
@@ -152,7 +152,7 @@ character_event = {
 		random_demesne_title = {
 			limit = {
 				tier = baron
-				holding_type = castle
+				holding_type = temple
 				has_building = tp_roman_cathedrale
 			}
 			remove_building = tp_roman_cathedrale
@@ -169,7 +169,7 @@ character_event = {
 		random_demesne_title = {
 			limit = {
 				tier = baron
-				holding_type = castle
+				holding_type = temple
 				has_building = tp_roman_cathedrale
 			}
 			location = { owner = { character_event = { id = REC.106 days = 10 } } }
@@ -187,7 +187,7 @@ province_event = {
 	immediate = {
 		random_province_holding = {
 			limit = {
-				holding_type = castle
+				holding_type = temple
 				has_building = tp_constructing_roman_cathedrale
 			}
 			remove_building = tp_constructing_roman_cathedrale
@@ -267,7 +267,7 @@ character_event = {
 			random_demesne_title = {
 				limit = {
 					tier = baron
-					holding_type = castle
+					holding_type = temple
 					has_building = tp_roman_cathedrale
 				}
 				remove_building = tp_roman_cathedrale
@@ -311,7 +311,7 @@ character_event = {
 			random_demesne_title = {
 				limit = {
 					tier = baron
-					holding_type = castle
+					holding_type = temple
 					has_building = tp_roman_cathedrale
 				}
 				remove_building = tp_roman_cathedrale
@@ -349,7 +349,7 @@ character_event = {
 			random_demesne_title = {
 				limit = {
 					tier = baron
-					holding_type = castle
+					holding_type = temple
 					has_building = tp_roman_cathedrale
 				}
 				remove_building = tp_roman_cathedrale
