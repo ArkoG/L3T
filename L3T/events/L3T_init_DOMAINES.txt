@@ -767,9 +767,9 @@ narrative_event = {
 			modifier = { factor =  5	learning = 20	}
 			modifier = { factor =   2	learning = 15	}
 			modifier = { factor = 0.75	NOT = { learning = 10 }	}
-			modifier = { factor = 2.25	NOT = { tier = count } }
+			modifier = { factor = 1.5	NOT = { tier = count } }
 			modifier = {
-				factor = 3
+				factor = 2
 				any_demesne_title = {
 					has_title_flag = temple_to_specialize
 					location = { check_variable = { which = "resourceNb" value = 2 } }
@@ -825,7 +825,6 @@ narrative_event = {
 			factor = 40
 			modifier = { factor = 5	tier = count }
 			modifier = { factor = 2	tier = duke }
-			modifier = { factor =  0.9	NOT = { learning = 15 } }
 			modifier = { factor = 0.75	NOT = { tier = count } }
 		}
 		trigger = {
