@@ -54,3 +54,283 @@ opus_francigenum_dynamic_apparition = {
 		}
 	}
 }
+
+# Root is the character who loses a relic
+destroy_relic = {
+	random_artifact = {					
+		limit = { has_artifact_flag = relique }
+		# The relic will be available to be create again
+		if = {
+			limit = { artifact_type = relique01 }
+			set_global_flag = available_relique01
+		}
+		if = {
+			limit = { artifact_type = relique02 }
+			set_global_flag = available_relique02
+		}
+		if = {
+			limit = { artifact_type = relique03 }
+			set_global_flag = available_relique03
+		}
+		if = {
+			limit = { artifact_type = relique04 }
+			set_global_flag = available_relique04
+		}
+		if = {
+			limit = { artifact_type = relique05 }
+			set_global_flag = available_relique05
+		}
+		if = {
+			limit = { artifact_type = relique06 }
+			set_global_flag = available_relique06
+		}
+		if = {
+			limit = { artifact_type = relique07 }
+			set_global_flag = available_relique07
+		}
+		if = {
+			limit = { artifact_type = relique08 }
+			set_global_flag = available_relique08
+		}
+		if = {
+			limit = { artifact_type = relique09 }
+			set_global_flag = available_relique09
+		}
+		if = {
+			limit = { artifact_type = relique10 }
+			set_global_flag = available_relique10
+		}
+		if = {
+			limit = { artifact_type = relique11 }
+			set_global_flag = available_relique11
+		}
+		if = {
+			limit = { artifact_type = relique12 }
+			set_global_flag = available_relique12
+		}
+		if = {
+			limit = { artifact_type = relique13 }
+			set_global_flag = available_relique13
+		}
+		if = {
+			limit = { artifact_type = relique14 }
+			set_global_flag = available_relique14
+		}
+		if = {
+			limit = { artifact_type = relique15 }
+			set_global_flag = available_relique15
+		}
+		if = {
+			limit = { artifact_type = relique16 }
+			set_global_flag = available_relique16
+		}
+		if = {
+			limit = { artifact_type = relique17 }
+			set_global_flag = available_relique17
+		}
+		if = {
+			limit = { artifact_type = relique18 }
+			set_global_flag = available_relique18
+		}
+		if = {
+			limit = { artifact_type = relique19 }
+			set_global_flag = available_relique19
+		}
+		if = {
+			limit = { artifact_type = relique20 }
+			set_global_flag = available_relique20
+		}
+		if = {
+			limit = { artifact_type = relique21 }
+			set_global_flag = available_relique21
+		}
+		if = {
+			limit = { artifact_type = relique22 }
+			set_global_flag = available_relique22
+		}
+		if = {
+			limit = { artifact_type = relique23 }
+			set_global_flag = available_relique23
+		}
+		if = {
+			limit = { artifact_type = relique24 }
+			set_global_flag = available_relique24
+		}
+		if = {
+			limit = { artifact_type = relique25 }
+			set_global_flag = available_relique25
+		}
+		if = {
+			limit = { artifact_type = relique26 }
+			set_global_flag = available_relique26
+		}
+		
+		destroy_artifact = yes
+	}
+}
+
+# Root is the character which gets a relic
+get_relic = {
+	# Priority for burned relics
+	if = {
+		limit = { has_global_flag = available_relique26 }
+		add_artifact = relique26
+		clr_global_flag = available_relique26
+		break = yes
+	}	
+
+	# Other relics
+	if = {
+		limit = { has_global_flag = available_relique01 }
+		add_artifact = relique01
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique02 }
+		add_artifact = relique02
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique03 }
+		add_artifact = relique03
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique04 }
+		add_artifact = relique04
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique05 }
+		add_artifact = relique05
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique06 }
+		add_artifact = relique06
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique07 }
+		add_artifact = relique07
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique08 }
+		add_artifact = relique08
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique09 }
+		add_artifact = relique09
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique10 }
+		add_artifact = relique10
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique01 }
+		add_artifact = relique11
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique12 }
+		add_artifact = relique12
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique13 }
+		add_artifact = relique13
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique14 }
+		add_artifact = relique14
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique15 }
+		add_artifact = relique15
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique16 }
+		add_artifact = relique16
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique17 }
+		add_artifact = relique17
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique18 }
+		add_artifact = relique18
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique19 }
+		add_artifact = relique19
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique20 }
+		add_artifact = relique20
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique21 }
+		add_artifact = relique21
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique22 }
+		add_artifact = relique22
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique23 }
+		add_artifact = relique23
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique24 }
+		add_artifact = relique24
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique25 }
+		add_artifact = relique25
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	
+	# If no relic is available, we give a default relic
+	add_artifact = relique26
+}

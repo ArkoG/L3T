@@ -370,10 +370,12 @@ character_event = {
 				}
 			}
 		}
-		# Lord gets the relic
-		add_artifact = relique26
 		# Lord should use the relic in the year
 		character_event = { id = REC.107 days = 365 }
+		# Lord gets the relic
+		get_relic = yes
+		# WARNING : DON'T PUT CODE HERE, IT WILL NOT BE EXECUTED
+		# because there is a break in get_relic
 	}
 }
 

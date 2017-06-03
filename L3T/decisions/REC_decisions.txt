@@ -16,10 +16,7 @@ decisions = {
 			wealth = -100
 			piety = 100
 			add_trait = batisseur_cathedrale
-			random_artifact = {					
-				limit = { has_artifact_flag = relique }
-				destroy_artifact = yes
-			}
+			destroy_relic = yes
 
 			chronicle = {
 				entry = CHRONICLE_CATHEDRALE_BEGINS
