@@ -130,6 +130,10 @@ character_event = {
 			tier = baron
 			holding_type = temple
 			has_building = tp_roman_cathedrale
+			OR = {
+				NOT = { has_title_flag = repaired_cathedral }
+				had_title_flag = { flag = repaired_cathedral years = 50 }
+			}
 		}
 	}
 	
@@ -192,6 +196,7 @@ province_event = {
 			}
 			remove_building = tp_constructing_roman_cathedrale
 			add_building = tp_roman_cathedrale
+			set_title_flag = repaired_cathedral
 		}
 		# Give Opus Francigenum
 		if = {
