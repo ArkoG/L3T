@@ -892,6 +892,10 @@ narrative_event = {
 				}
 				add_building = tp_roman_cathedrale
 				location = {
+					add_province_modifier = {
+						name = relique_generique
+						duration = -1
+					}
 					set_province_flag = roman_cathedral
 					any_neighbor_province = {
 						set_province_flag = neighbor_roman_cathedral
