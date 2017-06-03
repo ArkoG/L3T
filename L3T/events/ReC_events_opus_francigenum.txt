@@ -142,7 +142,11 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 20
+		years = 50
+		modifier = {
+			factor = 2
+			NOT = { year = 1100 }
+		}
 		modifier = {
 			factor = 0.5
 			year = 1140
