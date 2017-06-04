@@ -379,7 +379,7 @@ character_event = {
 	}
 }
 
-# Lord gets a piety malus if it has not already
+# Lord gets a piety malus if he has not already
 character_event = {
     id = REC.107
 	desc = "DESCREC.107"
@@ -393,9 +393,29 @@ character_event = {
 	
 	option = {
 		name = "REC.107A"
-		piety = -20
+		piety = -25
 		add_character_modifier = { name = stolen_relic duration = 365 }
 		# Lord should use the relic in the year
-		character_event = { id = REC.107 days = 365 }
+		character_event = { id = REC.108 days = 365 }
+	}
+}
+# Lord gets a piety malus if he has not already
+character_event = {
+    id = REC.108
+	desc = "DESCREC.108"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_artifact = relique26
+	}
+	
+	option = {
+		name = "REC.108A"
+		piety = -100
+		add_character_modifier = { name = stolen_relic duration = 1826 } #5years
+		# Lord should use the relic in the year
+		character_event = { id = REC.108 days = 1826 } #5years
 	}
 }
