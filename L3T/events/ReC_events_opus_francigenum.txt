@@ -337,7 +337,10 @@ character_event = {
 		
 	option = {
 		name = "REC.106C"
-		trigger = { has_global_flag = opus_francigenum }
+		trigger = {
+			has_global_flag = opus_francigenum 
+			yearly_income = 100
+		}
 		ai_chance = {
 			factor = 70
 			modifier = {
@@ -351,6 +354,14 @@ character_event = {
 			modifier = {
 				factor = 2
 				piety = 1000
+			}
+			modifier = {
+				factor = 2
+				yearly_income = 300
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { yearly_income = 200 }
 			}
 		}
 		FROM = {
