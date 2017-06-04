@@ -393,7 +393,7 @@ character_event = {
 	
 	option = {
 		name = "REC.107A"
-		piety = -25
+		piety = -20
 		add_character_modifier = { name = stolen_relic duration = 365 }
 		# Lord should use the relic in the year
 		character_event = { id = REC.108 days = 365 }
