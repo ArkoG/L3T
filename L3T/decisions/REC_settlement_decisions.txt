@@ -41,6 +41,7 @@ settlement_decisions = {
 					picture = GFX_evt_cathedral
 				}
 				hidden_tooltip = { character_event = { id = REC.5 days = 10} }
+				remove_character_modifier = stolen_relic
 			}
 			
 			location = {
