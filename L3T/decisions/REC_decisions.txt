@@ -46,7 +46,12 @@ decisions = {
 				}
 			}
 			hidden_tooltip = { character_event = { id = REC.5 days = 10} }
-			remove_character_modifier = stolen_relic
+			if = {
+				limit = {
+					has_character_modifier = stolen_relic
+				}
+				remove_character_modifier = stolen_relic
+			}
 		}
 		
 		revoke_allowed = {
