@@ -241,7 +241,7 @@ get_relic = {
 		break = yes
 	}
 	if = {
-		limit = { has_global_flag = available_relique01 }
+		limit = { has_global_flag = available_relique11 }
 		add_artifact = relique11
 		clr_global_flag = available_relique11
 		break = yes
