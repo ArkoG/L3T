@@ -6,7 +6,7 @@ character_event = { #notification for 1103 normal growth
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
 	
-	is_triggered_only = yes
+	is_triggered_only = yes #not called
 	
 	trigger = {
 		has_global_flag = init_population
