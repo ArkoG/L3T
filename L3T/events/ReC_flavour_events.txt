@@ -844,9 +844,9 @@ character_event = {
 	picture = GFX_evt_REC1
 	
 	only_rulers = yes
-	is_feudal = yes
 	
 	trigger = {
+		is_feudal = yes
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
 			NOT = { has_province_modifier = chantier_stop }
