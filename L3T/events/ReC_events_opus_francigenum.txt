@@ -405,9 +405,9 @@ character_event = {
 	option = {
 		name = "REC.107A"
 		piety = -20
-		add_character_modifier = { name = stolen_relic duration = 365 }
+		add_character_modifier = { name = stolen_relic duration = 1826 }
 		# Lord should use the relic in the year
-		character_event = { id = REC.108 days = 365 }
+		character_event = { id = REC.108 days = 1826 }
 	}
 }
 # Lord gets a piety malus if he has not already
