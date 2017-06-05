@@ -187,7 +187,9 @@ province_event = {
 					has_building = CA_chasse_L3
 				}
 			}
-			remove_building = CA_chasse_L3
+			random_province_holding = {
+				remove_building = CA_chasse_L3	
+			}
 		}
 	}
 }
