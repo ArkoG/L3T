@@ -14,7 +14,7 @@ character_event = {
 		any_title = {
 			limit = { tier = baron }
 			export_to_variable = { which = "developpement" value = num_of_buildings } #gives a random seed based on techs
-			set_variable = { which = "devnextstep" value = 0 }
+			set_variable = { which = "devnextstep" value = 100 }
 			if = {
 				limit = {	
 					year = 1000
@@ -35,11 +35,11 @@ character_event = {
 			}
 			
 			# Castles
-			if = {
-				holding_type = castle
-				limit = { check_variable = { which = "developpement" value = 0 }}
-				set_variable = { which = "devnextstep" value = 100 }
-			}
+			#if = { #buggy
+			#	holding_type = castle
+			#	limit = { check_variable = { which = "developpement" value = 0 }}
+			#	set_variable = { which = "devnextstep" value = 100 }
+			#}
 
 			if = {
 				#limit = { num_of_buildings = 10 }
@@ -76,12 +76,12 @@ character_event = {
 			}
 
 			# Cities
-			if = {
-				holding_type = city
-				limit = { check_variable = { which = "developpement" value = 0 }}
-
-				set_variable = { which = "devnextstep" value = 100 }
-			}
+			#if = { #buggy
+			#	holding_type = city
+			#	limit = { check_variable = { which = "developpement" value = 0 }}
+			#
+			#	set_variable = { which = "devnextstep" value = 100 }
+			#}
 			
 			if = {
 				#limit = { num_of_buildings = 10 }
@@ -117,15 +117,15 @@ character_event = {
 				add_building = ct_town_5
 			}
 			# Temples
-			if = {
-				holding_type = temple
-				limit = { check_variable = { which = "developpement" value = 0 }}
-				set_variable = { which = "devnextstep" value = 120 }
-			}
+			#if = { #buggy
+			#	holding_type = temple
+			#	limit = { check_variable = { which = "developpement" value = 0 }}
+			#	set_variable = { which = "devnextstep" value = 120 }
+			#}
 			
 			if = {
 				#limit = { num_of_buildings = 12 }
-				limit = { check_variable = { which = "developpement" value = 120 }}
+				limit = { check_variable = { which = "developpement" value = 100 }}
 				add_building = tp_town_1
 				set_variable = { which = "devnextstep" value = 170 }
 			}
@@ -255,48 +255,15 @@ character_event = {
 			}		
 		}
 	}
-#	option = { #totoro
-#			trigger = {
-#				any_demesne_title = {
-#					tier = baron
-#					has_title_flag = dev_plus_1 
-#				}
-#			}
-#			random_demesne_title = { 
-#				limit = { tier = baron }
-#				#if = { 
-#					limit = { has_title_flag = dev_plus_1 }
-#					change_variable = { which = "developpement" value = 1 }
-#					#clr_title_flag = dev_plus_1
-#				#}
-#			}
-#			name = "plus_un"
-#		}
-#		option = {
-#			trigger = {
-#				any_demesne_title = {
-#					tier = baron
-#					has_title_flag =  dev_moins_1 
-#				}
-#			}
-#			random_demesne_title = { 
-#				limit = { tier = baron }
-#				#if = { 
-#					limit = { has_title_flag = dev_moins_1 }
-#					change_variable = { which = "developpement" value = -1 }
-#					#clr_title_flag = dev_moins_1
-#				#}
-#			}
-#			name = "moins_un"
-#		}
 }
 
 #called by on_loot_settlement
 character_event = { 
 	id = L3T.1108
-	desc = "DESCL3T.1108"
-	picture = GFX_evt_castle_construction
-	border = GFX_event_normal_frame_economy
+	hide_window = yes
+	#desc = "DESCL3T.1108"
+	#picture = GFX_evt_castle_construction
+	#border = GFX_event_normal_frame_economy
 	
 	is_triggered_only = yes 
 	
@@ -358,7 +325,7 @@ character_event = {
 	}
 }
 #hospital bonus
-character_event = {
+province_event = {
 	id = L3T.1111
 	hide_window = yes
 	
