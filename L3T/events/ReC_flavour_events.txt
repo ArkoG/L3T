@@ -898,7 +898,6 @@ character_event = {
 	}
 	option = { #radin
 		name = "REC.1408D"
-		#wealth = -50
 		random_demesne_province = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
@@ -910,15 +909,13 @@ character_event = {
 	option = { #cela va ralentir le chantier
 		name = "REC.1408B"
 		trigger = {
-			OR = {
-				NOT = { 
-					any_demesne_province = { 
-						has_province_modifier = foret_up #doesn't have an upgraded forest in his demesne
+			any_demesne_province = { 
+				OR = {
+					NOT = { has_province_modifier = foret_up } #doesn't have an upgraded forest in his demesne
+					AND = { #does have an upgraded forest in his demesne but it will be razed soon
+						has_province_modifier = foret_up
+						check_variable = { which = "wood_cut" value = 3 } 
 					}
-				}
-				any_demesne_province = { 
-					has_province_modifier = foret_up
-					check_variable = { which = "wood_cut" value = 3 } #does have an upgraded forest in his demesne but it will be razed soon
 				}
 			}
 		}
