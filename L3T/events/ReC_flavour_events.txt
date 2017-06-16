@@ -892,6 +892,10 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
+				NOT = { has_province_modifier = chantier_stop }
+				NOT = { has_province_modifier = chantier_down }
+				NOT = { had_province_flag = { flag = appro_bois_recent days = 1825 }} #5ans
+				NOT = { check_variable = { which = cathedral value = 2600 }} #raw wood is only required untilproto-cathedral, more advanced ressources can be required later 
 			}
 			set_province_flag = appro_bois_recent
 		}
@@ -901,6 +905,10 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
+				NOT = { has_province_modifier = chantier_stop }
+				NOT = { has_province_modifier = chantier_down }
+				NOT = { had_province_flag = { flag = appro_bois_recent days = 1825 }} #5ans
+				NOT = { check_variable = { which = cathedral value = 2600 }} #raw wood is only required untilproto-cathedral, more advanced ressources can be required later 
 			}
 			add_province_modifier = { name = chantier_down	duration = -1 }
 		}
@@ -922,6 +930,10 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
+				NOT = { has_province_modifier = chantier_stop }
+				NOT = { has_province_modifier = chantier_down }
+				NOT = { had_province_flag = { flag = appro_bois_recent days = 1825 }} #5ans
+				NOT = { check_variable = { which = cathedral value = 2600 }} #raw wood is only required untilproto-cathedral, more advanced ressources can be required later 
 			}
 			add_province_modifier = { name = chantier_down	duration = -1 }
 		}
@@ -947,6 +959,10 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
+				NOT = { has_province_modifier = chantier_stop }
+				NOT = { has_province_modifier = chantier_down }
+				NOT = { had_province_flag = { flag = appro_bois_recent days = 1825 }} #5ans
+				NOT = { check_variable = { which = cathedral value = 2600 }} #raw wood is only required untilproto-cathedral, more advanced ressources can be required later 
 			}
 			set_province_flag = appro_bois_recent
 		}
