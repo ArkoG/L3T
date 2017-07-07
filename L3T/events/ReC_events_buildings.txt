@@ -16,7 +16,7 @@ province_event = {
 	is_triggered_only = yes		
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_1 = yes
 			check_variable = { which = cathedral value = 100 }
 		}
@@ -25,7 +25,11 @@ province_event = {
 	#option unique flag province lieu du chantier
 	option = {
 		name = "REC.201A"
-		capital_holding = {
+		random_province_holding  = {
+			limit = {
+				is_building_cathedral_step_1 = yes
+				check_variable = { which = cathedral value = 100 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_01
@@ -52,7 +56,7 @@ province_event = {
 	is_triggered_only = yes	
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_2 = yes
 			check_variable = { which = cathedral value = 600 }
 		}
@@ -62,7 +66,11 @@ province_event = {
 	option = {
 		name = "REC.202A"
 		owner = { piety = 200 }
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_2 = yes
+				check_variable = { which = cathedral value = 600 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_02
@@ -87,13 +95,21 @@ province_event = {
 	is_triggered_only = yes	
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_3 = yes
 			check_variable = { which = cathedral value = 2600 }
 		}
 	}
 	
-	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+	immediate = { 
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_3 = yes
+				check_variable = { which = cathedral value = 2600 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+		}
+	}
 
 	#option unique gain piété à vie
 	option = {
@@ -103,7 +119,11 @@ province_event = {
 			excommunicate = no 
 			set_character_flag = has_made_cathedral_major_step
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_3 = yes
+				check_variable = { which = cathedral value = 2600 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_03
@@ -129,7 +149,7 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_4 = yes
 			check_variable = { which = cathedral value = 3100 }
 		}
@@ -139,7 +159,11 @@ province_event = {
 	option = {
 		name = "REC.204A"	
 		owner = { piety = 350 }
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_4 = yes
+				check_variable = { which = cathedral value = 3100 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_04
@@ -157,7 +181,11 @@ province_event = {
 	option = {
 		name = "REC.204B"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 2555 }	}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_4 = yes
+				check_variable = { which = cathedral value = 3100 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_04
@@ -183,13 +211,21 @@ province_event = {
 	is_triggered_only = yes	
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_5 = yes
 			check_variable = { which = cathedral value = 5600 }
 		}
 	}
 
-	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_5 = yes
+				check_variable = { which = cathedral value = 5600 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+		}
+	}
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 20ans
 	option = {
@@ -198,7 +234,11 @@ province_event = {
 			piety = 950
 			set_character_flag = has_made_cathedral_major_step
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_5 = yes
+				check_variable = { which = cathedral value = 5600 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_05
@@ -220,7 +260,11 @@ province_event = {
 			add_character_modifier = { name = en_odeur_de_saintete duration = 7300 }
 			set_character_flag = has_made_cathedral_major_step
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_5 = yes
+				check_variable = { which = cathedral value = 5600 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_05
@@ -246,13 +290,21 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_6 = yes
 			check_variable = { which = cathedral value = 6800 }
 		}
 	}
 
-	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_6 = yes
+				check_variable = { which = cathedral value = 6800 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+		}
+	}
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 10ans
 	option = {
@@ -261,7 +313,11 @@ province_event = {
 			piety = 700
 			set_character_flag = has_made_cathedral_major_step
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_6 = yes
+				check_variable = { which = cathedral value = 6800 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_06
@@ -282,7 +338,11 @@ province_event = {
 			add_character_modifier = { name = en_odeur_de_saintete duration = 3650 }
 			set_character_flag = has_made_cathedral_major_step
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_6 = yes
+				check_variable = { which = cathedral value = 6800 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_06
@@ -307,13 +367,21 @@ province_event = {
 
 	is_triggered_only = yes	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_7 = yes
 			check_variable = { which = cathedral value = 8300 }
 		}
 	}
 
-	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_7 = yes
+				check_variable = { which = cathedral value = 8300 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+		}
+	}
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 15ans
 	option = {
@@ -322,7 +390,11 @@ province_event = {
 			piety = 750
 			set_character_flag = has_made_cathedral_major_step
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_7 = yes
+				check_variable = { which = cathedral value = 8300 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_07
@@ -343,7 +415,11 @@ province_event = {
 			add_character_modifier = { name = en_odeur_de_saintete duration = 5475 }
 			set_character_flag = has_made_cathedral_major_step
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_7 = yes
+				check_variable = { which = cathedral value = 8300 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_07
@@ -369,13 +445,21 @@ province_event = {
 	is_triggered_only = yes	
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_8 = yes
 			check_variable = { which = cathedral value = 9800 }
 		}
 	}
 
-	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_8 = yes
+				check_variable = { which = cathedral value = 9800 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+		}
+	}
 
 	#choix piété one shot Vs gain mensuel + opinion boost pour 15ans
 	option = {
@@ -384,7 +468,11 @@ province_event = {
 			piety = 750
 			set_character_flag = has_made_cathedral_major_step
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_8 = yes
+				check_variable = { which = cathedral value = 9800 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_08
@@ -405,7 +493,11 @@ province_event = {
 			add_character_modifier = { name = en_odeur_de_saintete duration = 5475 }
 			set_character_flag = has_made_cathedral_major_step
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_8 = yes
+				check_variable = { which = cathedral value = 9800 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_08
@@ -430,7 +522,7 @@ province_event = {
 
 	is_triggered_only = yes	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_9 = yes
 			check_variable = { which = cathedral value = 10300 }
 		}
@@ -440,7 +532,11 @@ province_event = {
 	option = {
 		name = "REC.209A"	
 		owner = { piety = 350 }
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_9 = yes
+				check_variable = { which = cathedral value = 10300 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_09
@@ -458,7 +554,11 @@ province_event = {
 	option = {
 		name = "REC.209B"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 1825 }	}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_9 = yes
+				check_variable = { which = cathedral value = 10300 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_09
@@ -484,13 +584,21 @@ province_event = {
 
 	is_triggered_only = yes	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_10_ca = yes
 			check_variable = { which = cathedral value = 10800 }
 		}
 	}
 
-	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_ca = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+		}
+	}
 
 	#opinion boost féodaux pour +ou- 5ans
 	option = {
@@ -500,7 +608,11 @@ province_event = {
 			5 = { owner = { add_character_modifier = { name = boost_opinion_feodaux	duration = 2008 }	}}
 			5 = { owner = { add_character_modifier = { name = boost_opinion_feodaux	duration = 2372 }	}}
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_ca = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
 			add_building = ca_cathedrale_10
 		}
 	}
@@ -514,13 +626,21 @@ province_event = {
 	is_triggered_only = yes	
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_10_ct = yes
 			check_variable = { which = cathedral value = 10800 }
 		}
 	}
 
-	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_ct = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+		}
+	}
 
 	#opinion boost bourgeois pour +ou- 5ans
 	option = {
@@ -530,7 +650,11 @@ province_event = {
 			5 = { owner = { add_character_modifier = { name = boost_opinion_bourgeois	duration = 2008 }	}}
 			5 = { owner = { add_character_modifier = { name = boost_opinion_bourgeois	duration = 2372 }	}}
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_ct = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
 			add_building = ct_cathedrale_10
 		}
 	}
@@ -544,13 +668,21 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_10_tp = yes
 			check_variable = { which = cathedral value = 10800 }
 		}
 	}
 
-	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_tp = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+		}
+	}
 
 	#opinion boost éclésiastiques pour +ou- 5ans
 	option = {
@@ -560,7 +692,11 @@ province_event = {
 			5 = { owner = { add_character_modifier = { name = boost_opinion_ecclesia	duration = 2008 }	}}
 			5 = { owner = { add_character_modifier = { name = boost_opinion_ecclesia	duration = 2372 }	}}
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_tp = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
 			add_building = tp_cathedrale_10
 		}
 	}
@@ -576,7 +712,7 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_11 = yes
 			check_variable = { which = cathedral value = 11300 }
 		}
@@ -586,7 +722,11 @@ province_event = {
 	option = {
 		name = "REC.211A"	
 		owner = { piety = 350 }
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_11 = yes
+				check_variable = { which = cathedral value = 11300 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_11
@@ -604,7 +744,11 @@ province_event = {
 	option = {
 		name = "REC.211B"
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 1825 }	}
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_11 = yes
+				check_variable = { which = cathedral value = 11300 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_11
@@ -630,20 +774,32 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		capital_holding = {
+		any_province_holding = {
 			is_building_cathedral_step_12 = yes
 			check_variable = { which = cathedral value = 12000 }
 		}
 	}
 
-	immediate = { capital_holding = { change_variable = { which = "developpement" value = 10 }}}
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_12 = yes
+				check_variable = { which = cathedral value = 12000 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+		}
+	}
 
 	#option unique gain piété à vie
 	option = {
 		name = "REC.212A"	
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = -1	} }
 		owner = { excommunicate = no }
-		capital_holding = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_12 = yes
+				check_variable = { which = cathedral value = 12000 }
+			}
 			if = {
 				limit = { holding_type = castle }
 				add_building = ca_cathedrale_12

@@ -60,7 +60,7 @@ character_event = {
 		trait = batisseur_cathedrale
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			capital_holding = {
+			any_province_holding = {
 				is_occupied = no
 				has_siege = no
 				had_title_flag = { # The first rising will arrive more than 1 year after construction starting
@@ -76,7 +76,7 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
-				capital_holding = {
+				any_province_holding = {
 					had_title_flag = { # The first rising will arrive more than 1 year after construction starting
 						flag = cathedral_construction
 						years = 1
@@ -123,7 +123,8 @@ province_event = {
 			}
 		}
 		FROM = { wealth = -100 }
-		capital_holding = {
+		random_province_holding = {
+			limit = { has_title_flag = cathedral_construction }
 			if = {
 				limit = { 
 					NOT = {
@@ -180,7 +181,8 @@ province_event = {
 			}
 		}
 		FROM = { wealth = -75 }
-		capital_holding = {
+		random_province_holding = {
+			limit = { has_title_flag = cathedral_construction }
 			if = {
 				limit = {
 					NOT = {
@@ -631,7 +633,8 @@ letter_event = {
 	
 	immediate = {
 		FROM = {
-			capital_holding = {
+			random_province_holding = {
+				limit = { has_title_flag = cathedral_construction }
 				if = {
 					limit = { is_building_cathedral_step_1 = yes }
 					# requiredStepPoint = total required point for this step

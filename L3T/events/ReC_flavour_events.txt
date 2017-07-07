@@ -154,7 +154,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			capital_holding = {
+			any_province_holding = {
 				holding_type = temple
 				has_building = tp_cathedrale_10
 			}
@@ -219,7 +219,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			capital_holding = {
+			any_province_holding = {
 				holding_type = city
 				has_building = ct_cathedrale_10
 			}
@@ -270,7 +270,7 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			capital_holding = {
+			any_province_holding = {
 				holding_type = castle
 				has_building = ca_cathedrale_10
 			}
@@ -319,7 +319,7 @@ character_event = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
 			NOT = { has_province_modifier = chantier_stop }
-			capital_holding = {
+			any_province_holding = {
 				holding_type = castle
 				has_building = ca_cathedrale_10
 			}
@@ -399,7 +399,10 @@ character_event = {
 				has_province_modifier = chantier_down
 			} 
 			remove_province_modifier = chantier_down
-			capital_holding = { change_variable = { which = cathedral value = 30 }}
+			random_province_holding = {
+				limit = { has_title_flag = cathedral_construction }
+				change_variable = { which = cathedral value = 30 }
+			}
 		}
 	}
 	option = {
@@ -411,7 +414,8 @@ character_event = {
 					has_province_modifier = chantier_cathedrale
 					has_province_modifier = chantier_down
 				}
-				capital_holding = {
+				random_province_holding = {
+					limit = { has_title_flag = cathedral_construction }
 					random_list = {
 						10 = { change_variable = { which = cathedral value = 20 } }
 						10 = { change_variable = { which = cathedral value = 30 } }
@@ -987,7 +991,8 @@ character_event = {
 			has_province_modifier = chantier_cathedrale
 			NOT = { has_province_modifier = chantier_stop }
 			NOT = { has_province_flag = wall_construction }
-			capital_holding = {
+			any_province_holding = {
+				has_title_flag = cathedral_construction
 				has_siege = no
 				NOT = { has_holding_modifier = temp_wall }
 			}
@@ -1043,7 +1048,8 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
-				capital_holding = {
+				any_province_holding = {
+					has_title_flag = cathedral_construction
 					NOT = { has_holding_modifier = temp_wall }
 				}
 			}
@@ -1079,7 +1085,8 @@ province_event = {
 	
 	option = {
 		name = "REC.1502A"
-		capital_holding = {
+		random_province_holding = {
+			limit = { has_title_flag = cathedral_construction }
 			add_holding_modifier = {
 				name = temp_wall
 				duration = -1
@@ -1125,7 +1132,8 @@ province_event = {
 				}
 			}
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = { has_title_flag = cathedral_construction }
 			remove_holding_modifier = temp_wall
 		}
 		# Accelerate Cathedral construction
@@ -1207,7 +1215,8 @@ province_event = {
 	option = {
 		name = "REC.1511B"
 		trigger = {
-			capital_holding = {
+			any_province_holding = {
+				has_title_flag = cathedral_construction
 				NOT = { has_holding_modifier = temp_wall }
 			}
 		}
@@ -1218,7 +1227,8 @@ province_event = {
 			name = chantier_stop
 			duration = -1
 		}
-		capital_holding = {
+		random_province_holding = {
+			limit = { has_title_flag = cathedral_construction }
 			add_holding_modifier = {
 				name = temp_wall_improvement
 				duration = 365
@@ -1266,7 +1276,8 @@ character_event = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
 			NOT = { has_province_modifier = chantier_stop }
-			capital_holding = { 
+			any_province_holding = {
+				has_title_flag = cathedral_construction
 				is_occupied = no
 				has_siege = no
 			}
@@ -1290,7 +1301,8 @@ character_event = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
 				NOT = { has_province_modifier = chantier_stop }
-				capital_holding = { 
+				any_province_holding = {
+					has_title_flag = cathedral_construction
 					is_occupied = no
 					has_siege = no
 				}
@@ -1305,7 +1317,8 @@ character_event = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
 				NOT = { has_province_modifier = chantier_stop }
-				capital_holding = { 
+				any_province_holding = {
+					has_title_flag = cathedral_construction
 					is_occupied = no
 					has_siege = no
 				}
@@ -1338,7 +1351,8 @@ character_event = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
 				NOT = { has_province_modifier = chantier_stop }
-				capital_holding = { 
+				any_province_holding = {
+					has_title_flag = cathedral_construction
 					is_occupied = no
 					has_siege = no
 				}
@@ -1368,7 +1382,8 @@ character_event = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
 			NOT = { has_province_modifier = chantier_stop }
-			capital_holding = { 
+			any_province_holding = {
+				has_title_flag = cathedral_construction
 				is_occupied = no
 				has_siege = no
 			}
@@ -1384,7 +1399,8 @@ character_event = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
 				NOT = { has_province_modifier = chantier_stop }
-				capital_holding = { 
+				any_province_holding = {
+					has_title_flag = cathedral_construction
 					is_occupied = no
 					has_siege = no
 				}
@@ -1407,7 +1423,8 @@ character_event = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
 				NOT = { has_province_modifier = chantier_stop }
-				capital_holding = { 
+				any_province_holding = {
+					has_title_flag = cathedral_construction
 					is_occupied = no
 					has_siege = no
 				}
@@ -1440,7 +1457,8 @@ character_event = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
 				NOT = { has_province_modifier = chantier_stop }
-				capital_holding = { 
+				any_province_holding = {
+					has_title_flag = cathedral_construction
 					is_occupied = no
 					has_siege = no
 				}
@@ -1497,7 +1515,8 @@ character_event = {
 				has_province_modifier = chantier_down
 				has_province_modifier = chantier_stop
 			}
-			capital_holding = { 
+			any_province_holding = {
+				has_title_flag = cathedral_construction
 				is_occupied = no
 				has_siege = no
 			}
@@ -1515,7 +1534,8 @@ character_event = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
 				has_province_flag = war_slow_cathedral
-				capital_holding = { 
+				any_province_holding = {
+					has_title_flag = cathedral_construction
 					is_occupied = no
 					has_siege = no
 				}
