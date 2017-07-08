@@ -67,7 +67,8 @@ character_event = {
 					flag = cathedral_construction
 					years = 1
 				}
-				NOT = { # We have not seen this construction this year
+				OR = { # We have not seen this construction this year
+					NOT = { has_title_flag = construction_progression }
 					had_title_flag = {
 						flag = construction_progression
 						days = 340 # 1 year - a margin
@@ -86,7 +87,8 @@ character_event = {
 						flag = cathedral_construction
 						years = 1
 					}
-					NOT = { # We have not seen this construction this year
+					OR = { # We have not seen this construction this year
+						NOT = { has_title_flag = construction_progression }
 						had_title_flag = {
 							flag = construction_progression
 							days = 340 # 1 year - a margin
@@ -102,14 +104,15 @@ character_event = {
 						flag = cathedral_construction
 						years = 1
 					}
-					NOT = { # We have not seen this construction this year
+					OR = { # We have not seen this construction this year
+						NOT = { has_title_flag = construction_progression }
 						had_title_flag = {
 							flag = construction_progression
 							days = 340 # 1 year - a margin
 						}
 					}
 				}
-				clr_title_flag = construction_progression
+				if = { limit = { has_title_flag = construction_progression } clr_title_flag = construction_progression }
 				set_title_flag = construction_progression
 			}
 			
