@@ -938,7 +938,15 @@ character_event = {
 	immediate = {
 		FROMFROM = {
 			random_demesne_province = {
-				limit = { has_province_modifier = chantier_cathedrale }
+				limit = { # The province whose the holding in which the decision was taken
+					has_province_flag = province_cathedral_progression
+					NOT = {
+						had_province_flag = {
+							flag = province_cathedral_progression
+							days = 1
+						}
+					}
+				}
 				province_event = { id = REC.10  days = 1 }
 			}
 		}

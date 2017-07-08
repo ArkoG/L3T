@@ -111,6 +111,7 @@ settlement_decisions = {
 		}
 		
 		effect = {
+			location = { set_province_flag = province_cathedral_progression }
 			FROM = {
 				if = {
 					limit = { any_courtier = { has_minor_title = title_batisseur } }
