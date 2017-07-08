@@ -67,12 +67,17 @@ character_event = {
 					flag = cathedral_construction
 					years = 1
 				}
+				NOT = { # We have not seen this construction this year
+					had_title_flag = {
+						flag = construction_progression
+						days = 340 # 1 year - a margin
+					}
+				}
 			}
 		}
 	}
 	
 	immediate = {
-		# TODO : Manage the case it can be have several ones
 		random_demesne_province = {
 			limit = {
 				has_province_modifier = chantier_cathedrale
@@ -81,8 +86,34 @@ character_event = {
 						flag = cathedral_construction
 						years = 1
 					}
+					NOT = { # We have not seen this construction this year
+						had_title_flag = {
+							flag = construction_progression
+							days = 340 # 1 year - a margin
+						}
+					}
 				}
 			}
+			
+			# Mark the title in order to treat it only once a year
+			random_province_holding = {
+				limit = {
+					had_title_flag = { # The first rising will arrive more than 1 year after construction starting
+						flag = cathedral_construction
+						years = 1
+					}
+					NOT = { # We have not seen this construction this year
+						had_title_flag = {
+							flag = construction_progression
+							days = 340 # 1 year - a margin
+						}
+					}
+				}
+				clr_title_flag = construction_progression
+				set_title_flag = construction_progression
+			}
+			
+			# Construction progression
 			clr_province_flag = cathedral_siege_event
 			province_event = { id = REC.4 days = 30}
 		}
