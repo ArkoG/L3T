@@ -120,6 +120,11 @@ character_event = {
 			clr_province_flag = cathedral_siege_event
 			province_event = { id = REC.4 days = 30}
 		}
+		
+		# Manage other Cathedral
+		character_event = { id = REC.3 days = 10}
+		
+		# Builder master
 		character_event = { id = REC.5 days = 10}
 	}
 }
