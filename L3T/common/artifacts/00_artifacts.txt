@@ -1036,7 +1036,7 @@ iron_crown_of_lombardy = {
 	}
 	quality = 5
 	indestructible = yes
-	flags = { religious christian jewelry unique crucifixion }
+	flags = { religious christian jewelry unique crucifixion relique }
 	stacking = no
 	picture = "GFX_iron_crown_of_lombardy"
 	slot = crown
@@ -1054,9 +1054,10 @@ shroud_of_jesus = {
 	}
 	quality = 5
 	indestructible = yes
-	flags = { religious christian textile unique jesus crucifixion }
+	flags = { religious christian textile unique jesus crucifixion relique }
 	stacking = no
 	picture = "GFX_shroud_of_jesus"
+	slot = slot_relique
 }
 
 spear_of_destiny = {
@@ -1073,7 +1074,7 @@ spear_of_destiny = {
 		religion_group = christian
 	}
 	quality = 5
-	flags = { religious christian very_rare crucifixion troops_morale }
+	flags = { religious christian very_rare crucifixion troops_morale relique }
 	stacking = no
 	picture = "GFX_spear_of_destiny"
 	slot = weapon
@@ -1088,9 +1089,10 @@ holy_grail = {
 		religion_group = christian
 	}
 	quality = 5
-	flags = { religious christian very_rare crucifixion fantasy }
+	flags = { religious christian very_rare crucifixion fantasy relique }
 	stacking = no
 	picture = "GFX_cup_holy_grail"
+	slot = slot_relique
 }
 
 holy_chalice = {
@@ -1103,9 +1105,10 @@ holy_chalice = {
 		religion_group = christian
 	}
 	quality = 5
-	flags = { religious christian very_rare crucifixion }
+	flags = { religious christian very_rare crucifixion relique }
 	stacking = no
 	picture = "GFX_cup_fancy"
+	slot = slot_relique
 }
 
 bones_of_st_peter = {
@@ -1120,9 +1123,10 @@ bones_of_st_peter = {
 		religion_group = christian
 	}
 	quality = 5
-	flags = { religious christian bone saint very_rare }
+	flags = { religious christian bone saint very_rare relique }
 	stacking = no
 	picture = "GFX_saints_bone_femur"
+	slot = slot_relique
 }
 
 crown_of_thorns = {
@@ -1136,9 +1140,10 @@ crown_of_thorns = {
 		religion_group = christian
 	}
 	quality = 4
-	flags = { religious christian rare jesus crucifixion }
+	flags = { religious christian rare jesus crucifixion relique }
 	stacking = no
 	picture = "GFX_crown_of_thorns"
+	slot = slot_relique
 }
 
 seamless_robe_of_jesus = {
@@ -1154,9 +1159,10 @@ seamless_robe_of_jesus = {
 		religion_group = christian
 	}
 	quality = 4
-	flags = { religious christian rare jesus }
+	flags = { religious christian rare jesus relique }
 	stacking = no
 	picture = "GFX_seamless_robe_of_jesus"
+	slot = slot_relique
 }
 
 fragment_of_true_cross = {
@@ -1168,9 +1174,10 @@ fragment_of_true_cross = {
 		religion_group = christian
 	}
 	quality = 3
-	flags = { religious christian rare crucifixion }
+	flags = { religious christian rare crucifixion relique }
 	stacking = no
 	picture = "GFX_nail_of_the_true_cross"
+	slot = slot_relique
 }
 
 holy_foreskin = {
@@ -1184,9 +1191,10 @@ holy_foreskin = {
 		religion_group = christian
 	}
 	quality = 3
-	flags = { religious christian rare foreskin jesus }
+	flags = { religious christian rare foreskin jesus relique }
 	stacking = no
 	picture = "GFX_pouch"
+	slot = slot_relique
 }
 
 fingerbone_of_saint = {
@@ -1199,8 +1207,9 @@ fingerbone_of_saint = {
 		religion_group = christian
 	}
 	quality = 1
-	flags = { religious christian bone saint bodypart }
+	flags = { religious christian bone saint bodypart relique }
 	picture = "GFX_saints_bone_finger"
+	slot = slot_relique
 }
 
 finger_of_st_john = { #separate event chain
@@ -1212,9 +1221,10 @@ finger_of_st_john = { #separate event chain
 		religion_group = christian
 	}
 	quality = 2
-	flags = { religious christian SoA bodypart }
+	flags = { religious christian SoA bodypart relique }
 	stacking = no
 	picture = "GFX_saints_bone_finger"
+	slot = slot_relique
 }
 
 chains_of_st_peter = {
@@ -1225,9 +1235,10 @@ chains_of_st_peter = {
 		religion_group = christian
 	}
 	quality = 2
-	flags = { religious christian chains saint }
+	flags = { religious christian chains saint relique }
 	stacking = no
 	picture = "GFX_relic_box_simple"
+	slot = slot_relique
 }
 
 right_hand_st_demetrius = {
@@ -1238,9 +1249,10 @@ right_hand_st_demetrius = {
 		religion_group = christian
 	}
 	quality = 2
-	flags = { religious christian hand saint bodypart }
+	flags = { religious christian hand saint bodypart relique }
 	stacking = no
 	picture = "GFX_saints_bone_finger"
+	slot = slot_relique
 }
 
 veil_of_veronica = {
@@ -1252,9 +1264,10 @@ veil_of_veronica = {
 		religion_group = christian
 	}
 	quality = 2
-	flags = { religious christian jesus face cloth }
+	flags = { religious christian jesus face cloth relique }
 	stacking = no
 	picture = "GFX_veil_of_veronica"
+	slot = slot_relique
 }
 
 image_of_edessa = {
@@ -1267,9 +1280,10 @@ image_of_edessa = {
 		religion_group = christian
 	}
 	quality = 3
-	flags = { religious christian jesus face cloth }
+	flags = { religious christian jesus face cloth relique }
 	stacking = no
 	picture = "GFX_magnificent_painting_improved"
+	slot = slot_relique
 }
 
 remains_of_st_cessianus = {
@@ -1280,9 +1294,10 @@ remains_of_st_cessianus = {
 		religion_group = christian
 	}
 	quality = 2
-	flags = { religious christian saint remains }
+	flags = { religious christian saint remains relique }
 	stacking = no
 	picture = "GFX_relic_box_simple"
+	slot = slot_relique
 }
 
 weeping_statue = {
@@ -1293,9 +1308,10 @@ weeping_statue = {
 		religion_group = christian
 	}
 	quality = 2
-	flags = { religious christian mary statue }
+	flags = { religious christian mary statue relique }
 	stacking = no
 	picture = "GFX_magnificent_painting_improved"
+	slot = slot_relique
 }
 
 
