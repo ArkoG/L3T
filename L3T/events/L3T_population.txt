@@ -228,7 +228,10 @@ character_event = {
 				}
 				save_event_target_as = holding_dev #totoro
 				set_variable = { which = "developpementold" which = "developpement" }
-				change_variable = { which = "developpement" value = -1 }				
+				if = {
+					limit = { check_variable = { which = "developpement" value = 1 }}
+					change_variable = { which = "developpement" value = -1 }
+				}
 				holder_scope = { character_event = { id = L3T.1105 days = 0 }} #totoro
 			}
 			if = {
@@ -276,7 +279,14 @@ character_event = {
 		FROM = {
 			save_event_target_as = holding_dev #totoro
 			set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
-			change_variable = { which = "developpement" value = -15 } 
+			if = {
+				limit = { check_variable = { which = "developpement" value = 15 } }
+				change_variable = { which = "developpement" value = -15 }
+			}
+			if = {
+				limit = { NOT = { check_variable = { which = "developpement" value = 15 } } }
+				set_variable = { which = "developpement" value = 0 }
+			}				
 			holder_scope = { character_event = { id = L3T.1109 days = 0 }} #totoro
 		}
 	}
