@@ -740,28 +740,30 @@ province_event = {
 				limit = { has_province_modifier = province_fleuve }
 				add_province_modifier = { name = route_fluviale duration = -1 }
 				any_province_holding = {
-						limit = {
-							OR = {
-								holding_type = castle
-								holding_type = temple
-								holding_type = city
-							}
+					limit = {
+						OR = {
+							holding_type = castle
+							holding_type = temple
+							holding_type = city
 						}
-						change_variable = { which = "developpement" value = 10 } #pour la route 
+					}
+					change_variable = { which = "developpement" value = 10 } #pour la route 
+					change_variable = { which = "developpement_road" value = 10 }
 				}
 			}
 			if = {
 				limit = { NOT = { has_province_modifier = province_fleuve } }
 				add_province_modifier = { name = route_terrestre duration = -1 }
 				any_province_holding = {
-						limit = {
-							OR = {
-								holding_type = castle
-								holding_type = temple
-								holding_type = city
-							}
+					limit = {
+						OR = {
+							holding_type = castle
+							holding_type = temple
+							holding_type = city
 						}
-						change_variable = { which = "developpement" value = 10 } #pour la route 
+					}
+					change_variable = { which = "developpement" value = 10 } #pour la route 
+					change_variable = { which = "developpement_road" value = 10 } 
 				}
 			}
 			
@@ -812,14 +814,15 @@ province_event = {
 	immediate = {
 		add_province_modifier = { name = noeud_commercial_annexe duration = -1 }
 		any_province_holding = {
-				limit = {
-					OR = {
-						holding_type = castle
-						holding_type = temple
-						holding_type = city
-					}
+			limit = {
+				OR = {
+					holding_type = castle
+					holding_type = temple
+					holding_type = city
 				}
-				change_variable = { which = "developpement" value = 10 } #pour la route 
+			}
+			change_variable = { which = "developpement" value = 10 } #pour la route 
+			change_variable = { which = "developpement_road" value = 10 }
 		}
 	}
 }
@@ -840,59 +843,63 @@ province_event = {
 			limit = { is_variable_equal = { which = "route_size" value = 2 } }
 			add_province_modifier = { name = route_size2 duration = -1 }
 			any_province_holding = {
-					limit = {
-						OR = {
-							holding_type = castle
-							holding_type = temple
-							holding_type = city
-						}
+				limit = {
+					OR = {
+						holding_type = castle
+						holding_type = temple
+						holding_type = city
 					}
-					change_variable = { which = "developpement" value = 10 } #pour la route 
+				}
+				change_variable = { which = "developpement" value = 10 } #pour la route 
+				change_variable = { which = "developpement_road" value = 10 }
 			}
 		}
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 3 } }
 			add_province_modifier = { name = route_size3 duration = -1 }
 			any_province_holding = {
-					limit = {
-						OR = {
-							holding_type = castle
-							holding_type = temple
-							holding_type = city
-						}
+				limit = {
+					OR = {
+						holding_type = castle
+						holding_type = temple
+						holding_type = city
 					}
-					change_variable = { which = "developpement" value = 10 } #pour la route 
+				}
+				change_variable = { which = "developpement" value = 10 } #pour la route 
+				change_variable = { which = "developpement_road" value = 10 }
 			}
 		}
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 4 } }
 			add_province_modifier = { name = route_size4 duration = -1 }
 			any_province_holding = {
-					limit = {
-						OR = {
-							holding_type = castle
-							holding_type = temple
-							holding_type = city
-						}
+				limit = {
+					OR = {
+						holding_type = castle
+						holding_type = temple
+						holding_type = city
 					}
-					change_variable = { which = "developpement" value = 10 } #pour la route 
+				}
+				change_variable = { which = "developpement" value = 10 } #pour la route
+				change_variable = { which = "developpement_road" value = 10 } 
 			}
 		}
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 5 } }
 			add_province_modifier = { name = route_size5 duration = -1 }
 			any_province_holding = {
-					limit = {
-						tier = baron
-						OR = {
-							holding_type = castle
-							holding_type = temple
-							holding_type = city
-						}
+				limit = {
+					tier = baron
+					OR = {
+						holding_type = castle
+						holding_type = temple
+						holding_type = city
 					}
-					change_variable = { which = "developpement" value = 10 } #pour la route 
+				}
+				change_variable = { which = "developpement" value = 10 } #pour la route
+				change_variable = { which = "developpement_road" value = 10 } 
 			}
-	}
+		}
 	}
 }
 

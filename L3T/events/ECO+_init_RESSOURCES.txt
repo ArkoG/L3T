@@ -506,6 +506,7 @@ province_event = {
 				has_title_flag = bonus_origin
 			}
 			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_farm" value = 10 }
 			clear_event_target = holding_pour_desc
 			clr_title_flag = bonus_origin
 		}

@@ -18,21 +18,34 @@ character_event = {
 			if = {
 				limit = {	
 					year = 1000
-					}
+				}
+				# Gives a random bonus
 				random_list = {
-					15 = { change_variable = { which = "developpement" value = 10 }} #gives a random bonus
-					20 = { change_variable = { which = "developpement" value = 20 }}
-					40 = { change_variable = { which = "developpement" value = 30 }}
-					15 = { change_variable = { which = "developpement" value = 40 }}
-					10 = { change_variable = { which = "developpement" value = 50 }}
+					15 = {
+						change_variable = { which = "developpement" value = 10 }
+					} 
+					20 = {
+						change_variable = { which = "developpement" value = 20 }
+					}
+					40 = {
+						change_variable = { which = "developpement" value = 30 }
+					}
+					15 = {
+						change_variable = { which = "developpement" value = 40 }
+					}
+					10 = {
+						change_variable = { which = "developpement" value = 50 }
+					}
 				}
 			}
 			if = {
 				limit = {	
 					year = 1150
-					}
+				}
 				change_variable = { which = "developpement" value = 50 }
 			}
+			
+			set_variable = { which = "developpement_init" which = "developpement" }
 			
 			# Castles
 			#if = { #buggy
@@ -218,8 +231,10 @@ character_event = {
 						holding_type = city
 					}
 					change_variable = { which = "developpement" value = 1 }
+					change_variable = { which = "developpement_yearly_growth" value = 1 }
 				}
 				change_variable = { which = "developpement" value = 1 } 
+				change_variable = { which = "developpement_yearly_growth" value = 1 }
 				#holder_scope = { character_event = { id = L3T.1104 days = 0 }} #totoro
 			}
 			if = {
@@ -231,6 +246,7 @@ character_event = {
 				if = {
 					limit = { check_variable = { which = "developpement" value = 1 }}
 					change_variable = { which = "developpement" value = -1 }
+					change_variable = { which = "developpement_yearly_growth" value = -1 }
 				}
 				holder_scope = { character_event = { id = L3T.1105 days = 0 }} #totoro
 			}
@@ -282,9 +298,11 @@ character_event = {
 			if = {
 				limit = { check_variable = { which = "developpement" value = 15 } }
 				change_variable = { which = "developpement" value = -15 }
+				change_variable = { which = "developpement_looting" value = -15 }
 			}
 			if = {
 				limit = { NOT = { check_variable = { which = "developpement" value = 15 } } }
+				change_variable = { which = "developpement_looting" which = "developpement" }
 				set_variable = { which = "developpement" value = 0 }
 			}				
 			holder_scope = { character_event = { id = L3T.1109 days = 0 }} #totoro
@@ -322,11 +340,13 @@ character_event = {
 				if = {
 					limit = { has_building = VOC_INDUSTRIELLE }
 					change_variable = { which = "developpement" value = 10 }
+					change_variable = { which = "developpement_trade_post" value = 10 }
 					holder_scope = { character_event = { id = L3T.11091 days = 0 }} #totoro
 				}
 				if = {
 					limit = { has_building = VOC_COMMERCIALE }
 					change_variable = { which = "developpement" value = 30 }
+					change_variable = { which = "developpement_trade_post" value = 30 }
 					holder_scope = { character_event = { id = L3T.11092 days = 0 }} #totoro
 					#change_variable = { which = "developpement" value = 20 } #only diff
 				}
@@ -369,6 +389,7 @@ character_event = {
 				}
 				set_title_flag = received_hospital_devv_bonus
 				change_variable = { which = "developpement" value = 10 }
+				change_variable = { which = "developpement_hospital" value = 10 }
 				save_event_target_as = holding_dev #totoro
 				holder_scope = { character_event = { id = L3T.11093 days = 0 }} #totoro
 			}

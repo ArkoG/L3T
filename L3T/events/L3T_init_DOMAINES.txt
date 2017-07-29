@@ -108,6 +108,7 @@ narrative_event = {
 		capital_holding = {
 			add_building = FEODAL_adm
 			change_variable = { which = "developpement" value = 20 }
+			change_variable = { which = "developpement_spec" value = 20 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
 			clr_title_flag = castle_to_specialize
@@ -183,6 +184,7 @@ narrative_event = {
 			}
 			add_building = FEODAL_prod
 			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_spec" value = 10 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
 			clr_title_flag = castle_to_specialize
@@ -286,6 +288,7 @@ narrative_event = {
 			add_building = CITE_L1
 			add_building = VOC_INDUSTRIELLE
 			change_variable = { which = "developpement" value = 20 }
+			change_variable = { which = "developpement_spec" value = 20 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = voc_indus_L1 duration = -1 }
 			clr_title_flag = city_to_specialize
@@ -359,6 +362,7 @@ narrative_event = {
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
 			change_variable = { which = "developpement" value = 30 }
+			change_variable = { which = "developpement_spec" value = 30 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = voc_comm_L1 duration = -1 }
 			# La province devient le départ d'une route	si possible
@@ -415,6 +419,8 @@ narrative_event = {
 								}
 							}
 							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
+							change_variable = { which = "developpement_spec" value = 30 }
+							change_variable = { which = "developpement_road" value = 20 }
 						}
 					}
 					if = {
@@ -429,6 +435,8 @@ narrative_event = {
 								}
 							}
 							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
+							change_variable = { which = "developpement_spec" value = 30 }
+							change_variable = { which = "developpement_road" value = 20 }
 						}
 					}
 					# Avert the player that a route is on its demesne
@@ -483,6 +491,7 @@ province_event = {
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
 			change_variable = { which = "developpement" value = 30 }
+			change_variable = { which = "developpement_spec" value = 30 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			add_holding_modifier = { name = voc_comm_L1 duration = -1 }
 			
@@ -531,6 +540,8 @@ province_event = {
 								}
 							}
 							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
+							change_variable = { which = "developpement_spec" value = 30 }
+							change_variable = { which = "developpement_road" value = 20 }
 						}
 					}
 					if = {
@@ -545,6 +556,8 @@ province_event = {
 								}
 							}
 							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
+							change_variable = { which = "developpement_spec" value = 30 }
+							change_variable = { which = "developpement_road" value = 20 }
 						}
 					}
 					# Avert the player that a route is on its demesne
@@ -584,6 +597,7 @@ province_event = {
 				add_building = CITE_L1
 				add_building = VOC_INDUSTRIELLE
 				change_variable = { which = "developpement" value = 20 }
+				change_variable = { which = "developpement_spec" value = 20 }
 				#change_variable = { which = "specNB" value = 1 } #debug
 				add_holding_modifier = { name = voc_indus_L1 duration = -1 }
 			}
@@ -797,6 +811,7 @@ narrative_event = {
 				}
 				add_building = MONASTERE
 				change_variable = { which = "developpement" value = 10 }
+				change_variable = { which = "developpement_spec" value = 10 }
 				add_holding_modifier = { name = monastere_L1 duration = -1 }
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 				holder_scope = { narrative_event = { id = L3T.7 days = 0 }}
@@ -851,6 +866,7 @@ narrative_event = {
 				}
 				add_building = CITEEPISCOPALE
 				change_variable = { which = "developpement" value = 10 }
+				change_variable = { which = "developpement_spec" value = 10 }
 			}
 			if = {
 				limit = { location = { religion_group = christian }} #//christian specific icon
@@ -933,6 +949,7 @@ province_event = {
 			add_building = tp_roman_cathedrale
 			add_building = CITEEPISCOPALE
 			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_spec" value = 10 }
 			add_holding_modifier = { name = episcopale_L1 duration = -1 }
 			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug	
 		}
