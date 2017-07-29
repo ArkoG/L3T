@@ -793,6 +793,7 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
+		NOT = { has_province_modifier = noeud_commercial_annexe }
 		OR = {
 			has_province_flag = bloc_C
 			has_province_flag = bloc_D
