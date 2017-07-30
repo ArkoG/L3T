@@ -57,6 +57,12 @@ opus_francigenum_dynamic_apparition = {
 
 # Root is the character who loses a relic
 destroy_relic = {
+	# The character use the relic he has get from roman Cathedral
+	if = {
+		limit = { has_character_flag = has_relique_from_cathedral }
+		clr_character_flag = has_relique_from_cathedral
+	}
+	
 	random_artifact = {					
 		limit = { has_artifact_flag = relique }
 		# The relic will be available to be create again
@@ -171,6 +177,9 @@ destroy_relic = {
 
 # Root is the character which gets a relic
 get_relic = {
+	# Character get a relic from a roman cathedral
+	set_character_flag = has_relique_from_cathedral
+
 	# Priority for burned relics
 	if = {
 		limit = { has_global_flag = available_relique26 }
