@@ -2,7 +2,7 @@
 
 > An economic and medieval flavour mod for CK2 
 
-![alt tag](http://i789.photobucket.com/albums/yy174/ArKoG/CK2%20-%20Les%20%20Trois%20Tours/logo_L3T_forum_zpsjwachfud.png)
+![alt tag](http://forum.reseau-js.com/uploads/monthly_2017_08/logo_L3T_forum.PNG.a4f74973e762f95806758094391ea8f2.PNG)
 
 # Mod presentation
 
