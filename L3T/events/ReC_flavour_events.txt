@@ -1,6 +1,6 @@
-############################################
-# [ReC][Reliques et Cathédrales]  par Arko #
-############################################
+#######################################################
+# [ReC][Reliques et Cathédrales]  par Arko  et Mouchi #
+#######################################################
 
 
 namespace = REC
@@ -1555,5 +1555,327 @@ character_event = {
 				}
 			}
 		}
+	}
+}
+
+# Someone wants to buy you a relic
+# FROMFROM is the buyer
+character_event = {
+	id = REC.1701
+	desc = "DESCREC.1701"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.1701A"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 5
+				NOT = { wealth = 0 }
+			}
+		}
+		wealth = 100
+		FROMFROM = { wealth = -100 }
+		any_artifact = {
+			limit = { has_artifact_flag = relique }
+			transfer_artifact = {		
+				from = ROOT
+				to = FROMFROM
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.1701B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				NOT = { wealth = 50 }
+			}
+			modifier = {
+				factor = 5
+				trait = gluttonous
+			}
+		}
+		FROMFROM = { character_event = { id = REC.1702 days = 30 } }
+	}
+	
+	option = {
+		name = "REC.1701C"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		FROMFROM = { character_event = { id = REC.1704 days = 30 } }
+		set_character_flag = refuse_to_sell_relic
+	}
+}
+
+# The seller wants more money
+# FROM is the seller
+character_event = {
+	id = REC.1702
+	desc = "DESCREC.1702"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.1702A"
+		trigger =  {
+			wealth = 150
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 3
+				trait = charitable
+			}
+		}
+		FROM = { character_event = { id = REC.1703 days = 30 } }
+	}
+	
+	option = {
+		name = "REC.1702B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 3
+				trait = greedy
+			}
+		}
+		character_event = { id = REC.1705 days = 30 }
+	}
+	
+	option = {
+		name = "REC.1702C"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 3
+				trait = content
+			}
+		}
+		piety = -5
+		if = {
+			limit = { NOT = { trait = content } }
+			add_trait = content
+		}
+	}
+}
+
+# The buyer proposed more to buy the relic
+# FROM is the buyer
+character_event = {
+	id = REC.1703
+	desc = "DESCREC.1703"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.1703A"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 5
+				NOT = { wealth = 0 }
+			}
+		}
+		wealth = 150
+		FROMFROM = { wealth = -150 }
+		any_artifact = {
+			limit = { has_artifact_flag = relique }
+			transfer_artifact = {		
+				from = ROOT
+				to = FROM
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.1703B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				wealth = 100
+			}
+			modifier = {
+				factor = 2
+				trait = gluttonous
+			}
+		}
+		FROM = { character_event = { id = REC.1704 days = 30 } }
+		set_character_flag = refuse_to_sell_relic
+	}
+}
+
+# The relic owner doesn't want to sell
+# FROM is the relic owner
+character_event = {
+	id = REC.1704
+	desc = "DESCREC.1704"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.1704A"
+		trigger = {
+			NOT = { trait = honest }
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 3
+				trait = deceitful
+			}
+		}
+		character_event = { id = REC.1705 days = 30 }
+		if = {
+			limit = { NOT = { trait = deceitful } }
+			add_trait = deceitful
+		}
+	}
+	
+	option = {
+		name = "REC.1704B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 3
+				trait = content
+			}
+		}
+		piety = -5
+		if = {
+			limit = {
+				NOT = { trait = honest }
+				NOT = { trait = content }
+			}
+			add_trait = content
+		}
+	}
+}
+
+# Choose another mean to get the relic
+# FROMFROM is the relic owner
+character_event = {
+	id = REC.1705
+	desc = "DESCREC.1705"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "REC.1705A"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				wealth = 200
+			}
+		}
+		wealth = -100
+		hidden_tooltip = {
+			random_list = {
+				50 = { character_event = { id = REC.1706 days = 30 } }
+				50 = { character_event = { id = REC.1707 days = 30 } }
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.1705B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				NOT = { wealth = 200 }
+			}
+		}
+		wealth = -50
+		hidden_tooltip = {
+			random_list = {
+				40 = { character_event = { id = REC.1706 days = 30 } }
+				60 = { character_event = { id = REC.1707 days = 30 } }
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.1705C"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = cruel
+			}
+		}
+		wealth = -50
+		hidden_tooltip = {
+			random_list = {
+				30 = { character_event = { id = REC.1706 days = 30 } }
+				70 = { character_event = { id = REC.1707 days = 30 } }
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.1705D"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = content
+			}
+		}
+		piety = -5
+		prestige = -10
+	}
+}
+
+# Sucessful robbery
+# FROMFROMFROM is the victim
+character_event = {
+	id = REC.1706
+	desc = "DESCREC.1706"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.1706A" 
+		any_artifact = {
+			limit = { has_artifact_flag = relique }
+			transfer_artifact = {		
+				from = FROMFROMFROM
+				to = ROOT
+			}
+		}
+	}
+}
+
+# Failure robbery
+# FROMFROMFROM is the victim
+character_event = {
+	id = REC.1707
+	desc = "DESCREC.1707"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.1706A"
+		prestige = -10
+		piety = -20
 	}
 }
