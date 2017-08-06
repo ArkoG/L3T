@@ -1859,7 +1859,8 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "REC.1706A" 
+		name = "REC.1706A"
+		FROMFROMFROM = { opinion = { modifier = stolen_relic_opinion who = ROOT years = 10 } }
 		random_artifact = {
 			limit = { has_artifact_flag = relique }
 			transfer_artifact = {		
@@ -1880,7 +1881,8 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "REC.1706A"
+		name = "REC.1707A"
+		FROMFROMFROM = { opinion = { modifier = stolen_relic_attempt who = ROOT years = 10 } }
 		prestige = -10
 		piety = -20
 	}
