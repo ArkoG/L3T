@@ -90,8 +90,8 @@ targetted_decisions = {
 	
 	buy_relic = {
 		only_playable = yes
-		filter = sub_realm
-		ai_target_filter = sub_realm
+		filter = realm
+		ai_target_filter = realm
 		
 		from_potential = {
 			has_global_flag = opus_francigenum
@@ -147,7 +147,7 @@ targetted_decisions = {
 		}
 		
 		effect = {
-			FROM = { character_event = { id = REC.1701 days = 30 } }
+			character_event = { id = REC.1701 days = 30 }
 		}
 		
 		revoke_allowed = {

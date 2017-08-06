@@ -1577,8 +1577,11 @@ character_event = {
 			}
 		}
 		wealth = 100
-		FROMFROM = { wealth = -100 }
-		any_artifact = {
+		FROMFROM = {
+			wealth = -100
+			letter_event = { id = REC.1708 }
+		}
+		random_artifact = {
 			limit = { has_artifact_flag = relique }
 			transfer_artifact = {		
 				from = ROOT
@@ -1689,8 +1692,11 @@ character_event = {
 			}
 		}
 		wealth = 150
-		FROMFROM = { wealth = -150 }
-		any_artifact = {
+		FROM = {
+			wealth = -150
+			letter_event = { id = REC.1708 }
+		}
+		random_artifact = {
 			limit = { has_artifact_flag = relique }
 			transfer_artifact = {		
 				from = ROOT
@@ -1854,7 +1860,7 @@ character_event = {
 	
 	option = {
 		name = "REC.1706A" 
-		any_artifact = {
+		random_artifact = {
 			limit = { has_artifact_flag = relique }
 			transfer_artifact = {		
 				from = FROMFROMFROM
@@ -1878,4 +1884,14 @@ character_event = {
 		prestige = -10
 		piety = -20
 	}
+}
+
+# Inform that relic is bought
+# FROM is the seller
+letter_event = {
+	id = REC.1708
+	desc = "DESCREC.1708"
+	is_triggered_only = yes
+	
+	option = { name = "OK" }
 }
