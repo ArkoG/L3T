@@ -112,7 +112,7 @@ character_event = { #notification for trade post CT commercante
 		clear_event_target = holding_dev 
 	}
 }
-character_event = { #notification for trade post CT commercante
+character_event = { #notification for hospital
 	id = L3T.11093
 	desc = "DESCL3T.11093"
 	picture = GFX_evt_castle_construction
@@ -123,5 +123,31 @@ character_event = { #notification for trade post CT commercante
 	option = {
 		name = "OK"	
 		clear_event_target = holding_dev 
+	}
+}
+character_event = { #notification from advanced ressources +10
+	id = L3T.11094
+	desc = "DESCL3T.11094"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_pour_desc
+	}
+}
+character_event = { #notification from advanced ressources +20
+	id = L3T.11095
+	desc = "DESCL3T.11095"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_pour_desc 
 	}
 }
