@@ -112,6 +112,8 @@ DESCL3T.1109;;La valeur de [holding_dev.developpementold.GetName] de [holding_de
 DESCL3T.11091;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \naprès avoir augmenté de 10, grâce à un comptoir commercial, car c'est une cité productrice.;;;;;;;;;;;;x
 DESCL3T.11092;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \naprès avoir augmenté de 30, grâce à un comptoir commercial, car c'est une cité commerçante.;;;;;;;;;;;;x
 DESCL3T.11093;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \n a augmenté de 10 grâce à l'hôpital érigé dans la province.;;;;;;;;;;;;x
+DESCL3T.11094;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \n a augmenté de 10 grâce au développement d'une ressource avancée dans la province.;;;;;;;;;;;;x
+DESCL3T.11095;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \n a augmenté de 20 grâce au développement d'une ressource lucrative dans la province.;;;;;;;;;;;;x
 
 #;EASTER EGGS;x;;;;;;;;;;;;x
 DESCL3T.401;War disrupts our Easter Eggs Hunt. We are forced to cancel our activities.;La guerre nous oblige à renoncer à notre recherche d'œufs de Pâques.;;;;;;;;;;x;
@@ -1129,9 +1131,12 @@ soutien_noble_nature3;You receive a trio of pink granite gargoyles one whose fac
 bourse_soulagee;There we go! That ought to come lighten our purse;Voilà qui devrait venir alléger notre bourse.;;;;;;;;;;;;x
 bourse_remplie;Some trinkets in addition to the treasure is never bad.;Quelques pièces venant s'ajouter au trésor ne font jamais de mal.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-#;x;x;;;;;;;;;;;;x
+
+TOOLTIP_bonus_dev_ressources_avancee;The activation of an advanced ressource increases the attractivity of the demesne.;L'activation d'une ressource avancée augmente l'attractivité du domaine. ;;;;;;;;;;;;x
+TOOLTIP_bonus_dev_ressources_lucrative;The activation of a lucrative ressource increases the attractivity of the demesne.;L'activation d'une ressource lucrative augmente l'attractivité du domaine. ;;;;;;;;;;;;x
+
 ECO.100;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
-DESCECO.100;The cultivation of cereals has yielded such bountiful harvests over the past few years that the demesne of [holding_pour_desc.GetName] is now considered a major grower of cereals. These can now supply local grain-mills.;Dans la province de [From.Location.GetName], les quantités de céréales issues des champs du domaine [holding_pour_desc.GetDeDapostrophe][holding_pour_desc.GetName] suffisent à nourrir la population locale et même davantage. \nLes excédents peuvent désormais être vendus et transportés pour transformation dans les villes de la région ou au delà en suivant les voies commerciales.;;;;;;;;;;;;x
+DESCECO.100;The cultivation of cereals has yielded such bountiful harvests over the past few years that the province of [From.Location.GetName] is now considered a major grower of cereals. These can now supply local grain-mills.;Dans la province de [From.Location.GetName], les quantités de céréales issues des champs de nos domaines suffisent à nourrir la population locale et même davantage. \nLes excédents peuvent désormais être vendus et transportés pour transformation dans les villes de la région ou au delà en suivant les voies commerciales.;;;;;;;;;;;;x
 ECO.100A;OK;OK;;;;;;;;;;;;x
 ECO.101;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
 DESCECO.101;Our fruit orchards have yielded such bountiful harvests over the past few years that [From.Location.GetName] is now considered a major grower of fruits.;Les productions de nos vergers en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
@@ -1143,10 +1148,10 @@ ECO.103;AGRICULTURE activation;activation AGRICULTURE;;;;;;;;;;;;x
 DESCECO.103;Our vineyards has yielded such bountiful harvests over the past few years that [From.Location.GetName] is now considered a major grower of grapes to be sold to the wineries.;Les activités viticoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans  les villes de la région.;;;;;;;;;;;;x
 ECO.103A;OK;OK;;;;;;;;;;;;x
 ECO.105;BEER activation;activation BIERE;;;;;;;;;;;;x
-DESCECO.105;The breweries in [From.Location.GetName] have produced beer of such quality and in such quantities that word has spread to the surrounding lands, attracting many prominent merchants here.;Les brassins produits en [From.Location.GetName] commencent à avoir une plutôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
+DESCECO.105;The breweries in [From.Location.GetName] have produced beer of such quality and in such quantities that word has spread to the surrounding lands, attracting many prominent merchants here.;Les brassins produits par les artisans de la province de [From.Location.GetName] commencent à avoir une plutôt bonne réputation ce qui en fait un objet de commerce local et aux alentours. ;;;;;;;;;;;;x
 ECO.105A;What luck!;Fort bien !;;;;;;;;;;;;x
 ECO.106;WINE activation;activation VIN;;;;;;;;;;;;x
-DESCECO.106;The wineries in [From.Location.GetName] have become renowned for the great quality of its wine, attracting many prominent merchants here.;Les crus qui sortent de nos chais en [From.Location.GetName] commencent à avoir une plutôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
+DESCECO.106;The wineries in [From.Location.GetName] have become renowned for the great quality of its wine, attracting many prominent merchants here.;Les crus qui sortent des chais situés sur les terres de [From.Location.GetName] commencent à avoir une plutôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
 ECO.106A;Be sure to save some for my cellars!;Fort bien !;;;;;;;;;;;;x
 ECO.110;BREEDING activation;activation ELEVAGE;;;;;;;;;;;;x
 DESCECO.110;The herds have multiplied and yielded such large volumes of wool over the past few years that [From.Location.GetName] is now considered a major producer of wool.;La production de laine en [From.Location.GetName] est suffisamment importante pour être vendue et transportée pour transformation dans les villes de la région.;;;;;;;;;;;;x
@@ -1164,7 +1169,7 @@ ECO.121;FOREST activation;activation FORET;;;;;;;;;;;;x
 DESCECO.121;The clearing of this province's extensive forests has yielded a surplus of wood to be used as fuel over the past few years that [From.Location.GetName] is now considered a major producer of charcoal.;La production de charbon de bois en [From.Location.GetName] est devenue suffisamment importante pour être vendue et transportée pour alimenter dans les villes de la région en combustible.;;;;;;;;;;;;x
 ECO.121A;OK;OK;;;;;;;;;;;;x
 ECO.130;STONE activation;activation PIERRE;;;;;;;;;;;;x
-DESCECO.130;Our quarries have increased their production so much over the past few years that [holding_pour_desc.GetName] is now considered a major producer of quarried stone.;Les activités de nos carrières [holding_pour_desc.GetDeDapostrophe][holding_pour_desc.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région. \nCela fait de [From.Location.GetName] une province pourvoyeuse de pierres.;;;;;;;;;;;;x
+DESCECO.130;Our quarries have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of quarried stone.;Les activités de nos carrières de la province de [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région. \nCela fait de [From.Location.GetName] une province pourvoyeuse de pierres.;;;;;;;;;;;;x
 ECO.130A;OK;OK;;;;;;;;;;;;x
 ECO.140;ORE activation;activation MINERAI;;;;;;;;;;;;x
 DESCECO.140;Our mines have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of raw ore.;Les activités d'exploitation de nos ressources minières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
@@ -1189,7 +1194,7 @@ ECO.107;FLOUR activation;activation FARINE;;;;;;;;;;;;x
 DESCECO.107;The grain mills have incrased their production so much over the past few years that [From.Location.GetName] now produces a significant amount of flour to be used in large-scale production of bread..;\nLa ressource "Farine" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
 ECO.107A;OK;OK;;;;;;;;;;;;x
 ECO.108;CIDER activation;activation CIDRE;;;;;;;;;;;;x
-DESCECO.108;The cideries in [From.Location.GetName] have produced cider of such quality and in such quantities that word has spread to the surrounding lands, attracting many prominent merchants here.;\nLa ressource "Cidre" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
+DESCECO.108;The cideries in [From.Location.GetName] have produced cider of such quality and in such quantities that word has spread to the surrounding lands, attracting many prominent merchants here.;\nLa brevage à base de fruits issu des cidreries de [From.Location.GetName] est désormais reconnu de qualité et produit en quantités suffisantes pour être vendu au delà même de la province.;;;;;;;;;;;;x
 ECO.108A;OK;OK;;;;;;;;;;;;x
 ECO.109;BREAD activation;activation PAIN;;;;;;;;;;;;x
 DESCECO.109;Our bakeries have increased their production so much over the past few years that [From.Location.GetName] is now considered a major producer of bread to feed the masses in the cities and villages.;\nLa ressource "Pain" est désormais active pour la province de [From.Location.GetName].;;;;;;;;;;;;x
