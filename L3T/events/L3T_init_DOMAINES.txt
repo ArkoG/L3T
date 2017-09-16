@@ -419,8 +419,7 @@ narrative_event = {
 								}
 							}
 							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
-							change_variable = { which = "developpement_spec" value = 30 }
-							change_variable = { which = "developpement_road" value = 20 }
+							change_variable = { which = "developpement_road" value = 50 }
 						}
 					}
 					if = {
@@ -435,8 +434,7 @@ narrative_event = {
 								}
 							}
 							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
-							change_variable = { which = "developpement_spec" value = 30 }
-							change_variable = { which = "developpement_road" value = 20 }
+							change_variable = { which = "developpement_spec" value = 50 }
 						}
 					}
 					# Avert the player that a route is on its demesne
@@ -540,8 +538,7 @@ province_event = {
 								}
 							}
 							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
-							change_variable = { which = "developpement_spec" value = 30 }
-							change_variable = { which = "developpement_road" value = 20 }
+							change_variable = { which = "developpement_road" value = 50 }
 						}
 					}
 					if = {
@@ -556,8 +553,7 @@ province_event = {
 								}
 							}
 							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
-							change_variable = { which = "developpement_spec" value = 30 }
-							change_variable = { which = "developpement_road" value = 20 }
+							change_variable = { which = "developpement_road" value = 50 }
 						}
 					}
 					# Avert the player that a route is on its demesne
