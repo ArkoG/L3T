@@ -11,8 +11,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_chap_seign
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle } } }
 	}
@@ -55,11 +54,20 @@ character_event = {
 }
 
 # Give the chapelle modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.203
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_chap_seign
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = chapelle duration = -1 }
@@ -91,8 +99,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_chap_seign_2
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle2 } } }
 	}
@@ -135,11 +142,20 @@ character_event = {
 }
 
 # Give the chapelle2 modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.207
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_chap_seign_2
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = chapelle2 duration = -1 }
@@ -160,7 +176,7 @@ character_event = {
 	}
 }
 
-# Give the chambre modifier 547 days after starting the building
+# Give the chambre modifier 365 days after starting the building
 # ROOT = Builder, FROM = The Holding Title
 character_event = {
 	id = L3T.209
@@ -171,14 +187,13 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_chambre_2
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chambre } } }
 	}
 	
 	immediate = {
-		FROM = { holder_scope = { character_event = { id = L3T.211 days = 547 } } }
+		FROM = { holder_scope = { character_event = { id = L3T.211 days = 365 } } }
 	}
 }
 
@@ -215,11 +230,20 @@ character_event = {
 }
 
 # Give the chambre modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.211
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_chambre_2
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = chambre duration = -1 }
@@ -251,8 +275,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_archives_1
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = archives } } }
 	}
@@ -295,11 +318,20 @@ character_event = {
 }
 
 # Give the archives modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.215
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_archives_1
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = archives duration = -1 }
@@ -331,8 +363,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_cour_justice
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = cour_justice } } }
 	}
@@ -375,11 +406,20 @@ character_event = {
 }
 
 # Give the cour_justice modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.219
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_cour_justice
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = cour_justice duration = -1 }
@@ -411,8 +451,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_chancellerie
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chancellerie } } }
 	}
@@ -455,11 +494,20 @@ character_event = {
 }
 
 # Give the chancellerie modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.223
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_chancellerie
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = chancellerie duration = -1 }
@@ -642,56 +690,64 @@ character_event = {
 				capital_holding = { has_building = CA_chap_seign }
 				NOT = { has_character_modifier = chapelle }
 			}
-			character_event = { id = L3T.203 days = 365 }
+			add_character_modifier = { name = chapelle duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_chap_seign_2 }
 				NOT = { has_character_modifier = chapelle2 }
 			}
-			character_event = { id = L3T.207 days = 460 }
+			add_character_modifier = { name = chapelle2 duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_chambre_2 }
 				NOT = { has_character_modifier = chambre }
 			}
-			character_event = { id = L3T.211 days = 547 }
+			add_character_modifier = { name = chambre duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_archives_1 }
 				NOT = { has_character_modifier = archives }
 			}
-			character_event = { id = L3T.215 days = 365 }
+			add_character_modifier = { name = archives duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_cour_justice }
 				NOT = { has_character_modifier = cour_justice }
 			}
-			character_event = { id = L3T.219 days = 465 }
+			add_character_modifier = { name = cour_justice duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_chancellerie }
 				NOT = { has_character_modifier = chancellerie }
 			}
-			character_event = { id = L3T.223 days = 365 }
+			add_character_modifier = { name = chancellerie duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_library_L1 }
 				NOT = { has_character_modifier = librairie_1 }
 			}
-			character_event = { id = L3T.243 days = 365 }
+			add_character_modifier = { name = librairie_1 duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_library_L2 }
-				NOT = { has_character_modifier = librairie_1 }
+				NOT = { has_character_modifier = librairie_2 }
 			}
-			character_event = { id = L3T.247 days = 547 }
+			add_character_modifier = { name = librairie_2 duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 	}
 }
@@ -755,8 +811,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_library_L1
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = librairie_1 } } }
 	}
@@ -799,11 +854,20 @@ character_event = {
 }
 
 # Give the librairie_1 modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.243
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_library_L1
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = librairie_1 duration = -1 }
@@ -835,8 +899,7 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_library_L2
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = librairie_2 } } }
 	}
@@ -879,11 +942,20 @@ character_event = {
 }
 
 # Give the librairie_2 modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.247
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_library_L2
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = librairie_2 duration = -1 }
