@@ -579,6 +579,7 @@ chapelle2 = {
 	icon = 8
 	monthly_character_piety = 0.10
 	monthly_character_prestige = 0.10
+	dynasty_opinion = 5
 }
 chambre = {
 	icon = 4
@@ -591,13 +592,24 @@ archives = {
 }
 cour_justice = {
 	icon = 11
-	monthly_character_prestige = 0.20
+	vassal_opinion = 5
+	monthly_character_prestige = 0.1
 	diplomacy = 1
 }
 chancellerie = {
 	icon = 3
 	stewardship = 1
 	diplomacy = 1
+}
+librairie_1 = {
+	icon = 2
+	learning = 1
+	diplomacy = 1
+}
+librairie_2 = {
+	icon = 2
+	learning = 1
+	dynasty_opinion = 7
 }
 
 #EASTER EGG

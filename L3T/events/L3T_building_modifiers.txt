@@ -517,6 +517,14 @@ character_event = {
 				NOT = { capital_holding = { has_building = CA_chancellerie } }
 				has_character_modifier = chancellerie
 			}
+			AND = {
+				NOT = { capital_holding = { has_building = CA_library_L1 } }
+				has_character_modifier = librairie_1
+			}
+			AND = {
+				NOT = { capital_holding = { has_building = CA_library_L2 } }
+				has_character_modifier = librairie_2
+			}
 		}
 	}
 	
@@ -564,6 +572,20 @@ character_event = {
 			}
 			remove_character_modifier = chancellerie
 		}
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_library_L1 } }
+				has_character_modifier = librairie_1
+			}
+			remove_character_modifier = librairie_1
+		}
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_library_L2 } }
+				has_character_modifier = librairie_2
+			}
+			remove_character_modifier = librairie_2
+		}
 	}
 }
 
@@ -602,6 +624,14 @@ character_event = {
 			AND = {
 				capital_holding = { has_building = CA_chancellerie }
 				NOT = { has_character_modifier = chancellerie }
+			}
+			AND = {
+				capital_holding = { has_building = CA_library_L1 }
+				NOT = { has_character_modifier = librairie_1 }
+			}
+			AND = {
+				capital_holding = { has_building = CA_library_L2 }
+				NOT = { has_character_modifier = librairie_2 }
 			}
 		}
 	}
@@ -648,6 +678,20 @@ character_event = {
 				NOT = { has_character_modifier = chancellerie }
 			}
 			character_event = { id = L3T.223 days = 365 }
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_library_L1 }
+				NOT = { has_character_modifier = librairie_1 }
+			}
+			character_event = { id = L3T.243 days = 365 }
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_library_L2 }
+				NOT = { has_character_modifier = librairie_1 }
+			}
+			character_event = { id = L3T.247 days = 547 }
 		}
 	}
 }
@@ -697,5 +741,165 @@ character_event = {
 	
 	option = {
 		name = OK
+	}
+}
+
+# Give the librairie_1 modifier 1 year after starting the building
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.241
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_library_L1
+		}
+		NOT = { FROM = { holder_scope = { has_character_modifier = librairie_1 } } }
+	}
+	
+	immediate = {
+		FROM = { holder_scope = { character_event = { id = L3T.243 days = 365 } } }
+	}
+}
+
+# Give the librairie_1 modifier to the new holder and remove it to the old
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.242
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			is_feudal = yes
+			has_building = CA_library_L1
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = librairie_1 }
+			}
+			character_event = { id = L3T.243 days = 1 }
+			character_event = { id = L3T.225 days = 30 }
+		}
+		if = {
+			limit = { 
+				FROMFROM = { has_character_modifier = librairie_1 }
+			}
+			FROMFROM = { character_event = { id = L3T.244 days = 1 } }
+		}
+	}
+}
+
+# Give the librairie_1 modifier
+character_event = {
+	id = L3T.243
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_character_modifier = { name = librairie_1 duration = -1 }
+		set_character_flag = feodal_adm_modifier
+	}
+}
+
+# Remove the librairie_1 modifier
+character_event = {
+	id = L3T.244
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = librairie_1
+		clr_character_flag = feodal_adm_modifier
+	}
+}
+
+# Give the librairie_2 modifier 547 days after starting the building
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.245
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_library_L2
+		}
+		NOT = { FROM = { holder_scope = { has_character_modifier = librairie_2 } } }
+	}
+	
+	immediate = {
+		FROM = { holder_scope = { character_event = { id = L3T.247 days = 547 } } }
+	}
+}
+
+# Give the librairie_2 modifier to the new holder and remove it to the old
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.246
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		FROM = {
+			is_feudal = yes
+			has_building = CA_library_L2
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = librairie_2 }
+			}
+			character_event = { id = L3T.247 days = 1 }
+			character_event = { id = L3T.225 days = 30 }
+		}
+		if = {
+			limit = { 
+				FROMFROM = { has_character_modifier = librairie_2 }
+			}
+			FROMFROM = { character_event = { id = L3T.248 days = 1 } }
+		}
+	}
+}
+
+# Give the librairie_2 modifier
+character_event = {
+	id = L3T.247
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_character_modifier = { name = librairie_2 duration = -1 }
+		set_character_flag = feodal_adm_modifier
+	}
+}
+
+# Remove the librairie_2 modifier
+character_event = {
+	id = L3T.248
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = librairie_2
+		clr_character_flag = feodal_adm_modifier
 	}
 }

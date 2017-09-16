@@ -8,8 +8,8 @@ castle = {
 			is_capital = yes
 			capital_holding = { title = FROMFROM }
 		}
-		gold_cost = 50
-		build_time = 365
+		gold_cost = 120
+		build_time = 547
 		tax_income = 2
 		ai_creation_factor = 100
 		add_number_to_name = no
@@ -26,8 +26,8 @@ castle = {
 		}
 		upgrades_from = CA_chambre_1
 		gold_cost = 250
-		build_time = 547
-		tax_income = 2
+		build_time = 365
+		tax_income = 1
 		stewardship = 1  # Given by modifier 
 		demesne_size = 1  # Given by modifier 
 		ai_creation_factor = 99
@@ -64,7 +64,7 @@ castle = {
 		gold_cost = 75
 		build_time = 365
 		stewardship = 1  # Given by modifier 
-		local_tax_modifier = 0.25
+		local_tax_modifier = 0.20
 		# tech_growth_modifier_economy = 0.05
 		ai_creation_factor = 100
 		add_number_to_name = no
@@ -81,7 +81,7 @@ castle = {
 		}
 		upgrades_from = CA_archives_1
 		gold_cost = 150
-		build_time = 520
+		build_time = 547
 		tax_income = 0.50
 		# tech_growth_modifier_economy = 0.05
 		ai_creation_factor = 100
@@ -97,10 +97,11 @@ castle = {
 			is_capital = yes
 			capital_holding = { title = FROMFROM }
 		}
-		gold_cost = 150
+		gold_cost = 175
 		build_time = 465
-		monthly_character_prestige = 0.20  # Given by modifier
+		monthly_character_prestige = 0.10  # Given by modifier
 		diplomacy = 1  # Given by modifier 
+		vassal_opinion = 5  # Given by modifier
 		# tech_growth_modifier_culture = 0.05
 		ai_creation_factor = 98
 		add_number_to_name = no
@@ -115,7 +116,7 @@ castle = {
 			is_capital = yes
 			capital_holding = { title = FROMFROM }
 		}
-		gold_cost = 75
+		gold_cost = 125
 		build_time = 365 
 		diplomacy = 1  # Given by modifier 
 		stewardship = 1  # Given by modifier 
@@ -133,7 +134,7 @@ castle = {
 			capital_holding = { title = FROMFROM }
 		}
 		gold_cost = 150 
-		build_time = 460
+		build_time = 365
 		monthly_character_piety = 0.25  # Given by modifier
 		church_opinion = 5  # Given by modifier
 		ai_creation_factor = 90
@@ -150,12 +151,47 @@ castle = {
 			capital_holding = { title = FROMFROM }
 		}
 		upgrades_from = CA_chap_seign
-		gold_cost = 200
+		gold_cost = 250
 		build_time = 460
 		monthly_character_piety = 0.10  # Given by modifier 
 		monthly_character_prestige = 0.10  # Given by modifier 
 		tax_income = 0.05
-		# dynasty_opinion = 5
+		dynasty_opinion = 5 # Given by modifier
+		ai_creation_factor = 80
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+	
+	CA_library_L1 = { # etude personnelle
+		desc = CA_library_L1_desc 
+		trigger = { TECH_CULTURE_FLEX = 2 }
+		prerequisites = { FEODAL_adm }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
+		gold_cost = 120
+		build_time = 365
+		learning = 1  # Given by modifier 
+		monthly_character_prestige = 0.10  # Given by modifier 
+		ai_creation_factor = 90
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	}
+	CA_library_L2 = { # bibliotheque et archives dynastiques
+		desc = CA_library_L2_desc 
+		trigger = { TECH_CULTURE_FLEX = 3 }
+		prerequisites = { FEODAL_adm }
+		is_active_trigger = {
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
+		upgrades_from = CA_library_L1
+		gold_cost = 185
+		build_time = 547
+		learning = 1  # Given by modifier 
+		dynasty_opinion = 7 # Given by modifier
+		monthly_character_prestige = 0.10  # Given by modifier 
 		ai_creation_factor = 80
 		add_number_to_name = no
 		extra_tech_building_start = 10.0
