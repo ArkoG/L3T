@@ -158,6 +158,10 @@ targetted_decisions = {
 			factor = 0.1 #Factors for an AI character to take the decision (1 = average of 1 year)
 			modifier = {
 				factor = 10
+				is_liege_or_above  = FROM
+			}
+			modifier = {
+				factor = 10
 				FROM = { yearly_income = 300 }
 			}
 			modifier = {
