@@ -14,6 +14,7 @@ character_event = {
 			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle } } }
+		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle2 } } }
 	}
 	
 	immediate = {
@@ -40,6 +41,7 @@ character_event = {
 		if = {
 			limit = { 
 				NOT = { has_character_modifier = chapelle }
+				NOT = { has_character_modifier = chapelle2 }
 			}
 			character_event = { id = L3T.203 days = 1 }
 			character_event = { id = L3T.225 days = 30 }
@@ -84,7 +86,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chapelle
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -158,6 +160,7 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_character_modifier = chapelle
 		add_character_modifier = { name = chapelle2 duration = -1 }
 		set_character_flag = feodal_adm_modifier
 	}
@@ -172,7 +175,14 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chapelle2
-		clr_character_flag = feodal_adm_modifier
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_chap_seign }
+				NOT = { has_character_modifier = chapelle }
+			}
+			add_character_modifier = { name = chapelle duration = -1 }
+		}
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -260,7 +270,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chambre
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -348,7 +358,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = archives
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -436,7 +446,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = cour_justice
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -524,7 +534,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chancellerie
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -634,6 +644,7 @@ character_event = {
 			}
 			remove_character_modifier = librairie_2
 		}
+		remove_feodal_adm_modifier_in_capital_if_necessary = yes
 	}
 }
 
@@ -698,6 +709,7 @@ character_event = {
 				capital_holding = { has_building = CA_chap_seign_2 }
 				NOT = { has_character_modifier = chapelle2 }
 			}
+			remove_character_modifier = chapelle
 			add_character_modifier = { name = chapelle2 duration = -1 }
 			set_character_flag = feodal_adm_modifier
 		}
@@ -746,6 +758,7 @@ character_event = {
 				capital_holding = { has_building = CA_library_L2 }
 				NOT = { has_character_modifier = librairie_2 }
 			}
+			remove_character_modifier = librairie_1
 			add_character_modifier = { name = librairie_2 duration = -1 }
 			set_character_flag = feodal_adm_modifier
 		}
@@ -814,6 +827,7 @@ character_event = {
 			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = librairie_1 } } }
+		NOT = { FROM = { holder_scope = { has_character_modifier = librairie_2 } } }
 	}
 	
 	immediate = {
@@ -840,6 +854,7 @@ character_event = {
 		if = {
 			limit = { 
 				NOT = { has_character_modifier = librairie_1 }
+				NOT = { has_character_modifier = librairie_2 }
 			}
 			character_event = { id = L3T.243 days = 1 }
 			character_event = { id = L3T.225 days = 30 }
@@ -884,7 +899,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = librairie_1
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -958,6 +973,7 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_character_modifier = librairie_1
 		add_character_modifier = { name = librairie_2 duration = -1 }
 		set_character_flag = feodal_adm_modifier
 	}
@@ -972,6 +988,13 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = librairie_2
-		clr_character_flag = feodal_adm_modifier
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_library_L1 }
+				NOT = { has_character_modifier = librairie_1 }
+			}
+			add_character_modifier = { name = librairie_1 duration = -1 }
+		}
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
