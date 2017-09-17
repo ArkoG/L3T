@@ -118,7 +118,7 @@ character_event = {
 			}
 		}
 		add_artifact = book_A
-		wealth = -100 #revoir prix
+		wealth = -120 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
 	option = {
@@ -127,7 +127,7 @@ character_event = {
 			NOT = { has_artifact = book_B }
 		}
 		add_artifact = book_B
-		wealth = -100 #revoir prix
+		wealth = -180 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
 	option = {
@@ -140,7 +140,7 @@ character_event = {
 			}
 		}
 		add_artifact = book_S
-		wealth = -100 #revoir prix
+		wealth = -150 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		if = {
 			limit = { 
@@ -192,7 +192,7 @@ character_event = {
 		name = "L3T.2512C"
 		trigger = { NOT = { has_artifact = book_C }}
 		add_artifact = book_C
-		wealth = -100 #revoir prix
+		wealth = -135 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		if = {
 			limit = { 
@@ -216,21 +216,21 @@ character_event = {
 		name = "L3T.2512D"
 		trigger = { NOT = { has_artifact = book_D }}
 		add_artifact = book_D
-		wealth = -100 #revoir prix
+		wealth = -120 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
 	option = {
 		name = "L3T.2512E"
 		trigger = { NOT = { has_artifact = book_E }}
 		add_artifact = book_E
-		wealth = -100 #revoir prix
+		wealth = -185 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
 	option = {
 		name = "L3T.2512F"
 		trigger = { NOT = { has_artifact = book_F }}
 		add_artifact = book_F
-		wealth = -100 #revoir prix
+		wealth = -145 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
 }
@@ -246,20 +246,21 @@ character_event = {
 		name = "L3T.2513G"
 		trigger = { NOT = { has_artifact = book_G }}
 		add_artifact = book_G
-		wealth = -100 #revoir prix
+		wealth = -130 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
 	option = {
 		name = "L3T.2513H"
 		trigger = { NOT = { has_artifact = book_H }}
 		add_artifact = book_H
+		wealth = -150 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
 	option = {
 		name = "L3T.2513I"
 		trigger = { NOT = { has_artifact = book_I }}
 		add_artifact = book_I
-		wealth = -100 #revoir prix
+		wealth = -165 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		if = {
 			limit = { 
@@ -283,7 +284,7 @@ character_event = {
 		name = "L3T.2513J"
 		trigger = { NOT = { has_artifact = book_J }}
 		add_artifact = book_J
-		wealth = -100 #revoir prix
+		wealth = -195 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
 }
@@ -299,14 +300,14 @@ character_event = {
 		name = "L3T.2514K"
 		trigger = { NOT = { has_artifact = book_K }}
 		add_artifact = book_K
-		wealth = -100 #revoir prix
+		wealth = -140 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
 	option = {
 		name = "L3T.2514L"
 		trigger = { NOT = { has_artifact = book_L }}
 		add_artifact = book_L
-		wealth = -100 #revoir prix
+		wealth = -120 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		if = {
 			limit = { 
@@ -330,7 +331,7 @@ character_event = {
 		name = "L3T.2514M"
 		trigger = { NOT = { has_artifact = book_M }}
 		add_artifact = book_M
-		wealth = -100 #revoir prix
+		wealth = -160 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
 }
