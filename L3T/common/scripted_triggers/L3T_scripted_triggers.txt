@@ -66,3 +66,34 @@ is_active_outil_ou_armes = {
 		}
 	}
 }
+
+has_all_books_religious = {
+	AND = { 
+		has_artifact = book_A
+		has_artifact = book_B
+		has_artifact = book_S
+	}
+}
+has_all_books_science = {
+	AND = {
+		has_artifact = book_C
+		has_artifact = book_D
+		has_artifact = book_E
+		has_artifact = book_F
+	}
+}
+has_all_books_litteracy = {
+	AND = {
+		has_artifact = book_G
+		has_artifact = book_H
+		has_artifact = book_I
+		has_artifact = book_J
+	}
+}
+has_all_books_economy = {
+	AND = {
+		has_artifact = book_K
+		has_artifact = book_L
+		has_artifact = book_M
+	}
+}

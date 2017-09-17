@@ -1,0 +1,426 @@
+namespace = L3T
+
+character_event = {
+	id = L3T.250 #choose who/where to buy the book + random pricing to filter the offer
+	desc = "DESCL3T.250"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+#	immediate = {
+#		random_list = {
+#			10 = { set_character_flag = prix_tranche_1 } #50/75
+#			20 = { set_character_flag = prix_tranche_2 } #76/100
+#			40 = { set_character_flag = prix_tranche_3 } #101/125
+#			20 = { set_character_flag = prix_tranche_4 } #126/150
+#			10 = { set_character_flag = prix_tranche_5 } #151/200		
+#		}
+#	}
+
+	option = {
+		name = "L3T.250A"
+		set_character_flag = buying_books_at_local_merchant
+		character_event = { id = L3T.251 days = 10 } #choose the type of book
+	}
+	option = {
+		name = "L3T.250B"
+		set_character_flag = buying_books_at_scholar
+		character_event = { id = L3T.251 days = 15 } #choose the type of book
+	}
+	option = {
+		name = "L3T.250C"
+		set_character_flag = buying_books_at_monastery
+		trigger = { religion_group = christian }
+		character_event = { id = L3T.251 days = 20 } #choose the type of book
+	}
+	option = {
+		name = "L3T.250D"
+		set_character_flag = buying_books_at_foreign_merchant
+		character_event = { id = L3T.251 days = 30 } #choose the type of book
+	}
+}
+
+character_event = {
+	id = L3T.251 #choose choose the type of book, conditionned by vendor type
+	desc = "DESCL3T.251"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.251A"
+		trigger = {
+			OR = {
+				has_character_flag = buying_books_at_local_merchant
+				has_character_flag = buying_books_at_monastery
+			}
+		has_all_books_religious = no
+		}
+		set_character_flag = buying_books_religious
+		character_event = { id = L3T.2511 days = 1 } #choose the book to buy
+	}
+	option = {
+		name = "L3T.251B"
+		trigger = {
+			OR = {
+				has_character_flag = buying_books_at_scholar
+				has_character_flag = buying_books_at_monastery
+				has_character_flag = buying_books_at_foreign_merchant
+			}
+		has_all_books_science = no
+		}
+		set_character_flag = buying_books_science
+		character_event = { id = L3T.2512 days = 1 } #choose the book to buy
+	}
+	option = {
+		name = "L3T.251C"
+		trigger = {
+			OR = {
+				has_character_flag = buying_books_at_local_merchant
+				has_character_flag = buying_books_at_scholar
+				has_character_flag = buying_books_at_foreign_merchant
+			}
+		has_all_books_litteracy = no
+		}
+		set_character_flag = buying_books_litteracy
+		character_event = { id = L3T.2513 days = 1 } #choose the book to buy
+	}
+	option = {
+		name = "L3T.251D"
+		trigger = {
+			OR = {
+				has_character_flag = buying_books_at_scholar
+				has_character_flag = buying_books_at_foreign_merchant
+			}
+		has_all_books_economy = no
+		}
+		set_character_flag = buying_books_economy
+		character_event = { id = L3T.2514 } #choose the book to buy
+	}
+}
+character_event = {
+	id = L3T.2511 #choose the book, filtered by owned, get a chance to acquire a unique book
+	desc = "DESCL3T.2511"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.2511A"
+		trigger = {
+			NOT = { has_artifact = book_A }
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		add_artifact = book_A
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+	}
+	option = {
+		name = "L3T.2511B"
+		trigger = {
+			NOT = { has_artifact = book_B }
+		}
+		add_artifact = book_B
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+	}
+	option = {
+		name = "L3T.2511S"
+		trigger = {
+			NOT = { has_artifact = book_S }
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		add_artifact = book_S
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+		if = {
+			limit = { 
+				NOT = { has_global_flag = book_religious_christian_unique_found }
+				religion_group = christian
+				NOT = { has_artifact = book_N }
+			}
+			hidden_tooltip = {
+				random_list = {
+					90 = {}
+					10 = {
+						set_global_flag = book_religious_christian_unique_found
+						#add_artifact = book_N #moved to notif event
+						destroy_artifact = book_S #the character will receive the unique instead
+						character_event = { id = L3T.2521 } #notif livre unique
+					}
+				}
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { has_global_flag = book_religious_mulsim_unique_found }
+				religion_group = muslim
+				NOT = { has_artifact = book_O }
+			}
+			hidden_tooltip = {
+				random_list = {
+					90 = {}
+					10 = {
+						set_global_flag = book_religious_muslim_unique_found
+						#add_artifact = book_O #moved to notif event
+						destroy_artifact = book_S #the character will receive the unique instead
+						character_event = { id = L3T.2521 } #notif livre unique
+					}
+				}
+			}
+		}
+	}
+}
+character_event = {
+	id = L3T.2512 #choose the book, filtered by owned, get a chance to acquire a unique book
+	desc = "DESCL3T.2512"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.2512C"
+		trigger = { NOT = { has_artifact = book_C }}
+		add_artifact = book_C
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+		if = {
+			limit = { 
+				NOT = { has_global_flag = book_science_unique_found }
+				NOT = { has_artifact = book_P }
+			}
+			hidden_tooltip = {
+				random_list = {
+					90 = {}
+					10 = {
+						set_global_flag = book_science_unique_found
+						#add_artifact = book_P #moved to notif event
+						destroy_artifact = book_C #the character will receive the unique instead
+						character_event = { id = L3T.2522 } #notif livre unique
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "L3T.2512D"
+		trigger = { NOT = { has_artifact = book_D }}
+		add_artifact = book_D
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+	}
+	option = {
+		name = "L3T.2512E"
+		trigger = { NOT = { has_artifact = book_E }}
+		add_artifact = book_E
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+	}
+	option = {
+		name = "L3T.2512F"
+		trigger = { NOT = { has_artifact = book_F }}
+		add_artifact = book_F
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+	}
+}
+character_event = {
+	id = L3T.2513 #choose the book, filtered by owned, get a chance to acquire a unique book
+	desc = "DESCL3T.2513"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.2513G"
+		trigger = { NOT = { has_artifact = book_G }}
+		add_artifact = book_G
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+	}
+	option = {
+		name = "L3T.2513H"
+		trigger = { NOT = { has_artifact = book_H }}
+		add_artifact = book_H
+		character_event = { id = L3T.2510 } #flag cleaner
+	}
+	option = {
+		name = "L3T.2513I"
+		trigger = { NOT = { has_artifact = book_I }}
+		add_artifact = book_I
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+		if = {
+			limit = { 
+				NOT = { has_global_flag = book_litteracy_unique_found }
+				NOT = { has_artifact = book_Q }
+			}
+			hidden_tooltip = {
+				random_list = {
+					90 = {}
+					10 = {
+						set_global_flag = book_litteracy_unique_found
+						#add_artifact = book_Q #moved to notif event
+						destroy_artifact = book_I #the character will receive the unique instead
+						character_event = { id = L3T.2523 } #notif livre unique
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "L3T.2513J"
+		trigger = { NOT = { has_artifact = book_J }}
+		add_artifact = book_J
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+	}
+}
+character_event = {
+	id = L3T.2513 #choose the book, filtered by owned, get a chance to acquire a unique book
+	desc = "DESCL3T.2513"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.2514K"
+		trigger = { NOT = { has_artifact = book_K }}
+		add_artifact = book_K
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+	}
+	option = {
+		name = "L3T.2514L"
+		trigger = { NOT = { has_artifact = book_L }}
+		add_artifact = book_L
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+		if = {
+			limit = { 
+				NOT = { has_global_flag = book_economy_unique_found }
+				NOT = { has_artifact = book_R }
+			}
+			hidden_tooltip = {
+				random_list = {
+					90 = {}
+					10 = {
+						set_global_flag = book_economy_unique_found
+						#add_artifact = book_R #moved to notif event
+						destroy_artifact = book_L #the character will receive the unique instead
+						character_event = { id = L3T.2524 } #notif livre unique
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "L3T.2514M"
+		trigger = { NOT = { has_artifact = book_M }}
+		add_artifact = book_M
+		wealth = -100 #revoir prix
+		character_event = { id = L3T.2510 } #flag cleaner
+	}
+}
+
+character_event = {
+	id = L3T.2510 #choose choose book, filtered by owned, get a chance to acquire a unique book
+	
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = buying_books_at_local_merchant
+		clr_character_flag = buying_books_at_scholar
+		clr_character_flag = buying_books_at_monastery
+		clr_character_flag = buying_books_at_foreign_merchant
+		clr_character_flag = buying_books_religious
+		clr_character_flag = buying_books_science
+		clr_character_flag = buying_books_litteracy
+		clr_character_flag = buying_books_economy
+		clr_character_flag = do_not_disturb
+		clr_character_flag = is_buying_books
+	}
+}
+
+#UNIQUE BOOKS NOTIFICATIONS
+character_event = {
+	id = L3T.2521 #choose the book, filtered by owned, get a chance to acquire a unique book
+	picture = "GFX_evt_book_carolingian_script"
+	
+	desc = {
+		trigger = { religion_group = christian }
+		text = "DESCL3T.2521X"
+		picture = "GFX_evt_book_carolingian_script"
+	}
+	desc = {
+		trigger = { religion_group = muslim }
+		text = "DESCL3T.2521Y"
+		picture = "GFX_evt_book_carolingian_script"
+	}
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.2510X"
+		trigger = { religion_group = christian }
+		add_artifact = book_N
+	}
+	option = {
+		name = "L3T.2510X"
+		trigger = { religion_group = muslim }
+		add_artifact = book_O
+	}
+}
+character_event = {
+	id = L3T.2522 #choose the book, filtered by owned, get a chance to acquire a unique book
+		desc = "DESCL3T.2522"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.2510X"
+		add_artifact = book_P
+	}
+}
+character_event = {
+	id = L3T.2523 #choose the book, filtered by owned, get a chance to acquire a unique book
+		desc = "DESCL3T.2523"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.2510X"
+		add_artifact = book_Q
+	}
+}
+character_event = {
+	id = L3T.2524 #choose the book, filtered by owned, get a chance to acquire a unique book
+		desc = "DESCL3T.2524"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.2510X"
+		add_artifact = book_R
+	}
+}
