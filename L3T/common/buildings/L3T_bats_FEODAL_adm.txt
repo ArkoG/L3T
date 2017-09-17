@@ -132,6 +132,7 @@ castle = {
 		is_active_trigger = {
 			is_capital = yes
 			capital_holding = { title = FROMFROM }
+			NOT = { religion_group = pagan_group }
 		}
 		gold_cost = 150 
 		build_time = 365
