@@ -1,6 +1,7 @@
 ###SLOTS
 slots = {
 	slot_egg = 10
+	slot_books = 5
 }
 
 ###ambition quests
@@ -103,4 +104,157 @@ oeuf_herisson = {
 	stacking = no
 	picture = "GFX_oeuf_4_faux"
 	slot = slot_egg
+}
+book_A = {
+	quality = 1
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz religious_book }
+	stacking = no
+	picture = "GFX_book_A"
+	slot = slot_books
+}
+book_B = {
+	quality = 2
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz religious_book }
+	stacking = no
+	picture = "GFX_book_E"
+	slot = slot_books
+}
+book_S = {
+	quality = 1
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz religious_book }
+	stacking = no
+	picture = "GFX_book_A"
+	slot = slot_books
+}
+book_C = {
+	quality = 1
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz science_book }
+	stacking = no
+	picture = "GFX_book_B"
+	slot = slot_books
+}
+book_D = {
+	quality = 1
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz science_book }
+	stacking = no
+	picture = "GFX_book_B"
+	slot = slot_books
+}
+book_E = {
+	quality = 1
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz science_book }
+	stacking = no
+	picture = "GFX_book_B"
+	slot = slot_books
+}
+book_F = {
+	quality = 2
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz science_book }
+	stacking = no
+	picture = "GFX_book_E"
+	slot = slot_books
+}
+book_G = {
+	quality = 1
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz litteracy_book }
+	stacking = no
+	picture = "GFX_book_C"
+	slot = slot_books
+}
+book_H = {
+	quality = 2
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz litteracy_book }
+	stacking = no
+	picture = "GFX_book_E"
+	slot = slot_books
+}
+book_I = {
+	quality = 3
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz litteracy_book }
+	stacking = no
+	picture = "GFX_book_E"
+	slot = slot_books
+}
+book_J = {
+	quality = 1
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz litteracy_book }
+	stacking = no
+	picture = "GFX_book_C"
+	slot = slot_books
+}
+book_K = {
+	quality = 1
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz economy_book }
+	stacking = no
+	picture = "GFX_book_D"
+	slot = slot_books
+}
+book_L = {
+	quality = 1
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz economy_book }
+	stacking = no
+	picture = "GFX_book_D"
+	slot = slot_books
+}
+book_M = {
+	quality = 2
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz economy_book }
+	stacking = no
+	picture = "GFX_book_E"
+	slot = slot_books
+}
+
+book_N = {
+	quality = 5
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz religious_book unique_book }
+	stacking = no
+	picture = "GFX_book_E"
+	slot = slot_books
+}
+book_O = {
+	quality = 5
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz religious_book unique_book }
+	stacking = no
+	picture = "GFX_book_E"
+	slot = slot_books
+}
+book_P = {
+	quality = 5
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz science_book unique_book }
+	stacking = no
+	picture = "GFX_book_E"
+	slot = slot_books
+}
+book_Q = {
+	quality = 5
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz litteracy_book unique_book }
+	stacking = no
+	picture = "GFX_book_E"
+	slot = slot_books
+}
+book_R = {
+	quality = 5
+	active = { NOT = { religion_group = pagan_group }}
+	flags = { bookz economy_book unique_book }
+	stacking = no
+	picture = "GFX_book_E"
+	slot = slot_books
 }
