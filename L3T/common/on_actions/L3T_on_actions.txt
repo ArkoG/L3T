@@ -208,8 +208,10 @@ on_hospital_construction_completed = {
 	}
 }
 
+# on action event is sent whenever a character receives an artifact (one event for each artifact)
+# Scopes: ROOT is the character, FROM is the artifact, FROMFROM is the old holder
 on_artifact_inheritance = {
 	events = {
-		L3T.253 # owned book flag transmission
+		L3T.256 # clean used book flag on artifact inheritance
 	}
 }
