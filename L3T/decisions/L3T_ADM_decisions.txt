@@ -53,7 +53,7 @@ decisions = {
 			set_character_flag = is_buying_books			
 			set_character_flag = recent_minor_decision
 			set_character_flag = do_not_disturb
-			hidden_tooltip = { character_event = { id = L3T.250 days = 1 } }
+			hidden_tooltip = { character_event = { id = L3T.250 } }
 		}
 		
 		revoke_allowed = {
@@ -136,6 +136,7 @@ decisions = {
 				count = 1
 				has_artifact_flag = bookz 
 				NOT = { has_artifact_flag = unique_book }
+				NOT = { has_artifact_flag = used_book }
 			}
 		}
 		allow = {
@@ -160,6 +161,12 @@ decisions = {
 					}
 				}
 			}
+			NOT = {
+				had_character_flag = {
+					flag = dropped_book_study
+					days = 365 #1y
+				}
+			}
 			prisoner = no
 			NOT = { is_inaccessible_trigger = yes }
 			custom_tooltip = {
@@ -171,7 +178,7 @@ decisions = {
 			set_character_flag = is_studying_books			
 			set_character_flag = recent_minor_decision
 			set_character_flag = do_not_disturb
-			hidden_tooltip = { character_event = { id = L3T.253 days = 1 } }
+			hidden_tooltip = { character_event = { id = L3T.253 } }
 		}
 		
 		revoke_allowed = {
