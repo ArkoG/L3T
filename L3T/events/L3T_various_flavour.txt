@@ -1,5 +1,6 @@
 namespace = L3T
 
+##BUY BOOK CHAIN
 character_event = {
 	id = L3T.250 #choose who/where to buy the book + random pricing to filter the offer
 	desc = "DESCL3T.250"
@@ -347,8 +348,8 @@ character_event = {
 	}
 }
 character_event = {
-	id = L3T.2513 #choose the book, filtered by owned, get a chance to acquire a unique book
-	desc = "DESCL3T.2513"
+	id = L3T.2514 #choose the book, filtered by owned, get a chance to acquire a unique book
+	desc = "DESCL3T.2514"
 	picture = "GFX_evt_book_carolingian_script"
 
 	only_playable = yes
@@ -356,8 +357,8 @@ character_event = {
 
 	option = {
 		name = "L3T.2514K"
-		trigger = { 
-			NOT = { 
+		trigger = {
+			NOT = {
 				has_artifact = book_K
 			}
 		}
@@ -376,7 +377,7 @@ character_event = {
 		wealth = -120 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		if = {
-			limit = { 
+			limit = {
 				NOT = { has_global_flag = book_economy_unique_found }
 				NOT = { has_artifact = book_R }
 			}
@@ -424,6 +425,14 @@ character_event = {
 		clr_character_flag = buying_books_economy
 		clr_character_flag = do_not_disturb
 		clr_character_flag = is_buying_books
+		
+		clr_character_flag = is_studying_books
+		clr_character_flag = studying_religious_books
+		clr_character_flag = studying_science_book
+		clr_character_flag = studying_litteracy_book
+		clr_character_flag = studying_economy_book
+		clr_character_flag = ne_sait_pas_vraiment_lire
+		
 	}
 }
 
@@ -494,5 +503,555 @@ character_event = {
 	option = {
 		name = "L3T.2510X"
 		add_artifact = book_R
+	}
+}
+
+##STUDY BOOK CHAIN
+character_event = {
+	id = L3T.253 #choose studying domain
+	desc = "DESCL3T.253"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.253A"
+		trigger = { 
+			any_artifact = {
+				has_artifact_flag = religious_book
+				NOT = { has_artifact_flag = unique_book }
+				NOT = { has_artifact_flag = used_book }
+			}
+		}
+		set_character_flag = studying_religious_books
+		custom_tooltip = { text = study_starts }
+		hidden_tooltip = {
+			random_list = {
+				30 = {  character_event = { id = L3T.255 days = 35 random = 10 }} #straight
+				70 = {  character_event = { id = L3T.254 days = 35 random = 10 }} #delayed
+			}
+		}
+		ai_chance = { factor = 1 modifier = { factor = 1.5	has_focus = focus_theology }}
+	}
+	option = {
+		name = "L3T.253B"
+		trigger = { 
+			any_artifact = {
+				has_artifact_flag = science_book
+				NOT = { has_artifact_flag = unique_book }
+				NOT = { has_artifact_flag = used_book }
+			}
+		}
+		set_character_flag = studying_science_book
+		custom_tooltip = { text = study_starts }
+		hidden_tooltip = {
+			random_list = {
+				30 = {  character_event = { id = L3T.255 days = 35 random = 10 }} #straight
+				70 = {  character_event = { id = L3T.254 days = 35 random = 10 }} #delayed
+			}
+		}
+		ai_chance = { factor = 1 modifier = { factor = 1.5	has_focus = focus_scholarship }}
+	}
+	option = {
+		name = "L3T.253C"
+		trigger = { 
+			any_artifact = {
+				has_artifact_flag = litteracy_book
+				NOT = { has_artifact_flag = unique_book }
+				NOT = { has_artifact_flag = used_book }
+			}
+		}
+		set_character_flag = studying_litteracy_book
+		custom_tooltip = { text = study_starts }
+		hidden_tooltip = {
+			random_list = {
+				30 = {  character_event = { id = L3T.255 days = 25 random = 10 }} #straight
+				70 = {  character_event = { id = L3T.254 days = 25 random = 10 }} #delayed
+			}
+		}
+	}
+	option = {
+		name = "L3T.253D"
+		trigger = { 
+			any_artifact = {
+				has_artifact_flag = economy_book
+				NOT = { has_artifact_flag = unique_book }
+				NOT = { has_artifact_flag = used_book }
+			}
+		}
+		set_character_flag = studying_economy_book
+		custom_tooltip = { text = study_starts }
+		hidden_tooltip = {
+			random_list = {
+				30 = {  character_event = { id = L3T.255 days = 25 random = 10 }} #straight
+				70 = {  character_event = { id = L3T.254 days = 25 random = 10 }} #delayed
+			}
+		}
+		ai_chance = { factor = 1 modifier = { factor = 1.5	has_focus = focus_business }}
+	}
+}
+character_event = {
+	id = L3T.254
+	desc = "DESCL3T.254"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_character_flag = ne_sait_pas_vraiment_lire
+	}
+
+	option = {
+		name = "L3T.254A" #persévérer
+		character_event = { id = L3T.255 days = 15 random = 5 }
+		ai_chance = { factor = 80 }
+	}
+	option = {
+		name = "L3T.254B" #abandon
+		custom_tooltip = { text = abandonne_letude_du_livre }
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+		set_character_flag = dropped_book_study
+		ai_chance = { factor = 20 }
+	}
+}
+character_event = {
+	id = L3T.255
+	
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = { #launches effect notifications
+		random_list = {
+			15 = {
+				character_event = { id = L3T.2551 } #ce livre ne nous apprend rien pour le moment
+			}
+			85 = {
+				if = {
+					limit = {
+						has_character_flag = studying_religious_books
+					}
+					random_artifact = {
+						limit = {
+							has_artifact_flag = religious_books
+							NOT = { has_artifact_flag = used_book }
+							NOT = { has_artifact_flag = book_in_use }
+						}
+						set_artifact_flag = book_in_use
+					}
+					random_list = {
+						30 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
+						70 = { character_event = { id = L3T.2553 }} #bonus livre religieux
+					}
+				}
+				if = {
+					limit = {
+						has_character_flag = studying_science_book
+					}
+					random_artifact = {
+						limit = {
+							has_artifact_flag = science_book
+							NOT = { has_artifact_flag = used_book }
+							NOT = { has_artifact_flag = book_in_use }
+						}
+						set_artifact_flag = book_in_use
+					}
+					random_list = {
+						30 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
+						70 = { character_event = { id = L3T.2554 }} #bonus livre scientifique
+					}
+				}
+				if = {
+					limit = {
+						has_character_flag = studying_litteracy_book
+					}
+					random_artifact = {
+						limit = {
+							has_artifact_flag = litteracy_book
+							NOT = { has_artifact_flag = used_book }
+							NOT = { has_artifact_flag = book_in_use }
+						}
+						set_artifact_flag = book_in_use
+					}
+					random_list = {
+						30 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
+						70 = { character_event = { id = L3T.2555 }} #bonus livre littéraire
+					}
+				}	
+				if = {
+					limit = {
+						has_character_flag = studying_economy_book
+					}
+					random_artifact = {
+						limit = {
+							has_artifact_flag = economy_book
+							NOT = { has_artifact_flag = used_book }
+							NOT = { has_artifact_flag = book_in_use }
+						}
+						set_artifact_flag = book_in_use
+					}
+					random_list = {
+						30 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
+						70 = { character_event = { id = L3T.2556 }} #bonus livre économie
+					}
+				}
+			}
+		}
+	}
+}
+
+#STUDYING BOOKS NOTIFICATIONS
+character_event = {
+	id = L3T.2551
+	desc = "DESCL3T.2551"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.2551A"
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+}
+character_event = {
+	id = L3T.2552
+	desc = "DESCL3T.2552"
+	picture = "GFX_evt_book_carolingian_script"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_A
+			}
+			FROM = { set_character_flag = used_book_A }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_B
+			}
+			FROM = { set_character_flag = used_book_B }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = {
+				has_artifact_flag = book_in_use
+				artifact_type = book_S
+			}
+			FROM = { set_character_flag = used_book_S }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_C
+			}
+			FROM = { set_character_flag = used_book_C }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_D
+			}
+			FROM = { set_character_flag = used_book_D }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_E
+			}
+			FROM = { set_character_flag = used_book_E }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_F
+			}
+			FROM = { set_character_flag = used_book_F }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_G
+			}
+			FROM = { set_character_flag = used_book_G }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_H
+			}
+			FROM = { set_character_flag = used_book_H }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_I
+			}
+			FROM = { set_character_flag = used_book_I }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_J
+			}
+			FROM = { set_character_flag = used_book_J }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_K
+			}
+			FROM = { set_character_flag = used_book_K }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_L
+			}
+			FROM = { set_character_flag = used_book_L }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}		
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_M
+			}
+			FROM = { set_character_flag = used_book_M }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+	}
+	option = {
+		name = "L3T.2552A"
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+}
+
+character_event = {
+	id = L3T.2553
+	#desc = "DESCL3T.2553"
+	picture = "GFX_evt_book_carolingian_script"
+
+	desc = {
+		trigger = { has_character_flag = studying_religious_books }
+		text = "DESCL3T.2553A"
+		picture = "GFX_evt_book_carolingian_script"
+	}
+	desc = {
+		trigger = { has_character_flag = studying_science_book }
+		text = "DESCL3T.2553B"
+		picture = "GFX_evt_book_carolingian_script"
+	}
+	desc = {
+		trigger = { has_character_flag = studying_litteracy_book }
+		text = "DESCL3T.2553C"
+		picture = "GFX_evt_book_carolingian_script"
+	}
+	desc = {
+		trigger = { has_character_flag = studying_economy_book }
+		text = "DESCL3T.2553D"
+		picture = "GFX_evt_book_carolingian_script"
+	}
+	
+	only_playable = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_A
+			}
+			FROM = { set_character_flag = used_book_A }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_B
+			}
+			FROM = { set_character_flag = used_book_B }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = {
+				has_artifact_flag = book_in_use
+				artifact_type = book_S
+			}
+			FROM = { set_character_flag = used_book_S }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_C
+			}
+			FROM = { set_character_flag = used_book_C }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_D
+			}
+			FROM = { set_character_flag = used_book_D }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_E
+			}
+			FROM = { set_character_flag = used_book_E }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = {
+				has_artifact_flag = book_in_use
+				artifact_type = book_F
+			}
+			FROM = { set_character_flag = used_book_F }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_G
+			}
+			FROM = { set_character_flag = used_book_G }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_H
+			}
+			FROM = { set_character_flag = used_book_H }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_I
+			}
+			FROM = { set_character_flag = used_book_I }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_J
+			}
+			FROM = { set_character_flag = used_book_J }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_K
+			}
+			FROM = { set_character_flag = used_book_K }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_L
+			}
+			FROM = { set_character_flag = used_book_L }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}		
+		random_artifact = {
+			limit = { 
+				has_artifact_flag = book_in_use
+				artifact_type = book_M
+			}
+			FROM = { set_character_flag = used_book_M }
+			set_artifact_flag = used_book
+			clr_artifact_flag = book_in_use
+		}
+	}
+	
+	option = {
+		name = "L3T.2553A"
+		trigger = { has_character_flag = studying_religious_books }
+		#effect
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	option = {
+		name = "L3T.2553B"
+		trigger = { has_character_flag = studying_science_book }
+		#effect
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	option = {
+		name = "L3T.2553C"
+		trigger = { has_character_flag = studying_litteracy_book }
+		#effect
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	option = {
+		name = "L3T.2553D"
+		trigger = { has_character_flag = studying_economy_book }
+		#effect
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+}
+
+#clean used book flag on artifact acquisition
+character_event = {
+	id = L3T.256
+	
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { FROM = { has_artifact_flag = used_book }}
+			FROM = { clr_artifact_flag = used_book }
+		}
 	}
 }
