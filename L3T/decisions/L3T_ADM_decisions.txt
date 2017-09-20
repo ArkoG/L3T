@@ -128,7 +128,7 @@ decisions = {
 			prisoner = no
 			NOT = { religion_group = pagan_group }
 			OR = {
-				#has_character_modifier = librairie_1
+				has_character_modifier = librairie_1 ###temp à retirer
 				has_character_modifier = librairie_2
 			}
 			any_artifact = {
