@@ -105,6 +105,7 @@ oeuf_herisson = {
 	picture = "GFX_oeuf_4_faux"
 	slot = slot_egg
 }
+#regular books
 book_A = {
 	quality = 1
 	active = { NOT = { religion_group = pagan_group }}
@@ -242,7 +243,7 @@ book_M = {
 	slot = slot_books
 	town_opinion = 5
 }
-
+#unique books
 book_N = {
 	quality = 5
 	active = { NOT = { religion_group = pagan_group }}
