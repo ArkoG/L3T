@@ -157,7 +157,7 @@
 #L3T_various_flavour.txt
 #id = L3T.250 #Buy books decision //choose who/where to buy it
 #id = L3T.251 #Buy books decision //choose the type of book
-#id = L3T.2510 #Buy books decision //flag cleaner
+#id = L3T.2510 #Buy + Studying books decision //flag cleaner
 #id = L3T.2511 #Buy books decision //choose the book - religious
 #id = L3T.2512 #Buy books decision //choose the book - science
 #id = L3T.2513 #Buy books decision //choose the book - litteracy
@@ -166,6 +166,17 @@
 #id = L3T.2522 #Buy books decision //unique book science
 #id = L3T.2523 #Buy books decision //unique book litteracy
 #id = L3T.2524 #Buy books decision //unique book economy
+#id = L3T.253 #Study books decision // choose the type of book  to study
+#id = L3T.254 #Study books decision // can't get into
+#id = L3T.255 #Study books decision // effects of the study computation
+#id = L3T.2551 #Study books decision // effects of the study NONE keeps the book untagged
+#id = L3T.2552 #Study books decision // effects of the study NONE inactivates the book
+#id = L3T.2553a #Study books decision // effects of the study notification lifestyle trait
+#id = L3T.2553b #Study books decision // effects of the study notification education trait upgrade
+#id = L3T.2553c #Study books decision // effects of the study notification piety
+#id = L3T.2553d #Study books decision // effects of the study notification attribute
+
+#id = L3T.256 #clean used book flag on artifact inheritance
 
 ###L3T_specialization_change.txt
 # id = L3T.301 # Remove the FEODAL_adm dependancies and choose a new specialization
