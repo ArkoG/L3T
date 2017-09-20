@@ -128,7 +128,8 @@ decisions = {
 			prisoner = no
 			NOT = { religion_group = pagan_group }
 			OR = {
-				has_character_modifier = librairie_1 ###temp à retirer
+			 ###temp à retirer librairie_1
+				has_character_modifier = librairie_1
 				has_character_modifier = librairie_2
 			}
 			any_artifact = {
@@ -155,10 +156,10 @@ decisions = {
 						count = 1
 						has_artifact_flag = bookz 
 						NOT = { has_artifact_flag = unique_book }
+						NOT = { has_artifact_flag = used_book }
 					}
 				}
 			}
-			wealth = 150
 			prisoner = no
 			NOT = { is_inaccessible_trigger = yes }
 			custom_tooltip = {
@@ -167,10 +168,10 @@ decisions = {
 			}
 		}
 		effect = {
-			set_character_flag = is_buying_books			
+			set_character_flag = is_studying_books			
 			set_character_flag = recent_minor_decision
 			set_character_flag = do_not_disturb
-			hidden_tooltip = { character_event = { id = L3T.250 days = 1 } }
+			hidden_tooltip = { character_event = { id = L3T.253 days = 1 } }
 		}
 		
 		revoke_allowed = {
@@ -180,15 +181,11 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 
-			modifier = { factor = 1.2 	NOT = {	any_artifact = { count = 1 has_artifact_flag = bookz }}}
-			modifier = { factor = 1.1 	NOT = {	any_artifact = { count = 2 has_artifact_flag = bookz }}}
-			modifier = { factor = 0.9 	NOT = {	any_artifact = { count = 5 has_artifact_flag = bookz }}}
-			modifier = { factor = 0.8 	NOT = {	any_artifact = { count = 6 has_artifact_flag = bookz }}}
-			
-			#modifier = { factor = 1.1 	wealth = 175 }
-			#modifier = { factor = 1.1 	wealth = 200 }
-			#modifier = { factor = 1.1 	wealth = 250 }
-			modifier = { factor = 1.5 	has_character_modifier = librairie_2 }
+			modifier = { factor = 0.8 	NOT = { any_artifact = { count = 2 has_artifact_flag = bookz	NOT = { has_artifact_flag = unique_book }	NOT = { has_artifact_flag = used_book }}}}
+			modifier = { factor = 0.9 	NOT = {	any_artifact = { count = 3 has_artifact_flag = bookz	NOT = { has_artifact_flag = unique_book }	NOT = { has_artifact_flag = used_book }}}}
+			modifier = { factor = 1.1 	NOT = {	any_artifact = { count = 5 has_artifact_flag = bookz	NOT = { has_artifact_flag = unique_book }	NOT = { has_artifact_flag = used_book }}}}
+			modifier = { factor = 1.2 	NOT = {	any_artifact = { count = 6 has_artifact_flag = bookz	NOT = { has_artifact_flag = unique_book }	NOT = { has_artifact_flag = used_book }}}}
+				
 			#characters with learning education traits are more likely to try to acquire more books
 			modifier = { factor = 1.1 	trait = detached_priest } 
 			modifier = { factor = 1.2 	trait = martial_cleric }
@@ -221,8 +218,11 @@ decisions = {
 			modifier = { factor = 0.7	has_focus = focus_family }
 			modifier = { factor = 0.5	has_focus = focus_carousing }
 			modifier = { factor = 0.7	has_focus = focus_intrigue }
-			modifier = { factor = 0.5	has_focus = focus_seduction }			
+			modifier = { factor = 0.5	has_focus = focus_seduction }
+			modifier = { factor = 2.0 	has_character_flag = dropped_book_study	}		
 
+			modifier = { factor = 0.05	trait = slothful }
+			
 			modifier = {
 				factor = 0
 				has_character_flag = recent_minor_decision
@@ -230,6 +230,16 @@ decisions = {
 					had_character_flag = {
 						flag = recent_minor_decision
 						days = 735 #2years
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_character_flag = dropped_book_study
+				NOT = {
+					had_character_flag = {
+						flag = dropped_book_study
+						days = 1825 #5years
 					}
 				}
 			}
