@@ -67,11 +67,15 @@ is_active_outil_ou_armes = {
 	}
 }
 
+#has_all_books/thematics
 has_all_books_religious = {
 	AND = { 
 		has_artifact = book_A
 		has_artifact = book_B
 		has_artifact = book_S
+		has_character_flag = owned_book_A
+		has_character_flag = owned_book_B
+		has_character_flag = owned_book_S
 	}
 }
 has_all_books_science = {
@@ -80,6 +84,10 @@ has_all_books_science = {
 		has_artifact = book_D
 		has_artifact = book_E
 		has_artifact = book_F
+		has_character_flag = owned_book_C
+		has_character_flag = owned_book_D
+		has_character_flag = owned_book_E
+		has_character_flag = owned_book_F
 	}
 }
 has_all_books_litteracy = {
@@ -88,6 +96,10 @@ has_all_books_litteracy = {
 		has_artifact = book_H
 		has_artifact = book_I
 		has_artifact = book_J
+		has_character_flag = owned_book_G
+		has_character_flag = owned_book_H
+		has_character_flag = owned_book_I
+		has_character_flag = owned_book_J
 	}
 }
 has_all_books_economy = {
@@ -95,5 +107,36 @@ has_all_books_economy = {
 		has_artifact = book_K
 		has_artifact = book_L
 		has_artifact = book_M
+		has_character_flag = owned_book_K
+		has_character_flag = owned_book_L
+		has_character_flag = owned_book_M
+	}
+}
+
+#has_all_books/vendor types
+has_all_books_from_local_merchant = {
+	AND = { 
+		has_all_books_religious = yes
+		has_all_books_litteracy = yes		
+	}
+}
+has_all_books_from_scholar = {
+	AND = { 
+		has_all_books_science = yes
+		has_all_books_litteracy = yes
+		has_all_books_economy = yes
+	}
+}
+has_all_books_from_monastery = {
+	AND = {
+		has_all_books_religious = yes
+		has_all_books_science = yes
+	}
+}
+has_all_books_from_foreign_merchant = {
+	AND = { 
+		has_all_books_science = yes
+		has_all_books_litteracy = yes
+		has_all_books_economy = yes
 	}
 }
