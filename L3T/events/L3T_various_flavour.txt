@@ -123,7 +123,6 @@ character_event = {
 		trigger = {
 			NOT = { 
 				has_artifact = book_A
-				has_character_flag = owned_book_A #can't buy a book already owned and used
 			}
 			OR = {
 				religion_group = christian
@@ -131,7 +130,6 @@ character_event = {
 			}
 		}
 		add_artifact = book_A
-		set_character_flag = owned_book_A
 		wealth = -120 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
@@ -140,11 +138,9 @@ character_event = {
 		trigger = {
 			NOT = { 
 				has_artifact = book_B
-				has_character_flag = owned_book_B
 			}
 		}
 		add_artifact = book_B
-		set_character_flag = owned_book_B
 		wealth = -180 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
@@ -153,7 +149,6 @@ character_event = {
 		trigger = {
 			NOT = { 
 				has_artifact = book_S
-				has_character_flag = owned_book_S
 			}
 			OR = {
 				religion_group = christian
@@ -161,7 +156,6 @@ character_event = {
 			}
 		}
 		add_artifact = book_S
-		set_character_flag = owned_book_S
 		wealth = -150 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		if = {
@@ -177,7 +171,6 @@ character_event = {
 						set_global_flag = book_religious_christian_unique_found
 						#add_artifact = book_N #moved to notif event
 						destroy_artifact = book_S #the character will receive the unique instead
-						clr_character_flag = owned_book_S
 						character_event = { id = L3T.2521 } #notif livre unique
 					}
 				}
@@ -196,7 +189,6 @@ character_event = {
 						set_global_flag = book_religious_muslim_unique_found
 						#add_artifact = book_O #moved to notif event
 						destroy_artifact = book_S #the character will receive the unique instead
-						clr_character_flag = owned_book_S
 						character_event = { id = L3T.2521 } #notif livre unique
 					}
 				}
@@ -217,11 +209,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_C
-				has_character_flag = owned_book_C
 			}
 		}
 		add_artifact = book_C
-		set_character_flag = owned_book_C
 		wealth = -135 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		ai_chance = { factor = 1 modifier = { factor = 1.2	trait = scholar }}
@@ -237,7 +227,6 @@ character_event = {
 						set_global_flag = book_science_unique_found
 						#add_artifact = book_P #moved to notif event
 						destroy_artifact = book_C #the character will receive the unique instead
-						clr_character_flag = owned_book_C
 						character_event = { id = L3T.2522 } #notif livre unique
 					}
 				}
@@ -249,11 +238,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_D
-				has_character_flag = owned_book_D
 			}
 		}
 		add_artifact = book_D
-		set_character_flag = owned_book_D
 		wealth = -120 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		ai_chance = { factor = 1 modifier = { factor = 1.2	trait = scholar }}
@@ -263,11 +250,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_E
-				has_character_flag = owned_book_E
 			}
 		}
 		add_artifact = book_E
-		set_character_flag = owned_book_E
 		wealth = -185 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		ai_chance = { factor = 1 modifier = { factor = 1.5	trait = gardener }}
@@ -277,11 +262,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_F
-				has_character_flag = owned_book_F
 			}
 		}
 		add_artifact = book_F
-		set_character_flag = owned_book_F
 		wealth = -145 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		ai_chance = { factor = 1 modifier = { factor = 1.2	trait = hunter }}
@@ -300,11 +283,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_G
-				has_character_flag = owned_book_G
 			}
 		}
 		add_artifact = book_G
-		set_character_flag = owned_book_G
 		wealth = -130 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		ai_chance = { 
@@ -318,11 +299,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_H
-				has_character_flag = owned_book_H
 			}
 		}
 		add_artifact = book_H
-		set_character_flag = owned_book_H
 		wealth = -150 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		ai_chance = { factor = 1 modifier = { factor = 1.2	trait = poet }}
@@ -332,11 +311,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_I
-				has_character_flag = owned_book_I
 			}
 		}
 		add_artifact = book_I
-		set_character_flag = owned_book_I
 		wealth = -165 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		if = {
@@ -351,7 +328,6 @@ character_event = {
 						set_global_flag = book_litteracy_unique_found
 						#add_artifact = book_Q #moved to notif event
 						destroy_artifact = book_I #the character will receive the unique instead
-						clr_character_flag = owned_book_I
 						character_event = { id = L3T.2523 } #notif livre unique
 					}
 				}
@@ -363,11 +339,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_J
-				has_character_flag = owned_book_J
 			}
 		}
 		add_artifact = book_J
-		set_character_flag = owned_book_J
 		wealth = -195 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
@@ -385,11 +359,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_K
-				has_character_flag = owned_book_K
 			}
 		}
 		add_artifact = book_K
-		set_character_flag = owned_book_K
 		wealth = -140 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
@@ -398,11 +370,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_L
-				has_character_flag = owned_book_L
 			}
 		}
 		add_artifact = book_L
-		set_character_flag = owned_book_L
 		wealth = -120 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 		if = {
@@ -417,7 +387,6 @@ character_event = {
 						set_global_flag = book_economy_unique_found
 						#add_artifact = book_R #moved to notif event
 						destroy_artifact = book_L #the character will receive the unique instead
-						clr_character_flag = owned_book_L
 						character_event = { id = L3T.2524 } #notif livre unique
 					}
 				}
@@ -429,11 +398,9 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				has_artifact = book_M
-				has_character_flag = owned_book_M
 			}
 		}
 		add_artifact = book_M
-		set_character_flag = owned_book_M
 		wealth = -160 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
 	}
@@ -527,29 +494,5 @@ character_event = {
 	option = {
 		name = "L3T.2510X"
 		add_artifact = book_R
-	}
-}
-
-#ON_ARTIFACT_INHERITANCE
-character_event = {
-	id = L3T.253 #transmits the owned books flags
-	
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		if = { limit = { has_artifact = book_A } set_character_flag = owned_book_A }
-		if = { limit = { has_artifact = book_B } set_character_flag = owned_book_B }
-		if = { limit = { has_artifact = book_C } set_character_flag = owned_book_C }
-		if = { limit = { has_artifact = book_D } set_character_flag = owned_book_D }
-		if = { limit = { has_artifact = book_E } set_character_flag = owned_book_E }
-		if = { limit = { has_artifact = book_F } set_character_flag = owned_book_F }
-		if = { limit = { has_artifact = book_G } set_character_flag = owned_book_G }
-		if = { limit = { has_artifact = book_H } set_character_flag = owned_book_H }
-		if = { limit = { has_artifact = book_I } set_character_flag = owned_book_I }
-		if = { limit = { has_artifact = book_J } set_character_flag = owned_book_J }
-		if = { limit = { has_artifact = book_K } set_character_flag = owned_book_K }
-		if = { limit = { has_artifact = book_L } set_character_flag = owned_book_L }
-		if = { limit = { has_artifact = book_M } set_character_flag = owned_book_M }
 	}
 }
