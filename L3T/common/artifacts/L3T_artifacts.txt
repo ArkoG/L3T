@@ -110,7 +110,10 @@ book_A = {
 	quality = 1
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_A }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_A }
+		} 
 	}
 	flags = { bookz religious_book }
 	stacking = no
@@ -123,7 +126,10 @@ book_B = {
 	quality = 2
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_B }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_B }
+		} 
 	}
 	flags = { bookz religious_book }
 	stacking = no
@@ -136,7 +142,10 @@ book_S = {
 	quality = 1
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_S }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_S }
+		}  
 	}
 	flags = { bookz religious_book }
 	stacking = no
@@ -148,7 +157,10 @@ book_C = {
 	quality = 1
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_C }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_C }
+		}   
 	}
 	flags = { bookz science_book }
 	stacking = no
@@ -161,7 +173,10 @@ book_D = {
 	quality = 1
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_D }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_D }
+		}  
 	}
 	flags = { bookz science_book }
 	stacking = no
@@ -174,7 +189,10 @@ book_E = {
 	quality = 1
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_E }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_E }
+		}  
 	}
 	flags = { bookz science_book }
 	stacking = no
@@ -187,7 +205,10 @@ book_F = {
 	quality = 2
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_F }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_F }
+		}  
 	}
 	flags = { bookz science_book }
 	stacking = no
@@ -200,7 +221,10 @@ book_G = {
 	quality = 1
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_G }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_G }
+		}  
 	}
 	flags = { bookz litteracy_book }
 	stacking = no
@@ -213,7 +237,10 @@ book_H = {
 	quality = 2
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_H }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_H }
+		} 
 	}
 	flags = { bookz litteracy_book }
 	stacking = no
@@ -226,7 +253,10 @@ book_I = {
 	quality = 3
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_I }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_I }
+		}   
 	}
 	flags = { bookz litteracy_book }
 	stacking = no
@@ -239,7 +269,10 @@ book_J = {
 	quality = 1
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_J }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_J }
+		}   
 	}
 	flags = { bookz litteracy_book }
 	stacking = no
@@ -253,7 +286,10 @@ book_K = {
 	quality = 1
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_K }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_K }
+		}   
 	}
 	flags = { bookz economy_book }
 	stacking = no
@@ -265,7 +301,10 @@ book_L = {
 	quality = 1
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_L }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_L }
+		} 
 	}
 	flags = { bookz economy_book }
 	stacking = no
@@ -277,7 +316,10 @@ book_M = {
 	quality = 2
 	active = { 
 		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = used_book_M }
+		custom_tooltip = {
+			text = book_isnt_studied_yet
+			NOT = { has_character_flag = used_book_M }
+		}   
 	}
 	flags = { bookz economy_book }
 	stacking = no
