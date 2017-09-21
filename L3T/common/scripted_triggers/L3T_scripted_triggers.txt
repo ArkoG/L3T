@@ -126,3 +126,10 @@ has_all_books_from_foreign_merchant = {
 		has_all_books_economy = yes
 	}
 }
+
+involved_in_personnal_war = {
+	OR = {
+		is_primary_war_attacker = yes
+		is_primary_war_defender = yes
+	}
+}

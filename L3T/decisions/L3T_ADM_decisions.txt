@@ -6,6 +6,7 @@ decisions = {
 
 		potential = {
 			is_playable = yes
+			#is_adult = yes
 			prisoner = no
 			NOT = { religion_group = pagan_group }
 			OR = {
@@ -20,16 +21,6 @@ decisions = {
 			#}
 		}
 		allow = {
-			war = no
-			custom_tooltip = {
-				text = UNOCCUPIED_DEMESNE_TITLE
-				hidden_tooltip = {
-					any_demesne_title = {
-						NOT = { higher_tier_than = count }
-						is_occupied = no
-					}
-				}
-			}
 			custom_tooltip = {
 				text = max_nb_books
 				hidden_tooltip = {
@@ -42,6 +33,18 @@ decisions = {
 				}
 			}
 			wealth = 150
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			#war = no #in big realm you are ALWAYS at war
+			involved_in_personnal_war = no
+			
 			prisoner = no
 			NOT = { is_inaccessible_trigger = yes }
 			custom_tooltip = {
@@ -126,6 +129,7 @@ decisions = {
 		potential = {
 			is_playable = yes
 			prisoner = no
+			#is_adult = yes  ###temp à ajouter
 			NOT = { religion_group = pagan_group }
 			OR = {
 			 ###temp à retirer librairie_1
@@ -140,16 +144,6 @@ decisions = {
 			}
 		}
 		allow = {
-			war = no
-			custom_tooltip = {
-				text = UNOCCUPIED_DEMESNE_TITLE
-				hidden_tooltip = {
-					any_demesne_title = {
-						NOT = { higher_tier_than = count }
-						is_occupied = no
-					}
-				}
-			}
 			custom_tooltip = {
 				text = owns_at_least_a_non_unique_book
 				hidden_tooltip = {
@@ -162,11 +156,27 @@ decisions = {
 				}
 			}
 			NOT = {
-				had_character_flag = {
-					flag = dropped_book_study
-					days = 365 #1y
+				has_character_flag = dropped_book_study
+				OR = {
+					had_character_flag = {
+						flag = dropped_book_study
+						days = 365 #1y
+					}
 				}
 			}
+			#war = no #in big realm you are ALWAYS at war
+			involved_in_personnal_war = no
+			
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+
 			prisoner = no
 			NOT = { is_inaccessible_trigger = yes }
 			custom_tooltip = {

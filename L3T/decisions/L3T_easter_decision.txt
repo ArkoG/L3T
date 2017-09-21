@@ -11,7 +11,8 @@ decisions = {
 			NOT = { has_artifact = oeuf_united }
 		}
 		allow = {
-			war = no
+			#war = no #in big realm you are ALWAYS at war
+			involved_in_personnal_war = no
 			custom_tooltip = {
 				text = UNOCCUPIED_DEMESNE_TITLE
 				hidden_tooltip = {
