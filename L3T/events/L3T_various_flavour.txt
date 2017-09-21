@@ -624,10 +624,10 @@ character_event = {
 
 	immediate = { #launches effect notifications
 		random_list = {
-			15 = {
+			12 = {
 				character_event = { id = L3T.2551 } #ce livre ne nous apprend rien pour le moment
 			}
-			85 = {
+			90 = {
 				if = {
 					limit = {
 						has_character_flag = studying_religious_books
@@ -641,8 +641,8 @@ character_event = {
 						set_artifact_flag = book_in_use
 					}
 					random_list = {
-						30 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
-						70 = { character_event = { id = L3T.2553 }} #bonus livre religieux
+						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
+						80 = { character_event = { id = L3T.2553 }} #bonus livre religieux
 					}
 				}
 				if = {
@@ -658,8 +658,8 @@ character_event = {
 						set_artifact_flag = book_in_use
 					}
 					random_list = {
-						30 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
-						70 = { character_event = { id = L3T.2554 }} #bonus livre scientifique
+						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
+						80 = { character_event = { id = L3T.2554 }} #bonus livre scientifique
 					}
 				}
 				if = {
@@ -675,8 +675,8 @@ character_event = {
 						set_artifact_flag = book_in_use
 					}
 					random_list = {
-						30 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
-						70 = { character_event = { id = L3T.2555 }} #bonus livre littéraire
+						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
+						80 = { character_event = { id = L3T.2555 }} #bonus livre littéraire
 					}
 				}	
 				if = {
@@ -692,8 +692,8 @@ character_event = {
 						set_artifact_flag = book_in_use
 					}
 					random_list = {
-						30 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
-						70 = { character_event = { id = L3T.2556 }} #bonus livre économie
+						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
+						80 = { character_event = { id = L3T.2556 }} #bonus livre économie
 					}
 				}
 			}
