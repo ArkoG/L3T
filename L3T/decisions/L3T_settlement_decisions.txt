@@ -570,6 +570,24 @@ settlement_decisions = {
 					}
 					remove_building = CA_chap_seign
 				}
+				if = {
+					limit = { has_building = CA_library_L2 }
+					random_list = {
+						20 = { owner = { wealth = 73 } }
+						60 = { owner = { wealth = 92 } }
+						20 = { owner = { wealth = 110 } }
+					}
+					remove_building = CA_library_L2
+				}
+				if = {
+					limit = { has_building = CA_library_L1 }
+					random_list = {
+						20 = { owner = { wealth = 48 } }
+						60 = { owner = { wealth = 60 } }
+						20 = { owner = { wealth = 72 } }
+					}
+					remove_building = CA_library_L1
+				}
 			}
 			
 			# Clean character modifiers if necessary
