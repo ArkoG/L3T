@@ -43,9 +43,8 @@ decisions = {
 				}
 			}
 			#war = no #in big realm you are ALWAYS at war
-			involved_in_personnal_war = no
+			not_involved_in_personnal_war = yes
 			
-			prisoner = no
 			NOT = { is_inaccessible_trigger = yes }
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
@@ -136,36 +135,37 @@ decisions = {
 				has_character_modifier = librairie_1
 				has_character_modifier = librairie_2
 			}
-			any_artifact = {
-				count = 1
-				has_artifact_flag = bookz 
-				NOT = { has_artifact_flag = unique_book }
-				NOT = { has_artifact_flag = used_book }
-			}
+			#any_artifact = {
+			#	has_artifact_flag = bookz 
+			#	NOT = { has_artifact_flag = unique_book }
+			#	NOT = { has_artifact_flag = used_book }
+			#}
 		}
 		allow = {
 			custom_tooltip = {
 				text = owns_at_least_a_non_unique_book
 				hidden_tooltip = {
 					any_artifact = {
-						count = 1
 						has_artifact_flag = bookz 
 						NOT = { has_artifact_flag = unique_book }
 						NOT = { has_artifact_flag = used_book }
 					}
 				}
 			}
-			NOT = {
-				has_character_flag = dropped_book_study
-				OR = {
-					had_character_flag = {
+			custom_tooltip = {
+				text = dropped_book_study
+				hidden_tooltip = {
+					OR = {
+						NOT = { has_character_flag = dropped_book_study }
+						had_character_flag = {
 						flag = dropped_book_study
 						days = 365 #1y
+						}
 					}
 				}
 			}
 			#war = no #in big realm you are ALWAYS at war
-			involved_in_personnal_war = no
+			not_involved_in_personnal_war = yes
 			
 			custom_tooltip = {
 				text = UNOCCUPIED_DEMESNE_TITLE
@@ -177,7 +177,6 @@ decisions = {
 				}
 			}
 
-			prisoner = no
 			NOT = { is_inaccessible_trigger = yes }
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
