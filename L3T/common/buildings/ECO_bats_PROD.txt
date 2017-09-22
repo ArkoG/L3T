@@ -807,9 +807,10 @@ TP_AGRI_cereale_L1 = {
 	desc = TP_AGRI_cereale_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
-			has_province_modifier = agriculture1
+		has_province_modifier = agriculture1
 		NOT = { terrain = hills }
-		}
+		terrain = farmlands
+	}
 	prerequisites = { MONASTERE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -822,7 +823,7 @@ TP_AGRI_cereale_L2 = {
 TP_AGRI_cereale_L3 = {
 	desc = TP_AGRI_cereale_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 terrain = farmlands }
-	potential = { terrain = farmlands }
+	#potential = { terrain = farmlands }
 		upgrades_from = TP_AGRI_cereale_L2
 		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -832,6 +833,7 @@ TP_AGRI_maraichage_L1 = {
 	desc = TP_AGRI_maraichage_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
+		NOT = { terrain = farmlands }
 		has_province_modifier = agriculture1
 		OR = {
 			terrain = plains
