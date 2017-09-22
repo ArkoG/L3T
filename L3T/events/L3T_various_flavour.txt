@@ -528,8 +528,8 @@ character_event = {
 		custom_tooltip = { text = study_starts }
 		hidden_tooltip = {
 			random_list = {
-				30 = {  character_event = { id = L3T.255 days = 35 random = 10 }} #straight
-				70 = {  character_event = { id = L3T.254 days = 35 random = 10 }} #delayed
+				20 = {  character_event = { id = L3T.255 days = 35 random = 10 }} #straight
+				80 = {  character_event = { id = L3T.254 days = 35 random = 10 }} #delayed
 			}
 		}
 		ai_chance = { factor = 1 modifier = { factor = 1.5	has_focus = focus_theology }}
@@ -566,8 +566,8 @@ character_event = {
 		custom_tooltip = { text = study_starts }
 		hidden_tooltip = {
 			random_list = {
-				30 = {  character_event = { id = L3T.255 days = 25 random = 10 }} #straight
-				70 = {  character_event = { id = L3T.254 days = 25 random = 10 }} #delayed
+				20 = {  character_event = { id = L3T.255 days = 35 random = 10 }} #straight
+				80 = {  character_event = { id = L3T.254 days = 35 random = 10 }} #delayed
 			}
 		}
 	}
@@ -584,8 +584,8 @@ character_event = {
 		custom_tooltip = { text = study_starts }
 		hidden_tooltip = {
 			random_list = {
-				30 = {  character_event = { id = L3T.255 days = 25 random = 10 }} #straight
-				70 = {  character_event = { id = L3T.254 days = 25 random = 10 }} #delayed
+				30 = {  character_event = { id = L3T.255 days = 35 random = 10 }} #straight
+				70 = {  character_event = { id = L3T.254 days = 35 random = 10 }} #delayed
 			}
 		}
 		ai_chance = { factor = 1 modifier = { factor = 1.5	has_focus = focus_business }}
@@ -659,7 +659,7 @@ character_event = {
 					}
 					random_list = {
 						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
-						80 = { character_event = { id = L3T.2554 }} #bonus livre scientifique
+						80 = { character_event = { id = L3T.2553 }} #bonus livre scientifique
 					}
 				}
 				if = {
@@ -676,7 +676,7 @@ character_event = {
 					}
 					random_list = {
 						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
-						80 = { character_event = { id = L3T.2555 }} #bonus livre littéraire
+						80 = { character_event = { id = L3T.2553 }} #bonus livre littéraire
 					}
 				}	
 				if = {
@@ -693,7 +693,7 @@ character_event = {
 					}
 					random_list = {
 						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
-						80 = { character_event = { id = L3T.2556 }} #bonus livre économie
+						80 = { character_event = { id = L3T.2553 }} #bonus livre économie
 					}
 				}
 			}
@@ -729,7 +729,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_A
 			}
-			FROM = { set_character_flag = used_book_A }
+			owner = { set_character_flag = used_book_A }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -738,7 +738,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_B
 			}
-			FROM = { set_character_flag = used_book_B }
+			owner = { set_character_flag = used_book_B }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -747,7 +747,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_S
 			}
-			FROM = { set_character_flag = used_book_S }
+			owner = { set_character_flag = used_book_S }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -756,7 +756,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_C
 			}
-			FROM = { set_character_flag = used_book_C }
+			owner = { set_character_flag = used_book_C }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -765,7 +765,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_D
 			}
-			FROM = { set_character_flag = used_book_D }
+			owner = { set_character_flag = used_book_D }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -774,7 +774,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_E
 			}
-			FROM = { set_character_flag = used_book_E }
+			owner = { set_character_flag = used_book_E }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -783,7 +783,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_F
 			}
-			FROM = { set_character_flag = used_book_F }
+			owner = { set_character_flag = used_book_F }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -792,7 +792,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_G
 			}
-			FROM = { set_character_flag = used_book_G }
+			owner = { set_character_flag = used_book_G }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -801,7 +801,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_H
 			}
-			FROM = { set_character_flag = used_book_H }
+			owner = { set_character_flag = used_book_H }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -810,7 +810,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_I
 			}
-			FROM = { set_character_flag = used_book_I }
+			owner = { set_character_flag = used_book_I }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -819,7 +819,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_J
 			}
-			FROM = { set_character_flag = used_book_J }
+			owner = { set_character_flag = used_book_J }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -828,7 +828,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_K
 			}
-			FROM = { set_character_flag = used_book_K }
+			owner = { set_character_flag = used_book_K }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -837,7 +837,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_L
 			}
-			FROM = { set_character_flag = used_book_L }
+			owner = { set_character_flag = used_book_L }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}		
@@ -846,7 +846,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_M
 			}
-			FROM = { set_character_flag = used_book_M }
+			owner = { set_character_flag = used_book_M }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -856,8 +856,8 @@ character_event = {
 		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
 	}
 }
-
-character_event = {
+#BOOK STUDY RESULTS
+character_event = { 
 	id = L3T.2553
 	#desc = "DESCL3T.2553"
 	picture = "GFX_evt_book_carolingian_script"
@@ -892,7 +892,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_A
 			}
-			FROM = { set_character_flag = used_book_A }
+			owner = { set_character_flag = used_book_A }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -901,7 +901,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_B
 			}
-			FROM = { set_character_flag = used_book_B }
+			owner = { set_character_flag = used_book_B }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -910,7 +910,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_S
 			}
-			FROM = { set_character_flag = used_book_S }
+			owner = { set_character_flag = used_book_S }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -919,7 +919,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_C
 			}
-			FROM = { set_character_flag = used_book_C }
+			owner = { set_character_flag = used_book_C }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -928,7 +928,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_D
 			}
-			FROM = { set_character_flag = used_book_D }
+			owner = { set_character_flag = used_book_D }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -937,7 +937,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_E
 			}
-			FROM = { set_character_flag = used_book_E }
+			owner = { set_character_flag = used_book_E }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -946,7 +946,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_F
 			}
-			FROM = { set_character_flag = used_book_F }
+			owner = { set_character_flag = used_book_F }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -955,7 +955,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_G
 			}
-			FROM = { set_character_flag = used_book_G }
+			owner = { set_character_flag = used_book_G }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -964,7 +964,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_H
 			}
-			FROM = { set_character_flag = used_book_H }
+			owner = { set_character_flag = used_book_H }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -973,7 +973,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_I
 			}
-			FROM = { set_character_flag = used_book_I }
+			owner = { set_character_flag = used_book_I }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -982,7 +982,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_J
 			}
-			FROM = { set_character_flag = used_book_J }
+			owner = { set_character_flag = used_book_J }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -991,7 +991,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_K
 			}
-			FROM = { set_character_flag = used_book_K }
+			owner = { set_character_flag = used_book_K }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
@@ -1000,7 +1000,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_L
 			}
-			FROM = { set_character_flag = used_book_L }
+			owner = { set_character_flag = used_book_L }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}		
@@ -1009,7 +1009,7 @@ character_event = {
 				has_artifact_flag = book_in_use
 				artifact_type = book_M
 			}
-			FROM = { set_character_flag = used_book_M }
+			owner = { set_character_flag = used_book_M }
 			set_artifact_flag = used_book
 			clr_artifact_flag = book_in_use
 		}
