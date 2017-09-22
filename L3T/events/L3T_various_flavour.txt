@@ -415,6 +415,8 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		#buy books dec cleaner
+		clr_character_flag = is_buying_books	
 		clr_character_flag = buying_books_at_local_merchant
 		clr_character_flag = buying_books_at_scholar
 		clr_character_flag = buying_books_at_monastery
@@ -424,15 +426,13 @@ character_event = {
 		clr_character_flag = buying_books_litteracy
 		clr_character_flag = buying_books_economy
 		clr_character_flag = do_not_disturb
-		clr_character_flag = is_buying_books
-		
+		#study books dec cleaner
 		clr_character_flag = is_studying_books
 		clr_character_flag = studying_religious_books
 		clr_character_flag = studying_science_book
 		clr_character_flag = studying_litteracy_book
 		clr_character_flag = studying_economy_book
 		clr_character_flag = ne_sait_pas_vraiment_lire
-		
 	}
 }
 
