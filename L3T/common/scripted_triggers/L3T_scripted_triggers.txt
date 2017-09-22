@@ -127,9 +127,12 @@ has_all_books_from_foreign_merchant = {
 	}
 }
 
-involved_in_personnal_war = {
-	OR = {
-		is_primary_war_attacker = yes
-		is_primary_war_defender = yes
+not_involved_in_personnal_war = {
+	custom_tooltip = { text = not_involved_in_personnal_war }
+	hidden_tooltip = {		
+		OR = {
+			is_primary_war_attacker = no
+			is_primary_war_defender = no
+		}
 	}
 }
