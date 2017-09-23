@@ -121,12 +121,15 @@ L3T.250A;At a local merchant's;Auprès d'un marchand local;;;;;;;;;;;x
 L3T.250B;Meet a scholar;Rendons-nous chez un érudit;;;;;;;;;;;x
 L3T.250C;Visit a monastery;Visitons un monastère;;;;;;;;;;;x
 L3T.250D;Contact a foreign merchant;Contactons un marchand étranger;;;;;;;;;;;x
-DESCL3T.251;PLACEHOLDER;quoi acheter ?;;;;;;;;;;;x
+DESCL3T.251A;We arrived at the local merchant's shop. It proposes books of various sizes, colours, conditions and prices !\nWhen examining the books, it appears that a few thematics are preponderant in the shelves, what will we choose then ?;Nous arrivons dans l'échoppe de ce marchand du coin qui propose divers ouvrages de tailles, couleurs et états variables, tout comme les prix ! \nEn examinant les différents livres, il semble en ressortir plusieurs thématiques, qu'allons-nous choisir ?;;;;;;;;;;;x
+DESCL3T.251B;We arrive in the rather cluttered study of the scholar. Piles of books and other parchments rise from the ground to the ceiling. Pelle-mell there are maps, inkstones, strange objects and in the middle of that, a man bent on his desk. \ nAfter our arrival he gets up and comes to offer us what he could hand over to us, it's time to make our choice!;Nous arrivons dans l'étude plutôt encombrée de l'érudit. Des piles de livres et autres parchemins s'élèvent depuis le sol vers le plafond. Pêle-mêle on trouve des cartes, des encriers, des objets étranges et au milieu un homme courbé sur son bureau. \nA notre arrivée il se relève et vient nous proposer ce qu'il pourrait nous céder, c'est le moment de faire notre choix ! ;;;;;;;;;;;x
+DESCL3T.251C;We arrived at the monastery. A monk leads us, passing through the scriptorium, until we finally reach the library.\nThere, aligned on shelves, there seems to be hundreds of books of all styles and sizes.\nThe book-keeper then comes to us to asking what we are interested to acquire ?;Nous sommes arrivés au monastère. Un moine nous conduit. Nous traversons d'abord le scriptorium où les moines copistes s'affairent, puis nous atteignons enfin la bibliothèque. \nLà, alignés sur les étagères, des livres de tout style et taille par centaines semble-t-il ! \nLe moine vient alors nous demander ce que nous désirons acquérir ?;;;;;;;;;;;x
+DESCL3T.251D;We arrive at the stall of this merchant from afar. Of all kinds of rare or strange goods, it offers books quite as diverse, as shimmering or original as dull. \ nWe review a few books, what are we going to choose?;Nous arrivons à l'étal de ce marchand venu de loin. Parmi toutes sortes de biens rares ou étranges, il propose des livres assez divers, autant chatoyants ou originaux que ternes.  \nNous passons en revue quelques ouvrages, qu'allons-nous choisir ?;;;;;;;;;;;x
 L3T.251A;A religious book;Un livre ayant trait à la religion;;;;;;;;;;;x
 L3T.251B;Science writings;Des écrits de science;;;;;;;;;;;x
 L3T.251C;Some good literary;Une oeuvre littéraire;;;;;;;;;;;x
 L3T.251D;Something about trade;Un ouvrage sur le commerce;;;;;;;;;;;x
-DESCL3T.2511;;RELIGIEUX;;;;;;;;;;;x
+DESCL3T.2511;;RELIGION;;;;;;;;;;;x
 L3T.2511A;A Saint's life;La vie d'un Saint;;;;;;;;;;;x
 L3T.2511B;A theologic treaty;Un traité de théologie;;;;;;;;;;;x
 L3T.2511S;A praying book;Un livre de prières;;;;;;;;;;;x
@@ -410,7 +413,7 @@ raids_pirates;Pirate Raids;Raids pirates;;;;;;;;;;;;x
 raids_pirates_desc;The raids of the pirates here are regular. Faced with the inefficiency and impotence of the Lord they thrive and probably have established home not far away.;Les raids des pirates ici sont réguliers. Face à l'inefficacité et l'impuissance du Seigneur ils prospèrent et ont probablement établi domicile non loin de là.;;;;;;;;;;;;x
 XYLO.2101;Pirate establishment;Établissement des pirates;;;;;;;;;;;;x
 DESCXYLO.2101;Due to our incapacity to rule so much lands, a band of pirates freely terrorize the coasts of [From.Location.GetName];Nous avons bien trop de terres à gérer... surtout au regard de nos compétences et notre incapacité à y maintenir l'ordre. Voilà une situation en or pour les roublards de tout poil ! Notamment semble-t-il cette bande de pirates qui sévit depuis quelques temps déjà et lancent des raids de plus en plus audacieux sur les côtes de [From.Location.GetName].;;;;;;;;;;;;x
-XYLO.2101A;Gottferdom ! ;Gottferdom ! ;;;;;;;;;;;;x
+XYLO.2101A;Damn it!;Sacrebleu ! ;;;;;;;;;;;;x
 XYLO.2101B;;Sacrebleu ! ;;;;;;;;;;;;x
 XYLO.2102;Pirate deletion;Suppression des pirates;;;;;;;;;;;;x
 DESCXYLO.2102;Pirates' raids ends in [From.Location.GetName].;En retrouvant un Domaine à la mesure de ce que nous pouvions maintenir en ordre et au prix d'une lutte longue et acharnée, nous avons finalement pu regagner le contrôle de nos terres et éradiquer les pirates qui ravageaient les côtes de [From.Location.GetName].;;;;;;;;;;;;x

@@ -51,8 +51,29 @@ character_event = {
 
 character_event = {
 	id = L3T.251 #choose choose the type of book, conditionned by vendor type
-	desc = "DESCL3T.251"
+	#desc = "DESCL3T.251"
 	picture = "GFX_evt_book_carolingian_script"
+
+	desc = {
+		trigger = { has_character_flag = buying_books_at_local_merchant }
+		text = "DESCL3T.251A"
+		picture = "GFX_evt_market"
+	}
+	desc = {
+		trigger = { has_character_flag = buying_books_at_scholar }
+		text = "DESCL3T.251B"
+		picture = "GFX_evt_book_carolingian_script"
+	}
+	desc = {
+		trigger = { has_character_flag = buying_books_at_monastery }
+		text = "DESCL3T.251C"
+		picture = "GFX_evt_monastery_monks"
+	}
+	desc = {
+		trigger = { has_character_flag = buying_books_at_foreign_merchant }
+		text = "DESCL3T.251D"
+		picture = "GFX_evt_merchant_caravan"
+	}
 
 	only_playable = yes
 	is_triggered_only = yes
