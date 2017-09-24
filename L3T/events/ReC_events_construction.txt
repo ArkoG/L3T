@@ -290,6 +290,10 @@ province_event = {
 			factor = 10
 		}
 		# TODO add flavour as consequences of that
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
+		}
 		add_province_modifier = {
 			name = chantier_stop
 			duration = -1
@@ -637,6 +641,10 @@ province_event = {
 	
 	option = {
 		name = "REC.6A"
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
+		}
 		add_province_modifier = {
 			name = chantier_stop
 			duration = -1
@@ -1164,6 +1172,10 @@ character_event = {
 			if = {
 				limit = { has_province_modifier = chantier_cancelled }
 				remove_province_modifier = chantier_cancelled
+			}
+			if = {
+				limit = { has_province_modifier = chantier_down }
+				remove_province_modifier = chantier_down
 			}
 			add_province_modifier = { name = chantier_cathedrale duration = -1 }
 			add_province_modifier = { name = chantier_stop duration = -1 }
