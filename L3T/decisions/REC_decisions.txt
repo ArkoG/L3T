@@ -76,6 +76,12 @@ decisions = {
 				factor = 2
 				has_character_modifier = stolen_relic
 			}
+			modifier = {
+				factor = 2
+				any_realm_title = {
+				is_holy_site = ROOT
+				}
+			}
 		}
 	}
 }
