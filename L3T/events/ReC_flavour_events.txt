@@ -81,6 +81,12 @@ character_event = {
 				has_province_modifier = chantier_stop
 			}
 		}
+		modifier = {
+			factor = 0.8
+				any_realm_title = {
+				is_holy_site = ROOT
+			}
+		}
 	}
 	
 	option = {
@@ -89,11 +95,23 @@ character_event = {
 		custom_tooltip = { text = bourse_remplie }
 		hidden_tooltip = {
 			random_list = {
-				10 = { wealth = 55	}
-				20 = { wealth = 85	}
-				40 = { wealth = 110	}
-				20 = { wealth = 130	}
-				10 = { wealth = 155	}
+				10 = { wealth = 55	} # 6% if holy site
+				20 = { wealth = 85	} # 13% if holy site
+				40 = { wealth = 110	} # 25% if holy site
+				20 = {  			  # 37% if holy site
+					wealth = 130
+					modifier = {
+						factor = 3
+						any_realm_title = { is_holy_site = ROOT }
+					}
+				}
+				10 = {  			  # 19% if holy site
+					wealth = 155
+					modifier = {
+						factor = 3
+						any_realm_title = { is_holy_site = ROOT }
+					}
+				}
 			}
 		}
 	}
