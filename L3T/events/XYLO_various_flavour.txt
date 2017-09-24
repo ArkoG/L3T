@@ -13,6 +13,7 @@ province_event = {
     id = XYLO.311
 	desc = "DESCXYLO.311"
 	picture = GFX_evt_XYLO_forest2
+	border = GFX_event_normal_frame_economy
 
 	trigger = {
 		has_province_modifier = foret2_chasse
@@ -21,9 +22,12 @@ province_event = {
 			has_province_modifier = loi_forestiere_L1
 			has_province_modifier = loi_forestiere_L2	
 		}
-		had_province_flag = {
-			flag = braconnage_regle_recemment
-			days = 1825 #5y
+		OR = {
+			NOT = { has_province_flag = braconnage_regle_recemment }
+			had_province_flag = {
+				flag = braconnage_regle_recemment
+				days = 1825 #5y
+			}
 		}
 		NOT = {
 			has_province_modifier = foret_braconnage
@@ -109,7 +113,13 @@ province_event = {
 	}
 	option = {
 		name = "XYLO.311B"	#rien ne presse
-		ai_chance = { factor = 20 }
+		ai_chance = { 
+			factor = 20
+				modifier = { 
+					factor = 1.5
+					owner = { trait = slothful }
+				}
+			}
 		province_event = { id = XYLO.312 days = 180 random = 54 }
 		add_province_modifier = {
 			name = foret_braconnage 
@@ -122,6 +132,7 @@ province_event = {
     id = XYLO.312
 	desc = "DESCXYLO.312"
 	picture = GFX_evt_XYLO_forest2
+	border = GFX_event_normal_frame_economy
 
 	is_triggered_only = yes
 		
@@ -177,7 +188,7 @@ province_event = {
 		
 		#effets
 		set_province_flag = appel_au_forestier
-		province_event = { id = XYLO.313 days = 9 random = 4 }
+		province_event = { id = XYLO.313 days = 9 }
 		random_list = {
 			75 = {
 				modifier = {
@@ -251,7 +262,7 @@ province_event = {
 		}
 		#effets
 		set_province_flag = appel_au_marechal
-		province_event = { id = XYLO.313 days = 9 random = 4 }
+		province_event = { id = XYLO.313 days = 9 }
 		random_list = {
 			75 = {
 				modifier = {
@@ -316,7 +327,7 @@ province_event = {
 					}
 				}
 			}
-			modifier = { #marshal is poor
+			modifier = { #marshal is poor or no marshall at all
 				factor = 2
 				OR = {
 					owner = {
@@ -330,10 +341,14 @@ province_event = {
 							has_job_title = job_marshal
 							NOT = { martial = 5 }
 						}
+					}
+					OR = {
+						owner = { NOT = { any_courtier = {  has_job_title = job_marshal }}}
+						owner = { NOT = { any_vassal = {  has_job_title = job_marshal }}}
 					}
 				}
 			}
-			modifier = { #forester is a moron
+			modifier = { #forester is a moron  or no forester at all
 				factor = 2
 				OR = {
 					owner = {
@@ -347,13 +362,17 @@ province_event = {
 							has_minor_title = title_forestier
 							NOT = { martial = 5 }
 						}
+					}
+					OR = { 
+						owner = { NOT = { any_courtier = {  has_minor_title = title_forestier }}}
+						owner = { NOT = { any_vassal = {  has_minor_title = title_forestier }}}
 					}
 				}
 			}
 		}
 		#effets
 		set_province_flag = par_soi_meme
-		province_event = { id = XYLO.313 days = 9 random = 4 }
+		province_event = { id = XYLO.313 days = 9 }
 		random_list = {
 			75 = {
 				modifier = {
@@ -394,6 +413,7 @@ province_event = {
 province_event = {
 	id = XYLO.313
 	picture = "GFX_evt_XYLO_forest2"
+	border = GFX_event_normal_frame_economy
 
 	desc = {
 		trigger = { has_province_flag = eradication_braconnage_succes }
@@ -472,7 +492,7 @@ province_event = {
 		if = {
 			limit = {
 				any_province_holding = {
-					is_feudal = yes
+					holding_type = castle
 					has_building = CA_chasse_L3
 					has_building = CA_chasse_L2
 				}
@@ -480,7 +500,11 @@ province_event = {
 			random = { 
 				chance = 5
 				random_province_holding = {
-					limit = { is_feudal = yes }
+					limit = { 
+						holding_type = castle
+						has_building = CA_chasse_L3
+						has_building = CA_chasse_L2
+					}
 					remove_building = CA_chasse_L3
 					remove_building = CA_chasse_L2
 				}
@@ -489,14 +513,17 @@ province_event = {
 		if = {
 			limit = {
 				any_province_holding = {
-					is_feudal = yes
+					holding_type = castle
 					has_building = CA_chasse_L3
 				}
 			}
 			random = { 
 				chance = 10
 				random_province_holding = {
-					limit = { is_feudal = yes }
+					limit = { 
+						holding_type = castle
+						has_building = CA_chasse_L3
+						}
 					remove_building = CA_chasse_L3	
 				}
 			}
@@ -513,6 +540,7 @@ province_event = {
     id = XYLO.314
 	desc = "DESCXYLO.314"
 	picture = GFX_evt_XYLO_forest2
+	border = GFX_event_normal_frame_economy
 
 	trigger = {
 		had_province_flag = {  flag = braconnage_notifie_seigneur 	days = 1825 }#for 5y
@@ -529,8 +557,9 @@ province_event = {
 	}
 	
 	option = {
-		name = "text_reponse_generique_D"
+		name = "XYLO.314A"
 		remove_province_modifier = foret_braconnage 
 		clr_province_flag = braconnage_notifie_seigneur
+		set_province_flag = braconnage_regle_recemment
 	}
 }
