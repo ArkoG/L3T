@@ -1,0 +1,348 @@
+#######################
+#  L3T - XYLO FLAVOR  #
+#######################
+
+
+namespace = XYLO
+
+
+###BRACONNAGE//POACHERS
+##XYLO.311-313
+# Braconnage -installation-
+province_event = {
+    id = XYLO.311
+	desc = "DESCXYLO.311"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+		has_province_modifier = foret2_chasse
+
+		revolt_risk = 0.02 
+		OR = {
+			has_province_modifier = loi_forestiere_L1
+			has_province_modifier = loi_forestiere_L2	
+		}
+		had_province_flag = { 
+			flag = braconnage_regle_recemment
+			days = 1825 #5y
+		}
+		NOT = {
+			has_province_modifier = foret_braconnage
+			has_province_modifier = justice_rendue_prov
+		}
+	}
+		
+	mean_time_to_happen = {
+		years = 7
+		
+		modifier = { factor = 2  	has_province_flag = braconnage_regle_recemment }
+		modifier = { factor = 0.5	has_province_modifier = loi_forestiere_L2 }
+		modifier = { factor = 0.9	has_province_modifier = foret_up } #the bigger the forest the harder to rule it is
+		modifier = { factor = 0.9	revolt_risk = 0.03 }
+		modifier = { factor = 0.8	revolt_risk = 0.05 }
+		modifier = {
+			factor = 2
+			owner = {
+				OR = { 
+					any_courtier = { 
+						has_minor_title = title_forestier
+						OR = {
+							martial = 10
+							diplomacy = 10
+						}
+					}
+					any_vassal = { 		
+						has_minor_title = title_forestier
+						OR = {
+							martial = 10
+							diplomacy = 10
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				OR = { 
+					any_courtier = { 
+						has_minor_title = title_forestier
+						OR = {
+							NOT = { martial = 5 }
+							NOT = { diplomacy = 5 }
+						}
+					}
+					any_vassal = { 		
+						has_minor_title = title_forestier
+						OR = {
+							NOT = { martial = 5 }
+							NOT = { diplomacy = 5 }
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			owner = {
+				NOT = { any_courtier = { has_minor_title = title_forestier }}
+				NOT = { any_vassal = { has_minor_title = title_forestier }}
+			}
+		}		
+	}
+	
+	immediate = { 
+		set_province_flag = braconnage_notifie_seigneur
+	}
+		
+	option = {
+		name = "XYLO.311A"	#agissons sans tarder
+		ai_chance = { factor = 80 }
+		character_event = { id = XYLO.312 days = 12 random = 7 }
+		add_province_modifier = {
+			name = foret_braconnage 
+			duration = -1
+		}
+		clr_province_flag = braconnage_regle_recemment
+	}
+	option = {
+		name = "XYLO.311B"	#rien ne presse
+		ai_chance = { factor = 20 }
+		character_event = { id = XYLO.312 days = 180 random = 54 }
+		add_province_modifier = {
+			name = foret_braconnage 
+			duration = -1
+		}
+		clr_province_flag = braconnage_regle_recemment
+	}
+}
+# Braconnage -action-
+province_event = {
+    id = XYLO.312
+	desc = "DESCXYLO.312"
+	picture = GFX_evt_XYLO_forest2
+
+	is_triggerred_only = yes
+		
+	immediate = { 
+		#set_province_flag = braconnage_notifie_seigneur
+	}
+		
+	option = {
+		name = "XYLO.312A"	#renforts pour le forestier
+		trigger = {
+			OR = { 
+				owner = { any_courtier = { has_minor_title = title_forestier }}
+				owner = { any_vassal = { has_minor_title = title_forestier }}
+			}
+		}
+		ai_chance = { 
+			factor = 60
+			modifier = { #stewardship affinity
+				factor = 2
+				owner = { stewardship = 10 } 
+			}
+			modifier = { #has a very good forester
+				factor = 2
+				OR = {
+					owner = {
+						any_courtier = { 
+							has_minor_title = title_forestier
+							stewardship = 15 
+						}
+					}
+					owner = {
+						any_vassal = { 
+							has_minor_title = title_forestier
+							stewardship = 15 
+						}
+					}
+				}
+			}
+			modifier = { #has a good martial forester
+				factor = 1.2
+				OR = {
+					owner = {
+						any_courtier = { 
+							has_minor_title = title_forestier
+							martial = 12 
+						}
+					}
+					owner = {
+						any_vassal = { 
+							has_minor_title = title_forestier
+							martial = 12 
+						}
+					}
+				}
+			}
+		}
+		
+		#effets
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 1.5 
+					owner = { stewardship = 10 }
+				}
+				character_event = { id = XYLO.3121 days = 9 random = 4 }
+			}
+			10 = {
+				modifier = {
+					factor = 1.5 
+					owner = { stewardship = 10 }
+				}
+				character_event = { id = XYLO.3122 days = 9 random = 4 }
+			}
+			10 = {
+				modifier = {
+					factor = 1.5 
+					owner = { stewardship = 10 }
+				}
+				character_event = { id = XYLO.3123 days = 9 random = 4 }
+			}
+		}
+	}
+	option = {
+		name = "XYLO.312B"	#maréchal
+		trigger = {
+			OR = { 
+				owner = { any_courtier = { has_job_title = job_marshal }}
+				owner = { any_vassal = { has_job_title = job_marshal }}
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = { #martial affinity
+				factor = 2
+				owner = { martial = 10 } 
+			}
+			modifier = { #has a very good marshal
+				factor = 2
+				OR = {
+					owner = {
+						any_courtier = { 
+							has_job_title = job_marshal
+							martial = 15 
+						}
+					}
+					owner = {
+						any_vassal = { 
+							has_job_title = job_marshal
+							martial = 15 
+						}
+					}
+				}
+			}
+		}
+		#effets
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 1.5 
+					owner = { stewardship = 10 }
+				}
+				character_event = { id = XYLO.3121 days = 9 random = 4 }
+			}
+			10 = {
+				modifier = {
+					factor = 1.5 
+					owner = { stewardship = 10 }
+				}
+				character_event = { id = XYLO.3122 days = 9 random = 4 }
+			}
+			10 = {
+				modifier = {
+					factor = 1.5 
+					owner = { stewardship = 10 }
+				}
+				character_event = { id = XYLO.3123 days = 9 random = 4 }
+			}
+		}
+	}
+	option = {
+		name = "XYLO.312C"	#soi-même
+		ai_chance = { 
+			factor = 10
+			modifier = { #martial affinity
+				factor = 2
+				owner = { martial = 15 } 
+			}
+			modifier = { #stewardship affinity
+				factor = 2
+				owner = { stewardship = 15 }
+			}
+			modifier = { #stewardship affinity
+				factor = 0.5
+				owner = { trait = coward }
+			}
+			modifier = { #involved in a personnal war
+				factor = 0.1
+				owner = { 
+					OR = {
+						is_primary_war_attacker = yes
+						is_primary_war_defender = yes
+					}
+				}
+			}
+			modifier = { #marshal is poor
+				factor = 2
+				OR = {
+					owner = {
+						any_courtier = { 
+							has_job_title = job_marshal
+							NOT = { martial = 5 }
+						}
+					}
+					owner = {
+						any_vassal = { 
+							has_job_title = job_marshal
+							NOT = { martial = 5 }
+						}
+					}
+				}
+			}
+			modifier = { #forester is a moron
+				factor = 2
+				OR = {
+					owner = {
+						any_courtier = { 
+							has_minor_title = title_forestier
+							NOT = { martial = 5 }
+						}
+					}
+					owner = {
+						any_vassal = { 
+							has_minor_title = title_forestier
+							NOT = { martial = 5 }
+						}
+					}
+				}
+			}
+		}
+		#effets
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 1.5 
+					owner = { stewardship = 10 }
+				}
+				character_event = { id = XYLO.3121 days = 9 random = 4 }
+			}
+			10 = {
+				modifier = {
+					factor = 1.5 
+					owner = { stewardship = 10 }
+				}
+				character_event = { id = XYLO.3122 days = 9 random = 4 }
+			}
+			10 = {
+				modifier = {
+					factor = 1.5 
+					owner = { stewardship = 10 }
+				}
+				character_event = { id = XYLO.3123 days = 9 random = 4 }
+			}
+		}
+	}		
+}
