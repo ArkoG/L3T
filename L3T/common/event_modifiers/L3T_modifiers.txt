@@ -481,7 +481,21 @@ foret_poor = {
 	icon = 158
 }
 
-poachers = {}
+foret_braconnage = {
+	local_revolt_risk = 0.03
+	local_tax_modifier  = -0.1 # -10%
+	icon = 236
+}
+justice_rendue_prov = { #province modifier
+	local_revolt_risk = -0.03
+	icon = 237
+}
+justice_rendue_char = { #character modifier
+	general_opinion = 5
+	monthly_character_prestige = 0.2
+	icon = 237
+}
+
 illegal_cut = {}
 a_witch = {}
 
