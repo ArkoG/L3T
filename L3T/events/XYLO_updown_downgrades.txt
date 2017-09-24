@@ -184,10 +184,12 @@ province_event = {
 		if = {
 			limit = {
 				any_province_holding = {
+					is_feudal = yes
 					has_building = CA_chasse_L3
 				}
 			}
 			random_province_holding = {
+				limit = { is_feudal = yes }
 				remove_building = CA_chasse_L3	
 			}
 		}
