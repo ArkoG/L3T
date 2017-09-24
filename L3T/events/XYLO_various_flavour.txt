@@ -115,16 +115,17 @@ province_event = {
 		name = "XYLO.311B"	#rien ne presse
 		ai_chance = { 
 			factor = 20
-				modifier = { 
-					factor = 1.5
-					owner = { trait = slothful }
-				}
+			modifier = { 
+				factor = 1.5
+				owner = { trait = slothful }
 			}
+		}
 		province_event = { id = XYLO.312 days = 180 random = 54 }
 		add_province_modifier = {
 			name = foret_braconnage 
 			duration = -1
 		}
+		custom_tooltip = { text = braconnage_action_repoussee }
 	}
 }
 # Braconnage -action-
@@ -188,7 +189,13 @@ province_event = {
 		
 		#effets
 		set_province_flag = appel_au_forestier
-		province_event = { id = XYLO.313 days = 9 }
+		#province_event = { id = XYLO.313 days = 9 }
+		owner = {
+			random_courtier = {
+				limit = { has_minor_title = title_forestier }
+				character_event = { id = XYLO.3131 }
+			}
+		}
 		random_list = {
 			75 = {
 				modifier = {
@@ -262,7 +269,13 @@ province_event = {
 		}
 		#effets
 		set_province_flag = appel_au_marechal
-		province_event = { id = XYLO.313 days = 9 }
+		#province_event = { id = XYLO.313 days = 9 }
+		owner = {
+			random_courtier = {
+				limit = { has_job_title = job_marshal }
+				character_event = { id = XYLO.3132 }
+			}
+		}
 		random_list = {
 			75 = {
 				modifier = {
@@ -410,6 +423,26 @@ province_event = {
 		}
 	}		
 }
+
+character_event = { #ping forester for portrait
+	id = XYLO.3131
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = { 	
+		FROM = { province_event = { id = XYLO.313 days = 9 }}
+	}
+}
+character_event = { #ping marshall for portrait
+	id = XYLO.3132
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = { 	
+		FROM = { province_event = { id = XYLO.313 days = 9 }}
+	}
+}			
+			
 province_event = {
 	id = XYLO.313
 	picture = "GFX_evt_XYLO_forest2"
@@ -431,13 +464,15 @@ province_event = {
 
 	immediate = { 	
 		clr_province_flag = braconnage_notifie_seigneur
+		owner = { remove_character_modifier = justice_rendue_char } #avoids a no effect if the character already has this one
 	}
 	
 	option = { #succès
 		name = "XYLO.313A"
 		trigger = { has_province_flag = eradication_braconnage_succes }
 
-		remove_province_modifier = foret_braconnage 
+		remove_province_modifier = foret_braconnage
+		
 		add_province_modifier = { 
 			name = justice_rendue_prov
 			duration = 1825 #5y				
@@ -469,12 +504,17 @@ province_event = {
 		if = {
 			limit = {
 				any_province_holding = {
+					holding_type = castle
 					has_building = CA_chasse_L3
 				}
 			}
 			random = { 
 				chance = 5
 				random_province_holding = {
+					limit = {
+						holding_type = castle
+						has_building = CA_chasse_L3	
+					}
 					remove_building = CA_chasse_L3	
 				}
 			}
