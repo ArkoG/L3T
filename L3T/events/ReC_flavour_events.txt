@@ -1071,6 +1071,10 @@ character_event = {
 					NOT = { has_holding_modifier = temp_wall }
 				}
 			}
+			if = {
+				limit = { has_province_modifier = chantier_down }
+				remove_province_modifier = chantier_down
+			}
 			add_province_modifier = {
 				name = chantier_stop
 				duration = -1
@@ -1220,6 +1224,10 @@ province_event = {
 		ai_chance = {
 			factor = 50
 		}
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
+		}
 		add_province_modifier = {
 			name = chantier_stop
 			duration = -1
@@ -1240,6 +1248,10 @@ province_event = {
 		}
 		ai_chance = {
 			factor = 30
+		}
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
 		}
 		add_province_modifier = {
 			name = chantier_stop

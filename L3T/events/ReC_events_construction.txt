@@ -175,16 +175,16 @@ province_event = {
 						}
 					}
 				}
-				hidden_tooltip = { change_variable = { which = cathedral value = 100 } }
+				hidden_tooltip = { change_variable = { which = cathedral value = 150 } }
 			}
 			if = {
 				limit = { location = { has_province_modifier = chantier_down } }
-				hidden_tooltip = { change_variable = { which = cathedral value = 90 } }
+				hidden_tooltip = { change_variable = { which = cathedral value = 135 } }
 				location = { remove_province_modifier = chantier_down }
 			}
 			if = {
 				limit = { location = { has_province_modifier = chantier_stop } }
-				hidden_tooltip = { change_variable = { which = cathedral value = 80 } }
+				hidden_tooltip = { change_variable = { which = cathedral value = 120 } }
 				location = { remove_province_modifier = chantier_stop }
 			}
 		}
@@ -235,9 +235,9 @@ province_event = {
 				}
 				hidden_tooltip = {
 					random_list = {
-						20 = { change_variable = { which = cathedral value = 85 } }
-						60 = { change_variable = { which = cathedral value = 75 } }
-						20 = { change_variable = { which = cathedral value = 65 } }
+						20 = { change_variable = { which = cathedral value = 120 } }
+						60 = { change_variable = { which = cathedral value = 110 } }
+						20 = { change_variable = { which = cathedral value = 100 } }
 					}
 				}
 			}
@@ -245,9 +245,9 @@ province_event = {
 				limit = { location = { has_province_modifier = chantier_down } }
 				hidden_tooltip = {
 					random_list = {
-						20 = { change_variable = { which = cathedral value = 80 } }
-						60 = { change_variable = { which = cathedral value = 70 } }
-						20 = { change_variable = { which = cathedral value = 60 } }
+						20 = { change_variable = { which = cathedral value = 110 } }
+						60 = { change_variable = { which = cathedral value = 100 } }
+						20 = { change_variable = { which = cathedral value = 90 } }
 					}
 				}
 			}
@@ -255,9 +255,9 @@ province_event = {
 				limit = { location = { has_province_modifier = chantier_stop } }
 				hidden_tooltip = {
 					random_list = {
-						20 = { change_variable = { which = cathedral value = 70 } }
-						60 = { change_variable = { which = cathedral value = 60 } }
-						20 = { change_variable = { which = cathedral value = 50 } }
+						20 = { change_variable = { which = cathedral value = 100 } }
+						60 = { change_variable = { which = cathedral value = 90 } }
+						20 = { change_variable = { which = cathedral value = 80 } }
 					}
 				}
 				location = { remove_province_modifier = chantier_stop }
@@ -290,6 +290,10 @@ province_event = {
 			factor = 10
 		}
 		# TODO add flavour as consequences of that
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
+		}
 		add_province_modifier = {
 			name = chantier_stop
 			duration = -1
@@ -637,6 +641,10 @@ province_event = {
 	
 	option = {
 		name = "REC.6A"
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
+		}
 		add_province_modifier = {
 			name = chantier_stop
 			duration = -1
@@ -1164,6 +1172,10 @@ character_event = {
 			if = {
 				limit = { has_province_modifier = chantier_cancelled }
 				remove_province_modifier = chantier_cancelled
+			}
+			if = {
+				limit = { has_province_modifier = chantier_down }
+				remove_province_modifier = chantier_down
 			}
 			add_province_modifier = { name = chantier_cathedrale duration = -1 }
 			add_province_modifier = { name = chantier_stop duration = -1 }
