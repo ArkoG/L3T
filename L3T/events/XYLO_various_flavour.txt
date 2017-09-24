@@ -8,7 +8,7 @@ namespace = XYLO
 
 ###BRACONNAGE//POACHERS
 ##XYLO.311-313
-# Braconnage -installation-
+#Braconnage -installation-
 province_event = {
     id = XYLO.311
 	desc = "DESCXYLO.311"
@@ -17,12 +17,11 @@ province_event = {
 	trigger = {
 		has_province_modifier = foret2_chasse
 
-		revolt_risk = 0.02 
 		OR = {
 			has_province_modifier = loi_forestiere_L1
 			has_province_modifier = loi_forestiere_L2	
 		}
-		had_province_flag = { 
+		had_province_flag = {
 			flag = braconnage_regle_recemment
 			days = 1825 #5y
 		}
@@ -35,6 +34,9 @@ province_event = {
 	mean_time_to_happen = {
 		years = 7
 		
+		modifier = { factor = 1.2 NOT = { had_province_flag = { flag = braconnage_regle_recemment days = 2190 }}}#6y
+		modifier = { factor = 1.2 NOT = { had_province_flag = { flag = braconnage_regle_recemment days = 2555 }}}#7y
+		modifier = { factor = 1.2 NOT = { had_province_flag = { flag = braconnage_regle_recemment days = 2920 }}}#8y
 		modifier = { factor = 2  	has_province_flag = braconnage_regle_recemment }
 		modifier = { factor = 0.5	has_province_modifier = loi_forestiere_L2 }
 		modifier = { factor = 0.9	has_province_modifier = foret_up } #the bigger the forest the harder to rule it is
@@ -91,29 +93,28 @@ province_event = {
 		}		
 	}
 	
-	immediate = { 
+	immediate = {
 		set_province_flag = braconnage_notifie_seigneur
+		clr_province_flag = braconnage_regle_recemment
 	}
 		
 	option = {
 		name = "XYLO.311A"	#agissons sans tarder
 		ai_chance = { factor = 80 }
-		character_event = { id = XYLO.312 days = 12 random = 7 }
+		province_event = { id = XYLO.312 days = 12 random = 7 }
 		add_province_modifier = {
 			name = foret_braconnage 
 			duration = -1
 		}
-		clr_province_flag = braconnage_regle_recemment
 	}
 	option = {
 		name = "XYLO.311B"	#rien ne presse
 		ai_chance = { factor = 20 }
-		character_event = { id = XYLO.312 days = 180 random = 54 }
+		province_event = { id = XYLO.312 days = 180 random = 54 }
 		add_province_modifier = {
 			name = foret_braconnage 
 			duration = -1
 		}
-		clr_province_flag = braconnage_regle_recemment
 	}
 }
 # Braconnage -action-
@@ -122,11 +123,7 @@ province_event = {
 	desc = "DESCXYLO.312"
 	picture = GFX_evt_XYLO_forest2
 
-	is_triggerred_only = yes
-		
-	immediate = { 
-		#set_province_flag = braconnage_notifie_seigneur
-	}
+	is_triggered_only = yes
 		
 	option = {
 		name = "XYLO.312A"	#renforts pour le forestier
@@ -179,27 +176,44 @@ province_event = {
 		}
 		
 		#effets
+		set_province_flag = appel_au_forestier
+		province_event = { id = XYLO.313 days = 9 random = 4 }
 		random_list = {
-			10 = {
+			75 = {
 				modifier = {
 					factor = 1.5 
-					owner = { stewardship = 10 }
+					OR = {
+						owner = { any_courtier = { has_minor_title = title_forestier stewardship = 12 }}
+						owner = { any_vassal = { has_minor_title = title_forestier stewardship = 12 }}
+					}
 				}
-				character_event = { id = XYLO.3121 days = 9 random = 4 }
+				modifier = {
+					factor = 1.5 
+					OR = {
+						owner = { any_courtier = { has_minor_title = title_forestier martial = 12 }}
+						owner = { any_vassal = { has_minor_title = title_forestier martial = 12 }}
+					}
+				}
+				set_province_flag = eradication_braconnage_succes
+				custom_tooltip = { text = chance_succes }
 			}
-			10 = {
+			25 = {
 				modifier = {
-					factor = 1.5 
-					owner = { stewardship = 10 }
+					factor = 1.5
+					OR = {
+						owner = { any_courtier = { has_minor_title = title_forestier NOT = { stewardship = 7 }}}
+						owner = { any_vassal = { has_minor_title = title_forestier NOT = { stewardship = 7 }}}
+					}
 				}
-				character_event = { id = XYLO.3122 days = 9 random = 4 }
-			}
-			10 = {
 				modifier = {
-					factor = 1.5 
-					owner = { stewardship = 10 }
+					factor = 1.5
+					OR = {
+						owner = { any_courtier = { has_minor_title = title_forestier NOT = { martial = 7 }}}
+						owner = { any_vassal = { has_minor_title = title_forestier NOT = { martial = 7 }}}
+					}
 				}
-				character_event = { id = XYLO.3123 days = 9 random = 4 }
+				set_province_flag = eradication_braconnage_echec
+				custom_tooltip = { text = chance_echec }
 			}
 		}
 	}
@@ -212,7 +226,7 @@ province_event = {
 			}
 		}
 		ai_chance = { 
-			factor = 30
+			factor = 20
 			modifier = { #martial affinity
 				factor = 2
 				owner = { martial = 10 } 
@@ -236,34 +250,51 @@ province_event = {
 			}
 		}
 		#effets
+		set_province_flag = appel_au_marechal
+		province_event = { id = XYLO.313 days = 9 random = 4 }
 		random_list = {
-			10 = {
+			75 = {
+				modifier = {
+					factor = 1.2 
+					OR = {
+						owner = { any_courtier = { has_job_title = job_marshal martial = 12 }}
+						owner = { any_vassal = { has_job_title = job_marshal martial = 12 }}
+					}
+				}
 				modifier = {
 					factor = 1.5 
-					owner = { stewardship = 10 }
+					OR = {
+						owner = { any_courtier = { has_job_title = job_marshal martial = 15 }}
+						owner = { any_vassal = { has_job_title = job_marshal martial = 15 }}
+					}
 				}
-				character_event = { id = XYLO.3121 days = 9 random = 4 }
+				set_province_flag = eradication_braconnage_succes
+				custom_tooltip = { text = chance_succes }
 			}
-			10 = {
+			25 = {
 				modifier = {
-					factor = 1.5 
-					owner = { stewardship = 10 }
+					factor = 1.2
+					OR = {
+						owner = { any_courtier = { has_job_title = job_marshal NOT = { martial = 7 }}}
+						owner = { any_vassal = { has_job_title = job_marshal NOT = { martial = 7 }}}
+					}
 				}
-				character_event = { id = XYLO.3122 days = 9 random = 4 }
-			}
-			10 = {
 				modifier = {
-					factor = 1.5 
-					owner = { stewardship = 10 }
+					factor = 1.5
+					OR = {
+						owner = { any_courtier = { has_job_title = job_marshal NOT = { martial = 5 }}}
+						owner = { any_vassal = { has_job_title = job_marshal NOT = { martial = 5 }}}
+					}
 				}
-				character_event = { id = XYLO.3123 days = 9 random = 4 }
+				set_province_flag = eradication_braconnage_echec
+				custom_tooltip = { text = chance_echec }
 			}
 		}
 	}
 	option = {
 		name = "XYLO.312C"	#soi-même
 		ai_chance = { 
-			factor = 10
+			factor = 20
 			modifier = { #martial affinity
 				factor = 2
 				owner = { martial = 15 } 
@@ -321,28 +352,185 @@ province_event = {
 			}
 		}
 		#effets
+		set_province_flag = par_soi_meme
+		province_event = { id = XYLO.313 days = 9 random = 4 }
 		random_list = {
-			10 = {
+			75 = {
 				modifier = {
 					factor = 1.5 
-					owner = { stewardship = 10 }
+					owner = { stewardship = 12 }
 				}
-				character_event = { id = XYLO.3121 days = 9 random = 4 }
+				modifier = {
+					factor = 1.5 
+					owner = { martial = 12 }
+				}
+				modifier = { #involved in a personnal war
+					factor = 0.8
+					owner = { 
+						OR = {
+							is_primary_war_attacker = yes
+							is_primary_war_defender = yes
+						}
+					}
+				}
+				set_province_flag = eradication_braconnage_succes
+				custom_tooltip = { text = chance_succes }
 			}
-			10 = {
+			25 = {
 				modifier = {
 					factor = 1.5 
-					owner = { stewardship = 10 }
+					owner = { NOT = { stewardship = 7 }}
 				}
-				character_event = { id = XYLO.3122 days = 9 random = 4 }
-			}
-			10 = {
 				modifier = {
 					factor = 1.5 
-					owner = { stewardship = 10 }
+					owner = { NOT = { martial = 7 }}
 				}
-				character_event = { id = XYLO.3123 days = 9 random = 4 }
+				set_province_flag = eradication_braconnage_echec
+				custom_tooltip = { text = chance_echec }
 			}
 		}
 	}		
+}
+province_event = {
+	id = XYLO.313
+	picture = "GFX_evt_XYLO_forest2"
+
+	desc = {
+		trigger = { has_province_flag = eradication_braconnage_succes }
+		text = "DESCXYLO.313A"
+		picture = "GFX_evt_XYLO_forest2"
+	}
+	desc = {
+		trigger = { has_province_flag = eradication_braconnage_echec }
+		text = "DESCXYLO.313B"
+		picture = "GFX_evt_XYLO_forest2"
+	}
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	immediate = { 	
+		clr_province_flag = braconnage_notifie_seigneur
+	}
+	
+	option = { #succès
+		name = "XYLO.313A"
+		trigger = { has_province_flag = eradication_braconnage_succes }
+
+		remove_province_modifier = foret_braconnage 
+		add_province_modifier = { 
+			name = justice_rendue_prov
+			duration = 1825 #5y				
+		}
+		set_province_flag = braconnage_regle_recemment
+		
+		if = {
+			limit = { has_province_flag = appel_au_forestier }
+			random = { 
+				chance = 60
+				owner = { add_character_modifier = { name = justice_rendue_char	duration = 1095 }}#3y
+			}
+		}
+		if = {
+			limit = { has_province_flag = appel_au_marechal }
+			random = { 
+				chance = 75
+				owner = { add_character_modifier = { name = justice_rendue_char	duration = 1460 }}#4y
+			}
+		}
+		if = {
+			limit = { has_province_flag = par_soi_meme }
+			random_list = {
+				30 = { owner = { add_character_modifier = { name = justice_rendue_char	duration = 1095 }}}#3y
+				30 = { owner = { add_character_modifier = { name = justice_rendue_char	duration = 1460 }}}#4y
+				30 = { owner = { add_character_modifier = { name = justice_rendue_char	duration = 1825 }}}#5y
+			}
+		}
+		if = {
+			limit = {
+				any_province_holding = {
+					has_building = CA_chasse_L3
+				}
+			}
+			random = { 
+				chance = 5
+				random_province_holding = {
+					remove_building = CA_chasse_L3	
+				}
+			}
+		}
+		clr_province_flag = eradication_braconnage_succes
+		clr_province_flag = appel_au_forestier
+		clr_province_flag = appel_au_marechal
+		clr_province_flag = par_soi_meme		
+	}
+	option = { #échec
+		name = "XYLO.313B"
+		trigger = { has_province_flag = eradication_braconnage_echec }
+		#remove_province_modifier = foret_braconnage #modifier kept
+		custom_tooltip = { text = braconniers_restent }
+		if = {
+			limit = {
+				any_province_holding = {
+					is_feudal = yes
+					has_building = CA_chasse_L3
+					has_building = CA_chasse_L2
+				}
+			}
+			random = { 
+				chance = 5
+				random_province_holding = {
+					limit = { is_feudal = yes }
+					remove_building = CA_chasse_L3
+					remove_building = CA_chasse_L2
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_province_holding = {
+					is_feudal = yes
+					has_building = CA_chasse_L3
+				}
+			}
+			random = { 
+				chance = 10
+				random_province_holding = {
+					limit = { is_feudal = yes }
+					remove_building = CA_chasse_L3	
+				}
+			}
+		}
+		clr_province_flag = eradication_braconnage_echec
+		clr_province_flag = appel_au_forestier
+		clr_province_flag = appel_au_marechal
+		clr_province_flag = par_soi_meme
+	}
+}
+
+#Braconnage -épuisement-
+province_event = {
+    id = XYLO.314
+	desc = "DESCXYLO.314"
+	picture = GFX_evt_XYLO_forest2
+
+	trigger = {
+		had_province_flag = {  flag = braconnage_notifie_seigneur 	days = 1825 }#for 5y
+		has_province_modifier = foret_braconnage
+	}
+		
+	mean_time_to_happen = {
+		years = 10
+		modifier = { factor = 0.8	had_province_flag = { flag = braconnage_notifie_seigneur	days = 2190 }}#for 6y
+		modifier = { factor = 0.8	had_province_flag = { flag = braconnage_notifie_seigneur	days = 2555 }}#for 7y		
+		modifier = { factor = 0.8	had_province_flag = { flag = braconnage_notifie_seigneur	days = 2920 }}#for 8y
+		modifier = { factor = 0.8	had_province_flag = { flag = braconnage_notifie_seigneur	days = 3295 }}#for 9y
+		modifier = { factor = 0.8	had_province_flag = { flag = braconnage_notifie_seigneur	days = 3650 }}#for 10y	
+	}
+	
+	option = {
+		name = "text_reponse_generique_D"
+		remove_province_modifier = foret_braconnage 
+		clr_province_flag = braconnage_notifie_seigneur
+	}
 }
