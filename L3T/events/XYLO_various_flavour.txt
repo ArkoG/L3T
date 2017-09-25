@@ -188,6 +188,7 @@ province_event = {
 		}
 		
 		#effets
+		custom_tooltip = { text = ctooltip_appel_au_forestier }
 		set_province_flag = appel_au_forestier
 		#province_event = { id = XYLO.313 days = 9 }
 		owner = {
@@ -197,7 +198,7 @@ province_event = {
 			}
 		}
 		random_list = {
-			75 = {
+			65 = {
 				modifier = {
 					factor = 1.5 
 					OR = {
@@ -215,7 +216,7 @@ province_event = {
 				set_province_flag = eradication_braconnage_succes
 				custom_tooltip = { text = chance_succes }
 			}
-			25 = {
+			35 = {
 				modifier = {
 					factor = 1.5
 					OR = {
@@ -268,6 +269,7 @@ province_event = {
 			}
 		}
 		#effets
+		custom_tooltip = { text = ctooltip_appel_au_marechal }
 		set_province_flag = appel_au_marechal
 		#province_event = { id = XYLO.313 days = 9 }
 		owner = {
@@ -384,6 +386,7 @@ province_event = {
 			}
 		}
 		#effets
+		custom_tooltip = { text = ctooltip_par_soi_meme }
 		set_province_flag = par_soi_meme
 		province_event = { id = XYLO.313 days = 9 }
 		random_list = {
@@ -487,6 +490,52 @@ province_event = {
 			}
 		}
 		if = {
+			limit = { 
+				has_province_flag = appel_au_forestier
+				owner = { 
+					any_courtier = { 
+						has_minor_title = title_forestier
+						NOT = { martial = 7 }
+					}
+				}
+			}
+			random = { 
+				chance = 50
+				owner = { 
+					random_courtier = {
+						limit = {
+							has_minor_title = title_forestier
+							NOT = { martial = 7 }
+						}
+						change_martial = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = { 
+				has_province_flag = appel_au_forestier
+				owner = { 
+					any_courtier = { 
+						has_minor_title = title_forestier
+						NOT = { stewardship = 7 }
+					}
+				}
+			}
+			random = { 
+				chance = 50
+				owner = { 
+					random_courtier = {
+						limit = {
+							has_minor_title = title_forestier
+							NOT = { stewardship = 7 }
+						}
+						change_stewardship = 1
+					}
+				}
+			}
+		}		
+		if = {
 			limit = { has_province_flag = appel_au_marechal }
 			random = { 
 				chance = 75
@@ -495,14 +544,11 @@ province_event = {
 		}
 		if = {
 			limit = { has_province_flag = par_soi_meme }
-			random_list = {
-				30 = { owner = { add_character_modifier = { name = justice_rendue_char	duration = 1095 }}}#3y
-				30 = { owner = { add_character_modifier = { name = justice_rendue_char	duration = 1460 }}}#4y
-				30 = { owner = { add_character_modifier = { name = justice_rendue_char	duration = 1825 }}}#5y
-			}
+			owner = { add_character_modifier = { name = justice_rendue_char	duration = 1825 }}#5y
 		}
 		if = {
 			limit = {
+				has_province_flag = appel_au_forestier
 				any_province_holding = {
 					holding_type = castle
 					has_building = CA_chasse_L3
@@ -511,11 +557,73 @@ province_event = {
 			random = { 
 				chance = 5
 				random_province_holding = {
-					limit = {
+					limit = { 
 						holding_type = castle
-						has_building = CA_chasse_L3	
+						has_building = CA_chasse_L3
+						}
+					remove_building = CA_chasse_L3
+					save_event_target_as = holding_rapport
+					holder_scope = { 
+						random_courtier = { 
+							limit = { has_minor_title = title_forestier }
+							letter_event = { id = XYLO.3133 }
+						}
 					}
-					remove_building = CA_chasse_L3	
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_province_flag = appel_au_marechal
+				any_province_holding = {
+					holding_type = castle
+					has_building = CA_chasse_L3
+				}
+			}
+			random = { 
+				chance = 5
+				random_province_holding = {
+					limit = { 
+						holding_type = castle
+						has_building = CA_chasse_L3
+						}
+					remove_building = CA_chasse_L3
+					save_event_target_as = holding_rapport
+					holder_scope = { 
+						random_courtier = { 
+							limit = { has_job_title = job_marshal }
+							letter_event = { id = XYLO.3133 }
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_province_flag = par_soi_meme
+				any_province_holding = {
+					holding_type = castle
+					has_building = CA_chasse_L3
+				}
+			}
+			random = { 
+				chance = 5
+				random_province_holding = {
+					limit = { 
+						holding_type = castle
+						has_building = CA_chasse_L3
+						}
+					remove_building = CA_chasse_L3
+					save_event_target_as = holding_rapport
+					holder_scope = { 
+						random_courtier = { 
+							limit = { 
+								is_adult = yes
+								is_female = no
+							}
+							letter_event = { id = XYLO.3133 }
+						}
+					}
 				}
 			}
 		}
@@ -531,27 +639,7 @@ province_event = {
 		custom_tooltip = { text = braconniers_restent }
 		if = {
 			limit = {
-				any_province_holding = {
-					holding_type = castle
-					has_building = CA_chasse_L3
-					has_building = CA_chasse_L2
-				}
-			}
-			random = { 
-				chance = 5
-				random_province_holding = {
-					limit = { 
-						holding_type = castle
-						has_building = CA_chasse_L3
-						has_building = CA_chasse_L2
-					}
-					remove_building = CA_chasse_L3
-					remove_building = CA_chasse_L2
-				}
-			}
-		}
-		if = {
-			limit = {
+				has_province_flag = appel_au_forestier
 				any_province_holding = {
 					holding_type = castle
 					has_building = CA_chasse_L3
@@ -564,7 +652,78 @@ province_event = {
 						holding_type = castle
 						has_building = CA_chasse_L3
 						}
-					remove_building = CA_chasse_L3	
+					remove_building = CA_chasse_L3
+					save_event_target_as = holding_rapport
+					hidden_tooltip = {
+						holder_scope = { 
+							random_courtier = { 
+								limit = { has_minor_title = title_forestier }
+								show_portrait = no
+								letter_event = { id = XYLO.3133 }
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_province_flag = appel_au_marechal
+				any_province_holding = {
+					holding_type = castle
+					has_building = CA_chasse_L3
+				}
+			}
+			random = { 
+				chance = 10
+				random_province_holding = {
+					limit = { 
+						holding_type = castle
+						has_building = CA_chasse_L3
+						}
+					remove_building = CA_chasse_L3
+					save_event_target_as = holding_rapport
+					hidden_tooltip = {
+						holder_scope = { 
+							random_courtier = { 
+								limit = { has_job_title = job_marshal }
+								show_portrait = no
+								letter_event = { id = XYLO.3133 }
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_province_flag = par_soi_meme
+				any_province_holding = {
+					holding_type = castle
+					has_building = CA_chasse_L3
+				}
+			}
+			random = { 
+				chance = 10
+				random_province_holding = {
+					limit = { 
+						holding_type = castle
+						has_building = CA_chasse_L3
+						}
+					remove_building = CA_chasse_L3
+					save_event_target_as = holding_rapport
+					hidden_tooltip = {
+						holder_scope = { 
+							random_vassal = { 
+								limit = { 
+									is_adult = yes
+									is_female = no
+								}
+								show_portrait = no
+								letter_event = { id = XYLO.3133 }
+							}
+						}
+					}
 				}
 			}
 		}
@@ -572,6 +731,29 @@ province_event = {
 		clr_province_flag = appel_au_forestier
 		clr_province_flag = appel_au_marechal
 		clr_province_flag = par_soi_meme
+	}
+}
+
+letter_event = { #notif batiment perdu
+	id = XYLO.3133
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = { 	
+		FROM = { owner = { letter_event = { id = XYLO.3134 }}}
+	}
+
+}
+letter_event = { #notif batiment perdu
+	id = XYLO.3134
+	desc = DESCXYLO.3134
+	border = "GFX_event_letter_frame_economy"
+	is_triggered_only = yes
+
+	option = { 
+		name = "XYLO.3134"
+		custom_tooltip = { text = CA_chasse_L3_detruit }
+		clear_event_target = holding_rapport
 	}
 }
 
