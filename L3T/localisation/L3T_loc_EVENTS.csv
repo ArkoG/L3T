@@ -81,28 +81,26 @@ text_reponse_generique_A;Good !;Bien, bien...;;;;;;;;;;;;x
 text_reponse_generique_B;Excellent!;Excellent !;;;;;;;;;;;;x
 text_reponse_generique_C;OK;D'accord;;;;;;;;;;;;x
 text_reponse_generique_D;Alright it's noted;J'en prends note;;;;;;;;;;;;x
-#;;;;;;;;;;;;;;x
+chance_succes;§Gsuccess§!;§Gréussir§!;;;;;;;;;;;;x
+chance_echec;§Rfailure§!;§Rdéfaillir§!;;;;;;;;;;;;;x
 inscription_chroniques;This information will be written in the Chronicles of our dynasty;Cette information sera consignée dans les Chroniques de notre Maison;;;;;;;;;;;;x
-
+#;;;;;;;;;;;;;;x
 DESCL3T.101;This settlement has grown! A little hamlet now thrives in this region and the peasants living here work ceaselessly under the wise rule of the local lord.;La population a cru autour du château. \n Les quelques maisonnées assemblées ici forment à présent un petit hameau !;;;;;;;;;;;;x
 DESCL3T.102;A once insignificant hamlet populated by only a few dozen households has grown into a busy village!;Le hameau a pris de l'importance au pied du château et forme à présent un village !;;;;;;;;;;;;x
 DESCL3T.103;The castle village has grown into a borough and now requires a local council led by some of the elders in order to oversee its day-to-day functions. The market too has grown and a small section of is now home to a handful of artisans.;Le village du château a pris de l'importance et attire toujours plus de nouveaux venus, artisans ou paysans et forme à présent un bourg !;;;;;;;;;;;;x
 DESCL3T.104;A thriving town has grown from this borough, and the markets are well-stocked with goods harvested and made both locally and coming in from afar. The derelict elder council has evolved into a properly elected council capable of administering trade and justice, although the final word still lies with the lord of these lands.;Le bourg formé plus tôt contre le château s'est développé et atteint désormais une population suffisante pour porter la dénomination de ville !;;;;;;;;;;;;x
 DESCL3T.105;A vast city now stands tall and proud at the foot of the castle keep, and its inhabitants prosper and reap the benefits of living in such an industrious and well-populated settlement.;Le château est désormais le cœur d'une ville suffisamment populeuse et industrieuse pour porter le nom de cité !;;;;;;;;;;;;x
-
 #DESCL3T.106;This settlement has grown! A little hamlet now thrives in this region and the inhabitants living here work ceaselessly under the wise leadership of a local council.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un petit hameau !;;;;;;;;;;;;x
 DESCL3T.106;Through a steady increase in trade and industry, this once insignificant hamlet populated by only a few dozen households has grown into a busy village!;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un village !;;;;;;;;;;;;x
 DESCL3T.107;The village has grown into a borough and now requires a council led by the leaders of the most prominent merchant families in order to oversee its day-to-day functions. The borough is now also home to a handful of artisans, and caravans of merchants keep the market squares busy with activity.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un bourg !;;;;;;;;;;;;x
 DESCL3T.108;A thriving town has grown from this borough and serves as a home for hundreds of traders, craftsmen, artisans, and laborers. Warehouses full of goods attract large numbers of merchants to come from near and far, and the traders here grow fat and wealthy.;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une ville !;;;;;;;;;;;;x
 DESCL3T.109;A most magnificent city has risen in [Root.Location.GetName] and offers refuge and opportunity for thousands of people residing within its walls. Wealthy merchants, skilled artisans, and a multitude of laborers feed the rapidly growing economy, funding massive projects and great works of art and culture. A great age is truly dawning upon us!;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une cité !;;;;;;;;;;;;x
 DESCL3T.110;A most magnificent great city has risen in [Root.Location.GetName] and offers refuge and opportunity for thousands of people residing within its walls. Wealthy merchants, skilled artisans, and a multitude of laborers feed the rapidly growing economy, funding massive projects and great works of art and culture. A great age is truly dawning upon us!;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une Grande cité !;;;;;;;;;;;;x
-
 DESCL3T.111;This settlement has grown! A little hamlet now thrives in this region and the peasants living here work ceaselessly under the wise guidance of the local cleric.;La population a cru autour du lieu de culte et forme à présent un petit hameau !;;;;;;;;;;;;x
 DESCL3T.112;Through a steady increase in trade and industry, this once insignificant hamlet populated by only a few dozen households has grown into a busy village!;La population a cru autour du lieu de culte et forme à présent un village !;;;;;;;;;;;;x
 DESCL3T.113;The village has grown into a borough and now requires a local council in order to oversee its day-to-day functions. The borough is now also home to a handful of artisans, and a steady stream of merchants keep the market squares busy.;La population a cru autour du lieu de culte et forme à présent un bourg !;;;;;;;;;;;;x
 DESCL3T.114;A thriving town has grown from this borough and serves as a home for hundreds of traders, craftsmen, artisans, and laborers. Warehouses full of goods attract large numbers of merchants to come from near and far, and the religious authorities make a healthy profit from taxing trade and commerce.;La population a cru autour du lieu de culte et forme à présent une ville !;;;;;;;;;;;;x
 DESCL3T.115;A most magnificent city has risen in [Root.Location.GetName] and offers refuge and opportunity for thousands of people residing within its walls. Wealthy merchants, skilled artisans, and a multitude of laborers feed the rapidly growing economy, funding massive projects and great works of art and culture. A great age is truly dawning upon us!;La population a cru autour du lieu de culte et forme à présent une cité !;;;;;;;;;;;;x
-
 DESCL3T.1102;;Le niveau de [From.developpement.GetName] à [From.GetName] est de [From.developpement.GetValue]. \nLe prochain niveau requiert [From.devnextstep.GetValue].;;;;;;;;;;;;x
 DESCL3T.1104;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \naprès une augmentation de 1 (+2 s'il s'agit d'une cité).;;;;;;;;;;;;x
 DESCL3T.1105;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \naprès une diminution de 1.;;;;;;;;;;;;x
@@ -114,9 +112,8 @@ DESCL3T.11092;;La valeur de [holding_dev.developpementold.GetName] de [holding_d
 DESCL3T.11093;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \n a augmenté de 10 grâce à l'hôpital érigé dans la province.;;;;;;;;;;;;x
 DESCL3T.11094;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \n a augmenté de 10 grâce au développement d'une ressource avancée dans la province.;;;;;;;;;;;;x
 DESCL3T.11095;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \n a augmenté de 20 grâce au développement d'une ressource lucrative dans la province.;;;;;;;;;;;;x
-
 #;BOOKS;x;;;;;;;;;;;;x
-DESCL3T.250;PLACEHOLDER;à qui acheter ce fichu bouquin;;;;;;;;;;;x
+DESCL3T.250;;à qui acheter ce fichu bouquin;;;;;;;;;;;x
 L3T.250A;At a local merchant's;Auprès d'un marchand local;;;;;;;;;;;x
 L3T.250B;Meet a scholar;Rendons-nous chez un érudit;;;;;;;;;;;x
 L3T.250C;Visit a monastery;Visitons un monastère;;;;;;;;;;;x
@@ -175,7 +172,6 @@ L3T.2553A;Hallelujah!;Hallelujah !;;;;;;;;;;;x
 L3T.2553B;Science is all!;La science vaincra !;;;;;;;;;;;x
 L3T.2553C;Words are all!;Les mots les mots l'émotion vient !;;;;;;;;;;;x
 L3T.2553D;1+1=2!;1+1=2 !;;;;;;;;;;;x
-
 #;EASTER EGGS;x;;;;;;;;;;;;x
 DESCL3T.401;War disrupts our Easter Eggs Hunt. We are forced to cancel our activities.;La guerre nous oblige à renoncer à notre recherche d'œufs de Pâques.;;;;;;;;;;x;
 L3T.401A;There is always next spring...;Rendez-vous le printemps prochain...;;;;;;;;;;;x;
@@ -242,7 +238,7 @@ DESCL3T.434C;"For 25 ducats, the egg is yours" said the monk.;"Nous sommes prêts
 DESCL3T.434D;"For 20 ducats, the egg is yours" said the monk.;"Nous sommes prêts à vous céder l'oeuf contre la somme de 20 ducats" lança le moine.;;;;;;;;;;;;x
 L3T.434A;This seems expensive but go on;Cela semble cher mais allons-y;;;;;;;;;;;;x
 L3T.434B;This seems expensive but go on;C'est pas donné mais bon...;;;;;;;;;;;;x
-L3T.434C;OK!;Marché conclu !;;;;;;;;;;;;x
+L3T.434C;Deal!;Marché conclu !;;;;;;;;;;;;x
 L3T.434D;An excellent deal in the end!;Une excellente affaire finalement !;;;;;;;;;;;;x
 DESCL3T.441;The forest you have expanded could be the ideal place where an Easter egg can be hidden.;La forêt que vous avez agrandie pourrait le lieu idéal où un œuf de Pâques puisse être caché.;;;;;;;;;;;x;
 L3T.441A;Let's go hunting for Easter eggs in the forest;Partons à la chasse à l'œuf de Pâques dans la forêt;;;;;;;;;;;x;
@@ -406,6 +402,27 @@ DESCXYLO.305;The granted logging license is not enough for the people of [From.L
 XYLO.305A;Granted;Accordé.;;;;;;;;;;;;x
 XYLO.305B;We can not afford it.;Nous ne pouvons nous le permettre.;;;;;;;;;;;;x
 XYLO.305C;Delete the existing charter, that will teach them!;Supprimons la charte existante ça leur apprendra !;;;;;;;;;;;;x
+DESCXYLO.311;Despite restrictions on hunting, a band of poachers rages in our woods. They act with impunity and defy our authority, it's intolerable! \nLet's see what our priorities are. In any case we'd need to get more info about them before acting.;Malgré les restrictions édictées concernant le chasse, une bande de braconniers sévit dans nos bois. Ils agissent en toute impunité et défient notre autorité, c'est intolérable ! Dans tous les cas il nous faudra récolter davatage d'infromations sur eux. \nVoyons quelles sont nos priorités.;;;;;;;;;;;;x
+XYLO.311A;Act the sooner the better;Allons les débusquer sans tarder !;;;;;;;;;;;;x
+XYLO.311B;There's no urge there;Rien ne presse;;;;;;;;;;;;x
+braconnage_action_repoussee;§YTaking action against poachers is postponed for a few months§!;§YToute entreprise à l'encontre des braconniers est ajournée de plusieurs mois§!;;;;;;;;;;;;x
+DESCXYLO.312;We are about to act against these vile poachers! \nWe were informed they've got some camp along the [Location.GetRouteRank], [Location.GetTopographicalFlavour]. We need to establish our action plan. \nWe can send our men or deal with this by ourselves to bring back the order. \n\nWhat is our choice?;Nous sommes prêt à agir contre ces vils braconniers ! \nIl semblerait qu'ils aient établi un campement le long de [Location.GetRouteRank], [Location.GetTopographicalFlavour]. Nous devons établir notre plan d'action. \nNous pouvons envoyer nos hommes ou nous charger nous-mêmes de ramener l'ordre. \n\nQuel est notre choix ?;;;;;;;;;;;;x
+XYLO.312A;Send our Forester;Envoyons notre Forestier;;;;;;;;;;;;x
+XYLO.312B;Mission our Marshal;Missionnons notre Maréchal;;;;;;;;;;;;x
+ctooltip_appel_au_forestier;We send some mens witho our §Yforester§! to help him in his task.;Nous envoyons quelques hommes pour aider notre §Yforestier§! dans sa tâche.;;;;;;;;;;;;x
+ctooltip_appel_au_marechal;We send some our §Ymarshall§! with his men for this task.;Nous envoyons notre §Ymaréchal§! et ses hommes régler le problème.;;;;;;;;;;;;x
+ctooltip_par_soi_meme;We are going to try solving this by ourselves with a few men.;Nous allons essayer de règler cela avec l'aide de quelques-uns parmi nos hommes.;;;;;;;;;;;;x
+XYLO.312C;Let's deal with this directly!;Allons-y nous-mêmes !;;;;;;;;;;;;x
+DESCXYLO.313A;Through our efforts and a fierce struggle against these evil poachers we have succeeded. Their camp has been dispersed, their trophees confiscated, the poachers judged form their offenses. We brought order back to our woods and hunting grounds. \nLet's hope this will last.;Grâce à nos efforts et une lutte acharnée contre ces malfaisants braconniers, nous avons réussi. Leur camp a été dispersé, les trophées confisqués et les braconniers jugés pour les délits commis. Nous avons ramené l'ordre dans nos bois et sur notre domaine de chasse. \nEspérons que cela soit durable.;;;;;;;;;;;;x
+DESCXYLO.313B;Despite a bitter struggle and all efforts to date, poachers continue to plague our forests. \nUnfortunately there seems to be nothing that can be done for the moment to refute them. ;Malgré une lutte âpre et tous les efforts menés à ce jour, les braconniers continuent de sévir dans nos forêts. \nIl n'y a malheureusement semble-t-il rien que l'on puisse faire pour le moment pour les réfreiner. ;;;;;;;;;;;;x
+XYLO.313A;Excellent!;Excellent !;;;;;;;;;;;;x
+XYLO.313B;Damn!;Malédiction !;;;;;;;;;;;;x
+braconniers_restent;Poachers will continue their activities...;Les braconniers vont continuer leurs activités néfastes... ;;;;;;;;;;;;x
+DESCXYLO.3134;[This.PrimaryTitle.GetFOA], \nAfter the intervention against the poachers who cracked down at [holding_rapport.GetName], I went to the Hunting Domain to inspect the condition of the buildings. \n\nSigned, [From.GetDynName] \nyour humble [From.GetTitle];[This.PrimaryTitle.GetFOA],\nSuite à l'intervention contre les braconniers qui sévissaient à [holding_rapport.GetName], je me suis rendu au Domaine de chasse pour inspecter l'état des bâtiments. Ceux-ci sont très endommagés et ne pourront plus remplir totalement leurs fonctions.\n\nSigné, [From.GetDynName]\nvotre humble [From.GetTitle];;;;;;;;;;;;x
+CA_chasse_L3_detruit;The §YHunting Mansion§! in [holding_rapport.GetName] is destroyed.;Le §YManoir de Chasse§! de [holding_rapport.GetName] est détruit. ;;;;;;;;;;;;x
+XYLO.3134;Gottferdom!;Gottferdom ! ;;;;;;;;;;;;x
+DESCXYLO.314;After our vain efforts and now several years of misdeeds, the activity of the poachers in our forest land seems to have slowed to the point of disappearing by itself.;Après nos efforts vains et maintenant plusieurs années de méfaits, l'activité des braconniers sur nos terres semble s'être ralentie au point de disparaitre d'elle même.;;;;;;;;;;;;x
+XYLO.314A;A good news!;Une bonne nouvelle !;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;EVENTS BANDITS;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
