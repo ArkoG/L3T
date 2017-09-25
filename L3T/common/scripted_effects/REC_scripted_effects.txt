@@ -13,7 +13,7 @@ opus_francigenum_dynamic_apparition = {
 			chance = 5
 			modifier = {
 				factor = 0.5
-				year = 1100
+				year = 1050
 			}
 			modifier = {
 				factor = 2
@@ -28,8 +28,12 @@ opus_francigenum_dynamic_apparition = {
 				check_variable = { which = "global_burns" value = 30 }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.8
 				NOT = { total_years_played = 60 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { ruled_years	 = 10 }
 			}			
 			modifier = {
 				factor = 1.2
