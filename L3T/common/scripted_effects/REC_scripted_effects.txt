@@ -7,17 +7,25 @@ opus_francigenum_dynamic_apparition = {
 				name = opus_francigenum
 				value = dynamic
 			}
-			#year = 1100
+			year = 1000
 		}
 		random = { 
 			chance = 5
 			modifier = {
-				factor = 0.5
+				factor = 0.6
 				year = 1050
 			}
 			modifier = {
-				factor = 2
+				factor = 1.4
+				year = 1135
+			}
+			modifier = {
+				factor = 1.5
 				year = 1140
+			}
+			modifier = {
+				factor = 2
+				year = 1150
 			}
 			modifier = {
 				factor = 1.4
@@ -32,7 +40,11 @@ opus_francigenum_dynamic_apparition = {
 				NOT = { total_years_played = 60 }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 1.5
+				total_years_played = 80
+			}
+			modifier = {
+				factor = 0.8
 				NOT = { ruled_years	 = 10 }
 			}			
 			modifier = {
