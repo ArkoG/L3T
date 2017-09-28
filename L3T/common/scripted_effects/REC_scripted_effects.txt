@@ -12,7 +12,7 @@ opus_francigenum_dynamic_apparition = {
 		random = { 
 			chance = 5
 			modifier = {
-				factor = 0.6
+				factor = 0.5
 				year = 1050
 			}
 			modifier = {
@@ -20,29 +20,39 @@ opus_francigenum_dynamic_apparition = {
 				year = 1135
 			}
 			modifier = {
-				factor = 1.5
-				year = 1140
-			}
-			modifier = {
 				factor = 2
 				year = 1150
 			}
 			modifier = {
-				factor = 1.4
+				factor = 1.2
 				check_variable = { which = "global_burns" value = 20 }
 			}
 			modifier = {
-				factor = 1.4
+				factor = 1.5
 				check_variable = { which = "global_burns" value = 30 }
 			}
 			modifier = {
+				factor = 2
+				check_variable = { which = "global_burns" value = 40 }
+			}
+			modifier = {
 				factor = 0.8
-				NOT = { total_years_played = 60 }
+				NOT = { total_years_played = 50 }
 			}
 			modifier = {
 				factor = 1.5
-				total_years_played = 80
+				AND = {
+					NOT = { start_date = 1070.1.1 }
+					total_years_played = 60 #~1130
+				}
 			}
+			modifier = {
+				factor = 1.5
+				AND = {
+					NOT = { start_date = 1040.1.1 }
+					total_years_played = 100 #~1140
+				}
+			}			
 			modifier = {
 				factor = 0.8
 				NOT = { ruled_years	 = 10 }
@@ -52,7 +62,7 @@ opus_francigenum_dynamic_apparition = {
 				learning = 12
 			}
 			modifier = {
-				factor = 1.2
+				factor = 1.3
 				learning = 15
 			}
 			modifier = {
