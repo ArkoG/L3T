@@ -175,6 +175,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chapelle2
+		remove_trait = dynastic_keeper
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_chap_seign }
@@ -584,8 +585,10 @@ character_event = {
 				has_character_modifier = librairie_2
 			}
 			AND = {
-				NOT = { capital_holding = { has_building = CA_chap_seign_2 }}
-				NOT = { capital_holding = { has_building = CA_library_L2 }}
+				OR = {
+					NOT = { capital_holding = { has_building = CA_chap_seign_2 }}
+					NOT = { capital_holding = { has_building = CA_library_L2 }}
+				}
 				trait = dynastic_keeper
 			}
 		}
@@ -651,8 +654,10 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = { capital_holding = { has_building = CA_library_L2 } }
-				NOT = { capital_holding = { has_building = CA_chap_seign_2 } }
+				OR = {
+					NOT = { capital_holding = { has_building = CA_library_L2 } }
+					NOT = { capital_holding = { has_building = CA_chap_seign_2 } }
+				}
 				trait = dynastic_keeper
 			}
 			remove_trait = dynastic_keeper
@@ -1019,6 +1024,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = librairie_2
+		remove_trait = dynastic_keeper
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_library_L1 }
