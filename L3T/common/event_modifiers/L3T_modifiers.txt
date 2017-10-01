@@ -599,7 +599,7 @@ chapelle2 = {
 	church_opinion = 5
 	monthly_character_piety = 0.35
 	monthly_character_prestige = 0.10
-	dynasty_opinion = 5
+	#dynasty_opinion = 7 #given by dynastic_keeper trait
 }
 chambre = {
 	icon = 4
@@ -630,7 +630,8 @@ librairie_2 = {
 	icon = 2
 	learning = 2
 	monthly_character_prestige = 0.10
-	dynasty_opinion = 7
+	castle_opinion = 5 #feudal vassals are very into the genealogy thing
+	#dynasty_opinion = 7 #given by dynastic_keeper trait
 }
 
 #EASTER EGG
