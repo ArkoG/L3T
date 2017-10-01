@@ -583,6 +583,11 @@ character_event = {
 				NOT = { capital_holding = { has_building = CA_library_L2 } }
 				has_character_modifier = librairie_2
 			}
+			AND = {
+				NOT = { capital_holding = { has_building = CA_chap_seign_2 }}
+				NOT = { capital_holding = { has_building = CA_library_L2 }}
+				trait = dynastic_keeper
+			}
 		}
 	}
 	
@@ -644,6 +649,14 @@ character_event = {
 			}
 			remove_character_modifier = librairie_2
 		}
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_library_L2 } }
+				NOT = { capital_holding = { has_building = CA_chap_seign_2 } }
+				trait = dynastic_keeper
+			}
+			remove_trait = dynastic_keeper
+		}
 		remove_feodal_adm_modifier_in_capital_if_necessary = yes
 	}
 }
@@ -662,6 +675,7 @@ character_event = {
 		OR = {
 			AND = {
 				capital_holding = { has_building = CA_chap_seign }
+				NOT = { capital_holding = { has_building = CA_chap_seign_2 }}
 				NOT = { has_character_modifier = chapelle }
 			}
 			AND = {
@@ -686,11 +700,17 @@ character_event = {
 			}
 			AND = {
 				capital_holding = { has_building = CA_library_L1 }
+				NOT = { capital_holding = { has_building = CA_library_L2 }}
 				NOT = { has_character_modifier = librairie_1 }
 			}
 			AND = {
 				capital_holding = { has_building = CA_library_L2 }
 				NOT = { has_character_modifier = librairie_2 }
+			}
+			AND = {
+				capital_holding = { has_building = CA_chap_seign_2 }
+				capital_holding = { has_building = CA_library_L2 }
+				NOT = { trait = dynastic_keeper }
 			}
 		}
 	}
@@ -699,6 +719,7 @@ character_event = {
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_chap_seign }
+				NOT = { capital_holding = { has_building = CA_chap_seign_2 }}
 				NOT = { has_character_modifier = chapelle }
 			}
 			add_character_modifier = { name = chapelle duration = -1 }
@@ -748,6 +769,7 @@ character_event = {
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_library_L1 }
+				NOT = { capital_holding = { has_building = CA_library_L2 }}
 				NOT = { has_character_modifier = librairie_1 }
 			}
 			add_character_modifier = { name = librairie_1 duration = -1 }
@@ -760,6 +782,15 @@ character_event = {
 			}
 			remove_character_modifier = librairie_1
 			add_character_modifier = { name = librairie_2 duration = -1 }
+			set_character_flag = feodal_adm_modifier
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_library_L2 }
+				capital_holding = { has_building = CA_chap_seign_2 }
+				NOT = { trait = dynastic_keeper }
+			}
+			add_trait = dynastic_keeper
 			set_character_flag = feodal_adm_modifier
 		}
 	}
