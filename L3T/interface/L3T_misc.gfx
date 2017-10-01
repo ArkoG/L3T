@@ -63,8 +63,14 @@ spriteTypes = {
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-	
-
+#L3T traits
+	spriteType = {
+		name = "GFX_trait_dynastic_keeper"
+		texturefile = "gfx/traits/dynastic_keeper.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
 #XYLO traits	
 	spriteType = {
 		name = "GFX_trait_chef_malandrin"
