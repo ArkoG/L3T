@@ -470,7 +470,7 @@ character_event = {
 	desc = {
 		trigger = { religion_group = muslim }
 		text = "DESCL3T.2521Y"
-		picture = "GFX_evt_book_carolingian_script"
+		picture = "GFX_evt_L3T_muslim_blue_dome"
 	}
 
 	only_playable = yes
@@ -614,9 +614,20 @@ character_event = {
 }
 character_event = {
 	id = L3T.254
-	desc = "DESCL3T.254"
+	#desc = "DESCL3T.254"
 	picture = "GFX_evt_book_carolingian_script"
 
+	desc = {
+		trigger = { NOT = { trait = lunatic }}
+		text = "DESCL3T.254"
+		picture = "GFX_evt_book_carolingian_script"
+	}
+	desc = {
+		trigger = { NOT = { trait = lunatic }}
+		text = "DESCL3T.254_alt"
+		picture = "GFX_evt_book_carolingian_script"
+	}
+	
 	only_playable = yes
 	is_triggered_only = yes
 
@@ -626,15 +637,58 @@ character_event = {
 
 	option = {
 		name = "L3T.254A" #persévérer
-		character_event = { id = L3T.255 days = 15 random = 5 }
-		ai_chance = { factor = 80 }
+		trigger = { NOT = { trait = lunatic }}
+		custom_tooltip = { text = continue_letude_du_livre }
+		character_event = { id = L3T.255 days = 25 random = 5 }
+		ai_chance = { 
+			factor = 80
+			modifier = { factor = 2 trait = patient }			
+			modifier = { factor = 1.1 trait = stubborn }
+			modifier = { factor = 1.1 trait = diligent }
+		}
 	}
 	option = {
 		name = "L3T.254B" #abandon
+		trigger = { NOT = { trait = lunatic }}
 		custom_tooltip = { text = abandonne_letude_du_livre }
 		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
 		set_character_flag = dropped_book_study
-		ai_chance = { factor = 20 }
+		ai_chance = { 
+			factor = 20
+			modifier = { factor = 2 trait = slothful }
+			modifier = { factor = 1.2 trait = content }
+		}
+	}
+	option = {
+		name = "L3T.254C" #let's concentrate
+		trigger = { trait = lunatic }
+		tooltip_info = lunatic
+		custom_tooltip = { text = continue_letude_du_livre }
+		hidden_tooltip = { 
+			random_list = {	
+				50 = { 
+					character_event = { id = L3T.255 days = 35 random = 5 }
+				}
+				50 = {
+					character_event = { id = L3T.2541 days = 35 random = 5 } #book is burning in a loudy and insane laugh!
+					#character_event = { id = L3T.2510 days = 41 } #flag cleaner, end of chain #launched by L3T.2541 instead
+				}
+			}
+		}
+		ai_chance = { factor = 25 }
+	}
+	option = {
+		name = "L3T.254D" #buuuuuuuuuuuuuUUUUrn !!!
+		trigger = { trait = lunatic }
+		tooltip_info = lunatic
+		custom_tooltip = { text = brule_letude_du_livre }
+		hidden_tooltip = { character_event = { id = L3T.2541 }} #book is burning in a loudy and insane laugh!
+		#hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+		set_character_flag = burnt_book_study
+		ai_chance = { 
+			factor = 75
+			modifier = { factor = 2 trait = wroth }
+		}
 	}
 }
 character_event = {
@@ -1061,7 +1115,20 @@ character_event = {
 		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
 	}
 }
+character_event = {
+	id = L3T.2541
+	desc = "DESCL3T.2541"
+	picture = "GFX_evt_L3T_book_burning"
 
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.2541"
+		custom_tooltip = { text = burned_book_warning }
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+}
 #clean used book flag on artifact acquisition
 character_event = {
 	id = L3T.256
