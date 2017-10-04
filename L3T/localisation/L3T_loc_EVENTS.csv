@@ -113,7 +113,7 @@ DESCL3T.11093;;La valeur de [holding_dev.developpementold.GetName] de [holding_d
 DESCL3T.11094;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \n a augmenté de 10 grâce au développement d'une ressource avancée dans la province.;;;;;;;;;;;;x
 DESCL3T.11095;;La valeur de [holding_dev.developpementold.GetName] de [holding_dev.developpementold.GetValue]\nLe niveau de [holding_dev.developpement.GetName] [holding_dev.GetDeDapostrophe][holding_dev.GetName] est de [holding_dev.developpement.GetValue] \n a augmenté de 20 grâce au développement d'une ressource lucrative dans la province.;;;;;;;;;;;;x
 #;BOOKS;x;;;;;;;;;;;;x
-DESCL3T.250;;à qui acheter ce fichu bouquin;;;;;;;;;;;x
+DESCL3T.250;Now that we are looking for a book, it is a question of finding out who we are going to buy from. \nThe different partners will offer us works of types, qualities and, of course, variable prices.;Maintenant que nous nous sommes mis en quête d'acquérir un livre, il s'agit de trouver auprès de qui nous allons effectuer notre achat. \nLes différents interlocuteurs nous proposeront des ouvrages de types, qualités et, bien entendu, des prix variables. ;;;;;;;;;;;x
 L3T.250A;At a local merchant's;Auprès d'un marchand local;;;;;;;;;;;x
 L3T.250B;Meet a scholar;Rendons-nous chez un érudit;;;;;;;;;;;x
 L3T.250C;Visit a monastery;Visitons un monastère;;;;;;;;;;;x
@@ -144,11 +144,11 @@ DESCL3T.2514;Among the books which at first sight appear unpleasant, several att
 L3T.2514K;A treaty about currencies;Un traité sur les monnaies;;;;;;;;;;;x
 L3T.2514L;A guide about trade;Un guide du commerce;;;;;;;;;;;x
 L3T.2514M;An accounting treaty;Un livre sur la comptabilité;;;;;;;;;;;x
-DESCL3T.2521X;Psalms of Solomon;Psaumes de Salomon;;;;;;;;;x
-DESCL3T.2521Y;Handwritten Quran;Coran manusrit;;;;;;;;;x
+DESCL3T.2521X;;Psalms of Solomon Psaumes de Salomon;;;;;;;;;x
+DESCL3T.2521Y;;Handwritten Quran Coran manusrit;;;;;;;;;x
 DESCL3T.2522;The Book on Calculation by Completion and Balancing by al-Khwarizmi;Le livre du rajout et de l'équilibre d'al-Khwarizmi;Le livre du rajout et de l'équilibre d'al-Khwarizmi;;;;;;;;;;;x
-DESCL3T.2523;Mirabilia;Mirabilia;;;;;;;;;;;x
-DESCL3T.2524;The Silk road;La route de la soie;;;;;;;;;;;x
+DESCL3T.2523;;Mirabilia Mirabilia;;;;;;;;;;;x
+DESCL3T.2524;;The Silk road La route de la soie;;;;;;;;;;;x
 L3T.2510X;This was unexpected!;Voilà qui était inattendu !;;;;;;;;;;;x
 DESCL3T.253;;start studying;;;;;;;;;;x
 study_starts;We start studying the choosen book;Nous entamons l'étude du livre;;;;;;;;;;x
@@ -157,8 +157,13 @@ L3T.253B;Search the lights of a science book;Cherchons l'éclairage d'un livre de
 L3T.253C;Some beautiful words;De la littérature;;;;;;;;;;x
 L3T.253D;Some fun accounting and economy!;Un bouquin sur l'économie;;;;;;;;;;x
 DESCL3T.254;;difficultés rencontrées;;;;;;;;;;x
+DESCL3T.254_alt;Letters and numbers get tangled up ... how about numbers? The lines of words seem to dance and taunt us by making fun. \nWhat a jumble this book is! Where would it be in our only in our thoughts that this is confused?;Lettres et chiffres s'emmêlent... comment ça des chiffres ? Les lignes de mots semblent danser et nous narguer en se moquant. \nQuel fouillis ce livre ! Où serait-ce dans notre uniquement dans nos pensées que cela est confus ? ;;;;;;;;;;x
 L3T.254A;Persevere!;Perséverons !;;;;;;;;;;x
 L3T.254B;Forget it for now...;Restons-en là...;;;;;;;;;;x
+L3T.254C;I have to concentrate...;Il faut que je me concentre...;;;;;;;;;;x
+continue_letude_du_livre;We try to focus on the reading... let's hope it won't be vain.;Nous tentons de nous recentrer sur la lecture... en espérant que ce ne soit pas vain.;;;;;;;;;;x
+L3T.254D;Buuuurn !;Brûuuule ! ;;;;;;;;;;x
+brule_letude_du_livre;The study ends here, in a flames and ashes fest mouahahaaaa !!;L'étude prend fin ici, dans un festival de flammes et de cendres mouhahahaaaaa !!;;;;;;;;x
 abandonne_letude_du_livre;We put away that et drop this kind of activity for a while.;Nous rangeons le livre sur son étagère et abandonnons cette activité pour un temps.;;;;;;;;;;x
 DESCL3T.2551;;ça ne donne rien;;;;;;;;;;x
 L3T.2551A;We'll somehow try that later on...;On verra une prochaine fois...;;;;;;;;;;;x
@@ -172,6 +177,9 @@ L3T.2553A;Hallelujah!;Hallelujah !;;;;;;;;;;;x
 L3T.2553B;Science is all!;La science vaincra !;;;;;;;;;;;x
 L3T.2553C;Words are evertything!;Les mots, les mots, l'émotion vient !;;;;;;;;;;;x
 L3T.2553D;1+1=2!;1+1=2 !;;;;;;;;;;;x
+DESCL3T.2541;;book burning notif;;;;;;;;;;;x
+L3T.2541;;mouhahahaaaaa !!;;;;;;;;;;;x
+burned_book_warning;This character won't appraoch a book for a while...;Ce personnage ne pourra plus approcher un livre pendant un certain temps...;;;;;;;;;x
 #;EASTER EGGS;x;;;;;;;;;;;;x
 DESCL3T.401;War disrupts our Easter Eggs Hunt. We are forced to cancel our activities.;La guerre nous oblige à renoncer à notre recherche d'œufs de Pâques.;;;;;;;;;;x;
 L3T.401A;There is always next spring...;Rendez-vous le printemps prochain...;;;;;;;;;;;x;
