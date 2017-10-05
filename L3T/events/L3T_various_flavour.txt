@@ -504,11 +504,13 @@ character_event = {
 		name = "L3T.2510X"
 		trigger = { religion_group = christian }
 		add_artifact = book_N
+		custom_tooltip = { text = book_unique_recu }
 	}
 	option = {
 		name = "L3T.2510X"
 		trigger = { religion_group = muslim }
 		add_artifact = book_O
+		custom_tooltip = { text = book_unique_recu }
 	}
 }
 character_event = {
@@ -522,6 +524,7 @@ character_event = {
 	option = {
 		name = "L3T.2510X"
 		add_artifact = book_P
+		custom_tooltip = { text = book_unique_recu }
 	}
 }
 character_event = {
@@ -535,6 +538,7 @@ character_event = {
 	option = {
 		name = "L3T.2510X"
 		add_artifact = book_Q
+		custom_tooltip = { text = book_unique_recu }
 	}
 }
 character_event = {
@@ -548,6 +552,7 @@ character_event = {
 	option = {
 		name = "L3T.2510X"
 		add_artifact = book_R
+		custom_tooltip = { text = book_unique_recu }
 	}
 }
 
