@@ -30,22 +30,34 @@ character_event = {
 		trigger = { has_all_books_from_scholar = no }
 		set_character_flag = buying_books_at_scholar
 		character_event = { id = L3T.251 days = 15 } #choose the type of book
-		ai_chance = { factor = 1 modifier = { factor = 1.5	has_focus = focus_scholarship }}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 1.5	has_focus = focus_scholarship }
+			modifier = { factor = 1.5	has_ambition = obj_improve_learning }
 		}
+	}
 	option = {
 		name = "L3T.250C"
 		trigger = { has_all_books_from_monastery = no }
 		set_character_flag = buying_books_at_monastery
 		trigger = { religion_group = christian }
 		character_event = { id = L3T.251 days = 20 } #choose the type of book
-		ai_chance = { factor = 1 modifier = { factor = 1.5	has_focus = focus_theology }}
+		ai_chance = { 
+			factor = 1 
+			modifier = { factor = 1.5	has_focus = focus_theology }
+			modifier = { factor = 1.2	has_ambition = obj_improve_learning }
+		}
 	}
 	option = {
 		name = "L3T.250D"
 		trigger = { has_all_books_from_foreign_merchant = no }
 		set_character_flag = buying_books_at_foreign_merchant
 		character_event = { id = L3T.251 days = 30 } #choose the type of book
-		ai_chance = { factor = 1 modifier = { factor = 1.5	has_focus = focus_business }}
+		ai_chance = { 
+			factor = 1 
+			modifier = { factor = 1.5	has_focus = focus_business }
+			modifier = { factor = 1.5	has_ambition = obj_improve_stewardship }
+		}
 	}
 }
 
@@ -236,7 +248,11 @@ character_event = {
 		add_artifact = book_C
 		wealth = -135 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
-		ai_chance = { factor = 1 modifier = { factor = 1.2	trait = scholar }}
+		ai_chance = { 
+			factor = 1 
+			modifier = { factor = 1.2	trait = scholar } #scholar in non muslim version of Faqih
+			modifier = { factor = 1.2	trait = faqih }
+		}
 		if = {
 			limit = { 
 				NOT = { has_global_flag = book_science_unique_found }
@@ -265,7 +281,11 @@ character_event = {
 		add_artifact = book_D
 		wealth = -120 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
-		ai_chance = { factor = 1 modifier = { factor = 1.2	trait = scholar }}
+		ai_chance = { 
+			factor = 1 
+			modifier = { factor = 1.2	trait = scholar }
+			modifier = { factor = 1.2	trait = faqih }
+		}
 	}
 	option = {
 		name = "L3T.2512E"
@@ -289,7 +309,11 @@ character_event = {
 		add_artifact = book_F
 		wealth = -145 #revoir prix
 		character_event = { id = L3T.2510 } #flag cleaner
-		ai_chance = { factor = 1 modifier = { factor = 1.2	trait = hunter }}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 1.3	trait = hunter }
+			modifier = { factor = 1.1	trait = falconer }
+		}
 	}
 }
 character_event = {
@@ -614,7 +638,6 @@ character_event = {
 }
 character_event = {
 	id = L3T.254
-	#desc = "DESCL3T.254"
 	picture = "GFX_evt_book_carolingian_script"
 
 	desc = {
@@ -623,7 +646,7 @@ character_event = {
 		picture = "GFX_evt_book_carolingian_script"
 	}
 	desc = {
-		trigger = { NOT = { trait = lunatic }}
+		trigger = { trait = lunatic }
 		text = "DESCL3T.254_alt"
 		picture = "GFX_evt_book_carolingian_script"
 	}
@@ -707,13 +730,17 @@ character_event = {
 					limit = {
 						has_character_flag = studying_religious_books
 					}
-					random_artifact = {
-						limit = {
-							has_artifact_flag = religious_books
-							NOT = { has_artifact_flag = used_book }
-							NOT = { has_artifact_flag = book_in_use }
+					FROM = {
+						random_artifact = {
+							limit = {
+								has_artifact_flag = religious_books
+								NOT = { has_artifact_flag = unique_book }
+								NOT = { has_artifact_flag = used_book }
+								NOT = { has_artifact_flag = book_in_use }
+							}
+							set_artifact_flag = book_in_use
+							
 						}
-						set_artifact_flag = book_in_use
 					}
 					random_list = {
 						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
@@ -724,13 +751,17 @@ character_event = {
 					limit = {
 						has_character_flag = studying_science_book
 					}
-					random_artifact = {
-						limit = {
-							has_artifact_flag = science_book
-							NOT = { has_artifact_flag = used_book }
-							NOT = { has_artifact_flag = book_in_use }
+					FROM = {
+						random_artifact = {
+							limit = {
+								has_artifact_flag = science_book
+								NOT = { has_artifact_flag = unique_book }
+								NOT = { has_artifact_flag = used_book }
+								NOT = { has_artifact_flag = book_in_use }
+							}
+							set_artifact_flag = book_in_use
+							
 						}
-						set_artifact_flag = book_in_use
 					}
 					random_list = {
 						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
@@ -741,13 +772,17 @@ character_event = {
 					limit = {
 						has_character_flag = studying_litteracy_book
 					}
-					random_artifact = {
-						limit = {
-							has_artifact_flag = litteracy_book
-							NOT = { has_artifact_flag = used_book }
-							NOT = { has_artifact_flag = book_in_use }
+					FROM = {
+						random_artifact = {
+							limit = {
+								has_artifact_flag = litteracy_book
+								NOT = { has_artifact_flag = unique_book }
+								NOT = { has_artifact_flag = used_book }
+								NOT = { has_artifact_flag = book_in_use }
+							}
+							set_artifact_flag = book_in_use
+							
 						}
-						set_artifact_flag = book_in_use
 					}
 					random_list = {
 						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
@@ -758,13 +793,17 @@ character_event = {
 					limit = {
 						has_character_flag = studying_economy_book
 					}
-					random_artifact = {
-						limit = {
-							has_artifact_flag = economy_book
-							NOT = { has_artifact_flag = used_book }
-							NOT = { has_artifact_flag = book_in_use }
+					FROM = {
+						random_artifact = {
+							limit = {
+								has_artifact_flag = economy_book
+								NOT = { has_artifact_flag = unique_book }
+								NOT = { has_artifact_flag = used_book }
+								NOT = { has_artifact_flag = book_in_use }
+							}
+							set_artifact_flag = book_in_use
+							
 						}
-						set_artifact_flag = book_in_use
 					}
 					random_list = {
 						20 = { character_event = { id = L3T.2552 }} #ce livre ne nous apprendra jamais rien
@@ -777,7 +816,7 @@ character_event = {
 }
 
 #STUDYING BOOKS NOTIFICATIONS
-character_event = {
+character_event = { #leads to nothing, the book can be used again
 	id = L3T.2551
 	desc = "DESCL3T.2551"
 	picture = "GFX_evt_book_carolingian_script"
@@ -790,7 +829,7 @@ character_event = {
 		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
 	}
 }
-character_event = {
+character_event = {  #unsuccessfull reading, the book is marked as used
 	id = L3T.2552
 	desc = "DESCL3T.2552"
 	picture = "GFX_evt_book_carolingian_script"
@@ -799,131 +838,173 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_A
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_A
+				}
+				owner = { set_character_flag = used_book_A }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_A }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_B
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_B
+				}
+				owner = { set_character_flag = used_book_B }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_B }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = {
-				has_artifact_flag = book_in_use
-				artifact_type = book_S
+		FROM = {
+			random_artifact = {
+				limit = {
+					has_artifact_flag = book_in_use
+					artifact_type = book_S
+				}
+				owner = { set_character_flag = used_book_S }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_S }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_C
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_C
+				}
+				owner = { set_character_flag = used_book_C }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_C }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_D
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_D
+				}
+				owner = { set_character_flag = used_book_D }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_D }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_E
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_E
+				}
+				owner = { set_character_flag = used_book_E }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_E }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_F
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_F
+				}
+				owner = { set_character_flag = used_book_F }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_F }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_G
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_G
+				}
+				owner = { set_character_flag = used_book_G }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_G }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_H
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_H
+				}
+				owner = { set_character_flag = used_book_H }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_H }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_I
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_I
+				}
+				owner = { set_character_flag = used_book_I }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_I }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_J
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_J
+				}
+				owner = { set_character_flag = used_book_J }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_J }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_K
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_K
+				}
+				owner = { set_character_flag = used_book_K }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_K }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_L
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_L
+				}
+				owner = { set_character_flag = used_book_L }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
+			}		
+		}
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_M
+				}
+				owner = { set_character_flag = used_book_M }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				
 			}
-			owner = { set_character_flag = used_book_L }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
-		}		
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_M
-			}
-			owner = { set_character_flag = used_book_M }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
 	}
 	option = {
@@ -932,7 +1013,7 @@ character_event = {
 	}
 }
 #BOOK STUDY RESULTS
-character_event = { 
+character_event = { #successfull reading, the book is marked as used
 	id = L3T.2553
 	#desc = "DESCL3T.2553"
 	picture = "GFX_evt_book_carolingian_script"
@@ -945,7 +1026,7 @@ character_event = {
 	desc = {
 		trigger = { has_character_flag = studying_science_book }
 		text = "DESCL3T.2553B"
-		picture = "GFX_evt_book_carolingian_script"
+		picture = "GFX_evt_scientist"
 	}
 	desc = {
 		trigger = { has_character_flag = studying_litteracy_book }
@@ -962,156 +1043,391 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_A
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_A
+				}
+				owner = { set_character_flag = used_book_A }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_A }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_B
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_B
+				}
+				owner = { set_character_flag = used_book_B }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_B }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = {
-				has_artifact_flag = book_in_use
-				artifact_type = book_S
+		FROM = {
+			random_artifact = {
+				limit = {
+					has_artifact_flag = book_in_use
+					artifact_type = book_S
+				}
+				owner = { set_character_flag = used_book_S }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_S }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_C
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_C
+				}
+				owner = { set_character_flag = used_book_C }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_C }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_D
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_D
+				}
+				owner = { set_character_flag = used_book_D }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_D }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_E
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_E
+				}
+				owner = { set_character_flag = used_book_E }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_E }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = {
-				has_artifact_flag = book_in_use
-				artifact_type = book_F
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_F
+				}
+				owner = { set_character_flag = used_book_F }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_F }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_G
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_G
+				}
+				owner = { set_character_flag = used_book_G }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_G }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_H
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_H
+				}
+				owner = { set_character_flag = used_book_H }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_H }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_I
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_I
+				}
+				owner = { set_character_flag = used_book_I }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_I }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_J
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_J
+				}
+				owner = { set_character_flag = used_book_J }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_J }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_K
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_K
+				}
+				owner = { set_character_flag = used_book_K }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_K }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_L
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_L
+				}
+				owner = { set_character_flag = used_book_L }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
+			}		
+		}
+		FROM = {
+			random_artifact = {
+				limit = { 
+					has_artifact_flag = book_in_use
+					artifact_type = book_M
+				}
+				owner = { set_character_flag = used_book_M }
+				set_artifact_flag = used_book
+				clr_artifact_flag = book_in_use
+				#
 			}
-			owner = { set_character_flag = used_book_L }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
-		}		
-		random_artifact = {
-			limit = { 
-				has_artifact_flag = book_in_use
-				artifact_type = book_M
-			}
-			owner = { set_character_flag = used_book_M }
-			set_artifact_flag = used_book
-			clr_artifact_flag = book_in_use
 		}
 	}
 	
+	##studying_religious_books
 	option = {
-		name = "L3T.2553A"
+		name = "L3T.2553_attribut"
 		trigger = { has_character_flag = studying_religious_books }
 		#effect
+		change_learning = 2
+		random_list = {
+			20 = { piety = 50 }
+			30 = { piety = 100 }
+			30 = { piety = 125 }
+			20 = { piety = 175 }
+		}
+		ai_chance = { factor = 20 }
 		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
 	}
 	option = {
-		name = "L3T.2553B"
+		name = "L3T.2553_lifestyle_a"
+		trigger = {
+			has_character_flag = studying_religious_books
+			NOT = { trait = erudite }
+		}
+		#effect
+		add_trait = erudite #not a lifestyle trait
+		ai_chance = { factor = 60 }
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	option = {
+		name = "L3T.2553_educatio" #upgrade education trait 1>>2 or 2>>3
+		trigger = {
+			has_character_flag = studying_religious_books
+			OR = {
+				trait = detached_priest #1
+				trait = martial_cleric #2
+			}
+		}
+		#effect
+		if = {
+			limit = { trait = detached_priest } #1
+			remove_trait = detached_priest #1
+			add_trait = martial_cleric #2
+		}
+		if = {
+			limit = { trait = martial_cleric } #2
+			remove_trait = martial_cleric #2
+			add_trait = scholarly_theologian #3
+		}	
+		ai_chance = { factor = 30 }
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	
+	##studying_science_book
+	option = {
+		name = "L3T.2553_attribut"
 		trigger = { has_character_flag = studying_science_book }
 		#effect
+		change_learning = 2
+		ai_chance = { factor = 20 }
 		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
 	}
 	option = {
-		name = "L3T.2553C"
+		name = "L3T.2553_lifestyle_b"
+		trigger = { 
+			has_character_flag = studying_science_book
+			NOT = { lifestyle_traits = 1 }
+		}
+		#effect
+		add_trait = scholar
+		ai_chance = { factor = 60 }
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	option = {
+		name = "L3T.2553_lifestyle_c"
+		trigger = { 
+			has_character_flag = studying_science_book
+			NOT = { lifestyle_traits = 1 }
+			NOT = {
+				had_character_flag = { 
+					flag = used_book_E #botanique
+					days = 2 #to catch only the most recent study
+				}
+			}
+		}
+		#effect
+		custom_tooltip = { text = used_botanic_book }
+		add_trait = gardener
+		ai_chance = { factor = 10 }
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	
+	##studying_litteracy_book
+	option = {
+		name = "L3T.2553_attribut"
 		trigger = { has_character_flag = studying_litteracy_book }
 		#effect
+		random_list = { 
+			50 = { 
+				change_learning = 1
+				change_diplomacy = 1
+			}
+			50 = {
+				change_diplomacy = 2
+			}
+		}
+		ai_chance = { factor = 20 }
 		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
 	}
 	option = {
-		name = "L3T.2553D"
+		name = "L3T.2553_lifestyle_c"
+		trigger = { 
+			has_character_flag = studying_litteracy_book
+			NOT = { lifestyle_traits = 1 }
+		}
+		#effect
+		add_trait = socializer 
+		ai_chance = { factor = 60 }
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	option = {
+		name = "L3T.2553_lifestyle_c"
+		trigger = { 
+			has_character_flag = studying_litteracy_book
+			lifestyle_traits = 1
+			OR = {
+				NOT = {
+					had_character_flag = { 
+						flag = used_book_G #poésie
+						days = 2 #to catch only the most recent study
+					}
+				}
+				NOT = {
+					had_character_flag = { 
+						flag = used_book_H #poésie
+						days = 2 #to catch only the most recent study
+					}
+				}
+			}
+		}
+		#effect
+		custom_tooltip = { text = used_poetry_book }
+		add_trait = poet
+		ai_chance = { factor = 10 }
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	option = {
+		name = "L3T.2553_educatio" #upgrade education trait 1>>2 or 2>>3
+		trigger = {
+			has_character_flag = studying_litteracy_book
+			OR = {
+				trait = naive_appeaser #1
+				trait = underhanded_rogue #2
+			}
+		}
+		#effect
+		if = { 
+			limit = { trait = naive_appeaser } #1 
+			remove_trait = naive_appeaser #1
+			add_trait = underhanded_rogue #2
+		}
+		if = { 
+			limit = { trait = underhanded_rogue } #2 
+			remove_trait = underhanded_rogue #2
+			add_trait = charismatic_negotiator #3
+		}	
+		ai_chance = { factor = 30 }		
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	
+	##studying_economy_book	
+	option = {
+		name = "L3T.2553_attribut"
 		trigger = { has_character_flag = studying_economy_book }
 		#effect
+		random_list = { 
+			50 = { 
+				change_learning = 1
+				change_stewardship = 1
+			}
+			50 = {
+				change_stewardship = 2
+			}
+		}
+		ai_chance = { factor = 20 }
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	option = {
+		name = "L3T.2553_lifestyle_d"
+		trigger = { 
+			has_character_flag = studying_economy_book 
+			NOT = { lifestyle_traits = 1 }
+		}
+		#effect
+		add_trait = administrator 
+		ai_chance = { factor = 60 }
+		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+	}
+	option = {
+		name = "L3T.2553_educatio" #upgrade education trait 1>>2 or 2>>3
+		trigger = {
+			has_character_flag = studying_economy_book 
+			OR = {
+				trait = indulgent_wastrel #1
+				trait = thrifty_clerk  #2
+			}
+		}
+		if = {
+			limit = { trait = indulgent_wastrel }
+			remove_trait = indulgent_wastrel  #1
+			add_trait = thrifty_clerk  #2
+		}
+		if = {
+			limit = { trait = thrifty_clerk }
+			remove_trait = thrifty_clerk  #2
+			add_trait = fortune_builder  #3
+		}
+		ai_chance = { factor = 30 }
 		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
 	}
 }
@@ -1123,12 +1439,76 @@ character_event = {
 	only_playable = yes
 	is_triggered_only = yes
 
-	option = {
+	immediate = { #marque le livre utilisé
+		if = {
+			limit = {
+				has_character_flag = studying_religious_books
+			}
+			random_artifact = {
+				limit = {
+					has_artifact_flag = religious_books
+					NOT = { has_artifact_flag = unique_book }
+					NOT = { has_artifact_flag = used_book }
+					NOT = { has_artifact_flag = book_in_use }
+				}
+				set_artifact_flag = book_in_use
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = studying_science_book
+			}
+			random_artifact = {
+				limit = {
+					has_artifact_flag = science_book
+					NOT = { has_artifact_flag = unique_book }
+					NOT = { has_artifact_flag = used_book }
+					NOT = { has_artifact_flag = book_in_use }
+				}
+				set_artifact_flag = book_in_use
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = studying_litteracy_book
+			}
+			random_artifact = {
+				limit = {
+					has_artifact_flag = litteracy_book
+					NOT = { has_artifact_flag = unique_book }
+					NOT = { has_artifact_flag = used_book }
+					NOT = { has_artifact_flag = book_in_use }
+				}
+				set_artifact_flag = book_in_use
+			}
+		}	
+		if = {
+			limit = {
+				has_character_flag = studying_economy_book
+			}
+			random_artifact = {
+				limit = {
+					has_artifact_flag = economy_book
+					NOT = { has_artifact_flag = unique_book }
+					NOT = { has_artifact_flag = used_book }
+					NOT = { has_artifact_flag = book_in_use }
+				}
+				set_artifact_flag = book_in_use
+			}
+		}
+	}
+
+	option = { #detruit le livre utilisé
 		name = "L3T.2541"
 		custom_tooltip = { text = burned_book_warning }
 		hidden_tooltip = { character_event = { id = L3T.2510 }} #flag cleaner, end of chain
+		random_artifact = {
+			limit = { has_artifact_flag = book_in_use }
+			destroy_artifact = yes
+		}
 	}
 }
+
 #clean used book flag on artifact acquisition
 character_event = {
 	id = L3T.256
