@@ -177,6 +177,17 @@ decisions = {
 				}
 			}
 			custom_tooltip = {
+				text = max_studied_books
+				hidden_tooltip = {
+					NOT = {
+						any_artifact = {
+							count = 3
+							has_artifact_flag = used_book
+						}
+					}
+				}
+			}
+			custom_tooltip = {
 				text = burnt_book_study
 				hidden_tooltip = {
 					OR = {
