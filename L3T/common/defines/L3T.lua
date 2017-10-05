@@ -35,3 +35,4 @@
 	NDefines.NAI.DOW_AGGRESSION_FACTOR = 0.25
 	NDefines.NEconomy.BUILDING_COST_MULT = 0.0						-- Increase to the build cost of all buildings that cost GOLD
 	NDefines.NGraphics.TREASURY_MODIFIER_ICON_FRAME = 182
+	NDefines.NDiplomacy.GIVE_ARTIFACT_INTERACTION_ENABLED = 0
