@@ -678,20 +678,25 @@ DESCREC.1304;The local clergy levied an additional tax to finance the Cathedral:
 REC.1304A;Good;Bien.;;;;;;;;;;;;x
 REC.1304B;That's All ?;C'est tout ?;;;;;;;;;;;;x
 REC.1305;Burgher Support;Soutien des bourgeois;;;;;;;;;;;;x
-DESCREC.1305;Towns and cities, guilds and burgher corporations in the region bring us their funding for the cathedral. A tidy sum you will agree.;Les villes et cités, guildes et corporations bourgeoises de la région nous apportent leur participation au financement de la cathédrale. Une somme rondelette vous en conviendrez.;;;;;;;;;;;;x
-REC.1305A;We do not tax enough apparently;On ne les taxe pas encore assez apparemment...;;;;;;;;;;;;x
+DESCREC.1305;Our project of cathedral attracts and amazes. \nThereby, towns and cities, guilds and burgher corporations from the region bring us their help for the cathedral. \nWe have to choose what form this contribution will take.;Notre projet de cathédrale attire et émerveille. \nAinsi, les villes et cités, guildes et corporations bourgeoises de la région nous apportent leur participation pour la cathédrale. \nNous nous voyons proposer que cette aide prenne une forme financière ou plus matérielle.;;;;;;;;;;;;x
+#REC.1305A;We do not tax enough apparently;On ne les taxe pas encore assez apparemment...;;;;;;;;;;;;x
+REC.1305A;Money is always welcome!;L'argent est toujours le bienvenu !;;;;;;;;;;;;x
+REC.1305B;We never have too few materials!;Nous n'avons jamais trop de matériaux !;;;;;;;;;;;;x
+REC.1305C;We can't refuse additional workforce!;Des bras supplémentaires ne sont d'aucun refus !;;;;;;;;;;;;x
+don_progression_materiel;We receive some materials to contribute to the §YCathedral§! progression.;Nous recevons des matériaux pour contribuer à la progression de la §YCathédrale§!.;;;;;;;;;;;x
+don_progression_main_doeuvre;We receive the help from workers paid by our donators to contribute to the §YCathedral§! progression.;Nous recevons l'aide d'ouvriers payés par nos donateurs pour contribuer à la progression de la §YCathédrale§!.;;;;;;;;;;;x
 REC.1306;Nobles Support;Soutien des nobles v1;;;;;;;;;;;;x
-DESCREC.1306;The local nobility address their support for the construction of the Cathedral by a most generous gift.;La noblesse locale adresse son soutien à la construction de la Cathédrale par ce don des plus généreux.;;;;;;;;;;;;x
+DESCREC.1306;The local nobility address their support for the construction of the Cathedral by a most generous gift.;La noblesse locale adresse son soutien à la construction de la Cathédrale en construction par ce don des plus généreux.;;;;;;;;;;;;x
 REC.1306A;Poor nobility or just plain greedy?;Noblesse désargentée ou simplement avare ?;;;;;;;;;;;;x
 REC.1307;Noblity Support;Soutien des nobles v2;;;;;;;;;;;;x
-DESCREC.1307;The local nobility addresses their support for the construction of the Cathedral by providing most generous gifts indeed ...! What gift do you choose?;La noblesse locale adresse son soutien à la construction de la Cathédrale par ce don des plus généreux... en nature ! Quel cadeau choisissez vous ?;;;;;;;;;;;;x
+DESCREC.1307;The local nobility addresses their support for the construction of the Lordly chapel that will take place inside the Cathedral by providing most generous gifts indeed ...! What gift do you choose?;La noblesse locale adresse son soutien à la construction de la Chapelle seigneuriale qui intègrera la future Cathédrale par ce don des plus généreux... en nature ! Quel cadeau choisissez vous ?;;;;;;;;;;;;x
+REC.1307A;These Stained Glass seems good.;Ces Vitraux me paraissent bien.;;;;;;;;;;;;x
+REC.1307B;This statue is awesome.;Cette statue est grandiose.;;;;;;;;;;;;x
+REC.1307C;This gargoyle looks good to me.;Cette gargouille a une bonne tête.;;;;;;;;;;;;x
 DESCREC.1308;Our master builder informs us that he tried to find a new source of cut stones. \nFor this he went [Location.GetTopographicalFlavour] where one can find [GetCutStoneMaterial] and tried to extract these precious stones we need so much...;Notre maître bâtisseur nous informe qu'il a cherché à relancer le chantier de la cathédrale en tentant de s'approvisionner en pierres taillées. \nEn effet, il s'est rendu [Location.GetTopographicalFlavour] où l'on trouve [GetCutStoneMaterial] et a tenté d'en extraire les si précieuses pierres...;;;;;;;;;;;;x
 REC.1308A;Success!;Bravo le chantier repart !;;;;;;;;;;;;x
 REC.1308B;At least it permitted;Cela a permis d'avancer un peu malgré tout;;;;;;;;;;;;x
 REC.1308C;A vain effort... Forget this.;Un effort vain... Oublions cela.;;;;;;;;;;;;x
-REC.1307A;These Stained Glass seems good.;Ces Vitraux me paraissent bien.;;;;;;;;;;;;x
-REC.1307B;This statue is awesome.;Cette statue est grandiose.;;;;;;;;;;;;x
-REC.1307C;This gargoyle looks good to me.;Cette gargouille a une bonne tête.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 REC.1401;Unscrupulous suppliers v1;Fournisseurs peu scrupuleux v1;;;;;;;;;;;;x
 DESCREC.1401;One of our suppliers of stone for the construction of the Cathedral, appeared this morning to post an increase in these prices - economic downturn he says - and staff expenditure too high, competition from far East, everything, in short, we not understand much (and that supplier has probably noticed too).;Un de nos fournisseurs de pierres pour la construction de la Cathédrale, s'est présenté ce matin pour nous soumettre une augmentation de ces tarifs -crise oblige paraît-il-, et les charges sur le personnel trop élevées, la concurrence d'Extrême-Orient, tout ça, bref, on y comprend pas grand chose (et ce fournisseur l'a probablement remarqué lui aussi).;;;;;;;;;;;;x
