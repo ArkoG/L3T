@@ -18,6 +18,9 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			any_province_holding = {
+				has_title_flag = cathedral_construction
+			}
 		}
 		religion = catholic
 	}
@@ -64,6 +67,9 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			any_province_holding = {
+				has_title_flag = cathedral_construction
+			}
 		}
 		religion = catholic
 	}
@@ -79,12 +85,16 @@ character_event = {
 			any_demesne_province = {
 				has_province_modifier = chantier_cathedrale
 				has_province_modifier = chantier_stop
+				any_province_holding = {
+					has_title_flag = cathedral_construction
+				}
 			}
 		}
 		modifier = {
-			factor = 0.8
-				any_realm_title = {
+			factor = 0.5
+			any_realm_title = {
 				is_holy_site = ROOT
+				has_title_flag = cathedral_construction
 			}
 		}
 	}
@@ -101,15 +111,21 @@ character_event = {
 				20 = {  			  # 37% if holy site
 					wealth = 130
 					modifier = {
-						factor = 3
-						any_realm_title = { is_holy_site = ROOT }
+						factor = 5
+						any_realm_title = { 
+							is_holy_site = ROOT
+							has_title_flag = cathedral_construction
+						}
 					}
 				}
 				10 = {  			  # 19% if holy site
 					wealth = 155
 					modifier = {
-						factor = 3
-						any_realm_title = { is_holy_site = ROOT }
+						factor = 5
+						any_realm_title = { 
+							is_holy_site = ROOT
+							has_title_flag = cathedral_construction
+						}
 					}
 				}
 			}
@@ -128,6 +144,9 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
+			any_province_holding = {
+				has_title_flag = cathedral_construction
+			}
 		}
 		religion = catholic
 	}
@@ -161,7 +180,7 @@ character_event = {
 	}
 }
 
-#soutien du clergé
+#soutien du clergé #
 character_event = {
     id = REC.1304
 	desc = "DESCREC.1304"
@@ -173,8 +192,7 @@ character_event = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
 			any_province_holding = {
-				holding_type = temple
-				has_building = tp_cathedrale_10
+				has_title_flag = cathedral_construction
 			}
 		}
 		religion = catholic
@@ -238,8 +256,7 @@ character_event = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
 			any_province_holding = {
-				holding_type = city
-				has_building = ct_cathedrale_10
+				has_title_flag = cathedral_construction
 			}
 		}
 		religion = catholic
@@ -261,7 +278,7 @@ character_event = {
 	}
 	
 	option = {
-		name = "REC.1304A"
+		name = "REC.1305A"
 		set_character_flag = don_recu
 		custom_tooltip = { text = bourse_remplie }
 		hidden_tooltip = {
@@ -274,10 +291,52 @@ character_event = {
 				 3 = { wealth = 225	}
 			}
 		}
+		ai_chance = { 
+			factor = 1
+			modifier = { factor = 3 trait = greedy }
+		}
+	}
+	option = {
+		name = "REC.1305B"
+		set_character_flag = don_recu
+		custom_tooltip = { text = don_progression_materiel } #matériaux
+		hidden_tooltip = {
+			random_demesne_title = {
+				limit = { has_title_flag = cathedral_construction }
+				random_list = {
+					10 = { change_variable = { which = cathedral value = 50 }} #base progression is 150points for 100 (1year). kept here the equivalent of the take gold option converted into prog point so 75gold*0.66667 = 50points
+					20 = { change_variable = { which = cathedral value = 65 }}
+					40 = { change_variable = { which = cathedral value = 90 }}
+					20 = { change_variable = { which = cathedral value = 110 }}
+					 7 = { change_variable = { which = cathedral value = 130 }}
+					 3 = { change_variable = { which = cathedral value = 150 }}
+				}
+			}
+		}
+		ai_chance = { factor = 2 }
+	}
+	option = {
+		name = "REC.1305C"
+		set_character_flag = don_recu
+		custom_tooltip = { text = don_progression_main_doeuvre } #main d'oeuvre
+		hidden_tooltip = {
+			random_demesne_title = {
+				limit = { has_title_flag = cathedral_construction }
+				random_list = {
+					10 = { change_variable = { which = cathedral value = 50 }} #base progression is 150points for 100 (1year). kept here the equivalent of the take gold option converted into prog point so 75gold*0.66667 = 50points
+					20 = { change_variable = { which = cathedral value = 65 }}
+					40 = { change_variable = { which = cathedral value = 90 }}
+					20 = { change_variable = { which = cathedral value = 110 }}
+					 7 = { change_variable = { which = cathedral value = 130 }}
+					 3 = { change_variable = { which = cathedral value = 150 }}
+				}
+			}
+		}
+		ai_chance = { factor = 2 }
 	}
 }
 
-#soutien de la noblesse v1 -en argent
+#soutien de la noblesse v1 -en argent  #specific gift until step 09 is finished and then after step 10 is achieved 
 character_event = {
     id = REC.1306
 	desc = "DESCREC.1306"
@@ -289,8 +348,15 @@ character_event = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
 			any_province_holding = {
+				has_title_flag = cathedral_construction
 				holding_type = castle
-				has_building = ca_cathedrale_10
+				OR = {
+					NOT = { has_building = ca_cathedrale_09 }
+					AND = { 
+						has_building = ca_cathedrale_10
+						NOT = { has_building = ca_cathedrale_12 }
+					}
+				}
 			}
 		}
 		religion = catholic
@@ -307,6 +373,13 @@ character_event = {
 			any_demesne_province = {
 				has_province_modifier = chantier_cathedrale
 				has_province_modifier = chantier_stop
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_down
 			}
 		}
 	}
@@ -325,7 +398,7 @@ character_event = {
 		}
 	}
 }
-#soutien de la noblesse v2 -en nature
+#soutien de la noblesse v2 -en nature #specific gift for step 10
 character_event = {
     id = REC.1307
 	desc = "DESCREC.1307"
@@ -336,20 +409,28 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			NOT = { has_province_modifier = chantier_stop }
 			any_province_holding = {
+				has_title_flag = cathedral_construction
 				holding_type = castle
-				has_building = ca_cathedrale_10
+				has_building = ca_cathedrale_09 #we have started 10th level
+				NOT = { has_building = ca_cathedrale_10 } #level10 is not finished yet
 			}
 		}
 		religion = catholic
 	}
 	
 	mean_time_to_happen = {
-		months = 12
+		months = 6
 		modifier = {
 			factor = 5
 			has_character_flag = don_recu
+		}
+		modifier = {
+			factor = 0.9
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+				has_province_modifier = chantier_down
+			}
 		}
 	}
 	
@@ -357,18 +438,63 @@ character_event = {
 		name = "REC.1307A"
 		set_character_flag = don_recu
 		custom_tooltip = { text = soutien_noble_nature1 }
+		hidden_tooltip = {
+			random_demesne_title = {
+				limit = {
+					has_title_flag = cathedral_construction
+					holding_type = castle
+					has_building = ca_cathedrale_09
+					NOT = { has_building = ca_cathedrale_10 }
+				}
+				random_list = {
+					10 = { change_variable = { which = cathedral value = 65 }}
+					10 = { change_variable = { which = cathedral value = 75 }}
+					10 = { change_variable = { which = cathedral value = 85 }}
+				}
+			}
+		}
 	}
 	
 	option = { #statue
 		name = "REC.1307B"
 		set_character_flag = don_recu
 		custom_tooltip = { text = soutien_noble_nature2 }
+		hidden_tooltip = {
+			random_demesne_title = {
+				limit = {
+					has_title_flag = cathedral_construction
+					holding_type = castle
+					has_building = ca_cathedrale_09
+					NOT = { has_building = ca_cathedrale_10 }
+				}
+				random_list = {
+					10 = { change_variable = { which = cathedral value = 25 }}
+					10 = { change_variable = { which = cathedral value = 35 }}
+					10 = { change_variable = { which = cathedral value = 45 }}
+				}
+			}
+		}
 	}
 	
 	option = { #set de gargouilles
 		name = "REC.1307C"
 		set_character_flag = don_recu
 		custom_tooltip = { text = soutien_noble_nature3 }
+		hidden_tooltip = {
+			random_demesne_title = {
+				limit = {
+					has_title_flag = cathedral_construction
+					holding_type = castle
+					has_building = ca_cathedrale_09
+					NOT = { has_building = ca_cathedrale_10 }
+				}
+				random_list = {
+					10 = { change_variable = { which = cathedral value = 45 }}
+					10 = { change_variable = { which = cathedral value = 55 }}
+					10 = { change_variable = { which = cathedral value = 65 }}
+				}
+			}
+		}
 	}
 }
 ##pillage cut stone from an old structure
