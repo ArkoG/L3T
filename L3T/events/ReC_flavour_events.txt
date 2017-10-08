@@ -18,9 +18,6 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			any_province_holding = {
-				has_title_flag = cathedral_construction
-			}
 		}
 		religion = catholic
 	}
@@ -67,9 +64,6 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			any_province_holding = {
-				has_title_flag = cathedral_construction
-			}
 		}
 		religion = catholic
 	}
@@ -85,9 +79,6 @@ character_event = {
 			any_demesne_province = {
 				has_province_modifier = chantier_cathedrale
 				has_province_modifier = chantier_stop
-				any_province_holding = {
-					has_title_flag = cathedral_construction
-				}
 			}
 		}
 		modifier = {
@@ -144,9 +135,6 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			any_province_holding = {
-				has_title_flag = cathedral_construction
-			}
 		}
 		religion = catholic
 	}
@@ -191,9 +179,6 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			any_province_holding = {
-				has_title_flag = cathedral_construction
-			}
 		}
 		religion = catholic
 	}
@@ -255,9 +240,6 @@ character_event = {
 	trigger = {
 		any_demesne_province = {
 			has_province_modifier = chantier_cathedrale
-			any_province_holding = {
-				has_title_flag = cathedral_construction
-			}
 		}
 		religion = catholic
 	}
