@@ -1,8 +1,97 @@
-# Trait donné pour les possesseurs de batiments spéciaux dans les capitales féodales
+### TRAITS ###
 
+#!save compatibility
+
+##SAINT
+#Trait donné aux personnages canonisés
+saint = {
+	cached = yes
+	customizer = 
+	random = no
+}
+
+##L3T
+# Trait donné pour les possesseurs de batiments spéciaux dans les capitales féodales
 dynastic_keeper = {
 	dynasty_opinion = 10#lovely family
 	ai_honor = 10 		#in memory of the ancestors
 	ai_ambition = 10 	#inspired by ancestors
 	customizer = no
+	random = no
+}
+
+##REC
+# Trait donné aux batisseurs de cathédrale 
+# Trait retiré dès qu'il n'y a plus de chantier de la cathédrale
+batisseur_cathedrale = {
+	same_opinion = -10
+	church_opinion = 25
+	town_opinion = -10 #NE SEMBLE PLUS MARCHER (mais présent dans XYLO_trait)
+	ai_zeal = 10
+	
+	customizer = no
+	random = no
+}
+
+apprenti_sculpteur = {
+	same_opinion = 10
+	
+	customizer = no
+	random = no
+}
+
+compagnon_sculpteur = {
+	same_opinion = 10
+	
+	customizer = no
+	random = no
+}
+
+maitre_sculpteur = {
+	same_opinion = 10
+	#health = 1 #to help master to not get pruned to soon	
+	customizer = no
+	random = no
+}
+
+apprenti_fresquiste = {
+	same_opinion = 10
+	
+	customizer = no
+	random = no
+}
+
+compagnon_fresquiste = {
+	same_opinion = 10
+	
+	customizer = no
+	random = no
+}
+
+maitre_fresquiste = {
+	same_opinion = 10
+	#health = 1 #to help master to not get pruned to soon
+	customizer = no
+	random = no
+}
+
+apprenti_verrier = {
+	same_opinion = 10
+	
+	customizer = no
+	random = no
+}
+
+compagnon_verrier = {
+	same_opinion = 10
+	
+	customizer = no
+	random = no
+}
+
+maitre_verrier = {
+	same_opinion = 10
+	#health = 1 #to help master to not get pruned to soon
+	customizer = no
+	random = no
 }
