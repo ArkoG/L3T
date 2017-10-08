@@ -143,8 +143,7 @@ decisions = {
 			#is_adult = yes  ###temp à ajouter
 			NOT = { religion_group = pagan_group }
 			OR = {
-			 ###temp à retirer librairie_1
-				has_character_modifier = librairie_1
+				#has_character_modifier = librairie_1
 				has_character_modifier = librairie_2
 			}
 			#any_artifact = {
