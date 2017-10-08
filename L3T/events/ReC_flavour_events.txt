@@ -286,12 +286,12 @@ character_event = {
 			random_demesne_title = {
 				limit = { has_title_flag = cathedral_construction }
 				random_list = {
-					10 = { change_variable = { which = cathedral value = 50 }} #base progression is 150points for 100 (1year). kept here the equivalent of the take gold option converted into prog point so 75gold*0.66667 = 50points
-					20 = { change_variable = { which = cathedral value = 65 }}
-					40 = { change_variable = { which = cathedral value = 90 }}
-					20 = { change_variable = { which = cathedral value = 110 }}
-					 7 = { change_variable = { which = cathedral value = 130 }}
-					 3 = { change_variable = { which = cathedral value = 150 }}
+					10 = { change_variable = { which = cathedral value = 115 }} #base progression is 150points for 100 (1year). kept here the equivalent of the take gold option converted into prog point so 75gold*1.5 = 110points
+					20 = { change_variable = { which = cathedral value = 145 }}
+					40 = { change_variable = { which = cathedral value = 205 }}
+					20 = { change_variable = { which = cathedral value = 250 }}
+					 7 = { change_variable = { which = cathedral value = 290 }}
+					 3 = { change_variable = { which = cathedral value = 335 }}
 				}
 			}
 		}
@@ -305,12 +305,12 @@ character_event = {
 			random_demesne_title = {
 				limit = { has_title_flag = cathedral_construction }
 				random_list = {
-					10 = { change_variable = { which = cathedral value = 50 }} #base progression is 150points for 100 (1year). kept here the equivalent of the take gold option converted into prog point so 75gold*0.66667 = 50points
-					20 = { change_variable = { which = cathedral value = 65 }}
-					40 = { change_variable = { which = cathedral value = 90 }}
-					20 = { change_variable = { which = cathedral value = 110 }}
-					 7 = { change_variable = { which = cathedral value = 130 }}
-					 3 = { change_variable = { which = cathedral value = 150 }}
+					10 = { change_variable = { which = cathedral value = 115 }} #base progression is 150points for 100 (1year). kept here the equivalent of the take gold option converted into prog point so 75gold*1.5 = 110points
+					20 = { change_variable = { which = cathedral value = 145 }}
+					40 = { change_variable = { which = cathedral value = 205 }}
+					20 = { change_variable = { which = cathedral value = 250 }}
+					 7 = { change_variable = { which = cathedral value = 290 }}
+					 3 = { change_variable = { which = cathedral value = 335 }}
 				}
 			}
 		}
