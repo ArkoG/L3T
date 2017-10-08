@@ -429,9 +429,9 @@ character_event = {
 					NOT = { has_building = ca_cathedrale_10 }
 				}
 				random_list = {
-					10 = { change_variable = { which = cathedral value = 65 }}
-					10 = { change_variable = { which = cathedral value = 75 }}
-					10 = { change_variable = { which = cathedral value = 85 }}
+					10 = { change_variable = { which = cathedral value = 100 }}
+					10 = { change_variable = { which = cathedral value = 110 }}
+					10 = { change_variable = { which = cathedral value = 120 }}
 				}
 			}
 		}
@@ -471,9 +471,9 @@ character_event = {
 					NOT = { has_building = ca_cathedrale_10 }
 				}
 				random_list = {
-					10 = { change_variable = { which = cathedral value = 45 }}
-					10 = { change_variable = { which = cathedral value = 55 }}
-					10 = { change_variable = { which = cathedral value = 65 }}
+					10 = { change_variable = { which = cathedral value = 80 }}
+					10 = { change_variable = { which = cathedral value = 70 }}
+					10 = { change_variable = { which = cathedral value = 60 }}
 				}
 			}
 		}
@@ -527,7 +527,7 @@ character_event = {
 			remove_province_modifier = chantier_down
 			random_province_holding = {
 				limit = { has_title_flag = cathedral_construction }
-				change_variable = { which = cathedral value = 30 }
+				change_variable = { which = cathedral value = 45 }
 			}
 		}
 	}
@@ -543,9 +543,9 @@ character_event = {
 				random_province_holding = {
 					limit = { has_title_flag = cathedral_construction }
 					random_list = {
-						10 = { change_variable = { which = cathedral value = 20 } }
-						10 = { change_variable = { which = cathedral value = 30 } }
-						10 = { change_variable = { which = cathedral value = 50 } }
+						10 = { change_variable = { which = cathedral value = 25 } }
+						10 = { change_variable = { which = cathedral value = 45 } }
+						10 = { change_variable = { which = cathedral value = 65 } }
 					}
 				}
 			}
