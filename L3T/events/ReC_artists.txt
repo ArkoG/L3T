@@ -7,6 +7,9 @@ character_event ={
 
 	is_triggered_only = yes	
 	
+	only_playable = yes
+	ai = no
+	
 	immediate = {
 		if = {
 			limit = { ai = no } # Should be execute once
@@ -182,6 +185,9 @@ character_event ={
 	hide_window = yes
 
 	is_triggered_only = yes	
+	
+	only_playable = yes
+	ai = no
 	
 	immediate = {
 		if = {
