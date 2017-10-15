@@ -436,29 +436,35 @@ ct_training_grounds_3 = { #Porte de  la ville
 	ct_marketplace_1 = {
 		desc = ct_marketplace_1_desc
 		trigger = { TECH_CITY_CONSTRUCTION = 0 }
-		gold_cost = 100
-		build_time = 365
-		tax_income = 3
+		gold_cost = 65
+		build_time = 200
+		tax_income = 1
 		ai_creation_factor = 110
 		#add_number_to_name = no
 		extra_tech_building_start = 0.4
 	}
-	ct_marketplace_2 = {
+	ct_marketplace_2 = { #marché de village, requiert une ressource active
 		desc = ct_marketplace_2_desc
-		prerequisites = { ct_wall_1 }
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { ct_town_1 } #village
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 0
+			#has_holding_modifier = has_ress_L2 #TO TEST
+		}
 		upgrades_from = ct_marketplace_1
-		gold_cost = 120
-		build_time = 547
-		tax_income = 3
+		gold_cost = 85
+		build_time = 150
+		tax_income = 1
 		ai_creation_factor = 109
 		#add_number_to_name = no
 		extra_tech_building_start = 0.8
 	}
-	ct_marketplace_3 = {
+	ct_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
 		desc = ct_marketplace_3_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 1 }
-		prerequisites = { ct_wall_2 }
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 1
+			#has_holding_modifier = has_ress_L3 #see if this is fitty or if we need to check the ressources on province level
+		}
+		prerequisites = { ct_town_2 } #bourg
 		upgrades_from = ct_marketplace_2
 		gold_cost = 200
 		build_time = 730
@@ -467,20 +473,26 @@ ct_training_grounds_3 = { #Porte de  la ville
 		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
-	ct_marketplace_4 = {
+	ct_marketplace_4 = { #grand marché
 		desc = ct_marketplace_4_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+		prerequisites = { ct_town_3 } #ville
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 3
+		}
 		upgrades_from = ct_marketplace_3
 		gold_cost = 300
-		build_time = 1095
-		tax_income = 3
+		build_time = 730
+		tax_income = 2
 		ai_creation_factor = 107
 		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
-	ct_marketplace_5 = {
+	ct_marketplace_5 = { #marché spécialisé
 		desc = ct_marketplace_5_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 5 }
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 3
+			#has_holding_modifier = has_ress_L4 #not yet
+		}
 		upgrades_from = ct_marketplace_4
 		gold_cost = 400
 		build_time = 2190
@@ -489,17 +501,18 @@ ct_training_grounds_3 = { #Porte de  la ville
 		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
-	ct_marketplace_6 = {
-		desc = ct_marketplace_6_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 7 }
-		upgrades_from = ct_marketplace_5
-		gold_cost = 500
-		build_time = 2190
-		tax_income = 3
-		ai_creation_factor = 105
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
+#	ct_marketplace_6 = {
+#		desc = ct_marketplace_6_desc
+#		trigger = { TECH_CITY_CONSTRUCTION = 7 }
+#		upgrades_from = ct_marketplace_5
+#		gold_cost = 500
+#		build_time = 2190
+#		tax_income = 3
+#		ai_creation_factor = 105
+#		#add_number_to_name = no
+#		extra_tech_building_start = 0.2
+#	}
+
 ##utilise en prebuild jusqu au niveau 3	
 	ct_port_1 = {
 		desc = ct_port_1_desc
