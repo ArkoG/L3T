@@ -439,7 +439,7 @@ province_event = {
 					any_neighbor_province = { has_province_flag = bloc_A }
 					any_neighbor_province = { has_province_flag = bloc_B }
 					any_neighbor_province = { has_province_flag = bloc_D }
-					any_neighbor_province = { has_province_flag = bloc_E }
+					#any_neighbor_province = { has_province_flag = bloc_E }###this should permit to create and a D province to an existing E province
 				}
 			}
 			hidden_tooltip = {			
