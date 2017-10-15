@@ -53,6 +53,7 @@ artist_guild = { #society code name
 		limit = 50 #max member of that rank
 		startup_limit = 12 #amount of member at the start if enabled=
 		decisions = { #rank based decisions power
+			create_an_artwork
 			# TODO
 		}
 	}

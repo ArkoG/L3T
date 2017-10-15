@@ -18,42 +18,13 @@ artist_guild_rank_4_male;Grand Master;Grand-Maître;;;;;;;;;;;;x
 artist_guild_currency;Skill Points;Points de Talent;;;;;;;;;;;;x
 #Rank up button name
 artist_guild_rank_up;Request to rank up.;Demander à être promu.;;;;;;;;;;;;x
+artist_guild_rank_up_desc;Request to the Grand Master to be ranked up.;Demander au Grans Maître à être promu.;;;;;;;;;;;;x
 request_to_rank_up_within_society_trait;;A montré l'étendu de son talent avec un chef d'oeuvre.;;;;;;;;;;;;x
 #For tooltip that require being a member
 IS_artist_guild_TRIGGER;Is a member of the Artist Guild.;Est un membre de la Guilde des Artistes.;;;;;;;;;;;;x
 
-#Name of the decision
-artist_guild_power_1;Trade Tutorial Points for gold!;;;;;;;;;;;;;x
-#Tooltip of the decision
-artist_guild_power_1_desc;Trade Tutorial Points for gold, the description.;;;;;;;;;;;;;x
-#Tooltip of the decision in the society menu
-artist_guild_power_1_power_desc;Trade Tutorial Points for gold, the power description.;;;;;;;;;;;;;x
- 
-#This event is for joining
-EVTDESC_TUTOSOCI_102;You want to join my glorious society?;;;;;;;;;;;;;x
-EVTOPTA_TUTOSOCI_102;Yes sir.;;;;;;;;;;;;;x
-EVTOPTB_TUTOSOCI_102;I'm not so sure anymore.;;;;;;;;;;;;;x
-
-#This event is for rank up
-EVTDESC_TUTOSOCI_122;Greetings [Root.GetSocietyRank] [Root.GetFirstName],\nYou can rank up. [Root.Society.GetName].\n\nSigned,\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
-EVTOPTA_EVTDESC_TUTOSOCI_122_122;Great.;;;;;;;;;;;;;x
-
-#Name for a quest
-quest_tutorial_quest_1;Press the button;;;;;;;;;;;;;x
-#Name for a quest if there is no quest target
-quest_tutorial_quest_1_fallback;Press the button;;;;;;;;;;;;;x
-quest_tutorial_quest_1_desc;Press the button and gain gold!;;;;;;;;;;;;;x
-quest_tutorial_quest_1_tooltip;Press the button in the intrige menu.;;;;;;;;;;;;;x
-
-#Start Quest event
-EVTDESC_TUTOSOCI_141;You want a quest?;;;;;;;;;;;;;x
-
-#End Quest event
-EVTDESC_TUTOSOCI_142;You want to complete or fail the quest?;;;;;;;;;;;;;x
-EVTOPTA_TUTOSOCI_142;Complete it.;;;;;;;;;;;;;x
-EVTOPTB_TUTOSOCI_142;Fail it..;;;;;;;;;;;;;x
-
-#End Quest event
-EVTDESC_TUTOSOCI_150;Here be the event text.;;;;;;;;;;;;;x
-EVTOPTA_TUTOSOCI_150;Choice 1.;;;;;;;;;;;;;x
-EVTOPTB_TUTOSOCI_150;Choice 2..;;;;;;;;;;;;;x
+#Decisions
+create_an_artwork;;Créer un chef d'oeuvre.;;;;;;;;;;;;x
+create_an_artwork_desc;;Si l'oeuvre est réussie, l'artiste pourra être promu dans la Guilde des Artistes;;;;;;;;;;;;x
+apprenti_with_750;;Apprenti avec 750 Points de Talent;;;;;;;;;;;;x
+compagnon_with_1250;;Compagnon avec 1250 Points de Talent;;;;;;;;;;;;x

@@ -73,4 +73,105 @@ society_decisions = { #only available to members of a society
 			factor = 1
 		}
 	}
+	
+
+	create_an_artwork = {
+
+		potential = {
+			society_member_of = artist_guild
+		}
+
+		allow = {
+			OR = {
+				custom_tooltip = {
+					text = apprenti_with_750
+					AND = {
+						society_currency >= 750
+						OR = {
+							trait = apprenti_sculpteur
+							trait = apprenti_fresquiste
+							trait = apprenti_verrier
+						}
+					}
+				}
+					
+				custom_tooltip = {
+					text = compagnon_with_1250
+					AND = { # Compagnon with 1250 currency
+						society_currency >= 1250
+						OR = {
+							trait = compagnon_sculpteur
+							trait = compagnon_fresquiste
+							trait = compagnon_verrier
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { trait = apprenti_sculpteur }
+				change_society_currency = -750
+				random = {
+					chance = 50
+					remove_trait = apprenti_sculpteur
+					add_trait = compagnon_sculpteur
+				}
+			}
+			if = {
+				limit = { trait = apprenti_fresquiste }
+				change_society_currency = -750
+				random = {
+					chance = 50
+					remove_trait = apprenti_fresquiste
+					add_trait = compagnon_fresquiste
+				}
+			}
+			if = {
+				limit = { trait = apprenti_verrier }
+				change_society_currency = -750
+				random = {
+					chance = 50
+					remove_trait = apprenti_verrier
+					add_trait = compagnon_verrier
+				}
+			}
+			if = {
+				limit = { trait = compagnon_sculpteur }
+				change_society_currency = -1250
+				random = {
+					chance = 50
+					remove_trait = compagnon_sculpteur
+					add_trait = maitre_sculpteur
+				}
+			}
+			if = {
+				limit = { trait = compagnon_fresquiste }
+				change_society_currency = -1250
+				random = {
+					chance = 50
+					remove_trait = compagnon_fresquiste
+					add_trait = maitre_fresquiste
+				}
+			}
+			if = {
+				limit = { trait = compagnon_verrier }
+				change_society_currency = -1250
+				random = {
+					chance = 50
+					remove_trait = compagnon_verrier
+					add_trait = maitre_verrier
+				}
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
