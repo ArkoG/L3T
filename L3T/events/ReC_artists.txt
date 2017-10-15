@@ -26,10 +26,7 @@ character_event ={
 				}
 				new_character = {
 					join_society = artist_guild
-					random_independent_ruler = {
-						limit = { religion = catholic }
-						PREV = { move_character = THIS } 
-					}
+					move_character = THIS # Remove character of play court
 				}
 				create_character = {
 					religion = catholic
@@ -42,10 +39,7 @@ character_event ={
 				}
 				new_character = {
 					join_society = artist_guild
-					random_independent_ruler = {
-						limit = { religion = catholic }
-						PREV = { move_character = THIS } 
-					}
+					move_character = THIS # Remove character of play court
 				}
 				create_character = {
 					religion = catholic
@@ -58,10 +52,7 @@ character_event ={
 				}
 				new_character = {
 					join_society = artist_guild
-					random_independent_ruler = {
-						limit = { religion = catholic }
-						PREV = { move_character = THIS } 
-					}
+					move_character = THIS # Remove character of play court
 				}
 			}
 			
@@ -82,10 +73,7 @@ character_event ={
 				new_character = {
 					join_society = artist_guild
 					society_rank_up = 1
-					random_independent_ruler = {
-						limit = { religion = catholic }
-						PREV = { move_character = THIS } 
-					}
+					move_character = THIS # Remove character of play court
 				}
 				create_character = {
 					religion = catholic
@@ -99,10 +87,7 @@ character_event ={
 				new_character = {
 					join_society = artist_guild
 					society_rank_up = 1
-					random_independent_ruler = {
-						limit = { religion = catholic }
-						PREV = { move_character = THIS } 
-					}
+					move_character = THIS # Remove character of play court
 				}
 				create_character = {
 					religion = catholic
@@ -116,10 +101,7 @@ character_event ={
 				new_character = {
 					join_society = artist_guild
 					society_rank_up = 1
-					random_independent_ruler = {
-						limit = { religion = catholic }
-						PREV = { move_character = THIS } 
-					}
+					move_character = THIS # Remove character of play court
 				}
 			}
 			
@@ -140,10 +122,7 @@ character_event ={
 				new_character = {
 					join_society = artist_guild
 					society_rank_up = 2
-					random_independent_ruler = {
-						limit = { religion = catholic }
-						PREV = { move_character = THIS } 
-					}
+					move_character = THIS # Remove character of play court
 				}
 				create_character = {
 					religion = catholic
@@ -157,10 +136,7 @@ character_event ={
 				new_character = {
 					join_society = artist_guild
 					society_rank_up = 2
-					random_independent_ruler = {
-						limit = { religion = catholic }
-						PREV = { move_character = THIS } 
-					}
+					move_character = THIS # Remove character of play court
 				}
 				create_character = {
 					religion = catholic
@@ -174,10 +150,7 @@ character_event ={
 				new_character = {
 					join_society = artist_guild
 					society_rank_up = 2
-					random_independent_ruler = {
-						limit = { religion = catholic }
-						PREV = { move_character = THIS } 
-					}
+					move_character = THIS # Remove character of play court
 				}
 			}
 			
@@ -198,6 +171,61 @@ character_event ={
 					}
 				}
 				leave_society = yes
+			}
+		}
+	}
+}
+
+# Apprenti creation by decade
+character_event ={
+    id = REC.2101
+	hide_window = yes
+
+	is_triggered_only = yes	
+	
+	immediate = {
+		if = {
+			limit = { ai = no } # Should be execute once
+			# Create apprentis
+			subtract_variable = { which = apprenti_startup value = 1 }
+			create_character = {
+				religion = catholic
+				culture = random
+				random_traits = yes
+				trait = apprenti_sculpteur
+				age = 18
+				dynasty = none
+				female = no
+			}
+			new_character = {
+				join_society = artist_guild
+				move_character = THIS # Remove character of play court
+			}
+			create_character = {
+				religion = catholic
+				culture = random
+				random_traits = yes
+				trait = apprenti_verrier
+				age = 18
+				dynasty = none
+				female = no
+			}
+			new_character = {
+				join_society = artist_guild
+				move_character = THIS # Remove character of play court
+			}
+			create_character = {
+				religion = catholic
+				culture = random
+				random_traits = yes
+				trait = apprenti_fresquiste
+				age = 18
+				dynasty = none
+				female = no
+			}
+			new_character = {
+				join_society = artist_guild
+				move_character = THIS # Remove character of play court
 			}
 		}
 	}
