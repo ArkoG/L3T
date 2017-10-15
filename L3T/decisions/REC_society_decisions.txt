@@ -1,0 +1,76 @@
+society_decisions = { #only available to members of a society
+	artist_guild_rank_up = { #pressing rank up button
+
+		hide_in_decisions_list = yes # This is shown in the Society View
+		
+		potential = {
+			hidden_tooltip = {
+				society_rank <= 3 #is not max rank
+				days_in_society > 365 #days requirement
+				is_in_society = yes #obviously
+				OR = { #Players can always rank up (if they have the power), AI won't if there is no room
+					ai = no
+					AND = {
+						ai = yes
+						society_can_rank_up = yes
+					}
+				}
+			}
+		}
+
+		allow = {
+			custom_tooltip = { # Trait
+				text = request_to_rank_up_within_society_trait
+				OR = {
+					AND = {
+						society_rank == 1
+						OR = {
+							trait = compagnon_sculpteur
+							trait = compagnon_fresquiste
+							trait = compagnon_verrier
+						}
+					}
+					AND = {
+						society_rank == 2
+						OR = {
+							trait = maitre_sculpteur
+							trait = maitre_fresquiste
+							trait = maitre_verrier
+						}
+					}
+				}
+			}
+
+			custom_tooltip = {
+				text = must_not_have_sent_request_already_tooltip 
+				NOT = { has_character_flag = has_sent_request_to_rank_up }
+			}
+
+			custom_tooltip = {
+				text = must_be_allowed_to_rank_up_tooltip 
+				days_at_current_society_rank >= 1095 #IMPORTANT! Update tooltip.
+			}
+
+			custom_tooltip = {
+				text = must_have_grandmaster_tooltip #You must have a grand master
+				any_society_member = {
+					is_society_grandmaster = yes
+					same_society_as = ROOT
+				}
+			}
+		}
+
+		effect = {
+			#Perform rank up
+			society_rank_up = 1
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,59 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+#The society name
+artist_guild;The Artist Guild;La Guilde des Artistes;;;;;;;;;;;;x
+#The society description
+artist_guild_desc;;La Guilde des Artistes rassemble des artistes du Monde Connu qui veulent par leur art honorer Dieu.;;;;;;;;;;;;x
+#Leader description
+artist_guild_leader_desc;The description of the leader of the society.;;;;;;;;;;;;;x
+#Name of the ranks
+artist_guild_rank_1_female;;;;;;;;;;;;;;x
+artist_guild_rank_2_female;;;;;;;;;;;;;;x
+artist_guild_rank_3_female;;;;;;;;;;;;;;x
+artist_guild_rank_4_female;;;;;;;;;;;;;;x
+artist_guild_rank_1_male;;Apprenti;;;;;;;;;;;;x
+artist_guild_rank_2_male;;Compagnon;;;;;;;;;;;;x
+artist_guild_rank_3_male;Master;Maître;;;;;;;;;;;;x
+artist_guild_rank_4_male;Grand Master;Grand-Maître;;;;;;;;;;;;x
+#Name of the currency
+artist_guild_currency;Skill Points;Points de Talent;;;;;;;;;;;;x
+#Rank up button name
+artist_guild_rank_up;Request to rank up.;Demander à être promu.;;;;;;;;;;;;x
+request_to_rank_up_within_society_trait;;A montré l'étendu de son talent avec un chef d'oeuvre.;;;;;;;;;;;;x
+#For tooltip that require being a member
+IS_artist_guild_TRIGGER;Is a member of the Artist Guild.;Est un membre de la Guilde des Artistes.;;;;;;;;;;;;x
+
+#Name of the decision
+artist_guild_power_1;Trade Tutorial Points for gold!;;;;;;;;;;;;;x
+#Tooltip of the decision
+artist_guild_power_1_desc;Trade Tutorial Points for gold, the description.;;;;;;;;;;;;;x
+#Tooltip of the decision in the society menu
+artist_guild_power_1_power_desc;Trade Tutorial Points for gold, the power description.;;;;;;;;;;;;;x
+ 
+#This event is for joining
+EVTDESC_TUTOSOCI_102;You want to join my glorious society?;;;;;;;;;;;;;x
+EVTOPTA_TUTOSOCI_102;Yes sir.;;;;;;;;;;;;;x
+EVTOPTB_TUTOSOCI_102;I'm not so sure anymore.;;;;;;;;;;;;;x
+
+#This event is for rank up
+EVTDESC_TUTOSOCI_122;Greetings [Root.GetSocietyRank] [Root.GetFirstName],\nYou can rank up. [Root.Society.GetName].\n\nSigned,\n[From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTOPTA_EVTDESC_TUTOSOCI_122_122;Great.;;;;;;;;;;;;;x
+
+#Name for a quest
+quest_tutorial_quest_1;Press the button;;;;;;;;;;;;;x
+#Name for a quest if there is no quest target
+quest_tutorial_quest_1_fallback;Press the button;;;;;;;;;;;;;x
+quest_tutorial_quest_1_desc;Press the button and gain gold!;;;;;;;;;;;;;x
+quest_tutorial_quest_1_tooltip;Press the button in the intrige menu.;;;;;;;;;;;;;x
+
+#Start Quest event
+EVTDESC_TUTOSOCI_141;You want a quest?;;;;;;;;;;;;;x
+
+#End Quest event
+EVTDESC_TUTOSOCI_142;You want to complete or fail the quest?;;;;;;;;;;;;;x
+EVTOPTA_TUTOSOCI_142;Complete it.;;;;;;;;;;;;;x
+EVTOPTB_TUTOSOCI_142;Fail it..;;;;;;;;;;;;;x
+
+#End Quest event
+EVTDESC_TUTOSOCI_150;Here be the event text.;;;;;;;;;;;;;x
+EVTOPTA_TUTOSOCI_150;Choice 1.;;;;;;;;;;;;;x
+EVTOPTB_TUTOSOCI_150;Choice 2..;;;;;;;;;;;;;x
