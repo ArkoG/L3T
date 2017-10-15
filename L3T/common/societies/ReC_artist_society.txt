@@ -154,15 +154,4 @@ artist_guild = { #society code name
 	# Score for the grand master succession
 	member_score_per_attribute = 3
 	member_score_per_rank = 100
-	
-	startup_populate = { #TODO #trigger for who can be the start-up population
-	    trigger = {
-			ai = yes
-	    	controls_religion = no
-			age = 16
-			is_in_society = no
-			is_ruler = no
-			is_female = no
-		}
-	}
 }
