@@ -1,0 +1,204 @@
+namespace = REC
+
+# Artist startup
+character_event ={
+    id = REC.2100
+	hide_window = yes
+
+	is_triggered_only = yes	
+	
+	immediate = {
+		if = {
+			limit = { ai = no } # Should be execute once
+			# Create apprentis
+			set_variable = { which = apprenti_startup value = 4 } # 1/3 of the startuplimit
+			while = {
+				limit = { check_variable = { which = apprenti_startup value = 1 } }
+				subtract_variable = { which = apprenti_startup value = 1 }
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = apprenti_sculpteur
+					age = 18
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					random_independent_ruler = {
+						limit = { religion = catholic }
+						PREV = { move_character = THIS } 
+					}
+				}
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = apprenti_verrier
+					age = 18
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					random_independent_ruler = {
+						limit = { religion = catholic }
+						PREV = { move_character = THIS } 
+					}
+				}
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = apprenti_fresquiste
+					age = 18
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					random_independent_ruler = {
+						limit = { religion = catholic }
+						PREV = { move_character = THIS } 
+					}
+				}
+			}
+			
+			# Create compagnons
+			set_variable = { which = compagnon_startup value = 3 } # 1/3 of the startuplimit
+			while = {
+				limit = { check_variable = { which = compagnon_startup value = 1 } }
+				subtract_variable = { which = compagnon_startup value = 1 }
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = compagnon_sculpteur
+					age = 35
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					society_rank_up = 1
+					random_independent_ruler = {
+						limit = { religion = catholic }
+						PREV = { move_character = THIS } 
+					}
+				}
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = compagnon_verrier
+					age = 35
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					society_rank_up = 1
+					random_independent_ruler = {
+						limit = { religion = catholic }
+						PREV = { move_character = THIS } 
+					}
+				}
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = compagnon_fresquiste
+					age = 35
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					society_rank_up = 1
+					random_independent_ruler = {
+						limit = { religion = catholic }
+						PREV = { move_character = THIS } 
+					}
+				}
+			}
+			
+			# Create maitres
+			set_variable = { which = maitre_startup value = 2 } # 1/3 of the startuplimit
+			while = {
+				limit = { check_variable = { which = maitre_startup value = 1 } }
+				subtract_variable = { which = maitre_startup value = 1 }
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = maitre_sculpteur
+					age = 50
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					society_rank_up = 2
+					random_independent_ruler = {
+						limit = { religion = catholic }
+						PREV = { move_character = THIS } 
+					}
+				}
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = maitre_verrier
+					age = 50
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					society_rank_up = 2
+					random_independent_ruler = {
+						limit = { religion = catholic }
+						PREV = { move_character = THIS } 
+					}
+				}
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = maitre_fresquiste
+					age = 50
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					society_rank_up = 2
+					random_independent_ruler = {
+						limit = { religion = catholic }
+						PREV = { move_character = THIS } 
+					}
+				}
+			}
+			
+			# Remove non-artists of the guild
+			any_society_member = {
+				limit = {
+					society_member_of = artist_guild
+					NOT = {
+						trait = apprenti_sculpteur
+						trait = compagnon_sculpteur
+						trait = maitre_sculpteur
+						trait = apprenti_fresquiste
+						trait = compagnon_fresquiste
+						trait = maitre_fresquiste
+						trait = apprenti_verrier
+						trait = compagnon_verrier
+						trait = maitre_verrier
+					}
+				}
+				leave_society = yes
+			}
+		}
+	}
+}

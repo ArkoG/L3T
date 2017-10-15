@@ -1,13 +1,16 @@
 #character
 on_startup = {
-	    events = {
-			L3T.10 #choix carte/map choice
+	events = {
+		L3T.10 #choix carte/map choice
 
-			#Initialisation population building
-			L3T.1101 
-			#AI money start bonus
-			L3T.12
-		}	
+		#Initialisation population building
+		L3T.1101 
+		#AI money start bonus
+		L3T.12
+		
+		# Artist initialisation
+		REC.2100
+	}	
 }
 
 #character

@@ -51,7 +51,7 @@ artist_guild = { #society code name
 	society_rank = { #society ranks
 		level = 1 #lowest rank
 		limit = 50 #max member of that rank
-		startup_limit = 10 #amount of member at the start if enabled=
+		startup_limit = 12 #amount of member at the start if enabled=
 		decisions = { #rank based decisions power
 			# TODO
 		}
@@ -60,7 +60,7 @@ artist_guild = { #society code name
 	society_rank = {
 		level = 2
 		limit = 25
-		startup_limit = 10
+		startup_limit = 9
 		decisions = {
 			# TODO
 		}
@@ -69,7 +69,7 @@ artist_guild = { #society code name
 	society_rank = {
 		level = 3
 		limit = 10
-		startup_limit = 5
+		startup_limit = 5 # The 6th will be the grand master
 		decisions = {
 			# TODO
 		}
