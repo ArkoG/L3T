@@ -192,46 +192,70 @@ character_event ={
 	immediate = {
 		if = {
 			limit = { ai = no } # Should be execute once
+			
 			# Create apprentis
-			subtract_variable = { which = apprenti_startup value = 1 }
-			create_character = {
-				religion = catholic
-				culture = random
-				random_traits = yes
-				trait = apprenti_sculpteur
-				age = 18
-				dynasty = none
-				female = no
+			if = {
+				limit = {
+					is_society_rank_full = {
+						society = artist_guild
+						rank = 1
+					}
+				}
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = apprenti_sculpteur
+					age = 18
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					move_character = THIS # Remove character of play court
+				}
 			}
-			new_character = {
-				join_society = artist_guild
-				move_character = THIS # Remove character of play court
+			if = {
+				limit = {
+					is_society_rank_full = {
+						society = artist_guild
+						rank = 1
+					}
+				}
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = apprenti_verrier
+					age = 18
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					move_character = THIS # Remove character of play court
+				}
 			}
-			create_character = {
-				religion = catholic
-				culture = random
-				random_traits = yes
-				trait = apprenti_verrier
-				age = 18
-				dynasty = none
-				female = no
-			}
-			new_character = {
-				join_society = artist_guild
-				move_character = THIS # Remove character of play court
-			}
-			create_character = {
-				religion = catholic
-				culture = random
-				random_traits = yes
-				trait = apprenti_fresquiste
-				age = 18
-				dynasty = none
-				female = no
-			}
-			new_character = {
-				join_society = artist_guild
-				move_character = THIS # Remove character of play court
+			if = {
+				limit = {
+					is_society_rank_full = {
+						society = artist_guild
+						rank = 1
+					}
+				}
+				create_character = {
+					religion = catholic
+					culture = random
+					random_traits = yes
+					trait = apprenti_fresquiste
+					age = 18
+					dynasty = none
+					female = no
+				}
+				new_character = {
+					join_society = artist_guild
+					move_character = THIS # Remove character of play court
+				}
 			}
 		}
 	}
