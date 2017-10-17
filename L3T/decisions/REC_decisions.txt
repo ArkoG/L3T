@@ -84,4 +84,68 @@ decisions = {
 			}
 		}
 	}
+	
+	seek_glass_bower_master ={
+		only_playable = yes
+		is_high_prio = yes
+		
+		potentiel = {
+			any_demesne_title = {	
+				tier = baron
+				OR = {				
+					has_building = ca_cathedrale_04
+					has_building = ct_cathedrale_04
+					has_building = tp_cathedrale_04
+				}
+				location = { NOT = { has_province_modifier = chantier_stop } }
+			}
+		}
+		
+		allow = {
+			wealth = 50
+			custom_tooltip = { 
+				text = available_glass_bower_master
+				any_society_member = {
+					society_member_of = artist_guild
+					trait = maitre_verrier
+					NOT = { has_character_flag = work_on_cathedral }
+				}
+			}
+		}
+		
+		effect = {
+			wealth = -50
+			prestige = 25
+			random_society_member = {
+				limit = {
+					society_member_of = artist_guild
+					trait = maitre_verrier
+					NOT = { has_character_flag = work_on_cathedral }
+				}
+				set_character_flag = work_on_cathedral
+				set_character_flag = work_alone
+				move_character = ROOT
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.1 #Factors for an AI character to take the decision (1 = average of 1 year)
+			modifier = {
+				factor = 10
+				yearly_income = 300
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { yearly_income = 200 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { yearly_income = 100 }
+			}
+		}
+	}
 }
