@@ -104,6 +104,11 @@ decisions = {
 				}
 				location = { NOT = { has_province_modifier = chantier_stop } }
 			}
+			NOT = {
+				any_courtier = {
+					trait = maitre_verrier
+				}
+			}
 		}
 		
 		allow = {
