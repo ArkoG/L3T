@@ -269,3 +269,134 @@ character_event ={
 		}
 	}
 }
+
+# Stained glass theme
+character_event ={
+    id = REC.2102
+	desc = "DESCREC.2102"
+	picture = GFX_evt_REC8
+
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = batisseur_cathedrale
+		
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
+		}
+		
+		any_courtier = {
+			trait = maitre_verrier
+			has_character_flag = work_on_cathedral
+		}
+	}
+	
+	option = {
+		name = "REC.2102A"
+		piety = 25
+		wealth = -10
+		character_event = { id = REC.2103 }
+	}
+	
+	option = {
+		name = "REC.2102B"
+		prestige = 15
+		wealth = -10
+		character_event = { id = REC.2103 }
+	}
+	
+	option = {
+		name = "REC.2102C"
+	}
+}
+
+# Stained glass size	
+character_event ={
+    id = REC.2103
+	desc = "DESCREC.2103"
+	picture = GFX_evt_REC8
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2103A"
+	}
+	
+	option = {
+		name = "REC.2103B"
+		trigger = {
+			any_society_member = {
+				society_member_of = artist_guild
+				trait = apprenti_verrier
+				NOT = { has_character_flag = work_on_cathedral }
+			}
+		}
+		wealth = -10
+		random_society_member = {
+			limit = {
+				society_member_of = artist_guild
+				trait = apprenti_verrier
+				NOT = { has_character_flag = work_on_cathedral }
+			}
+			set_character_flag = work_on_cathedral
+			move_character = ROOT
+		}
+	}
+	
+	option = {
+		name = "REC.2103C"
+		trigger = {
+			any_society_member = {
+				society_member_of = artist_guild
+				trait = compagnon_verrier
+				NOT = { has_character_flag = work_on_cathedral }
+			}
+		}
+		wealth = -25
+		random_society_member = {
+			limit = {
+				society_member_of = artist_guild
+				trait = compagnon_verrier
+				NOT = { has_character_flag = work_on_cathedral }
+			}
+			set_character_flag = work_on_cathedral
+			move_character = ROOT
+		}
+	}
+	
+	option = {
+		name = "REC.2103D"
+		trigger = {
+			any_society_member = {
+				society_member_of = artist_guild
+				trait = apprenti_verrier
+				NOT = { has_character_flag = work_on_cathedral }
+			}
+			any_society_member = {
+				society_member_of = artist_guild
+				trait = compagnon_verrier
+				NOT = { has_character_flag = work_on_cathedral }
+			}
+		}
+		wealth = -35
+		random_society_member = {
+			limit = {
+				society_member_of = artist_guild
+				trait = apprenti_verrier
+				NOT = { has_character_flag = work_on_cathedral }
+			}
+			set_character_flag = work_on_cathedral
+			move_character = ROOT
+		}
+		random_society_member = {
+			limit = {
+				society_member_of = artist_guild
+				trait = compagnon_verrier
+				NOT = { has_character_flag = work_on_cathedral }
+			}
+			set_character_flag = work_on_cathedral
+			move_character = ROOT
+		}
+	}
+}
