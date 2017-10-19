@@ -330,6 +330,13 @@ stone_siege_defence = {
 	siege_defence = 0.25
 }
 
+work_on_cathedral = {
+	icon = 167
+	#monthly_character_wealth = 1 # Seems to not work
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.1
+}
+
 # No more used
 
 chantier_stop_rivalite_1 = { # Chantier arrêté à cause d'un coup bas

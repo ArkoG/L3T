@@ -288,7 +288,7 @@ character_event ={
 		
 		any_courtier = {
 			trait = maitre_verrier
-			has_character_flag = work_on_cathedral
+			has_character_modifier = work_on_cathedral 
 		}
 	}
 	
@@ -329,7 +329,7 @@ character_event ={
 			any_society_member = {
 				society_member_of = artist_guild
 				trait = apprenti_verrier
-				NOT = { has_character_flag = work_on_cathedral }
+				NOT = { has_character_modifier = work_on_cathedral }
 			}
 		}
 		wealth = -10
@@ -339,9 +339,9 @@ character_event ={
 				limit = {
 					society_member_of = artist_guild
 					trait = apprenti_verrier
-					NOT = { has_character_flag = work_on_cathedral }
+					NOT = { has_character_modifier = work_on_cathedral }
 				}
-				set_character_flag = work_on_cathedral
+				add_character_modifier = { name = work_on_cathedral  duration = -1}
 				move_character = ROOT
 			}
 		}
@@ -353,7 +353,7 @@ character_event ={
 			any_society_member = {
 				society_member_of = artist_guild
 				trait = compagnon_verrier
-				NOT = { has_character_flag = work_on_cathedral }
+				NOT = { has_character_modifier = work_on_cathedral }
 			}
 		}
 		wealth = -25
@@ -364,9 +364,9 @@ character_event ={
 				limit = {
 					society_member_of = artist_guild
 					trait = compagnon_verrier
-					NOT = { has_character_flag = work_on_cathedral }
+					NOT = { has_character_modifier = work_on_cathedral }
 				}
-				set_character_flag = work_on_cathedral
+				add_character_modifier = { name = work_on_cathedral  duration = -1}
 				move_character = ROOT
 			}
 		}
@@ -378,12 +378,12 @@ character_event ={
 			any_society_member = {
 				society_member_of = artist_guild
 				trait = apprenti_verrier
-				NOT = { has_character_flag = work_on_cathedral }
+				NOT = { has_character_modifier = work_on_cathedral }
 			}
 			any_society_member = {
 				society_member_of = artist_guild
 				trait = compagnon_verrier
-				NOT = { has_character_flag = work_on_cathedral }
+				NOT = { has_character_modifier = work_on_cathedral }
 			}
 		}
 		wealth = -35
@@ -394,18 +394,18 @@ character_event ={
 				limit = {
 					society_member_of = artist_guild
 					trait = apprenti_verrier
-					NOT = { has_character_flag = work_on_cathedral }
+					NOT = { has_character_modifier = work_on_cathedral }
 				}
-				set_character_flag = work_on_cathedral
+				add_character_modifier = { name = work_on_cathedral  duration = -1}
 				move_character = ROOT
 			}
 			random_society_member = {
 				limit = {
 					society_member_of = artist_guild
 					trait = compagnon_verrier
-					NOT = { has_character_flag = work_on_cathedral }
+					NOT = { has_character_modifier = work_on_cathedral }
 				}
-				set_character_flag = work_on_cathedral
+				add_character_modifier = { name = work_on_cathedral  duration = -1}
 				move_character = ROOT
 			}
 		}
