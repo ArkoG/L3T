@@ -188,6 +188,8 @@ province_event = {
 				location = { remove_province_modifier = chantier_stop }
 			}
 		}
+		
+		# Construction bonus (building improvement)
 		province_event = { id = REC.201 days = 10}
 		province_event = { id = REC.202 days = 10}
 		province_event = { id = REC.203 days = 10}
@@ -202,6 +204,12 @@ province_event = {
 		province_event = { id = REC.3210 days = 10}
 		province_event = { id = REC.211 days = 10}
 		province_event = { id = REC.212 days = 10}
+		
+		# Artists
+		random = { 
+			chance = 20
+			owner = { character_event = { id = REC.2102 days = 100 random = 50 } }
+		}
 	}
 
 	# Save some money
@@ -267,6 +275,8 @@ province_event = {
 			name = chantier_down
 			duration = -1
 		}
+		
+		# Construction bonus (building improvement)
 		province_event = { id = REC.201 days = 10}
 		province_event = { id = REC.202 days = 10}
 		province_event = { id = REC.203 days = 10}
@@ -281,6 +291,12 @@ province_event = {
 		province_event = { id = REC.3210 days = 10}
 		province_event = { id = REC.211 days = 10}
 		province_event = { id = REC.212 days = 10}
+		
+		# Artists
+		random = { 
+			chance = 20
+			owner = { character_event = { id = REC.2102 days = 100 random = 50 } }
+		}
 	}
 	
 	# Stop financing
