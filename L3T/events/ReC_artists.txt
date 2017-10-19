@@ -333,14 +333,17 @@ character_event ={
 			}
 		}
 		wealth = -10
-		random_society_member = {
-			limit = {
-				society_member_of = artist_guild
-				trait = apprenti_verrier
-				NOT = { has_character_flag = work_on_cathedral }
+		custom_tooltip = { 
+			text = TOOLTIPREC.2103B
+			random_society_member = {
+				limit = {
+					society_member_of = artist_guild
+					trait = apprenti_verrier
+					NOT = { has_character_flag = work_on_cathedral }
+				}
+				set_character_flag = work_on_cathedral
+				move_character = ROOT
 			}
-			set_character_flag = work_on_cathedral
-			move_character = ROOT
 		}
 	}
 	
@@ -355,14 +358,17 @@ character_event ={
 		}
 		wealth = -25
 		prestige = 5
-		random_society_member = {
-			limit = {
-				society_member_of = artist_guild
-				trait = compagnon_verrier
-				NOT = { has_character_flag = work_on_cathedral }
+		custom_tooltip = { 
+			text = TOOLTIPREC.2103C
+			random_society_member = {
+				limit = {
+					society_member_of = artist_guild
+					trait = compagnon_verrier
+					NOT = { has_character_flag = work_on_cathedral }
+				}
+				set_character_flag = work_on_cathedral
+				move_character = ROOT
 			}
-			set_character_flag = work_on_cathedral
-			move_character = ROOT
 		}
 	}
 	
@@ -382,23 +388,26 @@ character_event ={
 		}
 		wealth = -35
 		prestige = 10
-		random_society_member = {
-			limit = {
-				society_member_of = artist_guild
-				trait = apprenti_verrier
-				NOT = { has_character_flag = work_on_cathedral }
+		custom_tooltip = { 
+			text = TOOLTIPREC.2103D
+			random_society_member = {
+				limit = {
+					society_member_of = artist_guild
+					trait = apprenti_verrier
+					NOT = { has_character_flag = work_on_cathedral }
+				}
+				set_character_flag = work_on_cathedral
+				move_character = ROOT
 			}
-			set_character_flag = work_on_cathedral
-			move_character = ROOT
-		}
-		random_society_member = {
-			limit = {
-				society_member_of = artist_guild
-				trait = compagnon_verrier
-				NOT = { has_character_flag = work_on_cathedral }
+			random_society_member = {
+				limit = {
+					society_member_of = artist_guild
+					trait = compagnon_verrier
+					NOT = { has_character_flag = work_on_cathedral }
+				}
+				set_character_flag = work_on_cathedral
+				move_character = ROOT
 			}
-			set_character_flag = work_on_cathedral
-			move_character = ROOT
 		}
 	}
 }
