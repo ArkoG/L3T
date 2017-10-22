@@ -1,0 +1,164 @@
+ # Triggers are in Province scope. The From Scope contains the settlement holder (character)
+ # start trigger is in title scope.
+ 
+ #<tag> = {
+ #	desc = description used in the tooltip of the building
+ #	trigger = used for tech requirement of the building, set to 0 if no requirement so it can be build automatically on new games
+ #	gold_cost = cost to build the building
+ #	build_time = time to build, in days
+ #	
+ #	ai_creation_factor = weight that the AI uses to determine what building to build
+ #	extra_tech_building_start = when starting a new game this building will be pre-built if the province has higher tech than the requirement + this + random 0-1
+ #}
+
+castle = {
+	ca_marketplace_1 = {
+		desc = marketplace_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 65
+		build_time = 200
+		tax_income = 0.5
+		ai_creation_factor = 110
+		extra_tech_building_start = 0.4
+	}
+	ca_marketplace_2 = { #marché de village, requiert un village
+		desc = marketplace_2_desc
+		prerequisites = { ca_town_2 } #village
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		upgrades_from = ca_marketplace_1
+		gold_cost = 85
+		build_time = 150
+		tax_income = 0.5
+		ai_creation_factor = 109
+		extra_tech_building_start = 10.0
+	}
+	ca_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
+		desc = marketplace_3_desc
+		trigger = { ressource_L2_dispo = yes }
+		not_if_x_exists = { FEODAL_mil }
+		upgrades_from = ca_marketplace_2
+		gold_cost = 200
+		build_time = 730
+		tax_income = 2
+		ai_creation_factor = 108
+		extra_tech_building_start = 10.0
+	}
+	ca_marketplace_4 = { #grand marché
+		desc = marketplace_5_desc
+		prerequisites = {
+			ca_town_3  #bourg 
+			FEODAL_adm
+		} 
+		trigger = {  TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_marketplace_3
+		gold_cost = 300
+		build_time = 730
+		tax_income = 3
+		ai_creation_factor = 107
+		extra_tech_building_start = 10.0
+	}
+}
+
+city = {
+##utilise en prebuild jusqu au niveau 2	
+	ct_marketplace_1 = {
+		desc = marketplace_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 65
+		build_time = 200
+		tax_income = 1
+		ai_creation_factor = 110
+		extra_tech_building_start = 0.4
+	}
+	ct_marketplace_2 = { #marché de village, requiert un village
+		desc = marketplace_2_desc
+		prerequisites = { ct_town_1 } #village
+		trigger = {  TECH_CITY_CONSTRUCTION = 0 }
+		upgrades_from = ct_marketplace_1
+		gold_cost = 85
+		build_time = 150
+		tax_income = 1
+		ai_creation_factor = 109
+		extra_tech_building_start = 5.0
+	}
+	ct_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
+		desc = marketplace_3_desc
+		trigger = { ressource_L2_dispo = yes }
+		prerequisites = { ct_town_2 } #bourg
+		upgrades_from = ct_marketplace_2
+		gold_cost = 200
+		build_time = 730
+		tax_income = 3
+		ai_creation_factor = 108
+		extra_tech_building_start = 10.0
+	}
+	ct_marketplace_4 = { #Marché florissant
+		desc = marketplace_4_desc
+		prerequisites = { ct_town_3 } #ville
+		trigger = { TECH_CITY_CONSTRUCTION = 2}
+		upgrades_from = ct_marketplace_3
+		gold_cost = 300
+		build_time = 730
+		tax_income = 2
+		ai_creation_factor = 107
+		extra_tech_building_start = 10.0
+	}
+	ct_marketplace_5 = { #Grand marché
+		desc = marketplace_5_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 2}
+		prerequisites = { VOC_COMMERCIALE }
+		upgrades_from = ct_marketplace_4
+		gold_cost = 400
+		build_time = 2190
+		tax_income = 3
+		ai_creation_factor = 106
+		extra_tech_building_start = 10.0
+	}
+}
+
+temple = {
+	tp_marketplace_1 = {
+		desc = marketplace_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 65
+		build_time = 200
+		tax_income = 0.5
+		ai_creation_factor = 110
+		extra_tech_building_start = 0.4
+	}
+	tp_marketplace_2 = { #marché de village, requiert un village
+		desc = marketplace_2_desc
+		prerequisites = { tp_town_2 } #village
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		upgrades_from = tp_marketplace_1
+		gold_cost = 85
+		build_time = 150
+		tax_income = 0.5
+		ai_creation_factor = 109
+		extra_tech_building_start = 10.0
+	}
+	tp_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
+		desc = marketplace_3_desc
+		trigger = { ressource_L2_dispo = yes }
+		upgrades_from = tp_marketplace_2
+		gold_cost = 200
+		build_time = 730
+		tax_income = 2
+		ai_creation_factor = 108
+		extra_tech_building_start = 10.0
+	}
+	tp_marketplace_4 = { #grand marché
+		desc = marketplace_5_desc
+		prerequisites = { 
+			tp_town_3  #bourg
+			CITEEPISCOPALE
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = tp_marketplace_3
+		gold_cost = 300
+		build_time = 730
+		tax_income = 3
+		ai_creation_factor = 107
+		extra_tech_building_start = 10.0
+	}
+}
