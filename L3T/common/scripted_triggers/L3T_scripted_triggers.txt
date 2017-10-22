@@ -4,6 +4,31 @@
 #				- The scopes
 #				- The OR blocs
 
+
+vigne_dispo = {
+	custom_tooltip = { text = vigne_dispo }
+	OR = {
+		has_province_modifier = agriculture2_vigne_trade
+		FROMFROM = { has_holding_modifier = agriculture2_vigne }
+	}
+}
+orge_dispo = {
+	custom_tooltip = { text = orge_dispo }
+	OR = {
+		has_province_modifier = agriculture2_cereales_trade
+		FROMFROM = { has_holding_modifier = agriculture2_cereales }
+	}
+}
+ressource_L2_dispo = {
+	custom_tooltip = { text = ressource_L2_dispo }
+	FROMFROM = { 
+		OR = {		
+			has_holding_modifier = agriculture2_cereales
+			has_holding_modifier = agriculture2_vigne
+		}
+	}
+}
+
 is_active_fonderie_by_neighbor = {
 	AND = { # Use AND because it will be use in a OR bloc
 		OR = {
