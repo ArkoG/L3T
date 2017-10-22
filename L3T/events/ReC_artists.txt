@@ -8,11 +8,13 @@ character_event ={
 	is_triggered_only = yes	
 	
 	only_playable = yes
-	ai = no
 	
 	immediate = {
 		if = {
-			limit = { ai = no } # Should be execute once
+			limit = { # The Pope to ensure that it is executed only once
+				religion = catholic
+				controls_religion = yes
+			}
 			# Create apprentis
 			set_variable = { which = apprenti_startup value = 4 } # 1/3 of the startuplimit
 			while = {
@@ -200,7 +202,10 @@ character_event ={
 	
 	immediate = {
 		if = {
-			limit = { ai = no } # Should be execute once
+			limit = {  # Should be executed once
+				religion = catholic
+				controls_religion = yes
+			}
 			
 			# Create apprentis
 			if = {
