@@ -16,6 +16,7 @@ province_event = {
 
 	trigger = {
 		has_province_modifier = foret1
+		NOT = { has_province_modifier = defrichage_actif }
 		NOT = { has_province_modifier = foret_up }
 		NOT = { has_province_modifier = foret_poor }
 		owner = { NOT = { has_character_flag = offre_achat_refusee }} #never totaly refused
@@ -68,6 +69,7 @@ province_event = {
 
 	trigger = {
 		has_province_modifier = foret1
+		NOT = { has_province_modifier = defrichage_actif }
 		NOT = { has_province_modifier = foret_up }
 		NOT = { has_province_modifier = foret_poor }
 		owner = { NOT = { has_character_flag = offre_achat_refusee }} #never totaly refused
@@ -120,6 +122,7 @@ province_event = {
 
 	trigger = {
 		has_province_modifier =  foret1
+		NOT = { has_province_modifier = defrichage_actif }
 		NOT = { has_province_modifier = foret_up }
 		NOT = { has_province_modifier = foret_poor }
 		owner = { NOT = { has_character_flag = offre_achat_refusee }} #never totaly refused
