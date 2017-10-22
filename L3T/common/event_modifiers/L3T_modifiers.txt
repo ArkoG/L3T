@@ -176,26 +176,11 @@
 
 
 ###ECO+
-	#holding_modifiers
+	#holding_modifiers #from raw
 agriculture2_cereales = {icon = 96} #0.3 income from the required buildings
 agriculture2_vigne = {icon = 103} #0.3 income from the required buildings
-	#province_modifiers
-agriculture1 = {
-	icon = 95
-	local_revolt_risk = -0.01
-}
-agriculture2_cereales_trade	= {
-	icon = 100
-	land_morale = 0.02
-}
-#agriculture2_fruits = {icon = 100}	 #0.4 income from the required buildings
-#agriculture2_legumes = {icon = 102}  #0.4 income from the required buildings	
-agriculture2_vigne_trade = {
-	icon = 102
-	local_tax_modifier = 0.01
-} 
+	#holding_modifiers #from ressources
 agriculture3_farine = {icon = 97}	
-#agriculture3_cidre = {icon = 101 garrison_size  = 0.05}				
 agriculture3_vin = { 
 	icon = 104
 	levy_size  = 0.05
@@ -206,9 +191,47 @@ agriculture3_biere = {
 	garrison_size  = 0.05
 	local_tax_modifier = 0.02
 }
-agriculture4_pain = {
+nourriture_1 = { #fruits(1), légumes(1), pain(4), fromage(4), viande(4), poisson(4), salaison(5), fumaison(5)
+	icon = 99
+	local_tax_modifier = 0.01
+}
+	#province_modifiers
+agriculture1 = { #base ressource
+	icon = 95
+	local_revolt_risk = -0.01
+}
+agriculture2_cereales_trade	= {
+	icon = 100
+	land_morale = 0.02
+}
+#agriculture2_fruits = {icon = 100}	 #0.4 income from the required buildings
+#agriculture2_legumes = {icon = 102}  #0.4 income from the required buildings	
+#agriculture3_cidre = {icon = 101 garrison_size  = 0.05}				
+agriculture3_vin_trade = { 
+	icon = 104
+	levy_size  = 0.05
+	local_tax_modifier = 0.03
+}
+agriculture3_biere_trade = {
+	icon = 98
+	garrison_size  = 0.05
+	local_tax_modifier = 0.02
+}
+
+nourriture_1_province = { #non trade-able
+	icon = 99
+	local_revolt_risk = -0.01
+	local_tax_modifier = 0.01
+}
+nourriture_2_province = { #non trade-able
+	icon = 99
+	local_revolt_risk = -0.03
+	local_tax_modifier = 0.02
+}
+nourriture_3_province = { #non trade-able
 	icon = 99
 	local_revolt_risk = -0.05
+	local_tax_modifier = 0.03
 }
 
 agriculture3_biere_Q1 = {icon = 145}
