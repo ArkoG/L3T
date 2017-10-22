@@ -176,16 +176,40 @@
 
 
 ###ECO+
-agriculture1			= {icon = 95 local_revolt_risk = -0.01} 
-agriculture2_cereales	= {icon = 96}	
-agriculture2_fruits	= {icon = 100}	
-agriculture2_legumes = {icon = 102}	
-agriculture2_vigne	= {icon = 103} 
-agriculture3_farine 	= {icon = 97}	
-agriculture3_cidre	= {icon = 101 garrison_size  = 0.05}				
-agriculture3_vin 	= {icon = 104 garrison_size  = 0.05}
-agriculture3_biere		= {icon = 98}	
-agriculture4_pain 		= {icon = 99 local_revolt_risk = -0.05}
+	#holding_modifiers
+agriculture2_cereales = {icon = 96} #0.3 income from the required buildings
+agriculture2_vigne = {icon = 103} #0.3 income from the required buildings
+	#province_modifiers
+agriculture1 = {
+	icon = 95
+	local_revolt_risk = -0.01
+}
+agriculture2_cereales_trade	= {
+	icon = 100
+	land_morale = 0.02
+}
+#agriculture2_fruits = {icon = 100}	 #0.4 income from the required buildings
+#agriculture2_legumes = {icon = 102}  #0.4 income from the required buildings	
+agriculture2_vigne_trade = {
+	icon = 102
+	local_tax_modifier = 0.01
+} 
+agriculture3_farine = {icon = 97}	
+#agriculture3_cidre = {icon = 101 garrison_size  = 0.05}				
+agriculture3_vin = { 
+	icon = 104
+	levy_size  = 0.05
+	local_tax_modifier = 0.03
+}
+agriculture3_biere = {
+	icon = 98
+	garrison_size  = 0.05
+	local_tax_modifier = 0.02
+}
+agriculture4_pain = {
+	icon = 99
+	local_revolt_risk = -0.05
+}
 
 agriculture3_biere_Q1 = {icon = 145}
 agriculture3_biere_Q2 = {icon = 146}
@@ -194,15 +218,37 @@ agriculture3_vin_Q1 = {icon = 148}
 agriculture3_vin_Q2 = {icon = 149}
 agriculture3_vin_Q3 = {icon = 150}
 			
-elevage1		= {icon = 105}
-elevage2_laine	= {icon = 107}	
-elevage2_boeuf	= {icon = 106	local_tax_modifier = 0.01}	
-elevage2_fromage= {icon = 109}  
-elevage2_cheval = {icon = 133} 
-elevage4_drap	= {icon = 112}	
-elevage3_viande	= {icon = 110 levy_size = 0.05}
-elevage3_etoffe	= {icon = 108}	
-elevage3_cuir	= {icon = 111}
+elevage1 = {icon = 105}
+elevage2_laine = {
+	icon = 107
+	local_tax_modifier = 0.01
+}
+elevage2_boeuf = {
+	icon = 106
+	local_tax_modifier = 0.01
+}
+#elevage2_fromage = {icon = 109} 	 #0.4 income from the required buildings
+ 
+elevage2_cheval = {
+	icon = 133
+	local_tax_modifier = 0.05
+}
+elevage4_drap = {
+	icon = 112
+	local_tax_modifier = 0.07	
+}
+elevage3_viande = {
+	icon = 110
+	levy_size = 0.05
+}
+elevage3_etoffe	= {
+	icon = 108
+	local_tax_modifier = 0.03
+}
+elevage3_cuir = {
+	icon = 111
+	local_tax_modifier = 0.02
+}
 
 foret1			= {icon = 113}
 foret2_expl		= {icon = 113} #caché
@@ -499,6 +545,10 @@ justice_rendue_char = { #character modifier
 	general_opinion = 7
 	monthly_character_prestige = 0.2
 	icon = 237
+}
+defrichage_actif = {
+	icon = 158
+	local_tax_modifier =  0.02
 }
 
 illegal_cut = {}
