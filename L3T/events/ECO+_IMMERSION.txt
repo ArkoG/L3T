@@ -18,8 +18,8 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = agriculture2_cereales
-			has_province_modifier = agriculture2_fruits		
-			has_province_modifier = agriculture2_legumes		
+			#has_province_modifier = agriculture2_fruits		
+			#has_province_modifier = agriculture2_legumes		
 		}
 		NOT = { has_province_modifier = meteo_inondation }
 		NOT = { has_province_modifier = meteo_secheresse }
@@ -68,7 +68,7 @@ province_event = {
 	trigger = {
 		OR = {
 			has_province_modifier = agriculture2_cereales
-			has_province_modifier = agriculture2_fruits		
+			#has_province_modifier = agriculture2_fruits		
 			has_province_modifier = agriculture2_legumes		
 		}
 		NOT = { has_province_modifier = recolte_bonne }
@@ -437,7 +437,7 @@ province_event = {
 		owner = { war = no }
 		OR = {
 			has_province_modifier = agriculture3_biere
-			has_province_modifier = agriculture3_cidre
+			#has_province_modifier = agriculture3_cidre
 			has_province_modifier = agriculture3_vin
 			has_province_modifier = elevage3_etoffe
 			has_province_modifier = elevage3_cuir

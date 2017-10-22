@@ -505,6 +505,8 @@ province_event = {
 				}
 				has_title_flag = bonus_origin
 			}
+			hidden_tooltip = { add_holding_modifier = { name = has_ress_L2 duration = -1 hidden = yes }}
+			
 #			change_variable = { which = "developpement" value = 10 }
 #			change_variable = { which = "developpement_farm" value = 10 }
 			clear_event_target = holding_pour_desc #for flavour text
@@ -514,51 +516,76 @@ province_event = {
 }
 
 #activation AGRICULTURE -fruits
-province_event = {
-    id = ECO.101
-	desc = "DESCECO.101"
-	picture = GFX_evt_ECO2
-	
-	trigger = {
-		has_province_modifier = agriculture1
-		NOT = { has_province_modifier = agriculture2_fruits }
-		any_province_holding = {
-			OR = {	
-				has_building = CA_AGRI_verger_L2
-				has_building = CT_AGRI_verger_L2
-			}
-		}
-	}
+#province_event = {
+#    id = ECO.101
+#	desc = "DESCECO.101"
+#	picture = GFX_evt_ECO2
+#	
+#	trigger = {
+#		has_province_modifier = agriculture1
+#		NOT = { has_province_modifier = agriculture2_fruits }
+#		any_province_holding = {
+#			OR = {	
+#				has_building = CA_AGRI_verger_L2
+#				has_building = CT_AGRI_verger_L2
+#			}
+#		}
+#	}
 		
-	mean_time_to_happen = { days = 360 }
-
-	option = {
-		name = "ECO.101A"
-		add_province_modifier = { name = agriculture2_fruits duration = -1 }		
-	}
-}
+#	mean_time_to_happen = { days = 360 }
+	
+#	immediate = {
+#		random_province_holding = {
+#			limit = {
+#				OR = {	
+#					has_building = CA_AGRI_verger_L2
+#					has_building = CT_AGRI_verger_L2
+#				}
+#			}
+#			hidden_tooltip = { add_holding_modifier = { name = has_ress_L2 duration = -1 hidden = yes }}
+			#set_title_flag = bonus_origin
+			#save_event_target_as = holding_pour_desc #for flavour text
+#		}
+#	}
+	
+#	option = {
+#		name = "ECO.101A"
+#		add_province_modifier = { name = agriculture2_fruits duration = -1 }		
+#	}
+#}
 
 #activation AGRICULTURE -légumes
-province_event = {
-    id = ECO.102
-	desc = "DESCECO.102"
-	picture = GFX_evt_ECO2
+#province_event = {
+#    id = ECO.102
+#	desc = "DESCECO.102"
+#	picture = GFX_evt_ECO2
 	
-	trigger = {
-		has_province_modifier = agriculture1
-		NOT = { has_province_modifier = agriculture2_legumes }
-		any_province_holding = {
-			has_building = TP_AGRI_maraichage_L2
-		}
-	}
+#	trigger = {
+#		has_province_modifier = agriculture1
+#		NOT = { has_province_modifier = agriculture2_legumes }
+#		any_province_holding = {
+#			has_building = TP_AGRI_maraichage_L2
+#		}
+#	}
 		
-	mean_time_to_happen = { days = 360 }
+#	mean_time_to_happen = { days = 360 }
 
-	option = {
-		name = "ECO.102A"
-		add_province_modifier = { name = agriculture2_legumes duration = -1 }		
-	}
-}
+#	immediate = {
+#		random_province_holding = {
+#			limit = {
+#				has_building = TP_AGRI_maraichage_L2
+#			}
+#			hidden_tooltip = { add_holding_modifier = { name = has_ress_L2 duration = -1 hidden = yes }}
+#			#set_title_flag = bonus_origin
+#			#save_event_target_as = holding_pour_desc #for flavour text
+#		}
+#	}
+	
+#	option = {
+#		name = "ECO.102A"
+#		add_province_modifier = { name = agriculture2_legumes duration = -1 }		
+#	}
+#}
 
 #activation AGRICULTURE -vigne
 province_event = {
@@ -575,7 +602,20 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { days = 360 }
-
+	
+	immediate = {
+		random_province_holding = {
+			limit = {
+				has_building = TP_AGRI_vigne_L2
+			}
+			add_holding_modifier = { name = agriculture2_vigne duration = -1 }	
+			set_title_flag = agriculture2_vigne
+			hidden_tooltip = { add_holding_modifier = { name = has_ress_L2 duration = -1 hidden = yes }}
+			#set_title_flag = bonus_origin
+			#save_event_target_as = holding_pour_desc #for flavour text
+		}
+	}
+	
 	option = {
 		name = "ECO.103A"
 		add_province_modifier = { name = agriculture2_vigne duration = -1 }		
@@ -605,29 +645,29 @@ province_event = {
 }
 
 #activation ELEVAGE -ovin fromage
-province_event = {
-    id = ECO.111
-	desc = "DESCECO.111"
-	picture = GFX_evt_market
-	
-	trigger = {
-		has_province_modifier = elevage1
-		NOT = { has_province_modifier = elevage2_fromage }
-		any_province_holding = {
-			OR = {	
-				has_building = CA_ELEV_ovin_L2b #bourg féodal, alpage
-				has_building = TP_ELEV_ovin_L2
-			}
-		}
-	}
-		
-	mean_time_to_happen = { days = 360 }
-
-	option = {
-		name = "ECO.111A"
-		add_province_modifier = { name = elevage2_fromage duration = -1 }		
-	}
-}
+#province_event = {
+#    id = ECO.111
+#	desc = "DESCECO.111"
+#	picture = GFX_evt_market
+#	
+#	trigger = {
+#		has_province_modifier = elevage1
+#		NOT = { has_province_modifier = elevage2_fromage }
+#		any_province_holding = {
+#			OR = {	
+#				has_building = CA_ELEV_ovin_L2b #bourg féodal, alpage
+#				has_building = TP_ELEV_ovin_L2
+#			}
+#		}
+#	}
+#		
+#	mean_time_to_happen = { days = 360 }
+#
+#	option = {
+#		name = "ECO.111A"
+#		add_province_modifier = { name = elevage2_fromage duration = -1 }		
+#	}
+#}
 
 #activation ELEVAGE -bovin bête sur pied
 province_event = {
@@ -1004,46 +1044,46 @@ province_event = {
 }
 
 #activation CIDRE
-province_event = {
-    id = ECO.108
-	desc = "DESCECO.108"
-	picture = GFX_evt_market
+#province_event = {
+#    id = ECO.108
+#	desc = "DESCECO.108"
+#	picture = GFX_evt_market
 	
-	trigger = {
-		OR = {
-			has_province_modifier = agriculture2_fruits
-			any_neighbor_province = { has_province_modifier = agriculture2_fruits }
-		}
-		NOT = { has_province_modifier = agriculture3_cidre}
-		any_province_holding = {
-			has_building = TP_presse_L2
-		}
-	}
+#	trigger = {
+#		OR = {
+#			has_province_modifier = agriculture2_fruits
+#			any_neighbor_province = { has_province_modifier = agriculture2_fruits }
+#		}
+#		NOT = { has_province_modifier = agriculture3_cidre}
+#		any_province_holding = {
+#			has_building = TP_presse_L2
+#		}
+#	}
 		
-	mean_time_to_happen = { days = 360 }
+#	mean_time_to_happen = { days = 360 }
 	
-	immediate = {
-		random_province_holding = {
-			limit = {
-				has_building = TP_presse_L2
-			}
-			save_event_target_as = holding_pour_desc
-		}
-	}
+#	immediate = {
+#		random_province_holding = {
+#			limit = {
+#				has_building = TP_presse_L2
+#			}
+#			save_event_target_as = holding_pour_desc
+#		}
+#	}
 	
-	option = {
-		name = "ECO.108A"
-		add_province_modifier = { name = agriculture3_cidre duration = -1 }
-		custom_tooltip = { text = TOOLTIP_bonus_dev_ressources_avancee }
-		hidden_tooltip = {
-			event_target:holding_pour_desc = {
-				change_variable = { which = "developpement" value = 10 }
-				#holder_scope = { character_event = { id = L3T.11094 days = 0 }} #totoro
-				clear_event_target = holding_pour_desc
-			}
-		}
-	}
-}
+#	option = {
+#		name = "ECO.108A"
+#		add_province_modifier = { name = agriculture3_cidre duration = -1 }
+#		custom_tooltip = { text = TOOLTIP_bonus_dev_ressources_avancee }
+#		hidden_tooltip = {
+#			event_target:holding_pour_desc = {
+#				change_variable = { which = "developpement" value = 10 }
+#				#holder_scope = { character_event = { id = L3T.11094 days = 0 }} #totoro
+#				clear_event_target = holding_pour_desc
+#			}
+#		}
+#	}
+#}
 
 #activation FARINE
 province_event = {
