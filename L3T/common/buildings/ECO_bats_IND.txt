@@ -859,43 +859,7 @@ temple = {
 
 
 #CIDRE
-TP_presse_L1 = {
-	desc = TP_presse_L1_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		OR = {
-			has_province_modifier = agriculture2_fruits
-			AND = {
-				OR = {
-					has_province_modifier = route_fluviale
-					has_province_modifier = route_terrestre
-				}
-				any_neighbor_province = {
-					has_province_modifier = agriculture2_fruits
-					OR = {
-						has_province_modifier = route_fluviale
-						has_province_modifier = route_terrestre
-					}					
-				}
-			}			
-		}
-	}
-	#prerequisites = { CITEEPISCOPALE }
-	not_if_x_exists = { MONASTERE }
-		gold_cost = 50.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-TP_presse_L2 = {
-	desc = TP_presse_L2_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	upgrades_from = TP_presse_L1
-		gold_cost = 75.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-TP_presse_L3 = {
-	desc = TP_presse_L3_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	upgrades_from = TP_presse_L2
-		gold_cost = 100.0	build_time = 100	tax_income = 0.4	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-}
+#removed
 
 #VERRE
 TP_four_L1 = {

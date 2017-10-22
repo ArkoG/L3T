@@ -251,24 +251,24 @@ CA_FISH_peche_L2 = {
 #}
 
 #FISH pisciculture (terres)
-CA_FISH_pisci_L1 = {
-  	desc = CA_FISH_pisci_L1_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		OR = {
-			has_province_modifier = pisci1
-			has_province_modifier = pisci2_poisson
-			}
-		}
-	prerequisites = { FEODAL_prod }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-CA_FISH_pisci_L2 = {
-  	desc = CA_FISH_pisci_L2_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	upgrades_from = CA_FISH_pisci_L1
-		gold_cost = 150.0	build_time = 360	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-}
+#CA_FISH_pisci_L1 = {
+#  	desc = CA_FISH_pisci_L1_desc
+#	trigger = { TECH_TRADE_PRACTICES = 0 }
+#	potential = {
+#		OR = {
+#			has_province_modifier = pisci1
+#			has_province_modifier = pisci2_poisson
+#			}
+#		}
+#	prerequisites = { FEODAL_prod }
+#		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+#}
+#CA_FISH_pisci_L2 = {
+#  	desc = CA_FISH_pisci_L2_desc
+#	trigger = { TECH_TRADE_PRACTICES = 0 }
+#	upgrades_from = CA_FISH_pisci_L1
+#		gold_cost = 150.0	build_time = 360	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+#}
 #CA_FISH_pisci_L3 = {
 #  	desc = CA_FISH_pisci_L3_desc
 #	upgrades_from = CA_FISH_pisci_L2
@@ -360,19 +360,25 @@ CA_ELEV_cheval_L1 = {
 		terrain = steppe
 	}
 	prerequisites = { FEODAL_mil } #for knights and noble mostly
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	horse_archers = 20 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	light_cavalry_offensive = 0.03
+	light_cavalry_defensive = 0.03
+		gold_cost = 90.0	build_time = 365	tax_income = 0.1	light_cavalry = 10 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_ELEV_cheval_L2 = {
  	desc = CA_ELEV_cheval_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_ELEV_cheval_L1
-		gold_cost = 75.0	build_time = 100	tax_income = 0.2	light_cavalry = 10 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	knights_offensive = 0.03
+	knights_defensive = 0.03
+		gold_cost = 175.0	build_time = 730	tax_income = 0.2	knights = 7 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_ELEV_cheval_L3 = {
  	desc = CA_ELEV_cheval_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_ELEV_cheval_L2
-		gold_cost = 150.0	build_time = 100	tax_income = 0.3	knights = 5 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	knights_offensive = 0.02
+	knights_defensive = 0.02
+		gold_cost = 150.0	build_time = 365	tax_income = 0.2	knights = 10 ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 }
@@ -805,14 +811,33 @@ temple = {
 #FERME CEREALIERE (terres arables)
 TP_AGRI_cereale_L1 = {
 	desc = TP_AGRI_cereale_L1_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
+	trigger = { 
+		has_province_modifier = agriculture1
+		NOT = { terrain = hills }
+		OR = {
+			terrain = farmlands
+			terrain = plains
+			AND = {
+				terrain = forest
+				has_province_modifier = defrichage_actif
+			}
+		}
+	}
 	potential = {
 		has_province_modifier = agriculture1
 		NOT = { terrain = hills }
-		terrain = farmlands
+		OR = {
+			terrain = farmlands
+			terrain = plains
+			AND = {
+				terrain = forest
+				has_province_modifier = defrichage_actif
+			}
+		}
 	}
 	prerequisites = { MONASTERE }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	not_if_x_exists = { TP_AGRI_maraichage_L1 }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_cereale_L2 = {
 	desc = TP_AGRI_cereale_L2_desc
@@ -823,8 +848,8 @@ TP_AGRI_cereale_L2 = {
 TP_AGRI_cereale_L3 = {
 	desc = TP_AGRI_cereale_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 terrain = farmlands }
-	#potential = { terrain = farmlands }
-		upgrades_from = TP_AGRI_cereale_L2
+	potential = { terrain = farmlands }
+	upgrades_from = TP_AGRI_cereale_L2
 		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
@@ -844,7 +869,8 @@ TP_AGRI_maraichage_L1 = {
 		}
 	}
 	prerequisites = { MONASTERE }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	not_if_x_exists = { TP_AGRI_cereale_L1 }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_maraichage_L2 = {
 	desc = TP_AGRI_maraichage_L2_desc
@@ -864,23 +890,23 @@ TP_AGRI_vigne_L1 = {
 	desc = TP_AGRI_vigne_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
-			has_province_modifier = agriculture1
+		has_province_modifier = agriculture1
 		terrain = hills
-		}
+	}
 	prerequisites = { MONASTERE }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 50.0	build_time = 730	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_vigne_L2 = {
 	desc = TP_AGRI_vigne_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_AGRI_vigne_L1
-		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 75.0	build_time = 730	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_vigne_L3 = {
 	desc = TP_AGRI_vigne_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_AGRI_vigne_L2
-		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 365	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #ELEVAGE ovin // pour fromage
@@ -940,11 +966,16 @@ TP_FISH_pisci_L1 = {
 	desc = TP_FISH_pisci_L1_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = {
-		OR = {
-			has_province_modifier = pisci1
-			has_province_modifier = pisci2_poisson
+		has_province_modifier = province_terrestre
+		OR = { 
+			terrain = plains
+			terrain = hills
+			AND = {
+				terrain = forest
+				has_province_modifier = defrichage_actif
 			}
 		}
+	}
 	prerequisites = { MONASTERE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -968,7 +999,7 @@ TP_AGRI_moulin_L1 = {
 	potential = {
 		has_province_modifier = agriculture2_cereales}
 	#prerequisites = { TP_AGRI_cereale_L1 }
-	prerequisites = { MONASTERE }
+	prerequisites = { CITEEPISCOPALE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_moulin_L2 = {
@@ -1014,10 +1045,7 @@ TP_AGRI_boulangerie_L3 = {
 #FUMAISON
 TP_FISH_fumoir_L1 = {
 	desc = TP_FISH_fumoir_L1_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		has_province_modifier = pisci2_poisson }
-	#prerequisites = { TP_FISH_pisci_L1 }
+	trigger = { poisson_dispo = yes }
 	prerequisites = { MONASTERE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -1040,21 +1068,16 @@ TP_FISH_fumoir_L3 = {
 #VIN
 TP_chai_L1 = {
 	desc = TP_chai_L1_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		has_province_modifier = agriculture2_vigne
-		#terrain = hills
-		}
-	#prerequisites = { TP_AGRI_vigne_L1 }
+	trigger = { vigne_dispo = yes }
 	prerequisites = { MONASTERE }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	not_if_x_exists = { TP_brasserie_L1 }
+		gold_cost = 85.0	build_time = 200	tax_income = 0.5	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_chai_L2 = {
 	desc = TP_chai_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { TP_AGRI_vigne_L2 }
 	upgrades_from = TP_chai_L1
-		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 70.0	build_time = 150	tax_income = 0.5	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_chai_L3 = {
 	desc = TP_chai_L3_desc
@@ -1062,9 +1085,8 @@ TP_chai_L3 = {
 		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_vin_Q1
 	}
-	#prerequisites = { TP_AGRI_vigne_L3 }
 	upgrades_from = TP_chai_L2
-		gold_cost = 125.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 125.0	build_time = 100	tax_income = 1.5	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_chai_L4 = {
 	desc = TP_chai_L4_desc
@@ -1074,7 +1096,7 @@ TP_chai_L4 = {
 	}
 	#prerequisites = { TP_AGRI_vigne_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = TP_chai_L3
-		gold_cost = 150.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 100	tax_income = 1.0	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_chai_L5 = {
 	desc = TP_chai_L5_desc
@@ -1084,26 +1106,22 @@ TP_chai_L5 = {
 	}
 	#prerequisites = { TP_AGRI_vigne_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = TP_chai_L4
-		gold_cost = 200.0	build_time = 100	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 200.0	build_time = 100	tax_income = 1.0	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #BIERE
 TP_brasserie_L1 = {
 	desc = TP_brasserie_L1_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		has_province_modifier = agriculture2_cereales
-	}
-	#prerequisites = { TP_AGRI_cereale_L1 }
+	trigger = { reales_dispo = yes }
 	prerequisites = { MONASTERE }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	not_if_x_exists = { TP_chai_L1 }
+		gold_cost = 85.0	build_time = 200	tax_income = 0.5	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_brasserie_L2 = {
 	desc = TP_brasserie_L2_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { TP_AGRI_cereale_L2 }
 	upgrades_from = TP_brasserie_L1
-		gold_cost = 75.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 70.0	build_time = 150	tax_income = 0.5	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_brasserie_L3 = {
 	desc = TP_brasserie_L3_desc
@@ -1111,9 +1129,8 @@ TP_brasserie_L3 = {
 		TECH_TRADE_PRACTICES = 0
 		has_province_modifier = agriculture3_biere_Q1
 	}
-	#prerequisites = { TP_AGRI_cereale_L3 }
 	upgrades_from = TP_brasserie_L2
-		gold_cost = 125.0	build_time = 150	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 125.0	build_time = 150	tax_income = 1.5	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_brasserie_L4 = {
 	desc = TP_brasserie_L4_desc
@@ -1123,7 +1140,7 @@ TP_brasserie_L4 = {
 	}
 	#prerequisites = { TP_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = TP_brasserie_L3
-		gold_cost = 150.0	build_time = 365	tax_income = 0.2	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 150.0	build_time = 365	tax_income = 1.0	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_brasserie_L5 = {
 	desc = TP_brasserie_L5_desc
@@ -1133,7 +1150,7 @@ TP_brasserie_L5 = {
 	}
 	#prerequisites = { TP_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
 	upgrades_from = TP_brasserie_L4
-		gold_cost = 200.0	build_time = 180	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 200.0	build_time = 180	tax_income = 1.0	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 }
