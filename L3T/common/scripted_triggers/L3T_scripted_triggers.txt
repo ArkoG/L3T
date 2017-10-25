@@ -46,6 +46,7 @@ region_vitis_vinifera = {
 		AND = { #SWMH+vanilla map
 			NOT = { has_global_flag = running_LCDA }
 			OR = {
+				region = world_europe_west_germania
 				region = world_europe_west_francia
 				region = world_europe_west_iberia
 				region = world_europe_south_east #world_europe_south
