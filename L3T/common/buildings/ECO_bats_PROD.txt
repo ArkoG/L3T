@@ -892,6 +892,7 @@ TP_AGRI_vigne_L1 = {
 	potential = {
 		has_province_modifier = agriculture1
 		terrain = hills
+		region_vitis_vinifera = yes
 	}
 	prerequisites = { MONASTERE }
 		gold_cost = 50.0	build_time = 730	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -906,6 +907,30 @@ TP_AGRI_vigne_L3 = {
 	desc = TP_AGRI_vigne_L3_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_AGRI_vigne_L2
+		gold_cost = 150.0	build_time = 365	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+#VERGER (côteaux)
+TP_AGRI_verger_L1 = {
+	desc = TP_AGRI_verger_L1_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = {
+		has_province_modifier = agriculture1
+		terrain = hills
+		region_vitis_vinifera = no
+	}
+	#prerequisites = { MONASTERE }
+		gold_cost = 50.0	build_time = 730	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_AGRI_verger_L2 = {
+	desc = TP_AGRI_verger_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_AGRI_verger_L1
+		gold_cost = 75.0	build_time = 730	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_AGRI_verger_L3 = {
+	desc = TP_AGRI_verger_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_AGRI_verger_L2
 		gold_cost = 150.0	build_time = 365	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 

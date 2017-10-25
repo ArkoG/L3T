@@ -5,6 +5,7 @@
 #				- The OR blocs
 
 
+###RESSOURCES
 vigne_dispo = {
 	custom_tooltip = { text = vigne_dispo }
 	OR = {
@@ -30,6 +31,30 @@ ressource_L2_dispo = {
 			has_holding_modifier = agriculture3_biere
 			has_holding_modifier = nourriture_1
 			##### !!! à compléter
+		}
+	}
+}
+
+
+###REGIONS
+region_vitis_vinifera = {
+	OR = {
+		AND = { #LCDA map
+			has_global_flag = running_LCDA
+			region = world_alps
+		}
+		AND = { #SWMH+vanilla map
+			NOT = { has_global_flag = running_LCDA }
+			OR = {
+				region = world_europe_west_francia
+				region = world_europe_west_iberia
+				region = world_europe_south_east #world_europe_south
+				region = world_europe_south_italy #world_europe_south
+				region = world_asia_minor
+				region = world_middle_east_jerusalem
+				region = world_persia
+				region = world_africa_north
+			}
 		}
 	}
 }
