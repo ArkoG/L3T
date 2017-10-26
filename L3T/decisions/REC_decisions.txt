@@ -134,6 +134,7 @@ decisions = {
 				}
 				add_character_modifier = { name = work_on_cathedral  duration = -1}
 				move_character = ROOT
+				opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
 			}
 		}
 		
