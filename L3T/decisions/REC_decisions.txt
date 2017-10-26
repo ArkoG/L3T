@@ -90,25 +90,25 @@ decisions = {
 		is_high_prio = yes
 		
 		potential = {
-			# any_demesne_title = {	
-				# tier = baron
-				# OR = {
-					# has_building = ca_cathedrale_04
-					# has_building = ct_cathedrale_04
-					# has_building = tp_cathedrale_04
-				# }
-				# NOT = {
-					# has_building = ca_cathedrale_09
-					# has_building = ct_cathedrale_09
-					# has_building = tp_cathedrale_09
-				# }
-				# location = { NOT = { has_province_modifier = chantier_stop } }
-			# }
-			# NOT = {
-				# any_courtier = {
-					# trait = maitre_verrier
-				# }
-			# }
+			any_demesne_title = {	
+				tier = baron
+				OR = {
+					has_building = ca_cathedrale_04
+					has_building = ct_cathedrale_04
+					has_building = tp_cathedrale_04
+				}
+				NOT = {
+					has_building = ca_cathedrale_09
+					has_building = ct_cathedrale_09
+					has_building = tp_cathedrale_09
+				}
+				location = { NOT = { has_province_modifier = chantier_stop } }
+			}
+			NOT = {
+				any_courtier = {
+					trait = maitre_verrier
+				}
+			}
 		}
 		
 		allow = {
