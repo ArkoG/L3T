@@ -3,7 +3,7 @@ title_forestier = {
 	realm_in_name = yes
 	show_as_title = yes
 	grant_limit = 1
-	opinion_effect = 10
+	opinion_effect = 15
 	
 	monthly_salary = 0.04
 	monthly_prestige = 0.004
@@ -17,11 +17,17 @@ title_forestier = {
 		
 	allowed_to_grant = {
 		any_demesne_province = { has_province_modifier = foret1 }
-		}
+		any_demesne_province = { region = world_europe }
+	}
 		
 	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { clr_character_flag = titre_mineur_detenu }
-
+	lose_effect = { 
+		clr_character_flag = titre_mineur_detenu
+		remove_opinion = { 
+			modifier = opinion_titre_mineur_promu
+			who = ROOT
+		}
+	}
 	message = yes
 }
 
@@ -29,7 +35,7 @@ title_veneur = {
 	dignity = 0.05
 	realm_in_name = yes
 	grant_limit = 1
-	opinion_effect = 10
+	opinion_effect = 7
 	
 	monthly_salary = 0.03
 	
@@ -61,7 +67,7 @@ title_soigneur = {
 	realm_in_name = yes
 	#show_as_title = yes
 	grant_limit = 1
-	opinion_effect = 10
+	opinion_effect = 7
 	
 	monthly_salary = 0.02
 	monthly_prestige = 0.002
