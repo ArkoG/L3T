@@ -50,11 +50,11 @@ title_veneur = {
 		NOT = { has_character_flag = titre_mineur_detenu }
 		}
 		
-		allowed_to_grant = {
-			is_feudal = yes
-			religion_group = christian
-			any_demesne_province = { has_province_modifier = foret2_chasse }
-		}
+	allowed_to_grant = {
+		is_feudal = yes
+		religion_group = christian
+		any_demesne_province = { has_province_modifier = foret2_chasse }
+	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
 	lose_effect = { clr_character_flag = titre_mineur_detenu }
@@ -79,9 +79,11 @@ title_soigneur = {
 		NOT = { has_character_flag = titre_mineur_detenu }
 		}
 		
-		allowed_to_grant = {
-			capital_holding = { has_building = TP_herboriste_L2 }
-		}
+	allowed_to_grant = {
+		is_feudal = yes
+		religion_group = christian
+		any_demesne_province = { has_province_modifier = foret2_holy }
+	}
 	
 	gain_effect = { set_character_flag = titre_mineur_detenu }
 	lose_effect = { clr_character_flag = titre_mineur_detenu }
