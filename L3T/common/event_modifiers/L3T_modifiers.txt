@@ -176,6 +176,36 @@
 
 
 ###ECO+
+
+
+###General design 
+
+##ressources will give a holding modifier if :
+#-it is usable within the holding (ex. raw wood)
+#-it is exportable (it is a requirement to activate export) (ex. charcoal)
+
+##lower ressources will lose their holding modifier when :
+#-it is used y a further level of ressource (ex; raw wood will by replaced by lumber or charcoal)
+
+##ressources won't give an holding modifier, but directly a province modifier (once market requirement is fulfilled), if : 
+#-it has no use within the holding (ex. glass)
+
+##final products made in towns :
+#-won't give holding modifiers
+#-will give province modifiers
+
+##food
+#-generic food /non trade-able/ won't give holding modifiers (ex. fruits, cheese, vegetables...)
+#-generic food is counted on province level for the general food modifier 
+#-transformable food (meat, fish) will give a holding modifier as they are exportable
+#-trade-able food (salted meat, smoked fish) will be displayed only on province level /same as final products
+
+##quality for beer and wine
+#-will be dealt through a holding variable with a yearly chance of progression
+#-significant bonuses will be brought by either additional buildings providing ingredients (maybe ?) and events.
+#ideas of Q elements : hop, honey, spices, barrels, methods etc. 
+
+
 	#holding_modifiers #from raw
 agriculture2_cereales = {icon = 96} #0.3 income from the required buildings
 agriculture2_vigne = {icon = 103} #0.3 income from the required buildings
@@ -273,13 +303,34 @@ elevage3_cuir = {
 	local_tax_modifier = 0.02
 }
 
-foret1			= {icon = 113}
-foret2_expl		= {icon = 113} #caché
-foret2_bois		= {icon = 114 local_tax_modifier = 0.01}	foret3_planche	= {icon = 116 local_build_time_modifier = -0.03}		
-foret2_charbon	= {icon = 115 local_tax_modifier = 0.01}	foret3_verre	= {icon = 117}	
+	#holding_modifiers #from raw
+foret2_bois = {icon = 114 local_tax_modifier = 0.01 }	
+	
+	#holding_modifiers #from ressources
+foret3_charbon = {icon = 115 local_tax_modifier = 0.01 }	
+foret3_planche = {icon = 116 local_build_time_modifier = -0.03 }
+foret4_verre = {icon = 117 }
 
-foret2_chasse = { 	tax_income = 0.1 local_revolt_risk = 0.04	icon = 118} #contrepartie loi, réduction max de 4% à 1%
-foret2_holy   = { 	tax_income = 0.1 local_revolt_risk = 0.04	icon = 119} #contrepartie loi, réduction max de 4% à 1%
+	#province_modifiers
+foret1 = {icon = 113 }
+foret2_expl = {icon = 113 } #caché
+foret2_chasse = { tax_income = 0.1 local_revolt_risk = 0.04	icon = 118} #contrepartie loi, réduction max de 4% à 1%
+foret2_holy   = { tax_income = 0.1 local_revolt_risk = 0.04	icon = 119} #contrepartie loi, réduction max de 4% à 1%
+
+foret3_charbon_trade = {
+	icon = 115
+}
+foret3_planche_trade = {
+	icon = 116
+}			
+foret4_verre_trade = {
+	icon = 116
+}	
+
+
+
+
+
 
 pierre1					= {icon = 120}
 pierre2_pierre_brute	= {icon = 121}
