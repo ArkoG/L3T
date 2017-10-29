@@ -299,6 +299,13 @@ character_event ={
 	
 	option = {
 		name = "REC.2102A"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
 		piety = 25
 		wealth = -10
 		character_event = { id = REC.2103 }
@@ -306,6 +313,13 @@ character_event ={
 	
 	option = {
 		name = "REC.2102B"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
 		prestige = 15
 		wealth = -10
 		character_event = { id = REC.2103 }
@@ -313,6 +327,13 @@ character_event ={
 	
 	option = {
 		name = "REC.2102C"
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 3
+				trait = greedy
+			}
+		}
 	}
 }
 
@@ -326,11 +347,25 @@ character_event ={
 	
 	option = {
 		name = "REC.2103A"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
 	}
 	
 	option = {
 		name = "REC.2103B"
 		trigger = { available_apprentice_glass_maker = yes }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
 		wealth = -10
 		custom_tooltip = { 
 			text = TOOLTIPREC.2103B
@@ -341,6 +376,13 @@ character_event ={
 	option = {
 		name = "REC.2103C"
 		trigger = { available_compagnon_glass_maker = yes }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 25 } 
+			}
+		}
 		wealth = -25
 		prestige = 5
 		custom_tooltip = { 
@@ -354,6 +396,13 @@ character_event ={
 		trigger = {
 			available_apprentice_glass_maker = yes
 			available_compagnon_glass_maker = yes
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 35 } 
+			}
 		}
 		wealth = -35
 		prestige = 10
@@ -412,6 +461,13 @@ character_event ={
 				has_character_modifier = work_on_cathedral 
 			}
 		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 30 } 
+			}
+		}
 		wealth = -30
 		prestige = 10
 		random_courtier = {
@@ -428,11 +484,25 @@ character_event ={
 	option = {
 		name = "REC.2105B"
 		trigger = { available_master_glass_maker = yes }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 } 
+			}
+		}
 		hire_master_glass_maker = yes
 	}
 	
 	option = {
 		name = "REC.2105C"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
 		custom_tooltip = { text = TOOLTIPREC.2105C }
 	}
 }
@@ -448,17 +518,40 @@ character_event ={
 	
 	option = {
 		name = "REC.2106A"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
 	}
 	
 	option = {
 		name = "REC.2106B"
 		trigger = { available_master_glass_maker = yes }
-		hire_master_glass_maker = yes
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 } 
+			}
+		}
+		hire_master_glass_maker = yes # wealth and prestige are included
 	}
 	
 	option = {
 		name = "REC.2106C"
 		trigger = { available_compagnon_glass_maker = yes }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				NOT = { wealth = 25 } 
+			}
+		}
+		wealth = -25
+		prestige = 5
 		hire_compagnon_glass_maker = yes
 	}
 }
