@@ -115,27 +115,12 @@ decisions = {
 			wealth = 50
 			custom_tooltip = { 
 				text = available_glass_bower_master
-				any_society_member = {
-					society_member_of = artist_guild
-					trait = maitre_verrier
-					NOT = { has_character_modifier = work_on_cathedral }
-				}
+				available_master_glass_maker = yes
 			}
 		}
 		
 		effect = {
-			wealth = -50
-			prestige = 25
-			random_society_member = {
-				limit = {
-					society_member_of = artist_guild
-					trait = maitre_verrier
-					NOT = { has_character_modifier = work_on_cathedral }
-				}
-				add_character_modifier = { name = work_on_cathedral  duration = -1}
-				move_character = ROOT
-				opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
-			}
+			hire_master_glass_maker = yes
 		}
 		
 		revoke_allowed = {

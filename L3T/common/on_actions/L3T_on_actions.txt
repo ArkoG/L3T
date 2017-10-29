@@ -225,3 +225,11 @@ on_artifact_inheritance = {
 		L3T.256 # clean used book flag on artifact inheritance
 	}
 }
+
+# Triggered before succession is dealt with (character still has their relevant flags and titles)
+# ROOT is the dead character
+on_death = {
+	events = {
+		REC.2104 # Death of a master glass maker
+	}
+}

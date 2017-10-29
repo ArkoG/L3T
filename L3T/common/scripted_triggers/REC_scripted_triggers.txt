@@ -298,3 +298,28 @@ is_building_cathedral_step_12 = {
 		}
 	}
 }
+
+available_master_glass_maker = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = maitre_verrier
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+available_compagnon_glass_maker = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = compagnon_verrier
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+available_apprentice_glass_maker = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = apprenti_verrier
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+

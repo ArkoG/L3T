@@ -330,93 +330,136 @@ character_event ={
 	
 	option = {
 		name = "REC.2103B"
-		trigger = {
-			any_society_member = {
-				society_member_of = artist_guild
-				trait = apprenti_verrier
-				NOT = { has_character_modifier = work_on_cathedral }
-			}
-		}
+		trigger = { available_apprentice_glass_maker = yes }
 		wealth = -10
 		custom_tooltip = { 
 			text = TOOLTIPREC.2103B
-			random_society_member = {
-				limit = {
-					society_member_of = artist_guild
-					trait = apprenti_verrier
-					NOT = { has_character_modifier = work_on_cathedral }
-				}
-				add_character_modifier = { name = work_on_cathedral  duration = -1}
-				move_character = ROOT
-				opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
-			}
+			hire_apprentice_glass_maker = yes
 		}
 	}
 	
 	option = {
 		name = "REC.2103C"
-		trigger = {
-			any_society_member = {
-				society_member_of = artist_guild
-				trait = compagnon_verrier
-				NOT = { has_character_modifier = work_on_cathedral }
-			}
-		}
+		trigger = { available_compagnon_glass_maker = yes }
 		wealth = -25
 		prestige = 5
 		custom_tooltip = { 
 			text = TOOLTIPREC.2103C
-			random_society_member = {
-				limit = {
-					society_member_of = artist_guild
-					trait = compagnon_verrier
-					NOT = { has_character_modifier = work_on_cathedral }
-				}
-				add_character_modifier = { name = work_on_cathedral  duration = -1}
-				move_character = ROOT
-				opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
-			}
+			hire_compagnon_glass_maker = yes
 		}
 	}
 	
 	option = {
 		name = "REC.2103D"
 		trigger = {
-			any_society_member = {
-				society_member_of = artist_guild
-				trait = apprenti_verrier
-				NOT = { has_character_modifier = work_on_cathedral }
-			}
-			any_society_member = {
-				society_member_of = artist_guild
-				trait = compagnon_verrier
-				NOT = { has_character_modifier = work_on_cathedral }
-			}
+			available_apprentice_glass_maker = yes
+			available_compagnon_glass_maker = yes
 		}
 		wealth = -35
 		prestige = 10
 		custom_tooltip = { 
 			text = TOOLTIPREC.2103D
-			random_society_member = {
-				limit = {
-					society_member_of = artist_guild
-					trait = apprenti_verrier
-					NOT = { has_character_modifier = work_on_cathedral }
-				}
-				add_character_modifier = { name = work_on_cathedral  duration = -1}
-				move_character = ROOT
-				opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
-			}
-			random_society_member = {
-				limit = {
-					society_member_of = artist_guild
-					trait = compagnon_verrier
-					NOT = { has_character_modifier = work_on_cathedral }
-				}
-				add_character_modifier = { name = work_on_cathedral  duration = -1}
-				move_character = ROOT
-				opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
-			}
+			hire_apprentice_glass_maker = yes
+			hire_compagnon_glass_maker = yes
 		}
 	}
 }
+
+# Death of a master glass maker
+# ROOT is the dead master glass maker
+character_event ={
+    id = REC.2104
+	hide_window = yes
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		trait = maitre_verrier
+		has_character_modifier = work_on_cathedral 
+	}
+	
+	immediate = {
+		employer = {
+			if = {
+				limit = {
+					any_courtier = {
+						trait = maitre_verrier
+						has_character_modifier = work_on_cathedral 
+						NOT = { character = ROOT }
+					}
+				}
+				character_event = { id = REC.2106 }
+				break = yes
+			}
+			character_event = { id = REC.2105 }
+		}
+	}	
+}
+
+# Employer has no more master glass maker
+character_event ={	
+	id = REC.2105 
+	desc = "DESCREC.2105"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2105A"
+		trigger = {
+			any_courtier = {
+				trait = compagnon_verrier
+				has_character_modifier = work_on_cathedral 
+			}
+		}
+		wealth = -30
+		prestige = 10
+		random_courtier = {
+			limit = {
+				trait = compagnon_verrier
+				has_character_modifier = work_on_cathedral 
+			}
+			remove_trait = compagnon_verrier
+			add_trait = maitre_verrier
+			hidden_tooltip = { change_society_currency = -1250 }
+		}
+	}
+	
+	option = {
+		name = "REC.2105B"
+		trigger = { available_master_glass_maker = yes }
+		hire_master_glass_maker = yes
+	}
+	
+	option = {
+		name = "REC.2105C"
+		custom_tooltip = { text = TOOLTIPREC.2105C }
+	}
+}
+	
+	
+# Employer has still master glass maker
+character_event ={	
+	id = REC.2106
+	desc = "DESCREC.2106"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2106A"
+	}
+	
+	option = {
+		name = "REC.2106B"
+		trigger = { available_master_glass_maker = yes }
+		hire_master_glass_maker = yes
+	}
+	
+	option = {
+		name = "REC.2106C"
+		trigger = { available_compagnon_glass_maker = yes }
+		hire_compagnon_glass_maker = yes
+	}
+}
+	
