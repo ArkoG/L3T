@@ -9,268 +9,293 @@ namespace = XYLO
 # embaucher un Forestier
 character_event = {
     id = XYLO.1
-	desc = "DESCXYLO.1"
+	#desc = "DESCXYLO.1"
 	picture = GFX_evt_XYLO_forest2
 
-	capable_only = yes
-
-	trigger = {
-			is_ruler = yes
-			#is_catholic_group = yes
-			prisoner = no
-			any_demesne_province = { has_province_modifier = foret1  }
-			NOT = {	any_courtier = { has_minor_title = title_forestier }	}
-			NOT = {	any_vassal = { has_minor_title = title_forestier }	}
-
-			any_courtier = {
-							prisoner = no
-							age = 16
-							is_female = no	
-							stewardship = 10
-							NOT = { has_character_flag = titre_mineur_detenu }
-							#NOT = { has_minor_title = title_court_jester }
-							#NOT = { has_minor_title = title_keeper_of_swans }
-							#NOT = { has_minor_title = title_court_dwarf }
-							#NOT = { has_minor_title = title_master_of_the_horse }
-							#NOT = { has_minor_title = title_master_of_the_hunt }
-							#NOT = { has_minor_title = title_high_almoner }
-							#NOT = { has_minor_title = title_cupbearer }
-							#NOT = { has_minor_title = title_seneschal }
-							#NOT = { has_minor_title = title_veneur }		
-							#NOT = { has_minor_title = title_court_poet_christian }
-							#NOT = { has_minor_title = title_court_troubadour }
-			}
+	desc = {
+		trigger = { any_courtier = { candidat_forestier = yes }}#scripted_trigger
+		text = "DESCXYLO.1a"
+		picture = GFX_evt_XYLO_forest2
+	}
+	desc = {
+		trigger = { NOT = { any_courtier = { candidat_forestier = yes }}}#scripted_trigger
+		text = "DESCXYLO.1b"
+		picture = GFX_evt_XYLO_forest2
 	}
 
-	mean_time_to_happen = {
+	capable_only = yes
+	only_playable = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		prisoner = no
+		is_nomadic = no
+		is_tribal = no
+		any_demesne_province = { has_province_modifier = foret1 }
+		any_demesne_province = { region = world_europe }
+		NOT = { any_courtier = { has_minor_title = title_forestier }} #n'a pas déjà de forestier
+	}
+
+	weight_multiplier = {
 		months = 5
-			modifier = {
-				factor = 4.5
-				has_character_flag = recrutement_forestier_repousse
+		modifier = {
+			factor = 0.2
+			has_character_flag = recrutement_forestier_repousse
+		}
+	}
+
+	immediate = {  #marque le candidat valide s'il en existe un
+		random_courtier = { 
+			limit = { 
+				candidat_forestier = yes #scripted_trigger
+			}
+			set_character_flag = favori_forestier
 		}
 	}
 	
-option = {
-		name = "XYLO.1A"	#trouvez moi quelqu'un
-		ai_chance = { factor = 100 }	
-						random_courtier = {
-									limit = {
-											prisoner = no											
-											age = 16
-											is_female = no	
-											stewardship = 10 
-											NOT = { has_character_flag = titre_mineur_detenu }
-											#NOT = { has_minor_title = title_court_jester }
-											#NOT = { has_minor_title = title_keeper_of_swans }
-											#NOT = { has_minor_title = title_court_dwarf }
-											#NOT = { has_minor_title = title_master_of_the_horse }
-											#NOT = { has_minor_title = title_master_of_the_hunt }
-											#NOT = { has_minor_title = title_high_almoner }
-											#NOT = { has_minor_title = title_cupbearer }
-											#NOT = { has_minor_title = title_seneschal }
-											#NOT = { has_minor_title = title_veneur }		
-											#NOT = { has_minor_title = title_court_poet_christian }
-											#NOT = { has_minor_title = title_court_troubadour }
-											}
-						give_minor_title = title_forestier	
-						set_character_flag = titre_mineur_detenu 
-						}
+	option = {
+		name = "XYLO.1A"	#quelqu'un de la cour
+		trigger = { #a un candidat valide
+			any_courtier = { 
+				has_character_flag = favori_forestier 
+			}
+		}
+		ai_chance = { factor = 75 }	
+		random_courtier = {
+			limit = {
+				candidat_forestier = yes #scripted_trigger
+				has_character_flag = favori_forestier
+			}
+			give_minor_title = title_forestier	
+			set_character_flag = titre_mineur_detenu 
+			clr_character_flag = favori_forestier
+		}
 	}
-
-option = {
-		name = "XYLO.1B" #je le choisirai	
+	option = {
+		name = "XYLO.1B"	#quelqu'un d'extérieur
+		trigger = { #aucun candidat valide
+			NOT = { any_courtier = { has_character_flag = favori_forestier }}
+		}
+		ai_chance = { factor = 25 }	
+		create_random_steward = {
+			random_traits = yes
+			female = no
+			attributes = {
+				stewardship = 10
+			}
+		}
+		new_character = {
+			give_minor_title = title_forestier	
+			set_character_flag = titre_mineur_detenu
+			opinion = { #le nouveau venu est reconnaissant
+				modifier = opinion_titre_mineur_promu
+				who = ROOT
+			}
+		}
+		custom_tooltip = { text = new_courtier_is_grateful }
+	}
+	option = {
+		name = "XYLO.1C"	#quelqu'un d'extérieur
+		trigger = { #candidat valide mais je fais venir quelqu'un d'extérieur
+			any_courtier = { 
+				has_character_flag = favori_forestier 
+			}
+		}
+		ai_chance = { factor = 25 }	
+		create_random_steward = {
+			random_traits = yes
+			female = no
+			attributes = {
+				stewardship = 10
+			}
+		}
+		new_character = {
+			give_minor_title = title_forestier	
+			set_character_flag = titre_mineur_detenu
+			opinion = { #le nouveau venu est reconnaissant
+				modifier = opinion_titre_mineur_promu
+				who = ROOT
+			}
+		}
+		custom_tooltip = { text = new_courtier_is_grateful }
+		random_courtier = {
+			limit = {
+				has_character_flag = favori_forestier
+			}
+			opinion = { #potential candidate feels insulted that someone else is favored
+				modifier = opinion_titre_mineur_favori_evince
+				who = ROOT
+			}
+			clr_character_flag = favori_forestier
+		}
+	}
+	option = {
+		name = "XYLO.1D" #je le choisirai	
 		ai_chance = { factor = 0 }	
 		set_character_flag = recrutement_forestier_repousse
 	}
 }
 
-# spécialisation Forêts -pour les Féodaux
-province_event = {
+character_event = {
     id = XYLO.2
-	desc = "DESCXYLO.2"
-	picture = GFX_evt_XYLO_forest2
-
+	hide_window = yes
+	
+	is_triggered_only = yes	
+	
 	trigger = {
-		has_province_modifier =	foret1
-		NOT = {
-			has_province_modifier = foret2_expl
-			has_province_modifier = foret2_chasse
-			has_province_modifier = foret2_holy				
+		any_courtier = { has_minor_title = title_forestier }
+		any_demesne_province = {
+			has_province_modifier = foret1
+			NOT = {
+				has_province_modifier = foret2_expl
+				has_province_modifier = foret2_chasse
+				has_province_modifier = foret2_holy
+				has_province_flag = province_foret_a_spec
 			}
-		
-		owner = {
-				is_feudal = yes
-				is_republic = no
-				#is_patrician = no
-				is_theocracy = no				
-				OR = {
-					any_courtier = {
-						has_minor_title = title_forestier
-					}
-					any_vassal = {
-						has_minor_title = title_forestier
-					}
+		}
+	}
+	
+	immediate = { 
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = foret1
+				NOT = {
+					has_province_modifier = foret2_expl
+					has_province_modifier = foret2_chasse
+					has_province_modifier = foret2_holy
+					has_province_flag = province_foret_a_spec
 				}
-			}
-	}
-		
-	mean_time_to_happen = {
-		days = 300
-	}	
-
-option = {
-		name = "XYLO.2A"	
-		trigger = { region = world_europe }
-		ai_chance = {
-			factor = 70
-				modifier = { factor = 0 NOT = { religion_group = christian }}
-				modifier = { factor = 2 owner = { trait = hunter }}
-		}		#à pondérer. choix privilégié si trait chasseur	et a nommé un maître de chasse.
-		add_province_modifier = {
-			name = foret2_chasse 
-			duration = -1
-			}
-		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
-	}
-option = {
-		name = "XYLO.2B"	
-		trigger = { region = world_europe }
-		ai_chance = { 
-			factor = 30
-			modifier = { factor = 2 owner = { stewardship = 10 }}
-			modifier = { factor = 2 owner = { stewardship = 15 }}
-			}		#à pondérer. choix privilégié si bon niveau d'intendance
-		add_province_modifier = {
-			name = foret2_expl
-			duration = -1
-			hidden = yes
+			} 
+			province_event = { id = XYLO.3 }
 		}
-		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
-	}
-option = {
-		name = "XYLO.2C"	
-		trigger = { NOT = { region = world_europe }}
-		ai_chance = { factor = 30 }	
-		add_province_modifier = {
-			name = foret2_expl 
-			duration = -1
-			hidden = yes
-		}
-		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
 	}
 }
 
-# spécialisation Forêts -pour les Villes
+# spécialisation Forêts -pour tous-
 province_event = {
     id = XYLO.3
-	desc = "DESCXYLO.3"
 	picture = GFX_evt_XYLO_forest2
-
-	trigger = {
-		has_province_modifier =	foret1
-		NOT = {
-			has_province_modifier = foret2_expl
-			has_province_modifier = foret2_chasse
-			has_province_modifier = foret2_holy				
-			}
-		
-		owner = {
-				is_feudal = no
-				is_republic = yes
-				#is_patrician = yes
-				is_theocracy = no				
-				OR = {
-					any_courtier = {
-						has_minor_title = title_forestier
-					}
-					any_vassal = {
-						has_minor_title = title_forestier
-					}
-				}
-			}
+	
+	desc = {
+		trigger = { 
+			owner = { is_feudal = yes }
+		}
+		text = "DESCXYLO.3_feudal"
+		picture = GFX_evt_XYLO_forest2
 	}
+	desc = {
+		trigger = { 
+			owner = { is_republic = yes }
+		}
+		text = "DESCXYLO.3_republic"
+		picture = GFX_evt_XYLO_forest2
+	}
+	desc = {
+		trigger = { 
+			owner = { is_theocracy = yes }
+		}
+		text = "DESCXYLO.3_temple"
+		picture = GFX_evt_XYLO_forest2
+	}
+	
+	is_triggered_only = yes
 		
-	mean_time_to_happen = {
-		days = 300
-	}	
+	immediate = {
+		set_province_flag = province_foret_a_spec
+		save_event_target_as = province_foret_a_spec
+		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
+	}
 
-option = {
-		name = "XYLO.3B"	
+	option = {
+		name = "XYLO.2A"	
+		trigger = {
+			owner = { is_feudal = yes }
+			has_province_flag = province_foret_a_spec
+		}
+		ai_chance = {
+			factor = 70
+				modifier = { factor = 0 owner = { NOT = { religion_group = christian }}}
+				modifier = { factor = 2 owner = { trait = hunter }}
+		}	
+		add_province_modifier = {
+			name = foret2_chasse 
+			duration = -1
+		}
+		custom_tooltip = { text = custom_foret_hunt }
+		clear_event_target_as = province_foret_a_spec
+	}
+	option = {
+		name = "XYLO.2B"	
+		trigger = {
+			owner = { is_feudal = yes }
+			has_province_flag = province_foret_a_spec
+		}
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 2 owner = { stewardship = 10 }}
+			modifier = { factor = 2 owner = { stewardship = 15 }}
+		}
+		add_province_modifier = {
+			name = foret2_expl
+			duration = -1
+		}
+		custom_tooltip = { text = custom_foret_expl }
+		clear_event_target_as = province_foret_a_spec
+	}
+	option = {
+		name = "XYLO.3B"
+		trigger = {
+			owner = { is_republic = yes }
+			has_province_flag = province_foret_a_spec
+		}
 		ai_chance = { factor = 100 }	#choix économique uniquement
 		add_province_modifier = {
 			name = foret2_expl 
 			hidden = yes
 			duration = -1
-			}
-		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
+		}
+		custom_tooltip = { text = custom_foret_expl }
+		clear_event_target_as = province_foret_a_spec
 	}
-}
-
-# spécialisation -Forêts clericales
-province_event = {
-    id = XYLO.4
-	desc = "DESCXYLO.4"
-	picture = GFX_evt_XYLO_forest2
-
-	trigger = {
-		has_province_modifier =	foret1
-		NOT = {
-			has_province_modifier = foret2_expl
-			has_province_modifier = foret2_chasse
-			has_province_modifier = foret2_holy				
-			}
-		
-		owner = {
-				is_feudal = no
-				is_republic = no
-				#is_patrician = no
-				is_theocracy = yes				
-				OR = {
-					any_courtier = {
-						has_minor_title = title_forestier
-					}
-					any_vassal = {
-						has_minor_title = title_forestier
-					}
-				}
-			}
-	}
-		
-	mean_time_to_happen = {
-		days = 300
-	}	
-
-option = {
+	option = {
 		name = "XYLO.4A"	
-		trigger = { region = world_europe }
+		trigger = { 
+			owner = { is_theocracy = yes }
+			has_province_flag = province_foret_a_spec
+		}
 		ai_chance = {
-			factor = 70
-			modifier = { factor = 0 religion_group = muslim		}
+			factor = 60
+			modifier = { factor = 0 NOT = { religion_group = christian }}
+			
+			modifier = { factor = 1.2 religion = catholic }
 			modifier = { factor = 2 owner = { trait = gardener }}
-		}	#à pondérer. choix privilégié si monastère + learning 
+			modifier = { factor = 2	owner = { learning = 15	}}
+			modifier = { factor = 0.5 	owner = { NOT = { learning = 10	}}}
+			modifier = { factor = 1.5	NOT = { tier = count } }
+		}
 		add_province_modifier = {
 			name = foret2_holy
 			duration = -1
-			}
+		}
+		custom_tooltip = { text = custom_foret_holy }
 	}
-option = {
+	option = {
 		name = "XYLO.4B"	
-		trigger = { region = world_europe }
-		ai_chance = { factor = 30 }	#à pondérer. choix privilégié si cité épiscopale
+		trigger = { 
+			owner = { is_theocracy = yes }
+			has_province_flag = province_foret_a_spec
+		}
+		ai_chance = { 
+			factor = 40
+			modifier = { factor = 2	owner = { stewardship = 15 }}
+		}
 		add_province_modifier = {
 			name = foret2_expl 
 			duration = -1
 			hidden = yes
-			}		
-	}
-option = {
-		name = "XYLO.4C"
-		trigger = { NOT = { region = world_europe }}
-		ai_chance = { factor = 30 }	#à pondérer. choix privilégié si cité épiscopale
-		add_province_modifier = {
-			name = foret2_expl 
-			duration = -1
-			hidden = yes
-			}		
+		}
+		custom_tooltip = { text = custom_foret_expl }
+		clear_event_target_as = province_foret_a_spec
 	}
 }
