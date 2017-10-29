@@ -1,0 +1,16 @@
+# WARNING: scripted triggers are not functions in the programming langages
+# 		   they are only macro: a way to avoid copy/paste
+#		   In particular take attention of:
+#				- The scopes
+#				- The OR blocs
+
+
+###XYLO
+candidat_forestier = {
+	prisoner = no
+	age = 16
+	is_female = no	
+	stewardship = 10
+	NOT = { has_character_flag = titre_mineur_detenu }
+	NOT = { has_minor_title = title_forestier }
+}
