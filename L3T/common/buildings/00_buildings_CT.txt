@@ -445,7 +445,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 ##utilise en prebuild jusqu au niveau 3	
 	ct_port_1 = {
 		desc = ct_port_1_desc
-		port = yes
+		potential = { has_province_modifier = province_cotiere }
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		gold_cost = 100
 		build_time = 365
@@ -456,7 +456,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 	}
 	ct_port_2 = {
 		desc = ct_port_1_desc
-		port = yes
+		potential = { has_province_modifier = province_cotiere }
 		trigger = { TECH_TRADE_PRACTICES = 1 }
 		prerequisites = { ct_wall_1 }
 		upgrades_from = ct_port_1
@@ -469,7 +469,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 	}
 	ct_port_3 = {
 		desc = ct_port_1_desc
-		port = yes
+		potential = { has_province_modifier = province_cotiere }
 		trigger = { TECH_TRADE_PRACTICES = 3 }
 		prerequisites = { ct_wall_2 }
 		upgrades_from = ct_port_2
@@ -482,7 +482,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 	}
 	ct_port_4 = {
 		desc = ct_port_1_desc
-		port = yes
+		potential = { has_province_modifier = province_cotiere }
 		trigger = { TECH_TRADE_PRACTICES = 4 }
 		upgrades_from = ct_port_3
 		gold_cost = 300
@@ -494,7 +494,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 	}
 	ct_port_5 = {
 		desc = ct_port_1_desc
-		port = yes
+		potential = { has_province_modifier = province_cotiere }
 		trigger = { TECH_TRADE_PRACTICES = 6 }
 		upgrades_from = ct_port_4
 		gold_cost = 400
@@ -507,13 +507,18 @@ ct_training_grounds_3 = { #Porte de  la ville
 ##utilise en prebuild jusqu au niveau 4	
 	ct_shipyard_1 = {
 		desc = shipyard_desc
+		trigger = { 
+			NOT = { has_province_modifier = has_shipyard }
+			#has_province_modifier = foret3_planche_trade
+		}
+		prerequisites = { VOC_INDUSTRIELLE }
 		port = yes
 		trigger = { TECH_NAVAL = 1 }
 		gold_cost = 100
 		build_time = 365
 		galleys = 7
 		ai_creation_factor = 100
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.2
 	}
 	
@@ -521,13 +526,14 @@ ct_training_grounds_3 = { #Porte de  la ville
 		desc = shipyard_desc
 		port = yes
 		trigger = { TECH_NAVAL = 2 }
-		prerequisites = { ct_port_2 } #L3T
+		#potential = { has_province_modifier = province_cotiere }
+		#prerequisites = { ct_port_2 } #L3T
 		upgrades_from = ct_shipyard_1
 		gold_cost = 100
 		build_time = 730
 		galleys = 8
 		ai_creation_factor = 99
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.2
 	}
 	
@@ -540,7 +546,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 		build_time = 1095
 		galleys = 9
 		ai_creation_factor = 98
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.2
 	}
 	
@@ -553,7 +559,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 		build_time = 1460
 		galleys = 10
 		ai_creation_factor = 97
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.2
 	}
 

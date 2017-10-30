@@ -458,13 +458,19 @@ tp_training_grounds_L2 = { #Porte en pierre
 ##utilise en prebuild jusqu au niveau 4	
 	tp_shipyard_1 = {
 		desc = shipyard_desc
+		trigger = { 
+			NOT = { has_province_modifier = has_shipyard }
+			has_province_modifier = foret3_planche_trade
+		}
+		potential = { has_province_modifier = province_cotiere }
+		prerequisites = { CITEEPISCOPALE }
 		port = yes
 		trigger = { TECH_NAVAL = 1 }
 		gold_cost = 100
 		build_time = 365
 		galleys = 6
 		ai_creation_factor = 100
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.4
 	}
 	
@@ -477,7 +483,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		build_time = 730
 		galleys = 7
 		ai_creation_factor = 99
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.4
 	}
 	
@@ -490,7 +496,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		build_time = 1095
 		galleys = 8
 		ai_creation_factor = 98
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.4
 	}
 	
@@ -498,12 +504,13 @@ tp_training_grounds_L2 = { #Porte en pierre
 		desc = shipyard_desc
 		port = yes
 		trigger = { TECH_NAVAL = 4 }
+		potential = { has_province_modifier = NEVER }
 		upgrades_from = tp_shipyard_3
 		gold_cost = 100
 		build_time = 1460
 		galleys = 9
 		ai_creation_factor = 97
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.4
 	}
 

@@ -717,26 +717,33 @@ ca_eglise_L4 = { #Grande église
 	##utilise en prebuild jusqu au niveau 4 
 	ca_shipyard_1 = {
 		desc = shipyard_desc
+		trigger = { 
+			NOT = { has_province_modifier = has_shipyard }
+			#has_province_modifier = foret3_planche_trade
+		}
+		#potential = { has_province_modifier = province_cotiere } #can't put this here because it forbids history pre-built shipyard L1 to be built on history loading fuck 
+		not_if_x_exists = { FEODAL_prod }
 		port = yes
 		trigger = { TECH_NAVAL = 1 }
 		gold_cost = 100
 		build_time = 365
 		galleys = 6
 		ai_creation_factor = 100
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.3
 	}
 	
 	ca_shipyard_2 = {
 		desc = shipyard_desc
-		port = yes
+		#port = yes
 		trigger = { TECH_NAVAL = 2 }
+		#potential = { has_province_modifier = province_cotiere }
 		upgrades_from = ca_shipyard_1
 		gold_cost = 100
 		build_time = 730
 		galleys = 7
 		ai_creation_factor = 99
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.3
 	}
 	
@@ -744,12 +751,13 @@ ca_eglise_L4 = { #Grande église
 		desc = shipyard_desc
 		port = yes
 		trigger = { TECH_NAVAL = 3 }
+		prerequisites = { FEODAL_adm }
 		upgrades_from = ca_shipyard_2
 		gold_cost = 100
 		build_time = 1095
 		galleys = 8
 		ai_creation_factor = 98
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.3
 	}
 	
@@ -757,12 +765,13 @@ ca_eglise_L4 = { #Grande église
 		desc = shipyard_desc
 		port = yes
 		trigger = { TECH_NAVAL = 4 }
+		potential = { has_province_modifier = NEVER }
 		upgrades_from = ca_shipyard_3
 		gold_cost = 100
 		build_time = 1460
 		galleys = 9
 		ai_creation_factor = 97
-		#add_number_to_name = no		
+		add_number_to_name = no		
 		extra_tech_building_start = 0.3
 	}
 }
