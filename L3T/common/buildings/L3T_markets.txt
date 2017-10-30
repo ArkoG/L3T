@@ -20,6 +20,7 @@ castle = {
 		tax_income = 0.5
 		ai_creation_factor = 110
 		extra_tech_building_start = 0.4
+		add_number_to_name = no
 	}
 	ca_marketplace_2 = { #marché de village, requiert un village
 		desc = marketplace_2_desc
@@ -31,6 +32,7 @@ castle = {
 		tax_income = 0.5
 		ai_creation_factor = 109
 		extra_tech_building_start = 10.0
+		add_number_to_name = no
 	}
 	ca_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
 		desc = marketplace_3_desc
@@ -42,6 +44,7 @@ castle = {
 		tax_income = 2
 		ai_creation_factor = 108
 		extra_tech_building_start = 10.0
+		add_number_to_name = no
 	}
 	ca_marketplace_4 = { #grand marché
 		desc = marketplace_5_desc
@@ -56,6 +59,7 @@ castle = {
 		tax_income = 3
 		ai_creation_factor = 107
 		extra_tech_building_start = 10.0
+		add_number_to_name = no
 	}
 }
 
@@ -69,6 +73,7 @@ city = {
 		tax_income = 1
 		ai_creation_factor = 110
 		extra_tech_building_start = 0.4
+		add_number_to_name = no
 	}
 	ct_marketplace_2 = { #marché de village, requiert un village
 		desc = marketplace_2_desc
@@ -80,6 +85,7 @@ city = {
 		tax_income = 1
 		ai_creation_factor = 109
 		extra_tech_building_start = 5.0
+		add_number_to_name = no
 	}
 	ct_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
 		desc = marketplace_3_desc
@@ -91,6 +97,7 @@ city = {
 		tax_income = 3
 		ai_creation_factor = 108
 		extra_tech_building_start = 10.0
+		add_number_to_name = no
 	}
 	ct_marketplace_4 = { #Marché florissant
 		desc = marketplace_4_desc
@@ -102,6 +109,7 @@ city = {
 		tax_income = 2
 		ai_creation_factor = 107
 		extra_tech_building_start = 10.0
+		add_number_to_name = no
 	}
 	ct_marketplace_5 = { #Grand marché
 		desc = marketplace_5_desc
@@ -113,6 +121,56 @@ city = {
 		tax_income = 3
 		ai_creation_factor = 106
 		extra_tech_building_start = 10.0
+		add_number_to_name = no
+	}
+	
+	CT_port_commercial_L1 = { #quai côtier
+		desc = CT_port_commercial_desc
+		prerequisites = { VOC_COMMERCIALE }
+		trigger = {  TECH_CITY_CONSTRUCTION = 0 }
+		potential = { has_province_modifier = province_cotiere }
+		gold_cost = 55
+		build_time = 150
+		tax_income = 1
+		ai_creation_factor = 110
+		extra_tech_building_start = 0.4
+		add_number_to_name = no
+	}
+	CT_port_commercial_L2 = { #port prospère
+		desc = CT_port_commercial_desc
+		prerequisites = { ct_town_1 } #village
+		trigger = {  TECH_CITY_CONSTRUCTION = 0 }
+		upgrades_from = CT_port_commercial_L1
+		gold_cost = 125
+		build_time = 365
+		tax_income = 1
+		ai_creation_factor = 109
+		extra_tech_building_start = 5.0
+		add_number_to_name = no
+	}
+	CT_port_commercial_L3 = { #port commercial
+		desc = CT_port_commercial_desc
+		trigger = { ressource_L2_dispo = yes }
+		prerequisites = { ct_town_2 } #bourg
+		upgrades_from = CT_port_commercial_L2
+		gold_cost = 200
+		build_time = 365
+		tax_income = 2
+		ai_creation_factor = 108
+		extra_tech_building_start = 10.0
+		add_number_to_name = no
+	}
+	CT_port_commercial_L4 = { #grand port marchand
+		desc = CT_port_commercial_desc
+		prerequisites = { ct_town_3 } #ville
+		trigger = { TECH_CITY_CONSTRUCTION = 2}
+		upgrades_from = CT_port_commercial_L3
+		gold_cost = 300
+		build_time = 730
+		tax_income = 3
+		ai_creation_factor = 107
+		extra_tech_building_start = 10.0
+		add_number_to_name = no
 	}
 }
 
@@ -125,6 +183,7 @@ temple = {
 		tax_income = 0.5
 		ai_creation_factor = 110
 		extra_tech_building_start = 0.4
+		add_number_to_name = no
 	}
 	tp_marketplace_2 = { #marché de village, requiert un village
 		desc = marketplace_2_desc
@@ -136,6 +195,7 @@ temple = {
 		tax_income = 0.5
 		ai_creation_factor = 109
 		extra_tech_building_start = 10.0
+		add_number_to_name = no
 	}
 	tp_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
 		desc = marketplace_3_desc
@@ -146,6 +206,7 @@ temple = {
 		tax_income = 2
 		ai_creation_factor = 108
 		extra_tech_building_start = 10.0
+		add_number_to_name = no
 	}
 	tp_marketplace_4 = { #grand marché
 		desc = marketplace_5_desc
@@ -160,5 +221,6 @@ temple = {
 		tax_income = 3
 		ai_creation_factor = 107
 		extra_tech_building_start = 10.0
+		add_number_to_name = no
 	}
 }
