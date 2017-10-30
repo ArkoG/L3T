@@ -276,16 +276,16 @@ settlement_decisions = {
 								ROOT = { remove_building = CA_AGRI_moulin_L1 }
 								add_building = CA_AGRI_moulin_L1
 							}
-							if = {
-								limit = { ROOT = { has_building = CA_FISH_pisci_L2 } }
-								ROOT = { remove_building = CA_FISH_pisci_L2}
-								add_building = CA_FISH_pisci_L2
-							}
-							if = {
-								limit = { ROOT = { has_building = CA_FISH_pisci_L1 } }
-								ROOT = { remove_building = CA_FISH_pisci_L1 }
-								add_building = CA_FISH_pisci_L1
-							}
+#							if = {
+#								limit = { ROOT = { has_building = CA_FISH_pisci_L2 } }
+#								ROOT = { remove_building = CA_FISH_pisci_L2}
+#								add_building = CA_FISH_pisci_L2
+#							}
+#							if = {
+#								limit = { ROOT = { has_building = CA_FISH_pisci_L1 } }
+#								ROOT = { remove_building = CA_FISH_pisci_L1 }
+#								add_building = CA_FISH_pisci_L1
+#							}
 							if = {
 								limit = { ROOT = { has_building = CA_FISH_peche_L2 } }
 								ROOT = { remove_building = CA_FISH_peche_L2 }
@@ -780,16 +780,16 @@ settlement_decisions = {
 							ROOT = { remove_building = CA_AGRI_moulin_L1 }
 							add_building = CA_AGRI_moulin_L1
 						}
-						if = {
-							limit = { ROOT = { has_building = CA_FISH_pisci_L2 } }
-							ROOT = { remove_building = CA_FISH_pisci_L2}
-							add_building = CA_FISH_pisci_L2
-						}
-						if = {
-							limit = { ROOT = { has_building = CA_FISH_pisci_L1 } }
-							ROOT = { remove_building = CA_FISH_pisci_L1 }
-							add_building = CA_FISH_pisci_L1
-						}
+#						if = {
+#							limit = { ROOT = { has_building = CA_FISH_pisci_L2 } }
+#							ROOT = { remove_building = CA_FISH_pisci_L2}
+#							add_building = CA_FISH_pisci_L2
+#						}
+#						if = {
+#							limit = { ROOT = { has_building = CA_FISH_pisci_L1 } }
+#							ROOT = { remove_building = CA_FISH_pisci_L1 }
+#							add_building = CA_FISH_pisci_L1
+#						}
 						if = {
 							limit = { ROOT = { has_building = CA_FISH_peche_L2 } }
 							ROOT = { remove_building = CA_FISH_peche_L2 }
