@@ -206,6 +206,8 @@
 #ideas of Q elements : hop, honey, spices, barrels, methods etc. 
 
 
+NEVER = {icon = 96} #to prevent some buildings to be ever built (vanilla stuff i dont want but can't remove) 
+
 	#holding_modifiers #from raw
 agriculture2_cereales = {icon = 96} #0.3 income from the required buildings
 agriculture2_vigne = {icon = 103} #0.3 income from the required buildings
@@ -353,6 +355,9 @@ minerai2_or	= {icon = 144}
 peche1					= {icon = 130}	pisci1			= {icon = 130}	
 peche2_poisson			= {icon = 131}	pisci2_poisson	= {icon = 131}
 peche_pisci3_fumaison	= {icon = 132 local_revolt_risk = -0.03}
+
+has_fishing_harbour = {icon = 130} #hidden only
+has_shipyard = {icon = 130} #hidden only
 
 peaux2_fourrure	= {icon = 136 	tax_income = 0.2}
 joyaux2_bijoux	= {icon = 137 	tax_income = 0.1}
