@@ -135,22 +135,24 @@ elevage3_cuir;Pastoral: Leather;Elevage : CUIR;;;;;;;;;;;;x
 elevage3_cuir_desc;High-quality leather is a major export of this province, useful in industry as well as military applications.;;;;;;;;;;;;;x
 elevage2_cheval;Pastoral: Steppe Horses;Elevage : CHEVAL;;;;;;;;;;;;x
 elevage2_cheval_desc;The vast expanse of steppe in this province is home to some breeds of uniquely robust horses. The tribesmen have succeeded in taming a significant number to sell to passing merchants as well as to the local lord's stablemaster.;;;;;;;;;;;;;x
+
 foret1;Forests;Forêts;;;;;;;;;;;;x
 foret1_desc;This province abounds with thick forests teeming with wildlife and, of course, trees available for exploitation. However, a §YForester§! is needed to manage its resources and ensure its security.;La province abonde de belles forêts. Engager un §YForestier§! est indispensable pour en assurer la gestion et la sécurité.;;;;;;;;;;;;x
-foret2_bois;Forestry: Timber;Exploitation Forestière: BOIS;;;;;;;;;;;;x
+foret2_bois;Forestry: Timber;Forêt : BOIS BRUT;;;;;;;;;;;;x
 foret2_bois_desc;The quality of the lumber harvested from these rich forests permits the production of sturdy wood for use in construction or the manufacture of other products.;Le gros calibre des arbres permet ici de produire du bois qui pourra être transformé pour servir à la construction ou à la fabrication d'objets divers.;;;;;;;;;;;;x
-foret2_charbon;Forestry: Charcoal;Exploitation Forestière: CHARBON;;;;;;;;;;;;x
-foret2_charbon_desc;Small trees and shrubs harvested from the outlying woodlands are turned into charcoal, a effective combustible notably used in glassmaking and metalworking.;Les plus petits arbres et taillis sont ici transformés en charbon de bois, un combustible efficace utilisé notamment pour la fabrication du verre ou la fonte de métal.;;;;;;;;;;;;x
-foret2_chasse;Forestry: Hunting;Domaine de Chasse;;;;;;;;;;;;x
+foret3_charbon;Forestry: Charcoal;Forêt : CHARBON DE BOIS;;;;;;;;;;;;x
+foret3_charbon_desc;Small trees and shrubs harvested from the outlying woodlands are turned into charcoal, a effective combustible notably used in glassmaking and metalworking.;Les plus petits arbres et taillis sont ici transformés en charbon de bois, un combustible efficace utilisé notamment pour la fabrication du verre ou la fonte de métal.;;;;;;;;;;;;x
+foret2_chasse;Forestry: Hunting demesne;Forêt : Domaine de chasse;;;;;;;;;;;;x
 foret2_chasse_desc;The game in these lands are reserved solely for the private use of the lord for hunting. The use of other minor resources on a small scale is permitted but poaching and deforestation are severely punished.;Il s'agit là des terres réservées à l'usage privé du seigneur pour la pratique de la chasse. L'exploitation des autres ressources y est limité et tout braconnage sera durement réprimé.;;;;;;;;;;;;x
-foret2_holy;Forestry: Woodland Sanctuary;Forêt Sanctuarisée;;;;;;;;;;;;x
+foret2_holy;Forestry: Woodland sanctuary;Forêt : Forêt sanctuarisée;;;;;;;;;;;;x
 foret2_holy_desc;The majority of these forests have been decreed under sanctuary by the local lord, protecting them from exploitation. Access to resources in these lands are extremely limited.;La plus grande partie de ces forêts a été sanctuarisée pour y abriter des lieux d'ermitage ou de retraite spirituelle, l'accès aux ressources pour les populations y est limité.;;;;;;;;;;;;x
-foret2_expl;Exploited Forest;Forêt exploitée;;;;;;;;;;;;x
+foret2_expl;Forestry: Exploited forest;Forêt : Forêt exploitée;;;;;;;;;;;;x
 foret2_expl_desc;The abundant resources of these forests are actively being exploited for purposes of industry.;Forêt exploitée;;;;;;;;;;;;x
-foret3_planche;Forestry: Lumber;BOIS : planches;;;;;;;;;;;;x
+foret3_planche;Forestry: Lumber;Forêt : BOIS;;;;;;;;;;;;x
 foret3_planche_desc;Wood harvested from the many forests in this region is then processed and made available as lumber for construction and industry.;;;;;;;;;;;;;x
-foret3_verre;GLASS;VERRE;;;;;;;;;;;;x
-foret3_verre_desc;These woods have much-needed combustible material and are fueling a thriving glass-making industry in this region.;Le bois abondant fournit le combustible à nombre de verriers qui pullulent dans les forêts.;;;;;;;;;;;;x
+foret4_verre;Forestry: GLASS;Forêt : VERRE;;;;;;;;;;;;x
+foret4_verre_desc;These woods have much-needed combustible material and are fueling a thriving glass-making industry in this region.;Le bois abondant fournit le combustible à nombre de verriers qui pullulent dans les forêts.;;;;;;;;;;;;x
+
 pierre1;Stone Deposits;Gisements de Pierre;;;;;;;;;;;;x
 pierre1_desc;The characteristic rock faces of the region could potentially be mined for stone, whether to be used for simple paving or cut into blocks for more complex construction projects.;Le caractère rocheux de la région, présente un bon potentiel pour fournir de la pierre, qu'il s'agisse de simple remblai ou de blocs de pierres à tailler pour servir à la construction.;;;;;;;;;;;;x
 pierre2_pierre_brute;Masonry: Stone;Extraction de PIERRE;;;;;;;;;;;;x
@@ -179,14 +181,18 @@ minerai3_salaison;Mining: Salt Curing;SALAISONS;;;;;;;;;;;;x
 minerai3_salaison_desc;The abundance of salt makes it cheaper in this province, allowing it to be commonly used in conserving food. These salted products last longer, travel farther before spoiling, and can be sold regionally.;L'abondance de sel le rend meilleur marché dans cette province, ce qui en rend l'usage pour la conservation plus commun. Ces même salaisons voyagent bien mieux et peuvent donc être vendues dans toute la région.;;;;;;;;;;;;x
 minerai4_armes;Mining: Arms;ARMES;;;;;;;;;;;;x
 minerai4_armes_desc;The iron produced here is then transformed into armor and arms to equip the local lord's armies.;Le métal forgé sert ici à fabriquer pièces d'armures, boucliers, armes tranchantes ou contendantes. Leur usage est réservé à la classe militaire. ;;;;;;;;;;;;x
-peche1;Abundant Fishing;Région de Pèche;;;;;;;;;;;;x
-peche1_desc;The bountiful waters that border these coasts, in addition to feeding the local population, have the potential for more profitable operations.;Les eaux poissonneuses qui bordent ces côtes, en plus de nourrir la population locale, ont probablement le potentiel pour une exploitation plus rémunératrice.;;;;;;;;;;;;x
+
+has_fishing_harbour;The province already owns one sea fishing harbor;La province possède déjà un port de pêche en mer;;;;;;;;;;;;x
+has_shipyard;The province already owns one sea fishing harbor;La province possède déjà un port de pêche en mer;;;;;;;;;;;;x
+
+#peche1;Abundant Fishing;Région de Pèche;;;;;;;;;;;;x
+#peche1_desc;The bountiful waters that border these coasts, in addition to feeding the local population, have the potential for more profitable operations.;Les eaux poissonneuses qui bordent ces côtes, en plus de nourrir la population locale, ont probablement le potentiel pour une exploitation plus rémunératrice.;;;;;;;;;;;;x
 peche2_poisson;Fishing Villages;Région de Pèche;;;;;;;;;;;;x
 peche2_poisson_desc;The waters around the province wriggle in silver fish and a number of small fishing villages have established themselves along the coast.;Les eaux bordant cette province frétillent de poissons aux reflets argentés... il ne reste qu'à aller les cueillir !;;;;;;;;;;;;x
-pisci1;Bountiful Waters;Potentiel pour la Pisciculture;;;;;;;;;;;;x
-pisci1_desc;The many lakes and rivers in the area are well-suited for the potential cultivation and harvesting of freshwater fish.;Les nombreux étangs et rivières de la région se prêtent très bien à l'élevage de poissons d'eau douce. Probablement une idée à creuser.;;;;;;;;;;;;x
-pisci2_poisson;Aquaculture: Freshwater Fish;Région Piscicole;;;;;;;;;;;;x
-pisci2_poisson_desc;Whether in the wild or in small ponds, fish farming feeds the region's and supplies the larders of the local nobles with a delicious supplement to their luxurious feasts.;Que ce soit en milieu naturel ou dans les étangs artificiels qui se multiplient, l'activité piscicole nourrit les populations et approvisionnent les tables nobles de la région en produit frais.;;;;;;;;;;;;x
+#pisci1;Bountiful Waters;Potentiel pour la Pisciculture;;;;;;;;;;;;x
+#pisci1_desc;The many lakes and rivers in the area are well-suited for the potential cultivation and harvesting of freshwater fish.;Les nombreux étangs et rivières de la région se prêtent très bien à l'élevage de poissons d'eau douce. Probablement une idée à creuser.;;;;;;;;;;;;x
+#pisci2_poisson;Aquaculture: Freshwater Fish;Région Piscicole;;;;;;;;;;;;x
+#pisci2_poisson_desc;Whether in the wild or in small ponds, fish farming feeds the region's and supplies the larders of the local nobles with a delicious supplement to their luxurious feasts.;Que ce soit en milieu naturel ou dans les étangs artificiels qui se multiplient, l'activité piscicole nourrit les populations et approvisionnent les tables nobles de la région en produit frais.;;;;;;;;;;;;x
 peche_pisci3_fumaison;Aquaculture: Smoked Fish;FUMAISONS;;;;;;;;;;;;x
 peche_pisci3_fumaison_desc;The best way to store and transport such an abundance of fish continues to be smoking them, which has become a specialty of this province.;Le meilleur moyen de conserver et transporter une telle abondance de poisson reste encore le traitement par fumaison, qui est par ailleurs devenue une spécialité de cette province.;;;;;;;;;;;;x
 peaux2_fourrure;Trade: Furs;FOURRURES;;;;;;;;;;;;x
