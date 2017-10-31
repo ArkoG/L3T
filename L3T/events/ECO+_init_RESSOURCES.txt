@@ -590,7 +590,53 @@ character_event = {
 		}
 	}
 }
+character_event = {
+    id = ECO.17
+	hide_window = yes
 
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_realm_province = {
+			any_province_holding = {
+				OR = {
+					AND = {
+						has_building = CA_AGRI_cereale_L1
+						NOT = { check_variable = { which = "a_deja_cereales" value = 0 }}
+					}
+					AND = {
+						has_building = CA_AGRI_verger_L1
+						NOT = { check_variable = { which = "a_deja_fruit" value = 0 }}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 10 }
+	
+	immediate = {
+		random_realm_province = {
+			random_province_holding = {
+				limit = { 
+					has_building = CA_AGRI_cereale_L1 
+					NOT = { check_variable = { which = "a_deja_cereales" value = 0 }}
+				}
+				set_variable = { which = "a_deja_cereales" value = 2 }
+			}
+		}
+
+		random_realm_province = {
+			random_province_holding = {
+				limit = { 
+					has_building = CA_AGRI_verger_L1
+					NOT = { check_variable = { which = "a_deja_fruit" value = 0 }}
+				}
+				set_variable = { which = "a_deja_fruit" value = 2 }
+			}
+		}
+	}
+}
 		
 ###activation ressources
 

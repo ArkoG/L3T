@@ -10,8 +10,11 @@ CA_AGRI_cereale_L1 = {
 	desc = CA_AGRI_cereale_L1_desc
 	potential = {
 		has_province_modifier = agriculture1
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_fruit" value = 1 }}}
 	}
-	trigger = { TECH_TRADE_PRACTICES = 0 }
+	trigger = { TECH_TRADE_PRACTICES = 0
+	
+	}
 	prerequisites = { FEODAL_prod }
 	not_if_x_exists = { CA_AGRI_verger_L1 }
 	#COST
@@ -62,13 +65,16 @@ CA_AGRI_verger_L1 = {
 	potential = {
 		has_province_modifier = agriculture1
 		NOT = { terrain = farmlands }
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_cereales" value = 1 }}}
 	}
-	trigger = { TECH_TRADE_PRACTICES = 0 }
+	trigger = { TECH_TRADE_PRACTICES = 0
+	
+	}
 	prerequisites = { FEODAL_prod }
 	not_if_x_exists = { CA_AGRI_cereale_L1 }
 	#COST
 		gold_cost = 105.0 #calc /2
-		build_time = 370
+		build_time = 740 #calc *2
 	#EFFECTS
 		tax_income = 0.1
 	#DIVERS
@@ -82,7 +88,7 @@ CA_AGRI_verger_L2 = {
 	upgrades_from = CA_AGRI_verger_L1
 	#COST
 		gold_cost = 115.0 #calc /2
-		build_time = 740 #calc *2
+		build_time = 740
 	#EFFECTS
 		tax_income = 0.2
 	#DIVERS
