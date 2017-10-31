@@ -20,6 +20,29 @@ orge_dispo = {
 		FROMFROM = { has_holding_modifier = agriculture2_cereales }
 	}
 }
+bois_brut_dispo = {
+	custom_tooltip = { text = bois_brut_dispo }
+	OR = {
+		FROMFROM = { has_holding_modifier = foret2_bois } #this icon will disapear once a further level is reached
+		FROMFROM = { has_holding_modifier = foret3_charbon }
+		FROMFROM = { has_holding_modifier = foret3_planche }
+	}
+}
+planche_dispo = {
+	custom_tooltip = { text = planche_dispo }
+	OR = {
+		has_province_modifier = foret3_planche_trade
+		FROMFROM = { has_holding_modifier = foret3_planche }
+	}
+}
+charbon_dispo = {
+	custom_tooltip = { text = charbon_dispo }
+	OR = {
+		has_province_modifier = foret3_charbon_trade
+		FROMFROM = { has_holding_modifier = foret3_charbon }
+	}
+}
+
 ressource_L2_dispo = {
 	custom_tooltip = { text = ressource_L2_dispo }
 	FROMFROM = { 
@@ -34,7 +57,6 @@ ressource_L2_dispo = {
 		}
 	}
 }
-
 
 ###REGIONS
 region_vitis_vinifera = {
@@ -60,6 +82,7 @@ region_vitis_vinifera = {
 	}
 }
 
+###ECO
 is_active_fonderie_by_neighbor = {
 	AND = { # Use AND because it will be use in a OR bloc
 		OR = {
