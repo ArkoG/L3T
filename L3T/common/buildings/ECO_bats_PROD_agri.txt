@@ -1,0 +1,452 @@
+### L3T // ECO
+## AGRI // prod
+#by Arko & Mouchi
+
+#############################
+castle = {
+
+#FERME CEREALIERE (plaine coteaux et terres arables)
+CA_AGRI_cereale_L1 = {
+	desc = CA_AGRI_cereale_L1_desc
+	potential = {
+		has_province_modifier = agriculture1
+	}
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	prerequisites = { FEODAL_prod }
+	not_if_x_exists = { CA_AGRI_verger_L1 }
+	#COST
+		gold_cost = 100.0
+		build_time = 180
+	#EFFECTS
+		tax_income = 0.1
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+}
+CA_AGRI_cereale_L2 = {
+	desc = CA_AGRI_cereale_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CA_AGRI_cereale_L1
+	#COST
+		gold_cost = 130.0
+		build_time = 380
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 97
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	#ACTIVATES 
+		#cereals as holding modifier
+		#cereals as province modifier with market
+}
+CA_AGRI_cereale_L3 = {
+	desc = CA_AGRI_cereale_L3_desc
+	potential = { terrain = farmlands }
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CA_AGRI_cereale_L2
+	#COST
+		gold_cost = 27.0
+		build_time = 370
+	#EFFECTS
+		tax_income = 0.3
+	#DIVERS
+		ai_creation_factor = 95
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+}
+#VERGER (plaine et coteaux)
+CA_AGRI_verger_L1 = {
+	desc = CA_AGRI_verger_L1_desc
+	potential = {
+		has_province_modifier = agriculture1
+		NOT = { terrain = farmlands }
+	}
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	prerequisites = { FEODAL_prod }
+	not_if_x_exists = { CA_AGRI_cereale_L1 }
+	#COST
+		gold_cost = 105.0 #calc /2
+		build_time = 370
+	#EFFECTS
+		tax_income = 0.1
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+}
+CA_AGRI_verger_L2 = {
+	desc = CA_AGRI_verger_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CA_AGRI_verger_L1
+	#COST
+		gold_cost = 115.0 #calc /2
+		build_time = 740 #calc *2
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	#ACTIVATES 
+		#food as title flag with variable
+		#food as variable at province modifier level with market		
+}
+CA_AGRI_verger_L3 = {
+	desc = CA_AGRI_verger_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CA_AGRI_verger_L2
+	#COST
+		gold_cost = 100.0
+		build_time = 320
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+}
+
+}
+
+#############################
+city = {
+
+#FERME CEREALIERE (plaine côteaux et terres arables)
+CT_AGRI_cereale_L1 = {
+ 	desc = CT_AGRI_cereale_L1_desc
+	potential = {
+		has_province_modifier = agriculture1
+	}
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	prerequisites = { VOC_INDUSTRIELLE }
+	not_if_x_exists = { CT_AGRI_verger_L1 }
+	#COST
+		gold_cost = 100.0
+		build_time = 180
+	#EFFECTS
+		tax_income = 0.1
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+}
+CT_AGRI_cereale_L2 = {
+ 	desc = CT_AGRI_cereale_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_AGRI_cereale_L1
+	#COST
+		gold_cost = 130.0
+		build_time = 380
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 97
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	#ACTIVATES 
+		#cereals as holding modifier
+		#cereals as province modifier with market
+}
+CT_AGRI_cereale_L3 = {
+ 	desc = CT_AGRI_cereale_L3_desc
+	potential = { terrain = farmlands }
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_AGRI_cereale_L2
+	#COST
+		gold_cost = 27.0
+		build_time = 640
+	#EFFECTS
+		tax_income = 0.3
+	#DIVERS
+		ai_creation_factor = 95
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+}
+#VERGER (plaine côteaux)
+CT_AGRI_verger_L1 = {
+ 	desc = CT_AGRI_verger_L1_desc
+	potential = {
+		has_province_modifier = agriculture1
+		NOT = { terrain = farmlands }
+	}
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	prerequisites = { VOC_INDUSTRIELLE }
+	not_if_x_exists = { CT_AGRI_cereale_L1 }
+	#COST
+		gold_cost = 105.0 #calc /2
+		build_time = 740 #calc *2
+	#EFFECTS
+		tax_income = 0.1
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+}
+CT_AGRI_verger_L2 = {
+ 	desc = CT_AGRI_verger_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_AGRI_verger_L1
+	#COST
+		gold_cost = 115.0 #calc /2
+		build_time = 730
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+	#ACTIVATES 
+		#food as title flag with variable
+		#food as variable at province modifier level with market
+}
+CT_AGRI_verger_L3 = {
+ 	desc = CT_AGRI_verger_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_AGRI_verger_L2
+	#COST
+		gold_cost = 100.0
+		build_time = 320
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+}
+
+}
+
+#############################
+temple = {
+
+#FERME CEREALIERE (plaines terres arables foret défrichée)
+TP_AGRI_cereale_L1 = {
+	desc = TP_AGRI_cereale_L1_desc
+	potential = {
+		has_province_modifier = agriculture1
+		NOT = { terrain = hills }
+		OR = {
+			terrain = farmlands
+			terrain = plains
+			terrain = forest
+		}
+	}
+	trigger = { 
+		OR = {
+			terrain = farmlands
+			terrain = plains
+			AND = {
+				terrain = forest
+				has_province_modifier = defrichage_actif
+			}
+		}
+	}
+	prerequisites = { MONASTERE }
+	not_if_x_exists = { TP_AGRI_maraichage_L1 }
+	#COST
+		gold_cost = 100.0
+		build_time = 180
+	#EFFECTS
+		tax_income = 0.1
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+}
+TP_AGRI_cereale_L2 = {
+	desc = TP_AGRI_cereale_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_AGRI_cereale_L1
+	#COST
+		gold_cost = 130.0
+		build_time = 380
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 97
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	#ACTIVATES 
+		#cereals as holding modifier
+		#cereals as province modifier with market
+}
+TP_AGRI_cereale_L3 = {
+	desc = TP_AGRI_cereale_L3_desc
+	potential = { terrain = farmlands }
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_AGRI_cereale_L2
+	#COST
+		gold_cost = 27.0
+		build_time = 640
+	#EFFECTS
+		tax_income = 0.3
+	#DIVERS
+		ai_creation_factor = 95
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+}
+
+#FERME MARAICHERE (plaines)
+TP_AGRI_maraichage_L1 = {
+	desc = TP_AGRI_maraichage_L1_desc
+	potential = {
+		NOT = { terrain = farmlands }
+		has_province_modifier = agriculture1
+		OR = {
+			terrain = plains
+			AND = {
+				terrain = coastal_desert
+				has_global_flag = SWMH
+			}
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	prerequisites = { MONASTERE }
+	not_if_x_exists = { TP_AGRI_cereale_L1 }
+	#COST
+		gold_cost = 100.0
+		build_time = 180
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+}
+TP_AGRI_maraichage_L2 = {
+	desc = TP_AGRI_maraichage_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_AGRI_maraichage_L1
+	#COST
+		gold_cost = 120.0
+		build_time = 380
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+	#ACTIVATES 
+		#food as title flag with variable
+		#food as variable at province modifier level with market
+}
+TP_AGRI_maraichage_L3 = {
+	desc = TP_AGRI_maraichage_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_AGRI_maraichage_L2
+	#COST
+		gold_cost = 160.0
+		build_time = 480
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0
+}
+#VIGNOBLE (côteaux)
+TP_AGRI_vigne_L1 = {
+	desc = TP_AGRI_vigne_L1_desc
+	potential = {
+		has_province_modifier = agriculture1
+		terrain = hills
+		region_vitis_vinifera = yes #scripted_trigger
+	}
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	prerequisites = { MONASTERE }
+	not_if_x_exists = { TP_AGRI_verger_L1 }
+	#COST
+		gold_cost = 105.0 #calc /2
+		build_time = 740 #calc *2
+	#EFFECTS
+		tax_income = 0.1
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+}
+TP_AGRI_vigne_L2 = {
+	desc = TP_AGRI_vigne_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_AGRI_vigne_L1
+	#COST
+		gold_cost = 125.0 #calc /2
+		build_time = 1460 #calc *2
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+	#ACTIVATES 
+		#vines as province modifier with market
+}
+TP_AGRI_vigne_L3 = {
+	desc = TP_AGRI_vigne_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_AGRI_vigne_L2
+	#COST
+		gold_cost = 160.0
+		build_time = 320
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+}
+#VERGER (côteaux)
+TP_AGRI_verger_L1 = {
+	desc = TP_AGRI_verger_L1_desc
+	potential = {
+		has_province_modifier = agriculture1
+		terrain = hills
+	}
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	prerequisites = { MONASTERE }
+	not_if_x_exists = { TP_AGRI_vigne_L1 }
+	#COST
+		gold_cost = 105.0 #calc /2
+		build_time = 740 #calc *2
+	#EFFECTS
+		tax_income = 0.1
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+}
+TP_AGRI_verger_L2 = {
+	desc = TP_AGRI_verger_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_AGRI_verger_L1
+	#COST
+		gold_cost = 115.0 #calc /2
+		build_time = 730
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+	#ACTIVATES 
+		#food as title flag with variable
+		#food as variable at province modifier level with market
+}
+TP_AGRI_verger_L3 = {
+	desc = TP_AGRI_verger_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = CT_AGRI_verger_L2
+	#COST
+		gold_cost = 100.0
+		build_time = 320
+	#EFFECTS
+		tax_income = 0.2
+	#DIVERS
+		ai_creation_factor = 99
+		add_number_to_name = no
+		extra_tech_building_start = 10.0	
+}
+
+}
