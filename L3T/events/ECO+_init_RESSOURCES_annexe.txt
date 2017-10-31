@@ -1,0 +1,148 @@
+#############################################################
+#  ECO+ an improved economy MOD for CK2 by ARKO  #
+#############################################################
+
+
+namespace = ECO
+
+#activation NOURRITURE from MARKET -phase des variables-
+province_event = {
+    id = ECO.161
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		#NOT = { has_province_modifier = nourriture_1 }
+		any_province_holding = {
+			AND = {
+				OR = { 
+					has_building = ca_marketplace_3
+					has_building = ct_marketplace_3
+					has_building = tp_marketplace_3
+				}
+				OR = {
+					has_building = CA_AGRI_verger_L2 #fruits
+					has_building = CT_AGRI_verger_L2 #fruits
+					has_building = TP_AGRI_verger_L2 #fruits
+					
+					has_building = TP_AGRI_maraichage_L2 #légumes
+					
+					has_building = CA_FISH_peche_L2 #poisson
+					has_building = CT_FISH_peche_L2 #poisson
+					has_building = TP_FISH_pisci_L2 #poisson
+					
+					has_building = CT_ELEV_boucherie_L2 #viande
+					
+					has_building = CA_AGRI_boulangerie_L2 #pain
+					has_building = CT_AGRI_boulangerie_L2 #pain
+					has_building = TP_AGRI_boulangerie_L2 #pain
+	
+					has_building = CA_FISH_fumoir_L2 #fumaison
+					has_building = CT_FISH_fumoir_L2 #fumaison
+					has_building = TP_FISH_fumoir_L2 #fumaison
+					
+					has_building = CT_salaison_L2 #salaison
+				}
+			}
+		}
+	}
+		
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					check_variable = { which = "food_degree" value = 1 }
+				}
+			}
+			set_variable = { which = food_degree value = 0 }
+		}
+		any_province_holding = {
+			limit = {
+				AND = {
+					OR = { 
+						has_building = ca_marketplace_3
+						has_building = ct_marketplace_3
+						has_building = tp_marketplace_3
+					}
+					OR = { ### !! on va donner le bonus plusieurs fois
+						AND = {
+							OR = {
+								has_building = CA_AGRI_verger_L2 #fruits
+								has_building = CT_AGRI_verger_L2 #fruits
+								has_building = TP_AGRI_verger_L2 #fruits
+							}
+							NOT = { has_title_flag = bonus_fruits_given }
+						}
+					}
+				}
+			}
+			set_title_flag = bonus_fruits_given
+			FROM = { change_variable = { which = food_degree value = 1 }}
+		}
+		any_province_holding = {
+			limit = {
+				AND = {
+					OR = {
+						has_building = ca_marketplace_3
+						has_building = ct_marketplace_3
+						has_building = tp_marketplace_3
+					}
+					OR = {
+						AND = {
+							has_building = TP_AGRI_maraichage_L2 #légumes
+							NOT = { has_title_flag = bonus_vegetables_given }
+						}
+					}
+				}
+			}
+			set_title_flag = bonus_vegetables_given
+			FROM = { change_variable = { which = food_degree value = 1 }}
+		}
+		any_province_holding = {
+			limit = {
+				AND = {
+					OR = { 
+						has_building = ca_marketplace_3
+						has_building = ct_marketplace_3
+						has_building = tp_marketplace_3
+					}
+					OR = {
+						has_building = CA_FISH_peche_L2 #poisson
+						has_building = CT_FISH_peche_L2 #poisson
+						has_building = CT_ELEV_boucherie_L2 #viande
+						has_building = TP_FISH_pisci_L2 #poisson
+					}
+				}
+			}
+			###marquer le holding pour dire que la variable a été incrémentée par le batiment
+			change_variable = { which = food_degree value = 2 }
+		}
+		any_province_holding = {
+			limit = {
+				AND = {
+					OR = { 
+						has_building = ca_marketplace_3
+						has_building = ct_marketplace_3
+						has_building = tp_marketplace_3
+					}
+					OR = {
+						has_building = CA_AGRI_boulangerie_L2 #pain
+						has_building = CA_FISH_fumoir_L2 #fumaison
+						has_building = CT_AGRI_boulangerie_L2 #pain
+						has_building = CT_FISH_fumoir_L2 #fumaison
+						has_building = TP_AGRI_boulangerie_L2 #pain
+						has_building = TP_FISH_fumoir_L2 #fumaison
+						has_building = CT_salaison_L2 #salaison
+					}
+				}
+			}
+			###marquer le holding pour dire que la variable a été incrémentée par le batiment
+			change_variable = { which = food_degree value = 3 }
+		}
+		province_event = { id = ECO.162 } #màj modifier fonction de la variable
+	}
+}
+
+
+#ECO.162 màj modifier depuis variable.
