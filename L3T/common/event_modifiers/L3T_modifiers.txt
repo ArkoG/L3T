@@ -282,11 +282,15 @@ elevage2_boeuf = {
 	icon = 106
 	local_tax_modifier = 0.01
 }
-#elevage2_fromage = {icon = 109} 	 #0.4 income from the required buildings
+elevage2_fromage = {icon = 109} 	 #0.4 income from the required buildings
  
 elevage2_cheval = {
 	icon = 133
 	local_tax_modifier = 0.05
+	light_cavalry_offensive = 0.03 #see if this is applied by building or not, and on which level (holding/province)
+	light_cavalry_defensive = 0.03
+	knights_offensive = 0.03
+	knights_defensive = 0.03
 }
 elevage4_drap = {
 	icon = 112
