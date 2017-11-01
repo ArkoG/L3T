@@ -10,7 +10,7 @@ CA_AGRI_cereale_L1 = {
 	desc = CA_AGRI_cereale_L1_desc
 	potential = {
 		has_province_modifier = agriculture1
-		FROMFROM = { NOT = { check_variable = { which = "a_deja_fruit" value = 1 }}}
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_fruits" value = 1 }}}
 	}
 	trigger = { TECH_TRADE_PRACTICES = 0
 	
@@ -124,6 +124,7 @@ CT_AGRI_cereale_L1 = {
  	desc = CT_AGRI_cereale_L1_desc
 	potential = {
 		has_province_modifier = agriculture1
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_fruits" value = 1 }}}
 	}
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	prerequisites = { VOC_INDUSTRIELLE }
@@ -176,6 +177,7 @@ CT_AGRI_verger_L1 = {
 	potential = {
 		has_province_modifier = agriculture1
 		NOT = { terrain = farmlands }
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_cereales" value = 1 }}}
 	}
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	prerequisites = { VOC_INDUSTRIELLE }
@@ -232,6 +234,7 @@ TP_AGRI_cereale_L1 = {
 	desc = TP_AGRI_cereale_L1_desc
 	potential = {
 		has_province_modifier = agriculture1
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_legumes" value = 1 }}}
 		NOT = { terrain = hills }
 		OR = {
 			terrain = farmlands
@@ -300,6 +303,7 @@ TP_AGRI_maraichage_L1 = {
 	potential = {
 		NOT = { terrain = farmlands }
 		has_province_modifier = agriculture1
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_cereales" value = 1 }}}
 		OR = {
 			terrain = plains
 			AND = {
@@ -357,6 +361,7 @@ TP_AGRI_vigne_L1 = {
 	desc = TP_AGRI_vigne_L1_desc
 	potential = {
 		has_province_modifier = agriculture1
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_fruits" value = 1 }}}
 		terrain = hills
 		region_vitis_vinifera = yes #scripted_trigger
 	}
@@ -408,6 +413,7 @@ TP_AGRI_verger_L1 = {
 	desc = TP_AGRI_verger_L1_desc
 	potential = {
 		has_province_modifier = agriculture1
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_vigne" value = 1 }}}
 		terrain = hills
 	}
 	trigger = { TECH_TRADE_PRACTICES = 0 }

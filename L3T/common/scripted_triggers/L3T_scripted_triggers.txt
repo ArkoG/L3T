@@ -48,6 +48,7 @@ ressource_L2_dispo = {
 	FROMFROM = { 
 		OR = {		
 			has_holding_modifier = agriculture2_cereales
+			#has_title_flag = blabla ###for ressources that any icon is displayed ##see if it work properly as trigger for markets
 			has_holding_modifier = agriculture2_vigne
 			has_holding_modifier = agriculture3_farine
 			has_holding_modifier = agriculture3_vin
