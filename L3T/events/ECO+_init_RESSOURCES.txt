@@ -616,14 +616,14 @@ character_event = {
 							has_building = TP_AGRI_verger_L1
 							#
 						}
-						NOT = { check_variable = { which = "a_deja_fruit" value = 0 }}
+						NOT = { check_variable = { which = "a_deja_fruits" value = 0 }}
 					}
 					AND = {
 						OR = {
 							has_building = TP_AGRI_maraichage_L1
 							#
 						}
-						NOT = { check_variable = { which = "a_deja_legume" value = 0 }}
+						NOT = { check_variable = { which = "a_deja_legumes" value = 0 }}
 					}
 					AND = {
 						OR = {
