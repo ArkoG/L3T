@@ -224,7 +224,7 @@ agriculture3_biere = {
 	local_tax_modifier = 0.02
 }
 nourriture_1 = { #fruits(1), légumes(1), pain(4), fromage(4), viande(4), poisson(4), salaison(5), fumaison(5)
-	icon = 99
+	icon = 99 ##bread icon currently
 	local_tax_modifier = 0.01
 }
 	#province_modifiers
@@ -233,7 +233,7 @@ agriculture1 = { #base ressource
 	local_revolt_risk = -0.01
 }
 agriculture2_cereales_trade	= {
-	icon = 100
+	icon = 96
 	land_morale = 0.02
 }
 #agriculture2_fruits = {icon = 100}	 #0.4 income from the required buildings
