@@ -528,6 +528,7 @@ province_event = {
 	}
 }
 
+##marquage port unique
 character_event = {
     id = ECO.16
 	hide_window = yes
@@ -590,6 +591,8 @@ character_event = {
 		}
 	}
 }
+
+##marquage batiments antagonistes
 character_event = {
     id = ECO.17
 	hide_window = yes
@@ -632,13 +635,27 @@ character_event = {
 						}
 						NOT = { check_variable = { which = "a_deja_vigne" value = 0 }}
 					}
+					AND = {
+						OR = {
+							has_building = CA_BOIS_charbon_L1
+							has_building = CT_BOIS_charbon_L1
+							#
+						}
+						NOT = { check_variable = { which = "a_deja_charbon" value = 0 }}
+					}
+					AND = {
+						OR = {
+							has_building = CA_scierie_L1
+							has_building = CT_scierie_L1
+							#
+						}
+						NOT = { check_variable = { which = "a_deja_planche" value = 0 }}
+					}
 				}
 			}
 		}
 	}
 
-	mean_time_to_happen = { days = 10 }
-	
 	immediate = {
 		random_realm_province = {
 			random_province_holding = {
@@ -646,7 +663,7 @@ character_event = {
 					OR = {
 						has_building = CA_AGRI_cereale_L1
 						has_building = CT_AGRI_cereale_L1
-						TP_AGRI_cereale_L1
+						has_building = TP_AGRI_cereale_L1
 						#
 					}
 					NOT = { check_variable = { which = "a_deja_cereales" value = 0 }}
@@ -673,7 +690,7 @@ character_event = {
 			random_province_holding = {
 				limit = { 
 					OR = {
-						TP_AGRI_maraichage_L1
+						has_building = TP_AGRI_maraichage_L1
 						#
 					}
 					NOT = { check_variable = { which = "a_deja_legumes" value = 0 }}
@@ -693,13 +710,39 @@ character_event = {
 				set_variable = { which = "a_deja_vigne" value = 2 }
 			}
 		}
+		random_realm_province = {
+			random_province_holding = {
+				limit = { 
+					OR = {
+						has_building = CA_BOIS_charbon_L1
+						has_building = CT_BOIS_charbon_L1
+						#
+					}
+					NOT = { check_variable = { which = "a_deja_charbon" value = 0 }}
+				}
+				set_variable = { which = "a_deja_charbon" value = 2 }
+			}
+		}
+		random_realm_province = {
+			random_province_holding = {
+				limit = { 
+					OR = {
+						has_building = CA_scierie_L1
+						has_building = CT_scierie_L1
+						#
+					}
+					NOT = { check_variable = { which = "a_deja_planche" value = 0 }}
+				}
+				set_variable = { which = "a_deja_planche" value = 2 }
+			}
+		}
 	}
 }
 		
 ###activation ressources
 
 
-#activation AGRICULTURE -céréales
+#activation AGRICULTURE -céréales //province
 province_event = {
     id = ECO.100
 	desc = "DESCECO.100"
@@ -713,15 +756,15 @@ province_event = {
 		any_province_holding = {
 			OR = {
 				AND = {
-					has_building = CA_AGRI_cereale_L2
+					has_holding_modifier = agriculture2_cereales
 					has_building = ca_marketplace_3
 				}
 				AND = {
-					has_building = CT_AGRI_cereale_L2
+					has_holding_modifier = agriculture2_cereales
 					has_building = ct_marketplace_3
 				}
 				AND = {
-					has_building = TP_AGRI_cereale_L2
+					has_holding_modifier = agriculture2_cereales
 					has_building = tp_marketplace_3
 				}
 			}
@@ -735,15 +778,15 @@ province_event = {
 			limit = {
 				OR = {
 					AND = {
-						has_building = CA_AGRI_cereale_L2
+						has_holding_modifier = agriculture2_cereales
 						has_building = ca_marketplace_3
 					}
 					AND = {
-						has_building = CT_AGRI_cereale_L2
+						has_holding_modifier = agriculture2_cereales
 						has_building = ct_marketplace_3
 					}
 					AND = {
-						has_building = TP_AGRI_cereale_L2
+						has_holding_modifier = agriculture2_cereales
 						has_building = tp_marketplace_3
 					}
 				}
@@ -768,8 +811,44 @@ province_event = {
 		}
 	}
 }
+#activation CEREALES //holding
+character_event = {
+    id = ECO.1000
+	hide_window = yes
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_realm_province = {
+			any_province_holding = {
+				NOT = { has_holding_modifier = agriculture2_cereales }
+				OR = {
+					has_building = CA_AGRI_cereale_L2
+					has_building = CT_AGRI_cereale_L2
+					has_building = TP_AGRI_cereale_L2
+				}
+			}
+		}
+	}
+		
+	immediate = {
+		any_realm_province = {
+			any_province_holding = {
+				limit = {
+					OR = {
+						has_building = CA_AGRI_cereale_L2
+						has_building = CT_AGRI_cereale_L2
+						has_building = TP_AGRI_cereale_L2
+					}
+				}
+				add_holding_modifier = { name = agriculture2_cereales duration = -1 }
+			}
+		}
+	}
+}
 
 #activation AGRICULTURE -fruits
+#into FOOD computation instead
 #province_event = {
 #    id = ECO.101
 #	desc = "DESCECO.101"
@@ -809,6 +888,7 @@ province_event = {
 #}
 
 #activation AGRICULTURE -légumes
+#into FOOD computation instead
 #province_event = {
 #    id = ECO.102
 #	desc = "DESCECO.102"
@@ -899,6 +979,7 @@ province_event = {
 }
 
 #activation ELEVAGE -ovin fromage
+#into FOOD computation instead
 #province_event = {
 #    id = ECO.111
 #	desc = "DESCECO.111"
@@ -946,31 +1027,9 @@ province_event = {
 }
 
 #activation FORET -bois
-province_event = {
-    id = ECO.120
-	desc = "DESCECO.120"
-	picture = GFX_evt_XYLO_forest5
-	
-	trigger = {
-		has_province_modifier = foret2_expl
-		NOT = { has_province_modifier = foret2_bois }
-		any_province_holding = {
-			OR = {	
-				has_building = CA_BOIS_bois_L2
-				has_building = CT_BOIS_bois_L2
-			}
-		}
-	}
-		
-	mean_time_to_happen = { days = 360 }
+#marquage holding inutile
 
-	option = {
-		name = "ECO.120A"
-		add_province_modifier = { name = foret2_bois duration = -1 }		
-	}
-}
-
-#activation FORET -charbon
+#activation FORET -charbon //province
 province_event = {
     id = ECO.121
 	desc = "DESCECO.121"
@@ -979,20 +1038,90 @@ province_event = {
 	trigger = {
 		has_province_modifier = foret2_expl
 		NOT = { has_province_modifier = foret2_charbon }
+#trade_version	##NOT = { has_province_modifier = agriculture2_cereales_trade } #happens only on first holding getting the ress building + market
+
 		any_province_holding = {
-			OR = {	
-				has_building = CA_BOIS_charbon_L2
-				has_building = CT_BOIS_charbon_L2
-				has_building = TP_BOIS_charbon_L2
+			OR = {
+				AND ={
+					has_building = CA_BOIS_charbon_L2
+					has_building = ca_marketplace_3
+				}
+				AND = {
+					has_building = CT_BOIS_charbon_L2
+					has_building = ct_marketplace_3
+				}
 			}
 		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
 
+	immediate = {
+		random_province_holding = {
+			limit = {
+				OR = {
+					AND ={
+						has_building = CA_BOIS_charbon_L2
+						has_building = ca_marketplace_3
+					}
+					AND = {
+						has_building = CT_BOIS_charbon_L2
+						has_building = ct_marketplace_3
+					}
+				}
+			}
+			set_title_flag = bonus_origin
+			save_event_target_as = holding_pour_desc #for flavour text
+		}
+	}
+	
 	option = {
 		name = "ECO.121A"
 		add_province_modifier = { name = foret2_charbon duration = -1 }		
+#trade_version	#add_province_modifier = { name = agriculture2_cereales_trade duration = -1 }
+		random_province_holding = {
+			limit = {
+				has_title_flag = bonus_origin
+			}
+#useless here		#hidden_tooltip = { add_holding_modifier = { name = has_ress_L2 duration = -1 hidden = yes }}
+
+			clear_event_target = holding_pour_desc #for flavour text
+			clr_title_flag = bonus_origin
+		}
+	}
+}
+
+#activation CHARBON //holding
+character_event_event = {
+    id = ECO.1210
+	hide_window = yes
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_realm_province = {
+			any_province_holding = {
+				NOT = { has_holding_modifier = foret2_charbon }
+				OR = {
+					has_building = CA_BOIS_charbon_L2
+					has_building = CT_BOIS_charbon_L2
+				}
+			}
+		}
+	}
+		
+	immediate = {
+		any_realm_province = {
+			any_province_holding = {
+				limit = {
+					OR = {
+						has_building = CA_BOIS_charbon_L2
+						has_building = CT_BOIS_charbon_L2
+					}
+				}
+				add_holding_modifier = { name = foret2_charbon duration = -1 }
+			}
+		}
 	}
 }
 
@@ -1138,58 +1267,60 @@ province_event = {
 }
 
 #activation PECHE
-province_event = {
-    id = ECO.150
-	desc = "DESCECO.150"
-	picture = GFX_evt_L3T_fishing
-	
-	trigger = {
-		has_province_modifier = peche1
-		NOT = { has_province_modifier = peche2_poisson }
-		any_province_holding = {
-			OR = {	
-				has_building = CA_FISH_peche_L2
-				has_building = CT_FISH_peche_L2
-			}
-		}
-	}
-		
-	mean_time_to_happen = { days = 360 }
-
-	option = {
-		name = "ECO.150A"
-		remove_province_modifier = peche1
-		add_province_modifier = { name = peche1 duration = -1 hidden = yes } #now hidden instead of removed
-		add_province_modifier = { name = peche2_poisson duration = -1 }		
-	}
-}
+#into FOOD computation instead
+#province_event = {
+#    id = ECO.150
+#	desc = "DESCECO.150"
+#	picture = GFX_evt_L3T_fishing
+#	
+#	trigger = {
+#		has_province_modifier = peche1
+#		NOT = { has_province_modifier = peche2_poisson }
+#		any_province_holding = {
+#			OR = {	
+#				has_building = CA_FISH_peche_L2
+#				has_building = CT_FISH_peche_L2
+#			}
+#		}
+#	}
+#		
+#	mean_time_to_happen = { days = 360 }
+#
+#	option = {
+#		name = "ECO.150A"
+#		remove_province_modifier = peche1
+#		add_province_modifier = { name = peche1 duration = -1 hidden = yes } #now hidden instead of removed
+#		add_province_modifier = { name = peche2_poisson duration = -1 }		
+#	}
+#}
 
 #activation PISCICULTURE
-province_event = {
-    id = ECO.151
-	desc = "DESCECO.151"
-	picture = GFX_evt_L3T_fishing
-	
-	trigger = {
-		has_province_modifier = pisci1
-		NOT = { has_province_modifier = pisci2_poisson }
-		any_province_holding = {
-			OR = {	
-				#has_building = CA_FISH_pisci_L2
-				has_building = TP_FISH_pisci_L2
-			}
-		}
-	}
-		
-	mean_time_to_happen = { days = 360 }
-
-	option = {
-		name = "ECO.151A"
-		remove_province_modifier = pisci1
-		add_province_modifier = { name = pisci1 duration = -1 hidden = yes } #now hidden instead of removed
-		add_province_modifier = { name = pisci2_poisson duration = -1 }		
-	}
-}
+#into FOOD computation instead
+#province_event = {
+#   id = ECO.151
+#	desc = "DESCECO.151"
+#	picture = GFX_evt_L3T_fishing
+#	
+#	trigger = {
+#		has_province_modifier = pisci1
+#		NOT = { has_province_modifier = pisci2_poisson }
+#		any_province_holding = {
+#			OR = {	
+#				#has_building = CA_FISH_pisci_L2
+#				has_building = TP_FISH_pisci_L2
+#			}
+#		}
+#	}
+#		
+#	mean_time_to_happen = { days = 360 }
+#
+#	option = {
+#		name = "ECO.151A"
+#		remove_province_modifier = pisci1
+#		add_province_modifier = { name = pisci1 duration = -1 hidden = yes } #now hidden instead of removed
+#		add_province_modifier = { name = pisci2_poisson duration = -1 }		
+#	}
+#}
 
 #activation BINOUSE
 province_event = {
@@ -1298,46 +1429,7 @@ province_event = {
 }
 
 #activation CIDRE
-#province_event = {
-#    id = ECO.108
-#	desc = "DESCECO.108"
-#	picture = GFX_evt_market
-	
-#	trigger = {
-#		OR = {
-#			has_province_modifier = agriculture2_fruits
-#			any_neighbor_province = { has_province_modifier = agriculture2_fruits }
-#		}
-#		NOT = { has_province_modifier = agriculture3_cidre}
-#		any_province_holding = {
-#			has_building = TP_presse_L2
-#		}
-#	}
-		
-#	mean_time_to_happen = { days = 360 }
-	
-#	immediate = {
-#		random_province_holding = {
-#			limit = {
-#				has_building = TP_presse_L2
-#			}
-#			save_event_target_as = holding_pour_desc
-#		}
-#	}
-	
-#	option = {
-#		name = "ECO.108A"
-#		add_province_modifier = { name = agriculture3_cidre duration = -1 }
-#		custom_tooltip = { text = TOOLTIP_bonus_dev_ressources_avancee }
-#		hidden_tooltip = {
-#			event_target:holding_pour_desc = {
-#				change_variable = { which = "developpement" value = 10 }
-#				#holder_scope = { character_event = { id = L3T.11094 days = 0 }} #totoro
-#				clear_event_target = holding_pour_desc
-#			}
-#		}
-#	}
-#}
+#cider doesn't exists anymore
 
 #activation FARINE
 province_event = {
@@ -1366,81 +1458,85 @@ province_event = {
 }
 
 #activation PAIN
-province_event = {
-    id = ECO.109
-	desc = "DESCECO.109"
-	picture = GFX_evt_market
-	
-	trigger = {
-		has_province_modifier = agriculture3_farine
-		NOT = { has_province_modifier = agriculture4_pain }
-		any_province_holding = {
-			OR = {	
-				has_building = CA_AGRI_boulangerie_L2
-				has_building = CT_AGRI_boulangerie_L2
-				has_building = TP_AGRI_boulangerie_L2
-			}
-		}
-	}
-		
-	mean_time_to_happen = { days = 360 }
-
-	option = {
-		name = "ECO.109A"
-		add_province_modifier = { name = agriculture4_pain duration = -1 }		
-	}
-}
+#into FOOD computation instead
+#province_event = {
+#    id = ECO.109
+#	desc = "DESCECO.109"
+#	picture = GFX_evt_market
+#	
+#	trigger = {
+#		has_province_modifier = agriculture3_farine
+#		NOT = { has_province_modifier = agriculture4_pain }
+#		any_province_holding = {
+#			OR = {	
+#				has_building = CA_AGRI_boulangerie_L2
+#				has_building = CT_AGRI_boulangerie_L2
+#				has_building = TP_AGRI_boulangerie_L2
+#			}
+#		}
+#	}
+#		
+#	mean_time_to_happen = { days = 360 }
+#
+#	option = {
+#		name = "ECO.109A"
+#		add_province_modifier = { name = agriculture4_pain duration = -1 }		
+#	}
+#}
 
 #activation VIANDE
-province_event = {
-    id = ECO.114
-	desc = "DESCECO.114"
-	picture = GFX_evt_L3T_boucherie
-	
-	trigger = {
-		has_province_modifier = elevage2_boeuf
-		NOT = { has_province_modifier = elevage3_viande }
-		any_province_holding = {
-			has_building = CT_ELEV_boucherie_L2
-		}
-	}
-		
-	mean_time_to_happen = { days = 360 }
-
-	option = {
-		name = "ECO.114A"
-		add_province_modifier = { name = elevage3_viande duration = -1 }		
-	}
-}
+#into FOOD computation instead
+#province_event = {
+#    id = ECO.114
+#	desc = "DESCECO.114"
+#	picture = GFX_evt_L3T_boucherie
+#	
+#	trigger = {
+#		has_province_modifier = elevage2_boeuf
+#		NOT = { has_province_modifier = elevage3_viande }
+#		any_province_holding = {
+#			has_building = CT_ELEV_boucherie_L2
+#		}
+#	}
+#		
+#	mean_time_to_happen = { days = 360 }
+#
+#	option = {
+#		name = "ECO.114A"
+#		add_province_modifier = { name = elevage3_viande duration = -1 }		
+#	}
+#}
 
 #activation FUMAISON
-province_event = {
-    id = ECO.152
-	desc = "DESCECO.152"
-	picture = GFX_evt_market
-	
-	trigger = {
-		OR = {
-			has_province_modifier = peche2_poisson
-			has_province_modifier = pisci2_poisson
-		}
-		NOT = { has_province_modifier = peche_pisci3_fumaison }
-		any_province_holding = {
-			OR = {	
-				has_building = CA_FISH_fumoir_L2
-				has_building = CT_FISH_fumoir_L2
-				has_building = TP_FISH_fumoir_L2
-			}
-		}
-	}
-		
-	mean_time_to_happen = { days = 360 }
-
-	option = {
-		name = "ECO.152A"
-		add_province_modifier = { name = peche_pisci3_fumaison duration = -1 }		
-	}
-}
+#into FOOD computation instead 
+###can be exported too
+#province_event = {
+#    id = ECO.152
+#	desc = "DESCECO.152"
+#	picture = GFX_evt_market
+#	
+#	trigger = {
+#		OR = {
+#			has_province_modifier = peche2_poisson
+#			has_province_modifier = pisci2_poisson
+#		}
+#		NOT = { has_province_modifier = peche_pisci3_fumaison }
+#		any_province_holding = {
+#			OR = {	
+#				has_building = CA_FISH_fumoir_L2
+#				has_building = CT_FISH_fumoir_L2
+#				has_building = TP_FISH_fumoir_L2
+#			}
+#		}
+#	}
+#		
+#	mean_time_to_happen = { days = 360 }
+#
+#	option = {
+#		name = "ECO.152A"
+#		add_province_modifier = { name = peche_pisci3_fumaison duration = -1 }		
+#	}
+#}
 
 #activation CUIR
 province_event = {
@@ -1467,62 +1563,164 @@ province_event = {
 	}
 }
 
-#activation PLANCHE
+#activation foret PLANCHE //province
 province_event = {
     id = ECO.122
 	desc = "DESCECO.122"
-	picture = GFX_evt_market
+	picture = GFX_evt_XYLO_forest5
 	
 	trigger = {
-		OR = {
-			has_province_modifier = foret2_bois
-			any_neighbor_province = { has_province_modifier = foret2_bois }
-		}
-		NOT = { has_province_modifier = foret3_planche}
+		has_province_modifier = foret2_expl
+		NOT = { has_province_modifier = foret3_planche }
+#trade_version	##NOT = { has_province_modifier = agriculture2_cereales_trade } #happens only on first holding getting the ress building + market
+
 		any_province_holding = {
-			OR = {	
-				has_building = CA_scierie_L2
-				has_building = CT_scierie_L2
+			OR = {
+				AND ={
+					has_holding_modifier = foret3_planche
+					has_building = ca_marketplace_3
+				}
+				AND = {
+					has_holding_modifier = foret3_planche
+					has_building = ct_marketplace_3
+				}
 			}
 		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
 
+	immediate = {
+		random_province_holding = {
+			limit = {
+				OR = {
+					AND ={
+						has_holding_modifier = foret3_planche
+						has_building = ca_marketplace_3
+					}
+					AND = {
+						has_holding_modifier = foret3_planche
+						has_building = ct_marketplace_3
+					}
+				}
+			}
+			set_title_flag = bonus_origin
+			save_event_target_as = holding_pour_desc #for flavour text
+		}
+	}
+	
 	option = {
 		name = "ECO.122A"
 		add_province_modifier = { name = foret3_planche duration = -1 }		
+#trade_version	#add_province_modifier = { name = agriculture2_cereales_trade duration = -1 }
+		random_province_holding = {
+			limit = {
+				has_title_flag = bonus_origin
+			}
+#useless here		#hidden_tooltip = { add_holding_modifier = { name = has_ress_L2 duration = -1 hidden = yes }}
+
+			clear_event_target = holding_pour_desc #for flavour text
+			clr_title_flag = bonus_origin
+		}
 	}
 }
 
-#activation VERRE
+#activation PLANCHE //holding
+character_event_event = {
+    id = ECO.1220
+	hide_window = yes
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_realm_province = {
+			any_province_holding = {
+				NOT = { has_holding_modifier = foret3_planche }
+				OR = {
+					has_building = CA_scierie_L2
+					has_building = CT_scierie_L2
+				}
+			}
+		}
+	}
+		
+	immediate = {
+		any_realm_province = {
+			any_province_holding = {
+				limit = {
+					OR = {
+						has_building = CA_scierie_L2
+						has_building = CT_scierie_L2
+					}
+				}
+				add_holding_modifier = { name = foret3_planche duration = -1 }
+			}
+		}
+	}
+}
+
+#activation VERRE //province
 province_event = {
     id = ECO.123
 	desc = "DESCECO.123"
-	picture = GFX_evt_market
+	picture = GFX_evt_XYLO_forest5
 	
 	trigger = {
-		OR = {
-			has_province_modifier = foret2_charbon
-			any_neighbor_province = { has_province_modifier = foret2_charbon }
-		}
-		NOT = { has_province_modifier = foret3_verre}
+		has_province_modifier = foret2_expl
+		NOT = { has_province_modifier = foret3_verre }
+#trade_version	##NOT = { has_province_modifier = agriculture2_cereales_trade } #happens only on first holding getting the ress building + market
+
 		any_province_holding = {
-			OR = {	
-				has_building = CA_four_L2
-				has_building = CT_four_L2
-				has_building = TP_four_L2
+			OR = {
+				AND ={
+					has_holding_modifier = foret3_verre
+					has_building = ca_marketplace_3
+				}
+				AND = {
+					has_holding_modifier = foret3_verre
+					has_building = ct_marketplace_3
+				}
 			}
 		}
 	}
 		
 	mean_time_to_happen = { days = 360 }
 
+	immediate = {
+		random_province_holding = {
+			limit = {
+				OR = {
+					AND ={
+						has_holding_modifier = foret3_verre
+						has_building = ca_marketplace_3
+					}
+					AND = {
+						has_holding_modifier = foret3_verre
+						has_building = ct_marketplace_3
+					}
+				}
+			}
+			set_title_flag = bonus_origin
+			save_event_target_as = holding_pour_desc #for flavour text
+		}
+	}
+	
 	option = {
-		name = "ECO.123A"
+		name = "ECO.122A"
 		add_province_modifier = { name = foret3_verre duration = -1 }		
+#trade_version	#add_province_modifier = { name = agriculture2_cereales_trade duration = -1 }
+		random_province_holding = {
+			limit = {
+				has_title_flag = bonus_origin
+			}
+#useless here		#hidden_tooltip = { add_holding_modifier = { name = has_ress_L2 duration = -1 hidden = yes }}
+
+			clear_event_target = holding_pour_desc #for flavour text
+			clr_title_flag = bonus_origin
+		}
 	}
 }
+
 
 ###
 #the modifier will be given by the trade propection (targeted)decision
@@ -1706,6 +1904,8 @@ province_event = {
 
 #activation SALAISON
 province_event = {
+#into FOOD computation
+###can be exported too
     id = ECO.147
 	desc = "DESCECO.147"
 	picture = GFX_evt_market
