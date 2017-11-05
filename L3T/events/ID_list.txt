@@ -249,7 +249,8 @@
 #id = ECO.17 #marquage batiments antagonistes
 
 ##activation ressources
-#id = ECO.100 #activation pour commerce -agriculture -céréales 
+#id = ECO.100 #activation pour commerce -agriculture -céréales //province
+#id = ECO.1000 #activation pour commerce -agriculture -céréales //holding
 #id = ECO.101 #activation pour commerce -agriculture -fruits
 #id = ECO.102 #activation pour commerce -agriculture -légumes
 #id = ECO.103 #activation pour commerce -agriculture -vigne
@@ -259,7 +260,7 @@
 #id = ECO.105 #activation pour commerce -agriculture -bière
 #id = ECO.106 #activation pour commerce -agriculture -vin
 #id = ECO.107 #activation pour commerce -agriculture -farine 
-#id = ECO.108 #activation pour commerce -agriculture -cidre 
+#id = ECO.108 # LIBRE
 #id = ECO.109 #activation pour commerce -agriculture -pain
 
 #id = ECO.110 #activation pour commerce -elevage -ovin laine-
@@ -271,10 +272,12 @@
 #id = ECO.116 #activation pour commerce -elevage -drap-
 #id = ECO.117 #activation pour commerce -elevage -cheval- 
 
-#id = ECO.120 #activation pour commerce -foret -bois- 
-#id = ECO.121 #activation pour commerce -foret -charbon-
-#id = ECO.122 #activation pour commerce -foret -planche-
-#id = ECO.123 #activation pour commerce -foret -verre- 
+#id = ECO.120 # LIBRE
+#id = ECO.121 #activation pour commerce -foret -charbon- //province
+#id = ECO.1210 #activation pour commerce -foret -charbon- //holding
+#id = ECO.122 #activation pour commerce -foret -planche- //province
+#id = ECO.1220 #activation pour commerce -foret -planche- //holding
+#id = ECO.123 #activation pour commerce -foret -verre- //province uniquement
 
 #id = ECO.124 #activation pour commerce -luxe -peaux-
 #id = ECO.125 #activation pour commerce -luxe -joyaux-
@@ -312,8 +315,8 @@
 #id = ECO.147 #activation pour commerce -minerai -salaison-
 #id = ECO.148 #activation pour commerce -minerai -armes-
 
-#id = ECO.150 #activation pour commerce -peche -poisson-
-#id = ECO.151 #activation pour commerce -pisciculture -poisson-
+#id = ECO.150 # LIBRE
+#id = ECO.151 # LIBRE
 #id = ECO.152 #activation pour commerce -peche/pisciculture -fumaison-
 
 #id = ECO.160 #activation nourriture en local (modifier unique)
