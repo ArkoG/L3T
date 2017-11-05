@@ -91,26 +91,6 @@ CA_MINE_minerai_L3;Raw Ores: Extensive Shaft Mining;MINERAI : Grande Mine;;;;;;;
 CA_MINE_minerai_L3_desc;The construction of an extensive tunnel network and the machinery needed to lift large loads of ore to the surface have greatly increased productivity to supply the production of arms and tools, but also make mining much more dangerous and a few lives are claimed every year.;Maintenant, une vraie mine soutenue par des étais a été creusée. Les risques d'éboulement sont diminués et les mineurs peuvent travailler plus sereinement. Le minerai extrait en bonnes quantités pourra dès lors fournir le métal nécessaire à la fabrication d'armes et outils.;;;;;;;;;;;;x;
 
 
-#FISH pisciculture (terres);;;;;;;;;;;;;;;x
-#CA_FISH_pisci_L1;Freshwater Fish: Artificial Lake;PISCICULTURE : Élevage en Rivière;;;;;;;;;;;;x;
-#CA_FISH_pisci_L1_desc;;;;;;;;;;;;;;x;
-#CA_FISH_pisci_L2;Freshwater Fish: Fish Farms;PISCICULTURE : Étang Aménagé;;;;;;;;;;;;x;
-#CA_FISH_pisci_L2_desc;;;;;;;;;;;;;;x;
-#CA_FISH_pisci_L3;Freshwater Fish: Elaborate Fish Farms;PISCICULTURE : Ferme Piscicole;;;;;;;;;;;;x;
-#CA_FISH_pisci_L3_desc;;;;;;;;;;;;;;x;
-CA_AGRI_moulin_L1;Flour: Horse Mill;FARINE : Meule de pierre;;;;;;;;;;;;x
-CA_AGRI_moulin_L1_desc;;;;;;;;;;;;;;x
-CA_AGRI_moulin_L2;Flour: Windmill;FARINE : Moulin à vent;;;;;;;;;;;;x
-CA_AGRI_moulin_L2_desc;;;;;;;;;;;;;;x
-CA_AGRI_moulin_L3;Flour: Great windmill;FARINE : Grand Moulin;;;;;;;;;;;;x
-CA_AGRI_moulin_L3_desc;;;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L1;Bread: Clay Kiln;PAIN : Four commun;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L2;Bread: Bakery;PAIN : Four en pierre;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L3;Bread: Bakers' Guild;PAIN : Boulanger;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
-
 
 CA_fonderie_L1;Iron: Smelter;METAL : atelier de fonte;;;;;;;;;;;;x
 CA_fonderie_L1_desc;;;;;;;;;;;;;;x
@@ -243,61 +223,17 @@ CT_pierre_taille_L2_desc;;Ce petit atelier fabrique des pierres taillées ou cise
 CT_pierre_taille_L3;Worked Stone: Stonecarvers' Workshop;PIERRE : manufacture de taille;;;;;;;;;;;;x
 CT_pierre_taille_L3_desc;;Ce grand atelier fabrique massivement de la pierre taillées pour tout type de constructions.;;;;;;;;;;;;x
 #MACON //craft (all cities);;;;;;;;;;;;;;;x
-CA_macon_L1;Carpenters' workshop;Atelier des charpentiers;;;;;;;;;;;;x
-CA_macon_L2;Carpenters' lodge;Loge des charpentiers;;;;;;;;;;;;x
-CT_macon_L1;Carpenters' workshop;Atelier des charpentiers;;;;;;;;;;;;x
-CT_macon_L2;Carpenters' lodge;Loge des charpentiers;;;;;;;;;;;;x
-CT_macon_L3;Carpenters' guild;Guilde des charpentiers;;;;;;;;;;;;x
-TP_macon_L1;Carpenters' workshop;Atelier des charpentiers;;;;;;;;;;;;x
-TP_maconr_L2;Carpenters' lodge;Loge des charpentiers;;;;;;;;;;;;x
-CA_macon_desc;;Les §Ycharpentiers§! retravaillent ici le §Gbois§! : planches, poutres et madriers afin de les utiliser sur les chantiers de construction.;;;;;;;;;;;;x
-CT_macon_desc;;Les §Ycharpentiers§! retravaillent ici le §Gbois§! : planches, poutres et madriers afin de les utiliser sur les chantiers de construction. \nDans les villes, s'ils deviennent suffisament riches et puissants ils fondent une corporation qui pourra devenir très influante sur la vie de la cité.;;;;;;;;;;;;x
-CT_macon_L3_desc;;Les §Ycharpentiers§! retravaillent ici le §Gbois§! : planches, poutres et madriers afin de les utiliser sur les chantiers de construction. \nLa fondation de la §Yguilde§! permet d'avoir un relais de pouvoir au sein de la cité et pourra peut être devenir très influente... \nLa guilde regroupe les différentes corporations d'artisans du bois : charpentiers, menuisiers, tonneliers, ébénistes, tourneurs...;;;;;;;;;;;;x
-TP_macon_desc;;Les §Ycharpentiers§! retravaillent ici le §Gbois§! : planches, poutres et madriers afin de les utiliser sur les chantiers de construction. ;;;;;;;;;;;;x
-
-###FILIERE POISSON;;;;;;;;;;;;;;;x
-#FISH pêche //prod (côtes);;;;;;;;;;;;;;;x
-CA_FISH_peche_L1;Fishing: Fishing pier;PECHE : Ponton;;;;;;;;;;;;x;
-CA_FISH_peche_L1_desc;A small pier has been constructed to accommodate the emergence of a small fishing village. Some fish are caught here, but the waters are still teeming with wildlife and could yield even more were there more infrastructure to support local fishing.;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;;;;;;;;;;;;x;
-CA_FISH_peche_L2;Fishing: Fishing quay;PECHE : Quai;;;;;;;;;;;;x;
-CA_FISH_peche_L2_desc;The pier has been renovated into a quay capable of accommodating a sizeable flotilla of small fishing craft. The yield has increased considerably and can easily feed the local populace and leave a surplus for the salting and smoking industries;Le ponton a été transformé en un quai et peut maintenant accueillir une flottille de pêche ramenant suffisamment de poissons tant pour nourrir la population locale qu'alimenter les activités de salage et fumage de la région.;;;;;;;;;;;;x;
-CA_FISH_peche_L3;Fishing: Fishing harbor;PECHE : Port;;;;;;;;;;;;x;
-CA_FISH_peche_L3_desc;The quay has been expanded into a bustling harbor and the fishing industry is booming here.;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;;;;;;;;;;;;x;
-CA_FISH_peche_L4;Fishing: Great harbor;PECHE : Grand port;;;;;;;;;;;;x
-#FISH pêche //prod (côtes);;;;;;;;;;;;;;;x
-CT_FISH_peche_L1;Fishing: Fishing Piers;PECHE : Ponton;;;;;;;;;;;;x;
-CT_FISH_peche_L1_desc;A small pier has been constructed to accommodate the emergence of a small fishing village. Some fish are caught here, but the waters are still teeming with wildlife and could yield even more were there more infrastructure to support local fishing.;Un ponton a été construit afin d'y accueillir quelques barques de pêcheurs.;;;;;;;;;;;;x;
-CT_FISH_peche_L2;Fishing: Fishing Quay;PECHE : Quai;;;;;;;;;;;;x;
-CT_FISH_peche_L2_desc;The pier has been renovated into a quay capable of accommodating a sizeable flotilla of small fishing craft. The yield has increased considerably and can easily feed the local populace and leave a surplus for the salting and smoking industries;Le ponton a été transformé en un quai et peut maintenant accueillir une flottille de pêche ramenant suffisamment de poissons tant pour nourrir la population locale qu'alimenter les activités de salage et fumage de la région.;;;;;;;;;;;;x;
-CT_FISH_peche_L3;Fishing: Fishing Harbor;PECHE : Port;;;;;;;;;;;;x;
-CT_FISH_peche_L3_desc;The quay has been expanded into a bustling harbor and the fishing industry is booming here.;C'est maintenant un port fourmillant d'activités et accueillant une pêche abondante qui est installé sur le site.;;;;;;;;;;;;x;
-CT_FISH_peche_L4;Fishing: Great harbor;PECHE : Grand port;;;;;;;;;;;;x
-#FISH pisciculture //prod (plaine, foret défrichée, coteaux);;;;;;;;;;;;;;;x
-TP_FISH_pisci_L1;Freshwater Fish: Artificial Lake;PISCICULTURE : Élevage en Rivière;;;;;;;;;;;;x;
-TP_FISH_pisci_L1_desc;;;;;;;;;;;;;;x;
-TP_FISH_pisci_L2;Freshwater Fish: Fish Farms;PISCICULTURE : Étang Aménagé;;;;;;;;;;;;x;
-TP_FISH_pisci_L2_desc;;;;;;;;;;;;;;x;
-TP_FISH_pisci_L3;Freshwater Fish: Fishery;PISCICULTURE : Ferme Piscicole;;;;;;;;;;;;x;
-TP_FISH_pisci_L3_desc;;;;;;;;;;;;;;x;
-#FISH fumaison //port de peche ou pisciculture (côtes);;;;;;;;;;;;;;;x
-CA_FISH_fumoir_L1;Smoked Fish: Fishmonger's Smokehouse;FUMAISON : atelier;;;;;;;;;;;;x
-CA_FISH_fumoir_L1_desc;;;;;;;;;;;;;;x
-CA_FISH_fumoir_L2;Smoked Fish: Curing Shed;FUMAISON : atelier seigneurial;;;;;;;;;;;;x
-CA_FISH_fumoir_L2_desc;;;;;;;;;;;;;;x
-CA_FISH_fumoir_L3;Smoked Fish: Communal Smokehouse;FUMAISON : manufacture;;;;;;;;;;;;x
-CA_FISH_fumoir_L3_desc;;;;;;;;;;;;;;x
-CT_FISH_fumoir_L1;Smoked Fish: Fishmongers' Shops;FUMAISON : atelier;;;;;;;;;;;;x
-CT_FISH_fumoir_L1_desc;;;;;;;;;;;;;;x
-CT_FISH_fumoir_L2;Smoked Fish: Communal Smokehouse;FUMAISON : atelier communal;;;;;;;;;;;;x
-CT_FISH_fumoir_L2_desc;;;;;;;;;;;;;;x
-CT_FISH_fumoir_L3;Smoked Fish: Fishmongers' Guild;FUMAISON : manufacture;;;;;;;;;;;;x
-CT_FISH_fumoir_L3_desc;;;;;;;;;;;;;;x
-TP_FISH_fumoir_L1;Smoked Fish: Fishmongers' Shops;FUMAISON : atelier;;;;;;;;;;;;x
-TP_FISH_fumoir_L1_desc;;On fume ici divers produits pour leur conservation, mais principalement du poisson;;;;;;;;;;;;x
-TP_FISH_fumoir_L2;Smoked Fish: Communal Smokehouse;FUMAISON : atelier communal;;;;;;;;;;;;x
-TP_FISH_fumoir_L2_desc;;;;;;;;;;;;;;x
-TP_FISH_fumoir_L3;Smoked Fish: Fishmongers' Guild;FUMAISON : manufacture;;;;;;;;;;;;x
-TP_FISH_fumoir_L3_desc;;;;;;;;;;;;;;x
+CA_macon_L1;Carpenters' workshop;Atelier des maçons;;;;;;;;;;;;x
+CA_macon_L2;Carpenters' lodge;Loge des maçons;;;;;;;;;;;;x
+CT_macon_L1;Carpenters' workshop;Atelier des maçons;;;;;;;;;;;;x
+CT_macon_L2;Carpenters' lodge;Loge des maçons;;;;;;;;;;;;x
+CT_macon_L3;Carpenters' guild;Guilde des maçons;;;;;;;;;;;;x
+TP_macon_L1;Carpenters' workshop;Atelier des maçons;;;;;;;;;;;;x
+TP_macon_L2;Carpenters' lodge;Loge des maçons;;;;;;;;;;;;x
+CA_macon_desc;;Les §Ymaçons§! utilisent la §Gpierre§! : planches, poutres et madriers afin de les utiliser sur les chantiers de construction.;;;;;;;;;;;;x
+CT_macon_desc;;Les §Ymaçons§! utilisent la §Gpierre§! : planches, poutres et madriers afin de les utiliser sur les chantiers de construction. \nDans les villes, s'ils deviennent suffisament riches et puissants ils fondent une corporation qui pourra devenir très influante sur la vie de la cité.;;;;;;;;;;;;x
+CT_macon_L3_desc;;Les §Ymaçons§! utilisent la §Gbpierre§! : planches, poutres et madriers afin de les utiliser sur les chantiers de construction. \nLa fondation de la §Yguilde§! permet d'avoir un relais de pouvoir au sein de la cité et pourra peut être devenir très influente... \nLa guilde regroupe les différentes corporations d'artisans du bois : charpentiers, menuisiers, tonneliers, ébénistes, tourneurs...;;;;;;;;;;;;x
+TP_macon_desc;;Les §Ymaçons§! utilisent la §Gpierre§! : planches, poutres et madriers afin de les utiliser sur les chantiers de construction. ;;;;;;;;;;;;x
 
 ###FILIERE MINERAUX;;;;;;;;;;;;;;;x
 
@@ -307,7 +243,6 @@ CT_sel_raffine_L2;Refined Salt: Modest Salt Refinery;SEL : boutique;;;;;;;;;;;;x
 CT_sel_raffine_L2_desc;;L'étal a ici fait place à un boutique plus organisée avec davantage de choix;;;;;;;;;;;;x
 CT_sel_raffine_L3;Refined Salt: Expanded Salt Refinery;SEL : marchand;;;;;;;;;;;;x
 CT_sel_raffine_L3_desc;;Ce marchand spécialisé dans le sel propose principalement la production du coin mais aussi quelques sels venus d'ailleurs aux parfums inattendus;;;;;;;;;;;;x
-
 #MINE minerai sel(montagne + côteau + désert);;;;;;;;;;;;;;;x
 CT_MINE_sel_L1;Salt: Brine Pits;SEL : Puits de Saumure;;;;;;;;;;;;x;
 CT_MINE_sel_L1_desc;;;;;;;;;;;;;;x;
@@ -334,46 +269,9 @@ CT_MINE_cuivre_L2_desc;;;;;;;;;;;;;;x;
 CT_MINE_cuivre_L3;Copper: Extensive Shaft Mining;CUIVRE : Grande mine;;;;;;;;;;;;;x
 CT_MINE_cuivre_L3_desc;;;;;;;;;;;;;;x;
 
-#VIN (coteaux);;;;;;;;;;;;;;x;
-CT_chai_L1;Wine: Cultivated Vineyards;VIN : Chai Modeste;;;;;;;;;;;;x;
-CT_chai_L1_desc;;;;;;;;;;;;;;x;
-CT_chai_L2;Wine: Modest Winery;VIN : Chai Agrandi;;;;;;;;;;;;x;
-CT_chai_L2_desc;;;;;;;;;;;;;;x;
-CT_chai_L3;Wine: Expanded Winery;VIN : Grand Chai;;;;;;;;;;;;x;
-CT_chai_L3_desc;;;;;;;;;;;;;;x;
-CT_chai_L4;Wine: Reputable Winery;VIN : Chai Réputé;;;;;;;;;;;;x;
-CT_chai_L4_desc;;;;;;;;;;;;;;x;
-CT_chai_L5;Wine: Famed Winery;VIN : Chai de Haute Renommée;;;;;;;;;;;;x;
-CT_chai_L5_desc;;;;;;;;;;;;;;x;
-#BIERE;;;;;;;;;;;;;;x;
-CT_brasserie_L1;Beer: Cultivated Hops;BIERE : Brasserie Modeste;;;;;;;;;;;;x;
-CT_brasserie_L1_desc;;;;;;;;;;;;;;x;
-CT_brasserie_L2;Beer: Modest Brewery;BIERE : Brasserie Agrandie;;;;;;;;;;;;x;
-CT_brasserie_L2_desc;;;;;;;;;;;;;;x;
-CT_brasserie_L3;Beer: Expanded Brewery;BIERE : Grande Brasserie;;;;;;;;;;;;x;
-CT_brasserie_L3_desc;;;;;;;;;;;;;;x;
-CT_brasserie_L4;Beer: Reputable Brewery;BIERE : Brasserie Réputée;;;;;;;;;;;;x;
-CT_brasserie_L4_desc;;;;;;;;;;;;;;x;
-CT_brasserie_L5;Beer: Famed Brewery;BIERE : Brasserie de Haute Renommée;;;;;;;;;;;;x;
-CT_brasserie_L5_desc;;;;;;;;;;;;;;x;
+
 #;x;x;;;;;;;;;;;;x
 #;x;DEBUT AJOUT MOUCHI;;;;;;;;;;;;x
-CT_AGRI_moulin_L1;Flour: Water-powered Mill;FARINE : Moulin à aubes;;;;;;;;;;;;x
-CT_AGRI_moulin_L1_desc;A modest watermill placed along the bank of the river.;Un modeste moulin à eau placé le long de la rive.;;;;;;;;;;;;x
-CT_AGRI_moulin_L2;Flour: Waterwheel Mill;FARINE : Moulin à noria;;;;;;;;;;;;x
-CT_AGRI_moulin_L2_desc;The watermill makes use of a massive wheel which serves to turn the grindstone ;Le moulin à eau est ici doté d'une immense roue appelée noria, bien plus efficace.;;;;;;;;;;;;x
-CT_AGRI_moulin_L3;Flour: Modest Urban Mill;FARINE : Grand moulin citadin;;;;;;;;;;;;x
-CT_AGRI_moulin_L3_desc;The construction of a small canal to assure a regular flow of water to power the mill has increased its production.;L'installation au bord la rivière est ici alimentée par un petit canal dédié qui assure un débit régulier et ainsi une bien meilleure production.;;;;;;;;;;;;x
-CT_AGRI_moulin_L4;Flour: Expanded Urban Mill;FARINE : Grands moulins urbains;;;;;;;;;;;;x
-CT_AGRI_moulin_L4_desc;The recent installations have expanded the mill in size and capacity, allowing the mill to produce flour in large quantities.;Les installations ici sont de taille et produisent une bonne farine en quantité.;;;;;;;;;;;;x
-CT_AGRI_moulin_L5;Flour: Great Urban Mill;FARINE: Grands moulins;;;;;;;;;;;;x
-CT_AGRI_moulin_L5_desc;This massive mill makes use of multiple wheels, and dedicated canal, and a sizeable workforce to produce an extremely fine flour, used only in the best bakeries in the city.;Le bâtiments massif qui accueille les moulins est alimenté par un canal dédié et équipé de grandes roues. La farine produite est très fine et très blanche.\n Elle fait le bonheur des maîtres boulangers et la fierté de la cité.;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L1;Bread: Bakers' Shops;PAIN : Four commun;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L2;Bread: Baker's Street;PAIN : Four en pierre;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L3;Bread: Baker's Guild;PAIN : Boulanger;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
 CT_ELEV_boucherie_L1;Beef: Butcher Shops;VIANDE : abattoir de rue;;;;;;;;;;;;x
 CT_ELEV_boucherie_L1_desc;;Le bétail est ici abattu et débité en grosses pièces pour être vendu;;;;;;;;;;;;x
 CT_ELEV_boucherie_L2;Beef: Slaughterhouse;VIANDE : abattoir;;;;;;;;;;;;x
@@ -411,29 +309,6 @@ TP_ELEV_ovin_L2_desc;Enclosing sheep herds allows more efficient use of grazing 
 TP_ELEV_ovin_L3;Cheese: Sheep Pens;BETAIL : Bergerie;;;;;;;;;;;;x;
 TP_ELEV_ovin_L3_desc;Keeping the sheep penned reduces the risk of losing them to theft or predators. The establishment of proper infrastructure for the breeding and cultivation of large herds of sheep has delivered significant returns.;La bergerie accueillent les ovins pour la nuit et permet la fabrication de fromages.;;;;;;;;;;;;x;
 
-#VIN;;;;;;;;;;;;;;;x
-TP_chai_L1;Wine: Cultivated Vineyards;VIN : Chai Modeste;;;;;;;;;;;;x;
-TP_chai_L1_desc;;;;;;;;;;;;;;x;
-TP_chai_L2;Wine: Modest Winery;VIN : Chai Agrandi;;;;;;;;;;;;x;
-TP_chai_L2_desc;;;;;;;;;;;;;;x;
-TP_chai_L3;Wine: Expanded Winery;VIN : Grand Chai;;;;;;;;;;;;x;
-TP_chai_L3_desc;;;;;;;;;;;;;;x;
-TP_chai_L4;Wine: Reputable Winery;VIN : Chai Réputé;;;;;;;;;;;;x;
-TP_chai_L4_desc;;;;;;;;;;;;;;x;
-TP_chai_L5;Wine: Famed Winery;VIN : Chai de Haute Renommée;;;;;;;;;;;;x;
-TP_chai_L5_desc;;;;;;;;;;;;;;x;
-#BIERE;;;;;;;;;;;;;;x;
-TP_brasserie_L1;Beer: Cultivated Hops;BIERE : Brasserie Modeste;;;;;;;;;;;;x;
-TP_brasserie_L1_desc;;;;;;;;;;;;;;x;
-TP_brasserie_L2;Beer: Modest Brewery;BIERE : Brasserie Agrandie;;;;;;;;;;;;x;
-TP_brasserie_L2_desc;;;;;;;;;;;;;;x;
-TP_brasserie_L3;Beer: Expanded Brewery;BIERE : Grande Brasserie;;;;;;;;;;;;x;
-TP_brasserie_L3_desc;;;;;;;;;;;;;;x;
-TP_brasserie_L4;Beer: Reputable Brewery;BIERE : Brasserie Réputée;;;;;;;;;;;;x;
-TP_brasserie_L4_desc;;;;;;;;;;;;;;x;
-TP_brasserie_L5;Beer: Famed Brewery;BIERE : Brasserie de Haute Renommée;;;;;;;;;;;;x;
-TP_brasserie_L5_desc;;;;;;;;;;;;;;x;
-
 #PEAUX;;;;;;;;;;;;;;;x
 CT_COMM_peaux_L1;Furs: Furrier's Workshop;PEAUX : Atelier du Pelletier;;;;;;;;;;;;x;
 CT_COMM_peaux_L1_desc;;;;;;;;;;;;;;x;
@@ -456,19 +331,6 @@ CT_COMM_epices_L2_desc;;;;;;;;;;;;;;x;
 CT_COMM_epices_L3;Spices: Eastern Trading Company;EPICES : Marchand;;;;;;;;;;;;x;
 CT_COMM_epices_L3_desc;;;;;;;;;;;;;;x;
 
-
-TP_AGRI_moulin_L1;Flour: Water-powered Mill;FARINE : Moulin à aubes;;;;;;;;;;;;x
-TP_AGRI_moulin_L1_desc;A modest watermill placed along the bank of the river.;Un modeste moulin à eau placé le long de la rive.;;;;;;;;;;;;x
-TP_AGRI_moulin_L2;Flour: Waterwheel Mill;FARINE : Moulin à noria;;;;;;;;;;;;x
-TP_AGRI_moulin_L2_desc;The watermill makes use of a massive wheel which serves to turn the grindstone ;Le moulin à eau est ici doté d'une immense roue appelée noria, bien plus efficace.;;;;;;;;;;;;x
-TP_AGRI_moulin_L3;Flour: Communal Mill;FARINE : Grand moulin citadin;;;;;;;;;;;;x
-TP_AGRI_moulin_L3_desc;The construction of a small canal to assure a regular flow of water to power the mill has increased its production.;L'installation au bord la rivière est ici alimentée par un petit canal dédié qui assure un débit régulier et ainsi une bien meilleure production.;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L1;Bread: Bakers' Shops;PAIN : Four commun;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L2;Bread: Baker's Street;PAIN : Four en pierre;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L3;Bread: Baker's Guild;PAIN : Boulanger;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
 
 
 CT_port_commercial_L1;TRADE: Coastal quay;COMMERCE : Quai côtier;;;;;;;;;;;;x
