@@ -142,6 +142,7 @@ CA_BOIS_bois_L1 = {
 		has_province_modifier = foret2_expl
 		NOT = { terrain = jungle }
 		NOT = { terrain = mountain }
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_planche" value = 1 }}}
 		
 	}
 	 prerequisites = { FEODAL_prod CA_BOIS_bois_L2 }
@@ -168,7 +169,10 @@ CA_scierie_L1 = {
 	desc = CA_scierie_desc
 	not_if_x_exists = { CA_BOIS_charbon_L1 }
 	trigger = { TECH_TRADE_PRACTICES = 1 }
-	potential = { has_province_modifier = foret2_expl }
+	potential = { 
+		has_province_modifier = foret2_expl
+		FROMFROM = { NOT = { check_variable = { which = "a_deja_charbon" value = 1 }}}
+	}
 	prerequisites = { FEODAL_prod CA_BOIS_bois_L2 }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
@@ -240,11 +244,36 @@ CA_CARR_pierre_L2 = {
 }
 CA_CARR_pierre_L3 = {
   	desc = CA_CARR_pierre_L3_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 terrain = mountain }
+	trigger = { TECH_TRADE_PRACTICES = 0 }
 	potential = { terrain = mountain }
 	upgrades_from = CA_CARR_pierre_L2
 		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 		local_build_time_modifier = -0.02 #-2% cumul -5%
+}
+CA_pierre_taille_L1 = {
+	desc = CA_pierre_taille_L1_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+#	potential = {
+#	}
+	prerequisites = { CA_CARR_pierre_L2 }
+	prerequisites = { FEODAL_prod }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_pierre_taille_L2 = {
+	desc = CA_pierre_taille_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CA_CARR_pierre_L2 }
+	upgrades_from = CA_pierre_taille_L1
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
+	#ACTIVATES 
+		#cut stone as province modifier with market
+}
+CA_pierre_taille_L3 = {
+	desc = CA_pierre_taille_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CA_CARR_pierre_L3 }
+	upgrades_from = CA_pierre_taille_L2
+		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #MINE minerai (montagne + côteau)
@@ -307,29 +336,7 @@ CA_FISH_peche_L4 = { #Grand port
 }
 
 #FISH pisciculture (terres)
-#CA_FISH_pisci_L1 = {
-#  	desc = CA_FISH_pisci_L1_desc
-#	trigger = { TECH_TRADE_PRACTICES = 0 }
-#	potential = {
-#		OR = {
-#			has_province_modifier = pisci1
-#			has_province_modifier = pisci2_poisson
-#			}
-#		}
-#	prerequisites = { FEODAL_prod }
-#		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-#}
-#CA_FISH_pisci_L2 = {
-#  	desc = CA_FISH_pisci_L2_desc
-#	trigger = { TECH_TRADE_PRACTICES = 0 }
-#	upgrades_from = CA_FISH_pisci_L1
-#		gold_cost = 150.0	build_time = 360	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-#}
-#CA_FISH_pisci_L3 = {
-#  	desc = CA_FISH_pisci_L3_desc
-#	upgrades_from = CA_FISH_pisci_L2
-#		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-#}
+#removed
 
 #FARINE
 CA_AGRI_moulin_L1 = {
@@ -384,27 +391,24 @@ CA_AGRI_boulangerie_L3 = {
 
 #FUMAISON
 CA_FISH_fumoir_L1 = {
- 	desc = CA_FISH_fumoir_L1_desc
+	desc = FISH_fumoir_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		OR = {
-			has_province_modifier = peche2_poisson
-			has_province_modifier = pisci2_poisson
-		}}
-	prerequisites = { FEODAL_prod }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		#salt required
+	potential = { has_province_modifier = province_cotiere }
+	prerequisites = { CA_FISH_peche_L2 }#port de pêche, village ou ville
+		gold_cost = 150.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_FISH_fumoir_L2 = {
- 	desc = CA_FISH_fumoir_L2_desc
+	desc = FISH_fumoir_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_FISH_fumoir_L1
-		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 175.0	build_time = 365	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_FISH_fumoir_L3 = {
- 	desc = CA_FISH_fumoir_L3_desc
+	desc = FISH_fumoir_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = CA_FISH_fumoir_L2
-		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 250.0	build_time = 365	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 
@@ -801,27 +805,26 @@ CT_ELEV_boucherie_L3 = {
 
 #FUMAISON
 CT_FISH_fumoir_L1 = {
-	desc = CT_FISH_fumoir_L1_desc
+	desc = FISH_fumoir_desc
+		#salt required
 	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		has_province_modifier = peche2_poisson }## MOUCHI : il n'y a pas de bâtiments de pisculture dans les cités
-	#prerequisites = { CT_FISH_peche_L1 }
-	prerequisites = { VOC_INDUSTRIELLE }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	potential = { has_province_modifier = province_cotiere }
+	prerequisites = { CT_FISH_peche_L2 } #port de pêche, village ou ville
+		gold_cost = 150.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_FISH_fumoir_L2 = {
-	desc = CT_FISH_fumoir_L2_desc
+	desc = FISH_fumoir_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_FISH_peche_L2 }
 	upgrades_from = CT_FISH_fumoir_L1
-		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 175.0	build_time = 365	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_FISH_fumoir_L3 = {
-	desc = CT_FISH_fumoir_L3_desc
+	desc = FISH_fumoir_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	#prerequisites = { CT_FISH_peche_L3 }
 	upgrades_from = CT_FISH_fumoir_L2
-		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 250.0	build_time = 365	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 }
@@ -937,6 +940,32 @@ TP_FISH_pisci_L3 = { #ferme piscicole
 		gold_cost = 250.0	build_time = 365	tax_income = 0.4	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
+#FISH pêche (côtes)
+TP_FISH_peche_L1 = {
+ 	desc = TP_FISH_peche_L1_desc
+	trigger = { NOT = { has_province_modifier = has_fishing_harbour }}
+	potential = { has_province_modifier = province_cotiere }
+	prerequisites = { CITEEPISCOPALE }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_FISH_peche_L2 = {
+ 	desc = TP_FISH_peche_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_FISH_peche_L1
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_FISH_peche_L3 = {
+ 	desc = CT_FISH_peche_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_FISH_peche_L2
+		gold_cost = 200.0	build_time = 365	tax_income = 0.5	ai_creation_factor = 101	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_FISH_peche_L4 = { #Grand port
+	desc = CT_FISH_peche_L3_desc #L3 desc used on purpose
+	upgrades_from = TP_FISH_peche_L3
+		gold_cost = 250.0	build_time = 740	tax_income = 0.5	ai_creation_factor = 101	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
 #FARINE
 TP_AGRI_moulin_L1 = {
 	desc = TP_AGRI_moulin_L1_desc
@@ -985,22 +1014,23 @@ TP_AGRI_boulangerie_L3 = {
 
 #FUMAISON
 TP_FISH_fumoir_L1 = {
-	desc = TP_FISH_fumoir_L1_desc
-	trigger = { poisson_dispo = yes } #scripted_trigger
-	prerequisites = { MONASTERE }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	desc = FISH_fumoir_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#salt required
+	prerequisites = { TP_FISH_peche_L2 CITEEPISCOPALE } #implies episcopal city 
+		gold_cost = 50.0	build_time = 150	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_FISH_fumoir_L2 = {
-	desc = TP_FISH_fumoir_L2_desc
+	desc = FISH_fumoir_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_FISH_fumoir_L1
-		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 175.0	build_time = 365	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_FISH_fumoir_L3 = {
-	desc = TP_FISH_fumoir_L3_desc
+	desc = FISH_fumoir_desc
 	trigger = { TECH_TRADE_PRACTICES = 0 }
 	upgrades_from = TP_FISH_fumoir_L2
-		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 250.0	build_time = 365	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 ##TRANSFORMATIONS SUR PLACE (ou à emporter lol)

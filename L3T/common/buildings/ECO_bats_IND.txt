@@ -11,48 +11,8 @@ castle = {
 
 #PLANCHE ##moved to PROD
 #VERRE ##moved to PROD
+#PIERRE TAILLE ##moved to PROD
 
-
-#PIERRE TAILLE
-CA_pierre_taille_L1 = {
-	desc = CA_pierre_taille_L1_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		OR = {
-			has_province_modifier = pierre2_pierre_brute
-			AND = {
-				OR = {
-					has_province_modifier = route_fluviale
-					has_province_modifier = route_terrestre
-				}
-				any_neighbor_province = {
-					has_province_modifier = pierre2_pierre_brute
-					OR = {
-						has_province_modifier = route_fluviale
-						has_province_modifier = route_terrestre
-					}					
-				}
-			}			
-		}
-	}
-	#prerequisites = { CA_CARR_pierre_L1 }
-	prerequisites = { FEODAL_prod }
-		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-CA_pierre_taille_L2 = {
-	desc = CA_pierre_taille_L2_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { CA_CARR_pierre_L2 }
-	upgrades_from = CA_pierre_taille_L1
-		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
-}
-CA_pierre_taille_L3 = {
-	desc = CA_pierre_taille_L3_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	#prerequisites = { CA_CARR_pierre_L3 }
-	upgrades_from = CA_pierre_taille_L2
-		gold_cost = 100.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
-}
 
 #METAL
 CA_fonderie_L1 = {
@@ -289,28 +249,8 @@ CT_draperie_L3 = {
 #BIERE
 CT_brasserie_L1 = {
 	desc = CT_brasserie_L1_desc
-	trigger = { TECH_TRADE_PRACTICES = 0 }
-	potential = {
-		OR = {
-			has_province_modifier = agriculture2_cereales
-			AND = {
-				OR = {
-					has_province_modifier = route_fluviale
-					has_province_modifier = route_terrestre
-				}
-				any_neighbor_province = {
-					has_province_modifier = agriculture2_cereales
-					OR = {
-						has_province_modifier = route_fluviale
-						has_province_modifier = route_terrestre
-					}					
-				}
-			}			
-		}
-	}
-	#prerequisites = { CT_AGRI_cereale_L1 }
+	trigger = { cereales_dispo = yes } #scripted_trigger
 	prerequisites = { VOC_INDUSTRIELLE }
-	not_if_x_exists = { CT_chai_L1 }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_brasserie_L2 = {
