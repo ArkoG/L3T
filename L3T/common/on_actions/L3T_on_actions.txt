@@ -22,13 +22,13 @@ on_yearly_pulse = {
 		L3T.225
 		L3T.226
 		RIP.10030 #vanilla on_province_major_modifier event
-		ECO.160 #food modifiers (holding)
+		#ECO.160 #food modifiers (holding)
 		ECO.161 #food modifiers (province)
 		ECO.16 #marquage ports et shipyards
-		ECO.17 #marquage batiments antagonistes
-		ECO.1000 #activation céréales //holding
-		ECO.1210 #activation charbon//holding
-		ECO.1220 #activation planche//holding
+		ECO.17 #marquage holding ressources L2
+		ECO.18 #upgrade MARKET to L3
+		ECO.101 #activation FOOD - fruits
+		ECO.102 #activation FOOD - legumes
 
 		XYLO.1 #hire a forester
 		XYLO.2 #choose forest spec computation

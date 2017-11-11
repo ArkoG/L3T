@@ -246,15 +246,14 @@
 #id = ECO.82 #évaluation du potentiel économique -arctique-  
 #id = ECO.15 #reroll pour les malchanceux (voir détection ressources)
 #id = ECO.16 #marquage port unique
-#id = ECO.17 #marquage batiments antagonistes
+#id = ECO.17 #marquage holding ressources L2
 
 ##activation ressources
 #id = ECO.100 #activation pour commerce -agriculture -céréales //province
-#id = ECO.1000 #activation pour commerce -agriculture -céréales //holding
 #id = ECO.101 #activation pour commerce -agriculture -fruits
 #id = ECO.102 #activation pour commerce -agriculture -légumes
-#id = ECO.103 #activation pour commerce -agriculture -vigne
 
+#id = ECO.103 # LIBRE
 #id = ECO.104 # LIBRE
 
 #id = ECO.105 #activation pour commerce -agriculture -bière
@@ -274,16 +273,14 @@
 
 #id = ECO.120 # LIBRE
 #id = ECO.121 #activation pour commerce -foret -charbon- //province
-#id = ECO.1210 #activation pour commerce -foret -charbon- //holding
 #id = ECO.122 #activation pour commerce -foret -planche- //province
-#id = ECO.1220 #activation pour commerce -foret -planche- //holding
 #id = ECO.123 #activation pour commerce -foret -verre- //province uniquement
 
 #id = ECO.124 #activation pour commerce -luxe -peaux-
 #id = ECO.125 #activation pour commerce -luxe -joyaux-
 #id = ECO.126 #activation pour commerce -luxe -epices-
 
-#id = ECO.130 #activation pour commerce -pierre- 
+#id = ECO.130 # LIBRE
 #id = ECO.131 #activation pour commerce -pierre taille- 
 
 #id = ECO.132 #décompte minerai on_action

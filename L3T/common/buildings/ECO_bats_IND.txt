@@ -249,7 +249,8 @@ CT_draperie_L3 = {
 #BIERE
 CT_brasserie_L1 = {
 	desc = CT_brasserie_L1_desc
-	trigger = { orge_dispo = yes } #scripted_trigger
+	trigger = { has_province_modifier = agriculture2_cereales }
+	#trigger = { orge_dispo = yes } #scripted_trigger
 	prerequisites = { VOC_INDUSTRIELLE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }

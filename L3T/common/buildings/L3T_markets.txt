@@ -36,8 +36,9 @@ castle = {
 	}
 	ca_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
 		desc = marketplace_3_desc
-		trigger = { ressource_L2_dispo = yes }
+		#trigger = { ressource_L2_dispo = yes }
 		not_if_x_exists = { FEODAL_mil }
+		prerequisites = { XXX } #event built
 		upgrades_from = ca_marketplace_2
 		gold_cost = 200
 		build_time = 730
@@ -89,8 +90,9 @@ city = {
 	}
 	ct_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
 		desc = marketplace_3_desc
-		trigger = { ressource_L2_dispo = yes }
-		prerequisites = { ct_town_2 } #bourg
+		#trigger = { ressource_L2_dispo = yes }
+		prerequisites = { XXX } #event built
+		#prerequisites = { ct_town_2 } #bourg
 		upgrades_from = ct_marketplace_2
 		gold_cost = 200
 		build_time = 730
@@ -199,7 +201,8 @@ temple = {
 	}
 	tp_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
 		desc = marketplace_3_desc
-		trigger = { ressource_L2_dispo = yes }
+		#trigger = { ressource_L2_dispo = yes }
+		prerequisites = { XXX } #event built
 		upgrades_from = tp_marketplace_2
 		gold_cost = 200
 		build_time = 730
