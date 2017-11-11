@@ -144,8 +144,8 @@
 #176 - parchemin + sceau + plume //rouge
 #177 - riviére inondation
 #178 - rivière asséchée
-  #179 - not used
-  #180 - not used
+#179 - coin pile blue arrows /trade node
+#180 - coin pile green arrows /trade node secondary
 #181 - spe commanderie
 #182 - treasury icon
 #183 - spe TEMPLE 2b -centre religieux musulman
@@ -369,8 +369,8 @@ epices2_epices	= {icon = 138 	tax_income = 0.3}
 
 1connexion_commerciale = {icon = 1 } #hidden
 2connexion_commerciale = {icon = 1 } #hidden
-noeud_commercial_annexe = {icon = 137 city_tax_modifier = 0.03 }
-prosperity_modifier_2 = {icon = 137 local_tax_modifier = 0.05 } #retagged for using the on map 3D icon from vanilla prosperity L2
+noeud_commercial_annexe = {icon = 180 city_tax_modifier = 0.03 }
+prosperity_modifier_2 = {icon = 179 local_tax_modifier = 0.05 } #retagged for using the on map 3D icon from vanilla prosperity L2
 #noeud_commercial_primaire = {icon = 137 local_tax_modifier = 0.05 }
 redaction_dun_cadastre  = {icon = 2 local_tax_modifier = 0.01 }
 interrupted_by_war = {icon = 1 } #hidden
@@ -684,6 +684,7 @@ mine_productivite_plus = {
 	tax_income = 0.2
 }
 
+ressource_L2_dispo = { icon = 138 }
 has_ress_L2 = { icon = 1} # hidden
 has_ress_L3 = { icon = 1} # hidden
 has_ress_L4 = { icon = 1} # hidden
