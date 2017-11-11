@@ -254,6 +254,18 @@ castle = {
 		liege_piety = 0.05
 		liege_prestige = 0.05
 	}
+	
+	ca_loge = {
+		desc = loge_desc
+		prerequisites = { ca_cathedrale_01 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 100		
+		build_time = 360		
+		ai_creation_factor = 90
+		local_build_time_modifier = -0.1
+		add_number_to_name = no
+		extra_tech_building_start = 100.0
+	}
 }
 #CITY
 city = {
@@ -507,6 +519,18 @@ city = {
 		extra_tech_building_start = 10.0
 		liege_piety = 0.05
 		liege_prestige = 0.05
+	}
+	
+	ct_loge = {
+		desc = loge_desc
+		prerequisites = { ca_cathedrale_01 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 100		
+		build_time = 360		
+		ai_creation_factor = 90
+		local_build_time_modifier = -0.1
+		add_number_to_name = no
+		extra_tech_building_start = 100.0
 	}
 }
 #TEMPLE
@@ -800,5 +824,17 @@ temple = {
 		ai_creation_factor = 5	
 		add_number_to_name = no	
 		extra_tech_building_start = 10.0
+	}
+	
+	tp_loge = {
+		desc = loge_desc
+		prerequisites = { ca_cathedrale_01 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 100		
+		build_time = 360		
+		ai_creation_factor = 90
+		local_build_time_modifier = -0.1
+		add_number_to_name = no
+		extra_tech_building_start = 100.0
 	}
 }

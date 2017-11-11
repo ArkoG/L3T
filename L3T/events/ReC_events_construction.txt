@@ -175,16 +175,43 @@ province_event = {
 						}
 					}
 				}
-				hidden_tooltip = { change_variable = { which = cathedral value = 150 } }
+				hidden_tooltip = { 
+					if = {
+						limit = { has_loge = yes }
+						change_variable = { which = cathedral value = 165 }
+					}
+					if = {
+						limit = { NOT = { has_loge = yes } }
+						change_variable = { which = cathedral value = 150 }
+					}
+				}
 			}
 			if = {
 				limit = { location = { has_province_modifier = chantier_down } }
-				hidden_tooltip = { change_variable = { which = cathedral value = 135 } }
+				hidden_tooltip = { 
+					if = {
+						limit = { has_loge = yes }
+						change_variable = { which = cathedral value = 148 }
+					}
+					if = {
+						limit = { NOT = { has_loge = yes } }
+						change_variable = { which = cathedral value = 135 }
+					}
+				}
 				location = { remove_province_modifier = chantier_down }
 			}
 			if = {
 				limit = { location = { has_province_modifier = chantier_stop } }
-				hidden_tooltip = { change_variable = { which = cathedral value = 120 } }
+				hidden_tooltip = { 
+					if = {
+						limit = { has_loge = yes }
+						change_variable = { which = cathedral value = 132 }
+					}
+					if = {
+						limit = { NOT = { has_loge = yes } }
+						change_variable = { which = cathedral value = 120 }
+					}
+				}
 				location = { remove_province_modifier = chantier_stop }
 			}
 		}
@@ -243,9 +270,36 @@ province_event = {
 				}
 				hidden_tooltip = {
 					random_list = {
-						20 = { change_variable = { which = cathedral value = 120 } }
-						60 = { change_variable = { which = cathedral value = 110 } }
-						20 = { change_variable = { which = cathedral value = 100 } }
+						20 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 132 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 120 }
+							}
+						}
+						60 = { 
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 121 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 110 }
+							}
+						}
+						20 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 110 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 100 }
+							}
+						}
 					}
 				}
 			}
@@ -253,9 +307,36 @@ province_event = {
 				limit = { location = { has_province_modifier = chantier_down } }
 				hidden_tooltip = {
 					random_list = {
-						20 = { change_variable = { which = cathedral value = 110 } }
-						60 = { change_variable = { which = cathedral value = 100 } }
-						20 = { change_variable = { which = cathedral value = 90 } }
+						20 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 121 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 110 }
+							}
+						}
+						60 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 110 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 100 }
+							}
+						}
+						20 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 99 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 90 }
+							}
+						}
 					}
 				}
 			}
@@ -263,9 +344,36 @@ province_event = {
 				limit = { location = { has_province_modifier = chantier_stop } }
 				hidden_tooltip = {
 					random_list = {
-						20 = { change_variable = { which = cathedral value = 100 } }
-						60 = { change_variable = { which = cathedral value = 90 } }
-						20 = { change_variable = { which = cathedral value = 80 } }
+						20 = { 
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 110 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 100 }
+							}
+						}
+						60 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 99 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 90 }
+							}
+						}
+						20 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 88 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 80 }
+							}
+						}
 					}
 				}
 				location = { remove_province_modifier = chantier_stop }
