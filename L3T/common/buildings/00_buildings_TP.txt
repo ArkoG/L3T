@@ -465,7 +465,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		potential = { has_province_modifier = province_cotiere }
 		prerequisites = { CITEEPISCOPALE }
 		port = yes
-		trigger = { TECH_NAVAL = 1 }
+		#trigger = { TECH_NAVAL = 1 }
 		gold_cost = 100
 		build_time = 365
 		galleys = 6

@@ -724,7 +724,7 @@ ca_eglise_L4 = { #Grande église
 		#potential = { has_province_modifier = province_cotiere } #can't put this here because it forbids history pre-built shipyard L1 to be built on history loading fuck 
 		not_if_x_exists = { FEODAL_prod }
 		port = yes
-		trigger = { TECH_NAVAL = 1 }
+		#trigger = { TECH_NAVAL = 1 }
 		gold_cost = 100
 		build_time = 365
 		galleys = 6

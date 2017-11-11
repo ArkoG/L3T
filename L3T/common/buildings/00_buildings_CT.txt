@@ -513,7 +513,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 		}
 		prerequisites = { VOC_INDUSTRIELLE }
 		port = yes
-		trigger = { TECH_NAVAL = 1 }
+		#trigger = { TECH_NAVAL = 1 }
 		gold_cost = 100
 		build_time = 365
 		galleys = 7
