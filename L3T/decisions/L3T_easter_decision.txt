@@ -12,7 +12,7 @@ decisions = {
 		}
 		allow = {
 			#war = no #in big realm you are ALWAYS at war
-			involved_in_personnal_war = no
+			not_involved_in_personnal_war = yes
 			custom_tooltip = {
 				text = UNOCCUPIED_DEMESNE_TITLE
 				hidden_tooltip = {
