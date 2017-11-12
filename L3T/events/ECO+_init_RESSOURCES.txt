@@ -95,10 +95,15 @@ province_event = {
 		}
 		random_list = {
 			70 = {
-				add_province_modifier = { name = minerai1_sel duration = -1	}
+				if = {			
+					limit = { NOT = { has_province_modifier = mine_stop }}
+					random_list = {
+					}
+					change_variable = { which = "resourceNb" value = 1 }
+				}
 				if = {
-					limit = { NOT = { has_province_modifier = mine_stop } }
-					add_province_modifier = { name = minerai1 duration = -1	}
+					limit = { has_province_modifier = mine_stop }
+					add_province_modifier = { name = minerai1_sel duration = -1	}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
 			}
@@ -159,10 +164,15 @@ province_event = {
 			 5 = { add_province_modifier = { name = elevage1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 			10 = { add_province_modifier = { name = agriculture1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 			10 = {
-				add_province_modifier = { name = minerai1_sel duration = -1	}
+				if = {			
+					limit = { NOT = { has_province_modifier = mine_stop }}
+					random_list = {
+					}
+					change_variable = { which = "resourceNb" value = 1 }
+				}
 				if = {
-					limit = { NOT = { has_province_modifier = mine_stop } }
-					add_province_modifier = { name = minerai1 duration = -1	}
+					limit = { has_province_modifier = mine_stop }
+					add_province_modifier = { name = minerai1_sel duration = -1	}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
 			}
@@ -202,10 +212,15 @@ province_event = {
 		random_list = {
 			40 = { add_province_modifier = { name = elevage1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 			25 = {
-				add_province_modifier = { name = minerai1_sel duration = -1	}
+				if = {			
+					limit = { NOT = { has_province_modifier = mine_stop }}
+					random_list = {
+					}
+					change_variable = { which = "resourceNb" value = 1 }
+				}
 				if = {
-					limit = { NOT = { has_province_modifier = mine_stop } }
-					add_province_modifier = { name = minerai1 duration = -1	}
+					limit = { has_province_modifier = mine_stop }
+					add_province_modifier = { name = minerai1_sel duration = -1	}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
 			}
@@ -266,13 +281,18 @@ province_event = {
 				}
 			}
 			 5 = {
-				add_province_modifier = { name = minerai1_sel duration = -1	}
-				if = {
-					limit = { NOT = { has_province_modifier = mine_stop } }
-					add_province_modifier = { name = minerai1 duration = -1	}
+				if = {			
+					limit = { NOT = { has_province_modifier = mine_stop }}
+					random_list = {
+					}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
-			 }
+				if = {
+					limit = { has_province_modifier = mine_stop }
+					add_province_modifier = { name = minerai1_sel duration = -1	}
+					change_variable = { which = "resourceNb" value = 1 }
+				}
+			}
 			10 = { add_province_modifier = { name = pierre1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 			70 = {}
 		}
@@ -312,10 +332,15 @@ province_event = {
 		}
 		random_list = {
 			70 = {
-				add_province_modifier = { name = minerai1_sel duration = -1	}
+				if = {			
+					limit = { NOT = { has_province_modifier = mine_stop }}
+					random_list = {
+					}
+					change_variable = { which = "resourceNb" value = 1 }
+				}
 				if = {
-					limit = { NOT = { has_province_modifier = mine_stop } }
-					add_province_modifier = { name = minerai1 duration = -1	}
+					limit = { has_province_modifier = mine_stop }
+					add_province_modifier = { name = minerai1_sel duration = -1	}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
 			}
@@ -410,10 +435,15 @@ province_event = {
 		}
 		random_list = {
 			30 = {
-				add_province_modifier = { name = minerai1_sel duration = -1	}
+				if = {			
+					limit = { NOT = { has_province_modifier = mine_stop }}
+					random_list = {
+					}
+					change_variable = { which = "resourceNb" value = 1 }
+				}
 				if = {
-					limit = { NOT = { has_province_modifier = mine_stop } }
-					add_province_modifier = { name = minerai1 duration = -1	}
+					limit = { has_province_modifier = mine_stop }
+					add_province_modifier = { name = minerai1_sel duration = -1	}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
 			}
@@ -470,10 +500,15 @@ province_event = {
 		}
 		random_list = {
 			15 = {
-				add_province_modifier = { name = minerai1_sel duration = -1	}
+				if = {			
+					limit = { NOT = { has_province_modifier = mine_stop }}
+					random_list = {
+					}
+					change_variable = { which = "resourceNb" value = 1 }
+				}
 				if = {
-					limit = { NOT = { has_province_modifier = mine_stop } }
-					add_province_modifier = { name = minerai1 duration = -1	}
+					limit = { has_province_modifier = mine_stop }
+					add_province_modifier = { name = minerai1_sel duration = -1	}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
 			}
