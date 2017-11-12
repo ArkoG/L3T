@@ -15,7 +15,7 @@ castle = {
 	ca_marketplace_1 = {
 		desc = marketplace_1_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		gold_cost = 65
+		gold_cost = 95
 		build_time = 200
 		tax_income = 0.5
 		ai_creation_factor = 110
@@ -27,7 +27,7 @@ castle = {
 		prerequisites = { ca_town_2 } #village
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
 		upgrades_from = ca_marketplace_1
-		gold_cost = 85
+		gold_cost = 185
 		build_time = 150
 		tax_income = 0.5
 		ai_creation_factor = 109
@@ -69,7 +69,7 @@ city = {
 	ct_marketplace_1 = {
 		desc = marketplace_1_desc
 		trigger = { TECH_CITY_CONSTRUCTION = 0 }
-		gold_cost = 65
+		gold_cost = 95
 		build_time = 200
 		tax_income = 1
 		ai_creation_factor = 110
@@ -81,7 +81,7 @@ city = {
 		prerequisites = { ct_town_1 } #village
 		trigger = {  TECH_CITY_CONSTRUCTION = 0 }
 		upgrades_from = ct_marketplace_1
-		gold_cost = 85
+		gold_cost = 185
 		build_time = 150
 		tax_income = 1
 		ai_creation_factor = 109
@@ -180,7 +180,7 @@ temple = {
 	tp_marketplace_1 = {
 		desc = marketplace_1_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		gold_cost = 65
+		gold_cost = 95
 		build_time = 200
 		tax_income = 0.5
 		ai_creation_factor = 110
@@ -192,7 +192,7 @@ temple = {
 		prerequisites = { tp_town_2 } #village
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
 		upgrades_from = tp_marketplace_1
-		gold_cost = 85
+		gold_cost = 185
 		build_time = 150
 		tax_income = 0.5
 		ai_creation_factor = 109
