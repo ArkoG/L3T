@@ -58,13 +58,6 @@ province_event = {
 			}
 			35 = {}
 		}
-#		if = { 
-#			limit = { has_province_modifier = province_cotiere }
-#			random_list = {
-#				30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-#				70 = {}
-#			}
-#		}
 		province_event = { id = ECO.15 days = 10 }
 	}
 }
@@ -98,6 +91,8 @@ province_event = {
 				if = {			
 					limit = { NOT = { has_province_modifier = mine_stop }}
 					random_list = {
+						25 = { add_province_modifier = { name = minerai1_sel duration = -1 }}
+						75 = { add_province_modifier = { name = minerai1 duration = -1 }}
 					}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
@@ -109,20 +104,6 @@ province_event = {
 			}
 			30 = {}
 		}
-#		if = {
-#			limit = { has_province_modifier = province_cotiere }
-#			random_list = {
-#				30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-#				70 = {}
-#			}
-#		}
-#		if = {
-#			limit = { has_province_modifier = province_terrestre }
-#			random_list = {
-#				35 = { add_province_modifier = { name = pisci1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-#				65 = {}
-#			}
-#		}
 		province_event = { id = ECO.15 days = 10 }
 	}
 }
@@ -167,6 +148,8 @@ province_event = {
 				if = {			
 					limit = { NOT = { has_province_modifier = mine_stop }}
 					random_list = {
+						25 = { add_province_modifier = { name = minerai1_sel duration = -1 }}
+						75 = { add_province_modifier = { name = minerai1 duration = -1 }}
 					}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
@@ -179,13 +162,6 @@ province_event = {
 			 5 = { add_province_modifier = { name = pierre1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 			70 = {}
 		}
-#		if = { 
-#			limit = { has_province_modifier = province_cotiere }
-#			random_list = {
-#				30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-#				70 = {}
-#			}
-#		}
 		province_event = { id = ECO.15 days = 10 }
 	}
 }
@@ -215,6 +191,8 @@ province_event = {
 				if = {			
 					limit = { NOT = { has_province_modifier = mine_stop }}
 					random_list = {
+						25 = { add_province_modifier = { name = minerai1_sel duration = -1 }}
+						75 = { add_province_modifier = { name = minerai1 duration = -1 }}
 					}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
@@ -230,13 +208,6 @@ province_event = {
 			70 = { add_province_modifier = { name = pierre1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 			30 = {}
 		}
-#		if = { 
-#			limit = { has_province_modifier = province_cotiere }
-#			random_list = {
-#				30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-#				70 = {}
-#			}
-#		}
 		province_event = { id = ECO.15 days = 10 }
 	}
 }
@@ -284,6 +255,8 @@ province_event = {
 				if = {			
 					limit = { NOT = { has_province_modifier = mine_stop }}
 					random_list = {
+						25 = { add_province_modifier = { name = minerai1_sel duration = -1 }}
+						75 = { add_province_modifier = { name = minerai1 duration = -1 }}
 					}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
@@ -296,13 +269,6 @@ province_event = {
 			10 = { add_province_modifier = { name = pierre1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 			70 = {}
 		}
-#		if = { 
-#			limit = { has_province_modifier = province_cotiere }
-#			random_list = {
-#				30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-#				70 = {}
-#			}
-#		}
 		province_event = { id = ECO.15 days = 10 }
 	}
 }
@@ -335,6 +301,8 @@ province_event = {
 				if = {			
 					limit = { NOT = { has_province_modifier = mine_stop }}
 					random_list = {
+						25 = { add_province_modifier = { name = minerai1_sel duration = -1 }}
+						75 = { add_province_modifier = { name = minerai1 duration = -1 }}
 					}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
@@ -346,13 +314,6 @@ province_event = {
 			}
 			30 = {}
 		}
-#		if = {
-#			limit = { has_province_modifier = province_cotiere }
-#			random_list = {
-#				30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-#				70 = {}
-#			}
-#		}
 		province_event = { id = ECO.15 days = 10 }
 	}
 }
@@ -384,13 +345,6 @@ province_event = {
 			90 = { add_province_modifier = { name = elevage1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 			10 = {}
 		}
-#		if = {
-#			limit = { has_province_modifier = province_cotiere }
-#			random_list = {
-#				30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-#				70 = {}
-#			}
-#		}
 		province_event = { id = ECO.15 days = 10 }
 	}
 }
@@ -438,6 +392,8 @@ province_event = {
 				if = {			
 					limit = { NOT = { has_province_modifier = mine_stop }}
 					random_list = {
+						25 = { add_province_modifier = { name = minerai1_sel duration = -1 }}
+						75 = { add_province_modifier = { name = minerai1 duration = -1 }}
 					}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
@@ -449,13 +405,6 @@ province_event = {
 			}
 			70 = {}
 		}
-#		if = {
-#			limit = { has_province_modifier = province_cotiere }
-#			random_list = {
-#				30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-#				70 = {}
-#			}
-#		}
 		province_event = { id = ECO.15 days = 10 }
 	}
 }
@@ -503,6 +452,8 @@ province_event = {
 				if = {			
 					limit = { NOT = { has_province_modifier = mine_stop }}
 					random_list = {
+						25 = { add_province_modifier = { name = minerai1_sel duration = -1 }}
+						75 = { add_province_modifier = { name = minerai1 duration = -1 }}
 					}
 					change_variable = { which = "resourceNb" value = 1 }
 				}
@@ -515,13 +466,6 @@ province_event = {
 			25 = { add_province_modifier = { name = elevage1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 			60 = {}
 		}
-#		if = {
-#			limit = { has_province_modifier = province_cotiere }
-#			random_list = {
-#				30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-#				70 = {}
-#			}
-#		}
 		province_event = { id = ECO.15 days = 10 }
 	}
 }
