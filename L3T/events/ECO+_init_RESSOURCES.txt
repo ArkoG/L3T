@@ -51,7 +51,7 @@ province_event = {
 					add_province_modifier = { 
 						name = foret2_expl
 						duration = -1
-						hidden = yes
+						#hidden = yes
 					}
 					set_variable = { which = "wood_cut" value = 0 }
 				}
@@ -150,7 +150,7 @@ province_event = {
 			add_province_modifier = {
 				name = foret2_expl
 				duration = -1
-				hidden = yes
+				#hidden = yes
 			}
 			set_variable = { which = "wood_cut" value = 0 }
 		}
@@ -260,7 +260,7 @@ province_event = {
 					add_province_modifier = { 
 						name = foret2_expl
 						duration = -1
-						hidden = yes
+						#hidden = yes
 					}
 					set_variable = { which = "wood_cut" value = 0 }
 				}
@@ -401,7 +401,7 @@ province_event = {
 					add_province_modifier = { 
 						name = foret2_expl
 						duration = -1
-						hidden = yes
+						#hidden = yes
 					}
 					set_variable = { which = "wood_cut" value = 0 }
 				}
@@ -461,7 +461,7 @@ province_event = {
 					add_province_modifier = { 
 						name = foret2_expl
 						duration = -1
-						hidden = yes
+						#hidden = yes
 					}
 					set_variable = { which = "wood_cut" value = 0 }
 				}
@@ -1118,7 +1118,7 @@ province_event = {
 	
 	trigger = {
 		has_province_modifier = foret2_expl
-		NOT = { has_province_modifier = foret2_charbon }
+		NOT = { has_province_modifier = foret3_charbon }
 #trade_version	##NOT = { has_province_modifier = agriculture2_cereales_trade } #happens only on first holding getting the ress building + market
 
 		any_province_holding = {
@@ -1158,7 +1158,7 @@ province_event = {
 	
 	option = {
 		name = "ECO.121A"
-		add_province_modifier = { name = foret2_charbon duration = -1 }		
+		add_province_modifier = { name = foret3_charbon duration = -1 }		
 #trade_version	#add_province_modifier = { name = agriculture2_cereales_trade duration = -1 }
 		random_province_holding = {
 			limit = {
