@@ -153,7 +153,6 @@ CA_AGRI_banal_moulin_L1 = {
 	}
 	is_active_trigger = {
 	#	OR ={
-	#		has_province_modifier = banalite1
 	#		has_province_modifier = banalite2
 	#	}
 	}
@@ -211,12 +210,11 @@ CA_AGRI_banal_four_L1 = {
 	#		has_province_modifier = banalite2
 	#	}		
 	}
-	potential = {
-		has_province_modifier = agriculture3_farine
-	}
+	#potential = {
+	#	has_province_modifier = agriculture3_farine
+	#}
 	is_active_trigger = {
 	#	OR ={
-	#		has_province_modifier = banalite1
 	#		has_province_modifier = banalite2
 	#	}
 	}
