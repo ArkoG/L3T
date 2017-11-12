@@ -25,15 +25,15 @@ CA_AGRI_verger_L2;Fruits: Large Orchards;FRUITS : Grands Vergers;;;;;;;;;;;;x
 CA_AGRI_verger_L2_desc;Through considerable investments in expanding the scale of production, large orchards now span the many hills and fields of this province.;;;;;;;;;;;;x
 CA_AGRI_verger_L3;Fruits: Seigneurial Orchards;FRUITS : Vergers Seigneuriaux;;;;;;;;;;;x
 CA_AGRI_verger_L3_desc;The local lord has taken control over the majority of the fruit orchards in this province and expanded them further. Thousands of peasants now toil in the groves harvesting fruit from trees bending under their own weight to send to market.;Les vergers couvrent à présent une bonne partie des coteaux et les arbres plient sous le poids de leurs fruits abondants.;;;;;;;;;;;;x
-CT_AGRI_verger_L1;Fruits: Small Orchards;FRUITS : Vergers Épars;;;;;;;;;;;;x
+CT_AGRI_verger_L1;Fruits: Small Orchards;FRUITS : Vergers épars;;;;;;;;;;;;x
 CT_AGRI_verger_L1_desc;Small orchards tended to by a few dozen workers dot the countryside, but more fertile land is available for  large-scale cultivation.;;;;;;;;;;;;;x
-CT_AGRI_verger_L2;Fruits: Large Orchards;FRUITS : Grands Vergers;;;;;;;;;;;;x
+CT_AGRI_verger_L2;Fruits: Large Orchards;FRUITS : Grands vergers;;;;;;;;;;;;x
 CT_AGRI_verger_L2_desc;Through considerable investments in expanding the scale of production, large orchards now span the many hills and fields of this province.;;;;;;;;;;;;x
 CT_AGRI_verger_L3;Fruits: Communal Orchards;FRUITS : Vergers Communaux;;;;;;;;;;;x
 CT_AGRI_verger_L3_desc;The communal government has expanded the majority of the fruit orchards in this province. Thousands of laborers now toil in the groves harvesting fruit from trees bending under their own weight to send to market.;Les vergers couvrent à présent une bonne partie des coteaux et les arbres plient sous le poids de leurs fruits abondants.;;;;;;;;;;;;x
-TP_AGRI_verger_L1;Fruits: Small Orchards;FRUITS : Vergers Épars;;;;;;;;;;;;x
+TP_AGRI_verger_L1;Fruits: Small Orchards;FRUITS : Vergers épars;;;;;;;;;;;;x
 TP_AGRI_verger_L1_desc;Small orchards tended by a few workers dot the countryside, but more fertile land is available for larger-scale cultivation.;;;;;;;;;;;;;x
-TP_AGRI_verger_L2;Fruits: Large Orchards;FRUITS : Grands Vergers;;;;;;;;;;;;x
+TP_AGRI_verger_L2;Fruits: Large Orchards;FRUITS : Grands vergers;;;;;;;;;;;;x
 TP_AGRI_verger_L2_desc;Through considerable investments in expanding the scale of production, large orchards now span the many hills and fields of this demesne.;;;;;;;;;;;;x
 TP_AGRI_verger_L3;Fruits: Abbey's Orchards;FRUITS : Vergers de l'Abbaye;;;;;;;;;;;;x
 TP_AGRI_verger_L3_desc;The expanded fruit orchards now hires lots of laborers whom now toil in the groves harvesting fruit from trees bending under their own weight to send to market.;Les vergers couvrent à présent une bonne partie des coteaux. Les arbres pliant sous le poids de leurs fruits abondants, nécessitent les soins de nombres d'hommes et de femmes.;;;;;;;;;;;;x
@@ -47,7 +47,7 @@ TP_AGRI_maraichage_L3_desc;;;;;;;;;;;;;;x
 #VINES;VIGNES;;;;;;;;;;;;;;x
 TP_AGRI_vigne_L1;Vineyards: Parcelled Land;VIGNE : Parcelles;;;;;;;;;;;;x
 TP_AGRI_vigne_L1_desc;;;;;;;;;;;;;;x
-TP_AGRI_vigne_L2;Vineyards: Modest Vineyards;VIGNE : Vignoble;;;;;;;;;;;;x
+TP_AGRI_vigne_L2;Vineyards: Modest Vineyards;VIGNE : Vignobles;;;;;;;;;;;;x
 TP_AGRI_vigne_L2_desc;;;;;;;;;;;;;;x
 TP_AGRI_vigne_L3;Vineyards: Expanded Vineyards;VIGNE : Domaine viticole;;;;;;;;;;;;x
 TP_AGRI_vigne_L3_desc;;;;;;;;;;;;;;x
@@ -76,23 +76,26 @@ TP_AGRI_moulin_L3;Flour: Communal Mill;FARINE : Grand moulin citadin;;;;;;;;;;;;
 TP_AGRI_moulin_L3_desc;The construction of a small canal to assure a regular flow of water to power the mill has increased its production.;L'installation au bord la rivière est ici alimentée par un petit canal dédié qui assure un débit régulier et ainsi une bien meilleure production.;;;;;;;;;;;;x
 #BREAD;PAIN;;;;;;;;;;;;;;x
 CA_AGRI_boulangerie_L1;Bread: Clay Kiln;PAIN : Four commun;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
 CA_AGRI_boulangerie_L2;Bread: Bakery;PAIN : Four en pierre;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
 CA_AGRI_boulangerie_L3;Bread: Bakers' Guild;PAIN : Boulanger;;;;;;;;;;;;x
-CA_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
+CA_AGRI_boulangerie_desc;;;;;;;;;;;;;;x
 CT_AGRI_boulangerie_L1;Bread: Bakers' Shops;PAIN : Four commun;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
 CT_AGRI_boulangerie_L2;Bread: Baker's Street;PAIN : Four en pierre;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
 CT_AGRI_boulangerie_L3;Bread: Baker's Guild;PAIN : Boulanger;;;;;;;;;;;;x
-CT_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
+CT_AGRI_boulangerie_desc;;;;;;;;;;;;;;x
 TP_AGRI_boulangerie_L1;Bread: Bakers' Shops;PAIN : Four commun;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L1_desc;;;;;;;;;;;;;;x
 TP_AGRI_boulangerie_L2;Bread: Baker's Street;PAIN : Four en pierre;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L2_desc;;;;;;;;;;;;;;x
 TP_AGRI_boulangerie_L3;Bread: Baker's Guild;PAIN : Boulanger;;;;;;;;;;;;x
-TP_AGRI_boulangerie_L3_desc;;;;;;;;;;;;;;x
+TP_AGRI_boulangerie_desc;;;;;;;;;;;;;;x
+#BANALITIES;BANALITES;;;;;;;;;;;;;;x
+CA_AGRI_banal_moulin_L1;BANALITE: Local mill;BANALITE : Moulin local;;;;;;;;;;;;x
+CA_AGRI_banal_moulin_L2;BANALITE: Seigneurial mill;BANALITE : Moulin seigneurial;;;;;;;;;;;;x
+CA_AGRI_banal_moulin_desc;The §YMill§!is owned by the local lord or his liege. \nSo to grind §GFlour§!, villagers are forced touse this building made available by their lord and they must pay a tax for that.;Le §YMoulin§! appartient au seigneur local ou son lige. \nAfin de produire de la §GFarine§!, les villageois ont pour obligation d'utiliser ce bâtiment mis à disposition par leur seigneur et doivent s'acquitter d'une taxe pour cela.;;;;;;;;;;;;x
+CA_AGRI_banal_four_L1;BANALITE: Local oven;BANALITE : Four local;;;;;;;;;;;;x
+CA_AGRI_banal_four_L2;BANALITE: Seigneurial oven;BANALITE : Four seigneurial;;;;;;;;;;;;x
+CA_AGRI_banal_four_desc;The §YOven§!is owned by the local lord or his liege. \nSo to bake §GBread§!, villagers are forced touse this building made available by their lord and they must pay a tax for that.;Le §YFour§! appartient au seigneur local ou son lige. \nAfin de cuire le §GPain§!, les villageois ont pour obligation d'utiliser ce bâtiment mis à disposition par leur seigneur et doivent s'acquitter de la taxe de fournage pour cela.;;;;;;;;;;;;x
+CA_ELEVAGE_banal_toretver_L1;BANALITE: Tor et ver;BANALITE : Tor et ver;;;;;;;;;;;;x
+CA_ELEVAGE_banal_toretver_desc;The §YTor et ver§! banalité means that only the lord had the right to own a bull or a boar. \nThe deliberate mating of cattle or pigs incurres fines.;La banalité de §YTor et ver§! donne au seul seigneur le droit de posséder un toaureau ou un verrat. \nLes saillies de ces animaux sont sujettes à redevance. ;;;;;;;;;;;;x
 #WINE;VIN;;;;;;;;;;;;;;x
 TP_chai_L1;Wine: Cultivated Vineyards;VIN : Chai Modeste;;;;;;;;;;;;x;
 TP_chai_L1_desc;;;;;;;;;;;;;;x;

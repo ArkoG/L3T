@@ -113,6 +113,132 @@ CA_AGRI_verger_L3 = {
 		add_number_to_name = no
 		extra_tech_building_start = 10.0	
 }
+#FARINE - ville
+CA_AGRI_moulin_L1 = {
+  	desc = CA_AGRI_moulin_L1_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = {
+		has_province_modifier = agriculture2_cereales
+	}
+	#prerequisites = { CA_AGRI_cereale_L1 } #import only
+	prerequisites = { FEODAL_adm }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_AGRI_moulin_L2 = {
+ 	desc = CA_AGRI_moulin_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CA_AGRI_cereale_L2 }
+	upgrades_from = CA_AGRI_moulin_L1
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_AGRI_moulin_L3 = {
+ 	desc = CA_AGRI_moulin_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CA_AGRI_cereale_L3 }
+	upgrades_from = CA_AGRI_moulin_L2
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+#FARINE - village
+CA_AGRI_banal_moulin_L1 = {
+  	desc = CA_AGRI_banal_moulin_desc
+	trigger = { 
+		TECH_TRADE_PRACTICES = 0
+	#	OR ={
+	#		has_province_modifier = banalite1
+	#		has_province_modifier = banalite2
+	#	}		
+	}
+	potential = {
+		has_province_modifier = agriculture1
+	}
+	is_active_trigger = {
+	#	OR ={
+	#		has_province_modifier = banalite1
+	#		has_province_modifier = banalite2
+	#	}
+	}
+	prerequisites = { 
+		FEODAL_prod
+		CA_AGRI_cereale_L1
+	}
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_AGRI_banal_moulin_L2 = {
+  	desc = CA_AGRI_banal_moulin_desc
+	trigger = { 
+		TECH_TRADE_PRACTICES = 0
+#		has_province_modifier = banalite2
+	}
+#	is_active_trigger = {
+#		has_province_modifier = banalite2
+#	}
+	prerequisites = { CA_AGRI_cereale_L2 }
+	upgrades_from = CA_AGRI_banal_moulin_L1
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#PAIN - ville
+CA_AGRI_boulangerie_L1 = {
+ 	desc = CA_AGRI_boulangerie_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = {
+		has_province_modifier = agriculture3_farine}
+	#prerequisites = { CA_AGRI_moulin_L1 } #local ou import
+	prerequisites = { FEODAL_adm } #great quantities in cities only
+		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_AGRI_boulangerie_L2 = {
+ 	desc = CA_AGRI_boulangerie_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CA_AGRI_moulin_L2 }
+	upgrades_from = CA_AGRI_boulangerie_L1
+		gold_cost = 75.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_AGRI_boulangerie_L3 = {
+ 	desc = CA_AGRI_boulangerie_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CA_AGRI_moulin_L3 }
+	upgrades_from = CA_AGRI_boulangerie_L2
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+#PAIN - village
+CA_AGRI_banal_four_L1 = {
+ 	desc = CA_AGRI_banal_four_desc
+	trigger = { 
+		TECH_TRADE_PRACTICES = 0
+	#	OR ={
+	#		has_province_modifier = banalite1
+	#		has_province_modifier = banalite2
+	#	}		
+	}
+	potential = {
+		has_province_modifier = agriculture3_farine
+	}
+	is_active_trigger = {
+	#	OR ={
+	#		has_province_modifier = banalite1
+	#		has_province_modifier = banalite2
+	#	}
+	}
+	prerequisites = { 
+		FEODAL_prod
+		CA_AGRI_banal_moulin_L1
+	}
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_AGRI_banal_four_L2 = {
+ 	desc = CA_AGRI_banal_four_desc
+	trigger = { 
+		TECH_TRADE_PRACTICES = 0
+#		has_province_modifier = banalite2
+	}
+#	is_active_trigger = {
+#		has_province_modifier = banalite2
+#	}
+	upgrades_from = CA_AGRI_banal_four_L1
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
 
 }
 
@@ -223,7 +349,87 @@ CT_AGRI_verger_L3 = {
 		add_number_to_name = no
 		extra_tech_building_start = 10.0	
 }
+#FARINE
+CT_AGRI_moulin_L1 = {
+	desc = CT_AGRI_moulin_L1_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	
+	potential = {
+		#has_province_modifier = agriculture2_cereales
+		has_province_modifier = province_fleuve
+		}
+		
+	prerequisites = { CT_AGRI_cereale_L2 } #local
+	prerequisites = { VOC_INDUSTRIELLE }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_AGRI_moulin_L2 = {
+	desc = CT_AGRI_moulin_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CT_AGRI_cereale_L2 }
+	upgrades_from = CT_AGRI_moulin_L1
+		gold_cost = 75.0	build_time = 150	tax_income = 0.2	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_AGRI_moulin_L3 = {
+	desc = CT_AGRI_moulin_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CT_AGRI_cereale_L3 }
+	upgrades_from = CT_AGRI_moulin_L2
+		gold_cost = 150.0	build_time = 200	tax_income = 0.3	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_AGRI_moulin_L4 = {
+	desc = CT_AGRI_moulin_L4_desc
+	potential = {
+		OR = {
+			has_province_modifier = route_fluviale
+			has_province_modifier = route_terrestre
+		}
+		#any_neighbor_province = {
+		#	has_province_modifier = agriculture2_cereales
+		#	OR = {
+		#		has_province_modifier = route_fluviale
+		#		has_province_modifier = route_terrestre
+		#	}					
+		#}		
+	}
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CT_AGRI_cereale_L2 }
+	upgrades_from = CT_AGRI_moulin_L3
+		gold_cost = 250.0	build_time = 350	tax_income = 0.5	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_AGRI_moulin_L5 = {
+	desc = CT_AGRI_moulin_L5_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CT_AGRI_cereale_L3 }
+	upgrades_from = CT_AGRI_moulin_L4
+		gold_cost = 200.0	build_time = 150	tax_income = 0.4	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
+}
 
+#PAIN
+CT_AGRI_boulangerie_L1 = {
+	desc = CT_AGRI_boulangerie_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = {
+		has_province_modifier = agriculture3_farine
+	}
+	#prerequisites = { CT_AGRI_moulin_L1 } #import farine
+	prerequisites = { VOC_COMMERCIALE }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_AGRI_boulangerie_L2 = {
+	desc = CT_AGRI_boulangerie_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CT_AGRI_moulin_L2 }
+	upgrades_from = CT_AGRI_boulangerie_L1
+		gold_cost = 75.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CT_AGRI_boulangerie_L3 = {
+	desc = CT_AGRI_boulangerie_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	#prerequisites = { CT_AGRI_moulin_L3 }
+	upgrades_from = CT_AGRI_boulangerie_L2
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
 }
 
 #############################
@@ -459,6 +665,147 @@ TP_AGRI_verger_L3 = {
 		ai_creation_factor = 99
 		add_number_to_name = no
 		extra_tech_building_start = 10.0	
+}
+#VIN
+TP_chai_L1 = {
+	desc = TP_chai_L1_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = { has_province_modifier = agriculture1 }
+	#trigger = { vigne_dispo = yes } #scripted_trigger
+	prerequisites = { 
+		MONASTERE
+		TP_AGRI_vigne_L2
+	}
+	not_if_x_exists = { TP_brasserie_L1 } #beer and wine are exclusive toward eachother
+		gold_cost = 85.0	build_time = 200	tax_income = 0.5	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_chai_L2 = {
+	desc = TP_chai_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_chai_L1
+		gold_cost = 70.0	build_time = 150	tax_income = 0.5	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_chai_L3 = {
+	desc = TP_chai_L3_desc
+	trigger = {
+		TECH_TRADE_PRACTICES = 0
+		has_province_modifier = agriculture3_vin_Q1
+	}
+	upgrades_from = TP_chai_L2
+		gold_cost = 125.0	build_time = 100	tax_income = 1.5	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_chai_L4 = {
+	desc = TP_chai_L4_desc
+	trigger = {
+		TECH_TRADE_PRACTICES = 0
+		has_province_modifier = agriculture3_vin_Q2
+	}
+	#prerequisites = { TP_AGRI_vigne_L3 } #à remplacer par pré-requis de trait
+	upgrades_from = TP_chai_L3
+		gold_cost = 150.0	build_time = 100	tax_income = 1.0	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_chai_L5 = {
+	desc = TP_chai_L5_desc
+	trigger = {
+		TECH_TRADE_PRACTICES = 0
+		has_province_modifier = agriculture3_vin_Q3
+	}
+	#prerequisites = { TP_AGRI_vigne_L3 } #à remplacer par pré-requis de trait
+	upgrades_from = TP_chai_L4
+		gold_cost = 200.0	build_time = 100	tax_income = 1.0	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#BIERE
+TP_brasserie_L1 = {
+	desc = TP_brasserie_L1_desc
+	potential = { has_province_modifier = agriculture1 }
+	#trigger = { orge_dispo = yes } #scripted_trigger
+	prerequisites = { 
+		MONASTERE
+		TP_AGRI_cereale_L2 #local only
+	}
+	not_if_x_exists = { TP_chai_L1 } #beer and wine are exclusive toward eachother
+		gold_cost = 85.0	build_time = 200	tax_income = 0.5	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_brasserie_L2 = {
+	desc = TP_brasserie_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_brasserie_L1
+		gold_cost = 70.0	build_time = 150	tax_income = 0.5	ai_creation_factor = 96	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_brasserie_L3 = {
+	desc = TP_brasserie_L3_desc
+	trigger = {
+		TECH_TRADE_PRACTICES = 0
+		has_province_modifier = agriculture3_biere_Q1
+	}
+	upgrades_from = TP_brasserie_L2
+		gold_cost = 125.0	build_time = 150	tax_income = 1.5	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_brasserie_L4 = {
+	desc = TP_brasserie_L4_desc
+	trigger = {
+		TECH_TRADE_PRACTICES = 0
+		has_province_modifier = agriculture3_biere_Q2
+	}
+	#prerequisites = { TP_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
+	upgrades_from = TP_brasserie_L3
+		gold_cost = 150.0	build_time = 365	tax_income = 1.0	ai_creation_factor = 94	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_brasserie_L5 = {
+	desc = TP_brasserie_L5_desc
+	trigger = {
+		TECH_TRADE_PRACTICES = 0
+		has_province_modifier = agriculture3_biere_Q3
+	}
+	#prerequisites = { TP_AGRI_cereale_L3 } #à remplacer par pré-requis de trait
+	upgrades_from = TP_brasserie_L4
+		gold_cost = 200.0	build_time = 180	tax_income = 1.0	ai_creation_factor = 93	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+#FARINE
+TP_AGRI_moulin_L1 = {
+	desc = TP_AGRI_moulin_L1_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = {
+		has_province_modifier = agriculture2_cereales
+	}
+	prerequisites = { CITEEPISCOPALE }
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_AGRI_moulin_L2 = {
+	desc = TP_AGRI_moulin_L2_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_AGRI_moulin_L1
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_AGRI_moulin_L3 = {
+	desc = TP_AGRI_moulin_L3_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_AGRI_moulin_L2
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+
+#PAIN
+TP_AGRI_boulangerie_L1 = {
+	desc = TP_AGRI_boulangerie_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	potential = {
+		has_province_modifier = agriculture3_farine
+	}
+	prerequisites = { CITEEPISCOPALE } #L4-L5 in city only
+		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_AGRI_boulangerie_L2 = {
+	desc = TP_AGRI_boulangerie_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_AGRI_boulangerie_L1
+		gold_cost = 75.0	build_time = 100	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+TP_AGRI_boulangerie_L3 = {
+	desc = TP_AGRI_boulangerie_desc
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	upgrades_from = TP_AGRI_boulangerie_L2
+		gold_cost = 150.0	build_time = 100	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 }
