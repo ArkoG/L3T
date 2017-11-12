@@ -920,7 +920,7 @@ character_event = {
 		random_realm_province = {
 			limit = {
 				NOT = { has_province_flag = agriculture2_fruits_recu }
-				random_province_holding = {
+				any_province_holding = {
 					OR = {
 						AND = {
 							has_building = CA_AGRI_verger_L2
@@ -940,10 +940,6 @@ character_event = {
 					}
 				}
 			}
-			change_variable = { which = "province_food" value = 1 }
-			set_province_flag = agriculture2_fruits_recu
-		}
-		random_realm_province = {
 			random_province_holding = {
 				limit = {
 					OR = {
@@ -966,6 +962,8 @@ character_event = {
 				}
 				set_title_flag = agriculture2_fruits_given
 			}
+			change_variable = { which = "province_food" value = 1 }
+			set_province_flag = agriculture2_fruits_recu
 		}
 	}
 }
