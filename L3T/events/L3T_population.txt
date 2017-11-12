@@ -259,7 +259,7 @@ character_event = {
 				save_event_target_as = holding_dev #totoro
 				set_variable = { which = "developpementold" which = "developpement" }
 				#change_variable = { which = "developpement" value = 1 } 
-				holder_scope = { character_event = { id = L3T.1106 days = 0 }} #totoro
+				#holder_scope = { character_event = { id = L3T.1106 days = 0 }} #totoro
 			}
 			if = {
 				limit = {
@@ -270,7 +270,7 @@ character_event = {
 				set_variable = { which = "developpementold" which = "developpement" }
 				#change_variable = { which = "developpement" value = 1 } #totoro
 				save_event_target_as = holding_dev #totoro
-				holder_scope = { character_event = { id = L3T.1107 days = 0 }} #totoro
+				#holder_scope = { character_event = { id = L3T.1107 days = 0 }} #totoro
 			}		
 		}
 	}
