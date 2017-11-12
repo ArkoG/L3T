@@ -753,6 +753,7 @@ character_event = {
 					AND = {
 						has_building = ct_marketplace_2
 						has_holding_modifier = ressource_L2_dispo
+						has_building = ct_town_2
 					}					
 					AND = {
 						has_building = tp_marketplace_2
@@ -778,6 +779,7 @@ character_event = {
 				limit = { 
 					NOT = { has_building = ct_marketplace_3 }
 					has_building = ct_marketplace_2
+					has_building = ct_town_2
 					has_holding_modifier = ressource_L2_dispo
 				}
 				add_building = ct_marketplace_3
