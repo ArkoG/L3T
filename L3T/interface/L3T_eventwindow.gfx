@@ -100,6 +100,18 @@ spriteTypes =
 		texturefile = "gfx\\event_pictures\ECO1.tga"
 		allwaystransparent = yes
 	}
+	
+	spriteType = {
+		name = "GFX_evt_ECO_outils_forge" #forge alt
+		texturefile = "gfx\\event_pictures\ECO_outils_forge.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ECO_etoffe_marche" #stands 
+		texturefile = "gfx\\event_pictures\ECO_etoffe_marche.tga"
+		allwaystransparent = yes
+	}
+	
 	spriteType = {
 		name = "GFX_evt_CK1" #CK1 picture
 		texturefile = "gfx\\event_pictures\CK1.tga"
