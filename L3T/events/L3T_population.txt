@@ -233,8 +233,19 @@ character_event = {
 					change_variable = { which = "developpement" value = 1 }
 					change_variable = { which = "developpement_yearly_growth" value = 1 }
 				}
-				change_variable = { which = "developpement" value = 1 } 
-				change_variable = { which = "developpement_yearly_growth" value = 1 }
+				random = { 
+					chance = 40
+					modifier = {
+						factor = 1.5
+						location = { has_province_modifier = agriculture4_pain }
+					}
+					modifier = {
+						factor = 1.5
+						location = { has_province_modifier = industrie_prospere }
+					}
+					change_variable = { which = "developpement" value = 1 } 
+					change_variable = { which = "developpement_yearly_growth" value = 1 }
+				}
 				#holder_scope = { character_event = { id = L3T.1104 days = 0 }} #totoro
 			}
 			if = {
