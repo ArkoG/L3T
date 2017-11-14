@@ -222,7 +222,15 @@ character_event = {
 				limit = {
 					has_siege = no
 					is_occupied = no
-					location = { has_disease = no }
+					NOT = {
+						location = { 
+							OR = {
+								has_disease = yes
+								has_province_modifier = meteo_inondation
+								has_province_modifier = meteo_secheresse
+							}
+						}
+					}
 				}
 				save_event_target_as = holding_dev #totoro
 				set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
@@ -250,7 +258,13 @@ character_event = {
 			}
 			if = {
 				limit = {
-					location = { has_disease = yes }
+					location = { 
+						OR = {
+							has_disease = yes
+							has_province_modifier = meteo_inondation
+							has_province_modifier = meteo_secheresse
+						}
+					}
 				}
 				save_event_target_as = holding_dev #totoro
 				set_variable = { which = "developpementold" which = "developpement" }
