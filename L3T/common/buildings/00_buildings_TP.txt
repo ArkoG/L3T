@@ -477,7 +477,11 @@ tp_training_grounds_L2 = { #Porte en pierre
 	tp_shipyard_2 = {
 		desc = shipyard_desc
 		port = yes
-		trigger = { TECH_NAVAL = 2 }
+		trigger = { 
+			NOT = { has_province_modifier = has_shipyard }
+			has_province_modifier = foret3_planche_trade
+			TECH_NAVAL = 2
+		}
 		upgrades_from = tp_shipyard_1
 		gold_cost = 100
 		build_time = 730
@@ -503,7 +507,11 @@ tp_training_grounds_L2 = { #Porte en pierre
 	tp_shipyard_4 = {
 		desc = shipyard_desc
 		port = yes
-		trigger = { TECH_NAVAL = 4 }
+		trigger = { 
+			NOT = { has_province_modifier = has_shipyard }
+			has_province_modifier = foret3_planche_trade
+			TECH_NAVAL = 4
+		}
 		potential = { has_province_modifier = NEVER }
 		upgrades_from = tp_shipyard_3
 		gold_cost = 100

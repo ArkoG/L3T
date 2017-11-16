@@ -736,7 +736,11 @@ ca_eglise_L4 = { #Grande église
 	ca_shipyard_2 = {
 		desc = shipyard_desc
 		#port = yes
-		trigger = { TECH_NAVAL = 2 }
+		trigger = { 
+			NOT = { has_province_modifier = has_shipyard }
+			#has_province_modifier = foret3_planche_trade
+			TECH_NAVAL = 2
+		}
 		#potential = { has_province_modifier = province_cotiere }
 		upgrades_from = ca_shipyard_1
 		gold_cost = 100
@@ -750,7 +754,11 @@ ca_eglise_L4 = { #Grande église
 	ca_shipyard_3 = {
 		desc = shipyard_desc
 		port = yes
-		trigger = { TECH_NAVAL = 3 }
+		trigger = { 
+			NOT = { has_province_modifier = has_shipyard }
+			#has_province_modifier = foret3_planche_trade
+			TECH_NAVAL = 3
+		}
 		prerequisites = { FEODAL_adm }
 		upgrades_from = ca_shipyard_2
 		gold_cost = 100
@@ -764,7 +772,11 @@ ca_eglise_L4 = { #Grande église
 	ca_shipyard_4 = {
 		desc = shipyard_desc
 		port = yes
-		trigger = { TECH_NAVAL = 4 }
+		trigger = { 
+			NOT = { has_province_modifier = has_shipyard }
+			#has_province_modifier = foret3_planche_trade
+			TECH_NAVAL = 4
+		}
 		potential = { has_province_modifier = NEVER }
 		upgrades_from = ca_shipyard_3
 		gold_cost = 100
