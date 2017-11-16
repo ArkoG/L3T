@@ -471,7 +471,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		galleys = 6
 		ai_creation_factor = 100
 		add_number_to_name = no		
-		extra_tech_building_start = 0.4
+		extra_tech_building_start = 10.0
 	}
 	
 	tp_shipyard_2 = {
@@ -488,20 +488,24 @@ tp_training_grounds_L2 = { #Porte en pierre
 		galleys = 7
 		ai_creation_factor = 99
 		add_number_to_name = no		
-		extra_tech_building_start = 0.4
+		extra_tech_building_start = 10.0
 	}
 	
 	tp_shipyard_3 = {
 		desc = shipyard_desc
 		port = yes
-		trigger = { TECH_NAVAL = 3 }
+		trigger = { 
+			NOT = { has_province_modifier = has_shipyard }
+			has_province_modifier = foret3_planche_trade
+			TECH_NAVAL = 3
+		}
 		upgrades_from = tp_shipyard_2
 		gold_cost = 100
 		build_time = 1095
 		galleys = 8
 		ai_creation_factor = 98
 		add_number_to_name = no		
-		extra_tech_building_start = 0.4
+		extra_tech_building_start = 10.0
 	}
 	
 	tp_shipyard_4 = {
@@ -519,7 +523,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		galleys = 9
 		ai_creation_factor = 97
 		add_number_to_name = no		
-		extra_tech_building_start = 0.4
+		extra_tech_building_start = 10.0
 	}
 
 	
