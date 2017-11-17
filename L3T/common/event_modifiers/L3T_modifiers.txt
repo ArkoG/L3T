@@ -57,24 +57,16 @@
 # 89 - Rats		 			- 90
 # 91 - Otter				- 92
 # 93 - Hedgehog				- 94
+# 95 - Taoist				- 96
+# 97 - Paper				- 98
+# 99 - Bamboo Book			- 100
+# 101 - Pagoda				- 102
+# 103 - Firework			- 104
+# 105 - Torch				- 106
+# 107 - Panda				- 108
+# 109 - Dragon				- 110
 #end of vanilla 2.7.x
 
-# 95 - AGRI épi doré
-# 96 - AGRI épi orangé
-# 97 - AGRI Farine
-# 98 - AGRI Bière
-# 99 - AGRI Pain
-#100 - AGRI Fruits
-#101 - AGRI Cidre (verre gris)
-#102 - AGRI legumes
-#103 - AGRI vigne
-#104 - AGRI vin
-#105 - ELEV boeuf marron
-#106 - ELEV boeuf brun
-#107 - ELEV laine (toile bleue)
-#108 - ELEV toile (toile brun rose)
-#109 - ELEV fromage
-#110 - ELEV viande boeuf brun
 #111 - ELEV cuir (toile marron)
 #112 - ELEV draps (toile rouge)
 #113 - BOIS foret feuille verte
@@ -172,20 +164,34 @@
 #231-235 - spe CITE 2 -cité commerce
 #236 - red hunt/poachers
 #237 - sword of justice green halo
-  #238-250 - not used
-
+#238 - AGRI épi doré
+#239 - AGRI épi orangé
+#240 - AGRI Farine
+#241 - AGRI Bière
+#242 - AGRI Pain
+#243 - AGRI Fruits
+#244 - AGRI Cidre (verre gris)
+#245 - AGRI legumes
+#246 - AGRI vigne
+#247 - AGRI vin
+#248 - ELEV boeuf marron
+#249 - ELEV boeuf brun
+#250 - ELEV laine (toile bleue)
+#251 - ELEV toile (toile brun rose)
+#252 - ELEV fromage
+#253 - ELEV viande boeuf brun
 
 ###ECO+
-agriculture1			= {icon = 95 local_revolt_risk = -0.01} 
-agriculture2_cereales	= {icon = 96}	
-agriculture2_fruits	= {icon = 100}	
-agriculture2_legumes = {icon = 102}	
-agriculture2_vigne	= {icon = 103} 
-agriculture3_farine 	= {icon = 97}	
-agriculture3_cidre	= {icon = 101 garrison_size  = 0.05}				
-agriculture3_vin 	= {icon = 104 garrison_size  = 0.05}
-agriculture3_biere		= {icon = 98}	
-agriculture4_pain 		= {icon = 99 local_revolt_risk = -0.05}
+agriculture1			= {icon = 238 local_revolt_risk = -0.01} 
+agriculture2_cereales	= {icon = 239}	
+agriculture2_fruits	= {icon = 243}	
+agriculture2_legumes = {icon = 245}	
+agriculture2_vigne	= {icon = 246} 
+agriculture3_farine 	= {icon = 240}	
+agriculture3_cidre	= {icon = 244 garrison_size  = 0.05}				
+agriculture3_vin 	= {icon = 247 garrison_size  = 0.05}
+agriculture3_biere		= {icon = 241}	
+agriculture4_pain 		= {icon = 242 local_revolt_risk = -0.05}
 
 agriculture3_biere_Q1 = {icon = 145}
 agriculture3_biere_Q2 = {icon = 146}
@@ -194,14 +200,14 @@ agriculture3_vin_Q1 = {icon = 148}
 agriculture3_vin_Q2 = {icon = 149}
 agriculture3_vin_Q3 = {icon = 150}
 			
-elevage1		= {icon = 105}
-elevage2_laine	= {icon = 107}	
-elevage2_boeuf	= {icon = 106	local_tax_modifier = 0.01}	
-elevage2_fromage= {icon = 109}  
+elevage1		= {icon = 248}
+elevage2_laine	= {icon = 250}	
+elevage2_boeuf	= {icon = 249	local_tax_modifier = 0.01}	
+elevage2_fromage= {icon = 252}  
 elevage2_cheval = {icon = 133} 
 elevage4_drap	= {icon = 112}	
-elevage3_viande	= {icon = 110 levy_size = 0.05}
-elevage3_etoffe	= {icon = 108}	
+elevage3_viande	= {icon = 253 levy_size = 0.05}
+elevage3_etoffe	= {icon = 251}	
 elevage3_cuir	= {icon = 111}
 
 foret1			= {icon = 113}
