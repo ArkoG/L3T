@@ -478,7 +478,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		desc = shipyard_desc
 		port = yes
 		trigger = { 
-			NOT = { has_province_modifier = has_shipyard }
+			#NOT = { has_province_modifier = has_shipyard }
 			has_province_modifier = foret3_planche_trade
 			TECH_NAVAL = 2
 		}
@@ -495,7 +495,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		desc = shipyard_desc
 		port = yes
 		trigger = { 
-			NOT = { has_province_modifier = has_shipyard }
+			#NOT = { has_province_modifier = has_shipyard }
 			has_province_modifier = foret3_planche_trade
 			TECH_NAVAL = 3
 		}
@@ -512,7 +512,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		desc = shipyard_desc
 		port = yes
 		trigger = { 
-			NOT = { has_province_modifier = has_shipyard }
+			#NOT = { has_province_modifier = has_shipyard }
 			has_province_modifier = foret3_planche_trade
 			TECH_NAVAL = 4
 		}

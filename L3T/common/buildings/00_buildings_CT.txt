@@ -526,7 +526,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 		desc = shipyard_desc
 		port = yes
 		trigger = { 
-			NOT = { has_province_modifier = has_shipyard }
+			#NOT = { has_province_modifier = has_shipyard }
 			#has_province_modifier = foret3_planche_trade
 			TECH_NAVAL = 2
 		}
@@ -545,7 +545,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 		desc = shipyard_desc
 		port = yes
 		trigger = { 
-			NOT = { has_province_modifier = has_shipyard }
+			#NOT = { has_province_modifier = has_shipyard }
 			#has_province_modifier = foret3_planche_trade
 			TECH_NAVAL = 3
 		}
@@ -562,7 +562,7 @@ ct_training_grounds_3 = { #Porte de  la ville
 		desc = shipyard_desc
 		port = yes
 		trigger = { 
-			NOT = { has_province_modifier = has_shipyard }
+			#NOT = { has_province_modifier = has_shipyard }
 			#has_province_modifier = foret3_planche_trade
 			TECH_NAVAL = 4
 		}
