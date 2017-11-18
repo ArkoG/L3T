@@ -390,3 +390,47 @@ get_relic = {
 	# If no relic is available, we give a default relic
 	add_artifact = relique26
 }
+
+# ROOT is the new employer
+hire_master_glass_maker = {
+	wealth   = -50
+	prestige = 25
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = maitre_verrier
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_compagnon_glass_maker = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = compagnon_verrier
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_apprentice_glass_maker = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = apprenti_verrier
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}

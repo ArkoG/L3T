@@ -298,3 +298,39 @@ is_building_cathedral_step_12 = {
 		}
 	}
 }
+
+# ROOT is not used
+available_master_glass_maker = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = maitre_verrier
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_compagnon_glass_maker = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = compagnon_verrier
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_apprentice_glass_maker = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = apprenti_verrier
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+has_loge = {
+	OR = {
+		has_building = ca_loge
+		has_building = ct_loge
+		has_building = tp_loge
+	}
+}

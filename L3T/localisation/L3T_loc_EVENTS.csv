@@ -604,7 +604,7 @@ REC.176A;From what this letter says, it is a vile counterfeit...;Une immonde con
 REC.176B;It is maybe not so necessary to spread the news...;Nul besoin de répandre la nouvelle peut-être...;;;;;;;;;;;;x
 
 OPUSFRANCIGENUM_title;Opus Francigenum;Opus Francigenum;;;;;;;;;;;;x
-DESCREC.101;The Opus Francigenum, later known as the Gothic style, appears in Picardy and Ile de France around 1130.\nIt marks a turning point in architecture.\nIts propagation in the Kingdom of France and then in the neighboring kingdoms allowed the construction of monumental Cathedrals still standing today.\n\nIn L3T, it allows you to build Cathedrals.\nYou have chosen the option for this event to happen freely at the beginning of the game.;L'Opus Francigenum, dénommé plus tard style gothique, apparaît en Picardie et Ile de France aux alentours de 1130.\nIl marque un tournant dans l'architecture.\nSa propagation dans le Royaume de France puis dans les pays limitrophes a permis la construction de monumentales Cathédrales encore debout de nos jours.\n\nDans Les Trois Tours, l'Opus Francigenum ouvre la période qui vous permet de construitre des Cathédrales.\nVous avez choisi l'option pour que cet événement arrive librement en début de partie.;;;;;;;;;;;;x
+DESCREC.101;The Opus Francigenum, later known as the Gothic style, appears in Picardy and Ile de France around 1130.\nIt marks a turning point in architecture.\nIts propagation in the Kingdom of France and then in the neighboring kingdoms allowed the construction of monumental Cathedrals still standing today.\n\nIn L3T, it allows you to build Cathedrals.\nYou have chosen the option for this event to happen at the beginning of the game to freely build Cathedrals.;L'Opus Francigenum, dénommé plus tard style gothique, apparaît en Picardie et Ile de France aux alentours de 1130.\nIl marque un tournant dans l'architecture.\nSa propagation dans le Royaume de France puis dans les pays limitrophes a permis la construction de monumentales Cathédrales encore debout de nos jours.\n\nDans Les Trois Tours, l'Opus Francigenum ouvre la période qui vous permet de construitre des Cathédrales.\nVous avez choisi l'option pour que cet événement arrive en début de partie pour construire librement des Cathédrales.;;;;;;;;;;;;x
 OPUSFRANCIGENUM.A;We need a holy relic.;Il nous faut une sainte relique.;;;;;;;;;;;;x
 OPUSFRANCIGENUM.B;Good news we already own a holy relic.;Cela tombe bien nous avons déjà une sainte relique.;;;;;;;;;;;x
 DESCREC.102;The Opus Francigenum, later known as the Gothic style, appears in Picardy and Ile de France around 1130.\n1130 corresponds to the beginning of the reconstruction of the abbey church of Saint Denis by the Abbot Suger.\nThis style revolutionizes architecture by several innovations including the vault of ogives and the flying buttresses.\nIts propagation in the Kingdom of France and then in the neighboring kingdoms allowed the construction of monumental Cathedrals still standing today.\n\nIn L3T, it allows you to build Cathedrals.;L'Opus Francigenum, dénommé plus tard style gothique, apparaît en Picardie et Ile de France aux alentours de 1130.\n1130 correspond au début de la reconstruction de l'abbatiale de Saint Denis par l'abbé Suger.\nCe style révolutionne l'architecture par plusieurs innovations notamment la voûte d'ogives et les arcs-boutants.\nSa propagation dans le Royaume de France puis dans les royaumes limitrophes a permis la construction de monumentales Cathédrales encore debout de nos jours.\n\nDans Les Trois Tours, l'Opus Francigenum ouvre la période qui vous permet de construitre des Cathédrales.;;;;;;;;;;;;x
@@ -776,6 +776,28 @@ REC.1706A;I will be able to build a Cathedral;Je vais pouvoir construire une Cat
 DESCREC.1707;The theft of the relic of [FromFromFrom.GetTitledName] is a failure.;Le vol de la relique de [FromFromFrom.GetTitledName] est un échec.;;;;;;;;;;;;x
 REC.1707A;Now the theft is impossible;Maintenant le vol est impossible;;;;;;;;;;;;x
 DESCREC.1708;Dear [From.GetTitledName],\nI accept your offer to buy my relic.;Cher [From.GetTitledName],\nj'accepte votre proposition d'achat de relique.;;;;;;;;;;;;x
+
+DESCREC.2102;;Votre maître verrier doit réaliser un vitrail pour la Cathédrale.\nLes vitraux peuvent représenter des scènes bibliques mais aussi des donateurs qui les financent.\nParmis ces donnateurs, on trouve des nobles mais aussi des corporations.\nQue doit réaliser le maître verrier ?;;;;;;;;;;;;x
+REC.2102A;;Une scène biblique;;;;;;;;;;;;x
+REC.2102B;;Des membres de votre dynastie;;;;;;;;;;;;x
+REC.2102C;;Faites le financer par d'autres donnateurs.;;;;;;;;;;;;x
+DESCREC.2103;;Le travail sur le chantier ne manque pas.\nAinsi votre maître verrier aurait besoin de renforts si vous voulez un vitrail qui sorte de l'ordinaire.\nCela serait d'ailleurs une bonne idée pour former la relève puisque le maître ne verra probablement pas se terminer la Cathédrale.\nQuel genre de vitrail souhaitez-vous ?;;;;;;;;;;;;x
+REC.2103A;;Un vitrail classique;;;;;;;;;;;;x
+REC.2103B;;Un vitrail avec un petit plus;;;;;;;;;;;;x
+TOOLTIPREC.2103B;;Vous devez faire venir un apprenti de plus sur le chantier;;;;;;;;;;;;x
+REC.2103C;;Un vitrail de très bonne facture;;;;;;;;;;;;x
+TOOLTIPREC.2103C;;Vous devez faire venir un compagnon de plus sur le chantier;;;;;;;;;;;;x
+REC.2103D;;Un vitrail exceptionnel;;;;;;;;;;;;x
+TOOLTIPREC.2103D;;Vous devez faire venir un apprenti et un compagnon supplémentaires sur le chantier;;;;;;;;;;;;x
+DESCREC.2105;;Votre maître verrier [From.GetTitledName] du chantier de la Cathédrale est mort. Au vue de son dévouement dans la construction de la Cathédrale il est parti au Paradis.\nSon apport était essentiel pour obtenir des vitraux de toute beauté. Il va falloir lui trouver un remplaçant.;;;;;;;;;;;;x
+REC.2105A;;Financer un compagnon pour qu'il prenne sa succession;;;;;;;;;;;;x
+REC.2105B;;Chercher un nouveau maître;;;;;;;;;;;;x
+REC.2105C;;Ce n'est pas la peine de le remplacer;;;;;;;;;;;;x
+TOOLTIPREC.2105C;;Vous pourrez toujours employer un maître verrier plus tard via la §Ydécision§!.;;;;;;;;;;;;x
+DESCREC.2106;;Un maître verrier du chantier de la Cathédrale, [From.GetTitledName], est mort. Au vue de son dévouement dans la construction de la Cathédrale il est parti au Paradis.\nSon apport était essentiel pour obtenir des vitraux de toute beauté. Il va être remplacé par d'autres maîtres du chantier.;;;;;;;;;;;;x
+REC.2106A;;Très bien;;;;;;;;;;;;x
+REC.2106B;;Je vais recruter un maître supplémentaire pour le remplacer;;;;;;;;;;;;x
+REC.2106C;;Je vais recruter un compagnon qui deviendra à terme un maître;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #REC.1408;pre-proposal loan;pré-proposition emprunt;;;;;;;;;;;;x
 #DESCREC.1408;Rumors of the construction of our Cathedral is spreading to all and all and have reached the ears of loan sharks that come to offer their loan services to accelerate the funding of the construction.;Les rumeurs de la construction de notre Cathédrale se répand de plus en plus et sont venues à l'oreille d'usuriers qui viennent nous proposer leurs services de prêts pour accélérer le financement du chantier.;;;;;;;;;;;;x
