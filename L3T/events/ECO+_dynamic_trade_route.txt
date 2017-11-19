@@ -110,6 +110,7 @@ province_event = {
 			}
 			hidden_tooltip = {	
 				set_province_flag = bloc_B
+				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
 				
 				# The route size is the max route size of its C neighboors + 1
 				set_variable = { which = "route_size" value = 1 } # the value to evaluate the neighboor, then to store final value
@@ -279,6 +280,7 @@ province_event = {
 			}
 			hidden_tooltip = {			
 				set_province_flag = bloc_C
+				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
 				
 				set_variable = { which = "route_size" value = 1 }
 				set_variable = { which = "tmp" value = 1 }
@@ -444,6 +446,7 @@ province_event = {
 			}
 			hidden_tooltip = {			
 				set_province_flag = bloc_D
+				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
 				
 				set_variable = { which = "route_size" value = 1 }
 				set_variable = { which = "tmp" value = 1 }
@@ -609,6 +612,7 @@ province_event = {
 			}
 			hidden_tooltip = {	
 				set_province_flag = bloc_E		
+				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
 				
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_D }
