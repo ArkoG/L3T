@@ -34,7 +34,10 @@ character_event = {
 		text = DESCL3T.10_VANILLA
 	}
 	
-	picture = GFX_evt_CK1
+	#picture = GFX_evt_CK1
+	picture = GFX_evt_L3Tv_test
+	window = EventWindowL3T
+	#background = GFX_event_window_news_from_china
 	major = yes
 	hide_new = yes
 	hide_from = yes
