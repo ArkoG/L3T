@@ -1,5 +1,6 @@
 spriteTypes = 
 {
+   ###EVENT PICTURES
 	spriteType = {
 		name = "GFX_evt_XYLO_forest1"
 		texturefile = "gfx\\event_pictures\XYLOforest1.tga"
@@ -190,6 +191,48 @@ spriteTypes =
 	spriteType = {
 		name = "GFX_evt_L3T_book_burning" #
 		texturefile = "gfx\\event_pictures\L3T_book_burning.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_L3Tv_test" #
+		texturefile = "gfx\\event_pictures\L3T_verti_test.tga"
+		allwaystransparent = yes
+	}
+	
+   ###L3T event type
+	spriteType = {
+		name = "GFX_event_normal_bg_L3T"
+		texturefile = "gfx\\interface\\event_normal_bg_L3T.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_event_normal_L3T_frame_diplomacy"
+		texturefile = "gfx\\interface\\event_normal_L3T_frame_diplomacy.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_event_normal_L3T_frame_war"
+		texturefile = "gfx\\interface\\event_normal_L3T_frame_war.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_event_normal_L3T_frame_economy"
+		texturefile = "gfx\\interface\\event_normal_L3T_frame_economy.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_event_normal_L3T_frame_intrigue"
+		texturefile = "gfx\\interface\\event_normal_L3T_frame_intrigue.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_event_normal_L3T_frame_religion"
+		texturefile = "gfx\\interface\\event_normal_L3T_frame_religion.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_event_normal_L3T_extension_top"
+		texturefile = "gfx\\interface\\event_normal_L3T_extension_top.tga"
 		allwaystransparent = yes
 	}
 }
