@@ -232,7 +232,7 @@ character_event = {
 						}
 					}
 				}
-				save_event_target_as = holding_dev #totoro
+				#save_event_target_as = holding_dev #totoro
 				set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
 				if = {
 					limit = {
@@ -281,7 +281,7 @@ character_event = {
 					is_occupied = yes
 					location = { has_disease = no }
 				}
-				save_event_target_as = holding_dev #totoro
+				#save_event_target_as = holding_dev #totoro
 				set_variable = { which = "developpementold" which = "developpement" }
 				#change_variable = { which = "developpement" value = 1 } 
 				#holder_scope = { character_event = { id = L3T.1106 days = 0 }} #totoro
@@ -294,7 +294,7 @@ character_event = {
 				}
 				set_variable = { which = "developpementold" which = "developpement" }
 				#change_variable = { which = "developpement" value = 1 } #totoro
-				save_event_target_as = holding_dev #totoro
+				#save_event_target_as = holding_dev #totoro
 				#holder_scope = { character_event = { id = L3T.1107 days = 0 }} #totoro
 			}		
 		}
