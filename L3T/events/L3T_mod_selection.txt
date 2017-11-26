@@ -2,7 +2,7 @@ namespace = L3T
 
 # Détection de la carte
 character_event = {
-    id = L3T.10
+    id = L3T.1
 	#title = "NAMEL3T.10"
 	#desc = "DESCL3T.10"
 	title = { 
@@ -35,7 +35,7 @@ character_event = {
 	}
 	
 	#picture = GFX_evt_CK1
-	picture = GFX_evt_L3Tv_test
+	picture = GFX_evt_L3Tv_hermes
 	window = EventWindowL3T
 	#background = GFX_event_window_news_from_china
 	major = yes
@@ -46,7 +46,147 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+			has_global_flag = running_ARKOpack_GUI
 		NOT = {
+			had_global_flag = { flag = running_LCDA days = 2 }
+			has_global_flag = running_VANILLA
+			# The SWMH flag is already given when creating history
+			# The LCDA flag is already given when creating history
+			had_global_flag = { flag = SWMH days = 2 }
+		}			
+	}
+	
+	immediate = {
+		any_province = {
+			province_event = { id = L3T.28 days = 25 random = 15} #attribution cols
+		}
+		set_global_flag = running_L3T
+		set_global_flag = available_relique26
+		if = {
+			limit = { 
+				ai = no
+				has_game_rule = {
+					name = opus_francigenum
+					value = free
+				}
+			}
+			narrative_event = { id = REC.101 days = 10 }
+		}
+		if = {
+			limit = { ai = no }
+			set_variable = { which = "global_burns" value = 0 }
+		}
+	}
+	
+	option = {	
+		#name = "L3T.10A"	
+		name = OK
+		ai_chance = { factor = 0 }
+		trigger = {
+			ai = no
+			has_global_flag = SWMH
+		}
+		#SWMH coasts, land, rivers
+		hidden_tooltip = {
+			any_province = { 
+				province_event = { id = L3T.20 days = 10 }
+				province_event = { id = L3T.21 days = 10 }
+				province_event = { id = L3T.22 days = 10 }
+			}
+		}
+		set_global_flag = paix_de_dieu 
+	}
+	option = {	
+		# name = "L3T.10B"	
+		name = OK
+		ai_chance = { factor = 0 }
+		trigger = {
+			ai = no
+			has_global_flag = running_LCDA
+		}
+		#LCDA coasts, land, rivers
+		hidden_tooltip = {
+			any_province = {
+				province_event = { id = L3T.30 days = 10 }
+				province_event = { id = L3T.31 days = 10 }
+				province_event = { id = L3T.32 days = 10 }
+			}
+		}
+		set_global_flag = paix_de_dieu 
+	}
+	option = {
+		#name = "L3T.10C"	
+		name = OK
+		ai_chance = { factor = 0 }
+		trigger = {
+			ai = no
+			NOT = { has_global_flag = SWMH }
+			NOT = { has_global_flag = running_LCDA }			
+		}
+		#VANILLA coasts, land, rivers
+		hidden_tooltip = {
+			any_province = { 
+				province_event = { id = L3T.25 days = 10 }
+				province_event = { id = L3T.26 days = 10 }
+				province_event = { id = L3T.27 days = 10 }
+			}
+		}
+		set_global_flag = running_VANILLA	
+		set_global_flag = paix_de_dieu 
+	}
+	option = {	
+		trigger = { ai = yes }
+		ai_chance = { factor = 100 }
+	}
+}
+
+character_event = {
+    id = L3T.10
+	#title = "NAMEL3T.10"
+	#desc = "DESCL3T.10"
+	title = { 
+		trigger = {	religion_group = christian	}
+		text = "NAMEL3T.10_christian"
+	}
+	title = {
+		trigger = {	religion_group = muslim	}
+		text = "NAMEL3T.10_muslim"
+	}
+	title = { 
+		trigger = { NOT = { religion_group = muslim religion_group = christian }}
+		text = "NAMEL3T.10_other"
+	}
+
+	desc = {
+		trigger = { has_global_flag = running_LCDA }
+		text = DESCL3T.10_LCDA
+	}
+	desc = {
+		trigger = { has_global_flag = SWMH }
+		text = DESCL3T.10_SWMH
+	}	
+	desc = {
+		trigger = { 
+			NOT = { has_global_flag = SWMH }
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = DESCL3T.10_VANILLA
+	}
+	
+	picture = GFX_evt_CK1
+	#picture = GFX_evt_L3Tv_test
+	#window = EventWindowL3T
+	#background = GFX_event_window_news_from_china
+	major = yes
+	hide_new = yes
+	hide_from = yes
+	ai=no 
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_global_flag = running_ARKOpack_GUI
 			had_global_flag = { flag = running_LCDA days = 2 }
 			has_global_flag = running_VANILLA
 			# The SWMH flag is already given when creating history
