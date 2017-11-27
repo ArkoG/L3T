@@ -38,7 +38,7 @@ trade_post = {
 		
 		trade_route_wealth = 1	# Affects total value of trade route
 		tradevalue = 30
-		
+		add_number_to_name = no
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -76,7 +76,8 @@ trade_post = {
 		trade_route_wealth = 2	# Affects total value of trade route
 		tradevalue = 50
 		fort_level = 1
-		prerequisites = { trade_offices_1 mercenary_garrison_1 }		
+		prerequisites = { trade_offices_1 mercenary_garrison_1 }
+		add_number_to_name = no		
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -110,7 +111,8 @@ trade_post = {
 		trade_route_wealth = 4	# Affects total value of trade route
 		tradevalue = 70
 		fort_level = 1
-		prerequisites = { trade_offices_2 }		
+		prerequisites = { trade_offices_2 }	
+		add_number_to_name = no	
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -131,6 +133,7 @@ trade_post = {
 		monthly_character_prestige = 0.25
 		retinuesize = 50
 		prerequisites = { tr_silk_road_1 }
+		add_number_to_name = no	
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -150,7 +153,8 @@ trade_post = {
 		
 		monthly_character_prestige = 0.5
 		retinuesize = 100
-		prerequisites = { tr_silk_road_2 }		
+		prerequisites = { tr_silk_road_2 }
+		add_number_to_name = no			
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -170,7 +174,8 @@ trade_post = {
 		
 		monthly_character_prestige = 1.75
 		retinuesize = 150
-		prerequisites = { tr_silk_road_3 }		
+		prerequisites = { tr_silk_road_3 }
+		add_number_to_name = no	
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -189,7 +194,8 @@ trade_post = {
 		
 		garrison_size = 3
 		tradevalue = 5
-		prerequisites = { tr_silk_road_1 }		
+		prerequisites = { tr_silk_road_1 }
+		add_number_to_name = no			
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -210,7 +216,8 @@ trade_post = {
 		garrison_size = 3
 		fort_level = 1
 		tradevalue = 10
-		prerequisites = { tr_silk_road_2 }		
+		prerequisites = { tr_silk_road_2 }
+		add_number_to_name = no	
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -231,7 +238,8 @@ trade_post = {
 		garrison_size = 3
 		fort_level = 1
 		tradevalue = 15
-		prerequisites = { tr_silk_road_3 }		
+		prerequisites = { tr_silk_road_3 }
+		add_number_to_name = no			
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -261,6 +269,7 @@ trade_post = {
 		tradevalue = 10
 		trade_route_wealth = 0.5
 		prerequisites = { tr_silk_road_1 }
+		add_number_to_name = no	
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -292,6 +301,7 @@ trade_post = {
 		tradevalue = 20
 		trade_route_wealth = 1
 		prerequisites = { tr_silk_road_2 }
+		add_number_to_name = no	
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 	
@@ -323,6 +333,7 @@ trade_post = {
 		tradevalue = 40
 		trade_route_wealth = 2
 		prerequisites = { tr_silk_road_3 }
+		add_number_to_name = no	
 		extra_tech_building_start = 10.0 # Never get at start of game
 	}
 }
