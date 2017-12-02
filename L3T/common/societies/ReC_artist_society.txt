@@ -1,8 +1,8 @@
 artist_guild = { #society code name
 	primary_attribute = learning #Its main attribute
-	society_ranks_gfx = generic_ranks #which rank icon it will use
+	society_ranks_gfx = artists_ranks #which rank icon it will use
 	society_rank_up_decision = artist_guild_rank_up #decision trigered by the rank-up button
-	sound = city_western #sound effect, see the interface/sound.sfx
+	sound = monastic_orders_build_monastery #sound effect, see the interface/sound.sfx
 	is_secret = no #can be joined openly or not, hide clothing from other members
 	criminal = no #is it considered a "bad" society
 	is_religious = no #affect opinion values
