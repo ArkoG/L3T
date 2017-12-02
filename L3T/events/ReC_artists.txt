@@ -32,7 +32,7 @@ character_event ={
 				new_character = {
 					give_nickname = nick_le_sculpteur
 					join_society = artist_guild
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 				create_character = {
 					religion = catholic
@@ -46,7 +46,7 @@ character_event ={
 				new_character = {
 					give_nickname = nick_le_verrier
 					join_society = artist_guild
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 				create_character = {
 					religion = catholic
@@ -60,7 +60,7 @@ character_event ={
 				new_character = {
 					give_nickname = nick_le_fresquiste
 					join_society = artist_guild
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 			}
 			
@@ -82,7 +82,7 @@ character_event ={
 					give_nickname = nick_le_sculpteur
 					join_society = artist_guild
 					society_rank_up = 1
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 				create_character = {
 					religion = catholic
@@ -97,7 +97,7 @@ character_event ={
 					give_nickname = nick_le_verrier
 					join_society = artist_guild
 					society_rank_up = 1
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 				create_character = {
 					religion = catholic
@@ -112,7 +112,7 @@ character_event ={
 					give_nickname = nick_le_fresquiste
 					join_society = artist_guild
 					society_rank_up = 1
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 			}
 			
@@ -134,7 +134,7 @@ character_event ={
 					give_nickname = nick_le_sculpteur
 					join_society = artist_guild
 					society_rank_up = 2
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 				create_character = {
 					religion = catholic
@@ -149,7 +149,7 @@ character_event ={
 					give_nickname = nick_le_verrier
 					join_society = artist_guild
 					society_rank_up = 2
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 				create_character = {
 					religion = catholic
@@ -164,7 +164,7 @@ character_event ={
 					give_nickname = nick_le_fresquiste
 					join_society = artist_guild
 					society_rank_up = 2
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 			}
 			
@@ -210,9 +210,11 @@ character_event ={
 			# Create apprentis
 			if = {
 				limit = {
-					is_society_rank_full = {
-						society = artist_guild
-						rank = 1
+					NOT = {
+						is_society_rank_full = {
+							society = artist_guild
+							rank = 1
+						}
 					}
 				}
 				create_character = {
@@ -226,14 +228,16 @@ character_event ={
 				}
 				new_character = {
 					join_society = artist_guild
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 			}
 			if = {
 				limit = {
-					is_society_rank_full = {
-						society = artist_guild
-						rank = 1
+					NOT = {
+						is_society_rank_full = {
+							society = artist_guild
+							rank = 1
+						}
 					}
 				}
 				create_character = {
@@ -247,14 +251,16 @@ character_event ={
 				}
 				new_character = {
 					join_society = artist_guild
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 			}
 			if = {
 				limit = {
-					is_society_rank_full = {
-						society = artist_guild
-						rank = 1
+					NOT = {
+						is_society_rank_full = {
+							society = artist_guild
+							rank = 1
+						}
 					}
 				}
 				create_character = {
@@ -268,7 +274,7 @@ character_event ={
 				}
 				new_character = {
 					join_society = artist_guild
-					move_character = THIS # Remove character of play court
+					move_character = THIS # Remove character from the Pope court
 				}
 			}
 		}
