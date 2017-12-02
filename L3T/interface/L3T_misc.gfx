@@ -191,16 +191,19 @@ spriteTypes = {
 	###SOCIETIES
 		spriteType = {
 		name = "GFX_artists_ranks"
+		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild.dds"
 		noOfFrames = 4
 	}
 	
 	spriteType = {
 		name = "GFX_artists_ranks_highlight"
+		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild_highlight.dds"
 		noOfFrames = 4
 	}
 	
 	spriteType = {
 		name = "GFX_artists_ranks_locked"
+		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild_locked.dds"
 		noOfFrames = 4
 	}
 }
