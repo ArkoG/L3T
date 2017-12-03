@@ -4,12 +4,17 @@ namespace = REC
 character_event ={
     id = REC.2100
 	hide_window = yes
+	
+	trigger = {
+		NOT = { had_global_flag = {flag = artist_init_generation days = 30 } }
+	}
 
 	is_triggered_only = yes	
 	
 	only_independent = yes
 	
 	immediate = {
+		set_global_flag = artist_init_generation
 		if = {
 			limit = {
 				religion = catholic
