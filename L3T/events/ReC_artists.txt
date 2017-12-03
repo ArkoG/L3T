@@ -4,187 +4,193 @@ namespace = REC
 character_event ={
     id = REC.2100
 	hide_window = yes
+	
+	trigger = {
+		NOT = { had_global_flag = {flag = artist_init_generation days = 30 } }
+	}
 
 	is_triggered_only = yes	
 	
-	only_playable = yes
+	only_independent = yes
 	
 	immediate = {
+		set_global_flag = artist_init_generation
 		if = {
-			limit = { # The Pope to ensure that it is executed only once
+			limit = {
 				religion = catholic
-				controls_religion = yes
+				independent = yes
 			}
+			
 			# Create apprentis
-			set_variable = { which = apprenti_startup value = 4 } # 1/3 of the startuplimit
-			while = {
-				limit = { check_variable = { which = apprenti_startup value = 1 } }
-				subtract_variable = { which = apprenti_startup value = 1 }
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = apprenti_sculpteur
-					age = 12
-					dynasty = none
-					female = no
+			random_list = {
+				76 = { }
+				8 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = apprenti_sculpteur
+						age = 12
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_sculpteur
+						join_society = artist_guild
+					}
 				}
-				new_character = {
-					give_nickname = nick_le_sculpteur
-					join_society = artist_guild
-					move_character = THIS # Remove character from the Pope court
+				8 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = apprenti_verrier
+						age = 12
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_verrier
+						join_society = artist_guild
+					}
 				}
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = apprenti_verrier
-					age = 12
-					dynasty = none
-					female = no
-				}
-				new_character = {
-					give_nickname = nick_le_verrier
-					join_society = artist_guild
-					move_character = THIS # Remove character from the Pope court
-				}
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = apprenti_fresquiste
-					age = 12
-					dynasty = none
-					female = no
-				}
-				new_character = {
-					give_nickname = nick_le_fresquiste
-					join_society = artist_guild
-					move_character = THIS # Remove character from the Pope court
+				8 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = apprenti_fresquiste
+						age = 12
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_fresquiste
+						join_society = artist_guild
+					}
 				}
 			}
 			
 			# Create compagnons
-			set_variable = { which = compagnon_startup value = 3 } # 1/3 of the startuplimit
-			while = {
-				limit = { check_variable = { which = compagnon_startup value = 1 } }
-				subtract_variable = { which = compagnon_startup value = 1 }
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = compagnon_sculpteur
-					age = 30
-					dynasty = none
-					female = no
+			random_list = {
+				85 = { }
+				5 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = compagnon_sculpteur
+						age = 30
+						dynasty = none
+						female = no
+					}
 				}
-				new_character = {
-					give_nickname = nick_le_sculpteur
-					join_society = artist_guild
-					society_rank_up = 1
-					move_character = THIS # Remove character from the Pope court
+				5 = {
+					new_character = {
+						give_nickname = nick_le_sculpteur
+						join_society = artist_guild
+						society_rank_up = 1
+					}
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = compagnon_verrier
+						age = 30
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_verrier
+						join_society = artist_guild
+						society_rank_up = 1
+					}
 				}
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = compagnon_verrier
-					age = 30
-					dynasty = none
-					female = no
-				}
-				new_character = {
-					give_nickname = nick_le_verrier
-					join_society = artist_guild
-					society_rank_up = 1
-					move_character = THIS # Remove character from the Pope court
-				}
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = compagnon_fresquiste
-					age = 30
-					dynasty = none
-					female = no
-				}
-				new_character = {
-					give_nickname = nick_le_fresquiste
-					join_society = artist_guild
-					society_rank_up = 1
-					move_character = THIS # Remove character from the Pope court
+				5 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = compagnon_fresquiste
+						age = 30
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_fresquiste
+						join_society = artist_guild
+						society_rank_up = 1
+					}
 				}
 			}
 			
 			# Create maitres
-			set_variable = { which = maitre_startup value = 2 } # 1/3 of the startuplimit
-			while = {
-				limit = { check_variable = { which = maitre_startup value = 1 } }
-				subtract_variable = { which = maitre_startup value = 1 }
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = maitre_sculpteur
-					age = 50
-					dynasty = none
-					female = no
-				}
-				new_character = {
-					give_nickname = nick_le_sculpteur
-					join_society = artist_guild
-					society_rank_up = 2
-					move_character = THIS # Remove character from the Pope court
-				}
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = maitre_verrier
-					age = 50
-					dynasty = none
-					female = no
-				}
-				new_character = {
-					give_nickname = nick_le_verrier
-					join_society = artist_guild
-					society_rank_up = 2
-					move_character = THIS # Remove character from the Pope court
-				}
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = maitre_fresquiste
-					age = 50
-					dynasty = none
-					female = no
-				}
-				new_character = {
-					give_nickname = nick_le_fresquiste
-					join_society = artist_guild
-					society_rank_up = 2
-					move_character = THIS # Remove character from the Pope court
-				}
-			}
-			
-			# Remove non-artists of the guild
-			any_society_member = {
-				limit = {
-					society_member_of = artist_guild
-					NOT = {
-						trait = apprenti_sculpteur
-						trait = compagnon_sculpteur
+			random_list = {
+				91 = { }
+				3 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
 						trait = maitre_sculpteur
-						trait = apprenti_fresquiste
-						trait = compagnon_fresquiste
-						trait = maitre_fresquiste
-						trait = apprenti_verrier
-						trait = compagnon_verrier
-						trait = maitre_verrier
+						age = 50
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_sculpteur
+						join_society = artist_guild
+						society_rank_up = 2
 					}
 				}
-				leave_society = yes
+				3 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = maitre_verrier
+						age = 50
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_verrier
+						join_society = artist_guild
+						society_rank_up = 2
+					}
+				}
+				3 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = maitre_fresquiste
+						age = 50
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_fresquiste
+						join_society = artist_guild
+						society_rank_up = 2
+					}
+				}
+			}			
+	
+			if = {
+				limit = { # Restricted to the Pope to be executed only once
+					religion = catholic
+					controls_religion = yes
+				}
+				# Remove non-artists of the guild
+				any_society_member = {
+					limit = {
+						society_member_of = artist_guild
+						NOT = {
+							trait = apprenti_sculpteur
+							trait = compagnon_sculpteur
+							trait = maitre_sculpteur
+							trait = apprenti_fresquiste
+							trait = compagnon_fresquiste
+							trait = maitre_fresquiste
+							trait = apprenti_verrier
+							trait = compagnon_verrier
+							trait = maitre_verrier
+						}
+					}
+					leave_society = yes
+				}
 			}
 		}
 	}
@@ -197,84 +203,88 @@ character_event ={
 
 	is_triggered_only = yes	
 	
-	only_playable = yes
+	only_independent = yes
 	ai = no
 	
 	immediate = {
 		if = {
-			limit = {  # Should be executed once
+			limit = {
 				religion = catholic
-				controls_religion = yes
+				independent = yes
 			}
 			
 			# Create apprentis
-			if = {
-				limit = {
-					NOT = {
-						is_society_rank_full = {
-							society = artist_guild
-							rank = 1
+			random_list = {
+				94 = { }
+				2 = {
+					if = {
+						limit = {
+							NOT = {
+								is_society_rank_full = {
+									society = artist_guild
+									rank = 1
+								}
+							}
+						}
+						create_character = {
+							religion = catholic
+							
+							random_traits = yes
+							trait = apprenti_sculpteur
+							age = 18
+							dynasty = none
+							female = no
+						}
+						new_character = {
+							join_society = artist_guild
 						}
 					}
 				}
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = apprenti_sculpteur
-					age = 18
-					dynasty = none
-					female = no
-				}
-				new_character = {
-					join_society = artist_guild
-					move_character = THIS # Remove character from the Pope court
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						is_society_rank_full = {
-							society = artist_guild
-							rank = 1
+				2 = {
+					if = {
+						limit = {
+							NOT = {
+								is_society_rank_full = {
+									society = artist_guild
+									rank = 1
+								}
+							}
+						}
+						create_character = {
+							religion = catholic
+							random_traits = yes
+							trait = apprenti_verrier
+							age = 18
+							dynasty = none
+							female = no
+						}
+						new_character = {
+							join_society = artist_guild
 						}
 					}
 				}
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = apprenti_verrier
-					age = 18
-					dynasty = none
-					female = no
-				}
-				new_character = {
-					join_society = artist_guild
-					move_character = THIS # Remove character from the Pope court
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						is_society_rank_full = {
-							society = artist_guild
-							rank = 1
+				2 = {
+					if = {
+						limit = {
+							NOT = {
+								is_society_rank_full = {
+									society = artist_guild
+									rank = 1
+								}
+							}
+						}
+						create_character = {
+							religion = catholic
+							random_traits = yes
+							trait = apprenti_fresquiste
+							age = 18
+							dynasty = none
+							female = no
+						}
+						new_character = {
+							join_society = artist_guild
 						}
 					}
-				}
-				create_character = {
-					religion = catholic
-					culture = random
-					random_traits = yes
-					trait = apprenti_fresquiste
-					age = 18
-					dynasty = none
-					female = no
-				}
-				new_character = {
-					join_society = artist_guild
-					move_character = THIS # Remove character from the Pope court
 				}
 			}
 		}
