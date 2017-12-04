@@ -205,8 +205,11 @@ province_event = {
 		# Give Opus Francigenum
 		if = {
 			limit = { has_global_flag = dynamic_opus_francigenum }
-			owner = { narrative_event = { id = REC.105 days = 10 } }
 			clr_global_flag = dynamic_opus_francigenum
+			if = {
+				limit = { NOT = { has_global_flag = opus_francigenum } }
+				owner = { narrative_event = { id = REC.105 days = 10 } }
+			}
 		}
 	}
 }
