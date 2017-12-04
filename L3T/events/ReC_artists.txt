@@ -216,7 +216,7 @@ character_event ={
 			# Create apprentis
 			random_list = {
 				94 = { }
-				2 = {
+				6 = {
 					if = {
 						limit = {
 							NOT = {
@@ -239,8 +239,6 @@ character_event ={
 							join_society = artist_guild
 						}
 					}
-				}
-				2 = {
 					if = {
 						limit = {
 							NOT = {
@@ -262,8 +260,6 @@ character_event ={
 							join_society = artist_guild
 						}
 					}
-				}
-				2 = {
 					if = {
 						limit = {
 							NOT = {
