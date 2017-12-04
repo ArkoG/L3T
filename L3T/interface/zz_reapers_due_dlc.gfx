@@ -1,0 +1,26 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "depop_icon"
+		file = "gfx/models/Mapindicators/depop_icon.mesh"
+		scale = 0.8f
+		
+	}
+	pdxmesh = {
+		name = "crown_focus_crown_mesh"
+		file = "gfx/models/Mapindicators/crown_focus_crown.mesh"
+		scale = 0.5
+		
+		animation = { id = "idle"			type = "crown_focus_crown_idle_animation" }
+	}
+	pdxmesh = {
+		name = "prosperity_modifier_2_mesh"
+		file = "gfx/models/Mapindicators/prosperity_modifier_2.mesh"
+		scale = 0.8
+	}
+	pdxmesh = {
+		name = "prosperity_modifier_1_mesh"
+		file = "gfx/models/Mapindicators/prosperity_modifier_1.mesh"
+		scale = 0.85
+	}
+}
