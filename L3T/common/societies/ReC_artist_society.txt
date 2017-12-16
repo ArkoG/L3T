@@ -22,7 +22,7 @@ artist_guild = { #society code name
 			NAND = { #AI cannot join if the society first rank is full
 				ai = yes
 				is_society_rank_full = { 
-					society = tutorial_society
+					society = artist_guild
 					rank = 1
 				}
 			}
