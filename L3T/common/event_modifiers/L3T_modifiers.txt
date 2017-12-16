@@ -372,7 +372,11 @@ epices2_epices	= {icon = 138 	tax_income = 0.3}
 2connexion_commerciale = {icon = 1 } #hidden
 noeud_commercial_annexe = {icon = 180 city_tax_modifier = 0.03 }
 prosperity_modifier_2 = {icon = 179 local_tax_modifier = 0.05 } #retagged for using the on map 3D icon from vanilla prosperity L2
-prosperity_modifier_1 = {icon = 179 } #using the on map 3D icon from vanilla prosperity L1
+#pour nodes, chariotte+sacs
+prosperity_modifier_1 = {icon = 179 } #using the on map 3D icon from vanilla prosperity L1 
+#pour route, sac de céréales
+#this modifier is hidden
+
 #noeud_commercial_primaire = {icon = 137 local_tax_modifier = 0.05 }
 redaction_dun_cadastre  = {icon = 2 local_tax_modifier = 0.01 }
 interrupted_by_war = {icon = 1 } #hidden
