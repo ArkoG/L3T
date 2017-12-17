@@ -326,6 +326,60 @@ available_apprentice_glass_maker = {
 	}
 }
 
+# ROOT is not used
+available_master_sculptor = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = maitre_sculpteur
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_compagnon_sculptor = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = compagnon_sculpteur
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_apprentice_sculptor = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = apprenti_sculpteur
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_master_painter = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = maitre_fresquiste
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_compagnon_painter = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = compagnon_fresquiste
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_apprentice_painter = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = apprenti_fresquiste
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
 # ROOT is the holding where the cathedral is building
 has_loge = {
 	OR = {
