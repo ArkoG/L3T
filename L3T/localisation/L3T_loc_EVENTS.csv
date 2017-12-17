@@ -704,7 +704,7 @@ REC.1401A;Grrrrr ... well well! pay him;Grrrrrr... bien bien ! disposez !;;;;;;;
 REC.1402;A Defects of the Supplier;Défaut d'un fournisseur;;;;;;;;;;;;x
 DESCREC.1402;One of our wood suppliers went bankrupt. We need to find a replacement without delay. This will further widen our construction costs for the Cathedral.;Un de nos fournisseurs de bois a fait faillite. Il nous faut en trouver un en remplacement dans les meilleurs délais. Ce qui va encore alourdir nos coûts de construction pour la Cathédrale.;;;;;;;;;;;;x
 REC.1402A;We do not really have a choice. Do the best you can;Nous n'avons pas vraiment le choix. Faîtes au mieux.;;;;;;;;;;;;x
-REC.1403;;Un fournisseur demande du lest;;;;;;;;;;;;x
+REC.1403;A supplier asks for ballast;Un fournisseur demande du lest;;;;;;;;;;;;x
 DESCREC.1403;One of our suppliers finds it difficult to provide in time the materials we need for the construction of the Cathedral, which may cause a delay in delivery unless we can extend financial assistance.;Un de nos fournisseurs rencontrent des difficultés pour nous fournir à temps les matériaux dont nous avons besoin pour le chantier de la Cathédrale, ce qui risque de causer un retard dans les livraisons à moins que l'on puisse lui fournir une aide pécuniaire.;;;;;;;;;;;;x
 REC.1403A;The construction must not be delayed.;Le chantier ne doit souffrir aucun retard.;;;;;;;;;;;;x
 REC.1403B;We need to wait for how many years exactly?;Nous ne sommes à plus à quelques années près...;;;;;;;;;;;;x
@@ -712,7 +712,7 @@ REC.1404;Cargo for ransom;Cargaison rançonnée;;;;;;;;;;;;x
 DESCREC.1404;A cargo of stone blocks due for the construction of our Cathedral has been intercepted by bandits whom demand ransom. We have to pay to get it back if we do not want to suffer too much delay on site.;Une cargaison de blocs de pierre destinée au chantier de notre Cathédrale a été interceptée par des brigands qui nous en demande rançon. Il nous faut payer pour la récupérer si nous ne voulons souffrir trop de retard sur le chantier.;;;;;;;;;;;;x
 REC.1404A;Immediate payment is our only solution ...;Dans l'immédiat payer est notre seule solution...;;;;;;;;;;;;x
 REC.1404B;So much for that one. Make sure you escort the next one.;Tant pis pour celle-ci. Veillez à ce qu'on fasse escorter les prochaines.;;;;;;;;;;;;x
-REC.1405;Surcoût (AR) défaut de conception;Surcoût (AR) défaut de conception;;;;;;;;;;;;x
+REC.1405;Surcharge (AR) design defect;Surcoût (AR) défaut de conception;;;;;;;;;;;;x
 DESCREC.1405;If you ever had doubts about the competence of your builder master, here is some news that will not reassure you. It seems that some parts of the Cathedral strucutre show weaknesses and flaws. Is this not the work of someone who is trying to reduce the cost of the work.;Si jamais vous aviez quelques déjà doutes sur les compétences de votre maître bâtisseur, voici des nouvelles qui ne vont pas vous rassurer. Il semblerait que certaines structures de la Cathédrale montrent des faiblesses et des défauts. Ce n'est pas ça qui va alléger le coût des travaux.;;;;;;;;;;;;x
 REC.1405A;Note to self: "choose a better builder master";Note pour plus tard : "mieux choisir son maître bâtisseur";;;;;;;;;;;;x
 REC.1406;Surely (AR) the cost has been underestimated;surcoût (AR) coût mésestimé;;;;;;;;;;;;x
@@ -771,27 +771,27 @@ DESCREC.1707;The theft of the relic of [FromFromFrom.GetTitledName] is a failure
 REC.1707A;Now the theft is impossible;Maintenant le vol est impossible;;;;;;;;;;;;x
 DESCREC.1708;Dear [From.GetTitledName],\nI accept your offer to buy my relic.;Cher [From.GetTitledName],\nj'accepte votre proposition d'achat de relique.;;;;;;;;;;;;x
 
-DESCREC.2102;;Votre maître verrier doit réaliser un vitrail pour la Cathédrale.\nLes vitraux peuvent représenter des scènes bibliques mais aussi des donateurs qui les financent.\nParmis ces donnateurs, on trouve des nobles mais aussi des corporations.\nQue doit réaliser le maître verrier ?;;;;;;;;;;;;x
-REC.2102A;;Une scène biblique;;;;;;;;;;;;x
-REC.2102B;;Des membres de votre dynastie;;;;;;;;;;;;x
-REC.2102C;;Faites le financer par d'autres donnateurs.;;;;;;;;;;;;x
-DESCREC.2103;;Le travail sur le chantier ne manque pas.\nAinsi votre maître verrier aurait besoin de renforts si vous voulez un vitrail qui sorte de l'ordinaire.\nCela serait d'ailleurs une bonne idée pour former la relève puisque le maître ne verra probablement pas se terminer la Cathédrale.\nQuel genre de vitrail souhaitez-vous ?;;;;;;;;;;;;x
-REC.2103A;;Un vitrail classique;;;;;;;;;;;;x
-REC.2103B;;Un vitrail avec un petit plus;;;;;;;;;;;;x
-TOOLTIPREC.2103B;;Vous devez faire venir un apprenti de plus sur le chantier;;;;;;;;;;;;x
-REC.2103C;;Un vitrail de très bonne facture;;;;;;;;;;;;x
-TOOLTIPREC.2103C;;Vous devez faire venir un compagnon de plus sur le chantier;;;;;;;;;;;;x
-REC.2103D;;Un vitrail exceptionnel;;;;;;;;;;;;x
-TOOLTIPREC.2103D;;Vous devez faire venir un apprenti et un compagnon supplémentaires sur le chantier;;;;;;;;;;;;x
-DESCREC.2105;;Votre maître verrier [From.GetTitledName] du chantier de la Cathédrale est mort. Au vue de son dévouement dans la construction de la Cathédrale il est parti au Paradis.\nSon apport était essentiel pour obtenir des vitraux de toute beauté. Il va falloir lui trouver un remplaçant.;;;;;;;;;;;;x
-REC.2105A;;Financer un compagnon pour qu'il prenne sa succession;;;;;;;;;;;;x
-REC.2105B;;Chercher un nouveau maître;;;;;;;;;;;;x
-REC.2105C;;Ce n'est pas la peine de le remplacer;;;;;;;;;;;;x
-TOOLTIPREC.2105C;;Vous pourrez toujours employer un maître verrier plus tard via la §Ydécision§!.;;;;;;;;;;;;x
-DESCREC.2106;;Un maître verrier du chantier de la Cathédrale, [From.GetTitledName], est mort. Au vue de son dévouement dans la construction de la Cathédrale il est parti au Paradis.\nSon apport était essentiel pour obtenir des vitraux de toute beauté. Il va être remplacé par d'autres maîtres du chantier.;;;;;;;;;;;;x
-REC.2106A;;Très bien;;;;;;;;;;;;x
-REC.2106B;;Je vais recruter un maître supplémentaire pour le remplacer;;;;;;;;;;;;x
-REC.2106C;;Je vais recruter un compagnon qui deviendra à terme un maître;;;;;;;;;;;;x
+DESCREC.2102;Your master glassmaker must make a stained glass window for the Cathedral. \nStained glass windows may represent biblical scenes but also donors who finance them. \nAmong these donors, there are nobles but also corporations. \nWhat should the master glassmaker achieve?;Votre maître verrier doit réaliser un vitrail pour la Cathédrale.\nLes vitraux peuvent représenter des scènes bibliques mais aussi des donateurs qui les financent.\nParmis ces donnateurs, on trouve des nobles mais aussi des corporations.\nQue doit réaliser le maître verrier ?;;;;;;;;;;;;x
+REC.2102A;A biblical scene;Une scène biblique;;;;;;;;;;;;x
+REC.2102B;Members of your dynasty;Des membres de votre dynastie;;;;;;;;;;;;x
+REC.2102C;Get funding from other donors.;Faites le financer par d'autres donateurs.;;;;;;;;;;;;x
+DESCREC.2103;Work on the construction site is not lacking. \nThus your master glassmaker needs reinforcements if you want a stained glass that is out of the ordinary. \nThis would also be a good idea to train the next generation since the master will probably not see the end of the Cathedral. \nWhat kind of stained glass do you want?;Le travail sur le chantier ne manque pas.\nAinsi votre maître verrier aurait besoin de renforts si vous voulez un vitrail qui sorte de l'ordinaire.\nCela serait d'ailleurs une bonne idée pour former la relève puisque le maître ne verra probablement pas se terminer la Cathédrale.\nQuel genre de vitrail souhaitez-vous ?;;;;;;;;;;;;x
+REC.2103A;A classic stained glass window;Un vitrail classique;;;;;;;;;;;;x
+REC.2103B;A window with a little more;Un vitrail avec un petit plus;;;;;;;;;;;;x
+TOOLTIPREC.2103B;You have to bring one more apprentice for the job;Vous devez faire venir un apprenti de plus sur le chantier;;;;;;;;;;;;x
+REC.2103C;A very good stained glass window;Un vitrail de très bonne facture;;;;;;;;;;;;x
+TOOLTIPREC.2103C;You must bring one more journeyman for the job;Vous devez faire venir un compagnon de plus sur le chantier;;;;;;;;;;;;x
+REC.2103D;An exceptional stained glass window;Un vitrail exceptionnel;;;;;;;;;;;;x
+TOOLTIPREC.2103D;You must bring an extra apprentice and a journeyman for the job;Vous devez faire venir un apprenti et un compagnon supplémentaires sur le chantier;;;;;;;;;;;;x
+DESCREC.2105;Your master glassmaker [From.GetTitledName] from the Cathedral construction is dead. In view of his devotion to the construction of the Cathedral he went to Paradise. \nHis contribution was essential to obtain beautiful stained glass windows. He will have to find a replacement.;Votre maître verrier [From.GetTitledName] du chantier de la Cathédrale est mort. Au vue de son dévouement dans la construction de la Cathédrale il est parti au Paradis.\nSon apport était essentiel pour obtenir des vitraux de toute beauté. Il va falloir lui trouver un remplaçant.;;;;;;;;;;;;x
+REC.2105A;Financing a journeyman to take over;Financer un compagnon pour qu'il prenne sa succession;;;;;;;;;;;;x
+REC.2105B;Seeking a new master;Chercher un nouveau maître;;;;;;;;;;;;x
+REC.2105C;It's not worth replacing;Ce n'est pas la peine de le remplacer;;;;;;;;;;;;x
+TOOLTIPREC.2105C;You will still be able to hire a master glassmaker later with the §Ydecision§!;Vous pourrez toujours employer un maître verrier plus tard via la §Ydécision§!.;;;;;;;;;;;;x
+DESCREC.2106;A master glassmaker from the Cathedral construction, [From.GetTitledName], is dead. In view of his devotion to the construction of the Cathedral he went to Paradise. \nHis contribution was essential to obtain beautiful stained glass windows. He will be replaced by other masters of the construction.;Un maître verrier du chantier de la Cathédrale, [From.GetTitledName], est mort. Au vue de son dévouement dans la construction de la Cathédrale il est parti au Paradis.\nSon apport était essentiel pour obtenir des vitraux de toute beauté. Il va être remplacé par d'autres maîtres du chantier.;;;;;;;;;;;;x
+REC.2106A;Very good;Très bien;;;;;;;;;;;;x
+REC.2106B;I will recruit an additional master to replace him;Je vais recruter un maître supplémentaire pour le remplacer;;;;;;;;;;;;x
+REC.2106C;I am going to recruit a journeyman who will eventually become a master;Je vais recruter un compagnon qui deviendra à terme un maître;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #REC.1408;pre-proposal loan;pré-proposition emprunt;;;;;;;;;;;;x
 #DESCREC.1408;Rumors of the construction of our Cathedral is spreading to all and all and have reached the ears of loan sharks that come to offer their loan services to accelerate the funding of the construction.;Les rumeurs de la construction de notre Cathédrale se répand de plus en plus et sont venues à l'oreille d'usuriers qui viennent nous proposer leurs services de prêts pour accélérer le financement du chantier.;;;;;;;;;;;;x
