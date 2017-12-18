@@ -1,7 +1,34 @@
 namespace = L3T
 
-# Détection de la carte
+## Mode debug
+character_event = {
+    id = L3T.1
+	title = "NAMEL3T.1"
+	desc = "DESCL3T.1"
+	picture = GFX_evt_L3T_capitulaire
 
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		set_global_flag = debug_L3T
+	}
+}
+character_event = {
+    id = L3T.2
+	title = "NAMEL3T.2"
+	desc = "DESCL3T.2"
+	picture = GFX_evt_L3T_capitulaire
+
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		clr_global_flag = debug_L3T
+	}
+}
+
+## Détection de la carte
 character_event = {
     id = L3T.10
 	#title = "NAMEL3T.10"
