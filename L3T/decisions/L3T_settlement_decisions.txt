@@ -1070,6 +1070,7 @@ settlement_decisions = {
 		}
 		
 		potential = {
+			has_global_flag = debug_L3T
 			FROM = { ai = no }
 			#holder_scope = { character = FROM }
  		}
@@ -1106,6 +1107,7 @@ settlement_decisions = {
 		}
 		
 		potential = {
+			has_global_flag = debug_L3T
 			holding_type = city
 			has_building = VOC_COMMERCIALE
 		}
@@ -1135,6 +1137,7 @@ settlement_decisions = {
 		}
 		
 		potential = {
+			has_global_flag = debug_L3T
 			holding_type = city
 			has_building = VOC_INDUSTRIELLE
 		}
@@ -1164,6 +1167,7 @@ settlement_decisions = {
 		}
 		
 		potential = {
+			has_global_flag = debug_L3T
 			holding_type = city
 			NOT = { has_building = CITE_L1 }
 		}
