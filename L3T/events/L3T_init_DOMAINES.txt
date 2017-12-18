@@ -387,7 +387,6 @@ narrative_event = {
 						}
 					}				
 					set_province_flag = bloc_A
-					#add_province_modifier = { name = noeud_commercial_primaire duration = -1 }
 					add_province_modifier = { name = prosperity_modifier_2 duration = -1 }
 					
 					# Marque les voisins et voisins de voisins pour faire une distance entre les blocs A
@@ -525,7 +524,6 @@ province_event = {
 						}
 					}
 					add_province_modifier = { name = route_size1 duration = -1 }
-					#add_province_modifier = { name = noeud_commercial_primaire duration = -1 }
 					add_province_modifier = { name = prosperity_modifier_2 duration = -1 }
 					set_variable = { which = "route_size" value = 1 }
 					if = {
