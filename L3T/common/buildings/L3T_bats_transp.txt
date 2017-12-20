@@ -8,10 +8,11 @@
 castle = {
 	CA_COMMERCE_tooltip = { #
 		desc = "CA_COMMERCE_tooltip_desc"
-		prerequisites = {xxx}
-		trigger = { TECH_TRADE_PRACTICES = 0 }
+		#prerequisites = {xxx}
+		trigger = { jamais = yes }
 		gold_cost = 0.0
 		build_time = 8
+		is_active_trigger = { jamais = yes }
 		ai_creation_factor = 5
 		add_number_to_name = no	
 		extra_tech_building_start = 10.0
