@@ -676,101 +676,109 @@ ca_banal_pressoir_desc;The banal-press is where peasants gather to press crops t
 #;;x;;;;;;;;;;;;x
 #PONTS et CHAUSSEES;;x;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-CA_pont_L1;Infrastructure: Ford;Gué;;;;;;;;;;;;x
+CA_COMMERCE_tooltip;TRADE buildings (info);Bâtiments de COMMERCE (infos);;;;;;;;;;;;x
+CA_COMMERCE_tooltip_desc;;Les bâtiments de la catégorie "COMMERCE", en dehors de générer des revenus et taxes, leur construction permet d'influencer le développment des routes de commerce en les "attirant" dans la province. \nLa construction de plusieurs types de bâtiments, ou au delà du premier niveau, renforce l'attractivité commerciale.;;;;;;;;;;;;x
+CA_pont_L1;TRADE: Ford;COMMERCE : Gué;;;;;;;;;;;;x
 CA_pont_L1_desc;The discovery of a point in the river where the riverbed is shallow enough to cross has led to an increase in traffic through these parts. The local lord could impose a minor toll to ford the river, but it is unlikely this alone will be profitable in the long run.;Un passage à gué a été aménagé à l'endroit ou le lit de la rivière est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prélever un droit de péage, bien que faible.;;;;;;;;;;;;x
-CA_pont_L2;Infrastructure: Wooden Bridge;Pont en bois;;;;;;;;;;;;x
+CA_pont_L2;TRADE: Wooden Bridge;COMMERCE : Pont en bois;;;;;;;;;;;;x
 CA_pont_L2_desc;The construction of a wooden bridge over the ford has made it easier for peasants and merchants to bring their goods to market, and a strategically-placed toll booth has allowed the local lord to profit as well.;Le passage étant relativement emprunté, permettre le franchissement de la rivière en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prélever un droit de passage plus élevé qu'auparavant.;;;;;;;;;;;;x
-CA_pont_L3;Infrastructure: Stone Bridge;Pont en pierre;;;;;;;;;;;;x
+CA_pont_L3;TRADE: Stone Bridge;COMMERCE : Pont en pierre;;;;;;;;;;;;x
 CA_pont_L3_desc;After a few unfortunate accidents, the wooden bridge has been repaired and reinforced with stones to prevent another collapse. Both people and heavy carts can safely pass, further affirming this region's importance as a (taxable!) trade route.;Le pont en pierre est solide et permet un passage aisé que l'on soit à pied ou que l'on roule. Une halte pour alléger sa bourse au péage reste néanmoins indispensable.;;;;;;;;;;;;x
-CA_col_L1;Infrastructure: Mountain Trail;COL : sentier;;;;;;;;;;;;x
+CA_col_L1;TRADE: Mountain Trail;COMMERCE : sentier de montagne;;;;;;;;;;;;x
 CA_col_L1_desc;This small pass through the mountains is the only path able to be traversed by large caravans, making it indispensible to trade in this region. Some of the peasants here make a living guiding dusty travelers through the treacherous terrain, and we too can profit doubly by taxing both the peasants and the merchants.;Le petit sentier qui mène au col est l'unique et indispensable passage au travers la montagne à des lieues à la ronde. Les paysans complètent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
-CA_col_L2;Infrastructure: Mountain Road;COL : chemin empierré;;;;;;;;;;;;x
-CA_col_L2_desc;Clearing a larger trail through the mountain and surfacing it with gravel allows the passage of more and larger trade caravans, resulting in greater profits for everyone.;Le sentier menant au col est à présent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
+CA_col_L2;TRADE: Mountain Road;COMMERCE : chemin de montagne;;;;;;;;;;;;x
+CA_col_L2_desc;Clearing a larger trail through the mountain and surfacing it with gravel allows the passage of more and larger trade caravans, resulting in greater profits for everyone.;Le sentier menant au col est à présent plus large, empierré, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
 CA_col_MIL;Eagle nest;Nid d'aigle;;;;;;;;;;;;x
 CA_col_MIL_desc;A small path leads to this eagle nest settled high in the mountain. A small garrison is maintained there and watches out the valley.;Un petit sentier mène à ce nid d'aigle perché sur les hauteurs. Une petite garnison y est entretenue et surveille la vallée.;;;;;;;;;;;;x
-CA_route_L1;Infrastructure: Dirt Trail;COMMERCE : Chemin de terre;;;;;;;;;;;;x
+CA_col_MIL_L2;Moutain fort;Fort de montagne;;;;;;;;;;;;x
+CA_col_MIL_L2_desc;High in the mountain is settled this small fort where a garrison is maintained. It watches out both the valley and the pass trail. Troops trained here are mastering the art of defence.;Haut dans la montagne s'élève un nid d'aigle fortifié qui abrite un garnison. Celle-ci scrute la vallée et surveille le passage menant au col proche. Les troupes formées ici sont aguerries dans l'art de la défense.;;;;;;;;;;;;x
+CA_route_L1;TRADE: Dirt Trail;COMMERCE : Chemin de terre;;;;;;;;;;;;x
 CA_route_L1_desc;The roads more travelled by peasants and merchants are often more worn, leaving clear trails for strangers to the province to follow as they bring their goods to market. Clearing the trails and expanding them make travel a little easier and attract more (taxable!) traffic.;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rôle de voie de transport.;;;;;;;;;;;;x
-CA_route_L2;Infrastructure: Gravel Road;COMMERCE : Chemin empierré;;;;;;;;;;;;x
+CA_route_L2;TRADE: Gravel Road;COMMERCE : Chemin empierré;;;;;;;;;;;;x
 CA_route_L2_desc;The primitive dirt road that passed through these parts is no longer enough to facilitate travel through these parts. A booming economy requires better roads, and surfacing them with gravel will improve travel by foot, horse, as well as cart.;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
-CA_route_L3;Infrastructure: Paved Road;COMMERCE : Route pavée;;;;;;;;;;;;x
+CA_route_L3;TRADE: Paved Road;COMMERCE : Route pavée;;;;;;;;;;;;x
 CA_route_L3_desc;The growing importance of this region as an economic center requires the expansion and construction of more evenly paved roads to facilitate the droves of merchants that pass through every year.;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
-CA_fleuve_L1;Infrastructure: Ferry;COMMERCE : Ponton fluvial;;;;;;;;;;;;x
+CA_fleuve_L1;TRADE: Ferry;COMMERCE : Ponton fluvial;;;;;;;;;;;;x
 CA_fleuve_L1_desc;Local peasants make a living ferrying small groups of merchants travelling through these parts (and then of course, pass on a portion of the payment to the local lord). It is a safer alternative to travelling by land... until one of the boats springs a leak.;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
-CA_fleuve_L2;Infrastructure: Trading Quay;COMMERCE : Quai fluvial;;;;;;;;;;;;x
+CA_fleuve_L2;TRADE: Trading Quay;COMMERCE : Quai fluvial;;;;;;;;;;;;x
 CA_fleuve_L2_desc;The establishment of a wharf on the banks of the river allows for a significant number of rivercraft to ferry goods across otherwise unfriendly water.;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
-CA_fleuve_L3;Infrastructure: Inland Trading Port;COMMERCE : Port fluvial;;;;;;;;;;;;x
+CA_fleuve_L3;TRADE: Inland Trading Port;COMMERCE : Port fluvial;;;;;;;;;;;;x
 CA_fleuve_L3_desc;Establishing a small port where merchants can rest and then transport larger volumes of goods on sturdier boats has attracted more traffic through these parts.;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
-CT_pont_L1;Infrastructure: Ford;Gué;;;;;;;;;;;;x
+CT_COMMERCE_tooltip;TRADE buildings (info);Bâtiments de COMMERCE (infos);;;;;;;;;;;;x
+CT_COMMERCE_tooltip_desc;;Les bâtiments de la catégorie "COMMERCE", en dehors de générer des revenus et taxes, leur construction permet d'influencer le développment des routes de commerce en les "attirant" dans la province. \nLa construction de plusieurs types de bâtiments, ou au delà du premier niveau, renforce l'attractivité commerciale.;;;;;;;;;;;;x
+CT_pont_L1;TRADE: Ford;COMMERCE : Gué;;;;;;;;;;;;x
 CT_pont_L1_desc;The discovery of a point in the river where the riverbed is shallow enough to cross has led to an increase in traffic through these parts. The local burghers could impose a minor toll to ford the river, but it is unlikely this alone will be profitable in the long run.;Un passage à gué a été aménagé à l'endroit ou le lit de la rivière est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prélever un droit de péage, bien que faible.;;;;;;;;;;;;x
-CT_pont_L2;Infrastructure: Wooden Bridge;Pont en bois;;;;;;;;;;;;x
+CT_pont_L2;TRADE: Wooden Bridge;COMMERCE : Pont en bois;;;;;;;;;;;;x
 CT_pont_L2_desc;The construction of a wooden bridge over the ford has made it easier for peasants and merchants to bring their goods to market, and a strategically-placed toll booth has allowed the locals to profit as well.;Le passage étant relativement emprunté, permettre le franchissement de la rivière en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prélever un droit de passage plus élevé qu'auparavant.;;;;;;;;;;;;x
-CT_pont_L3;Infrastucture: Stone Bridge;Pont en pierre;;;;;;;;;;;;x
+CT_pont_L3;TRADE: Stone Bridge;COMMERCE : Pont en pierre;;;;;;;;;;;;x
 CT_pont_L3_desc;After a few unfortunate accidents, the wooden bridge has been repaired and reinforced with stones to prevent another collapse. Both people and heavy carts can safely pass, further affirming this region's importance as a (taxable!) trade route.;Le pont en pierre est solide et permet un passage aisé que l'on soit à pied ou que l'on roule. Une halte pour alléger sa bourse au péage reste néanmoins indispensable.;;;;;;;;;;;;x
-CT_col_L1;Infrastructure: Mountain Pass;COL : sentier;;;;;;;;;;;;x
+CT_col_L1;TRADE: Mountain Trail;COMMERCE : sentier de montagne;;;;;;;;;;;;x
 CT_col_L1_desc;This small pass through the mountains is the only path able to be traversed by large caravans, making it indispensible to trade in this region. Some of the peasants here make a living guiding dusty travelers through the treacherous terrain, and we too can profit doubly by taxing both the peasants and the merchants.;Le petit sentier qui mène au col est l'unique et indispensable passage au travers la montagne à des lieues à la ronde. Les paysans complètent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
-CT_col_L2;Infrastructure: Mountain Trail;COL : chemin empierré;;;;;;;;;;;;x
-CT_col_L2_desc;Clearing a larger trail through the mountain and surfacing it with gravel allows the passage of more and larger trade caravans, resulting in greater profits for everyone.;Le sentier menant au col est à présent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
-CT_relais_L1;Infrastructure: Mountain Tavern;Abri de montagne;;;;;;;;;;;;x
-CT_relais_L1_desc;A tavern where travelers can safely rest after a long day's travel... for a price.;Cette construction assez sommaire permet aux voyageurs et marchands une halte au sommet du col pour passer la nuit ou laisser passer le mauvais temps.;;;;;;;;;;;;x
-CT_relais_L2;Infrastructure: Mountain Inn;Refuge de montagne;;;;;;;;;;;;x
+CT_col_L2;TRADE: Mountain Road;COMMERCE : chemin de montagne;;;;;;;;;;;;x
+CT_col_L2_desc;Clearing a larger trail through the mountain and surfacing it with gravel allows the passage of more and larger trade caravans, resulting in greater profits for everyone.;Le sentier menant au col est à présent plus large, empierré, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
+CT_relais_L1;TRADE: Mountain shelter;COMMERCE : Abri de montagne;;;;;;;;;;;;x
+CT_relais_L1_desc;A shelter where travelers can rest for the night after a long day's travel, or wait for bad weather to appease.;Cette construction assez sommaire permet aux voyageurs et marchands une halte au sommet du col pour passer la nuit ou laisser passer le mauvais temps.;;;;;;;;;;;;x
+CT_relais_L2;TRADE: Mountain Inn;COMMERCE : Refuge de montagne;;;;;;;;;;;;x
 CT_relais_L2_desc;The local inn not only offers warm drink and a hot soup at the end of a day's travel, but also relatively comfortable beds for tired merchants willing to pay for such comforts.;Cette auberge de montagne installée au passage du col offre une halte au chaud et le couvert aux marchands désireux de franchir la montagne.;;;;;;;;;;;;x
-CT_relais_L3;Infrastructure: Mountain road house;Relais de montagne;;;;;;;;;;;;x
-CT_relais_L3_desc;A road house is settled at the top of the pass, near the road. It hosts and feeds the travellers resting for the night.;Ce relais permet d'héberger et nourrir tous les marchand désireux de passer la montagne avec leurs marchandises. L'accueil y est chaleureux pour peu que l'on paye correctement son dû.;;;;;;;;;;;;x
-CT_oasis_L1;Infrastructure: Sheltered Oasis;Petite Oasis;;;;;;;;;;;;x
+CT_relais_L3;TRADE: Mountain road house;Relais de montagne;;;;;;;;;;;;x
+CT_relais_L3_desc;A road house is settled at the top of the pass, near the road. It hosts and feeds the travellers resting for the night.;Ce relais permet d'héberger et nourrir tous les marchands désireux de passer la montagne avec leurs marchandises. L'accueil y est chaleureux pour peu que l'on paye correctement son dû.;;;;;;;;;;;;x
+CT_oasis_L1;TRADE: Sheltered Oasis;COMMERCE : Petite oasis;;;;;;;;;;;;x
 CT_oasis_L1_desc;A sheltered oasis outside of town allows nomads and merchants to take shelter from the elements and the harsh desert nights.;Cette petite oasis, quasi inhabitée permet aux nomades de faire halte pour remplir leurs outres, se protéger d'une tempête de sable.;;;;;;;;;;;;x
-CT_oasis_L2;Infrastructure: Oasis Hamlet;Oasis moyenne;;;;;;;;;;;;x
+CT_oasis_L2;TRADE: Oasis Hamlet;COMMERCE : Oasis moyenne;;;;;;;;;;;;x
 CT_oasis_L2_desc;A small hamlet has sprung up around this oft-frequented oasis and the peasants make a living tending to needs of weary travellers.;Cette oasis est plus grande que la moyenne et héberge quelques habitants permanents. Les caravanes y font halte pour se ravitailler en eau et nourriture, au prix de quelques pièces néanmoins.;;;;;;;;;;;;x
-CT_oasis_L3;Infrastructure: Oasis Town;Oasis verdoyante;;;;;;;;;;;;x
+CT_oasis_L3;TRADE: Oasis Town;COMMERCE : Oasis verdoyante;;;;;;;;;;;;x
 CT_oasis_L3_desc;This oasis town, now irrigated by the waters of the oasis itself, supports a small town offering most of the comforts of home to travellers battered by the desert winds.;Cette grande oasis détient suffisamment d'eau pour irriguer jardins et cultures au beau milieu du désert. Cette une halte agréable pour tous voyageur et une halte indispensable pour tout marchand ou caravanes souhaitant se ravitailler en eau et nourriture, voire même y commercer un peu avant de repartir sur à travers le désert.;;;;;;;;;;;;x
-CT_pont_fluvial_L1;Trade and Commerce: Ferry;Bac;;;;;;;;;;;;x
+CT_pont_fluvial_L1;TRADE: Ferry;COMMERCE : Bac;;;;;;;;;;;;x
 CT_pont_fluvial_L1_desc;The ferryman transports people and goods from one side of the river to the other for a modest price, facilitating a trickle of trade through these parts.;Le passage du fleuve se fait ici à l'aide d'un bac moyennant un prix modique.;;;;;;;;;;;;x
-CT_pont_fluvial_L2;Trade and Commerce: Towed Ferry;Bac tracté;;;;;;;;;;;;x
+CT_pont_fluvial_L2;TRADE: Towed Ferry;COMMERCE : Bac tracté;;;;;;;;;;;;x
 CT_pont_fluvial_L2_desc;AS the current is much stronger here, a series of mechanisms are needed to ensure a steady passage from one bank of the river to the other.;Le courant étant plus fort ici, le bac est tracté par un mécanisme de cordes et chaînes permettant une traversée sereine y compris en période de hautes eaux.;;;;;;;;;;;;x
-CT_pont_fluvial_L3;Trade and Commerce: Floating Bridge;Pont flottant;;;;;;;;;;;;x
+CT_pont_fluvial_L3;TRADE: Floating Bridge;COMMERCE : Pont flottant;;;;;;;;;;;;x
 CT_pont_fluvial_L3_desc;For lack of the proper engineering knowledge by the locals to build a fixed bridge, a series of floating logs tied together with thick ropes are the only safe means of facilitating foot traffic across the river.;Un ensemble de rondins encordées forment une passerelle sur les eaux permettant un franchissement rapide et aisé du fleuve;;;;;;;;;;;;x
-CT_pont_fluvial_L4;Trade and Commerce: Fixed Wooden Bridge;Pont fixe en bois;;;;;;;;;;;;x
+CT_pont_fluvial_L4;TRADE: Fixed Wooden Bridge;COMMERCE : Pont fixe en bois;;;;;;;;;;;;x
 CT_pont_fluvial_L4_desc;The local authorities have elected to hire an engineer to build a sturdy and durable wooden bridge spanning the river. People are now less wary to cross over and a steady stream of merchants regularly flock into the city.;Rien ne vaut un pont permanent et résistant pour passer le fleuve en sécurité et... réclamer une bonne somme pour ledit passage.;;;;;;;;;;;;x
-CT_pont_fluvial_L5;Trade and Commerce: Stone Bridge;Grand pont de pierre;;;;;;;;;;;;x
+CT_pont_fluvial_L5;TRADE: Stone Bridge;COMMERCE : Grand pont de pierre;;;;;;;;;;;;x
 CT_pont_fluvial_L5_desc;After a few unfortunate accidents, the wooden bridge has been repaired and reinforced with stones to prevent another collapse. Both people and heavy carts can safely pass, provided they pay a modest toll.;L'ancien pont de bois a finalement laissé place à un fier et solide pont en pierre. La cité a bien entendu pris soin d'y instaurer un péage d'un montant tout aussi peu commun aux alentours que de ponts de cette envergure.;;;;;;;;;;;;x
-CT_pont_fluvial_L6;Trade and Commerce: Expanded Stone Bridge;Pont de pierre double;;;;;;;;;;;;x
+CT_pont_fluvial_L6;TRADE: Expanded Stone Bridge;COMMERCE : Pont de pierre double;;;;;;;;;;;;x
 CT_pont_fluvial_L6_desc;Expanding the bridge to double its width as well as strengthen the foundations has also doubled the traffic... and the taxes!;En sus d'être en pierre, ce pont permet même le passage de front de deux carrioles. Double capacité de passage, donc double revenus !;;;;;;;;;;;;x
-CT_route_L1;Infrastructure: Dirt Trail;COMMERCE : Chemin de terre;;;;;;;;;;;;x
+CT_route_L1;TRADE: Dirt Trail;COMMERCE : Chemin de terre;;;;;;;;;;;;x
 CT_route_L1_desc;The roads more travelled by peasants and merchants are often more worn, leaving clear trails for strangers to the province to follow as they bring their goods to market. Clearing the trails and expanding them make travel a little easier and attract more (taxable!) traffic.;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rôle de voie de transport.;;;;;;;;;;;;x
-CT_route_L2;Infrastructure: Gravel Road;COMMERCE : Chemin empierré;;;;;;;;;;;;x
+CT_route_L2;TRADE: Gravel Road;COMMERCE : Chemin empierré;;;;;;;;;;;;x
 CT_route_L2_desc;The primitive dirt road that passed through these parts is no longer enough to facilitate travel through these parts. A booming economy requires better roads, and surfacing them with gravel will improve travel by foot, horse, as well as cart.;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
-CT_route_L3;Infrastructure: Paved Road;COMMERCE : Route pavée;;;;;;;;;;;;x
+CT_route_L3;TRADE: Paved Road;COMMERCE : Route pavée;;;;;;;;;;;;x
 CT_route_L3_desc;The growing importance of this region as an economic center requires the expansion and construction of more evenly paved roads to facilitate the droves of merchants that pass through every year.;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
-CT_fleuve_L1;Infrastructure: Ferry;COMMERCE : Ponton fluvial;;;;;;;;;;;;x
+CT_fleuve_L1;TRADE: Ferry;COMMERCE : Ponton fluvial;;;;;;;;;;;;x
 CT_fleuve_L1_desc;Local peasants make a living ferrying small groups of merchants travelling through these parts (and then of course, pass on a portion of the payment to the local lord). It is a safer alternative to travelling by land... until one of the boats springs a leak.;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
-CT_fleuve_L2;Infrastructure: Trading Quay;COMMERCE : Quai fluvial;;;;;;;;;;;;x
+CT_fleuve_L2;TRADE: Trading Quay;COMMERCE : Quai fluvial;;;;;;;;;;;;x
 CT_fleuve_L2_desc;The establishment of a wharf on the banks of the river allows for a significant number of rivercraft to ferry goods across otherwise unfriendly water.;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
-CT_fleuve_L3;Infrastructure: Inland Trading Port;COMMERCE : Port fluvial;;;;;;;;;;;;x
+CT_fleuve_L3;TRADE: Inland Trading Port;COMMERCE : Port fluvial;;;;;;;;;;;;x
 CT_fleuve_L3_desc;Establishing a small port where merchants can rest and then transport larger volumes of goods on sturdier boats has attracted more traffic through these parts.;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
-TP_pont_L1;Infrastructure: Ford;Gué;;;;;;;;;;;;x
+TP_COMMERCE_tooltip;TRADE buildings (info);Bâtiments de COMMERCE (infos);;;;;;;;;;;;x
+TP_COMMERCE_tooltip_desc;;Les bâtiments de la catégorie "COMMERCE", en dehors de générer des revenus et taxes, leur construction permet d'influencer le développment des routes de commerce en les "attirant" dans la province. \nLa construction de plusieurs types de bâtiments, ou au delà du premier niveau, renforce l'attractivité commerciale.;;;;;;;;;;;;x
+TP_pont_L1;TRADE: Ford;COMMERCE : Gué;;;;;;;;;;;;x
 TP_pont_L1_desc;The discovery of a point in the river where the riverbed is shallow enough to cross has led to an increase in traffic through these parts. The local burghers could impose a minor toll to ford the river, but it is unlikely this alone will be profitable in the long run.;Un passage à gué a été aménagé à l'endroit ou le lit de la rivière est large et les eux peu profonde. Ce n'est pas le grand luxe mais cela permet de prélever un droit de péage, bien que faible.;;;;;;;;;;;;x
-TP_pont_L2;Infrastructure: Wooden Bridge;Pont en bois;;;;;;;;;;;;x
+TP_pont_L2;TRADE: Wooden Bridge;COMMERCE : Pont en bois;;;;;;;;;;;;x
 TP_pont_L2_desc;The construction of a wooden bridge over the ford has made it easier for peasants and merchants to bring their goods to market, and a strategically-placed toll booth has allowed the locals to profit as well.;Le passage étant relativement emprunté, permettre le franchissement de la rivière en toute saison et en restant au sec devenait indispensable. C'est maintenant chose faite avec ce pont fait de bois qui permet de plus de prélever un droit de passage plus élevé qu'auparavant.;;;;;;;;;;;;x
-TP_pont_L3;Infrastructure: Stone Bridge;Pont en pierre;;;;;;;;;;;;x
+TP_pont_L3;TRADE: Stone Bridge;COMMERCE : Pont en pierre;;;;;;;;;;;;x
 TP_pont_L3_desc;After a few unfortunate accidents, the wooden bridge has been repaired and reinforced with stones to prevent another collapse. Both people and heavy carts can safely pass, further affirming this region's importance as a (taxable!) trade route.;Le pont en pierre est solide et permet un passage aisé que l'on soit à pied ou que l'on roule. Une halte pour alléger sa bourse au péage reste néanmoins indispensable.;;;;;;;;;;;;x;;;;;;;;;;;;x
-TP_col_L1;Infrastructure: Mountain Pass;COL : sentier;;;;;;;;;;;;x
+TP_col_L1;TRADE: Mountain Trail;COMMERCE : sentier de montagne;;;;;;;;;;;;x
 TP_col_L1_desc;This small pass through the mountains is the only path able to be traversed by large caravans, making it indispensible to trade in this region. Some of the peasants here make a living guiding dusty travelers through the treacherous terrain, and we too can profit doubly by taxing both the peasants and the merchants.;Le petit sentier qui mène au col est l'unique et indispensable passage au travers la montagne à des lieues à la ronde. Les paysans complètent leurs revenus en louant leurs services pour aider au passage, ce qui leur permet de nous reverser une partie desdits revenus.;;;;;;;;;;;;x
-TP_col_L2;Infrastructure: Mountain Trail;COL : chemin empierré;;;;;;;;;;;;x
-TP_col_L2_desc;Clearing a larger trail through the mountain and surfacing it with gravel allows the passage of more and larger trade caravans, resulting in greater profits for everyone.;Le sentier menant au col est à présent plus large, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
-TP_relais_L1;Infrastructure: Mountain Tavern;Abri de montagne;;;;;;;;;;;;x
-TP_relais_L1_desc;A tavern where travelers can safely rest after a long day's travel... for a price.;Cette construction assez sommaire permet aux voyageurs et marchands une halte au sommet du col pour passer la nuit ou laisser passer le mauvais temps.;;;;;;;;;;;;x
-TP_relais_L2;Infrastructure: Mountain Inn;Refuge de montagne;;;;;;;;;;;;x
+TP_col_L2;TRADE: Mountain Road;COMMERCE : chemin de montagne;;;;;;;;;;;;x
+TP_col_L2_desc;Clearing a larger trail through the mountain and surfacing it with gravel allows the passage of more and larger trade caravans, resulting in greater profits for everyone.;Le sentier menant au col est à présent plus large, empierré, mieux entretenu et permet le passage de davantage de marchands qui payent bien entendu pour cela.;;;;;;;;;;;;x
+TP_relais_L1;TRADE: Mountain shelter;COMMERCE : Abri de montagne;;;;;;;;;;;;x
+TP_relais_L1_desc;A shelter where travelers can rest for the night after a long day's travel, or wait for bad weather to appease.;Cette construction assez sommaire permet aux voyageurs et marchands une halte au sommet du col pour passer la nuit ou laisser passer le mauvais temps.;;;;;;;;;;;;x
+TP_relais_L2;TRADE: Mountain Inn;COMMERCE : Refuge de montagne;;;;;;;;;;;;x
 TP_relais_L2_desc;The local inn not only offers warm drink and a hot soup at the end of a day's travel, but also relatively comfortable beds for tired merchants willing to pay for such comforts.;Cette auberge de montagne installée au passage du col offre une halte au chaud et le couvert aux marchands désireux de franchir la montagne.;;;;;;;;;;;;x
-TP_route_L1;Infrastructure: Dirt Trail;COMMERCE : Chemin de terre;;;;;;;;;;;;x
+TP_route_L1;TRADE: Dirt Trail;COMMERCE : Chemin de terre;;;;;;;;;;;;x
 TP_route_L1_desc;The roads more travelled by peasants and merchants are often more worn, leaving clear trails for strangers to the province to follow as they bring their goods to market. Clearing the trails and expanding them make travel a little easier and attract more (taxable!) traffic.;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rôle de voie de transport.;;;;;;;;;;;;x
 TP_route_L2;Infrastructure Gravel Road;COMMERCE : Chemin empierré;;;;;;;;;;;;x
 TP_route_L2_desc;The primitive dirt road that passed through these parts is no longer enough to facilitate travel through these parts. A booming economy requires better roads, and surfacing them with gravel will improve travel by foot, horse, as well as cart.;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
-TP_route_L3;Infrastructure: Paved Road;COMMERCE : Route pavée;;;;;;;;;;;;x
+TP_route_L3;TRADE: Paved Road;COMMERCE : Route pavée;;;;;;;;;;;;x
 TP_route_L3_desc;The growing importance of this region as an economic center requires the expansion and construction of more evenly paved roads to facilitate the droves of merchants that pass through every year.;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
-TP_fleuve_L1;Infrastructure: Ferry;COMMERCE : Ponton fluvial;;;;;;;;;;;;x
+TP_fleuve_L1;TRADE: Ferry;COMMERCE : Ponton fluvial;;;;;;;;;;;;x
 TP_fleuve_L1_desc;Local peasants make a living ferrying small groups of merchants travelling through these parts (and then of course, pass on a portion of the payment to the local lord). It is a safer alternative to travelling by land... until one of the boats springs a leak.;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
-TP_fleuve_L2;Infrastructure: Trading Quay;COMMERCE : Quai fluvial;;;;;;;;;;;;x
+TP_fleuve_L2;TRADE: Trading Quay;COMMERCE : Quai fluvial;;;;;;;;;;;;x
 TP_fleuve_L2_desc;The establishment of a wharf on the banks of the river allows for a significant number of rivercraft to ferry goods across otherwise unfriendly water.;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
-TP_fleuve_L3;Infrastructure: Inland Trading Port;COMMERCE : Port fluvial;;;;;;;;;;;;x
+TP_fleuve_L3;TRADE: Inland Trading Port;COMMERCE : Port fluvial;;;;;;;;;;;;x
 TP_fleuve_L3_desc;Establishing a small port where merchants can rest and then transport larger volumes of goods on sturdier boats has attracted more traffic through these parts.;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 tr_port_fluvial_1;Inland Trading Quay;Débarcadère fluvial;;;;;;;;;;;;x
@@ -789,8 +797,8 @@ tr_relais_route_1;Toll Booths;Péage;;;;;;;;;;;;x
 tr_relais_route_1_desc;Tolls are collected here.;Le malheur des marchands et le bonheur des bourgmestres. Ici, il faudra payer pour passer.;;;;;;;;;;;;x
 tr_relais_route_2;Travelers' Inn;Relais routier;;;;;;;;;;;;x
 tr_relais_route_2_desc;Weary travellers can rest their bones here.;Les caravanes s'arrêtent là afin de permettre à leurs membres de se reposer. Cela génèrent des revenus forts lucratifs.;;;;;;;;;;;;x
-tr_relais_route_3;Market Square;Relais commercial;;;;;;;;;;;;x
-tr_relais_route_3_desc;Goods can be sold here at the trading post in the market.;La quintessence de la route commerciale : auberges, échoppes, entrepôts et droit de douane se mélangent ici.;;;;;;;;;;;;x
+tr_relais_route_3;Market road house;Relais commercial;;;;;;;;;;;;x
+tr_relais_route_3_desc;Goods can be sold here at the trading post in the market.;La quintessence de la route commerciale : auberges, échoppes, entrepôts et taxes se mélangent ici.;;;;;;;;;;;;x
 tr_entrepot_1;Merchandise Depot;Entrepôt à marchandises;;;;;;;;;;;;x
 tr_entrepot_1_desc;A small storage for merchants to store their goods under lock and key.;Il est important de pouvoir garder les marchandises quelque part. Ce petit entrepôt s'en chargera.;;;;;;;;;;;;x
 tr_entrepot_2;Merchandise Warehouse;Halle à marchandises;;;;;;;;;;;;x
