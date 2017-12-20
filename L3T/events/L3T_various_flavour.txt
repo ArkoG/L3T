@@ -38,9 +38,11 @@ character_event = {
 	}
 	option = {
 		name = "L3T.250C"
-		trigger = { has_all_books_from_monastery = no }
+		trigger = { 
+			has_all_books_from_monastery = no
+			religion_group = christian
+		}
 		set_character_flag = buying_books_at_monastery
-		trigger = { religion_group = christian }
 		character_event = { id = L3T.251 days = 20 } #choose the type of book
 		ai_chance = { 
 			factor = 1 
