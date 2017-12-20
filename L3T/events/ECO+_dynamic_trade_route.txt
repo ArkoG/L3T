@@ -77,9 +77,10 @@ province_event = {
 			factor = 0.9
 			any_province_holding = {
 				OR = {
-					has_building = CA_pont_L2
-					has_building = CT_pont_L2
-					has_building = TP_pont_L2
+					has_building = CA_pont_L2 #pont #requires_town_1
+					has_building = CT_pont_L2 #pont #requires_town_1
+					has_building = TP_pont_L2 #pont #requires_town_1
+					has_building = CT_oasis_L2 #désert #requires_town_1
 				}
 			}
 		}
@@ -210,41 +211,32 @@ province_event = {
 		modifier = { 
 			factor = 0.8
 			OR = {
-				any_province_holding = { has_building = CA_route_L1 }
-				any_province_holding = { has_building = CT_route_L1 }
-				any_province_holding = { has_building = TP_route_L1 }
-				any_province_holding = { has_building = CA_fleuve_L1 }
-				any_province_holding = { has_building = CT_fleuve_L1 }
-				any_province_holding = { has_building = TP_fleuve_L1 }
+				any_province_holding = { has_building = CA_route_L1 } #route terrestre
+				any_province_holding = { has_building = CT_route_L1 } #route terrestre
+				any_province_holding = { has_building = TP_route_L1 } #route terrestre
+				any_province_holding = { has_building = CA_fleuve_L1 } #route fluviale (port)
+				any_province_holding = { has_building = CT_fleuve_L1 } #route fluviale (port)
+				any_province_holding = { has_building = TP_fleuve_L1 } #route fluviale (port)
 				}
 		}
 		modifier = { 
 			factor = 0.6
 			OR = {
-				any_province_holding = { has_building = CA_route_L2 }
-				any_province_holding = { has_building = CT_route_L2 }
-				any_province_holding = { has_building = TP_route_L2 }
-				any_province_holding = { has_building = CA_fleuve_L2 }
-				any_province_holding = { has_building = CT_fleuve_L2 }
-				any_province_holding = { has_building = TP_fleuve_L2 }
+				any_province_holding = { has_building = CA_route_L2 } #route terrestre #requires_town_1
+				any_province_holding = { has_building = CT_route_L2 } #route terrestre #requires_town_1
+				any_province_holding = { has_building = TP_route_L2 } #route terrestre #requires_town_1
+				any_province_holding = { has_building = CA_fleuve_L2 } #route fluviale (port) #requires_town_1
+				any_province_holding = { has_building = CT_fleuve_L2 } #route fluviale (port) #requires_town_1
+				any_province_holding = { has_building = TP_fleuve_L2 } #route fluviale (port) #requires_town_1
 				}
 		}
 		modifier = {
 			factor = 0.9
 			any_province_holding = {
 				OR = {
-					has_building = CA_col_L1
-					has_building = CT_col_L1
-					has_building = TP_col_L1
-				}
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_province_holding = {
-				OR = {
-					has_building = CT_relais_L1
-					has_building = TP_relais_L1
+					has_building = CA_col_L1 #montagne
+					has_building = CT_col_L1 #montagne
+					has_building = TP_col_L1 #montagne
 				}
 			}
 		}
@@ -252,9 +244,19 @@ province_event = {
 			factor = 0.9
 			any_province_holding = {
 				OR = {
-					has_building = CA_pont_L2
-					has_building = CT_pont_L2
-					has_building = TP_pont_L2
+					has_building = CT_relais_L1 #requires CT_col_1
+					has_building = TP_relais_L1 #requires TP_col_1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CA_pont_L2 #pont #requires_town_1
+					has_building = CT_pont_L2 #pont #requires_town_1
+					has_building = TP_pont_L2 #pont #requires_town_1
+					has_building = CT_oasis_L2 #désert #requires_town_1
 				}
 			}
 		}
@@ -418,9 +420,10 @@ province_event = {
 			factor = 0.9
 			any_province_holding = {
 				OR = {
-					has_building = CA_pont_L2
-					has_building = CT_pont_L2
-					has_building = TP_pont_L2
+					has_building = CA_pont_L2 #pont #requires_town_1
+					has_building = CT_pont_L2 #pont #requires_town_1
+					has_building = TP_pont_L2 #pont #requires_town_1
+					has_building = CT_oasis_L2 #désert #requires_town_1
 				}
 			}
 		}
@@ -584,9 +587,10 @@ province_event = {
 			factor = 0.9
 			any_province_holding = {
 				OR = {
-					has_building = CA_pont_L2
-					has_building = CT_pont_L2
-					has_building = TP_pont_L2
+					has_building = CA_pont_L2 #pont #requires_town_1
+					has_building = CT_pont_L2 #pont #requires_town_1
+					has_building = TP_pont_L2 #pont #requires_town_1
+					has_building = CT_oasis_L2 #désert #requires_town_1
 				}
 			}
 		}
@@ -722,9 +726,10 @@ province_event = {
 			factor = 0.9
 			any_province_holding = {
 				OR = {
-					has_building = CA_pont_L2
-					has_building = CT_pont_L2
-					has_building = TP_pont_L2
+					has_building = CA_pont_L2 #pont #requires_town_1
+					has_building = CT_pont_L2 #pont #requires_town_1
+					has_building = TP_pont_L2 #pont #requires_town_1
+					has_building = CT_oasis_L2 #désert #requires_town_1
 				}
 			}
 		}
