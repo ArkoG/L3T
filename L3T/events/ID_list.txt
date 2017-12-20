@@ -9,6 +9,8 @@
 # Cf [NON INCLUS] pour les fichiers d'events non inclus dans la version courante
 
 ###L3T_init_DOMAINES.txt
+#id = L3T.1 #mode debug //activation
+#id = L3T.2 #mode debug //désactivztion
 ##décider de l'avenir d'un domaine 
 #id = L3T.3 #domaine Féodal
 #id = L3T.4 #domaine Communal  
@@ -65,7 +67,7 @@
 #id = L3T.1106 ##used in L3T_pop_mouchards.txt
 #id = L3T.1107 ##used in L3T_pop_mouchards.txt
 #id = L3T.1108 #devv on loot
-#id = L3T.1109 ##used in L3T_pop_mouchards.txt
+###id = L3T.1109 ## UNused in L3T_pop_mouchards.txt
 #id = L3T.1110 #gives dev bonus on trade_port (cities only)
 #id = L3T.1111 #gives dev bonus on hospital building (all holdings)
 #id = L3T.100 #initialisation population buildings en variable
@@ -92,9 +94,9 @@
 #id = L3T.1104 #dev changes notifs debug
 #id = L3T.1105 #dev changes notifs debug
 #id = L3T.1106 #dev changes notifs debug
-#id = L3T.1107 #dev changes notifs debug
+#id = L3T.1107 #dev variable on loot settlement
 #id = L3T.1108 ##used in L3T_population.txt
-#id = L3T.1109 #dev variable on loot settlement
+#id = L3T.1109 #UNUSED
 #id = L3T.1109x #dev variable mouchards
 #id = L3T.1110 ##used in L3T_population.txt
 #id = L3T.1111 ##used in L3T_population.txt
