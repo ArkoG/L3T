@@ -6,6 +6,16 @@
 
 
 castle = {
+	CA_COMMERCE_tooltip = { #
+		desc = "CA_COMMERCE_tooltip_desc"
+		prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		gold_cost = 0.0
+		build_time = 8
+		ai_creation_factor = 5
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+	}
 #petit pont partout sauf désert
 CA_pont_L1 = { #gué
 	desc = "CA_pont_L1_desc"
@@ -53,7 +63,7 @@ CA_col_L2 = { #col route empierrée
 
 CA_col_MIL = { #nid d'aigle
 	desc = "CA_col_MIL_desc"
-	trigger = { TECH_CONSTRUCTION = 2 }
+	trigger = { TECH_CONSTRUCTION = 1 } #defensive tech instead
 	not_if_x_exists = { FEODAL_prod FEODAL_adm } #military only
 	potential = { terrain = mountain }
 	gold_cost = 150.0
@@ -63,6 +73,22 @@ CA_col_MIL = { #nid d'aigle
 	archers = 5
 	pikemen = 5
 	ai_creation_factor = 95	add_number_to_name = no	extra_tech_building_start = 10.0
+}
+CA_col_MIL_L2 = { #nid d'aigle
+	desc = "CA_col_MIL_desc"
+	trigger = { TECH_CONSTRUCTION = 2 } #defensive tech instead
+	potential = { terrain = mountain }
+	prerequisites = { ca_keep_3 CA_col_L1 }
+	upgrades_from = CA_col_MIL
+	gold_cost = 350.0
+	build_time = 730
+	tax_income = -0.2
+	fort_level = 1.0
+	archers = 10
+	archers_defensive = 0.02
+	pikemen = 10
+	pikemen_defensive = 0.02
+	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #routes de commerces
@@ -144,7 +170,16 @@ CA_fleuve_L3 = { #port fluvial avec péage
 
 
 city = {
-
+	CT_COMMERCE_tooltip = { #
+		desc = "CT_COMMERCE_tooltip_desc"
+		prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		gold_cost = 0.0
+		build_time = 8
+		ai_creation_factor = 5
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+	}
 #petit pont partout sauf désert
 CT_pont_L1 = { #gué
 	desc = "CT_pont_L1_desc"
@@ -220,20 +255,20 @@ CT_oasis_L1 = { #oasis
 	trigger = { TECH_CONSTRUCTION = 0 }
 	potential = {	terrain = desert }
 	#prerequisites = { CT_oasis_L1 }
-	gold_cost = 95.0	build_time = 220	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	gold_cost = 95.0	build_time = 220	local_tax_modifier = 0.01 tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_oasis_L2 = { #oasis 
 	desc = "CT_oasis_L2_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = CT_oasis_L1
-	#prerequisites = { CT_oasis_L2 }
-		gold_cost = 150.0	build_time = 350	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+	prerequisites = { ct_town_1 }
+		gold_cost = 150.0	build_time = 350	local_tax_modifier = 0.02	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_oasis_L3 = { #oasis 
 	desc = "CT_oasis_L3_desc"
 	trigger = { TECH_CONSTRUCTION = 0 }
 	upgrades_from = CT_oasis_L2
-		gold_cost = 120.0	build_time = 250	tax_income = 0.3	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+		gold_cost = 120.0	build_time = 250	local_tax_modifier = 0.02	tax_income = 0.5	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
 #grand pont sur fleuves seulement
@@ -359,7 +394,16 @@ CT_fleuve_L3 = { #port fluvial avec péage
 
 
 temple = {
-
+	TP_COMMERCE_tooltip = { #
+		desc = "CA_COMMERCE_tooltip_desc"
+		prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		gold_cost = 0.0
+		build_time = 8
+		ai_creation_factor = 5
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+	}
 #petit pont partout sauf désert
 TP_pont_L1 = { #gué
 	desc = "TP_pont_L1_desc"
