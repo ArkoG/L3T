@@ -275,7 +275,7 @@ character_event = {
 					limit = { check_variable = { which = "developpement" value = 1 }}
 					change_variable = { which = "developpement" value = -1 }
 					change_variable = { which = "developpement_yearly_growth" value = -1 }
-					holder_scope = { character_event = { id = L3T.1105 days = 0 }} #totoro
+					holder_scope = { character_event = { id = L3T.1105 days = 0 }}
 				}
 				
 			}
@@ -285,10 +285,9 @@ character_event = {
 					is_occupied = yes
 					location = { has_disease = no }
 				}
-				save_event_target_as = holding_dev #totoro
+				save_event_target_as = holding_dev
 				set_variable = { which = "developpementold" which = "developpement" }
-				#change_variable = { which = "developpement" value = 1 } 
-				holder_scope = { character_event = { id = L3T.1106 days = 0 }} #totoro
+				holder_scope = { character_event = { id = L3T.1106 days = 0 }}
 			}
 			if = {
 				limit = {
@@ -297,9 +296,8 @@ character_event = {
 					location = { has_disease = no }
 				}
 				set_variable = { which = "developpementold" which = "developpement" }
-				#change_variable = { which = "developpement" value = 1 } #totoro
-				save_event_target_as = holding_dev #totoro
-				holder_scope = { character_event = { id = L3T.1106 days = 0 }} #totoro
+				save_event_target_as = holding_dev
+				holder_scope = { character_event = { id = L3T.1106 days = 0 }}
 			}		
 		}
 	}
@@ -309,9 +307,6 @@ character_event = {
 character_event = { 
 	id = L3T.1108
 	hide_window = yes
-	#desc = "DESCL3T.1108"
-	#picture = GFX_evt_castle_construction
-	#border = GFX_event_normal_frame_economy
 	
 	is_triggered_only = yes 
 	
@@ -322,20 +317,19 @@ character_event = {
 	
 	immediate = { #i want to scope the settlement that fired this event
 		FROM = {
-			save_event_target_as = holding_dev #totoro
+			save_event_target_as = holding_dev
 			set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
 			if = {
 				limit = { check_variable = { which = "developpement" value = 15 } }
 				change_variable = { which = "developpement" value = -15 }
 				change_variable = { which = "developpement_looting" value = -15 }
-				holder_scope = { character_event = { id = L3T.1107 days = 0 }} #totoro
+				holder_scope = { character_event = { id = L3T.1107 days = 0 }}
 			}
 			if = {
 				limit = { NOT = { check_variable = { which = "developpement" value = 15 } } }
 				change_variable = { which = "developpement_looting" which = "developpement" }
 				set_variable = { which = "developpement" value = 0 }
-				#holder_scope = { character_event = { id = L3T.1109 days = 0 }} #totoro
-				#no need of a notification if already at zero, can't be worse.
+				#no need for a notification if already at zero, can't be worse.
 			}				
 		}
 	}
@@ -366,20 +360,22 @@ character_event = {
 					location = { has_trade_post = yes }
 					NOT = { has_title_flag = received_trade_post_devv_bonus }
 				}
-				save_event_target_as = holding_dev #totoro
 				#change_variable = { which = "developpement" value = 10 }
 				if = {
 					limit = { has_building = VOC_INDUSTRIELLE }
 					change_variable = { which = "developpement" value = 10 }
 					change_variable = { which = "developpement_trade_post" value = 10 }
-					holder_scope = { character_event = { id = L3T.11091 days = 0 }} #totoro
+					save_event_target_as = holding_dev
+					set_title_flag = received_trade_post_devv_bonus
+					holder_scope = { character_event = { id = L3T.11091 days = 0 }}
 				}
 				if = {
 					limit = { has_building = VOC_COMMERCIALE }
 					change_variable = { which = "developpement" value = 30 }
 					change_variable = { which = "developpement_trade_post" value = 30 }
-					holder_scope = { character_event = { id = L3T.11092 days = 0 }} #totoro
-					#change_variable = { which = "developpement" value = 20 } #only diff
+					save_event_target_as = holding_dev
+					set_title_flag = received_trade_post_devv_bonus
+					holder_scope = { character_event = { id = L3T.11091 days = 0 }}
 				}
 			}
 		}
@@ -422,7 +418,7 @@ character_event = {
 				change_variable = { which = "developpement" value = 10 }
 				change_variable = { which = "developpement_hospital" value = 10 }
 				save_event_target_as = holding_dev #totoro
-				holder_scope = { character_event = { id = L3T.11093 days = 0 }} #totoro
+				holder_scope = { character_event = { id = L3T.11093 days = 0 }}
 			}
 		}
 	}

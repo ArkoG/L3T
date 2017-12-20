@@ -175,45 +175,86 @@ character_event = { #notification for 1108 on_loot_settlement decrease
 	}
 }
 
-character_event = { #notification for trade post CT productrice #notification from 1110
+character_event = { #notification for hospital
 	id = L3T.11091
-	desc = "DESCL3T.11091"
-	picture = GFX_evt_castle_construction
-	border = GFX_event_normal_frame_economy
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "OK"	
-		clear_event_target = holding_dev 
+	#desc = "DESCL3T.11091"
+	title = "NAMEL3T.11091"
+
+	desc = {
+		trigger = { has_global_flag = debug_L3T }
+		text = DESCL3T.11091_debug_voc1
+		FROM = { has_building = VOC_INDUSTRIELLE }
 	}
-}
-character_event = { #notification for trade post CT commercante #notification for from 1110
-	id = L3T.11092
-	desc = "DESCL3T.11092"
+	desc = {
+		trigger = { has_global_flag = debug_L3T }
+		text = DESCL3T.11091_debug_voc2
+		FROM = { has_building = VOC_COMMERCIALE }
+	}
+	desc = {
+		trigger = {  NOT = { has_global_flag = debug_L3T } }
+		text = DESCL3T.11091
+	}
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "OK"	
+		#name = "OK"
+		name = "L3T.11091a"
 		clear_event_target = holding_dev 
 	}
 }
 character_event = { #notification for hospital
 	id = L3T.11093
 	desc = "DESCL3T.11093"
+	title = "NAMEL3T.11093"
+
+	desc = {
+		trigger = { has_global_flag = debug_L3T }
+		text = DESCL3T.11093_debug
+	}
+	desc = {
+		trigger = {  NOT = { has_global_flag = debug_L3T } }
+		text = DESCL3T.11093
+	}
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "OK"	
+		#name = "OK"
+		name = "L3T.11093a"
 		clear_event_target = holding_dev 
 	}
 }
+character_event = { #notification for hospital
+	id = L3T.11093
+	desc = "DESCL3T.11093"
+	title = "NAMEL3T.11093"
+
+	desc = {
+		trigger = { has_global_flag = debug_L3T }
+		text = DESCL3T.11093_debug
+	}
+	desc = {
+		trigger = {  NOT = { has_global_flag = debug_L3T } }
+		text = DESCL3T.11093
+	}
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+		name = "L3T.11093a"
+		clear_event_target = holding_dev 
+	}
+}
+
+##never called ATM
 character_event = { #notification from advanced ressources +10
 	id = L3T.11094
 	desc = "DESCL3T.11094"
