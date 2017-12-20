@@ -37,9 +37,11 @@ artist_guild = { #society code name
 			trait = apprenti_verrier
 			trait = compagnon_verrier
 			trait = maitre_verrier
-			AND = {
-				ai = no
-				has_global_flag = debug_L3T
+			hidden_tooltip = {
+				AND = {
+					ai = no
+					has_global_flag = debug_L3T
+				}
 			}
 		}		
 	}
@@ -67,6 +69,7 @@ artist_guild = { #society code name
 		limit = 25
 		startup_limit = 9
 		decisions = {
+			create_an_artwork
 			# TODO
 		}
 	}
