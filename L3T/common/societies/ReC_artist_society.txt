@@ -37,6 +37,10 @@ artist_guild = { #society code name
 			trait = apprenti_verrier
 			trait = compagnon_verrier
 			trait = maitre_verrier
+			AND = {
+				ai = no
+				has_global_flag = debug_L3T
+			}
 		}		
 	}
 
