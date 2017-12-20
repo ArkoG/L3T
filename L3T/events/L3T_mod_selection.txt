@@ -8,11 +8,9 @@ character_event = {
 	picture = GFX_evt_L3T_capitulaire
 
 	is_triggered_only = yes
-	
-	option = {
-		name = OK
-		set_global_flag = debug_L3T
-	}
+
+	immediate = { set_global_flag = debug_L3T }
+	option = { name = OK }
 }
 character_event = {
     id = L3T.2
@@ -22,10 +20,8 @@ character_event = {
 
 	is_triggered_only = yes
 	
-	option = {
-		name = OK
-		clr_global_flag = debug_L3T
-	}
+	immediate = { clr_global_flag = debug_L3T }
+	option = { name = OK }
 }
 
 ## Détection de la carte
