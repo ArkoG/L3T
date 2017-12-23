@@ -42,10 +42,12 @@ character_event = { #notification for 1103 disease decrease
 	desc = {
 		trigger = {  
 			NOT = { has_global_flag = debug_L3T }
-			FROM = {
-				has_disease = yes
-				NOT = {	has_province_modifier = meteo_inondation }
-				NOT = {	has_province_modifier = meteo_secheresse }
+			event_target:holding_dev = {
+				location = {
+					has_disease = yes
+					NOT = {	has_province_modifier = meteo_inondation }
+					NOT = {	has_province_modifier = meteo_secheresse }
+				}
 			}
 		}
 		text = DESCL3T.1105_disease
@@ -53,11 +55,13 @@ character_event = { #notification for 1103 disease decrease
 	desc = {
 		trigger = {  
 			NOT = { has_global_flag = debug_L3T }
-			FROM = {
-				NOT = {	has_disease = yes }
-				OR = {
-					has_province_modifier = meteo_inondation
-					has_province_modifier = meteo_secheresse
+			event_target:holding_dev = {
+				location = {
+					has_disease = no
+					OR = {
+						has_province_modifier = meteo_inondation
+						has_province_modifier = meteo_secheresse
+					}
 				}
 			}
 		}
@@ -66,11 +70,13 @@ character_event = { #notification for 1103 disease decrease
 	desc = {
 		trigger = {  
 			NOT = { has_global_flag = debug_L3T }
-			FROM = {
-				has_disease = yes
-				OR = {
-					has_province_modifier = meteo_inondation
-					has_province_modifier = meteo_secheresse
+			event_target:holding_dev = {
+				location = {
+					has_disease = yes
+					OR = {
+						has_province_modifier = meteo_inondation
+						has_province_modifier = meteo_secheresse
+					}
 				}
 			}
 		}
@@ -99,12 +105,14 @@ character_event = {  #notification for 1103 occupied stagnation
 	desc = {
 		trigger = {  
 			has_global_flag = debug_L3T
-			FROM = {
-				OR = {
-					has_siege = yes
-					is_occupied = yes
+			event_target:holding_dev = {
+				location = {
+					OR = {
+						has_siege = yes
+						is_occupied = yes
+					}
+					has_disease = no
 				}
-				location = { has_disease = no }
 			}
 		}
 		text = DESCL3T.1106_debug
@@ -112,10 +120,12 @@ character_event = {  #notification for 1103 occupied stagnation
 	desc = {
 		trigger = {  
 			NOT = { has_global_flag = debug_L3T }
-			FROM = {
-				has_siege = no
-				is_occupied = yes
-				location = { has_disease = no }
+			event_target:holding_dev = {
+				location = {
+					has_siege = no
+					is_occupied = yes
+					has_disease = no
+				}
 			}
 		}
 		text = DESCL3T.1106_occupation
@@ -123,10 +133,12 @@ character_event = {  #notification for 1103 occupied stagnation
 	desc = {
 		trigger = {  
 			NOT = { has_global_flag = debug_L3T }
-			FROM = {
-				has_siege = yes
-				is_occupied = no
-				location = { has_disease = no }
+			event_target:holding_dev = {
+				location = {
+					has_siege = yes
+					is_occupied = no
+					has_disease = no
+				}
 			}
 		}
 		text = DESCL3T.1106_assiege
