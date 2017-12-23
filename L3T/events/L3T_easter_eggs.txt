@@ -1397,9 +1397,11 @@ character_event = {
 # Give egg number 3
 character_event = {
 	id = L3T.431
+	title = NAMEL3T.431
 	desc = "DESCL3T.431"
-	picture = "GFX_evt_monastery_monks"
-
+	picture = GFX_evt_L3Tv_church
+	window = EventWindowL3T
+	
 	only_playable = yes
 	prisoner = no
 	capable_only = yes
