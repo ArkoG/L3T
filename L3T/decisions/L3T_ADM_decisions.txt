@@ -32,18 +32,18 @@ decisions = {
 					}
 				}
 			}
-			custom_tooltip = {
-				text = burnt_book_study
-				hidden_tooltip = {
-					OR = {
-						NOT = { has_character_flag = burnt_book_study }
-						had_character_flag = {
-						flag = burnt_book_study
-						days = 3650 #10y
-						}
-					}
-				}
-			}
+#			custom_tooltip = {
+#				text = burnt_book_study
+#				hidden_tooltip = {
+#					OR = {
+#						NOT = { has_character_flag = burnt_book_study }
+#						had_character_flag = {
+#						flag = burnt_book_study
+#						days = 3650 #10y
+#						}
+#					}
+#				}
+#			}
 			wealth = 150
 			custom_tooltip = {
 				text = UNOCCUPIED_DEMESNE_TITLE
