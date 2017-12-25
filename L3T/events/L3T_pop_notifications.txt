@@ -106,13 +106,13 @@ character_event = {  #notification for 1103 occupied stagnation
 		trigger = {  
 			has_global_flag = debug_L3T
 			event_target:holding_dev = {
-				location = {
+				#location = {
 					OR = {
 						has_siege = yes
 						is_occupied = yes
 					}
-					has_disease = no
-				}
+					#has_disease = no
+				#}
 			}
 		}
 		text = DESCL3T.1106_debug
@@ -121,11 +121,11 @@ character_event = {  #notification for 1103 occupied stagnation
 		trigger = {  
 			NOT = { has_global_flag = debug_L3T }
 			event_target:holding_dev = {
-				location = {
+				#location = {
 					has_siege = no
 					is_occupied = yes
-					has_disease = no
-				}
+					#has_disease = no
+				#}
 			}
 		}
 		text = DESCL3T.1106_occupation
@@ -134,11 +134,11 @@ character_event = {  #notification for 1103 occupied stagnation
 		trigger = {  
 			NOT = { has_global_flag = debug_L3T }
 			event_target:holding_dev = {
-				location = {
+				#location = {
 					has_siege = yes
 					is_occupied = no
-					has_disease = no
-				}
+					#has_disease = no
+				#}
 			}
 		}
 		text = DESCL3T.1106_assiege
@@ -187,7 +187,7 @@ character_event = { #notification for 1108 on_loot_settlement decrease
 	}
 }
 
-character_event = { #notification for hospital
+character_event = { #notification for trade post
 	id = L3T.11091
 	#desc = "DESCL3T.11091"
 	title = "NAMEL3T.11091"
@@ -237,30 +237,6 @@ character_event = { #notification for hospital
 	
 	option = {
 		#name = "OK"
-		name = "L3T.11093a"
-		clear_event_target = holding_dev 
-	}
-}
-character_event = { #notification for hospital
-	id = L3T.11093
-	desc = "DESCL3T.11093"
-	title = "NAMEL3T.11093"
-
-	desc = {
-		trigger = { has_global_flag = debug_L3T }
-		text = DESCL3T.11093_debug
-	}
-	desc = {
-		trigger = {  NOT = { has_global_flag = debug_L3T } }
-		text = DESCL3T.11093
-	}
-	picture = GFX_evt_castle_construction
-	border = GFX_event_normal_frame_economy
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "OK"
 		name = "L3T.11093a"
 		clear_event_target = holding_dev 
 	}
