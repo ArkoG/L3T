@@ -418,7 +418,12 @@ character_event = {
 				change_variable = { which = "developpement" value = 10 }
 				change_variable = { which = "developpement_hospital" value = 10 }
 				save_event_target_as = holding_dev #totoro
+				if = {
+					limit = { 
+						is_capital = yes
+					}
 				holder_scope = { character_event = { id = L3T.11093 days = 0 }}
+				}
 			}
 		}
 	}
