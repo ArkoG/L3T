@@ -187,7 +187,7 @@ character_event = { #notification for 1108 on_loot_settlement decrease
 	}
 }
 
-character_event = { #notification for trade post
+character_event = { #notification for trade post, for city owners
 	id = L3T.11091
 	#desc = "DESCL3T.11091"
 	title = "NAMEL3T.11091"
@@ -215,6 +215,24 @@ character_event = { #notification for trade post
 		#name = "OK"
 		name = "L3T.11091a"
 		clear_event_target = holding_dev 
+	}
+}
+character_event = { #notification for province owner, if not a republic/city owner
+	id = L3T.11092
+	#desc = "DESCL3T.11091"
+	title = "NAMEL3T.11092"
+
+	desc = "DESCL3T.11092"
+
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		#name = "OK"
+		name = "L3T.11091a"
+		#clear_event_target = holding_dev 
 	}
 }
 character_event = { #notification for hospital

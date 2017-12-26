@@ -377,6 +377,12 @@ character_event = {
 					set_title_flag = received_trade_post_devv_bonus
 					holder_scope = { character_event = { id = L3T.11091 days = 0 }}
 				}
+				if = {
+					limit = { 
+						location = { owner = { is_republic = no }}
+					}
+					location = { owner = { character_event = { id = L3T.11092 days = 0 }}}
+				}
 			}
 		}
 	}
@@ -417,11 +423,11 @@ character_event = {
 				set_title_flag = received_hospital_devv_bonus
 				change_variable = { which = "developpement" value = 10 }
 				change_variable = { which = "developpement_hospital" value = 10 }
-				save_event_target_as = holding_dev #totoro
 				if = {
 					limit = { 
 						is_capital = yes
 					}
+				save_event_target_as = holding_dev #totoro
 				holder_scope = { character_event = { id = L3T.11093 days = 0 }}
 				}
 			}
