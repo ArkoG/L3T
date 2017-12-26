@@ -1,19 +1,10 @@
 # Development variable notifications
 
-character_event = { #notification for 1103 normal growth
-	id = L3T.1104
-	desc = "DESCL3T.1104"
-	title = "NAMEL3T.1104"
+character_event = { #notification for 1103 normal growth #debug mode only
+	id = L3T.11031
+	desc = "DESCL3T.11031"
+	title = "NAMEL3T.11031"
 
-	#desc = {
-	#	trigger = { has_global_flag = debug_L3T }
-	#	text = DESCL3T.1104_debug
-	#}
-	#desc = { #this event is debug mod only
-	#	trigger = {  NOT = { has_global_flag = debug_L3T } }
-	#	text = DESCL3T.1104
-	#}
-	
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
 	
@@ -21,23 +12,21 @@ character_event = { #notification for 1103 normal growth
 	
 	trigger = {
 		has_global_flag = init_population
+		has_global_flag = debug_L3T #safety catch
 	}
-	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
-	
+
 	option = {
 		name = "OK"	
-		#name = "L3T.1104"
 		clear_event_target = holding_dev 
 	}
 }
 character_event = { #notification for 1103 disease decrease
-	id = L3T.1105
-	#desc = "DESCL3T.1105"
-	title = "NAMEL3T.1105"
+	id = L3T.11032
+	title = "NAMEL3T.11032"
 
 	desc = {
 		trigger = { has_global_flag = debug_L3T }
-		text = DESCL3T.1105_debug
+		text = DESCL3T.11032_debug
 	}
 	desc = {
 		trigger = {  
@@ -50,7 +39,7 @@ character_event = { #notification for 1103 disease decrease
 				}
 			}
 		}
-		text = DESCL3T.1105_disease
+		text = DESCL3T.11032_disease
 	}
 	desc = {
 		trigger = {  
@@ -65,7 +54,7 @@ character_event = { #notification for 1103 disease decrease
 				}
 			}
 		}
-		text = DESCL3T.1105_chatastrophe
+		text = DESCL3T.11032_chatastrophe
 	}
 	desc = {
 		trigger = {  
@@ -80,7 +69,7 @@ character_event = { #notification for 1103 disease decrease
 				}
 			}
 		}
-		text = DESCL3T.1105_chatastrophe #in case of both disease+meteo, meteo desc
+		text = DESCL3T.11032_chatastrophe #in case of both disease+meteo, meteo desc
 	}
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -90,17 +79,14 @@ character_event = { #notification for 1103 disease decrease
 	trigger = {
 		has_global_flag = init_population
 	}
-	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
-	
 	option = {
-		#name = "OK"	
-		name = "L3T.1105a"
+		name = "L3T.11032a"
 		clear_event_target = holding_dev 
 	}
 }
 character_event = {  #notification for 1103 occupied stagnation
-	id = L3T.1106
-	title = "NAMEL3T.1106"
+	id = L3T.11033
+	title = "NAMEL3T.11033"
 
 	desc = {
 		trigger = {  
@@ -115,7 +101,7 @@ character_event = {  #notification for 1103 occupied stagnation
 				#}
 			}
 		}
-		text = DESCL3T.1106_debug
+		text = DESCL3T.11033_debug
 	}
 	desc = {
 		trigger = {  
@@ -128,7 +114,7 @@ character_event = {  #notification for 1103 occupied stagnation
 				#}
 			}
 		}
-		text = DESCL3T.1106_occupation
+		text = DESCL3T.11033_occupation
 	}
 	desc = {
 		trigger = {  
@@ -141,7 +127,7 @@ character_event = {  #notification for 1103 occupied stagnation
 				#}
 			}
 		}
-		text = DESCL3T.1106_assiege
+		text = DESCL3T.11033_assiege
 	}
 	
 	picture = GFX_evt_castle_construction
@@ -152,27 +138,23 @@ character_event = {  #notification for 1103 occupied stagnation
 	trigger = {
 		has_global_flag = init_population
 	}
-	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
-	
 	option = {
-		#name = "OK"	
-		name = "L3T.1106a"
+		name = "L3T.11033a"
 		clear_event_target = holding_dev 
 	}
 }
 
-character_event = { #notification for 1108 on_loot_settlement decrease
-	id = L3T.1107
-	#desc = "DESCL3T.1107"
-	title = "NAMEL3T.1107"
+character_event = { #notification for 1106 on_loot_settlement decrease
+	id = L3T.11061
+	title = "NAMEL3T.11061"
 
 	desc = {
 		trigger = { has_global_flag = debug_L3T }
-		text = DESCL3T.1107_debug
+		text = DESCL3T.11061_debug
 	}
 	desc = {
 		trigger = {  NOT = { has_global_flag = debug_L3T } }
-		text = DESCL3T.1107
+		text = DESCL3T.11061
 	}
 	
 	picture = GFX_evt_castle_construction
@@ -181,30 +163,28 @@ character_event = { #notification for 1108 on_loot_settlement decrease
 	is_triggered_only = yes
 	
 	option = {
-		#name = "OK"	
-		name = "L3T.1107a"
+		name = "L3T.11061a" 
 		clear_event_target = holding_dev 
 	}
 }
 
 character_event = { #notification for trade post, for city owners
-	id = L3T.11091
-	#desc = "DESCL3T.11091"
-	title = "NAMEL3T.11091"
+	id = L3T.11041
+	title = "NAMEL3T.11041"
 
 	desc = {
 		trigger = { has_global_flag = debug_L3T }
-		text = DESCL3T.11091_debug_voc1
+		text = DESCL3T.11041_debug_voc1
 		FROM = { has_building = VOC_INDUSTRIELLE }
 	}
 	desc = {
 		trigger = { has_global_flag = debug_L3T }
-		text = DESCL3T.11091_debug_voc2
+		text = DESCL3T.11041_debug_voc2
 		FROM = { has_building = VOC_COMMERCIALE }
 	}
 	desc = {
 		trigger = {  NOT = { has_global_flag = debug_L3T } }
-		text = DESCL3T.11091
+		text = DESCL3T.11041
 	}
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -212,16 +192,15 @@ character_event = { #notification for trade post, for city owners
 	is_triggered_only = yes
 	
 	option = {
-		#name = "OK"
-		name = "L3T.11091a"
+		name = "L3T.11041a"
 		clear_event_target = holding_dev 
 	}
 }
 character_event = { #notification for province owner, if not a republic/city owner
-	id = L3T.11092
-	title = "NAMEL3T.11092"
+	id = L3T.11042
+	title = "NAMEL3T.11042"
 
-	desc = "DESCL3T.11092"
+	desc = "DESCL3T.11042"
 
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -229,22 +208,22 @@ character_event = { #notification for province owner, if not a republic/city own
 	is_triggered_only = yes
 	
 	option = {
-		name = "L3T.11091a"
-		#clear_event_target = holding_dev 
+		name = "L3T.11041a"
+		#clear_event_target = holding_dev //pour mémoire
 	}
 }
 character_event = { #notification for hospital
-	id = L3T.11093
-	desc = "DESCL3T.11093"
-	title = "NAMEL3T.11093"
+	id = L3T.11051
+	desc = "DESCL3T.11051"
+	title = "NAMEL3T.11051"
 
 	desc = {
 		trigger = { has_global_flag = debug_L3T }
-		text = DESCL3T.11093_debug
+		text = DESCL3T.11051_debug
 	}
 	desc = {
 		trigger = {  NOT = { has_global_flag = debug_L3T } }
-		text = DESCL3T.11093
+		text = DESCL3T.11051
 	}
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -252,8 +231,7 @@ character_event = { #notification for hospital
 	is_triggered_only = yes
 	
 	option = {
-		#name = "OK"
-		name = "L3T.11093a"
+		name = "L3T.11051a"
 		clear_event_target = holding_dev 
 	}
 }
