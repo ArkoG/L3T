@@ -14,21 +14,6 @@ trade_post = {
 			TECH_TRADE_PRACTICES = 1
 			custom_tooltip = {
 				text = TR_SILK_ROAD_1_OTHER_PROVINCES_CONDITION
-				NOT = {
-					any_trade_route_province = {
-						NOT = {
-							distance = {
-								where = ROOT
-								value = 100
-							}
-						}
-						OR = {
-							trade_post_has_building = tr_silk_road_1
-							trade_post_has_building = tr_silk_road_2
-							trade_post_has_building = tr_silk_road_3
-						}
-					}
-				}
 			}
 		}
 		gold_cost = 200
@@ -56,7 +41,7 @@ trade_post = {
 						NOT = {
 							distance = {
 								where = ROOT
-								value = 200
+								value = 250
 							}
 						}
 						OR = {
