@@ -240,8 +240,29 @@ character_event = {
 			if = {
 				limit = { #progression malus on disease bad weather
 					location = { 
-						OR = {
+						#OR = {
 							has_disease = yes
+						#	has_province_modifier = meteo_inondation
+						#	has_province_modifier = meteo_secheresse
+						#}
+					}
+				}
+				save_event_target_as = holding_dev #totoro
+				set_variable = { which = "developpementold" which = "developpement" }
+				if = {
+					limit = { check_variable = { which = "developpement" value = 1 }}
+					change_variable = { which = "developpement" value = -1 }
+					change_variable = { which = "developpement_yearly_growth" value = -1 }
+					#holder_scope = { character_event = { id = L3T.1105 days = 0 }}
+					holder_scope = { character_event = { id = L3T.11032 days = 0 }}
+				}
+				
+			}
+			if = {
+				limit = { #progression malus on disease bad weather
+					location = { 
+						OR = {
+						#	has_disease = yes
 							has_province_modifier = meteo_inondation
 							has_province_modifier = meteo_secheresse
 						}
@@ -253,8 +274,7 @@ character_event = {
 					limit = { check_variable = { which = "developpement" value = 1 }}
 					change_variable = { which = "developpement" value = -1 }
 					change_variable = { which = "developpement_yearly_growth" value = -1 }
-					#holder_scope = { character_event = { id = L3T.1105 days = 0 }}
-					holder_scope = { character_event = { id = L3T.11032 days = 0 }}
+					holder_scope = { character_event = { id = L3T.11032 days = 0 }} #spam limiting, show only in debug mode
 				}
 				
 			}

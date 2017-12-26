@@ -43,7 +43,8 @@ character_event = { #notification for 1103 disease decrease
 	}
 	desc = {
 		trigger = {  
-			NOT = { has_global_flag = debug_L3T }
+			#NOT = { has_global_flag = debug_L3T }
+			has_global_flag = debug_L3T
 			event_target:holding_dev = {
 				location = {
 					has_disease = no
