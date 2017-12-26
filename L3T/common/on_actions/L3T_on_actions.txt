@@ -201,20 +201,20 @@ on_loot_settlement = { #seems it fires for the settlement owner, FROM is the set
 	#random_events = {
 	#}
 	events = {
-		L3T.1108 #systématique ou non
+		L3T.1106 #systématique ou non
 	}
 }
 # ROOT = Builder, FROM = Province
 on_trade_post_construction_completed = {
 	events = {
-		L3T.1110 #dev variable
+		L3T.1104 #dev variable
 	}
 }
 
 # ROOT = Builder, FROM = Province
 on_hospital_construction_completed = {
 	events = {
-		L3T.1111 #dev variable
+		L3T.1105 #dev variable
 	}
 }
 
