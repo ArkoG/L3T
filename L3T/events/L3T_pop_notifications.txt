@@ -219,7 +219,6 @@ character_event = { #notification for trade post, for city owners
 }
 character_event = { #notification for province owner, if not a republic/city owner
 	id = L3T.11092
-	#desc = "DESCL3T.11091"
 	title = "NAMEL3T.11092"
 
 	desc = "DESCL3T.11092"
@@ -230,7 +229,6 @@ character_event = { #notification for province owner, if not a republic/city own
 	is_triggered_only = yes
 	
 	option = {
-		#name = "OK"
 		name = "L3T.11091a"
 		#clear_event_target = holding_dev 
 	}
