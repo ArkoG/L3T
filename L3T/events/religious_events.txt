@@ -1555,9 +1555,9 @@ character_event = {
 		trigger_switch = {
 			on_trigger = trait
 			kinslayer = {
-				piety = -100
-				wealth = -50
-				remove_trait = kinslayer
+		piety = -100
+		wealth = -50
+		remove_trait = kinslayer
 			}
 			familial_kinslayer = {
 				piety = -50
@@ -2515,6 +2515,12 @@ character_event = {
 				years = 5
 			}
 		}
+		# Beginning add L3T
+		religion_authority = {
+			modifier = achat_indulgence
+			years = 5
+		}
+		# End add L3T
 #		clr_character_flag  = ask_for_indulgence	
 	}
 	option = {
@@ -2557,6 +2563,12 @@ character_event = {
 				years = 5
 			}
 		}
+		# Beginning add L3T
+		religion_authority = {
+			modifier = achat_indulgence
+			years = 5
+		}
+		# end add L3T
 #		clr_character_flag  = ask_for_indulgence	
 	}
 	option = {
@@ -2600,6 +2612,12 @@ character_event = {
 				years = 5
 			}
 		}
+		# Beginning add L3T
+		religion_authority = {
+			modifier = achat_indulgence
+			years = 5
+		}
+		# end add L3T
 #		clr_character_flag  = ask_for_indulgence	
 	}
 	option = {
@@ -2642,6 +2660,12 @@ character_event = {
 				years = 5
 			}
 		}
+		# Beginning add L3T
+		religion_authority = {
+			modifier = achat_indulgence
+			years = 5
+		}
+		# end add L3T
 #		clr_character_flag  = ask_for_indulgence	
 	}
 	option = {
@@ -2654,6 +2678,12 @@ character_event = {
 				years = 5
 			}
 		}
+		# Beginning add L3T
+		religion_authority = {
+			modifier = achat_indulgence_refuse
+			years = 5
+		}
+		# End add L3T
 		clr_character_flag  = ask_for_indulgence	
 	}
 }
@@ -2706,6 +2736,12 @@ character_event = {
 				years = 10
 			}
 		}
+		# Beginning add L3T
+		religion_authority = {
+			modifier = rachat_excommunion
+			years = 5
+		}
+		# End add L3T
 		clr_character_flag  = ask_for_repentance	
 	}
 	option = {
@@ -2731,6 +2767,12 @@ character_event = {
 				years = 10
 			}
 		}
+		# Beginning add L3T
+		religion_authority = {
+			modifier = rachat_excommunion
+			years = 5
+		}
+		# End add L3T
 		clr_character_flag  = ask_for_repentance	
 	}
 	option = {
@@ -2756,6 +2798,12 @@ character_event = {
 				years = 10
 			}
 		}
+		# Beginning add L3T
+		religion_authority = {
+			modifier = rachat_excommunion
+			years = 5
+		}
+		# End add L3T
 		clr_character_flag  = ask_for_repentance	
 	}
 	option = {
@@ -2780,6 +2828,12 @@ character_event = {
 				years = 10
 			}
 		}
+		# Beginning add L3T
+		religion_authority = {
+			modifier = rachat_excommunion
+			years = 5
+		}
+		# End add L3T
 		clr_character_flag  = ask_for_repentance	
 	}
 	option = {
@@ -2791,7 +2845,10 @@ character_event = {
 				modifier = refused_making_repentance
 				years = 5
 			}
-		}
+		}		
+		# Beginning add L3T
+		# No effect !
+		# End add L3T
 		clr_character_flag  = ask_for_repentance	
 	}
 }
@@ -3900,14 +3957,14 @@ character_event = {
 	picture = GFX_evt_heretic
 	border = GFX_event_normal_frame_religion
 	
-	is_triggered_only = yes
-	
  	trigger = {
 		OR = {
 			ai = yes
 			FROMs_religion_is_playable_trigger = yes
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	option = {
 		name = EVTOPTA39601
@@ -7842,4 +7899,3 @@ character_event = {
 		}
 	}
 }
-
