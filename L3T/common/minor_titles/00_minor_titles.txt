@@ -2915,10 +2915,8 @@ title_genghis = {
 	monthly_salary = 0
 	monthly_prestige = 1.50
 	
-	gain_effect = {
-	}
-	lose_effect = {
-	}
+	gain_effect = { set_character_flag = titre_mineur_detenu }
+	lose_effect = { clr_character_flag = titre_mineur_detenu }
 	
 	message = yes
 }
