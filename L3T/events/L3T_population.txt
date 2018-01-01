@@ -247,10 +247,11 @@ character_event = {
 						#}
 					}
 				}
-				save_event_target_as = holding_dev #totoro
+				
 				set_variable = { which = "developpementold" which = "developpement" }
 				if = {
 					limit = { check_variable = { which = "developpement" value = 1 }}
+					save_event_target_as = holding_dev #totoro
 					change_variable = { which = "developpement" value = -1 }
 					change_variable = { which = "developpement_yearly_growth" value = -1 }
 					#holder_scope = { character_event = { id = L3T.1105 days = 0 }}
@@ -268,13 +269,14 @@ character_event = {
 						}
 					}
 				}
-				save_event_target_as = holding_dev #totoro
+				
 				set_variable = { which = "developpementold" which = "developpement" }
 				if = {
 					limit = { check_variable = { which = "developpement" value = 1 }}
+					save_event_target_as = holding_dev #totoro
 					change_variable = { which = "developpement" value = -1 }
 					change_variable = { which = "developpement_yearly_growth" value = -1 }
-					holder_scope = { character_event = { id = L3T.11032 days = 0 }} #spam limiting, show only in debug mode
+					holder_scope = { character_event = { id = L3T.11034 days = 0 }} #spam limiting, show only in debug mode
 				}
 				
 			}
