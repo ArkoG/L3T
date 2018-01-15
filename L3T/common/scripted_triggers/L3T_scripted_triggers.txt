@@ -84,6 +84,12 @@ region_vitis_vinifera = {
 }
 
 ###ECO
+
+jamais = {
+	custom_tooltip = { text = TOOLTIP_JAMAIS }
+	hidden_tooltip = { is_at_sea = no }
+}
+
 is_active_fonderie_by_neighbor = {
 	AND = { # Use AND because it will be use in a OR bloc
 		OR = {

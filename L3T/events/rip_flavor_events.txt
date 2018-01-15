@@ -3061,7 +3061,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		is_tribal = no
+		is_tribal = yes #L3T
 		is_nomadic = no
 		higher_tier_than = COUNT
 		job_spiritual = {

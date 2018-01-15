@@ -2,16 +2,16 @@
 #The society name
 artist_guild;The Artist Guild;La Guilde des Artistes;;;;;;;;;;;;x
 #The society description
-artist_guild_desc;;La Guilde des Artistes rassemble des artistes du Monde Connu qui veulent par leur art honorer Dieu.;;;;;;;;;;;;x
+artist_guild_desc;The Guild of Artists brings together artists of the known world who want by their art to honor God.;La Guilde des Artistes rassemble des artistes du Monde Connu qui veulent par leur art honorer Dieu.;;;;;;;;;;;;x
 #Leader description
-artist_guild_leader_desc;The description of the leader of the society.;;;;;;;;;;;;;x
+artist_guild_leader_desc;The Grand Master of the Guild is a reference in this area. He has traveled the known world without ceasing to learn, innovate, transmit to get to the top of his art. He is one of the men of this century, whose works will last and his memory will be celebrated for a long time.;Le Grand-Maître de la Guilde est une référence en la matière. Il a parcouru tout le Monde connu sans cesser d'apprendre, innover, transmettre pour arriver au sommet de son art. Il est un des hommes de ce siècle, dont les oeuvres perdureront et sa mémoire sera célébrée longtemps encore.;;;;;;;;;;;;x
 #Name of the ranks
-artist_guild_rank_1_female;;;;;;;;;;;;;;x
-artist_guild_rank_2_female;;;;;;;;;;;;;;x
-artist_guild_rank_3_female;;;;;;;;;;;;;;x
-artist_guild_rank_4_female;;;;;;;;;;;;;;x
-artist_guild_rank_1_male;;Apprenti;;;;;;;;;;;;x
-artist_guild_rank_2_male;;Compagnon;;;;;;;;;;;;x
+artist_guild_rank_1_female;Apprentice;Apprenti;;;;;;;;;;;;x
+artist_guild_rank_2_female;Journeyman;Compagnon;;;;;;;;;;;;x
+artist_guild_rank_3_female;Master;Maître;;;;;;;;;;;;x
+artist_guild_rank_4_female;Grand Master;Grand-Maître;;;;;;;;;;;;x
+artist_guild_rank_1_male;Apprentice;Apprenti;;;;;;;;;;;;x
+artist_guild_rank_2_male;Journeyman;Compagnon;;;;;;;;;;;;x
 artist_guild_rank_3_male;Master;Maître;;;;;;;;;;;;x
 artist_guild_rank_4_male;Grand Master;Grand-Maître;;;;;;;;;;;;x
 #Name of the currency
@@ -19,12 +19,11 @@ artist_guild_currency;Skill Points;Points de Talent;;;;;;;;;;;;x
 #Rank up button name
 artist_guild_rank_up;Request to rank up.;Demander à être promu.;;;;;;;;;;;;x
 artist_guild_rank_up_desc;Request to the Grand Master to be ranked up.;Demander au Grans Maître à être promu.;;;;;;;;;;;;x
-request_to_rank_up_within_society_trait;;A montré l'étendu de son talent avec un chef d'oeuvre.;;;;;;;;;;;;x
+request_to_rank_up_within_society_trait;Has shown the extent of his talent with a masterpiece.;A montré l'étendu de son talent avec un chef d'oeuvre.;;;;;;;;;;;;x
 #For tooltip that require being a member
 IS_artist_guild_TRIGGER;Is a member of the Artist Guild.;Est un membre de la Guilde des Artistes.;;;;;;;;;;;;x
-
 #Decisions
-create_an_artwork;;Créer un chef d'oeuvre.;;;;;;;;;;;;x
-create_an_artwork_desc;;Si l'oeuvre est réussie, l'artiste pourra être promu dans la Guilde des Artistes;;;;;;;;;;;;x
-apprenti_with_750;;Apprenti avec 750 Points de Talent;;;;;;;;;;;;x
-compagnon_with_1250;;Compagnon avec 1250 Points de Talent;;;;;;;;;;;;x
+create_an_artwork;Create a masterpiece.;Créer un chef d'oeuvre.;;;;;;;;;;;;x
+create_an_artwork_power_desc;If the work is successful, the artist can be promoted in the Artists Guild;Si l'oeuvre est réussie, l'artiste pourra être promu dans la Guilde des Artistes;;;;;;;;;;;;x
+apprenti_with_750;Apprentice with 750 Talent Points;Apprenti avec 750 Points de Talent;;;;;;;;;;;;x
+compagnon_with_1250;Journeyman with 1250 Talent Points;Compagnon avec 1250 Points de Talent;;;;;;;;;;;;x

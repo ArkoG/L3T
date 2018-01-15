@@ -34,67 +34,94 @@ batisseur_cathedrale = {
 }
 
 apprenti_sculpteur = {
+	potential = {
+		always = no
+	}
+	
 	same_opinion = 10
 	cannot_marry = yes
 	
 	customizer = no
-	random = no
 }
 
 compagnon_sculpteur = {
+	potential = {
+		always = no
+	}
+	
 	same_opinion = 10
 	
 	customizer = no
-	random = no
 }
 
 maitre_sculpteur = {
+	potential = {
+		always = no
+	}
+	
 	same_opinion = 10
 	#health = 1 #to help master to not get pruned to soon	
 	customizer = no
-	random = no
 }
 
 apprenti_fresquiste = {
+	potential = {
+		always = no
+	}
+	
 	same_opinion = 10
 	cannot_marry = yes
 	
 	customizer = no
-	random = no
 }
 
 compagnon_fresquiste = {
+	potential = {
+		always = no
+	}
+	
 	same_opinion = 10
 	
 	customizer = no
-	random = no
 }
 
 maitre_fresquiste = {
+	potential = {
+		always = no
+	}
+	
 	same_opinion = 10
 	#health = 1 #to help master to not get pruned to soon
 	customizer = no
-	random = no
 }
 
 apprenti_verrier = {
+	potential = {
+		always = no
+	}
+	
 	same_opinion = 10
 	cannot_marry = yes
 	
 	customizer = no
-	random = no
 }
 
 compagnon_verrier = {
+	potential = {
+		always = no
+	}
+	
 	same_opinion = 10
 	
 	customizer = no
-	random = no
 }
 
 maitre_verrier = {
+	potential = {
+		always = no
+	}
+	
 	same_opinion = 10
 	#health = 1 #to help master to not get pruned to soon
 	customizer = no
-	random = no
 }

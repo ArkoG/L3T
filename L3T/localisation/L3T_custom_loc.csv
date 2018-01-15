@@ -1,6 +1,5 @@
 #;;CUSTOM_LOCALISATION;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
-
 #;;CATHEDRAL;;;;;;;;;;;;x
 ca_cathedrale_01_shorter;building site overture;'ouverture du chantier;;;;;;;;;;;;x
 ca_cathedrale_02_shorter;foundations;es fondations;;;;;;;;;;;;x
@@ -20,7 +19,6 @@ avancement_normal;progresses on schedule;progresse selon les délais prévus;;;;;;
 avancement_up;progresses with a smooth rythm;progresse à un trés bon rythme;;;;;;;;;;;;x
 avancement_down;progresses slower than it should;malheureusement piétine;;;;;;;;;;;;x
 avancement_stop;is sadly stooped for now;est malheureusement a l'arrêt pour le moment;;;;;;;;;;;;x
-
 #;;PASS;;;;;;;;;;;;x
 col_minor_descA;which lies between mounts covered by snow in winter;qui s'engouffre entre les monts couverts de neige à la froide saison;;;;;;;;;;;;x
 col_minor_descB;whick has a pretty bad reputation;qui a cependant mauvaise réputation pour les voyageurs;;;;;;;;;;;;x
@@ -30,13 +28,11 @@ col_major_descA;which ventures between snowy pikes;qui s'engouffre entre les cim
 col_major_descB;which is feared by most travellers;dont le passgage est redouté par nombre de voyageurs;;;;;;;;;;;;x
 col_major_descC;which lonely attraction is its pastures;qui n'est guère prisé que pour ces alpages proches;;;;;;;;;;;;x
 col_major_descD;where few actually dare venturing;où néanmoins peu osent s'aventurer;;;;;;;;;;;;x
-
 #;;ROUTES;;;;;;;;;;;;x
 TYPE_route_terrestre;land;terrestre;;;;;;;;;;;;x
 TYPE_route_fluviale;fluvial;fluviale;;;;;;;;;;;;x
 TYPE_modifier_route_terrestre;trade Route;route de commerce;;;;;;;;;;;;x
 TYPE_modifier_route_fluviale;river Trade Route;voie commerciale fluviale;;;;;;;;;;;;x
-
 #;;VARIOUS FLAVOUR;;;;;;;;;;;;x
 #;blablabla se passe GetTopographicalFlavour...;;;;;;;;;;;;x
 danslest;in the East of the province;dans l'Est de la province;;;;;;;;;;;;x
@@ -68,12 +64,14 @@ theway;the Great path;la Grande route;;;;;;;;;;;;x
 #DESCL3T.33;;Il faut pour cela emprunter [Location.GetRouteRank] et se rendre [Location.GetTopographicalFlavour] pour enfin trouver où se terrent ces vils gredins et les défaire une bonne fois pour toutes !;;;;;;;;;;;x
 #;GetCutStoneMaterial;;;;;;;;;;;;x
 someoldwall;some old wall from the past;un mur ancien, témoin d'un passé oublié;;;;;;;;;;;;x
-someruins;some forgotten times ruins;des ruines d'origine inconnue;;;;;;;;;;;;x
-someoldfort;some old fort remains;les restes de ce vieux fort;;;;;;;;;;;;x
+someruins;some ruins from forgotten times;des ruines d'origine inconnue;;;;;;;;;;;;x
+someoldfort;some remains of an old fort;les restes de ce vieux fort;;;;;;;;;;;;x
 someoldtemple;that strange and old temple;cet ancien et étrange temple;;;;;;;;;;;;x
 someoldtower;an half fallen tower;cette tour à demi écroulée;;;;;;;;;;;;x
 someoldpavedroute;that old scrappy paved road;cette voie pavée inutilisable;;;;;;;;;;;;x
 #;GetDeDapostrophe;;;;;;;;;;;;x
 get_d_apostrophe;of ;d';;;;;;;;;;x
 get_de;of ;de ;;;;;;;;;;x
-
+#;GetEnA;;;;;;;;;;;;x
+get_en_prov;in ;en ;;;;;;;;;;;;x
+get_a_prov;in ;à ;;;;;;;;;;;;x

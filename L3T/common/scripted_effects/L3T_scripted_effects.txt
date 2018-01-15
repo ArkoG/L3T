@@ -2,7 +2,7 @@
 remove_feodal_adm_modifier_if_necessary = {
 	if = {
 		limit = {
-			has_character_modifier = feodal_adm_modifier
+			has_character_flag = feodal_adm_modifier
 			FROMFROM = {
 				NOT = { has_building = CA_chap_seign }
 				NOT = { has_building = CA_chap_seign_2 }
@@ -22,7 +22,7 @@ remove_feodal_adm_modifier_if_necessary = {
 remove_feodal_adm_modifier_in_capital_if_necessary = {
 	if = {
 		limit = {
-			has_character_modifier = feodal_adm_modifier
+			has_character_flag = feodal_adm_modifier
 			capital_holding = {
 				NOT = { has_building = CA_chap_seign }
 				NOT = { has_building = CA_chap_seign_2 }

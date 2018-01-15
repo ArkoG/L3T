@@ -1,0 +1,228 @@
+# Development variable notifications
+
+character_event = { #notification for 1103 normal growth #debug mode only
+	id = L3T.11031
+	desc = "DESCL3T.11031"
+	title = "NAMEL3T.11031"
+
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes #called only in debug mod
+	
+	trigger = {
+		has_global_flag = init_population
+		has_global_flag = debug_L3T #safety catch
+	}
+
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
+character_event = { #notification for 1103 disease decrease
+	id = L3T.11032
+	title = "NAMEL3T.11032"
+	desc = "DESCL3T.11032_disease"
+
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	option = {
+		name = "L3T.11032a"
+		clear_event_target = holding_dev 
+	}
+}
+character_event = { #notification for 1103 meteo decrease
+	id = L3T.11034
+	title = "NAMEL3T.11034"
+	desc = "DESCL3T.11034_chatastrophe"
+
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	option = {
+		name = "L3T.11034a"
+		clear_event_target = holding_dev 
+	}
+}
+character_event = {  #notification for 1103 occupied stagnation
+	id = L3T.11033
+	title = "NAMEL3T.11033"
+
+	desc = {
+		trigger = {  
+			has_global_flag = debug_L3T
+			event_target:holding_dev = {
+				OR = {
+					has_siege = yes
+					is_occupied = yes
+				}
+			}
+		}
+		text = DESCL3T.11033_debug
+	}
+	desc = {
+		trigger = {  
+			NOT = { has_global_flag = debug_L3T }
+			event_target:holding_dev = {
+				has_siege = no
+				is_occupied = yes
+			}
+		}
+		text = DESCL3T.11033_occupation
+	}
+	desc = {
+		trigger = {  
+			NOT = { has_global_flag = debug_L3T }
+			event_target:holding_dev = {
+				has_siege = yes
+				is_occupied = no
+			}
+		}
+		text = DESCL3T.11033_assiege
+	}
+	
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	option = {
+		name = "L3T.11033a"
+		clear_event_target = holding_dev 
+	}
+}
+
+character_event = { #notification for 1106 on_loot_settlement decrease
+	id = L3T.11061
+	title = "NAMEL3T.11061"
+
+	desc = {
+		trigger = { has_global_flag = debug_L3T }
+		text = DESCL3T.11061_debug
+	}
+	desc = {
+		trigger = {  NOT = { has_global_flag = debug_L3T } }
+		text = DESCL3T.11061
+	}
+	
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.11061a" 
+		clear_event_target = holding_dev 
+	}
+}
+
+character_event = { #notification for trade post, for city owners
+	id = L3T.11041
+	title = "NAMEL3T.11041"
+
+	desc = {
+		trigger = { has_global_flag = debug_L3T }
+		text = DESCL3T.11041_debug_voc1
+		FROM = { has_building = VOC_INDUSTRIELLE }
+	}
+	desc = {
+		trigger = { has_global_flag = debug_L3T }
+		text = DESCL3T.11041_debug_voc2
+		FROM = { has_building = VOC_COMMERCIALE }
+	}
+	desc = {
+		trigger = {  NOT = { has_global_flag = debug_L3T } }
+		text = DESCL3T.11041
+	}
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.11041a"
+		clear_event_target = holding_dev 
+	}
+}
+character_event = { #notification for province owner, if not a republic/city owner
+	id = L3T.11042
+	title = "NAMEL3T.11042"
+
+	desc = "DESCL3T.11042"
+
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.11041a"
+		#clear_event_target = holding_dev //pour mémoire
+	}
+}
+character_event = { #notification for hospital
+	id = L3T.11051
+	desc = "DESCL3T.11051"
+	title = "NAMEL3T.11051"
+
+	desc = {
+		trigger = { has_global_flag = debug_L3T }
+		text = DESCL3T.11051_debug
+	}
+	desc = {
+		trigger = {  NOT = { has_global_flag = debug_L3T } }
+		text = DESCL3T.11051
+	}
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.11051a"
+		clear_event_target = holding_dev 
+	}
+}
+
+##never called ATM
+character_event = { #notification from advanced ressources +10
+	id = L3T.11094
+	desc = "DESCL3T.11094"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_pour_desc
+	}
+}
+character_event = { #notification from advanced ressources +20
+	id = L3T.11095
+	desc = "DESCL3T.11095"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"	
+		clear_event_target = holding_pour_desc 
+	}
+}

@@ -38,9 +38,11 @@ character_event = {
 	}
 	option = {
 		name = "L3T.250C"
-		trigger = { has_all_books_from_monastery = no }
+		trigger = { 
+			has_all_books_from_monastery = no
+			religion_group = christian
+		}
 		set_character_flag = buying_books_at_monastery
-		trigger = { religion_group = christian }
 		character_event = { id = L3T.251 days = 20 } #choose the type of book
 		ai_chance = { 
 			factor = 1 
@@ -1023,7 +1025,7 @@ character_event = { #successfull reading, the book is marked as used
 	desc = {
 		trigger = { has_character_flag = studying_economy_book }
 		text = "DESCL3T.2553D"
-		picture = "GFX_evt_book_carolingian_script"
+		picture = "GFX_evt_L3T_capitulaire"
 	}
 	
 	only_playable = yes

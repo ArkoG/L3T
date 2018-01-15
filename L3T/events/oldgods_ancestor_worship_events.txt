@@ -4440,10 +4440,10 @@ character_event = {
 
 		#Changes depopulation/prosperity
 		capital_scope = {
-			if = {
-				limit = {
-					has_dlc = "Reapers"
-					NOT = { has_province_modifier = prosperityz_modifier_3 } #L3T
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+				NOT = { has_province_modifier = prosperityz_modifier_3 }
 				}
 				if = {
 					limit = { has_province_modifier = depopulated_1 }

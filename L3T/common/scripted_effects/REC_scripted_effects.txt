@@ -434,3 +434,91 @@ hire_apprentice_glass_maker = {
 		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
 	}
 }
+
+# ROOT is the new employer
+hire_master_sculptor = {
+	wealth   = -50
+	prestige = 25
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = maitre_sculpteur
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_compagnon_sculptor = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = compagnon_sculpteur
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_apprentice_sculptor = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = apprenti_sculpteur
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_master_painter = {
+	wealth   = -50
+	prestige = 25
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = maitre_fresquiste
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_compagnon_painter = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = compagnon_fresquiste
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_apprentice_painter = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = apprenti_fresquiste
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}

@@ -5,6 +5,20 @@ spriteTypes = {
 		name = "GFX_abdiquer"
 		texturefile = "gfx\\interface\\decision_icon_retire_to_monastery.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_seek_glass_bower_master"
+		texturefile = "gfx\\interface\\decision_icon_seek_glass_bower_master.dds"
+	}
+	spriteType = {
+		name = "GFX_seek_sculptor_master"
+		texturefile = "gfx\\interface\\decision_icon_seek_sculptor_master.dds"
+	}
+	spriteType = {
+		name = "GFX_seek_painter_master"
+		texturefile = "gfx\\interface\\decision_icon_seek_painter_master.dds"
+	}
+	
 	spriteType = {
 		name = "GFX_found_a_monastery"
 		texturefile = "gfx\\interface\\decision_icon_found_monastery.dds"
@@ -187,5 +201,23 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\charframe_34_abbaye.tga"
 		noOfFrames = 6
 		allwaystransparent = yes
+	}
+	###SOCIETIES
+		spriteType = {
+		name = "GFX_artists_ranks"
+		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_artists_ranks_highlight"
+		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild_highlight.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_artists_ranks_locked"
+		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild_locked.dds"
+		noOfFrames = 4
 	}
 }

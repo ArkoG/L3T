@@ -1058,7 +1058,6 @@ settlement_decisions = {
 			factor = 0
 		}
 	}
-	
 	###debug test totoro
 	check_dev_variable = {
 		only_playable = yes
@@ -1070,6 +1069,7 @@ settlement_decisions = {
 		}
 		
 		potential = {
+			has_global_flag = debug_L3T
 			FROM = { ai = no }
 			#holder_scope = { character = FROM }
  		}
