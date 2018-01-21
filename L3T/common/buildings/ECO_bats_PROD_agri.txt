@@ -164,6 +164,9 @@ CA_AGRI_banal_moulin_L1 = {
 }
 CA_AGRI_banal_moulin_L2 = {
   	desc = CA_AGRI_banal_moulin_desc
+	potential = {
+		has_province_modifier = agriculture1
+	}
 	trigger = { 
 		TECH_TRADE_PRACTICES = 0
 #		has_province_modifier = banalite2
@@ -203,7 +206,10 @@ CA_AGRI_boulangerie_L3 = {
 #PAIN - village
 CA_AGRI_banal_four_L1 = {
  	desc = CA_AGRI_banal_four_desc
-	trigger = { 
+	potential = {
+		has_province_modifier = agriculture1
+	}
+	trigger = {
 		TECH_TRADE_PRACTICES = 0
 	#	OR ={
 	#		has_province_modifier = banalite1
