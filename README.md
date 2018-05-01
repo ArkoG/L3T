@@ -21,6 +21,7 @@ Gameplay :
 - Unique trade system with dynamic trade routes
 - Ressources and economic system
 - Settlement specializations
+- Cathedral construction with relic system
 
 Flavour :
 - forest themed (donation, buy/sell/forest charters, specializations...)
@@ -32,7 +33,6 @@ Graphics :
 - new graphics associated with the new features (a lot modifiers icons, event pictures etc. )
 
 ### Next ?
-- the return of cathedrals with a brand new and better system, AI usable, with a lot of flavour stuff (loans, competition, artists...)
 - completion of specialisation system
 - flavour and even more flavour ! the return of bandits, mushroom hunt, new laws...
 
