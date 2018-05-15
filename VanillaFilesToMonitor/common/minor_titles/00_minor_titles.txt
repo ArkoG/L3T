@@ -71,6 +71,7 @@ title_appointed_regent = {
 
 	lose_effect = {
 	}
+	message = yes
 }
 
 title_ruler_consort = {
@@ -418,7 +419,17 @@ title_master_of_the_horse = {
 		}
 		is_adult = yes
 		OR = { 
-			is_female = no
+			OR = {
+				is_female = no
+				AND = {
+					religion = cathar
+					liege = { religion = cathar }
+				}
+				AND = {
+					religion = messalian
+					liege = { religion = messalian }
+				}
+			}
 			liege = {
 				OR = {
 					primary_title = {
@@ -475,7 +486,17 @@ title_master_of_the_hunt = {
 		}
 		is_adult = yes
 		OR = {
-			is_female = no
+			OR = {
+				is_female = no
+				AND = {
+					religion = cathar
+					liege = { religion = cathar }
+				}
+				AND = {
+					religion = messalian
+					liege = { religion = messalian }
+				}
+			}
 			liege = {
 				OR = {
 					primary_title = {
@@ -574,9 +595,29 @@ title_cupbearer = {
 		NOT = { 
 			primary_title = { temporary = yes } 
 		}
-		is_adult = yes
+		OR = {
+				is_female = no
+				AND = {
+					religion = cathar
+					liege = { religion = cathar }
+				}
+				AND = {
+					religion = messalian
+					liege = { religion = messalian }
+				}
+			}
 		OR = { 
-			is_female = no
+			OR = {
+				is_female = no
+				AND = {
+					religion = cathar
+					liege = { religion = cathar }
+				}
+				AND = {
+					religion = messalian
+					liege = { religion = messalian }
+				}
+			}
 			liege = {
 				OR = {
 					primary_title = {
@@ -630,7 +671,17 @@ title_seneschal = {
 		}
 		is_adult = yes
 		OR = { 
-			is_female = no
+			OR = {
+				is_female = no
+				AND = {
+					religion = cathar
+					liege = { religion = cathar }
+				}
+				AND = {
+					religion = messalian
+					liege = { religion = messalian }
+				}
+			}
 			liege = {
 				OR = {
 					primary_title = {
@@ -712,25 +763,23 @@ title_despot = {
 	is_unique = yes
 	
 	allowed_to_hold = {
-		NOT = { 
-			primary_title = { temporary = yes } 
-		}
-		OR = { 
+		OR = {
 			is_female = no
-			liege = {
-				OR = {
-					primary_title = {
-						has_law = status_of_women_4
-					}
-					has_game_rule = {
-						name = gender
-						value = all
-					}
-				}
+			AND = {
+				religion = cathar
+				liege = { religion = cathar }
 			}
+			AND = {
+				religion = messalian
+				liege = { religion = messalian }
+			}
+			has_law = true_cognatic_succession
 		}
 		is_close_relative = FROM
-		NOT = { trait = incapable } 
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+		NOT = { trait = eunuch }
+		is_theocracy = no
 	}
 	
 	allowed_to_grant = {
@@ -846,7 +895,27 @@ title_kouropalates = {
 		}
 		is_adult = yes
 		OR = { 
-			is_female = no
+			OR = {
+				OR = {
+					is_female = no
+					AND = {
+						religion = cathar
+						liege = { religion = cathar }
+					}
+					AND = {
+						religion = messalian
+						liege = { religion = messalian }
+					}
+				}
+				AND = {
+					religion = cathar
+					liege = { religion = cathar }
+				}
+				AND = {
+					religion = messalian
+					liege = { religion = messalian }
+				}
+			}
 			liege = {
 				OR = {
 					primary_title = {
@@ -896,7 +965,17 @@ title_anthypatos = {
 		}
 		is_adult = yes
 		OR = { 
-			is_female = no
+			OR = {
+				is_female = no
+				AND = {
+					religion = cathar
+					liege = { religion = cathar }
+				}
+				AND = {
+					religion = messalian
+					liege = { religion = messalian }
+				}
+			}
 			liege = {
 				OR = {
 					primary_title = {
@@ -1322,7 +1401,17 @@ title_state_inquisitor = {
 		}
 		is_adult = yes
 		OR = { 
-			is_female = no
+			OR = {
+				is_female = no
+				AND = {
+					religion = cathar
+					liege = { religion = cathar }
+				}
+				AND = {
+					religion = messalian
+					liege = { religion = messalian }
+				}
+			}
 			liege = {
 				OR = {
 					primary_title = {
@@ -1367,7 +1456,17 @@ title_high_admiral = {
 		}
 		is_adult = yes
 		OR = { 
-			is_female = no
+			OR = {
+				is_female = no
+				AND = {
+					religion = cathar
+					liege = { religion = cathar }
+				}
+				AND = {
+					religion = messalian
+					liege = { religion = messalian }
+				}
+			}
 			liege = {
 				OR = {
 					primary_title = {
@@ -1412,7 +1511,17 @@ title_high_judge = {
 		}
 		is_adult = yes
 		OR = { 
-			is_female = no
+			OR = {
+				is_female = no
+				AND = {
+					religion = cathar
+					liege = { religion = cathar }
+				}
+				AND = {
+					religion = messalian
+					liege = { religion = messalian }
+				}
+			}
 			liege = {
 				OR = {
 					primary_title = {
@@ -1458,11 +1567,10 @@ title_patrician_heir = {
 		is_female = no
 		is_landed = no
 		dynasty = FROM
-		NOT = { trait = incapable }
 		NOT = { trait = bastard }
-		NOT = { is_ascetic_trigger = yes }
+		NOT = { trait = monk }
 		NOT = { trait = eunuch }
-		NOT = { trait = celibate }
+		is_theocracy = no
 	}
 
 	allowed_to_grant = {
@@ -3563,6 +3671,11 @@ title_hermetics_apprentice = {
 		}
 		character_event = { id = MNM.1413 days = 4500 random = 1000 }  #Some years later, the apprenticeship ends
 
+		opinion = { 
+			modifier = opinion_hermetic_apprentice
+			who = FROM
+			years = 100
+		}
 		FROM = {
 			if = {
 				limit = { has_quest = quest_hermetics_find_apprentice }
@@ -3571,6 +3684,10 @@ title_hermetics_apprentice = {
 		}
 	}
 	lose_effect = {
+		remove_opinion = { 
+			modifier = opinion_hermetic_apprentice
+			who = FROM
+		}
 	}
 	retire_effect = {
 	}
