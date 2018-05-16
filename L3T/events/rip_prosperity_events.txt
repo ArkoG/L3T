@@ -111,27 +111,27 @@ province_event = { #prosperity gain
 					factor = 0.7 #slightly lower chance if helping in a war
 					owner = {
 						war = yes
-							NOR = {
-								is_primary_war_defender = yes
-								is_primary_war_attacker = yes
-							}
+						NOR = {
+							is_primary_war_defender = yes
+							is_primary_war_attacker = yes
 						}
+					}
 				}
 				modifier = {
 					factor = 0.5 #low chance if defending in a war
 					owner = {
-							is_primary_war_defender = yes
+						is_primary_war_defender = yes
 						NOT = {
-								is_primary_war_attacker = yes
-							}
-						}
-					}
-				modifier = {
-					factor = 0.2 #very low chance if attacking in a war
-					owner = {
 							is_primary_war_attacker = yes
 						}
 					}
+				}
+				modifier = {
+					factor = 0.2 #very low chance if attacking in a war
+					owner = {
+						is_primary_war_attacker = yes
+					}
+				}
 				modifier = {
 					factor = 0 #no chance if under siege/occupied/diseased
 					OR = {
@@ -880,6 +880,16 @@ province_event = { #Monetary Incentives for culture conversion
 		}
 		owner = {
 			NOT = { culture = ROOT }
+		}
+		OR = {
+			NOT = { 
+				has_game_rule = {
+					name = culture_conversion
+					value = restricted
+				}
+			}
+			any_neighbor_province = { ROOT = { owner = { culture = PREVPREV } } }
+			any_neighbor_province = { port = yes } 
 		}
 	}	
 	
