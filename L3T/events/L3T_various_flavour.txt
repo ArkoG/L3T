@@ -1266,6 +1266,7 @@ character_event = { #successfull reading, the book is marked as used
 		name = "L3T.2553_lifestyle_b"
 		trigger = { 
 			has_character_flag = studying_science_book
+			has_character_flag = used_book_E #botanique
 			NOT = { lifestyle_traits = 1 }
 			NOT = {
 				had_character_flag = { 

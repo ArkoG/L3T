@@ -316,6 +316,25 @@ province_event = {
 		text = "DESCL3T.29_min"
 		picture = GFX_evt_LCDA_montagne2
 	}
+  #dry mountains variant for muslim regions
+	desc = {
+		trigger = { 
+			has_province_modifier = great_pass
+			owner = { religion_group = muslim }
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = "DESCL3T.29_maj"
+		picture = GFX_evt_LCDA_montagne2_muslim
+	}
+	desc = {
+		trigger = { 
+			has_province_modifier = minor_pass
+			owner = { religion_group = muslim }
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = "DESCL3T.29_min"
+		picture = GFX_evt_LCDA_montagne2_muslim
+	}
 	
 	is_triggered_only = yes
 	

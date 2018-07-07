@@ -124,6 +124,11 @@ spriteTypes =
 		allwaystransparent = yes
 	}
 	spriteType = {
+		name = "GFX_evt_L3T_castle" #
+		texturefile = "gfx\\event_pictures\L3T_castle.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
 		name = "GFX_evt_L3T_capitulaire" #
 		texturefile = "gfx\\event_pictures\L3T_capitulaire_de_villis.tga"
 		allwaystransparent = yes
@@ -191,11 +196,6 @@ spriteTypes =
 	spriteType = {
 		name = "GFX_evt_L3T_book_burning" #
 		texturefile = "gfx\\event_pictures\L3T_book_burning.tga"
-		allwaystransparent = yes
-	}
-	spriteType = {
-		name = "GFX_evt_L3Tv_hermes" #messenger guy
-		texturefile = "gfx\\event_pictures\L3T_verti_hermes.tga"
 		allwaystransparent = yes
 	}
 }
