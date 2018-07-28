@@ -756,6 +756,7 @@ narrative_event = {
 				has_building = CITEEPISCOPALE
 			}
 		}
+		#NOT = { government = abbaye_government }
 	}	
 
 	mean_time_to_happen = {
@@ -833,6 +834,10 @@ narrative_event = {
 				holder_scope = { narrative_event = { id = L3T.7 days = 0 }}
 			}
 			if = {
+				limit = { has_global_flag = running_LCDA }
+				holder_scope = { set_government_type = abbaye_government }
+			}
+			if = {
 				limit = {
 					location = {
 						OR = {
@@ -885,6 +890,7 @@ narrative_event = {
 					change_variable = { which = "developpement" value = 10 }
 					change_variable = { which = "developpement_spec" value = 10 }
 				}
+				#holder_scope = { set_government_type = theocracy_government }
 			}
 			if = {
 				limit = { location = { religion_group = christian }} #//christian specific icon
