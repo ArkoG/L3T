@@ -336,6 +336,12 @@ narrative_event = {
 					location = { trade_route = silk_road } #favors starting points on the silk_road
 				}
 			}
+			modifier = { 
+				factor = 2
+				any_demesne_title = {
+					location = { is_pass = yes } #favors starting points on passes
+				}
+			}
 			modifier = {
 				factor = 0.1
 				any_demesne_title = {

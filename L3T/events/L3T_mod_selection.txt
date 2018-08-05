@@ -247,9 +247,11 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		is_pass = no
 		NOT = { has_province_modifier = minor_pass }
 		NOT = { has_province_modifier = great_pass }
 		NOT = { any_neighbor_province = { has_province_modifier = great_pass }}
+		NOT = { any_neighbor_province = { is_pass = yes }}
 		terrain = mountain
 		}
 

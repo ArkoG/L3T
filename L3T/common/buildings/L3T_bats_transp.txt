@@ -48,10 +48,12 @@ CA_col_L1 = { #chemin col
 		OR = { 
 			has_province_modifier = minor_pass
 			has_province_modifier = great_pass
+			is_pass = yes
 		}
 	}
 	not_if_x_exists = { FEODAL_mil } #prod ou ADM only
 	potential = { terrain = mountain }
+	global_movement_speed = 0.02
 	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CA_col_L2 = { #col route empierrée
@@ -59,6 +61,7 @@ CA_col_L2 = { #col route empierrée
 	trigger = { TECH_CONSTRUCTION = 2 }
 	upgrades_from = CA_col_L1
 	prerequisites = { ca_town_1 }
+	global_movement_speed = 0.03 #halves the major pass malus
 		gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.03	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
@@ -212,9 +215,11 @@ CT_col_L1 = { #chemin col
 		OR = { 
 			has_province_modifier = minor_pass
 			has_province_modifier = great_pass
+			is_pass = yes
 		}
 	}
 	potential = {	terrain = mountain }
+	global_movement_speed = 0.02 #
 	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 CT_col_L2 = { #col route empierrée
@@ -222,6 +227,7 @@ CT_col_L2 = { #col route empierrée
 	trigger = { TECH_CONSTRUCTION = 2 }
 	upgrades_from = CT_col_L1
 	prerequisites = { ct_town_1 }
+	global_movement_speed = 0.03 #halves the major pass malus
 	gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.04	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 
@@ -244,7 +250,10 @@ CT_relais_L3 = { #relais col
 	desc = "CT_relais_L3_desc"
 	trigger = { 
 		TECH_CONSTRUCTION = 2
-		has_province_modifier = great_pass
+		OR = {
+			has_province_modifier = great_pass
+			is_pass = yes
+			}
 		}
 	upgrades_from = CT_relais_L2
 		gold_cost = 120.0	build_time = 250	tax_income = 0.2	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
@@ -436,9 +445,11 @@ TP_col_L1 = { #chemin col
 		OR = { 
 			has_province_modifier = minor_pass
 			has_province_modifier = great_pass
+			is_pass = yes
 		}
 	}
 	potential = {	terrain = mountain }
+	global_movement_speed = 0.02 #
 	gold_cost = 50.0	build_time = 100	local_tax_modifier = 0.02	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_col_L2 = { #col route empierrée
@@ -446,6 +457,7 @@ TP_col_L2 = { #col route empierrée
 	trigger = { TECH_CONSTRUCTION = 2 }
 	upgrades_from = TP_col_L1
 	prerequisites = { tp_town_1 }
+	global_movement_speed = 0.03 #halves the major pass malus
 	gold_cost = 125.0	build_time = 400	local_tax_modifier = 0.03	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 

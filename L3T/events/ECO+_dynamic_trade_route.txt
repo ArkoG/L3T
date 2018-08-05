@@ -90,6 +90,10 @@ province_event = {
 			factor = 3
 				location = { trade_route = silk_road } #favors getting away from silk_road
 		}
+		modifier = { 
+			factor = 3
+				location = { is_pass = yes } #favors getting away from pass
+		}
 	}
 
 	immediate = {
@@ -269,6 +273,10 @@ province_event = {
 		modifier = { 
 			factor = 3
 				location = { trade_route = silk_road } #favors getting away from silk_road
+		}
+		modifier = { 
+			factor = 3
+				location = { is_pass = yes } #favors getting away from pass
 		}
 	}
 
