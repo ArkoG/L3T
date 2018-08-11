@@ -206,6 +206,7 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
+			has_global_flag = apocalypto_finished
 			had_global_flag = { flag = SWMH days = 360 }			
 			had_global_flag = { flag = running_VANILLA days = 360 }
 			had_global_flag = { flag = running_LCDA days = 360 }
@@ -1107,78 +1108,160 @@ character_event = {
 	}
 }
 
-#event SoA
-#character_event = {
-#	id = L3T.13
-#	desc = DESCL3T.13
-#	picture = GFX_evt_castle_construction
-#	border = GFX_event_normal_frame_religion
-#	#hide_window = yes
-#	
-#	is_triggered_only = yes 
-##not called	#triggered from LCDA's soa_holy_order_event
-#	#SoA.1024 # The Knights Templar loan
-#	#SoA.1054 # The Knights Templar humble request
-#	#SoA.1154 #The Knights of St Jean / the Hospitallers humble request
-#	#SoA.1354 # The Teutonic Order humble request
-#	#SoA.1654 # The Brotherhood of the Holy Sepulchre  humble request
-#	#SoA.2654 # The Order of Santiago
-#	#SoA.2754 # The Order of Calatrava
-#	
-#	trigger = {
-#		any_demesne_title = {
-#				holding_type = temple
-#				tier = baron
-#				NOT = { num_of_buildings = 1 }
-#					NOT = {
-#						has_building = MONASTERE
-#						has_building = COMMANDERIE
-#						has_building = CITEEPISCOPALE
-#					}
-#				NOT = { has_title_flag = future_commanderie }
-#		}
-#	}
-#
-#	immediate = { 
-#		random_demesne_title = {
-#			limit = {
-#				NOT = { has_title_flag = future_commanderie }
-#				holding_type = temple
-#				tier = baron
-#				NOT = {
-#					has_building = MONASTERE
-#					has_building = COMMANDERIE
-#					has_building = CITEEPISCOPALE
-#				}				
-#			}
-#			set_title_flag = future_commanderie
-#			add_holding_modifier = { name = commanderie duration = -1 }
-#		}
-#	}
-#		
-#	option = {
-#		name = L3T.13A
-#		custom_tooltip = { text = construction_commanderie } # ++++le modifier de holding qui va bien
-#			hidden_tooltip = {
-#				random_demesne_title = {
-#					limit = {
-#						holding_type = temple
-#						tier = baron
-#						has_title_flag = future_commanderie
-#							NOT = {
-#								has_building = MONASTERE
-#								has_building = COMMANDERIE
-#							}
-#					}
-#					add_building = MONASTERE
-#					add_building = COMMANDERIE
-#					random = {
-#						chance = 40
-#						add_building = COMMANDERIE_L2
-#					}
-#					clr_title_flag = future_commanderie
-#				}
-#				set_character_flag = canGetEasterEgg3
-#			}
-#	}
-#}
+character_event = {
+	id = L3T.13
+	#desc = DESCL3T.13
+	#picture = GFX_evt_castle_construction
+	#border = GFX_event_normal_frame_religion
+	hide_window = yes
+	
+	is_triggered_only = yes 
+	
+	trigger = {
+		has_game_rule = {
+			name = essor_urbain
+			value = dynamic
+		}
+		NOT = { has_global_flag = running_LCDA }
+		NOT = { has_global_flag = apocalypto_finished }
+		tier = baron
+		is_patrician = no
+		is_merchant_republic  = no
+		capital_holding = {
+			holding_type = city
+			NOT = { has_title_flag = saved_from_apocalypto }
+			is_patrician = no
+			is_merchant_republic  = no
+		}
+	}
+
+	immediate = {
+		character_event = { id = L3T.140 days = 150 }
+		capital_holding = { #multi cities
+			if = {
+				limit = {
+					location = {
+						any_province_holding = {
+							holding_type = city
+							count = 2
+							tier = baron
+						}
+					}
+					tier = baron
+					holding_type = city
+					NOT = { has_title_flag = saved_from_apocalypto }
+					is_patrician = no
+					is_merchant_republic  = no
+				}
+				random_list = {
+					25 = { 
+						convert_to = CASTLE
+						refill_holding_levy = yes
+						holder_scope = { 	set_government_type = feudal_government }
+						#set_title_flag = city_2_convert
+						add_holding_modifier = { modifier = agriculture3_farine years = -1 }
+					}
+					25 = { 
+						modifier = {  factor = 2.0		NOT = { year =  999 }}
+						destroy_settlement = THIS
+					}
+					50 = { 
+						modifier = {  factor = 1.5		holder_scope = { 	religion_group = muslim }}
+						modifier = {  factor = 0.5		NOT = { year =  999 }}
+						set_title_flag = saved_from_apocalypto
+						add_holding_modifier = { modifier = agriculture4_pain years = -1 }
+					}
+				}
+			}
+			if = { #mono cities, muslim
+				limit = {
+					location = {
+						NOT = { religion_group = muslim }
+						any_province_holding = {
+							holding_type = city
+							NOT = { count = 2 }
+							tier = baron
+						}
+					}
+					tier = baron
+					holding_type = city
+					NOT = {
+						has_title_flag = saved_from_apocalypto
+						is_patrician = yes
+						is_merchant_republic  = yes
+					}
+				}
+				random_list = {
+					50 = { 
+						convert_to = CASTLE
+						refill_holding_levy = yes
+						holder_scope = { 	set_government_type = feudal_government }
+						#set_title_flag = city_2_convert
+						add_holding_modifier = { modifier = agriculture3_farine years = -1 }
+					}
+					50 = { 
+						destroy_settlement = THIS
+					}
+				}
+			}
+			if = { #mono cities, non muslim
+				limit = {
+					location = {
+						religion_group = muslim
+						any_province_holding = {
+							holding_type = city
+							NOT = { count = 2 }
+							tier = baron
+						}
+					}
+					tier = baron
+					holding_type = city
+					NOT = {
+						has_title_flag = saved_from_apocalypto
+						is_patrician = yes
+						is_merchant_republic  = yes
+					}
+				}
+				random_list = {
+					30 = { 
+						convert_to = CASTLE
+						refill_holding_levy = yes
+						holder_scope = { 	set_government_type = feudal_government }
+						#set_title_flag = city_2_convert
+						add_holding_modifier = { modifier = agriculture3_farine years = -1 }
+					}
+					30 = { 
+						modifier = {  factor = 2.0		NOT = { year =  999 }}
+						modifier = {  factor = 1.5		AND = { year = 999 NOT = { year =  1220 }}}
+						modifier = {  factor = 0.8		region = world_europe_south }
+						modifier = {  factor = 0.8		narbonaise_lands =  yes }
+						destroy_settlement = THIS
+					}
+					30 = { 
+						modifier = {  factor = 0.5		NOT = { year =  999 }}
+						modifier = {  factor = 1.5		year = 1220 }
+						set_title_flag = saved_from_apocalypto
+						add_holding_modifier = { modifier = agriculture4_pain years = -1 }
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+character_event = { 
+    id = L3T.140
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = apocalypto_finished }
+	}
+
+	immediate = {
+		set_global_flag = apocalypto_finished
+	}
+}

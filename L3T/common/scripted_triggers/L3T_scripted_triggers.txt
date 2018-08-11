@@ -141,3 +141,18 @@ not_involved_in_personnal_war = {
 		}
 	}
 }
+
+narbonaise_lands = {
+	liege = { 
+		has_landed_title = {
+			OR = {
+				c_montpellier
+				c_narbonne
+				c_carcassonne
+				c_provence
+				c_nimes #SWMH
+				c_beziers #SWMH
+				c_marseille #SWMH
+			}
+		}
+}
