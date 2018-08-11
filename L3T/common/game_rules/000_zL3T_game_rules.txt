@@ -1,0 +1,29 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+
+essor_urbain = {
+	name = "RULE_ESSOR_URBAIN"
+	group = "RULE_GROUP_RAILROADING"
+	option = {
+		name = dynamic
+		text = "RULE_ESSOR_URBAIN_DYNAMIC"
+		desc = "RULE_ESSOR_URBAIN_DYNAMIC_DESC"
+	}
+	option = {
+		name = static
+		text = "RULE_ESSOR_URBAIN_STATIC"
+		desc = "RULE_ESSOR_URBAIN_STATIC_DESC"
+	}
+}
