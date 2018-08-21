@@ -84,11 +84,12 @@ narrative_event = {
 		trigger = {
 			capital_holding = {
 					has_title_flag = castle_to_specialize
+					is_capital = yes
 			}
-			OR = {
-				higher_tier_than = COUNT # Duke, King or Emperor
-				num_of_count_titles = 2
-			}
+			#OR = {
+			#	#higher_tier_than = COUNT # Duke, King or Emperor
+			#	#num_of_count_titles = 2
+			#}
 			holy_order = no
 		}
 		ai_chance = {
@@ -137,6 +138,7 @@ narrative_event = {
 		trigger = {
 			any_demesne_title = {
 				has_title_flag = castle_to_specialize
+				is_capital = no
 			}
 		}
 		random_demesne_title = {
@@ -161,6 +163,7 @@ narrative_event = {
 				any_demesne_title = {
 					has_title_flag = castle_to_specialize
 					location = { check_variable = { which = "resourceNb" value = 2 } }
+					is_capital = no
 				}
 			}
 			modifier = {
@@ -1159,7 +1162,7 @@ character_event = {
 						refill_holding_levy = yes
 						holder_scope = { 	set_government_type = feudal_government }
 						#set_title_flag = city_2_convert
-						add_holding_modifier = { modifier = agriculture3_farine years = -1 }
+						add_holding_modifier = { modifier = agriculture3_farine years = -1 } #mouchard
 					}
 					25 = { 
 						modifier = {  factor = 2.0		NOT = { year =  999 }}
@@ -1169,7 +1172,7 @@ character_event = {
 						modifier = {  factor = 1.5		holder_scope = { 	religion_group = muslim }}
 						modifier = {  factor = 0.5		NOT = { year =  999 }}
 						set_title_flag = saved_from_apocalypto
-						add_holding_modifier = { modifier = agriculture4_pain years = -1 }
+						add_holding_modifier = { modifier = agriculture4_pain years = -1 } #mouchard
 					}
 				}
 			}
@@ -1197,7 +1200,7 @@ character_event = {
 						refill_holding_levy = yes
 						holder_scope = { 	set_government_type = feudal_government }
 						#set_title_flag = city_2_convert
-						add_holding_modifier = { modifier = agriculture3_farine years = -1 }
+						add_holding_modifier = { modifier = agriculture3_farine years = -1 } #mouchard
 					}
 					50 = { 
 						destroy_settlement = THIS
@@ -1228,20 +1231,20 @@ character_event = {
 						refill_holding_levy = yes
 						holder_scope = { 	set_government_type = feudal_government }
 						#set_title_flag = city_2_convert
-						add_holding_modifier = { modifier = agriculture3_farine years = -1 }
+						add_holding_modifier = { modifier = agriculture3_farine years = -1 } #mouchard
 					}
 					30 = { 
 						modifier = {  factor = 2.0		NOT = { year =  999 }}
-						modifier = {  factor = 1.5		AND = { year = 999 NOT = { year =  1220 }}}
+						modifier = {  factor = 1.2		region = world_europe_north }
 						modifier = {  factor = 0.8		region = world_europe_south }
 						modifier = {  factor = 0.8		narbonaise_lands =  yes }
 						destroy_settlement = THIS
 					}
 					30 = { 
-						modifier = {  factor = 0.5		NOT = { year =  999 }}
-						modifier = {  factor = 1.5		year = 1220 }
+						#modifier = {  factor = 0.5		NOT = { year =  999 }}
+						modifier = {  factor = 1.5		year = 1200 }
 						set_title_flag = saved_from_apocalypto
-						add_holding_modifier = { modifier = agriculture4_pain years = -1 }
+						add_holding_modifier = { modifier = agriculture4_pain years = -1 } #mouchard
 					}
 				}
 			}
