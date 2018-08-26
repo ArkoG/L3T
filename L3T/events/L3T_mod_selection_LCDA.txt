@@ -8,9 +8,7 @@ province_event = { #installe les provinces côtières LCDA
 	
 	trigger = {
 			NOT = { has_province_modifier = province_cotiere }
-			OR = {   
-			province_id = 1 #Nyon
-			}
+			port = yes
 		}
 
 	immediate = {
@@ -26,9 +24,7 @@ province_event = { #installe les provinces terrestres LCDA
 	
 	trigger = {
 			NOT = { has_province_modifier = province_terrestre }
-			NOT = {  
-			province_id = 1 #Nyon
-			}
+			land = yes
 		}
 
 	immediate = {
@@ -46,10 +42,11 @@ province_event = { #installe les provinces fluviales LCDA
 		if = {
 			limit = {
 				OR = {   
-					province_id = 6 # Aigle
-					province_id = 7 # Faucigny
-					province_id = 10 # Montjoie
-					province_id = 28 # Martigny
+					borders_major_river = yes
+					#province_id = 6 # Aigle
+					#province_id = 7 # Faucigny
+					#province_id = 10 # Montjoie
+					#province_id = 28 # Martigny
 				}
 			}
 			add_province_modifier = { name = province_fleuve duration = -1 }
@@ -59,7 +56,10 @@ province_event = { #installe les provinces fluviales LCDA
 		if = {
 			limit = {
 				religion_group = christian
-				capital_holding = { holding_type = temple }
+				capital_holding = { 
+					holding_type = temple
+					is_LCDA_hard_monastery = no
+				}
 			}
 			province_event = { id = L3T.61 days = 10 }
 		}

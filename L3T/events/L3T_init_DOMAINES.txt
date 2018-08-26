@@ -796,12 +796,16 @@ narrative_event = {
 			any_demesne_title = {
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
+				is_LCDA_hard_monastery = no
+				is_LCDA_hard_episcopat = no
 			}
 		}
 		random_demesne_title = {
 			limit = {
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
+				is_LCDA_hard_monastery = no
+				is_LCDA_hard_episcopat = no
 			}
 			#clear_event_target = holding_to_spec #is cleared by monastic rule event instead
 			if = {
@@ -849,6 +853,8 @@ narrative_event = {
 				#location = { NOT = { religion_group = pagan_group } }
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
+				is_LCDA_hard_monastery = no
+				is_LCDA_hard_episcopat = no
 			}
 		}
 		random_demesne_title = {
@@ -856,6 +862,169 @@ narrative_event = {
 				#location = { NOT = { religion_group = pagan_group } }
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
+				is_LCDA_hard_monastery = no
+				is_LCDA_hard_episcopat = no
+			}
+			clear_event_target = holding_to_spec
+			clr_title_flag = temple_to_specialize
+			if = {
+				limit = {
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+					}
+				}
+				add_building = CITEEPISCOPALE
+				change_variable = { which = "developpement" value = 10 }
+				change_variable = { which = "developpement_spec" value = 10 }
+			}
+			if = {
+				limit = { location = { religion_group = christian }} #//christian specific icon
+				add_holding_modifier = { name = episcopale_L1 duration = -1 }
+			}
+#			if = {
+#				limit = { location = { religion_group = muslim }} #//muslim specific icon
+#				add_holding_modifier = { name = episco_muslim duration = -1 }
+#			}
+#			if = {
+#				limit = { #other non pagan religions //jewish, zoro, indian
+#					location = { NOT = {religion_group = christian }}
+#					location = { NOT = {religion_group = muslim }}
+#				}
+#				add_holding_modifier = { 
+#					name = episcopale_L1
+#					duration = -1
+#					hidden = yes
+#				}
+#			}
+
+			# Romanesque Cathedral
+			if = {
+				limit = {
+					# No Roman Cathedral at 3 province distance
+					location = {
+						religion_group = christian
+						NOT = {
+							had_global_flag = { flag = opus_francigenum days = 360 }
+							has_province_flag = roman_cathedral
+							any_neighbor_province = {
+								OR = {
+									has_province_flag = neighbor_roman_cathedral
+									has_province_flag = neighbor_neighbor_roman_cathedral
+								}
+							}
+						}
+					}
+				}
+				add_building = tp_roman_cathedrale
+				location = {
+					add_province_modifier = {
+						name = relique_generique
+						duration = -1
+					}
+					set_province_flag = roman_cathedral
+					any_neighbor_province = {
+						set_province_flag = neighbor_roman_cathedral
+						any_neighbor_province = {
+							limit = {
+								NOT = {
+									has_province_flag = neighbor_roman_cathedral									
+									has_province_flag = neighbor_neighbor_roman_cathedral
+									has_province_flag = roman_cathedral
+								}
+							}
+							set_province_flag = neighbor_neighbor_roman_cathedral
+						}
+					}
+				}
+			}
+			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
+		}
+	}
+	option = {
+		name = "L3T.6C"	
+		ai_chance = {
+			factor = 40
+			modifier = { factor =  5	learning = 20	}
+			modifier = { factor =   2	learning = 15	}
+			modifier = { factor = 0.75	NOT = { learning = 10 }	}
+			modifier = { factor = 1.5	NOT = { tier = count } }
+			modifier = {
+				factor = 2
+				any_demesne_title = {
+					has_title_flag = temple_to_specialize
+					location = { check_variable = { which = "resourceNb" value = 2 } }
+				}
+			}
+		}
+		trigger = {
+			any_demesne_title = {
+				location = { religion_group = christian }
+				has_title_flag = temple_to_specialize
+				is_LCDA_hard_monastery = yes
+			}
+		}
+		random_demesne_title = {
+			limit = {
+				location = { religion_group = christian }
+				has_title_flag = temple_to_specialize
+				is_LCDA_hard_monastery = yes
+			}
+			#clear_event_target = holding_to_spec #is cleared by monastic rule event instead
+			if = {
+				limit = {
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+					}
+				}
+				add_building = MONASTERE
+				change_variable = { which = "developpement" value = 10 }
+				change_variable = { which = "developpement_spec" value = 10 }
+				add_holding_modifier = { name = monastere_L1 duration = -1 }
+				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
+				holder_scope = { narrative_event = { id = L3T.7 days = 0 }}
+			}
+			if = {
+				limit = {
+					location = {
+						OR = {
+							religion = orthodox
+							is_heresy_of = orthodox
+						}
+					}
+					NOT = { has_building = REGLE_DE_3 }
+				}
+				add_building = REGLE_DE_3 #saint-Basile
+				clear_event_target = holding_to_spec
+				clr_title_flag = temple_to_specialize
+			}
+		}
+		set_character_flag = canGetEasterEgg3
+	}
+	
+	option = {
+		name = "L3T.6D"	
+		ai_chance = {
+			factor = 40
+			modifier = { factor = 5	tier = count }
+			modifier = { factor = 2	tier = duke }
+			modifier = { factor = 0.75	NOT = { tier = count } }
+		}
+		trigger = {
+			any_demesne_title = {
+				#location = { NOT = { religion_group = pagan_group } }
+				location = { religion_group = christian }
+				has_title_flag = temple_to_specialize
+				is_LCDA_hard_episcopat = yes
+			}
+		}
+		random_demesne_title = {
+			limit = {
+				#location = { NOT = { religion_group = pagan_group } }
+				location = { religion_group = christian }
+				has_title_flag = temple_to_specialize
+				is_LCDA_hard_episcopat = yes
 			}
 			clear_event_target = holding_to_spec
 			clr_title_flag = temple_to_specialize
@@ -953,7 +1122,7 @@ province_event = {
 			change_variable = { which = "developpement" value = 10 }
 			change_variable = { which = "developpement_spec" value = 10 }
 			add_holding_modifier = { name = episcopale_L1 duration = -1 }
-			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug	
+			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 		}
 		set_province_flag = roman_cathedral
 		any_neighbor_province = {
