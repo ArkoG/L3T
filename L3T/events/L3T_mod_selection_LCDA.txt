@@ -63,6 +63,17 @@ province_event = { #installe les provinces fluviales LCDA
 			}
 			province_event = { id = L3T.61 days = 10 }
 		}
+		if = {
+			limit = {
+				religion_group = christian
+				any_province_holding = { 
+					is_capital = no
+					holding_type = temple
+					is_LCDA_hard_episcopat = yes
+				}
+			}
+			province_event = { id = L3T.61 days = 10 }
+		}
 		
 		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
 		if = {
