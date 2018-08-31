@@ -27,7 +27,7 @@
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_90 = 4000				-- Natural deaths per decade out of 10000 people: Age 90-99
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_100 = 8000			-- Natural deaths per decade out of 10000 people: Age 100+
 	NDefines.NCharacter.FERTILITY_BASE_MULT = 0.70						-- Base fertility multiplier to adjust the base chance of impregnation
-	NDefines.NTitle.ENFORCE_ONE_OF_EACH_HOLDING = 0			-- Require players to build at least one City, Temple and Castle in each province
+	NDefines.NTitle.ENFORCE_ONE_OF_EACH_HOLDING = 1			-- Require players to build at least one City, Temple and Castle in each province
 	NDefines.NCharacter.INFANT_DEATH_CHANCE = 0.05
 	NDefines.NReligion.CREATE_ANTIPOPE_PRESTIGE_COST = 1000
 	NDefines.NTechnology.IDEAL_YEAR_LEVEL_0 = 900
@@ -37,3 +37,9 @@
 	NDefines.NEconomy.BUILDING_COST_MULT = 0.0						-- Increase to the build cost of all buildings that cost GOLD
 	NDefines.NGraphics.TREASURY_MODIFIER_ICON_FRAME = 182
 	NDefines.NDiplomacy.GIVE_ARTIFACT_INTERACTION_ENABLED = 0
+-- ALWAYS_GENERATE_NOMADS = 0,						-- If turned on will generate nomads even if they are not playable
+-- MAX_HOLDINGS_IN_NOMADIC_PROVINCE = 1,			-- Counties with this number of holdings or less are counted as a nomadic province that clans can demand
+	NDefines.NNomad.MAX_HOLDINGS_IN_NOMADIC_PROVINCE = 0			-- Counties with this number of holdings or less are counted as a nomadic province that clans can demand
+	NDefines.NNomad.ALWAYS_GENERATE_NOMADS = 0						-- If turned on will generate nomads even if they are not playable
+-- HOLDING_SLOT_BUILD_COST_MOD = 0.2
+	NDefines.NEconomy.HOLDING_SLOT_BUILD_COST_MOD = 1.0
