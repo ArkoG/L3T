@@ -159,7 +159,7 @@ city = {
 		desc = "VOC_INDUSTRIELLE_DESC"
 		prerequisites = { CITE_L1 }
 		trigger = { TECH_TRADE_PRACTICES = 0 }	
-		not_if_x_exists = { VOC_COMMERCIALE }		
+		#not_if_x_exists = { VOC_COMMERCIALE }		
 		gold_cost = 0.0
 		build_time = 8
 		ai_creation_factor = 5
@@ -169,7 +169,7 @@ city = {
 		desc = "VOC_COMMERCIALE_DESC"
 		prerequisites = { CITE_L1 }
 		trigger = { TECH_TRADE_PRACTICES = 0 }	
-		not_if_x_exists = { VOC_INDUSTRIELLE }		
+		#not_if_x_exists = { VOC_INDUSTRIELLE }		
 		gold_cost = 0.0
 		build_time = 8
 		ai_creation_factor = 5
@@ -181,6 +181,7 @@ city = {
 		trigger = { TECH_TRADE_PRACTICES = 0 }	
 		gold_cost = 0.0
 		build_time = 8
+		tax_income = -4
 		fort_level = 0.5
 		light_infantry = 30
 		archers = 20
@@ -189,39 +190,41 @@ city = {
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
-#	CITE_L2 = {
-#		desc = "CITE_L2_desc"
-#		prerequisites = {xxx}
-#		trigger = { TECH_TRADE_PRACTICES = 0 }
-#		upgrades_from = CITE_L1
-#		#potential = { NOT = { religion_group = pagan_group } }
-#		gold_cost = 0.0
-#		build_time = 8
-#		fort_level = 0.5
-#		light_infantry = 30
-#		archers = 20
-#		galleys = 2
-#		garrison_size = 0.1
-#		ai_creation_factor = 5
-#		add_number_to_name = no	extra_tech_building_start = 10.0
-#	}
-#
-#	CITE_L3 = {
-#		desc = "CITE_L3_desc"
-#		prerequisites = {xxx}
-#		trigger = { TECH_TRADE_PRACTICES = 0 }
-#		upgrades_from = CITE_L2
-#		#potential = { NOT = { religion_group = pagan_group } }
-#		gold_cost = 0.0
-#		build_time = 8
-#		fort_level = 0.5
-#		light_infantry = 30
-#		archers = 20
-#		galleys = 2
-#		garrison_size = 0.1
-#		ai_creation_factor = 5
-#		add_number_to_name = no	extra_tech_building_start = 10.0
-#	}	
+	CITE_L2 = {
+		desc = "CITE_L2_desc"
+		prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		upgrades_from = CITE_L1
+		#potential = { NOT = { religion_group = pagan_group } }
+		gold_cost = 0.0
+		build_time = 8
+		tax_income = 2
+		fort_level = 0.5
+		light_infantry = 30
+		archers = 20
+		galleys = 2
+		garrison_size = 0.2
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+
+	CITE_L3 = {
+		desc = "CITE_L3_desc"
+		prerequisites = {xxx}
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		upgrades_from = CITE_L2
+		#potential = { NOT = { religion_group = pagan_group } }
+		gold_cost = 0.0
+		build_time = 8
+		tax_income = 2
+		fort_level = 0.5
+		light_infantry = 30
+		archers = 20
+		galleys = 2
+		garrison_size = 0.2
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}	
 }
 
 # Temple
@@ -231,12 +234,36 @@ temple = {
 		desc = "MONASTERE_desc"
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		prerequisites = { xxx }
-		not_if_x_exists = { CITEEPISCOPALE }	
+		not_if_x_exists = { 
+			CITEEPISCOPALE
+			BOURG_EPISCOPAL
+		}	
 		potential = { religion_group = christian }
 		gold_cost = 0.0
 		build_time = 8
 		fort_level = 0
-		tax_income = -4
+		tax_income = -1
+		heavy_infantry = 5
+		light_infantry = 20
+		archers = 5
+		liege_piety = 0.20
+		ai_creation_factor = 5
+		add_number_to_name = no	extra_tech_building_start = 10.0
+	}
+
+	BOURG_EPISCOPAL = {
+		desc = "BOURG_EPISCOPAL_desc"
+		trigger = { TECH_TRADE_PRACTICES = 0 }
+		prerequisites = { xxx }
+		not_if_x_exists = { 
+			MONASTERE
+			CITEEPISCOPALE
+		}
+		potential = { religion_group = christian }
+		gold_cost = 0.0
+		build_time = 8
+		fort_level = 0
+		tax_income = -2
 		heavy_infantry = 5
 		light_infantry = 20
 		archers = 5
@@ -249,12 +276,15 @@ temple = {
 		desc = "CITEEPISCOPALE_desc"
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		prerequisites = { xxx }
-		not_if_x_exists = { MONASTERE }		
+		not_if_x_exists = { 
+			MONASTERE
+			BOURG_EPISCOPAL
+		}		
 		potential = { NOT = { religion_group = pagan_group } }
 		gold_cost = 0.0
 		build_time = 8
 		fort_level = 1.0
-		tax_income = -2
+		#tax_income = -2
 		heavy_infantry = 10
 		light_infantry = 40
 		archers = 10
