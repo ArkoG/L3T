@@ -19,6 +19,13 @@ character_event = {
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.203 days = 365 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 10 }
+		}
 	}
 }
 
@@ -108,6 +115,13 @@ character_event = {
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.207 days = 460 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 10 }
+		}
 	}
 }
 
@@ -205,6 +219,13 @@ character_event = {
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.211 days = 365 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 20 }
+		}
 	}
 }
 
@@ -293,6 +314,13 @@ character_event = {
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.215 days = 365 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 15 }
+		}
 	}
 }
 
@@ -381,6 +409,13 @@ character_event = {
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.219 days = 465 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 30 }
+		}
 	}
 }
 
@@ -469,6 +504,13 @@ character_event = {
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.223 days = 365 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 20 }
+		}
 	}
 }
 
@@ -809,10 +851,47 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
-	ai = no
+	#ai = no
 	
 	immediate = {
-		FROM = { location = { province_event = { id = L3T.228 days = 30 } } }
+		FROM = { set_variable = { which = "global_best_capital" which = "best_capital" }}
+		if = {
+			limit = {
+				ai = no
+				NOT = {
+					FROM = { is_capital = ROOT }
+					ROOT = {
+						any_demesne_title = {
+							is_capital = yes
+							holding_type = castle
+							has_building = FEODAL_adm
+							check_variable = { which = "best_capital" which = "global_best_capital" }
+						}
+					}
+				}
+			}
+			#makes the events firing only if the title is has a better "best_capital" value
+			FROM = { location = { province_event = { id = L3T.228 days = 30 } } } #ex days=30
+			FROM  = { set_title_flag = better_realm_capital }
+		}
+		if = {
+			limit = {
+				ai = yes
+				NOT = { 
+					FROM = { is_capital = ROOT }
+					ROOT = {
+						any_demesne_title = {
+							is_capital = yes
+							holding_type = castle
+							has_building = FEODAL_adm
+							check_variable = { which = "best_capital" which = "global_best_capital" }
+						}
+					}
+				}
+			}
+			#for the AI, if this title has a better "best_capital" value, make it the new capital
+			FROM = { make_capital_holding = yes }
+		}
 	}
 }
 
@@ -828,11 +907,12 @@ province_event = {
 		capital_holding = {
 			holding_type = castle 
 			has_building = FEODAL_adm
+			has_title_flag = better_realm_capital
 		}
 	}
 	
 	immediate = {
-		holder_scope = { character_event = { id = L3T.229 days = 1 } }
+		holder_scope = { character_event = { id = L3T.229 days = 0 } }
 	}
 }
 
@@ -845,7 +925,14 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = OK
+		name = L3T.229A #I'll think about it
+	}
+	option = {
+		name = L3T.229B #make it the new realm capital
+		FROM = { 
+			make_capital_holding = yes
+			clr_title_flag = better_realm_capital
+		}
 	}
 }
 
@@ -868,6 +955,13 @@ character_event = {
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.243 days = 365 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 10 }
+		}
 	}
 }
 
@@ -957,6 +1051,13 @@ character_event = {
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.247 days = 547 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 10 }
+		}
 	}
 }
 
