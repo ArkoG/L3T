@@ -10,7 +10,7 @@ DESCL3T.3.pasCap;We shall decide how to develop this feudal demesne. \n\n     A 
 L3T.3A;We shall make a glorious Feudal city out of it!;Faisons-en une glorieuse Cité seigneuriale !;;;;;;;;;;;x
 L3T.3B;Let's erect there an impregnable fortress!;Erigeons une Forteresse imprenable !;;;;;;;;;;;;x
 L3T.3C;This will be a flourishing Feudal manor!;Ce sera un Bourg seigneurial florissant !;;;;;;;;;;;;x
-custom_est_capitale;This option is avalaible because [holding_to_spec.GetName] is our §Ycapital§!;Cette option est disponible car [holding_to_spec.GetName] est notre §Ycapitale§!.;;;;;;;;;;;;x
+custom_est_capitale;This option is avalaible because [holding_to_spec.GetName] is the province's §Ycapital§!;Cette option est disponible car [holding_to_spec.GetName] est la §Ycapitale§! de la province.;;;;;;;;;;;;x
 
 NAMEL3T.4;City of [holding_to_spec.GetName];Cité [holding_to_spec.GetDeDapostrophe][holding_to_spec.GetName];;;;;;;;;;;;x
 DESCL3T.4;This city demesne in [holding_to_spec.Location.GetName] should see its focus chosen. \n\n     We may choose to develop [holding_to_spec.GetName] into a city where production is the base of the economy: craftmens grouped in various guilds and corporations of artisans will product there all sorts of goods and tools. \n     The other option is to focus on trade: the city then will have to attract merchants from the region and convince them to make their transactions in our markets. We'll need to promote meetings and security to provide the best place for trade... and taxation !\n\nHowever, only few cities can pretend flourishing from trade. So such cities can't be too close to each other to rise and prosper.\n;Ce domaine communal de la province de [holding_to_spec.Location.GetName] doit se voir assigner une voie de développement. \n\n     Nous pouvons développer [holding_to_spec.GetName] afin qu'elle devienne une cité où la production est privilégiée : l'on pourra y voir fabriqués toutes sortes d'objets, biens et outils par les corporations de métiers et d'artisans. \n     L'autre option est de tout miser sur le commerce : la ville se devra alors d'attirer les marchands et de tout mettre en oeuvre pour favoriser les rencontres et échanges en toute sécurité et maximiser nos profits. \n\nCependant, peu de cités peuvent prétendre vivre exclusivement du commerce. Ainsi de telles cités ne peuvent se trouver trop proches l'unes de l'autres pour pouvoir faire leur place et prospérer. \n;;;;;;;;;;;;x
@@ -24,9 +24,17 @@ L3T.4B;We shall trade!;Commerçons ! ;;;;;;;;;;;;x
 #L3T.2A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
 
 NAMEL3T.6;Clerical Lands at [holding_to_spec.GetName];Les Terres du Clergé à [holding_to_spec.GetName];;;;;;;;;;;;x
-DESCL3T.6;Your steward reports that a settlement in the province of [holding_to_spec.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of local religious authorities. \n\nChoosing to support the local clergy will allow us to develop the proper infrastructure to encourage local industries in this province, although a portion of the control and the profits will be surrendered to the Church.;Nous devons décider de l'avenir de ce domaine sur les terres de [holding_to_spec.Location.GetName]. Que choisirons-nous ? \n\n     Un Monastère constitue un conservatoire du savoir où l'on y instruit la jeunesse et compile nombre de connaissances anciennes et nouvelles. La communauté religieuse choisira une règle de vie monastique et pourra rejoindre un ordre monastique. \n     Une Cité Episcopale abritera les institutions religieuses locales et aura la mainmise sur les terres environnantes.;;;;;;;;;;;;x
-L3T.6A;We shall support a monastic order.;Implantons-y un Monastère;;;;;;;;;;;;x
+DESCL3T.6;Your steward reports that a settlement in the province of [holding_to_spec.Location.GetName] has grown quite rapidly and would be of strategic value for future development of these lands. However, in order to progress, it is vital to gain the support of local religious authorities. \n\nChoosing to support the local clergy will allow us to develop the proper infrastructure to encourage local industries in this province, although a portion of the control and the profits will be surrendered to the Church.;Nous devons décider de l'avenir de ce domaine sur les terres de [holding_to_spec.Location.GetName]. Que choisirons-nous ? \n\n     Un Monastère constitue un conservatoire du savoir où l'on y instruit la jeunesse et compile nombre de connaissances anciennes et nouvelles. La communauté religieuse choisira une règle de vie monastique et pourra rejoindre un ordre monastique. \n     Un bourg épiscopal rassemble des terres apparteant au clergé. On y exploite les ressources locales en vu de les vendre dans les cités. \n     Une Cité Episcopale abritera les institutions religieuses locales et aura la mainmise sur les terres environnantes. ;;;;;;;;;;;;x
+L3T.6A;We shall support a monastery.;Implantons-y un Monastère;;;;;;;;;;;;x
 L3T.6B;We shall grant rights and privileges to the local clergy.;Laissons-les à libre gestion du clergé local.;;;;;;;;;;;;x
+L3T.6C;This land belongs to the local bishop.;Cette terre revient à l'évêque local.;;;;;;;;;;;;x
+L3T.6D;This will be the new episcopal seat.;Ce sera le nouveau siège de l'évêché.;;;;;;;;;;;;x
+
+custom_spec_milites;This castle and its surroundings are of strategic interest and will be dedicated to the defence of our lands, including through attack.\n;Ce château et ses environs sont d'un intérêt stratégique et seront dédiés à la défense de nos terres, y compris par l'attaque. \n;;;;;;;;;;;;x
+custom_spec_production;These lands dotted with hamlets, villages and even boroughs will be exploited to provide the necessary resources for the craftsmen of the cities.\n;Ces terres parsemées de hameaux,villages voire bourgs seront exploitées pour fournir les ressources nécéssaires aux artisans des cités. \n;;;;;;;;;;;;x
+custom_spec_industrie;This city is home to craftsmen who transform the resources purchased in the nearby fields into a multitude of products.\n;Cette cité abrite des artisans qui transforment les ressources achetées dans les domaines proches en une multitude de produits. \n;;;;;;;;;;;;x
+custom_spec_commerce;This city actively lives from the trade it makes in locally manufactured and imported goods.\n;Cette cité vit activement du commerce qu'elle fait des biens fabriqués sur place et des marchandises importées. \n;;;;;;;;;;;;x
+
 NAMEL3T.7;Monastery of [holding_to_spec.GetName];Le monastère [holding_to_spec.GetDeDapostrophe][holding_to_spec.GetName];;;;;;;;;;;;x
 DESCL3T.7;The newly founded monastery needs to get a monastic rule assigned.\n\nSo what rule the Monastery of [holding_to_spec.GetName] should adopt ? \n\nThis choice will condition a possible plain rattachment to a monastic order under the same monastic rule. These orders all have their own specificities to bring in.;Suite à sa récente fondation, ce monastère doit se voir assigner une règle de vie monastique. \n\nQuelle règle monastique le Monastère [holding_to_spec.GetDeDapostrophe][holding_to_spec.GetName] devra-t-il adopter ? \n\nCe choix conditionnera ensuite un éventuel rattachement en plein à l'un des ordres monastiques de la même obédience, ordres présentant chacun leurs spécificités.;;;;;;;;;;;;x
 L3T.7A;The Rule of Saint Benedict;La Règle de Saint Benoît;;;;;;;;;;;;x
@@ -62,11 +70,12 @@ DESCL3T.10_LCDA;You've have chosen to play with the map from the excellent mod "
 #L3T.10A;Some What More Historic (SWMH);Some What More Historic (SWMH);;;;;;;;;;;;x
 #L3T.10B;La Couronne des Alpes (LCDA);La Couronne des Alpes (LCDA);;;;;;;;;;;;x
 #L3T.10C;Vanilla;Vanilla;;;;;;;;;;;;x
-L3T.15;Choose your language;Choix de la langue;;;;;;;;;;;;;x
-DESCL3T.15;Some parts of the mod are not translated from French yet.\n You can disable some of the unlocalized stuff (mostly some flavour events) by selecting you want to play the English version.;Une partie du contenu n'est pas traduit en langue angloise. Cet évènement introductif permet de désactiver une partie des contenus non traduits. \n Logiquement, si vous lisez ceci, cliquez sur "JOUER en français".;;;;;;;;;;;;;x
-L3T.15A;FRENCH speaking version;L3T complet, en français;;;;;;;;;;;;x
-L3T.15B;ENGLISH speaking version;L3T partiel, en anglais;;;;;;;;;;;;x
-L3T.15C;IA choice;choix de l'AI;;;;;;;;;;;;;x
+
+
+
+
+
+
 NAMEL3T.29_LCDA;The [From.GetPassName];Le [From.GetPassName];;;;;;;;;;;;x
 #NAMEL3T.29_LCDA;Welcome to the Alps!;Bienvenue dans les Alpes !;;;;;;;;;;;;;x
 NAMEL3T.29_noLCDA;Mountain's air;L'air de la montagne;;;;;;;;;;;;;x
