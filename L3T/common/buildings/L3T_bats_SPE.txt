@@ -113,10 +113,10 @@ castle = {
 		desc = "FEODAL_adm_desc"
 		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-		is_active_trigger = {
-			is_capital = yes
-			capital_holding = { title = FROMFROM }
-		}
+#		is_active_trigger = {
+#			is_capital = yes
+#			capital_holding = { title = FROMFROM }
+#		}
 		not_if_x_exists = { FEODAL_mil FEODAL_prod }
 		gold_cost = 0.0
 		build_time = 8
