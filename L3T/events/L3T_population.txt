@@ -228,7 +228,10 @@ character_event = {
 					}
 					modifier = {
 						factor = 1.5
-						location = { has_province_modifier = industrie_prospere }
+						OR = {
+							location = { has_province_modifier = industrie_prospere }
+							location = { has_province_flag = crown_focus_province }
+						}
 					}
 					modifier = {
 						factor = 1.25
