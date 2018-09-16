@@ -594,7 +594,7 @@ province_event = {
 							}
 						NOT = { has_province_modifier = relique_generique }
 						}
-					}						
+											
 					holding_type = temple
 					#NOT = { has_title_flag = temple_to_specialize }
 					NOT = {
@@ -606,6 +606,7 @@ province_event = {
 					is_capital = no
 					is_LCDA_hard_monastery =no
 					is_LCDA_hard_episcopat = no
+				}
 			}
 			province_event = { id = L3T.63 days = 2 }
 		}

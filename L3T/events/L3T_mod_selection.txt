@@ -421,15 +421,15 @@ character_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		year = 1
-		modifier = {
-			factor = 0.5 
-			any_demesne_province = {
-				capital_holding = { holding_type = castle }
-			}
-		}
-	}
+#	mean_time_to_happen = {
+#		years = 1
+#		modifier = {
+#			factor = 0.5 
+#			any_demesne_province = {
+#				capital_holding = { holding_type = castle }
+#			}
+#		}
+#	}
 	
 	option = {
 		name = "capital_MAJ"
@@ -475,7 +475,7 @@ character_event = {
 					}
 				}
 			}
-			any_demesne_province { remove_province_modifier = realm_capital_province }
+			any_demesne_province = { remove_province_modifier = realm_capital_province }
 		}
 	}
 }

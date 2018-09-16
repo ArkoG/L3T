@@ -161,7 +161,6 @@ narrative_event = {
 	option = {
 		name = "L3T.3C"	#ECO
 		custom_tooltip = { text = custom_spec_production }
-		trigger = { holy_order = no }
 		ai_chance = { 
 			factor = 50
 			modifier = {
@@ -187,6 +186,7 @@ narrative_event = {
 			modifier = { factor = 0.5	holy_order = yes }
 		}
 		trigger = {
+			holy_order = no
 			any_demesne_title = {
 				is_capital = no
 				has_title_flag = castle_to_specialize
@@ -673,6 +673,7 @@ province_event = {
 	}
 }
 #City Apocalypto
+#called on_action - inactive ATM-
 character_event = {
 	id = L3T.45
 	#desc = DESCL3T.13
