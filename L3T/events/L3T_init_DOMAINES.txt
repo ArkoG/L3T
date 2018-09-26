@@ -703,8 +703,8 @@ character_event = {
 
 	immediate = {
 		character_event = { id = L3T.46 days = 150 }
-		capital_holding = { #multi cities
-			if = {
+		capital_holding = {
+			if = { #multi cities
 				limit = {
 					location = {
 						any_province_holding = {
