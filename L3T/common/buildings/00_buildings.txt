@@ -5,6 +5,9 @@
  #	desc = description used in the tooltip of the building
  #	trigger = used for tech requirement of the building, set to 0 if no requirement so it can be build automatically on new games
  #	gold_cost = cost to build the building
+ #	piety_cost = piety cost to build the building
+ #	prestige_cost = prestige cost to build the building
+ #	Be aware that you can only use one of gold, piety, and prestige cost
  #	build_time = time to build, in days
  #	
  #	ai_creation_factor = weight that the AI uses to determine what building to build
