@@ -325,11 +325,15 @@
 ###ECO+_immersion.txt
 
 ##Récoltes
-#id = ECO.200 #bonne récolte
-#id = ECO.201 #mauvaise récolte
+#id = ECO.200 #bonne récolte [HIDDEN]
+#id = ECO.250 #bonne récolte
+#id = ECO.201 #mauvaise récolte [HIDDEN]
+#id = ECO.251 #mauvaise récolte
 ##Peches
-#id = ECO.202 #bonne pêche
-#id = ECO.203 #mauvaise pêche
+#id = ECO.202 #bonne pêche [HIDDEN]
+#id = ECO.252 #bonne pêche
+#id = ECO.203 #mauvaise pêche [HIDDEN]
+#id = ECO.253 #mauvaise pêche
 ##Mine
 #id = ECO.204 #baisse productivité de la mine
 #id = ECO.205 #amelioration productivité de la mine
@@ -340,7 +344,8 @@
 #id = ECO.207 #fin industrie prospère
 ##Meteo
 #id = ECO.208 #inondation
-#id = ECO.209 #sécheresse
+#id = ECO.209 #sécheresse [HIDDEN]
+#id = ECO.259 #sécheresse
 
 #id = ECO.210 #prospérité  5ans - notif chronique
 #id = ECO.211 #prospérité 10ans - notif chronique

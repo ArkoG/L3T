@@ -26,9 +26,6 @@ decisions = {
 				}
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 0.1
 			modifier = {
@@ -58,6 +55,40 @@ decisions = {
 				factor =  0.5
 				NOT = { wealth = 100 }
 			}
+		}
+	}
+	
+	disable_notification = {
+		is_high_prio = yes
+		
+		potential = {
+			NOT = { has_global_flag = no_immersion_notification }
+		}
+		allow = {
+			NOT = { has_global_flag = no_immersion_notification }
+		}
+		effect = {
+			set_global_flag = no_immersion_notification
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	enable_notification = {
+		is_high_prio = yes
+		
+		potential = {
+			has_global_flag = no_immersion_notification
+		}
+		allow = {
+			has_global_flag = no_immersion_notification
+		}
+		effect = {
+			clr_global_flag = no_immersion_notification
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }
