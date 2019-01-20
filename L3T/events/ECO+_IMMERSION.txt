@@ -9,11 +9,11 @@ namespace = ECO
 ###events d'immersion
 
 
-#Récoltes agricoles -Bonne récolte
+#Récoltes agricoles -Bonne récolte [HIDDEN]
 province_event = {
     id = ECO.200
-	desc = "DESCECO.200"
-	picture = GFX_evt_ECO1
+	
+	hide_window = yes
 	
 	trigger = {
 		OR = {
@@ -39,31 +39,46 @@ province_event = {
 		modifier = { factor = 0.75	owner = { has_focus = focus_business } }
 		modifier = { factor = 3.00	owner = { has_focus = focus_war } }
 	}
-
-	option = {
-		name = "ECO.200A"
-		add_province_modifier = { name = recolte_bonne duration = 300 }	
-		hidden_tooltip = {
-			random_list = {		
-				85 = {}
-				15 = {
-					owner = { 		
-						chronicle = {
-							entry = RECOLTE_BONNE_CHRONIQUE
-							picture = GFX_evt_ECO1
-						}
-					}
+	
+	immediate = {
+		random = {		
+			chance = 15
+			owner = { 		
+				chronicle = {
+					entry = RECOLTE_BONNE_CHRONIQUE
+					picture = GFX_evt_ECO1
 				}
 			}
+		}
+		if = {
+			limit = { has_global_flag = no_immersion_notification }
+			add_province_modifier = { name = recolte_bonne duration = 300 }
+		}
+		else = {
+			province_event = { id = ECO.250 days = 0}
 		}
 	}
 }
 
-#Récoltes agricoles -Mauvaise récolte
+#Récoltes agricoles -Bonne récolte
+province_event = {
+    id = ECO.250
+	desc = "DESCECO.200"
+	picture = GFX_evt_ECO1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "ECO.200A"
+		add_province_modifier = { name = recolte_bonne duration = 300 }
+	}
+}
+
+#Récoltes agricoles -Mauvaise récolte [HIDDEN]
 province_event = {
     id = ECO.201
-	desc = "DESCECO.201"
-	picture = GFX_evt_ECO3
+	
+	hide_window = yes
 	
 	trigger = {
 		OR = {
@@ -89,31 +104,46 @@ province_event = {
 		modifier = { factor = 0.85	any_neighbor_province = { has_province_modifier = meteo_secheresse } }
 		modifier = { factor = 0.80	owner = { has_focus = focus_war } }
 	}
-
-	option = {
-		name = "ECO.201A"
-		add_province_modifier = { name = recolte_mauvaise duration = 300 }
-		hidden_tooltip = {
-			random_list = {		
-				85 = {}
-				15 = {
-					owner = { 		
-						chronicle = {
-							entry = RECOLTE_MAUVAISE_CHRONIQUE
-							picture = GFX_evt_ECO3
-						}
-					}
+	
+	immediate = {
+		random = {		
+			chance = 15
+			owner = { 		
+				chronicle = {
+					entry = RECOLTE_MAUVAISE_CHRONIQUE
+					picture = GFX_evt_ECO3
 				}
 			}
-		}		
+		}
+		if = {
+			limit = { has_global_flag = no_immersion_notification }
+			add_province_modifier = { name = recolte_mauvaise duration = 300 }
+		}
+		else = {
+			province_event = { id = ECO.251 days = 0}
+		}	
 	}
 }
 
-#Pêche -Pêche abondante
+#Récoltes agricoles -Mauvaise récolte
+province_event = {
+    id = ECO.251
+	desc = "DESCECO.201"
+	picture = GFX_evt_ECO3
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "ECO.201A"
+		add_province_modifier = { name = recolte_mauvaise duration = 300 }		
+	}
+}
+
+#Pêche -Pêche abondante [HIDDEN]
 province_event = {
     id = ECO.202
-	desc = "DESCECO.202"
-	picture = GFX_evt_L3T_fishing
+	
+	hide_window = yes
 	
 	trigger = {
 		has_province_modifier = peche2_poisson
@@ -134,30 +164,46 @@ province_event = {
 		modifier = { factor = 3.00	owner = { has_focus = focus_war } }
 	}
 
-	option = {
+	immediate = {
 		name = "ECO.202A"
-		add_province_modifier = { name = peche_bonne duration = 300 }
-		hidden_tooltip = {
-			random_list = {		
-				85 = {}
-				15 = {
-					owner = { 		
-						chronicle = {
-							entry = PECHE_BONNE_CHRONIQUE
-							picture = GFX_evt_L3T_fishing
-						}
-					}
+		random = {		
+			chance = 15
+			owner = { 		
+				chronicle = {
+					entry = PECHE_BONNE_CHRONIQUE
+					picture = GFX_evt_L3T_fishing
 				}
 			}
+		}
+		if = {
+			limit = { has_global_flag = no_immersion_notification }
+			add_province_modifier = { name = peche_bonne duration = 300 }
+		}
+		else = {
+			province_event = { id = ECO.252 days = 0}
 		}
 	}
 }
 
-#Pêche -Pêche peu fructueuse
+#Pêche -Pêche abondante
+province_event = {
+    id = ECO.252
+	desc = "DESCECO.202"
+	picture = GFX_evt_L3T_fishing
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "ECO.202A"
+		add_province_modifier = { name = peche_bonne duration = 300 }
+	}
+}
+
+#Pêche -Pêche peu fructueuse [HIDDEN]
 province_event = {
     id = ECO.203
-	desc = "DESCECO.203"
-	picture = GFX_evt_merchant_ship_at_sea_republic
+	
+	hide_window = yes
 	
 	trigger = {
 		has_province_modifier = peche2_poisson
@@ -178,22 +224,38 @@ province_event = {
 		modifier = { factor = 0.80	owner = { has_focus = focus_war } }	
 	}
 
+	immediate = {
+		name = "ECO.203A"
+		random = {		
+			chance = 15
+			owner = { 		
+				chronicle = {
+					entry = PECHE_MAUVAISE_CHRONIQUE
+					picture = GFX_evt_merchant_ship_at_sea_republic
+				}
+			}
+		}
+		if = {
+			limit = { has_global_flag = no_immersion_notification }
+			add_province_modifier = { name = peche_mauvaise duration = 300 }
+		}
+		else = {
+			province_event = { id = ECO.253 days = 0}
+		}		
+	}
+}
+
+#Pêche -Pêche peu fructueuse
+province_event = {
+    id = ECO.253
+	desc = "DESCECO.203"
+	picture = GFX_evt_merchant_ship_at_sea_republic
+	
+	is_triggered_only = yes
+
 	option = {
 		name = "ECO.203A"
 		add_province_modifier = { name = peche_mauvaise duration = 300 }	
-		hidden_tooltip = {
-			random_list = {		
-				85 = {}
-				15 = {
-					owner = { 		
-						chronicle = {
-							entry = PECHE_MAUVAISE_CHRONIQUE
-							picture = GFX_evt_merchant_ship_at_sea_republic
-						}
-					}
-				}
-			}
-		}		
 	}
 }
 
@@ -583,9 +645,8 @@ province_event = {
 #Météo - sécheresse
 province_event = {
     id = ECO.209
-	title = "ECO.209_title"
-	desc = "DESCECO.209"
-	picture = GFX_evt_ECO2 #plaine avec rivière
+	
+	hide_window = yes
 	
 	trigger = {
 		NOT = { has_province_modifier = meteo_inondation }
@@ -610,58 +671,67 @@ province_event = {
 		modifier = { factor = 0.90	terrain = steppe }
 		}
 
+	immediate = {
+		name = "ECO.209A"
+		if = {
+			limit = { NOT = { has_global_flag = no_immersion_notification } }
+			province_event = { id = ECO.259 days = 0}
+		}
+		random_list = {		
+			20 = { add_province_modifier = { name = meteo_secheresse duration =  30 }}
+			29 = { add_province_modifier = { name = meteo_secheresse duration =  50 }} 
+			20 = { add_province_modifier = { name = meteo_secheresse duration =  70 }}
+			18 = {
+				add_province_modifier = { name = meteo_secheresse duration = 90 }
+				random = {	
+					chance = 50 
+					owner = {
+						chronicle = {
+							entry = CHRONICLE_SECHERESSE_1
+							picture = GFX_evt_ECO2
+						}
+					}
+				}
+			}
+			8 = {
+				add_province_modifier = { name = meteo_secheresse duration = 120 }
+				random = {	
+					chance = 75
+					owner = {
+						chronicle = {
+							entry = CHRONICLE_SECHERESSE_2
+							picture = GFX_evt_ECO2
+						}
+					}					
+				}
+			}
+			5 = { 
+				add_province_modifier = { name = meteo_secheresse duration = 150 }
+				random = {	
+					chance = 80
+					owner = {
+						chronicle = {
+							entry = CHRONICLE_SECHERESSE_3
+							picture = GFX_evt_ECO2
+						}
+					}					
+				}
+			}
+		}
+	}
+}
+#Météo - sécheresse
+province_event = {
+    id = ECO.259
+	title = "ECO.209_title"
+	desc = "DESCECO.209"
+	picture = GFX_evt_ECO2 #plaine avec rivière
+	
+	is_triggered_only = yes
+
 	option = {
 		name = "ECO.209A"
 		custom_tooltip = { text = meteo_secheresse_tooltip }
-		hidden_tooltip = {
-			random_list = {		
-				20 = { add_province_modifier = { name = meteo_secheresse duration =  30 }}
-				29 = { add_province_modifier = { name = meteo_secheresse duration =  50 }} 
-				20 = { add_province_modifier = { name = meteo_secheresse duration =  70 }}
-				18 = {
-					add_province_modifier = { name = meteo_secheresse duration = 90 }
-						random_list = {	
-									50 = { 
-										owner = {
-											chronicle = {
-												entry = CHRONICLE_SECHERESSE_1
-												picture = GFX_evt_ECO2
-											}
-										}
-									}
-									50 = {}						
-						}
-					}
-					8 = {
-					add_province_modifier = { name = meteo_secheresse duration = 120 }
-						random_list = {	
-									75 = { 
-										owner = {
-											chronicle = {
-												entry = CHRONICLE_SECHERESSE_2
-												picture = GFX_evt_ECO2
-											}
-										}
-									}
-									25 = {}						
-						}
-					}
-				 5 = { 
-					add_province_modifier = { name = meteo_secheresse duration = 150 }
-						random_list = {	
-									80 = { 
-										owner = {
-											chronicle = {
-												entry = CHRONICLE_SECHERESSE_3
-												picture = GFX_evt_ECO2
-											}
-										}
-									}
-									20 = {}						
-						}
-					}
-			}
-		}
 	}
 }
 #Prospérité - notif chronique
