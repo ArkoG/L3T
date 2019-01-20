@@ -59,8 +59,7 @@ decisions = {
 	}
 	
 	disable_notification = {
-		is_high_prio = yes
-		
+				
 		potential = {
 			NOT = { has_global_flag = no_immersion_notification }
 		}
@@ -76,8 +75,7 @@ decisions = {
 	}
 	
 	enable_notification = {
-		is_high_prio = yes
-		
+				
 		potential = {
 			has_global_flag = no_immersion_notification
 		}
