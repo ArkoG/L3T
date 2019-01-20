@@ -38,6 +38,8 @@ province_event = {
 		modifier = { factor = 2.00	owner = { war = yes } }
 		modifier = { factor = 0.75	owner = { has_focus = focus_business } }
 		modifier = { factor = 3.00	owner = { has_focus = focus_war } }
+		modifier = { factor = 2.00	owner = { demesne_size = 12 } }
+		modifier = { factor = 3.00	owner = { demesne_size = 25 } }
 	}
 	
 	immediate = {
@@ -103,6 +105,8 @@ province_event = {
 		modifier = { factor = 0.50	has_province_modifier = meteo_secheresse }	
 		modifier = { factor = 0.85	any_neighbor_province = { has_province_modifier = meteo_secheresse } }
 		modifier = { factor = 0.80	owner = { has_focus = focus_war } }
+		modifier = { factor = 2.00	owner = { demesne_size = 12 } }
+		modifier = { factor = 3.00	owner = { demesne_size = 25 } }
 	}
 	
 	immediate = {
@@ -162,6 +166,8 @@ province_event = {
 		modifier = { factor = 2.00	owner = { war = yes } }
 		modifier = { factor = 0.75	owner = { has_focus = focus_business } }
 		modifier = { factor = 3.00	owner = { has_focus = focus_war } }
+		modifier = { factor = 2.00	owner = { demesne_size = 12 } }
+		modifier = { factor = 3.00	owner = { demesne_size = 25 } }
 	}
 
 	immediate = {
@@ -222,6 +228,8 @@ province_event = {
 		modifier = { factor = 0.60	owner = { NOT = { stewardship = 9 } } }
 		modifier = { factor = 0.50	owner = { war = yes } }	
 		modifier = { factor = 0.80	owner = { has_focus = focus_war } }	
+		modifier = { factor = 2.00	owner = { demesne_size = 12 } }
+		modifier = { factor = 3.00	owner = { demesne_size = 25 } }
 	}
 
 	immediate = {
@@ -589,9 +597,11 @@ province_event = {
 		modifier = { factor = 0.95	owner = { NOT = { piety = 500 } } }
 		modifier = { factor = 0.90	borders_major_river = yes }
 		modifier = { factor = 0.90	has_province_modifier = province_fleuve }
-		modifier = { factor = 1.50	terrain = desert }
+		modifier = { factor = 2.00	terrain = desert }
 		modifier = { factor = 1.10	any_neighbor_province = { terrain = desert } }
-		modifier = { factor = 1.10	terrain = steppe }
+		modifier = { factor = 1.50	terrain = steppe }
+		modifier = { factor = 2.00	owner = { demesne_size = 12 } }
+		modifier = { factor = 3.00	owner = { demesne_size = 25 } }
 	}
 
 	immediate = {
@@ -671,8 +681,10 @@ province_event = {
 		modifier = { factor = 1.20	has_province_modifier = province_fleuve }
 		modifier = { factor = 0.50	terrain = desert }
 		modifier = { factor = 0.90	any_neighbor_province = { terrain = desert } }
-		modifier = { factor = 0.90	terrain = steppe }
-		}
+		modifier = { factor = 0.75	terrain = steppe }
+		modifier = { factor = 2.00	owner = { demesne_size = 12 } }
+		modifier = { factor = 3.00	owner = { demesne_size = 25 } }
+	}
 
 	immediate = {
 		name = "ECO.209A"
