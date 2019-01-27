@@ -9,29 +9,51 @@
 # Cf [NON INCLUS] pour les fichiers d'events non inclus dans la version courante
 
 ###L3T_init_DOMAINES.txt
-#id = L3T.1 #mode debug //activation
-#id = L3T.2 #mode debug //désactivztion
-##décider de l'avenir d'un domaine 
-#id = L3T.3 #domaine Féodal
-#id = L3T.4 #domaine Communal  
+#id = L3T.3 #SPEC domaine Féodal
+#id = L3T.31 #domaine Féodal capitals are feudal cities
+
+#id = L3T.4 #SPEC domaine Communal  
 #id = L3T.41 #domaine Communal province à double cité  
-#obsolete#id = L3T.5 #upgrade CITE GRANDE L1  vers L2
-#id = L3T.6 #domaine Ecclésial libre
-#id = L3T.60 #domaine Ecclésial hardcode
-#id = L3T.61 #old cathedral and spe in religious province
+#id = L3T.45#city apocalypto
+#id = L3T.46#city apocalypto end
+
+#obsolete#id = L3T.5 #upgrade CITE GRANDE L1  vers L2 à rename en 4x
+
+#id = L3T.6 #SPEC domaine Ecclésial
+#id = L3T.61 #domaine Ecclésial hardcode
+#id = L3T.62 #old cathedral and spe in religious province for capitals
+#id = L3T.63 #filling the grid ofold cathedrals 
+
 #id = L3T.7 #attribution règle monastique
-#[COMMENTE] id = L3T.0008 #attribution ordre militaire
+
 #id = L3T.9 #Init built holding (on_action)
-#[COMMENTE] id = L3T.13 #EX Spec en Commanderie event SoA
+
 
 ###L3T_mod_selection.txt
+#id = L3T.1 #mode debug //activation
+#id = L3T.2 #mode debug //désactivation
+
 #id = L3T.10 #détection de la carte + paix de Dieu
 #id = L3T.11 #fin paix de Dieu
 #id = L3T.12 #boost IA gold+piety
-#[COMMENTE] id = L3T.13 #dans L3T_init_DOMAINES.txt
+
 ###id = L3T.13 #adbication (provisoire, la localisation de la décision porte cet ID}
+
+###L3T_mod_selection_SWMH.txt
+#id = L3T.20 #SWMH attribution coasts rivers lands
+
+###L3T_mod_selection_LCDA.txt
+#id = L3T.21#LCDA attribution coasts rivers lands
+
+###L3T_mod_selection_VANI.txt
+#id = L3T.22 #Vanilla attribution coasts rivers lands
+
+###L3T_mod_selection.txt
 #id = L3T.28 #toute carte - Cols attribution
 #id = L3T.29 #toute carte - Cols notification
+
+#id = L3T.50#maintenance capitales
+
 
 ###[NON INCLUS] L3T_minorite.txt
 #id = L3T.15 #event initial
@@ -39,24 +61,6 @@
 #id = L3T.17 #marquage conversion depuis
 #id = L3T.18 #
 #id = L3T.19 #
-
-###L3T_mod_selection_SWMH.txt
-#id = L3T.20 #SWMH - Coast
-#id = L3T.21 #SWMH - Land
-#id = L3T.22 #SWMH - Rivers
-
-###L3T_mod_selection_VANI.txt
-#id = L3T.25 #Vanilla - Coast
-#id = L3T.26 #Vanilla - Land
-#id = L3T.27 #Vanilla - Rivers
-#id = L3T.28 #used in L3T_mod_selection.txt
-#id = L3T.29 #used in L3T_mod_selection.txt
-
-###L3T_mod_selection_LCDA.txt
-#id = L3T.30 #LCDA - Coast
-#id = L3T.31 #LCDA - Land
-#id = L3T.32 #LCDA - Rivers
-#id = L3T.33 #used in L3T_init_DOMAINES.txt
 
 ###L3T_population.txt
 #id = L3T.1101 #initialisation dev variable (devv) buildings

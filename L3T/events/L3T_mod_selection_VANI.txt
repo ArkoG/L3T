@@ -1,57 +1,18 @@
 namespace = L3T
 
-province_event = { #installe les provinces côtières Vanilla
-    id = L3T.25
+province_event = {
+    id = L3T.22
 	hide_window = yes
 
 	is_triggered_only = yes
 	
-	trigger = {
-			OR = {
-				port = yes
-			#mer caspienne
-				province_id = 625 #Usturt
-				province_id = 624 #Mangyshlak
-				province_id = 621 #Kangly
-				province_id = 618 #Guryev
-				province_id = 620 #Itil
-				province_id = 604 #Kuma
-				province_id = 675 #Semender
-				province_id = 674 #Derbent
-				province_id = 669 #Shemakha
-				province_id = 668 #Shirvan
-				province_id = 667 #Tabriz
-				province_id = 666 #Gilan
-				province_id = 662 #Mazandaran
-				province_id = 661 #Tabaristan
-				province_id = 633 #Gurgan
-				province_id = 631 #Dihistan
-				province_id = 627 #Kara-Kum
-			#mer d'Aral
-				province_id = 622 #Turkestan
-				province_id = 623 #Aral
-				province_id = 1378 #Urgench
-				province_id = 901 #Kyzylkum
-				province_id = 900 #Syr Darya
-			}
-		}
-
 	immediate = {
-		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
-	}
-}
-
-province_event = { #installe les provinces terrestres VANILLA
-    id = L3T.26
-	hide_window = yes
-
-	is_triggered_only = yes
-	
-	trigger = {
-			NOT = {
-				#OR = {
+		#installe les provinces côtières Vanilla
+		if = {
+			limit = {
+				OR = {
 					port = yes
-				#mer caspienne
+					#mer caspienne
 					province_id = 625 #Usturt
 					province_id = 624 #Mangyshlak
 					province_id = 621 #Kangly
@@ -69,29 +30,58 @@ province_event = { #installe les provinces terrestres VANILLA
 					province_id = 633 #Gurgan
 					province_id = 631 #Dihistan
 					province_id = 627 #Kara-Kum
-				#mer d'Aral
+					#mer d'Aral
 					province_id = 622 #Turkestan
 					province_id = 623 #Aral
 					province_id = 1378 #Urgench
 					province_id = 901 #Kyzylkum
 					province_id = 900 #Syr Darya
-					#}
+				}
+			}
+			add_province_modifier = {	name = province_cotiere  	duration = -1 }
+		}
+		#installe les provinces terrestres Vanilla
+		if = {
+			limit= {
+				NOT = {
+					#OR = {
+						port = yes
+						#mer caspienne
+						province_id = 625 #Usturt
+						province_id = 624 #Mangyshlak
+						province_id = 621 #Kangly
+						province_id = 618 #Guryev
+						province_id = 620 #Itil
+						province_id = 604 #Kuma
+						province_id = 675 #Semender
+						province_id = 674 #Derbent
+						province_id = 669 #Shemakha
+						province_id = 668 #Shirvan
+						province_id = 667 #Tabriz
+						province_id = 666 #Gilan
+						province_id = 662 #Mazandaran
+						province_id = 661 #Tabaristan
+						province_id = 633 #Gurgan
+						province_id = 631 #Dihistan
+						province_id = 627 #Kara-Kum
+						#mer d'Aral
+						province_id = 622 #Turkestan
+						province_id = 623 #Aral
+						province_id = 1378 #Urgench
+						province_id = 901 #Kyzylkum
+						province_id = 900 #Syr Darya
+						#}
+				}
+			}
+			add_province_modifier = {
+				name = province_terrestre
+				duration = -1  
+				hidden = yes
 			}
 		}
 
-	immediate = {
-		add_province_modifier = {	name = province_terrestre  	duration = -1  hidden = yes }	
-	}
-}
-
-province_event = { #installe les provinces fluviales VANILLA
-    id = L3T.27
-	hide_window = yes
-
-	is_triggered_only = yes
-	
-	immediate = {
 		if = {
+			#installe les provinces rivières Vanilla
 			limit = {
 				OR = {
 				## India
@@ -557,13 +547,125 @@ province_event = { #installe les provinces fluviales VANILLA
 			add_province_modifier = {	name = province_fleuve  	duration = -1 }	
 		}
 		
-		# Old cathedral attribution
+		
+		#for hard republics, will trigger nodes attribution
+		##those will set the hardcode is done flagS, that opens regular MTTH spec
+		
+		#for hard Monasteries, will give basilique and relic if capital
+		#for hard bishoprics, will give basilique and relic		
+		if = {
+			limit = {
+				any_province_holding = {
+					holding_type = temple
+					OR = {
+						is_LCDA_hard_monastery = yes
+						is_LCDA_hard_episcopat = yes
+					}
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
+					}
+				}
+			}
+			#province_event = { id = L3T.61 } #LCDA only
+		}
+
+		#for christian all CAPITAL temple, will get relic				
 		if = {
 			limit = {
 				religion_group = christian
-				capital_holding = { holding_type = temple }
+				NOT = { has_province_flag = roman_cathedral }
+				capital_holding = { 
+					holding_type = temple
+					is_LCDA_hard_monastery =no
+					is_LCDA_hard_episcopat = no
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
+					}
+				}
 			}
-			province_event = { id = L3T.61 days = 10 }
+			province_event = { id = L3T.62 days = 1 }
+		}
+		
+		#for christian NON capital, to give relic, following grid pattern, to fill the grid
+		if = {
+			limit = {
+				any_province_holding = {
+					location = {
+						religion_group = christian
+						NOT = {
+								has_province_flag = neighbor_roman_cathedral									
+								has_province_flag = neighbor_neighbor_roman_cathedral
+								has_province_flag = roman_cathedral
+							}
+							any_neighbor_province = {
+								NOT = {
+									has_province_flag = neighbor_roman_cathedral									
+									has_province_flag = neighbor_neighbor_roman_cathedral
+									has_province_flag = roman_cathedral
+								}
+							}
+						NOT = { has_province_modifier = relique_generique }
+						}
+											
+					holding_type = temple
+					#NOT = { has_title_flag = temple_to_specialize }
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
+						has_building = tp_roman_cathedrale
+					}
+					is_capital = no
+					is_LCDA_hard_monastery =no
+					is_LCDA_hard_episcopat = no
+				}
+			}
+			province_event = { id = L3T.63 days = 2 }
+		}
+
+		#for feudal capital holdings, make them feudal cities				
+		if = {
+			limit = {
+				religion_group = christian
+					#holder = { capital_scope = capital_holding }
+				capital_holding = { 
+					holding_type = castle
+					NOT = {
+						has_building = FEODAL_mil
+						has_building = FEODAL_prod
+						has_building = FEODAL_adm
+					}
+				}
+			}
+			province_event = { id = L3T.31 }
+		}
+		
+		#realm's capital receives a prov modifier
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						demesne_size = 3
+						realm_size = 8
+					}
+					capital_scope = {
+						NOT = { has_province_modifier = realm_capital_province }
+					}
+				}
+			}
+			owner = {
+				#owner = { character_event = { id = L3T.50 }}
+				capital_scope = {
+					add_province_modifier = { 
+						name = realm_capital_province
+						duration = -1
+					}
+				}
+			}
 		}
 		
 		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
@@ -588,6 +690,15 @@ province_event = { #installe les provinces fluviales VANILLA
 			}
 			# The other are delayed
 			province_event = { id = L3T.41 days = 60 }
-		}	
+		}
+		province_event = { id = ECO.1 }
+		province_event = { id = ECO.2 }
+		province_event = { id = ECO.3 }
+		province_event = { id = ECO.4 }
+		province_event = { id = ECO.5 }
+		province_event = { id = ECO.8 }
+		province_event = { id = ECO.80 }
+		province_event = { id = ECO.81 }
+		province_event = { id = ECO.82 }
 	}
 }

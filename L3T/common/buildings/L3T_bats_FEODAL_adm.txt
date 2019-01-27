@@ -55,7 +55,7 @@ castle = {
 
 	CA_archives_1 = { # salle des archives
 		desc = CA_archives_1_desc
-		trigger = { TECH_MAJESTY = 4 }
+		trigger = { TECH_MAJESTY = 3 }
 		prerequisites = {CA_chambre_1 FEODAL_adm }
 		is_active_trigger = {
 			is_capital = yes
@@ -127,7 +127,7 @@ castle = {
 	 
 	CA_chap_seign = { # chapelle seigneuriale
 		desc = CA_chap_seign_desc
-		trigger = { TECH_RELIGIOUS_CUSTOMS = 3 }
+		trigger = { TECH_RELIGIOUS_CUSTOMS = 2 }
 		prerequisites = { FEODAL_adm }
 		is_active_trigger = {
 			is_capital = yes

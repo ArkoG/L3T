@@ -136,14 +136,18 @@ character_event = { #notification for trade post, for city owners
 	title = "NAMEL3T.11041"
 
 	desc = {
-		trigger = { has_global_flag = debug_L3T }
+		trigger = {
+			has_global_flag = debug_L3T
+			FROM = { has_building = VOC_INDUSTRIELLE }
+		}
 		text = DESCL3T.11041_debug_voc1
-		FROM = { has_building = VOC_INDUSTRIELLE }
 	}
 	desc = {
-		trigger = { has_global_flag = debug_L3T }
+		trigger = {
+			has_global_flag = debug_L3T
+			FROM = { has_building = VOC_COMMERCIALE }
+		}
 		text = DESCL3T.11041_debug_voc2
-		FROM = { has_building = VOC_COMMERCIALE }
 	}
 	desc = {
 		trigger = {  NOT = { has_global_flag = debug_L3T } }

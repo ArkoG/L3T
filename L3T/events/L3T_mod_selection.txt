@@ -79,6 +79,13 @@ character_event = {
 	}
 	
 	immediate = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = SWMH }
+				NOT = { has_global_flag = running_LCDA }
+			}
+			set_global_flag = running_VANILLA
+		}
 		any_province = {
 			province_event = { id = L3T.28 days = 25 random = 15} #attribution cols
 		}
@@ -97,6 +104,11 @@ character_event = {
 		if = {
 			limit = { ai = no }
 			set_variable = { which = "global_burns" value = 0 }
+			random_list = {
+				30 = { }
+				30 = { change_variable = { which = "global_burns" value = 5 }}
+				30 = { change_variable = { which = "global_burns" value = 10 }}
+			}
 		}
 	}
 	
@@ -111,9 +123,9 @@ character_event = {
 		#SWMH coasts, land, rivers
 		hidden_tooltip = {
 			any_province = { 
-				province_event = { id = L3T.20 days = 10 }
-				province_event = { id = L3T.21 days = 10 }
-				province_event = { id = L3T.22 days = 10 }
+				province_event = { id = L3T.20   }
+				#province_event = { id = L3T.21   }
+				#province_event = { id = L3T.22   }
 			}
 		}
 		set_global_flag = paix_de_dieu 
@@ -129,12 +141,15 @@ character_event = {
 		#LCDA coasts, land, rivers
 		hidden_tooltip = {
 			any_province = {
-				province_event = { id = L3T.30 days = 10 }
-				province_event = { id = L3T.31 days = 10 }
-				province_event = { id = L3T.32 days = 10 }
+				province_event = { id = L3T.21  } #LCDA coasts, land, rivers
+				#province_event = { id = L3T.31  }
+				#province_event = { id = L3T.32   }
 			}
 		}
 		set_global_flag = paix_de_dieu 
+		
+		###########LAUNCH HARDCODE events from here 
+		
 	}
 	option = {
 		#name = "L3T.10C"	
@@ -142,18 +157,19 @@ character_event = {
 		ai_chance = { factor = 0 }
 		trigger = {
 			ai = no
-			NOT = { has_global_flag = SWMH }
-			NOT = { has_global_flag = running_LCDA }			
+			#NOT = { has_global_flag = SWMH }
+			#NOT = { has_global_flag = running_LCDA }	
+			has_global_flag = running_VANILLA
 		}
 		#VANILLA coasts, land, rivers
 		hidden_tooltip = {
 			any_province = { 
-				province_event = { id = L3T.25 days = 10 }
-				province_event = { id = L3T.26 days = 10 }
-				province_event = { id = L3T.27 days = 10 }
+				province_event = { id = L3T.22   }
+				#province_event = { id = L3T.26   }
+				#province_event = { id = L3T.27   }
 			}
 		}
-		set_global_flag = running_VANILLA	
+		#set_global_flag = running_VANILLA	
 		set_global_flag = paix_de_dieu 
 	}
 	option = {	
@@ -336,7 +352,7 @@ province_event = {
 		picture = GFX_evt_LCDA_montagne2_muslim
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only = yes #on_startup
 	
 	immediate = {
 		random_list = {
@@ -367,3 +383,101 @@ province_event = {
 		clr_province_flag = text_reponse_generique_D
 	}
 }
+#Maintenance realm capitales
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+    id = L3T.50
+	desc = "capital_MAJ_blah"
+	#hide_window = yes
+	picture = GFX_evt_castle_construction
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					demesne_size = 3 #maybe just two ?
+					realm_size = 8 #more than one province owned
+				}
+				capital_scope = {
+					NOT = { has_province_modifier = realm_capital_province }
+				}
+			}
+			AND = {
+				any_demesne_province = { has_province_modifier = realm_capital_province }
+				#owner = { 
+					NOT = { 
+						OR = {
+							demesne_size = 3
+							realm_size = 8
+						}
+					}
+				#}
+			}			
+		}
+	}
+	
+#	mean_time_to_happen = {
+#		years = 1
+#		modifier = {
+#			factor = 0.5 
+#			any_demesne_province = {
+#				capital_holding = { holding_type = castle }
+#			}
+#		}
+#	}
+	
+	option = {
+		name = "capital_MAJ"
+		if = { 
+			limit = {
+				#owner = {
+					OR = {
+						demesne_size = 3
+						realm_size = 8
+					}
+					capital_scope = {
+						NOT = { has_province_modifier = realm_capital_province }
+					}
+				#}
+			}
+			#owner = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = realm_capital_province
+						NOT = { owner = { capital_scope = { province = ROOT }}}
+					}
+					remove_province_modifier = realm_capital_province
+				}
+				capital_scope = { 
+					add_province_modifier = { 
+						name = realm_capital_province
+						duration = -1
+					}
+				}
+			#}
+		}
+		if = { 
+			limit = {
+				AND = {
+					any_demesne_province = {
+						has_province_modifier = realm_capital_province
+					}
+					NOT= {
+						OR = {
+							demesne_size = 3
+							realm_size = 8
+						}
+					}
+				}
+			}
+			any_demesne_province = { remove_province_modifier = realm_capital_province }
+		}
+	}
+}
+

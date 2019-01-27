@@ -695,6 +695,14 @@ herisson_maudit_3 = { #prestige loss
 	monthly_character_prestige = -0.1
 }
 
+realm_capital_province = {
+	icon = 206
+	local_revolt_risk = -0.01
+	local_tax_modifier = 0.03
+	economy_techpoints = 0.05
+	culture_techpoints = 0.05
+	military_techpoints = 0.05
+}
 ### Specialization modifiers
 feodal_prod_L1 = {icon = 225 }
 feodal_prod_L2 = {icon = 226 }
@@ -720,11 +728,17 @@ monastere_L3 = {icon = 242 }
 monastere_L4 = {icon = 243 }
 monastere_L5 = {icon = 244 }
 
-episcopale_L1 = {icon = 245 }
-episcopale_L2 = {icon = 246 }
+episcopale_L1 = {icon = 246 } #episcopal land
+episcopale_L2 = {icon = 246 } #episcopal city
 episcopale_L3 = {icon = 247 }
 episcopale_L4 = {icon = 248 }
 episcopale_L5 = {icon = 249 }
+
+episco_land_L1 = {icon = 245 }
+episco_land_L2 = {icon = 246 }
+episco_land_L3 = {icon = 247 }
+episco_land_L4 = {icon = 248 }
+episco_land_L5 = {icon = 249 }
 
 voc_indus_L1 = {icon = 250 }
 voc_indus_L2 = {icon = 251 }

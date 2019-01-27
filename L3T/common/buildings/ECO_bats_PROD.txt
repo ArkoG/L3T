@@ -811,7 +811,7 @@ TP_AGRI_cereale_L1 = {
 		NOT = { terrain = hills }
 		terrain = farmlands
 	}
-	prerequisites = { MONASTERE }
+	not_if_x_exists = { CITEEPISCOPALE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_cereale_L2 = {
@@ -843,7 +843,7 @@ TP_AGRI_maraichage_L1 = {
 			}
 		}
 	}
-	prerequisites = { MONASTERE }
+	not_if_x_exists = { CITEEPISCOPALE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_maraichage_L2 = {
@@ -891,7 +891,7 @@ TP_ELEV_ovin_L1 = {
 			has_province_modifier = elevage1
 		NOT = { terrain = mountain }
 		}
-	prerequisites = { MONASTERE }
+	not_if_x_exists = { CITEEPISCOPALE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_ELEV_ovin_L2 = {
@@ -918,7 +918,7 @@ TP_BOIS_charbon_L1 = {
 			 has_province_modifier = foret2_holy
 			 }
 		 }
-	 prerequisites = { MONASTERE }
+	 prerequisites = { BOURG_EPISCOPAL }
 		 gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
  }
 TP_BOIS_charbon_L2 = {
@@ -945,7 +945,7 @@ TP_FISH_pisci_L1 = {
 			has_province_modifier = pisci2_poisson
 			}
 		}
-	prerequisites = { MONASTERE }
+	not_if_x_exists = { CITEEPISCOPALE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_FISH_pisci_L2 = {
@@ -968,7 +968,7 @@ TP_AGRI_moulin_L1 = {
 	potential = {
 		has_province_modifier = agriculture2_cereales}
 	#prerequisites = { TP_AGRI_cereale_L1 }
-	prerequisites = { MONASTERE }
+	not_if_x_exists = { CITEEPISCOPALE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_AGRI_moulin_L2 = {
@@ -1018,7 +1018,7 @@ TP_FISH_fumoir_L1 = {
 	potential = {
 		has_province_modifier = pisci2_poisson }
 	#prerequisites = { TP_FISH_pisci_L1 }
-	prerequisites = { MONASTERE }
+	not_if_x_exists = { CITEEPISCOPALE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_FISH_fumoir_L2 = {
