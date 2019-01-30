@@ -65,292 +65,281 @@
 # 105 - Torch				- 106
 # 107 - Panda				- 108
 # 109 - Dragon				- 110
-# 111 - Eagle				- 112
-# 113 - Pregnancy			- 114
-# 115 - Evil Sword			- 116
-# 117 - Combat Skill		- 118
-# 119 - Broken Bone			- 120
-# 121 - Chicken				- 122
-# 123 - Combat Skill (New)	- 124
-# 125 - Bear 				- 126
-# 127 - Lion 				- 128
-# 129 - Rain Good           - 130
-# 131 - Rain Storm          - 132
-# 133 - Sun   	            - 134
-#end of vanilla 3.0.x
+#end of vanilla 2.7.x
 
-#135 - ELEV cuir (toile marron)
-#136 - ELEV draps (toile rouge)
-#137 - BOIS foret feuille verte
-#138 - BOIS bois brut (bois marrom foncé)
-#139 - BOIS charbon de bois (feuille bleue)
-#140 - BOIS planches (bois marrom clair)
-#141 - BOIS verre (verre transparent)
-#142 - BOIS foret chasse
-#143 - BOIS foret holy
-#144 - PIER rouage gris potentiel
-#145 - PIER hache bleu pierre active
-#146 - PIER hache rose pierre de taille
-#147 - MINE rouage bleu argent (potentiel)
-#148 - MINE rouage bleu foncé (actif)
-#149 - MINE rouage gris foncé (métal)
-#150 - MINE rouage vert (provisoire outils + sel raffine)
-#151 - MINE armes
-#152 - MINE gemme de sel
-#153 - MINE jambon (salaisons)
-#154 - FISH poisson bleu
-#155 - FISH poisson bleu
-#156 - FISH poisson fumé
-#157 - ELEV poney
-#158 - AGRI épi bleu
-#159 - AGRI épi grisé
-#160 - LUXE fourrure (pièces bleues)
-#161 - LUXE bijoux (pièces or)
-#162 - LUXE epices (pièces oranges)
-#163 - côte maritime
-#164 - route fluviale
-#165 - route terrestre [NOT USED]
-#166 - land/demesne
-#167 - rouage minerai cuivre
-#168 - rouage minerai or
-#169 - biere_Q1
-#170 - biere_Q2
-#171 - biere_Q3
-#172 - vin_Q1
-#173 - vin_Q2
-#174 - vin_Q3
-#175 - LCDA col majeur
-#176 - LCDA col mineur
-#177 - LCDA ordre1 [NOT USED]
-#178 - LCDA ordre2 [NOT USED]
-#179 - Relique
-#180 - silk road [NOT USED]
-  #181 - not used
-#182 - feuille rouge
-#183 - feuille or
-#184 - feuille violette
-#185 - foire (de decision vanilla) [NOT USED]
-#186 - feuille bleue
-#187 - couronne or [NOT USED]
-#188 - poisson bleu
-#189 - poisson grisé
-#190 - sainte grenade pourpre halo vert foncé [NOT USED]
-#191 - construction monument/cathedrale/holding
-#192 - Rouage rouge brisé
-#193 - Rouage halo rouge
-#194 - Rouage halo vert
-#195 - pastille verte + croix dorée
-#196 - pastille verte + couronne dorée
-#197 - pastille verte + clé dorée
-#198 - parchemin + sceau + plume //normal
-#199 - parchemin + sceau + plume //vert
-#200 - parchemin + sceau + plume //rouge
-#201 - riviére inondation
-#202 - rivière asséchée
-#203 - coin pile blue arrows /trade node
-#204 - coin pile green arrows /trade node secondary
-#205 - spe commanderie
-#206 - treasury icon
-#207 - spe TEMPLE 2b -centre religieux musulman
-  #208-211 - not used
-#212 - tradition chrétienne
-#213 - tradition musulmane
-#214 - tradition autre (voir si tuile)
-#215 - déclin tradition chrétienne
-#216 - déclin tradition musulmane
-#217 - déclin tradition autre (voir si tuile) [NOT USED]
-#218 - depopulation vanilla 1 [NOT USED]
-#219 - depopulation vanilla 2 [NOT USED]
-#220 - depopulation vanilla 3 [NOT USED]
-#221 - prosperite vanilla 1 [NOT USED]
-#222 - prosperite vanilla 2 [NOT USED]
-#223 - prosperite vanilla 3 [NOT USED]
-#224 - Totoro sama
-#225-229 - spe FEODAL 1 -village féodal
-#230-234 - spe FEODAL 2 -forteresse
-#235-239 - spe FEODAL 3 -cité féodale
-#239-244 - spe TEMPLE 1 -monastère
-#245-249 - spe TEMPLE 2a -cité épiscopale
-#250-254 - spe CITE 1 -cité production
-#255-259 - spe CITE 2 -cité commerce
-#260 - red hunt/poachers
-#261 - sword of justice green halo
-#262 - AGRI épi doré
-#263 - AGRI épi orangé
-#264 - AGRI Farine
-#265 - AGRI Bière
-#266 - AGRI Pain
-#267 - AGRI Fruits
-#268 - AGRI Cidre (verre gris)
-#269 - AGRI legumes
-#270 - AGRI vigne
-#271 - AGRI vin
-#272 - ELEV boeuf marron
-#273 - ELEV boeuf brun
-#274 - ELEV laine (toile bleue)
-#275 - ELEV toile (toile brun rose)
-#276 - ELEV fromage
-#277 - ELEV viande boeuf brun
+#111 - ELEV cuir (toile marron)
+#112 - ELEV draps (toile rouge)
+#113 - BOIS foret feuille verte
+#114 - BOIS bois brut (bois marrom foncé)
+#115 - BOIS charbon de bois (feuille bleue)
+#116 - BOIS planches (bois marrom clair)
+#117 - BOIS verre (verre transparent)
+#118 - BOIS foret chasse
+#119 - BOIS foret holy
+#120 - PIER rouage gris potentiel
+#121 - PIER hache bleu pierre active
+#122 - PIER hache rose pierre de taille
+#123 - MINE rouage bleu argent (potentiel)
+#124 - MINE rouage bleu foncé (actif)
+#125 - MINE rouage gris foncé (métal)
+#126 - MINE rouage vert (provisoire outils)
+#127 - MINE armes
+#128 - MINE gemme de sel
+#126 - MINE rouage vert (provisoire sel raffiné)
+#129 - MINE jambon (salaisons)
+#130 - FISH poisson bleu
+#131 - FISH poisson bleu
+#132 - FISH poisson fumé
+#133 - ELEV poney
+#134 - AGRI épi bleu
+#135 - AGRI épi grisé
+#136 - LUXE fourrure (pièces bleues)
+#137 - LUXE bijoux (pièces or)
+#138 - LUXE epices (pièces oranges)
+#139 - côte maritime
+#140 - route fluviale
+#141 - route terrestre
+#142 - land/demesne
+#143 - rouage minerai cuivre
+#144 - rouage minerai or
+#145 - biere_Q1
+#146 - biere_Q2
+#147 - biere_Q3
+#148 - vin_Q1
+#149 - vin_Q2
+#150 - vin_Q3
+#151 - LCDA col majeur
+#152 - LCDA col mineur
+#153 - LCDA ordre1
+#154 - LCDA ordre2
+#155 - Relique
+#156 - silk road (unused ?)
+  #157 - not used
+#158 - feuille rouge
+#159 - feuille or
+#160 - feuille violette
+#161 - foire (de decision vanilla)
+#162 - feuille bleue
+#163 - couronne or
+#164 - poisson bleu
+#165 - poisson grisé
+#166 - sainte grenade pourpre halo vert foncé
+#167 - construction monument/cathedrale/holding
+#168 - Rouage rouge brisé
+#169 - Rouage halo rouge
+#170 - Rouage halo vert
+#171 - pastille verte + croix dorée
+#172 - pastille verte + couronne dorée
+#173 - pastille verte + clé dorée
+#174 - parchemin + sceau + plume //normal
+#175 - parchemin + sceau + plume //vert
+#176 - parchemin + sceau + plume //rouge
+#177 - riviére inondation
+#178 - rivière asséchée
+#179 - coin pile blue arrows /trade node
+#180 - coin pile green arrows /trade node secondary
+#181 - spe commanderie
+#182 - treasury icon
+#183 - spe TEMPLE 2b -centre religieux musulman
+  #184-187 - not used
+#188 - tradition chrétienne
+#189 - tradition musulmane
+#190 - tradition autre (voir si tuile)
+#191 - déclin tradition chrétienne
+#192 - déclin tradition musulmane
+#193 - déclin tradition autre (voir si tuile)
+#194 - depopulation vanilla 1
+#195 - depopulation vanilla 2
+#196 - depopulation vanilla 3
+#197 - prosperite vanilla 1
+#198 - prosperite vanilla 2
+#199 - prosperite vanilla 3 
+#200 - Totoro sama
+#201-205 - spe FEODAL 1 -village féodal
+#206-210 - spe FEODAL 2 -forteresse
+#211-215 - spe FEODAL 3 -cité féodale
+#215-220 - spe TEMPLE 1 -monastère
+#221-225 - spe TEMPLE 2a -cité épiscopale
+#226-230 - spe CITE 1 -cité production
+#231-235 - spe CITE 2 -cité commerce
+#236 - red hunt/poachers
+#237 - sword of justice green halo
+#238 - AGRI épi doré
+#239 - AGRI épi orangé
+#240 - AGRI Farine
+#241 - AGRI Bière
+#242 - AGRI Pain
+#243 - AGRI Fruits
+#244 - AGRI Cidre (verre gris)
+#245 - AGRI legumes
+#246 - AGRI vigne
+#247 - AGRI vin
+#248 - ELEV boeuf marron
+#249 - ELEV boeuf brun
+#250 - ELEV laine (toile bleue)
+#251 - ELEV toile (toile brun rose)
+#252 - ELEV fromage
+#253 - ELEV viande boeuf brun
 
 ###ECO+
-agriculture1			= {icon = 262 local_revolt_risk = -0.01} 
-agriculture2_cereales	= {icon = 263}	
-agriculture2_fruits	= {icon = 267}	
-agriculture2_legumes = {icon = 269}	
-agriculture2_vigne	= {icon = 270} 
-agriculture3_farine 	= {icon = 264}	
-agriculture3_cidre	= {icon = 268 garrison_size  = 0.05}				
-agriculture3_vin 	= {icon = 271 garrison_size  = 0.05}
-agriculture3_biere		= {icon = 265}	
-agriculture4_pain 		= {icon = 266 local_revolt_risk = -0.05}
+agriculture1			= {icon = 238 local_revolt_risk = -0.01} 
+agriculture2_cereales	= {icon = 239}	
+agriculture2_fruits	= {icon = 243}	
+agriculture2_legumes = {icon = 245}	
+agriculture2_vigne	= {icon = 246} 
+agriculture3_farine 	= {icon = 240}	
+agriculture3_cidre	= {icon = 244 garrison_size  = 0.05}				
+agriculture3_vin 	= {icon = 247 garrison_size  = 0.05}
+agriculture3_biere		= {icon = 241}	
+agriculture4_pain 		= {icon = 242 local_revolt_risk = -0.05}
 
-agriculture3_biere_Q1 = {icon = 169}
-agriculture3_biere_Q2 = {icon = 170}
-agriculture3_biere_Q3 = {icon = 171}
-agriculture3_vin_Q1 = {icon = 172}
-agriculture3_vin_Q2 = {icon = 173}
-agriculture3_vin_Q3 = {icon = 174}
+agriculture3_biere_Q1 = {icon = 145}
+agriculture3_biere_Q2 = {icon = 146}
+agriculture3_biere_Q3 = {icon = 147}
+agriculture3_vin_Q1 = {icon = 148}
+agriculture3_vin_Q2 = {icon = 149}
+agriculture3_vin_Q3 = {icon = 150}
 			
-elevage1		= {icon = 272}
-elevage2_laine	= {icon = 274}	
-elevage2_boeuf	= {icon = 273	local_tax_modifier = 0.01}	
-elevage2_fromage= {icon = 276}  
-elevage2_cheval = {icon = 157} 
-elevage4_drap	= {icon = 136}	
-elevage3_viande	= {icon = 277 levy_size = 0.05}
-elevage3_etoffe	= {icon = 275}	
-elevage3_cuir	= {icon = 135}
+elevage1		= {icon = 248}
+elevage2_laine	= {icon = 250}	
+elevage2_boeuf	= {icon = 249	local_tax_modifier = 0.01}	
+elevage2_fromage= {icon = 252}  
+elevage2_cheval = {icon = 133} 
+elevage4_drap	= {icon = 112}	
+elevage3_viande	= {icon = 253 levy_size = 0.05}
+elevage3_etoffe	= {icon = 251}	
+elevage3_cuir	= {icon = 111}
 
-foret1			= {icon = 137}
-foret2_expl		= {icon = 137} #caché
-foret2_bois		= {icon = 138 local_tax_modifier = 0.01}	foret3_planche	= {icon = 140 local_build_time_modifier = -0.03}		
-foret2_charbon	= {icon = 139 local_tax_modifier = 0.01}	foret3_verre	= {icon = 141}	
+foret1			= {icon = 113}
+foret2_expl		= {icon = 113} #caché
+foret2_bois		= {icon = 114 local_tax_modifier = 0.01}	foret3_planche	= {icon = 116 local_build_time_modifier = -0.03}		
+foret2_charbon	= {icon = 115 local_tax_modifier = 0.01}	foret3_verre	= {icon = 117}	
 
-foret2_chasse = { 	tax_income = 0.1 local_revolt_risk = 0.04	icon = 142} #contrepartie loi, réduction max de 4% à 1%
-foret2_holy   = { 	tax_income = 0.1 local_revolt_risk = 0.04	icon = 143} #contrepartie loi, réduction max de 4% à 1%
+foret2_chasse = { 	tax_income = 0.1 local_revolt_risk = 0.04	icon = 118} #contrepartie loi, réduction max de 4% à 1%
+foret2_holy   = { 	tax_income = 0.1 local_revolt_risk = 0.04	icon = 119} #contrepartie loi, réduction max de 4% à 1%
 
-pierre1					= {icon = 144}
-pierre2_pierre_brute	= {icon = 145}
-pierre3_pierre_taille	= {local_build_time_modifier = -0.03 icon = 146}
+pierre1					= {icon = 120}
+pierre2_pierre_brute	= {icon = 121}
+pierre3_pierre_taille	= {local_build_time_modifier = -0.03 icon = 122}
 
-minerai1		= {icon = 147}
-minerai2_fer	= {icon = 148}	
-minerai3_metal	= {icon = 149}	
-minerai4_outils	= {icon = 150 local_build_time_modifier = -0.05}	
-minerai4_armes	= {icon = 151 levy_size = 0.05}
+minerai1		= {icon = 123}
+minerai2_fer	= {icon = 124}	
+minerai3_metal	= {icon = 125}	
+minerai4_outils	= {icon = 126 local_build_time_modifier = -0.05}	
+minerai4_armes	= {icon = 127 levy_size = 0.05}
 
-minerai1_sel			= {icon = 147}
-minerai2_sel_gemme		= {icon = 152 local_tax_modifier = 0.02}
-minerai3_sel_raffine	= {icon = 150}
-minerai3_salaison		= {icon = 153}
+minerai1_sel			= {icon = 123}
+minerai2_sel_gemme		= {icon = 128 local_tax_modifier = 0.02}
+minerai3_sel_raffine	= {icon = 126}
+minerai3_salaison		= {icon = 129}
 
-minerai2_cuivre	= {icon = 167}
-minerai2_or	= {icon = 168}
+minerai2_cuivre	= {icon = 143}
+minerai2_or	= {icon = 144}
 
-peche1					= {icon = 154}	pisci1			= {icon = 154}	
-peche2_poisson			= {icon = 155}	pisci2_poisson	= {icon = 155}
-peche_pisci3_fumaison	= {icon = 156 local_revolt_risk = -0.03}
+peche1					= {icon = 130}	pisci1			= {icon = 130}	
+peche2_poisson			= {icon = 131}	pisci2_poisson	= {icon = 131}
+peche_pisci3_fumaison	= {icon = 132 local_revolt_risk = -0.03}
 
-peaux2_fourrure	= {icon = 160 	tax_income = 0.2}
-joyaux2_bijoux	= {icon = 161 	tax_income = 0.1}
-epices2_epices	= {icon = 162 	tax_income = 0.3}
+peaux2_fourrure	= {icon = 136 	tax_income = 0.2}
+joyaux2_bijoux	= {icon = 137 	tax_income = 0.1}
+epices2_epices	= {icon = 138 	tax_income = 0.3}
 
 1connexion_commerciale = {icon = 1 } #hidden
 2connexion_commerciale = {icon = 1 } #hidden
-noeud_commercial_annexe = {icon = 204 city_tax_modifier = 0.03 }
-prosperity_modifier_2 = {icon = 203 local_tax_modifier = 0.05 } #retagged for using the on map 3D icon from vanilla prosperity L2
-prosperity_modifier_1 = {icon = 203 } #using the on map 3D icon from vanilla prosperity L1
-#noeud_commercial_primaire = {icon = 161 local_tax_modifier = 0.05 }
+noeud_commercial_annexe = {icon = 180 city_tax_modifier = 0.03 }
+prosperity_modifier_2 = {icon = 179 local_tax_modifier = 0.05 } #retagged for using the on map 3D icon from vanilla prosperity L2
+prosperity_modifier_1 = {icon = 179 } #using the on map 3D icon from vanilla prosperity L1
+#noeud_commercial_primaire = {icon = 137 local_tax_modifier = 0.05 }
 redaction_dun_cadastre  = {icon = 2 local_tax_modifier = 0.01 }
 interrupted_by_war = {icon = 1 } #hidden
 
 ###ReC
-relique01 = {icon = 179}	relique02 = {icon = 179}	relique03 = {icon = 179}	
-relique04 = {icon = 179}	relique05 = {icon = 179}	relique06 = {icon = 179}	
-relique07 = {icon = 179}	relique08 = {icon = 179}	relique09 = {icon = 179}	
-relique10 = {icon = 179}	relique11 = {icon = 179}	relique12 = {icon = 179}	
-relique13 = {icon = 179}	relique14 = {icon = 179}	relique15 = {icon = 179}	
-relique16 = {icon = 179}	relique17 = {icon = 179}	relique18 = {icon = 179}	
-relique19 = {icon = 179}	relique20 = {icon = 179}	relique21 = {icon = 179}	
-relique22 = {icon = 179}	relique23 = {icon = 179}	relique24 = {icon = 179}	
-relique25 = {icon = 179}
-relique_achercher_01 = {icon = 179}	
-relique_achercher_02 = {icon = 179}	
-relique_achercher_03 = {icon = 179}	
-relique_achercher_04 = {icon = 179}	
-relique_achercher_05 = {icon = 179}
-relique_graal_01 = {icon = 179}
+relique01 = {icon = 155}	relique02 = {icon = 155}	relique03 = {icon = 155}	
+relique04 = {icon = 155}	relique05 = {icon = 155}	relique06 = {icon = 155}	
+relique07 = {icon = 155}	relique08 = {icon = 155}	relique09 = {icon = 155}	
+relique10 = {icon = 155}	relique11 = {icon = 155}	relique12 = {icon = 155}	
+relique13 = {icon = 155}	relique14 = {icon = 155}	relique15 = {icon = 155}	
+relique16 = {icon = 155}	relique17 = {icon = 155}	relique18 = {icon = 155}	
+relique19 = {icon = 155}	relique20 = {icon = 155}	relique21 = {icon = 155}	
+relique22 = {icon = 155}	relique23 = {icon = 155}	relique24 = {icon = 155}	
+relique25 = {icon = 155}
+relique_achercher_01 = {icon = 155}	
+relique_achercher_02 = {icon = 155}	
+relique_achercher_03 = {icon = 155}	
+relique_achercher_04 = {icon = 155}	
+relique_achercher_05 = {icon = 155}
+relique_graal_01 = {icon = 155}
 relique_generique = {	
-	icon = 179
+	icon = 155
 	temple_tax_modifier = 0.15
 }
-relique_fort_douteuse = {icon = 179} 
-relique_falsifiee = {icon = 179} 
-relique_mineure = {icon = 179} 
+relique_fort_douteuse = {icon = 155} 
+relique_falsifiee = {icon = 155} 
+relique_mineure = {icon = 155} 
 
-repasse_dans_un_an = {icon = 179}  # hidden
-a_offert_sculpture = {icon = 179}  # hidden
-a_deja_recu_sculpture = {icon = 179}  # hidden
-a_offert_fresque = {icon = 179}  # hidden
-a_deja_recu_fresque = {icon = 179}  # hidden
-a_offert_vitrail = {icon = 179}  # hidden
-a_deja_recu_vitrail = {icon = 179}  # hidden
+repasse_dans_un_an = {icon = 155}  # hidden
+a_offert_sculpture = {icon = 155}  # hidden
+a_deja_recu_sculpture = {icon = 155}  # hidden
+a_offert_fresque = {icon = 155}  # hidden
+a_deja_recu_fresque = {icon = 155}  # hidden
+a_offert_vitrail = {icon = 155}  # hidden
+a_deja_recu_vitrail = {icon = 155}  # hidden
 
-totoro = {icon = 224} #mouchard :p
+totoro = {icon = 200} #mouchard :p
 
 romanesque_construction = {
-	icon = 193
+	icon = 169
 	local_tax_modifier  = -0.9 # -90%
 }
 
 chantier_cathedrale = {
-	icon = 191
+	icon = 167
 	local_build_time_modifier = 0.2 #+20% because workers are occupied
 	#local_build_cost_modifier = 0.2 #+20% because workers are occupied
 }
 
 chantier_up = {
-	icon = 194
+	icon = 170
 	local_build_time_modifier = 0.1 # 10% like chantier_cathedrale
 	local_build_cost_modifier = 0.1 # 10% like chantier_cathedrale
 }
 
 chantier_down = {
-	icon = 193
+	icon = 169
 	local_build_time_modifier = -0.1 # -10% to balance chantier_cathedrale
 	local_build_cost_modifier = -0.1 # -10% to balance chantier_cathedrale
 	local_revolt_risk = 0.01
 }
 
 chantier_stop = {
-	icon = 192
+	icon = 168
 	local_build_time_modifier = -0.2 # -20% to balance chantier_cathedrale
 	#local_build_cost_modifier = -0.2 # -20% to balance chantier_cathedrale
 	local_revolt_risk = 0.02 #2% chantier stoppé cause grève ou arrêt "simple" : employés non payés
 }
 
 chantier_cancelled = {
-	icon = 191
+	icon = 167
 	local_revolt_risk = 0.05
 }
 
 temp_wall = {
-	icon = 151
+	icon = 127
 	fort_level = 1
 }
 
 temp_wall_improvement = {
-	icon = 151
+	icon = 127
 	fort_level = 0.5
 }
 
 stone_siege_defence = {
-	icon = 151
+	icon = 127
 	siege_defence = 0.25
 }
 
 work_on_cathedral = {
-	icon = 191
+	icon = 167
 	#monthly_character_wealth = 1 # Seems to not work
 	monthly_character_prestige = 0.1
 	monthly_character_piety = 0.1
@@ -361,68 +350,68 @@ work_on_cathedral = {
 chantier_stop_rivalite_1 = { # Chantier arrêté à cause d'un coup bas
 	local_build_time_modifier = 1.00 #+100%
 	local_revolt_risk = 0.01
-	icon = 192
+	icon = 168
 }
 chantier_stop_rivalite_2 = { # Mis si le 1er existe déjà
 	local_build_time_modifier = 1.00 #+100%
 	local_revolt_risk = 0.01
-	icon = 192
+	icon = 168
 }
 chantier_stop_rivalite_3 = { # Mis si le 1er et le 2ème existent déjà
 	local_build_time_modifier = 1.00 #+100%
 	local_revolt_risk = 0.01
-	icon = 192
+	icon = 168
 }
 
 chantier_down_rivalite_1 = { # Chantier ralenti à cause d'un coup bas
 	local_build_time_modifier = 0.10 #+10%
-	icon = 193
+	icon = 169
 }
 chantier_down_rivalite_2 = { # Mis si le 1er existe déjà
 	local_build_time_modifier = 0.10 #+10%
-	icon = 193
+	icon = 169
 }
 chantier_down_rivalite_3 = { # Mis si le 1er et le 2ème existent déjà
 	local_build_time_modifier = 0.10 #+10%
-	icon = 193
+	icon = 169
 }
 loge_modifier = {
 	local_build_time_modifier = -0.10 #-10%
-	icon = 194
+	icon = 170
 }
 
 ##########
-trad_chretienne = { icon = 212 } #flag
-trad_musulmane = { icon = 213 } #flag
-trad_autre = { icon = 214 } #flag
+trad_chretienne = { icon = 188 } #flag
+trad_musulmane = { icon = 189 } #flag
+trad_autre = { icon = 190 } #flag
 
-minorite_chretienne = { icon = 215 }
-minorite_musulmane = { icon = 216 }
+minorite_chretienne = { icon = 191 }
+minorite_musulmane = { icon = 192 }
 
 ##########
-boost_opinion_bourgeois	= {	town_opinion	= 25	icon = 197	}
-boost_opinion_feodaux	= {	castle_opinion	= 25	icon = 196	}
-boost_opinion_ecclesia	= {	church_opinion	= 25	icon = 195	}
-en_odeur_de_saintete	= {	church_opinion	= 20	monthly_character_piety = 2.5	icon = 195	}
+boost_opinion_bourgeois	= {	town_opinion	= 25	icon = 173	}
+boost_opinion_feodaux	= {	castle_opinion	= 25	icon = 172	}
+boost_opinion_ecclesia	= {	church_opinion	= 25	icon = 171	}
+en_odeur_de_saintete	= {	church_opinion	= 20	monthly_character_piety = 2.5	icon = 171	}
 stolen_relic 			= { church_opinion = -10 	icon = 26 }
 
 ##########
-emprunt_A = { icon = 200 } #T3% M150
-emprunt_B = { icon = 200 } #T3%  M250
-emprunt_C = { icon = 200 } #T3%   M350
-emprunt_D = { icon = 200 } #T3%    M450
-emprunt_E = { icon = 200 }  #T4% M150
-emprunt_F = { icon = 200 }  #T4%  M250
-emprunt_G = { icon = 200 }  #T4%   M350
-emprunt_H = { icon = 200 }  #T4%    M450
-emprunt_I = { icon = 200 } #T5% M150
-emprunt_J = { icon = 200 } #T5%  M250
-emprunt_K = { icon = 200 } #T5%   M350
-emprunt_L = { icon = 200 } #T5%    M450
+emprunt_A = { icon = 176 } #T3% M150
+emprunt_B = { icon = 176 } #T3%  M250
+emprunt_C = { icon = 176 } #T3%   M350
+emprunt_D = { icon = 176 } #T3%    M450
+emprunt_E = { icon = 176 }  #T4% M150
+emprunt_F = { icon = 176 }  #T4%  M250
+emprunt_G = { icon = 176 }  #T4%   M350
+emprunt_H = { icon = 176 }  #T4%    M450
+emprunt_I = { icon = 176 } #T5% M150
+emprunt_J = { icon = 176 } #T5%  M250
+emprunt_K = { icon = 176 } #T5%   M350
+emprunt_L = { icon = 176 } #T5%    M450
 
-emprunt_jew_75 = { icon = 200 }
-emprunt_jew_150 = { icon = 200 }
-emprunt_jew_300 = { icon = 200 }
+emprunt_jew_75 = { icon = 176 }
+emprunt_jew_150 = { icon = 176 }
+emprunt_jew_300 = { icon = 176 }
 
 #XYLO
 
@@ -480,79 +469,79 @@ la_province_se_remet = { #
 
 foret_up = {
 	local_tax_modifier = 0.05 #+5% #cumulatif.
-	icon = 183
+	icon = 159
 }
 
 loi_forestiere_L1 = {
 	local_revolt_risk = -0.01 #-1%
 	tax_income = -0.1
-	icon = 198
+	icon = 174
 }
 loi_forestiere_L2 = {
 	local_revolt_risk = -0.03 #-3%
 	tax_income = -0.1
-	icon = 199
+	icon = 175
 }
 
 foret_hantee = {
 	local_tax_modifier = -0.1 #-10%
-	icon = 182
+	icon = 158
 }
 foret_malfamee = {
 	local_tax_modifier = -0.30 #-30%
-	icon = 186
+	icon = 162
 }
 foret_maudite = {
 	local_tax_modifier = -0.50 #-50%
-	icon = 184
+	icon = 160
 }
 foret_poor = {
 	local_tax_modifier = -0.10 #-10%
 	local_revolt_risk = 0.01
-	icon = 182
+	icon = 158
 }
 
 foret_braconnage = {
 	local_revolt_risk = 0.03
 	local_tax_modifier  = -0.1 # -10%
-	icon = 260
+	icon = 236
 }
 justice_rendue_prov = { #province modifier
 	local_revolt_risk = -0.03
-	icon = 261
+	icon = 237
 }
 justice_rendue_char = { #character modifier
 	general_opinion = 7
 	monthly_character_prestige = 0.2
-	icon = 261
+	icon = 237
 }
 
 illegal_cut = {}
 a_witch = {}
 
 recolte_bonne = {
-	icon = 158 
+	icon = 134 
 	local_revolt_risk = -0.05
 	tax_income = 0.2
 	local_tax_modifier =  0.02
 }
 
 recolte_mauvaise = {
-	icon =  159
+	icon =  135
 	local_revolt_risk =  0.05
 	tax_income = -0.2
 	local_tax_modifier = -0.02
 }
 
 peche_bonne = {
-	icon = 188 
+	icon = 164 
 	local_revolt_risk = -0.05
 	tax_income = 0.3
 	local_tax_modifier =  0.03
 }
 
 peche_mauvaise = {
-	icon =  189 
+	icon =  165 
 	local_revolt_risk =  0.05
 	tax_income = -0.3
 	local_tax_modifier = -0.03
@@ -560,7 +549,7 @@ peche_mauvaise = {
 
 ###Terrain et commerce
 mine_stop = {
-	icon =  192
+	icon =  168
 	tax_income = -0.5
 }
 no_more_mines = { icon = 1} # hidden
@@ -568,21 +557,21 @@ no_more_foundries = { icon = 1} # hidden
 no_more_tools_weapons = { icon = 1} # hidden
 nouveau_filon = { icon = 1} # hidden
 mine_productivite_moins = {
-	icon =  193
+	icon =  169
 	tax_income = -0.2
 }
 mine_productivite_plus = {
-	icon =  194
+	icon =  170
 	tax_income = 0.2
 }
 
-ressource_L2_dispo = { icon = 162 }
+ressource_L2_dispo = { icon = 138 }
 has_ress_L2 = { icon = 1} # hidden
 has_ress_L3 = { icon = 1} # hidden
 has_ress_L4 = { icon = 1} # hidden
 
 industrie_prospere = {
-	icon =  162
+	icon =  138
 	local_revolt_risk = -0.05
 	tax_income = 3.0
 	local_tax_modifier =  0.15
@@ -590,29 +579,29 @@ industrie_prospere = {
 
 ###Meteo
 meteo_inondation = {
-	icon =  201 
+	icon =  177 
 	local_revolt_risk =  0.02
 	tax_income = -0.2
 	local_tax_modifier = -0.02
 } 
 meteo_secheresse = {
-	icon =  202 
+	icon =  178 
 	local_revolt_risk =  0.03
 	tax_income = -0.3
 	local_tax_modifier = -0.03
 } 
 	
-province_cotiere = { icon = 163 local_tax_modifier = 0.02 }
-province_fleuve = { icon = 164 }
-province_terrestre = { icon = 166 } # hidden
+province_cotiere = { icon = 139 local_tax_modifier = 0.02 }
+province_fleuve = { icon = 140 }
+province_terrestre = { icon = 142 } # hidden
 
 great_pass = {
 	local_tax_modifier = 0.07
-	icon = 175
+	icon = 151
 }
 minor_pass = {
 	local_tax_modifier = 0.04
-	icon = 176
+	icon = 152
 }
 
 route_terrestre01 = { local_tax_modifier = 0.05	icon = 80 } #+5%
@@ -704,6 +693,7 @@ realm_capital_province = {
 	military_techpoints = 0.05
 }
 ### Specialization modifiers
+<<<<<<< HEAD
 feodal_prod_L1 = {icon = 225 }
 feodal_prod_L2 = {icon = 226 }
 feodal_prod_L3 = {icon = 227 }
@@ -755,6 +745,53 @@ voc_comm_L5 = {icon = 259 }
 
 episco_muslim = {icon = 207 }
 #commanderie = {icon = 205 }
+=======
+feodal_prod_L1 = {icon = 201 }
+feodal_prod_L2 = {icon = 202 }
+feodal_prod_L3 = {icon = 203 }
+feodal_prod_L4 = {icon = 204 }
+feodal_prod_L5 = {icon = 205 }
+
+feodal_mil_L1 = {icon = 206 }
+feodal_mil_L2 = {icon = 207 }
+feodal_mil_L3 = {icon = 208 }
+feodal_mil_L4 = {icon = 209 }
+feodal_mil_L5 = {icon = 210 }
+
+feodal_adm_L1 = {icon = 211 }
+feodal_adm_L2 = {icon = 212 }
+feodal_adm_L3 = {icon = 213 }
+feodal_adm_L4 = {icon = 214 }
+feodal_adm_L5 = {icon = 215 }
+
+monastere_L1 = {icon = 216 }
+monastere_L2 = {icon = 217 }
+monastere_L3 = {icon = 218 }
+monastere_L4 = {icon = 219 }
+monastere_L5 = {icon = 220 }
+
+episcopale_L1 = {icon = 221 }
+episcopale_L2 = {icon = 222 }
+episcopale_L3 = {icon = 223 }
+episcopale_L4 = {icon = 224 }
+episcopale_L5 = {icon = 225 }
+
+voc_indus_L1 = {icon = 226 }
+voc_indus_L2 = {icon = 227 }
+voc_indus_L3 = {icon = 228 }
+voc_indus_L4 = {icon = 229 }
+voc_indus_L5 = {icon = 230 }
+
+voc_comm_L1 = {icon = 231 }
+voc_comm_L2 = {icon = 232 }
+voc_comm_L3 = {icon = 233 }
+voc_comm_L4 = {icon = 234 }
+voc_comm_L5 = {icon = 235 }
+
+
+episco_muslim = {icon = 183 }
+#commanderie = {icon = 181 }
+>>>>>>> parent of 85d37a4... Update L3T modifiers
  
 
 ###
@@ -795,13 +832,13 @@ route_size5 = {
 }
 
 route_fluviale = { 
-	#icon = 164 
+	#icon = 140 
 	icon = 6 #major_modifer_icon_strip
 	local_tax_modifier = 0.05
 	major = yes
 	}
 route_terrestre = { 
-	#icon = 165 
+	#icon = 141 
 	icon = 7 #major_modifer_icon_strip
 	local_tax_modifier = 0.05
 	major = yes
