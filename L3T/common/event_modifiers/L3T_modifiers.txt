@@ -152,7 +152,8 @@
 #205 - spe commanderie
 #206 - treasury icon
 #207 - spe TEMPLE 2b -centre religieux musulman
-  #208-211 - not used
+#208 - realm capital province
+  #209-211 - not used
 #212 - tradition chrétienne
 #213 - tradition musulmane
 #214 - tradition autre (voir si tuile)
@@ -696,7 +697,7 @@ herisson_maudit_3 = { #prestige loss
 }
 
 realm_capital_province = {
-	icon = 184
+	icon = 208
 	local_revolt_risk = -0.01
 	local_tax_modifier = 0.03
 	economy_techpoints = 0.05
