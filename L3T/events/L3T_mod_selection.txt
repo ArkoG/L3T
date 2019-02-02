@@ -384,11 +384,10 @@ province_event = {
 	}
 }
 #Maintenance realm capitales
-# ROOT is the character, FROM is the title, FROMFROM is the old holder
+# ROOT is the character
 character_event = {
     id = L3T.50
 	desc = "capital_MAJ_blah"
-	#hide_window = yes
 	picture = GFX_evt_castle_construction
 	
 	only_rulers = yes
@@ -397,87 +396,71 @@ character_event = {
 
 	is_triggered_only = yes
 	
-	trigger = {
-		OR = {
-			AND = {
+	option = {
+		name = "capital_MAJ"
+		
+		# Ruler can have a realm capital and doesn't have it in the capital yet
+		if = { 
+			limit = {
 				OR = {
-					demesne_size = 3 #maybe just two ?
-					realm_size = 8 #more than one province owned
+					demesne_size = 3
+					realm_size = 8
 				}
 				capital_scope = {
 					NOT = { has_province_modifier = realm_capital_province }
 				}
 			}
-			AND = {
-				any_demesne_province = { has_province_modifier = realm_capital_province }
-				#owner = { 
-					NOT = { 
-						OR = {
-							demesne_size = 3
-							realm_size = 8
-						}
-					}
-				#}
-			}			
+			capital_scope = { 
+				add_province_modifier = { 
+					name = realm_capital_province
+					duration = -1
+				}
+			}
 		}
-	}
-	
-#	mean_time_to_happen = {
-#		years = 1
-#		modifier = {
-#			factor = 0.5 
-#			any_demesne_province = {
-#				capital_holding = { holding_type = castle }
-#			}
-#		}
-#	}
-	
-	option = {
-		name = "capital_MAJ"
+		
+		# Remove old realm capital
+		any_demesne_province = {
+			limit = {
+				has_province_modifier = realm_capital_province
+				NOT = { owner = { capital_scope = { province = ROOT }}}
+			}
+			remove_province_modifier = realm_capital_province
+		}
+		
+		# Ruler is become too little to have a realm capital
 		if = { 
 			limit = {
-				#owner = {
+				capital_scope = {
+					has_province_modifier = realm_capital_province
+				}
+				NOT = {
 					OR = {
 						demesne_size = 3
 						realm_size = 8
 					}
-					capital_scope = {
-						NOT = { has_province_modifier = realm_capital_province }
-					}
-				#}
-			}
-			#owner = {
-				any_demesne_province = {
-					limit = {
-						has_province_modifier = realm_capital_province
-						NOT = { owner = { capital_scope = { province = ROOT }}}
-					}
-					remove_province_modifier = realm_capital_province
-				}
-				capital_scope = { 
-					add_province_modifier = { 
-						name = realm_capital_province
-						duration = -1
-					}
-				}
-			#}
-		}
-		if = { 
-			limit = {
-				AND = {
-					any_demesne_province = {
-						has_province_modifier = realm_capital_province
-					}
-					NOT= {
-						OR = {
-							demesne_size = 3
-							realm_size = 8
-						}
-					}
 				}
 			}
-			any_demesne_province = { remove_province_modifier = realm_capital_province }
+			capital_scope = { remove_province_modifier = realm_capital_province }
 		}
+	}
+}
+
+#Maintenance realm capitales
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+    id = L3T.51
+	desc = "capital_MAJ_blah"
+	hide_window = yes
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	immediate = {
+		# maintenance for the old holder
+		FROMFROM = { character_event = { id = L3T.50 } }
 	}
 }
 
