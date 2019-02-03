@@ -171,7 +171,6 @@ province_event = {
 	}
 
 	immediate = {
-		name = "ECO.202A"
 		random = {		
 			chance = 15
 			owner = { 		
@@ -233,7 +232,6 @@ province_event = {
 	}
 
 	immediate = {
-		name = "ECO.203A"
 		random = {		
 			chance = 15
 			owner = { 		
@@ -687,7 +685,6 @@ province_event = {
 	}
 
 	immediate = {
-		name = "ECO.209A"
 		if = {
 			limit = { NOT = { has_global_flag = no_immersion_notification } }
 			province_event = { id = ECO.259 days = 0}
