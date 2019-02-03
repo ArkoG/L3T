@@ -405,76 +405,18 @@ character_event = {
 		}
 	}
 
-
 	immediate = {
+	#option = {
 		#name = "capital_MAJ"
 		
-		set_variable = { which = "cap_number" value = 0 }
-		any_demesne_province = { #count any capital a character has
-			limit = {
-				has_province_modifier = realm_capital_province
-			}
-			owner = {
-				change_variable = { which = "cap_number" value = 1 }
-			}
-		}
-
 		# Ruler can have a realm capital and doesn't have it in his capital holding yet
-		if = { 
+		if = {
 			limit = {
-				NOT = { check_variable = { which = "cap_number" value = 1 }} #less than 1
-			}
-			#any_demesne_province = { #remove any other capital modifier if any
-			#	limit = {
-			#		has_province_modifier = realm_capital_province
-			#	}
-			#	remove_province_modifier = realm_capital_province
-			#}			
-			capital_scope = { 
-				add_province_modifier = { 
-					name = realm_capital_province
-					duration = -1
+				any_demesne_province = {
+					owner = { capital_scope = { province = PREVPREV}}
+					NOT = { has_province_modifier = realm_capital_province }
 				}
 			}
-		}
-		
-		if = { 
-			limit = {
-				check_variable = { which = "cap_number" value = 1 } #at least one
-				NOT = { check_variable = { which = "cap_number" value = 2 }} #not more than 1
-				capital_scope = { has_province_modifier = realm_capital_province }
-			}
-			#do nothing
-		}
-		if = { 
-			limit = {
-				check_variable = { which = "cap_number" value = 1 } #at least one
-				NOT = { check_variable = { which = "cap_number" value = 2 }} #not more than 1
-				NOT = { capital_scope = { has_province_modifier = realm_capital_province }}
-			}
-			any_demesne_province = { #remove any other capital modifier if any
-				limit = {
-					has_province_modifier = realm_capital_province
-				}
-				remove_province_modifier = realm_capital_province
-			}
-			capital_scope = { 
-				add_province_modifier = { 
-					name = realm_capital_province
-					duration = -1
-				}
-			}
-		}
-		if = { 
-			limit = {
-				check_variable = { which = "cap_number" value = 2 } #more than 1
-			}
-			any_demesne_province = { #remove any other capital modifier if any
-				limit = {
-					has_province_modifier = realm_capital_province
-				}
-				remove_province_modifier = realm_capital_province
-			}	
 			capital_scope = {
 				add_province_modifier = { 
 					name = realm_capital_province
@@ -482,9 +424,23 @@ character_event = {
 				}
 			}
 		}
-		#reseting the variable for next check
-		change_variable = { which = "cap_number" value = 0 }
-		#character_event = { id = L3T.52 }
+		#remove capital modifier from any province that is not the capital
+		if = { 
+			limit = {
+				any_demesne_province = {	
+					NOT = { owner = { capital_scope = { province = PREVPREV}}}
+					has_province_modifier = realm_capital_province
+				}
+			}
+			any_demesne_province = { #remove any other capital modifier if any
+				limit = {
+					NOT = { owner = { capital_scope = { province = PREVPREV}}}
+					has_province_modifier = realm_capital_province
+				}
+				remove_province_modifier = realm_capital_province
+			}
+
+		}
 	}
 }
 			
