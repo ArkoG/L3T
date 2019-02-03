@@ -111,7 +111,15 @@ destroy_relic = {
 	}
 	
 	random_artifact = {					
-		limit = { has_artifact_flag = relique }
+		limit = { 
+			OR ={
+				has_artifact_flag = relique
+				AND = {
+					has_artifact_flag = saint
+					has_artifact_flag = bodypart
+				}
+			}
+		}
 		# The relic will be available to be create again
 		if = {
 			limit = { artifact_type = relique01 }
