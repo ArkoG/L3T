@@ -4,6 +4,11 @@ namespace = HL
 # Nomad Pillaging Events #
 ##########################
 
+#####################
+# L3T modifications #
+# Replace prosperityz_modifier by prosperityz_modifier
+# Audax Validator "!" Ignore_ALL
+
 character_event = { # Pillaging Repeating Event
 	id = HL.4800
 	hide_window = yes
@@ -234,7 +239,7 @@ character_event = { # Nomads may pillage holdings on siege
 			top_liege = {
 				save_event_target_as = top_liege_target
 			}
-		}		
+		}
 		FROM = {
 			location = {
 				add_province_modifier = {
