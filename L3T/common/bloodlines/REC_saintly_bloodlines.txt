@@ -1,14 +1,46 @@
-# Catholic
+## Catholic for ReC Sainthood
+# these are bloodline pattern to use as base - bloodline creation can actualy add some customization
+
+#general piousness //nothing special 
+#martial piouness //crusader holy warrior - male only
+#monastic piouness // monk/nun - genre
+#theology/erudition // 
+
+#some bloodlines effects
+## MODIFIER: 									## FLAG:						# DOES:
+# bloodline_effect_joining_warrior_lodge		bloodline_legendary_warrior		Will have an easier time joining Warrior Lodges
+# bloodline_effect_battle_survivor				battle_survivor_bloodline		More resistant to battle injury
+# bloodline_effect_reaver						bloodline_reaver 				Greater chance of capturing loot (sieging)
+# bloodline_effect_fearsome						bloodline_fearsome 				Increased chance of capturing enemy commanders
+# bloodline_effect_inspire_commanders			bloodline_inspire_commanders 	The Promote Commander decision tends to give better commanders
+# bloodline_effect_loyal_councilors				bloodline_loyalist				Your council tends to lean towards loyalist
+# bloodline_effect_artisan_craftsmen			bloodline_artisan_craftsmen 	Smiths are less prone to be jerks
+# bloodline_effect_battle_bards					bloodline_battle_bards  		Unlocks extra things in battle
+# bloodline_effect_pet_dog  					bloodline_pet_dog 	 			If you lose your dog, you will be given a new one...
+# bloodline_effect_pet_eagle 					bloodline_pet_eagle 			If you lose your eagle, you will find a new one...
+
+
+#picture = "GFX_BL_cross1"
+#picture = "GFX_BL_cross2"
+#picture = "GFX_BL_cross3"
+#picture = "GFX_BL_cross4"
+#picture = "GFX_BL_cross5"
+#picture = "GFX_BL_cross6"
+#picture = "GFX_BL_angel"
+#picture = "GFX_BL_maria_maria"
+#picture = "GFX_BL_crusader1"
+#picture = "GFX_BL_crusader2"
+
 
 saintly_bloodline_catholic_07 = {
 	monthly_character_piety = 0.3
 	command_modifier = {
 		religious_enemy = 0.3
-	}	
+	}
 	saintly_defender_bloodline = 1
 	inheritance = patrilineal
 	allow_bastards = no
-	flags = { saintly_bloodline defender_of_the_faith }
+	flags = { created_bloodline saintly_bloodline defender_of_the_faith }
 	picture = GFX_bloodlines_symbol_cross_1
 	active = {
 		custom_tooltip = {
@@ -22,13 +54,21 @@ saintly_bloodline_catholic_07 = {
 	}
 }
 
-saintly_bloodline_catholic_02 = {
+saintly_bloodline_catholic_08 = {
 	monthly_character_piety = 0.1
 	christian_church_opinion = 5
 	saintly_monastic_bloodline = 1
 	inheritance = patrilineal
-	allow_bastards = no
-	flags = { saintly_bloodline monastic_saintly_bloodline }
+	#inheritance = matrilineal
+	allow_bastards = yes
+	#allow_bastards = no
+	
+	#default flags
+	flags = { 
+		saintly_bloodline
+		monastic_saintly_bloodline
+		created_bloodline #to fullfil the create bloodline ambition
+	}
 	picture = GFX_bloodlines_symbol_cross_1
 	active = {
 		custom_tooltip = {
@@ -42,26 +82,9 @@ saintly_bloodline_catholic_02 = {
 	}
 }
 
-saintly_bloodline_catholic_03 = {
-	monthly_character_piety = 0.3
-	saintly_cultural_bloodline = 1
-	inheritance = patrilineal
-	allow_bastards = no
-	flags = { saintly_bloodline cultural_saintly_bloodline }
-	picture = GFX_bloodlines_symbol_cross_1
-	active = {
-		custom_tooltip = {
-			text = saintly_bloodline_same_culture_TT
-			FROM = {
-				founder = {
-					culture = ROOT
-				}
-			}
-		}
-	}
-}
 
-saintly_bloodline_catholic_04 = {
+
+saintly_bloodline_catholic_09 = {
 	command_modifier = {
 		religious_enemy = 0.1
 	}	
@@ -83,20 +106,7 @@ saintly_bloodline_catholic_04 = {
 	}
 }
 
-saintly_bloodline_catholic_05 = {
-	monthly_character_piety = 0.2
-	jewish_group_opinion = 15
-	saintly_jewish_bloodline = 1
-	inheritance = patrilineal
-	allow_bastards = no
-	flags = { saintly_bloodline jewish_saintly_bloodline }
-	picture = GFX_bloodlines_symbol_cross_1
-	active = {
-		religion_group = christian
-	}
-}
-
-saintly_bloodline_catholic_06 = {
+saintly_bloodline_catholic_10 = {
 	saintly_theologians_bloodline = 1
 	monthly_character_piety = 0.2
 	inheritance = patrilineal
