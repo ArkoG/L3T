@@ -56,6 +56,21 @@ relic_spawn_bonus_catholic_theocratie = {
 	}
 }
 
+# ROOT is a character
+has_a_relic = {
+	any_artifact = {
+		OR = {
+			#ReC relics
+			has_artifact_flag = relique
+			#vanilla generic/dynamic relic support
+			AND = { 
+				has_artifact_flag = saint
+				has_artifact_flag = bodypart
+			}
+		}
+	}
+}
+
 # ROOT is a potentiel ruler who wants to build a Cathedral
 construire_cathedral_potential = {
 	AND = {
@@ -79,17 +94,7 @@ construire_cathedral_potential = {
 		}
 		
 		# Has a relic
-		any_artifact = {
-			OR = {
-				#ReC relics
-				has_artifact_flag = relique
-				#vanilla generic/dynamic relic support
-				AND = { 
-					has_artifact_flag = saint
-					has_artifact_flag = bodypart
-				}
-			}
-		}
+		has_a_relic = yes
 	}
 }
 
