@@ -387,69 +387,8 @@ province_event = {
 # ROOT is the character
 character_event = {
     id = L3T.50
-	desc = "capital_MAJ_blah"
-	picture = GFX_evt_castle_construction
-	
-	only_rulers = yes
-	capable_only = yes
-	prisoner = no
-
-	is_triggered_only = yes
-	
-	option = {
-		name = "capital_MAJ"
-		
-		# Ruler can have a realm capital and doesn't have it in the capital yet
-		if = { 
-			limit = {
-				OR = {
-					demesne_size = 3
-					realm_size = 8
-				}
-				capital_scope = {
-					NOT = { has_province_modifier = realm_capital_province }
-				}
-			}
-			capital_scope = { 
-				add_province_modifier = { 
-					name = realm_capital_province
-					duration = -1
-				}
-			}
-		}
-		
-		# Remove old realm capital
-		any_demesne_province = {
-			limit = {
-				has_province_modifier = realm_capital_province
-				NOT = { owner = { capital_scope = { province = ROOT }}}
-			}
-			remove_province_modifier = realm_capital_province
-		}
-		
-		# Ruler is become too little to have a realm capital
-		if = { 
-			limit = {
-				capital_scope = {
-					has_province_modifier = realm_capital_province
-				}
-				NOT = {
-					OR = {
-						demesne_size = 3
-						realm_size = 8
-					}
-				}
-			}
-			capital_scope = { remove_province_modifier = realm_capital_province }
-		}
-	}
-}
-
-#Maintenance realm capitales
-# ROOT is the character, FROM is the title, FROMFROM is the old holder
-character_event = {
-    id = L3T.51
-	desc = "capital_MAJ_blah"
+	#desc = "capital_MAJ_blah"
+	#picture = GFX_evt_debug_totoro
 	hide_window = yes
 	
 	only_rulers = yes
@@ -458,9 +397,131 @@ character_event = {
 
 	is_triggered_only = yes
 	
+	trigger = { 
+		higher_tier_than = BARON
+		OR = {
+			demesne_size = 2
+			higher_tier_than = COUNT
+		}
+	}
+
+
 	immediate = {
-		# maintenance for the old holder
-		FROMFROM = { character_event = { id = L3T.50 } }
+		#name = "capital_MAJ"
+		
+		set_variable = { which = "cap_number" value = 0 }
+		any_demesne_province = { #count any capital a character has
+			limit = {
+				has_province_modifier = realm_capital_province
+			}
+			owner = {
+				change_variable = { which = "cap_number" value = 1 }
+			}
+		}
+
+		# Ruler can have a realm capital and doesn't have it in his capital holding yet
+		if = { 
+			limit = {
+				NOT = { check_variable = { which = "cap_number" value = 1 }} #less than 1
+			}
+			#any_demesne_province = { #remove any other capital modifier if any
+			#	limit = {
+			#		has_province_modifier = realm_capital_province
+			#	}
+			#	remove_province_modifier = realm_capital_province
+			#}			
+			capital_scope = { 
+				add_province_modifier = { 
+					name = realm_capital_province
+					duration = -1
+				}
+			}
+		}
+		
+		if = { 
+			limit = {
+				check_variable = { which = "cap_number" value = 1 } #at least one
+				NOT = { check_variable = { which = "cap_number" value = 2 }} #not more than 1
+				capital_scope = { has_province_modifier = realm_capital_province }
+			}
+			#do nothing
+		}
+		if = { 
+			limit = {
+				check_variable = { which = "cap_number" value = 1 } #at least one
+				NOT = { check_variable = { which = "cap_number" value = 2 }} #not more than 1
+				NOT = { capital_scope = { has_province_modifier = realm_capital_province }}
+			}
+			any_demesne_province = { #remove any other capital modifier if any
+				limit = {
+					has_province_modifier = realm_capital_province
+				}
+				remove_province_modifier = realm_capital_province
+			}
+			capital_scope = { 
+				add_province_modifier = { 
+					name = realm_capital_province
+					duration = -1
+				}
+			}
+		}
+		if = { 
+			limit = {
+				check_variable = { which = "cap_number" value = 2 } #more than 1
+			}
+			any_demesne_province = { #remove any other capital modifier if any
+				limit = {
+					has_province_modifier = realm_capital_province
+				}
+				remove_province_modifier = realm_capital_province
+			}	
+			capital_scope = {
+				add_province_modifier = { 
+					name = realm_capital_province
+					duration = -1
+				}
+			}
+		}
+		#reseting the variable for next check
+		change_variable = { which = "cap_number" value = 0 }
+		#character_event = { id = L3T.52 }
 	}
 }
+			
 
+#Maintenance realm capitals
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+    id = L3T.51
+	#desc = "capital_MAJ_blah_51"
+	#picture = GFX_evt_debug_totoro
+	hide_window = yes
+	
+	only_rulers = yes
+	#capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	# Ruler became too small to have a realm capital
+	trigger = { 
+		higher_tier_than = BARON
+		NOt = {
+			OR = {
+				demesne_size = 2
+				higher_tier_than = COUNT
+			}
+		}
+	}
+
+	immediate = {
+		#name = "capital_MAJ_51"
+
+		any_demesne_province = { 
+			limit = {
+				has_province_modifier = realm_capital_province
+			}
+			remove_province_modifier = realm_capital_province
+		}
+	}
+}
