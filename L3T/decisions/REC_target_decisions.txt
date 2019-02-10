@@ -18,6 +18,7 @@ targetted_decisions = {
 		only_playable = yes
 		filter = court
 		ai_target_filter = self
+		diplomacy_icon = GFX_diplo_decision_icon
 		
 		from_potential = {
 			is_playable = yes
@@ -50,6 +51,7 @@ targetted_decisions = {
 		only_playable = yes
 		filter = all
 		ai_target_filter = self
+		diplomacy_icon = GFX_diplo_gold_icon
 		
 		from_potential = {
 			is_playable = yes
@@ -70,6 +72,7 @@ targetted_decisions = {
 				random_province_holding = {
 					limit = { has_title_flag = cathedral_construction }
 					change_variable = { which = cathedral value = 35 }
+				}
 			}
 			FROM = {
 				wealth = -50
@@ -97,6 +100,7 @@ targetted_decisions = {
 		only_playable = yes
 		filter = realm
 		ai_target_filter = realm
+		diplomacy_icon = GFX_diplo_relic_icon
 		
 		from_potential = {
 			has_global_flag = opus_francigenum
@@ -124,7 +128,20 @@ targetted_decisions = {
 		
 		potential = {
 			# Has a relic
-			has_a_relic = yes
+			#has_a_relic = yes
+			# Won't sell a dynastic relic
+			any_artifact = {
+				NOT = { has_artifact_flag = dynastic_relic }
+				OR = {
+					#ReC relics
+					has_artifact_flag = relique
+					#vanilla generic/dynamic relic support
+					AND = { 
+						has_artifact_flag = saint
+						has_artifact_flag = bodypart
+					}
+				}
+			}			
 			
 			# Has not already refused to sell it
 			NOT = { has_character_flag = refuse_to_sell_relic }
