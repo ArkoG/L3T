@@ -65,7 +65,12 @@ targetted_decisions = {
 		}
 		
 		effect = {
-			ROOT = { wealth = 50 }
+			#ROOT = { wealth = 50 }
+			ROOT = {
+				random_province_holding = {
+					limit = { has_title_flag = cathedral_construction }
+					change_variable = { which = cathedral value = 35 }
+			}
 			FROM = {
 				wealth = -50
 				piety = 20
