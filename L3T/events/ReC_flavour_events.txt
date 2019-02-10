@@ -1720,7 +1720,18 @@ character_event = {
 			letter_event = { id = REC.1708 }
 		}
 		random_artifact = {
-			limit = { has_artifact_flag = relique }
+			limit = { 
+				NOT = { has_artifact_flag = dynastic_relic }
+				OR = {
+					#ReC relics
+					has_artifact_flag = relique
+					#vanilla generic/dynamic relic support
+					AND = { 
+						has_artifact_flag = saint
+						has_artifact_flag = bodypart
+					}
+				}
+			}
 			transfer_artifact = {		
 				from = ROOT
 				to = FROMFROM
@@ -1835,7 +1846,18 @@ character_event = {
 			letter_event = { id = REC.1708 }
 		}
 		random_artifact = {
-			limit = { has_artifact_flag = relique }
+			limit = { 
+				NOT = { has_artifact_flag = dynastic_relic }
+				OR = {
+					#ReC relics
+					has_artifact_flag = relique
+					#vanilla generic/dynamic relic support
+					AND = { 
+						has_artifact_flag = saint
+						has_artifact_flag = bodypart
+					}
+				}
+			}
 			transfer_artifact = {		
 				from = ROOT
 				to = FROM
@@ -2000,7 +2022,18 @@ character_event = {
 		name = "REC.1706A"
 		FROMFROMFROM = { opinion = { modifier = stolen_relic_opinion who = ROOT years = 10 } }
 		random_artifact = {
-			limit = { has_artifact_flag = relique }
+			limit = { 
+				NOT = { has_artifact_flag = dynastic_relic }
+				OR = {
+					#ReC relics
+					has_artifact_flag = relique
+					#vanilla generic/dynamic relic support
+					AND = { 
+						has_artifact_flag = saint
+						has_artifact_flag = bodypart
+					}
+				}
+			}
 			transfer_artifact = {		
 				from = FROMFROMFROM
 				to = ROOT
