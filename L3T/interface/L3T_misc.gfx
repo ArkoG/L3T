@@ -77,7 +77,15 @@ spriteTypes = {
 		name = "GFX_enable_notification"
 		texturefile = "gfx\\interface\\decision_icon_thesunandtherainfall_enable.dds"
 	}
-	
+#TARGETTED DECISIONS
+	spriteType = {
+		name = "GFX_diplo_relic_icon"
+		texturefile = "gfx\\interface\\diplo_relic_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_diplo_gold_icon"
+		texturefile = "gfx\\interface\\diplo_gold_icon.dds"
+	}
 #REC traits
 	spriteType = {
 		name = "GFX_trait_batisseur_cathedrale"
