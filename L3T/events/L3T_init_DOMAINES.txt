@@ -229,20 +229,22 @@ province_event = {
 
 	immediate = {
 		capital_holding = {
-			limit = {
-				holding_type = castle
-				NOT = {
-					has_building = FEODAL_mil
-					has_building = FEODAL_prod
-					has_building = FEODAL_adm
+			if = {
+				limit = {
+					holding_type = castle
+					NOT = {
+						has_building = FEODAL_mil
+						has_building = FEODAL_prod
+						has_building = FEODAL_adm
+					}
 				}
-			}
 
-			add_building = FEODAL_adm
-			change_variable = { which = "developpement" value = 20 }
-			change_variable = { which = "developpement_spec" value = 20 }
-			#change_variable = { which = "specNB" value = 1 } #debug
-			add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+				add_building = FEODAL_adm
+				change_variable = { which = "developpement" value = 20 }
+				change_variable = { which = "developpement_spec" value = 20 }
+				#change_variable = { which = "specNB" value = 1 } #debug
+				add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+			}
 		}
 	}
 }
