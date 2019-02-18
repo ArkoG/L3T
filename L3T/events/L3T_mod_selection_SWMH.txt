@@ -830,6 +830,16 @@ province_event = { #installe les provinces côtières, terrestres et rivières S
 			}
 			# The other are delayed
 			province_event = { id = L3T.41 days = 60 }
-		}	
+		}
+		#RESSOURCES ATTRIBUTION
+			province_event = { id = ECO.1 }
+			province_event = { id = ECO.2 }
+			province_event = { id = ECO.3 }
+			province_event = { id = ECO.4 }
+			province_event = { id = ECO.5 }
+			province_event = { id = ECO.8 }
+			province_event = { id = ECO.80 }
+			province_event = { id = ECO.81 }
+			province_event = { id = ECO.82 }
 	}
 }
