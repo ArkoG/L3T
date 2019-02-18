@@ -462,7 +462,7 @@ character_event = {
 	# Ruler became too small to have a realm capital
 	trigger = { 
 		higher_tier_than = BARON
-		NOt = {
+		NOT = {
 			OR = {
 				demesne_size = 2
 				higher_tier_than = COUNT
