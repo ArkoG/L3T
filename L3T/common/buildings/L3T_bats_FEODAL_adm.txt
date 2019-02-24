@@ -3,7 +3,11 @@ castle = {
 	CA_chambre_1 = {# chambre du sénéchal 
 		desc = CA_chambre_1_desc
 		prerequisites = { FEODAL_adm }
-		trigger = { TECH_MAJESTY = 3 }
+		trigger = {
+			TECH_MAJESTY = 3
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		is_active_trigger = {
 			is_capital = yes
 			capital_holding = { title = FROMFROM }
@@ -18,7 +22,11 @@ castle = {
 
 	CA_chambre_2 = { # chambre des comptes 
 		desc = CA_chambre_2_desc
-		trigger = { TECH_MAJESTY = 5 }
+		trigger = {
+			TECH_MAJESTY = 5
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		prerequisites = { FEODAL_adm CA_tresor CA_archives_2  }
 		is_active_trigger = {
 			is_capital = yes
@@ -37,7 +45,11 @@ castle = {
 
 	CA_tresor = { # salle du trésor
 		desc = CA_tresor_desc
-		trigger = { TECH_MAJESTY = 3 }
+		trigger = {
+			TECH_MAJESTY = 3
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		prerequisites = {CA_chambre_1 FEODAL_adm }
 		is_active_trigger = {
 			is_capital = yes
@@ -55,7 +67,11 @@ castle = {
 
 	CA_archives_1 = { # salle des archives
 		desc = CA_archives_1_desc
-		trigger = { TECH_MAJESTY = 3 }
+		trigger = {
+			TECH_MAJESTY = 3
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		prerequisites = {CA_chambre_1 FEODAL_adm }
 		is_active_trigger = {
 			is_capital = yes
@@ -73,7 +89,11 @@ castle = {
 	 
 	CA_archives_2 = { # grande salle des archives
 		desc = CA_archives_2_desc
-		trigger = { TECH_MAJESTY = 5 }
+		trigger = {
+			TECH_MAJESTY = 5
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		prerequisites = {CA_chambre_1 FEODAL_adm CA_tresor }
 		is_active_trigger = {
 			is_capital = yes
@@ -91,7 +111,11 @@ castle = {
 	 
 	CA_cour_justice = { # cour de justice
 		desc = CA_cour_justice_desc
-		trigger = { TECH_MAJESTY = 4 }
+		trigger = {
+			TECH_MAJESTY = 5
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		prerequisites = { FEODAL_adm }
 		is_active_trigger = {
 			is_capital = yes
@@ -110,7 +134,11 @@ castle = {
 	 
 	CA_chancellerie = {
 		desc = CA_chancellerie_desc
-		trigger = { TECH_LEGALISM = 3 }
+		trigger = {
+			TECH_LEGALISM = 3
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		prerequisites = { FEODAL_adm }
 		is_active_trigger = {
 			is_capital = yes
@@ -127,7 +155,11 @@ castle = {
 	 
 	CA_chap_seign = { # chapelle seigneuriale
 		desc = CA_chap_seign_desc
-		trigger = { TECH_RELIGIOUS_CUSTOMS = 2 }
+		trigger = {
+			TECH_RELIGIOUS_CUSTOMS = 2
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		prerequisites = { FEODAL_adm }
 		is_active_trigger = {
 			is_capital = yes
@@ -145,7 +177,11 @@ castle = {
 	 
 	CA_chap_seign_2 = { # chapelle seigneuriale et reliquaire dynastique
 		desc = CA_chap_seign_2_desc 
-		trigger = { TECH_RELIGIOUS_CUSTOMS = 4 }
+		trigger = {
+			TECH_RELIGIOUS_CUSTOMS = 4
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		prerequisites = { FEODAL_adm }
 		is_active_trigger = {
 			is_capital = yes
@@ -164,8 +200,12 @@ castle = {
 	}
 	
 	CA_library_L1 = { # etude personnelle
-		desc = CA_library_L1_desc 
-		trigger = { TECH_CULTURE_FLEX = 2 }
+		desc = CA_library_L1_desc
+		trigger = {
+			TECH_CULTURE_FLEX = 2
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		prerequisites = { FEODAL_adm }
 		is_active_trigger = {
 			is_capital = yes
@@ -181,7 +221,11 @@ castle = {
 	}
 	CA_library_L2 = { # bibliotheque et archives dynastiques
 		desc = CA_library_L2_desc 
-		trigger = { TECH_CULTURE_FLEX = 3 }
+		trigger = {
+			TECH_CULTURE_FLEX = 3
+			is_capital = yes
+			capital_holding = { title = FROMFROM }
+		}
 		prerequisites = { FEODAL_adm }
 		is_active_trigger = {
 			is_capital = yes
