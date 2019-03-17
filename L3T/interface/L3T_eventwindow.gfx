@@ -111,8 +111,13 @@ spriteTypes =
 		allwaystransparent = yes
 	}
 	spriteType = {
-		name = "GFX_evt_L3T_castle" #
-		texturefile = "gfx\\event_pictures\L3T_castle.tga"
+		name = "GFX_evt_L3T_castle_southern" #
+		texturefile = "gfx\\event_pictures\L3T_castle_southern.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_L3T_castle_northern" #
+		texturefile = "gfx\\event_pictures\L3T_castle_northern.tga"
 		allwaystransparent = yes
 	}
 	spriteType = {
