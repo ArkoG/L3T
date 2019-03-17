@@ -161,7 +161,21 @@ spriteTypes = {
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-
+	spriteType = {
+		name = "GFX_trait_deus_vox"
+		texturefile = "gfx/traits/deus_vox.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_deus_gladio"
+		texturefile = "gfx/traits/deus_gladio.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
 #L3T traits
 	spriteType = {
 		name = "GFX_trait_dynastic_keeper"
