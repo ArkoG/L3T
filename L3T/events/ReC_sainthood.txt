@@ -15,10 +15,13 @@ character_event = {
 	trigger = {
 		religion = catholic
 		NOT = { trait = deus_vox }
-		check_variable = { which = "deus_vox" value = 35 }
-		#variable gain : 15 by converted province, from priest action
-		#variable gain :  5 by converted people, from priest action
-		#variable gain : 30 by mass conversion sponsorship, from baptism chain
+		check_variable = { which = "deus_vox" value = 50 }
+		#variable gain : 15 by converted province or pagan lord province, from priest action
+		#variable gain :  3 by converted courtier or baron or pagan lord spouse, from priest action
+		#variable gain :  5 by converted pagan lord or count, from priest action
+		#variable gain :  +2 by converted duke, from priest action
+		#variable gain :  +3 by converted king, from priest action
+		#variable gain : 50 by mass conversion sponsorship, from baptism chain
 		#variable gain : 50 by mass conversion lead	(ex pagan guy), from baptism chain
 	}
 
