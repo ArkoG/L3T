@@ -4344,19 +4344,135 @@ character_event = {
 		religion = FROM
 		prestige = -500
 		piety = 250
+		#L3T
+		ROOT = {
+			liege = {
+				if = {
+					limit = {
+						religion = catholic
+						NOT = { check_variable = { which = "deus_vox" value = 0 }}
+					}
+					custom_tooltip = { text = L3T_works_for_faith }
+					#hidden_tooltip = {
+					set_variable = { which = "deus_vox" value = 0 }
+					change_variable = { which= "deus_vox" value = 5 }
+					character_event = { id = REC.20 }
+					#}
+				}
+				if = {
+					limit = {
+						religion = catholic
+						check_variable = { which = "deus_vox" value = 0 }
+					}
+					custom_tooltip = { text = L3T_works_for_faith }
+					#hidden_tooltip = {
+					change_variable = { which= "deus_vox" value = 5 }
+					character_event = { id = REC.20 }
+					#}
+				}
+			}
+		}
+		#L3T
 		
 		if = {
 			limit = { ai = yes }
 			capital_scope = { religion = FROM }
+			#L3T
+			ROOT = {
+				liege = {
+					if = {
+						limit = {
+							religion = catholic
+							NOT = { check_variable = { which = "deus_vox" value = 0 }}
+						}
+						custom_tooltip = { text = L3T_works_for_faith }
+						#hidden_tooltip = {
+						set_variable = { which = "deus_vox" value = 0 }
+						change_variable = { which= "deus_vox" value = 15 }
+						character_event = { id = REC.20 }
+						#}
+					}
+					if = {
+						limit = {
+							religion = catholic
+							check_variable = { which = "deus_vox" value = 0 }
+						}
+						custom_tooltip = { text = L3T_works_for_faith }
+						#hidden_tooltip = {
+						change_variable = { which= "deus_vox" value = 15 }
+						character_event = { id = REC.20 }
+						#}
+					}
+				}
+			}
+			#L3T
 		}
 		
 		any_courtier = {
 			limit = { is_close_relative = ROOT }
 			religion = FROM
+			#L3T
+			ROOT = {
+				liege = {
+					if = {
+						limit = {
+							religion = catholic
+							NOT = { check_variable = { which = "deus_vox" value = 0 }}
+						}
+						custom_tooltip = { text = L3T_works_for_faith }
+						#hidden_tooltip = {
+						set_variable = { which = "deus_vox" value = 0 }
+						change_variable = { which= "deus_vox" value = 3 }
+						character_event = { id = REC.20 }
+						#}
+					}
+					if = {
+						limit = {
+							religion = catholic
+							check_variable = { which = "deus_vox" value = 0 }
+						}
+						custom_tooltip = { text = L3T_works_for_faith }
+						#hidden_tooltip = {
+						change_variable = { which= "deus_vox" value = 3 }
+						character_event = { id = REC.20 }
+						#}
+					}
+				}
+			}
+			#L3T
 		}
 		any_spouse = {
 			limit = { is_consort = no }
 			religion = FROM
+			#L3T
+			ROOT = {
+				liege = {
+					if = {
+						limit = {
+							religion = catholic
+							NOT = { check_variable = { which = "deus_vox" value = 0 }}
+						}
+						custom_tooltip = { text = L3T_works_for_faith }
+						#hidden_tooltip = {
+						set_variable = { which = "deus_vox" value = 0 }
+						change_variable = { which= "deus_vox" value = 3 }
+						character_event = { id = REC.20 }
+						#}
+					}
+					if = {
+						limit = {
+							religion = catholic
+							check_variable = { which = "deus_vox" value = 0 }
+						}
+						custom_tooltip = { text = L3T_works_for_faith }
+						#hidden_tooltip = {
+						change_variable = { which= "deus_vox" value = 3 }
+						character_event = { id = REC.20 }
+						#}
+					}
+				}
+			}
+			#L3T
 		}
 		create_random_priest = {
 			random_traits = yes
