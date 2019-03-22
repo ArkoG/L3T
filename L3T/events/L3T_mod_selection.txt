@@ -23,8 +23,27 @@ character_event = {
 	immediate = { clr_global_flag = debug_L3T }
 	option = { name = OK }
 }
+character_event = {
+    id = L3T.9998
+	desc = "test_variable"
+	picture = GFX_evt_L3T_capitulaire
 
-## DÃ©tection de la carte
+	is_triggered_only = yes
+	
+	immediate = { 
+		set_variable = { which = "deus_vox" value = 0 }
+		change_variable = { which = "deus_vox" value = 9999 }
+		set_variable = { which = "deus_gladio" value = 0 }
+		change_variable = { which = "deus_gladio" value = 9999 }
+	}
+	option = {
+		name = OK
+		#death = { death_reason = death_missing }
+	}
+}
+
+
+## Détection de la carte
 character_event = {
     id = L3T.10
 	#title = "NAMEL3T.10"
