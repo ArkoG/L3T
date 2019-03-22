@@ -1131,26 +1131,29 @@ reconquista_win_effect = {
 	ROOT = {
 		##catholic ROOT winning on reconquista	
 		#L3T
-		custom_tooltip = { text = L3T_fights_for_faith }
-		#hidden_tooltip = { 
 			if = {
 				limit = {
 					religion = catholic
 					NOT = { check_variable = { which = "deus_gladio" value = 0 }}
 				}
-				set_variable = { which = "deus_gladio" value = 0 }
-				change_variable = { which= "deus_gladio" value = 10 }
-				character_event = { id = REC.21 }
+				custom_tooltip = { text = L3T_fights_for_faith }
+				hidden_tooltip = {
+					set_variable = { which = "deus_gladio" value = 0 }
+					change_variable = { which= "deus_gladio" value = 10 }
+					character_event = { id = REC.21 }
+				}
 			}
 			if = {
 				limit = {
 					religion = catholic
 					check_variable = { which = "deus_gladio" value = 0 }
 				}
-				change_variable = { which= "deus_gladio" value = 10 }
-				character_event = { id = REC.21 }
+				custom_tooltip = { text = L3T_fights_for_faith }
+				hidden_tooltip = {				
+					change_variable = { which= "deus_gladio" value = 10 }
+					character_event = { id = REC.21 }
+				}
 			}
-		#}
 		#L3T
 		if = {
 			limit = {
