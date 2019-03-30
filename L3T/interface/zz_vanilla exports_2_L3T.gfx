@@ -29,6 +29,20 @@ spriteTypes = {
 		noOfFrames = 8
 	}
 
+###from generalstuff.gfx	spriteType = {
+		name = "GFX_overlay_char_dead"
+		texturefile = "gfx\\interface\\overlay_char_dead.tga"
+		transparencecheck = yes
+		norefcount = yes
+		noOfFrames = 4 #additional martyr icon
+	}
+	spriteType = {
+		name = "GFX_overlay_char_dead_small"
+		texturefile = "gfx\\interface\\overlay_char_dead2.tga"
+		transparencecheck = yes
+		norefcount = yes
+		noOfFrames = 4 #additional martyr icon
+	}
 
 	
 }
