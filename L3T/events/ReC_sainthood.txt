@@ -10,7 +10,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	picture = GFX_evt_religious_exultation
 
-	is_triggered_only = yes #on variable gain
+	is_triggered_only = yes #on variable gain+on_action
 
 	trigger = {
 		religion = catholic
@@ -36,7 +36,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	picture = GFX_evt_religious_exultation
 
-	is_triggered_only = yes #on variable gain
+	is_triggered_only = yes #on variable gain+on_action
 
 	trigger = {
 		religion = catholic
