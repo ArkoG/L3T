@@ -4341,7 +4341,7 @@ character_event = {
 			}
 		}		
 		
-		religion = FROM
+		religion = FROM #character conversion
 		prestige = -500
 		piety = 250
 		#L3T
@@ -4356,7 +4356,7 @@ character_event = {
 					#hidden_tooltip = {
 					set_variable = { which = "deus_vox" value = 0 }
 					change_variable = { which= "deus_vox" value = 5 }
-					character_event = { id = REC.20 }
+					character_event = { id = REC.20 days = 1 }
 					#}
 				}
 				if = {
@@ -4367,7 +4367,7 @@ character_event = {
 					custom_tooltip = { text = L3T_works_for_faith }
 					#hidden_tooltip = {
 					change_variable = { which= "deus_vox" value = 5 }
-					character_event = { id = REC.20 }
+					character_event = { id = REC.20 days = 1 }
 					#}
 				}
 			}
@@ -4376,7 +4376,7 @@ character_event = {
 		
 		if = {
 			limit = { ai = yes }
-			capital_scope = { religion = FROM }
+			capital_scope = { religion = FROM } #province conversion
 			#L3T
 			ROOT = {
 				liege = {
@@ -4389,7 +4389,7 @@ character_event = {
 						#hidden_tooltip = {
 						set_variable = { which = "deus_vox" value = 0 }
 						change_variable = { which= "deus_vox" value = 15 }
-						character_event = { id = REC.20 }
+						character_event = { id = REC.20 days = 2 }
 						#}
 					}
 					if = {
@@ -4400,7 +4400,7 @@ character_event = {
 						custom_tooltip = { text = L3T_works_for_faith }
 						#hidden_tooltip = {
 						change_variable = { which= "deus_vox" value = 15 }
-						character_event = { id = REC.20 }
+						character_event = { id = REC.20 days = 2 }
 						#}
 					}
 				}
@@ -4423,7 +4423,7 @@ character_event = {
 						#hidden_tooltip = {
 						set_variable = { which = "deus_vox" value = 0 }
 						change_variable = { which= "deus_vox" value = 3 }
-						character_event = { id = REC.20 }
+						#character_event = { id = REC.20 }
 						#}
 					}
 					if = {
@@ -4434,7 +4434,7 @@ character_event = {
 						custom_tooltip = { text = L3T_works_for_faith }
 						#hidden_tooltip = {
 						change_variable = { which= "deus_vox" value = 3 }
-						character_event = { id = REC.20 }
+						#character_event = { id = REC.20 }
 						#}
 					}
 				}
@@ -4456,7 +4456,7 @@ character_event = {
 						#hidden_tooltip = {
 						set_variable = { which = "deus_vox" value = 0 }
 						change_variable = { which= "deus_vox" value = 3 }
-						character_event = { id = REC.20 }
+						#character_event = { id = REC.20 }
 						#}
 					}
 					if = {
@@ -4467,7 +4467,7 @@ character_event = {
 						custom_tooltip = { text = L3T_works_for_faith }
 						#hidden_tooltip = {
 						change_variable = { which= "deus_vox" value = 3 }
-						character_event = { id = REC.20 }
+						#character_event = { id = REC.20 }
 						#}
 					}
 				}

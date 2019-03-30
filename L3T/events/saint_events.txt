@@ -10,11 +10,11 @@ character_event = {
 	trigger = {
 		OR = { # Correct religion to become a Saint with an appropriate head
 			religion = catholic
-			AND = {
-				religion = fraticelli
-				is_title_active = d_fraticelli
-				#has_dlc = "Sons of Abraham" #L3T
-			}
+			#AND = {
+			#	religion = fraticelli
+			#	is_title_active = d_fraticelli
+			#	#has_dlc = "Sons of Abraham" #L3T
+			#}
 		}
 		NOR = { # Traits which would block being made a saint
 			trait = sayyid
@@ -27,7 +27,7 @@ character_event = {
 			trait = bad_priest_christian
 			trait = hedonist
 			any_claim = { title = k_papal_state } # Antipopes
-			any_claim = { title = d_fraticelli } # Antipopes
+			#any_claim = { title = d_fraticelli } # Antipopes
 			death_suicide_trigger = yes #L3T
 		}
 		OR = { # Must be pious or good traits with less piety
@@ -129,13 +129,35 @@ character_event = {
 				factor = 1.2
 				trait = zealous
 			}
-			rightful_religious_head_scope = { 
+			modifier = {
+				factor = 1.5
+				martyrs_death_trigger = yes
+				#form death_reason : 
+				 #death_sacrificed
+				 #death_sacrificed_norse
+				 #death_sacrificed_ancestors
+				 #death_execution_aztec_sacrifice
+			}
+###			
+			modifier = {
+				factor = 3.5
+				death_reason = deus_martyris #religious enemy torture execution
+			}
+			modifier = {
+				factor = 1.5
+				trait = deus_gladio
+			}
+			modifier = {
+				factor = 2.0
+				trait = deus_vox
+			}
+###			
+			rightful_religious_head_scope = {
 				character_event = { 
 					id = saint_events.2 
-					days = 250
-					random = 100
+					days = 250 random = 100
 					#days = 5 #test
-				} 
+				}
 			}
 		}
 	}
@@ -351,4 +373,5 @@ narrative_event = {
 		}
 	}	
 }
+
 #L3T 

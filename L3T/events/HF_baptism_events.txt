@@ -506,7 +506,35 @@ narrative_event = {
 				years = 30
 			}
 		}
-		religion = event_target:sponsoring_king
+		religion = event_target:sponsoring_king 
+		#L3T
+		#The Baptism itself happens. Converter, his courtiers and provinces are converted.
+		if = {
+			limit = {
+				religion = catholic
+				NOT = { check_variable = { which = "deus_vox" value = 0 }}
+			}
+			custom_tooltip = { text = L3T_embraces_true_faith }
+			#hidden_tooltip = {
+			set_variable = { which = "deus_vox" value = 0 }
+			change_variable = { which= "deus_vox" value = 25 }
+			character_event = { id = REC.20 days = 1 }
+			#}
+		}
+		if = {
+			limit = {
+				religion = catholic
+				check_variable = { which = "deus_vox" value = 0 }
+			}
+			custom_tooltip = { text = L3T_embraces_true_faith }
+			#hidden_tooltip = {
+			change_variable = { which= "deus_vox" value = 25 }
+			character_event = { id = REC.20 days = 1 }
+			#}
+		}
+		#L3T
+		
+		
 		custom_tooltip = { text = ALL_PROVINCES_CONVERT_TOOLTIP } 
 		hidden_tooltip = { any_demesne_province = { religion = event_target:sponsoring_king } } 
 		
@@ -768,6 +796,32 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTAHF20004
+		#L3T
+		#The Baptism itself happens (Sponsor version)
+		if = {
+			limit = {
+				religion = catholic
+				NOT = { check_variable = { which = "deus_vox" value = 0 }}
+			}
+			custom_tooltip = { text = L3T_works_for_faith }
+			#hidden_tooltip = {
+			set_variable = { which = "deus_vox" value = 0 }
+			change_variable = { which= "deus_vox" value = 20 }
+			character_event = { id = REC.20 }
+			#}
+		}
+		if = {
+			limit = {
+				religion = catholic
+				check_variable = { which = "deus_vox" value = 0 }
+			}
+			custom_tooltip = { text = L3T_works_for_faith }
+			#hidden_tooltip = {
+			change_variable = { which= "deus_vox" value = 20 }
+			character_event = { id = REC.20 }
+			#}
+		}
+		#L3T
 		clr_character_flag = flag_sponsoring_baptism
 		set_character_flag = flag_sponsored_baptism 
 		hidden_tooltip = {
@@ -2312,6 +2366,21 @@ narrative_event = {
 			}	
 		}
 		hidden_tooltip = { religion = event_target:sponsoring_king }
+		#L3T
+		#Pagan vassal decides to convert with liege
+		event_target:converting_king = {
+			if = {
+				limit = {
+					religion = catholic
+				}
+				custom_tooltip = { text = L3T_works_for_faith }
+				#hidden_tooltip = {
+				change_variable = { which= "deus_vox" value = 5 }
+				#character_event = { id = REC.20 }
+				#}
+			}
+		}
+		#L3T
 		if = { #Give Baptised Trait if Christian and a bishop is available. 
 			limit = { 
 				event_target:sponsoring_king = { 
@@ -4568,6 +4637,19 @@ letter_event = {
 			}
 		}
 		piety = 500
+		#L3T
+		if = {
+			limit = {
+				religion = catholic
+				check_variable = { which = "deus_vox" value = 0 }
+			}
+			custom_tooltip = { text = L3T_works_for_faith }
+			#hidden_tooltip = {
+			change_variable = { which= "deus_vox" value = 10 }
+			character_event = { id = REC.20 }
+			#}
+		}
+		#L3T
 		if = { 
 			limit = { ai = no } #Cheating AI
 		 	wealth = -300 
@@ -4651,6 +4733,19 @@ letter_event = {
 			}
 		}
 		ai_chance = { factor = 100 }
+		#L3T
+		if = {
+			limit = {
+				religion = catholic
+				check_variable = { which = "deus_vox" value = 0 }
+			}
+			custom_tooltip = { text = L3T_works_for_faith }
+			#hidden_tooltip = {
+			change_variable = { which= "deus_vox" value = 5 }
+			character_event = { id = REC.20 }
+			#}
+		}
+		#L3T
 	}
 }
 #Converter: Sponsor is sending more priests to convert a province.
@@ -4798,6 +4893,19 @@ letter_event = {
 		wealth = -30
 		piety = 100
 		ai_chance = { factor = 100 }
+		#L3T
+		if = {
+			limit = {
+				religion = catholic
+				check_variable = { which = "deus_vox" value = 0 }
+			}
+			custom_tooltip = { text = L3T_works_for_faith }
+			#hidden_tooltip = {
+			change_variable = { which= "deus_vox" value = 15 }
+			character_event = { id = REC.20 }
+			#}
+		}
+		#L3T
 	}
 }
 
