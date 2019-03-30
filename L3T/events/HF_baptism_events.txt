@@ -509,28 +509,15 @@ narrative_event = {
 		religion = event_target:sponsoring_king 
 		#L3T
 		#The Baptism itself happens. Converter, his courtiers and provinces are converted.
+		  #no need for deux vox bonus, the guy will get a mass of it through other conversions
 		if = {
 			limit = {
 				religion = catholic
-				NOT = { check_variable = { which = "deus_vox" value = 0 }}
 			}
-			custom_tooltip = { text = L3T_embraces_true_faith }
-			#hidden_tooltip = {
-			set_variable = { which = "deus_vox" value = 0 }
-			change_variable = { which= "deus_vox" value = 25 }
-			character_event = { id = REC.20 days = 1 }
-			#}
-		}
-		if = {
-			limit = {
-				religion = catholic
-				check_variable = { which = "deus_vox" value = 0 }
+			hidden_tooltip = {
+				#change_variable = { which= "deus_vox" value = 25 }
+				character_event = { id = REC.20 days = 1 }
 			}
-			custom_tooltip = { text = L3T_embraces_true_faith }
-			#hidden_tooltip = {
-			change_variable = { which= "deus_vox" value = 25 }
-			character_event = { id = REC.20 days = 1 }
-			#}
 		}
 		#L3T
 		
@@ -804,11 +791,11 @@ narrative_event = {
 				NOT = { check_variable = { which = "deus_vox" value = 0 }}
 			}
 			custom_tooltip = { text = L3T_works_for_faith }
-			#hidden_tooltip = {
-			set_variable = { which = "deus_vox" value = 0 }
-			change_variable = { which= "deus_vox" value = 20 }
-			character_event = { id = REC.20 }
-			#}
+			hidden_tooltip = {
+				set_variable = { which = "deus_vox" value = 0 }
+				change_variable = { which= "deus_vox" value = 20 }
+				character_event = { id = REC.20 }
+			}
 		}
 		if = {
 			limit = {
@@ -816,10 +803,10 @@ narrative_event = {
 				check_variable = { which = "deus_vox" value = 0 }
 			}
 			custom_tooltip = { text = L3T_works_for_faith }
-			#hidden_tooltip = {
-			change_variable = { which= "deus_vox" value = 20 }
-			character_event = { id = REC.20 }
-			#}
+			hidden_tooltip = {
+				change_variable = { which= "deus_vox" value = 20 }
+				character_event = { id = REC.20 }
+			}
 		}
 		#L3T
 		clr_character_flag = flag_sponsoring_baptism
@@ -2374,10 +2361,10 @@ narrative_event = {
 					religion = catholic
 				}
 				custom_tooltip = { text = L3T_works_for_faith }
-				#hidden_tooltip = {
-				change_variable = { which= "deus_vox" value = 5 }
+				hidden_tooltip = {
+					change_variable = { which= "deus_vox" value = 5 }
 				#character_event = { id = REC.20 }
-				#}
+				}
 			}
 		}
 		#L3T
@@ -4644,10 +4631,10 @@ letter_event = {
 				check_variable = { which = "deus_vox" value = 0 }
 			}
 			custom_tooltip = { text = L3T_works_for_faith }
-			#hidden_tooltip = {
-			change_variable = { which= "deus_vox" value = 10 }
-			character_event = { id = REC.20 }
-			#}
+			hidden_tooltip = {
+				change_variable = { which= "deus_vox" value = 10 }
+				character_event = { id = REC.20 }
+			}
 		}
 		#L3T
 		if = { 
@@ -4740,10 +4727,10 @@ letter_event = {
 				check_variable = { which = "deus_vox" value = 0 }
 			}
 			custom_tooltip = { text = L3T_works_for_faith }
-			#hidden_tooltip = {
-			change_variable = { which= "deus_vox" value = 5 }
-			character_event = { id = REC.20 }
-			#}
+			hidden_tooltip = {
+				change_variable = { which= "deus_vox" value = 5 }
+				character_event = { id = REC.20 }
+			}
 		}
 		#L3T
 	}
@@ -4900,10 +4887,10 @@ letter_event = {
 				check_variable = { which = "deus_vox" value = 0 }
 			}
 			custom_tooltip = { text = L3T_works_for_faith }
-			#hidden_tooltip = {
-			change_variable = { which= "deus_vox" value = 15 }
-			character_event = { id = REC.20 }
-			#}
+			hidden_tooltip = {
+				change_variable = { which= "deus_vox" value = 15 }
+				character_event = { id = REC.20 }
+			}
 		}
 		#L3T
 	}
