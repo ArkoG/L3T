@@ -1,19 +1,120 @@
 #Don't forget to add new deaths to the scripted death triggers
 # Frames can be specified for individual death season, using "icon = 2" or similar. Defaults to 1 if not specified
 # Only the first frame gets recolored based on illness/known killer
-# Use "killer_icon = 2" or similar to have a different icon shown if there's a known killer. It'll default to using whatever you specified with "icon" otherwise
+# Use "icon = 2" or similar to have a different icon shown if there's a known killer. It'll default to using whatever you specified with "icon" otherwise
 # The icons themselves are defined in GFX_overlay_char_dead and GFX_overlay_char_dead_small
 # sound = no will prevent this death reason from playing a death sound
 # death_date_desc will define a different loc key than the default "DEATH_DATE_DESC" to use for descriptions of their date of death. E.G., to use "Went to China: $DATE|Y$ at age $AGE|Y$" instead of describing them as having died
 
-#GENERAL
-deus_martyris = {
+#MARTYRIS
+death_deus_martyris_burnt = {
 	violent = yes
-	long_desc = "DEATH_MARTYR"
-	can_nokiller = yes
-	killer_icon = 1
-	#execution = yes
+	long_desc = "DEATH_DEUS_MARTYRIS_BURNT"
+	sound_list = {
+		female = {
+			"burning_female_01"
+			"burning_female_02"
+			"burning_female_03"
+		}
+		male = {
+			"burning_male_01"
+			"burning_male_02"
+			"burning_male_03"
+			"burning_male_04"
+		}
+	}
+	#can_nokiller = yes
+	icon = 4
+	execution = yes
 }
-
-	
-	
+death_deus_martyris_whipped = {
+	violent = yes
+	long_desc = "DEATH_DEUS_MARTYRIS_WHIPPED"
+	sound_list = {
+		female = {
+			"female_violent_death_01"
+			"female_violent_death_02"
+			"female_violent_death_03"
+			"female_violent_death_04"
+		}
+		male = {
+			"male_violent_death_01"
+			"male_violent_death_02"
+			"male_violent_death_03"
+			"male_violent_death_04"
+			"male_violent_death_05"
+		}
+	}
+	#can_nokiller = yes
+	icon = 4
+	execution = yes
+}
+death_deus_martyris_lapidation = {
+	violent = yes
+	long_desc = "DEATH_DEUS_MARTYRIS_LAPIDATION"
+	sound_list = {
+		female = {
+			"female_violent_death_01"
+			"female_violent_death_02"
+			"female_violent_death_03"
+			"female_violent_death_04"
+		}
+		male = {
+			"male_violent_death_01"
+			"male_violent_death_02"
+			"male_violent_death_03"
+			"male_violent_death_04"
+			"male_violent_death_05"
+		}
+	}
+	#can_nokiller = yes
+	icon = 4
+	execution = yes
+}
+death_deus_martyris_crucified = {
+	violent = yes
+	long_desc = "DEATH_DEUS_MARTYRIS_CRUCIFIED"
+	sound_list = {
+		female = {
+			"cruxifiction_female_01"
+			"cruxifiction_female_02"
+		}
+		male = {
+			"cruxifiction_male_01"
+			"cruxifiction_male_02"
+		}
+	}
+	#can_nokiller = yes
+	icon = 4
+	execution = yes
+}
+death_deus_martyris_hung = {
+	violent = yes
+	long_desc = "DEATH_DEUS_MARTYRIS_HUNG"
+	sound_list = {
+		female = {
+			"death_hanging_neutral_01"
+		}
+		male = {
+			"death_hanging_neutral_01"
+		}
+	}
+	#can_nokiller = yes
+	icon = 4
+	execution = yes
+}
+death_deus_martyris_beheaded = {
+	violent = yes
+	long_desc = "DEATH_DEUS_MARTYRIS_BEHEADED"
+	sound_list = {
+		female = {
+			"neutral_beheading_01"
+		}
+		male = {
+			"neutral_beheading_01"
+		}
+	}
+	#can_nokiller = yes
+	icon = 4
+	execution = yes
+}
