@@ -130,18 +130,25 @@ character_event = {
 				trait = zealous
 			}
 			modifier = {
-				factor = 1.5
+				factor = 1.1
 				martyrs_death_trigger = yes
-				#form death_reason : 
+				#from death_reasons : 
 				 #death_sacrificed
 				 #death_sacrificed_norse
 				 #death_sacrificed_ancestors
 				 #death_execution_aztec_sacrifice
 			}
-###			
+	
 			modifier = {
 				factor = 3.5
-				death_reason = deus_martyris #religious enemy torture execution
+				OR = {
+					death_reason = death_deus_martyris_burnt
+					death_reason = death_deus_martyris_whipped
+					death_reason = death_deus_martyris_lapidation
+					death_reason = death_deus_martyris_crucified
+					death_reason = death_deus_martyris_hung
+					death_reason = death_deus_martyris_beheaded
+				}
 			}
 			modifier = {
 				factor = 1.5
@@ -151,7 +158,7 @@ character_event = {
 				factor = 2.0
 				trait = deus_vox
 			}
-###			
+		
 			rightful_religious_head_scope = {
 				character_event = { 
 					id = saint_events.2 
