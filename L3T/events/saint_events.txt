@@ -16,32 +16,49 @@ character_event = {
 			#	#has_dlc = "Sons of Abraham" #L3T
 			#}
 		}
+		is_adult = yes
+		death_in_china_trigger = no
+		death_no_trace_trigger = no
+		
 		NOR = { # Traits which would block being made a saint
 			trait = sayyid
 			trait = mirza
 			trait = mujahid
 			trait = excommunicated
-			trait = kinslayer
+			#trait = kinslayer
 			#trait = homosexual #L3T
 			trait = possessed
 			trait = bad_priest_christian
 			trait = hedonist
-			any_claim = { title = k_papal_state } # Antipopes
+			trait = sympathy_pagans
+			#any_claim = { title = k_papal_state } # Antipopes
 			#any_claim = { title = d_fraticelli } # Antipopes
 			death_suicide_trigger = yes #L3T
+			
+			#vanilla inspiration
+            is_any_kinslayer_trigger = yes
+            has_character_modifier = voice_of_satan
+            has_character_modifier = known_satanist
+            has_character_modifier = suspected_demon_spawn
+            has_character_modifier = suspected_witch
+            has_character_modifier = known_witch
+            has_character_modifier = crazy_cannibal
+            has_character_modifier = demon_child_non_pagan
+            has_character_modifier = corrupting_magic_minor
+            has_character_modifier = corrupting_magic_major
 		}
 		OR = { # Must be pious or good traits with less piety
 			piety = 5000
 			AND = {
 				OR = {
 					trait = celibate
-					#trait = theologian
 					is_priest = yes
 					trait = pilgrim
 					trait = crusader
 					is_theocracy = yes
+					learning = 17
 				}
-				piety = 3000
+				piety = 3500
 			}
 		}
 	}
@@ -50,22 +67,44 @@ character_event = {
 		random = {
 			chance = 10
 			#chance = 10000 #Test
+			
 			modifier = {
 				factor = 1.1
 				is_priest = yes
 			}
 			modifier = {
 				factor = 1.2
-				trait = celibate
+				AND = {
+					government = abbaye_government
+					has_global_flag = running_LCDA
+				}
 			}
-			#TOTORO add a factor if the character has founded a monastery and retired to it afterward
 			modifier = {
-				factor = 1.1
-				trait = theologian
+				factor = 1.3
+				trait = pilgrim
 			}
 			modifier = {
 				factor = 1.2
+				trait = celibate
+			}
+			modifier = { factor = 1.3 trait = monk }
+			modifier = { factor = 1.3 trait = nun }
+			
+			#TOTORO add a factor if the character has founded a monastery and retired to it afterward
+			modifier = {
+				factor = 1.2
+				trait = theologian
+			}
+			modifier = {
+				factor = 1.5
 				trait = crusader
+			}
+			modifier = {
+				factor = 1.2
+				AND = {
+					religion = catholic
+					trait = holy_warrior
+				}
 			}
 			modifier = {
 				factor = 1.1
@@ -76,13 +115,15 @@ character_event = {
 				trait = lunatic
 			}
 			modifier = {
-				factor = 0.6
-				OR = {
-					trait = sympathy_pagans
-					trait = sympathy_zoroastrianism
+				factor = 0.1
+				OR = { #worse with polytheists
 					trait = sympathy_indian
-					trait = sympathy_islam
+					trait = sympathy_zoroastrianism
 				}
+			}
+			modifier = {
+				factor = 0.6
+				trait = sympathy_islam #better with monotheists
 			}
 			modifier = {
 				factor = 0.8
@@ -96,7 +137,12 @@ character_event = {
 				factor = 0.7
 				trait = inbred
 			}
-			#Piety
+			# Learning
+			modifier = { factor = 1.05 learning = 12 }
+			modifier = { factor = 1.10 learning = 15 }
+			modifier = { factor = 1.15 learning = 20 }
+			modifier = { factor = 1.30 learning = 25 }
+			# Piety
 			modifier = { factor = 1.05 piety = 5500 }
 			modifier = { factor = 1.10 piety = 6500 }
 			modifier = { factor = 1.15 piety = 7500 }
@@ -109,7 +155,7 @@ character_event = {
 			modifier = { factor = 0.90 trait = slothful }
 			modifier = { factor = 0.85 trait = envious }
 			modifier = { factor = 0.90 trait = wroth }
-			modifier = { factor = 0.90  trait = proud }
+			modifier = { factor = 0.90 trait = proud }
 			# Seven Virtues
 			modifier = { factor = 1.25 trait = chaste}
 			modifier = { factor = 1.15 trait = temperate }
@@ -118,11 +164,22 @@ character_event = {
 			modifier = { factor = 1.15 trait = kind }
 			modifier = { factor = 1.25 trait = patient }
 			modifier = { factor = 1.25 trait = humble }
-			
-			modifier = { factor = 1.05 NOT = { religion_authority = 0.5 }}
+
+			# Reduced chance for Popes / Antipopes to become Saints
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_landed_title = k_papal_state
+					has_landed_title = d_fraticelli
+					any_claim = { title = k_papal_state }
+					any_claim = { title = d_fraticelli }
+				}
+			}
+		
+			modifier = { factor = 1.2 NOT = { religion_authority = 0.5 }} #need to reinforce the faith
 			
 			modifier = {
-				factor = 0.75
+				factor = 0.6
 				trait = cynical
 			}
 			modifier = {
@@ -158,8 +215,55 @@ character_event = {
 				factor = 2.0
 				trait = deus_vox
 			}
-		
-			rightful_religious_head_scope = {
+			
+			modifier = {
+				factor = 1.3
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_cathedral_builder #totoro remind me this bloodline_flag/tag
+				}
+			}
+			modifier = {
+				factor = 2.0
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_cathedral_builder
+					founder = ROOT
+				}
+			}
+			#don't have a saintly bloodline have a higher chance of becoming a Saint
+			modifier = {
+				factor = 1.2
+				NOT = {
+ 					any_owned_bloodline = {  
+                        has_bloodline_flag = saintly_bloodline
+                    }
+				}
+			}
+			#already having have a saintly bloodline have a lower chance of becoming a Saint
+			modifier = {
+			factor = 0.2
+				any_owned_bloodline = {
+					has_bloodline_flag = saintly_bloodline
+				}
+			}
+			
+			#crowning criterias
+			modifier = { factor = 0.5 trait = crowned_by_myself } #I am watching you Napoleon!
+			modifier = { factor = 0.7 trait = uncrowned }
+			#modifier = { factor = 1.0 trait = crowned_by_priest } #neutral
+			modifier = { factor = 1.1 trait = crowned_by_bishop }
+			modifier = { factor = 1.3 trait = crowned_by_pope }
+	
+	        #Lower chance when there is more Saints around (vanilla saint variable)
+			modifier = {
+				factor = 1.2
+				NOT = { check_variable = { which = global_saint_number value = 10 }}
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { which = global_saint_number value = 25 }
+			}
+ 							
+			rightful_religious_head_scope = { 
 				character_event = { 
 					id = saint_events.2 
 					days = 250 random = 100
@@ -182,9 +286,9 @@ character_event = {
 	hide_window = yes
 
 	immediate = {
-	#option = {
-		#name = "Ok"
+		#Now this is happening
 		FROM = {
+			#special title
 			if = { # For french and spanish localisations
 				limit = { is_female = no }
 				set_special_character_title = SAINT_male #L3T changed tag for clarity sake
@@ -193,12 +297,18 @@ character_event = {
 				limit = { is_female = yes }
 				set_special_character_title = SAINT_female
 			}
+			#trait
 			add_trait = saint
+			
+			#bloodlines
+			
+			#various
 			set_dynasty_flag = saint_dynasty_member #L3T saint tracker on dynastic level
 			religion_authority = { #L3T 
 				modifier = new_saint
 				years = 20
 			}
+			change_variable = { which = global_saint_number value = 1 }
 			any_child = {
 				letter_event = { id = saint_events.3 } # Inform children of ceremony
 			}

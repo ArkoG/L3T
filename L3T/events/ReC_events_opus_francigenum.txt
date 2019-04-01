@@ -143,6 +143,31 @@ character_event = {
 			factor = 0.5
 			year = 1140
 		}
+		modifier = {
+			factor = 0.5
+			any_war = { #the character is involved in war
+				using_cb = religious #that is a (minor) holy war
+				is_primary_war_defender = yes #is a defender in this war
+			}
+		}
+		modifier = {
+			factor = 0.7
+			any_demesne_title = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_roman_cathedrale
+				has_siege = yes
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_demesne_title = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_roman_cathedrale
+				is_occupied = yes
+			}
+		}
 	}
 	
 	option = {
