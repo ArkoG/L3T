@@ -4490,6 +4490,10 @@ new_crusade = {
 				}
 				PREV = {
 					title = k_thrace	
+					FROM = { 
+						has_landed_title = e_byzantium 
+						religion_group = christian
+					}
 				} 
 			}
 		}
@@ -6300,7 +6304,6 @@ religious = {
 					}
 				}
 			}
-
 		}
 		
 		ROOT = { 
@@ -12619,7 +12622,7 @@ pagan_holy_war = {
 					}
 					change_variable = { which = strengthen_religion value = 1 }
 				}
-			}		
+			}			
 		}
 	}
 
