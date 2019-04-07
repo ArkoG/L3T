@@ -1,14 +1,15 @@
 namespace = saint_events
 
 # Do you fit the criteria to be made a saint
+#DEBUG VERSION
 character_event = {
-	id = saint_events.1
+	id = saint_events.10
 	
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_global_flag = debug_L3T }
+		has_global_flag = debug_L3T
 		
 		OR = { # Correct religion to become a Saint with an appropriate head
 			religion = catholic
@@ -50,7 +51,7 @@ character_event = {
             has_character_modifier = corrupting_magic_major
 		}
 		OR = { # Must be pious or good traits with less piety
-			piety = 5000
+			piety = 250
 			AND = {
 				OR = {
 					trait = celibate
@@ -67,8 +68,8 @@ character_event = {
 	
 	immediate = {
 		random = {
-			chance = 10
-			#chance = 10000 #Test
+			#chance = 10
+			chance = 10000 #Test
 			
 			modifier = {
 				factor = 1.1
@@ -259,20 +260,20 @@ character_event = {
 			modifier = { factor = 1.3 trait = crowned_by_pope }
 	
 	        #Lower chance when there is more Saints around (vanilla saint variable)
-			#modifier = {
-			#	factor = 1.2
-			#	NOT = { check_variable = { which = global_saint_number value = 10 }}
-			#}
-			#modifier = {
-			#	factor = 0.8
-			#	check_variable = { which = global_saint_number value = 25 }
-			#}
+			modifier = {
+				factor = 1.2
+				NOT = { check_variable = { which = global_saint_number value = 10 }}
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { which = global_saint_number value = 25 }
+			}
  							
 			rightful_religious_head_scope = { 
 				character_event = { 
 					id = saint_events.2 
-					days = 250 random = 100
-					#days = 5 #test
+					#days = 250 random = 100
+					days = 5 #test
 				}
 			}
 		}
@@ -283,252 +284,3 @@ character_event = {
 	#}
 }
 
-# Pope - Inform world of new saint
-character_event = {
-	id = saint_events.2
-	
-	is_triggered_only = yes
-	hide_window = yes
-
-	immediate = {
-		#Now this is happening
-		FROM = {
-			#special title
-			if = { # For french and spanish localisations
-				limit = { is_female = no }
-				set_special_character_title = SAINT_male #L3T changed tag for clarity sake
-			}
-			if = {
-				limit = { is_female = yes }
-				set_special_character_title = SAINT_female
-			}
-			#trait
-			add_trait = saint
-			
-			#count L3T saints
-			#variable is set on startup
-			change_variable = { which= "global_L3T_saint_number" value = 1 }
-			
-			#put bloodlines here
-			random_list = {
-				10 = { 
-					create_bloodline = {
-						type = saintly_bloodline_catholic_07
-						religion = FROM
-					}
-				}
-				10 = { 
-					create_bloodline = {
-						type = saintly_bloodline_catholic_08
-						religion = FROM
-					}
-				}
-				10 = { 
-					create_bloodline = {
-						type = saintly_bloodline_catholic_09
-						religion = FROM
-					}
-				}
-				10 = { 
-					create_bloodline = {
-						type = saintly_bloodline_catholic_10
-						religion = FROM
-					}
-				}
-			}
-			
-			#various
-			set_dynasty_flag = saint_dynasty_member #L3T saint tracker on dynastic level
-			religion_authority = { #L3T 
-				modifier = new_saint
-				years = 20
-			}
-			#change_variable = { which = global_saint_number value = 1 }
-			any_child = {
-				letter_event = { id = saint_events.3 } # Inform children of ceremony
-			}
-		}
-		narrative_event = { id = saint_events.4 days = 5 } # Announce to all of Christendom
-	}
-}
-
-# Inform heir of parent being made a Saint
-letter_event = {
-	id = saint_events.3
-	border = "GFX_event_letter_frame_religion"
-	
-	is_triggered_only = yes
-	
-	desc = { # Father
-		text = EVTDESCAsaint_events.3
-		trigger = {
-			FROMFROM = { is_female = no }
-		}
-	}
-	desc = { # Mother
-		text = EVTDESCBsaint_events.3
-		trigger = {
-			FROMFROM = { is_female = yes }
-		}
-	}
-	
-	option = {
-		name = EVTOPTAsaint_events.3
-		set_character_flag = new_saints_child
-	}
-}
-
-# Inform all of Christendom
-narrative_event = {
-	id = saint_events.4
-	#title = EVTTITLEsaint_events.4
-	#desc = EVTDESCsaint_events.4
-	picture = GFX_evt_pope
-	border = "GFX_event_narrative_frame_religion" #L3T fixed birder>>border
-
-	title = { #L3T 
-		trigger = { ROOT = { is_female = no } }
-		text = "TITLE_masc_saint_events.4"
-	}
-	title = { #L3T 
-		trigger = { ROOT = { is_female = yes } }
-		text = "TITLE_fem_saint_events.4"
-	}
-
-	desc = { #L3T 
-		trigger = { ROOT = { is_female = no } }
-		text = "EVTDESCsaint_events.4H"
-	}
-	desc = { #L3T 
-		trigger = { ROOT = { is_female = yes } }
-		text = "EVTDESCsaint_events.4F"
-	}
-	
-	is_triggered_only = yes
-	major = yes
-	show_from_from = yes
-	
-	major_trigger = {
-		rightful_religious_head_scope = { character = FROM }
-	}
-	
-	#immediate = { sound_effect = saint_proclaimed }
-	
-	option = {
-		name = EVTOPTAsaint_events.4
-		trigger = {
-			has_character_flag = new_saints_child
-		}
-		tooltip = {
-			FROMFROM = {
-				add_trait = saint
-			}
-		}
-		prestige = 100
-		piety = 50
-		clr_character_flag = new_saints_child
-		if = {
-			limit = { ai = no }
-			chronicle = {
-				entry = CHRONICLE_NEW_SAINT
-				picture = GFX_evt_pope
-				portrait = [Root.GetID]
-			}
-		}
-	}
-	option = {
-		name = EVTOPTBsaint_events.4
-		trigger = {
-			NOT = { has_character_flag = new_saints_child }
-			NOT = { dynasty = FROMFROM }
-		}
-		tooltip = {
-			FROMFROM = {
-				add_trait = saint
-			}
-		}
-		if = {
-			limit = { ai = no }
-			chronicle = {
-				entry = CHRONICLE_NEW_SAINT
-				picture = GFX_evt_pope
-				portrait = [Root.GetID]
-			}
-		}
-	}
-	option = {
-		name = EVTOPTCsaint_events.4
-		trigger = {
-			NOT = { has_character_flag = new_saints_child }
-			dynasty = FROMFROM
-		}
-		tooltip = {
-			FROMFROM = {
-				add_trait = saint
-			}
-		}
-		prestige = 100
-		piety = 50
-		if = {
-			limit = { ai = no }
-			chronicle = {
-				entry = CHRONICLE_NEW_SAINT
-				picture = GFX_evt_pope
-				portrait = [Root.GetID]
-			}
-		}
-	}
-}
-
-#L3T 
-# A relic from the ancestor is received by the head of the dynasty
-narrative_event = {
-	id = saint_events.5
-	title = EVTTITLEsaint_events.5
-	border = "GFX_event_narrative_frame_religion"
-	desc = "EVTDESCAsaint_events.5"
-	picture = GFX_evt_pope
-	
-	trigger = {
-		has_dynasty_flag = saint_dynasty_member
-		dynasty_head = { character = ROOT }
-		#dynasty_head = yes #fonctionne pô
-	}
-
-	mean_time_to_happen = {
-		#days = 15 #test
-		years = 60
-			modifier = { factor = 1.10 had_dynasty_flag = { flag = saint_dynasty_member days =  9125 }} #25 years
-			modifier = { factor = 0.95 had_dynasty_flag = { flag = saint_dynasty_member days = 10950 }} #30 years
-			modifier = { factor = 0.95 had_dynasty_flag = { flag = saint_dynasty_member days = 18250 }} #50 years	
-			modifier = { factor = 0.95 had_dynasty_flag = { flag = saint_dynasty_member days = 36500 }} #100 years
-			modifier = { factor = 0.10 had_dynasty_flag = { flag = saint_dynasty_member days = 37000 }}
-	}
-
-	
-
-#see more options : keep the relic at the castle, keep the relic in our necropolis, keep the relic in a monastery, refuse the relic
-	
-	option = {
-		name = EVTOPTAsaint_events.5
-		clr_dynasty_flag = saint_dynasty_member
-		custom_tooltip = { text = relique_ancetre }
-		piety = 450
-		hidden_tooltip = {
-			random_list = {
-				10 = { add_artifact = ancestor_relic_0 }
-				10 = { add_artifact = ancestor_relic_1 }
-				10 = { add_artifact = ancestor_relic_2 }
-				10 = { add_artifact = ancestor_relic_3 }
-				10 = { add_artifact = ancestor_relic_4 }
-				10 = { add_artifact = ancestor_relic_5 }
-				10 = { add_artifact = ancestor_relic_6 }
-				10 = { add_artifact = ancestor_relic_7 }
-				10 = { add_artifact = ancestor_relic_8 }
-				10 = { add_artifact = ancestor_relic_9 }
-			}
-		}
-	}	
-}
-
-#L3T 
