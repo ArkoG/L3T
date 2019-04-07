@@ -8,7 +8,7 @@
 
 #MARTYRIS
 death_deus_martyris_burnt = {
-	violent = yes
+	#violent = yes
 	long_desc = "DEATH_DEUS_MARTYRIS_BURNT"
 	sound_list = {
 		female = {
@@ -25,10 +25,11 @@ death_deus_martyris_burnt = {
 	}
 	#can_nokiller = yes
 	icon = 4
+	killer_icon = 4
 	execution = yes
 }
 death_deus_martyris_whipped = {
-	violent = yes
+	#violent = yes
 	long_desc = "DEATH_DEUS_MARTYRIS_WHIPPED"
 	sound_list = {
 		female = {
@@ -47,10 +48,11 @@ death_deus_martyris_whipped = {
 	}
 	#can_nokiller = yes
 	icon = 4
+	killer_icon = 4
 	execution = yes
 }
 death_deus_martyris_lapidation = {
-	violent = yes
+	#violent = yes
 	long_desc = "DEATH_DEUS_MARTYRIS_LAPIDATION"
 	sound_list = {
 		female = {
@@ -69,10 +71,11 @@ death_deus_martyris_lapidation = {
 	}
 	#can_nokiller = yes
 	icon = 4
+	killer_icon = 4
 	execution = yes
 }
 death_deus_martyris_crucified = {
-	violent = yes
+	#violent = yes
 	long_desc = "DEATH_DEUS_MARTYRIS_CRUCIFIED"
 	sound_list = {
 		female = {
@@ -86,10 +89,11 @@ death_deus_martyris_crucified = {
 	}
 	#can_nokiller = yes
 	icon = 4
+	killer_icon = 4
 	execution = yes
 }
 death_deus_martyris_hung = {
-	violent = yes
+	#violent = yes
 	long_desc = "DEATH_DEUS_MARTYRIS_HUNG"
 	sound_list = {
 		female = {
@@ -101,10 +105,11 @@ death_deus_martyris_hung = {
 	}
 	#can_nokiller = yes
 	icon = 4
+	killer_icon = 4
 	execution = yes
 }
 death_deus_martyris_beheaded = {
-	violent = yes
+	#violent = yes
 	long_desc = "DEATH_DEUS_MARTYRIS_BEHEADED"
 	sound_list = {
 		female = {
@@ -116,5 +121,6 @@ death_deus_martyris_beheaded = {
 	}
 	#can_nokiller = yes
 	icon = 4
+	killer_icon = 4
 	execution = yes
 }
