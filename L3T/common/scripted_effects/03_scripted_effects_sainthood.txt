@@ -10,13 +10,27 @@ setting_up_saintly_burial_site_effect = {
 deciding_upon_saint_effect = {
     random = {
         #chance = 1
-		chance = 10 #L3T
-
-        #Lower chance when there is more Saints around
-        modifier = {
-            factor = 0.8
-            check_variable = { which = global_saint_number value = 15 }
+		chance = 12 #L3T
+ 
+		#debug mod
+		modifier = {
+            factor = 10.0
+            has_global_flag = debug_L3T
         }
+		
+        #Lower chance when there is more Saints around
+         modifier = {
+            factor = 1.25
+            NOT = { check_variable = { which = global_saint_number value = 5 }}
+        }
+        modifier = {
+            factor = 1.2
+           NOT = { check_variable = { which = global_saint_number value = 10 }}
+        }
+		#modifier = {
+        #    factor = 0.8
+        #    check_variable = { which = global_saint_number value = 15 }
+        #}
         modifier = {
             factor = 0.8
             check_variable = { which = global_saint_number value = 20 }
@@ -145,15 +159,9 @@ deciding_upon_saint_effect = {
 		##shamely demote if not
 		modifier = {
 			factor = 0.7
-			event_target:saint_person = { NOT = { trait = deus_vox }}
-		}
-		modifier = {
-			factor = 0.8
-			event_target:saint_person = { NOT = { trait = deus_gladio }}
-		}	
-		modifier = {
-			factor = 0.6
 			OR = {
+				event_target:saint_person = { NOT = { trait = deus_vox }}
+				event_target:saint_person = { NOT = { trait = deus_gladio }}
 				event_target:saint_person = { NOT = { death_reason = death_deus_martyris_burnt }}
 				event_target:saint_person = { NOT = { death_reason = death_deus_martyris_whipped }}
 				event_target:saint_person = { NOT = { death_reason = death_deus_martyris_lapidation }}
@@ -467,6 +475,12 @@ deciding_upon_saint_effect = {
             province_event = { id = HF.40010 }
         }
         change_variable = { which = global_saint_number value = 1 }
+		
+		if = {
+			limit = { religion = catholic }
+			change_variable = { which = global_L3T_saint_number value = 1 }
+		}
+			
         trigger_switch = {
             on_trigger = religion 
             catholic = { set_global_flag = catholic_saint }
