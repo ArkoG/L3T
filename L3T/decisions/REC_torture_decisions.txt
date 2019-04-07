@@ -295,6 +295,20 @@ targetted_decisions = {
 					}
 					give_nickname = nick_the_martyr_femme
 				}
+				#mouchard pour stats
+				if = { 
+					limit = {
+						NOT = { check_variable = { which = "global_martyr_number" value = 0 }}
+					}
+					set_variable = { which = "global_martyr_number" value = 0 }
+					change_variable = { which= "global_martyr_number" value = 1 }
+				}
+				if = { 
+					limit = {
+						check_variable = { which = "global_martyr_number" value = 0 }
+					}
+					change_variable = { which= "global_martyr_number" value = 1 }
+				}
 			}
 			
 			FROM = {
@@ -358,7 +372,7 @@ targetted_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 0.1
+			factor = 0.20
 			
 			modifier = {
 				factor = 0
