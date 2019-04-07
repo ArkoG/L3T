@@ -433,6 +433,41 @@ targetted_decisions = {
 				factor = 0
 				FROM = { secret_religion_group = christian }
 			}
+			modifier = {
+				factor = 0.5
+				tier = emperor
+			}
+			modifier = {
+				factor = 0.6
+				tier = king
+			}
+			modifier = {
+				factor = 0.7
+				tier = duke
+			}
+			modifier = {
+				factor = 1.5
+				AND = {
+					FROM = { trait = zealous }
+					trait = deus_vox
+				}
+			}
+			modifier = {
+				factor = 2.0
+				AND = {
+					FROM = { trait = zealous }
+					trait = deus_gladio
+				}
+			}
+			modifier = {
+				factor = 1.2
+				AND = {
+					FROM = { trait = zealous }
+					trait = crusader
+				}
+			}
 		}
 	}
 }
+
+
