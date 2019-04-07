@@ -23,24 +23,6 @@ character_event = {
 	immediate = { clr_global_flag = debug_L3T }
 	option = { name = OK }
 }
-character_event = {
-    id = L3T.9998
-	desc = "test_variable"
-	picture = GFX_evt_L3T_capitulaire
-
-	is_triggered_only = yes
-	
-	immediate = { 
-		set_variable = { which = "deus_vox" value = 0 }
-		change_variable = { which = "deus_vox" value = 9999 }
-		set_variable = { which = "deus_gladio" value = 0 }
-		change_variable = { which = "deus_gladio" value = 9999 }
-	}
-	option = {
-		name = OK
-		#death = { death_reason = death_missing }
-	}
-}
 
 
 ## Détection de la carte
@@ -122,12 +104,16 @@ character_event = {
 		}
 		if = {
 			limit = { ai = no }
-			set_variable = { which = "global_burns" value = 0 }
+			set_variable = { which = "global_burns" value = 1 }
 			random_list = {
-				30 = { }
-				30 = { change_variable = { which = "global_burns" value = 5 }}
-				30 = { change_variable = { which = "global_burns" value = 10 }}
+				30 = {}
+				30 = { change_variable = { which = "global_burns" value = 6 }}
+				30 = { change_variable = { which = "global_burns" value = 11 }}
 			}
+		}
+		if = {
+			limit = { ai = no }
+			set_variable = { which = "global_L3T_saint_number" value = 1 }
 		}
 	}
 	
