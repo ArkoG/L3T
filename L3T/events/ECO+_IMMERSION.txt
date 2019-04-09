@@ -30,7 +30,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = {
-		years = 4
+		years = 6
 		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = recolte_mauvaise } }
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = recolte_bonne } }
 		modifier = { factor = 0.60	owner = { stewardship = 13 } }
@@ -96,7 +96,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { 
-		years = 4
+		years = 6
 		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = recolte_bonne } }
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = recolte_mauvaise } }
 		modifier = { factor = 1.50	owner = { stewardship = 13 } }
@@ -158,7 +158,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = {
-		years = 6
+		years = 8
 		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = peche_mauvaise } }
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = peche_bonne } }
 		modifier = { factor = 0.60	owner = { stewardship = 13 } }
@@ -220,7 +220,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { 
-		years = 6
+		years = 8
 		modifier = { factor = 20	any_neighbor_province = { has_province_modifier = peche_bonne } }
 		modifier = { factor = 0.05	any_neighbor_province = { has_province_modifier = peche_mauvaise } }
 		modifier = { factor = 1.50	owner = { stewardship = 13 } }
@@ -551,7 +551,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = { 
-		years = 3
+		years = 5
 		modifier = { factor = 1.50	owner = { realm_martial = 50 } }
 		modifier = { factor = 0.60	owner = { NOT = { realm_martial = 30 } } }
 		modifier = { factor = 0.8	owner = { has_focus = focus_war } }
@@ -586,7 +586,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { 
-		years = 15
+		years = 20
 		modifier = { factor = 0.15	any_neighbor_province = { has_province_modifier = meteo_inondation } }
 		modifier = { factor = 0.98	owner = { NOT = { piety = 100 } } } #punition divine hahahaha !
 		modifier = { factor = 0.97	owner = { NOT = { piety = 200 } } }
@@ -669,7 +669,7 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { 
-		years = 15
+		years = 20
 		modifier = { factor = 0.10	any_neighbor_province = { has_province_modifier = meteo_secheresse } }
 		modifier = { factor = 0.98	owner = { NOT = { piety = 100 } } } #punition divine hahahaha !
 		modifier = { factor = 0.96	owner = { NOT = { piety = 200 } } }
