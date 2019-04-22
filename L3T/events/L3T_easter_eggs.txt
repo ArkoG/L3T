@@ -7,10 +7,11 @@ character_event = {
 	picture = "GFX_evt_hunt"
 
 	only_playable = yes
-	war = yes
+	#war = yes
 
 	trigger = {
 		has_character_flag = search_easter_eggs
+		not_involved_in_personnal_war = no #personal wars only
 	}
 
 	mean_time_to_happen = {
@@ -85,6 +86,7 @@ character_event = {
 
 ### the event chains
 # Search egg number 1
+#holy site or pilgrim
 narrative_event = {
 	id = L3T.411
 	#desc = "DESCL3T.411"
@@ -449,6 +451,7 @@ character_event = {
 }
 
 # Search egg number 2
+#buy at the market chain
 character_event = {
 	id = L3T.421
 	desc = "DESCL3T.421"
@@ -1395,6 +1398,7 @@ character_event = {
 }
 
 # Give egg number 3
+#monastery chain
 character_event = {
 	id = L3T.431
 	title = NAMEL3T.431
@@ -1596,6 +1600,7 @@ letter_event = { #Monks make their offer
 }
 
 # Search egg number 4
+#forest chain
 character_event = {
 	id = L3T.441
 	desc = "DESCL3T.441"
@@ -2044,6 +2049,7 @@ character_event = {
 }
 
 # Search egg number 5
+#courtier chain
 character_event = {
 	id = L3T.451
 	desc = "DESCL3T.451"
