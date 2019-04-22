@@ -1,0 +1,74 @@
+#########################
+# L3T AMBITIONS by Arko #
+#########################
+
+#Find all eggs
+
+ambition_egg_them_all = {
+	type = character
+
+	fertility = -0.05 #se consacrer à l'oeuvre de sa vie fait se détourner d'autres choses
+	monthly_character_piety = 0.03
+
+	potential = {
+		 #has heard about the One egg
+		OR = {
+			has_character_flag = rumeur508_recue
+			has_character_flag = rumeur510_recue
+			has_character_flag = rumeur511_recue
+		}
+		 #not has it already, obviously
+		NOT = { has_artifact = oeuf_united }
+		 #has more than one egg already
+		OR = { AND = { has_artifact = oeuf_1 has_artifact = oeuf_2 }}
+		OR = { AND = { has_artifact = oeuf_1 has_artifact = oeuf_3 }}
+		OR = { AND = { has_artifact = oeuf_1 has_artifact = oeuf_4 }}
+		OR = { AND = { has_artifact = oeuf_1 has_artifact = oeuf_5 }}
+		OR = { AND = { has_artifact = oeuf_2 has_artifact = oeuf_3 }}
+		OR = { AND = { has_artifact = oeuf_2 has_artifact = oeuf_4 }}
+		OR = { AND = { has_artifact = oeuf_2 has_artifact = oeuf_5 }}
+		OR = { AND = { has_artifact = oeuf_3 has_artifact = oeuf_4 }}
+		OR = { AND = { has_artifact = oeuf_3 has_artifact = oeuf_5 }}
+		OR = { AND = { has_artifact = oeuf_4 has_artifact = oeuf_5 }}
+	}
+	
+	allow = {
+		is_adult = yes
+		is_ruler = yes
+		is_catholic_group = yes
+		NOT = { trait = incapable }
+	}
+	
+	chance = {
+		factor = 100
+		modifier = { factor = 1.5	trait = ambitious }		
+		modifier = { factor = 2.0	trait = patient }
+		modifier = { factor = 0.75	trait = greedy }
+		modifier = { factor = 1.5	trait = humble }
+		modifier = { factor = 0.01	trait = content }
+		modifier = { factor = 1.5	trait = zealous }
+		modifier = { factor = 0.2	trait = wroth }
+	}
+	
+	success = {
+		custom_tooltip = { text = build_something_reussite }
+		hidden_tooltip = { # Add other monuments
+			has_character_flag = has_made_cathedral_major_step
+		}
+	}
+	
+	abort = {
+		OR = {
+			trait = incapable
+		}
+	}
+	
+	abort_effect = {
+	}
+	
+	effect = {
+		change_learing = 1
+		prestige = 50
+		piety = 150
+	}
+}
