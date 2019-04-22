@@ -92,9 +92,9 @@ construire_cathedral_potential = {
 				}
 			}
 		}
-		
-		# Has a relic
-		has_a_relic = yes
+		#moved to allow s-trigger
+		## Has a relic
+		#has_a_relic = yes
 	}
 }
 
@@ -103,8 +103,20 @@ construire_cathedral_allow = {
 	AND = {
 		wealth = 100
 		# Peace
-		war = no
-		NOT = { any_liege = { war = yes } }
+		custom_tooltip = { 
+			text = custom_paix_totale
+			hidden_tooltip = {
+				war = no
+				NOT = { any_liege = { war = yes } }
+			}
+		}
+	   #Has a relic
+		custom_tooltip = { 
+			text = custom_relique 
+			hidden_tooltip = {
+				has_a_relic = yes
+			}
+		}
 	}
 }
 
