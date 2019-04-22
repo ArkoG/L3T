@@ -63,7 +63,12 @@ decisions = {
 						trait = patient
 					}
 				}
-				hidden_tooltip = { character_event = { id = L3T.402 days = 90 } }
+				hidden_tooltip = { 
+					# longer hunt under some conditions
+					character_event = { id = L3T.402 days = 90 }
+					# Fire the unification egg
+					narrative_event = { id = L3T.500 days = 90 }
+				}
 			}
 			if = {
 				limit = {
@@ -76,7 +81,12 @@ decisions = {
 						}
 					}
 				}
-				hidden_tooltip = { character_event = { id = L3T.402 days = 61 } }
+				hidden_tooltip = { 
+					# shorter hunt under some conditions
+					character_event = { id = L3T.402 days = 61 }
+					# Fire the unification egg
+					narrative_event = { id = L3T.500 days = 61 }
+				}
 			}
 			# Fire one event chain
 			hidden_tooltip = {
@@ -170,7 +180,8 @@ decisions = {
 				}
 			}
 			# Fire the unification egg
-			narrative_event = { id = L3T.500 days = 10 }
+			#moved to fired at the end of the hunt
+			#narrative_event = { id = L3T.500 days = 10 }
 		custom_tooltip = { text = egg_hunt_custom }
 		}
 		revoke_allowed = {
