@@ -4,7 +4,7 @@
 
 #Find all eggs
 
-ambition_egg_them_all = {
+obj_egg_them_all = {
 	type = character
 
 	fertility = -0.05 #se consacrer à l'oeuvre de sa vie fait se détourner d'autres choses
@@ -20,16 +20,7 @@ ambition_egg_them_all = {
 		 #not has it already, obviously
 		NOT = { has_artifact = oeuf_united }
 		 #has more than one egg already
-		OR = { AND = { has_artifact = oeuf_1 has_artifact = oeuf_2 }}
-		OR = { AND = { has_artifact = oeuf_1 has_artifact = oeuf_3 }}
-		OR = { AND = { has_artifact = oeuf_1 has_artifact = oeuf_4 }}
-		OR = { AND = { has_artifact = oeuf_1 has_artifact = oeuf_5 }}
-		OR = { AND = { has_artifact = oeuf_2 has_artifact = oeuf_3 }}
-		OR = { AND = { has_artifact = oeuf_2 has_artifact = oeuf_4 }}
-		OR = { AND = { has_artifact = oeuf_2 has_artifact = oeuf_5 }}
-		OR = { AND = { has_artifact = oeuf_3 has_artifact = oeuf_4 }}
-		OR = { AND = { has_artifact = oeuf_3 has_artifact = oeuf_5 }}
-		OR = { AND = { has_artifact = oeuf_4 has_artifact = oeuf_5 }}
+		check_variable = { which = "egg_count" value = 2 }
 	}
 	
 	allow = {
@@ -41,7 +32,8 @@ ambition_egg_them_all = {
 	
 	chance = {
 		factor = 100
-		modifier = { factor = 1.5	trait = ambitious }		
+		modifier = { factor = 1.5	trait = ambitious }	
+		modifier = { factor = 1.5	has_focus = focus_hunting }		
 		modifier = { factor = 2.0	trait = patient }
 		modifier = { factor = 0.75	trait = greedy }
 		modifier = { factor = 1.5	trait = humble }
@@ -51,9 +43,9 @@ ambition_egg_them_all = {
 	}
 	
 	success = {
-		custom_tooltip = { text = build_something_reussite }
-		hidden_tooltip = { # Add other monuments
-			has_character_flag = has_made_cathedral_major_step
+		custom_tooltip = { text = custom_egg_them_all }
+		hidden_tooltip = { 
+			has_artifact = oeuf_united
 		}
 	}
 	
@@ -67,7 +59,7 @@ ambition_egg_them_all = {
 	}
 	
 	effect = {
-		change_learing = 1
+		change_learning = 1
 		prestige = 50
 		piety = 150
 	}
