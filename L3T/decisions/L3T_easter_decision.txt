@@ -12,7 +12,7 @@ decisions = {
 		}
 		allow = {
 			#war = no #in big realm you are ALWAYS at war
-			not_involved_in_personnal_war = yes
+			not_involved_in_personnal_war = yes #personal wars only
 			custom_tooltip = {
 				text = UNOCCUPIED_DEMESNE_TITLE
 				hidden_tooltip = {
@@ -40,16 +40,16 @@ decisions = {
 			hidden_tooltip = { character_event = { id = L3T.499 days = 150 } } # Safety catch flag clearing
 			hidden_tooltip = { 
 				random_list = { 
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur501_recue }}} letter_event = { id = L3T.501 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur502_recue }}} letter_event = { id = L3T.502 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur503_recue }}} letter_event = { id = L3T.503 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur504_recue }}} letter_event = { id = L3T.504 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur505_recue }}} letter_event = { id = L3T.505 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur506_recue }}} letter_event = { id = L3T.506 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur507_recue }}} letter_event = { id = L3T.507 days = 15 random = 10}}
+				20 = { if = { limit = { NOT = { has_character_flag = rumeur501_recue }}} letter_event = { id = L3T.501 days = 15 random = 10}}
+				20 = { if = { limit = { NOT = { has_character_flag = rumeur502_recue }}} letter_event = { id = L3T.502 days = 15 random = 10}}
+				20 = { if = { limit = { NOT = { has_character_flag = rumeur503_recue }}} letter_event = { id = L3T.503 days = 15 random = 10}}
+				20 = { if = { limit = { NOT = { has_character_flag = rumeur504_recue }}} letter_event = { id = L3T.504 days = 15 random = 10}}
+				20 = { if = { limit = { NOT = { has_character_flag = rumeur505_recue }}} letter_event = { id = L3T.505 days = 15 random = 10}}
+				20 = { if = { limit = { NOT = { has_character_flag = rumeur506_recue }}} letter_event = { id = L3T.506 days = 15 random = 10}}
+				20 = { if = { limit = { NOT = { has_character_flag = rumeur507_recue }}} letter_event = { id = L3T.507 days = 15 random = 10}}
 				10 = { if = { limit = { NOT = { has_character_flag = rumeur508_recue }}} letter_event = { id = L3T.508 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur509_recue }}} letter_event = { id = L3T.509 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur510_recue }}} letter_event = { id = L3T.510 days = 15 random = 10}}
+				20 = { if = { limit = { NOT = { has_character_flag = rumeur509_recue }}} letter_event = { id = L3T.509 days = 15 random = 10}}
+				20 = { if = { limit = { NOT = { has_character_flag = rumeur510_recue }}} letter_event = { id = L3T.510 days = 15 random = 10}}
 				10 = { if = { limit = { NOT = { has_character_flag = rumeur511_recue }}} letter_event = { id = L3T.511 days = 15 random = 10}}
 				}
 			}
@@ -81,11 +81,92 @@ decisions = {
 			# Fire one event chain
 			hidden_tooltip = {
 				random_list = {
-					20 = { narrative_event = { id = L3T.411 days = 10 random = 5} }
-					20 = { character_event = { id = L3T.421 days = 10 random = 5} }
-					20 = { character_event = { id = L3T.431 days = 10 random = 5} }
-					20 = { character_event = { id = L3T.441 days = 10 random = 5} }
-					20 = { character_event = { id = L3T.451 days = 10 random = 5} }
+					##holy site or pilgrim chain
+					22 = { 
+						#will fire less if already have that artifact
+						modifier = { 
+							factor = 0.5
+							has_artifact = oeuf_1
+						}
+						#better focus if having the ambition
+						modifier = {
+							factor = 0.5 #cumulative, so 25%
+							AND = {
+								has_artifact = oeuf_1
+								has_ambition = ambition_egg_them_all
+							}
+						}
+						narrative_event = { id = L3T.411 days = 10 random = 5}
+					}
+					##buy at the market chain
+					22 = { 
+						#will fire less if already have that artifact
+						modifier = { 
+							factor = 0.5
+							has_artifact = oeuf_2
+						}
+						#better focus if having the ambition
+						modifier = {
+							factor = 0.5
+							AND = {
+								has_artifact = oeuf_2
+								has_ambition = ambition_egg_them_all
+							}
+						}
+						narrative_event = { id = L3T.421 days = 10 random = 5}
+					}
+					##monastery chain
+					22 = { 
+						#will fire less if already have that artifact
+						modifier = { 
+							factor = 0.5
+							has_artifact = oeuf_3
+						}
+						#better focus if having the ambition
+						modifier = {
+							factor = 0.5
+							AND = {
+								has_artifact = oeuf_3
+								has_ambition = ambition_egg_them_all
+							}
+						}
+						narrative_event = { id = L3T.431 days = 10 random = 5}
+					}
+					##forest chain
+					22 = { 
+						#will fire less if already have that artifact
+						modifier = { 
+							factor = 0.5
+							has_artifact = oeuf_4
+						}
+						#better focus if having the ambition
+						modifier = {
+							factor = 0.5
+							AND = {
+								has_artifact = oeuf_4
+								has_ambition = ambition_egg_them_all
+							}
+						}
+						narrative_event = { id = L3T.441 days = 10 random = 5}
+					}
+					##courtier chain
+					#easier to get, so reducing the chances
+					12 = { 
+						#will fire less if already have that artifact
+						modifier = { 
+							factor = 0.5
+							has_artifact = oeuf_5
+						}
+						#better focus if having the ambition
+						modifier = {
+							factor = 0.5
+							AND = {
+								has_artifact = oeuf_5
+								has_ambition = ambition_egg_them_all
+							}
+						}
+						narrative_event = { id = L3T.451 days = 10 random = 5}
+					}
 				}
 			}
 			# Fire the unification egg
@@ -100,11 +181,10 @@ decisions = {
 			
 			modifier = {
 				factor = 0
-				NOT = { wealth = 25 }
+				NOT = { wealth = 50 }
 			}
 			modifier = {
-				factor = 0
-				NOT = { wealth = 50 }
+				factor = 0.5
 				NOT = { trait = patient }
 			}
 			modifier = {
