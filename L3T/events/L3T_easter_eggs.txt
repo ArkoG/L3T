@@ -2085,6 +2085,7 @@ character_event = {
 					any_courtier = {
 						prisoner = no
 						is_ruler = no
+						lower_tier_than = count
 						has_artifact = oeuf_5
 					}
 				}
@@ -2093,6 +2094,7 @@ character_event = {
 				limit = {
 					prisoner = no
 					is_ruler = no
+					lower_tier_than = count
 					NOT = { dynasty = ROOT }
 				}
 				add_artifact = oeuf_5
@@ -2164,7 +2166,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2200,7 +2202,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2295,7 +2297,7 @@ character_event = {
 		name = "L3T.453A"
 		FROM = {
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2331,7 +2333,7 @@ character_event = {
 		FROM = {
 			imprison = ROOT
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2388,7 +2390,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2424,7 +2426,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2498,7 +2500,7 @@ character_event = {
 		name = "L3T.456A"
 		FROM = {
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2534,7 +2536,7 @@ character_event = {
 		}
 		FROM = {
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2595,7 +2597,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2631,7 +2633,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2656,7 +2658,7 @@ character_event = {
 		FROM = {
 			imprison = ROOT
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2732,7 +2734,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2768,7 +2770,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2793,7 +2795,7 @@ character_event = {
 		FROM = {
 			imprison = ROOT
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag}
+				limit = { has_artifact_flag = oeuf5_flag}
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2828,7 +2830,7 @@ character_event = {
 		name = "L3T.459A"
 		FROMFROM = {
 			random_artifact = {
-				limit = { has_artifact_flag = oeuf_5_flag }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
