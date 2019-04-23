@@ -145,8 +145,10 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_war = { #the character is involved in war
-				using_cb = religious #that is a (minor) holy war
+			AND = {
+				any_war = { #the character is involved in war
+					using_cb = religious #that is a (minor) holy war
+				}
 				is_primary_war_defender = yes #is a defender in this war
 			}
 		}
