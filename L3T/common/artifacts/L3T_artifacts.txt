@@ -37,7 +37,8 @@ sayf_al_islam = {
 ###EGGS SERIE
 oeuf_1 = {
 	monthly_character_piety = 0.1
-	quality = 1
+	monthly_character_prestige = 0.05
+	quality = 2
 	active = { religion_group = christian }
 	flags = { easter }
 	stacking = no
@@ -46,7 +47,7 @@ oeuf_1 = {
 }
 oeuf_2 = {
 	monthly_character_prestige = 0.1
-	quality = 1
+	quality = 2
 	active = { religion_group = christian }
 	flags = { easter }
 	stacking = no
@@ -54,8 +55,8 @@ oeuf_2 = {
 	slot = slot_egg
 }
 oeuf_3 = {
-	monthly_character_piety = 0.1
-	quality = 1
+	monthly_character_piety = 0.2
+	quality = 3
 	active = { religion_group = christian }
 	flags = { easter }
 	stacking = no
@@ -76,7 +77,7 @@ oeuf_5 = {
 	monthly_character_prestige = 0.05
 	quality = 1
 	active = { religion_group = christian }
-	flags = { easter oeuf_5_flag }
+	flags = { easter oeuf5_flag }
 	stacking = no
 	picture = "GFX_oeuf_5"
 	slot = slot_egg
@@ -88,7 +89,7 @@ oeuf_united = {
 	vassal_opinion = 5
 	same_religion_opinion = 5
 	diplomacy = 1
-	quality = 3
+	quality = 4
 	active = { religion_group = christian }
 	indestructible = yes
 	flags = { easter regalia religious christian unique }
