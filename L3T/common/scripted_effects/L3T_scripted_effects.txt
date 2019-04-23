@@ -38,6 +38,7 @@ remove_feodal_adm_modifier_in_capital_if_necessary = {
 	}
 }
 counting_eggs = {
+	set_variable = { which = "egg_count" value = 0 }
 	if = { 
 		limit = { has_artifact = oeuf_1 }
 		change_variable = { which = "egg_count" value = 1 }
