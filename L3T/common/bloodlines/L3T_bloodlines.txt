@@ -1,0 +1,39 @@
+##########################
+# L3T bloodlines by Arko #
+########################## 
+
+#given by temple specialisation - event L3T.6
+
+monastery_foundation_bloodline = { 
+	monthly_character_piety = 0.15
+	christian_church_opinion = 2
+	christian_opinion = 3
+	#inheritance = patrilineal
+	#inheritance = matrilineal
+	bloodline_effect_fading_BL = 1
+	allow_bastards = no
+	flags = { 
+		monastery_foundation
+		bloodline_short_transmission
+	}
+	picture = GFX_BL_monastery
+	active = {
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion_group = ROOT
+				}
+			}
+		}
+		custom_tooltip = {
+			text = BL_confirmed_donation
+			ROOT = {
+				OR = {
+					has_character_flag = monastery_founder_gen1
+					has_character_flag = bloodline_preserver
+				}
+			}
+		}
+	}
+}
