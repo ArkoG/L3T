@@ -1417,7 +1417,6 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_character_flag = canGetEasterEgg3 #gain when one chooses the monastery spec
 		NOT = { has_character_flag = egg_found }
 		NOT = { has_character_flag = search_egg1 }
 		NOT = { has_character_flag = search_egg2 }
@@ -1425,6 +1424,14 @@ character_event = {
 		NOT = { has_character_flag = search_egg5 }
 		NOT = { has_artifact = oeuf_3 }
 		NOT = { has_artifact = oeuf_united }
+		AND = {
+			religion_group = christian
+			#has_character_flag = canGetEasterEgg3 #gain when one chooses the monastery spec
+			any_owned_bloodline = {
+				has_bloodline_flag = monastery_foundation
+				#bloodline_is_active_for = PREV
+			}
+		}
 	}
 
 	immediate = { set_character_flag = egg_found }
