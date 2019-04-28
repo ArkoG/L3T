@@ -1039,6 +1039,53 @@ narrative_event = {
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 				holder_scope = { narrative_event = { id = L3T.7 days = 0 }} ####MAKE IT automatic ONCE new holdings will be built by decision only######
 			}
+
+			if = {
+				limit = {
+					holder_scope = 	{
+						religion_group = christian
+						is_female = yes
+						OR = {
+							is_feudal = yes
+							is_republic = yes
+						}
+					}
+				}
+				holder_scope = {
+					create_bloodline = {
+						type = monastery_foundation_bloodline
+						inheritance = matrilineal
+					}
+					new_bloodline = {
+						set_description = "monastery_bloodline_desc"
+						set_bloodline_flag = monastery_foundation_to_revive
+					}
+					set_character_flag = monastery_founder_gen1
+				}
+			}
+			if = {
+				limit = { 
+					holder_scope = {
+						religion_group = christian
+						is_female = no
+						OR = {
+							is_feudal = yes
+							is_republic = yes
+						}
+					}
+				}
+				holder_scope = {
+					create_bloodline = {
+						type = monastery_foundation_bloodline
+						inheritance = patrilineal
+					}
+					new_bloodline = {
+						set_description = "monastery_bloodline_desc"
+						set_bloodline_flag = monastery_foundation_to_revive
+					}
+					set_character_flag = monastery_founder_gen1
+				}
+			}
 			if = {
 				limit = {
 					location = {
