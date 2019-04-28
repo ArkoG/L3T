@@ -298,6 +298,15 @@ deciding_upon_saint_effect = {
                 }
             }
         }
+       ##foundation of a monastery
+	   modifier = {
+            factor = 2
+            event_target:saint_person  = {
+				any_owned_bloodline = {
+					has_bloodline_flag = monastery_foundation
+                }    
+            }
+        }
         #Players who don't have a saintly bloodline have a higher chance of becoming a Saint
         modifier = {
             factor = 2
