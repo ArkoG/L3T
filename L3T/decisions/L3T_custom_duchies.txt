@@ -1,0 +1,168 @@
+decisions = {
+
+	form_new_duchy = {
+
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			is_feudal = yes
+			is_adult = yes
+			tier = COUNT
+			NOT = { tier = DUKE }
+			holy_order = no
+			NOT = { trait = incapable }
+			NOT = { has_global_flag = running_LCDA }  #needs a different localisation
+			
+			NOT = {
+				has_game_rule = {
+					name = dynamic_realms
+					value = off
+				}
+			}
+
+			NOT = { has_character_flag = created_dynamic_title }
+			
+			demesne_size = 2
+		}
+
+		allow = {
+			prisoner = no
+			#is_feudal = yes
+			NOT = { trait = incapable }
+			
+			AND = {
+				demesne_size = 3
+				realm_size = 9
+				custom_tooltip = { text = new_duchy_req_tooltip_demesne }
+				hidden_tooltip = {
+					any_demesne_title = {
+						count = 2
+						tier = COUNT
+					}
+				}
+			}
+			wealth = 250
+			
+			conditional_tooltip = {
+				trigger = { independent = yes }
+				custom_tooltip = { text = new_duchy_req_tooltip_yind }
+			}
+			conditional_tooltip = {
+				trigger = { independent = no }
+				custom_tooltip = { text = new_duchy_req_tooltip_nind }
+			}
+			hidden_tooltip = {
+				OR = {
+					AND = {
+						independent = yes
+						prestige = 250
+						piety = 150
+					}
+					AND = {
+						independent = no
+						prestige = 500
+						piety = 300
+					}
+				}
+			}
+		}
+		
+		effect = {
+			set_character_flag = created_dynamic_title
+			wealth = -250
+			hidden_tooltip = {
+				primary_title = {
+					create_title = {
+						tier = DUKE
+						landless = no
+						temporary = no
+						custom_created = yes
+						culture = ROOT
+						holder = ROOT
+						base_title = THIS
+						copy_title_laws = yes
+					}
+					hidden_tooltip = {
+						kingdom = {
+							ROOT = {
+								primary_title = {
+									de_jure_liege = PREVPREV
+								}
+							}
+						}
+					}
+				}
+				any_demesne_title = {
+					limit = { tier = COUNT }
+					de_jure_liege = PREV
+				}
+			}
+			custom_tooltip = { text = form_new_duchy_tooltip }
+			chronicle = {
+				entry = CHRONICLE_FOUNDED_NEW_DUCHY
+				portrait = [Root.GetID]
+			}
+			###needs a notification event maybe ? #yes need a notification for holder and liege and top liege
+			#notify character
+			#notify form duke liege (opinion)
+			#notify king liege
+			#notify emperor
+			#notify top liege with agreement or not (opinion/claim)
+			#make better chronicle entry + picture
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					NOT = { trait = ambitious }
+					piety = 750
+					prestige = 750
+					wealth = 300
+				}
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { 
+					any_demesne_title = {
+						count = 2
+						tier = COUNT
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { 
+					any_demesne_title = {
+						count = 3
+						tier = COUNT
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { 
+					any_demesne_title = {
+						count = 4
+						tier = COUNT
+					}
+				}
+			}
+			modifier = {
+				factor = 3.0
+				NOT = { 
+					any_demesne_title = {
+						count = 5
+						tier = COUNT
+					}
+				}
+			}		
+		}
+	}
+}
