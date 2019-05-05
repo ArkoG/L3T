@@ -23,8 +23,8 @@ decisions = {
 			}
 
 			NOT = { has_character_flag = created_dynamic_title }
-			
 			demesne_size = 2
+
 		}
 
 		allow = {
@@ -34,14 +34,31 @@ decisions = {
 			is_primary_war_defender = no
 			in_revolt = no
 			
+			custom_tooltip = { 
+				text = blabla 
+				primary_title = {
+					location = {
+						any_neighbor_province = {
+							owner = { character = ROOT }
+						}
+					}
+				}
+			}
+			
 			AND = {
 				demesne_size = 3
 				realm_size = 9
-				custom_tooltip = { text = new_duchy_req_tooltip_demesne }
-				hidden_tooltip = {
+				custom_tooltip = { 
+					text = new_duchy_req_tooltip_demesne 
 					any_demesne_title = {
-						count = 2
+						count = 2 #at least 2
 						tier = COUNT
+					}
+					NOT = {
+						any_demesne_title = {
+							count = 6 #less than 6, so 5 #to limit the exploit to hoard counties before taking the decision, and so value creating an mega DJ duchy 
+							tier = COUNT
+						}
 					}
 				}
 			}
@@ -50,22 +67,36 @@ decisions = {
 			conditional_tooltip = {
 				trigger = { independent = yes }
 				custom_tooltip = { text = new_duchy_req_tooltip_yind }
+				hidden_tooltip = {
+					OR = {
+						AND = {
+							independent = yes
+							prestige = 250
+							piety = 150
+						}
+						AND = {
+							independent = no
+							prestige = 500
+							piety = 300
+						}
+					}
+				}
 			}
 			conditional_tooltip = {
 				trigger = { independent = no }
 				custom_tooltip = { text = new_duchy_req_tooltip_nind }
-			}
-			hidden_tooltip = {
-				OR = {
-					AND = {
-						independent = yes
-						prestige = 250
-						piety = 150
-					}
-					AND = {
-						independent = no
-						prestige = 500
-						piety = 300
+				hidden_tooltip = {
+					OR = {
+						AND = {
+							independent = yes
+							prestige = 250
+							piety = 150
+						}
+						AND = {
+							independent = no
+							prestige = 500
+							piety = 300
+						}
 					}
 				}
 			}
@@ -75,39 +106,36 @@ decisions = {
 			set_character_flag = created_dynamic_title
 			capital_scope = {
 				set_flag = my_kapital
-				#location = {
-					#set_flag = my_kapital 
+				any_neighbor_province = {
+					limit = { 
+						owner = { character = ROOT  }
+						#NOT = { has_flag = my_kapital }
+						#any_neighbor_province = { has_flag = my_kapital }
+						#NOT = { has_flag = my_kapital_connected }
+						NOT = { has_flag = my_kapital_connected_R1 }
+						#NOT = { has_flag = my_kapital_connected_R2 }
+					}
+					#set_flag = my_kapital_connected
+					set_flag = my_kapital_connected_R1
 					any_neighbor_province = {
 						limit = { 
 							owner = { character = ROOT  }
-							#NOT = { has_flag = my_kapital }
-							#any_neighbor_province = { has_flag = my_kapital }
+							NOT = { has_flag = my_kapital }
+							#any_neighbor_province = { any_neighbor_province = { has_flag = my_kapital }}
+							#any_neighbor_province = { has_flag = my_kapital_connected_R1}
 							#NOT = { has_flag = my_kapital_connected }
 							NOT = { has_flag = my_kapital_connected_R1 }
-							#NOT = { has_flag = my_kapital_connected_R2 }
+							NOT = { has_flag = my_kapital_connected_R2 }
 						}
 						#set_flag = my_kapital_connected
-						set_flag = my_kapital_connected_R1
-						any_neighbor_province = {
-							limit = { 
-								owner = { character = ROOT  }
-								NOT = { has_flag = my_kapital }
-								#any_neighbor_province = { any_neighbor_province = { has_flag = my_kapital }}
-								#any_neighbor_province = { has_flag = my_kapital_connected_R1}
-								#NOT = { has_flag = my_kapital_connected }
-								NOT = { has_flag = my_kapital_connected_R1 }
-								NOT = { has_flag = my_kapital_connected_R2 }
-							}
-							#set_flag = my_kapital_connected
-							set_flag = my_kapital_connected_R2
-						}
+						set_flag = my_kapital_connected_R2
 					}
-				#}
+				}
 			}
 			wealth = -250
 			#hidden_tooltip = {
 				primary_title = {
-					save_event_target_as = old_primary_title
+					#save_event_target_as = old_primary_title
 					create_title = {
 						tier = DUKE
 						landless = no
@@ -131,34 +159,117 @@ decisions = {
 						}
 					}
 				}
-				#event_target:old_primary_title = {
 				any_demesne_title = {
 					limit = { 
 						tier = COUNT
 						location = { has_flag = my_kapital }
 					}
 					de_jure_liege = PREV
+					event_target:new_primary_title = { set_variable = { which = created_DJ_size value = 1 }}
 				}
 				any_demesne_title = {
-					#limit = {
-					#	has_flag = my_kapital
-					#}
-					#any_neighbour_province = {
-					#clear_event_target = old_primary_title
-					custom_tooltip = { text = blabla }
 					limit = {
+						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 5 }}}
 						tier = COUNT
+						#NOT = { has_title_flag = integrated_yet }
 						location = {
 							NOT = { has_flag = my_kapital }
-							OR = {
-								has_flag = my_kapital_connected_R1
-								has_flag = my_kapital_connected_R2
-							}
+							has_flag = my_kapital_connected_R1
+							NOT = { has_flag = my_kapital_connected_R2 }
 						}
 					}
 					de_jure_liege = PREV
+					#set_title_flag = integrated_yet
+					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
 				}
-				#}
+				any_demesne_title = {
+					limit = {
+						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 5 }}}
+						tier = COUNT
+						#NOT = { has_title_flag = integrated_yet }
+						location = {
+							NOT = { has_flag = my_kapital }
+							NOT = { has_flag = my_kapital_connected_R1 }
+							has_flag = my_kapital_connected_R2
+						}
+					}
+					de_jure_liege = PREV
+					#set_title_flag = integrated_yet
+					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
+				}
+				#remove flags
+				capital_scope = {
+					clr_flag = my_kapital
+					any_neighbor_province = {
+						limit = { 
+							owner = { character = ROOT  }
+							has_flag = my_kapital_connected_R1
+						}
+						clr_flag = my_kapital_connected_R1
+					}
+					any_neighbor_province = { 
+						any_neighbor_province = {
+							limit = { 
+								owner = { character = ROOT  }
+								has_flag = my_kapital_connected_R2
+							}
+							clr_flag = my_kapital_connected_R2
+						}
+					}
+				}
+				#if didn't hit yet the 5 prov max, check if other provinces are eligible
+				#capital+at least one adjacent+at least one indirect adjacent make 2 prov DJ
+				#so try to find 3 additional eligible provinces
+				random_demesne_title = { #1
+					limit = {
+						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 5 }}}
+						location = {
+							is_connected_to = {
+								sub_realm = yes #Which realm to allow pathing through. "yes" for the sub-realm of the province owner. "no" for the realm of the top-liege.
+								target = capital
+								#land_gap = no
+								#naval_distance = no
+							}
+						}
+						NOT = { de_jure_liege = ROOT }
+					}
+					de_jure_liege = PREV
+					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
+				}
+				random_demesne_title = { #2
+					limit = {
+						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 5 }}}
+						location = {
+							is_connected_to = {
+								sub_realm = yes #Which realm to allow pathing through. "yes" for the sub-realm of the province owner. "no" for the realm of the top-liege.
+								target = capital
+								#land_gap = no
+								#naval_distance = no
+							}
+						}
+						NOT = { de_jure_liege = ROOT }
+					}
+					de_jure_liege = PREV
+					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
+				}
+				random_demesne_title = { #3
+					limit = {
+						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 5 }}}
+						location = {
+							is_connected_to = {
+								sub_realm = yes #Which realm to allow pathing through. "yes" for the sub-realm of the province owner. "no" for the realm of the top-liege.
+								target = capital
+								#land_gap = no
+								#naval_distance = no
+							}
+						}
+						NOT = { de_jure_liege = ROOT }
+					}
+					de_jure_liege = PREV
+					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
+				}
+				
+					
 			#}
 			custom_tooltip = { text = form_new_duchy_tooltip }
 			chronicle = {
@@ -178,6 +289,7 @@ decisions = {
 		revoke_allowed = {
 			always = no
 		}
+		
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -190,7 +302,7 @@ decisions = {
 				}
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0.1 #AI's not dumb
 				NOT = { 
 					any_demesne_title = {
 						count = 2
@@ -199,7 +311,7 @@ decisions = {
 				}
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.5 #AI's not so dumb
 				NOT = { 
 					any_demesne_title = {
 						count = 3
@@ -208,7 +320,7 @@ decisions = {
 				}
 			}
 			modifier = {
-				factor = 0.8
+				factor = 1.2 #AI's almost right
 				NOT = { 
 					any_demesne_title = {
 						count = 4
@@ -217,14 +329,12 @@ decisions = {
 				}
 			}
 			modifier = {
-				factor = 3.0
-				NOT = { 
-					any_demesne_title = {
-						count = 5
-						tier = COUNT
-					}
+				factor = 3.0  #clever AI
+				any_demesne_title = {
+					count = 5
+					tier = COUNT
 				}
-			}		
+			}
 		}
 	}
 }
