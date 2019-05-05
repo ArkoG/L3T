@@ -11,8 +11,8 @@ decisions = {
 			is_adult = yes
 			tier = COUNT
 			NOT = { tier = DUKE }
-			holy_order = no
-			NOT = { trait = incapable }
+			#holy_order = no
+			
 			NOT = { has_global_flag = running_LCDA }  #needs a different localisation
 			
 			NOT = {
@@ -28,9 +28,11 @@ decisions = {
 		}
 
 		allow = {
+			is_incapable = no
 			prisoner = no
-			#is_feudal = yes
-			NOT = { trait = incapable }
+			has_regent = no
+			is_primary_war_defender = no
+			in_revolt = no
 			
 			AND = {
 				demesne_size = 3
@@ -71,9 +73,41 @@ decisions = {
 		
 		effect = {
 			set_character_flag = created_dynamic_title
+			capital_scope = {
+				set_flag = my_kapital
+				#location = {
+					#set_flag = my_kapital 
+					any_neighbor_province = {
+						limit = { 
+							owner = { character = ROOT  }
+							#NOT = { has_flag = my_kapital }
+							#any_neighbor_province = { has_flag = my_kapital }
+							#NOT = { has_flag = my_kapital_connected }
+							NOT = { has_flag = my_kapital_connected_R1 }
+							#NOT = { has_flag = my_kapital_connected_R2 }
+						}
+						#set_flag = my_kapital_connected
+						set_flag = my_kapital_connected_R1
+						any_neighbor_province = {
+							limit = { 
+								owner = { character = ROOT  }
+								NOT = { has_flag = my_kapital }
+								#any_neighbor_province = { any_neighbor_province = { has_flag = my_kapital }}
+								#any_neighbor_province = { has_flag = my_kapital_connected_R1}
+								#NOT = { has_flag = my_kapital_connected }
+								NOT = { has_flag = my_kapital_connected_R1 }
+								NOT = { has_flag = my_kapital_connected_R2 }
+							}
+							#set_flag = my_kapital_connected
+							set_flag = my_kapital_connected_R2
+						}
+					}
+				#}
+			}
 			wealth = -250
-			hidden_tooltip = {
+			#hidden_tooltip = {
 				primary_title = {
+					save_event_target_as = old_primary_title
 					create_title = {
 						tier = DUKE
 						landless = no
@@ -83,6 +117,9 @@ decisions = {
 						holder = ROOT
 						base_title = THIS
 						copy_title_laws = yes
+					}
+					new_title = {
+						save_event_target_as = new_primary_title
 					}
 					hidden_tooltip = {
 						kingdom = {
@@ -94,11 +131,35 @@ decisions = {
 						}
 					}
 				}
+				#event_target:old_primary_title = {
 				any_demesne_title = {
-					limit = { tier = COUNT }
+					limit = { 
+						tier = COUNT
+						location = { has_flag = my_kapital }
+					}
 					de_jure_liege = PREV
 				}
-			}
+				any_demesne_title = {
+					#limit = {
+					#	has_flag = my_kapital
+					#}
+					#any_neighbour_province = {
+					#clear_event_target = old_primary_title
+					custom_tooltip = { text = blabla }
+					limit = {
+						tier = COUNT
+						location = {
+							NOT = { has_flag = my_kapital }
+							OR = {
+								has_flag = my_kapital_connected_R1
+								has_flag = my_kapital_connected_R2
+							}
+						}
+					}
+					de_jure_liege = PREV
+				}
+				#}
+			#}
 			custom_tooltip = { text = form_new_duchy_tooltip }
 			chronicle = {
 				entry = CHRONICLE_FOUNDED_NEW_DUCHY
@@ -111,6 +172,7 @@ decisions = {
 			#notify emperor
 			#notify top liege with agreement or not (opinion/claim)
 			#make better chronicle entry + picture
+			#expand DJ
 		}
 		
 		revoke_allowed = {
