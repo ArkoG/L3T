@@ -21,14 +21,8 @@ province_event = {
 		}
 		OR = {
 			terrain = plains
-			AND = {
-				terrain = coastal_desert
-				has_global_flag = SWMH
-			}
-			AND = {
-				terrain = marsh
-				has_global_flag = SWMH
-			}
+			terrain = coastal_desert
+			terrain = marsh
 		}
 		NOT = { terrain = forest }
 	}
@@ -45,48 +39,39 @@ province_event = {
 				70 = {}
 			}
 		}
+		#marsh get only one ressource, fish excepted
 		if = {
-			limit = { terrain = marsh } #marsh won't get secondary ressource
+			limit = {
+				OR = {
+					terrain = marsh 
+					terrain = coastal_desert
+				}
+			}
 			random_list = {
-				#80 = { add_province_modifier = { name = agriculture1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 				40 = { add_province_modifier = { name = agriculture1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				#20 = {}
-			#}
-			#random_list = {
-				#30 = { add_province_modifier = { name = elevage1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 				15 = { add_province_modifier = { name = elevage1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				#35 = { add_province_modifier = { name = foret1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
 				17 = { add_province_modifier = { name = foret1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				#35 = {}
-				#55 = {}
 				28 = {}
 			}
 		}
-		break=yes
-				
-		random_list = {
-			80 = { add_province_modifier = { name = agriculture1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-			20 = {}
-		}
-		random_list = {
-			30 = { add_province_modifier = { name = elevage1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-			35 = { add_province_modifier = { name = foret1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-			35 = {}
-		}
 		if = {
-			limit = {
-				terrain = marsh
+			limit = { 
+				NOT = { 
+					terrain = marsh
+					terrain = coastal_desert
+				}
 			}
-			remove_province_modifier = { agriculture1 }
-				
-		if = { 
-			limit = { has_province_modifier = province_cotiere }
 			random_list = {
-				30 = { add_province_modifier = { name = peche1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
-				70 = {}
+				80 = { add_province_modifier = { name = agriculture1	duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				20 = {}
 			}
+			random_list = {
+				30 = { add_province_modifier = { name = elevage1		duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				35 = { add_province_modifier = { name = foret1			duration = -1	} change_variable = { which = "resourceNb" value = 1 } }
+				35 = {}
+			}
+			province_event = { id = ECO.15 days = 10 } #reroll
 		}
-		province_event = { id = ECO.15 days = 10 }
 	}
 }
 
@@ -475,6 +460,8 @@ province_event = {
 			has_province_modifier = minerai1_sel
 			has_province_modifier = peche1				
 			has_province_modifier = pisci1
+			terrain = marsh
+			terrain = coastal_desert
 		}
 	}
 	
