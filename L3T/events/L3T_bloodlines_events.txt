@@ -1,0 +1,42 @@
+#################################
+#         L3T par Arko          #
+#################################
+
+namespace = L3T
+
+
+## bloodline pruning 
+
+
+character_event = {
+	id = L3T.52
+	hide_window = yes
+	is_triggered_only = yes #on_death
+	
+	trigger = {
+		any_owned_bloodline = {
+			has_bloodline_flag = monastery_foundation
+			has_bloodline_flag = bloodline_limited_transmission
+		}
+		OR = {
+			has_character_flag = monastery_confirmed2
+			has_character_flag = monastery_confirmed1
+		}
+		#le mourrant possède une BL donnée / comment faire si plusieurs ? limiter à une seule ou remplacer ?
+		#il passe son flag à l'un de ses enfants, vivant, sinon petit enfants
+		#tant qu'un descendant du founder porte le flag, la lignée est active pour tous les descendants
+		#au passage de flag, élagage des parents trop distants
+		
+	}
+
+	immediate = {
+		any_child = {
+			any_owned_bloodline = {
+				is_child_of = ROOT
+				has_bloodline_flag = monastery_foundation
+				has_bloodline_flag = bloodline_limited_transmission
+			}
+		}
+	}
+	
+}

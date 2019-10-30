@@ -1031,7 +1031,7 @@ narrative_event = {
 				}
 				add_building = MONASTERE
 				set_title_flag = L3T6_made_me_opt_A
-				hidden_tooltip ={
+				hidden_tooltip = {
 					change_variable = { which = "developpement" value = 10 }
 					change_variable = { which = "developpement_spec" value = 10 }
 				}
@@ -1058,10 +1058,14 @@ narrative_event = {
 					}
 					new_bloodline = {
 						set_description = "monastery_bloodline_desc"
-						set_bloodline_flag = monastery_foundation_to_revive
+						#set_bloodline_flag = monastery_foundation_to_revive
+						#set_bloodline_flag = was_founded@event_target:holding_to_spec
 					}
-					set_character_flag = monastery_founder_gen1
+					set_character_flag = monastery_founder_generation_left3
 				}
+				#event_target:holding_to_spec = { 
+				#	set_title_flag = fondation_par@FROM
+				#}
 			}
 			if = {
 				limit = { 
@@ -1081,10 +1085,14 @@ narrative_event = {
 					}
 					new_bloodline = {
 						set_description = "monastery_bloodline_desc"
-						set_bloodline_flag = monastery_foundation_to_revive
+						#set_bloodline_flag = monastery_foundation_to_revive
+						#set_bloodline_flag = fondateur_@event_target:holding_to_spec
 					}
-					set_character_flag = monastery_founder_gen1
+					set_character_flag = monastery_founder_generation_left3
 				}
+				#event_target:holding_to_spec = { 
+				#	set_title_flag = fondation_par@FROM
+				#}
 			}
 			if = {
 				limit = {
