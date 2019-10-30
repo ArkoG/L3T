@@ -1,0 +1,44 @@
+# Title decisions are possible vs _all_ titles and are shown in the Title Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [capital/primary_title/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all]
+# ai_target_filter = [capital/primary_title/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all] (which titles for which the AI evaluates the decision.)
+#	owned: all titles owned by the AI
+#	vassal_owned: all titles owned by direct vassal rulers of the AI's employer
+#	sub_realm_owned: all titles below the AI's employer
+#	realm_owned: all titles in the same top realm as the AI
+#	dynasty_owned: all titles owned by members of the same dynasty
+#	all: all titles (Avoid if possible. VERY CPU-HEAVY!)
+#	
+
+title_decisions = {
+	rename_all = {
+		only_rulers = yes
+		filter = owned
+		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_rename_icon
+		
+		from_potential = {
+			is_ruler = yes
+		}
+		
+		potential = {
+			FROM = { ai = no }
+		}
+		
+		allow = {
+			always=yes
+		}
+		
+		effect = {
+			#ROOT = { character_event = { ROOT }
+			prompt_name = {
+				player = FROM
+				type = RENAME_TITLE
+				#portrait = FROM
+				#name_list = cultural # Optional. What name list to use. Can also use "religion" for religious names of the scoped character's religion, or "culture"
+			}
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+}
