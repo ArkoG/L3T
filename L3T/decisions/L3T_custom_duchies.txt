@@ -35,13 +35,14 @@ decisions = {
 			in_revolt = no
 			
 			custom_tooltip = { 
-				text = blabla 
-				primary_title = {
-					location = {
+				text = new_duchy_req_tooltip_package
+				capital_scope = {
+				#primary_title = {
+					#location = {
 						any_neighbor_province = {
 							owner = { character = ROOT }
 						}
-					}
+					#}
 				}
 			}
 			
@@ -148,6 +149,7 @@ decisions = {
 					}
 					new_title = {
 						save_event_target_as = new_primary_title
+						set_flag = my_created_title
 					}
 					hidden_tooltip = {
 						kingdom = {
@@ -165,6 +167,8 @@ decisions = {
 						location = { has_flag = my_kapital }
 					}
 					de_jure_liege = PREV
+					####has_de_jure_pretension ####
+					location = { province_event = { id = L3T.80 }}
 					event_target:new_primary_title = { set_variable = { which = created_DJ_size value = 1 }}
 				}
 				any_demesne_title = {
@@ -179,6 +183,7 @@ decisions = {
 						}
 					}
 					de_jure_liege = PREV
+					location = { province_event = { id = L3T.81 }}
 					#set_title_flag = integrated_yet
 					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
 				}
@@ -194,7 +199,69 @@ decisions = {
 						}
 					}
 					de_jure_liege = PREV
+					location = { province_event = { id = L3T.82 }}
 					#set_title_flag = integrated_yet
+					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
+				}
+
+				#if didn't hit yet the 5 prov max, check if other provinces are eligible
+				#capital+at least one adjacent+at least one indirect adjacent make 2 prov DJ
+				#so try to find 3 additional eligible provinces
+				random_demesne_title = { #1
+					limit = {
+						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 3 }}}
+						location = {
+							is_connected_to = {
+								sub_realm = yes #Which realm to allow pathing through. "yes" for the sub-realm of the province owner. "no" for the realm of the top-liege.
+								target = capital
+								#land_gap = no #can't take "no"
+								#naval_distance = no
+							}
+						NOT = { has_flag = my_kapital_connected_R1 }
+						NOT = { has_flag = my_kapital_connected_R2 }						
+						NOT = { de_jure_liege = ROOT }
+						}
+					}
+					de_jure_liege = PREV
+					location = { province_event = { id = L3T.83 }}
+					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
+				}
+				random_demesne_title = { #2
+					limit = {
+						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 3 }}}
+						location = {
+							is_connected_to = {
+								sub_realm = yes #Which realm to allow pathing through. "yes" for the sub-realm of the province owner. "no" for the realm of the top-liege.
+								target = capital
+								#land_gap = no
+								#naval_distance = no
+							}
+						NOT = { has_flag = my_kapital_connected_R1 }
+						NOT = { has_flag = my_kapital_connected_R2 }	
+						NOT = { de_jure_liege = ROOT }
+						}
+					}
+					de_jure_liege = PREV
+					location = { province_event = { id = L3T.83 }}
+					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
+				}
+				random_demesne_title = { #3
+					limit = {
+						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 3 }}}
+						location = {
+							is_connected_to = {
+								sub_realm = yes #Which realm to allow pathing through. "yes" for the sub-realm of the province owner. "no" for the realm of the top-liege.
+								target = capital
+								#land_gap = no
+								#naval_distance = no
+							}
+						NOT = { has_flag = my_kapital_connected_R1 }
+						NOT = { has_flag = my_kapital_connected_R2 }	
+						NOT = { de_jure_liege = ROOT }
+						}
+					}
+					de_jure_liege = PREV
+					location = { province_event = { id = L3T.83 }}
 					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
 				}
 				#remove flags
@@ -216,59 +283,7 @@ decisions = {
 							clr_flag = my_kapital_connected_R2
 						}
 					}
-				}
-				#if didn't hit yet the 5 prov max, check if other provinces are eligible
-				#capital+at least one adjacent+at least one indirect adjacent make 2 prov DJ
-				#so try to find 3 additional eligible provinces
-				random_demesne_title = { #1
-					limit = {
-						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 5 }}}
-						location = {
-							is_connected_to = {
-								sub_realm = yes #Which realm to allow pathing through. "yes" for the sub-realm of the province owner. "no" for the realm of the top-liege.
-								target = capital
-								#land_gap = no
-								#naval_distance = no
-							}
-						}
-						NOT = { de_jure_liege = ROOT }
-					}
-					de_jure_liege = PREV
-					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
-				}
-				random_demesne_title = { #2
-					limit = {
-						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 5 }}}
-						location = {
-							is_connected_to = {
-								sub_realm = yes #Which realm to allow pathing through. "yes" for the sub-realm of the province owner. "no" for the realm of the top-liege.
-								target = capital
-								#land_gap = no
-								#naval_distance = no
-							}
-						}
-						NOT = { de_jure_liege = ROOT }
-					}
-					de_jure_liege = PREV
-					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
-				}
-				random_demesne_title = { #3
-					limit = {
-						event_target:new_primary_title = { NOT = { check_variable = { which = created_DJ_size value = 5 }}}
-						location = {
-							is_connected_to = {
-								sub_realm = yes #Which realm to allow pathing through. "yes" for the sub-realm of the province owner. "no" for the realm of the top-liege.
-								target = capital
-								#land_gap = no
-								#naval_distance = no
-							}
-						}
-						NOT = { de_jure_liege = ROOT }
-					}
-					de_jure_liege = PREV
-					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
-				}
-				
+				}				
 					
 			#}
 			custom_tooltip = { text = form_new_duchy_tooltip }
@@ -336,5 +351,76 @@ decisions = {
 				}
 			}
 		}
+	}
+}
+title_decisions = {
+	adjoin_province_to_new_duchy = {
+		only_playable = yes
+		filter = sub_realm_owned
+		ai_target_filter = sub_realm_owned
+		ai_check_interval = 36
+		diplomacy_icon = GFX_diplo_dejure_icon
+		
+		from_potential = { #title owner
+			is_feudal=yes
+			tier = DUKE
+			#has_character_flag = created_dynamic_title
+			#primary_title = { 
+			#	has_flag = my_created_title
+			#	custom_created = yes
+			#	NOT = { check_variable = { which = created_DJ_size value = 5 }}
+
+			#}
+		}
+		
+		potential = { #the targeted title
+			owner = { character = FROM }
+			tier = COUNT
+		}
+		
+		allow = {
+			location = {
+				#owner = {
+				#	same_realm = FROM
+				#}
+				is_connected_to = {
+					sub_realm = yes #Which realm to allow pathing through. "yes" for the sub-realm of the province owner. "no" for the realm of the top-liege.
+					target = capital
+					#land_gap = no
+					#naval_distance = no
+				}
+			#NOT = { has_flag = my_kapital_connected_R1 }
+			#NOT = { has_flag = my_kapital_connected_R2 }	
+			NOT = { de_jure_liege = FROM }
+			}
+			FROM = { 
+				is_incapable = no
+				prisoner = no
+				has_regent = no
+				is_primary_war_defender = no
+				in_revolt = no
+			}
+			is_occupied = no
+			#controlled_by = FROM
+	
+			FROM = { wealth = 150 }
+		}
+			
+		effect = {}
+		
+		revoke_allowed = { always = no }
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				OR = {
+					FROM = {
+						NOT = { trait = ambitious }
+						wealth = 200
+					}
+				}
+			}
+		}	
 	}
 }
