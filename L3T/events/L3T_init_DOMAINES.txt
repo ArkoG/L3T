@@ -81,6 +81,7 @@ narrative_event = {
 	option = {
 		name = "L3T.3A" #ADM
 		custom_tooltip = { text = custom_est_capitale }
+		custom_tooltip = { text = custom_spec_industrie }
 		trigger = {
 			capital_holding = {
 					has_title_flag = castle_to_specialize
@@ -108,9 +109,11 @@ narrative_event = {
 		}
 		capital_holding = {
 			add_building = FEODAL_adm
-			change_variable = { which = "developpement" value = 20 }
-			change_variable = { which = "developpement_spec" value = 20 }
-			#change_variable = { which = "specNB" value = 1 } #debug
+			hidden_tooltip ={
+				change_variable = { which = "developpement" value = 20 }
+				change_variable = { which = "developpement_spec" value = 20 }
+				#change_variable = { which = "specNB" value = 1 } #debug
+			}
 			add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
 			clr_title_flag = castle_to_specialize
 			clear_event_target = holding_to_spec
@@ -119,6 +122,7 @@ narrative_event = {
 
 	option = {
 		name = "L3T.3B"	#MIL
+		custom_tooltip = { text = custom_spec_milites }
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -137,6 +141,7 @@ narrative_event = {
 		}
 		trigger = {
 			any_demesne_title = {
+				is_capital = no
 				has_title_flag = castle_to_specialize
 				is_capital = no
 			}
@@ -146,7 +151,9 @@ narrative_event = {
 				has_title_flag = castle_to_specialize
 			}
 			add_building = FEODAL_mil
-			#change_variable = { which = "specNB" value = 1 } #debug
+			hidden_tooltip ={
+				#change_variable = { which = "specNB" value = 1 } #debug
+			}
 			add_holding_modifier = { name = feodal_mil_L1 duration = -1 }	
 			clr_title_flag = castle_to_specialize
 			clear_event_target = holding_to_spec
@@ -155,7 +162,7 @@ narrative_event = {
 	
 	option = {
 		name = "L3T.3C"	#ECO
-		trigger = { holy_order = no }
+		custom_tooltip = { text = custom_spec_production }
 		ai_chance = { 
 			factor = 50
 			modifier = {
@@ -181,20 +188,70 @@ narrative_event = {
 			}
 			modifier = { factor = 0.5	holy_order = yes }
 		}
+		trigger = {
+			holy_order = no
+			any_demesne_title = {
+				is_capital = no
+				has_title_flag = castle_to_specialize
+			}
+		}
 		random_demesne_title = {
 			limit = {
 				has_title_flag = castle_to_specialize
 			}
 			add_building = FEODAL_prod
-			change_variable = { which = "developpement" value = 10 }
-			change_variable = { which = "developpement_spec" value = 10 }
+			hidden_tooltip ={
+				change_variable = { which = "developpement" value = 10 }
+				change_variable = { which = "developpement_spec" value = 10 }
 			#change_variable = { which = "specNB" value = 1 } #debug
+			}
 			add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
 			clr_title_flag = castle_to_specialize
 			clear_event_target = holding_to_spec
 		}
 	}
 }
+
+#Domaine Féodal pour capitales de provinces 
+province_event = {
+    id = L3T.31
+	hide_window = yes
+	
+	is_triggered_only = yes
+		
+	trigger = {
+		capital_holding = { 
+			holding_type = castle 
+			NOT = {
+				has_building = FEODAL_mil
+				has_building = FEODAL_prod
+				has_building = FEODAL_adm
+			}
+		}
+	}
+
+	immediate = {
+		capital_holding = {
+			if = {
+				limit = {
+					holding_type = castle
+					NOT = {
+						has_building = FEODAL_mil
+						has_building = FEODAL_prod
+						has_building = FEODAL_adm
+					}
+				}
+
+				add_building = FEODAL_adm
+				change_variable = { which = "developpement" value = 20 }
+				change_variable = { which = "developpement_spec" value = 20 }
+				#change_variable = { which = "specNB" value = 1 } #debug
+				add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+			}
+		}
+	}
+}
+
 
 #Domaine Communal     
 narrative_event = {
@@ -268,6 +325,8 @@ narrative_event = {
 	
 	option = {
 		name = "L3T.4A"	
+		custom_tooltip = { text = custom_spec_production }
+		custom_tooltip = { text = custom_spec_industrie }
 		ai_chance = { 
 			factor = 50			
 			modifier = {
@@ -291,9 +350,11 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_INDUSTRIELLE
-			change_variable = { which = "developpement" value = 20 }
-			change_variable = { which = "developpement_spec" value = 20 }
-			#change_variable = { which = "specNB" value = 1 } #debug
+			hidden_tooltip ={
+				change_variable = { which = "developpement" value = 20 }
+				change_variable = { which = "developpement_spec" value = 20 }
+				#change_variable = { which = "specNB" value = 1 } #debug
+			}
 			add_holding_modifier = { name = voc_indus_L1 duration = -1 }
 			clr_title_flag = city_to_specialize
 			clear_event_target = holding_to_spec
@@ -302,6 +363,7 @@ narrative_event = {
 	
 	option = {
 		name = "L3T.4B"
+		custom_tooltip = { text = custom_spec_commerce }
 		trigger = {
 			any_demesne_title = {
 				has_title_flag = city_to_specialize
@@ -371,9 +433,11 @@ narrative_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
-			change_variable = { which = "developpement" value = 30 }
-			change_variable = { which = "developpement_spec" value = 30 }
-			#change_variable = { which = "specNB" value = 1 } #debug
+			hidden_tooltip ={
+				change_variable = { which = "developpement" value = 30 }
+				change_variable = { which = "developpement_spec" value = 30 }
+				#change_variable = { which = "specNB" value = 1 } #debug
+			}
 			add_holding_modifier = { name = voc_comm_L1 duration = -1 }
 			# La province devient le départ d'une route	si possible
 			location = {
@@ -498,9 +562,11 @@ province_event = {
 			}
 			add_building = CITE_L1
 			add_building = VOC_COMMERCIALE
-			change_variable = { which = "developpement" value = 30 }
-			change_variable = { which = "developpement_spec" value = 30 }
-			#change_variable = { which = "specNB" value = 1 } #debug
+			hidden_tooltip ={
+				change_variable = { which = "developpement" value = 30 }
+				change_variable = { which = "developpement_spec" value = 30 }
+				#change_variable = { which = "specNB" value = 1 } #debug
+			}
 			add_holding_modifier = { name = voc_comm_L1 duration = -1 }
 			
 			# La province devient le départ d'une route si elle est distance au moins 3 d'un autre
@@ -602,15 +668,172 @@ province_event = {
 				}
 				add_building = CITE_L1
 				add_building = VOC_INDUSTRIELLE
-				change_variable = { which = "developpement" value = 20 }
-				change_variable = { which = "developpement_spec" value = 20 }
-				#change_variable = { which = "specNB" value = 1 } #debug
+				hidden_tooltip ={
+					change_variable = { which = "developpement" value = 20 }
+					change_variable = { which = "developpement_spec" value = 20 }
+					#change_variable = { which = "specNB" value = 1 } #debug
+				}
 				add_holding_modifier = { name = voc_indus_L1 duration = -1 }
 			}
 		}
 	}
 }
+#City Apocalypto
+#called on_action - inactive ATM-
+character_event = {
+	id = L3T.45
+	#desc = DESCL3T.13
+	#picture = GFX_evt_castle_construction
+	#border = GFX_event_normal_frame_religion
+	hide_window = yes
+	
+	is_triggered_only = yes 
+	
+	trigger = {
+		#has_game_rule = {
+		#	name = essor_urbain
+		#	value = dynamic
+		#}
+		NOT = { has_global_flag = running_LCDA }
+		NOT = { has_global_flag = apocalypto_finished }
+		tier = baron
+		is_patrician = no
+		is_merchant_republic  = no
+		capital_holding = {
+			holding_type = city
+			NOT = { has_title_flag = saved_from_apocalypto }
+			is_patrician = no
+			is_merchant_republic  = no
+		}
+	}
 
+	immediate = {
+		character_event = { id = L3T.46 days = 150 }
+		capital_holding = {
+			if = { #multi cities
+				limit = {
+					location = {
+						any_province_holding = {
+							holding_type = city
+							count = 2
+							tier = baron
+						}
+					}
+					tier = baron
+					holding_type = city
+					NOT = { has_title_flag = saved_from_apocalypto }
+					is_patrician = no
+					is_merchant_republic  = no
+				}
+				random_list = {
+					25 = { 
+						convert_to = CASTLE
+						refill_holding_levy = yes
+						holder_scope = { 	set_government_type = feudal_government }
+						#set_title_flag = city_2_convert
+						add_holding_modifier = { modifier = agriculture3_farine years = -1 } #mouchard
+					}
+					25 = { 
+						modifier = {  factor = 2.0		NOT = { year =  999 }}
+						destroy_settlement = THIS
+					}
+					50 = { 
+						modifier = {  factor = 1.5		holder_scope = { 	religion_group = muslim }}
+						modifier = {  factor = 0.5		NOT = { year =  999 }}
+						set_title_flag = saved_from_apocalypto
+						add_holding_modifier = { modifier = agriculture4_pain years = -1 } #mouchard
+					}
+				}
+			}
+			if = { #mono cities, muslim
+				limit = {
+					location = {
+						NOT = { religion_group = muslim }
+						any_province_holding = {
+							holding_type = city
+							NOT = { count = 2 }
+							tier = baron
+						}
+					}
+					tier = baron
+					holding_type = city
+					NOT = {
+						has_title_flag = saved_from_apocalypto
+						is_patrician = yes
+						is_merchant_republic  = yes
+					}
+				}
+				random_list = {
+					50 = { 
+						convert_to = CASTLE
+						refill_holding_levy = yes
+						holder_scope = { 	set_government_type = feudal_government }
+						#set_title_flag = city_2_convert
+						add_holding_modifier = { modifier = agriculture3_farine years = -1 } #mouchard
+					}
+					50 = { 
+						destroy_settlement = THIS
+					}
+				}
+			}
+			if = { #mono cities, non muslim
+				limit = {
+					location = {
+						religion_group = muslim
+						any_province_holding = {
+							holding_type = city
+							NOT = { count = 2 }
+							tier = baron
+						}
+					}
+					tier = baron
+					holding_type = city
+					NOT = {
+						has_title_flag = saved_from_apocalypto
+						is_patrician = yes
+						is_merchant_republic  = yes
+					}
+				}
+				random_list = {
+					30 = { 
+						convert_to = CASTLE
+						refill_holding_levy = yes
+						holder_scope = { 	set_government_type = feudal_government }
+						#set_title_flag = city_2_convert
+						add_holding_modifier = { modifier = agriculture3_farine years = -1 } #mouchard
+					}
+					30 = { 
+						modifier = {  factor = 2.0		NOT = { year =  999 }}
+						modifier = {  factor = 1.2		region = world_europe_north }
+						modifier = {  factor = 0.8		region = world_europe_south }
+						modifier = {  factor = 0.8		narbonaise_lands =  yes }
+						destroy_settlement = THIS
+					}
+					30 = { 
+						#modifier = {  factor = 0.5		NOT = { year =  999 }}
+						modifier = {  factor = 1.5		year = 1200 }
+						set_title_flag = saved_from_apocalypto
+						add_holding_modifier = { modifier = agriculture4_pain years = -1 } #mouchard
+					}
+				}
+			}
+		}
+	}
+}
+character_event = { 
+    id = L3T.46
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = apocalypto_finished }
+	}
+
+	immediate = {
+		set_global_flag = apocalypto_finished
+	}
+}
 #upgrade CITE L1 vers L2
 #narrative_event = {
 #	title = "NAMEL3T.5"
@@ -706,49 +929,29 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	desc = "DESCL3T.6" #ne mettre que si tous les cas ne sont pas couverts par les triggers 
 	
-#	title = { 
-#		trigger = {	NOT = { religion_group = muslim } }
-#		text = "NAMEL3T.6"
-#	}
-#	title = { 
-#		trigger = {	religion_group = muslim	}
-#		text = "NAMEL3T.6"
-#	}
-	
-#	desc = { 
-#		trigger = {	NOT = {	religion_group = muslim	} }
-#		text = "DESCL3T.6"
-#		picture = GFX_evt_monk
-#	}
-#	
-#	desc = { 
-#		trigger = {	religion_group = muslim	}
-#		text = "DESCL3T.6"
-#		picture = GFX_evt_L3T_muslim_blue_dome
-#	}
-	
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
 		
-	trigger = {		
+	trigger = {	
 		OR = {
 			had_global_flag = { flag = SWMH days = 360 }			
 			had_global_flag = { flag = running_VANILLA days = 360 }
 			had_global_flag = { flag = running_LCDA days = 360 }
 		}		
 		any_demesne_title = {
-			tier = baron
 			holding_type = temple
-			#location = { NOT = { religion_group = pagan_group } }
 			location = { religion_group = christian }
 			NOT = { has_title_flag = temple_to_specialize }
 			NOT = {
 				has_building = MONASTERE
 				has_building = CITEEPISCOPALE
+				has_building = BOURG_EPISCOPAL
 			}
+			is_LCDA_hard_monastery = no
+			is_LCDA_hard_episcopat = no
 		}
-	}	
+	}
 
 	mean_time_to_happen = {
 		months = 9 
@@ -765,14 +968,16 @@ narrative_event = {
 	immediate = {
 		random_demesne_title = {
 			limit = {
-				tier = baron
 				holding_type = temple
-				#location = { NOT = { religion_group = pagan_group } }
 				location = { religion_group = christian }
+				NOT = { has_title_flag = temple_to_specialize }
 				NOT = {
 					has_building = MONASTERE
 					has_building = CITEEPISCOPALE
+					has_building = BOURG_EPISCOPAL
 				}
+				is_LCDA_hard_monastery =no
+				is_LCDA_hard_episcopat = no
 			}
 			set_title_flag = temple_to_specialize
 			set_variable = { which = "specNB" value = 0 } #debug
@@ -781,31 +986,43 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.6A"	
+		name = "L3T.6A"
+		custom_tooltip = { text = custom_spec_production }		
 		ai_chance = {
-			factor = 40
-			modifier = { factor =  5	learning = 20	}
-			modifier = { factor =   2	learning = 15	}
-			modifier = { factor = 0.75	NOT = { learning = 10 }	}
-			modifier = { factor = 1.5	NOT = { tier = count } }
+			factor = 50
+			#favored by a monk/erudite profile
+			modifier = { 
+				factor = 2
+				learning = 20
+			}
 			modifier = {
 				factor = 2
-				any_demesne_title = {
-					has_title_flag = temple_to_specialize
-					location = { check_variable = { which = "resourceNb" value = 2 } }
-				}
+				learning = 15
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { learning = 10 }
+			}
+			modifier = {
+				factor = 1.5
+				capital_holding = { has_building = MONASTERE }
 			}
 		}
 		trigger = {
 			any_demesne_title = {
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
+				#is_LCDA_hard_monastery = no
+				#is_LCDA_hard_episcopat = no
+				is_capital = no
 			}
 		}
 		random_demesne_title = {
 			limit = {
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
+				#is_LCDA_hard_monastery = no
+				#is_LCDA_hard_episcopat = no
 			}
 			#clear_event_target = holding_to_spec #is cleared by monastic rule event instead
 			if = {
@@ -813,14 +1030,18 @@ narrative_event = {
 					NOT = {
 						has_building = MONASTERE
 						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
 					}
 				}
 				add_building = MONASTERE
-				change_variable = { which = "developpement" value = 10 }
-				change_variable = { which = "developpement_spec" value = 10 }
+				set_title_flag = L3T6_made_me_opt_A
+				hidden_tooltip ={
+					change_variable = { which = "developpement" value = 10 }
+					change_variable = { which = "developpement_spec" value = 10 }
+				}
 				add_holding_modifier = { name = monastere_L1 duration = -1 }
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
-				holder_scope = { narrative_event = { id = L3T.7 days = 0 }}
+				holder_scope = { narrative_event = { id = L3T.7 days = 0 }} ####MAKE IT automatic ONCE new holdings will be built by decision only######
 			}
 			if = {
 				limit = {
@@ -842,22 +1063,37 @@ narrative_event = {
 	
 	option = {
 		name = "L3T.6B"	
+		custom_tooltip = { text = custom_spec_production }
 		ai_chance = {
-			factor = 40
-			modifier = { factor = 5	tier = count }
-			modifier = { factor = 2	tier = duke }
-			modifier = { factor = 0.75	NOT = { tier = count } }
+			factor = 50
+			#favored by an intendant or a protector profile
+			modifier = { 
+				factor = 2
+				stewardship = 15
+			}
+			modifier = {
+				factor = 2
+				martial = 15
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { stewardship = 10 }
+				NOT = { martial = 10 }
+			}
+			modifier = {
+				factor = 1.5
+				capital_holding = { has_building = CITEEPISCOPALE }
+			}
 		}
 		trigger = {
 			any_demesne_title = {
-				#location = { NOT = { religion_group = pagan_group } }
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
+				is_capital = no
 			}
 		}
 		random_demesne_title = {
 			limit = {
-				#location = { NOT = { religion_group = pagan_group } }
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
 			}
@@ -868,59 +1104,147 @@ narrative_event = {
 					NOT = {
 						has_building = MONASTERE
 						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
+					}
+				}
+				add_building = BOURG_EPISCOPAL
+				set_title_flag = L3T6_made_me_opt_B
+				hidden_tooltip ={
+					change_variable = { which = "developpement" value = 10 }
+					change_variable = { which = "developpement_spec" value = 10 }
+				}
+				add_holding_modifier = { name = episco_land_L1 duration = -1 }
+			}
+			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
+		}
+	}
+	option = {
+		name = "L3T.6C"	
+		custom_tooltip = { text = custom_spec_industrie }
+		custom_tooltip = { text = custom_est_capitale }
+		
+		trigger = {
+			any_demesne_title = {
+				is_capital = yes
+				location = { religion_group = christian }
+				has_title_flag = temple_to_specialize
+			}
+		}
+		capital_holding = {
+			limit = {
+				location = { religion_group = christian }
+				has_title_flag = temple_to_specialize
+			}
+			clear_event_target = holding_to_spec
+			clr_title_flag = temple_to_specialize
+			if = {
+				limit = {
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
 					}
 				}
 				add_building = CITEEPISCOPALE
+				set_title_flag = L3T6_made_me_opt_C
+				hidden_tooltip ={
+					change_variable = { which = "developpement" value = 15 }
+					change_variable = { which = "developpement_spec" value = 15 }
+				}
+				add_holding_modifier = { name = episcopale_L1 duration = -1 }
+			}
+			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
+		}
+	}
+}
+
+ ##church spec for hardcode
+province_event = {
+    id = L3T.61
+	hide_window = yes
+	
+	is_triggered_only = yes
+	#trigger = { unecessary unless i delay the events}
+	
+	trigger = {		
+		any_province_holding = {
+			holding_type = temple
+			OR = {
+				is_LCDA_hard_monastery = yes
+				is_LCDA_hard_episcopat = yes
+			}
+			NOT = {
+				has_building = MONASTERE
+				has_building = CITEEPISCOPALE
+				has_building = BOURG_EPISCOPAL
+			}
+		}
+	}
+
+	immediate = {
+		any_province_holding = {
+			limit = {
+				holding_type = temple
+				##MONASTERY
+				is_LCDA_hard_monastery = yes
+				is_LCDA_hard_episcopat = no
+				NOT = {
+					has_building = MONASTERE
+					has_building = CITEEPISCOPALE
+					has_building = BOURG_EPISCOPAL
+				}
+			}
+			set_variable = { which = "specNB" value = 0 } #debug
+			add_building = MONASTERE
+			set_title_flag = L3T60_made_me_cas_Aa
+			hidden_tooltip ={
 				change_variable = { which = "developpement" value = 10 }
 				change_variable = { which = "developpement_spec" value = 10 }
 			}
+			add_holding_modifier = { name = monastere_L1 duration = -1 }
+			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
+			holder_scope = { set_character_flag = canGetEasterEgg3 }
+			
+			#add rule automaticaly
 			if = {
-				limit = { location = { religion_group = christian }} #//christian specific icon
-				add_holding_modifier = { name = episcopale_L1 duration = -1 }
+				limit = { is_LCDA_hard_regula1 = yes }
+				add_building = REGLE_DE_1
 			}
-#			if = {
-#				limit = { location = { religion_group = muslim }} #//muslim specific icon
-#				add_holding_modifier = { name = episco_muslim duration = -1 }
-#			}
-#			if = {
-#				limit = { #other non pagan religions //jewish, zoro, indian
-#					location = { NOT = {religion_group = christian }}
-#					location = { NOT = {religion_group = muslim }}
-#				}
-#				add_holding_modifier = { 
-#					name = episcopale_L1
-#					duration = -1
-#					hidden = yes
-#				}
-#			}
-
-			# Romanesque Cathedral
+			if = {
+				limit = { is_LCDA_hard_regula2 = yes }
+				add_building = REGLE_DE_2
+			}
+			if = {
+				limit = { 
+					is_LCDA_hard_regula1 = no
+					is_LCDA_hard_regula2 = no
+				}
+				random_list = {
+					10 = { add_building = REGLE_DE_1 }
+					10 = { add_building = REGLE_DE_2 }
+				}
+			}
+			
+			# Romanesque Cathedral/Basilique for monastery if capital holding
 			if = {
 				limit = {
-					# No Roman Cathedral at 3 province distance
+					is_capital = yes
 					location = {
-						religion_group = christian
+						#religion_group = christian
 						NOT = {
 							had_global_flag = { flag = opus_francigenum days = 360 }
 							has_province_flag = roman_cathedral
-							any_neighbor_province = {
-								OR = {
-									has_province_flag = neighbor_roman_cathedral
-									has_province_flag = neighbor_neighbor_roman_cathedral
-								}
-							}
 						}
 					}
 				}
 				add_building = tp_roman_cathedrale
+				set_title_flag = L3T60_made_me_cas_Ab
+
+				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 				location = {
-					add_province_modifier = {
-						name = relique_generique
-						duration = -1
-					}
 					set_province_flag = roman_cathedral
 					any_neighbor_province = {
-						set_province_flag = neighbor_roman_cathedral
+						set_province_flag = neighbor_roman_cathedral	
 						any_neighbor_province = {
 							limit = {
 								NOT = {
@@ -933,35 +1257,149 @@ narrative_event = {
 						}
 					}
 				}
+				if = { 
+					limit = {
+						location = {
+							NOT = { has_province_modifier = relique_generique }
+						}
+					}
+					location = {
+						add_province_modifier = {
+							name = relique_generique
+							duration = -1
+						}
+					}
+				}
 			}
-			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
 		}
+		
+		#hardcode episco
+		any_province_holding = {
+			limit = {
+				holding_type = temple
+				##EPISCOPAT
+				is_LCDA_hard_monastery = no
+				is_LCDA_hard_episcopat = yes
+				NOT = {
+					has_building = MONASTERE
+					has_building = CITEEPISCOPALE
+					has_building = BOURG_EPISCOPAL
+				}
+			}
+			set_variable = { which = "specNB" value = 0 } #debug
+			add_building = CITEEPISCOPALE
+			set_title_flag = L3T60_made_me_cas_B
+			hidden_tooltip ={
+				change_variable = { which = "developpement" value = 15 }
+				change_variable = { which = "developpement_spec" value = 15 }
+			}
+			add_holding_modifier = { name = episcopale_L1 duration = -1 }
+
+			# Romanesque Cathedral for all hardcode episcopal seat
+			if = {
+				limit = {
+					location = {
+						NOT = {
+							had_global_flag = { flag = opus_francigenum days = 360 }
+							has_province_flag = roman_cathedral
+						}
+					}				
+				}
+				add_building = tp_roman_cathedrale
+				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
+				location = {
+					set_province_flag = roman_cathedral
+					any_neighbor_province = {
+						set_province_flag = neighbor_roman_cathedral	
+						any_neighbor_province = {
+							limit = {
+								NOT = {
+									has_province_flag = neighbor_roman_cathedral									
+									has_province_flag = neighbor_neighbor_roman_cathedral
+									has_province_flag = roman_cathedral
+								}
+							}
+							set_province_flag = neighbor_neighbor_roman_cathedral
+						}
+					}
+				}
+				if = {
+					limit = {
+						location = {
+							NOT = { has_province_modifier = relique_generique }
+						}
+					}
+					location = {
+						add_province_modifier = {
+							name = relique_generique
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+		
 	}
+	
 }
 
-#old cathedral and spe in religious province
+ ##church spec open to non hardcode
+#old cathedral and spe in religious province, christian only
 province_event = {
-    id = L3T.61
+    id = L3T.62
 	hide_window = yes
 	
 	is_triggered_only = yes
 	
-	immediate = {
-		add_province_modifier = {
-			name = relique_generique
-			duration = -1
+	trigger = { 
+		religion_group = christian
+		NOT = { has_province_flag = roman_cathedral }
+		capital_holding = { 
+			holding_type = temple
+			is_LCDA_hard_monastery =no
+			is_LCDA_hard_episcopat = no
+			NOT = {
+				has_building = MONASTERE
+				has_building = CITEEPISCOPALE
+				has_building = BOURG_EPISCOPAL
+			}
 		}
-		capital_holding = {
-			add_building = tp_roman_cathedrale
-			add_building = CITEEPISCOPALE
-			change_variable = { which = "developpement" value = 10 }
-			change_variable = { which = "developpement_spec" value = 10 }
-			add_holding_modifier = { name = episcopale_L1 duration = -1 }
-			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug	
+	}
+			
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_province_modifier = relique_generique }
+			}
+			add_province_modifier = {
+				name = relique_generique
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				religion_group = christian
+				capital_holding = { 
+					holding_type = temple
+					is_LCDA_hard_monastery =no
+					is_LCDA_hard_episcopat = no
+				}
+			}
+			capital_holding = {
+				add_building = tp_roman_cathedrale
+				add_building = CITEEPISCOPALE
+				set_title_flag = L3T61_made_me
+				hidden_tooltip ={
+					change_variable = { which = "developpement" value = 15 }
+					change_variable = { which = "developpement_spec" value = 15 }
+				}
+				add_holding_modifier = { name = episcopale_L1 duration = -1 }
+				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
+			}
 		}
 		set_province_flag = roman_cathedral
 		any_neighbor_province = {
-			set_province_flag = neighbor_roman_cathedral
+			set_province_flag = neighbor_roman_cathedral	
 			any_neighbor_province = {
 				limit = {
 					NOT = {
@@ -971,6 +1409,108 @@ province_event = {
 					}
 				}
 				set_province_flag = neighbor_neighbor_roman_cathedral
+			}
+		}
+	}
+}
+##church spec open to non hardcode
+#old cathedral and spe in religious province, christian only
+province_event = {
+    id = L3T.63
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_province_holding = {
+			location = {
+				religion_group = christian
+				NOT = {
+					has_province_flag = neighbor_roman_cathedral									
+					has_province_flag = neighbor_neighbor_roman_cathedral
+					has_province_flag = roman_cathedral
+				}
+				any_neighbor_province = {
+					NOT = {
+						has_province_flag = neighbor_roman_cathedral									
+						has_province_flag = neighbor_neighbor_roman_cathedral
+						has_province_flag = roman_cathedral
+					}
+				}
+				NOT = { has_province_modifier = relique_generique }
+			}
+			holding_type = temple
+			#NOT = { has_title_flag = temple_to_specialize }
+			NOT = {
+				has_building = MONASTERE
+				has_building = CITEEPISCOPALE
+				has_building = BOURG_EPISCOPAL
+				has_building = tp_roman_cathedrale
+			}
+			is_capital = no
+			is_LCDA_hard_monastery =no
+			is_LCDA_hard_episcopat = no
+		}
+	}
+	
+	immediate = {
+		random_province_holding = {
+			limit = {
+				location = {
+					religion_group = christian
+					NOT = {
+						has_province_flag = neighbor_roman_cathedral									
+						has_province_flag = neighbor_neighbor_roman_cathedral
+						has_province_flag = roman_cathedral
+					}
+					any_neighbor_province = {
+						NOT = {
+							has_province_flag = neighbor_roman_cathedral									
+							has_province_flag = neighbor_neighbor_roman_cathedral
+							has_province_flag = roman_cathedral
+						}
+					}
+					NOT = { has_province_modifier = relique_generique }
+				}
+				holding_type = temple
+				NOT = {
+					has_building = MONASTERE
+					has_building = CITEEPISCOPALE
+					has_building = BOURG_EPISCOPAL
+					has_building = tp_roman_cathedrale
+				}
+				is_capital = no
+				is_LCDA_hard_monastery =no
+				is_LCDA_hard_episcopat = no					
+			}
+			add_building = tp_roman_cathedrale
+			add_building = CITEEPISCOPALE
+			set_title_flag = L3T62_made_me
+			hidden_tooltip ={
+				change_variable = { which = "developpement" value = 15 }
+				change_variable = { which = "developpement_spec" value = 15 }
+			}
+			add_holding_modifier = { name = episcopale_L1 duration = -1 }
+			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
+			location = {
+				set_province_flag = roman_cathedral
+				any_neighbor_province = {
+					set_province_flag = neighbor_roman_cathedral
+					any_neighbor_province = {
+						limit = {
+							NOT = {
+								has_province_flag = neighbor_roman_cathedral									
+								has_province_flag = neighbor_neighbor_roman_cathedral
+								has_province_flag = roman_cathedral
+							}
+						}
+						set_province_flag = neighbor_neighbor_roman_cathedral
+					}
+				}
+				add_province_modifier = {
+					name = relique_generique
+					duration = -1
+				}
 			}
 		}
 	}

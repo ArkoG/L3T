@@ -1,0 +1,93 @@
+#######################################################
+# [ReC][Reliques et Cathédrales]  par Arko  et Mouchi #
+#######################################################
+
+namespace = REC
+
+character_event = {
+    id = REC.20
+    desc = DESCREC.20
+	border = GFX_event_normal_frame_religion
+	picture = GFX_evt_religious_exultation
+
+	is_triggered_only = yes #on variable gain+on_action
+
+	trigger = {
+		religion = catholic
+		NOT = { trait = deus_vox }
+		check_variable = { which = "deus_vox" value = 60 }
+		#variable gain : 15 by converted province or pagan lord province, from priest action
+		#variable gain :  3 by converted courtier or baron or pagan lord spouse, from priest action
+		#variable gain :  5 by converted pagan lord or count, from priest action
+		#variable gain :  +2 by converted duke, from priest action
+		#variable gain :  +3 by converted king, from priest action
+		#variable gain : 30 by mass conversion sponsorship, from baptism chain
+		#variable gain : 50 by mass conversion lead	(ex pagan guy), from baptism chain
+	}
+	
+	immediate = {
+		#mouchard pour stats
+		if = { 
+			limit = {
+				NOT = { check_variable = { which = "global_deus_vox_number" value = 0 }}
+			}
+			set_variable = { which = "global_deus_vox_number" value = 0 }
+			change_variable = { which= "global_deus_vox_number" value = 1 }
+		}
+		if = { 
+			limit = {
+				check_variable = { which = "global_deus_vox_number" value = 0 }
+			}
+			change_variable = { which= "global_deus_vox_number" value = 1 }
+		}
+	}
+
+	option = {
+		name = RECOPT_deus_vult
+		add_trait = deus_vox
+	}
+}
+character_event = {
+    id = REC.21
+    desc = DESCREC.21
+	border = GFX_event_normal_frame_religion
+	picture = GFX_evt_religious_exultation
+
+	is_triggered_only = yes #on variable gain+on_action
+
+	trigger = {
+		religion = catholic
+		NOT = { trait = deus_gladio }
+		check_variable = { which = "deus_gladio" value = 60 }
+		##ducal tier wars
+		 #variable gain : 20 main defenser won HW, resisting religion revol
+		 #variable gain : 10 attacker won HW, leading religion revolt
+		##kingdom tier wars
+		 #variable gain : 10 by co_attacking in a successful crusade
+		 #variable gain : 20 by defending successfuly in a crusade
+		 #variable gain : 60 by attacker or best crusader won crusade
+		 #variable gain : 60 by defending successfuly in a GHW		 
+	}
+
+	immediate = {
+		#mouchard pour stats
+		if = { 
+			limit = {
+				NOT = { check_variable = { which = "global_deus_gladio_number" value = 0 }}
+			}
+			set_variable = { which = "global_deus_gladio_number" value = 0 }
+			change_variable = { which= "global_deus_gladio_number" value = 1 }
+		}
+		if = { 
+			limit = {
+				check_variable = { which = "global_deus_gladio_number" value = 0 }
+			}
+			change_variable = { which= "global_deus_gladio_number" value = 1 }
+		}
+	}
+	
+	option = {
+		name = RECOPT_deus_vult
+		add_trait = deus_gladio
+	}
+}

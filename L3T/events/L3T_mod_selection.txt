@@ -24,7 +24,8 @@ character_event = {
 	option = { name = OK }
 }
 
-## DÃ©tection de la carte
+
+## Détection de la carte
 character_event = {
     id = L3T.10
 	#title = "NAMEL3T.10"
@@ -79,6 +80,13 @@ character_event = {
 	}
 	
 	immediate = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = SWMH }
+				NOT = { has_global_flag = running_LCDA }
+			}
+			set_global_flag = running_VANILLA
+		}
 		any_province = {
 			province_event = { id = L3T.28 days = 25 random = 15} #attribution cols
 		}
@@ -96,7 +104,16 @@ character_event = {
 		}
 		if = {
 			limit = { ai = no }
-			set_variable = { which = "global_burns" value = 0 }
+			set_variable = { which = "global_burns" value = 1 }
+			random_list = {
+				30 = {}
+				30 = { change_variable = { which = "global_burns" value = 6 }}
+				30 = { change_variable = { which = "global_burns" value = 11 }}
+			}
+		}
+		if = {
+			limit = { ai = no }
+			set_variable = { which = "global_L3T_saint_number" value = 1 }
 		}
 	}
 	
@@ -111,9 +128,9 @@ character_event = {
 		#SWMH coasts, land, rivers
 		hidden_tooltip = {
 			any_province = { 
-				province_event = { id = L3T.20 days = 10 }
-				province_event = { id = L3T.21 days = 10 }
-				province_event = { id = L3T.22 days = 10 }
+				province_event = { id = L3T.20   }
+				#province_event = { id = L3T.21   }
+				#province_event = { id = L3T.22   }
 			}
 		}
 		set_global_flag = paix_de_dieu 
@@ -129,12 +146,15 @@ character_event = {
 		#LCDA coasts, land, rivers
 		hidden_tooltip = {
 			any_province = {
-				province_event = { id = L3T.30 days = 10 }
-				province_event = { id = L3T.31 days = 10 }
-				province_event = { id = L3T.32 days = 10 }
+				province_event = { id = L3T.21  } #LCDA coasts, land, rivers
+				#province_event = { id = L3T.31  }
+				#province_event = { id = L3T.32   }
 			}
 		}
 		set_global_flag = paix_de_dieu 
+		
+		###########LAUNCH HARDCODE events from here 
+		
 	}
 	option = {
 		#name = "L3T.10C"	
@@ -142,18 +162,19 @@ character_event = {
 		ai_chance = { factor = 0 }
 		trigger = {
 			ai = no
-			NOT = { has_global_flag = SWMH }
-			NOT = { has_global_flag = running_LCDA }			
+			#NOT = { has_global_flag = SWMH }
+			#NOT = { has_global_flag = running_LCDA }	
+			has_global_flag = running_VANILLA
 		}
 		#VANILLA coasts, land, rivers
 		hidden_tooltip = {
 			any_province = { 
-				province_event = { id = L3T.25 days = 10 }
-				province_event = { id = L3T.26 days = 10 }
-				province_event = { id = L3T.27 days = 10 }
+				province_event = { id = L3T.22   }
+				#province_event = { id = L3T.26   }
+				#province_event = { id = L3T.27   }
 			}
 		}
-		set_global_flag = running_VANILLA	
+		#set_global_flag = running_VANILLA	
 		set_global_flag = paix_de_dieu 
 	}
 	option = {	
@@ -249,7 +270,9 @@ province_event = {
 		NOT = { has_province_modifier = great_pass }
 		NOT = { any_neighbor_province = { has_province_modifier = great_pass }}
 		terrain = mountain
-		}
+		NOT = { is_pass = yes } #not already a hardcoded pass in LCDA
+		NOT = { any_neighbor_province = { is_pass = yes }}
+	}
 
 	immediate = {
 		if = {
@@ -334,7 +357,7 @@ province_event = {
 		picture = GFX_evt_LCDA_montagne2_muslim
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only = yes #on_startup
 	
 	immediate = {
 		random_list = {
@@ -363,5 +386,103 @@ province_event = {
 		name = "text_reponse_generique_D"	
 		trigger = { has_province_flag = text_reponse_generique_D }
 		clr_province_flag = text_reponse_generique_D
+	}
+}
+#Maintenance realm capitales
+# ROOT is the character
+character_event = {
+    id = L3T.50
+	#desc = "capital_MAJ_blah"
+	#picture = GFX_evt_debug_totoro
+	hide_window = yes
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	trigger = { 
+		higher_tier_than = BARON
+		OR = {
+			demesne_size = 2
+			higher_tier_than = COUNT
+		}
+	}
+
+	immediate = {
+	#option = {
+		#name = "capital_MAJ"
+		
+		# Ruler can have a realm capital and doesn't have it in his capital holding yet
+		if = {
+			limit = {
+				any_demesne_province = {
+					owner = { capital_scope = { province = PREVPREV}}
+					NOT = { has_province_modifier = realm_capital_province }
+				}
+			}
+			capital_scope = {
+				add_province_modifier = { 
+					name = realm_capital_province
+					duration = -1
+				}
+			}
+		}
+		#remove capital modifier from any province that is not the capital
+		if = { 
+			limit = {
+				any_demesne_province = {	
+					NOT = { owner = { capital_scope = { province = PREVPREV}}}
+					has_province_modifier = realm_capital_province
+				}
+			}
+			any_demesne_province = { #remove any other capital modifier if any
+				limit = {
+					NOT = { owner = { capital_scope = { province = PREVPREV}}}
+					has_province_modifier = realm_capital_province
+				}
+				remove_province_modifier = realm_capital_province
+			}
+
+		}
+	}
+}
+			
+
+#Maintenance realm capitals
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+    id = L3T.51
+	#desc = "capital_MAJ_blah_51"
+	#picture = GFX_evt_debug_totoro
+	hide_window = yes
+	
+	only_rulers = yes
+	#capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	# Ruler became too small to have a realm capital
+	trigger = { 
+		higher_tier_than = BARON
+		NOT = {
+			OR = {
+				demesne_size = 2
+				higher_tier_than = COUNT
+			}
+		}
+	}
+
+	immediate = {
+		#name = "capital_MAJ_51"
+
+		any_demesne_province = { 
+			limit = {
+				has_province_modifier = realm_capital_province
+			}
+			remove_province_modifier = realm_capital_province
+		}
 	}
 }

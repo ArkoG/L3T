@@ -1,0 +1,66 @@
+#########################
+# L3T AMBITIONS by Arko #
+#########################
+
+#Find all eggs
+
+obj_egg_them_all = {
+	type = character
+
+	fertility = -0.05 #se consacrer à l'oeuvre de sa vie fait se détourner d'autres choses
+	monthly_character_piety = 0.03
+
+	potential = {
+		 #has heard about the One egg
+		OR = {
+			has_character_flag = rumeur508_recue
+			has_character_flag = rumeur510_recue
+			has_character_flag = rumeur511_recue
+		}
+		 #not has it already, obviously
+		NOT = { has_artifact = oeuf_united }
+		 #has more than one egg already
+		check_variable = { which = "egg_count" value = 2 }
+	}
+	
+	allow = {
+		is_adult = yes
+		is_ruler = yes
+		is_catholic_group = yes
+		NOT = { trait = incapable }
+	}
+	
+	chance = {
+		factor = 100
+		modifier = { factor = 1.5	trait = ambitious }	
+		modifier = { factor = 1.5	has_focus = focus_hunting }		
+		modifier = { factor = 2.0	trait = patient }
+		modifier = { factor = 0.75	trait = greedy }
+		modifier = { factor = 1.5	trait = humble }
+		modifier = { factor = 0.01	trait = content }
+		modifier = { factor = 1.5	trait = zealous }
+		modifier = { factor = 0.2	trait = wroth }
+	}
+	
+	success = {
+		custom_tooltip = { text = custom_egg_them_all }
+		hidden_tooltip = { 
+			has_artifact = oeuf_united
+		}
+	}
+	
+	abort = {
+		OR = {
+			trait = incapable
+		}
+	}
+	
+	abort_effect = {
+	}
+	
+	effect = {
+		change_learning = 1
+		prestige = 50
+		piety = 150
+	}
+}

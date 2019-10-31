@@ -37,3 +37,26 @@ remove_feodal_adm_modifier_in_capital_if_necessary = {
 		clr_character_flag = feodal_adm_modifier
 	}
 }
+counting_eggs = {
+	set_variable = { which = "egg_count" value = 0 }
+	if = { 
+		limit = { has_artifact = oeuf_1 }
+		change_variable = { which = "egg_count" value = 1 }
+	}
+	if = {
+		limit = { has_artifact = oeuf_2 }
+		change_variable = { which = "egg_count" value = 1 }
+	}
+	if = { 
+		limit = { has_artifact = oeuf_3 }
+		change_variable = { which = "egg_count" value = 1 }
+	}
+	if = { 
+		limit = { has_artifact = oeuf_4 }
+		change_variable = { which = "egg_count" value = 1 }
+	}
+	if = { 
+		limit = { has_artifact = oeuf_5 }
+		change_variable = { which = "egg_count" value = 1 }
+	}
+}

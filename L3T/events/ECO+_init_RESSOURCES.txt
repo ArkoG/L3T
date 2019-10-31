@@ -29,7 +29,7 @@ province_event = {
 		NOT = { terrain = forest }
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -68,7 +68,7 @@ province_event = {
 		terrain = hills
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -121,7 +121,7 @@ province_event = {
 		terrain = forest
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -167,7 +167,7 @@ province_event = {
 		terrain = mountain
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -213,7 +213,7 @@ province_event = {
 		terrain = farmlands
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -259,7 +259,7 @@ province_event = {
 		terrain = desert
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -304,7 +304,7 @@ province_event = {
 		terrain = steppe
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -342,7 +342,7 @@ province_event = {
 		terrain = jungle
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -387,7 +387,7 @@ province_event = {
 		terrain = arctic
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }

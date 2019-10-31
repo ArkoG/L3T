@@ -43,3 +43,5 @@
 	NDefines.NNomad.ALWAYS_GENERATE_NOMADS = 0						-- If turned on will generate nomads even if they are not playable
 -- HOLDING_SLOT_BUILD_COST_MOD = 0.2
 	NDefines.NEconomy.HOLDING_SLOT_BUILD_COST_MOD = 1.0
+-- ENFORCE_ONE_OF_EACH_HOLDING = 1,			-- Require players to build at least one City, Temple and Castle in each province
+	NDefines.NTitle.ENFORCE_ONE_OF_EACH_HOLDING = 0			-- Require players to build at least one City, Temple and Castle in each province
