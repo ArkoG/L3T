@@ -765,7 +765,7 @@ TP_ELEV_ovin_L1 = {
 			has_province_modifier = elevage1
 		NOT = { terrain = mountain }
 		}
-	prerequisites = { MONASTERE }
+	not_if_x_exists = { CITEEPISCOPALE }
 		gold_cost = 50.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
 }
 TP_ELEV_ovin_L2 = {
@@ -835,6 +835,7 @@ TP_FISH_pisci_L1 = { #élevage en riviére
 	}
 	prerequisites = { MONASTERE }
 		gold_cost = 65.0	build_time = 100	tax_income = 0.1	ai_creation_factor = 97	add_number_to_name = no	extra_tech_building_start = 10.0
+
 }
 TP_FISH_pisci_L2 = { #étang
 	desc = TP_FISH_pisci_L2_desc

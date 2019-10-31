@@ -2,6 +2,7 @@
 slots = {
 	slot_egg = 10
 	slot_books = 3
+	slot_royal_law = 1
 }
 
 ###ambition quests
@@ -36,7 +37,8 @@ sayf_al_islam = {
 ###EGGS SERIE
 oeuf_1 = {
 	monthly_character_piety = 0.1
-	quality = 1
+	monthly_character_prestige = 0.05
+	quality = 2
 	active = { religion_group = christian }
 	flags = { easter }
 	stacking = no
@@ -45,7 +47,7 @@ oeuf_1 = {
 }
 oeuf_2 = {
 	monthly_character_prestige = 0.1
-	quality = 1
+	quality = 2
 	active = { religion_group = christian }
 	flags = { easter }
 	stacking = no
@@ -53,8 +55,8 @@ oeuf_2 = {
 	slot = slot_egg
 }
 oeuf_3 = {
-	monthly_character_piety = 0.1
-	quality = 1
+	monthly_character_piety = 0.2
+	quality = 3
 	active = { religion_group = christian }
 	flags = { easter }
 	stacking = no
@@ -75,19 +77,19 @@ oeuf_5 = {
 	monthly_character_prestige = 0.05
 	quality = 1
 	active = { religion_group = christian }
-	flags = { easter }
+	flags = { easter oeuf5_flag }
 	stacking = no
 	picture = "GFX_oeuf_5"
 	slot = slot_egg
 }
 oeuf_united = {
-	monthly_character_piety = 0.1
-	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.15
+	monthly_character_prestige = 0.15
 	short_reign_length = -5
 	vassal_opinion = 5
 	same_religion_opinion = 5
 	diplomacy = 1
-	quality = 3
+	quality = 4
 	active = { religion_group = christian }
 	indestructible = yes
 	flags = { easter regalia religious christian unique }
@@ -380,4 +382,24 @@ book_R = {
 	slot = slot_books
 	stewardship = 1
 	town_opinion = 15
+}
+gombette_law = {
+	short_reign_length = -5
+	monthly_character_prestige = 1
+	vassal_opinion = 10
+	diplomacy = 1 
+	stewardship = 1 
+	active = { 
+		has_landed_title = k_burgundy
+		religion_group = christian
+	}
+	allowed_gift = {
+		always = no
+	}
+	quality = 4
+	#indestructible = yes
+	flags = { religious christian unique }
+	stacking = no
+	picture = "GFX_book_roots_crown_03"
+	slot = slot_royal_law
 }

@@ -8,6 +8,9 @@ on_startup = {
 		#AI money start bonus
 		L3T.12
 		
+		#city apocalypto
+		#L3T.45
+		
 		# Artist initialisation
 		REC.2100
 	}	
@@ -33,6 +36,10 @@ on_yearly_pulse = {
 		#modernized XYLO
 		XYLO.1 #hire a forester
 		XYLO.2 #choose forest spec computation
+
+		#màj capital modifier
+		L3T.50
+		L3T.51
 		
 		##population events
 		 #castle
@@ -57,7 +64,10 @@ on_yearly_pulse = {
 		L3T.1103
 		
 		#ReC
-		REC.3
+		 REC.3
+		#additional check for Deus vult traits
+		 REC.20
+		 REC.21
 	}
 	
 	random_events = {
@@ -152,6 +162,9 @@ on_new_holder = {
 		#cathedral
 		REC.1
 		REC.11
+		#màj capital modifier
+		L3T.50
+		L3T.51
 	}
 }
 
@@ -171,6 +184,9 @@ on_new_holder_inheritance = {
 		#cathedral
 		REC.1
 		REC.11
+		#màj capital modifier
+		L3T.50
+		L3T.51
 	}
 }
 
@@ -190,6 +206,9 @@ on_new_holder_usurpation = {
 		#cathedral
 		REC.1
 		REC.11
+		#màj capital modifier
+		L3T.50
+		L3T.51
 	}
 }
 

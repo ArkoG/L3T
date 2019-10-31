@@ -40,7 +40,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 280
+		months = 140
 		modifier = { factor = 0.9  NOT = { martial = 7 }}
 		modifier = { factor = 0.9  NOT = { martial = 6 }}		
 		modifier = { factor = 0.9  NOT = { martial = 5 }}
@@ -549,7 +549,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 280
+		months = 140
 		modifier = { factor = 0.9  NOT = { stewardship = 7 }}
 		modifier = { factor = 0.9  NOT = { stewardship = 6 }}		
 		modifier = { factor = 0.9  NOT = { stewardship = 5 }}	
@@ -872,7 +872,7 @@ narrative_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 280
+		months = 140
 	}
 	
 	option = {

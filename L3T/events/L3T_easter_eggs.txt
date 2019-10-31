@@ -1,16 +1,17 @@
 namespace = L3T
 
-#end if we go to war.
+#war end.
 character_event = {
 	id = L3T.401
 	desc = "DESCL3T.401"
 	picture = "GFX_evt_hunt"
 
 	only_playable = yes
-	war = yes
-
+	#war = yes
+	
 	trigger = {
 		has_character_flag = search_easter_eggs
+		not_involved_in_personnal_war = no #personal wars only
 	}
 
 	mean_time_to_happen = {
@@ -27,11 +28,13 @@ character_event = {
 		clr_character_flag = search_egg5
 		clr_character_flag = pious_hunt
 		clr_character_flag = not_that_pious_hunt
+		#reset and count eggs each time
+		counting_eggs = yes #scripted effect
 	}
 
 	option = {
 		name = "L3T.401A"
-	}
+	}	
 }
 
 #Normal end.
@@ -54,6 +57,8 @@ character_event = {
 		clr_character_flag = search_egg2
 		clr_character_flag = search_egg4
 		clr_character_flag = search_egg5
+		#reset and count eggs each time
+		counting_eggs = yes #scripted effect
 	}
 
 	option = {
@@ -75,7 +80,7 @@ character_event = {
 			}
 		}
 		piety = 10
-		}
+	}
 	option = {
 		name = "L3T.402B"
 		trigger = { has_character_flag = not_that_pious_hunt }
@@ -85,6 +90,7 @@ character_event = {
 
 ### the event chains
 # Search egg number 1
+#holy site or pilgrim
 narrative_event = {
 	id = L3T.411
 	#desc = "DESCL3T.411"
@@ -298,7 +304,7 @@ narrative_event = {
 	}
 }
 
-# Religous head takes a decision
+# Religious head takes a decision
 character_event = {
 	id = L3T.412
 
@@ -350,7 +356,7 @@ character_event = {
 	}
 }
 
-# Religous head accepts
+# Religious head accepts
 character_event = {
 	id = L3T.413
 	desc = "DESCL3T.413"
@@ -404,7 +410,7 @@ character_event = {
 	}
 }
 
-# Relious head refuses
+# Religious head refuses
 character_event = {
 	id = L3T.414
 	desc = "DESCL3T.414"
@@ -449,6 +455,7 @@ character_event = {
 }
 
 # Search egg number 2
+#buy at the market chain
 character_event = {
 	id = L3T.421
 	desc = "DESCL3T.421"
@@ -1395,6 +1402,7 @@ character_event = {
 }
 
 # Give egg number 3
+#monastery chain
 character_event = {
 	id = L3T.431
 	title = NAMEL3T.431
@@ -1482,6 +1490,7 @@ character_event = {
 		set_character_flag = pious_hunt
 	}
 }
+
 letter_event = { #Monks accept
 	id = L3T.432
 	desc = "DESCL3T.432"
@@ -1524,6 +1533,7 @@ letter_event = { #Monks refuse
 		set_character_flag = pious_hunt
 	}
 }
+
 letter_event = { #Monks make their offer
 	id = L3T.434
 	border = GFX_event_letter_frame_diplomacy
@@ -1596,6 +1606,7 @@ letter_event = { #Monks make their offer
 }
 
 # Search egg number 4
+#forest chain
 character_event = {
 	id = L3T.441
 	desc = "DESCL3T.441"
@@ -2044,6 +2055,7 @@ character_event = {
 }
 
 # Search egg number 5
+#courtier chain
 character_event = {
 	id = L3T.451
 	desc = "DESCL3T.451"
@@ -2073,6 +2085,7 @@ character_event = {
 					any_courtier = {
 						prisoner = no
 						is_ruler = no
+						lower_tier_than = count
 						has_artifact = oeuf_5
 					}
 				}
@@ -2081,9 +2094,11 @@ character_event = {
 				limit = {
 					prisoner = no
 					is_ruler = no
+					lower_tier_than = count
 					NOT = { dynasty = ROOT }
 				}
 				add_artifact = oeuf_5
+				save_event_target_as = courtier_with_egg5 ##registers only if given
 			}
 		}
 		set_character_flag = search_egg5
@@ -2151,7 +2166,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2160,6 +2175,7 @@ character_event = {
 		}
 		set_character_flag = egg_found
 		set_character_flag = not_that_pious_hunt
+		clear_event_target = courtier_with_egg5
 	}
 	
 	option = {
@@ -2186,7 +2202,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2196,8 +2212,9 @@ character_event = {
 		add_trait = deceitful
 		set_character_flag = egg_found
 		set_character_flag = not_that_pious_hunt
+		clear_event_target = courtier_with_egg5
 	}
-	
+
 	option = {
 		name = "L3T.451D"
 		ai_chance = {
@@ -2213,13 +2230,20 @@ character_event = {
 		}
 		if = {
 			limit = { NOT = { trait = content } }
-			random = { 
+			random = {
 				chance = 50
 				add_trait = content
 			}
 		}
+		#if failed chain, the unused artifact is destroyed
+		event_target:courtier_with_egg5 = {
+			destroy_artifact = oeuf_5
+		}
+		clear_event_target = courtier_with_egg5
 	}
 }
+	
+
 
 # Courtier thinks about giving the egg
 character_event = {
@@ -2273,7 +2297,7 @@ character_event = {
 		name = "L3T.453A"
 		FROM = {
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2281,6 +2305,7 @@ character_event = {
 			}
 		}
 		set_character_flag = egg_found
+		clear_event_target = courtier_with_egg5
 	}
 }
 
@@ -2308,7 +2333,7 @@ character_event = {
 		FROM = {
 			imprison = ROOT
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2323,6 +2348,7 @@ character_event = {
 				add_trait = arbitrary
 			}
 		}
+		clear_event_target = courtier_with_egg5
 	}
 	
 	option = {
@@ -2364,7 +2390,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2373,6 +2399,7 @@ character_event = {
 		}
 		set_character_flag = egg_found
 		set_character_flag = not_that_pious_hunt
+		clear_event_target = courtier_with_egg5
 	}
 	
 	option = {
@@ -2399,7 +2426,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2409,6 +2436,7 @@ character_event = {
 		add_trait = deceitful
 		set_character_flag = egg_found
 		set_character_flag = not_that_pious_hunt
+		clear_event_target = courtier_with_egg5
 	}
 }
 
@@ -2472,7 +2500,7 @@ character_event = {
 		name = "L3T.456A"
 		FROM = {
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2481,6 +2509,7 @@ character_event = {
 		}
 		set_character_flag = egg_found
 		wealth = -15
+		clear_event_target = courtier_with_egg5
 	}
 }
 
@@ -2507,7 +2536,7 @@ character_event = {
 		}
 		FROM = {
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2516,6 +2545,7 @@ character_event = {
 		}
 		set_character_flag = egg_found
 		wealth = -30
+		clear_event_target = courtier_with_egg5
 	}
 	
 	option = {
@@ -2567,7 +2597,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2576,6 +2606,7 @@ character_event = {
 		}
 		set_character_flag = egg_found
 		set_character_flag = not_that_pious_hunt
+		clear_event_target = courtier_with_egg5
 	}
 	
 	option = {
@@ -2602,7 +2633,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2612,6 +2643,7 @@ character_event = {
 		add_trait = deceitful
 		set_character_flag = egg_found
 		set_character_flag = not_that_pious_hunt
+		clear_event_target = courtier_with_egg5
 	}
 	
 	option = {
@@ -2626,7 +2658,7 @@ character_event = {
 		FROM = {
 			imprison = ROOT
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2641,6 +2673,7 @@ character_event = {
 				add_trait = arbitrary
 			}
 		}
+		clear_event_target = courtier_with_egg5
 	}
 }
 
@@ -2701,7 +2734,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2710,6 +2743,7 @@ character_event = {
 		}
 		set_character_flag = egg_found
 		set_character_flag = not_that_pious_hunt
+		clear_event_target = courtier_with_egg5
 	}
 	
 	option = {
@@ -2736,7 +2770,7 @@ character_event = {
 			}
 			opinion = { modifier = opinion_egg_stolen who = ROOT years = 5 }
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2746,6 +2780,7 @@ character_event = {
 		add_trait = deceitful
 		set_character_flag = egg_found
 		set_character_flag = not_that_pious_hunt
+		clear_event_target = courtier_with_egg5
 	}
 	
 	option = {
@@ -2760,7 +2795,7 @@ character_event = {
 		FROM = {
 			imprison = ROOT
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag}
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2775,6 +2810,7 @@ character_event = {
 				add_trait = arbitrary
 			}
 		}
+		clear_event_target = courtier_with_egg5
 	}
 }
 
@@ -2794,7 +2830,7 @@ character_event = {
 		name = "L3T.459A"
 		FROMFROM = {
 			random_artifact = {
-				limit = { has_artifact_flag = easter }
+				limit = { has_artifact_flag = oeuf5_flag }
 				transfer_artifact = {
 					from = PREV
 					to = ROOT
@@ -2804,6 +2840,7 @@ character_event = {
 		set_character_flag = egg_found
 		set_character_flag = not_that_pious_hunt
 		wealth = -15
+		clear_event_target = courtier_with_egg5
 	}
 }
 
@@ -2843,13 +2880,13 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_character_flag = search_easter_eggs
+		#has_character_flag = search_easter_eggs
 		has_artifact = oeuf_1
 		has_artifact = oeuf_2
 		has_artifact = oeuf_3
 		has_artifact = oeuf_4
 		has_artifact = oeuf_5
-		NOT = { has_character_flag = egg_found } # Not assemble the same year as a egg was found
+		#NOT = { has_character_flag = egg_found } # Not assemble the same year as a egg was found
 		NOT = { has_artifact = oeuf_united }
 	}
 

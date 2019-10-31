@@ -3,6 +3,7 @@ decisions = {
 	egg_hunt = {
 		only_playable = yes
 		is_high_prio = yes
+		
 		potential = {
 			is_playable = yes
 			prisoner = no
@@ -10,9 +11,10 @@ decisions = {
 			NOT = {	has_character_flag = search_easter_eggs }
 			NOT = { has_artifact = oeuf_united }
 		}
+		
 		allow = {
 			#war = no #in big realm you are ALWAYS at war
-			not_involved_in_personnal_war = yes
+			not_involved_in_personnal_war = yes #personal wars only
 			custom_tooltip = {
 				text = UNOCCUPIED_DEMESNE_TITLE
 				hidden_tooltip = {
@@ -32,25 +34,35 @@ decisions = {
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
 			}
 		}
+		
 		effect = {
 			wealth = -10
 			set_character_flag = search_easter_eggs			
 			set_character_flag = recent_minor_decision
 			set_character_flag = do_not_disturb
 			hidden_tooltip = { character_event = { id = L3T.499 days = 150 } } # Safety catch flag clearing
-			hidden_tooltip = { 
+			hidden_tooltip = {
 				random_list = { 
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur501_recue }}} letter_event = { id = L3T.501 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur502_recue }}} letter_event = { id = L3T.502 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur503_recue }}} letter_event = { id = L3T.503 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur504_recue }}} letter_event = { id = L3T.504 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur505_recue }}} letter_event = { id = L3T.505 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur506_recue }}} letter_event = { id = L3T.506 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur507_recue }}} letter_event = { id = L3T.507 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur508_recue }}} letter_event = { id = L3T.508 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur509_recue }}} letter_event = { id = L3T.509 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur510_recue }}} letter_event = { id = L3T.510 days = 15 random = 10}}
-				10 = { if = { limit = { NOT = { has_character_flag = rumeur511_recue }}} letter_event = { id = L3T.511 days = 15 random = 10}}
+					20 = { if = { limit = { NOT = { has_character_flag = rumeur501_recue }}} letter_event = { id = L3T.501 days = 10 random = 3}}
+					20 = { if = { limit = { NOT = { has_character_flag = rumeur502_recue }}} letter_event = { id = L3T.502 days = 10 random = 3}}
+					20 = { if = { limit = { NOT = { has_character_flag = rumeur503_recue }}} letter_event = { id = L3T.503 days = 10 random = 3}}
+					20 = { if = { limit = { NOT = { has_character_flag = rumeur504_recue }}} letter_event = { id = L3T.504 days = 10 random = 3}}
+					20 = { if = { limit = { NOT = { has_character_flag = rumeur505_recue }}} letter_event = { id = L3T.505 days = 10 random = 3}}
+					20 = { if = { limit = { NOT = { has_character_flag = rumeur506_recue }}} letter_event = { id = L3T.506 days = 10 random = 3}}
+					20 = { if = { limit = { NOT = { has_character_flag = rumeur507_recue }}} letter_event = { id = L3T.507 days = 10 random = 3}}
+					20 = { #to favour the unlocking of the ambition
+						modifier = { factor = 2.0 check_variable = { which = "egg_count" value = 2 } }
+						if = { limit = { NOT = { has_character_flag = rumeur508_recue }}} letter_event = { id = L3T.508 days = 10 random = 3}
+					}
+					20 = { if = { limit = { NOT = { has_character_flag = rumeur509_recue }}} letter_event = { id = L3T.509 days = 10 random = 3}}
+					20 = { 
+						modifier = { factor = 2.0 check_variable = { which = "egg_count" value = 2 } } 
+						if = { limit = { NOT = { has_character_flag = rumeur510_recue }}} letter_event = { id = L3T.510 days = 10 random = 3}
+					}
+					20 = {
+						modifier = { factor = 2.0 check_variable = { which = "egg_count" value = 2 } } 
+						if = { limit = { NOT = { has_character_flag = rumeur511_recue }}} letter_event = { id = L3T.511 days = 10 random = 3}
+					}
 				}
 			}
 			# End
@@ -63,7 +75,12 @@ decisions = {
 						trait = patient
 					}
 				}
-				hidden_tooltip = { character_event = { id = L3T.402 days = 90 } }
+				hidden_tooltip = { 
+					# longer hunt under some conditions
+					character_event = { id = L3T.402 days = 90 }
+					# Fire the unification egg
+					narrative_event = { id = L3T.500 days = 91 }
+				}
 			}
 			if = {
 				limit = {
@@ -76,36 +93,156 @@ decisions = {
 						}
 					}
 				}
-				hidden_tooltip = { character_event = { id = L3T.402 days = 61 } }
+				hidden_tooltip = { 
+					# shorter hunt under some conditions
+					character_event = { id = L3T.402 days = 61 }
+					# Fire the unification egg
+					narrative_event = { id = L3T.500 days = 62 }
+				}
 			}
 			# Fire one event chain
 			hidden_tooltip = {
 				random_list = {
-					20 = { narrative_event = { id = L3T.411 days = 10 random = 5} }
-					20 = { character_event = { id = L3T.421 days = 10 random = 5} }
-					20 = { character_event = { id = L3T.431 days = 10 random = 5} }
-					20 = { character_event = { id = L3T.441 days = 10 random = 5} }
-					20 = { character_event = { id = L3T.451 days = 10 random = 5} }
+					##holy site or pilgrim chain
+					22 = { 
+						#more likely to fire if not owned
+						modifier = { 
+							factor = 1.5
+							NOT = { has_artifact = oeuf_1 }
+						}
+						#will fire less if already have that artifact
+						modifier = { 
+							factor = 0.5
+							has_artifact = oeuf_1
+						}
+						#better focus if having the ambition
+						modifier = {
+							factor = 0.5 #cumulative, so 25%
+							AND = {
+								has_artifact = oeuf_1
+								has_ambition = obj_egg_them_all
+							}
+						}
+						narrative_event = { id = L3T.411 days = 21 random = 7} #it should happen after the rumor
+					}
+					##buy at the market chain
+					22 = { 
+						#more likely to fire if not owned
+						modifier = { 
+							factor = 1.5
+							NOT = { has_artifact = oeuf_2 }
+						}
+						#will fire less if already have that artifact
+						modifier = { 
+							factor = 0.5
+							has_artifact = oeuf_2
+						}
+						#better focus if having the ambition
+						modifier = {
+							factor = 0.5
+							AND = {
+								has_artifact = oeuf_2
+								has_ambition = obj_egg_them_all
+							}
+						}
+						narrative_event = { id = L3T.421 days = 21 random = 7}
+					}
+					##monastery chain
+					22 = {
+						#more likely to fire if not owned
+						modifier = { 
+							factor = 1.5
+							NOT = { has_artifact = oeuf_3 }
+						}
+						#will fire less if already have that artifact
+						modifier = { 
+							factor = 0.5
+							has_artifact = oeuf_3
+						}
+						#better focus if having the ambition
+						modifier = {
+							factor = 0.5
+							AND = {
+								has_artifact = oeuf_3
+								has_ambition = obj_egg_them_all
+							}
+						}
+						narrative_event = { id = L3T.431 days = 21 random = 7}
+					}
+					##forest chain
+					22 = {
+						#more likely to fire if not owned
+						modifier = { 
+							factor = 1.5
+							NOT = { has_artifact = oeuf_4 }
+						}						
+						#will fire less if already have that artifact
+						modifier = { 
+							factor = 0.5
+							has_artifact = oeuf_4
+						}
+						#better focus if having the ambition
+						modifier = {
+							factor = 0.5
+							AND = {
+								has_artifact = oeuf_4
+								has_ambition = obj_egg_them_all
+							}
+						}
+						narrative_event = { id = L3T.441 days = 21 random = 7}
+					}
+					##courtier chain
+					#easier to get, so reducing the chances
+					12 = {
+						#more likely to fire if not owned
+						modifier = { 
+							factor = 1.5
+							NOT = { has_artifact = oeuf_5 }
+						}
+						#will fire less if already have that artifact
+						modifier = { 
+							factor = 0.5
+							has_artifact = oeuf_5
+						}
+						#better focus if having the ambition
+						modifier = {
+							factor = 0.5
+							AND = {
+								has_artifact = oeuf_5
+								has_ambition = obj_egg_them_all
+							}
+						}
+						narrative_event = { id = L3T.451 days = 21 random = 7}
+					}
 				}
 			}
 			# Fire the unification egg
-			narrative_event = { id = L3T.500 days = 10 }
-		custom_tooltip = { text = egg_hunt_custom }
+			#moved to fired at the end of the hunt
+			#narrative_event = { id = L3T.500 days = 10 }
+			custom_tooltip = { text = egg_hunt_custom }
 		}
+		
 		revoke_allowed = {
 			always = no
 		}
+		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 0
-				NOT = { wealth = 25 }
+				factor = 5
+				has_ambition = obj_egg_them_all
 			}
 			modifier = {
 				factor = 0
 				NOT = { wealth = 50 }
+			}
+			modifier = {
+				factor = 0.5
 				NOT = { trait = patient }
+			}
+			modifier = {
+				factor = 1.2
+				has_focus = focus_hunting
 			}
 			modifier = {
 				factor = 0

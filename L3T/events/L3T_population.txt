@@ -214,11 +214,13 @@ character_event = {
 				if = {
 					limit = {
 						holding_type = city
+						#+ gov type
 					}
 					change_variable = { which = "developpement" value = 1 }
 					change_variable = { which = "developpement_yearly_growth" value = 1 }
+					#add variation upon city governement 
 				}
-				random = { 
+				random = {
 					chance = 40
 					modifier = {
 						factor = 1.5
@@ -226,7 +228,19 @@ character_event = {
 					}
 					modifier = {
 						factor = 1.5
-						location = { has_province_modifier = industrie_prospere }
+						OR = {
+							location = { has_province_modifier = industrie_prospere }
+							location = { has_province_flag = crown_focus_province }
+						}
+					}
+					modifier = {
+						factor = 1.25
+						is_capital = yes #main/capital holding
+					}
+					modifier = {
+						factor = 2.0 #100% (40*1.25*2=100) chance if realm capital
+						is_capital = yes
+						location = { has_province_modifier = realm_capital_province }
 					}
 					change_variable = { which = "developpement" value = 1 } 
 					change_variable = { which = "developpement_yearly_growth" value = 1 }

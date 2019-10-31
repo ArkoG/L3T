@@ -69,6 +69,27 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\decision_icon_study_books.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_disable_notification"
+		texturefile = "gfx\\interface\\decision_icon_thesunandtherainfall_disable.dds"
+	}
+	spriteType = {
+		name = "GFX_enable_notification"
+		texturefile = "gfx\\interface\\decision_icon_thesunandtherainfall_enable.dds"
+	}
+#TARGETTED DECISIONS
+	spriteType = {
+		name = "GFX_diplo_relic_icon"
+		texturefile = "gfx\\interface\\diplo_relic_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_diplo_gold_icon"
+		texturefile = "gfx\\interface\\diplo_gold_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_diplo_martyr_icon"
+		texturefile = "gfx\\interface\\diplo_martyr_icon.dds"
+	}
 #REC traits
 	spriteType = {
 		name = "GFX_trait_batisseur_cathedrale"
@@ -140,7 +161,21 @@ spriteTypes = {
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-
+	spriteType = {
+		name = "GFX_trait_deus_vox"
+		texturefile = "gfx/traits/deus_vox.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_deus_gladio"
+		texturefile = "gfx/traits/deus_gladio.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
 #L3T traits
 	spriteType = {
 		name = "GFX_trait_dynastic_keeper"
@@ -162,6 +197,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_obj_build_something"
 		texturefile = "gfx/ambitions/obj_build_something.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_obj_egg_them_all"
+		texturefile = "gfx/ambitions/obj_egg_them_all.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
