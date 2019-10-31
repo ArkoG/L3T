@@ -26,6 +26,11 @@ spriteTypes =
 		allwaystransparent = yes
 	}
 	spriteType = {
+		name = "GFX_evt_XYLO_forest6"
+		texturefile = "gfx\\event_pictures\XYLOforest6.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
 		name = "GFX_evt_XYLOforestcut"
 		texturefile = "gfx\\event_pictures\XYLOforestcut.tga"
 		allwaystransparent = yes
@@ -106,6 +111,21 @@ spriteTypes =
 		allwaystransparent = yes
 	}
 	spriteType = {
+		name = "GFX_evt_L3T_castle_southern" #
+		texturefile = "gfx\\event_pictures\L3T_castle_southern.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_L3T_castle_northern" #
+		texturefile = "gfx\\event_pictures\L3T_castle_northern.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_L3T_capitulaire" #
+		texturefile = "gfx\\event_pictures\L3T_capitulaire_de_villis.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
 		name = "GFX_evt_L3T_war" #
 		texturefile = "gfx\\event_pictures\L3T_war.tga"
 		allwaystransparent = yes
@@ -123,6 +143,11 @@ spriteTypes =
 	spriteType = {
 		name = "GFX_evt_L3T_carte" #
 		texturefile = "gfx\\event_pictures\L3T_carte.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_L3T_elevage_moutons" #
+		texturefile = "gfx\\event_pictures\L3T_elevage_moutons.tga"
 		allwaystransparent = yes
 	}
 	spriteType = {
@@ -155,6 +180,29 @@ spriteTypes =
 		texturefile = "gfx\\event_pictures\L3T_muslim_blue_dome.tga"
 		allwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_L3T_herisson" #
+		texturefile = "gfx\\event_pictures\L3T_herisson.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_L3T_FIRE" #
+		texturefile = "gfx\\event_pictures\L3T_FIRE.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_L3T_book_burning" #
+		texturefile = "gfx\\event_pictures\L3T_book_burning.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_bandits_muslim"
+		texturefile = "gfx\\event_pictures\\Bandits_forest_muslim.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_debug_totoro"
+		texturefile = "gfx\\event_pictures\\debug.tga"
+		allwaystransparent = yes
+	}
 }
-
-

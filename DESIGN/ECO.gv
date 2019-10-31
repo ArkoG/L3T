@@ -1,7 +1,7 @@
 digraph G {
 	node [shape=ellipse];
-		{node [label="JOUR 10 : Placement des provinces terrestres, cotières et fluviales\nL3T_mod_selection_XXXX"] n0;};
-		{node [label="JOUR 20 : Distribution des ressources\nECO+_init_RESSOURCES"] n1;};
+		{node [label="JOUR 1 : Placement des provinces terrestres, cotières et fluviales\nL3T_mod_selection_XXXX"] n0;};
+		{node [label="JOUR 1 : Distribution des ressources\nECO+_init_RESSOURCES"] n1;};
 		{node [label="(JOUR 20 pour les républiques, JOUR 60 sinon): \n Spécialisation des cités dans les provinces multi-cité\nL3T_init_DOMAINES"] n2;};
 		{node [label="Spécialisation des cités uniques dans les provinces\nL3T_init_DOMAINES"] n4;};
 		{node [label="Attribution des départs des routes\nL3T_init_DOMAINES"] n5;};

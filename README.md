@@ -2,7 +2,7 @@
 
 > An economic and medieval flavour mod for CK2 
 
-![alt tag](http://i789.photobucket.com/albums/yy174/ArKoG/CK2%20-%20Les%20%20Trois%20Tours/logo_L3T_forum_zpsjwachfud.png)
+![alt tag](http://forum.reseau-js.com/uploads/monthly_2017_08/logo_L3T_forum.PNG.a4f74973e762f95806758094391ea8f2.PNG)
 
 # Mod presentation
 
@@ -21,6 +21,7 @@ Gameplay :
 - Unique trade system with dynamic trade routes
 - Ressources and economic system
 - Settlement specializations
+- Cathedral construction with relic system
 
 Flavour :
 - forest themed (donation, buy/sell/forest charters, specializations...)
@@ -32,7 +33,6 @@ Graphics :
 - new graphics associated with the new features (a lot modifiers icons, event pictures etc. )
 
 ### Next ?
-- the return of cathedrals with a brand new and better system, AI usable, with a lot of flavour stuff (loans, competition, artists...)
 - completion of specialisation system
 - flavour and even more flavour ! the return of bandits, mushroom hunt, new laws...
 

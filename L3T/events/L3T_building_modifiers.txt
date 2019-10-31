@@ -11,14 +11,21 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_chap_seign
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle } } }
+		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle2 } } }
 	}
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.203 days = 365 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 10 }
+		}
 	}
 }
 
@@ -32,8 +39,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_chap_seign
 		}
 	}
@@ -42,6 +48,7 @@ character_event = {
 		if = {
 			limit = { 
 				NOT = { has_character_modifier = chapelle }
+				NOT = { has_character_modifier = chapelle2 }
 			}
 			character_event = { id = L3T.203 days = 1 }
 			character_event = { id = L3T.225 days = 30 }
@@ -56,11 +63,20 @@ character_event = {
 }
 
 # Give the chapelle modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.203
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_chap_seign
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = chapelle duration = -1 }
@@ -77,7 +93,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chapelle
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -92,14 +108,20 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_chap_seign_2
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chapelle2 } } }
 	}
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.207 days = 460 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 10 }
+		}
 	}
 }
 
@@ -113,8 +135,7 @@ character_event = {
 	
 	trigger = {	
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_chap_seign_2
 		}
 	}
@@ -137,13 +158,23 @@ character_event = {
 }
 
 # Give the chapelle2 modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.207
 	
 	hide_window = yes
 	is_triggered_only = yes
 	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_chap_seign_2
+		}
+	}
+	
 	immediate = {
+		remove_character_modifier = chapelle
 		add_character_modifier = { name = chapelle2 duration = -1 }
 		set_character_flag = feodal_adm_modifier
 	}
@@ -158,11 +189,19 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chapelle2
-		clr_character_flag = feodal_adm_modifier
+		remove_trait = dynastic_keeper
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_chap_seign }
+				NOT = { has_character_modifier = chapelle }
+			}
+			add_character_modifier = { name = chapelle duration = -1 }
+		}
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
-# Give the chambre modifier 547 days after starting the building
+# Give the chambre modifier 365 days after starting the building
 # ROOT = Builder, FROM = The Holding Title
 character_event = {
 	id = L3T.209
@@ -173,14 +212,20 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_chambre_2
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chambre } } }
 	}
 	
 	immediate = {
-		FROM = { holder_scope = { character_event = { id = L3T.211 days = 547 } } }
+		FROM = { holder_scope = { character_event = { id = L3T.211 days = 365 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 20 }
+		}
 	}
 }
 
@@ -194,8 +239,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_chambre_2
 		}
 	}
@@ -218,11 +262,20 @@ character_event = {
 }
 
 # Give the chambre modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.211
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_chambre_2
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = chambre duration = -1 }
@@ -239,7 +292,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chambre
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -254,14 +307,20 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_archives_1
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = archives } } }
 	}
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.215 days = 365 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 15 }
+		}
 	}
 }
 
@@ -275,8 +334,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_archives_1
 		}
 	}
@@ -299,11 +357,20 @@ character_event = {
 }
 
 # Give the archives modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.215
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_archives_1
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = archives duration = -1 }
@@ -320,7 +387,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = archives
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -335,14 +402,20 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_cour_justice
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = cour_justice } } }
 	}
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.219 days = 465 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 30 }
+		}
 	}
 }
 
@@ -356,8 +429,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_cour_justice
 		}
 	}
@@ -380,11 +452,20 @@ character_event = {
 }
 
 # Give the cour_justice modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.219
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_cour_justice
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = cour_justice duration = -1 }
@@ -401,7 +482,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = cour_justice
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -416,14 +497,20 @@ character_event = {
 	trigger = {
 		FROM = { 
 			tier = baron	
-			holding_type = castle 
-			has_building = CA_chancellerie
+			holding_type = castle
 		}
 		NOT = { FROM = { holder_scope = { has_character_modifier = chancellerie } } }
 	}
 	
 	immediate = {
 		FROM = { holder_scope = { character_event = { id = L3T.223 days = 365 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 20 }
+		}
 	}
 }
 
@@ -437,8 +524,7 @@ character_event = {
 	
 	trigger = {
 		FROM = {
-			tier = baron
-			holding_type = castle 
+			is_feudal = yes
 			has_building = CA_chancellerie
 		}
 	}
@@ -461,11 +547,20 @@ character_event = {
 }
 
 # Give the chancellerie modifier
+# FROMFROM = The Holding Title
 character_event = {
 	id = L3T.223
 	
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_chancellerie
+		}
+	}
 	
 	immediate = {
 		add_character_modifier = { name = chancellerie duration = -1 }
@@ -482,7 +577,7 @@ character_event = {
 	
 	immediate = {
 		remove_character_modifier = chancellerie
-		clr_character_flag = feodal_adm_modifier
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
 
@@ -522,6 +617,21 @@ character_event = {
 			AND = {
 				NOT = { capital_holding = { has_building = CA_chancellerie } }
 				has_character_modifier = chancellerie
+			}
+			AND = {
+				NOT = { capital_holding = { has_building = CA_library_L1 } }
+				has_character_modifier = librairie_1
+			}
+			AND = {
+				NOT = { capital_holding = { has_building = CA_library_L2 } }
+				has_character_modifier = librairie_2
+			}
+			AND = {
+				OR = {
+					NOT = { capital_holding = { has_building = CA_chap_seign_2 }}
+					NOT = { capital_holding = { has_building = CA_library_L2 }}
+				}
+				trait = dynastic_keeper
 			}
 		}
 	}
@@ -570,6 +680,31 @@ character_event = {
 			}
 			remove_character_modifier = chancellerie
 		}
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_library_L1 } }
+				has_character_modifier = librairie_1
+			}
+			remove_character_modifier = librairie_1
+		}
+		if = {
+			limit = {
+				NOT = { capital_holding = { has_building = CA_library_L2 } }
+				has_character_modifier = librairie_2
+			}
+			remove_character_modifier = librairie_2
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = { capital_holding = { has_building = CA_library_L2 } }
+					NOT = { capital_holding = { has_building = CA_chap_seign_2 } }
+				}
+				trait = dynastic_keeper
+			}
+			remove_trait = dynastic_keeper
+		}
+		remove_feodal_adm_modifier_in_capital_if_necessary = yes
 	}
 }
 
@@ -587,6 +722,7 @@ character_event = {
 		OR = {
 			AND = {
 				capital_holding = { has_building = CA_chap_seign }
+				NOT = { capital_holding = { has_building = CA_chap_seign_2 }}
 				NOT = { has_character_modifier = chapelle }
 			}
 			AND = {
@@ -608,6 +744,20 @@ character_event = {
 			AND = {
 				capital_holding = { has_building = CA_chancellerie }
 				NOT = { has_character_modifier = chancellerie }
+			}
+			AND = {
+				capital_holding = { has_building = CA_library_L1 }
+				NOT = { capital_holding = { has_building = CA_library_L2 }}
+				NOT = { has_character_modifier = librairie_1 }
+			}
+			AND = {
+				capital_holding = { has_building = CA_library_L2 }
+				NOT = { has_character_modifier = librairie_2 }
+			}
+			AND = {
+				capital_holding = { has_building = CA_chap_seign_2 }
+				capital_holding = { has_building = CA_library_L2 }
+				NOT = { trait = dynastic_keeper }
 			}
 		}
 	}
@@ -616,44 +766,79 @@ character_event = {
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_chap_seign }
+				NOT = { capital_holding = { has_building = CA_chap_seign_2 }}
 				NOT = { has_character_modifier = chapelle }
 			}
-			character_event = { id = L3T.203 days = 365 }
+			add_character_modifier = { name = chapelle duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_chap_seign_2 }
 				NOT = { has_character_modifier = chapelle2 }
 			}
-			character_event = { id = L3T.207 days = 460 }
+			remove_character_modifier = chapelle
+			add_character_modifier = { name = chapelle2 duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_chambre_2 }
 				NOT = { has_character_modifier = chambre }
 			}
-			character_event = { id = L3T.211 days = 547 }
+			add_character_modifier = { name = chambre duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_archives_1 }
 				NOT = { has_character_modifier = archives }
 			}
-			character_event = { id = L3T.215 days = 365 }
+			add_character_modifier = { name = archives duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_cour_justice }
 				NOT = { has_character_modifier = cour_justice }
 			}
-			character_event = { id = L3T.219 days = 465 }
+			add_character_modifier = { name = cour_justice duration = -1 }
+			set_character_flag = feodal_adm_modifier
 		}
 		if = {
 			limit = {
 				capital_holding = { has_building = CA_chancellerie }
 				NOT = { has_character_modifier = chancellerie }
 			}
-			character_event = { id = L3T.223 days = 365 }
+			add_character_modifier = { name = chancellerie duration = -1 }
+			set_character_flag = feodal_adm_modifier
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_library_L1 }
+				NOT = { capital_holding = { has_building = CA_library_L2 }}
+				NOT = { has_character_modifier = librairie_1 }
+			}
+			add_character_modifier = { name = librairie_1 duration = -1 }
+			set_character_flag = feodal_adm_modifier
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_library_L2 }
+				NOT = { has_character_modifier = librairie_2 }
+			}
+			remove_character_modifier = librairie_1
+			add_character_modifier = { name = librairie_2 duration = -1 }
+			set_character_flag = feodal_adm_modifier
+		}
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_library_L2 }
+				capital_holding = { has_building = CA_chap_seign_2 }
+				NOT = { trait = dynastic_keeper }
+			}
+			add_trait = dynastic_keeper
+			set_character_flag = feodal_adm_modifier
 		}
 	}
 }
@@ -666,10 +851,47 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
-	ai = no
+	#ai = no
 	
 	immediate = {
-		FROM = { location = { province_event = { id = L3T.228 days = 30 } } }
+		FROM = { set_variable = { which = "global_best_capital" which = "best_capital" }}
+		if = {
+			limit = {
+				ai = no
+				NOT = {
+					FROM = { is_capital = ROOT }
+					ROOT = {
+						any_demesne_title = {
+							is_capital = yes
+							holding_type = castle
+							has_building = FEODAL_adm
+							check_variable = { which = "best_capital" which = "global_best_capital" }
+						}
+					}
+				}
+			}
+			#makes the events firing only if the title is has a better "best_capital" value
+			FROM = { location = { province_event = { id = L3T.228 days = 30 } } } #ex days=30
+			FROM  = { set_title_flag = better_realm_capital }
+		}
+		if = {
+			limit = {
+				ai = yes
+				NOT = { 
+					FROM = { is_capital = ROOT }
+					ROOT = {
+						any_demesne_title = {
+							is_capital = yes
+							holding_type = castle
+							has_building = FEODAL_adm
+							check_variable = { which = "best_capital" which = "global_best_capital" }
+						}
+					}
+				}
+			}
+			#for the AI, if this title has a better "best_capital" value, make it the new capital
+			FROM = { make_capital_holding = yes }
+		}
 	}
 }
 
@@ -681,14 +903,16 @@ province_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = { FROM = { is_capital = ROOT } }
 		capital_holding = {
 			holding_type = castle 
 			has_building = FEODAL_adm
+			has_title_flag = better_realm_capital
 		}
 	}
 	
 	immediate = {
-		holder_scope = { character_event = { id = L3T.229 days = 1 } }
+		holder_scope = { character_event = { id = L3T.229 days = 0 } }
 	}
 }
 
@@ -701,6 +925,214 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = OK
+		name = L3T.229A #I'll think about it
+	}
+	option = {
+		name = L3T.229B #make it the new realm capital
+		FROM = { 
+			make_capital_holding = yes
+			clr_title_flag = better_realm_capital
+		}
+	}
+}
+
+# Give the librairie_1 modifier 1 year after starting the building
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.241
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			holding_type = castle
+		}
+		NOT = { FROM = { holder_scope = { has_character_modifier = librairie_1 } } }
+		NOT = { FROM = { holder_scope = { has_character_modifier = librairie_2 } } }
+	}
+	
+	immediate = {
+		FROM = { holder_scope = { character_event = { id = L3T.243 days = 365 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 10 }
+		}
+	}
+}
+
+# Give the librairie_1 modifier to the new holder and remove it to the old
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.242
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			is_feudal = yes
+			has_building = CA_library_L1
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = librairie_1 }
+				NOT = { has_character_modifier = librairie_2 }
+			}
+			character_event = { id = L3T.243 days = 1 }
+			character_event = { id = L3T.225 days = 30 }
+		}
+		if = {
+			limit = { 
+				FROMFROM = { has_character_modifier = librairie_1 }
+			}
+			FROMFROM = { character_event = { id = L3T.244 days = 1 } }
+		}
+	}
+}
+
+# Give the librairie_1 modifier
+# FROMFROM = The Holding Title
+character_event = {
+	id = L3T.243
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_library_L1
+		}
+	}
+	
+	immediate = {
+		add_character_modifier = { name = librairie_1 duration = -1 }
+		set_character_flag = feodal_adm_modifier
+	}
+}
+
+# Remove the librairie_1 modifier
+character_event = {
+	id = L3T.244
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = librairie_1
+		remove_feodal_adm_modifier_if_necessary = yes
+	}
+}
+
+# Give the librairie_2 modifier 547 days after starting the building
+# ROOT = Builder, FROM = The Holding Title
+character_event = {
+	id = L3T.245
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			holding_type = castle
+		}
+		NOT = { FROM = { holder_scope = { has_character_modifier = librairie_2 } } }
+	}
+	
+	immediate = {
+		FROM = { holder_scope = { character_event = { id = L3T.247 days = 547 } } }
+		FROM = { 
+			if = { 
+				limit = { NOT = { check_variable = { which = "best_capital" value = 0 }}}
+				set_variable = { which = "best_capital" value = 0 }
+			}
+			change_variable = { which = "best_capital" value = 10 }
+		}
+	}
+}
+
+# Give the librairie_2 modifier to the new holder and remove it to the old
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+	id = L3T.246
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		FROM = {
+			is_feudal = yes
+			has_building = CA_library_L2
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = librairie_2 }
+			}
+			character_event = { id = L3T.247 days = 1 }
+			character_event = { id = L3T.225 days = 30 }
+		}
+		if = {
+			limit = { 
+				FROMFROM = { has_character_modifier = librairie_2 }
+			}
+			FROMFROM = { character_event = { id = L3T.248 days = 1 } }
+		}
+	}
+}
+
+# Give the librairie_2 modifier
+# FROMFROM = The Holding Title
+character_event = {
+	id = L3T.247
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle 
+			has_building = CA_library_L2
+		}
+	}
+	
+	immediate = {
+		remove_character_modifier = librairie_1
+		add_character_modifier = { name = librairie_2 duration = -1 }
+		set_character_flag = feodal_adm_modifier
+	}
+}
+
+# Remove the librairie_2 modifier
+character_event = {
+	id = L3T.248
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = librairie_2
+		remove_trait = dynastic_keeper
+		if = {
+			limit = {
+				capital_holding = { has_building = CA_library_L1 }
+				NOT = { has_character_modifier = librairie_1 }
+			}
+			add_character_modifier = { name = librairie_1 duration = -1 }
+		}
+		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }

@@ -4,8 +4,13 @@
 #;;x;;;;;;;;;;;;x
 redevance_banale;Feudal Tenure;Redevance Banale;;;;;;;;;;;;x
 redevance_banale_desc;The peasants here are required to to pay dues in exchange for use of to the local lord's facilities. If only one could also oblige them to use strictly only these facilities and no others... ;En échange de l'accès aux installations seigneuriales, les paysans étaient taxés. Si l'on ajoute à cela qu'ils étaient dans l'obligation d'utiliser celles-ci et aucune autre... ;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
-foret_up;Seigneurial Forestry Laws;Domaine Forestier Agrandi;;;;;;;;;;;;x
+
+great_pass;Major pass;Col Majeur;;;;;;;;;;;;x
+great_pass_desc;This pass is a key to control the trade and borders throughout the mountains.;Ce col est un des passages clé à travers les montagnes. S'en assurer le contrôle représente un avantage financier et stratégique non négligeable.;;;;;;;;;;;;;x
+minor_pass;Minor pass;Col Mineur;;;;;;;;;;;;x
+minor_pass_desc;This passage through the mountains offers some advantages despite being secondary.;Ce col, bien que d'importance moindre procure néanmoins quelques avantages non sans intérêts.;;;;;;;;;;;;x
+
+foret_up;Forest demesne;Domaine forestier;;;;;;;;;;;;x
 foret_up_desc;We have augmented our woodland holdings through a series of strategic acquisitions and can now profit even more greatly from these lands.;Grâce à notre politique d'acquisitions, nous avons agrandit nos domaines boisés et nous pouvons à présent en tirer encore davantage de profits.;;;;;;;;;;;;x
 loi_forestiere_L1;Forest Licence;Licence Forestière;;;;;;;;;;;;x
 loi_forestiere_L1_desc;The granting of forest licenses bestows upon the holder the following rights and restrictions: \n-Right to Pasture: a small tax for the privilege of feeding swine in said woods \n-Right of Passage: the right to pass through the area of the forest accompanied by hounds provided that their claws have been clipped \n-Hunting is strictly §Rforbidden§! \n-Deforestation is strictly §Rforbidden§!;Par la promulgation de la présente, j'édicte les règles suivantes : \n-droit de pâture : agistment et pannage des porcs \n-se déplacer librement accompagné de chiens à condition qu'ils aient été privés de leur griffes pour ne point chasser \n-toute chasse est INTERDITE \n-la déforestation est INTERDITE;;;;;;;;;;;;x
@@ -17,9 +22,10 @@ foret_maudite;Cursed Forest;Forêt Maudite !;;;;;;;;;;;;x
 foret_maudite_desc;This forest is rumored to be cursed!;Forêt Maudite !;;;;;;;;;;;;x
 foret_malfamee;Bandit Lair;Nid de Bandits;;;;;;;;;;;;x
 foret_malfamee_desc;A lair of unscrupulous bandits plague this forest.;Nid de Bandits;;;;;;;;;;;;x
+
 bandits_installes;Well settlef bandits;Bandits bien installés;;;;;;;;;;;;x
 bandits_installes_desc;Thieves, bandits and other bands of horrendous people are permanently settled on these lands, busied with their vile activities and with disastrous consequences.;Les voleurs, malandrins et autres bandes d'affreux ce sont installés durablement sur ces terres, s'affairant à leurs viles activités et avec des conséquences désastreuses.;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+
 relique01;Saint Giles' Relic;Relique de Saint Gilles;;;;;;;;;;;;x
 relique01_desc;;Une sandale de cuir desséché aurait été portée par Saint Gilles lors de son ascension de l'Escalier des Pénitents, où il rencontra la mort.;;;;;;;;;;;;x
 relique02;Saint Aubert's Relic;Relique de Saint Aubert;;;;;;;;;;;;x
@@ -70,6 +76,14 @@ relique24;Saint Brigitte's Relic;Relique de Sainte Brigitte;;;;;;;;;;;;x
 #relique24_desc;;;;;;;;;;;;;;x
 relique25;Saint Odile's Relic;Relique de Sainte Odile;;;;;;;;;;;;x
 relique25_desc;;Odile, alors enfant n'a pas encore reçu le baptême. Or, c'est le moment où le moine irlandais Erhard, évêque d'Ardagh, parcourant la Bavière, a une vision dans laquelle Dieu lui ordonne de se rendre à Baume afin de procéder à ce baptême. Ce qu'il fait quelques jours plus tard : au moment où l'huile sainte touche les yeux de l'enfant, celle-ci retrouve la vue. C'est à ce moment qu'elle reçoit le nom d'Odile, qui signifie « fille de la lumière ». \nLe reliquaire orné des ors les plus fins, renferme dans un tube cristallin, une petite perle noire brillante : la pupille dit-on de la Sainte.;;;;;;;;;;;;x
+
+foret_braconnage;Poaching;Braconnage;;;;;;;;;;;;x
+foret_braconnage_desc;Poachers are braving the local lord authority here by violating the hunt restrictions.\nSuch troubles agitate population and disturb the collect of taxes.;Des braconniers sont à l'oeuvre et défient l'autorité seigneuriale en violant les restrictions de chasse. \nDe tels troubles agitent la population et perturbent la perception de l'impôt.;;;;;;;;;;;;x
+justice_rendue_prov;Justice brought;Justice rendue;;;;;;;;;;;;x
+justice_rendue_prov_desc;The local lord brought justice and order back in the province.;Le seigneur local a fait respecter la justice et rétabli l'ordre dans la province.;;;;;;;;;;;;x
+justice_rendue_char;Brought Justice;A rendu la Justice;;;;;;;;;;;;x
+justice_rendue_char_desc;This character made the law applied and brought justice.;Ce personnage a fait appliquer la loi et rendu justice.;;;;;;;;;;;;x
+
 #relique_pour_jaloux;Forged relic;Relique falsifiée;;;;;;;;;;;;x
 #relique_pour_jaloux_desc;A relic falasified by an individual itching to construct a cathedral;Une relique falsifiée par quelqu'un d'envieux pour construire une cathédrale;;;;;;;;;;;;x
 relique_fort_douteuse;Doubtful relic;Relique fort douteuse;;;;;;;;;;;;x
@@ -88,10 +102,10 @@ relique_achercher_04;Mysterious relic;Relique mystérieuse;;;;;;;;;;;;x
 relique_achercher_04_desc;This relic was revealed to the World only recently. It was lost for centuries before reappearing here, in this unexpected region.;Cette relique s'est révélée au Monde il y a peu. Elle était restée cachée pendant plusieurs siècles avant de reparaître dans cette région assez improbable.;;;;;;;;;;;;x
 relique_achercher_05;Mysterious relic;Relique mystérieuse;;;;;;;;;;;;x
 relique_achercher_05_desc;This relic was revealed to the World only recently. It was lost for centuries before reappearing here, in this unexpected region.;Cette relique s'est révélée au Monde il y a peu. Elle était restée cachée pendant plusieurs siècles avant de reparaître dans cette région assez improbable.;;;;;;;;;;;;x
-relique_generique;Relic;Relique;;;;;;;;;;;;x
+relique_generique;Holy Relic;Sainte Relique;;;;;;;;;;;;x
 relique_graal_01;The Holy Grail;Le Saint Graal;;;;;;;;;;;;x
 relique_graal_01_desc;The Holy Grail;Le Saint Graal ! ;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+
 chantier_stop;Construction Stopped;Chantier Arrêté;;;;;;;;;;;;x
 chantier_stop_desc;It is more than likely that this rather critical situation is the direct impact of gross incompetence by one of your subordinates. Still, such situation must end as quickly and not recur;Il est plus que vraisemblable que cette situation plutôt critique est la répercussion directe de la flagrante incompétence d'un de vos maître d'ouvrage. Toujours est-il qu'une telle situation doit cesser au plus vite et ne plus se reproduire.;;;;;;;;;;;;x
 chantier_stop_rivalite_1;Construction Stopped;Chantier Arrêté;;;;;;;;;;;;x
@@ -112,11 +126,22 @@ chantier_up;Accelerated Construction;Les travaux vont bon train;;;;;;;;;;;;x
 chantier_up_desc;Construction is going well, we can hope finish within the planned delays.;Le rythme du chantier se déroule à bonne allure, on peut même espérer finir à temps.;;;;;;;;;;;;x
 chantier_cathedrale;Cathedral Building Site;Construction d'une Cathédrale;;;;;;;;;;;;x
 chantier_cathedrale_desc;A Cathedrale is under construction on this lord's lands.;Une Cathédrale est en construction sur les terres de ce seigneur.;;;;;;;;;;;;x
+chantier_cancelled;Cancelled Cathedral Building Site;Construction d'une Cathédrale annulée;;;;;;;;;;;;x
+chantier_cancelled_desc;A Cathedrale was under construction on this lord's lands.\nThis construction was stopped for a religious question (the lord has no longer a Catholic confession or one of his heresies).;Une Cathédrale était en construction sur les terres de ce seigneur.\nCe chantier a été arrêté pour une question religieuse (le seigneur n'est plus de confession catholique ou d'une de ses hérésies).;;;;;;;;;;;;x
+romanesque_construction;Romanesque cathedral reconstruction;Reconstruction de la cathédrale romane;;;;;;;;;;;;x
+romanesque_construction_desc;The reconstruction of the Romanesque cathedral weighs heavily on finances.;La reconstruction de la cathédrale romane pèse terriblement sur les finances.;;;;;;;;;;;;x
+
 loge_modifier;;Présence d'une loge pour ouvriers;;;;;;;;;;;;x
 loge_modifier_desc;;La loge permet aux ouvriers de travailler plus efficacement l'hiver.\nElle permet également de former les ouvriers.;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+temp_wall;Temporary wall;Mur provisoire;;;;;;;;;;;;x
+temp_wall_desc;Temporary wall erected from stones for the construction of the Cathedral;Mur provisoire érigé à partir des pierres destinées à la construction de la Cathédrale;;;;;;;;;;;;x
+temp_wall_improvement;Temporary wall improvement;Amélioration provisoire des murs;;;;;;;;;;;;x
+temp_wall_improvement_desc;Improvements made in the emergency by the workers of the Cathedral construction;Améliorations faites dans l'urgence par les ouvriers du chantier de la Cathédrale;;;;;;;;;;;;x
+stone_siege_defence;Stone defence;Défense de pierre;;;;;;;;;;;;x
+stone_siege_defence_desc;Defend yourself by launching the stones originally planned for the construction of the Cathedral.;Se défendre en lançant les pierres initialement prévues pour la construction de la Cathédrale.;;;;;;;;;;;;x
+
 agriculture1;Fertile Farmland;Région Agricole ;;;;;;;;;;;;x
-agriculture1_desc;The land in this region is uncharacteristically fertile and many crops can potentially be cultivated here.;Cette région présente un fort potentiel agricole qui ne demande qu'à être toujours mieux exploité.;;;;;;;;;;;;x
+agriculture1_desc;The land in this region is uncharacteristically fertile and many crops can potentially be cultivated here.;Cette région présente un fort potentiel agricole qui ne demande qu'à être toujours mieux exploité.\nLe développement de ce potentiel permet de produire : \n-Des §Ycéréales§! sur les plaines d'un §YBourg seigneurial§! \n-Des §Ycéréales§! sur les plaines d'une §YCité manufacturière§! \n-Des §Ycéréales§! sur les terres arables d'un §YMonastère§! \n-Des §Yproduits maraîchers§! sur les plaines d'un §YMonastère§! \n-Des §Yfruits§! sur les côteaux d'un un §YBourg seigneurial§! \n-Des §Yfruits§! sur les coteaux d'une §YCité manufacturière§! \n De la §Yvigne§! sur les côteaux d'un §YMonastère§!;;;;;;;;;;;;x
 agriculture2_cereales;Agriculture: Cereals;Agriculture: CEREALES;;;;;;;;;;;;x
 agriculture2_cereales_desc;This region has been cultivated and many bountiful harvest is assured. These lands produce a wide variety of cereals.;Cette région a été mise en culture et assure de bons rendements. Les plaines produisent une grande variété de céréales.;;;;;;;;;;;;x
 agriculture2_fruits;Agriculture: Fruits;Agriculture: FRUITS;;;;;;;;;;;;x
@@ -165,7 +190,7 @@ elevage3_cuir;Pastoral: Leather;Elevage : CUIR;;;;;;;;;;;;x
 elevage3_cuir_desc;High-quality leather is a major export of this province, useful in industry as well as military applications.;;;;;;;;;;;;;x
 elevage2_cheval;Pastoral: Steppe Horses;Elevage : CHEVAL;;;;;;;;;;;;x
 elevage2_cheval_desc;The vast expanse of steppe in this province is home to some breeds of uniquely robust horses. The tribesmen have succeeded in taming a significant number to sell to passing merchants as well as to the local lord's stablemaster.;;;;;;;;;;;;;x
-foret1;Dense Forest;Domaine Forestier;;;;;;;;;;;;x
+foret1;Forests;Forêts;;;;;;;;;;;;x
 foret1_desc;This province abounds with thick forests teeming with wildlife and, of course, trees available for exploitation. However, a §YForester§! is needed to manage its resources and ensure its security.;La province abonde de belles forêts. Engager un §YForestier§! est indispensable pour en assurer la gestion et la sécurité.;;;;;;;;;;;;x
 foret2_bois;Forestry: Timber;Exploitation Forestière: BOIS;;;;;;;;;;;;x
 foret2_bois_desc;The quality of the lumber harvested from these rich forests permits the production of sturdy wood for use in construction or the manufacture of other products.;Le gros calibre des arbres permet ici de produire du bois qui pourra être transformé pour servir à la construction ou à la fabrication d'objets divers.;;;;;;;;;;;;x
@@ -225,7 +250,7 @@ joyaux2_bijoux;Trade: Jewelry;JOYAUX;;;;;;;;;;;;x
 joyaux2_bijoux_desc;Jewelry, precious stones and jewels are not for everyone, but the vanity of wealthy burghers and nobles are more than enough to fill the coffers of dusty merchants.;Bijoux, pierres précieuses et joyaux ne sont pas à la portée de tous, néanmoins ils trouvent acheteurs et remplissent les caisses des marchands poussiéreux.;;;;;;;;;;;;x
 epices2_epices;Trade: Spices;EPICES;;;;;;;;;;;;x
 epices2_epices_desc;The spice must flow !;Les épices, l'or des marchands qui arpentent le monde à leur recherche. Très rares et très chères, elles ont fait la fortune de certains d'entres eux.;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+
 foret_poor;Diminished Forests;Forêt Amoindrie;;;;;;;;;;;;x
 foret_poor_desc;The forests have suffered from over-exploitation and reduced the quantity and quality of the resources extracted.;Les forêts ici ont souffert d'une surexploitation ce qui amoindrie leur surface et leur rendement.;;;;;;;;;;;;x
 recolte_bonne;Bountiful Harvests;Bonne Récolte;;;;;;;;;;;;x
@@ -249,19 +274,19 @@ mine_productivite_plus_desc; ;La productivité de la mine est améliorée grâce à u
 industrie_prospere;Economic Prosperity;Industrie prospère;;;;;;;;;;;;x
 industrie_prospere_desc;The continued peace has allowed commerce and industry to prosper.;La paix permet à l'industrie de prospérer.;;;;;;;;;;;;x
 meteo_inondation;Floods;Inondations;;;;;;;;;;;;x
-meteo_inondation_desc;Floods are negatively affecting the province's economy;Des inondations affectent la province.;;;;;;;;;;;;x
+meteo_inondation_desc;Recent torrential rains provocated floodings int he province. \nThis could affect negatively the §Yeconomic developpement§!.;Les récentes pluies torrentielles ont provoqué des inondations dans la province. \nCela risque d'affecter négativement le §Ydéveloppement économique§!.;;;;;;;;;;;;x
 meteo_inondation_tooltip;The province is affected by floods and will take some time to recover.;Les inondations dans la province ralentissent l'économie. \nLe temps de remettre la province sur pieds est variable.;;;;;;;;;;;;x
 meteo_secheresse;Drought;Sécheresse;;;;;;;;;;;;x
-meteo_secheresse_desc;The soil is very dry this year and the water levels are low. One should expect bad crops this year.;Les sols sont secs, le niveau des rivières plus bas qu'è l'habitude en cette période. \nCela pourrait compromettre le rendement des récoltes de l'année.;;;;;;;;;;;;x
+meteo_secheresse_desc;The soil is very dry this year and the water levels are low. \nOne could expect bad crops this year that will affect negatively the §Yeconomic developpement§!.;Les sols sont secs, le niveau des rivières plus bas qu'à l'habitude en cette période. \nCela pourrait compromettre le rendement des récoltes de l'année et pénaliser le §Ydéveloppement économique§!.;;;;;;;;;;;;x
 meteo_secheresse_tooltip;The province is affected by drought, hopefully not for too long.;La province souffre de sécheresse, en espérant que cela dure pas trop longtemps.;;;;;;;;;;;;x
 redaction_dun_cadastre;Provincial Survey;Cadastre provincial;;;;;;;;;;;;x
 redaction_dun_cadastre_desc;In light of the clear obsolescence of the current land registry, the local lord has commissioned a new survey of the lands owned and rents due in this province. This will allow for greater control over the imposition and collection of taxes.;Le souverain local a fait rédigé un cadastre de la province. Ce qui permet un meilleur suivi de l'imposition. Malheureusement il est difficile de tenir un tel registre à jour sur la durée sans volonté du pouvoir en place.;;;;;;;;;;;;x
 CHRONICLE_CADASTRE;In this most fortuitous year, [Root.GetTitledFirstName] commissioned the compilation of a new land registry. After months of careful account, a full and complete survey of incomes and rents was completed in [From.Location.GetName].;En cette glorieuse année, [Root.GetTitledFirstName] a fait rédigé un grand registre cadastral de la province de [From.Location.GetName]. Ceci a permis d'améliorer significativement les rentrées fiscales pendant les années qui ont suivi.;;;;;;;;;;;;x
-#;x;x;;;;;;;;;;;;x
+
 pont_fluvial;Bridge;Pont;;;;;;;;;;;;x
 pont_fluvial_desc;The bridge over this crucial river crossing serves both to facilitate commerce as well as generate revenues through the collection of tolls.;Le pont qui enjambe cet important cours d'eau est un passage obligé pour de nombreux marchands qui peut être mis à profit pour générer des revenus confortables par une politique de prélèvement de droits de péages.;;;;;;;;;;;;x
-#;x;x;;;;;;;;;;;;x
-province_cotiere;Coastal Province;Accès à la mer;;;;;;;;;;;;x
+
+province_cotiere;Sea access;Accès à la mer;;;;;;;;;;;;x
 province_cotiere_desc;This province benefits from being beside the sea or a large inland body of water lake favoring trade and fishing.;Cette province bénéficie d'une situation en bord de mer ou d'un grand lac propice au commerce et à la pêche.;;;;;;;;;;;;x
 route_fluviale;River Trade Route;Voie commerciale fluviale;;;;;;;;;;;;x
 route_fluviale_desc;Trade passes along this major river.;Le transit commercial se fait ici par voie fluviale.;;;;;;;;;;;;x
@@ -273,14 +298,16 @@ province_fleuve;River Province;Cours d'eau;;;;;;;;;;;;x
 province_fleuve_desc;A river large enough to transport merchandise and facilitate trade flows here, and is also an obstacle to movement over land. Constructing a bridge would greatly benefit this situation.;La province est traversée par un ou plusieurs cours d'eau permettant le transport de marchandises mais rendant également difficile le passage d'une rive à l'autre, évidemment, aménager des chemins de halage ou construire un pont serait profitable.;;;;;;;;;;;;x
 future_route;Trade Potential;Potentiel commercial;;;;;;;;;;;;x
 future_route_desc;Were the local lord to invest in the requisite infrastructure, the thriving markets here would likely encourage the development of a major trade route through this province.;Des marchands ont trouvé un intérêt à passer par la province. Malheureusement l'infrastructure routière laisse à désirer.;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
-noeud_commercial_annexe;Minor Regional Center of Trade;Nœud commercial secondaire;;;;;;;;;;;;x
-noeud_commercial_annexe_desc;A less commonly frequented center of trade.\nThe influx of trade in this province benefits the cities.;Ce nœud commercial d'importance moindre fait le lien entre plusieurs routes commerciales. \nCela profite principalement aux cités.;;;;;;;;;;;;x
-noeud_commercial_primaire;Major Regional Center of Trade;Nœud commercial;;;;;;;;;;;;x
-noeud_commercial_primaire_desc;This province is the center from which many major trade routes begin and end.\n This can be extended by investing in land or river routes. \n Developed centers of trade give acesss to luxury goods. ;L'une des cités de cette province est le point de départ d'un réseau commercial local plus ou moins étendu et influant. \nCe réseau peut être étendu en favorisant le développement de routes terrestres ou fluviales connectées à ce centre de commerce.\nLorsque ce centre de commerce devient suffisamment important, l'on peut y trouver des biens rares venus de loin. ;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+
+noeud_commercial_annexe;Minor Center of Trade;Nœud commercial secondaire;;;;;;;;;;;;x
+noeud_commercial_annexe_desc;A less commonly frequented center of trade.\nThe influx of trade in this province benefits the cities.;Ce nœud commercial d'importance moindre fait le lien entre plusieurs routes commerciales.\nCela profite principalement aux cités.;;;;;;;;;;;;x
+noeud_commercial_primaire;Major Center of Trade;Nœud commercial;;;;;;;;;;;;x
+noeud_commercial_primaire_desc;This province is the center from which many major trade routes begin and end.\nThis can be extended by investing in land or river routes. \nDeveloped centers of trade give acesss to luxury goods.;L'une des cités de cette province est le point de départ d'un réseau commercial local plus ou moins étendu et influant.\nCe réseau peut être étendu en favorisant le développement de routes terrestres ou fluviales connectées à ce centre de commerce.\nLorsque ce centre de commerce devient suffisamment important, l'on peut y trouver des biens rares venus de loin.;;;;;;;;;;;;x
+prosperity_modifier_2;Major Center of Trade;Nœud commercial;;;;;;;;;;;;x
+desc_prosperity_modifier_2;This province is the center from which many major trade routes begin and end.\nThis can be extended by investing in land or river routes. \nDeveloped centers of trade give acesss to luxury goods.;L'une des cités de cette province est le point de départ d'un réseau commercial local plus ou moins étendu et influant.\nCe réseau peut être étendu en favorisant le développement de routes terrestres ou fluviales connectées à ce centre de commerce.\nLorsque ce centre de commerce devient suffisamment important, l'on peut y trouver des biens rares venus de loin.;;;;;;;;;;;;x
+
 paix_de_dieu;Peace of God;Paix de Dieu;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+
 route_size1;Trade Zone I;Zone commerciale I;;;;;;;;;;;;x
 route_size1_desc;This indicates the level of the influence of this trade centre over the neighboring region.;Cet indicateur mesure l'étendue de l'influence régionale de ce centre de commerce.;;;;;;;;;;;;x
 route_size2;Trade Zone II;Zone commerciale II;;;;;;;;;;;;x
@@ -291,7 +318,7 @@ route_size4;Trade Zone IV;Zone commerciale IV;;;;;;;;;;;;x
 route_size4_desc;This indicates the level of the influence of this trade centre over the neighboring region.;Cet indicateur mesure l'étendue de l'influence régionale de ce centre de commerce.;;;;;;;;;;;;x
 route_size5;Trade Zone V;Zone commerciale V;;;;;;;;;;;;x
 route_size5_desc;This indicates the level of the influence of this trade centre over the neighboring region.;Cet indicateur mesure l'étendue de l'influence régionale de ce centre de commerce.;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+
 trad_chretienne;Christian Tradition;Tradition chrétienne;;;;;;;;;;;;x
 trad_musulmane;Muslim Tradition;Tradition musulmane;;;;;;;;;;;;x
 trad_autre;Other Religious Traditions;Autres traditions religieuses;;;;;;;;;;;;x
@@ -299,20 +326,90 @@ minorite_chretienne;Christian Minority;Minorité chrétienne;;;;;;;;;;;;x
 minorite_chretienne_desc;Christian communities are present in this province. They have either traditionally settled here or have been attracted to these lands by the gracious tolerance allowed them by the sovereign.;Des communautés chrétiennes vivent dans cette province. Elles peuvent avoir traditionnellement vécu ici depuis longtemps ou ont été attirées par la tolérance religieuse dont fait preuve le suzerain.;;;;;;;;;;;;x
 minorite_musulmane;Muslim Minority;Minorité musulmane;;;;;;;;;;;;x
 minorite_musulmane_desc;Muslim communities are present in this province. They have either traditionally settled here or have been attracted to these lands by the gracious tolerance allowed them by the sovereign.;Des communautés musulmanes vivent dans cette province. Elles peuvent avoir traditionnellement vécu ici depuis longtemps ou ont été attirées par la tolérance religieuse dont fait preuve le suzerain.;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
-feodal_prod;FEUDAL MANOR;BOURG FÉODAL;;;;;;;;;;;;x
-feodal_prod_desc;Designating this holding as a §YFeudal Manor§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets.\nThe manorial system places the peasants of the land as serfs bound to serve and pay tributes to a local lord in exchange for protection.;Le Bourg Féodal est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
-feodal_mil;FORTRESS;FORTERESSE;;;;;;;;;;;;x
-feodal_mil_desc;Designating this holding as a §YCitadel§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
-feodal_adm;FEODAL CITY;CITÉ FÉODALE;;;;;;;;;;;;x
-feodal_adm_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
-monastere;MONASTERY;MONASTÈRE;;;;;;;;;;;;x
-monastere_desc;Specializing this holding as a §YMonastic Town§! allows the holder to facilitate the growth of a thriving monastic community. These humble, isolated institutions act as repositories of knowledge as well as tend to the people's illnesses and disease. Some orders are also actively involved in land reclamation and small-scale industry.;"Travail et Prière" : tel est le crédo de la vie monastique. Souvent isolés, les institutions monastiques sont les conservatoires du savoir et source d'éducation. Vous pouvez compter sur ces communautés pour leurs rôles dans le défrichement de terres nouvelles et également soigner les maux de tous.;;;;;;;;;;x
-episcopale;EPISCOPAL SEE;CITÉ ÉPISCOPALE ;;;;;;;;;;;;x
-episcopale_desc;Specializing this holding as an §YEpiscopal See§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy headed by the bishop has facilitated the growth of a thriving town centered around the local church.;L'influence de l'évêque a érigé ce centre épiscopal en une fière cité pouvant tout à fait rivaliser en puissance et richesse avec la plupart des villes et châteaux de la région.;;;;;;;;;;;;x
-episco_muslim;Grand Mosque;CENTRE RELIGIEUX ;;;;;;;;;;;;x
-episco_muslim_desc;Specializing this holding as a §YGrand Mosque§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy has facilitated the growth of a thriving town centered around a great mosque where the people gather to pray.;L'influence de le clergé a érigé ce centre religieux en une fière cité pouvant tout à fait rivaliser en puissance et richesse avec la plupart des villes et châteaux de la région.;;;;;;;;;;x
-voc_indus;MANUFACTURING CITY;CITÉ MANUFACTURIÈRE;;;;;;;;;;;;x
-voc_indus_desc;Specializing this holding as a center of §YManufacturing and Artisanry§! allows the holder to focus solely on the extraction and production of processed and luxury goods to be used by the local lord or exported for profit.;Cette cité s'est spécialisée dans l'extraction et la production de matières premières ainsi que dans leur transformation. Elle en attire de bons revenus. ;;;;;;;;;;;;x
-voc_comm;TRADING CITY;CITÉ COMMERÇANTE;;;;;;;;;;;;x
-voc_comm_desc;Specializing this holding as a center of §YTrade and Commerce§! allows the holder to focus solely on facilitating and expanding the passage of numerous trade routes and the levying of tolls and taxes upon the droves of merchants flocking here seeking to make a generous profit.;Cette cité s'est spécialisée dans les activités de commerce et retire des bénéfices par tous les moyens, marchés, foires, péages entre autres. ;;;;;;;;;;;;x
+
+feodal_prod_L1;FEUDAL MANOR;BOURG SEIGNEURIAL;;;;;;;;;;;;x
+feodal_prod_L1_desc;Designating this holding as a §YFeudal Manor§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets.\nThe manorial system places the peasants of the land as serfs bound to serve and pay tributes to a local lord in exchange for protection.;Le bourg seigneurial est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+feodal_prod_L2;FEUDAL MANOR;BOURG SEIGNEURIAL;;;;;;;;;;;;x
+feodal_prod_L2_desc;Designating this holding as a §YFeudal Manor§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets.\nThe manorial system places the peasants of the land as serfs bound to serve and pay tributes to a local lord in exchange for protection.;Le bourg seigneurial est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+feodal_prod_L3;FEUDAL MANOR;BOURG SEIGNEURIAL;;;;;;;;;;;;x
+feodal_prod_L3_desc;Designating this holding as a §YFeudal Manor§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets.\nThe manorial system places the peasants of the land as serfs bound to serve and pay tributes to a local lord in exchange for protection.;Le bourg seigneurial est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+feodal_prod_L4;FEUDAL MANOR;BOURG SEIGNEURIAL;;;;;;;;;;;;x
+feodal_prod_L4_desc;Designating this holding as a §YFeudal Manor§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets.\nThe manorial system places the peasants of the land as serfs bound to serve and pay tributes to a local lord in exchange for protection.;Le bourg seigneurial est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+feodal_prod_L5;FEUDAL MANOR;BOURG SEIGNEURIAL;;;;;;;;;;;;x
+feodal_prod_L5_desc;Designating this holding as a §YFeudal Manor§! allows the holder to focus solely on production of raw goods to be used by the local lord or sold in the markets.\nThe manorial system places the peasants of the land as serfs bound to serve and pay tributes to a local lord in exchange for protection.;Le bourg seigneurial est le type de domaine le plus répandu. Il est le siège d'un château plus ou moins important et constitue donc un relais de votre autorité. C'est un domaine à dominance rurale tout ce qu'il a de plus commun.;;;;;;;;;;;;x
+feodal_mil_L1;FORTRESS;FORTERESSE;;;;;;;;;;;;x
+feodal_mil_L1_desc;Designating this holding as a §YCitadel§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
+feodal_mil_L2;FORTRESS;FORTERESSE;;;;;;;;;;;;x
+feodal_mil_L2_desc;Designating this holding as a §YCitadel§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
+feodal_mil_L3;FORTRESS;FORTERESSE;;;;;;;;;;;;x
+feodal_mil_L3_desc;Designating this holding as a §YCitadel§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
+feodal_mil_L4;FORTRESS;FORTERESSE;;;;;;;;;;;;x
+feodal_mil_L4_desc;Designating this holding as a §YCitadel§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
+feodal_mil_L5;FORTRESS;FORTERESSE;;;;;;;;;;;;x
+feodal_mil_L5_desc;Designating this holding as a §YCitadel§! allows the holder to develop it from a military outpost to a veritable fortress, capable of supporting and protecting large numbers of highly-trained troops behind its impregnable walls.;Choisir cette voie mènera à développer ce domaine d'un simple poste frontière à un véritable fort, fournissant troupes en nombre et offrant une efficace protection derrière ses murs.;;;;;;;;;;x
+feodal_adm_L1;FEODAL CITY;CITÉ SEIGNEURIALE;;;;;;;;;;;;x
+feodal_adm_L1_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
+feodal_adm_L2;FEODAL CITY;CITÉ SEIGNEURIALE;;;;;;;;;;;;x
+feodal_adm_L2_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
+feodal_adm_L3;FEODAL CITY;CITÉ SEIGNEURIALE;;;;;;;;;;;;x
+feodal_adm_L3_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
+feodal_adm_L4;FEODAL CITY;CITÉ SEIGNEURIALE;;;;;;;;;;;;x
+feodal_adm_L4_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
+feodal_adm_L5;FEODAL CITY;CITÉ SEIGNEURIALE;;;;;;;;;;;;x
+feodal_adm_L5_desc;Designating this holding as an §YAdministrative Center§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un !;;;;;;;;;;x;;
+monastere_L1;MONASTERY;MONASTÈRE;;;;;;;;;;;;x
+monastere_L1_desc;Specializing this holding as a §YMonastic Town§! allows the holder to facilitate the growth of a thriving monastic community. These humble, isolated institutions act as repositories of knowledge as well as tend to the people's illnesses and disease. Some orders are also actively involved in land reclamation and small-scale industry.;"Travail et Prière" : tel est le crédo de la vie monastique. Souvent isolés, les institutions monastiques sont les conservatoires du savoir et source d'éducation. Vous pouvez compter sur ces communautés pour leurs rôles dans le défrichement de terres nouvelles et également soigner les maux de tous.;;;;;;;;;;x
+monastere_L2;MONASTERY;MONASTÈRE;;;;;;;;;;;;x
+monastere_L2_desc;Specializing this holding as a §YMonastic Town§! allows the holder to facilitate the growth of a thriving monastic community. These humble, isolated institutions act as repositories of knowledge as well as tend to the people's illnesses and disease. Some orders are also actively involved in land reclamation and small-scale industry.;"Travail et Prière" : tel est le crédo de la vie monastique. Souvent isolés, les institutions monastiques sont les conservatoires du savoir et source d'éducation. Vous pouvez compter sur ces communautés pour leurs rôles dans le défrichement de terres nouvelles et également soigner les maux de tous.;;;;;;;;;;x
+monastere_L3;MONASTERY;MONASTÈRE;;;;;;;;;;;;x
+monastere_L3_desc;Specializing this holding as a §YMonastic Town§! allows the holder to facilitate the growth of a thriving monastic community. These humble, isolated institutions act as repositories of knowledge as well as tend to the people's illnesses and disease. Some orders are also actively involved in land reclamation and small-scale industry.;"Travail et Prière" : tel est le crédo de la vie monastique. Souvent isolés, les institutions monastiques sont les conservatoires du savoir et source d'éducation. Vous pouvez compter sur ces communautés pour leurs rôles dans le défrichement de terres nouvelles et également soigner les maux de tous.;;;;;;;;;;x
+monastere_L4;MONASTERY;MONASTÈRE;;;;;;;;;;;;x
+monastere_L4_desc;Specializing this holding as a §YMonastic Town§! allows the holder to facilitate the growth of a thriving monastic community. These humble, isolated institutions act as repositories of knowledge as well as tend to the people's illnesses and disease. Some orders are also actively involved in land reclamation and small-scale industry.;"Travail et Prière" : tel est le crédo de la vie monastique. Souvent isolés, les institutions monastiques sont les conservatoires du savoir et source d'éducation. Vous pouvez compter sur ces communautés pour leurs rôles dans le défrichement de terres nouvelles et également soigner les maux de tous.;;;;;;;;;;x
+monastere_L5;MONASTERY;MONASTÈRE;;;;;;;;;;;;x
+monastere_L5_desc;Specializing this holding as a §YMonastic Town§! allows the holder to facilitate the growth of a thriving monastic community. These humble, isolated institutions act as repositories of knowledge as well as tend to the people's illnesses and disease. Some orders are also actively involved in land reclamation and small-scale industry.;"Travail et Prière" : tel est le crédo de la vie monastique. Souvent isolés, les institutions monastiques sont les conservatoires du savoir et source d'éducation. Vous pouvez compter sur ces communautés pour leurs rôles dans le défrichement de terres nouvelles et également soigner les maux de tous.;;;;;;;;;;x
+episco_land_L1;Specialization: Episcopal Manor;Spécialisation : BOURG EPISCOPAL;;;;;;;;;;;;x
+episco_land_L1_desc;;Le §Ybourg episcopal§! est un ensemble de terres et droits constituant le temporel religieux de l'évêque local. Ce dernier l'administre parfois directement, mais plus généralement se fait représenter par un membre du clergé qui aura la charge de ce domaine rural. \n\nCe bâtiment est une §Yspécialisation§! de domaine.;;;;;;;;;;;;x
+episco_land_L2;Specialization: Episcopal Manor;Spécialisation : BOURG EPISCOPAL;;;;;;;;;;;;x
+episco_land_L2_desc;;Le §Ybourg episcopal§! est un ensemble de terres et droits constituant le temporel religieux de l'évêque local. Ce dernier l'administre parfois directement, mais plus généralement se fait représenter par un membre du clergé qui aura la charge de ce domaine rural. \n\nCe bâtiment est une §Yspécialisation§! de domaine.;;;;;;;;;;;;x
+episco_land_L3;Specialization: Episcopal Manor;Spécialisation : BOURG EPISCOPAL;;;;;;;;;;;;x
+episco_land_L3_desc;;Le §Ybourg episcopal§! est un ensemble de terres et droits constituant le temporel religieux de l'évêque local. Ce dernier l'administre parfois directement, mais plus généralement se fait représenter par un membre du clergé qui aura la charge de ce domaine rural. \n\nCe bâtiment est une §Yspécialisation§! de domaine.;;;;;;;;;;;;x
+episco_land_L4;Specialization: Episcopal Manor;Spécialisation : BOURG EPISCOPAL;;;;;;;;;;;;x
+episco_land_L4_desc;;Le §Ybourg episcopal§! est un ensemble de terres et droits constituant le temporel religieux de l'évêque local. Ce dernier l'administre parfois directement, mais plus généralement se fait représenter par un membre du clergé qui aura la charge de ce domaine rural. \n\nCe bâtiment est une §Yspécialisation§! de domaine.;;;;;;;;;;;;x
+episco_land_L5;Specialization: Episcopal Manor;Spécialisation : BOURG EPISCOPAL;;;;;;;;;;;;x
+episco_land_L5_desc;;Le §Ybourg episcopal§! est un ensemble de terres et droits constituant le temporel religieux de l'évêque local. Ce dernier l'administre parfois directement, mais plus généralement se fait représenter par un membre du clergé qui aura la charge de ce domaine rural. \n\nCe bâtiment est une §Yspécialisation§! de domaine.;;;;;;;;;;;;x
+episcopale_L1;EPISCOPAL SEE;CITÉ ÉPISCOPALE ;;;;;;;;;;;;x
+episcopale_L1_desc;Specializing this holding as an §YEpiscopal See§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy headed by the bishop has facilitated the growth of a thriving town centered around the local church.;L'influence de l'évêque a érigé ce centre épiscopal en une fière cité pouvant tout à fait rivaliser en puissance et richesse avec la plupart des villes et châteaux de la région.;;;;;;;;;;;;x
+episcopale_L2;EPISCOPAL SEE;CITÉ ÉPISCOPALE ;;;;;;;;;;;;x
+episcopale_L2_desc;Specializing this holding as an §YEpiscopal See§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy headed by the bishop has facilitated the growth of a thriving town centered around the local church.;L'influence de l'évêque a érigé ce centre épiscopal en une fière cité pouvant tout à fait rivaliser en puissance et richesse avec la plupart des villes et châteaux de la région.;;;;;;;;;;;;x
+episcopale_L3;EPISCOPAL SEE;CITÉ ÉPISCOPALE ;;;;;;;;;;;;x
+episcopale_L3_desc;Specializing this holding as an §YEpiscopal See§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy headed by the bishop has facilitated the growth of a thriving town centered around the local church.;L'influence de l'évêque a érigé ce centre épiscopal en une fière cité pouvant tout à fait rivaliser en puissance et richesse avec la plupart des villes et châteaux de la région.;;;;;;;;;;;;x
+episcopale_L4;EPISCOPAL SEE;CITÉ ÉPISCOPALE ;;;;;;;;;;;;x
+episcopale_L4_desc;Specializing this holding as an §YEpiscopal See§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy headed by the bishop has facilitated the growth of a thriving town centered around the local church.;L'influence de l'évêque a érigé ce centre épiscopal en une fière cité pouvant tout à fait rivaliser en puissance et richesse avec la plupart des villes et châteaux de la région.;;;;;;;;;;;;x
+episcopale_L5;EPISCOPAL SEE;CITÉ ÉPISCOPALE ;;;;;;;;;;;;x
+episcopale_L5_desc;Specializing this holding as an §YEpiscopal See§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy headed by the bishop has facilitated the growth of a thriving town centered around the local church.;L'influence de l'évêque a érigé ce centre épiscopal en une fière cité pouvant tout à fait rivaliser en puissance et richesse avec la plupart des villes et châteaux de la région.;;;;;;;;;;;;x
+#episco_muslim;Religion centre;CENTRE RELIGIEUX ;;;;;;;;;;;;x
+#episco_muslim_desc;Specializing this holding as a §YGrand Mosque§! allows the settlement to develop into a bastion of the faith. The influence of the local clergy has facilitated the growth of a thriving town centered around a great mosque where the people gather to pray.;L'influence de le clergé a érigé ce centre religieux en une fière cité pouvant tout à fait rivaliser en puissance et richesse avec la plupart des villes et châteaux de la région.;;;;;;;;;;x
+voc_indus_L1;MANUFACTURING CITY;CITÉ MANUFACTURIÈRE;;;;;;;;;;;;x
+voc_indus_L1_desc;Specializing this holding as a center of §YManufacturing and Artisanry§! allows the holder to focus solely on the extraction and production of processed and luxury goods to be used by the local lord or exported for profit.;Cette cité s'est spécialisée dans l'extraction et la production de matières premières ainsi que dans leur transformation. Elle en attire de bons revenus. ;;;;;;;;;;;;x
+voc_indus_L2;MANUFACTURING CITY;CITÉ MANUFACTURIÈRE;;;;;;;;;;;;x
+voc_indus_L2_desc;Specializing this holding as a center of §YManufacturing and Artisanry§! allows the holder to focus solely on the extraction and production of processed and luxury goods to be used by the local lord or exported for profit.;Cette cité s'est spécialisée dans l'extraction et la production de matières premières ainsi que dans leur transformation. Elle en attire de bons revenus. ;;;;;;;;;;;;x
+voc_indus_L3;MANUFACTURING CITY;CITÉ MANUFACTURIÈRE;;;;;;;;;;;;x
+voc_indus_L3_desc;Specializing this holding as a center of §YManufacturing and Artisanry§! allows the holder to focus solely on the extraction and production of processed and luxury goods to be used by the local lord or exported for profit.;Cette cité s'est spécialisée dans l'extraction et la production de matières premières ainsi que dans leur transformation. Elle en attire de bons revenus. ;;;;;;;;;;;;x
+voc_indus_L4;MANUFACTURING CITY;CITÉ MANUFACTURIÈRE;;;;;;;;;;;;x
+voc_indus_L4_desc;Specializing this holding as a center of §YManufacturing and Artisanry§! allows the holder to focus solely on the extraction and production of processed and luxury goods to be used by the local lord or exported for profit.;Cette cité s'est spécialisée dans l'extraction et la production de matières premières ainsi que dans leur transformation. Elle en attire de bons revenus. ;;;;;;;;;;;;x
+voc_indus_L5;MANUFACTURING CITY;CITÉ MANUFACTURIÈRE;;;;;;;;;;;;x
+voc_indus_L5_desc;Specializing this holding as a center of §YManufacturing and Artisanry§! allows the holder to focus solely on the extraction and production of processed and luxury goods to be used by the local lord or exported for profit.;Cette cité s'est spécialisée dans l'extraction et la production de matières premières ainsi que dans leur transformation. Elle en attire de bons revenus. ;;;;;;;;;;;;x
+voc_comm_L1;TRADING CITY;CITÉ COMMERÇANTE;;;;;;;;;;;;x
+voc_comm_L1_desc;Specializing this holding as a center of §YTrade and Commerce§! allows the holder to focus solely on facilitating and expanding the passage of numerous trade routes and the levying of tolls and taxes upon the droves of merchants flocking here seeking to make a generous profit.;Cette cité s'est spécialisée dans les activités de commerce et retire des bénéfices par tous les moyens, marchés, foires, péages entre autres. ;;;;;;;;;;;;x
+voc_comm_L2;TRADING CITY;CITÉ COMMERÇANTE;;;;;;;;;;;;x
+voc_comm_L2_desc;Specializing this holding as a center of §YTrade and Commerce§! allows the holder to focus solely on facilitating and expanding the passage of numerous trade routes and the levying of tolls and taxes upon the droves of merchants flocking here seeking to make a generous profit.;Cette cité s'est spécialisée dans les activités de commerce et retire des bénéfices par tous les moyens, marchés, foires, péages entre autres. ;;;;;;;;;;;;x
+voc_comm_L3;TRADING CITY;CITÉ COMMERÇANTE;;;;;;;;;;;;x
+voc_comm_L3_desc;Specializing this holding as a center of §YTrade and Commerce§! allows the holder to focus solely on facilitating and expanding the passage of numerous trade routes and the levying of tolls and taxes upon the droves of merchants flocking here seeking to make a generous profit.;Cette cité s'est spécialisée dans les activités de commerce et retire des bénéfices par tous les moyens, marchés, foires, péages entre autres. ;;;;;;;;;;;;x
+voc_comm_L4;TRADING CITY;CITÉ COMMERÇANTE;;;;;;;;;;;;x
+voc_comm_L4_desc;Specializing this holding as a center of §YTrade and Commerce§! allows the holder to focus solely on facilitating and expanding the passage of numerous trade routes and the levying of tolls and taxes upon the droves of merchants flocking here seeking to make a generous profit.;Cette cité s'est spécialisée dans les activités de commerce et retire des bénéfices par tous les moyens, marchés, foires, péages entre autres. ;;;;;;;;;;;;x
+voc_comm_L5;TRADING CITY;CITÉ COMMERÇANTE;;;;;;;;;;;;x
+voc_comm_L5_desc;Specializing this holding as a center of §YTrade and Commerce§! allows the holder to focus solely on facilitating and expanding the passage of numerous trade routes and the levying of tolls and taxes upon the droves of merchants flocking here seeking to make a generous profit.;Cette cité s'est spécialisée dans les activités de commerce et retire des bénéfices par tous les moyens, marchés, foires, péages entre autres. ;;;;;;;;;;;;x
+#commanderie;Commandry;COMMANDERIE;;;;;;;;;;;;x
+#commanderie_desc;A commandry is a demesne under the control of a commander of a religious and military order. \nIt is where brothers and knights receive their training.;Une commanderie est un établissement foncier appartenant à un ordre religieux et militaire. \nElle est le lieu de vie et de formation de communautés de frères, de chevaliers et d'affiliés. ;;;;;;;;;;;;x
+realm_capital_province;Capital;Capitale;;;;;;;;;;;;x
+realm_capital_province_desc;This province shelters the ruler's power seat and main residence. He holds court and placitum there and brings justice. Only lords owning multiple demesnes can choose one as capital.\n§YIn case the court moves to another place, this can take a few months to be fully achieved.§!;Cette province est le siège de pouvoir et la résidence principale du seigneur local. C'est ici qu'il tient cour, organise les plaids et rend la justice. Seuls les seigneurs possédant plusieurs domaines peuvent en choisir un pour être leur capitale.\n§YEn cas de déplacement de la cour, ce changement peut prendre quelques mois pour s'achever.§!;;;;;;;;;;;;x

@@ -1,0 +1,62 @@
+# ROOT = the owner, FROMFROM = The Holding Title
+remove_feodal_adm_modifier_if_necessary = {
+	if = {
+		limit = {
+			has_character_flag = feodal_adm_modifier
+			FROMFROM = {
+				NOT = { has_building = CA_chap_seign }
+				NOT = { has_building = CA_chap_seign_2 }
+				NOT = { has_building = CA_chambre_2 }
+				NOT = { has_building = CA_archives_1 }
+				NOT = { has_building = CA_cour_justice }
+				NOT = { has_building = CA_chancellerie }
+				NOT = { has_building = CA_library_L1 }
+				NOT = { has_building = CA_library_L2 }
+			}
+		}
+		clr_character_flag = feodal_adm_modifier
+	}
+}
+
+# ROOT = the owner
+remove_feodal_adm_modifier_in_capital_if_necessary = {
+	if = {
+		limit = {
+			has_character_flag = feodal_adm_modifier
+			capital_holding = {
+				NOT = { has_building = CA_chap_seign }
+				NOT = { has_building = CA_chap_seign_2 }
+				NOT = { has_building = CA_chambre_2 }
+				NOT = { has_building = CA_archives_1 }
+				NOT = { has_building = CA_cour_justice }
+				NOT = { has_building = CA_chancellerie }
+				NOT = { has_building = CA_library_L1 }
+				NOT = { has_building = CA_library_L2 }
+			}
+		}
+		clr_character_flag = feodal_adm_modifier
+	}
+}
+counting_eggs = {
+	set_variable = { which = "egg_count" value = 0 }
+	if = { 
+		limit = { has_artifact = oeuf_1 }
+		change_variable = { which = "egg_count" value = 1 }
+	}
+	if = {
+		limit = { has_artifact = oeuf_2 }
+		change_variable = { which = "egg_count" value = 1 }
+	}
+	if = { 
+		limit = { has_artifact = oeuf_3 }
+		change_variable = { which = "egg_count" value = 1 }
+	}
+	if = { 
+		limit = { has_artifact = oeuf_4 }
+		change_variable = { which = "egg_count" value = 1 }
+	}
+	if = { 
+		limit = { has_artifact = oeuf_5 }
+		change_variable = { which = "egg_count" value = 1 }
+	}
+}

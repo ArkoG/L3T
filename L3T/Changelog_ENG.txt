@@ -1,26 +1,113 @@
-##################################
+###############################
 # MOD Les 3 Tours / The 3 Towers #
-##################################
+##############################
 
 ###by Arko and Mouchi
 
-CHANGELOG
+RELEASE BETA 0.98 SAINT1 (8th april 2019) pour CK2 v3.1.x
 
-DEV BETA 0.94 (XX march 2017)
-version name : ------
+MAJEUR :
+-upgrade to 3.1.x game version
+-"fast start" : ressources are now given immediatly at game launch
+-new holding specialization: episcopal village, equivalent of the feudal village for a bishop
+-addition of a "capital" mechanism that gives a bonus in your capital, its update is automatic
+-enrichment of the conditions to be canonized
+-mechanism of martyrdom, increases the chances of being canonized
+-religious conversions increase the chances of being canonized
+-crusades and religious wars increase the chances of being canonized
+
+MINOR and VARIOUS:
+-new decision to hide some notifications (weather)
+-possibility to place the interest of the crown on a province with a trade route, the IA also possesses this faculty
+-the crown focus affects the growth of the population
+-the capitals of provinces are now feudal cities by default
+-a capital has a better population growth rate
+-relic type artifacts from vanilla can now be used for the construction of cathedrals
+-additional icons for character decisions (buy a relic etc.)
+-donating to a cathedral now gives it advancement points rather than gold to its builder
+-holy wars can advance the outbreak of "Opus francigenum"
+-it is no longer possible to sell a dynastic relic
+-new artifact illustration: a reliquary, used for some relics
+-various improved texts
+
+BUGFIX :
+-correction of the bug that prevented the depopulation modifier from being removed
+
+
+RELEASE BETA 0.97 RELIC3 (june 10th 2018) for CK2 v2.8.2
 
 MAJOR :
+-mod update for 2.8.2 game version
+
+MINOR and VARIOUS:
+-dynamic roads get more chances to start on the "Silk road"
+-dynamic roads will get away from the "Silk road" for its further steps 
+
+BUGFIXES :
+-fixed a bug occuring in studying books final event
+
+
+RELEASE BETA 0.96 RELIC2 (january 7th 2018) for CK2 v2.8.1
+
+MAJOR :
+-nothing major since RELIC1
+
+MINOR and VARIOUS:
+-some text revisions and translations
+
+BUGFIXES :
+-fixed some bugs in economic development notifications
+-fixed some localisation bugs
+-fixed the bug that stops the write a book event chain to complete
+-fixed a compatching bug
+
+
+RELEASE BETA 0.95 RELIC1 (december 23rd 2017) for CK2 v2.8.x
+
+MAJOR :
+The return of the cathedral system.
+-redesign of the cathedrals system, now fully IA-friendly, with plenty of immersion elements during construction
+-enriched system of holy relics
+-integration and extension of the mini-mod "ascent to sainthood" by blackninja9939
+-a new society (non playable) which brings together the artists of the cathedrals
+Development.
+-new system for the economic development of demesnes
+A new type of event.
+-The mod proposes a new layout of the event window and put it in use by the way
+
+MINOR and VARIOUS:
+-game rule "Opus Francigenum" for the activation of the era of cathedrals
+-new icons for learning modifiers
+-new buildings for your capital: a personal library (2 levels)
+-new decisions related to the library (buy books, study books)
+-new events on the theme of poaching
+-the mountainous regions may feature a pass
+-many revisions of texts and translations
+-new tooltips and descriptions to help the gameplay
+-the trade routes are now materialized on the map with 3D models
+-all the rest I forget
+-lots of balancing
+-debug mode
+
+
+RELEASE BETA 0.94 EASTER1 (16 april 2017) for CK2 v2.7.0 and 2.7.1
+
+MAJOR :
+-easter egg hunt feature
 -update for 2.7 version of the game
 -republic tradeposts buildings overhaul
 
 VARIOUS and MINOR :
+-granted access new ambition events to AI
 -added a muslim specific icon for religious center specialization
 -added some prestige requirement to buildings
--improved starting event
+-added some theological universites relying on muslim schools
+-improved starting event text
 -improved the "Legendary sword" event chain, it now possibly gives an artefact in the end
 -added a muslim only alternate to the "legendary sword" event chain, with proper specific flavour and artefact to gain
--brought a new event picture
+-brought some new event pictures
 -updated provinces getting the river modifier on SWMH map
+-adds a small piety startup bonus
 
 BUGFIXES :
 -added muslim specific localisation to castle and city temple buildings

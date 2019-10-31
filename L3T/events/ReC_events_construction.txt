@@ -1,0 +1,1340 @@
+#####################################################
+# [ReC][Reliques et Cathédrales]  par Arko et Mouchi#
+#####################################################
+
+namespace = REC
+
+# Give builder trait succession
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+    id = REC.1
+	hide_window = yes
+
+	is_triggered_only = yes		
+	
+	trigger = {
+		FROM = {
+			# FROM cannot be a capital_holding, it is a province title or a non capital holding
+			tier = count
+			location = {
+				has_province_modifier = chantier_cathedrale
+			}
+		}
+	}
+	
+	immediate = {
+		ROOT = { add_trait = batisseur_cathedrale }
+		FROMFROM = { character_event = { id = REC.2 days = 10} }
+	}
+}
+
+# Remove builder trait succession
+character_event = {
+    id = REC.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			any_demesne_province = {
+				has_province_modifier = chantier_cathedrale
+			}
+		}
+	}
+	
+	immediate = {
+		remove_trait = batisseur_cathedrale
+	}
+}
+
+# Construction base progression [character]
+character_event = {
+    id = REC.3
+	
+	hide_window = yes
+
+	is_triggered_only = yes		
+	
+	trigger = {
+		trait = batisseur_cathedrale
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			any_province_holding = {
+				is_occupied = no
+				has_siege = no
+				had_title_flag = { # The first rising will arrive more than 1 year after construction starting
+					flag = cathedral_construction
+					years = 1
+				}
+				OR = { # We have not seen this construction this year
+					NOT = { has_title_flag = construction_progression }
+					had_title_flag = {
+						flag = construction_progression
+						days = 340 # 1 year - a margin
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				has_province_modifier = chantier_cathedrale
+				any_province_holding = {
+					had_title_flag = { # The first rising will arrive more than 1 year after construction starting
+						flag = cathedral_construction
+						years = 1
+					}
+					OR = { # We have not seen this construction this year
+						NOT = { has_title_flag = construction_progression }
+						had_title_flag = {
+							flag = construction_progression
+							days = 340 # 1 year - a margin
+						}
+					}
+				}
+			}
+			
+			# Mark the title in order to treat it only once a year
+			random_province_holding = {
+				limit = {
+					had_title_flag = { # The first rising will arrive more than 1 year after construction starting
+						flag = cathedral_construction
+						years = 1
+					}
+					OR = { # We have not seen this construction this year
+						NOT = { has_title_flag = construction_progression }
+						had_title_flag = {
+							flag = construction_progression
+							days = 340 # 1 year - a margin
+						}
+					}
+				}
+				if = { limit = { has_title_flag = construction_progression } clr_title_flag = construction_progression }
+				set_title_flag = construction_progression
+			}
+			
+			# Construction progression
+			clr_province_flag = cathedral_siege_event
+			province_event = { id = REC.4 days = 30}
+		}
+		
+		# Manage other Cathedral
+		character_event = { id = REC.3 days = 10}
+		
+		# Builder master
+		character_event = { id = REC.5 days = 10}
+	}
+}
+
+# Construction base progression [province]
+province_event = {
+    id = REC.4
+	desc = "DESCREC.4"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		owner = {
+			OR = {
+				any_courtier = { has_minor_title = title_batisseur }
+				any_vassal = { has_minor_title = title_batisseur }
+			}
+		}
+	}
+	
+	# Pay correctly
+	option = {
+		name = "REC.4A"
+		trigger = { FROM = { wealth = 100 } }
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				FROM = { trait = zealous }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = charitable }
+			}
+		}
+		FROM = { wealth = -100 }
+		random_province_holding = {
+			limit = { has_title_flag = cathedral_construction }
+			if = {
+				limit = { 
+					NOT = {
+						location = {
+							OR = { 
+								has_province_modifier = chantier_stop 
+								has_province_modifier = chantier_down
+							}
+						}
+					}
+				}
+				hidden_tooltip = { 
+					if = {
+						limit = { has_loge = yes }
+						change_variable = { which = cathedral value = 165 }
+					}
+					if = {
+						limit = { NOT = { has_loge = yes } }
+						change_variable = { which = cathedral value = 150 }
+					}
+				}
+			}
+			if = {
+				limit = { location = { has_province_modifier = chantier_down } }
+				hidden_tooltip = { 
+					if = {
+						limit = { has_loge = yes }
+						change_variable = { which = cathedral value = 148 }
+					}
+					if = {
+						limit = { NOT = { has_loge = yes } }
+						change_variable = { which = cathedral value = 135 }
+					}
+				}
+				location = { remove_province_modifier = chantier_down }
+			}
+			if = {
+				limit = { location = { has_province_modifier = chantier_stop } }
+				hidden_tooltip = { 
+					if = {
+						limit = { has_loge = yes }
+						change_variable = { which = cathedral value = 132 }
+					}
+					if = {
+						limit = { NOT = { has_loge = yes } }
+						change_variable = { which = cathedral value = 120 }
+					}
+				}
+				location = { remove_province_modifier = chantier_stop }
+			}
+		}
+		
+		# Construction bonus (building improvement)
+		province_event = { id = REC.201 days = 10}
+		province_event = { id = REC.202 days = 10}
+		province_event = { id = REC.203 days = 10}
+		province_event = { id = REC.204 days = 10}
+		province_event = { id = REC.205 days = 10}
+		province_event = { id = REC.206 days = 10}
+		province_event = { id = REC.207 days = 10}
+		province_event = { id = REC.208 days = 10}
+		province_event = { id = REC.209 days = 10}
+		province_event = { id = REC.1210 days = 10}
+		province_event = { id = REC.2210 days = 10}
+		province_event = { id = REC.3210 days = 10}
+		province_event = { id = REC.211 days = 10}
+		province_event = { id = REC.212 days = 10}
+		
+		# Artists
+		random = { 
+			chance = 20
+			owner = { character_event = { id = REC.2102 days = 100 random = 50 } }
+			owner = { character_event = { id = REC.2112 days = 100 random = 50 } }
+			owner = { character_event = { id = REC.2122 days = 100 random = 50 } }
+		}
+	}
+
+	# Save some money
+	option = {
+		name = "REC.4B"
+		trigger = { FROM = { wealth = 75 } }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 5
+				FROM = { NOT = { wealth = 100 } }
+			}
+			modifier = {
+				factor = 3
+				FROM = { trait = greedy }
+			}
+		}
+		FROM = { wealth = -75 }
+		random_province_holding = {
+			limit = { has_title_flag = cathedral_construction }
+			if = {
+				limit = {
+					NOT = {
+						location = {
+							OR = { 
+								has_province_modifier = chantier_stop 
+								has_province_modifier = chantier_down
+							}
+						}
+					}
+				}
+				hidden_tooltip = {
+					random_list = {
+						20 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 132 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 120 }
+							}
+						}
+						60 = { 
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 121 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 110 }
+							}
+						}
+						20 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 110 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 100 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { location = { has_province_modifier = chantier_down } }
+				hidden_tooltip = {
+					random_list = {
+						20 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 121 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 110 }
+							}
+						}
+						60 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 110 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 100 }
+							}
+						}
+						20 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 99 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 90 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { location = { has_province_modifier = chantier_stop } }
+				hidden_tooltip = {
+					random_list = {
+						20 = { 
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 110 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 100 }
+							}
+						}
+						60 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 99 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 90 }
+							}
+						}
+						20 = {
+							if = {
+								limit = { has_loge = yes }
+								change_variable = { which = cathedral value = 88 }
+							}
+							if = {
+								limit = { NOT = { has_loge = yes } }
+								change_variable = { which = cathedral value = 80 }
+							}
+						}
+					}
+				}
+				location = { remove_province_modifier = chantier_stop }
+			}
+		}			
+		add_province_modifier = {
+			name = chantier_down
+			duration = -1
+		}
+		
+		# Construction bonus (building improvement)
+		province_event = { id = REC.201 days = 10}
+		province_event = { id = REC.202 days = 10}
+		province_event = { id = REC.203 days = 10}
+		province_event = { id = REC.204 days = 10}
+		province_event = { id = REC.205 days = 10}
+		province_event = { id = REC.206 days = 10}
+		province_event = { id = REC.207 days = 10}
+		province_event = { id = REC.208 days = 10}
+		province_event = { id = REC.209 days = 10}
+		province_event = { id = REC.1210 days = 10}
+		province_event = { id = REC.2210 days = 10}
+		province_event = { id = REC.3210 days = 10}
+		province_event = { id = REC.211 days = 10}
+		province_event = { id = REC.212 days = 10}
+		
+		# Artists
+		random = { 
+			chance = 20
+			owner = { character_event = { id = REC.2102 days = 100 random = 50 } }
+			owner = { character_event = { id = REC.2112 days = 100 random = 50 } }
+			owner = { character_event = { id = REC.2122 days = 100 random = 50 } }
+		}
+	}
+	
+	# Stop financing
+	option = {
+		name = "REC.4C"
+		ai_chance = {
+			factor = 10
+		}
+		# TODO add flavour as consequences of that
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
+		}
+		add_province_modifier = {
+			name = chantier_stop
+			duration = -1
+		}
+	}
+}
+
+# Recruit a Builder Master
+character_event = {
+    id = REC.5
+	picture = GFX_evt_emissary
+	
+	desc = {
+		trigger = { NOT = { has_character_flag = recrutement_repousse } }
+		text = "DESCREC.5"
+	}
+	desc = {
+		trigger = { has_character_flag = recrutement_repousse }
+		text = "DESCREC.5bis"
+	}
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { any_courtier = { has_minor_title = title_batisseur } }
+		NOT = { any_vassal = { has_minor_title = title_batisseur } }
+	}
+
+	option = {
+		name = "REC.5A" #je le choisirai
+		trigger = { NOT = { has_character_flag = recutement_suggestion } }
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { NOT = { has_character_flag = recrutement_repousse } }
+			set_character_flag = recrutement_repousse
+		}
+		if = {
+			limit = { has_character_flag = recrutement_repousse }
+			random_demesne_province = {
+				limit = {
+					has_province_modifier = chantier_cathedrale
+				}	
+				province_event = { id = REC.6 days = 40 }
+			}
+		}
+	}
+
+	option = {
+		name = "REC.5B"	#trouvez moi quelqu'un, n'importe qui.
+		
+		trigger = { 
+			OR = {
+				#trait = lunatic #irrationel
+				#trait = slow #débile
+				#trait = imbecile #débile
+				#trait = slothful #grosse fainéasse
+				NOT = { stewardship = 8 }
+				NOT = { diplomacy = 8 }
+				NOT = { learning = 8 }				
+			}
+		} 
+		
+		ai_chance = { factor = 100 }
+			
+		custom_tooltip = { text = recrutement_profil_sans }
+		hidden_tooltip = {
+			random_list = { #un gars correct, sans plus, mais gratos
+				33 = {
+					create_character = {
+						random_traits = yes
+						##dynasty = random
+						female = no
+						attributes = {
+							stewardship = 8 
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				33 = {
+					create_character = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 8
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				33 = {
+					create_character = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 8
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.5C"	#trouvez moi quelqu'un, dominante gestion
+		
+		trigger = { stewardship = 8 }
+
+		ai_chance = { factor = 100 }
+		
+		scaled_wealth = -0.2
+		
+		custom_tooltip = { text = recrutement_profil_intendance }
+		hidden_tooltip = {
+			random_list = { 
+				50 = {
+					create_random_steward = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							stewardship = 14
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_steward = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							stewardship = 10 						
+							diplomacy = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_steward = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							stewardship = 10 						
+							learning = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				 5 = {
+					create_random_steward = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire						
+							stewardship = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				 5 = {
+					create_random_steward = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire					
+							stewardship = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.5D"	#trouvez moi quelqu'un, dominante diplo
+		
+		trigger = { diplomacy = 8 }
+		
+		ai_chance = { factor = 100 }
+
+		scaled_wealth = -0.2
+		
+		custom_tooltip = { text = recrutement_profil_diplomatie }
+		hidden_tooltip = {			
+			random_list = { 
+				50 = {
+					create_random_diplomat = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 14
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_diplomat = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 10 						
+							stewardship = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_diplomat = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 10 						
+							learning = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				 5 = {
+					create_random_diplomat = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							stewardship = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire						
+							diplomacy = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				 5 = {
+					create_random_diplomat = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire					
+							diplomacy = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.5E"	#trouvez moi quelqu'un, dominante érudtion
+		
+		trigger = { learning = 8 }
+		
+		ai_chance = { factor = 100 }
+
+		scaled_wealth = -0.2
+		
+		custom_tooltip = { text = recrutement_profil_erudition }
+		hidden_tooltip = {			
+			random_list = { 
+				50 = {
+					create_random_priest = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 14
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_priest = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 10 						
+							stewardship = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				20 = {
+					create_random_priest = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							learning = 10 						
+							diplomacy = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				5 = {
+					create_random_priest = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							stewardship = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire						
+							learning = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+				5 = {
+					create_random_priest = {
+						random_traits = yes
+						#dynasty = random
+						female = no
+						attributes = {
+							diplomacy = 10 #pas exactement le spécialiste attendu. la compétence voulue est la secondaire					
+							learning = 6
+						}
+					}
+					new_character = { give_minor_title = title_batisseur }
+				}
+			}
+		}
+	}
+}
+
+# Construction stopped because not leaded
+province_event = {
+    id = REC.6
+	desc = "DESCREC.6"
+	picture = GFX_evt_REC5
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { any_courtier = { has_minor_title = title_batisseur } }
+			NOT = { any_vassal = { has_minor_title = title_batisseur } }
+		}
+	}
+	
+	option = {
+		name = "REC.6A"
+		if = {
+			limit = { has_province_modifier = chantier_down }
+			remove_province_modifier = chantier_down
+		}
+		add_province_modifier = {
+			name = chantier_stop
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = "REC.6B"
+		owner = {
+			set_character_flag = recutement_suggestion
+			character_event = { id = REC.5  days = 10 }
+		}
+	}
+}
+
+# Get construction progression [province]
+province_event = {
+    id = REC.7
+	hide_window = yes
+	
+	is_triggered_only = yes
+	immediate = { FROMFROM = { letter_event = { id = REC.8 days = 0 } } }
+}
+
+# Get construction progression [ruler]
+letter_event = {
+	id = REC.8
+	desc = "DESCREC.8"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			random_province_holding = {
+				limit = { has_title_flag = cathedral_construction }
+				if = {
+					limit = { is_building_cathedral_step_1 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 100 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { is_building_cathedral_step_2 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 600 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { is_building_cathedral_step_3 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 2600 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { is_building_cathedral_step_4 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 3100 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { is_building_cathedral_step_5 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 5600 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { is_building_cathedral_step_6 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 6800 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { is_building_cathedral_step_7 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 8300 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { is_building_cathedral_step_8 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 9800 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { is_building_cathedral_step_9 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 10300 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { 
+						OR = {
+							is_building_cathedral_step_10_ca = yes
+							is_building_cathedral_step_10_ct = yes
+							is_building_cathedral_step_10_tp = yes
+						}
+					}
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 10800 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { is_building_cathedral_step_11 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 11300 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+				if = {
+					limit = { is_building_cathedral_step_12 = yes }
+					location = {
+						# requiredStepPoint = total required point for this step
+						set_variable = { which = requiredStepPoint value = 12000 }
+						# cathedralYear1 = year remaining to build the step with 100 point by year = int((requiredStepPoint - cathedral) / 100)
+						set_variable = { which = ratio which = requiredStepPoint }
+						subtract_variable = { which = ratio which = cathedral }
+						divide_variable = { which = ratio value = 100 } # ratio = (requiredStepPoint - cathedral) / 100
+						set_variable = { which = cathedralYear1 value = 0}
+						while = {
+							limit = {
+								check_variable = { which = ratio value = 1 }
+							}
+							change_variable = { which = cathedralYear1 value = 1 }
+							subtract_variable = { which = ratio value = 1 }
+						}
+						# cathedralYear2 = cathedralYear1 + 1
+						set_variable = { which = cathedralYear2 which = cathedralYear1 }
+						change_variable = { which = cathedralYear2 value = 1 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.8A"
+	}
+}
+
+# Get construction progression [master builder]
+character_event = {
+    id = REC.9
+	hide_window = yes
+	
+	is_triggered_only = yes
+	immediate = {
+		FROMFROM = {
+			random_demesne_province = {
+				limit = { # The province whose the holding in which the decision was taken
+					has_province_flag = province_cathedral_progression
+					NOT = {
+						had_province_flag = {
+							flag = province_cathedral_progression
+							days = 1
+						}
+					}
+				}
+				province_event = { id = REC.10  days = 1 }
+			}
+		}
+	}
+}
+
+# Get construction progression [province 2]
+province_event = {
+    id = REC.10
+	hide_window = yes
+	
+	is_triggered_only = yes
+	immediate = { FROMFROMFROM = { letter_event = { id = REC.8 days = 0 } } }
+}
+
+# Check the builder religion after succession
+character_event = {
+	id = REC.11
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = { # Bad religion to continue construction
+				is_catholic_group = no
+				FROM = {
+					# FROM cannot be a capital_holding, it is a province title or a non capital holding
+					tier = count
+					location = {
+						has_province_modifier = chantier_cathedrale
+					}
+				}
+			}
+			AND = { # Good religion to start again construction
+				is_catholic_group = yes
+				FROM = {
+					# FROM cannot be a capital_holding, it is a province title or a non capital holding
+					tier = count
+					location = {
+						has_province_flag = chantier_cancelled_flag
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		# Stop construction
+		if = {
+			limit = { is_catholic_group = no }
+			FROM = { location = { province_event = {  id = REC.13 days = 10 } } }
+		}
+		
+		# Or start again construction
+		if = {
+			limit = { is_catholic_group = yes }
+			FROM = { location = { province_event = {  id = REC.15 days = 10 } } }
+		}
+	}
+}
+
+# Check the builder religion after conversion
+character_event = {
+	id = REC.12
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = { # Bad religion to continue construction
+				is_catholic_group = no
+				any_demesne_province = {
+					has_province_modifier = chantier_cathedrale
+				}
+			}
+			AND = { # Good religion to start again construction
+				is_catholic_group = yes
+				any_demesne_province = {
+					has_province_flag = chantier_cancelled_flag
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		# Stop construction
+		if = {
+			limit = { is_catholic_group = no }
+			any_demesne_province = {
+				limit = { has_province_modifier = chantier_cathedrale }
+				province_event = { id = REC.13 days = 10 }
+			}
+		}
+		
+		# Or start again construction
+		if = {
+			limit = { is_catholic_group = yes }
+			any_demesne_province = {
+				limit = { has_province_flag = chantier_cancelled_flag }
+				province_event = { id = REC.15 days = 10 }
+			}
+		}
+	}
+}
+
+# Province where the cathedral construction will be stopped
+province_event = {
+	id = REC.13
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	# This event is only useful to have the province in the FROM scope of REC.14
+	immediate = { owner = { character_event = { id = REC.14 days = 10 } } }
+}
+
+# Non catholic stop construction
+character_event = {
+	id = REC.14
+	desc = "DESCREC.14"
+	picture = GFX_evt_REC5
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.14A"
+		remove_trait = batisseur_cathedrale
+		FROM = {
+			remove_province_modifier = chantier_cathedrale
+			if = {
+				limit = { has_province_modifier = chantier_down }
+				remove_province_modifier = chantier_down
+			}
+			if = {
+				limit = { has_province_modifier = chantier_stop }
+				remove_province_modifier = chantier_stop
+			}
+			set_province_flag = chantier_cancelled_flag
+			custom_tooltip = { text = TOOLTIP_cathedral_cancel }
+			hidden_tooltip = {
+				random_list = {
+					25 = { add_province_modifier = { name = chantier_cancelled duration = 3650 } } # 10 years
+					25 = { add_province_modifier = { name = chantier_cancelled duration = 5475 } } # 15 years
+					25 = { add_province_modifier = { name = chantier_cancelled duration = 7300 } } # 20 years
+					25 = { add_province_modifier = { name = chantier_cancelled duration = 9125 } } # 25 years
+				}
+			}
+		}
+	}
+}
+
+# Province where the cathedral construction will be started again
+province_event = {
+	id = REC.15
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	# This event is only useful to have the province in the FROM scope of REC.14
+	immediate = { owner = { character_event = { id = REC.16 days = 10 } } }
+}
+
+# Catholic starts again construction
+character_event = {
+	id = REC.16
+	desc = "DESCREC.16"
+	picture = GFX_evt_REC5
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.16A"
+		trigger = { wealth = 75 }
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				trait = charitable
+			}
+		}
+		wealth = -75
+		add_trait = batisseur_cathedrale
+		FROM = {
+			clr_province_flag = chantier_cancelled_flag
+			if = {
+				limit = { has_province_modifier = chantier_cancelled }
+				remove_province_modifier = chantier_cancelled
+			}
+			if = {
+				limit = { has_province_modifier = chantier_down }
+				remove_province_modifier = chantier_down
+			}
+			add_province_modifier = { name = chantier_cathedrale duration = -1 }
+			add_province_modifier = { name = chantier_stop duration = -1 }
+		}
+	}
+		
+	option = {
+		name = "REC.16B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 3
+				trait = greedy
+			}
+		}
+		FROM = { province_event = { id = REC.17 days = 365 } }
+	}
+}
+
+# Province where the cathedral construction will be started again
+province_event = {
+	id = REC.17
+	hide_window = yes
+	
+	trigger = {
+		has_province_flag = chantier_cancelled_flag
+		owner = { is_catholic_group = yes }
+	}
+	
+	is_triggered_only = yes
+	
+	# This event is only useful to have the province in the FROM scope of REC.14
+	immediate = { owner = { character_event = { id = REC.16 days = 10 } } }
+}

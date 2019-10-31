@@ -1,0 +1,1132 @@
+namespace = REC
+
+# Artist startup
+character_event ={
+    id = REC.2100
+	hide_window = yes
+	
+	trigger = {
+		NOT = { had_global_flag = {flag = artist_init_generation days = 30 } }
+	}
+
+	is_triggered_only = yes	
+	
+	only_independent = yes
+	
+	immediate = {
+		set_global_flag = artist_init_generation
+		if = {
+			limit = {
+				religion = catholic
+				independent = yes
+			}
+			
+			# Create apprentis
+			random_list = {
+				76 = { }
+				8 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = apprenti_sculpteur
+						age = 12
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_sculpteur
+						join_society = artist_guild
+					}
+				}
+				8 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = apprenti_verrier
+						age = 12
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_verrier
+						join_society = artist_guild
+					}
+				}
+				8 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = apprenti_fresquiste
+						age = 12
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_fresquiste
+						join_society = artist_guild
+					}
+				}
+			}
+			
+			# Create compagnons
+			random_list = {
+				85 = { }
+				5 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = compagnon_sculpteur
+						age = 30
+						dynasty = none
+						female = no
+					}
+				}
+				5 = {
+					new_character = {
+						give_nickname = nick_le_sculpteur
+						join_society = artist_guild
+						society_rank_up = 1
+					}
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = compagnon_verrier
+						age = 30
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_verrier
+						join_society = artist_guild
+						society_rank_up = 1
+					}
+				}
+				5 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = compagnon_fresquiste
+						age = 30
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_fresquiste
+						join_society = artist_guild
+						society_rank_up = 1
+					}
+				}
+			}
+			
+			# Create maitres
+			random_list = {
+				91 = { }
+				3 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = maitre_sculpteur
+						age = 50
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_sculpteur
+						join_society = artist_guild
+						society_rank_up = 2
+					}
+				}
+				3 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = maitre_verrier
+						age = 50
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_verrier
+						join_society = artist_guild
+						society_rank_up = 2
+					}
+				}
+				3 = {
+					create_character = {
+						religion = catholic
+						random_traits = yes
+						trait = maitre_fresquiste
+						age = 50
+						dynasty = none
+						female = no
+					}
+					new_character = {
+						give_nickname = nick_le_fresquiste
+						join_society = artist_guild
+						society_rank_up = 2
+					}
+				}
+			}			
+	
+			if = {
+				limit = { # Restricted to the Pope to be executed only once
+					religion = catholic
+					controls_religion = yes
+				}
+				# Remove non-artists of the guild
+				any_society_member = {
+					limit = {
+						society_member_of = artist_guild
+						NOT = {
+							trait = apprenti_sculpteur
+							trait = compagnon_sculpteur
+							trait = maitre_sculpteur
+							trait = apprenti_fresquiste
+							trait = compagnon_fresquiste
+							trait = maitre_fresquiste
+							trait = apprenti_verrier
+							trait = compagnon_verrier
+							trait = maitre_verrier
+						}
+					}
+					leave_society = yes
+				}
+			}
+		}
+	}
+}
+
+# Apprenti creation by decade
+character_event ={
+    id = REC.2101
+	hide_window = yes
+
+	is_triggered_only = yes	
+	
+	only_independent = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				religion = catholic
+				independent = yes
+			}
+			
+			# Create apprentis
+			random_list = {
+				94 = { }
+				6 = {
+					if = {
+						limit = {
+							NOT = {
+								is_society_rank_full = {
+									society = artist_guild
+									rank = 1
+								}
+							}
+						}
+						create_character = {
+							religion = catholic
+							
+							random_traits = yes
+							trait = apprenti_sculpteur
+							age = 18
+							dynasty = none
+							female = no
+						}
+						new_character = {
+							join_society = artist_guild
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								is_society_rank_full = {
+									society = artist_guild
+									rank = 1
+								}
+							}
+						}
+						create_character = {
+							religion = catholic
+							random_traits = yes
+							trait = apprenti_verrier
+							age = 18
+							dynasty = none
+							female = no
+						}
+						new_character = {
+							join_society = artist_guild
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								is_society_rank_full = {
+									society = artist_guild
+									rank = 1
+								}
+							}
+						}
+						create_character = {
+							religion = catholic
+							random_traits = yes
+							trait = apprenti_fresquiste
+							age = 18
+							dynasty = none
+							female = no
+						}
+						new_character = {
+							join_society = artist_guild
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Stained glass theme
+character_event ={
+    id = REC.2102
+	desc = "DESCREC.2102"
+	picture = GFX_evt_REC8
+
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = batisseur_cathedrale
+		
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
+		}
+		
+		any_courtier = {
+			trait = maitre_verrier
+			has_character_modifier = work_on_cathedral 
+		}
+	}
+	
+	option = {
+		name = "REC.2102A"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
+		piety = 25
+		wealth = -10
+		character_event = { id = REC.2103 }
+	}
+	
+	option = {
+		name = "REC.2102B"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
+		prestige = 15
+		wealth = -10
+		character_event = { id = REC.2103 }
+	}
+	
+	option = {
+		name = "REC.2102C"
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 3
+				trait = greedy
+			}
+		}
+	}
+}
+
+# Stained glass size	
+character_event ={
+    id = REC.2103
+	desc = "DESCREC.2103"
+	picture = GFX_evt_REC8
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2103A"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.2103B"
+		trigger = { available_apprentice_glass_maker = yes }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
+		wealth = -10
+		custom_tooltip = { 
+			text = TOOLTIPREC.2103B
+			hire_apprentice_glass_maker = yes
+		}
+	}
+	
+	option = {
+		name = "REC.2103C"
+		trigger = { available_compagnon_glass_maker = yes }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 25 } 
+			}
+		}
+		wealth = -25
+		prestige = 5
+		custom_tooltip = { 
+			text = TOOLTIPREC.2103C
+			hire_compagnon_glass_maker = yes
+		}
+	}
+	
+	option = {
+		name = "REC.2103D"
+		trigger = {
+			available_apprentice_glass_maker = yes
+			available_compagnon_glass_maker = yes
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 35 } 
+			}
+		}
+		wealth = -35
+		prestige = 10
+		custom_tooltip = { 
+			text = TOOLTIPREC.2103D
+			hire_apprentice_glass_maker = yes
+			hire_compagnon_glass_maker = yes
+		}
+	}
+}
+
+# Death of a master glass maker
+# ROOT is the dead master glass maker
+character_event ={
+    id = REC.2104
+	hide_window = yes
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		trait = maitre_verrier
+		has_character_modifier = work_on_cathedral 
+	}
+	
+	immediate = {
+		employer = {
+			if = {
+				limit = {
+					any_courtier = {
+						trait = maitre_verrier
+						has_character_modifier = work_on_cathedral 
+						NOT = { character = ROOT }
+					}
+				}
+				character_event = { id = REC.2106 }
+				break = yes
+			}
+			character_event = { id = REC.2105 }
+		}
+	}	
+}
+
+# Employer has no more master glass maker
+character_event ={	
+	id = REC.2105 
+	desc = "DESCREC.2105"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2105A"
+		trigger = {
+			any_courtier = {
+				trait = compagnon_verrier
+				has_character_modifier = work_on_cathedral 
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 30 } 
+			}
+		}
+		wealth = -30
+		prestige = 10
+		random_courtier = {
+			limit = {
+				trait = compagnon_verrier
+				has_character_modifier = work_on_cathedral 
+			}
+			remove_trait = compagnon_verrier
+			add_trait = maitre_verrier
+			hidden_tooltip = { change_society_currency = -1250 }
+		}
+	}
+	
+	option = {
+		name = "REC.2105B"
+		trigger = { available_master_glass_maker = yes }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 } 
+			}
+		}
+		hire_master_glass_maker = yes
+	}
+	
+	option = {
+		name = "REC.2105C"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		custom_tooltip = { text = TOOLTIPREC.2105C }
+	}
+}
+	
+	
+# Employer has still master glass maker
+character_event ={	
+	id = REC.2106
+	desc = "DESCREC.2106"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2106A"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.2106B"
+		trigger = { available_master_glass_maker = yes }
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 } 
+			}
+		}
+		hire_master_glass_maker = yes # wealth and prestige are included
+	}
+	
+	option = {
+		name = "REC.2106C"
+		trigger = { available_compagnon_glass_maker = yes }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				NOT = { wealth = 25 } 
+			}
+		}
+		wealth = -25
+		prestige = 5
+		hire_compagnon_glass_maker = yes
+	}
+}
+
+# Sculpture theme
+character_event ={
+    id = REC.2112
+	desc = "DESCREC.2112"
+	picture = GFX_evt_REC8
+
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = batisseur_cathedrale
+		
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
+		}
+		
+		any_courtier = {
+			trait = maitre_sculpteur
+			has_character_modifier = work_on_cathedral 
+		}
+	}
+	
+	option = {
+		name = "REC.2112A"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
+		piety = 25
+		wealth = -10
+		character_event = { id = REC.2113 }
+	}
+	
+	option = {
+		name = "REC.2112B"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
+		prestige = 15
+		wealth = -10
+		character_event = { id = REC.2113 }
+	}
+	
+	option = {
+		name = "REC.2112C"
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 3
+				trait = greedy
+			}
+		}
+	}
+}
+
+# Sculpture size	
+character_event ={
+    id = REC.2113
+	desc = "DESCREC.2113"
+	picture = GFX_evt_REC8
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2113A"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.2113B"
+		trigger = { available_apprentice_sculptor = yes }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
+		wealth = -10
+		custom_tooltip = { 
+			text = TOOLTIPREC.2113B
+			hire_apprentice_sculptor = yes
+		}
+	}
+	
+	option = {
+		name = "REC.2113C"
+		trigger = { available_compagnon_sculptor = yes }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 25 } 
+			}
+		}
+		wealth = -25
+		prestige = 5
+		custom_tooltip = { 
+			text = TOOLTIPREC.2113C
+			hire_compagnon_sculptor = yes
+		}
+	}
+	
+	option = {
+		name = "REC.2113D"
+		trigger = {
+			available_apprentice_sculptor = yes
+			available_compagnon_sculptor = yes
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 35 } 
+			}
+		}
+		wealth = -35
+		prestige = 10
+		custom_tooltip = { 
+			text = TOOLTIPREC.2113D
+			hire_apprentice_sculptor = yes
+			hire_compagnon_sculptor = yes
+		}
+	}
+}
+
+# Death of a master sculptor
+# ROOT is the dead master sculptor
+character_event ={
+    id = REC.2114
+	hide_window = yes
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		trait = maitre_sculpteur
+		has_character_modifier = work_on_cathedral 
+	}
+	
+	immediate = {
+		employer = {
+			if = {
+				limit = {
+					any_courtier = {
+						trait = maitre_sculpteur
+						has_character_modifier = work_on_cathedral 
+						NOT = { character = ROOT }
+					}
+				}
+				character_event = { id = REC.2116 }
+				break = yes
+			}
+			character_event = { id = REC.2115 }
+		}
+	}	
+}
+
+# Employer has no more master sculptor
+character_event ={	
+	id = REC.2115 
+	desc = "DESCREC.2115"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2115A"
+		trigger = {
+			any_courtier = {
+				trait = compagnon_sculpteur
+				has_character_modifier = work_on_cathedral 
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 30 } 
+			}
+		}
+		wealth = -30
+		prestige = 10
+		random_courtier = {
+			limit = {
+				trait = compagnon_sculpteur
+				has_character_modifier = work_on_cathedral 
+			}
+			remove_trait = compagnon_sculpteur
+			add_trait = maitre_sculpteur
+			hidden_tooltip = { change_society_currency = -1250 }
+		}
+	}
+	
+	option = {
+		name = "REC.2115B"
+		trigger = { available_master_sculptor = yes }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 } 
+			}
+		}
+		hire_master_sculptor = yes
+	}
+	
+	option = {
+		name = "REC.2115C"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		custom_tooltip = { text = TOOLTIPREC.2115C }
+	}
+}
+	
+	
+# Employer has still master sculptor
+character_event ={	
+	id = REC.2116
+	desc = "DESCREC.2116"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2116A"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.2116B"
+		trigger = { available_master_sculptor = yes }
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 } 
+			}
+		}
+		hire_master_sculptor = yes # wealth and prestige are included
+	}
+	
+	option = {
+		name = "REC.2116C"
+		trigger = { available_compagnon_sculptor = yes }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				NOT = { wealth = 25 } 
+			}
+		}
+		wealth = -25
+		prestige = 5
+		hire_compagnon_sculptor = yes
+	}
+}
+
+# Fresco theme
+character_event ={
+    id = REC.2122
+	desc = "DESCREC.2122"
+	picture = GFX_evt_REC8
+
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = batisseur_cathedrale
+		
+		any_demesne_province = {
+			has_province_modifier = chantier_cathedrale
+			NOT = { has_province_modifier = chantier_stop }
+		}
+		
+		any_courtier = {
+			trait = maitre_fresquiste
+			has_character_modifier = work_on_cathedral 
+		}
+	}
+	
+	option = {
+		name = "REC.2122A"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
+		piety = 25
+		wealth = -10
+		character_event = { id = REC.2123 }
+	}
+	
+	option = {
+		name = "REC.2122B"
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
+		prestige = 15
+		wealth = -10
+		character_event = { id = REC.2123 }
+	}
+	
+	option = {
+		name = "REC.2122C"
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 3
+				trait = greedy
+			}
+		}
+	}
+}
+
+# Sculpture size	
+character_event ={
+    id = REC.2123
+	desc = "DESCREC.2123"
+	picture = GFX_evt_REC8
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2123A"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.2123B"
+		trigger = { available_apprentice_painter = yes }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 10 } 
+			}
+		}
+		wealth = -10
+		custom_tooltip = { 
+			text = TOOLTIPREC.2123B
+			hire_apprentice_painter = yes
+		}
+	}
+	
+	option = {
+		name = "REC.2123C"
+		trigger = { available_compagnon_painter = yes }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 25 } 
+			}
+		}
+		wealth = -25
+		prestige = 5
+		custom_tooltip = { 
+			text = TOOLTIPREC.2123C
+			hire_compagnon_painter = yes
+		}
+	}
+	
+	option = {
+		name = "REC.2123D"
+		trigger = {
+			available_apprentice_painter = yes
+			available_compagnon_painter = yes
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { wealth = 35 } 
+			}
+		}
+		wealth = -35
+		prestige = 10
+		custom_tooltip = { 
+			text = TOOLTIPREC.2123D
+			hire_apprentice_painter = yes
+			hire_compagnon_painter = yes
+		}
+	}
+}
+
+# Death of a master painter
+# ROOT is the dead master painter
+character_event ={
+    id = REC.2124
+	hide_window = yes
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		trait = maitre_fresquiste
+		has_character_modifier = work_on_cathedral 
+	}
+	
+	immediate = {
+		employer = {
+			if = {
+				limit = {
+					any_courtier = {
+						trait = maitre_fresquiste
+						has_character_modifier = work_on_cathedral 
+						NOT = { character = ROOT }
+					}
+				}
+				character_event = { id = REC.2126 }
+				break = yes
+			}
+			character_event = { id = REC.2125 }
+		}
+	}	
+}
+
+# Employer has no more master painter
+character_event ={	
+	id = REC.2125 
+	desc = "DESCREC.2125"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2125A"
+		trigger = {
+			any_courtier = {
+				trait = compagnon_fresquiste
+				has_character_modifier = work_on_cathedral 
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 30 } 
+			}
+		}
+		wealth = -30
+		prestige = 10
+		random_courtier = {
+			limit = {
+				trait = compagnon_fresquiste
+				has_character_modifier = work_on_cathedral 
+			}
+			remove_trait = compagnon_fresquiste
+			add_trait = maitre_fresquiste
+			hidden_tooltip = { change_society_currency = -1250 }
+		}
+	}
+	
+	option = {
+		name = "REC.2125B"
+		trigger = { available_master_painter = yes }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 } 
+			}
+		}
+		hire_master_painter = yes
+	}
+	
+	option = {
+		name = "REC.2125C"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		custom_tooltip = { text = TOOLTIPREC.2125C }
+	}
+}
+	
+	
+# Employer has still master painter
+character_event ={	
+	id = REC.2126
+	desc = "DESCREC.2126"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.2126A"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.2126B"
+		trigger = { available_master_painter = yes }
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 } 
+			}
+		}
+		hire_master_painter = yes # wealth and prestige are included
+	}
+	
+	option = {
+		name = "REC.2126C"
+		trigger = { available_compagnon_painter = yes }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				NOT = { wealth = 25 } 
+			}
+		}
+		wealth = -25
+		prestige = 5
+		hire_compagnon_painter = yes
+	}
+}
+
+	

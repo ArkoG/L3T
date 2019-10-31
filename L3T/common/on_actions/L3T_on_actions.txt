@@ -1,22 +1,32 @@
 #character
 on_startup = {
-	    events = {
-			L3T.10 #choix carte/map choice
+	events = {
+		L3T.10 #choix carte/map choice
 
-			#Initialisation population building
-			L3T.1101 
-			#AI money start bonus
-			L3T.12
-		}	
+		#Initialisation population building
+		L3T.1101 
+		#AI money start bonus
+		L3T.12
+		
+		#city apocalypto
+		#L3T.45
+		
+		# Artist initialisation
+		REC.2100
+	}	
 }
 
 #character
 on_yearly_pulse = {
 	events = {
+		#décompte minerai
 		ECO.132
+		#feodal_adm_modifier
 		L3T.225
 		L3T.226
-		#RIP.10030 #vanilla on_province_major_modifier event
+		#màj capital modifier
+		L3T.50
+		L3T.51
 		
 		##population events
 		 #castle
@@ -37,6 +47,14 @@ on_yearly_pulse = {
 		L3T.113
 		L3T.114
 		L3T.115
+		 #pop natural growth
+		L3T.1103
+		
+		#ReC
+		 REC.3
+		#additional check for Deus vult traits
+		 REC.20
+		 REC.21
 	}
 	
 	random_events = {
@@ -45,20 +63,63 @@ on_yearly_pulse = {
 		3000 = ECO.321
 		1000 = ECO.322
 		1000 = ECO.323	
+	}
+}
+ 
+# character
+on_decade_pulse = {
+	events = {
+		REC.2101
+	}
+}
 
-		
+# character
+on_siege_pulse = {
+	events = {
+		REC.1510
+	}
+}
+
+# From = Attacker, Root = Defender
+on_war_ended_victory = {
+	events = {
+		REC.1522
+	}
+}
+
+# From = Attacker, Root = Defender
+on_war_ended_whitepeace = {
+	events = {
+		REC.1522
+	}
+}
+
+# From = Attacker, Root = Defender
+on_war_ended_defeat = {
+	events = {
+		REC.1522
+	}
+}
+
+# From = Attacker, Root = Defender
+on_war_ended_invalid = {
+	events = {
+		REC.1522
 	}
 }
 
 # ROOT = Builder, FROM = The Holding Title
 on_holding_building_start = {
 	events = {
+		#feudal city bonus
 		L3T.201
 		L3T.205
 		L3T.209
 		L3T.213
 		L3T.217
 		L3T.221
+		L3T.241 #library_1
+		L3T.245 #library_2
 		L3T.302
 		#building prestige cost events
 		L3T.230
@@ -75,45 +136,119 @@ on_holding_building_start = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder = {
 	events = {
+		#feudal city bonus
 		L3T.202
 		L3T.206
 		L3T.210
 		L3T.214
 		L3T.218
 		L3T.222
+		L3T.242 #library_1
+		L3T.246 #library_2
 		L3T.227
+		#cathedral
+		REC.1
+		REC.11
+		#màj capital modifier
+		L3T.50
+		L3T.51
 	}
 }
 
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_inheritance = {
 	events = {
+		#feudal city bonus
 		L3T.202
 		L3T.206
 		L3T.210
 		L3T.214
 		L3T.218
 		L3T.222
+		L3T.242 #library_1
+		L3T.246 #library_2
 		L3T.227
+		#cathedral
+		REC.1
+		REC.11
+		#màj capital modifier
+		L3T.50
+		L3T.51
 	}
 }
 
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_usurpation = {
 	events = {
+		#feudal city bonus
 		L3T.202
 		L3T.206
 		L3T.210
 		L3T.214
 		L3T.218
 		L3T.222
+		L3T.242 #library_1
+		L3T.246 #library_2
 		L3T.227
+		#cathedral
+		REC.1
+		REC.11
+		#màj capital modifier
+		L3T.50
+		L3T.51
 	}
 }
 
 # ROOT = Builder, FROM = Title
 on_settlement_construction_completed = {
 	events = {
-		L3T.9
+		L3T.9 #starts spec holding for the new built building
+		L3T.1101 #gives dev init + random bonus
+	}
+}
+
+# Character converts religion, for whatever reason. ROOT is the character after conversion and the FROM scope has the old religion.
+on_character_convert_religion = {
+	events = {
+		REC.12
+	}
+}
+
+on_loot_settlement = { #seems it fires for the settlement owner, FROM is the settlement
+	#random_events = {
+	#}
+	events = {
+		L3T.1106 #systématique ou non
+	}
+}
+# ROOT = Builder, FROM = Province
+on_trade_post_construction_completed = {
+	events = {
+		L3T.1104 #dev variable
+	}
+}
+
+# ROOT = Builder, FROM = Province
+on_hospital_construction_completed = {
+	events = {
+		L3T.1105 #dev variable
+	}
+}
+
+# on action event is sent whenever a character receives an artifact (one event for each artifact)
+# Scopes: ROOT is the character, FROM is the artifact, FROMFROM is the old holder
+on_artifact_inheritance = {
+	events = {
+		L3T.256 # clean used book flag on artifact inheritance
+	}
+}
+
+# Triggered before succession is dealt with (character still has their relevant flags and titles)
+# ROOT is the dead character
+on_death = {
+	events = {
+		REC.2104 # Death of a master glass maker
+		REC.2114 # Death of a master sculptor
+		REC.2124 # Death of a master painter
 	}
 }

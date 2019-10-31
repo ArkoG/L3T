@@ -1,0 +1,526 @@
+# Root is the bishop which can be at the origin of the apparition
+opus_francigenum_dynamic_apparition = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = opus_francigenum }
+			has_game_rule = {
+				name = opus_francigenum
+				value = dynamic
+			}
+			year = 1000
+		}
+		random = { 
+			chance = 5
+			modifier = {
+				factor = 0.5
+				year = 1050
+			}
+			modifier = {
+				factor = 1.4
+				year = 1135
+			}
+			modifier = {
+				factor = 2
+				year = 1150
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { which = "global_burns" value = 20 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { which = "global_burns" value = 30 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { which = "global_burns" value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { total_years_played = 50 }
+			}
+			modifier = {
+				factor = 1.5
+				AND = {
+					NOT = { start_date = 1070.1.1 }
+					total_years_played = 60 #~1130
+				}
+			}
+			modifier = {
+				factor = 1.5
+				AND = {
+					NOT = { start_date = 1040.1.1 }
+					total_years_played = 100 #~1140
+				}
+			}			
+			modifier = {
+				factor = 0.8
+				NOT = { ruled_years	 = 10 }
+			}			
+			modifier = {
+				factor = 1.2
+				learning = 12
+			}
+			modifier = {
+				factor = 1.3
+				learning = 15
+			}
+			modifier = {
+				factor = 0
+				NOT = { learning = 5 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { learning = 7 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { learning = 10 }
+			}
+			modifier = {
+				factor = 2
+				trait = architect
+			}
+			modifier = {
+				factor = 2
+				trait = diligent
+			}
+			modifier = {
+				factor = 3
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.1
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = erudite
+			}
+			set_global_flag = dynamic_opus_francigenum
+		}
+	}
+}
+
+# Root is the character who loses a relic
+destroy_relic = {
+	# The character use the relic he has get from roman Cathedral
+	if = {
+		limit = { has_character_flag = has_relique_from_cathedral }
+		clr_character_flag = has_relique_from_cathedral
+	}
+	
+	random_artifact = {					
+		limit = { 
+			has_a_relic = yes
+		}
+		# The relic will be available to be create again
+		if = {
+			limit = { artifact_type = relique01 }
+			set_global_flag = available_relique01
+		}
+		if = {
+			limit = { artifact_type = relique02 }
+			set_global_flag = available_relique02
+		}
+		if = {
+			limit = { artifact_type = relique03 }
+			set_global_flag = available_relique03
+		}
+		if = {
+			limit = { artifact_type = relique04 }
+			set_global_flag = available_relique04
+		}
+		if = {
+			limit = { artifact_type = relique05 }
+			set_global_flag = available_relique05
+		}
+		if = {
+			limit = { artifact_type = relique06 }
+			set_global_flag = available_relique06
+		}
+		if = {
+			limit = { artifact_type = relique07 }
+			set_global_flag = available_relique07
+		}
+		if = {
+			limit = { artifact_type = relique08 }
+			set_global_flag = available_relique08
+		}
+		if = {
+			limit = { artifact_type = relique09 }
+			set_global_flag = available_relique09
+		}
+		if = {
+			limit = { artifact_type = relique10 }
+			set_global_flag = available_relique10
+		}
+		if = {
+			limit = { artifact_type = relique11 }
+			set_global_flag = available_relique11
+		}
+		if = {
+			limit = { artifact_type = relique12 }
+			set_global_flag = available_relique12
+		}
+		if = {
+			limit = { artifact_type = relique13 }
+			set_global_flag = available_relique13
+		}
+		if = {
+			limit = { artifact_type = relique14 }
+			set_global_flag = available_relique14
+		}
+		if = {
+			limit = { artifact_type = relique15 }
+			set_global_flag = available_relique15
+		}
+		if = {
+			limit = { artifact_type = relique16 }
+			set_global_flag = available_relique16
+		}
+		if = {
+			limit = { artifact_type = relique17 }
+			set_global_flag = available_relique17
+		}
+		if = {
+			limit = { artifact_type = relique18 }
+			set_global_flag = available_relique18
+		}
+		if = {
+			limit = { artifact_type = relique19 }
+			set_global_flag = available_relique19
+		}
+		if = {
+			limit = { artifact_type = relique20 }
+			set_global_flag = available_relique20
+		}
+		if = {
+			limit = { artifact_type = relique21 }
+			set_global_flag = available_relique21
+		}
+		if = {
+			limit = { artifact_type = relique22 }
+			set_global_flag = available_relique22
+		}
+		if = {
+			limit = { artifact_type = relique23 }
+			set_global_flag = available_relique23
+		}
+		if = {
+			limit = { artifact_type = relique24 }
+			set_global_flag = available_relique24
+		}
+		if = {
+			limit = { artifact_type = relique25 }
+			set_global_flag = available_relique25
+		}
+		if = {
+			limit = { artifact_type = relique26 }
+			set_global_flag = available_relique26
+		}
+		
+		destroy_artifact = yes
+	}
+}
+
+# Root is the character which gets a relic
+get_relic = {
+	# Character get a relic from a roman cathedral
+	set_character_flag = has_relique_from_cathedral
+
+	# Priority for burned relics
+	if = {
+		limit = { has_global_flag = available_relique26 }
+		add_artifact = relique26
+		clr_global_flag = available_relique26
+		break = yes
+	}	
+
+	# Other relics
+	if = {
+		limit = { has_global_flag = available_relique01 }
+		add_artifact = relique01
+		clr_global_flag = available_relique01
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique02 }
+		add_artifact = relique02
+		clr_global_flag = available_relique02
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique03 }
+		add_artifact = relique03
+		clr_global_flag = available_relique03
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique04 }
+		add_artifact = relique04
+		clr_global_flag = available_relique04
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique05 }
+		add_artifact = relique05
+		clr_global_flag = available_relique05
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique06 }
+		add_artifact = relique06
+		clr_global_flag = available_relique06
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique07 }
+		add_artifact = relique07
+		clr_global_flag = available_relique07
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique08 }
+		add_artifact = relique08
+		clr_global_flag = available_relique08
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique09 }
+		add_artifact = relique09
+		clr_global_flag = available_relique09
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique10 }
+		add_artifact = relique10
+		clr_global_flag = available_relique10
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique11 }
+		add_artifact = relique11
+		clr_global_flag = available_relique11
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique12 }
+		add_artifact = relique12
+		clr_global_flag = available_relique12
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique13 }
+		add_artifact = relique13
+		clr_global_flag = available_relique13
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique14 }
+		add_artifact = relique14
+		clr_global_flag = available_relique14
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique15 }
+		add_artifact = relique15
+		clr_global_flag = available_relique15
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique16 }
+		add_artifact = relique16
+		clr_global_flag = available_relique16
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique17 }
+		add_artifact = relique17
+		clr_global_flag = available_relique17
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique18 }
+		add_artifact = relique18
+		clr_global_flag = available_relique18
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique19 }
+		add_artifact = relique19
+		clr_global_flag = available_relique19
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique20 }
+		add_artifact = relique20
+		clr_global_flag = available_relique20
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique21 }
+		add_artifact = relique21
+		clr_global_flag = available_relique21
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique22 }
+		add_artifact = relique22
+		clr_global_flag = available_relique22
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique23 }
+		add_artifact = relique23
+		clr_global_flag = available_relique23
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique24 }
+		add_artifact = relique24
+		clr_global_flag = available_relique24
+		break = yes
+	}
+	if = {
+		limit = { has_global_flag = available_relique25 }
+		add_artifact = relique25
+		clr_global_flag = available_relique25
+		break = yes
+	}
+	
+	# If no relic is available, we give a default relic
+	add_artifact = relique26
+}
+
+# ROOT is the new employer
+hire_master_glass_maker = {
+	wealth   = -50
+	prestige = 25
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = maitre_verrier
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_compagnon_glass_maker = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = compagnon_verrier
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_apprentice_glass_maker = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = apprenti_verrier
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_master_sculptor = {
+	wealth   = -50
+	prestige = 25
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = maitre_sculpteur
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_compagnon_sculptor = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = compagnon_sculpteur
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_apprentice_sculptor = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = apprenti_sculpteur
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_master_painter = {
+	wealth   = -50
+	prestige = 25
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = maitre_fresquiste
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_compagnon_painter = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = compagnon_fresquiste
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}
+
+# ROOT is the new employer
+hire_apprentice_painter = {
+	random_society_member = {
+		limit = {
+			society_member_of = artist_guild
+			trait = apprenti_fresquiste
+			NOT = { has_character_modifier = work_on_cathedral }
+		}
+		add_character_modifier = { name = work_on_cathedral  duration = -1}
+		move_character = ROOT
+		opinion = { modifier = opinion_cathedral_employer who = ROOT years = 100 }
+	}
+}

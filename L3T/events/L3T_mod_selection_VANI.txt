@@ -1,57 +1,18 @@
 namespace = L3T
 
-province_event = { #installe les provinces côtières Vanilla
-    id = L3T.25
+province_event = {
+    id = L3T.22
 	hide_window = yes
 
 	is_triggered_only = yes
 	
-	trigger = {
-			OR = {
-				port = yes
-			#mer caspienne
-				province_id = 625 #Usturt
-				province_id = 624 #Mangyshlak
-				province_id = 621 #Kangly
-				province_id = 618 #Guryev
-				province_id = 620 #Itil
-				province_id = 604 #Kuma
-				province_id = 675 #Semender
-				province_id = 674 #Derbent
-				province_id = 669 #Shemakha
-				province_id = 668 #Shirvan
-				province_id = 667 #Tabriz
-				province_id = 666 #Gilan
-				province_id = 662 #Mazandaran
-				province_id = 661 #Tabaristan
-				province_id = 633 #Gurgan
-				province_id = 631 #Dihistan
-				province_id = 627 #Kara-Kum
-			#mer d'Aral
-				province_id = 622 #Turkestan
-				province_id = 623 #Aral
-				province_id = 1378 #Urgench
-				province_id = 901 #Kyzylkum
-				province_id = 900 #Syr Darya
-			}
-		}
-
 	immediate = {
-		add_province_modifier = {	name = province_cotiere  	duration = -1 }	
-	}
-}
-
-province_event = { #installe les provinces terrestres VANILLA
-    id = L3T.26
-	hide_window = yes
-
-	is_triggered_only = yes
-	
-	trigger = {
-			NOT = {
-				#OR = {
+		#installe les provinces côtières Vanilla
+		if = {
+			limit = {
+				OR = {
 					port = yes
-				#mer caspienne
+					#mer caspienne
 					province_id = 625 #Usturt
 					province_id = 624 #Mangyshlak
 					province_id = 621 #Kangly
@@ -69,29 +30,58 @@ province_event = { #installe les provinces terrestres VANILLA
 					province_id = 633 #Gurgan
 					province_id = 631 #Dihistan
 					province_id = 627 #Kara-Kum
-				#mer d'Aral
+					#mer d'Aral
 					province_id = 622 #Turkestan
 					province_id = 623 #Aral
 					province_id = 1378 #Urgench
 					province_id = 901 #Kyzylkum
 					province_id = 900 #Syr Darya
-					#}
+				}
+			}
+			add_province_modifier = {	name = province_cotiere  	duration = -1 }
+		}
+		#installe les provinces terrestres Vanilla
+		if = {
+			limit= {
+				NOT = {
+					#OR = {
+						port = yes
+						#mer caspienne
+						province_id = 625 #Usturt
+						province_id = 624 #Mangyshlak
+						province_id = 621 #Kangly
+						province_id = 618 #Guryev
+						province_id = 620 #Itil
+						province_id = 604 #Kuma
+						province_id = 675 #Semender
+						province_id = 674 #Derbent
+						province_id = 669 #Shemakha
+						province_id = 668 #Shirvan
+						province_id = 667 #Tabriz
+						province_id = 666 #Gilan
+						province_id = 662 #Mazandaran
+						province_id = 661 #Tabaristan
+						province_id = 633 #Gurgan
+						province_id = 631 #Dihistan
+						province_id = 627 #Kara-Kum
+						#mer d'Aral
+						province_id = 622 #Turkestan
+						province_id = 623 #Aral
+						province_id = 1378 #Urgench
+						province_id = 901 #Kyzylkum
+						province_id = 900 #Syr Darya
+						#}
+				}
+			}
+			add_province_modifier = {
+				name = province_terrestre
+				duration = -1  
+				hidden = yes
 			}
 		}
 
-	immediate = {
-		add_province_modifier = {	name = province_terrestre  	duration = -1  hidden = yes }	
-	}
-}
-
-province_event = { #installe les provinces fluviales VANILLA
-    id = L3T.27
-	hide_window = yes
-
-	is_triggered_only = yes
-	
-	immediate = {
 		if = {
+			#installe les provinces rivières Vanilla
 			limit = {
 				OR = {
 				## India
@@ -100,15 +90,16 @@ province_event = { #installe les provinces fluviales VANILLA
 						borders_major_river = yes
 					}			
 				##IRLANDE
-					province_id = 13 # Thomond
+					province_id = 1955 # Hy-Many
 					province_id = 9 # Connacht
 					province_id = 10 # Kildare
 				#England
-					province_id = 21 # Gloucester - Wales
+					province_id = 21 # Gloucester / Wales
 					province_id = 30 # Worcester
-					province_id = 57 # York - York
+					province_id = 57 # York / York
+					province_id = 1941 # Hull
 					province_id = 61 # Lincoln
-					province_id = 32 # Middlesex
+					province_id = 32 # Middlesex /Thames
 					province_id = 22 # Oxford
 					province_id = 70 # Norfolk
 				##Spains
@@ -151,18 +142,19 @@ province_event = { #installe les provinces fluviales VANILLA
 					province_id = 147 # Limousin
 					province_id = 106 # Nantes # Loire/Vienne/Maine/Allier
 					province_id = 107 # Anjou
+					province_id = 1959 # Saumur
 					province_id = 140 # Tourraine
+					province_id = 1965 # Dunois
 					province_id = 141 # Poitiers
 					province_id = 144 # Lusignan
 					province_id = 145 # La Marche
 					province_id = 110 # Blois
 					province_id = 111 # Chartres /Eure
 					province_id = 138 # Orleans
-					province_id = 139 # Bourges
+					province_id = 1960 # Sancerre
 					province_id = 137 # Nevers
 					province_id = 146 # Bourbon
 					province_id = 226 # Charolais
-					province_id = 224 # Forez
 					province_id = 217 # Auvergne
 					province_id = 108 # Maine
 					province_id = 109 # Vendome
@@ -170,9 +162,11 @@ province_event = { #installe les provinces fluviales VANILLA
 					province_id = 99 # Evreux
 					province_id = 98 # Vexin
 					province_id = 112 # Ile de France
+					province_id = 1963 # Senlis
 					province_id = 95 # Amiens
+					province_id = 1962 # Ponthieu
 					province_id = 113 # Vermandois
-					province_id = 114 # Reims
+					province_id = 1964 # Brie
 					province_id = 130 # Troyes
 					province_id = 131 # Sens
 					province_id = 132 # Auxerre
@@ -185,20 +179,19 @@ province_event = { #installe les provinces fluviales VANILLA
 					province_id = 237 # Savoie
 					province_id = 225 # Macon
 					province_id = 240 # Chalons
+					province_id = 1615 # Amous
 					province_id = 135 # Besancon
-					province_id = 136 # Dijon
 				#Rhein/Moselle/Maas/Escaut
 					province_id = 247 # Chur
 					province_id = 248 # St Gallen
 					province_id = 249 # Schwaben
-					province_id = 245 # Schwyz
 					province_id = 242 # Aargau
 					province_id = 134 # Sundgau
 					province_id = 250 # Breisgau
-					# province_id = 134 # Sundgau
 					province_id = 125 # Baden
 					province_id = 122 # Leiningen
 					province_id = 253 # Wurttemberg
+					province_id = 1981 # Frankfurt
 					province_id = 124 # Pfalz
 					province_id = 118 # Trier
 					province_id = 128 # Metz
@@ -236,18 +229,18 @@ province_event = { #installe les provinces fluviales VANILLA
 					province_id = 363 # Litomerice
 					province_id = 439 # Plzen
 					province_id = 437 # Praha
-					# province_id = 439 # Plzen
 					province_id = 362 # Domazlice
 					province_id = 361 # Niederbayern
 					province_id = 447 # Passau
 				#Saxe
 					province_id = 308 # Wolgast
 					province_id = 366 # Stettin
-					# province_id = 365 # Brandenburg
+					province_id = 1988 # Havelberg
 					province_id = 430 # Lubusz
 					province_id = 434 # Lower Silesia
 					province_id = 435 # Upper Silesia
 					province_id = 433 # Opole
+					province_id = 1927 # Opava
 					province_id = 526 # Cieszyn
 					province_id = 440 # Olomouc
 				#Vistule
@@ -281,26 +274,21 @@ province_event = { #installe les provinces fluviales VANILLA
 					province_id = 295 # Dal
 					province_id = 296 # Viken
 					province_id = 272 # Akershus
-					province_id = 271 # Vestfold
-					province_id = 273 # Oppland
-					province_id = 276 # Hedmark
-					province_id = 277 # Naumadal
-					# province_id = 290 # Uppland
+					province_id = 1620 # Romerike
 					province_id = 286 # Gastrikland
 					province_id = 287 # Jarnbaraland
 					province_id = 285 # Halsingland
 					province_id = 284 # Herjedalen
 					province_id = 280 # Vasterbotten
 					province_id = 386 # Kemi
+					province_id = 1600 # Oulu
 					province_id = 385 # Osterbotten
 					province_id = 384 # Satakunta
-					province_id = 383 # Tavasts
 					province_id = 956 # Kallavesi
 					province_id = 392 # Kexholm
 					province_id = 411 # Vodi
-					province_id = 388 # Karelen
 					province_id = 393 # Onega
-					province_id = 394 # Trans#portage
+					province_id = 394 # Trans-portage
 					province_id = 403 # Romny
 					province_id = 404 # Zaozerye
 					province_id = 409 # Bezhetsky Verh
@@ -312,13 +300,24 @@ province_event = { #installe les provinces fluviales VANILLA
 					province_id = 379 # Dorpat
 					province_id = 380 # Narva 
 				##West Africa
-					province_id = 927 # Zarma
+					province_id = 927 # Zarma //MALI
+					province_id = 1753 # Dyamare
+					province_id = 1755 # Dendi
+					province_id = 1754 # Songhay
+					province_id = 1768 # Mema
+					province_id = 1880 # Soso
+					province_id = 1763 # Dodugu
 					province_id = 914 # Gao
 					province_id = 911 # Timbuktu
 					province_id = 915 # Djenne
-					province_id = 925 # Mali
-					province_id = 913 # Ghana
-					province_id = 926 # Bambuk
+					province_id = 926 # Bambuk //Western than MALI
+					province_id = 1764 # Diafunu
+					province_id = 1765 # Kantor
+					province_id = 1743 # Bornu //Lac Tchaad
+					province_id = 1744 # Munio
+					province_id = 1741 # Makari
+					province_id = 1742 # Kagha
+					
 				#Nil
 					province_id = 802 # Alexandria
 					province_id = 799 # Gabiyaha
@@ -387,10 +386,10 @@ province_event = { #installe les provinces fluviales VANILLA
 					province_id = 328 # Firenze
 				##Grèce/Turquie
 					province_id = 490 # Thessalonike
-					province_id = 491 # Chalkidike
+					province_id = 1888 # Astibus
 					province_id = 492 # Strymon
-					province_id = 495 # Kaliopolis
 					province_id = 494 # Adrianopolis
+					province_id = 1884 # Traianopolis
 					province_id = 745 # Smyrna
 					province_id = 743 # Kyzikos
 					province_id = 746 # Ephesos
@@ -398,6 +397,7 @@ province_event = { #installe les provinces fluviales VANILLA
 					province_id = 738 # Amisos
 					province_id = 751 # Paphlagonia
 					province_id = 752 # Galatia
+					province_id = 1934 # Charsianon
 					province_id = 737 # Kaisereia
 					province_id = 668 # Shirvan
 					province_id = 669 # Shemakha
@@ -478,6 +478,7 @@ province_event = { #installe les provinces fluviales VANILLA
 					# province_id = 904 # Balkh
 					province_id = 1188 # Khuttal
 					province_id = 622 # Turkestan
+					province_id = 1794 # Yangikent
 					province_id = 900 # Syr Darya
 					province_id = 1431 # Otrar
 					province_id = 1186 # Chach
@@ -530,16 +531,140 @@ province_event = { #installe les provinces fluviales VANILLA
 					province_id = 570 # Tver
 					province_id = 405 # Chud
 					province_id = 406 # Vologda
-					province_id = 402 # Veliky Ustug
-					# province_id = 400 # Zyriane
 					province_id = 395 # North Dvina
+					province_id = 1822 # Pinega
+					province_id = 1824 # Yezhuga
 					province_id = 399 # Syrj
-					province_id = 401 # Hlynov
-					province_id = 400 # Zyriane
+					province_id = 1826 # Velsk
+					province_id = 1817 # Syktyvkar
+					province_id = 402 # Veliky Ustug
+
 				}
 			}
 			add_province_modifier = {	name = province_fleuve  	duration = -1 }	
 		}
+		
+		
+		#for hard republics, will trigger nodes attribution
+		##those will set the hardcode is done flagS, that opens regular MTTH spec
+		
+		#for hard Monasteries, will give basilique and relic if capital
+		#for hard bishoprics, will give basilique and relic		
+		if = {
+			limit = {
+				any_province_holding = {
+					holding_type = temple
+					OR = {
+						is_LCDA_hard_monastery = yes
+						is_LCDA_hard_episcopat = yes
+					}
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
+					}
+				}
+			}
+			#province_event = { id = L3T.61 } #LCDA only
+		}
+
+		#for christian all CAPITAL temple, will get relic				
+		if = {
+			limit = {
+				religion_group = christian
+				NOT = { has_province_flag = roman_cathedral }
+				capital_holding = { 
+					holding_type = temple
+					is_LCDA_hard_monastery =no
+					is_LCDA_hard_episcopat = no
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
+					}
+				}
+			}
+			province_event = { id = L3T.62 days = 1 }
+		}
+		
+		#for christian NON capital, to give relic, following grid pattern, to fill the grid
+		if = {
+			limit = {
+				any_province_holding = {
+					location = {
+						religion_group = christian
+						NOT = {
+								has_province_flag = neighbor_roman_cathedral									
+								has_province_flag = neighbor_neighbor_roman_cathedral
+								has_province_flag = roman_cathedral
+							}
+							any_neighbor_province = {
+								NOT = {
+									has_province_flag = neighbor_roman_cathedral									
+									has_province_flag = neighbor_neighbor_roman_cathedral
+									has_province_flag = roman_cathedral
+								}
+							}
+						NOT = { has_province_modifier = relique_generique }
+						}
+											
+					holding_type = temple
+					#NOT = { has_title_flag = temple_to_specialize }
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
+						has_building = tp_roman_cathedrale
+					}
+					is_capital = no
+					is_LCDA_hard_monastery =no
+					is_LCDA_hard_episcopat = no
+				}
+			}
+			province_event = { id = L3T.63 days = 2 }
+		}
+
+		#for feudal capital holdings, make them feudal cities				
+		if = {
+			limit = {
+				religion_group = christian
+					#holder = { capital_scope = capital_holding }
+				capital_holding = { 
+					holding_type = castle
+					NOT = {
+						has_building = FEODAL_mil
+						has_building = FEODAL_prod
+						has_building = FEODAL_adm
+					}
+				}
+			}
+			province_event = { id = L3T.31 }
+		}
+		
+		#realm's capital receives a prov modifier
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						demesne_size = 3
+						realm_size = 8
+					}
+					capital_scope = {
+						NOT = { has_province_modifier = realm_capital_province }
+					}
+				}
+			}
+			owner = {
+				#owner = { character_event = { id = L3T.50 }}
+				capital_scope = {
+					add_province_modifier = { 
+						name = realm_capital_province
+						duration = -1
+					}
+				}
+			}
+		}
+		
 		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
 		if = {
 			limit = {
@@ -562,6 +687,15 @@ province_event = { #installe les provinces fluviales VANILLA
 			}
 			# The other are delayed
 			province_event = { id = L3T.41 days = 60 }
-		}	
+		}
+		province_event = { id = ECO.1 }
+		province_event = { id = ECO.2 }
+		province_event = { id = ECO.3 }
+		province_event = { id = ECO.4 }
+		province_event = { id = ECO.5 }
+		province_event = { id = ECO.8 }
+		province_event = { id = ECO.80 }
+		province_event = { id = ECO.81 }
+		province_event = { id = ECO.82 }
 	}
 }

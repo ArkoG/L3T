@@ -1,0 +1,143 @@
+# Settlement decisions are possible vs _all_ settlements and are shown in the Settlement Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [capital/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all]
+# ai_target_filter = [capital/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all] (which settlements for which the AI evaluates the decision.)
+#	owned: all settlements owned by the AI
+#	vassal_owned: all settlements owned by direct vassal rulers of the AI's employer
+#	sub_realm_owned: all settlements below the AI's employer
+#	realm_owned: all settlements in the same top realm as the AI
+#	dynasty_owned: all settlements owned by members of the same dynasty
+#	all: all settlements (Avoid if possible. VERY CPU-HEAVY!)
+
+settlement_decisions = {
+	construire_cathedral_province = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = capital
+		diplomacy_icon = GFX_diplo_decision_icon
+		
+		from_potential = {
+			ai = no
+			is_ruler = yes
+		}
+		
+		potential = {
+			holder_scope = { character = FROM }
+			is_capital = yes
+			FROM = { construire_cathedral_potential = yes }
+		}
+
+		allow = {
+			FROM = { construire_cathedral_allow = yes }
+		}
+		
+		effect = {
+			FROM = {
+				wealth = -100
+				piety = 100
+				add_trait = batisseur_cathedrale
+				destroy_relic = yes
+				chronicle = {
+					entry = CHRONICLE_CATHEDRALE_BEGINS
+					picture = GFX_evt_cathedral
+				}
+				hidden_tooltip = { character_event = { id = REC.5 days = 10} }
+				if = {
+					limit = {
+						has_character_modifier = stolen_relic
+					}
+				remove_character_modifier = stolen_relic
+				}
+			}
+			
+			location = {
+				custom_tooltip = { text = TOOLTIPCONSTRUIRECATHEDRALE }
+				hidden_tooltip = {
+					add_province_modifier = {
+						name = relique_generique
+						duration = -1
+					}
+					add_province_modifier = {
+						name = chantier_cathedrale
+						duration = -1
+					}
+					capital_holding = {
+						set_title_flag = cathedral_construction
+						random_list = {
+							25 = { set_variable = { which = cathedral value = 10 } }
+							25 = { set_variable = { which = cathedral value = 20 } }
+							25 = { set_variable = { which = cathedral value = 30 } }
+							25 = { set_variable = { which = cathedral value = 40 } }
+						}
+					}	
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ask_construction_progession_settlement = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = capital
+		diplomacy_icon = GFX_diplo_decision_icon
+		
+		from_potential = {
+			ai = no
+			trait = batisseur_cathedrale
+			OR = {
+				any_courtier = { has_minor_title = title_batisseur }
+				any_vassal = { has_minor_title = title_batisseur }
+			}
+		}
+		
+		potential = {
+			holder_scope = { character = FROM }
+			has_title_flag = cathedral_construction
+		}
+		
+		allow = {
+			FROM = {
+				OR = {
+					any_courtier = { has_minor_title = title_batisseur } 
+					any_vassal = { has_minor_title = title_batisseur } 
+				}
+			}
+		}
+		
+		effect = {
+			location = { set_province_flag = province_cathedral_progression }
+			FROM = {
+				if = {
+					limit = { any_courtier = { has_minor_title = title_batisseur } }
+					random_courtier = {
+						limit = { has_minor_title = title_batisseur }
+						character_event = { id = REC.9 days = 0 }
+					}
+				}
+				if = {
+					limit = { NOT = { any_courtier = { has_minor_title = title_batisseur } } }
+					random_vassal = {
+						limit = { has_minor_title = title_batisseur }
+						character_event = { id = REC.9 days = 0 }
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -29,7 +29,7 @@ province_event = {
 		NOT = { terrain = forest }
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -68,7 +68,7 @@ province_event = {
 		terrain = hills
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -121,7 +121,7 @@ province_event = {
 		terrain = forest
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -167,7 +167,7 @@ province_event = {
 		terrain = mountain
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -213,7 +213,7 @@ province_event = {
 		terrain = farmlands
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -259,7 +259,7 @@ province_event = {
 		terrain = desert
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -304,7 +304,7 @@ province_event = {
 		terrain = steppe
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -342,7 +342,7 @@ province_event = {
 		terrain = jungle
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -387,7 +387,7 @@ province_event = {
 		terrain = arctic
 	}
 	
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes #mean_time_to_happen = { days = 10 }
 	
 	immediate = {
 		set_variable = { which = "resourceNb" value = 0 }
@@ -479,9 +479,37 @@ province_event = {
 		
 	mean_time_to_happen = { days = 360 }
 
+	immediate = {
+		random_province_holding = {
+			limit = {
+				OR = {	
+					has_building = CA_AGRI_cereale_L2
+					has_building = CT_AGRI_cereale_L2
+					has_building = TP_AGRI_cereale_L2
+				}
+			}
+			set_title_flag = bonus_origin
+			save_event_target_as = holding_pour_desc #for flavour text
+		}
+	}
+
 	option = {
 		name = "ECO.100A"
-		add_province_modifier = { name = agriculture2_cereales duration = -1 }		
+		add_province_modifier = { name = agriculture2_cereales duration = -1 }
+		random_province_holding = {
+			limit = {
+				OR = {
+					has_building = CA_AGRI_cereale_L2
+					has_building = CT_AGRI_cereale_L2
+					has_building = TP_AGRI_cereale_L2
+				}
+				has_title_flag = bonus_origin
+			}
+#			change_variable = { which = "developpement" value = 10 }
+#			change_variable = { which = "developpement_farm" value = 10 }
+			clear_event_target = holding_pour_desc #for flavour text
+			clr_title_flag = bonus_origin
+		}
 	}
 }
 
@@ -693,11 +721,32 @@ province_event = {
 		
 	mean_time_to_happen = { days = 360 }
 
+#	immediate = {
+#		random_province_holding = {
+#			limit = {
+#				OR = {	
+#					has_building = CA_CARR_pierre_L2
+#					has_building = CT_CARR_pierre_L2
+#				}
+#			}
+#			save_event_target_as = holding_pour_desc
+#		}
+#	}
+	
 	option = {
 		name = "ECO.130A"
 		remove_province_modifier = pierre1
 		add_province_modifier = { name = pierre1 duration = -1 hidden = yes } #now hidden instead of removed
-		add_province_modifier = { name = pierre2_pierre_brute duration = -1 }		
+		add_province_modifier = { name = pierre2_pierre_brute duration = -1 }
+#		random_province_holding = {
+#			limit = {
+#				OR = {	
+#					has_building = CA_CARR_pierre_L2
+#					has_building = CT_CARR_pierre_L2
+#				}
+#			}
+#			clear_event_target = holding_pour_desc
+#		}		
 	}
 }
 
@@ -875,9 +924,29 @@ province_event = {
 		
 	mean_time_to_happen = { days = 360 }
 
+	immediate = {
+		random_province_holding = {
+			limit = {
+				OR = {	
+					has_building = CT_brasserie_L2
+					has_building = TP_brasserie_L2
+				}
+			}
+			save_event_target_as = holding_pour_desc
+		}
+	}
+	
 	option = {
 		name = "ECO.105A"
-		add_province_modifier = { name = agriculture3_biere duration = -1 }		
+		add_province_modifier = { name = agriculture3_biere duration = -1 }
+		custom_tooltip = { text = TOOLTIP_bonus_dev_ressources_avancee }
+		hidden_tooltip = {
+			event_target:holding_pour_desc = {
+				change_variable = { which = "developpement" value = 10 }
+				#holder_scope = { character_event = { id = L3T.11094 days = 0 }} #totoro
+				clear_event_target = holding_pour_desc
+			}
+		}
 	}
 }
 
@@ -907,10 +976,30 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { days = 360 }
+	
+	immediate = {
+		random_province_holding = {
+			limit = {
+				OR = {	
+					has_building = CT_chai_L2
+					has_building = TP_chai_L2
+				}
+			}
+			save_event_target_as = holding_pour_desc
+		}
+	}
 
 	option = {
 		name = "ECO.106A"
-		add_province_modifier = { name = agriculture3_vin duration = -1 }		
+		add_province_modifier = { name = agriculture3_vin duration = -1 }
+		custom_tooltip = { text = TOOLTIP_bonus_dev_ressources_avancee }
+		hidden_tooltip = {		
+			event_target:holding_pour_desc = {
+				change_variable = { which = "developpement" value = 10 }
+				#holder_scope = { character_event = { id = L3T.11094 days = 0 }} #totoro
+				clear_event_target = holding_pour_desc
+			}
+		}		
 	}
 }
 
@@ -932,10 +1021,27 @@ province_event = {
 	}
 		
 	mean_time_to_happen = { days = 360 }
-
+	
+	immediate = {
+		random_province_holding = {
+			limit = {
+				has_building = TP_presse_L2
+			}
+			save_event_target_as = holding_pour_desc
+		}
+	}
+	
 	option = {
 		name = "ECO.108A"
-		add_province_modifier = { name = agriculture3_cidre duration = -1 }		
+		add_province_modifier = { name = agriculture3_cidre duration = -1 }
+		custom_tooltip = { text = TOOLTIP_bonus_dev_ressources_avancee }
+		hidden_tooltip = {
+			event_target:holding_pour_desc = {
+				change_variable = { which = "developpement" value = 10 }
+				#holder_scope = { character_event = { id = L3T.11094 days = 0 }} #totoro
+				clear_event_target = holding_pour_desc
+			}
+		}
 	}
 }
 

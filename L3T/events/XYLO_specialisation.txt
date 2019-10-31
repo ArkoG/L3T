@@ -16,10 +16,7 @@ character_event = {
 
 	trigger = {
 			is_ruler = yes
-#			OR = {
-#				religion = catholic
-#				is_heresy_of = catholic
-#				}
+			#is_catholic_group = yes
 			prisoner = no
 			any_demesne_province = { has_province_modifier = foret1  }
 			NOT = {	any_courtier = { has_minor_title = title_forestier }	}
@@ -133,6 +130,7 @@ option = {
 			name = foret2_chasse 
 			duration = -1
 			}
+		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
 	}
 option = {
 		name = "XYLO.2B"	
@@ -143,10 +141,11 @@ option = {
 			modifier = { factor = 2 owner = { stewardship = 15 }}
 			}		#à pondérer. choix privilégié si bon niveau d'intendance
 		add_province_modifier = {
-			name = foret2_expl 
+			name = foret2_expl
 			duration = -1
 			hidden = yes
-			}
+		}
+		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
 	}
 option = {
 		name = "XYLO.2C"	
@@ -156,8 +155,9 @@ option = {
 			name = foret2_expl 
 			duration = -1
 			hidden = yes
-			}
-	}	
+		}
+		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
+	}
 }
 
 # spécialisation Forêts -pour les Villes
@@ -202,6 +202,7 @@ option = {
 			hidden = yes
 			duration = -1
 			}
+		hidden_tooltip = { set_variable = { which = "wood_cut" value = 0 }}
 	}
 }
 

@@ -1,0 +1,39 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+
+opus_francigenum = {
+	name = "RULE_OPUS_FRANCIGENUM"
+	group = "RULE_GROUP_RAILROADING"
+	option = {
+		name = dynamic
+		text = "RULE_OPUS_FRANCIGENUM_DYNAMIC"
+		desc = "RULE_OPUS_FRANCIGENUM_DYNAMIC_DESC"
+	}
+	option = {
+		name = historical
+		text = "RULE_OPUS_FRANCIGENUM_HISTORICAL"
+		desc = "RULE_OPUS_FRANCIGENUM_HISTORICAL_DESC"
+	}
+	option = {
+		name = fiftyYears
+		text = "RULE_OPUS_FRANCIGENUM_FIFTY_YEARS"
+		desc = "RULE_OPUS_FRANCIGENUM_FIFTY_YEARS_DESC"
+	}
+	option = {
+		name = free
+		text = "RULE_OPUS_FRANCIGENUM_FREE"
+		desc = "RULE_OPUS_FRANCIGENUM_FREE_DESC"
+	}
+}

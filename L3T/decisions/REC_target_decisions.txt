@@ -1,0 +1,193 @@
+# Targetted decisions are possible vs _all_ other characters and shown are in the Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#     FROM is the decision taker
+#     ROOT is the targetted character
+#
+# filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] ('self' MUST be set for decisions targetting only the taker, the other filter types can be set to lessen CPU load)
+# ai_target_filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (which characters for which the AI evaluates the decision.)
+#	court: all characters in the AI's host court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	home_court: all characters in the AI's home court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	vassals: direct vassal rulers of the AI's employer
+#	sub_realm: all characters below the AI's employer
+#	realm: all characters in the same top realm as the AI
+#	dynasty: all members of the same dynasty
+#	rivals: your rivals plus any character you have an opinion modifier with 'crime = yes' set (the same set of characters the 'is_foe' trigger evaluates)
+#	all: all living characters (Avoid if possible. VERY CPU-HEAVY!)
+#	
+targetted_decisions = {
+	ask_construction_progession = {
+		only_playable = yes
+		filter = court
+		ai_target_filter = self
+		diplomacy_icon = GFX_diplo_decision_icon
+		
+		from_potential = {
+			is_playable = yes
+			trait = batisseur_cathedrale
+		}
+		
+		potential = {
+			has_minor_title = title_batisseur
+		}
+		
+		effect = {
+			FROM = {
+				random_demesne_province = {
+					limit = { has_province_modifier = chantier_cathedrale }
+					province_event = { id = REC.7  days = 1 }
+				}
+			}
+		}
+			
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	support_other_cathedral = {
+		only_playable = yes
+		filter = all
+		ai_target_filter = self
+		diplomacy_icon = GFX_diplo_gold_icon
+		
+		from_potential = {
+			is_playable = yes
+		}
+		
+		potential = {
+			ai = yes
+			trait = batisseur_cathedrale
+		}
+		
+		allow = {
+			FROM = { wealth = 50 }
+		}
+		
+		effect = {
+			#ROOT = { wealth = 50 }
+			ROOT = {
+				random_province_holding = {
+					limit = { has_title_flag = cathedral_construction }
+					change_variable = { which = cathedral value = 35 }
+				}
+			}
+			FROM = {
+				wealth = -50
+				piety = 20
+			}
+			if = { # Give opinion bonus only once
+				limit = {
+					NOT = { has_character_flag = donation_@FROM }
+				}
+				opinion = { modifier = donation who = FROM years = 5 }
+				set_character_flag = donation_@FROM
+			}
+		}
+			
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	buy_relic = {
+		only_playable = yes
+		filter = realm
+		ai_target_filter = realm
+		diplomacy_icon = GFX_diplo_relic_icon
+		
+		from_potential = {
+			has_global_flag = opus_francigenum
+		
+			# Catholic province ruler
+			is_catholic_group = yes
+			higher_tier_than = BARON # Count, Duke, King or Emperor
+
+			# Not already build or own a Cathedral
+			NOT = {
+				trait = batisseur_cathedrale			
+				any_demesne_title = {	
+					tier = baron
+					OR = {				
+						has_building = ca_cathedrale_01
+						has_building = ct_cathedrale_01
+						has_building = tp_cathedrale_01
+					}
+				}
+			}
+			
+			# Not already have a relic
+			NOT = { has_a_relic = yes }
+		}
+		
+		potential = {
+			# Has a relic
+			#has_a_relic = yes
+			# Won't sell a dynastic relic
+			any_artifact = {
+				NOT = { has_artifact_flag = dynastic_relic }
+				OR = {
+					#ReC relics
+					has_artifact_flag = relique
+					#vanilla generic/dynamic relic support
+					AND = { 
+						has_artifact_flag = saint
+						has_artifact_flag = bodypart
+					}
+				}
+			}			
+			
+			# Has not already refused to sell it
+			NOT = { has_character_flag = refuse_to_sell_relic }
+		}
+		
+		allow = {
+			FROM = {
+				wealth = 100
+				OR = {
+					trait = scholarly_theologian
+					trait = mastermind_theologian
+					trait = scholar
+					trait = theologian
+					trait = zealous
+					trait = pilgrim
+					trait = crusader
+				}
+			}
+		}
+		
+		effect = {
+			character_event = { id = REC.1701 days = 30 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.1 #Factors for an AI character to take the decision (1 = average of 1 year)
+			modifier = {
+				factor = 10
+				is_liege_or_above  = FROM
+			}
+			modifier = {
+				factor = 10
+				FROM = { yearly_income = 300 }
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { FROM = { yearly_income = 200 } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { FROM = { yearly_income = 100 } }
+			}
+		}
+	}
+}

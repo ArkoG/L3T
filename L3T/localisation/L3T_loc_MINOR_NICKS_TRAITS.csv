@@ -2,8 +2,8 @@
 #;;MINOR TITLES;;;;;;;;;;;;x
 #title_parlier;Parlier;Parlier;;;;;;;;;;;;x
 #title_parlier_desc;The construction of a cathedral attracts workers from throughout the Western world, but not all share the same language. This is where the Parlier comes in, who coordinates everyone's skills to ensure the smooth running of the site. This makes him an essential character to carry out such a project.;Le chantier d'une cathédrale attire des ouvriers de tout le monde occidental mais tous ne partagent donc pas la même langue. C'est là qu'intervient le Parlier, qui se charge de coordonner les compétences de chacun pour assurer le bon déroulement du chantier. Cela en fait donc un personnage incontournable pour mener à bien un tel projet.;;;;;;;;;;;;x
-title_batisseur;Master Builder;Maître Bâtisseur;;;;;;;;;;;;x
-title_batisseur_desc;The Master Builder is the director and foreman of the construction project. He performs all the tasks of design, logistics, recruitment ... and more! Needless to say, he is indispensable if you ever want to see your construction finished...;C'est lui qui dirige le chantier. Il assure toutes les missions de conception, d'approvisionnement, de logistique, recrute les ouvriers...entre autres ! Inutile de dire combien il est indispensable si vous voulez un jour voir votre chantier aboutir.;;;;;;;;;;;;x
+title_batisseur;Builder Master;Maître Bâtisseur;;;;;;;;;;;;x
+title_batisseur_desc;The Builder Master is the director and foreman of the construction project. He performs all the tasks of design, logistics, recruitment ... and more! Needless to say, he is indispensable if you ever want to see your construction finished...;C'est lui qui dirige le chantier. Il assure toutes les missions de conception, d'approvisionnement, de logistique, recrute les ouvriers...entre autres ! Inutile de dire combien il est indispensable si vous voulez un jour voir votre chantier aboutir.;;;;;;;;;;;;x
 #title_batisseur_desc;;C'est lui qui dirige l'exécution du chantier. Il assure les missions d'approvisionnement, de logistique, décide du déroulement du chantier, recrute les ouvriers...entre autres ! Inutile de dire combien il est indispensable si vous voulez un jour voir les murs de votre cathédrale dépasser une toise sans s'écrouler.;;;;;;;;;;;;x
 #title_architecte;Architect;Architecte;;;;;;;;;;;;x
 #title_architecte_desc;He is the brains behind the project, he draws the plans, decides on the pace and style of the building and of course extends us some of megalomaniac delusions and artistic handwork... but we still need him!;Il est la tête pensante du projet, il dessine les plans, décide de l'allure et du style de l'édifice et auteur de bien entendu de quelques délires mégalo-artistiques... mais on a quand même besoin de lui !;;;;;;;;;;;;x
@@ -19,32 +19,48 @@ title_sorciere_presumee_desc;This a good way of obtaining revenge on a loathed v
 #;;x;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;TRAITS;;;;;;;;;;;;x
-batisseur_cathedrale;Cathedral Builder;Batisseur de cathédrale;;;;;;;;;;;;x
-batisseur_cathedrale_desc;This character has embarked on the construction of a cathedral after discovering a relic of a saint;Ce personnage s'est lancé dans la construction d'une cathédrale suite à la découverte d'une relique d'un saint;;;;;;;;;;;;x
+batisseur_cathedrale;Cathedral builder;Maître d'ouvrage d'une cathédrale;;;;;;;;;;;;x
+batisseur_cathedrale_desc;This character is involved into a serious construction project : building a cathedral in his capital. He strated such after discovering a holy relic and offered it to the future cathedral.;Ce personnage s'est lancé dans la construction d'une cathédrale suite à la découverte d'une sainte relique afin que les fidèles puissent la vénérer dans une somptueuse maison de Dieu.;;;;;;;;;;;;x
 #batisseur_peu_scrupuleux;Unscrupulous Cathedral builder ;Batisseur peu scrupuleux de cathédrale;;;;;;;;;;;;x
 #batisseur_peu_scrupuleux_desc;This character has embarked on the construction of a cathedral after falsifying a relic;Ce personnage s'est lancé dans la construction d'une cathédrale suite à la falsification d'une relique;;;;;;;;;;;;x
+saint;Saint;Saint;;Sankt;Santo;;;;;;;;;x
+saint_desc;This character is a Saint in one of the Christian denominations due to acts on Earth that have caused them to be recognised as a Saint in Heaven.;Ce personnage est un considéré comme Saint parmi les Chrétiens. De part ces actes durant sa vie sur Terre, il pourra dès lors être considéré comme Saint au Paradis.;;;;;;;;;;;;x
+dynastic_keeper;Dynastic keeper;Conservation de biens dynastiques;;;;;;;;;;;;x
+dynastic_keeper_desc;This character is the keeper in his castle common and precious goods of his dynasty. \nHis §Ylibrary§! contains records of the family genealogy and the §Ylordly chapel§! hosts a dynastic reliquary. \nIn this quality of guardian, he is respected by the members of his dynasty and among his vassals.;Ce personnage conserve dans son château des biens communs et précieux de sa dynastie. \nSa §Ybibliothèque§! contient des registres consignant la généalogie familiale et la §Ychapelle seigneuriale§! accueille un reliquaire dynastique. \nEn cette qualité de gardien, il est respecté par les membres de sa dynastie et parmi ses vassaux. ;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 apprenti_sculpteur;Apprentice Scultor;Apprenti sculpteur;;;;;;;;;;;;x
-apprenti_sculpteur_desc;;Ce sculpteur est talenteux mais ce n'est qu'un apprenti;;;;;;;;;;;;x
+apprenti_sculpteur_desc;This sculptor is an apprentice. He was placed from a childhood at a master's to learn the job.\nHe must execute a masterpiece in order to gain mastery and to marry.;Ce sculpteur est un apprenti. Il a été placé dès l'enfance chez un maître pour apprendre le métier.\nIl doit exécuter un chef d'oeuvre pour pouvoir accèder à la maîtrise et se marrier.;;;;;;;;;;;;x
 compagnon_sculpteur;Journeyman Sculptor;Compagnon sculpteur;;;;;;;;;;;;x
-compagnon_sculpteur_desc;;Ce sculpteur est talenteux et commence déjà à transmettre son savoir;;;;;;;;;;;;x
+compagnon_sculpteur_desc;This sculptor, although having completed his apprenticeship, continues to work for a master because he has not enough money to become one.;Ce sculpteur bien qu'ayant terminé son apprentissage continue de travailler pour un maître faute d'argent.\nOn dit que c'est un compagnon mais on trouve aussi les désignations valet ou garçon.\nAu fil du Moyen Age, la maîtrise devient hériditaire, les enfants de maître sont exemptés d'apprentissage, de chef d'oeuvre ou de droit d'entrée.;;;;;;;;;;;;x
 maitre_sculpteur;Master Sculptor;Maître sculpteur;;;;;;;;;;;;x
-maitre_sculpteur_desc;;Ce sculpteur est talenteux et transmet son savoir;;;;;;;;;;;;x
+maitre_sculpteur_desc;This recognized sculptor has paid an entrance fee to the trade and takes an oath to the regulations of his trade.\nIt can practice, hire companions and train apprentices that he lodges and fed.;Ce sculpteur reconnu a versé un droit d'entrée dans le métier et préter serment aux réglements de son métier.\nIl peut exercer, embaucher des compagnons et former des apprentis qu'il loge et nourri.;;;;;;;;;;;;x
 nick_le_sculpteur;The Sculptor;Le sculpteur;;;;;;;;;;;;x
 apprenti_fresquiste;Apprentice Painter;Apprenti fresquiste;;;;;;;;;;;;x
-apprenti_fresquiste_desc;;Ce fresquiste est talenteux mais ce n'est qu'un apprenti;;;;;;;;;;;;x
+apprenti_fresquiste_desc;This painter is an apprentice. He was placed from a childhood at a master's to learn the job.\nHe must execute a masterpiece in order to gain mastery and to marry.;Ce fresquiste est un apprenti. Il a été placé dès l'enfance chez un maître pour apprendre le métier.\nIl doit exécuter un chef d'oeuvre pour pouvoir accèder à la maîtrise et se marrier.;;;;;;;;;;;;x
 compagnon_fresquiste;Journeyman Painter;Compagnon fresquiste;;;;;;;;;;;;x
-compagnon_fresquiste_desc;;Ce fresquiste est talenteux et commence déjà à transmettre son savoir;;;;;;;;;;;;x
+compagnon_fresquiste_desc;This painter, although having completed his apprenticeship, continues to work for a master because he has not enough money to become one.;Ce fresquiste bien qu'ayant terminé son apprentissage continue de travailler pour un maître faute d'argent.\nOn dit que c'est un compagnon mais on trouve aussi les désignations valet ou garçon.\nAu fil du Moyen Age, la maîtrise devient hériditaire, les enfants de maître sont exemptés d'apprentissage, de chef d'oeuvre ou de droit d'entrée.;;;;;;;;;;;;x
 maitre_fresquiste;Master Painter;Maître fresquiste;;;;;;;;;;;;x
-maitre_fresquiste_desc;;Ce fresquiste est talenteux et transmet son savoir;;;;;;;;;;;;x
+maitre_fresquiste_desc;This recognized painter has paid an entrance fee to the trade and takes an oath to the regulations of his trade.\nIt can practice, hire companions and train apprentices that he lodges and fed.;Ce fresquiste reconnu a versé un droit d'entrée dans le métier et préter serment aux réglements de son métier.\nIl peut exercer, embaucher des compagnons et former des apprentis qu'il loge et nourri.;;;;;;;;;;;;x
 nick_le_fresquiste;the Painter;Le fresquiste;;;;;;;;;;;;x
-apprenti_verrier;Apprentice Glassmaker;Apprenti verrier;;;;;;;;;;;;x
-apprenti_verrier_desc;;Ce verrier est talenteux mais ce n'est qu'un apprenti;;;;;;;;;;;;x
-compagnon_verrier;Journeyman Glassmaker;Compagnon verrier;;;;;;;;;;;;x
-compagnon_verrier_desc;;Ce verrier est talenteux et commence déjà à transmettre son savoir;;;;;;;;;;;;x
-maitre_verrier;Master Glassmaker;Maître verrier;;;;;;;;;;;;x
-maitre_verrier_desc;;Ce verrier est talenteux et transmet son savoir;;;;;;;;;;;;x
-nick_le_verrier;the Glassmaker;Le verrier;;;;;;;;;;;;x
+apprenti_verrier;Apprentice Glass maker;Apprenti verrier;;;;;;;;;;;;x
+apprenti_verrier_desc;This glass maker is an apprentice. He was placed from a childhood at a master's to learn the job.\nHe must execute a masterpiece in order to gain mastery and to marry.;Ce verrier est un apprenti. Il a été placé dès l'enfance chez un maître pour apprendre le métier.\nIl doit exécuter un chef d'oeuvre pour pouvoir accèder à la maîtrise et se marrier.;;;;;;;;;;;;x
+compagnon_verrier;Journeyman Glass maker;Compagnon verrier;;;;;;;;;;;;x
+compagnon_verrier_desc;This glass maker, although having completed his apprenticeship, continues to work for a master because he has not enough money to become one.;Ce verrier bien qu'ayant terminé son apprentissage continue de travailler pour un maître faute d'argent.\nOn dit que c'est un compagnon mais on trouve aussi les désignations valet ou garçon.\nAu fil du Moyen Age, la maîtrise devient hériditaire, les enfants de maître sont exemptés d'apprentissage, de chef d'oeuvre ou de droit d'entrée.;;;;;;;;;;;;x
+maitre_verrier;Master Glass maker;Maître verrier;;;;;;;;;;;;x
+maitre_verrier_desc;This recognized glass maker has paid an entrance fee to the trade and takes an oath to the regulations of his trade.\nIt can practice, hire companions and train apprentices that he lodges and fed.;Ce verrier reconnu a versé un droit d'entrée dans le métier et préter serment aux réglements de son métier.\nIl peut exercer, embaucher des compagnons et former des apprentis qu'il loge et nourri.;;;;;;;;;;;;x
+nick_le_verrier;the Glass maker;Le verrier;;;;;;;;;;;;x
+nick_the_inquisitor_homme;the Inquisitor;l'Inquisiteur;;;;;;;;;;;;x
+nick_the_inquisitor_femme;the Inquisitor;l'Inquisitrise;;;;;;;;;;;;x
+nick_the_punisher_homme;the Punisher;le Punisseur;;;;;;;;;;;;x
+nick_the_punisher_femme;the Punisher;la Punisseuse;;;;;;;;;;;;x
+nick_the_crucified_homme;the Crucified;le Crucifié;;;;;;;;;;;;x
+nick_the_crucified_femme;the Crucified;la Crucifiée;;;;;;;;;;;;x
+nick_the_martyr_homme;the Martyr;le Martyr;;;;;;;;;;;;x
+nick_the_martyr_femme;the Martyr;la Martyre;;;;;;;;;;;;x
+deus_gladio;Sword of God;Epée de Dieu;;;;;;;;;;;;x
+deus_gladio_desc;This character's sword served many times the plans of God.;Ce personnage a été à maintes reprises le bras armé de Dieu.;;;;;;;;;;;;x
+deus_vox;Voice of God;Voix de Dieu;;;;;;;;;;;;x
+deus_vox_desc;This character heard and spread the word of God among Mens.;Ce personnage a entendu et répandu la parole de Dieu parmi les Hommes.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;NICKNAMES;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x

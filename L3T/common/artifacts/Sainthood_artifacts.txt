@@ -1,0 +1,232 @@
+###sainthood relics
+
+ancestor_relic_0 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 1
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+			}
+		}
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
+	}
+	allowed_gift = { always = no }
+	flags = { dynastic_relic relique }
+	stacking = no
+	picture = GFX_relic_box_simple
+	slot = slot_relique
+}
+ancestor_relic_1 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 1
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+			}
+		}
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
+	}
+	allowed_gift = { always = no }
+	flags = { dynastic_relic relique }
+	stacking = no
+	picture = GFX_relic_box_simple
+	slot = slot_relique
+}
+ancestor_relic_2 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 2
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+			}
+		}
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
+	}
+	allowed_gift = { always = no }
+	flags = { dynastic_relic relique }
+	stacking = no
+	picture = GFX_relic_box
+	slot = slot_relique
+}
+ancestor_relic_3 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 2
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+			}
+		}
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
+	}
+	allowed_gift = { always = no }
+	flags = { dynastic_relic relique }
+	stacking = no
+	picture = "GFX_relicbox_iron"
+	slot = slot_relique
+}
+ancestor_relic_4 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 3
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+			}
+		}
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
+	}
+	allowed_gift = { always = no }
+	flags = { dynastic_relic relique }
+	stacking = no
+	picture = "GFX_relicbox_iron"
+	slot = slot_relique
+}
+ancestor_relic_5 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 3
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+			}
+		}
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
+	}
+	allowed_gift = { always = no }
+	flags = { dynastic_relic relique }
+	stacking = no
+	picture = "GFX_saints_bone_femur"
+	slot = slot_relique
+}
+ancestor_relic_6 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 4
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+			}
+		}
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
+	}
+	allowed_gift = { always = no }
+	flags = { dynastic_relic relique }
+	stacking = no
+	picture = "GFX_saints_skull"
+	slot = slot_relique
+}
+ancestor_relic_7 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 4
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+			}
+		}
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
+	}
+	allowed_gift = { always = no }
+	flags = { dynastic_relic relique }
+	stacking = no
+	picture = "GFX_saints_skull"
+	slot = slot_relique
+}
+ancestor_relic_8 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 5
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+			}
+		}
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
+	}
+	allowed_gift = { always = no }
+	flags = { dynastic_relic relique }
+	stacking = no
+	picture = "GFX_pouch"
+	slot = slot_relique
+}
+ancestor_relic_9 = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.3
+	quality = 5
+	active = {
+		OR = { # Correct religion to become a Saint with an appropriate head
+			religion = catholic
+			AND = {
+				religion = fraticelli
+				is_title_active = d_fraticelli
+			}
+		}
+		any_dynasty_member_even_if_dead  = { 
+			dynasty = ROOT
+			trait = saint
+		}
+	}
+	allowed_gift = { always = no }
+	flags = { dynastic_relic relique }
+	stacking = no
+	picture = "GFX_saints_bone_finger"
+	slot = slot_relique
+}

@@ -1,0 +1,331 @@
+# Province scope
+defined_text = {
+	name = GetTypeRouteTerrestreFluvial
+
+	text = {
+		localisation_key = TYPE_route_terrestre #"terrestre"
+		trigger = { NOT = { has_province_modifier = province_fleuve }}
+	}
+	text = {
+		localisation_key = TYPE_route_fluviale #"fluviale"
+		trigger = { has_province_modifier = province_fleuve }
+	}
+}
+	
+	
+defined_text = {
+	name = GetRouteTypeModifier	
+
+	text = {
+		localisation_key = TYPE_modifier_route_terrestre #"route de commerce"
+		trigger = { NOT = { has_province_modifier = province_fleuve }}
+	}
+	text = {
+		localisation_key = TYPE_modifier_route_fluviale #"voie commerciale fluviale"
+		trigger = { has_province_modifier = province_fleuve }
+	}
+}	
+
+#province/location scope
+
+#blablabla se passe GetTopographicalFlavour (par rapport à où l'on se trouve)
+defined_text = { 
+	name = GetTopographicalFlavour
+
+	text = {
+		localisation_key = danslest
+		trigger = {}
+	}
+	text = {
+		localisation_key = danslouest
+		trigger = {}
+	}
+	text = {
+		localisation_key = danslenord
+		trigger = {}
+	}
+	text = {
+		localisation_key = danslesud
+		trigger = {}
+	}	
+	text = {
+		localisation_key = plusaunord
+		trigger = {}
+	}	
+	text = {
+		localisation_key = plusausud
+		trigger = {}
+	}	
+	text = {
+		localisation_key = plusalest
+		trigger = {}
+	}	
+	text = {
+		localisation_key = plusalouest
+		trigger = {}
+	}	
+	text = {
+		localisation_key = nonloin
+		trigger = {}
+	}
+	text = {
+		localisation_key = pastresloin
+		trigger = {}
+	}
+	text = {
+		localisation_key = aquelqueslieues
+		trigger = {}
+	}
+	text = {
+		localisation_key = parlesmonts
+		trigger = { terrain = mountain }
+	}
+	text = {
+		localisation_key = parlesbois
+		trigger = { 
+			OR = {
+				terrain = forest
+				has_province_modifier = foret1
+			}
+		}
+	}
+	text = {
+		localisation_key = plusloinplaine
+		trigger = { terrain = plains }
+	}
+	text = {
+		localisation_key = pardelalacote
+		trigger = { terrain = hills }
+	}
+	text = {
+		localisation_key = pardelalesdunes
+		trigger = { terrain = desert }
+	}	
+	text = {
+		localisation_key = plusloinsurlacote
+		trigger = { has_province_modifier = province_cotiere }
+	}
+	text = {
+		localisation_key = plusloinsurlacote_alt
+		trigger = { has_province_modifier = province_cotiere }
+	}
+}	
+	
+defined_text = { 
+	name = GetRouteRank
+
+	text = {
+		localisation_key = routecomtale
+		trigger = { 
+			owner = { 
+				tier = COUNT
+				NOT = { tier = DUKE }
+			}
+		}
+	}
+	text = {
+		localisation_key = routeducale
+		trigger = { 
+			owner = { 
+				tier = DUKE
+				NOT = { tier = KING }
+			}
+		}
+	}	
+	text = {
+		localisation_key = routeduroi
+		trigger = { 
+			owner = { 
+				tier = KING
+				NOT = { tier = EMPEROR }
+			}
+		}
+	}
+	text = {
+		localisation_key = routedesrois
+		trigger = { 
+			owner = { 
+				tier = KING
+				NOT = { tier = EMPEROR }
+			}
+		}
+	}
+	text = {
+		localisation_key = routeimperiale
+		trigger = { 
+			owner = { 
+				tier = EMPEROR
+			}
+		}
+	}
+	text = { localisation_key = theroute }
+	text = { localisation_key = theway }
+}
+
+defined_text = { 
+	name = GetCutStoneMaterial
+
+	text = { localisation_key = someoldwall }
+	text = { localisation_key = someruins }	
+	text = { localisation_key = someoldfort }
+	text = { localisation_key = someoldtemple }
+	text = { localisation_key = someoldtower }
+	text = { localisation_key = someoldpavedroute }	
+}
+
+#title_scope
+defined_text = {
+	name = GetDeDapostrophe #//d'attruc // de truc (titre-lieu)
+
+	text = {
+		localisation_key = get_d_apostrophe
+		trigger = { 
+			OR = {
+				has_title_flag = needs_elision
+				province_id = 107#Anjou # >>> d'Anjou
+				
+				
+			}
+		}
+	}
+	text = {
+		localisation_key = get_de
+		trigger = { 
+			NOT = { 
+				OR = {
+					has_title_flag = needs_elision
+					province_id = 107#Anjou#Anjou#Anjou##Anjou
+					
+				}
+			}
+		}
+	}
+}
+defined_text = {
+	name = GetEnA #//en machinois // à machin (dans lieu)
+
+	text = {
+		localisation_key = get_en_prov #province named as a country f.e. Touraine
+		trigger = { 
+			OR = {
+				province_id = 90#Jülich#Juliers#Jülich##Jülich
+				province_id = 94#Hainaut#Hainaut#Hennegau##Henao
+				province_id = 98#Vexin#Vexin#Vexin##Vexin
+				province_id = 100#Mortain#Mortain#Mortain##Mortain
+				province_id = 102#Penthievre#Penthièvre#Penthievre##Penthievre
+				province_id = 103#Léon#Léon#Léon##Léon
+				province_id = 104#Cornouaille#Cornouaille#Cornouaille##Cornualles
+				province_id = 107#Anjou#Anjou#Anjou##Anjou
+				province_id = 108#Maine#Maine#Maine##Maine
+				province_id = 113#Vermandois#Vermandois#Vermandois##Vermandois
+				province_id = 114#Reims#Champagne#Reims##Reims
+				province_id = 117#Brabant#Brabant#Brabant##Brabante
+				province_id = 121#Nassau#Nassau#Nassau##Nasáu
+				province_id = 124#Pfalz#Palatinat#Pfalz##El Palatinado
+				province_id = 126#Nordgau#Nordgau#Nordgau##Nordgau
+				province_id = 127#Lorraine#Lorraine#Lothringen##Lorena
+				province_id = 133#Saintois#Saintois#Saintois##Saintois
+				province_id = 134#Sundgau#Sundgau#Sundgau##Sundgau
+				province_id = 135#Bourgogne#Bourgogne#Bourgogne##Borgoña
+				province_id = 139#Bourges#Berry#Bourges##Bourges
+				province_id = 140#Tours#Touraine#Tours##Tours
+				province_id = 141#Poitiers#Poitou#Poitiers##Poitiers
+				province_id = 143#Saintonge#Saintonge#Saintonge##Saintonge
+				province_id = 144#Lusignan#Lusignan#Lusignan##Lusignan
+				province_id = 146#Bourbon#Bourbon#Bourbon##Bourbon
+				province_id = 147#Limousin#Limousin#Limousin##Lemosín
+				province_id = 149#Bordeaux#Guyenne#Bordeaux##Burdeos
+				province_id = 150#Marsan#Albret#Marsan##Marsan
+				province_id = 151#Dax#Lahourd#Dax##Dax
+				province_id = 152#Navarra#Navarre#Navarra##Navarra
+				province_id = 153#Viscaya#Biscaye#Viscaya##Vizcaya
+				province_id = 154#Asturias de Santillana#Asturies#Asturias de Santillana##Asturias de Santillana
+				province_id = 155#Asturias de Oviedo#Oviedo#Asturias de Oviedo##Asturias de Oviedo
+				province_id = 208#Béarn#Béarn#Béarn##Bearn
+				province_id = 209#Armagnac#Armagnac#Armagnac##Armagnac
+				province_id = 211#Rosello#Roussillon#Rosello##Rosellò
+				province_id = 216#Périgord#Périgord#Périgord##Périgord
+				province_id = 217#Auvergne#Auvergne#Auvergne##Auvernia
+				province_id = 218#Rouergue#Rouergue#Rouergue##Rouergue
+				province_id = 219#Gévaudan#Gévaudan#Gévaudan##Gévaudan
+				province_id = 220#Melgueil#Melgueil#Melgueil##Melgueil
+				province_id = 221#provence
+				province_id = 222#Venaissin#Venaissin#Venaissin##Venaissin
+				province_id = 223#Vivarais#Vivarais#Vivarais##Vivarais
+				province_id = 224#Forez#Forez#Forez##Forez
+				province_id = 226#Charolais#Charolais#Charolais##Charolais
+				province_id = 228#Vienne#Viennois#Vienne##Viena
+				province_id = 237#Savoy#Savoie#Savoyen##Saboya
+				province_id = 238#Valais#Valais#Valais##Valais
+				province_id = 242#Aargau#Argovie#Aargau##Aargau
+				province_id = 245#Schwyz#Schwyz#Schwyz##Schwyz
+				province_id = 246#Grisons#Grisons#Grisons##Grisons
+				province_id = 249#Schwaben#Souabe#Schwaben##Schwaben
+				province_id = 250#Breisgau#Brisgau#Breisgau##Friburgo de Brisgovia
+			}
+		}
+	}
+	text = {
+		localisation_key = get_a_prov #province named as a city f.e. Touraine
+		trigger = { 
+			NOT = {
+				province_id = 90#Jülich#Juliers#Jülich##Jülich
+				province_id = 94#Hainaut#Hainaut#Hennegau##Henao
+				province_id = 98#Vexin#Vexin#Vexin##Vexin
+				province_id = 100#Mortain#Mortain#Mortain##Mortain
+				province_id = 102#Penthievre#Penthièvre#Penthievre##Penthievre
+				province_id = 103#Léon#Léon#Léon##Léon
+				province_id = 104#Cornouaille#Cornouaille#Cornouaille##Cornualles
+				province_id = 107#Anjou#Anjou#Anjou##Anjou
+				province_id = 108#Maine#Maine#Maine##Maine
+				province_id = 113#Vermandois#Vermandois#Vermandois##Vermandois
+				province_id = 114#Reims#Champagne#Reims##Reims
+				province_id = 117#Brabant#Brabant#Brabant##Brabante
+				province_id = 121#Nassau#Nassau#Nassau##Nasáu
+				province_id = 124#Pfalz#Palatinat#Pfalz##El Palatinado
+				province_id = 126#Nordgau#Nordgau#Nordgau##Nordgau
+				province_id = 127#Lorraine#Lorraine#Lothringen##Lorena
+				province_id = 133#Saintois#Saintois#Saintois##Saintois
+				province_id = 134#Sundgau#Sundgau#Sundgau##Sundgau
+				province_id = 135#Bourgogne#Bourgogne#Bourgogne##Borgoña
+				province_id = 139#Bourges#Berry#Bourges##Bourges
+				province_id = 140#Tours#Touraine#Tours##Tours
+				province_id = 141#Poitiers#Poitou#Poitiers##Poitiers
+				province_id = 143#Saintonge#Saintonge#Saintonge##Saintonge
+				province_id = 144#Lusignan#Lusignan#Lusignan##Lusignan
+				province_id = 146#Bourbon#Bourbon#Bourbon##Bourbon
+				province_id = 147#Limousin#Limousin#Limousin##Lemosín
+				province_id = 149#Bordeaux#Guyenne#Bordeaux##Burdeos
+				province_id = 150#Marsan#Albret#Marsan##Marsan
+				province_id = 151#Dax#Lahourd#Dax##Dax
+				province_id = 152#Navarra#Navarre#Navarra##Navarra
+				province_id = 153#Viscaya#Biscaye#Viscaya##Vizcaya
+				province_id = 154#Asturias de Santillana#Asturies#Asturias de Santillana##Asturias de Santillana
+				province_id = 155#Asturias de Oviedo#Oviedo#Asturias de Oviedo##Asturias de Oviedo
+				province_id = 208#Béarn#Béarn#Béarn##Bearn
+				province_id = 209#Armagnac#Armagnac#Armagnac##Armagnac
+				province_id = 211#Rosello#Roussillon#Rosello##Rosellò
+				province_id = 216#Périgord#Périgord#Périgord##Périgord
+				province_id = 217#Auvergne#Auvergne#Auvergne##Auvernia
+				province_id = 218#Rouergue#Rouergue#Rouergue##Rouergue
+				province_id = 219#Gévaudan#Gévaudan#Gévaudan##Gévaudan
+				province_id = 220#Melgueil#Melgueil#Melgueil##Melgueil
+				province_id = 221#provence
+				province_id = 222#Venaissin#Venaissin#Venaissin##Venaissin
+				province_id = 223#Vivarais#Vivarais#Vivarais##Vivarais
+				province_id = 224#Forez#Forez#Forez##Forez
+				province_id = 226#Charolais#Charolais#Charolais##Charolais
+				province_id = 228#Vienne#Viennois#Vienne##Viena
+				province_id = 237#Savoy#Savoie#Savoyen##Saboya
+				province_id = 238#Valais#Valais#Valais##Valais
+				province_id = 242#Aargau#Argovie#Aargau##Aargau
+				province_id = 245#Schwyz#Schwyz#Schwyz##Schwyz
+				province_id = 246#Grisons#Grisons#Grisons##Grisons
+				province_id = 249#Schwaben#Souabe#Schwaben##Schwaben
+				province_id = 250#Breisgau#Brisgau#Breisgau##Friburgo de Brisgovia
+			}
+		}
+	}
+}
+	
+	

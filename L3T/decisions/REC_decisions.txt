@@ -1,0 +1,264 @@
+decisions = { 
+
+	construire_cathedrale = {
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential = {
+			construire_cathedral_potential = yes
+		}
+	
+		allow = {
+			construire_cathedral_allow = yes
+		}
+	
+		effect = {
+			wealth = -100
+			piety = 100
+			add_trait = batisseur_cathedrale
+			destroy_relic = yes
+
+			chronicle = {
+				entry = CHRONICLE_CATHEDRALE_BEGINS
+				picture = GFX_evt_cathedral
+			}
+
+			capital_scope = {
+				custom_tooltip = { text = TOOLTIPCONSTRUIRECATHEDRALE }
+				hidden_tooltip = {
+					add_province_modifier = {
+						name = relique_generique
+						duration = -1
+					}
+					add_province_modifier = {
+						name = chantier_cathedrale
+						duration = -1
+					}
+					capital_holding = {
+						set_title_flag = cathedral_construction
+						random_list = {
+							25 = { set_variable = { which = cathedral value = 10 } }
+							25 = { set_variable = { which = cathedral value = 20 } }
+							25 = { set_variable = { which = cathedral value = 30 } }
+							25 = { set_variable = { which = cathedral value = 40 } }
+						}
+					}	
+				}
+			}
+			hidden_tooltip = { character_event = { id = REC.5 days = 10} }
+			if = {
+				limit = {
+					has_character_modifier = stolen_relic
+				}
+				remove_character_modifier = stolen_relic
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.1 #Factors for an AI character to take the decision (1 = average of 1 year)
+			modifier = {
+				factor = 10
+				yearly_income = 300
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { yearly_income = 200 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { yearly_income = 100 }
+			}
+			modifier = {
+				factor = 2
+				has_character_modifier = stolen_relic
+			}
+			modifier = {
+				factor = 2
+				any_realm_title = {
+				is_holy_site = ROOT
+				}
+			}
+		}
+	}
+	
+	seek_glass_bower_master ={
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential = {
+			any_demesne_title = {	
+				tier = baron
+				OR = {
+					has_building = ca_cathedrale_04
+					has_building = ct_cathedrale_04
+					has_building = tp_cathedrale_04
+				}
+				NOT = {
+					has_building = ca_cathedrale_09
+					has_building = ct_cathedrale_09
+					has_building = tp_cathedrale_09
+				}
+				location = { NOT = { has_province_modifier = chantier_stop } }
+			}
+			NOT = {
+				any_courtier = {
+					trait = maitre_verrier
+				}
+			}
+		}
+		
+		allow = {
+			wealth = 50
+			custom_tooltip = { 
+				text = available_glass_bower_master
+				available_master_glass_maker = yes
+			}
+		}
+		
+		effect = {
+			hire_master_glass_maker = yes
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.1 #Factors for an AI character to take the decision (1 = average of 1 year)
+			modifier = {
+				factor = 10
+				yearly_income = 300
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { yearly_income = 200 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { yearly_income = 100 }
+			}
+		}
+	}
+	
+	seek_sculptor_master ={
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential = {
+			any_demesne_title = {	
+				tier = baron
+				OR = {
+					has_building = ca_cathedrale_04
+					has_building = ct_cathedrale_04
+					has_building = tp_cathedrale_04
+				}
+				NOT = {
+					has_building = ca_cathedrale_09
+					has_building = ct_cathedrale_09
+					has_building = tp_cathedrale_09
+				}
+				location = { NOT = { has_province_modifier = chantier_stop } }
+			}
+			NOT = {
+				any_courtier = {
+					trait = maitre_sculpteur
+				}
+			}
+		}
+		
+		allow = {
+			wealth = 50
+			custom_tooltip = { 
+				text = available_sculptor_master
+				available_master_sculptor = yes
+			}
+		}
+		
+		effect = {
+			hire_master_sculptor = yes
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.1 #Factors for an AI character to take the decision (1 = average of 1 year)
+			modifier = {
+				factor = 10
+				yearly_income = 300
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { yearly_income = 200 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { yearly_income = 100 }
+			}
+		}
+	}
+	
+	seek_painter_master ={
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential = {
+			any_demesne_title = {	
+				tier = baron
+				OR = {
+					has_building = ca_cathedrale_04
+					has_building = ct_cathedrale_04
+					has_building = tp_cathedrale_04
+				}
+				NOT = {
+					has_building = ca_cathedrale_09
+					has_building = ct_cathedrale_09
+					has_building = tp_cathedrale_09
+				}
+				location = { NOT = { has_province_modifier = chantier_stop } }
+			}
+			NOT = {
+				any_courtier = {
+					trait = maitre_sculpteur
+				}
+			}
+		}
+		
+		allow = {
+			wealth = 50
+			custom_tooltip = { 
+				text = available_painter_master
+				available_master_painter = yes
+			}
+		}
+		
+		effect = {
+			hire_master_painter = yes
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.1 #Factors for an AI character to take the decision (1 = average of 1 year)
+			modifier = {
+				factor = 10
+				yearly_income = 300
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { yearly_income = 200 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { yearly_income = 100 }
+			}
+		}
+	}
+}

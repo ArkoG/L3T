@@ -16,7 +16,7 @@ province_event = {
 		
 	mean_time_to_happen = {
 		months = 100
-		modifier = {
+		modifier = { #favours double cities
 			factor = 0.01
 			any_province_holding = {
 				count = 2
@@ -24,19 +24,71 @@ province_event = {
 				holding_type = city
 			}
 		}
+		modifier = { #favours commercial cities
+			factor = 0.5
+				any_province_holding = {
+					tier = baron
+					holding_type = city
+					has_building = VOC_COMMERCIALE
+				}
+		}
+		modifier = { 
+			factor = 0.8
+			OR = {
+				any_province_holding = { has_building = CA_route_L1 }
+				any_province_holding = { has_building = CT_route_L1 }
+				any_province_holding = { has_building = TP_route_L1 }
+				any_province_holding = { has_building = CA_fleuve_L1 }
+				any_province_holding = { has_building = CT_fleuve_L1 }
+				any_province_holding = { has_building = TP_fleuve_L1 }
+				}
+		}
+		modifier = { 
+			factor = 0.6
+			OR = {
+				any_province_holding = { has_building = CA_route_L2 }
+				any_province_holding = { has_building = CT_route_L2 }
+				any_province_holding = { has_building = TP_route_L2 }
+				any_province_holding = { has_building = CA_fleuve_L2 }
+				any_province_holding = { has_building = CT_fleuve_L2 }
+				any_province_holding = { has_building = TP_fleuve_L2 }
+				}
+		}
 		modifier = {
-			factor = 0.1
+			factor = 0.9
 			any_province_holding = {
 				OR = {
-					has_building = CA_route_L1
-					has_building = CT_route_L1
-					has_building = TP_route_L1
+					has_building = CA_col_L1
+					has_building = CT_col_L1
+					has_building = TP_col_L1
 				}
 			}
 		}
 		modifier = {
-			factor = 0.5
-			has_province_modifier = province_fleuve
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CT_relais_L1
+					has_building = TP_relais_L1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CA_pont_L2 #pont #requires_town_1
+					has_building = CT_pont_L2 #pont #requires_town_1
+					has_building = TP_pont_L2 #pont #requires_town_1
+					has_building = CT_oasis_L2 #désert #requires_town_1
+				}
+			}
+		}
+		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
+		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
+		modifier = { 
+			factor = 3
+			trade_route = silk_road #favors getting away from silk_road
 		}
 	}
 
@@ -63,6 +115,7 @@ province_event = {
 			}
 			hidden_tooltip = {	
 				set_province_flag = bloc_B
+				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
 				
 				# The route size is the max route size of its C neighboors + 1
 				set_variable = { which = "route_size" value = 1 } # the value to evaluate the neighboor, then to store final value
@@ -143,7 +196,7 @@ province_event = {
 		
 	mean_time_to_happen = {
 		months = 100
-		modifier = {
+		modifier = { #favours double cities
 			factor = 0.01
 			any_province_holding = {
 				count = 2
@@ -151,19 +204,71 @@ province_event = {
 				holding_type = city
 			}
 		}
+		modifier = { #favours commercial cities
+			factor = 0.5
+				any_province_holding = {
+					tier = baron
+					holding_type = city
+					has_building = VOC_COMMERCIALE
+				}
+		}
+		modifier = { 
+			factor = 0.8
+			OR = {
+				any_province_holding = { has_building = CA_route_L1 } #route terrestre
+				any_province_holding = { has_building = CT_route_L1 } #route terrestre
+				any_province_holding = { has_building = TP_route_L1 } #route terrestre
+				any_province_holding = { has_building = CA_fleuve_L1 } #route fluviale (port)
+				any_province_holding = { has_building = CT_fleuve_L1 } #route fluviale (port)
+				any_province_holding = { has_building = TP_fleuve_L1 } #route fluviale (port)
+				}
+		}
+		modifier = { 
+			factor = 0.6
+			OR = {
+				any_province_holding = { has_building = CA_route_L2 } #route terrestre #requires_town_1
+				any_province_holding = { has_building = CT_route_L2 } #route terrestre #requires_town_1
+				any_province_holding = { has_building = TP_route_L2 } #route terrestre #requires_town_1
+				any_province_holding = { has_building = CA_fleuve_L2 } #route fluviale (port) #requires_town_1
+				any_province_holding = { has_building = CT_fleuve_L2 } #route fluviale (port) #requires_town_1
+				any_province_holding = { has_building = TP_fleuve_L2 } #route fluviale (port) #requires_town_1
+				}
+		}
 		modifier = {
-			factor = 0.1
+			factor = 0.9
 			any_province_holding = {
 				OR = {
-					has_building = CA_route_L1
-					has_building = CT_route_L1
-					has_building = TP_route_L1
+					has_building = CA_col_L1 #montagne
+					has_building = CT_col_L1 #montagne
+					has_building = TP_col_L1 #montagne
 				}
 			}
 		}
 		modifier = {
-			factor = 0.5
-			has_province_modifier = province_fleuve
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CT_relais_L1 #requires CT_col_1
+					has_building = TP_relais_L1 #requires TP_col_1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CA_pont_L2 #pont #requires_town_1
+					has_building = CT_pont_L2 #pont #requires_town_1
+					has_building = TP_pont_L2 #pont #requires_town_1
+					has_building = CT_oasis_L2 #désert #requires_town_1
+				}
+			}
+		}
+		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
+		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
+		modifier = { 
+			factor = 3
+			trade_route = silk_road #favors getting away from silk_road
 		}
 	}
 
@@ -185,6 +290,7 @@ province_event = {
 			}
 			hidden_tooltip = {			
 				set_province_flag = bloc_C
+				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
 				
 				set_variable = { which = "route_size" value = 1 }
 				set_variable = { which = "tmp" value = 1 }
@@ -261,7 +367,7 @@ province_event = {
 		
 	mean_time_to_happen = {
 		months = 100
-		modifier = {
+		modifier = { #favours double cities
 			factor = 0.01
 			any_province_holding = {
 				count = 2
@@ -269,20 +375,68 @@ province_event = {
 				holding_type = city
 			}
 		}
+		modifier = { #favours commercial cities
+			factor = 0.5
+				any_province_holding = {
+					tier = baron
+					holding_type = city
+					has_building = VOC_COMMERCIALE
+				}
+		}
+		modifier = { 
+			factor = 0.8
+			OR = {
+				any_province_holding = { has_building = CA_route_L1 }
+				any_province_holding = { has_building = CT_route_L1 }
+				any_province_holding = { has_building = TP_route_L1 }
+				any_province_holding = { has_building = CA_fleuve_L1 }
+				any_province_holding = { has_building = CT_fleuve_L1 }
+				any_province_holding = { has_building = TP_fleuve_L1 }
+				}
+		}
+		modifier = { 
+			factor = 0.6
+			OR = {
+				any_province_holding = { has_building = CA_route_L2 }
+				any_province_holding = { has_building = CT_route_L2 }
+				any_province_holding = { has_building = TP_route_L2 }
+				any_province_holding = { has_building = CA_fleuve_L2 }
+				any_province_holding = { has_building = CT_fleuve_L2 }
+				any_province_holding = { has_building = TP_fleuve_L2 }
+				}
+		}
 		modifier = {
-			factor = 0.1
+			factor = 0.9
 			any_province_holding = {
 				OR = {
-					has_building = CA_route_L1
-					has_building = CT_route_L1
-					has_building = TP_route_L1
+					has_building = CA_col_L1
+					has_building = CT_col_L1
+					has_building = TP_col_L1
 				}
 			}
 		}
 		modifier = {
-			factor = 0.5
-			has_province_modifier = province_fleuve
-		}		
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CT_relais_L1
+					has_building = TP_relais_L1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CA_pont_L2 #pont #requires_town_1
+					has_building = CT_pont_L2 #pont #requires_town_1
+					has_building = TP_pont_L2 #pont #requires_town_1
+					has_building = CT_oasis_L2 #désert #requires_town_1
+				}
+			}
+		}
+		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
+		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
 	}
 
 	immediate = {
@@ -298,11 +452,12 @@ province_event = {
 					any_neighbor_province = { has_province_flag = bloc_A }
 					any_neighbor_province = { has_province_flag = bloc_B }
 					any_neighbor_province = { has_province_flag = bloc_D }
-					any_neighbor_province = { has_province_flag = bloc_E }
+					#any_neighbor_province = { has_province_flag = bloc_E }###this should permit to create and a D province to an existing E province
 				}
 			}
 			hidden_tooltip = {			
 				set_province_flag = bloc_D
+				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
 				
 				set_variable = { which = "route_size" value = 1 }
 				set_variable = { which = "tmp" value = 1 }
@@ -379,7 +534,7 @@ province_event = {
 		
 	mean_time_to_happen = {
 		months = 100
-		modifier = {
+		modifier = { #favours double cities
 			factor = 0.01
 			any_province_holding = {
 				count = 2
@@ -387,20 +542,68 @@ province_event = {
 				holding_type = city
 			}
 		}
+		modifier = { #favours commercial cities
+			factor = 0.5
+				any_province_holding = {
+					tier = baron
+					holding_type = city
+					has_building = VOC_COMMERCIALE
+				}
+		}
+		modifier = { 
+			factor = 0.8
+			OR = {
+				any_province_holding = { has_building = CA_route_L1 }
+				any_province_holding = { has_building = CT_route_L1 }
+				any_province_holding = { has_building = TP_route_L1 }
+				any_province_holding = { has_building = CA_fleuve_L1 }
+				any_province_holding = { has_building = CT_fleuve_L1 }
+				any_province_holding = { has_building = TP_fleuve_L1 }
+				}
+		}
+		modifier = { 
+			factor = 0.6
+			OR = {
+				any_province_holding = { has_building = CA_route_L2 }
+				any_province_holding = { has_building = CT_route_L2 }
+				any_province_holding = { has_building = TP_route_L2 }
+				any_province_holding = { has_building = CA_fleuve_L2 }
+				any_province_holding = { has_building = CT_fleuve_L2 }
+				any_province_holding = { has_building = TP_fleuve_L2 }
+				}
+		}
 		modifier = {
-			factor = 0.1
+			factor = 0.9
 			any_province_holding = {
 				OR = {
-					has_building = CA_route_L1
-					has_building = CT_route_L1
-					has_building = TP_route_L1
+					has_building = CA_col_L1
+					has_building = CT_col_L1
+					has_building = TP_col_L1
 				}
 			}
 		}
 		modifier = {
-			factor = 0.5
-			has_province_modifier = province_fleuve
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CT_relais_L1
+					has_building = TP_relais_L1
+				}
+			}
 		}
+		modifier = {
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CA_pont_L2 #pont #requires_town_1
+					has_building = CT_pont_L2 #pont #requires_town_1
+					has_building = TP_pont_L2 #pont #requires_town_1
+					has_building = CT_oasis_L2 #désert #requires_town_1
+				}
+			}
+		}
+		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
+		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
 	}
 
 	immediate = {
@@ -421,6 +624,7 @@ province_event = {
 			}
 			hidden_tooltip = {	
 				set_province_flag = bloc_E		
+				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
 				
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_D }
@@ -484,20 +688,100 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 10
+		months = 15
+		modifier = { 
+			factor = 0.9
+				OR = {
+					any_province_holding = { has_building = CA_route_L1 }
+					any_province_holding = { has_building = CT_route_L1 }
+					any_province_holding = { has_building = TP_route_L1 }
+					any_province_holding = { has_building = CA_fleuve_L1 }
+					any_province_holding = { has_building = CT_fleuve_L1 }
+					any_province_holding = { has_building = TP_fleuve_L1 }
+				}
+		}
+		modifier = { 
+			factor = 0.8
+				OR = {
+					any_province_holding = { has_building = CA_route_L2 }
+					any_province_holding = { has_building = CT_route_L2 }
+					any_province_holding = { has_building = TP_route_L2 }
+					any_province_holding = { has_building = CA_fleuve_L2 }
+					any_province_holding = { has_building = CT_fleuve_L2 }
+					any_province_holding = { has_building = TP_fleuve_L2 }
+				}
+		}
+		modifier = { #more connected
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CA_col_L1
+					has_building = CT_col_L1
+					has_building = TP_col_L1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CT_relais_L1
+					has_building = TP_relais_L1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_province_holding = {
+				OR = {
+					has_building = CA_pont_L2 #pont #requires_town_1
+					has_building = CT_pont_L2 #pont #requires_town_1
+					has_building = TP_pont_L2 #pont #requires_town_1
+					has_building = CT_oasis_L2 #désert #requires_town_1
+				}
+			}
+		}
+		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
+		modifier = { factor = 0.8	any_province_holding = { has_building = VOC_COMMERCIALE }}#there is a commercial city
+ 		modifier = { factor = 1.2	any_province_holding = { has_building = VOC_INDUSTRIELLE }}#not my business
+		#modifier = { factor = 0.9	any_province_holding = { has_building = CITE_L2 }}#the bigger the better	
+		#modifier = { factor = 0.9	any_province_holding = { has_building = CITE_L3 }}#the bigger the better
 	}
 	
 	option = {
 		name = "L3TRADE.5A"
+		custom_tooltip = { text = recoit_une_route_commerciale }
 		hidden_tooltip = {
 			remove_province_modifier = future_route
 			if = {
 				limit = { has_province_modifier = province_fleuve }
 				add_province_modifier = { name = route_fluviale duration = -1 }
+				any_province_holding = {
+					limit = {
+						OR = {
+							holding_type = castle
+							holding_type = temple
+							holding_type = city
+						}
+					}
+					change_variable = { which = "developpement" value = 10 } #pour la route 
+					change_variable = { which = "developpement_road" value = 10 }
+				}
 			}
 			if = {
 				limit = { NOT = { has_province_modifier = province_fleuve } }
 				add_province_modifier = { name = route_terrestre duration = -1 }
+				any_province_holding = {
+					limit = {
+						OR = {
+							holding_type = castle
+							holding_type = temple
+							holding_type = city
+						}
+					}
+					change_variable = { which = "developpement" value = 10 } #pour la route 
+					change_variable = { which = "developpement_road" value = 10 } 
+				}
 			}
 			
 			# If the player does not receive this event ...
@@ -526,6 +810,7 @@ province_event = {
 	hide_window = yes
 	
 	trigger = {
+		NOT = { has_province_modifier = noeud_commercial_annexe }
 		OR = {
 			has_province_flag = bloc_C
 			has_province_flag = bloc_D
@@ -546,6 +831,17 @@ province_event = {
 	
 	immediate = {
 		add_province_modifier = { name = noeud_commercial_annexe duration = -1 }
+		any_province_holding = {
+			limit = {
+				OR = {
+					holding_type = castle
+					holding_type = temple
+					holding_type = city
+				}
+			}
+			change_variable = { which = "developpement" value = 10 } #pour la route 
+			change_variable = { which = "developpement_road" value = 10 }
+		}
 	}
 }
 
@@ -564,18 +860,63 @@ province_event = {
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 2 } }
 			add_province_modifier = { name = route_size2 duration = -1 }
+			any_province_holding = {
+				limit = {
+					OR = {
+						holding_type = castle
+						holding_type = temple
+						holding_type = city
+					}
+				}
+				change_variable = { which = "developpement" value = 10 } #pour la route 
+				change_variable = { which = "developpement_road" value = 10 }
+			}
 		}
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 3 } }
 			add_province_modifier = { name = route_size3 duration = -1 }
+			any_province_holding = {
+				limit = {
+					OR = {
+						holding_type = castle
+						holding_type = temple
+						holding_type = city
+					}
+				}
+				change_variable = { which = "developpement" value = 10 } #pour la route 
+				change_variable = { which = "developpement_road" value = 10 }
+			}
 		}
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 4 } }
 			add_province_modifier = { name = route_size4 duration = -1 }
+			any_province_holding = {
+				limit = {
+					OR = {
+						holding_type = castle
+						holding_type = temple
+						holding_type = city
+					}
+				}
+				change_variable = { which = "developpement" value = 10 } #pour la route
+				change_variable = { which = "developpement_road" value = 10 } 
+			}
 		}
 		if = {
 			limit = { is_variable_equal = { which = "route_size" value = 5 } }
 			add_province_modifier = { name = route_size5 duration = -1 }
+			any_province_holding = {
+				limit = {
+					tier = baron
+					OR = {
+						holding_type = castle
+						holding_type = temple
+						holding_type = city
+					}
+				}
+				change_variable = { which = "developpement" value = 10 } #pour la route
+				change_variable = { which = "developpement_road" value = 10 } 
+			}
 		}
 	}
 }
@@ -675,8 +1016,9 @@ character_event = {
 }
 
 # Avert the player that a route is on its demesne
-character_event = {
+narrative_event = {
     id = L3TRADE.10
+	title = NAME.L3TRADE.10
 	desc = "DESCL3TRADE.10"
 	picture = GFX_evt_market
 

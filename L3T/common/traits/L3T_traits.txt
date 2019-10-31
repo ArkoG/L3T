@@ -1,0 +1,147 @@
+### TRAITS ###
+
+#!save compatibility
+
+##SAINT
+#Trait donné aux personnages canonisés
+#saint = {
+#	cached = yes
+#	customizer = no
+#	random = no
+#}
+deus_gladio = {
+	cached = yes
+	customizer = no
+	random = no
+
+	religious = yes
+	martial = 1
+	dynasty_opinion = 3
+	church_opinion = 10
+}
+deus_vox = {
+	cached = yes
+	customizer = no
+	random = no
+
+	religious = yes
+	learning = 1
+	dynasty_opinion = 5
+	church_opinion = 15	
+}
+
+##L3T
+# Trait donné pour les possesseurs de batiments spéciaux dans les capitales féodales
+dynastic_keeper = {
+	dynasty_opinion = 10#lovely family
+	ai_honor = 10 		#in memory of the ancestors
+	ai_ambition = 10 	#inspired by ancestors
+	customizer = no
+	random = no
+}
+
+##REC
+# Trait donné aux batisseurs de cathédrale 
+# Trait retiré dès qu'il n'y a plus de chantier de la cathédrale
+batisseur_cathedrale = {
+	same_opinion = -10
+	church_opinion = 25
+	town_opinion = -10 #NE SEMBLE PLUS MARCHER (mais présent dans XYLO_trait)
+	ai_zeal = 10
+	
+	customizer = no
+	random = no
+}
+
+apprenti_sculpteur = {
+	potential = {
+		always = no
+	}
+	
+	same_opinion = 10
+	cannot_marry = yes
+	
+	customizer = no
+}
+
+compagnon_sculpteur = {
+	potential = {
+		always = no
+	}
+	
+	same_opinion = 10
+	
+	customizer = no
+}
+
+maitre_sculpteur = {
+	potential = {
+		always = no
+	}
+	
+	same_opinion = 10
+	#health = 1 #to help master to not get pruned to soon	
+	customizer = no
+}
+
+apprenti_fresquiste = {
+	potential = {
+		always = no
+	}
+	
+	same_opinion = 10
+	cannot_marry = yes
+	
+	customizer = no
+}
+
+compagnon_fresquiste = {
+	potential = {
+		always = no
+	}
+	
+	same_opinion = 10
+	
+	customizer = no
+}
+
+maitre_fresquiste = {
+	potential = {
+		always = no
+	}
+	
+	same_opinion = 10
+	#health = 1 #to help master to not get pruned to soon
+	customizer = no
+}
+
+apprenti_verrier = {
+	potential = {
+		always = no
+	}
+	
+	same_opinion = 10
+	cannot_marry = yes
+	
+	customizer = no
+}
+
+compagnon_verrier = {
+	potential = {
+		always = no
+	}
+	
+	same_opinion = 10
+	
+	customizer = no
+}
+
+maitre_verrier = {
+	potential = {
+		always = no
+	}
+	
+	same_opinion = 10
+	#health = 1 #to help master to not get pruned to soon
+	customizer = no
+}

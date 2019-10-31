@@ -1,0 +1,415 @@
+# WARNING: scripted triggers are not functions in the programming langages
+# 		   they are only macro: a way to avoid copy/paste
+#		   In particular take attention of:
+#				- The scopes
+#				- The OR blocs
+
+
+is_catholic_group = {
+	OR = {
+		religion = catholic
+		is_heresy_of = catholic
+	}
+}
+
+relic_spawn_bonus_christian = {
+	AND = {
+		religion_group = christian
+		is_landed = yes
+	}
+}
+
+relic_spawn_bonus_muslim = {
+	AND = {
+		religion_group = muslim
+		is_landed = yes
+	}
+}
+
+relic_spawn_bonus_catholic = {
+	AND = {
+		is_catholic_group = yes
+		is_landed = yes
+	}
+}
+
+relic_spawn_bonus_landed_rank = {
+	AND = {
+		is_landed = yes
+		OR = {
+			religion_group = muslim
+			religion_group = christian
+		}
+		OR = {
+			tier = king
+			tier = duke
+			tier = count
+		}		
+	}
+}
+
+relic_spawn_bonus_catholic_theocratie = {
+	AND = {
+		is_catholic_group = yes
+		is_landed = yes
+		is_theocracy = yes
+	}
+}
+
+# ROOT is a character
+has_a_relic = {
+	any_artifact = {
+		OR = {
+			#ReC relics
+			has_artifact_flag = relique
+			#vanilla generic/dynamic relic support
+			AND = { 
+				has_artifact_flag = saint
+				has_artifact_flag = bodypart
+			}
+		}
+	}
+}
+
+# ROOT is a potentiel ruler who wants to build a Cathedral
+construire_cathedral_potential = {
+	AND = {
+		has_global_flag = opus_francigenum
+		
+		# Catholic province ruler
+		is_catholic_group = yes
+		higher_tier_than = BARON # Count, Duke, King or Emperor
+
+		# Not already build or own a Cathedral
+		NOT = {
+			trait = batisseur_cathedrale			
+			any_demesne_title = {	
+				tier = baron
+				OR = {				
+					has_building = ca_cathedrale_01
+					has_building = ct_cathedrale_01
+					has_building = tp_cathedrale_01
+				}
+			}
+		}
+		#moved to allow s-trigger
+		## Has a relic
+		#has_a_relic = yes
+	}
+}
+
+# ROOT is a potentiel ruler who wants to build a Cathedral
+construire_cathedral_allow = {
+	AND = {
+		wealth = 100
+		# Peace
+		custom_tooltip = { 
+			text = custom_paix_totale
+			hidden_tooltip = {
+				war = no
+				NOT = { any_liege = { war = yes } }
+			}
+		}
+	   #Has a relic
+		custom_tooltip = { 
+			text = custom_relique 
+			hidden_tooltip = {
+				has_a_relic = yes
+			}
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_1 = {
+	NOT = { 
+		OR = {
+			has_building = ca_cathedrale_01
+			has_building = ct_cathedrale_01
+			has_building = tp_cathedrale_01
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_2 = {
+	OR = {
+		has_building = ca_cathedrale_01
+		has_building = ct_cathedrale_01
+		has_building = tp_cathedrale_01
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_02
+			has_building = ct_cathedrale_02
+			has_building = tp_cathedrale_02
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_3 = {
+	OR = {
+		has_building = ca_cathedrale_02
+		has_building = ct_cathedrale_02
+		has_building = tp_cathedrale_02
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_03
+			has_building = ct_cathedrale_03
+			has_building = tp_cathedrale_03
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_4 = {
+	OR = {
+		has_building = ca_cathedrale_03
+		has_building = ct_cathedrale_03
+		has_building = tp_cathedrale_03
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_04
+			has_building = ct_cathedrale_04
+			has_building = tp_cathedrale_04
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_5 = {
+	OR = {
+		has_building = ca_cathedrale_04
+		has_building = ct_cathedrale_04
+		has_building = tp_cathedrale_04
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_05
+			has_building = ct_cathedrale_05
+			has_building = tp_cathedrale_05
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_6 = {
+	OR = {
+		has_building = ca_cathedrale_05
+		has_building = ct_cathedrale_05
+		has_building = tp_cathedrale_05
+	}
+	NOT = { 
+		OR = {
+			has_building = ca_cathedrale_06
+			has_building = ct_cathedrale_06
+			has_building = tp_cathedrale_06
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_7 = {
+	OR = {
+		has_building = ca_cathedrale_06
+		has_building = ct_cathedrale_06
+		has_building = tp_cathedrale_06
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_07
+			has_building = ct_cathedrale_07
+			has_building = tp_cathedrale_07
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_8 = {
+	OR = {
+		has_building = ca_cathedrale_07
+		has_building = ct_cathedrale_07
+		has_building = tp_cathedrale_07
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_08
+			has_building = ct_cathedrale_08
+			has_building = tp_cathedrale_08
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_9 = {
+	OR = {
+		has_building = ca_cathedrale_08
+		has_building = ct_cathedrale_08
+		has_building = tp_cathedrale_08
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_09
+			has_building = ct_cathedrale_09
+			has_building = tp_cathedrale_09
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_10_ca = {
+	OR = {
+		has_building = ca_cathedrale_09
+		has_building = ct_cathedrale_09
+		has_building = tp_cathedrale_09
+	}
+	holding_type = castle
+	NOT = { has_building = ca_cathedrale_10 }
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_10_ct = {
+	OR = {
+		has_building = ca_cathedrale_09
+		has_building = ct_cathedrale_09
+		has_building = tp_cathedrale_09
+	}
+	holding_type = city
+	NOT = { has_building = ct_cathedrale_10 }
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_10_tp = {
+	OR = {
+		has_building = ca_cathedrale_09
+		has_building = ct_cathedrale_09
+		has_building = tp_cathedrale_09
+	}
+	holding_type = temple
+	NOT = { has_building = tp_cathedrale_10 }
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_11 = {
+	OR = {
+		has_building = ca_cathedrale_10
+		has_building = ct_cathedrale_10
+		has_building = tp_cathedrale_10
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_11
+			has_building = ct_cathedrale_11
+			has_building = tp_cathedrale_11
+		}
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+is_building_cathedral_step_12 = {
+	OR = {
+		has_building = ca_cathedrale_11
+		has_building = ct_cathedrale_11
+		has_building = tp_cathedrale_11
+	}
+	NOT = {
+		OR = {
+			has_building = ca_cathedrale_12
+			has_building = ct_cathedrale_12
+			has_building = tp_cathedrale_12
+		}
+	}
+}
+
+# ROOT is not used
+available_master_glass_maker = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = maitre_verrier
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_compagnon_glass_maker = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = compagnon_verrier
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_apprentice_glass_maker = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = apprenti_verrier
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_master_sculptor = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = maitre_sculpteur
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_compagnon_sculptor = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = compagnon_sculpteur
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_apprentice_sculptor = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = apprenti_sculpteur
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_master_painter = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = maitre_fresquiste
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_compagnon_painter = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = compagnon_fresquiste
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is not used
+available_apprentice_painter = {
+	any_society_member = {
+		society_member_of = artist_guild
+		trait = apprenti_fresquiste
+		NOT = { has_character_modifier = work_on_cathedral }
+	}
+}
+
+# ROOT is the holding where the cathedral is building
+has_loge = {
+	OR = {
+		has_building = ca_loge
+		has_building = ct_loge
+		has_building = tp_loge
+	}
+}

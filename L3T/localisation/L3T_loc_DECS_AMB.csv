@@ -1,26 +1,65 @@
 #;;x;;;;;;;;;;;;x
+
 #;;DECISIONS;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+egg_hunt;Search for Easter Eggs;Chercher des œufs de Pâques;;;;;;;;;;;;x
+egg_hunt_desc;During season of Spring, people seek for Easter eggs. To hold a search for some of them would be a pious act.;Le printemps est la saison des œufs de Pâques. En chercher serait faire preuve de piété.;;;;;;;;;;;;x
+egg_hunt_custom;Let the hunt begin!;Que la chasse commence !;;;;;;;;;;;;x
+buy_books;Acquire some books;Acquérir des livres;;;;;;;;;;;;x
+buy_books_desc;Now we have a library in our castle, we could invest some gold to acquire some books. It may bring us some advantages.;Comme nous possédons une bibliothèque dans notre château, peut être pourrions investir un peu d'or dans l'achat de livres et en tirer avantage.;;;;;;;;;;;;x
+max_nb_books;The character doesn't already owns more than §Y7§! books.;Le personnage ne possède pas davantage que §Y7§! livres.;;;;;;;;;;;;x
+max_studied_books;The character is limited to study no more than §Y3§! books.;Le personnage est limité à l'étude de §Y3§! livres en tout.;;;;;;;;;;;;x
+study_books;Study some books;Etudier des livres;;;;;;;;;;;;x
+study_books_desc;The character starts studying a book from his personnal collection. \nMind that §Ythe studied book may become unusable§! for this character at the end of the study.;Le personnage commence à étudier un livre de sa collection personnelle. \nA noter que §Yle livre étudié pourrait ne plus pouvoir être équipé§! par ce personnage à l'issue de l'étude.;;;;;;;;;;;;x
+owns_at_least_a_non_unique_book;The character must own at least §Y1§! book in his personnal collection, that is NOT a special book.;Le personnage doit posséder au moins §Y1§! livre dans sa collection personnelle, et qui ne soit PAS un livre spécial.;;;;;;;;;;x
+dropped_book_study;Didn't dropped a book study more less than one year ago;N'a pas abandonné l'étude d'un livre depuis moins d'un an;;;;;;;;;;;;x
+burnt_book_study;Most recent study that end very badly is more than §Y5§! years old...;La dernière étude à s'être vraiment mal terminée doit remonter à au moins §Y5§! années... ;;;;;;;;;;;;x
 prospect;Prospect;Prospecter;;;;;;;;;;;;x
 prospect_desc;One of our demesne province mines have very few ore available left to extract.\nWe can decide to search for new veins.;Les mines d'une de nos provinces n'a plus beaucoup de minerai à extraire.\nNous pouvons décider de prospecter pour découvrir de nouveaux filons à exploiter.;;;;;;;;;;;;x
 prospectTooltip;Our people will prospect for a year in search of new veins.;Nos gens vont prospecter pendant une année à la recherche de nouveaux filons.;;;;;;;;;;;;x
-set_adm_spe;Convert to an Administrative Center;Établir une CITÉ FÉODALE;;;;;;;;;;;;x
+disable_notification;Hide some immersion notifications;Masquer certaines notifications d'immersion;;;;;;;;;;;;x
+disable_notification_desc;Hides some immersion events' notifications.\nOnly notifications are disabled, the events continue to happen and applying their effects.;Masque certaines notifications d'événements d'immersion.\nSeules les notifications sont désactivées, les événements continuent de se produire et d'appliquer leurs effets.;;;;;;;;;;;;x
+enable_notification;Show all immersion notifications;Voir toutes les notifications d'immersion;;;;;;;;;;;;x
+enable_notification_desc;Shows the notifications about immersion events that were previously disabled.;Montre toutes les notifications d'événements d'immersion préalablement désactivées.;;;;;;;;;;;;x
+set_adm_spe;Convert to a FEUDAL CITY;Établir une CITÉ SEIGNEURIALE;;;;;;;;;;;;x
 set_adm_spe_desc;Specialize this settlement into an administrative center.;Spécialiser ce domaine en une véritable capitale administrative.;;;;;;;;;;;;x
-remove_adm_spe;Remove the useless Administrative Center;Démolir l'ancienne CITÉ FÉODALE;;;;;;;;;;;;x
-remove_adm_spe_desc;The Administrative Center is no more usefull because the settlement is no more a major capital.;Cette CITÉ FÉODALE n'est plus d'aucune utilité étant donné que le domaine n'est plus une importante capitale.;;;;;;;;;;;;x
+remove_adm_spe;Remove the useless FEUDAL CITY;Démolir l'ancienne CITÉ SEIGNEURIALE;;;;;;;;;;;;x
+remove_adm_spe_desc;The FEUDAL CITY is no more usefull because the settlement is no more a major capital.;Cette CITÉ FÉODALE n'est plus d'aucune utilité étant donné que le domaine n'est plus une importante capitale.;;;;;;;;;;;;x
 set_spe_mil_from_prod;Convert into a Citadel;Transformer en FORTERESSE;;;;;;;;;;;;x
 set_spe_mil_from_prod_desc;We need more troops than gold.;Nous avons plus intérêt à avoir des troupes que des marchands.;;;;;;;;;;;;x
-set_spe_prod_from_mil;Convert into a Feudal Manor;Transformer en BOURG FÉODAL;;;;;;;;;;;;x
+set_spe_prod_from_mil;Convert into a Feudal Manor;Transformer en BOURG SEIGNEURIAL;;;;;;;;;;;;x
 set_spe_prod_from_mil_desc;We need more gold than troops.;Nous devrions développer l'économie de ce comté.;;;;;;;;;;;;x
-TOOLTIPanotherPROD;There is another Feudal Manor in the county.;Il y a un autre BOURG FÉODAL dans le comté.;;;;;;;;;;;;x
+TOOLTIPanotherPROD;There is another Feudal Manor in the county.;Il y a un autre BOURG SEIGNEURIAL dans le comté.;;;;;;;;;;;;x
 TOOLTIPdelocalize;The production buildings will be moved to another settlement with a Feudal Manor in the county.\n;Les bâtiments de production vont être délocalisés dans un autre domaine du comté possédant un BOURG FÉODAL.\n;;;;;;;;;;;;x
 TOOLTIPfromMilToProd;The weapon manufacturing buildings and upgraded barracks will be sold between §Y40%§! and §Y60%§! of their building cost.\n;Les bâtiments de production d'outils et les casernes évoluées seront vendus entre §Y40%§! et §Y60%§! de leur coût de construction.\n;;;;;;;;;;;;x
 TOOLTIPfromMilToAdm;The weapon manufacturing buildings will be converted to tool manufacturing. The upgraded barracks will be sold between §Y40%§! and §Y60%§! of their building cost.\n;Les bâtiments de production d'armes fabriqueront des outils. Les casernes évoluées seront vendus entre §Y40%§! et §Y60%§! de leur coût de construction.\n;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-construire_cathedrale;Build a cathedral;Construire une Cathédrale;;;;;;;;;;;;x
+construire_cathedrale;Build a cathedral in your capital;Construire une Cathédrale dans votre capitale;;;;;;;;;;;;x
 construire_cathedrale_desc;Let's begin this cathedral !;Lancer le chantier de notre cathédrale !;;;;;;;;;;;;x
-TOOLTIPCONSTRUIRECATHEDRALE;Beginning of the construction;Début de la construction;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;
+TOOLTIPCONSTRUIRECATHEDRALE;Beginning of the construction.\n§RWarning, the annual construction cost of the Cathedral is about 100¤, and over more than a century.§!;Début de la construction.\n§RAttention le coût de construction de la Cathédrale est d'environ 100¤/an, et cela sur plus d'un siècle.§!;;;;;;;;;;;;x
+construire_cathedral_province;Build a cathedral;Construire une Cathédrale;;;;;;;;;;;;x
+construire_cathedral_province_desc;Let's begin this cathedral !;Lancer le chantier de notre cathédrale !;;;;;;;;;;;;x
+ask_construction_progession;Ask about construction progression;Demander l'avancement du chantier;;;;;;;;;;;;x
+ask_construction_progession_desc;Ask to our Master builder about the progress of the Cathedral construction.;S'enquérir auprès de notre Maître bâtisseur de l'état d'avancement du chantier de la Cathédrale. ;;;;;;;;;;;;x
+ask_construction_progession_settlement;Ask about construction progression;Demander l'avancement du chantier;;;;;;;;;;;;x
+ask_construction_progession_settlement_desc;Ask to our Master builder about the progress of the Cathedral construction.;S'enquérir auprès de notre Maître bâtisseur de l'état d'avancement du chantier de la Cathédrale.;;;;;;;;;;;;x
+support_other_cathedral;Make a donation for the cathedral;Faire un don pour la cathédrale;;;;;;;;;;;;x
+support_other_cathedral_desc;Make a donation for the Cathedral building. \nIt will impact directly its progression.;Faire un don pour la construction de la Cathédrale.\nCela permettra un avancement immédiat du chantier.;;;;;;;;;;;;x
+buy_relic;Buy a Holy relic;Acheter une Sainte relique;;;;;;;;;;;;x
+buy_relic_desc;Ask this character to buy a relic he owns.;Proposer à ce personnage d'acheter une relique qu'il possède dans son trésor. ;;;;;;;;;;;;x
+seek_glass_bower_master;Hire a glass maker master;Embaucher un maitre verrier;;;;;;;;;;;;x
+seek_glass_bower_master_desc;The Cathedral requires stained glasses.\nIf we want the best results, we must hire a master.;La Cathedrale requiert des vitraux.\nSi nous voulons ce qui se fait de mieux, nous devons embaucher un maître.;;;;;;;;;;;;x
+available_glass_bower_master;A glass maker master from the Artist Guild is available.;Un maitre verrier de la Guilde des Artistes est disponible.;;;;;;;;;;;;x
+seek_sculptor_master;Hire a sculptor master;Embaucher un maitre sculpteur;;;;;;;;;;;;x
+seek_sculptor_master_desc;The Cathedral requires sculptures.\nIf we want the best results, we must hire a master.;La Cathedrale requiert des sculptures.\nSi nous voulons ce qui se fait de mieux, nous devons embaucher un maître.;;;;;;;;;;;;x
+available_sculptor_master;A sculptor master from the Artist Guild is available.;Un maitre sculpteur de la Guilde des Artistes est disponible.;;;;;;;;;;;;x
+seek_painter_master;Hire a painter master;Embaucher un maitre fresquiste;;;;;;;;;;;;x
+seek_painter_master_desc;The Cathedral requires frescos.\nIf we want the best results, we must hire a master.;La Cathedrale requiert des fresques.\nSi nous voulons ce qui se fait de mieux, nous devons embaucher un maître.;;;;;;;;;;;;x
+available_painter_master;A painter master from the Artist Guild is available.;Un maitre fresquiste de la Guilde des Artistes est disponible.;;;;;;;;;;;;x
+religious_execution;Religious execution;Exécution religieuse;;;;;;;;;;;;x
+religious_execution_desc;That character will be put to death in the name our Faith. \nMind that it could make [Root.GetHerHim] seen as a §Ymartyr§! for [Root.GetHerHis] pairs.;Ce personnage sera exécuté au nom de notre Foi. \nNéanmoins cela pourrait en faire un[Get_E] §Ymartyr[Get_E]§! pour ses pairs.;;;;;;;;;;;;x
+check_dev_variable;Visit the demesne;Visiter le domaine;;;;;;;;;;;;x
+check_dev_variable_desc;Visit the demesne;Visiter le domaine;;;;;;;;;;;;x
+cust_check_dev;We visit this demesne to estimate its level of development;Nous visitons ce domaine pour en estimer le niveau de développement;;;;;;;;;;;;x
 borrow_money_jews_cd;Borrow 75¤ from Jewish Merchants;Emprunter 75¤ aux usuriers juifs;;;;;;;;;;;;x
 borrow_money_jews_cd_desc;I can borrow 75¤ from Jewish merchants and moneylenders living in the realm. With the interest agreed upon, I will owe them 110¤ to be paid back at my convenience.;Il est possible d'emprunter 75¤ aux usuriers juifs du royaume.\nAu taux d'intérêt convenu, nous devrons leur rembourser 110¤, payable quand nous le voudrons.;;;;;;;;;;;;x
 repay_money_jews_cd;Repay the 110¤ loan;Rembourser notre dette de 110¤;;;;;;;;;;;;x
@@ -35,17 +74,18 @@ repay_money_jews_ke;Repay the 350¤ loan;Rembourser notre dette de 350¤;;;;;;;;;;
 repay_money_jews_ke_desc;I will repay the gold that I owe the Jewish moneylenders.;Il nous est possible de rembourser la somme que nous devons aux usuriers juifs.;;;;;;;;;;;;x
 borrowed_from_jews;Owes to Jewish Moneylenders;Dette envers les usuriers juifs;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;
-L3T.13;Monastic retirement;Retraite Monastique;;;;;;;;;;;;x
-NAMEL3T.13;Monastic retirement;Retraite monastique;;;;;;;;;;;;x
-DESCL3T.13;After years of ruling, [Root.GetTitledFirstName] has decided that [Root.GetSheHe] is no longer fit to rule and as such decided to abdicate in favour of [Root.GetHerHis] heir, while [Root.GetSheHe] [Root.GetHerselfHimself] will retire into a monastry.;Epuisé par des années de règne, [Root.GetTitledFirstName] a décidé qu'il était temps de laisser la main à son héritier et de rejoindre un monastère pour dédier le reste de sa vie à Dieu, hors des contraintes du Monde.;;;;;;;;;;;;
-L3T.13A;Deo gratias !;Deo gratias !;;;;;;;;;;;;x
+#L3T.13;Monastic retirement;Retraite Monastique;;;;;;;;;;;;x
+#NAMEL3T.13;Monastic retirement;Retraite monastique;;;;;;;;;;;;x
+#DESCL3T.13;After years of ruling, [Root.GetTitledFirstName] has decided that [Root.GetSheHe] is no longer fit to rule and as such decided to abdicate in favour of [Root.GetHerHis] heir, while [Root.GetSheHe] [Root.GetHerselfHimself] will retire into a monastry.;Epuisé par des années de règne, [Root.GetTitledFirstName] a décidé qu'il était temps de laisser la main à son héritier et de rejoindre un monastère pour dédier le reste de sa vie à Dieu, hors des contraintes du Monde.;;;;;;;;;;;;
+#L3T.13A;Deo gratias !;Deo gratias !;;;;;;;;;;;;x
 abdiquer;Retire to a monastery;Se retirer dans un Monastère;;;;;;;;;;;;
 abdiquer_desc;I have grown very much past my prime. It is time for the next generation to rule while I retire in a peacefull monastery.;J'ai fait mon temps. Ce monastère que j'ai fondé il y a quelques années sera un havre parfait pour mes vieux jours.;;;;;;;;;;;;;x
-#;;;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
+
 #;;AMBITIONS;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;x
 obj_build_something_title;Build a monument;Construire un Monument ;;;;;;;;;;;;x
 obj_build_something_desc;This character wants to let his print in History by building something big and hopefully eternal.;Ce personnage a pour ambition de laisser une empreinte durable dans l'Histoire par ses réalisations à la fois solides et monumentales.;;;;;;;;;;;;x
-build_something_reussite;The caracter must have achieved a major construction or a step of it.;Le personnage doit avoir achevé une construction majeure ou une étape de celle-ci.;;;;;;;;;;;;x
+build_something_reussite;The character must have achieved a major construction or a step of it.\nThe steps of the Cathedral which can validate this ambition are:\n3 - Proto-Cathedral\n5 - Cathedral, Magnificent Nave\n6 - Cathedral, Transept\n7 - Cathedral, Northern Tower\n8 - Cathedral, Southern Tower§!;Le personnage doit avoir achevé une construction majeure ou une étape de celle-ci.\n§YLes étapes de la Cathédrale qui peuvent valider cette ambition sont : \n3 - Proto-Cathédrale\n5 -Cathédrale, Nef Magnifique\n6 - Cathédrale, Transept\n7 - Cathédrale, Tour Nord\n8 - Cathédrale, Tour du Midi§!;;;;;;;;;;;;x
+obj_egg_them_all_title;Search for the One-Egg;Se mettre en quête l'Oeuf Unique;;;;;;;;;;;;x
+obj_egg_them_all_desc;Having laid our hands on several of these egg-relics and heard the lingering rumor that they would permit find an even more powerful artifact. \nWe are looking for other Eggs so we can someday discover this Holy Artifact.;Ayant mis la main sur plusieurs de ces oeufs-reliques et ayant entendu la rumeur persistante qu'ils permettraient de trouver un artefact encore plus puissant. \nNous nous mettons en quête des autres Oeufs afin de peut être découvrir un jour ce Saint artefact.;;;;;;;;;;;;x
+custom_egg_them_all;Succeed in collecting the Eggs-relics needed and obtain the Unique Egg;Réussir à rassembler les Oeufs-reliques nécessaires et obtenir de l'Oeuf Unique;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x

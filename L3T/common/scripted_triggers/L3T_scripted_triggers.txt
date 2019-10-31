@@ -4,6 +4,11 @@
 #				- The scopes
 #				- The OR blocs
 
+jamais = {
+	custom_tooltip = { text = TOOLTIP_JAMAIS }
+	hidden_tooltip = { is_at_sea = no }
+}
+
 is_active_fonderie_by_neighbor = {
 	AND = { # Use AND because it will be use in a OR bloc
 		OR = {
@@ -27,7 +32,10 @@ is_active_fonderie = {
 			has_province_modifier = minerai2_fer
 			NOT = { has_province_modifier = mine_stop }
 		}
-		is_active_fonderie_by_neighbor = yes			
+		custom_tooltip = {
+			text = TOOLTIP_is_active_fonderie_by_neighbor
+			is_active_fonderie_by_neighbor = yes
+		}
 	}
 }
 
@@ -52,8 +60,84 @@ is_active_outil_ou_armes = {
 	OR = {
 		AND = {
 			has_province_modifier = minerai3_metal
-			is_active_fonderie = yes
+			custom_tooltip = {
+				text = TOOLTIP_is_active_fonderie
+				is_active_fonderie = yes
+			}
 		}
-		is_active_outil_ou_armes_neighbor = yes			
+		custom_tooltip = {
+			text = TOOLTIP_is_active_outil_ou_armes_neighbor
+			is_active_outil_ou_armes_neighbor = yes
+		}
+	}
+}
+
+#has_all_books/thematics
+has_all_books_religious = {
+	AND = { 
+		has_artifact = book_A
+		has_artifact = book_B
+		has_artifact = book_S
+	}
+}
+has_all_books_science = {
+	AND = {
+		has_artifact = book_C
+		has_artifact = book_D
+		has_artifact = book_E
+		has_artifact = book_F
+	}
+}
+has_all_books_litteracy = {
+	AND = {
+		has_artifact = book_G
+		has_artifact = book_H
+		has_artifact = book_I
+		has_artifact = book_J
+	}
+}
+has_all_books_economy = {
+	AND = {
+		has_artifact = book_K
+		has_artifact = book_L
+		has_artifact = book_M
+	}
+}
+
+#has_all_books/vendor types
+has_all_books_from_local_merchant = {
+	AND = { 
+		has_all_books_religious = yes
+		has_all_books_litteracy = yes		
+	}
+}
+has_all_books_from_scholar = {
+	AND = { 
+		has_all_books_science = yes
+		has_all_books_litteracy = yes
+		has_all_books_economy = yes
+	}
+}
+has_all_books_from_monastery = {
+	AND = {
+		has_all_books_religious = yes
+		has_all_books_science = yes
+	}
+}
+has_all_books_from_foreign_merchant = {
+	AND = { 
+		has_all_books_science = yes
+		has_all_books_litteracy = yes
+		has_all_books_economy = yes
+	}
+}
+
+not_involved_in_personnal_war = {
+	custom_tooltip = { text = not_involved_in_personnal_war }
+	hidden_tooltip = {		
+		OR = {
+			is_primary_war_attacker = no
+			is_primary_war_defender = no
+		}
 	}
 }

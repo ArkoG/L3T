@@ -1,35 +1,61 @@
 #;;x;;;;;;;;;;;;x
 #;;DIVERS;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-nobuilding;Never (built by event);JAMAIS Constructible;;;;;;;;;;;;x
+xxx;an event for being built;un évènement pour être construit;;;;;;;;;;;;x
+XXX;an event for being built;un évènement pour être construit;;;;;;;;;;;;x
+TOOLTIP_JAMAIS;This fictious building is used to display a tooltip.;Ce bâtiment fictif sert de support à une info-bulle.;;;;;;;;;;;;x
+nobuilding;an event for being built;un évènement pour être construit;;;;;;;;;;;;x
 TOOLTIP_recent_construction;Has not already built something here during past year\n;N'a pas déjà construit quelque chose durant l'année dans ce domaine\n;;;;;;;;;;;;x
 TOOLTIP_prestige_building;This building require to spend some prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser des points de prestige pour être construit.\n Le coût en prestige sera déduit dès le lancement de la construction.;;;;;;;;;;;;x
+opinion_egg_stolen;Easter egg robber;Voleur d'œufs de Pâques;;;;;;;;;;;;x
+opinion_cathedral_employer;Employer;Employeur;;;;;;;;;;;;x
+donation;Cathedral donator;Donateur de ma Cathédrale;;;;;;;;;;;;x
+stolen_relic_opinion;Stolen my relic;A volé ma relique;;;;;;;;;;;;x
+stolen_relic_attempt;Attempted to steal my relic;A tenté de voler ma relique;;;;;;;;;;;;x
+not_involved_in_personnal_war;Must not be involved in a personnal;Ne doit pas être impliqué dans une guerre privée;;;;;;;;;;;;x
+custom_paix_totale;§YTotal peace§! : nor you or any of your lieges must NOT be involved in a war;§YPaix totale§! : ni vous ni l'un de vos suzerains ne doivent être engagés dans un guerre;;;;;;;;;;;;x
+custom_relique;You must own a §YHoly relic§!;Vous devez posséder une §YSainte relique§!;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;ReC;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
-ca_cathedrale_lite_01;Saint Giles' Cathedral;Cathédrale Saint Gilles;;;;;;;;;;;;x
-ca_cathedrale_lite_02;Saint Aubert Cathedral;Cathédrale Saint Aubert;;;;;;;;;;;;x
-ca_cathedrale_lite_03;Saint Boniface Cathedral;Cathédrale Saint Boniface;;;;;;;;;;;;x
-ca_cathedrale_lite_04;Saint Landry Cathedral;Cathédrale Saint Landry;;;;;;;;;;;;x
-ca_cathedrale_lite_05;Saint Richarius' Cathedral;Cathédrale Saint Riquier;;;;;;;;;;;;x
-ca_cathedrale_lite_06;Saint Merry Cathedral;Cathédrale Saint Médéric;;;;;;;;;;;;x
-ca_cathedrale_lite_07;Saint Fiacre Cathedral;Cathédrale Saint Fiacre;;;;;;;;;;;;x
-ca_cathedrale_lite_08;Saint Remy Cathedral;Cathédrale Saint Rémy;;;;;;;;;;;;x
-ca_cathedrale_lite_09;Saint Germain Cathedral;Cathédrale Saint Germain;;;;;;;;;;;;x
-ca_cathedrale_lite_10;Saint Arnulf Cathedral;Cathédrale Saint Arnould;;;;;;;;;;;;x
-ca_cathedrale_lite_11;Saint Séverin Cathedral;Cathédrale Saint Séverin;;;;;;;;;;;;x
-ca_cathedrale_lite_12;Saint Honoratus Cathedral;Cathédrale Saint Honorat;;;;;;;;;;;;x
-ca_cathedrale_lite_13;Saint Blaise Cathedral;Cathédrale Saint Blaise;;;;;;;;;;;;x
-ca_cathedrale_lite_14;Saint Eliphius Cathedral;Cathédrale Saint Eliphe;;;;;;;;;;;;x
-ca_cathedrale_lite_15;Saint Hilarion Cathedral;Cathédrale Saint Hilarion;;;;;;;;;;;;x
-ca_cathedrale_lite_16;Saint Siricius Cathedral;Cathédrale Saint Sirice;;;;;;;;;;;;x
-ca_cathedrale_lite_17;Saint Aude Cathedral;Cathédrale Sainte Aude;;;;;;;;;;;;x
-ca_cathedrale_lite_18;Saint Sabina Cathedral;Cathédrale Sainte Sabine;;;;;;;;;;;;x
-ca_cathedrale_lite_19;Saint Genevieve Cathedral;Cathédrale Sainte Geneviève;;;;;;;;;;;;x
-ca_cathedrale_lite_20;Saint Fara Cathedral;Cathédrale Sainte Fare;;;;;;;;;;;;x
-ca_cathedrale_lite_21;Saint Onenne Cathedral;Cathédrale Sainte Onenne;;;;;;;;;;;;x
-ca_cathedrale_lite_22;Saint Matilda Cathedral;Cathédrale Sainte Mathilde;;;;;;;;;;;;x
-ca_cathedrale_lite_23;Saint Sylvie Cathedral;Cathédrale Sainte Sylvie;;;;;;;;;;;;x
-ca_cathedrale_lite_24;Saint Brigitte Cathedral;Cathédrale Sainte Brigitte;;;;;;;;;;;;x
-ca_cathedrale_lite_25;Saint Odile Cathedral;Cathédrale Sainte Odile;;;;;;;;;;;;x
-cathedrale_lite_desc;The cathedral's construction has been completed at last! ~Its shining marble edifice and intricate craftsmanship tower over the city, offering the populace a glimpse of Heaven. Pilgrims and sinners from far and wide flock here in droves, generously giving alms in hopes of salvation and gaining favor with God.;Cette cathédrale est enfin parachevée et fait rayonner la toute puissance divine sur les terres environnantes et par la même occasion procure au seigneur local la gloire et le fruit de la taxation du détenteur d'un tel édifice où affluent pèlerins et pécheurs en quête de salut.;;;;;;;;;;;;x
+#ca_cathedrale_lite_01;Saint Giles' Cathedral;Cathédrale Saint Gilles;;;;;;;;;;;;x
+#ca_cathedrale_lite_02;Saint Aubert Cathedral;Cathédrale Saint Aubert;;;;;;;;;;;;x
+#ca_cathedrale_lite_03;Saint Boniface Cathedral;Cathédrale Saint Boniface;;;;;;;;;;;;x
+#ca_cathedrale_lite_04;Saint Landry Cathedral;Cathédrale Saint Landry;;;;;;;;;;;;x
+#ca_cathedrale_lite_05;Saint Richarius' Cathedral;Cathédrale Saint Riquier;;;;;;;;;;;;x
+#ca_cathedrale_lite_06;Saint Merry Cathedral;Cathédrale Saint Médéric;;;;;;;;;;;;x
+#ca_cathedrale_lite_07;Saint Fiacre Cathedral;Cathédrale Saint Fiacre;;;;;;;;;;;;x
+#ca_cathedrale_lite_08;Saint Remy Cathedral;Cathédrale Saint Rémy;;;;;;;;;;;;x
+#ca_cathedrale_lite_09;Saint Germain Cathedral;Cathédrale Saint Germain;;;;;;;;;;;;x
+#ca_cathedrale_lite_10;Saint Arnulf Cathedral;Cathédrale Saint Arnould;;;;;;;;;;;;x
+#ca_cathedrale_lite_11;Saint Séverin Cathedral;Cathédrale Saint Séverin;;;;;;;;;;;;x
+#ca_cathedrale_lite_12;Saint Honoratus Cathedral;Cathédrale Saint Honorat;;;;;;;;;;;;x
+#ca_cathedrale_lite_13;Saint Blaise Cathedral;Cathédrale Saint Blaise;;;;;;;;;;;;x
+#ca_cathedrale_lite_14;Saint Eliphius Cathedral;Cathédrale Saint Eliphe;;;;;;;;;;;;x
+#ca_cathedrale_lite_15;Saint Hilarion Cathedral;Cathédrale Saint Hilarion;;;;;;;;;;;;x
+#ca_cathedrale_lite_16;Saint Siricius Cathedral;Cathédrale Saint Sirice;;;;;;;;;;;;x
+#ca_cathedrale_lite_17;Saint Aude Cathedral;Cathédrale Sainte Aude;;;;;;;;;;;;x
+#ca_cathedrale_lite_18;Saint Sabina Cathedral;Cathédrale Sainte Sabine;;;;;;;;;;;;x
+#ca_cathedrale_lite_19;Saint Genevieve Cathedral;Cathédrale Sainte Geneviève;;;;;;;;;;;;x
+#ca_cathedrale_lite_20;Saint Fara Cathedral;Cathédrale Sainte Fare;;;;;;;;;;;;x
+#ca_cathedrale_lite_21;Saint Onenne Cathedral;Cathédrale Sainte Onenne;;;;;;;;;;;;x
+#ca_cathedrale_lite_22;Saint Matilda Cathedral;Cathédrale Sainte Mathilde;;;;;;;;;;;;x
+#ca_cathedrale_lite_23;Saint Sylvie Cathedral;Cathédrale Sainte Sylvie;;;;;;;;;;;;x
+#ca_cathedrale_lite_24;Saint Brigitte Cathedral;Cathédrale Sainte Brigitte;;;;;;;;;;;;x
+#ca_cathedrale_lite_25;Saint Odile Cathedral;Cathédrale Sainte Odile;;;;;;;;;;;;x
+#cathedrale_generic_desc;The cathedral's construction has been completed at last! Its shining marble edifice and intricate craftsmanship tower over the city, offering the populace a glimpse of Heaven. Pilgrims and sinners from far and wide flock here in droves, generously giving alms in hopes of salvation and gaining favor with God.;Cette cathédrale est enfin parachevée et fait rayonner la toute puissance divine sur les terres environnantes et par la même occasion procure au seigneur local la gloire et le fruit de la taxation du détenteur d'un tel édifice où affluent pèlerins et pécheurs en quête de salut.;;;;;;;;;;;;x
+slot_relique;Relic;Relique;;;;;;;;;;;;x
+developpement;development;développement;;;;;;;;;;;x
+developpementold;development was;développement était;;;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM;§RL3T§!: Opus Francigenum;§RL3T§! : Opus Francigenum;;;;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM_DYNAMIC;Dynamic;Dynamique;Dynamisch;;Dinámico;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM_DYNAMIC_DESC;The Opus Francigenum will occur dynamically under certain conditions;L'Opus Francigenum se produira dynamiquement sous certaines conditions;;;;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM_HISTORICAL;Historical;Historique;Historisch;;Histórico;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM_HISTORICAL_DESC;The Opus Francigenum will occur between the years of 1130 and 1150;L'Opus Francigenum se produira entre l'an 1130 et l'an 1150.;;;;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM_FIFTY_YEARS;Random;Aléatoire;Zufällig;;Aleatorio;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM_FIFTY_YEARS_DESC;The Opus Francigenum will occur at a random date, though at the earliest 50 years after the game is started.;L'Opus Francigenum se produira à une date aléatoire, mais au plus tôt 50 ans après le début de la partie.;;;;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM_FREE;Free;Libre;;;;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM_FREE_DESC;The Opus Francigenum will occur at game launch, allowing to build Cathedrals immediatly.;L'Opus Francigenum se produira suite au lancement de la partie permettant ainsi de bâtir des Cathédrales librement.;;;;;;;;;;;;x
+L3T_fights_for_faith;Gain §Grecognition for fighting§! for Catholic faith;Gagne §Greconnaissance pour son combat§! pour la Foi catholique;;;;;;;;;;;;x
+L3T_defends_for_faith;Gain §Grecognition for defending§! Catholic faith;Gagne §Greconnaissance pour sa défense§! de la Foi catholique;;;;;;;;;;;;x
+L3T_works_for_faith;Gain §Grecognition for spreading§! Catholic faith;Gagne §Greconnaissance comme précheur§! de la Foi catholique;;;;;;;;;;;;x

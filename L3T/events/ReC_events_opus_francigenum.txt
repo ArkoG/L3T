@@ -1,0 +1,450 @@
+######################################################
+# [ReC][Reliques et Cathédrales]  par Arko et Mouchi #
+######################################################
+
+# Free Opus Francigenum
+narrative_event = {
+    id = REC.101
+	title = "OPUSFRANCIGENUM_title"
+	desc = "DESCREC.101"
+	picture = GFX_evt_REC10
+	major = yes
+	hide_new = yes
+	hide_from = yes
+
+	is_triggered_only = yes	
+	
+	immediate = {
+		set_global_flag = opus_francigenum
+	}
+	
+	option = {
+		name = "OPUSFRANCIGENUM.A"
+		trigger = {
+			NOT = {
+				has_a_relic = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "OPUSFRANCIGENUM.B"
+		trigger = {
+			has_a_relic = yes
+		}
+	}
+}
+
+# Historical or 50 years Opus Francigenum
+narrative_event = {
+	id = REC.102
+	title = "OPUSFRANCIGENUM_title"
+	desc = "DESCREC.102"
+	picture = GFX_evt_REC10
+	major = yes
+	hide_new = yes
+	hide_from = yes
+	
+	only_playable = yes
+	religion = catholic
+	
+	trigger = {
+		NOT = { has_global_flag = opus_francigenum }
+		OR = {
+			AND = {
+				year = 1130
+				has_game_rule = {
+					name = opus_francigenum
+					value = historical
+				}
+			}
+			AND = {
+				total_years_played = 50
+				has_game_rule = {
+					name = opus_francigenum
+					value = fiftyYears
+				}
+			}
+		}
+		controls_religion = yes # Let it happen for the Pope. He's always around.
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.5
+			year = 1140
+			has_game_rule = {
+				name = opus_francigenum
+				value = historical
+			}
+		}
+		modifier = {
+			factor = 0.5
+			total_years_played = 60
+			has_game_rule = {
+				name = opus_francigenum
+				value = fiftyYears
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = opus_francigenum
+	}
+	
+	option = {
+		name = "OPUSFRANCIGENUM.A"
+		trigger = {
+			NOT = {
+				has_a_relic = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "OPUSFRANCIGENUM.B"
+		trigger = {
+			has_a_relic = yes
+		}
+	}
+}
+
+# Romanesque cathedral burning
+character_event = {
+	id = REC.103
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_title = {
+			tier = baron
+			holding_type = temple
+			has_building = tp_roman_cathedrale
+			OR = {
+				NOT = { has_title_flag = repaired_cathedral }
+				had_title_flag = { flag = repaired_cathedral years = 50 }
+			}
+		}
+	}
+	
+	immediate = {
+		change_variable = { which = "global_burns" value = 1 }
+	}
+	
+	mean_time_to_happen = {
+		years = 50
+		modifier = {
+			factor = 2
+			NOT = { year = 1100 }
+		}
+		modifier = {
+			factor = 0.5
+			year = 1140
+		}
+		modifier = {
+			factor = 0.5
+			AND = {
+				any_war = { #the character is involved in war
+					using_cb = religious #that is a (minor) holy war
+				}
+				is_primary_war_defender = yes #is a defender in this war
+			}
+		}
+		modifier = {
+			factor = 0.7
+			any_demesne_title = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_roman_cathedrale
+				has_siege = yes
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_demesne_title = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_roman_cathedrale
+				is_occupied = yes
+			}
+		}
+	}
+	
+	option = {
+		trigger = { wealth = 200 }
+		wealth = -200
+		# The romanesque cathedral is now under construction for 10 years
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_roman_cathedrale
+			}
+			remove_building = tp_roman_cathedrale
+			add_building = tp_constructing_roman_cathedrale
+			location = { province_event = { id = REC.104 days = 3650 } }
+		}
+		# Opus Francigenum can appear
+		opus_francigenum_dynamic_apparition = yes
+	}
+	
+	option = {
+		trigger = { NOT = { wealth = 200 }  }
+		# Ask assistance to the lord of the province
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_roman_cathedrale
+			}
+			location = { owner = { character_event = { id = REC.106 days = 10 } } }
+		}
+	}
+}
+
+# End of the romanesque cathedral reconstruction
+province_event = {
+	id = REC.104
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_province_holding = {
+			limit = {
+				holding_type = temple
+				has_building = tp_constructing_roman_cathedrale
+			}
+			remove_building = tp_constructing_roman_cathedrale
+			add_building = tp_roman_cathedrale
+			set_title_flag = repaired_cathedral
+		}
+		# Give Opus Francigenum
+		if = {
+			limit = { has_global_flag = dynamic_opus_francigenum }
+			clr_global_flag = dynamic_opus_francigenum
+			if = {
+				limit = { NOT = { has_global_flag = opus_francigenum } }
+				owner = { narrative_event = { id = REC.105 days = 10 } }
+			}
+		}
+	}
+}
+
+# Dynamic Opus Francigenum
+narrative_event = {
+    id = REC.105
+	title = "OPUSFRANCIGENUM_title"
+	desc = "DESCREC.105"
+	picture = GFX_evt_REC10
+	major = yes
+	hide_new = yes
+	hide_from = yes
+
+	is_triggered_only = yes	
+	
+	immediate = {
+		set_global_flag = opus_francigenum
+	}
+	
+	option = {
+		name = "OPUSFRANCIGENUM.A"
+		trigger = {
+			NOT = {
+				has_a_relic = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "OPUSFRANCIGENUM.B"
+		trigger = {
+			has_a_relic = yes
+		}
+	}
+}
+
+# Ask lord contribution
+character_event = {
+    id = REC.106
+	desc = "DESCREC.106"
+	picture = GFX_evt_L3T_FIRE
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "REC.106A"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+			modifier = {
+				factor = 2
+				NOT = { wealth = 100 }
+			}
+		}
+		# Lord is not pious
+		piety = -10
+		FROM = {
+			# The romanesque cathedral is now under construction for 10 years
+			random_demesne_title = {
+				limit = {
+					tier = baron
+					holding_type = temple
+					has_building = tp_roman_cathedrale
+				}
+				remove_building = tp_roman_cathedrale
+				add_building = tp_constructing_roman_cathedrale
+				location = { province_event = { id = REC.104 days = 3650 } }
+				
+				# Bishop pays by taxes
+				add_holding_modifier = { name = romanesque_construction days = 3650 }
+			}
+			# Opus Francigenum can appear
+			opus_francigenum_dynamic_apparition = yes
+		}
+	}
+		
+	option = {
+		name = "REC.106B"
+		trigger = {
+			NOT = { has_global_flag = opus_francigenum }
+			wealth = 50 
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = charitable
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				piety = 1000
+			}
+		}
+		# Lord pays 25% and gets piety
+		wealth = -50
+		piety = 10
+		FROM = {
+			# The romanesque cathedral is now under construction for 10 years
+			random_demesne_title = {
+				limit = {
+					tier = baron
+					holding_type = temple
+					has_building = tp_roman_cathedrale
+				}
+				remove_building = tp_roman_cathedrale
+				add_building = tp_constructing_roman_cathedrale
+				location = { province_event = { id = REC.104 days = 3650 } }
+				
+				# Bishop pays by taxes
+				add_holding_modifier = { name = romanesque_construction days = 2700 } # 75% of 10 years because lord pays 25%
+			}
+			# Opus Francigenum can appear
+			opus_francigenum_dynamic_apparition = yes
+		}
+	}
+		
+	option = {
+		name = "REC.106C"
+		trigger = {
+			has_global_flag = opus_francigenum 
+			yearly_income = 100
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = charitable
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				piety = 1000
+			}
+			modifier = {
+				factor = 2
+				yearly_income = 300
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { yearly_income = 200 }
+			}
+		}
+		FROM = {
+			# The romanesque cathedral is destroyed and the relic removed
+			random_demesne_title = {
+				limit = {
+					tier = baron
+					holding_type = temple
+					has_building = tp_roman_cathedrale
+				}
+				remove_building = tp_roman_cathedrale
+				location = { 
+					if = {
+						limit = { NOT = { has_province_modifier = chantier_cathedrale } }
+						remove_province_modifier = relique_generique
+					}
+				}
+			}
+		}
+		# Lord should use the relic in the year
+		character_event = { id = REC.107 days = 365 }
+		# Lord gets the relic
+		get_relic = yes
+		# WARNING : DON'T PUT CODE HERE, IT WILL NOT BE EXECUTED
+		# because there is a break in get_relic
+	}
+}
+
+# Lord gets a piety malus if he has not already
+character_event = {
+    id = REC.107
+	desc = "DESCREC.107"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = has_relique_from_cathedral
+	}
+	
+	option = {
+		name = "REC.107A"
+		piety = -20
+		add_character_modifier = { name = stolen_relic duration = 1826 }
+		# Lord should use the relic in the year
+		character_event = { id = REC.108 days = 1826 }
+	}
+}
+# Lord gets a piety malus if he has not already
+character_event = {
+    id = REC.108
+	desc = "DESCREC.108"
+	picture = GFX_evt_REC1
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = has_relique_from_cathedral
+	}
+	
+	option = {
+		name = "REC.108A"
+		piety = -100
+		add_character_modifier = { name = stolen_relic duration = 1826 } #5years
+		# Lord should use the relic in the year
+		character_event = { id = REC.108 days = 1826 } #5years
+	}
+}

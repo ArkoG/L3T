@@ -1,0 +1,181 @@
+# Province scope
+defined_text = {
+	name = GetCathedralConstructionBuildingName
+
+	text = {
+		localisation_key = ca_cathedrale_01
+		trigger = { capital_holding = { is_building_cathedral_step_1 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_02
+		trigger = { capital_holding = { is_building_cathedral_step_2 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_03
+		trigger = { capital_holding = { is_building_cathedral_step_3 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_04
+		trigger = { capital_holding = { is_building_cathedral_step_4 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_05
+		trigger = { capital_holding = { is_building_cathedral_step_5 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_06
+		trigger = { capital_holding = { is_building_cathedral_step_6 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_07
+		trigger = { capital_holding = { is_building_cathedral_step_7 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_08
+		trigger = { capital_holding = { is_building_cathedral_step_8 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_09
+		trigger = { capital_holding = { is_building_cathedral_step_9 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_10
+		trigger = { capital_holding = { is_building_cathedral_step_10_ca = yes } }
+	}
+	text = {
+		localisation_key = ct_cathedrale_10
+		trigger = { capital_holding = { is_building_cathedral_step_10_ct = yes } }
+	}
+	text = {
+		localisation_key = tp_cathedrale_10
+		trigger = { capital_holding = { is_building_cathedral_step_10_tp = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_11
+		trigger = { capital_holding = { is_building_cathedral_step_11 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_12
+		trigger = { capital_holding = { is_building_cathedral_step_12 = yes } }
+	}
+}
+
+defined_text = {
+	name = GetCathedralShorterNameGenre
+
+	text = {
+		localisation_key = ca_cathedrale_01_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_1 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_02_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_2 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_03_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_3 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_04_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_4 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_05_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_5 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_06_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_6 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_07_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_7 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_08_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_8 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_09_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_9 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_10_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_10_ca = yes } }
+	}
+	text = {
+		localisation_key = ct_cathedrale_10_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_10_ct = yes } }
+	}
+	text = {
+		localisation_key = tp_cathedrale_10_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_10_tp = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_11_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_11 = yes } }
+	}
+	text = {
+		localisation_key = ca_cathedrale_12_shorter
+		trigger = { capital_holding = { is_building_cathedral_step_12 = yes } }
+	}
+}
+
+defined_text = {
+	name = GetAvancementChantier
+
+	text = {
+		localisation_key = avancement_normal
+		trigger = { 
+			NOT = {
+				has_province_modifier = chantier_up
+				has_province_modifier = chantier_down
+				has_province_modifier = chantier_stop
+			}
+		}
+	}
+	text = {
+		localisation_key = avancement_up
+		trigger = {
+			has_province_modifier = chantier_up
+		}
+	}	
+	text = {
+		localisation_key = avancement_down
+		trigger = {
+			has_province_modifier = chantier_down
+		}
+	}
+	text = {
+		localisation_key = avancement_stop
+		trigger = {	
+			has_province_modifier = chantier_stop
+		}
+		weight_multiplier = {
+			factor = 1
+				modifier = {
+					factor = 100
+					has_province_modifier = chantier_stop
+				}
+		}
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

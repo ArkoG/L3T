@@ -9,26 +9,51 @@
 # Cf [NON INCLUS] pour les fichiers d'events non inclus dans la version courante
 
 ###L3T_init_DOMAINES.txt
+#id = L3T.3 #SPEC domaine Féodal
+#id = L3T.31 #domaine Féodal capitals are feudal cities
 
-##décider de l'avenir d'un domaine 
-#id = L3T.3 #domaine Féodal 
-#id = L3T.4 #domaine Communal  
+#id = L3T.4 #SPEC domaine Communal  
 #id = L3T.41 #domaine Communal province à double cité  
-#id = L3T.6 #domaine Ecclésial 
+#id = L3T.45#city apocalypto
+#id = L3T.46#city apocalypto end
+
+#obsolete#id = L3T.5 #upgrade CITE GRANDE L1  vers L2 à rename en 4x
+
+#id = L3T.6 #SPEC domaine Ecclésial
+#id = L3T.61 #domaine Ecclésial hardcode
+#id = L3T.62 #old cathedral and spe in religious province for capitals
+#id = L3T.63 #filling the grid ofold cathedrals 
+
 #id = L3T.7 #attribution règle monastique
-#[COMMENTE] id = L3T.0008 #attribution ordre militaire
+
 #id = L3T.9 #Init built holding (on_action)
 
-##upgrades 
-#id = L3T.5 #upgrade CITE GRANDE L1  vers L2
-#id = L3T.2 #upgrade CITE GRANDE L2  vers L1
 
 ###L3T_mod_selection.txt
+#id = L3T.1 #mode debug //activation
+#id = L3T.2 #mode debug //désactivation
+
 #id = L3T.10 #détection de la carte + paix de Dieu
 #id = L3T.11 #fin paix de Dieu
-#id = L3T.12 #boost IA
-#[LIBRE] id = L3T.13 #
-#[LIBRE] id = L3T.14 #
+#id = L3T.12 #boost IA gold+piety
+
+###id = L3T.13 #adbication (provisoire, la localisation de la décision porte cet ID}
+
+###L3T_mod_selection_SWMH.txt
+#id = L3T.20 #SWMH attribution coasts rivers lands
+
+###L3T_mod_selection_LCDA.txt
+#id = L3T.21#LCDA attribution coasts rivers lands
+
+###L3T_mod_selection_VANI.txt
+#id = L3T.22 #Vanilla attribution coasts rivers lands
+
+###L3T_mod_selection.txt
+#id = L3T.28 #toute carte - Cols attribution
+#id = L3T.29 #toute carte - Cols notification
+
+#id = L3T.50#maintenance capitales - update
+#id = L3T.51#maintenance capitales - removal
 
 ###[NON INCLUS] L3T_minorite.txt
 #id = L3T.15 #event initial
@@ -37,26 +62,14 @@
 #id = L3T.18 #
 #id = L3T.19 #
 
-###L3T_mod_selection_SWMH.txt
-#id = L3T.20 #SWMH - Coast
-#id = L3T.21 #SWMH - Land
-#id = L3T.22 #SWMH - Rivers
-#id = L3T.23 #SWMH - Cols (non attribué)
-#id = L3T.24 #SWMH - autre (non attribué)
-###L3T_mod_selection_VANI.txt
-#id = L3T.25 #Vanilla - Coast
-#id = L3T.26 #Vanilla - Land
-#id = L3T.27 #Vanilla - Rivers
-#id = L3T.28 #Vanilla - Cols (non attribué)
-#id = L3T.29 #Vanilla - autre (non attribué)
-###L3T_mod_selection_LCDA.txt
-#id = L3T.30 #LCDA - Coast
-#id = L3T.31 #LCDA - Land
-#id = L3T.32 #LCDA - Rivers
-#id = L3T.33 #LCDA - Cols (non attribué)
-#id = L3T.34 #LCDA - autre (non attribué)
-
 ###L3T_population.txt
+#id = L3T.1101 #initialisation dev variable (devv) buildings
+#id = L3T.1102 #check dev variable settlement decision
+#id = L3T.1103 #dev variable natural growth
+#id = L3T.1104 #gives dev bonus on trade_port (cities only)
+#id = L3T.1105 #gives dev bonus on hospital building (all holdings)
+#id = L3T.1106 #devv on loot
+	#id = L3T.1107 ## FREE
 #id = L3T.101 #upgrade population CA vers L1 #Féodal
 #id = L3T.102 #upgrade population CA vers L2
 #id = L3T.103 #upgrade population CA vers L3
@@ -72,7 +85,18 @@
 #id = L3T.113 #upgrade population TP vers L3
 #id = L3T.114 #upgrade population TP vers L4
 #id = L3T.115 #upgrade population TP vers L5
-#id = L3T.1101 #initialisation population buildings
+
+###L3T_pop_notifications.txt
+#id = L3T.11031 #dev changes notifs debug
+#id = L3T.11032 #dev changes notifs debug
+#id = L3T.11033 #dev changes notifs debug
+#id = L3T.11034 #dev changes notifs debug
+#id = L3T.11041 #dev variable mouchards trade post republic
+#id = L3T.11042 #dev variable mouchards trade post non-city
+#id = L3T.11051 #dev variable mouchards hospital
+#id = L3T.11061 #dev variable on loot settlement
+	#id = L3T.11094 #dev variable ress adv+10
+	#id = L3T.11095 #dev variable ress adv+20
 
 ###L3T_building_modifiers.txt
 #id = L3T.201 # Give the chapelle modifier 1 year after starting the building
@@ -99,11 +123,22 @@
 #id = L3T.222 # Give the chancellerie modifier to the new holder and remove it to the old
 #id = L3T.223 # Give the chancellerie modifier
 #id = L3T.224 # Remove the chancellerie modifier
-#id = L3T.225 # Remove the feodal_adm_modifier
-#id = L3T.226 # Add the feodal_adm_modifier
+#id = L3T.225 # Remove the feodal_adm_modifier [MAINTENANCE EVENT]
+#id = L3T.226 # Add the feodal_adm_modifier [MAINTENANCE EVENT]
 #id = L3T.227 # Wait a little before to alert that it can be a good idea to move the capital
 #id = L3T.228 # Pass by the province to localize its name
 #id = L3T.229 # Alert that it can be a good idea to move the capital
+#id = L3T.230-237 see L3T_building_prestige_cost.txt
+#id = L3T.237-240 FREE
+#id = L3T.241 # Give the library_1 modifier 1 year after starting the building
+#id = L3T.242 # Give the library_1 modifier to the new holder and remove it to the old
+#id = L3T.243 # Give the library_1 modifier
+#id = L3T.244 # Remove the library_1 modifier
+#id = L3T.245 # Give the library_2 modifier 547 days after starting the building
+#id = L3T.246 # Give the library_2 modifier to the new holder and remove it to the old
+#id = L3T.247 # Give the library_2 modifier
+#id = L3T.248 # Remove the library_2 modifier
+#id = L3T.249 FREE
 
 #L3T_building_prestige_cost.txt
 #id = L3T.230 # Spends prestige point for building ca_tour_L4
@@ -114,10 +149,78 @@
 #id = L3T.235 # Spends prestige point for building ct_eglise_L5
 #id = L3T.236 # Spends prestige point for building TR_bureau_3
 #id = L3T.237 # Spends prestige point for building TR_cartographe_2
+#id = L3T.237-240 FREE
+#id = L3T.241-248 # See L3T_building_modifiers.txt
+#id = L3T.249 FREE
+
+#L3T_various_flavour.txt
+#id = L3T.250 #Buy books decision //choose who/where to buy it
+#id = L3T.251 #Buy books decision //choose the type of book
+#id = L3T.2510 #Buy + Studying books decision //flag cleaner
+#id = L3T.2511 #Buy books decision //choose the book - religious
+#id = L3T.2512 #Buy books decision //choose the book - science
+#id = L3T.2513 #Buy books decision //choose the book - litteracy
+#id = L3T.2514 #Buy books decision //choose the book - economy
+#id = L3T.2521 #Buy books decision //unique book religious
+#id = L3T.2522 #Buy books decision //unique book science
+#id = L3T.2523 #Buy books decision //unique book litteracy
+#id = L3T.2524 #Buy books decision //unique book economy
+#id = L3T.253 #Study books decision // choose the type of book  to study
+#id = L3T.254 #Study books decision // can't get into
+#id = L3T.2541 #Study books decision // lunatic goes crazy
+#id = L3T.255 #Study books decision // effects of the study computation
+#id = L3T.2551 #Study books decision // effects of the study NONE keeps the book untagged
+#id = L3T.2552 #Study books decision // effects of the study NONE inactivates the book
+#id = L3T.2553a #Study books decision // effects of the study notification lifestyle trait
+#id = L3T.2553b #Study books decision // effects of the study notification education trait upgrade
+#id = L3T.2553c #Study books decision // effects of the study notification piety
+#id = L3T.2553d #Study books decision // effects of the study notification attribute
+
+#id = L3T.256 #clean used book flag on artifact inheritance
 
 ###L3T_specialization_change.txt
 # id = L3T.301 # Remove the FEODAL_adm dependancies and choose a new specialization
 # id = L3T.302 # Add a holding modifier after starting to build
+
+###L3T_easter_eggs.txt
+# id = L3T.401 #end if we go to war.
+# id = L3T.402 #Normal end.
+# id = L3T.411 # Search egg number 1
+# id = L3T.412 # Religous head takes a decision
+# id = L3T.413 # Religous head accepts
+# id = L3T.414 # Relious head refuses
+# id = L3T.421 # Search egg number 2
+# id = L3T.422 # Buy an egg in a small market
+# id = L3T.423 # Buy an egg in a medium market
+# id = L3T.424 # Buy an egg in a big market
+# id = L3T.425 # Buy an egg in a very big market
+# id = L3T.426 # Buy an egg in a huge market
+# id = L3T.427 # Egg number 4 bought
+# id = L3T.428 # Good egg bought
+# id = L3T.429 # Bad egg bought
+# id = L3T.431 # Give egg number 3
+# id = L3T.432 # Monks accept
+# id = L3T.433 # Monks refuse
+# id = L3T.434 # Monks propose their price
+# id = L3T.441 # Search egg number 4
+# id = L3T.442 # Found egg 4 by oneself
+# id = L3T.443 # Someone else found egg 4
+### id = L3T.444 # Free slot
+# id = L3T.445 # Found egg 4 by oneself -false egg "acts" strangely
+# id = L3T.446 # Found egg 4 by oneself -false egg hatches GOOD
+# id = L3T.447 # Found egg 4 by oneself -false egg hatches BAD
+# id = L3T.451 # Search egg number 5
+# id = L3T.452 # Courtier thinks about giving the egg
+# id = L3T.453 # Courtier gives the egg
+# id = L3T.454 # Courtier refuses to give the egg
+# id = L3T.455 # Courtier thinks about selling the egg
+# id = L3T.456 # Courtier sells the egg
+# id = L3T.457 # Courtier want more money
+# id = L3T.458 # Courtier refuse to sell the egg
+# id = L3T.459 # Courtier sells the egg finally by pressure
+# id = L3T.499 # Safety catch - clears character flags and modifiers
+# id = L3T.500 #egg unification
+# id = L3T.501-511 #rumors serie
 
 #[NON INCLUS] id = L3T.2000-2999 #Amis_Ennemis
 
@@ -222,11 +325,15 @@
 ###ECO+_immersion.txt
 
 ##Récoltes
-#id = ECO.200 #bonne récolte
-#id = ECO.201 #mauvaise récolte
+#id = ECO.200 #bonne récolte [HIDDEN]
+#id = ECO.250 #bonne récolte
+#id = ECO.201 #mauvaise récolte [HIDDEN]
+#id = ECO.251 #mauvaise récolte
 ##Peches
-#id = ECO.202 #bonne pêche
-#id = ECO.203 #mauvaise pêche
+#id = ECO.202 #bonne pêche [HIDDEN]
+#id = ECO.252 #bonne pêche
+#id = ECO.203 #mauvaise pêche [HIDDEN]
+#id = ECO.253 #mauvaise pêche
 ##Mine
 #id = ECO.204 #baisse productivité de la mine
 #id = ECO.205 #amelioration productivité de la mine
@@ -236,8 +343,10 @@
 #id = ECO.206 #industrie prospère
 #id = ECO.207 #fin industrie prospère
 ##Meteo
-#id = ECO.208 #inondation
-#id = ECO.209 #sécheresse
+#id = ECO.208 #inondation [HIDDEN]
+#id = ECO.258 #inondation
+#id = ECO.209 #sécheresse [HIDDEN]
+#id = ECO.259 #sécheresse
 
 #id = ECO.210 #prospérité  5ans - notif chronique
 #id = ECO.211 #prospérité 10ans - notif chronique
@@ -290,16 +399,16 @@
 # L3TRADE dynamic trade route by Arko and Mouchi #
 ################################################
 
-#id = L3TRADE.1 #Step B attribution
-#id = L3TRADE.2 #Step C attribution
-#id = L3TRADE.3 #Step D attribution
-#id = L3TRADE.4 #Step E attribution
-#id = L3TRADE.5 #Route modifier attribution
+#id = L3TRADE.1 #Step B attribution (potentiel commercial - pré-attribution route)
+#id = L3TRADE.2 #Step C attribution (potentiel commercial - pré-attribution route)
+#id = L3TRADE.3 #Step D attribution (potentiel commercial - pré-attribution route)
+#id = L3TRADE.4 #Step E attribution (potentiel commercial - pré-attribution route)
+#id = L3TRADE.5 #Route modifier attribution (attribution définitive avec notif)
 #id = L3TRADE.6 #Annex comercial node attribution
 #id = L3TRADE.7 #Update the modifier of the route size
 #id = L3TRADE.8 #Update the route size variable for previous steps
-#id = L3TRADE.9 #Avert the player that the route building can be build on its demesne
-#id = L3TRADE.10 #Avert the player that a route is on its demesne
+#id = L3TRADE.9 #Avert the player that there is a trade route or trade node in a neighbouring province
+#id = L3TRADE.10 #Avert the player that a trade node is in his demesne
 
 ######################################################
 # [ReC][Reliques et Cathédrales]  par Arko et Mouchi #
@@ -309,45 +418,59 @@
 #List ID des events.
 #namespace = REC
 
- 
-##ReC_events_reliques.txt
-#id = REC.101 >> REC.125 # initialisation Reliques
-#id = REC.126 >> REC.130 # initialisation Reliques à découvrir
-#id = REC.131 >> REC.135 # confirmation Reliques à découvrir (cachée)
-#id = REC.136 # initialisation Relique Graal
-#id = REC.137 # confirmation Relique Graal (cachée)
-#libres ID 138 >> 150
-#id = REC.151 >> REC.175 # confirmation relique CATHOLIQUES et MUSULMANS
-#id = REC.176 # fausse relique (catholique)
-#id = REC.177 # maintenance doublon pré-attribution reliques
+##ReC_events_construction.txt
+#id = REC.1 # Give builder trait succession
+#id = REC.2 # Remove builder trait succession
+#id = REC.3 # Construction base progression [character]
+#id = REC.4 # Construction base progression [province]
+#id = REC.5 # Recruit a Builder Master
+#id = REC.6 # Construction stopped because not leaded
+#id = REC.7 # Get construction progression [province]
+#id = REC.8 # Get construction progression [ruler]
+#id = REC.9 # Get construction progression [master builder]
+#id = REC.10 # Get construction progression [province 2]
+#id = REC.11 # Check the builder religion after succession
+#id = REC.12 # Check the builder religion after conversion
+#id = REC.13 # Province where the cathedral construction will be stopped
+#id = REC.14 # Non catholic stop construction
+#id = REC.15 # Province where the cathedral construction will be started again
+#id = REC.16 # Catholic starts again construction
 
-##[NON INCLUS]ReC_events_generaux.txt
-#id = REC.0301 # recruter un maitre batisseur
-#OBSOLETE #id = REC.0302 # recruter un batisseur
-#OBSOLETE #id = REC.0303 # recruter un architecte
+##saint_events.txt
+#saint_events.1
+#saint_events.10 alternate debug for saint_events.1
+#saint_events.2
+#saint_events.3
+#saint_events.4
+#saint_events.5
 
-##[NON INCLUS]ReC_events_bonus.txt
-#id = REC.0201 # bonus achèvement étape 1 (modifieur pour recrutement)
-#id = REC.0202 >> REC.211 # bonus achévement des étapes sauf 0210
+#ReC_sainthood.txt
+#id = REC.20# deus_vox trait evaluation
+#id = REC.21# deus_gladio trait evaluation
+
+##Rec_events_opus_francigenum.txt
+#id = REC.101 # Free Opus Francigenum
+#id = REC.102 # Historical or 50 years Opus Francigenum
+#id = REC.103 # Romanesque cathedral burning
+#id = REC.104 # End of the romanesque cathedral reconstruction
+#id = REC.105 # Dynamic Opus Francigenum
+#id = REC.106 # Ask lord contribution
+#id = REC.107 # Lord gets a piety malus if it has not already (1st year)
+#id = REC.108 # Lord gets a piety malus if it has not already (5years)
+
+##ReC_events_buildings.txt
+#id = REC.201 # bonus achèvement étape 1 (modifieur pour recrutement)
+#id = REC.202 >> REC.211 # bonus achévement des étapes sauf 0210
 #id = REC.1210 # bonus achévement étape n°10_ca
 #id = REC.2210 # bonus achévement étape n°10_ct
 #id = REC.3210 # bonus achévement étape n°10_tp
-#id = REC.0212 # bonus achévement ultime étape
+#id = REC.212 # bonus achévement ultime étape
 
-##[NON INCLUS]ReC_flavour_events.txt
+##ReC_flavour_events.txt
 #ralentissements chantier
-#id = REC.1101 # 
-#id = REC.1101 # 
-#id = REC.1101 # 
-#id = REC.1101 # 
-#id = REC.1101 # 
+#id = REC.1101 # TODO
 #accélérations chantier
-#id = REC.1201 # 
-#id = REC.1201 # 
-#id = REC.1201 # 
-#id = REC.1201 # 
-#id = REC.1201 # 
-#id = REC.1201 # 
+#id = REC.1201 # TODO
 #économies, revenus bonus
 #id = REC.1301 # dons de fidèles 
 #id = REC.1302 # dons de pélerins 
@@ -356,6 +479,7 @@
 #id = REC.1305 # soutien des bourgeois 
 #id = REC.1306 # soutien des nobles v1
 #id = REC.1307 # soutien des nobles v2
+#id = REC.1308 # pillage cut stone from an old structure
 #surcoûts
 #id = REC.1401 # fournisseurs peu scrupuleux v1
 #id = REC.1402 # défaut d'un fournisseur
@@ -364,31 +488,39 @@
 #id = REC.1405 # surcoût (AR) défaut de conception
 #id = REC.1406 # surcoût (AR) coût mésestimé
 #id = REC.1407 # fournisseurs peu scrupuleux v2
+#id = REC.1408 # manque de bois
+#guerre et sièges
+#id = REC.1501 # Build temporary wall
+#id = REC.1502 # Give temporary wall
+#id = REC.1503 # Keep temporary wall
+#id = REC.1510 # Siege attacker to besieged Cathedral building province
+#id = REC.1511 # Besieged Cathedral building province
+#id = REC.1520 # War slows cathedral construction : supplying
+#id = REC.1521 # War slows cathedral construction : labour
+#id = REC.1522 # End of war [On_action]
+#id = REC.1523 # End of war [Builder]
+#chaîne grêve
+#id = REC.1601 # TODO
+#relic trading
+#id = REC.1701 # Someone wants to buy you a relic
+#id = REC.1702 # The seller wants more money
+#id = REC.1703 # The buyer proposed more to buy the relic
+#id = REC.1704 # The relic owner doesn't want to sell
+#id = REC.1705 # Choose another mean to get the relic
+#id = REC.1706 # Sucessful thieft
+#id = REC.1707 # Failure thieft
+#id = REC.1708 # Inform that relic is bought
 
+##[NON INCLUS] ReC_events_emprunts.txt
 ##emprunts : financement progressif mais payant
 #souscription emprunts
-#id = REC.1408 # pré-prop emprunts
+### a retagguer id = REC.1408 # pré-prop emprunts
 #id = REC.1409 # souscrire un emprunt à 3%
 #id = REC.1410 # souscrire un emprunt à 4%
 #id = REC.1411 # souscrire un emprunt à 5%
 #id = REC.1420 # paiement annuités emprunts + cloture
 #id = REC.1421 # report du nombre d'annuités payées du souverain à son héritier
 #id = REC.1422 # passage des usuriers vers l'héritier	
-#guerre et sièges
-#id = REC.5001 # 
-#id = REC.5001 # 
-#id = REC.5001 # 
-#id = REC.5001 # 
-#id = REC.5001 # 
-#id = REC.5001 # 
-#chaîne grêve
-#id = REC.6001 # 
-#id = REC.6001 # 
-#id = REC.6001 # 
-#id = REC.6001 # 
-#id = REC.6001 # 
-#id = REC.6001 # 
-#id = REC.6001 # 
 
 ##[NON INCLUS] ReC_events_rivalite.txt
 # id = REC.2001 # Chatelin jaloux bâtit (ou non) une cathérale
@@ -424,93 +556,24 @@
 # id = REC.2030 # Ralentissement d'un chantier pendant 180 jours suite à un coup bas
 # id = REC.2031 # Ralentissement d'un chantier pendant 90 jours suite à un coup bas
 
-##[NON INCLUS] ReC_sculpteurs
-# id = REC.2101 # Création d'artistes - sculpteur
-# id = REC.2102 # Demande de financement d'une petite sculpture
-# id = REC.2103 # Sculpture réalisée - travail du sculpteur
-# id = REC.2104 # Sculpture montrée au seigneur - sculpture très réussie
-# id = REC.2105 # Sculpture montrée au seigneur - sculpture assez banale
-# id = REC.2106 # Sculpture montrée au seigneur - sculpture ratée
-# id = REC.2107 # Demande de financement d'une sculpture moyenne
-# id = REC.2108 # Demande de financement d'une grande sculpture
-# id = REC.2109 # Formation des sculpteurs
-# id = REC.2110 # Rivalité - Rumeur de chef d'oeuvre
-# id = REC.2111 # Rivalité - Chef d'oeuvre non trouvé
-# id = REC.2112 # Rivalité - Prise de contact avec le sculpteur
-# id = REC.2113 # Rivalité - Lancement coup bas
-# id = REC.2114 # Rivalité - Succès non dévoilé du coup bas diplomatique
-# id = REC.2115 # Rivalité - Succès dévoilé du coup bas diplomatique
-# id = REC.2116 # Rivalité - Echec non dévoilé du coup bas (quelqu'il soit)
-# id = REC.2117 # Rivalité - Echec dévoilé du coup bas (quelqu'il soit)
-# id = REC.2118 # Rivalité - Succès non dévoilé du coup bas d'intendance
-# id = REC.2119 # Rivalité - Succès dévoilé du coup bas d'intendance
-# id = REC.2120 # Rivalité - Succès non dévoilé du coup bas d'intrigue
-# id = REC.2121 # Rivalité - Succès dévoilé du coup bas d'intrigue
-# id = REC.2122 # Rivalité - Compte rendu du succès non dévoilé du coup bas diplomatique
-# id = REC.2123 # Rivalité - Compte rendu du succès dévoilé du coup bas diplomatique
-# id = REC.2124 # Rivalité - Compte rendu de l'échec non dévoilé
-# id = REC.2125 # Rivalité - Compte rendu de l'échec dévoilé
-# id = REC.2126 # Rivalité - Compte rendu du succès non dévoilé du coup bas d'intendance
-# id = REC.2127 # Rivalité - Compte rendu du succès dévoilé du coup bas d'intendance
-# id = REC.2128 # Rivalité - Compte rendu du succès non dévoilé du coup bas d'intrigue
-# id = REC.2129 # Rivalité - Compte rendu du succès dévoilé du coup bas d'intrigue
-# id = REC.2130 # Les sculpteurs demandent à un nouveau seigneur le droit à sculpter
-# id = REC.2131 # Les sculpteur demandent l'autorisation de créer une guilde
-# id = REC.2132 # Offrir une sculpture - choisir entre Pape, suzerain, vassal et famille
-# id = REC.2133 # Offrir une sculpture - choisir entre vassal roi, vassal duc, vassal comte, vassal baron
-# id = REC.2134 # Offrir une sculpture - choisir entre les vassaux roi
-# id = REC.2135 # Offrir une sculpture - choisir entre les vassaux duc
-# id = REC.2136 # Offrir une sculpture - choisir entre les vassaux conte
-# id = REC.2137 # Offrir une sculpture - choisir entre les vassaux baron
-# id = REC.2138 # Offrir une sculpture - choisir entre les membres de la famille
-# id = REC.2139 # Offrir une sculpture - choisir entre les enfants
-# id = REC.2140 # Offrir une sculpture - choisir entre les frères et soeurs
-# id = REC.2141 # Offrir une sculpture - nettoyage des flags
-# id = REC.2142 # Offrir une sculpture - liste épuisée
-
-##[NON INCLUS] ReC_fresquistes
-# id = REC.2201 # Création d'artistes - sculpteur
-# id = REC.2202 # Demande de financement d'une petite sculpture
-# id = REC.2203 # Sculpture réalisée - travail du sculpteur
-# id = REC.2204 # Sculpture montrée au seigneur - sculpture très réussie
-# id = REC.2205 # Sculpture montrée au seigneur - sculpture assez banale
-# id = REC.2206 # Sculpture montrée au seigneur - sculpture ratée
-# id = REC.2207 # Demande de financement d'une sculpture moyenne
-# id = REC.2208 # Demande de financement d'une grande sculpture
-# id = REC.2209 # Formation des sculpteurs
-# id = REC.22102# Rivalité - Rumeur de chef d'oeuvre
-# id = REC.2211 # Rivalité - Chef d'oeuvre non trouvé
-# id = REC.2212 # Rivalité - Prise de contact avec le sculpteur
-# id = REC.2213 # Rivalité - Lancement coup bas
-# id = REC.2214 # Rivalité - Succès non dévoilé du coup bas diplomatique
-# id = REC.2215 # Rivalité - Succès dévoilé du coup bas diplomatique
-# id = REC.2216 # Rivalité - Echec non dévoilé du coup bas (quelqu'il soit)
-# id = REC.2217 # Rivalité - Echec dévoilé du coup bas (quelqu'il soit)
-# id = REC.2218 # Rivalité - Succès non dévoilé du coup bas d'intendance
-# id = REC.2219 # Rivalité - Succès dévoilé du coup bas d'intendance
-# id = REC.2220 # Rivalité - Succès non dévoilé du coup bas d'intrigue
-# id = REC.2221 # Rivalité - Succès dévoilé du coup bas d'intrigue
-# id = REC.2222 # Rivalité - Compte rendu du succès non dévoilé du coup bas diplomatique
-# id = REC.2223 # Rivalité - Compte rendu du succès dévoilé du coup bas diplomatique
-# id = REC.2224 # Rivalité - Compte rendu de l'échec non dévoilé
-# id = REC.2225 # Rivalité - Compte rendu de l'échec dévoilé
-# id = REC.2226 # Rivalité - Compte rendu du succès non dévoilé du coup bas d'intendance
-# id = REC.2227 # Rivalité - Compte rendu du succès dévoilé du coup bas d'intendance
-# id = REC.2228 # Rivalité - Compte rendu du succès non dévoilé du coup bas d'intrigue
-# id = REC.2229 # Rivalité - Compte rendu du succès dévoilé du coup bas d'intrigue
-# id = REC.2230 # Les sculpteurs demandent à un nouveau seigneur le droit à sculpter
-# id = REC.2231 # Les sculpteur demandent l'autorisation de créer une guilde
-# id = REC.2232 # Offrir une sculpture - choisir entre Pape, suzerain, vassal et famille
-# id = REC.2233 # Offrir une sculpture - choisir entre vassal roi, vassal duc, vassal comte, vassal baron
-# id = REC.2234 # Offrir une sculpture - choisir entre les vassaux roi
-# id = REC.2235 # Offrir une sculpture - choisir entre les vassaux duc
-# id = REC.2236 # Offrir une sculpture - choisir entre les vassaux conte
-# id = REC.2237 # Offrir une sculpture - choisir entre les vassaux baron
-# id = REC.2238 # Offrir une sculpture - choisir entre les membres de la famille
-# id = REC.2239 # Offrir une sculpture - choisir entre les enfants
-# id = REC.2240 # Offrir une sculpture - choisir entre les frères et soeurs
-# id = REC.2241 # Offrir une sculpture - nettoyage des flags
-# id = REC.2242 # Offrir une sculpture - liste épuisée
+## ReC_artists
+# id = REC.2100 # Artist startup
+# id = REC.2101 # Apprenti creation by decade
+# id = REC.2102 # Stained glass theme
+# id = REC.2103 # Stained glass size
+# id = REC.2104 # Death of a master glass maker
+# id = REC.2105 # Employer has no more master glass maker
+# id = REC.2106 # Employer has still master glass maker
+# id = REC.2112 # Sculpture theme
+# id = REC.2113 # Sculpture size
+# id = REC.2114 # Death of a master sculptor
+# id = REC.2115 # Employer has no more master sculptor
+# id = REC.2116 # Employer has still master sculptor
+# id = REC.2122 # Fresco theme
+# id = REC.2123 # Fresco size
+# id = REC.2124 # Death of a master painter
+# id = REC.2125 # Employer has no more master painter
+# id = REC.2126 # Employer has still master painter
 
 #################################
 # XYLO-KIT par Arko #
@@ -587,5 +650,18 @@
 #id = XYLO.305 # Loi forestière -demande d'upgrade
 
 ### XYLO_bandits.txt (encore)
+
+### XYLO_various_flavour.txt
+#id = XYLO.311 # Braconnage -installation-
+#id = XYLO.312 # Braconnage -action-
+#id = XYLO.313 # Braconnage -notif effet action-
+#id = XYLO.3131 # Braconnage -ping forestier-
+#id = XYLO.3132 # Braconnage -ping maréchal-
+#id = XYLO.3133 # Braconnage -ping notif batiment détruit-
+#id = XYLO.3134 # Braconnage -notif batiment détruit-
+#id = XYLO.314 # Braconnage -épuisement-
+
+#[NON INCLUS] 
+
 #Divers flavour
 #id = XYLO.0401 # attaque de bandits pendant une partie de chasse

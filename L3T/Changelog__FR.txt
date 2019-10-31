@@ -1,30 +1,118 @@
-##################################
+###############################
 # MOD Les 3 Tours / The 3 Towers #
-##################################
+##############################
 
 ###par Arko et Mouchi
 
-NOTES DE CHANGEMENT
-
-DEV BETA 0.94 (XX mars 2017)
-version name : ------
+RELEASE BETA 0.98 SAINT1 (8 avril 2019) pour CK2 v3.1.x
 
 MAJEUR :
+-mise à niveau du mod pour la version 3.1.x du jeu
+-"démarrage rapide" : les ressources sont distribuées immédiatement au lancement de la partie
+-nouvelle spécialisation de domaine : Bourg épiscopal, équivalent du bourg féodal pour un religieux
+-ajout d'un mécanisme de "capitale" qui donne un bonus dans votre capitale, sa mise à jour est automatique
+-enrichissement des conditions pour être canonisé
+-mécanisme de martyrs, augmente les chances de se voir canonisé
+-les conversions religieuses augmentent les chances de se voir canonisé
+-les croisades et guerres religieuses augmentent les chances de se voir canonisé
+
+MINEUR et DIVERS :
+-nouvelle décision pour cacher certaines notifications (météo)
+-possibilité de placer l'intérêt de la couronne sur une province ayant une route de commerce, l'IA possède aussi cette faculté
+-l'intérêt de la couronne affecte la croissance de la population
+-les capitales de provinces sont désormais des cités féodales par défaut
+-une capitale a une croissance de population plus importante
+-prise en compte des artefacts de type relique de la vanilla pour la construction des cathédrales
+-ajouts d'icones pour les décisions de personnage (acheter une relique etc. )
+-faire un don pour une cathédrale lui donne désormais des points d'avancement plutot que de l'or au batisseur
+-les guerres saintes peuvent avancer le déclenchement de "l'Opus francigenum"
+-il n'est plus possible de vendre une relique dynastique
+-nouvelle illustration d'artefact : un reliquaire, utilisées pour certaines reliques
+-divers textes améliorés
+
+CORRECTION DE BUGS :
+-correction du bug qui empêchait le modificateur de dépopulation d'être retiré
+
+
+RELEASE BETA 0.97 RELIC3 (10 juin 2018) pour CK2 v2.8.2
+
+MAJEUR :
+-mise à niveau du mod pour la version 2.8.2 du jeu
+
+MINEUR et DIVERS :
+-une route dynamique a plus de chances de débuter sur la "Route de la soie"
+-une route dynamique s'éloignera de la "Route de la soie" pour les étapes suivantes
+
+CORRECTION DE BUGS :
+-correction d'un bug dans les résultats de l'étude d'un livre
+
+
+RELEASE BETA 0.96 RELIC2 (7 janvier 2018) pour CK2 v2.8.1
+
+MAJEUR :
+-rien de nouveau depuis RELIC1
+
+MINEUR et DIVERS :
+-révisions de textes et traductions
+
+CORRECTION DE BUGS :
+-correction des notifications du développement économique
+-correction des textes
+-correction du bug qui empêchait la finalisation de la châine d'évènement permettant l'écriture d'un livre
+-correction d'un bug de compatch
+
+
+RELEASE BETA 0.95 RELIC1 (23 décembre 2017) pour CK2 v2.8.0
+
+MAJEUR :
+Le retour du système de cathédrales.
+-refonte du système de cathédrales désormais complètement IA-friendly, avec plein d'éléments d'immersion lors de la construction
+-système enrichi de saintes reliques
+-intégration et extension du mini-mod "ascent to sainthood" par blackninja9939
+-une nouvelle société (non jouable) qui regroupe les artistes des cathédrales
+Le développement. 
+-nouveau système pour le développement économique des domaines
+Un nouveau type d'évènement.
+-Le mod propose une nouvelle disposition de fenêtre d'évènement
+
+MINEUR et DIVERS :
+-règle de jeu "Opus Francigenum" pour l'activation de l'ère des cathédrales
+-nouvelles icônes pour les modificateurs relatifs à l'érudition
+-nouveaux batiments pour votre capitale : une bibliothèque personnelle (2 niveaux)
+-nouvelles décisions liées à la bibliothèque (acheter des livres, étudier des livres)
+-nouveaux evènements sur la thématique du braconnage
+-les régions montagneuses peuvent disposer d'un col
+-nombreuses révisions de textes et traductions
+-nouveaux tooltips ou descriptifs pour aider au gameplay
+-les routes de comemrce sont désormais matérialisées sur la carte par des modèles 3D
+-tout le reste que j'oublie
+-équilibrages divers
+-mode débug
+
+
+RELEASE BETA 0.94 EASTER1 (16 avril 2017) pour CK2 v2.7.0 et 2.7.1
+
+MAJEUR :
+-feature de chasse à l'oeuf de Pâques
 -mise à jour du mod pour la version 2.7 du jeu
 -révision complète des batiments dans les comptoirs commerciaux des républiques marchandes
 
 MINEUR et DIVERS :
+-déverrouillage des nouveaux events d'ambition pour l'IA
 -ajout d'une icône spécifique pour la spécialisation des temples musulmans
 -ajout d'un coût en prestige pour certains bâtiments
+-ajout d'universités théologiques pour les écoles musulmanes
 -révision de l'évènement d'accueil
 -amélioration de la chaîne d'évènements "l'épée légendaire", qui permet désormais de déboucher sur l'acquisition d'un artefact
--ajout d'une branche pour les muslumans à la chaîne d'évènements "l'épée légendaire", avec des spécifités, notamment un artefact thématique en bout de chaîne
--ajout d'une nouvelle image d'évènement
+-ajout d'une branche pour les musulmans à la chaîne d'évènements "l'épée légendaire", avec des spécifités, notamment un artefact thématique en bout de chaîne
+-ajout de nouvelles images d'évènement
 -mise à jour des provinces recevant le modificateur "rivière" sur la carte SWMH
+-ajout d'un bonus de départ de piété
 
 CORRECTION DE BUGS :
 -ajout de textes spécifiques pour certains bâtiments des domaines temples et cités musulmans
 -correction du bug rare de double spécialisation d'un domaine religieux
+-correction d'un bug sur l'écran principal si vous n'utilisez pas L3T avec l'ARKOpack Interface
 -optimisation des évènements de décompte de population
 
 RELEASE BETA 0.93 (04 février 2017)

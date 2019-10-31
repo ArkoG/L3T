@@ -1,0 +1,155 @@
+namespace = L3T
+
+#RUMEURS CHASSE AUX OEUFS
+
+letter_event = {
+    id = L3T.501
+	desc = "DESCL3T.501"
+#	picture = GFX_evt_L3T_city_visitor
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+#	trigger = {
+#		has_character_flag = search_easter_eggs
+#		NOT = { has_character_flag = rumeur501_recue }
+#		NOT = { has_character_flag = rumeur_recue_cette_annee }
+#		NOT = { has_artifact = oeuf_united }
+#	}
+
+	option = {
+		name = "L3T.501A" #make it common to all ?	
+		set_character_flag = rumeur501_recue
+		#set_character_flag = rumeur_recue_cette_annee
+	}
+}
+
+letter_event = {
+    id = L3T.502
+	desc = "DESCL3T.502"
+	border = GFX_event_letter_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { name = "L3T.502A"	set_character_flag = rumeur502_recue }
+}
+
+letter_event = {
+    id = L3T.503
+	desc = "DESCL3T.503"
+	border = GFX_event_letter_frame_economy
+	
+	is_triggered_only = yes
+
+	option = { name = "L3T.503A"	set_character_flag = rumeur503_recue }
+}
+
+letter_event = {
+    id = L3T.504
+	desc = "DESCL3T.504"
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+
+	option = { name = "L3T.504A"	set_character_flag = rumeur504_recue }
+}
+
+letter_event = {
+    id = L3T.505
+	desc = "DESCL3T.505"
+	border = GFX_event_letter_frame_intrigue
+	
+	is_triggered_only = yes
+
+	option = { name = "L3T.505A"	set_character_flag = rumeur505_recue }
+}
+
+letter_event = {
+    id = L3T.506
+	desc = "DESCL3T.506"
+	border = GFX_event_letter_frame_economy
+	
+	is_triggered_only = yes
+
+	option = { name = "L3T.506A"	set_character_flag = rumeur506_recue }
+}
+
+letter_event = {
+    id = L3T.507
+	desc = "DESCL3T.507"
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+
+	option = { name = "L3T.507A"	set_character_flag = rumeur507_recue }
+}
+
+letter_event = {
+    id = L3T.508
+	desc = "DESCL3T.508"
+	border = GFX_event_letter_frame_intrigue
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.508A"
+		trigger = { NOT = { has_character_flag = heard_one_ring_rumor }}
+		set_character_flag = rumeur508_recue
+		set_character_flag = heard_one_ring_rumor
+		}
+	option = {
+		name = "L3T.508B"
+		trigger = { has_character_flag = heard_one_ring_rumor }
+		set_character_flag = rumeur508_recue
+	}
+}
+
+letter_event = {
+    id = L3T.509
+	desc = "DESCL3T.509"
+	border = GFX_event_letter_frame_economy
+
+	is_triggered_only = yes
+
+	option = { name = "L3T.509A"	set_character_flag = rumeur509_recue }
+}
+
+letter_event = {
+    id = L3T.510
+	desc = "DESCL3T.510"
+	border = GFX_event_letter_frame_intrigue
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.510A"
+		trigger = { NOT = { has_character_flag = heard_one_ring_rumor }}
+		set_character_flag = rumeur510_recue
+		set_character_flag = heard_one_ring_rumor
+		}
+	option = {
+		name = "L3T.510B"
+		trigger = { has_character_flag = heard_one_ring_rumor }
+		set_character_flag = rumeur510_recue
+	}
+}
+
+letter_event = {
+    id = L3T.511
+	desc = "DESCL3T.511"
+	border = GFX_event_letter_frame_intrigue
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.511A"
+		trigger = { NOT = { has_character_flag = heard_one_ring_rumor }}
+		set_character_flag = rumeur511_recue
+		set_character_flag = heard_one_ring_rumor
+		}
+	option = {
+		name = "L3T.511B"
+		trigger = { has_character_flag = heard_one_ring_rumor }
+		set_character_flag = rumeur511_recue
+	}
+}

@@ -1,0 +1,164 @@
+artist_guild = { #society code name
+	primary_attribute = learning #Its main attribute
+	society_ranks_gfx = artists_ranks #which rank icon it will use
+	society_rank_up_decision = artist_guild_rank_up #decision trigered by the rank-up button
+	sound = monastic_orders_build_monastery #sound effect, see the interface/sound.sfx
+	is_secret = no #can be joined openly or not, hide clothing from other members
+	criminal = no #is it considered a "bad" society
+	is_religious = no #affect opinion values
+	devil_worshipper = no #if it will trigger devil society stuff
+	non_interference = { #AI will avoid messing with each others
+		always = no 
+	}
+	
+	active = { #if its on by default or not
+		#default to always active, will start empty unless "indestructible = yes" and "startup_populate" are filled.
+	}
+	
+	indestructible = yes #TODO  on_society_failed_to_find_new_leader on action #if it can be destroyed and if not will add members up to the start-up limit
+	
+	can_join_society = { #add restriction for joining
+		hidden_trigger = {
+			NAND = { #AI cannot join if the society first rank is full
+				ai = yes
+				is_society_rank_full = { 
+					society = artist_guild
+					rank = 1
+				}
+			}
+		}
+		OR = {
+			trait = apprenti_sculpteur
+			trait = compagnon_sculpteur
+			trait = maitre_sculpteur
+			trait = apprenti_fresquiste
+			trait = compagnon_fresquiste
+			trait = maitre_fresquiste
+			trait = apprenti_verrier
+			trait = compagnon_verrier
+			trait = maitre_verrier
+			hidden_tooltip = {
+				AND = {
+					ai = no
+					has_global_flag = debug_L3T
+				}
+			}
+		}		
+	}
+
+	show_society = { #society will appear in the list if these are met
+		always = yes
+	}
+	
+	potential = { #will kick from society if these are no longer met
+		NOT = { trait = incapable }
+	}
+	
+	society_rank = { #society ranks
+		level = 1 #lowest rank
+		limit = 50 #max member of that rank
+		startup_limit = 12 #amount of member at the start if enabled=
+		decisions = { #rank based decisions power
+			create_an_artwork
+			# TODO
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 25
+		startup_limit = 9
+		decisions = {
+			# TODO
+		}
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 10
+		startup_limit = 5 # The 6th will be the grand master
+		decisions = {
+			# TODO
+		}
+	}
+
+	society_rank = {
+		level = 4
+		limit = 1 #there can be more than max rank member
+		startup_limit = 1
+		decisions = { }
+	}
+	
+	monthly_currency_gain = { #how much society currency they gain
+		name = artist_guild_currency #code name of the society currency
+		
+		per_attribute = {
+    		name = learning
+    		value = 0.5
+    	}
+		
+		per_attribute = {
+    		name = stewardship
+    		value = 0.2
+    	}
+		
+		has_trait = {
+			value = 5
+			trait = scholarly_theologian
+		}
+		
+		has_trait = {
+			value = 10
+			trait = mastermind_theologian
+		}
+		
+		has_trait = {
+			value = 10
+			trait = quick
+		}
+		
+		has_trait = {
+			value = 15
+			trait = genius
+		}
+		
+		has_trait = {
+			value = -10
+			trait = slow 
+		}
+		
+		has_trait = {
+			value = -15
+			trait = imbecile
+		}
+		
+		has_trait = {
+			value = 5
+			trait = architect
+		}
+		
+		has_trait = {
+			value = 5
+			trait = patient
+		}
+		
+		has_trait = {
+			value = 5
+			trait = diligent
+		}
+		
+		has_trait = {
+			value = -5
+			trait = wroth
+		}
+		
+		has_trait = {
+			value = -5
+			trait = slothful
+		}
+	}
+
+	# Score for the grand master succession
+	member_score_per_attribute = 3
+	member_score_per_rank = 100
+}

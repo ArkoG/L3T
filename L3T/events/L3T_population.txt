@@ -1,8 +1,10 @@
-# Initialisation of population buildings at starting
+### DEVELOPPMENT VARIABLE EVENTS ###
+## Init building+variable on_startup
 character_event = {
 	id = L3T.1101
 	hide_window = yes
 	ai = no
+
 	is_triggered_only = yes
 	
 	trigger = {
@@ -13,97 +15,448 @@ character_event = {
 		set_global_flag = init_population
 		any_title = {
 			limit = { tier = baron }
-			# Castles
+			export_to_variable = { which = "developpement" value = num_of_buildings } #gives a random seed based on techs
+			set_variable = { which = "devnextstep" value = 100 }
 			if = {
-				if = {
-					limit = { num_of_buildings = 10 }
-					add_building = ca_town_1
+				limit = {	
+					year = 1000
 				}
-				
-				if = {
-					limit = { num_of_buildings = 15 }
-					add_building = ca_town_2
-				}
-				
-				if = {
-					limit = { num_of_buildings = 20 }
-					add_building = ca_town_3
-				}
-				
-				if = {
-					limit = { num_of_buildings = 25 }
-					add_building = ca_town_4
-				}
-				
-				if = {
-					limit = { num_of_buildings = 35 }
-					add_building = ca_town_5
+				# Gives a random bonus
+				random_list = {
+					15 = {
+						change_variable = { which = "developpement" value = 10 }
+					} 
+					20 = {
+						change_variable = { which = "developpement" value = 20 }
+					}
+					40 = {
+						change_variable = { which = "developpement" value = 30 }
+					}
+					15 = {
+						change_variable = { which = "developpement" value = 40 }
+					}
+					10 = {
+						change_variable = { which = "developpement" value = 50 }
+					}
 				}
 			}
-			# Cities	
 			if = {
-				if = {
-					limit = { num_of_buildings = 10 }
-					add_building = ct_town_1
+				limit = {	
+					year = 1150
 				}
-				
-				if = {
-					limit = { num_of_buildings = 15 }
-					add_building = ct_town_2
-				}
-				
-				if = {
-					limit = { num_of_buildings = 20 }
-					add_building = ct_town_3
-				}
-				
-				if = {
-					limit = { num_of_buildings = 25 }
-					add_building = ct_town_4
-				}
-				
-				if = {
-					limit = { num_of_buildings = 30 }
-					add_building = ct_town_5
-				}
+				change_variable = { which = "developpement" value = 50 }
+			}
+			
+			set_variable = { which = "developpement_init" which = "developpement" }
+			
+			# Castles
+			#if = { #buggy pour mémoire
+			#	holding_type = castle
+			#	limit = { check_variable = { which = "developpement" value = 0 }}
+			#	set_variable = { which = "devnextstep" value = 100 }
+			#}
+			if = {
+				limit = { check_variable = { which = "developpement" value = 100 }}
+				add_building = ca_town_1
+				set_variable = { which = "devnextstep" value = 150 }
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 150 }}
+				set_variable = { which = "devnextstep" value = 200 }
+				add_building = ca_town_2
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 200 }}
+				set_variable = { which = "devnextstep" value = 250 }
+				add_building = ca_town_3
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 250 }}
+				set_variable = { which = "devnextstep" value = 350 }
+				add_building = ca_town_4
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 350 }}
+				add_building = ca_town_5
+			}
+
+			# Cities
+			if = {
+				limit = { check_variable = { which = "developpement" value = 100 }}
+				add_building = ct_town_1
+				set_variable = { which = "devnextstep" value = 150 }
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 150 }}
+				add_building = ct_town_2
+				set_variable = { which = "devnextstep" value = 250 }
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 250 }}
+				add_building = ct_town_3
+				set_variable = { which = "devnextstep" value = 400 }
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 400 }}
+				add_building = ct_town_4
+				set_variable = { which = "devnextstep" value = 500 }
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 500 }}
+				add_building = ct_town_5
 			}
 			# Temples
-			if = {		
+			if = {
+				limit = { check_variable = { which = "developpement" value = 100 }}
+				add_building = tp_town_1
+				set_variable = { which = "devnextstep" value = 170 }
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 170 }}
+				add_building = tp_town_2
+				set_variable = { which = "devnextstep" value = 220 }
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 220 }}
+				add_building = tp_town_3
+				set_variable = { which = "devnextstep" value = 260 }
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 260 }}
+				add_building = tp_town_4
+				set_variable = { which = "devnextstep" value = 300 }
+			}
+			
+			if = {
+				limit = { check_variable = { which = "developpement" value = 300 }}
+				add_building = tp_town_5
+			}
+		}
+	}
+}
+
+## various +-
+# visit demesne event #debug only ATM
+province_event = { #called by settlement_decision
+	id = L3T.1102
+	desc = "DESCL3T.1102"
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
+	
+	option = {
+		name = "OK"	
+	}
+	#might need to do some computation and then getting results into a notification
+}
+
+#BASE progression bonus/malus
+character_event = {
+	id = L3T.1103
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		#war = no
+		any_demesne_title = {
+			tier = baron
+			OR = { 
+				holding_type = castle
+				holding_type = temple
+				holding_type = city
+			}
+		}
+	}
+	
+	immediate = {
+		any_demesne_title = {
+			limit = { 
+				tier = baron
+				OR = { 
+					holding_type = castle
+					holding_type = temple
+					holding_type = city
+				}
+			}
+			if = { #progression bonus on properity #ECO_revision totoro
+				limit = {
+					has_siege = no
+					is_occupied = no
+					NOT = {
+						location = { 
+							OR = {
+								has_disease = yes
+								has_province_modifier = meteo_inondation
+								has_province_modifier = meteo_secheresse
+							}
+						}
+					}
+				}
+				save_event_target_as = holding_dev #totoro
+				set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
 				if = {
-					limit = { num_of_buildings = 12 }
-					add_building = tp_town_1
+					limit = {
+						holding_type = city
+						#+ gov type
+					}
+					change_variable = { which = "developpement" value = 1 }
+					change_variable = { which = "developpement_yearly_growth" value = 1 }
+					#add variation upon city governement 
+				}
+				random = {
+					chance = 40
+					modifier = {
+						factor = 1.5
+						location = { has_province_modifier = agriculture4_pain }
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							location = { has_province_modifier = industrie_prospere }
+							location = { has_province_flag = crown_focus_province }
+						}
+					}
+					modifier = {
+						factor = 1.25
+						is_capital = yes #main/capital holding
+					}
+					modifier = {
+						factor = 2.0 #100% (40*1.25*2=100) chance if realm capital
+						is_capital = yes
+						location = { has_province_modifier = realm_capital_province }
+					}
+					change_variable = { which = "developpement" value = 1 } 
+					change_variable = { which = "developpement_yearly_growth" value = 1 }
+				}
+				if = {
+					limit = { has_global_flag = debug_L3T }
+					#holder_scope = { character_event = { id = L3T.1104 days = 0 }} #totoro
+					holder_scope = { character_event = { id = L3T.11031 days = 0 }} #totoro
+				}
+			}
+			if = {
+				limit = { #progression malus on disease bad weather
+					location = { 
+						#OR = {
+							has_disease = yes
+						#	has_province_modifier = meteo_inondation
+						#	has_province_modifier = meteo_secheresse
+						#}
+					}
 				}
 				
+				set_variable = { which = "developpementold" which = "developpement" }
 				if = {
-					limit = { num_of_buildings = 17 }
-					add_building = tp_town_2
+					limit = { check_variable = { which = "developpement" value = 1 }}
+					save_event_target_as = holding_dev #totoro
+					change_variable = { which = "developpement" value = -1 }
+					change_variable = { which = "developpement_yearly_growth" value = -1 }
+					#holder_scope = { character_event = { id = L3T.1105 days = 0 }}
+					holder_scope = { character_event = { id = L3T.11032 days = 0 }}
 				}
 				
-				if = {
-					limit = { num_of_buildings = 22 }
-					add_building = tp_town_3
+			}
+			if = {
+				limit = { #progression malus on disease bad weather
+					location = { 
+						OR = {
+						#	has_disease = yes
+							has_province_modifier = meteo_inondation
+							has_province_modifier = meteo_secheresse
+						}
+					}
 				}
 				
+				set_variable = { which = "developpementold" which = "developpement" }
 				if = {
-					limit = { num_of_buildings = 26 }
-					add_building = tp_town_4
+					limit = { check_variable = { which = "developpement" value = 1 }}
+					save_event_target_as = holding_dev #totoro
+					change_variable = { which = "developpement" value = -1 }
+					change_variable = { which = "developpement_yearly_growth" value = -1 }
+					holder_scope = { character_event = { id = L3T.11034 days = 0 }} #spam limiting, show only in debug mode
 				}
 				
+			}
+			if = {
+				limit = {
+					has_siege = no
+					is_occupied = yes
+					location = { has_disease = no }
+				}
+				save_event_target_as = holding_dev
+				set_variable = { which = "developpementold" which = "developpement" }
+				#holder_scope = { character_event = { id = L3T.1106 days = 0 }}
+				holder_scope = { character_event = { id = L3T.11033 days = 0 }}
+			}
+			if = {
+				limit = {
+					has_siege = yes
+					is_occupied = no
+					location = { has_disease = no }
+				}
+				set_variable = { which = "developpementold" which = "developpement" }
+				save_event_target_as = holding_dev
+				#holder_scope = { character_event = { id = L3T.1106 days = 0 }}
+				holder_scope = { character_event = { id = L3T.11033 days = 0 }}
+			}		
+		}
+	}
+}
+
+#called by #on_loot_settlement
+character_event = { 
+	id = L3T.1106
+	hide_window = yes
+	
+	is_triggered_only = yes 
+	
+	trigger = {
+		has_global_flag = init_population
+	}
+	#voir pour retourner une estimation textuée plutot que la valeur brute si on l'utilise à d'autres fins que le test/debug
+	
+	immediate = { #i want to scope the settlement that fired this event
+		FROM = {
+			save_event_target_as = holding_dev
+			set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
+			if = {
+				limit = { check_variable = { which = "developpement" value = 15 } }
+				change_variable = { which = "developpement" value = -15 }
+				change_variable = { which = "developpement_looting" value = -15 }
+				#holder_scope = { character_event = { id = L3T.1108 days = 0 }}
+				holder_scope = { character_event = { id = L3T.11061 days = 0 }}
+			}
+			if = {
+				limit = { NOT = { check_variable = { which = "developpement" value = 15 } } }
+				change_variable = { which = "developpement_looting" which = "developpement" }
+				set_variable = { which = "developpement" value = 0 }
+				#no need for a notification if already at zero, can't be worse.
+			}				
+		}
+	}
+}
+
+#trade post bonus #on_trade_post_construction_completed
+character_event = {
+	id = L3T.1104
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			has_trade_post=yes  #province has a trade post
+			any_province_holding = { 
+				holding_type = city
+				NOT = { has_title_flag = received_trade_post_devv_bonus }
+			} #I am a city holder
+		}
+	}
+	
+	immediate = {
+		FROM = {
+			any_province_holding = {
+				limit = {
+					holding_type = city
+					location = { has_trade_post = yes }
+					NOT = { has_title_flag = received_trade_post_devv_bonus }
+				}
 				if = {
-					limit = { num_of_buildings = 30 }
-					add_building = tp_town_5
+					limit = { has_building = VOC_INDUSTRIELLE }
+					change_variable = { which = "developpement" value = 10 }
+					change_variable = { which = "developpement_trade_post" value = 10 }
+					save_event_target_as = holding_dev
+					set_title_flag = received_trade_post_devv_bonus
+					holder_scope = { character_event = { id = L3T.11041 days = 0 }} #city holder/republic notif
+				}
+				if = {
+					limit = { has_building = VOC_COMMERCIALE }
+					change_variable = { which = "developpement" value = 30 }
+					change_variable = { which = "developpement_trade_post" value = 30 }
+					save_event_target_as = holding_dev
+					set_title_flag = received_trade_post_devv_bonus
+					holder_scope = { character_event = { id = L3T.11041 days = 0 }} #city holder/republic notif
+				}
+				if = {
+					limit = { 
+						location = { owner = { is_republic = no }}
+					}
+					location = { owner = { character_event = { id = L3T.11042 days = 0 }}} #non republic notif
 				}
 			}
 		}
 	}
 }
 
-#Evolution population	CASTLE 
-##niveau 1	CASTLE
-
+#hospital bonus #on_hospital_construction_completed
 character_event = {
-	#title = "NAMEL3T.101"
-    	id = L3T.101
+	id = L3T.1105
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			hospital_level = 1
+			any_province_holding = {
+				OR = {
+					holding_type = castle
+					holding_type = temple
+					holding_type = city
+				}
+				NOT = { has_title_flag = received_hospital_devv_bonus }
+			}
+		}
+	}
+	
+	immediate = {
+		FROM = {
+			any_province_holding = {
+				limit = {
+					OR = { 
+						holding_type = castle
+						holding_type = temple
+						holding_type = city
+					}
+					location = { hospital_level = 1 }
+					NOT = { has_title_flag = received_hospital_devv_bonus }
+				}
+				set_title_flag = received_hospital_devv_bonus
+				change_variable = { which = "developpement" value = 10 }
+				change_variable = { which = "developpement_hospital" value = 10 }
+				if = {
+					limit = { 
+						is_capital = yes
+					}
+				save_event_target_as = holding_dev #totoro
+				holder_scope = { character_event = { id = L3T.11051 days = 0 }}
+				}
+			}
+		}
+	}
+}
+
+## Evolution population buildings - CASTLE 
+##niveau 1	CASTLE
+character_event = {
+   	id = L3T.101
 	desc = "DESCL3T.101"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -113,36 +466,34 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
 			holding_type = castle 
 			NOT = {	has_building = ca_town_1	}
-			num_of_buildings = 10
+			check_variable = { which = "developpement" value = 100 }
 		}
 	}
 		
-	#mean_time_to_happen = { months = 18 }
-
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
 				holding_type = castle 	
 				NOT = {	has_building = ca_town_1	}
-				num_of_buildings = 10
+				check_variable = { which = "developpement" value = 100 }
 			}
 			add_building = ca_town_1
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 150 } }
 		}
 	}
 }
 
 ##niveau 2	CASTLE
 character_event = {
-	#title = "NAMEL3T.102"
-    	id = L3T.102
+    id = L3T.102
 	desc = "DESCL3T.102"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -152,38 +503,36 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
 			holding_type = castle 	
 			has_building = ca_town_1
 			NOT = { has_building = ca_town_2 }
-			num_of_buildings = 15
+			check_variable = { which = "developpement" value = 150 }
 		}
 	}
 		
-	#mean_time_to_happen = { months = 18 }
-
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
 				holding_type = castle 
-				num_of_buildings = 15
-				has_building = ca_town_1
+				check_variable = { which = "developpement" value = 150 }
+								has_building = ca_town_1
 				NOT = { has_building = ca_town_2 }
 			}
 			add_building = ca_town_2
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 200 }}
 		}
 	}
 }
 
 ##niveau 3	CASTLE
 character_event = {
-	#title = "NAMEL3T.103"
-    	id = L3T.103
+   	id = L3T.103
 	desc = "DESCL3T.103"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -193,38 +542,36 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
 			holding_type = castle 	
 			has_building = ca_town_2
 			NOT = { has_building = ca_town_3 }
-			num_of_buildings = 20
+			check_variable = { which = "developpement" value = 200 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
 				holding_type = castle 
-				num_of_buildings = 20
+				check_variable = { which = "developpement" value = 200 }
 				has_building = ca_town_2
 				NOT = { has_building = ca_town_3 }
 			}
 			add_building = ca_town_3
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 250 }}
 		}
 	}
 }
 
 ##niveau 4	CASTLE
 character_event = {
-	#title = "NAMEL3T.104"
-    	id = L3T.104
+   	id = L3T.104
 	desc = "DESCL3T.104"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -234,38 +581,36 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
 			holding_type = castle 	
 			has_building = ca_town_3
 			NOT = { has_building = ca_town_4 }
-			num_of_buildings = 25
+			check_variable = { which = "developpement" value = 250 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
 				holding_type = castle 
-				num_of_buildings = 25
+				check_variable = { which = "developpement" value = 250 }
 				has_building = ca_town_3
 				NOT = { has_building = ca_town_4 }
 			}
 			add_building = ca_town_4
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 350 }}
 		}
 	}
 }
 
 ##niveau 5	CASTLE
 character_event = {
-	#title = "NAMEL3T.105"
-    	id = L3T.105
+   	id = L3T.105
 	desc = "DESCL3T.105"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -276,7 +621,7 @@ character_event = {
 	is_triggered_only = yes
 
 	
-trigger = {
+	trigger = {
 		war = no
 		primary_title = { higher_tier_than = BARON }
 		
@@ -285,19 +630,17 @@ trigger = {
 			holding_type = castle 	
 			has_building = ca_town_4
 			NOT = { has_building = ca_town_5 }
-			num_of_buildings = 35
+			check_variable = { which = "developpement" value = 350 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
 				holding_type = castle 
-				num_of_buildings = 35
+				check_variable = { which = "developpement" value = 350 }
 				has_building = ca_town_4
 				NOT = { has_building = ca_town_5 }
 			}
@@ -310,8 +653,7 @@ option = {
 #Evolution population	CITY sligtly faster
 ##niveau 1	CITY 
 character_event = {
-	#title = "NAMEL3T.106"
-    	id = L3T.106
+   	id = L3T.106
 	desc = "DESCL3T.106"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -321,36 +663,34 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron
 			holding_type = city		
 			NOT = {	has_building = ct_town_1	}
-			num_of_buildings = 10
+			check_variable = { which = "developpement" value = 100 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron
 				holding_type = city	
 				NOT = {	has_building = ct_town_1	}
-				num_of_buildings = 10
+				check_variable = { which = "developpement" value = 100 }
 			}
 			add_building = ct_town_1
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 150 }}
 		}
 	}
 }
 
 ##niveau 2	CITY 
 character_event = {
-	#title = "NAMEL3T.107"
-    	id = L3T.107
+   	id = L3T.107
 	desc = "DESCL3T.107"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -360,38 +700,36 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron
 			holding_type = city	
 			has_building = ct_town_1
 			NOT = { has_building = ct_town_2 }
-			num_of_buildings = 15
+			check_variable = { which = "developpement" value = 150 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron
 				holding_type = city	
-				num_of_buildings = 15
+				check_variable = { which = "developpement" value = 150 }
 				has_building = ct_town_1
 				NOT = { has_building = ct_town_2 }
 			}
 			add_building = ct_town_2
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 250 }}
 		}
 	}
 }
 
 ##niveau 3	CITY 
 character_event = {
-	#title = "NAMEL3T.108"
-    	id = L3T.108
+   	id = L3T.108
 	desc = "DESCL3T.108"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -401,38 +739,36 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron
 			holding_type = city		
 			has_building = ct_town_2
 			NOT = { has_building = ct_town_3 }
-			num_of_buildings = 20
+			check_variable = { which = "developpement" value = 250 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron
 				holding_type = city	
-				num_of_buildings = 20
+				check_variable = { which = "developpement" value = 250 }
 				has_building = ct_town_2
 				NOT = { has_building = ct_town_3 }
 			}
 			add_building = ct_town_3
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 400 }}
 		}
 	}
 }
 
 ##niveau 4	CITY 
 character_event = {
-	#title = "NAMEL3T.109"
-    	id = L3T.109
+   	id = L3T.109
 	desc = "DESCL3T.109"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -442,38 +778,36 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron
 			holding_type = city			
 			has_building = ct_town_3
 			NOT = { has_building = ct_town_4 }
-			num_of_buildings = 25
+			check_variable = { which = "developpement" value = 400 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron
 				holding_type = city		
-				num_of_buildings = 25
+				check_variable = { which = "developpement" value = 400 }
 				has_building = ct_town_3
-						NOT = { has_building = ct_town_4 }
+				NOT = { has_building = ct_town_4 }
 			}
 			add_building = ct_town_4
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 500 }}
 		}
 	}
 }
 
 ##niveau 5	CITY 
 character_event = {
-	#title = "NAMEL3T.110"
-    	id = L3T.110
+   	id = L3T.110
 	desc = "DESCL3T.110"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -484,7 +818,7 @@ character_event = {
 	is_triggered_only = yes
 
 	
-trigger = {
+	trigger = {
 		war = no
 		primary_title = { higher_tier_than = BARON }
 		
@@ -493,19 +827,17 @@ trigger = {
 			holding_type = city		
 			has_building = ct_town_4
 			NOT = { has_building = ct_town_5 }
-			num_of_buildings = 30
+			check_variable = { which = "developpement" value = 500 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron
 				holding_type = city	
-				num_of_buildings = 30
+				check_variable = { which = "developpement" value = 500 }
 				has_building = ct_town_4
 				NOT = { has_building = ct_town_5 }
 			}
@@ -517,8 +849,7 @@ option = {
 #Evolution population	TEMPLE sligtly slower 
 ##niveau 1	TEMPLE 
 character_event = {
-	#title = "NAMEL3T.111"
-    	id = L3T.111
+   	id = L3T.111
 	desc = "DESCL3T.111"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -528,36 +859,34 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
 			holding_type = temple	
 			NOT = {	has_building = tp_town_1	}
-			num_of_buildings = 12
+			check_variable = { which = "developpement" value = 120 }
 		}
 	}
 		
-	#mean_time_to_happen = { months = 18 }
-
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
 				holding_type = temple	
 				NOT = {	has_building = tp_town_1	}
-				num_of_buildings = 12
+				check_variable = { which = "developpement" value = 120 }
 			}
 			add_building = tp_town_1
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 170 }}
 		}
 	}
 }
 
 ##niveau 2	TEMPLE 
 character_event = {
-	#title = "NAMEL3T.112"
-    	id = L3T.112
+   	id = L3T.112
 	desc = "DESCL3T.112"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -567,38 +896,36 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
 			holding_type = temple	
 			has_building = tp_town_1
 			NOT = { has_building = tp_town_2 }
-			num_of_buildings = 17
+			check_variable = { which = "developpement" value = 170 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
 				holding_type = temple
-				num_of_buildings = 17
+				check_variable = { which = "developpement" value = 170 }
 				has_building = tp_town_1
 				NOT = {	has_building = tp_town_2	}
 			}
 			add_building = tp_town_2
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 220 }}
 		}
 	}
 }
 
 ##niveau 3	TEMPLE 
 character_event = {
-	#title = "NAMEL3T.113"
-    	id = L3T.113
+   	id = L3T.113
 	desc = "DESCL3T.113"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -608,38 +935,36 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
 			holding_type = temple	
 			has_building = tp_town_2
 			NOT = { has_building = tp_town_3 }
-			num_of_buildings = 22
+			check_variable = { which = "developpement" value = 220 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
 				holding_type = temple
-				num_of_buildings = 22
+				check_variable = { which = "developpement" value = 220 }
 				has_building = tp_town_2
 				NOT = {	has_building = tp_town_3	}
 			}
 			add_building = tp_town_3
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 260 }}
 		}
 	}
 }
 
 ##niveau 4	TEMPLE 
 character_event = {
-	#title = "NAMEL3T.114"
-    	id = L3T.114
+   	id = L3T.114
 	desc = "DESCL3T.114"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -649,38 +974,36 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
-trigger = {
+	trigger = {
 		war = no
 		any_demesne_title = {	
 			tier = baron	
 			holding_type = temple	
 			has_building = tp_town_3
 			NOT = { has_building = tp_town_4 }
-			num_of_buildings = 26
+			check_variable = { which = "developpement" value = 260 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
 				holding_type = temple
-				num_of_buildings = 26
+				check_variable = { which = "developpement" value = 260 }
 				has_building = tp_town_3
 				NOT = {	has_building = tp_town_4	}
 			}
 			add_building = tp_town_4
+			hidden_tooltip = { set_variable = { which = "devnextstep" value = 300 }}
 		}
 	}
 }
 
 ##niveau 5	TEMPLE 
 character_event = {
-	#title = "NAMEL3T.115"
-    	id = L3T.115
+   	id = L3T.115
 	desc = "DESCL3T.115"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -691,7 +1014,7 @@ character_event = {
 	is_triggered_only = yes
 
 	
-trigger = {
+	trigger = {
 		war = no
 		primary_title = { higher_tier_than = BARON }
 		
@@ -700,19 +1023,17 @@ trigger = {
 			holding_type = temple	
 			has_building = tp_town_4
 			NOT = { has_building = tp_town_5 }
-			num_of_buildings = 30
+			check_variable = { which = "developpement" value = 300 }
 		}
 	}
-		
-	#mean_time_to_happen = { months = 18 }
 
-option = {
+	option = {
 		name = "OK"	
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
 				holding_type = temple
-				num_of_buildings = 30
+				check_variable = { which = "developpement" value = 300 }
 				has_building = tp_town_4
 				NOT = {	has_building = tp_town_5	}
 			}

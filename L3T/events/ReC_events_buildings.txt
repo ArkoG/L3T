@@ -1,0 +1,828 @@
+############################################
+# [ReC][Reliques et Cathédrales]  par Arko #
+############################################
+
+
+namespace = REC
+
+
+#flag chantier cathedrale // Etape 1
+#Cathédrale, Ouverture du chantier
+province_event = {
+    id = REC.201
+	desc = "DESCREC.201"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes		
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_1 = yes
+			check_variable = { which = cathedral value = 100 }
+		}
+	}
+
+	#option unique flag province lieu du chantier
+	option = {
+		name = "REC.201A"
+		random_province_holding  = {
+			limit = {
+				is_building_cathedral_step_1 = yes
+				check_variable = { which = cathedral value = 100 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_01
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_01
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_01
+			}
+		}
+	}
+}
+
+###bonus achèvement étapes cathedrale
+#Cathédrale, Fondations
+province_event = {
+    id = REC.202
+	desc = "DESCREC.202"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_2 = yes
+			check_variable = { which = cathedral value = 600 }
+		}
+	}
+	
+	#option unique one shot pieté
+	option = {
+		name = "REC.202A"
+		owner = { piety = 200 }
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_2 = yes
+				check_variable = { which = cathedral value = 600 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_02
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_02
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_02
+			}
+		}
+	}
+}
+#Proto-Cathédrale
+province_event = {
+    id = REC.203
+	desc = "DESCREC.203"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_3 = yes
+			check_variable = { which = cathedral value = 2600 }
+		}
+	}
+	
+	immediate = { 
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_3 = yes
+				check_variable = { which = cathedral value = 2600 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_cathedral" value = 10 }
+		}
+	}
+
+	#option unique gain piété à vie
+	option = {
+		name = "REC.203A"
+		owner = { 
+			add_character_modifier = { name = en_odeur_de_saintete duration = -1 } 
+			excommunicate = no 
+			set_character_flag = has_made_cathedral_major_step
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_3 = yes
+				check_variable = { which = cathedral value = 2600 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_03
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_03
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_03
+			}
+		}
+	}
+}
+
+#Cathédrale, Portail
+province_event = {
+    id = REC.204
+	desc = "DESCREC.204"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_4 = yes
+			check_variable = { which = cathedral value = 3100 }
+		}
+	}
+
+	#choix piété one shot Vs gain mensuel + opinion boost pour 7ans
+	option = {
+		name = "REC.204A"	
+		owner = { piety = 350 }
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_4 = yes
+				check_variable = { which = cathedral value = 3100 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_04
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_04
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_04
+			}
+		}
+	}
+	option = {
+		name = "REC.204B"
+		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 2555 }	}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_4 = yes
+				check_variable = { which = cathedral value = 3100 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_04
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_04
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_04
+			}
+		}
+	}
+}
+
+#Cathédrale, Nef Magnifique
+province_event = {
+    id = REC.205
+	desc = "DESCREC.205"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_5 = yes
+			check_variable = { which = cathedral value = 5600 }
+		}
+	}
+
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_5 = yes
+				check_variable = { which = cathedral value = 5600 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_cathedral" value = 10 }
+		}
+	}
+
+	#choix piété one shot Vs gain mensuel + opinion boost pour 20ans
+	option = {
+		name = "REC.205A"	
+		owner = {
+			piety = 950
+			set_character_flag = has_made_cathedral_major_step
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_5 = yes
+				check_variable = { which = cathedral value = 5600 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_05
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_05
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_05
+			}
+		}
+	}
+	
+	option = {
+		name = "REC.205B"
+		owner = {
+			add_character_modifier = { name = en_odeur_de_saintete duration = 7300 }
+			set_character_flag = has_made_cathedral_major_step
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_5 = yes
+				check_variable = { which = cathedral value = 5600 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_05
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_05
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_05
+			}
+		}
+	}
+}
+
+#Cathédrale, Transept
+province_event = {
+    id = REC.206
+	desc = "DESCREC.206"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_6 = yes
+			check_variable = { which = cathedral value = 6800 }
+		}
+	}
+
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_6 = yes
+				check_variable = { which = cathedral value = 6800 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_cathedral" value = 10 }
+		}
+	}
+
+	#choix piété one shot Vs gain mensuel + opinion boost pour 10ans
+	option = {
+		name = "REC.206A"	
+		owner = {
+			piety = 700
+			set_character_flag = has_made_cathedral_major_step
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_6 = yes
+				check_variable = { which = cathedral value = 6800 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_06
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_06
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_06
+			}
+		}
+	}
+	option = {
+		name = "REC.206B"
+		owner = {
+			add_character_modifier = { name = en_odeur_de_saintete duration = 3650 }
+			set_character_flag = has_made_cathedral_major_step
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_6 = yes
+				check_variable = { which = cathedral value = 6800 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_06
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_06
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_06
+			}
+		}
+	}
+}
+
+#Cathédrale, Tour Nord
+province_event = {
+    id = REC.207
+	desc = "DESCREC.207"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_7 = yes
+			check_variable = { which = cathedral value = 8300 }
+		}
+	}
+
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_7 = yes
+				check_variable = { which = cathedral value = 8300 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_cathedral" value = 10 }
+		}
+	}
+
+	#choix piété one shot Vs gain mensuel + opinion boost pour 15ans
+	option = {
+		name = "REC.207A"	
+		owner = {
+			piety = 750
+			set_character_flag = has_made_cathedral_major_step
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_7 = yes
+				check_variable = { which = cathedral value = 8300 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_07
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_07
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_07
+			}
+		}
+	}
+	option = {
+		name = "REC.207B"
+		owner = {
+			add_character_modifier = { name = en_odeur_de_saintete duration = 5475 }
+			set_character_flag = has_made_cathedral_major_step
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_7 = yes
+				check_variable = { which = cathedral value = 8300 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_07
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_07
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_07
+			}
+		}
+	}
+}
+
+#Cathédrale, Tour du Midi
+province_event = {
+    id = REC.208
+	desc = "DESCREC.208"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_8 = yes
+			check_variable = { which = cathedral value = 9800 }
+		}
+	}
+
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_8 = yes
+				check_variable = { which = cathedral value = 9800 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_cathedral" value = 10 }
+		}
+	}
+
+	#choix piété one shot Vs gain mensuel + opinion boost pour 15ans
+	option = {
+		name = "REC.208A"	
+		owner = {
+			piety = 750
+			set_character_flag = has_made_cathedral_major_step
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_8 = yes
+				check_variable = { which = cathedral value = 9800 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_08
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_08
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_08
+			}
+		}
+	}
+	option = {
+		name = "REC.208B"
+		owner = {
+			add_character_modifier = { name = en_odeur_de_saintete duration = 5475 }
+			set_character_flag = has_made_cathedral_major_step
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_8 = yes
+				check_variable = { which = cathedral value = 9800 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_08
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_08
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_08
+			}
+		}
+	}
+}
+
+#Cathédrale, Grande Rosace
+province_event = {
+    id = REC.209
+	desc = "DESCREC.209"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_9 = yes
+			check_variable = { which = cathedral value = 10300 }
+		}
+	}
+
+	#choix piété one shot Vs gain mensuel + opinion boost pour 5ans
+	option = {
+		name = "REC.209A"	
+		owner = { piety = 350 }
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_9 = yes
+				check_variable = { which = cathedral value = 10300 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_09
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_09
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_09
+			}
+		}
+	}
+	option = {
+		name = "REC.209B"
+		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 1825 }	}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_9 = yes
+				check_variable = { which = cathedral value = 10300 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_09
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_09
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_09
+			}
+		}
+	}
+}
+
+##triptyque étape 10
+#Chapelle Seigneuriale
+province_event = {
+    id = REC.1210
+	desc = "DESCREC.1210"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_10_ca = yes
+			check_variable = { which = cathedral value = 10800 }
+		}
+	}
+
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_ca = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_cathedral" value = 10 }
+		}
+	}
+
+	#opinion boost féodaux pour +ou- 5ans
+	option = {
+		name = "REC.1210A"
+		random_list = {
+			5 = { owner = { add_character_modifier = { name = boost_opinion_feodaux	duration = 1642 }	}}
+			5 = { owner = { add_character_modifier = { name = boost_opinion_feodaux	duration = 2008 }	}}
+			5 = { owner = { add_character_modifier = { name = boost_opinion_feodaux	duration = 2372 }	}}
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_ca = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
+			add_building = ca_cathedrale_10
+		}
+	}
+}
+#Carillon
+province_event = {
+    id = REC.2210
+	desc = "DESCREC.2210"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_10_ct = yes
+			check_variable = { which = cathedral value = 10800 }
+		}
+	}
+
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_ct = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_cathedral" value = 10 }
+		}
+	}
+
+	#opinion boost bourgeois pour +ou- 5ans
+	option = {
+		name = "REC.2210A"
+		random_list = {
+			5 = { owner = { add_character_modifier = { name = boost_opinion_bourgeois	duration = 1642 }	}}
+			5 = { owner = { add_character_modifier = { name = boost_opinion_bourgeois	duration = 2008 }	}}
+			5 = { owner = { add_character_modifier = { name = boost_opinion_bourgeois	duration = 2372 }	}}
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_ct = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
+			add_building = ct_cathedrale_10
+		}
+	}
+}
+#Très Sainte Chapelle
+province_event = {
+    id = REC.3210
+	desc = "DESCREC.3210"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_10_tp = yes
+			check_variable = { which = cathedral value = 10800 }
+		}
+	}
+
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_tp = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_cathedral" value = 10 }
+		}
+	}
+
+	#opinion boost éclésiastiques pour +ou- 5ans
+	option = {
+		name = "REC.3210A"
+		random_list = {
+			5 = { owner = { add_character_modifier = { name = boost_opinion_ecclesia	duration = 1642 }	}}
+			5 = { owner = { add_character_modifier = { name = boost_opinion_ecclesia	duration = 2008 }	}}
+			5 = { owner = { add_character_modifier = { name = boost_opinion_ecclesia	duration = 2372 }	}}
+		}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_10_tp = yes
+				check_variable = { which = cathedral value = 10800 }
+			}
+			add_building = tp_cathedrale_10
+		}
+	}
+}
+##
+
+#Cathédrale, Flèche Céleste
+province_event = {
+    id = REC.211
+	desc = "DESCREC.211"
+	picture = GFX_evt_REC5
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_11 = yes
+			check_variable = { which = cathedral value = 11300 }
+		}
+	}
+
+	#choix piété one shot Vs gain mensuel + opinion boost pour 5ans
+	option = {
+		name = "REC.211A"	
+		owner = { piety = 350 }
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_11 = yes
+				check_variable = { which = cathedral value = 11300 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_11
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_11
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_11
+			}
+		}
+	}
+	option = {
+		name = "REC.211B"
+		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = 1825 }	}
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_11 = yes
+				check_variable = { which = cathedral value = 11300 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_11
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_11
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_11
+			}
+		}
+	}
+}
+#Cathédrale, Finalisation
+province_event = {
+    id = REC.212
+	desc = "DESCREC.212"
+	picture = GFX_evt_REC1
+	title = "NAMEREC.212"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_province_holding = {
+			is_building_cathedral_step_12 = yes
+			check_variable = { which = cathedral value = 12000 }
+		}
+	}
+
+	immediate = {
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_12 = yes
+				check_variable = { which = cathedral value = 12000 }
+			}
+			change_variable = { which = "developpement" value = 10 }
+			change_variable = { which = "developpement_cathedral" value = 10 }
+		}
+	}
+
+	#option unique gain piété à vie
+	option = {
+		name = "REC.212A"	
+		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = -1	} }
+		owner = { excommunicate = no }
+		random_province_holding = {
+			limit = {
+				is_building_cathedral_step_12 = yes
+				check_variable = { which = cathedral value = 12000 }
+			}
+			if = {
+				limit = { holding_type = castle }
+				add_building = ca_cathedrale_12
+			}
+			if = {
+				limit = { holding_type = city }
+				add_building = ct_cathedrale_12
+			}
+			if = {
+				limit = { holding_type = temple }
+				add_building = tp_cathedrale_12
+			}
+			clr_title_flag = cathedral_construction
+		}
+		remove_province_modifier = chantier_cathedrale
+	}
+}

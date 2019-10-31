@@ -26,7 +26,11 @@ province_event = {
 	}
 		
 	mean_time_to_happen = {
-		days = 850
+		years = 6
+		modifier = {
+			factor = 2
+			has_province_flag = refus_charte
+		}
 	}	
 
 option = {
@@ -34,16 +38,18 @@ option = {
 		ai_chance = { factor = 20 }
 		add_province_modifier = {
 			name = loi_forestiere_L2 
-			duration = 1095 #3ans
+			duration = 1825 #5ans
 			}
+		clr_province_flag = refus_charte
 	}
 option = {
 		name = "XYLO.302B"	#tentons de relâcher un peu la tension
 		ai_chance = { factor = 45 }
 		add_province_modifier = {
 			name = loi_forestiere_L1 
-			duration =  365 #1an
+			duration =  730 #2an
 			}
+		clr_province_flag = refus_charte
 	}	
 option = {
 		name = "XYLO.302C"	#et alors ?
@@ -52,6 +58,7 @@ option = {
 			name = peasants_upset #paysans inquiets
 			duration = 1095 #3ans
 			}
+		set_province_flag = refus_charte
 	}
 }
 
@@ -75,7 +82,11 @@ province_event = {
 	}
 		
 	mean_time_to_happen = {
-		days = 850
+		years = 6
+		modifier = {
+			factor = 2
+			has_province_flag = refus_charte
+		}
 	}	
 
 option = {
@@ -85,6 +96,7 @@ option = {
 			name = loi_forestiere_L2 
 			duration = 1825 #5ans
 			}
+		clr_province_flag = refus_charte
 	}
 option = {
 		name = "XYLO.303B"	#faisons un geste
@@ -93,6 +105,7 @@ option = {
 			name = loi_forestiere_L1 
 			duration = 1095 #3ans
 			}
+		clr_province_flag = refus_charte
 	}	
 option = {
 		name = "XYLO.303C"	#ce n'est pas la cause réelle
@@ -101,6 +114,7 @@ option = {
 			name = peasants_upset #paysans inquiets
 			duration = 1095 #3ans
 			}
+		set_province_flag = refus_charte
 	}
 }
 
@@ -124,7 +138,11 @@ province_event = {
 	}
 		
 	mean_time_to_happen = {
-		days = 850
+		years = 6
+		modifier = {
+			factor = 2
+			has_province_flag = refus_charte
+		}
 	}	
 
 option = {
@@ -134,6 +152,7 @@ option = {
 			name = loi_forestiere_L1 
 			duration = 1095 #3ans
 			}
+		clr_province_flag = refus_charte
 	}
 option = {
 		name = "XYLO.304B"	#envoyez la milice
@@ -141,7 +160,8 @@ option = {
 		add_province_modifier = {
 			name = peasants_upset #paysans inquiets
 			duration = 1095 #3ans
-			}
+		}
+		set_province_flag = refus_charte
 	}
 }
 
@@ -162,7 +182,11 @@ province_event = {
 	}
 		
 	mean_time_to_happen = {
-		days = 960
+		years = 7
+		modifier = {
+			factor = 2
+			has_province_flag = refus_charte
+		}
 	}	
 
 option = {
@@ -170,10 +194,11 @@ option = {
 		ai_chance = { factor = 25 }
 		add_province_modifier = {
 			name = loi_forestiere_L2
-			duration = 1825 #5ans
+			duration = 2555 #7ans
 			}
 		remove_province_modifier = loi_forestiere_L1
 		remove_province_modifier = peasants_upset
+		clr_province_flag = refus_charte
 	}
 option = {
 		name = "XYLO.305B"	#non
@@ -182,6 +207,7 @@ option = {
 			name = peasants_upset #paysans inquiets
 			duration = 1095 #3ans
 			}
+		clr_province_flag = refus_charte
 	}
 option = {
 		name = "XYLO.305C"	#non et je vais leur retirer leurs droits actuels
@@ -191,5 +217,6 @@ option = {
 			duration = 1825 #5ans
 			}
 		remove_province_modifier = loi_forestiere_L1
+		set_province_flag = refus_charte
 	}
 }

@@ -1,0 +1,404 @@
+#L3T // LES CATHEDRALES
+#by ARKO&Mouchi
+
+#reliques REC
+relique01 = {
+    max_amount = 1 #unique
+    spawn_date = -1.1.1 #related as unknown creation date
+	
+	spawn_chance = { value = 100 } #100% de chances de spawn
+    
+    weight = {
+		value = 0 #chances if not filling ANY condition below
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus //inter exclusive with landed muslim bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus //inter exclusive with landed christian bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic/heretic bonus //cumulative with exception to muslim criteria
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes } #landed christian > baron bonus //cumulative with exception to muslim criteria
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }  #landed catholic/heretic theocratic bonus //cumulative with exception to muslim criteria
+	}
+    artifacts = { relique01 = { value = 1 } } #list of artifact that can spawn from this spawn tag
+}
+relique02 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique02 = { value = 1 } }
+}
+relique03 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique03 = { value = 1 } }
+}
+relique04 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique04 = { value = 1 } }
+}
+relique05 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique05 = { value = 1 } }
+}
+relique06 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique06 = { value = 1 } }
+}
+relique07 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique07 = { value = 1 } }
+}
+relique08 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique08 = { value = 1 } }
+}
+relique09 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique09 = { value = 1 } }
+}
+relique10 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique10 = { value = 1 } }
+}
+relique11 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique11 = { value = 1 } }
+}
+relique12 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique12 = { value = 1 } }
+}
+relique13 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique13 = { value = 1 } }
+}
+relique14 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique14 = { value = 1 } }
+}
+relique15 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique15 = { value = 1 } }
+}
+relique16 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique16 = { value = 1 } }
+}
+relique17 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique17 = { value = 1 } }
+}
+relique18 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique18 = { value = 1 } }
+}
+relique19 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique19 = { value = 1 } }
+}
+relique20 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique20 = { value = 1 } }
+}
+relique21 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique21 = { value = 1 } }
+}
+relique22 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique22 = { value = 1 } }
+}
+relique23 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique23 = { value = 1 } }
+}
+relique24 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique24 = { value = 1 } }
+}
+relique25 = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = { value = 100 }
+    
+    weight = {
+		value = 0
+		additive_modifier = { value = 100	relic_spawn_bonus_christian = yes } #landed christian bonus
+		additive_modifier = { value =  25	relic_spawn_bonus_muslim = yes } #landed muslim bonus
+		additive_modifier = { value = 250	relic_spawn_bonus_catholic = yes } #landed catholic or heretic bonus
+		additive_modifier = { value =  50	relic_spawn_bonus_landed_rank = yes }
+		additive_modifier = { value =  25	relic_spawn_bonus_catholic_theocratie = yes }
+	}
+    artifacts = { relique25 = { value = 1 } }
+}

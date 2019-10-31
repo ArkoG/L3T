@@ -5,6 +5,20 @@ spriteTypes = {
 		name = "GFX_abdiquer"
 		texturefile = "gfx\\interface\\decision_icon_retire_to_monastery.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_seek_glass_bower_master"
+		texturefile = "gfx\\interface\\decision_icon_seek_glass_bower_master.dds"
+	}
+	spriteType = {
+		name = "GFX_seek_sculptor_master"
+		texturefile = "gfx\\interface\\decision_icon_seek_sculptor_master.dds"
+	}
+	spriteType = {
+		name = "GFX_seek_painter_master"
+		texturefile = "gfx\\interface\\decision_icon_seek_painter_master.dds"
+	}
+	
 	spriteType = {
 		name = "GFX_found_a_monastery"
 		texturefile = "gfx\\interface\\decision_icon_found_monastery.dds"
@@ -42,6 +56,40 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\decision_icon_repay_loan.dds"
 	}
 
+	spriteType = {
+		name = "GFX_egg_hunt"
+		texturefile = "gfx\\interface\\decision_icon_egg_hunt.dds"
+	}
+	spriteType = {
+		name = "GFX_buy_books"
+		texturefile = "gfx\\interface\\decision_icon_buy_books.dds"
+	}
+	spriteType = {
+		name = "GFX_study_books"
+		texturefile = "gfx\\interface\\decision_icon_study_books.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_disable_notification"
+		texturefile = "gfx\\interface\\decision_icon_thesunandtherainfall_disable.dds"
+	}
+	spriteType = {
+		name = "GFX_enable_notification"
+		texturefile = "gfx\\interface\\decision_icon_thesunandtherainfall_enable.dds"
+	}
+#TARGETTED DECISIONS
+	spriteType = {
+		name = "GFX_diplo_relic_icon"
+		texturefile = "gfx\\interface\\diplo_relic_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_diplo_gold_icon"
+		texturefile = "gfx\\interface\\diplo_gold_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_diplo_martyr_icon"
+		texturefile = "gfx\\interface\\diplo_martyr_icon.dds"
+	}
 #REC traits
 	spriteType = {
 		name = "GFX_trait_batisseur_cathedrale"
@@ -50,8 +98,92 @@ spriteTypes = {
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
+	spriteType = {
+		name = "GFX_trait_apprenti_sculpteur"
+		texturefile = "gfx/traits/artisan_apprenti.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_compagnon_sculpteur"
+		texturefile = "gfx/traitsartisan_compagnon.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_maitre_sculpteur"
+		texturefile = "gfx/traits/artisan_maitre.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_apprenti_fresquiste"
+		texturefile = "gfx/traits/artisan_apprenti.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_compagnon_fresquiste"
+		texturefile = "gfx/traits/artisan_compagnon.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_maitre_fresquiste"
+		texturefile = "gfx/traits/artisan_maitre.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_apprenti_verrier"
+		texturefile = "gfx/traits/artisan_apprenti.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_compagnon_verrier"
+		texturefile = "gfx/traits/artisan_compagnon.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_maitre_verrier"
+		texturefile = "gfx/traits/artisan_maitre.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_deus_vox"
+		texturefile = "gfx/traits/deus_vox.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_deus_gladio"
+		texturefile = "gfx/traits/deus_gladio.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
 	
-
+#L3T traits
+	spriteType = {
+		name = "GFX_trait_dynastic_keeper"
+		texturefile = "gfx/traits/dynastic_keeper.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
 #XYLO traits	
 	spriteType = {
 		name = "GFX_trait_chef_malandrin"
@@ -65,6 +197,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_obj_build_something"
 		texturefile = "gfx/ambitions/obj_build_something.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_obj_egg_them_all"
+		texturefile = "gfx/ambitions/obj_egg_them_all.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -104,5 +243,23 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\charframe_34_abbaye.tga"
 		noOfFrames = 6
 		allwaystransparent = yes
+	}
+	###SOCIETIES
+		spriteType = {
+		name = "GFX_artists_ranks"
+		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_artists_ranks_highlight"
+		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild_highlight.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_artists_ranks_locked"
+		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild_locked.dds"
+		noOfFrames = 4
 	}
 }

@@ -225,9 +225,9 @@ ct_training_grounds_1 = { #Porte en pierre
 ct_training_grounds_2 = { #Porte gardée
 	desc = ct_training_grounds_2_desc
 	trigger = { TECH_CITY_CONSTRUCTION = 0 }
-	prerequisites = { 
-		CITE_L2
-	}
+	#prerequisites = { 
+	#	CITE_L2 #to replace with main building
+	#}
 	upgrades_from = ct_training_grounds_1
 	gold_cost = 190
 
@@ -248,9 +248,9 @@ ct_training_grounds_3 = { #Porte de  la ville
 		FROM = { prestige = 70} #replaces prestige_cost
 		custom_tooltip = { text = TOOLTIP_prestige_building }
 	}	
-	prerequisites = { 
-		CITE_L3
-	}
+	#prerequisites = { 
+	#	CITE_L3
+	#}
 	upgrades_from = ct_training_grounds_2
 	gold_cost = 270
 	#prestige_cost = 70
@@ -436,29 +436,35 @@ ct_training_grounds_3 = { #Porte de  la ville
 	ct_marketplace_1 = {
 		desc = ct_marketplace_1_desc
 		trigger = { TECH_CITY_CONSTRUCTION = 0 }
-		gold_cost = 100
-		build_time = 365
-		tax_income = 3
+		gold_cost = 65
+		build_time = 200
+		tax_income = 1
 		ai_creation_factor = 110
 		#add_number_to_name = no
 		extra_tech_building_start = 0.4
 	}
-	ct_marketplace_2 = {
+	ct_marketplace_2 = { #marché de village, requiert une ressource active
 		desc = ct_marketplace_2_desc
-		prerequisites = { ct_wall_1 }
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { ct_town_1 } #village
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 0
+			#has_holding_modifier = has_ress_L2 #TO TEST
+		}
 		upgrades_from = ct_marketplace_1
-		gold_cost = 120
-		build_time = 547
-		tax_income = 3
+		gold_cost = 85
+		build_time = 150
+		tax_income = 1
 		ai_creation_factor = 109
 		#add_number_to_name = no
 		extra_tech_building_start = 0.8
 	}
-	ct_marketplace_3 = {
+	ct_marketplace_3 = { #local market. this means it need to produce a L3 product. Will require a charter at some point.
 		desc = ct_marketplace_3_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 1 }
-		prerequisites = { ct_wall_2 }
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 1
+			#has_holding_modifier = has_ress_L3 #see if this is fitty or if we need to check the ressources on province level
+		}
+		prerequisites = { ct_town_2 } #bourg
 		upgrades_from = ct_marketplace_2
 		gold_cost = 200
 		build_time = 730
@@ -467,20 +473,26 @@ ct_training_grounds_3 = { #Porte de  la ville
 		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
-	ct_marketplace_4 = {
+	ct_marketplace_4 = { #grand marché
 		desc = ct_marketplace_4_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+		prerequisites = { ct_town_3 } #ville
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 3
+		}
 		upgrades_from = ct_marketplace_3
 		gold_cost = 300
-		build_time = 1095
-		tax_income = 3
+		build_time = 730
+		tax_income = 2
 		ai_creation_factor = 107
 		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
-	ct_marketplace_5 = {
+	ct_marketplace_5 = { #marché spécialisé
 		desc = ct_marketplace_5_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 5 }
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 3
+			#has_holding_modifier = has_ress_L4 #not yet
+		}
 		upgrades_from = ct_marketplace_4
 		gold_cost = 400
 		build_time = 2190
@@ -489,17 +501,18 @@ ct_training_grounds_3 = { #Porte de  la ville
 		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
-	ct_marketplace_6 = {
-		desc = ct_marketplace_6_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 7 }
-		upgrades_from = ct_marketplace_5
-		gold_cost = 500
-		build_time = 2190
-		tax_income = 3
-		ai_creation_factor = 105
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
+#	ct_marketplace_6 = {
+#		desc = ct_marketplace_6_desc
+#		trigger = { TECH_CITY_CONSTRUCTION = 7 }
+#		upgrades_from = ct_marketplace_5
+#		gold_cost = 500
+#		build_time = 2190
+#		tax_income = 3
+#		ai_creation_factor = 105
+#		#add_number_to_name = no
+#		extra_tech_building_start = 0.2
+#	}
+
 ##utilise en prebuild jusqu au niveau 3	
 	ct_port_1 = {
 		desc = ct_port_1_desc
@@ -656,6 +669,219 @@ ct_training_grounds_3 = { #Porte de  la ville
 		extra_tech_building_start = 10
 	}
 	
+	#Architect Bloodline buildings.
+	ct_planned_infrastructure_1 = { #Garrisoned roads
+		desc = ct_planned_infrastructure_1_desc
+		potential = { 
+			OR = {
+				FROMFROM = { has_building = ct_planned_infrastructure_1 } #Show the building only if it has been already built or if the owner has the proper bloodline to build it.
+				FROM = {
+					any_owned_bloodline = {
+						has_bloodline_flag = bloodline_architect 
+					}
+				}
+				FROM = {
+					any_liege = {
+						any_owned_bloodline = {
+							has_bloodline_flag = bloodline_architect 
+						}	
+					}
+				}
+			}
+		}
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 1
+			custom_tooltip = {
+				text = tooltip_has_architect_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_architect 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_architect 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROMFROM = {
+				owner = {
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+			}
+		}
+
+		gold_cost = 125
+		build_time = 365
+		tax_income = 3
+		land_morale = 0.05
+		tech_growth_modifier = 0.05
+		tradevalue = 5
+		
+		add_number_to_name = no
+
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+	ct_planned_infrastructure_2 = { #Stone Roads
+		desc = ct_planned_infrastructure_2_desc
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 3
+			custom_tooltip = {
+				text = tooltip_has_architect_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_architect 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_architect 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROMFROM = {
+				owner = {
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+			}
+		}
+		upgrades_from = ct_planned_infrastructure_1
+		gold_cost = 250
+		build_time = 560
+		tax_income = 3
+		max_tradeposts = 2
+		tech_growth_modifier = 0.05
+		tradevalue = 5
+
+		add_number_to_name = no
+		
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+	ct_planned_infrastructure_3 = { #Cleared Pathways
+		desc = ct_planned_infrastructure_3_desc
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 5
+			custom_tooltip = {
+				text = tooltip_has_architect_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_architect 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_architect 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROMFROM = {
+				owner = {
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+			}
+		}
+		upgrades_from = ct_planned_infrastructure_2
+		gold_cost = 450
+		build_time = 760
+
+		tech_growth_modifier = 0.1
+		levy_reinforce_rate = 0.1
+		disease_defence = 0.05
+		tradevalue = 5
+
+		add_number_to_name = no
+		
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+	
+	ct_planned_infrastructure_4 = { #Great Acqueduct
+		desc = ct_planned_infrastructure_4_desc
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 7
+			custom_tooltip = {
+				text = tooltip_has_architect_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_architect 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_architect 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROMFROM = {
+				owner = {
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+			}
+		}
+		upgrades_from = ct_planned_infrastructure_3
+		gold_cost = 750
+		build_time = 1250
+		tech_growth_modifier = 0.05
+		economy_techpoints = 0.1
+		disease_defence = 0.1
+		tradevalue = 5
+
+		add_number_to_name = no
+		
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+
 	#City town, gives income
 #L3T stuff - event only
 	ct_town_1 = {
