@@ -163,7 +163,7 @@ city = {
 		desc = "VOC_INDUSTRIELLE_DESC"
 		prerequisites = { CITE_L1 }
 		trigger = { TECH_TRADE_PRACTICES = 0 }	
-		#not_if_x_exists = { VOC_COMMERCIALE }		
+		not_if_x_exists = { VOC_COMMERCIALE }		
 		gold_cost = 0.0
 		build_time = 8
 		economy_techpoints = 0.05
@@ -174,7 +174,7 @@ city = {
 		desc = "VOC_COMMERCIALE_DESC"
 		prerequisites = { CITE_L1 }
 		trigger = { TECH_TRADE_PRACTICES = 0 }	
-		#not_if_x_exists = { VOC_INDUSTRIELLE }		
+		not_if_x_exists = { VOC_INDUSTRIELLE }		
 		gold_cost = 0.0
 		build_time = 8
 		economy_techpoints = 0.05
