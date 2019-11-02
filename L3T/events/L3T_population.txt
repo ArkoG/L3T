@@ -62,7 +62,21 @@ character_event = {
 				limit = {	
 					year = 1150
 				}
-				change_variable = { which = "developpement" value = 50 }
+				#used to be flat +50
+				random_list = {
+					20 = {
+						change_variable = { which = "developpement" value = 30 }
+					} 
+					50 = {
+						change_variable = { which = "developpement" value = 50 }
+					}
+					20 = {
+						change_variable = { which = "developpement" value = 70 }
+					}
+					10 = {
+						change_variable = { which = "developpement" value = 100 }
+					}
+				}
 			}
 			
 			set_variable = { which = "developpement_init" which = "developpement" }
