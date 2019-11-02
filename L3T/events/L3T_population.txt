@@ -19,6 +19,24 @@ character_event = {
 			set_variable = { which = "devnextstep" value = 100 }
 			if = {
 				limit = {	
+					year = 900
+					NOT = { year = 1000 }
+				}
+				# Gives a random bonus
+				random_list = {
+					30 = {
+						change_variable = { which = "developpement" value = 10 }
+					} 
+					20 = {
+						change_variable = { which = "developpement" value = 20 }
+					}
+					50 = {
+						change_variable = { which = "developpement" value = 30 }
+					}
+				}
+			}
+			if = {
+				limit = {	
 					year = 1000
 				}
 				# Gives a random bonus
