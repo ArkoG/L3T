@@ -382,14 +382,14 @@ character_event = {
 			}
 			modifier = {
 				factor = 0.1
-				NOT = { wealth = 20 }
+				NOT = { wealth = 50 }
 			}
 			modifier = {
 				factor = 3
 				wealth = 100
 			}
 		}
-		wealth = -10
+		wealth = -75
 		add_artifact = oeuf_1
 		set_character_flag = egg_found
 	}
@@ -403,7 +403,7 @@ character_event = {
 				piety = 200
 			}
 		}
-		piety = -10
+		piety = -50
 		add_artifact = oeuf_1
 		set_character_flag = egg_found
 		set_character_flag = pious_hunt
@@ -2899,7 +2899,6 @@ narrative_event = {
 
 	option = {
 		name = "L3T.500A"
-		#add_character_modifier = { name = totoro duration = -1 } #MOUCHARD pour si voir l'event pop
 		chronicle = {
 			entry = CHRONICLE_EGG_UNITED
 			portrait = [Root.GetID]

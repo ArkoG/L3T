@@ -257,7 +257,8 @@ ca_tour_L4 = { #Tours rondes
 		levy_size = 0.05
 		garrison_size = 0.05
 		ai_creation_factor = 102
-		#add_number_to_name = no		
+		#add_number_to_name = no
+		court_size_modifier = 1 #temporary, give it palace
 		extra_tech_building_start = 1.0
 	}
 	ca_keep_2 = {
@@ -271,6 +272,7 @@ ca_tour_L4 = { #Tours rondes
 		garrison_size = 0.1
 		ai_creation_factor = 101
 		#add_number_to_name = no
+		court_size_modifier = 1 #temporary, give it palace
 		extra_tech_building_start = 3.0
 	}
 	ca_keep_3 = {
@@ -283,7 +285,8 @@ ca_tour_L4 = { #Tours rondes
 		levy_size = 0.15
 		garrison_size = 0.15
 		ai_creation_factor = 100
-		#add_number_to_name = no		
+		#add_number_to_name = no
+		court_size_modifier = 1 #temporary, give it palace		
 		extra_tech_building_start = 4.0
 	}
 	ca_keep_4 = {	
@@ -296,6 +299,7 @@ ca_tour_L4 = { #Tours rondes
 		garrison_size = 0.2
 		ai_creation_factor = 99
 		#add_number_to_name = no
+		court_size_modifier = 1 #temporary, give it palace
 		extra_tech_building_start = 5.0
 	}
 	ca_keep_5 = {
@@ -308,6 +312,7 @@ ca_tour_L4 = { #Tours rondes
 		garrison_size = 0.2
 		ai_creation_factor = 98
 		#add_number_to_name = no
+		court_size_modifier = 1 #temporary, give it palace
 		extra_tech_building_start = 6.0
 	}
 	ca_keep_6 = {
@@ -587,7 +592,7 @@ ca_training_grounds_2 = { #Porte en pierre
 		ai_creation_factor = 100
 		add_number_to_name = no
 		
-		court_size_modifier = 1
+		#court_size_modifier = 1 #stupid, vanilla
 		extra_tech_building_start = 10
 	}
 	ca_town_2 = {
@@ -601,7 +606,7 @@ ca_training_grounds_2 = { #Porte en pierre
 		ai_creation_factor = 99
 		add_number_to_name = no
 		
-		court_size_modifier = 1
+		#court_size_modifier = 1 #stupid, vanilla
 		extra_tech_building_start = 10
 	}
 	ca_town_3 = {
@@ -615,7 +620,7 @@ ca_training_grounds_2 = { #Porte en pierre
 		ai_creation_factor = 98
 		add_number_to_name = no
 		
-		court_size_modifier = 1
+		#court_size_modifier = 1 #stupid, vanilla
 		extra_tech_building_start = 10
 	}
 	ca_town_4 = {
@@ -629,7 +634,7 @@ ca_training_grounds_2 = { #Porte en pierre
 		ai_creation_factor = 97
 		add_number_to_name = no
 		
-		court_size_modifier = 1
+		#court_size_modifier = 1 #stupid, vanilla
 		extra_tech_building_start = 10
 	}
 	ca_town_5 = {
