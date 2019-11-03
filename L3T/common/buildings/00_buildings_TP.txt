@@ -18,7 +18,7 @@ temple = {
 #new tags
 tp_training_grounds_L1 = { #Porte de guet
 	desc = tp_training_grounds_L1_desc
-	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	trigger = { TECH_CITY_CONSTRUCTION = 0 }
 	#prerequisites = { 
 	#	CITEEPISCOPALE
 	#}
@@ -37,7 +37,7 @@ tp_training_grounds_L1 = { #Porte de guet
 
 tp_training_grounds_L2 = { #Porte en pierre
 	desc = tp_training_grounds_L2_desc
-	trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+	trigger = { TECH_CITY_CONSTRUCTION = 0 }
 	upgrades_from = tp_training_grounds_L1
 	gold_cost = 270
 
@@ -176,7 +176,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 ##utilise en prebuild jusqu au niveau 3
 	tp_monastery_1 = {
 		desc = tp_monastery_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
 		gold_cost = 150
 		build_time = 547
 		levy_size = 0.05
@@ -188,7 +188,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_monastery_2 = {
 		desc = tp_monastery_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
 		prerequisites = { tp_wall_1 }
 		upgrades_from = tp_monastery_1
 		gold_cost = 200
@@ -202,7 +202,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	} 
 	tp_monastery_3 = {
 		desc = tp_monastery_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 2 }
+		trigger = { TECH_CITY_CONSTRUCTION = 2 }
 		upgrades_from = tp_monastery_2
 		gold_cost = 300
 		build_time = 1095
@@ -215,7 +215,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	} 
 	tp_monastery_4 = {
 		desc = tp_monastery_2_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 4 }
+		trigger = { TECH_CITY_CONSTRUCTION = 4 }
 		upgrades_from = tp_monastery_3
 		gold_cost = 400
 		build_time = 1460
@@ -228,7 +228,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	} 
 	tp_monastery_5 = {
 		desc = tp_monastery_2_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 6 }
+		trigger = { TECH_CITY_CONSTRUCTION = 6 }
 		upgrades_from = tp_monastery_4
 		gold_cost = 500
 		build_time = 2190
@@ -241,7 +241,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_monastery_6 = {
 		desc = tp_monastery_2_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		upgrades_from = tp_monastery_5
 		gold_cost = 500
 		build_time = 2190
@@ -255,7 +255,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 ##utilise en prebuild jusqu au niveau 2	
 	tp_barracks_1 = {
 		desc = tp_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
 		gold_cost = 100
 		build_time = 365
 		light_infantry = 60
@@ -266,7 +266,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_barracks_2 = {
 		desc = tp_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
 		prerequisites = { tp_wall_1 }
 		upgrades_from = tp_barracks_1
 		gold_cost = 120
@@ -279,7 +279,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_barracks_3 = {
 		desc = tp_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 1 }
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
 		prerequisites = { tp_wall_2 }
 		upgrades_from = tp_barracks_2
 		gold_cost = 200
@@ -292,7 +292,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_barracks_4 = {
 		desc = tp_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 3 }
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
 		upgrades_from = tp_barracks_3
 		gold_cost = 300
 		build_time = 1095
@@ -304,7 +304,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_barracks_5 = {
 		desc = tp_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 5 }
+		trigger = { TECH_CITY_CONSTRUCTION = 5 }
 		upgrades_from = tp_barracks_4
 		gold_cost = 400
 		build_time = 2190
@@ -316,7 +316,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_barracks_6 = {
 		desc = tp_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 7 }
+		trigger = { TECH_CITY_CONSTRUCTION = 7 }
 		upgrades_from = tp_barracks_5
 		gold_cost = 500
 		build_time = 2190
@@ -329,7 +329,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	
 	tp_elite_barracks_1 = {
 		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
 		gold_cost = 100
 		build_time = 365
 		heavy_infantry = 45
@@ -339,7 +339,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_elite_barracks_2 = {
 		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
 		prerequisites = { tp_wall_1 }
 		upgrades_from = tp_elite_barracks_1
 		gold_cost = 120
@@ -351,7 +351,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_elite_barracks_3 = {
 		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 2 }
+		trigger = { TECH_CITY_CONSTRUCTION = 2 }
 		prerequisites = { tp_wall_2 }
 		upgrades_from = tp_elite_barracks_2
 		gold_cost = 200
@@ -363,7 +363,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_elite_barracks_4 = {
 		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 4 }
+		trigger = { TECH_CITY_CONSTRUCTION = 4 }
 		upgrades_from = tp_elite_barracks_3
 		gold_cost = 300
 		build_time = 1095
@@ -374,7 +374,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_elite_barracks_5 = {
 		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 6 }
+		trigger = { TECH_CITY_CONSTRUCTION = 6 }
 		upgrades_from = tp_elite_barracks_4
 		gold_cost = 400
 		build_time = 2190
@@ -385,7 +385,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_elite_barracks_6 = {
 		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		upgrades_from = tp_elite_barracks_5
 		gold_cost = 500
 		build_time = 2190
@@ -398,7 +398,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	tp_town_1 = {
 		desc = tp_town_1_desc
 		prerequisites = {xxx}
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		gold_cost = 100
 		build_time = 365
 		tax_income = 2
@@ -408,7 +408,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_town_2 = {
 		desc = tp_town_2_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		prerequisites = { tp_wall_1 xxx }
 		upgrades_from = tp_town_1
 		gold_cost = 120
@@ -421,7 +421,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	tp_town_3 = {
 		desc = tp_town_3_desc
 		prerequisites = {tp_wall_2 xxx}
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		upgrades_from = tp_town_2
 		gold_cost = 200
 		build_time = 730
@@ -433,7 +433,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	tp_town_4 = {
 		desc = tp_town_4_desc
 		prerequisites = {xxx}
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		upgrades_from = tp_town_3
 		gold_cost = 300
 		build_time = 1095
@@ -445,7 +445,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	tp_town_5 = {
 		desc = tp_town_4_desc
 		prerequisites = {xxx}
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
+		trigger = { TECH_CITY_CONSTRUCTION = 8 }
 		upgrades_from = tp_town_4
 		gold_cost = 400
 		build_time = 2190
@@ -510,7 +510,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	
 	tp_school_1 = {
 		desc = tp_school_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 3 }
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
 		prerequisites = { tp_wall_1 }
 		gold_cost = 120
 		build_time = 547
@@ -526,7 +526,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	}
 	tp_school_2 = {
 		desc = tp_school_1_desc
-		trigger = { TECH_TEMPLE_CONSTRUCTION = 6 }
+		trigger = { TECH_CITY_CONSTRUCTION = 6 }
 		prerequisites = { tp_wall_2 }
 		upgrades_from = tp_school_1
 		gold_cost = 120
@@ -827,7 +827,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 			}
 		}
 		trigger = { 
-			TECH_TEMPLE_CONSTRUCTION = 1
+			TECH_CITY_CONSTRUCTION = 1
 			custom_tooltip = {
 				text = tooltip_has_monumental_bloodline
 				hidden_tooltip = {
@@ -873,7 +873,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	tp_monumental_shrines_2 = { 
 		desc = tp_monumental_shrines_2_desc
 		trigger = { 
-			TECH_TEMPLE_CONSTRUCTION = 3
+			TECH_CITY_CONSTRUCTION = 3
 			custom_tooltip = {
 				text = tooltip_has_monumental_bloodline
 				hidden_tooltip = {
@@ -919,7 +919,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	tp_monumental_shrines_3 = { 
 		desc = tp_monumental_shrines_3_desc
 		trigger = { 
-			TECH_TEMPLE_CONSTRUCTION = 5
+			TECH_CITY_CONSTRUCTION = 5
 			custom_tooltip = {
 				text = tooltip_has_monumental_bloodline
 				hidden_tooltip = {
@@ -965,7 +965,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 	tp_monumental_shrines_4 = { 
 		desc = tp_monumental_shrines_4_desc
 		trigger = { 
-			TECH_TEMPLE_CONSTRUCTION = 7
+			TECH_CITY_CONSTRUCTION = 7
 			custom_tooltip = {
 				text = tooltip_has_monumental_bloodline
 				hidden_tooltip = {
@@ -1014,7 +1014,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		desc = TP_universite_mutazilite_desc
 		potential = { owner = { religion = sunni }}
 		trigger = { 
-			TECH_TEMPLE_CONSTRUCTION = 3
+			TECH_CITY_CONSTRUCTION = 3
 			#FROM = { religion = sunni	NOT = { trait = ashari }}
 			owner = { religion = sunni	trait = mutazilite }		
 		}
@@ -1037,7 +1037,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		desc = TP_universite_mutazilite_desc
 		potential = { owner = { religion = sunni }}
 		trigger = {
-			TECH_TEMPLE_CONSTRUCTION = 5
+			TECH_CITY_CONSTRUCTION = 5
 			#FROM = { religion = sunni	NOT = { trait = ashari }}
 			owner = { religion = sunni	trait = mutazilite }			
 		}
@@ -1062,7 +1062,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		desc = TP_universite_asharite_desc
 		potential = { owner = { religion = sunni }}
 		trigger = {
-			TECH_TEMPLE_CONSTRUCTION = 3
+			TECH_CITY_CONSTRUCTION = 3
 			#FROM = { religion = sunni	trait = ashari }
 			owner = { religion = sunni	trait = ashari }
 		}
@@ -1085,7 +1085,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		desc = TP_universite_asharite_desc
 		potential = { owner = { religion = sunni }}
 		trigger = {
-			TECH_TEMPLE_CONSTRUCTION = 5
+			TECH_CITY_CONSTRUCTION = 5
 			#FROM = { religion = sunni	trait = ashari }
 			owner = { religion = sunni	trait = ashari }			
 		}
