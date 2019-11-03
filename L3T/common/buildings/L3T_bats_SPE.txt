@@ -163,7 +163,7 @@ city = {
 		desc = "VOC_INDUSTRIELLE_DESC"
 		prerequisites = { CITE_L1 }
 		trigger = { TECH_TRADE_PRACTICES = 0 }	
-		#not_if_x_exists = { VOC_COMMERCIALE }		
+		not_if_x_exists = { VOC_COMMERCIALE }		
 		gold_cost = 0.0
 		build_time = 8
 		economy_techpoints = 0.05
@@ -174,7 +174,7 @@ city = {
 		desc = "VOC_COMMERCIALE_DESC"
 		prerequisites = { CITE_L1 }
 		trigger = { TECH_TRADE_PRACTICES = 0 }	
-		#not_if_x_exists = { VOC_INDUSTRIELLE }		
+		not_if_x_exists = { VOC_INDUSTRIELLE }		
 		gold_cost = 0.0
 		build_time = 8
 		economy_techpoints = 0.05
@@ -313,7 +313,7 @@ temple = {
 #	COMMANDERIE = {
 #		desc = "COMMANDERIE_desc"
 #		trigger = { 
-#			TECH_TEMPLE_CONSTRUCTION = 0
+#			TECH_CITY_CONSTRUCTION = 0
 #			religion = catholic
 #			}
 #		prerequisites = { xxx }
@@ -331,7 +331,7 @@ temple = {
 #	}
 #	COMMANDERIE_L2 = { 
 #		desc = "COMMANDERIE_desc"
-#		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+#		trigger = { TECH_CITY_CONSTRUCTION = 0 }
 #		prerequisites = { 
 #			tp_wall_1				#vanilla wall
 #			tp_training_grounds_L1 	#Porte de guet
@@ -353,7 +353,7 @@ temple = {
 #	COMMANDERIE_L3 = { 
 #		desc = "COMMANDERIE_desc"
 #		trigger = { 
-#			TECH_TEMPLE_CONSTRUCTION = 1
+#			TECH_CITY_CONSTRUCTION = 1
 #			TECH_CASTLE_CONSTRUCTION = 1
 #			#OR = {
 #				#has_province_modifier = ordre_type_classique
@@ -377,7 +377,7 @@ temple = {
 #	COMMANDERIE_L4 = { 
 #		desc = "COMMANDERIE_desc"
 #		trigger = { 
-#			TECH_TEMPLE_CONSTRUCTION = 2
+#			TECH_CITY_CONSTRUCTION = 2
 #			TECH_CASTLE_CONSTRUCTION = 2
 #		}
 #		prerequisites = { tp_town_2 }
@@ -398,7 +398,7 @@ temple = {
 #	COMMANDERIE_L5 = { 
 #		desc = "COMMANDERIE_desc"
 #		trigger = { 
-#			TECH_TEMPLE_CONSTRUCTION = 4
+#			TECH_CITY_CONSTRUCTION = 4
 #			TECH_CASTLE_CONSTRUCTION = 4
 #		}
 #		upgrades_from = COMMANDERIE_L4
