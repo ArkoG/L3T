@@ -527,6 +527,7 @@ TECH_GROUP_CULTURE = {
 	TECH_NOBLE_CUSTOMS = {
 		modifier = {
 			CASTLE_OPINION = 24
+			ADD_PRESTIGE_MODIFIER = 0.5
 		}
 	}
 	TECH_POPULAR_CUSTOMS = {
@@ -537,13 +538,14 @@ TECH_GROUP_CULTURE = {
 	TECH_RELIGIOUS_CUSTOMS = {
 		modifier = {
 			CHURCH_OPINION = 24
+			ADD_PIETY_MODIFIER = 0.5
 		}
 	}
 	TECH_MAJESTY = {
 		modifier = {
 			SHORT_REIGN_LENGTH = -5
-			ADD_PRESTIGE_MODIFIER = 0.5
-			ADD_PIETY_MODIFIER = 0.5
+			#ADD_PRESTIGE_MODIFIER = 0.5
+			#ADD_PIETY_MODIFIER = 0.5
 			court_size_maintenance_cost_modifier = -0.1
 			court_size_modifier = 30
 
