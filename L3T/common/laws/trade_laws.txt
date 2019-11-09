@@ -1,0 +1,113 @@
+# Demesne type (de facto) laws (set for the PRIMARY title in a demesne but affects the whole demesne)
+
+law_groups = {
+	law_group_trade_octroi = {
+		law_type = realm
+	}
+}
+
+laws = {
+	### CITY OCTROI
+
+	law_trade_octroi_0 = {
+		group = law_group_trade_octroi
+		default = yes
+
+		potential = {
+			OR = {
+				holder_scope = { is_patrician = yes }
+				OR = {
+					AND = {
+						holder_scope = { is_republic = yes }
+						#tier = baron
+					}
+					AND = {
+						#tier = baron
+						holder_scope = { is_feudal = yes } #TEST TOTORO
+					}
+				}
+			}
+		}
+		allow = {
+			#holder_scope = { wealth = 50 }
+		}
+
+		revoke_allowed = { always = no }			
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = law_trade_octroi_1
+			}
+			custom_tooltip = { text = TOOLTIP_octroi_consequences }
+		}
+		pass_effect = {
+			holder_scope = {
+				any_title_under = {
+					limit = { 
+						tier = baron
+						is_republic = yes
+					}
+					remove_holding_modifier = { modifier = octroi_holding duration = -1 }
+					location = {
+						remove_province_modifier = { modifier = octroi_province duration = -1 }
+					}
+				}
+			}
+			holder_scope = { character_event = { id = ECO.220 }}
+			}
+		}
+	}
+	law_trade_octroi_1 = {
+		group = law_group_trade_octroi
+		
+		potential = {
+			OR = {
+				holder_scope = { is_patrician = yes }
+				OR = {
+					AND = {
+						holder_scope = { is_republic = yes }
+						#tier = baron
+					}
+					AND = {
+						#tier = baron
+						holder_scope = { is_feudal = yes } #TEST TOTORO
+					}
+				}
+			}
+		}
+		allow = {
+			holder_scope = { wealth = 50 }
+		}
+
+		revoke_allowed = { always = no }			
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = law_trade_octroi_0
+			}
+			custom_tooltip = { text = TOOLTIP_octroi_consequences }
+		}
+		pass_effect = {
+			holder_scope = {
+				wealth = -50
+			}
+			holder_scope = {
+				any_title_under = {
+					limit = { 
+						tier = baron
+						is_republic = yes
+					}
+					add_holding_modifier = { modifier = octroi_holding duration = -1 }
+					location = {
+						add_province_modifier = { modifier = octroi_province duration = -1 }
+					}
+				}
+			}
+			#holder_scope = { character_event = { id = ECO.220 }}
+		}
+	}
+}

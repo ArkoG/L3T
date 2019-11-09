@@ -1,0 +1,51 @@
+#####
+# ECO+ _an improved economy and trade by Arko 
+# [ReC]Reliques et Cathédrales _Build gigantic cathedrals ! by Arko
+#[XYLO Kit] _Manage your woodlands by Arko
+#
+# Each icon is a 28x28 pixels
+#####
+
+# Icons:
+#
+# Good 				    <=> 	  		 Bad
+#
+#  1 - Martial 							- 19
+#  2 - Learning, livre ouvert 			- 20
+#  3 - Diplomacy, parchemin 			- 21
+#  4 - Stewardship, coffre + pièces		- 22
+#  5 - Intrigue, lettre + poignard 		- 23
+#  6 - Money, pile de pièces 			- 24
+#  7 - Prestige, couronne ouverte 		- 25
+#  8 - Piety, croix rayonnante 			- 26
+#  9 - Titles, écu + couronne 			- 27
+# 10 - Council, couronne fermée 		- 28 
+# 11 - Laws, marteau 					- 29
+# 12 - Tech, rouages 					- 30 
+# 13 - Military, épée + heaume mini 	- 31
+# 14 - Plots, dague + lettre mini 		- 32
+# 15 - Messages, parchemin enroulé mini	- 33
+# 16 - Diplomatic actions, parchemin mini 	- 34
+# 17 - Church, croix chapelet 				- 35
+# 18 - Characters, MSN 						- 36
+# 37 - Prison 								- 38
+# 39 - Love 								- 40
+
+###ECO+
+#trade laws
+octroi_holding = {
+	icon = 6
+	tax_income = 2.0
+}
+octroi_province = {
+	icon = 24
+	local_tax_modifier = -0.02
+}
+tolls_province_1 = {
+	icon = 6
+	local_tax_modifier = 0.02
+}
+tolls_province_2 = {
+	icon = 6
+	local_tax_modifier = +0.02
+}

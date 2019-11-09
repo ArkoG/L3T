@@ -1,0 +1,64 @@
+#############################################################
+#  ECO+ an improved economy MOD for CK2 by ARKO  #
+#############################################################
+
+namespace = ECO
+
+###OCTROI rights
+character_event = {
+    id = ECO.220
+	desc = "DESCECO.220"
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		any_title_under = {
+			limit = { 
+				tier = baron
+				is_republic = yes
+			}
+			#set_title_flag = mouchard_loi_immediate
+			#save_event_target_as = holding_pour_desc
+			location = {
+				set_title_flag = mouchard_loi_immediate_P
+				save_event_target_as = province_pour_desc
+			}
+		}
+	}
+	###need to be turned into a maintenance event for newly created cities (on_action)
+	
+	
+	
+	###########apply trade route malus
+	
+	
+	
+	
+	
+	option = {
+		name = "ECO.220A"
+		any_title_under = {
+			limit = { 
+				tier = baron
+				is_republic = yes
+				#has_title_flag = mouchard_loi_immediate
+			}
+			add_holding_modifier = { modifier = octroi_holding duration = -1 }
+			clr_title_flag = mouchard_loi_immediate
+			location = {
+				add_province_modifier = { modifier = octroi_province duration = -1 }
+				clr_title_flag = mouchard_loi_immediate_P
+			}
+		}
+#		hidden_tooltip = {
+#			event_target:holding_pour_desc = {
+#				clear_event_target = holding_pour_desc
+#			}
+#			event_target:province_pour_desc = {
+#				clear_event_target = province_pour_desc
+#			}
+#		}
+	}
+}
