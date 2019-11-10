@@ -258,8 +258,8 @@ epices2_epices	= {icon = 162 	tax_income = 0.3}
 
 1connexion_commerciale = {icon = 1 } #hidden
 2connexion_commerciale = {icon = 1 } #hidden
-noeud_commercial_annexe = {icon = 204 city_tax_modifier = 0.03 }
-prosperity_modifier_2 = {icon = 203 local_tax_modifier = 0.05 } #retagged for using the on map 3D icon from vanilla prosperity L2
+noeud_commercial_annexe = {icon = 204 city_tax_modifier = 0.05 }
+prosperity_modifier_2 = {icon = 203 local_tax_modifier = 0.1 } #retagged for using the on map 3D icon from vanilla prosperity L2
 prosperity_modifier_1 = {icon = 203 } #using the on map 3D icon from vanilla prosperity L1
 #noeud_commercial_primaire = {icon = 161 local_tax_modifier = 0.05 }
 redaction_dun_cadastre  = {icon = 2 local_tax_modifier = 0.01 }
@@ -771,27 +771,27 @@ episco_muslim = {icon = 207 }
 
 route_size1 = { 
 	icon = 5 #major_modifer_icon_strip
-	local_tax_modifier = 0.07
+	local_tax_modifier = 0.05 #+node (10%) +route (5%) = +20%
 	major = yes
 }
 route_size2 = { 
 	icon = 4 #major_modifer_icon_strip
-	local_tax_modifier = 0.10 
+	local_tax_modifier = 0.10 #+node (10%) +route (5%) = +25%
 	major = yes
 }
 route_size3 = { 
 	icon = 3 #major_modifer_icon_strip
-	local_tax_modifier = 0.15
+	local_tax_modifier = 0.20 #+node (10%) +route (5%) = +35%
 	major = yes
 }
 route_size4 = { 
 	icon = 2 #major_modifer_icon_strip
-	local_tax_modifier = 0.20
+	local_tax_modifier = 0.25 #+node (10%) +route (5%) = +40%
 	major = yes
 }
 route_size5 = { 
 	icon = 1 #major_modifer_icon_strip
-	local_tax_modifier = 0.25 
+	local_tax_modifier = 0.35 #+node (10%) +route (5%) = +50%
 	major = yes
 }
 
