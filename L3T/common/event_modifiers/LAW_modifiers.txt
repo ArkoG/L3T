@@ -13,9 +13,9 @@
 #  1 - Martial 							- 19
 #  2 - Learning, livre ouvert 			- 20
 #  3 - Diplomacy, parchemin 			- 21
-#  4 - Stewardship, coffre + pièces		- 22
+#  4 - Stewardship, coffre + pièces/parchemin+pièces		- 22
 #  5 - Intrigue, lettre + poignard 		- 23
-#  6 - Money, pile de pièces 			- 24
+#  6 - Money, parchemin+pièces/pile de pièces 			- 24
 #  7 - Prestige, couronne ouverte 		- 25
 #  8 - Piety, croix rayonnante 			- 26
 #  9 - Titles, écu + couronne 			- 27
@@ -38,7 +38,7 @@ octroi_holding = {
 	tax_income = 2.0
 }
 octroi_province = {
-	icon = 24
+	icon = 22
 	local_tax_modifier = -0.02
 }
 tolls_province_1 = {
