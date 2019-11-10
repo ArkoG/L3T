@@ -88,7 +88,10 @@ province_event = {
 		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
 		modifier = { 
 			factor = 3
-			trade_route = silk_road #favors getting away from silk_road
+			OR = { #favors splitting away from vanilla trade roads
+				trade_route = silk_road 
+				trade_route = trans_saharan_trade_route
+			}
 		}
 	}
 
@@ -268,7 +271,10 @@ province_event = {
 		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
 		modifier = { 
 			factor = 3
-			trade_route = silk_road #favors getting away from silk_road
+			OR = { #favors splitting away from vanilla trade roads
+				trade_route = silk_road 
+				trade_route = trans_saharan_trade_route
+			}
 		}
 	}
 
