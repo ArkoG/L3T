@@ -93,6 +93,17 @@ province_event = {
 				trade_route = trans_saharan_trade_route
 			}
 		}
+		#octroi law influence
+		modifier = {
+			factor = 0.8
+			NOT = {
+				any_province_holding = { has_holding_modifier = octroi_holding }
+			}
+		}
+		modifier = {
+			factor = 1.2
+				any_province_holding = { has_holding_modifier = octroi_holding }
+		}
 	}
 
 	immediate = {
@@ -275,6 +286,17 @@ province_event = {
 				trade_route = silk_road 
 				trade_route = trans_saharan_trade_route
 			}
+		}
+		#octroi law influence
+		modifier = {
+			factor = 0.8
+			NOT = {
+				any_province_holding = { has_holding_modifier = octroi_holding }
+			}
+		}
+		modifier = {
+			factor = 1.2
+				any_province_holding = { has_holding_modifier = octroi_holding }
 		}
 	}
 
