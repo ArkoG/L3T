@@ -16,16 +16,16 @@ laws = {
 		potential = {
 			OR = {
 				holder_scope = { is_patrician = yes }
-				OR = {
-					AND = {
+				#OR = {
+					#AND = {
 						holder_scope = { is_republic = yes }
 						#tier = baron
-					}
-					AND = {
+					#}
+					#AND = {
 						#tier = baron
 						holder_scope = { is_feudal = yes } #TEST TOTORO
-					}
-				}
+					#}
+				#}
 			}
 		}
 		allow = {
@@ -49,14 +49,13 @@ laws = {
 						tier = baron
 						is_republic = yes
 					}
-					remove_holding_modifier = { modifier = octroi_holding duration = -1 }
+					remove_holding_modifier = octroi_holding
 					location = {
-						remove_province_modifier = { modifier = octroi_province duration = -1 }
+						remove_province_modifier = octroi_province
 					}
 				}
 			}
-			holder_scope = { character_event = { id = ECO.220 }}
-			}
+			#holder_scope = { character_event = { id = ECO.220 }}
 		}
 	}
 	law_trade_octroi_1 = {
@@ -65,16 +64,16 @@ laws = {
 		potential = {
 			OR = {
 				holder_scope = { is_patrician = yes }
-				OR = {
-					AND = {
+				#OR = {
+					#AND = {
 						holder_scope = { is_republic = yes }
 						#tier = baron
-					}
-					AND = {
+					#}
+					#AND = {
 						#tier = baron
 						holder_scope = { is_feudal = yes } #TEST TOTORO
-					}
-				}
+					#}
+				#}
 			}
 		}
 		allow = {
