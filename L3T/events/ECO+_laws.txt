@@ -4,7 +4,9 @@
 
 namespace = ECO
 
-###OCTROI rights
+###OCTROI law update
+##need to add the effect of the laws
+
 character_event = {
     id = ECO.220
 	desc = "DESCECO.220"
@@ -17,50 +19,107 @@ character_event = {
 	#on_settlement_construction_completed#
 	
 	trigger = {
-		FROM = { holding_type = city }
+		FROM = { 
+			holding_type = city
+			NOT = { has_holding_modifier = octroi_holding }
+		}
 		ROOT = { has_law = law_trade_octroi_1 }
 	}
 	
 	#maintenance if not a new holding
 	mean_time_to_happen = {
-		months = 9
-		modifier = {
-			factor = 0.5
-			OR = {
-				had_global_flag = { flag = SWMH days = 360 }			
-				had_global_flag = { flag = running_VANILLA days = 360 }
-				had_global_flag = { flag = running_LCDA days = 360 }
-			}
-		}
+		months = 12
 	}
 	
-	immediate = {
-	}
+	immediate = {}
 	
 	option = {
 		name = "ECO.220A"
-		if = {
-			limit = {
-				ROOT = {
-					has_law = law_trade_octroi_1
+		FROM = {
+			save_event_target_as = holding_pour_desc
+			add_holding_modifier = { modifier = octroi_holding duration = -1 }
+			hidden_tooltip = { 
+				event_target:holding_pour_desc = { 
+					clear_event_target = holding_pour_desc
 				}
 			}
-			any_demesne_title = {
-				limit = { holding_type = city }
-				save_event_target_as = holding_pour_desc
-				add_holding_modifier = { modifier = octroi_holding duration = -1 }
-				hidden_tooltip = { 
-					event_target:holding_pour_desc = { 
-						clear_event_target = holding_pour_desc
+			location = { 
+				add_province_modifier = { modifier = octroi_province duration = -1 }
+				save_event_target_as = province_pour_desc
+				hidden_tooltip = {
+					event_target:province_pour_desc = {
+						clear_event_target = province_pour_desc
 					}
 				}
-				location = { 
-					add_province_modifier = { modifier = octroi_province duration = -1 }
-					save_event_target_as = province_pour_desc
-					hidden_tooltip = {
-						event_target:province_pour_desc = {
-							clear_event_target = province_pour_desc
-						}
+			}
+		}
+	}
+}
+
+##need to withdraw the effects of the laws
+character_event = {
+    id = ECO.221
+	desc = "DESCECO.221"
+	picture = GFX_evt_L3T_city
+	border = GFX_event_normal_frame_economy
+	
+	#is_triggered_only = yes
+
+	# ROOT = Builder, FROM = Title
+	#on_settlement_construction_completed#
+	
+	trigger = {
+		FROM = { 
+			holding_type = city
+			has_holding_modifier = octroi_holding
+		}
+		ROOT = { has_law = law_trade_octroi_0 }
+	}
+	
+	#maintenance if not a new holding, may be useless?
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {}
+
+	option = {
+		#keep it
+		name = "ECO.221A"
+		FROM = { #only for names in event desc
+			save_event_target_as = holding_pour_desc
+			hidden_tooltip = { 
+				event_target:holding_pour_desc = { 
+					clear_event_target = holding_pour_desc
+				}
+			}
+			location = { 
+				save_event_target_as = province_pour_desc
+				hidden_tooltip = {
+					event_target:province_pour_desc = {
+						clear_event_target = province_pour_desc
+					}
+				}
+			}
+		}
+	}
+	option = {
+		#apply our law
+		name = "ECO.221B"
+		FROM = {
+			save_event_target_as = holding_pour_desc
+			remove_holding_modifier = octroi_holding
+			hidden_tooltip = { 
+				event_target:holding_pour_desc = { 
+					clear_event_target = holding_pour_desc
+				}
+			}
+			location = { 
+				remove_province_modifier = octroi_province
+				save_event_target_as = province_pour_desc
+				hidden_tooltip = {
+					event_target:province_pour_desc = {
+						clear_event_target = province_pour_desc
 					}
 				}
 			}
