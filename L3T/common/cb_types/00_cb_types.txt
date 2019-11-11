@@ -16513,6 +16513,14 @@ tributary_cb = {
 		has_dlc = "Horse Lords"
 
 		ROOT = {
+		###L3T###
+			FROM = {
+				OR = {
+					is_nomadic = yes
+					is_tribal = yes
+				}
+			}		
+		###L3T###
 			mercenary = no
 			OR = {
 				is_tributary = no
