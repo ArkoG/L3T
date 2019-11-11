@@ -204,6 +204,7 @@ on_settlement_construction_completed = {
 	events = {
 		L3T.9 #starts spec holding for the new built building
 		L3T.1101 #gives dev init + random bonus
+		ECO.220 #octroi law for cities
 	}
 }
 
