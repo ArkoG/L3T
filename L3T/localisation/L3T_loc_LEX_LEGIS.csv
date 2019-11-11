@@ -16,11 +16,15 @@ tolerance_pleine;Religious Acceptance;Acceptation religieuse élevée;;;;;;;;;;;;x
 tolerance_pleine_desc;Peoples of all faiths and creeds coexist peacefully and are encouraged to settle in the cities, much to the chagrin of clerics across the realm.;Les fidèles des différentes religions cohabitent dans la paix et le respect de l'autre, quoiqu'en disent les grincheux du Clergé.;;;;;;;;;;;;x
 
 law_group_trade_octroi;Trade: Octroi;Commerce : Octroi;;;;;;;;;;;;x
-law_group_trade_octroi_desc;;;;;;;;;;;;;;x
-law_trade_octroi_0;Exemption of Octroi for cities;Exemption d'octroi pour les cités;;;;;;;;;;;;x
-law_trade_octroi_0_desc;;;;;;;;;;;;;;x
+law_group_trade_octroi_desc;§YOctroi§! increases the §Gcity income§!, but it lowers §Rrevenues from trade§! in the whole province.\nIt also influences negatively province attractivity for trade routes attribution and population growth in the city.;L'§YOctroi§! augmente §Gles recettes de la cité§! mais §Rdiminue les revenus du commerce§! de toute la province.\nCela influence négativement l'attractivité de la province pour l'attribution de routes de commerce ainsi que la croissance de la population de la cité. ;;;;;;;;;;;;x
+law_trade_octroi_0;Exemption of Octroi for the city;Exemption d'octroi pour la cité.;;;;;;;;;;;;x
+law_trade_octroi_0_desc;Goods importation in the city is free.;L'mportation de biens dans la cité n'est pas taxée. ;;;;;;;;;;;;x
 law_trade_octroi_0_option;Exempt;Exempt;;;;;;;;;;;;x
 law_trade_octroi_1;Octroi for cities;Octroi pour les cités;;;;;;;;;;;;x
-law_trade_octroi_1_desc;;;;;;;;;;;;;;x
+law_trade_octroi_1_desc;Importing goods in the city is taxed.;L'import de biens dans la cité est taxé.;;;;;;;;;;;;x
 law_trade_octroi_1_option;Octroi;Octroi;;;;;;;;;;;;x
+
+TOOLTIP_octroi_enacting_consequences;Enacting §GOctroi§! gives:\n -city income +2.0\n -province tax modifier -2%\n -craftmans may ask that law to be cancelled\n;Promulguer l'§GOctroi§! procure:\n -revenus de la cité +2.0\n -impôts de la province -2%\n -les artisans peuvent demander à faire annuler cette loi\n;;;;;;;;;;;;x
+TOOLTIP_octroi_exemption_consequences;Enacting §GOctroi exemption§! cancels any effects of octroi law.\nMerchants may ask to enact Octroi law for the city.;Promulguer l'§GExemption d'octroi§! annule les effets de l'Octroi.\nLes Marchands peuvent demander la mise en place d'un Octroi pour la cité.;;;;;;;;;;;;x
+
 DESCECO.220;[holding_pour_desc.GetName]\n[province_pour_desc.GetName];;;;;;;;;;;;;x
