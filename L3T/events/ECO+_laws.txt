@@ -86,6 +86,38 @@ character_event = {
 	option = {
 		#keep it
 		name = "ECO.221A"
+		ai_chance = { 
+			factor = 50
+			modifier = { 
+				factor = 1.2
+				diplomacy = 12
+			}
+			modifier = { 
+				factor = 1.2
+				diplomacy = 15
+			}
+			modifier = { 
+				factor = 1.2
+				OR = {
+					trait = just
+					trait = content
+				}
+			}		
+		}
+		if = {
+			limit = { NOT = { trait = just }}
+			random = { 
+				chance = 20
+				add_trait = just
+			}
+		}
+		if = {
+			limit = { trait = arbitrary }
+			random = { 
+				chance = 20
+				remove_trait = arbitrary
+			}
+		}
 		FROM = { #only for names in event desc
 			save_event_target_as = holding_pour_desc
 			hidden_tooltip = { 
@@ -106,6 +138,42 @@ character_event = {
 	option = {
 		#apply our law
 		name = "ECO.221B"
+		ai_chance = { 
+			factor = 50
+			modifier = { 
+				factor = 0.8
+				NOT = {diplomacy = 8 }
+			}
+			modifier = { 
+				factor = 0.8
+				NOT = { diplomacy = 5 }
+			}
+			modifier = { 
+				factor = 1.2
+				OR = {
+					trait = arbitrary
+					trait = ambitious
+				}
+			}
+			modifier = { 
+				factor = 1.2
+				trait = studborn
+			}
+		}
+		if = {
+			limit = { NOT = { trait = arbitrary }}
+			random = { 
+				chance = 20
+				add_trait = arbitrary
+			}
+		}
+		if = {
+			limit = { trait = just }
+			random = { 
+				chance = 20
+				remove_trait = just
+			}
+		}
 		FROM = {
 			save_event_target_as = holding_pour_desc
 			remove_holding_modifier = octroi_holding
