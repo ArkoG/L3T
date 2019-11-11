@@ -152,6 +152,9 @@ on_new_holder = {
 		#màj capital modifier
 		L3T.50
 		L3T.51
+		#octroi law for cities update
+		ECO.220
+		ECO.221
 	}
 }
 
@@ -174,6 +177,9 @@ on_new_holder_inheritance = {
 		#màj capital modifier
 		L3T.50
 		L3T.51
+		#octroi law for cities update
+		ECO.220
+		ECO.221
 	}
 }
 
@@ -196,6 +202,9 @@ on_new_holder_usurpation = {
 		#màj capital modifier
 		L3T.50
 		L3T.51
+		#octroi law for cities update
+		ECO.220
+		ECO.221
 	}
 }
 
@@ -204,7 +213,8 @@ on_settlement_construction_completed = {
 	events = {
 		L3T.9 #starts spec holding for the new built building
 		L3T.1101 #gives dev init + random bonus
-		ECO.220 #octroi law for cities
+		ECO.220 #octroi law for cities update +
+		ECO.221 #octroi law for cities update -
 	}
 }
 
