@@ -15,19 +15,25 @@ laws = {
 
 		potential = {
 			OR = {
-				holder_scope = { is_patrician = yes }
+				#holder_scope = { is_patrician = yes }
 				#OR = {
 					#AND = {
 						holder_scope = { is_republic = yes }
 						#tier = baron
 					#}
-					#AND = {
-						#tier = baron
-						holder_scope = { is_feudal = yes } #TEST TOTORO
-					#}
+					AND = {
+						holder_scope = { 
+							is_feudal = yes #TEST TOTORO
+							any_demesne_title = { 
+								#tier = baron
+								holding_type = city
+							}
+						}
+					}
 				#}
 			}
 		}
+
 		allow = {
 			#holder_scope = { wealth = 50 }
 		}
@@ -40,11 +46,11 @@ laws = {
 			hidden_tooltip = {
 				revoke_law = law_trade_octroi_1
 			}
-			custom_tooltip = { text = TOOLTIP_octroi_consequences }
+			custom_tooltip = { text = TOOLTIP_octroi_exemption_consequences }
 		}
 		pass_effect = {
 			holder_scope = {
-				any_title_under = {
+				any_demesne_title = {
 					limit = { 
 						tier = baron
 						is_republic = yes
@@ -63,16 +69,21 @@ laws = {
 		
 		potential = {
 			OR = {
-				holder_scope = { is_patrician = yes }
+				#holder_scope = { is_patrician = yes }
 				#OR = {
 					#AND = {
 						holder_scope = { is_republic = yes }
 						#tier = baron
 					#}
-					#AND = {
-						#tier = baron
-						holder_scope = { is_feudal = yes } #TEST TOTORO
-					#}
+					AND = {
+						holder_scope = { 
+							is_feudal = yes #TEST TOTORO
+							any_demesne_title = { 
+								#tier = baron
+								holding_type = city
+							}
+						}
+					}
 				#}
 			}
 		}
@@ -88,14 +99,14 @@ laws = {
 			hidden_tooltip = {
 				revoke_law = law_trade_octroi_0
 			}
-			custom_tooltip = { text = TOOLTIP_octroi_consequences }
+			custom_tooltip = { text = TOOLTIP_octroi_enacting_consequences }
 		}
 		pass_effect = {
 			holder_scope = {
 				wealth = -50
 			}
 			holder_scope = {
-				any_title_under = {
+				any_demesne_title = {
 					limit = { 
 						tier = baron
 						is_republic = yes
