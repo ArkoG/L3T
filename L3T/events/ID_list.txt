@@ -354,6 +354,16 @@
 
 #id = ECO.213 #voir #Mine
 
+##ECO_laws_events.txt
+#id = ECO.220 #octroi law for new settlement (build or acquired) MTTH+on_settlement_construction_completed
+#id = ECO.221 #effect of octroi law (retracted law)
+#id = ECO.222 #province lord ask to retract octroi law
+#id = ECO.223 #mayor answers
+#id = ECO.224 #traders ask the mayor to pass law
+#id = ECO.226 #mayor answers to merchants
+#id = ECO.225 #crafters ask the mayor to retract law
+#id = ECO.227 #mayor answers to crafters
+
 ##ambition_events.txt
 #id = ECO.301 #Début chaîne d'event "acheter pour revendre"
 #id = ECO.302 #Choix de l'achat
@@ -394,6 +404,12 @@
 #id = ECO.321 #Bonne réputation pour le vignoble !!!à renuméroter!!!
 #id = ECO.322 #Bonne réputation pour la brasserie !!!à renuméroter!!!
 #id = ECO.323 #Le seigneur a préféré un produit étranger !!!à renuméroter!!!
+
+##ECO_job_events.txt
+#id = ECO.330 #starts chain tolls collected
+#id = ECO.331 #
+#id = ECO.303 #
+#id = ECO.304 #
 
 ################################################
 # L3TRADE dynamic trade route by Arko and Mouchi #
