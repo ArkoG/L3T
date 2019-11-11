@@ -52,8 +52,7 @@ laws = {
 			holder_scope = {
 				any_demesne_title = {
 					limit = { 
-						tier = baron
-						is_republic = yes
+						holding_type = city
 					}
 					remove_holding_modifier = octroi_holding
 					location = {
@@ -108,8 +107,7 @@ laws = {
 			holder_scope = {
 				any_demesne_title = {
 					limit = { 
-						tier = baron
-						is_republic = yes
+						holding_type = city
 					}
 					add_holding_modifier = { modifier = octroi_holding duration = -1 }
 					location = {
