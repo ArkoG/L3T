@@ -1,6 +1,6 @@
-#############################################################
+##################################################
 #  ECO+ an improved economy MOD for CK2 by ARKO  #
-#############################################################
+##################################################
 
 namespace = ECO
 
@@ -8,57 +8,62 @@ namespace = ECO
 character_event = {
     id = ECO.220
 	desc = "DESCECO.220"
-	picture = GFX_evt_carriage
+	picture = GFX_evt_L3T_city
 	border = GFX_event_normal_frame_economy
 	
-	is_triggered_only = yes
+	#is_triggered_only = yes
+
+	# ROOT = Builder, FROM = Title
+	#on_settlement_construction_completed#
 	
-	immediate = {
-		any_title_under = {
-			limit = { 
-				tier = baron
-				is_republic = yes
-			}
-			#set_title_flag = mouchard_loi_immediate
-			#save_event_target_as = holding_pour_desc
-			location = {
-				set_title_flag = mouchard_loi_immediate_P
-				save_event_target_as = province_pour_desc
+	trigger = {
+		FROM = { holding_type = city }
+		ROOT = { has_law = law_trade_octroi_1 }
+	}
+	
+	#maintenance if not a new holding
+	mean_time_to_happen = {
+		months = 9
+		modifier = {
+			factor = 0.5
+			OR = {
+				had_global_flag = { flag = SWMH days = 360 }			
+				had_global_flag = { flag = running_VANILLA days = 360 }
+				had_global_flag = { flag = running_LCDA days = 360 }
 			}
 		}
 	}
-	###need to be turned into a maintenance event for newly created cities (on_action)
 	
-	
-	
-	###########apply trade route malus
-	
-	
-	
-	
+	immediate = {
+	}
 	
 	option = {
 		name = "ECO.220A"
-		any_title_under = {
-			limit = { 
-				tier = baron
-				is_republic = yes
-				#has_title_flag = mouchard_loi_immediate
+		if = {
+			limit = {
+				ROOT = {
+					has_law = law_trade_octroi_1
+				}
 			}
-			add_holding_modifier = { modifier = octroi_holding duration = -1 }
-			clr_title_flag = mouchard_loi_immediate
-			location = {
-				add_province_modifier = { modifier = octroi_province duration = -1 }
-				clr_title_flag = mouchard_loi_immediate_P
+			any_demesne_title = {
+				limit = { holding_type = city }
+				save_event_target_as = holding_pour_desc
+				add_holding_modifier = { modifier = octroi_holding duration = -1 }
+				hidden_tooltip = { 
+					event_target:holding_pour_desc = { 
+						clear_event_target = holding_pour_desc
+					}
+				}
+				location = { 
+					add_province_modifier = { modifier = octroi_province duration = -1 }
+					save_event_target_as = province_pour_desc
+					hidden_tooltip = {
+						event_target:province_pour_desc = {
+							clear_event_target = province_pour_desc
+						}
+					}
+				}
 			}
 		}
-#		hidden_tooltip = {
-#			event_target:holding_pour_desc = {
-#				clear_event_target = holding_pour_desc
-#			}
-#			event_target:province_pour_desc = {
-#				clear_event_target = province_pour_desc
-#			}
-#		}
 	}
 }
