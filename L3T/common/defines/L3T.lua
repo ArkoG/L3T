@@ -6,7 +6,6 @@
 -- NCharacter NR_OF_CHILDREN ex 2 ; ex 2
 -- NATURAL_DEATH ex 5 ; 1 ;15 ; 20 ; 51 ; 100;400;1400;3500;7000;9000
 -- FERTILITY_BASE ex 0.5
--- INFANT_DEATH_CHANCE ex 0.0
 -- IDEAL_YEAR_LEVEL_0 ex 700
 -- IDEAL_YEAR_LEVEL_8 ex 1500
 -- CROWDED ex 75
@@ -27,7 +26,6 @@
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_90 = 4000				-- Natural deaths per decade out of 10000 people: Age 90-99
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_100 = 8000			-- Natural deaths per decade out of 10000 people: Age 100+
 	NDefines.NCharacter.FERTILITY_BASE_MULT = 0.70						-- Base fertility multiplier to adjust the base chance of impregnation
-	NDefines.NCharacter.INFANT_DEATH_CHANCE = 0.05
 	NDefines.NReligion.CREATE_ANTIPOPE_PRESTIGE_COST = 1000
 	NDefines.NTechnology.IDEAL_YEAR_LEVEL_0 = 900
 	NDefines.NTechnology.IDEAL_YEAR_LEVEL_8 = 1650
