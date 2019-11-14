@@ -49,3 +49,24 @@ tolls_province_2 = {
 	icon = 6
 	local_tax_modifier = +0.02
 }
+
+octroi_annoyed_craftman = {
+	icon = 22
+	stewardship = -1
+	monthly_character_prestige = -0.02
+}
+octroi_annoyed_merchant = {
+	icon = 21
+	diplomacy = -1
+	monthly_character_prestige = -0.02
+}
+octroi_annoyed_militia = {
+	icon = 19
+	martial = -1
+	monthly_character_prestige = -0.02
+}
+octroi_annoyed_citycouncilor = {
+	icon = 23
+	intrigue = -1
+	monthly_character_prestige = -0.02
+}
