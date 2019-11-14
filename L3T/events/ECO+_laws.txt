@@ -38,6 +38,7 @@ character_event = {
 		FROM = {
 			save_event_target_as = holding_pour_desc
 			add_holding_modifier = { modifier = octroi_holding duration = -1 }
+			set_title_flag = octroi_law_duration
 			hidden_tooltip = { 
 				event_target:holding_pour_desc = { 
 					clear_event_target = holding_pour_desc
@@ -177,6 +178,7 @@ character_event = {
 		FROM = {
 			save_event_target_as = holding_pour_desc
 			remove_holding_modifier = octroi_holding
+			clr_title_flag = octroi_law_duration
 			hidden_tooltip = { 
 				event_target:holding_pour_desc = { 
 					clear_event_target = holding_pour_desc
@@ -194,3 +196,296 @@ character_event = {
 		}
 	}
 }
+
+#corporations requests, once guild buildings are in
+#merchants request, until some market level+trade public offices exist
+
+#Mayor is asked to abolish octroi law
+character_event = {
+    id = ECO.222
+	picture = GFX_evt_L3T_city
+	border = GFX_event_letter_frame_economy
+
+	desc = {
+		trigger = { has_character_flag = asker_is_craftman }
+		text = "DESCL3T.222a"
+		picture = GFX_evt_L3T_city
+	}
+	desc = {
+		trigger = { has_character_flag = asker_is_merchant }
+		text = "DESCL3T.222b"
+		picture = GFX_evt_L3T_city
+	}
+	desc = {
+		trigger = { has_character_flag = asker_is_militia }
+		text = "DESCL3T.222c"
+		picture = GFX_evt_L3T_city
+	}
+	desc = {
+		trigger = { has_character_flag = asker_is_citycouncilor }
+		text = "DESCL3T.222d"
+		picture = GFX_evt_L3T_city
+	}
+
+	capable_only = yes
+	prisoner = no
+	only_rulers = yes
+
+	trigger = {
+		any_demesne_title = {
+			limit = { holding_type = city }
+		}
+		OR = {
+			#lastest SOFT refusal is older than 3 years
+			had_character_flag = { 
+				flag = refused_abolishing_octroi_soft
+				days = 1095
+			}
+			#lastest HARD refusal is older than 7 years
+			had_character_flag = {
+				flag = refused_abolishing_octroi_hard
+				days = 2555
+			}
+		}
+		NOT = { has_character_flag = already_changed_back_octroi_law }
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 0.5
+			NOT = { wealth = -10 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { wealth = -100 }
+		}
+
+		modifier = {
+			factor = 2.0
+			wealth = 350 #is wealthy
+		}
+
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = {
+					had_character_flag = { 
+						flag = refused_abolishing_octroi_soft
+						days = 1825 #<5y
+					}
+				}
+				NOT = {
+					had_character_flag = { 
+						flag = refused_abolishing_octroi_hard
+						days = 5475 #<15y
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.7
+			NOT = {
+				had_character_flag = { 
+					flag = refused_abolishing_octroi_soft
+					days = 3650 #<10y
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				had_character_flag = { 
+					flag = refused_abolishing_octroi_soft
+					days = 7300 #>20y
+				}
+				had_character_flag = { 
+					flag = refused_abolishing_octroi_hard
+					days = 7300 #>20y
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_list = {
+			25 = { set_character_flag = asker_is_craftman }
+			25 = { set_character_flag = asker_is_merchant }
+			25 = { set_character_flag = asker_is_militia }
+			25 = { set_character_flag = asker_is_citycouncilor }
+		}
+		random_demesne_title = {
+			limit = { holding_type = city }
+			save_event_target_as = holding_pour_desc
+		}
+	}
+	
+	#accept
+	option = {
+		name = "ECO.222A"
+		set_character_flag = already_changed_back_octroi_law
+		revoke_law = law_trade_octroi_1
+		any_demesne_title = {
+			limit = { holding_type = city }
+			remove_holding_modifier = octroi_holding
+			clr_title_flag = octroi_law_duration
+			location = { remove_province_modifier = octroi_province }
+		}
+	}
+
+	##soft refusal 
+	option = {
+		#(bribe as steward)=no effect, if not working, = hard refusal
+		name = "ECO.222B1" # try bribery
+		tooltip_info = stewardship
+		trigger = { stewardship = 9 }
+		custom_tooltip = { text = EVTTOOLTIP_L3T.222B1 }
+		random_list = {
+			#add subtility there !!!!!!!!!!!!
+			50 = {
+				custom_tooltip = { text = chance_succes }
+				letter_event = { id = L3T.223 }
+			}
+			50 = {
+				custom_tooltip = { text = chance_echec }
+				letter_event = { id = L3T.224 }
+			}
+		}
+
+		scaled_wealth = -0.3
+		############ai_chance = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = greedy
+			}
+		}
+	}
+	option = {
+		#(diplo)=no effect convincing, if not working, = hard refusal
+		name = "ECO.222B2" # try to convince
+		tooltip_info = diplomacy
+		trigger = { 
+			diplomacy = 9
+			NOT = { martial = 9 } #make the two options inter-exclusive
+		}
+		custom_tooltip = { text = EVTTOOLTIP_L3T.222B2 }
+		random_list = {
+			#add subtility there !!!!!!!!!!!!
+			50 = {
+				custom_tooltip = { text = chance_succes }
+				letter_event = { id = L3T.223 }
+			}
+			50 = {
+				custom_tooltip = { text = chance_echec }
+				letter_event = { id = L3T.224 }
+			}
+		}
+		############ai_chance = {
+	}
+
+	option = {
+		#(diplo)=no effect convincing, if not working, = hard refusal
+		name = "ECO.222B3" # threaten
+		tooltip_info = martial
+		trigger = { 
+			martial = 9
+			NOT = { diplomacy = 9 } #make the two options inter-exclusive
+		}
+		custom_tooltip = { text = EVTTOOLTIP_L3T.222B3 }
+		random_list = {
+			#add subtility there !!!!!!!!!!!!
+			50 = {
+				custom_tooltip = { text = chance_succes }
+				letter_event = { id = L3T.223  }
+			}
+			50 = {
+				custom_tooltip = { text = chance_echec }
+				letter_event = { id = L3T.224 }
+			}
+		}
+		############ai_chance = {
+	}
+
+	##hard refusal
+	option = {
+		name = "ECO.222C"
+		
+		############ai_chance = {
+		
+		clr_character_flag = refused_abolishing_octroi_hard #to renew the timer flag
+		set_character_flag = refused_abolishing_octroi_hard
+		custom_tooltip = { text = EVTTOOLTIP_L3T.222C }
+		if = {
+			limit = { has_character_flag = asker_is_craftman }
+			clr_character_flag = asker_is_craftman
+			add_character_modifier = { modifier = octroi_annoyed_craftman }
+		}
+		if = {
+			limit = { has_character_flag = asker_is_merchant }
+			clr_character_flag = asker_is_craftman
+			add_character_modifier = { modifier = octroi_annoyed_merchant }
+		}
+		if = {
+			limit = { has_character_flag = asker_is_militia }
+			clr_character_flag = asker_is_craftman
+			add_character_modifier = { modifier = octroi_annoyed_militia }
+		}
+		if = {
+			limit = { has_character_flag = asker_is_citycouncilor }
+			clr_character_flag = asker_is_craftman
+			add_character_modifier = { modifier = octroi_annoyed_citycouncilor }
+		}
+		event_target:holding_pour_desc = { clear_event_target = holding_pour_desc }
+	}		
+}
+
+letter_event = { #succes
+    id = ECO.223
+	desc = "DESCECO.223"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ECO.223A
+		clr_character_flag = refused_abolishing_octroi_hard #to renew the timer flag
+		clr_character_flag = refused_abolishing_octroi_soft
+		set_character_flag = refused_abolishing_octroi_soft
+		event_target:holding_pour_desc = { clear_event_target = holding_pour_desc }
+	}
+}
+letter_event = { #failure
+    id = ECO.224
+	desc = "DESCECO.224"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ECO.224A
+		clr_character_flag = refused_abolishing_octroi_hard #to renew the timer flag
+		set_character_flag = refused_abolishing_octroi_hard
+		if = {
+			limit = { has_character_flag = asker_is_craftman }
+			clr_character_flag = asker_is_craftman
+			add_character_modifier = { modifier = octroi_annoyed_craftman duration = 1825 }
+		}
+		if = {
+			limit = { has_character_flag = asker_is_merchant }
+			clr_character_flag = asker_is_craftman
+			add_character_modifier = { modifier = octroi_annoyed_merchant duration = 1825 }
+		}
+		if = {
+			limit = { has_character_flag = asker_is_militia }
+			clr_character_flag = asker_is_craftman
+			add_character_modifier = { modifier = octroi_annoyed_militia duration = 1825 }
+		}
+		if = {
+			limit = { has_character_flag = asker_is_citycouncilor }
+			clr_character_flag = asker_is_craftman
+			add_character_modifier = { modifier = octroi_annoyed_citycouncilor duration = 1825 }
+		}
+		event_target:holding_pour_desc = { clear_event_target = holding_pour_desc }
+	}
+}
+	
