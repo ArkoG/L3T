@@ -58,6 +58,7 @@ laws = {
 				any_demesne_title = {
 					limit = { holding_type = city }
 					remove_holding_modifier = octroi_holding
+					clr_title_flag = octroi_law_duration
 					location = { remove_province_modifier = octroi_province }
 				}
 			}
@@ -115,6 +116,7 @@ laws = {
 				any_demesne_title = {
 					limit = {  holding_type = city }
 					add_holding_modifier = { modifier = octroi_holding duration = -1 }
+					set_title_flag = octroi_law_duration
 					location = { add_province_modifier = { modifier = octroi_province duration = -1 }}
 				}
 			}
