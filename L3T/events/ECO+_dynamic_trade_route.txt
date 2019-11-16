@@ -465,6 +465,17 @@ province_event = {
 		}
 		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
 		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
+		#octroi law influence
+		modifier = {
+			factor = 0.8
+			NOT = {
+				any_province_holding = { has_holding_modifier = octroi_holding }
+			}
+		}
+		modifier = {
+			factor = 1.2
+				any_province_holding = { has_holding_modifier = octroi_holding }
+		}
 	}
 
 	immediate = {
@@ -632,6 +643,17 @@ province_event = {
 		}
 		modifier = { factor = 0.8	any_province_holding = { has_building = CT_pont_fluvial_L4 }}
 		modifier = { factor = 0.9	has_province_modifier = province_fleuve }
+		#octroi law influence
+		modifier = {
+			factor = 0.8
+			NOT = {
+				any_province_holding = { has_holding_modifier = octroi_holding }
+			}
+		}
+		modifier = {
+			factor = 1.2
+				any_province_holding = { has_holding_modifier = octroi_holding }
+		}
 	}
 
 	immediate = {
@@ -774,6 +796,17 @@ province_event = {
  		modifier = { factor = 1.2	any_province_holding = { has_building = VOC_INDUSTRIELLE }}#not my business
 		#modifier = { factor = 0.9	any_province_holding = { has_building = CITE_L2 }}#the bigger the better	
 		#modifier = { factor = 0.9	any_province_holding = { has_building = CITE_L3 }}#the bigger the better
+		#octroi law influence
+		modifier = {
+			factor = 0.8
+			NOT = {
+				any_province_holding = { has_holding_modifier = octroi_holding }
+			}
+		}
+		modifier = {
+			factor = 1.2
+				any_province_holding = { has_holding_modifier = octroi_holding }
+		}
 	}
 	
 	option = {
