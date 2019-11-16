@@ -415,16 +415,19 @@
 # L3TRADE dynamic trade route by Arko and Mouchi #
 ################################################
 
-#id = L3TRADE.1 #Step B attribution (potentiel commercial - pré-attribution route)
-#id = L3TRADE.2 #Step C attribution (potentiel commercial - pré-attribution route)
-#id = L3TRADE.3 #Step D attribution (potentiel commercial - pré-attribution route)
-#id = L3TRADE.4 #Step E attribution (potentiel commercial - pré-attribution route)
-#id = L3TRADE.5 #Route modifier attribution (attribution définitive avec notif)
+#id = L3TRADE.1 #Step B attribution (les marchand s'installent - pré-attribution route)
+#id = L3TRADE.2 #Step C attribution (les marchand s'installent - pré-attribution route)
+#id = L3TRADE.3 #Step D attribution (les marchand s'installent - pré-attribution route)
+#id = L3TRADE.4 #Step E attribution (les marchand s'installent - pré-attribution route)
+#id = L3TRADE.5 #Route modifier attribution (attribution définitive avec notif et bonus)
 #id = L3TRADE.6 #Annex comercial node attribution
 #id = L3TRADE.7 #Update the modifier of the route size
 #id = L3TRADE.8 #Update the route size variable for previous steps
 #id = L3TRADE.9 #Avert the player that there is a trade route or trade node in a neighbouring province
 #id = L3TRADE.10 #Avert the player that a trade node is in his demesne
+
+#id = L3TRADE.20 #Inform the player that the province starts dev a road
+#id = L3TRADE.21 #Inform the player that the province won't host a road
 
 ######################################################
 # [ReC][Reliques et Cathédrales]  par Arko et Mouchi #
