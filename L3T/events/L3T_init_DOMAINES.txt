@@ -519,16 +519,24 @@ narrative_event = {
 						
 					# Avert the player that the route building can be build on its demesne
 					any_neighbor_province = {
-						any_province_lord = {
-							limit = {
-								ai = no
-								NOT = { has_global_flag = avert_player }
-							}
-							set_global_flag = avert_player
-							character_event = { id = L3TRADE.9 days = 10}
+						owner = { ai = no }
+						NOT = {
+							has_province_flag = bloc_A
+							has_province_flag = bloc_B
+							has_province_flag = bloc_C
+							has_province_flag = bloc_D
+							has_province_flag = bloc_E
+							has_province_flag = checked_blocB
+							has_province_flag = checked_blocC
+							has_province_flag = checked_blocD
+							has_province_flag = checked_blocE
+							has_province_flag = invalidate_trade
+						}
+						save_event_target_as = province_pour_desc
+						owner = {
+							character_event = { id = L3TRADE.9 }
 						}
 					}
-					clr_global_flag = avert_player
 				}
 			}
 			clr_title_flag = city_to_specialize	
@@ -640,16 +648,24 @@ province_event = {
 					
 					# Avert the player that the route building can be build on its demesne
 					any_neighbor_province = {
-						any_province_lord = {
-							limit = {
-								ai = no
-								NOT = { has_global_flag = avert_player }
-							}
-							set_global_flag = avert_player
-							character_event = { id = L3TRADE.9 days = 10}
+						owner = { ai = no }
+						NOT = {
+							has_province_flag = bloc_A
+							has_province_flag = bloc_B
+							has_province_flag = bloc_C
+							has_province_flag = bloc_D
+							has_province_flag = bloc_E
+							has_province_flag = checked_blocB
+							has_province_flag = checked_blocC
+							has_province_flag = checked_blocD
+							has_province_flag = checked_blocE
+							has_province_flag = invalidate_trade
+						}
+						save_event_target_as = province_pour_desc
+						owner = {
+							character_event = { id = L3TRADE.9 }
 						}
 					}
-					clr_global_flag = avert_player
 				}
 			}
 		}
