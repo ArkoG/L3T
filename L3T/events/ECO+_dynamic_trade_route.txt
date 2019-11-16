@@ -3,16 +3,26 @@ namespace = L3TRADE
 # Give the step B of the trade routes
 province_event = {
     id = L3TRADE.1
-	desc = "DESCSTEP"
+	desc = "DESCSTEP_B"
 	picture = GFX_evt_market
 	
 	trigger = {
+		#must not has been checked already
 		NOT = { has_province_flag = checked_blocB } #Flag to avoid big CPU computation of a trigger for nothing (see limit of the option)
+		NOT = { has_province_flag = invalidate_trade }
 		# Check for the bloc B if the province is neighbor to a province with the previous bloc, here A
 		any_neighbor_province = {
 			has_province_flag = bloc_A
 		}
-	}	
+		#not already has any block
+		NOT = {
+			has_province_flag = bloc_A
+			has_province_flag = bloc_B
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
+		}
+	}
 		
 	mean_time_to_happen = {
 		months = 100
@@ -108,20 +118,20 @@ province_event = {
 
 	immediate = {
 		set_province_flag = checked_blocB
+				#if valid, block is set, if not, nothing happens, but owner is notified
 		if = {
 			limit = {
 				NOT = {
 					# To not give step B to the province which has already a bloc
-					has_province_flag = bloc_A
-					has_province_flag = bloc_B
-					has_province_flag = bloc_C
-					has_province_flag = bloc_D
-					has_province_flag = bloc_E
+				##check by trigger already
+					#has_province_flag = bloc_A
+					#has_province_flag = bloc_B
+					#has_province_flag = bloc_C
+					#has_province_flag = bloc_D
+					#has_province_flag = bloc_E
 					
-					# To not give step B to distinct routes each other
+					#can't connect to any block
 					any_neighbor_province = { has_province_flag = bloc_B }
-					
-					# To not give step B to a province which don't have a minimal distance of 1 (in terms of neighboor) to a step A province
 					any_neighbor_province = { has_province_flag = bloc_C }
 					any_neighbor_province = { has_province_flag = bloc_D }
 					any_neighbor_province = { has_province_flag = bloc_E }
@@ -155,56 +165,98 @@ province_event = {
 				}
 				
 				add_province_modifier = { name = future_route duration = -1 }
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_A }
+					save_event_target_as = origin_trade_province
+				}
+
+				#mark as checked_bloc invalide neighbors
+				any_neighbor_province = {
+					limit = {
+						#not has a bloc already
+						NOT = {
+							has_province_flag = bloc_A
+							has_province_flag = bloc_B
+							has_province_flag = bloc_C
+							has_province_flag = bloc_D
+							has_province_flag = bloc_E
+							has_province_flag = invalidate_trade
+						}
+						#is not invalidated already
+						NOT = { 
+							has_province_flag = checked_blocB
+						}
+						#fits same conditions
+						any_neighbor_province = {
+							has_province_flag = bloc_A
+						}
+					}
+					set_province_flag = checked_blocB
+					set_province_flag = invalidate_trade
+					province_event = { id = L3TRADE.21 }
+				}
 			}
-		}
-	}
-	
-	option = {
-		name = "L3TRADESTEPOK"
-		trigger = { has_province_flag = bloc_B }
-	}
-	
-	option = {
-		name = "L3TRADESTEPKO"
-		trigger = { 
-			NOT = {
-				has_province_flag = bloc_A
-				has_province_flag = bloc_B
-				has_province_flag = bloc_C
-				has_province_flag = bloc_D
-				has_province_flag = bloc_E
-			}
+			province_event = { id = L3TRADE.20 }
 		}
 	}
 
 	option = {
-		name = "L3TRADESTEPALREADY"
-		trigger = { 
-			OR = {
-				has_province_flag = bloc_A
-				has_province_flag = bloc_C
-				has_province_flag = bloc_D
-				has_province_flag = bloc_E
-			}
-		}
+		name = "OK"
 	}
+	
+	#option = {
+	#	name = "L3TRADESTEPOK"
+	#	#merchants start using the province
+	#	trigger = { has_province_flag = bloc_B }
+	#}
+	
+	#option = {
+	#	name = "L3TRADESTEPKO"
+	#	trigger = { 
+	#		NOT = {
+	#			#has_province_flag = bloc_A
+	#			has_province_flag = bloc_B
+	#			#has_province_flag = bloc_C
+	#			#has_province_flag = bloc_D
+	#			#has_province_flag = bloc_E
+	#		}
+	#	}
+	#}
+	##now checked before, limits spam
+	#option = {
+	#	name = "L3TRADESTEPALREADY"
+	#	trigger = { 
+	#		OR = {
+	#			has_province_flag = bloc_A
+	#			has_province_flag = bloc_C
+	#			has_province_flag = bloc_D
+	#			has_province_flag = bloc_E
+	#		}
+	#	}
+	#}
 }
 
 # Give the step C of the trade routes
-# COPY-PASTE with adaptation of L3TRADE.1
 province_event = {
     id = L3TRADE.2
-	desc = "DESCSTEP"
+	desc = "DESCSTEP_C"
 	picture = GFX_evt_market
 	
 	trigger = {
+		#must not has been checked already
 		NOT = { has_province_flag = checked_blocC } 
-		any_neighbor_province = {
+		NOT = { has_province_flag = invalidate_trade }
+		#Check for the bloc C if the province is neighbor to a province with the previous bloc, here B
+			any_neighbor_province = {
 			has_province_flag = bloc_B
-			OR = {
-				has_province_modifier = route_terrestre
-				has_province_modifier = route_fluviale
-			}
+		}
+		#not already has any block
+		NOT = {
+			has_province_flag = bloc_A
+			has_province_flag = bloc_B
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
 		}
 	}
 		
@@ -302,14 +354,19 @@ province_event = {
 
 	immediate = {
 		set_province_flag = checked_blocC
+		#if valid, bloc is set, if not, nothing happens
 		if = {
 			limit = {
 				NOT = {
-					has_province_flag = bloc_A
-					has_province_flag = bloc_B
-					has_province_flag = bloc_C
-					has_province_flag = bloc_D
-					has_province_flag = bloc_E
+					# To not give step B to the province which has already a bloc
+				##check by trigger already
+					#has_province_flag = bloc_A
+					#has_province_flag = bloc_B
+					#has_province_flag = bloc_C
+					#has_province_flag = bloc_D
+					#has_province_flag = bloc_E
+
+					#can't connect to any block
 					any_neighbor_province = { has_province_flag = bloc_A }
 					any_neighbor_province = { has_province_flag = bloc_C }
 					any_neighbor_province = { has_province_flag = bloc_D }
@@ -320,6 +377,7 @@ province_event = {
 				set_province_flag = bloc_C
 				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
 				
+				# The route size is the max route size of its D neighboors + 1
 				set_variable = { which = "route_size" value = 1 }
 				set_variable = { which = "tmp" value = 1 }
 				any_neighbor_province = {
@@ -327,69 +385,114 @@ province_event = {
 					ROOT = { subtract_variable = { which = "route_size" which = PREV} }
 					if = {
 						limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+						# We have found a neighboor with a route_size value more or equal, so we update the value
 						ROOT = { set_variable = { which = "route_size" which = PREV} }
 						ROOT = { change_variable = { which = "route_size" value = 1} }
 						ROOT = { set_variable = { which = "tmp" which = "route_size"} }
 					}
+					# Reset the C route_size for the stored value
 					ROOT = { set_variable = { which = "route_size" which = "tmp"} }
 				}
-				
+
+				# Update the route size in previous blocs (here B)				
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_B }
 					province_event = { id = L3TRADE.8 days = 10}
 				}
 				
 				add_province_modifier = { name = future_route duration = -1 }
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_B }
+					save_event_target_as = origin_trade_province
+				}
+				
+				#mark as checked_bloc invalide neighbors
+				any_neighbor_province = {
+					limit = {
+						#not has a bloc already
+						NOT = {
+							has_province_flag = bloc_A
+							has_province_flag = bloc_B
+							has_province_flag = bloc_C
+							has_province_flag = bloc_D
+							has_province_flag = bloc_E
+							has_province_flag = invalidate_trade
+						}
+						#is not invalidated already
+						NOT = { 
+							has_province_flag = checked_blocC
+						}
+						#fits same conditions
+						any_neighbor_province = {
+							has_province_flag = bloc_B
+						}
+					}
+					set_province_flag = checked_blocC
+					set_province_flag = invalidate_trade
+					province_event = { id = L3TRADE.21 }
+				}
 			}
+			province_event = { id = L3TRADE.20 }
 		}
 	}
 		
 	option = {
-		name = "L3TRADESTEPOK"
-		trigger = { has_province_flag = bloc_C }
+		name = "OK"
 	}
 	
-	option = {
-		name = "L3TRADESTEPKO"
-		trigger = { 
-			NOT = {
-				has_province_flag = bloc_A
-				has_province_flag = bloc_B
-				has_province_flag = bloc_C
-				has_province_flag = bloc_D
-				has_province_flag = bloc_E
-			}
-		}
-	}
-
-	option = {
-		name = "L3TRADESTEPALREADY"
-		trigger = { 
-			OR = {
-				has_province_flag = bloc_A
-				has_province_flag = bloc_B
-				has_province_flag = bloc_D
-				has_province_flag = bloc_E
-			}
-		}
-	}
+	#option = {
+	#	name = "L3TRADESTEPOK"
+	#	#merchants start using the province
+	#	trigger = { has_province_flag = bloc_B }
+	#}
+	
+	#option = {
+	#	name = "L3TRADESTEPKO"
+	#	trigger = { 
+	#		NOT = {
+	#			#has_province_flag = bloc_A
+	#			has_province_flag = bloc_B
+	#			#has_province_flag = bloc_C
+	#			#has_province_flag = bloc_D
+	#			#has_province_flag = bloc_E
+	#		}
+	#	}
+	#}
+	##now checked before, limits spam
+	#option = {
+	#	name = "L3TRADESTEPALREADY"
+	#	trigger = { 
+	#		OR = {
+	#			has_province_flag = bloc_A
+	#			has_province_flag = bloc_C
+	#			has_province_flag = bloc_D
+	#			has_province_flag = bloc_E
+	#		}
+	#	}
+	#}
 }
 
 # Give the step D of the trade routes
-# COPY-PASTE with adaptation of L3TRADE.1
 province_event = {
     id = L3TRADE.3
-	desc = "DESCSTEP"
+	desc = "DESCSTEP_D"
 	picture = GFX_evt_market
 	
 	trigger = {
+		#must not has been checked already
 		NOT = { has_province_flag = checked_blocD }
+		#NOT = { has_province_flag = invalidate_trade }
+		# Check for the bloc B if the province is neighbor to a province with the previous bloc, here A
 		any_neighbor_province = {
 			has_province_flag = bloc_C
-			OR = {
-				has_province_modifier = route_terrestre
-				has_province_modifier = route_fluviale
-			}
+		}
+		#not already has any block
+		NOT = {
+			has_province_flag = bloc_A
+			has_province_flag = bloc_B
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
 		}
 	}
 		
@@ -480,24 +583,30 @@ province_event = {
 
 	immediate = {
 		set_province_flag = checked_blocD
+		#if valid, bloc is set, if not, nothing happens
 		if = {
 			limit = {
 				NOT = {
-					has_province_flag = bloc_A
-					has_province_flag = bloc_B
-					has_province_flag = bloc_C
-					has_province_flag = bloc_D
-					has_province_flag = bloc_E
+					# To not give step B to the province which has already a bloc
+				##check by trigger already
+					#has_province_flag = bloc_A
+					#has_province_flag = bloc_B
+					#has_province_flag = bloc_C
+					#has_province_flag = bloc_D
+					#has_province_flag = bloc_E
+					
+					#can't connect to any block but E from another road
 					any_neighbor_province = { has_province_flag = bloc_A }
 					any_neighbor_province = { has_province_flag = bloc_B }
 					any_neighbor_province = { has_province_flag = bloc_D }
-					#any_neighbor_province = { has_province_flag = bloc_E }###this should permit to create and a D province to an existing E province
+					#any_neighbor_province = { has_province_flag = bloc_E }###this should permit to create a D province adjacent to an existing E province
 				}
 			}
 			hidden_tooltip = {			
 				set_province_flag = bloc_D
 				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
 				
+				# The route size is the max route size of its C neighboors + 1
 				set_variable = { which = "route_size" value = 1 }
 				set_variable = { which = "tmp" value = 1 }
 				any_neighbor_province = {
@@ -505,69 +614,114 @@ province_event = {
 					ROOT = { subtract_variable = { which = "route_size" which = PREV} }
 					if = {
 						limit = { NOT = { ROOT = { check_variable = { which = "route_size" value = 0 } } } }
+						# We have found a neighboor with a route_size value more or equal, so we update the value
 						ROOT = { set_variable = { which = "route_size" which = PREV} }
 						ROOT = { change_variable = { which = "route_size" value = 1} }
 						ROOT = { set_variable = { which = "tmp" which = "route_size"} }
 					}
+					# Reset the C route_size for the stored value
 					ROOT = { set_variable = { which = "route_size" which = "tmp"} }
 				}
-				
+
+				# Update the route size in previous blocs (here C)				
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_C }
 					province_event = { id = L3TRADE.8 days = 10}
 				}
 				
 				add_province_modifier = { name = future_route duration = -1 }
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_C }
+					save_event_target_as = origin_trade_province
+				}
+
+				#mark as checked_bloc invalide neighbors
+				any_neighbor_province = {
+					limit = {
+						#not has a bloc already
+						NOT = {
+							has_province_flag = bloc_A
+							has_province_flag = bloc_B
+							has_province_flag = bloc_C
+							has_province_flag = bloc_D
+							has_province_flag = bloc_E
+							#has_province_flag = invalidate_trade
+						}
+						#is not invalidated already
+						NOT = { 
+							has_province_flag = checked_blocD
+						}
+						#fits same conditions
+						any_neighbor_province = {
+							has_province_flag = bloc_C
+						}
+					}
+					set_province_flag = checked_blocD
+					#set_province_flag = invalidate_trade
+					province_event = { id = L3TRADE.21 }
+				}
 			}
+			province_event = { id = L3TRADE.20 }
 		}
 	}
 			
 	option = {
-		name = "L3TRADESTEPOK"
-		trigger = { has_province_flag = bloc_D }
+		name = "OK"
 	}
 	
-	option = {
-		name = "L3TRADESTEPKO"
-		trigger = { 
-			NOT = {
-				has_province_flag = bloc_A
-				has_province_flag = bloc_B
-				has_province_flag = bloc_C
-				has_province_flag = bloc_D
-				has_province_flag = bloc_E
-			}
-		}
-	}
-
-	option = {
-		name = "L3TRADESTEPALREADY"
-		trigger = { 
-			OR = {
-				has_province_flag = bloc_A
-				has_province_flag = bloc_B
-				has_province_flag = bloc_C
-				has_province_flag = bloc_E
-			}
-		}
-	}
+	#option = {
+	#	name = "L3TRADESTEPOK"
+	#	#merchants start using the province
+	#	trigger = { has_province_flag = bloc_B }
+	#}
+	
+	#option = {
+	#	name = "L3TRADESTEPKO"
+	#	trigger = { 
+	#		NOT = {
+	#			#has_province_flag = bloc_A
+	#			has_province_flag = bloc_B
+	#			#has_province_flag = bloc_C
+	#			#has_province_flag = bloc_D
+	#			#has_province_flag = bloc_E
+	#		}
+	#	}
+	#}
+	##now checked before, limits spam
+	#option = {
+	#	name = "L3TRADESTEPALREADY"
+	#	trigger = { 
+	#		OR = {
+	#			has_province_flag = bloc_A
+	#			has_province_flag = bloc_C
+	#			has_province_flag = bloc_D
+	#			has_province_flag = bloc_E
+	#		}
+	#	}
+	#}
 }
 
 # Give the step E of the trade routes
-# COPY-PASTE with adaptation of L3TRADE.1
 province_event = {
     id = L3TRADE.4
-	desc = "DESCSTEP"
+	desc = "DESCSTEP_E"
 	picture = GFX_evt_market
 	
 	trigger = {
+		#must not has been checked already
 		NOT = { has_province_flag = checked_blocE }
+		#NOT = { has_province_flag = invalidate_trade }
+		# Check for the bloc B if the province is neighbor to a province with the previous bloc, here A
 		any_neighbor_province = {
 			has_province_flag = bloc_D
-			OR = {
-				has_province_modifier = route_terrestre
-				has_province_modifier = route_fluviale
-			}
+		}
+		#not already has any block
+		NOT = {
+			has_province_flag = bloc_A
+			has_province_flag = bloc_B
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
 		}
 	}
 		
@@ -658,14 +812,19 @@ province_event = {
 
 	immediate = {
 		set_province_flag = checked_blocE
+				#if valid, block is set, if not, nothing happens, but owner is notified
 		if = {
 			limit = {
 				NOT = {
-					has_province_flag = bloc_A
-					has_province_flag = bloc_B
-					has_province_flag = bloc_C
-					has_province_flag = bloc_D
-					has_province_flag = bloc_E
+					# To not give step B to the province which has already a bloc
+				##check by trigger already
+					#has_province_flag = bloc_A
+					#has_province_flag = bloc_B
+					#has_province_flag = bloc_C
+					#has_province_flag = bloc_D
+					#has_province_flag = bloc_E
+					
+					#can't connect to any block
 					any_neighbor_province = { has_province_flag = bloc_A }
 					any_neighbor_province = { has_province_flag = bloc_B }
 					any_neighbor_province = { has_province_flag = bloc_C }
@@ -675,46 +834,83 @@ province_event = {
 			hidden_tooltip = {	
 				set_province_flag = bloc_E		
 				add_province_modifier = { name = prosperity_modifier_1 duration = -1 hidden=yes}
-				
+
+				# Update the route size in previous blocs (here D)				
 				any_neighbor_province = {
 					limit = { has_province_flag = bloc_D }
 					province_event = { id = L3TRADE.8 days = 10}
 				}
 				
 				add_province_modifier = { name = future_route duration = -1 }
+				any_neighbor_province = {
+					limit = { has_province_flag = bloc_D }
+					save_event_target_as = origin_trade_province
+				}
+
+				#mark as checked_bloc invalide neighbors
+				any_neighbor_province = {
+					limit = {
+						#not has a bloc already
+						NOT = {
+							has_province_flag = bloc_A
+							has_province_flag = bloc_B
+							has_province_flag = bloc_C
+							has_province_flag = bloc_D
+							has_province_flag = bloc_E
+							#has_province_flag = invalidate_trade
+						}
+						#is not invalidated already
+						NOT = { 
+							has_province_flag = checked_blocE
+						}
+						#fits same conditions
+						any_neighbor_province = {
+							has_province_flag = bloc_D
+						}
+					}
+					set_province_flag = checked_blocE
+					#set_province_flag = invalidate_trade
+					province_event = { id = L3TRADE.21 }
+				}
 			}
+			province_event = { id = L3TRADE.20 }
 		}
 	}
 		
 	option = {
-		name = "L3TRADESTEPOK"
-		trigger = { has_province_flag = bloc_E }
+		name = "OK"
 	}
 	
-	option = {
-		name = "L3TRADESTEPKO"
-		trigger = { 
-			NOT = {
-				has_province_flag = bloc_A
-				has_province_flag = bloc_B
-				has_province_flag = bloc_C
-				has_province_flag = bloc_D
-				has_province_flag = bloc_E
-			}
-		}
-	}
-
-	option = {
-		name = "L3TRADESTEPALREADY"
-		trigger = { 
-			OR = {
-				has_province_flag = bloc_A
-				has_province_flag = bloc_B
-				has_province_flag = bloc_C
-				has_province_flag = bloc_D
-			}
-		}
-	}
+	#option = {
+	#	name = "L3TRADESTEPOK"
+	#	#merchants start using the province
+	#	trigger = { has_province_flag = bloc_B }
+	#}
+	
+	#option = {
+	#	name = "L3TRADESTEPKO"
+	#	trigger = { 
+	#		NOT = {
+	#			#has_province_flag = bloc_A
+	#			has_province_flag = bloc_B
+	#			#has_province_flag = bloc_C
+	#			#has_province_flag = bloc_D
+	#			#has_province_flag = bloc_E
+	#		}
+	#	}
+	#}
+	##now checked before, limits spam
+	#option = {
+	#	name = "L3TRADESTEPALREADY"
+	#	trigger = { 
+	#		OR = {
+	#			has_province_flag = bloc_A
+	#			has_province_flag = bloc_C
+	#			has_province_flag = bloc_D
+	#			has_province_flag = bloc_E
+	#		}
+	#	}
+	#}
 }
 
 # Give the route modifier
@@ -845,21 +1041,19 @@ province_event = {
 				}
 			}
 			
-			# If the player does not receive this event ...
-			if = {
-				limit = { owner = { ai = yes } }
-				# ... but is a neighbour. Avert the player that the route building can be build on its demesne
+			# inform the player does not receive this event...
 				any_neighbor_province = {
-					any_province_lord = {
-						limit = {
-							ai = no
-							NOT = { has_global_flag = avert_player }
-						}
-						set_global_flag = avert_player
-						character_event = { id = L3TRADE.9 days = 10}
+					owner = { ai = no }
+					NOT = {
+						has_province_flag = bloc_A
+						has_province_flag = bloc_B
+						has_province_flag = bloc_C
+						has_province_flag = bloc_D
+						has_province_flag = bloc_E
+						has_province_flag = invalidate_trade
 					}
-				}
-				clr_global_flag = avert_player
+				save_event_target_as = province_pour_desc
+				province_event = { id = L3TRADE.9 days = 10 }
 			}
 		}
 	}
@@ -1069,7 +1263,7 @@ character_event = {
 	picture = GFX_evt_market
 
 	is_triggered_only = yes
-	hide_from = yes
+	#hide_from = yes
 	
 	option = {
 		name = "L3TRADE.9A"
@@ -1084,9 +1278,39 @@ narrative_event = {
 	picture = GFX_evt_market
 
 	is_triggered_only = yes	
-	hide_from = yes
+	#hide_from = yes
 	
 	option = {
 		name = "L3TRADE.10A"
+		custom_tooltip = { text = TRADE_L3T.9 }
+	}
+}
+#Inform the player that the province WILL host a road
+province_event = {
+    id = L3TRADE.20
+	desc = "DESCSTEP"
+	picture = GFX_evt_market
+	is_triggered_only = yes	
+	#hide_from = yes
+
+	option = {
+		name = "L3TRADESTEPOK"
+		event_target:province_pour_desc = { clear_event_target = province_pour_desc }
+		event_target:origin_trade_province = { clear_event_target = province_pour_desc }
+	}
+}
+#Inform the player that the province WON'T host a road
+province_event = {
+    id = L3TRADE.21
+	desc = "L3TRADESTEPKO"
+	picture = GFX_evt_market
+
+	is_triggered_only = yes	
+	#hide_from = yes
+	
+	option = {
+		name = "KO"
+		event_target:province_pour_desc = { clear_event_target = province_pour_desc }
+		event_target:origin_trade_province = { clear_event_target = province_pour_desc }
 	}
 }
