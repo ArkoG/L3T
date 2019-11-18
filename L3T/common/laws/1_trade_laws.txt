@@ -14,19 +14,10 @@ laws = {
 		default = yes
 
 		potential = {
-			OR = {
-				holder_scope = { 
-					OR = {
-						is_nomadic = no 
-						is_tribal = no
-					}
-				}
-				holder_scope = { is_republic = yes }
-				AND = {
-					holder_scope = { 
-						is_feudal = yes
-						any_demesne_title = { holding_type = city }
-					}
+			holder_scope = {
+				NOT = {
+					is_nomadic = yes
+					is_tribal = yes
 				}
 			}
 		}
@@ -34,17 +25,15 @@ laws = {
 		allow = {
 			OR = {
 				holder_scope = { is_republic = yes }
-				AND = {
-					holder_scope = { 
-						is_feudal = yes
-						any_demesne_title = { holding_type = city }
-					}
+				holder_scope = { 
+					is_feudal = yes
+					any_demesne_title = { holding_type = city }
 				}
 			}
 		}
 
 		revoke_allowed = { always = no }			
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 0.005 } #test totoro adds some subtility here
 		ai_will_revoke = { factor = 0 }
 		
 		effect = {
@@ -68,19 +57,10 @@ laws = {
 		group = law_group_trade_octroi
 		
 		potential = {
-			OR = {
-				holder_scope = { 
-					OR = {
-						is_nomadic = no 
-						is_tribal = no
-					}
-				}
-				holder_scope = { is_republic = yes }
-				AND = {
-					holder_scope = { 
-						is_feudal = yes
-						any_demesne_title = { holding_type = city }
-					}
+			holder_scope = {
+				NOT = {
+					is_nomadic = yes
+					is_tribal = yes
 				}
 			}
 		}
@@ -88,18 +68,16 @@ laws = {
 		allow = {
 			OR = {
 				holder_scope = { is_republic = yes }
-				AND = {
-					holder_scope = { 
-						is_feudal = yes
-						any_demesne_title = { holding_type = city }
-					}
+				holder_scope = { 
+					is_feudal = yes
+					any_demesne_title = { holding_type = city }
 				}
 			}
 			holder_scope = { wealth = 50 }
 		}
 
 		revoke_allowed = { always = no }			
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 0.01 } #test totoro adds some subtility here
 		ai_will_revoke = { factor = 0 }
 		
 		effect = {
