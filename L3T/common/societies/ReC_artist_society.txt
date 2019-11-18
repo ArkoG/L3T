@@ -18,6 +18,26 @@ artist_guild = { #society code name
 	indestructible = yes #TODO  on_society_failed_to_find_new_leader on action #if it can be destroyed and if not will add members up to the start-up limit
 	
 	can_join_society = { #add restriction for joining
+		custom_tooltip = { 
+			text = artist_guild_info
+			OR = {
+				trait = apprenti_sculpteur
+				trait = compagnon_sculpteur
+				trait = maitre_sculpteur
+				trait = apprenti_fresquiste
+				trait = compagnon_fresquiste
+				trait = maitre_fresquiste
+				trait = apprenti_verrier
+				trait = compagnon_verrier
+				trait = maitre_verrier
+				hidden_tooltip = {
+					AND = {
+						ai = no
+						has_global_flag = debug_L3T
+					}
+				}
+			}			
+		}
 		hidden_trigger = {
 			NAND = { #AI cannot join if the society first rank is full
 				ai = yes
@@ -27,23 +47,6 @@ artist_guild = { #society code name
 				}
 			}
 		}
-		OR = {
-			trait = apprenti_sculpteur
-			trait = compagnon_sculpteur
-			trait = maitre_sculpteur
-			trait = apprenti_fresquiste
-			trait = compagnon_fresquiste
-			trait = maitre_fresquiste
-			trait = apprenti_verrier
-			trait = compagnon_verrier
-			trait = maitre_verrier
-			hidden_tooltip = {
-				AND = {
-					ai = no
-					has_global_flag = debug_L3T
-				}
-			}
-		}		
 	}
 
 	show_society = { #society will appear in the list if these are met
