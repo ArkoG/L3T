@@ -475,7 +475,9 @@ narrative_event = {
 					}
 					
 					add_province_modifier = { name = route_size1 duration = -1 }
-					set_variable = { which = "route_size" value = 1 }
+					hidden_tooltip ={
+						set_variable = { which = "route_size" value = 1 }
+					}
 					if = {
 						limit = { has_province_modifier = province_fleuve }
 						add_province_modifier = { name = route_fluviale duration = -1 hidden = yes }
@@ -488,8 +490,10 @@ narrative_event = {
 									holding_type = city
 								}
 							}
-							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
-							change_variable = { which = "developpement_road" value = 50 }
+							hidden_tooltip ={
+								change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
+								change_variable = { which = "developpement_road" value = 50 }
+							}
 						}
 					}
 					if = {
@@ -503,8 +507,10 @@ narrative_event = {
 									holding_type = city
 								}
 							}
-							change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
-							change_variable = { which = "developpement_spec" value = 50 }
+							hidden_tooltip ={
+								change_variable = { which = "developpement" value = 50 } # 10 pour la route + 30 pour le noeud + 10 pour le route size 1
+								change_variable = { which = "developpement_spec" value = 50 }
+							}
 						}
 					}
 					# Avert the player that a route is on its demesne
