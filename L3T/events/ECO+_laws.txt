@@ -488,4 +488,76 @@ letter_event = { #failure
 		event_target:holding_pour_desc = { clear_event_target = holding_pour_desc }
 	}
 }
+
+
+
+#Mayor is asked to enact octroi law (baronial mayors only)
+
+#+ ALT VERSION as a proper demand
+character_event = {
+    id = ECO.225
+	hide_window = yes
+
+	capable_only = yes
+	prisoner = no
+	only_rulers = yes
+	ai = yes
 	
+	#is_triggered_only = yes
+	
+	###to trigger on spec
+
+	trigger = {
+		any_demesne_title = {
+			holding_type = city
+			OR = {
+				has_building = VOC_INDUSTRIELLE
+				has_building = VOC_COMMERCIALE
+			}
+		}
+
+		tier = baron
+		is_feudal = no
+		is_nomadic = no
+		is_tribal = no
+		is_republic = yes
+		is_merchant_republic = no
+		is_patrician = no
+	#
+	#
+	#
+	###SOME LOGICAL FLAGS HERE
+	#
+	#
+	#
+	
+	}
+	###MTTH test value
+	mean_time_to_happen = {
+		months = 1
+	
+	#
+	#
+	#
+	###SOME LOGICAL FLAGS HERE
+	#
+	#
+	#
+		}
+
+	immediate = {
+		random_list = {
+			25 = { 
+				primary_title = { add_law = law_trade_octroi_1 }
+				any_demesne_title = {
+					limit = {  holding_type = city }
+					add_holding_modifier = { modifier = octroi_holding duration = -1 }
+					set_title_flag = octroi_law_duration
+					location = { add_province_modifier = { modifier = octroi_province duration = -1 }}
+				}
+			}
+			75 = {
+			}
+		}
+	}
+}
