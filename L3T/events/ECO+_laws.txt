@@ -104,6 +104,24 @@ character_event = {
 					trait = content
 				}
 			}		
+			modifier = { 
+				factor = 1.5
+				FROM = { 
+					had_title_flag = {
+						flag = octroi_law_duration
+						days = 7300 #10 years
+					}
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				FROM = { 
+					had_title_flag = {
+						flag = octroi_law_duration
+						days = 14600 #20 years
+					}
+				}
+			}
 		}
 		if = {
 			limit = { NOT = { trait = just }}
@@ -159,6 +177,17 @@ character_event = {
 			modifier = { 
 				factor = 1.2
 				trait = studborn
+			}
+			modifier = { 
+				factor = 1.5
+				FROM = {
+					NOT = {
+						had_title_flag = {
+							flag = octroi_law_duration
+							days = 1825 #<5 years
+						}
+					}
+				}
 			}
 		}
 		if = {
@@ -232,6 +261,7 @@ character_event = {
 	only_rulers = yes
 
 	trigger = {
+		has_law = law_trade_octroi_1
 		any_demesne_title = {
 			limit = { holding_type = city }
 		}
@@ -252,6 +282,18 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 2000
+		#won't happen if the law is to fresh
+		modifier = { 
+			factor = 2.0
+			FROM = {
+				NOT = {
+					had_title_flag = {
+						flag = octroi_law_duration
+						days = 7300 #<10 years
+					}
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			NOT = { wealth = -10 }
@@ -508,6 +550,7 @@ character_event = {
 	###to trigger on spec
 
 	trigger = {
+		NOT = { has_global_flag = octroi_law_distribution }
 		any_demesne_title = {
 			holding_type = city
 			OR = {
@@ -515,7 +558,8 @@ character_event = {
 				has_building = VOC_COMMERCIALE
 			}
 		}
-
+		has_law = law_trade_octroi_0
+		
 		tier = baron
 		is_feudal = no
 		is_nomadic = no
@@ -532,9 +576,9 @@ character_event = {
 	#
 	
 	}
-	###MTTH test value
+	###MTTH test value totoro
 	mean_time_to_happen = {
-		months = 1
+		years = 10
 	
 	#
 	#
@@ -546,8 +590,9 @@ character_event = {
 		}
 
 	immediate = {
+		set_global_flag = octroi_law_distribution
 		random_list = {
-			25 = { 
+			20 = { 
 				primary_title = { add_law = law_trade_octroi_1 }
 				any_demesne_title = {
 					limit = {  holding_type = city }
@@ -556,7 +601,7 @@ character_event = {
 					location = { add_province_modifier = { modifier = octroi_province duration = -1 }}
 				}
 			}
-			75 = {
+			80 = {
 			}
 		}
 	}
