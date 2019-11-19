@@ -952,6 +952,7 @@ narrative_event = {
 	prisoner = no
 		
 	trigger = {	
+		religion_group = christian
 		OR = {
 			had_global_flag = { flag = SWMH days = 360 }			
 			had_global_flag = { flag = running_VANILLA days = 360 }
