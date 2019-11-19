@@ -23,11 +23,32 @@ laws = {
 		}
 
 		allow = {
-			OR = {
-				holder_scope = { is_republic = yes }
-				holder_scope = { 
+			holder_scope = {
+				OR = {
+					is_republic = yes
 					is_feudal = yes
-					any_demesne_title = { holding_type = city }
+				}
+				custom_tooltip = { 
+					text = octroi_needs_a_city
+					hidden_tooltip = {
+						any_demesne_title = {
+							holding_type = city
+						}
+					}
+				}
+				custom_tooltip = { 
+					text = octroi_needs_specialized_city
+					hidden_tooltip = {
+						NOT = {
+							any_demesne_title = {
+								holding_type = city
+								NOT = {
+									has_building = VOC_INDUSTRIELLE
+									has_building = VOC_COMMERCIALE
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -66,14 +87,35 @@ laws = {
 		}
 
 		allow = {
-			OR = {
-				holder_scope = { is_republic = yes }
-				holder_scope = { 
+			holder_scope = {
+				holder_scope = { wealth = 50 }
+				OR = {
+					is_republic = yes
 					is_feudal = yes
-					any_demesne_title = { holding_type = city }
+				}
+				custom_tooltip = { 
+					text = octroi_needs_a_city
+					hidden_tooltip = {
+						any_demesne_title = {
+							holding_type = city
+						}
+					}
+				}
+				custom_tooltip = { 
+					text = octroi_needs_specialized_city
+					hidden_tooltip = {
+						NOT = {
+							any_demesne_title = {
+								holding_type = city
+								NOT = {
+									has_building = VOC_INDUSTRIELLE
+									has_building = VOC_COMMERCIALE
+								}
+							}
+						}
+					}
 				}
 			}
-			holder_scope = { wealth = 50 }
 		}
 
 		revoke_allowed = { always = no }			
