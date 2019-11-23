@@ -233,7 +233,7 @@ character_event = {
 character_event = {
     id = ECO.222
 	picture = GFX_evt_L3T_city
-	border = GFX_event_letter_frame_economy
+	border = GFX_event_normal_frame_economy
 
 	desc = {
 		trigger = { has_character_flag = asker_is_craftman }
@@ -372,6 +372,19 @@ character_event = {
 			remove_holding_modifier = octroi_holding
 			clr_title_flag = octroi_law_duration
 			location = { remove_province_modifier = octroi_province }
+		}
+	   ###totoro debug
+		if = { 
+			limit = { 
+				NOT = { check_variable = { which = "global_octroi_withdrawn_by_EVT" value = 0 }}
+				set_variable = { which = "global_octroi_withdrawn_by_EVT" value = 1 }
+			}
+		}
+		if = { 
+			limit = {
+				check_variable = { which = "global_octroi_withdrawn_by_EVT" value = 0 }
+				change_variable = { which = "global_octroi_withdrawn_by_EVT" value = 1 }
+			}
 		}
 	}
 
@@ -540,25 +553,25 @@ character_event = {
     id = ECO.225
 	hide_window = yes
 
-	capable_only = yes
 	prisoner = no
 	only_rulers = yes
 	ai = yes
 	
-	#is_triggered_only = yes
+	is_triggered_only = yes
 	
 	###to trigger on spec
 
 	trigger = {
-		NOT = { has_global_flag = octroi_law_distribution }
+		#NOT = { has_global_flag = octroi_law_distribution }
 		any_demesne_title = {
 			holding_type = city
-			OR = {
-				has_building = VOC_INDUSTRIELLE
-				has_building = VOC_COMMERCIALE
-			}
+			#totoro test
+			#OR = {
+			#	has_building = VOC_INDUSTRIELLE
+			#	has_building = VOC_COMMERCIALE
+			#}
 		}
-		has_law = law_trade_octroi_0
+		NOT = { has_law = law_trade_octroi_1 }
 		
 		tier = baron
 		is_feudal = no
@@ -590,7 +603,7 @@ character_event = {
 		}
 
 	immediate = {
-		set_global_flag = octroi_law_distribution
+		set_global_flag = octroi_law_distribution #totoro
 		random_list = {
 			20 = { 
 				primary_title = { add_law = law_trade_octroi_1 }
@@ -603,6 +616,19 @@ character_event = {
 			}
 			80 = {
 			}
+		}
+	   ###totoro debug
+		if = { 
+			limit = { 
+				NOT = { check_variable = { which = "global_octroi_given_by_EVT" value = 0 }}
+				set_variable = { which = "global_octroi_given_by_EVT" value = 1 }
+			}
+		}
+		if = { 
+			limit = {
+				check_variable = { which = "global_octroi_given_by_EVT" value = 0 }
+				change_variable = { which = "global_octroi_given_by_EVT" value = 1 }
+			} 
 		}
 	}
 }
