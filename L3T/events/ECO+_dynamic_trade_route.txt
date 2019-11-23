@@ -9,6 +9,7 @@ province_event = {
 	trigger = {
 		#must not has been checked already
 		NOT = { has_province_flag = checked_blocB } #Flag to avoid big CPU computation of a trigger for nothing (see limit of the option)
+		NOT = { has_province_flag = invalidate_B }
 		NOT = { has_province_flag = invalidate_trade }
 		# Check for the bloc B if the province is neighbor to a province with the previous bloc, here A
 		any_neighbor_province = {
@@ -173,13 +174,41 @@ province_event = {
 				#mark as checked_bloc invalide neighbors
 				any_neighbor_province = {
 					limit = {
-						#not has a bloc already
+						#not has a bloc already nor been checked negatively
 						NOT = {
 							has_province_flag = bloc_A
 							has_province_flag = bloc_B
 							has_province_flag = bloc_C
 							has_province_flag = bloc_D
 							has_province_flag = bloc_E
+							has_province_flag = invalidate_B
+							has_province_flag = invalidate_trade
+						}
+						#is not invalidated already
+						NOT = { 
+							has_province_flag = checked_blocB
+						}
+						#fits same conditions, can't receive any block
+						any_neighbor_province = {
+							has_province_flag = bloc_A
+						}
+					}
+					set_province_flag = checked_blocB
+					#set_province_flag = invalidate_B #that specific block
+					set_province_flag = invalidate_trade #only C can connect to B
+					province_event = { id = L3TRADE.21 }
+				}
+				#mark as checked_bloc invalide neighbors
+				any_neighbor_province = {
+					limit = {
+						#not has a bloc already nor been checked negatively
+						NOT = {
+							has_province_flag = bloc_A
+							has_province_flag = bloc_B
+							has_province_flag = bloc_C
+							has_province_flag = bloc_D
+							has_province_flag = bloc_E
+							has_province_flag = invalidate_B
 							has_province_flag = invalidate_trade
 						}
 						#is not invalidated already
@@ -187,12 +216,13 @@ province_event = {
 							has_province_flag = checked_blocB
 						}
 						#fits same conditions
-						any_neighbor_province = {
-							has_province_flag = bloc_A
-						}
+						#any_neighbor_province = {
+						#	has_province_flag = bloc_A
+						#}
 					}
 					set_province_flag = checked_blocB
-					set_province_flag = invalidate_trade
+					set_province_flag = invalidate_B #that specific block, can still receive another block but no B
+					#set_province_flag = invalidate_trade #only C can connect to B
 					province_event = { id = L3TRADE.21 }
 				}
 			}
@@ -245,6 +275,7 @@ province_event = {
 	trigger = {
 		#must not has been checked already
 		NOT = { has_province_flag = checked_blocC } 
+		NOT = { has_province_flag = invalidate_C }
 		NOT = { has_province_flag = invalidate_trade }
 		#Check for the bloc C if the province is neighbor to a province with the previous bloc, here B
 			any_neighbor_province = {
@@ -406,16 +437,17 @@ province_event = {
 					save_event_target_as = origin_trade_province
 				}
 				
-				#mark as checked_bloc invalide neighbors
+				#mark as checked_bloc invalide neighbors for C if adj to B either
 				any_neighbor_province = {
 					limit = {
-						#not has a bloc already
+						#not has a bloc already nor been checked negatively
 						NOT = {
 							has_province_flag = bloc_A
 							has_province_flag = bloc_B
 							has_province_flag = bloc_C
 							has_province_flag = bloc_D
 							has_province_flag = bloc_E
+							has_province_flag = invalidate_C
 							has_province_flag = invalidate_trade
 						}
 						#is not invalidated already
@@ -428,7 +460,35 @@ province_event = {
 						}
 					}
 					set_province_flag = checked_blocC
-					set_province_flag = invalidate_trade
+					#set_province_flag = invalidate_C
+					set_province_flag = invalidate_trade #only D can connect to C as a node
+					province_event = { id = L3TRADE.21 }
+				}
+				#mark as checked_bloc invalide neighbors
+				any_neighbor_province = {
+					limit = {
+						#not has a bloc already nor been checked negatively
+						NOT = {
+							has_province_flag = bloc_A
+							has_province_flag = bloc_B
+							has_province_flag = bloc_C
+							has_province_flag = bloc_D
+							has_province_flag = bloc_E
+							has_province_flag = invalidate_C
+							has_province_flag = invalidate_trade
+						}
+						#is not invalidated already
+						NOT = { 
+							has_province_flag = checked_blocC
+						}
+						#fits same conditions
+						#any_neighbor_province = {
+						#	has_province_flag = bloc_B
+						#}
+					}
+					set_province_flag = checked_blocC
+					set_province_flag = invalidate_C
+					#set_province_flag = invalidate_trade #only D can connect to C as a node
 					province_event = { id = L3TRADE.21 }
 				}
 			}
@@ -481,6 +541,7 @@ province_event = {
 	trigger = {
 		#must not has been checked already
 		NOT = { has_province_flag = checked_blocD }
+		NOT = { has_province_flag = invalidate_D }
 		#NOT = { has_province_flag = invalidate_trade }
 		# Check for the bloc B if the province is neighbor to a province with the previous bloc, here A
 		any_neighbor_province = {
@@ -638,13 +699,14 @@ province_event = {
 				#mark as checked_bloc invalide neighbors
 				any_neighbor_province = {
 					limit = {
-						#not has a bloc already
+						#not has a bloc already nor been checked negatively
 						NOT = {
 							has_province_flag = bloc_A
 							has_province_flag = bloc_B
 							has_province_flag = bloc_C
 							has_province_flag = bloc_D
 							has_province_flag = bloc_E
+							has_province_flag = invalidate_D
 							#has_province_flag = invalidate_trade
 						}
 						#is not invalidated already
@@ -657,6 +719,7 @@ province_event = {
 						}
 					}
 					set_province_flag = checked_blocD
+					set_province_flag = invalidate_D
 					#set_province_flag = invalidate_trade
 					province_event = { id = L3TRADE.21 }
 				}
@@ -710,7 +773,8 @@ province_event = {
 	trigger = {
 		#must not has been checked already
 		NOT = { has_province_flag = checked_blocE }
-		#NOT = { has_province_flag = invalidate_trade }
+		NOT = { has_province_flag = invalidate_E }
+		NOT = { has_province_flag = invalidate_trade }
 		# Check for the bloc B if the province is neighbor to a province with the previous bloc, here A
 		any_neighbor_province = {
 			has_province_flag = bloc_D
@@ -850,13 +914,14 @@ province_event = {
 				#mark as checked_bloc invalide neighbors
 				any_neighbor_province = {
 					limit = {
-						#not has a bloc already
+						#not has a bloc already nor been checked negatively
 						NOT = {
 							has_province_flag = bloc_A
 							has_province_flag = bloc_B
 							has_province_flag = bloc_C
 							has_province_flag = bloc_D
 							has_province_flag = bloc_E
+							has_province_flag = invalidate_E
 							#has_province_flag = invalidate_trade
 						}
 						#is not invalidated already
@@ -864,11 +929,12 @@ province_event = {
 							has_province_flag = checked_blocE
 						}
 						#fits same conditions
-						any_neighbor_province = {
-							has_province_flag = bloc_D
-						}
+						#any_neighbor_province = {
+						#	has_province_flag = bloc_D
+						#}
 					}
 					set_province_flag = checked_blocE
+					set_province_flag = invalidate_E
 					#set_province_flag = invalidate_trade
 					province_event = { id = L3TRADE.21 }
 				}
@@ -1041,7 +1107,7 @@ province_event = {
 				}
 			}
 			
-			# inform the player does not receive this event...
+			# if the player does not receive this event...
 				any_neighbor_province = {
 					owner = { ai = no }
 					NOT = {
@@ -1257,13 +1323,13 @@ province_event = {
 }
 
 # Avert the player that the route building can be build on its demesne
-character_event = {
+province_event = {
     id = L3TRADE.9
 	desc = "DESCL3TRADE.9"
 	picture = GFX_evt_market
 
 	is_triggered_only = yes
-	#hide_from = yes
+	hide_from = yes
 	
 	option = {
 		name = "L3TRADE.9A"
@@ -1271,14 +1337,14 @@ character_event = {
 }
 
 # Avert the player that a route is on its demesne
-narrative_event = {
+province_event = {
     id = L3TRADE.10
 	title = NAME.L3TRADE.10
 	desc = "DESCL3TRADE.10"
 	picture = GFX_evt_market
 
 	is_triggered_only = yes	
-	#hide_from = yes
+	hide_from = yes
 	
 	option = {
 		name = "L3TRADE.10A"
@@ -1291,7 +1357,7 @@ province_event = {
 	desc = "DESCSTEP"
 	picture = GFX_evt_market
 	is_triggered_only = yes	
-	#hide_from = yes
+	hide_from = yes
 
 	option = {
 		name = "L3TRADESTEPOK"
@@ -1306,7 +1372,7 @@ province_event = {
 	picture = GFX_evt_market
 
 	is_triggered_only = yes	
-	#hide_from = yes
+	hide_from = yes
 	
 	option = {
 		name = "KO"
