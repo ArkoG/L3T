@@ -8,6 +8,8 @@ on_startup = {
 		#AI money start bonus
 		L3T.12
 		
+		L3T.600 #luck init
+		
 		#city apocalypto
 		#L3T.45
 		
@@ -55,6 +57,11 @@ on_yearly_pulse = {
 		#additional check for Deus vult traits
 		 REC.20
 		 REC.21
+		#luck modifiers giver
+		 L3T.603
+		 #totoro
+		 L3T.601
+		 L3T.602
 	}
 	
 	random_events = {
@@ -70,6 +77,13 @@ on_yearly_pulse = {
 on_decade_pulse = {
 	events = {
 		REC.2101
+	}
+}
+
+# character
+on_birth = {
+	events = {
+		L3T.600 #luck init
 	}
 }
 

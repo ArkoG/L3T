@@ -1,0 +1,152 @@
+###############
+# L3T by Arko #
+###############
+
+
+namespace = L3T
+
+###L3T_play.txt
+# id = L3T.601 #initial luck giver
+# id = L3T.601 #luck trait giver
+# id = L3T.602 #player trait giver
+# id = L3T.603 #luck modifiers giver
+
+##initial luck giver
+#on_birth
+#on_startup
+character_event = {
+    id = L3T.600
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { check_variable = { which = "luck" value = 1 }}
+		NOT = { check_variable = { which = "nb_parties" value = 1 }}
+	}
+
+	immediate = {
+		random_list = {
+			#D6 random chance
+			1 = { set_variable = { which = "luck" value = 1 }}
+			1 = { set_variable = { which = "luck" value = 2 }}
+			1 = { set_variable = { which = "luck" value = 3 }}
+			1 = { set_variable = { which = "luck" value = 4 }}
+			1 = { set_variable = { which = "luck" value = 5 }}
+			1 = { set_variable = { which = "luck" value = 6 }}
+		}
+		set_variable = { which = "nb_parties" value = 1 }
+	}
+}
+
+##luck trait giver
+#by game events, victories
+character_event = {
+    id = L3T.601
+	desc = "DESCL3T.601"
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { which = "luck" value = 10 }
+		NOT = { trait = fortune }
+	}
+	
+	immediate = {
+		character_event = { id = L3T.603 days = 0 } #gives the first modifier
+	}
+
+	option = {
+		name = "L3T.601A"
+		add_trait = fortune
+		if = {
+			limit = { has_nickname = no }
+			random = { 
+				chance = 20
+				give_nickname = nick_the_lucky
+			}
+		}
+	}
+}
+
+##player trait giver
+#by game events, number of games
+character_event = {
+    id = L3T.602
+	desc = "DESCL3T.602"
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { which = "nb_parties" value = 100 }
+		NOT = { lifestyle_traits = 1 }
+		NOT = { trait = joueur }
+	}
+
+	option = {
+		name = "L3T.602A"
+		add_trait = joueur
+	}
+}
+
+##luck modifiers giver
+#on_yearly_pulse
+character_event = {
+    id = L3T.603
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = fortune
+	}
+
+	immediate = {
+		remove_character_modifier = luck_martial
+		remove_character_modifier = luck_diplomacy		
+		remove_character_modifier = luck_stewardship		
+		remove_character_modifier = luck_intrigue
+		remove_character_modifier = luck_learning
+		
+		random_list = {
+			1 = { add_character_modifier = { modifier = luck_martial duration = -1}}
+			1 = { add_character_modifier = { modifier = luck_diplomacy duration = -1}}	
+			1 = { add_character_modifier = { modifier = luck_stewardship duration = -1}}		
+			1 = { add_character_modifier = { modifier = luck_intrigue duration = -1}}
+			1 = { add_character_modifier = { modifier = luck_learning duration = -1}}
+		}
+	}
+}
+
+##victory notification
+character_event = {
+    id = L3T.604
+	desc = "DESCL3T.604"
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+
+	option = {
+		name = "L3T.604A"
+	}
+}
+#defeat notification
+character_event = {
+    id = L3T.605
+	desc = "DESCL3T.605"
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+
+	option = {
+		name = "L3T.605A"
+	}
+}
