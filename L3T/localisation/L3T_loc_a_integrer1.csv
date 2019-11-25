@@ -1,0 +1,32 @@
+#;;x;;;;;;;;;;;;x
+#TRAIT DE JEU
+fortune;Good fortune;Bonne fortune;;;;;;;;;;;;x
+fortune_desc;This character is naturally more lucky. \nLuck translates into a propensity to be healthier and skills that are sometimes higher and changing.;Ce personnage est d'un naturel chanceux. \nLa chance se traduit par un propension à être en meilleure santé et des compétences parfois plus élévées et changeantes.;;;;;;;;;;;;x
+joueur;Gamester;Joueur;;;;;;;;;;;;x
+joueur_desc;This character has a taste for the game in all circumstances.;Ce personnage a le goût du jeu en toutes circonstances. ;;;;;;;;;;;;x
+
+#MODIFIER DE JEU
+luck_martial;Combat luck;Chance au combat;;;;;;;;;;;;x
+luck_martial_desc;Luck infuses courage into this character.;La chance insuffle du courage à ce personnage.;;;;;;;;;;;;x
+luck_diplomacy;Persuasive chance;Chance persuasive;;;;;;;;;;;;x
+luck_diplomacy_desc;An insipred choice of words sometimes helps.;Un heureux choix de mots aide parfois.;;;;;;;;;;;;x
+luck_stewardship;Business luck;Chance en affaires;;;;;;;;;;;;x
+luck_stewardship_desc;What could be more necessary than a bit of luck for business?;Quoi de plus nécessaire qu'un brin de chance pour les affaires ?;;;;;;;;;;;;x
+luck_intrigue;Fox trickery;Chance de goupil;;;;;;;;;;;;x
+luck_intrigue_desc;Like the fox always escaping his pursuer...;Tel le renard échappant toujours à son poursuivant...;;;;;;;;;;;;x
+luck_learning;Scholar luck;Chance des lettrés;;;;;;;;;;;;x
+luck_learning_desc;Breaking the secret of codes and languages has become a new talent for this character.;Percer le secret des codes et langages est devenu un nouveau talent pour ce personnage.;;;;;;;;;;;;x
+
+DESCL3T.601;donne le trait chance;;;;;;;;;;;;;x
+L3T.601A;;;;;;;;;;;;;;x
+DESCL3T.602;donne le trait joueur;;;;;;;;;;;;;x
+L3T.602A;;;;;;;;;;;;;;x
+DESCL3T.604;;;;;;;;;;;;;;x
+L3T.604A;Gagné !;;;;;;;;;;;;;x
+DESCL3T.605;;;;;;;;;;;;;;x
+L3T.605A;Perdu !;;;;;;;;;;;;;x
+
+DEC_play_dices;Play dice with [Root.GetFirstName];Jouer aux dés avec [Root.GetFirstName];;;;;;;;;;;;;x
+DEC_play_dices_desc;Propose [Root.GetFirstName] to play a game of dice with us.;Proposer à [Root.GetFirstName] de jouer une partie de dés avec nous;;;;;;;;;;;;;x
+
+bonne_opinion;Has a §Ggood§! opinion of §Yme§!;A une §Gbonne opinion§! de §Ymoi§!;;;;;;;;;;;;x
