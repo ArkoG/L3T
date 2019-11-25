@@ -1,0 +1,18 @@
+spriteTypes = {
+
+#PLAY traits
+	spriteType = {
+		name = "GFX_trait_fortune"
+		texturefile = "gfx/traits/fortune.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_joueur"
+		texturefile = "gfx/traits/joueur.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}
