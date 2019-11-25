@@ -40,3 +40,168 @@ title_decisions = {
 		}
 	}
 }
+
+# Targetted decisions are possible vs _all_ other characters and shown are in the Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#     FROM is the decision taker
+#     ROOT is the targetted character
+#
+# filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] ('self' MUST be set for decisions targetting only the taker, the other filter types can be set to lessen CPU load)
+# ai_target_filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (which characters for which the AI evaluates the decision.)
+#	court: all characters in the AI's host court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	home_court: all characters in the AI's home court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	vassals: direct vassal rulers of the AI's employer
+#	sub_realm: all characters below the AI's employer
+#	realm: all characters in the same top realm as the AI
+#	dynasty: all members of the same dynasty
+#	rivals: your rivals plus any character you have an opinion modifier with 'crime = yes' set (the same set of characters the 'is_foe' trigger evaluates)
+#	all: all living characters (Avoid if possible. VERY CPU-HEAVY!)
+#	
+targetted_decisions = {
+	DEC_play_dices = {
+		only_playable = yes
+		is_high_prio = yes
+		#filter = court
+		ai_target_filter = court
+		diplomacy_icon = GFX_diplo_play_icon
+		ai_check_interval = 2
+		
+		#the taker
+		from_potential = { 
+			is_playable = yes
+			is_adult = yes
+			#OR = {
+			#	has_focus = focus_carousing
+			#	has_character_modifier = holding_large_feast
+			#}
+			#NOT = {
+			#	has_character_modifier = in_meditation
+			#	has_character_modifier = doing_penance
+			#}
+			NOT = { has_character_modifier = dice_timer } #AI only
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+
+		#the target
+		potential = {
+			is_priest = no
+			NOT = { character = FROM }
+			OR = {
+				at_location = FROM
+				vassal_of = FROM
+			}
+			ai = yes
+		}
+
+		allow = {
+			FROM = { 
+				OR = {
+					has_focus = focus_carousing
+					has_character_modifier = holding_large_feast
+				}
+				NOT = {
+					has_character_modifier = in_meditation
+					has_character_modifier = doing_penance
+				}
+				hidden_tooltip = { NOT = { has_character_modifier = dice_timer }}
+			}
+			ROOT = {
+				is_adult = yes
+				NOT = { is_rival = FROM }
+				OR = {
+					is_friend = FROM
+					custom_tooltip = { 
+						text = bonne_opinion
+						hidden_tooltip = {
+							opinion = { who = FROM value = 50 }
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			#determinate winner
+			
+			##to hide totoro
+			random_list = {
+				50 = { 
+					FROM = {
+						#initiator may improve luck on victory
+						random_list = {
+							10 = { change_variable = { which = "luck" value = 1 }}
+							90 = {}
+						}
+						character_event = { id = L3T.604 } #victory notification
+					}
+				}
+				50 = {
+					ROOT = { 
+						#opponement may improve luck on victory
+						random_list = {
+							10 = { change_variable = { which = "luck" value = 1 }}
+							90 = {}
+						}
+					}
+					FROM = { character_event = { id = L3T.605 }} #defeat notification
+				}
+			}
+
+			#from playing
+			FROM = {
+				#only initiator increases that variable
+				random_list = {
+					50 = { change_variable = { which = "nb_parties" value = 3 }}
+					30 = { change_variable = { which = "nb_parties" value = 5 }}
+					20 = { change_variable = { which = "nb_parties" value = 7 }}
+				}
+				character_event = { id = L3T.601 days = 0 } #luck trait test
+				character_event = { id = L3T.602 days = 0 } #player trait test
+			}
+			ROOT = {
+				add_character_modifier = { modifier = dice_timer duration = 1095 hidden = yes } #3years
+			}
+		}
+			
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 0
+				FROM = { trait = depressed }
+			}
+			modifier = {
+				factor = 1.1
+				FROM = {
+					OR = {
+						trait = lustful
+						trait = greedy
+						trait = trickster
+						trait = decadent
+						trait = mutazilite
+					}
+				}
+			}
+			modifier = {
+				factor = 0.9
+				FROM = { trait = ashari }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = joueur }
+			}
+			modifier = {
+				factor = 1.1
+				FROM = { trait = fortune }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					OR = {
+						has_education_learning_trigger = yes
+						trait = zealous
+					}
+				}
+			}
+		}
+	}
+}
