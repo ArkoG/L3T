@@ -115,6 +115,37 @@ province_event = {
 			factor = 1.2
 				any_province_holding = { has_holding_modifier = octroi_holding }
 		}
+		#job treasurer influence
+		modifier = { 
+			factor = 1.2
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					NOT = { stewardship = 8 }
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.9
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					stewardship = 10
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.8
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					stewardship = 15
+				}
+			}
+		}
 	}
 
 	immediate = {
@@ -381,6 +412,37 @@ province_event = {
 			factor = 1.2
 				any_province_holding = { has_holding_modifier = octroi_holding }
 		}
+		#job treasurer influence
+		modifier = { 
+			factor = 1.2
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					NOT = { stewardship = 8 }
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.9
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					stewardship = 10
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.8
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					stewardship = 15
+				}
+			}
+		}
 	}
 
 	immediate = {
@@ -640,6 +702,37 @@ province_event = {
 			factor = 1.2
 				any_province_holding = { has_holding_modifier = octroi_holding }
 		}
+		#job treasurer influence
+		modifier = { 
+			factor = 1.2
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					NOT = { stewardship = 8 }
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.9
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					stewardship = 10
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.8
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					stewardship = 15
+				}
+			}
+		}
 	}
 
 	immediate = {
@@ -872,6 +965,37 @@ province_event = {
 			factor = 1.2
 				any_province_holding = { has_holding_modifier = octroi_holding }
 		}
+		#job treasurer influence
+		modifier = { 
+			factor = 1.2
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					NOT = { stewardship = 8 }
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.9
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					stewardship = 10
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.8
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					stewardship = 15
+				}
+			}
+		}
 	}
 
 	immediate = {
@@ -1068,6 +1192,37 @@ province_event = {
 		modifier = {
 			factor = 1.2
 				any_province_holding = { has_holding_modifier = octroi_holding }
+		}
+		#job treasurer influence
+		modifier = { 
+			factor = 1.2
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					NOT = { stewardship = 8 }
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.9
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					stewardship = 10
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.8
+			owner = {
+				job_treasurer = {
+					at_location = ROOT
+					has_job_action = action_oversee_construction #Oversee province
+					stewardship = 15
+				}
+			}
 		}
 	}
 	
