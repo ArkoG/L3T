@@ -136,17 +136,26 @@ targetted_decisions = {
 			#hidden_tooltip = {
 				random_list = {
 					50 = { 
+						modifier = { factor = 1.1 FROM = { check_variable = { which = "luck" value = 5 }}}
+						modifier = { factor = 1.1 FROM = { check_variable = { which = "luck" value = 6 }}}
+						modifier = { factor = 1.1 FROM = { trait = fortune }} # AKA "luck" value = 10
 						FROM = {
 							#initiator may improve luck on victory
 							random_list = {
-								10 = { change_variable = { which = "luck" value = 1 }}
+								10 = { 
+									modifier = { factor = 0 FROM = { trait = fortune }}
+									change_variable = { which = "luck" value = 1 }
+								}
 								90 = {}
 							}
 							character_event = { id = L3T.604 } #victory notification
 						}
 					}
 					50 = {
-						ROOT = { 
+						modifier = { factor = 1.1 ROOT = { check_variable = { which = "luck" value = 5 }}}
+						modifier = { factor = 1.1 ROOT = { check_variable = { which = "luck" value = 6 }}}
+						modifier = { factor = 1.1 ROOT = { trait = fortune }} # AKA "luck" value = 10
+						ROOT = {
 							#opponement may improve luck on victory
 							random_list = {
 								10 = { change_variable = { which = "luck" value = 1 }}
