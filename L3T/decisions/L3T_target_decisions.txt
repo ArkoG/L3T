@@ -69,14 +69,14 @@ targetted_decisions = {
 		from_potential = { 
 			is_playable = yes
 			is_adult = yes
-			#OR = {
-			#	has_focus = focus_carousing
-			#	has_character_modifier = holding_large_feast
-			#}
-			#NOT = {
-			#	has_character_modifier = in_meditation
-			#	has_character_modifier = doing_penance
-			#}
+			OR = {
+				has_focus = focus_carousing
+				has_character_modifier = holding_large_feast
+			}
+			NOT = {
+				has_character_modifier = in_meditation
+				has_character_modifier = doing_penance
+			}
 			NOT = { has_character_modifier = dice_timer } #AI only
 			prisoner = no
 			NOT = { trait = incapable }
@@ -89,21 +89,30 @@ targetted_decisions = {
 			OR = {
 				at_location = FROM
 				vassal_of = FROM
+				#in pilgrimage in Jerusalem, faking the location
+				AND = {
+					NOT = { has_global_flag = running_LCDA } 
+					FROM = { has_character_flag = pilgrimage_to_jerusalem }
+					at_location = 774 #vanilla and SWMH Jerusalem
+				}
 			}
+			
 			ai = yes
 		}
 
 		allow = {
 			FROM = { 
-				OR = {
-					has_focus = focus_carousing
-					has_character_modifier = holding_large_feast
-				}
-				NOT = {
-					has_character_modifier = in_meditation
-					has_character_modifier = doing_penance
-				}
+				#OR = {
+				#	has_focus = focus_carousing
+				#	has_character_modifier = holding_large_feast
+				#}
+				#NOT = {
+				#	has_character_modifier = in_meditation
+				#	has_character_modifier = doing_penance
+				#}
 				hidden_tooltip = { NOT = { has_character_modifier = dice_timer }}
+				
+				#totoro add also a timer for the human player ?
 			}
 			ROOT = {
 				is_adult = yes
@@ -124,43 +133,52 @@ targetted_decisions = {
 			#determinate winner
 			
 			##to hide totoro
-			random_list = {
-				50 = { 
-					FROM = {
-						#initiator may improve luck on victory
-						random_list = {
-							10 = { change_variable = { which = "luck" value = 1 }}
-							90 = {}
-						}
-						character_event = { id = L3T.604 } #victory notification
-					}
-				}
-				50 = {
-					ROOT = { 
-						#opponement may improve luck on victory
-						random_list = {
-							10 = { change_variable = { which = "luck" value = 1 }}
-							90 = {}
-						}
-					}
-					FROM = { character_event = { id = L3T.605 }} #defeat notification
-				}
-			}
-
-			#from playing
-			FROM = {
-				#only initiator increases that variable
+			#hidden_tooltip = {
 				random_list = {
-					50 = { change_variable = { which = "nb_parties" value = 3 }}
-					30 = { change_variable = { which = "nb_parties" value = 5 }}
-					20 = { change_variable = { which = "nb_parties" value = 7 }}
+					50 = { 
+						FROM = {
+							#initiator may improve luck on victory
+							random_list = {
+								10 = { change_variable = { which = "luck" value = 1 }}
+								90 = {}
+							}
+							character_event = { id = L3T.604 } #victory notification
+						}
+					}
+					50 = {
+						ROOT = { 
+							#opponement may improve luck on victory
+							random_list = {
+								10 = { change_variable = { which = "luck" value = 1 }}
+								90 = {}
+							}
+						}
+						FROM = { character_event = { id = L3T.605 }} #defeat notification
+					}
 				}
-				character_event = { id = L3T.601 days = 0 } #luck trait test
-				character_event = { id = L3T.602 days = 0 } #player trait test
-			}
-			ROOT = {
-				add_character_modifier = { modifier = dice_timer duration = 1095 hidden = yes } #3years
-			}
+
+				#from playing
+				FROM = {
+					#only initiator increases that variable
+					random_list = {
+						50 = { change_variable = { which = "nb_parties" value = 3 }}
+						30 = { change_variable = { which = "nb_parties" value = 5 }}
+						20 = { change_variable = { which = "nb_parties" value = 7 }}
+					}
+					character_event = { id = L3T.601 days = 0 } #luck trait test
+					character_event = { id = L3T.602 days = 0 } #player trait test
+				}
+				ROOT = {
+					add_character_modifier = { modifier = dice_timer duration = 1095 hidden = yes } #3years
+					random_list = {
+						50 = { change_variable = { which = "nb_parties" value = 1 }}
+						30 = { change_variable = { which = "nb_parties" value = 3 }}
+						20 = { change_variable = { which = "nb_parties" value = 5 }}
+					}
+					character_event = { id = L3T.601 days = 0 } #luck trait test
+					character_event = { id = L3T.602 days = 0 } #player trait test
+				}
+			#}
 		}
 			
 		ai_will_do = {
