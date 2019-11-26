@@ -1427,7 +1427,22 @@ character_event = {
 		NOT = { has_artifact = oeuf_united }
 	}
 
-	immediate = { set_character_flag = egg_found }
+	immediate = { 
+		set_character_flag = egg_found
+		random_list = {
+			#D6 random chance
+			1 = { set_global_variable = { which = "monks_fake_luck" value = 1 }}
+			1 = { set_global_variable = { which = "monks_fake_luck" value = 2 }}
+			1 = { set_global_variable = { which = "monks_fake_luck" value = 3 }}
+			1 = { set_global_variable = { which = "monks_fake_luck" value = 4 }}
+			1 = { set_global_variable = { which = "monks_fake_luck" value = 5 }}
+			1 = { set_global_variable = { which = "monks_fake_luck" value = 6 }}
+		}
+		random_list = {
+			1 = { set_global_variable = { which = "monks_play" value = 2 }}
+			1 = { set_global_variable = { which = "monks_play" value = 3 }}
+		}
+	}
 
 	option = {
 		name = "L3T.431A" #end+
@@ -1467,6 +1482,50 @@ character_event = {
 			random_list = {
 				10 = { letter_event = { id = L3T.432 days = 1 }	wealth = -15 } #Monks accept
 				10 = { letter_event = { id = L3T.433 days = 1 }} #Monks refuse
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.431D"
+		tooltip_info = joueur
+		trigger = { trait = joueur }		
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = fortune
+			}
+			modifier = {
+				factor = 1.5
+				trait = greedy
+			}
+		}
+		custom_tooltip = { text = custom_monks_can_refuse }
+		hidden_tooltip = { 
+			random_list = {
+				#the monk don't want to play
+				50 = {
+					set_character_flag = monk_refused_to_play
+					character_event = { id = L3T.435 } #back to pseudo L3T.431
+				}
+				#the monk accepts, computing who wins 
+				50 = {
+					modifier = { factor = 2.0 check_variable = { which = "monks_play" value = 2 }}
+					modifier = { factor = 1.5 check_variable = { which = "monks_play" value = 3 }}
+					random_list = {
+						50 = { 
+							modifier = { factor = 1.1 check_variable = { which = "luck" value = 5 }}
+							modifier = { factor = 1.1 check_variable = { which = "luck" value = 6 }}
+							letter_event = { id = L3T.436 } #victory notification
+						}
+						50 = { 
+							modifier = { factor = 1.1 check_variable = { which = "monks_fake_luck" value = 5 }}
+							modifier = { factor = 1.1 check_variable = { which = "monks_fake_luck" value = 6 }}
+							letter_event = { id = L3T.437 } #defeat notification
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1527,7 +1586,7 @@ letter_event = { #Monks refuse
 		name = "L3T.433C" #end-
 		custom_tooltip = { text = custom_abandon_oeuf3 }
 		trigger = { NOT = { wealth = 30 }}
-		piety = 10
+		#piety = 10
 		prestige = -10
 		clr_character_flag = canGetEasterEgg3
 		set_character_flag = pious_hunt
@@ -1602,6 +1661,108 @@ letter_event = { #Monks make their offer
 		trigger = { diplomacy = 16 } #>15 range
 		wealth = -20
 		add_artifact = oeuf_3
+	}
+}
+
+#Monk refused to play, explore other options
+character_event = {
+	id = L3T.435
+	desc = "DESCL3T.435"
+	picture = GFX_evt_L3Tv_church
+	window = EventWindowL3T
+	
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.431A" #end+
+		trigger = { NOT = { trait = honest } }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		add_artifact = oeuf_3
+		set_character_flag = not_that_pious_hunt
+		if = {
+			limit = { NOT = { trait = deceitful } }
+			random = { 
+				chance = 50
+				add_trait = deceitful
+			}
+		}
+	}
+
+	option = { #offre d'achat
+		name = "L3T.435B"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
+		#add_artifact = oeuf_3
+		#wealth = -10
+		#piety = 5
+		custom_tooltip = { text = custom_offre_dachat_oeuf3a } #offre 15po
+		hidden_tooltip = { 
+			random_list = {
+				10 = { letter_event = { id = L3T.432 days = 1 }	wealth = -15 } #Monks accept
+				10 = { letter_event = { id = L3T.433 days = 1 }} #Monks refuse
+			}
+		}
+	}
+
+	option = {
+		name = "L3T.431C" #end-
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		piety = 10
+		prestige = -10
+		clr_character_flag = canGetEasterEgg3
+		set_character_flag = pious_hunt
+	}
+}
+
+#We win the egg at dice
+letter_event = { 
+	id = L3T.436
+	desc = "DESCL3T.436"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.436A" #end+
+		prestige = 10
+		add_artifact = oeuf_3
+	}
+}
+#We DO NOT win the egg at dice
+letter_event = { 
+	id = L3T.437
+	desc = "DESCL3T.437"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.437A" #end
+		prestige = -10
+		clr_character_flag = canGetEasterEgg3
 	}
 }
 
@@ -2132,8 +2293,12 @@ character_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 2
+				factor = 0.5
 				trait = greedy
+			}
+			modifier = {
+				factor = 1.5
+				wealth = 150
 			}
 		}
 		random_courtier = {
@@ -2465,6 +2630,10 @@ character_event = {
 				modifier = {
 					factor = 2
 					opinion = { who = FROM value = 0 } 
+				}
+				modifier = {
+					factor = 2
+					trait = greedy 
 				}
 				
 				FROM = { character_event = { id = L3T.457 days = 10 } }
