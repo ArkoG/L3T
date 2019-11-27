@@ -1519,10 +1519,15 @@ character_event = {
 							modifier = { factor = 1.1 check_variable = { which = "luck" value = 6 }}
 							letter_event = { id = L3T.436 } #victory notification
 						}
-						50 = { 
+						25 = { 
 							modifier = { factor = 1.1 check_variable = { which = "monks_fake_luck" value = 5 }}
 							modifier = { factor = 1.1 check_variable = { which = "monks_fake_luck" value = 6 }}
 							letter_event = { id = L3T.437 } #defeat notification
+						}
+						25 = { 
+							modifier = { factor = 1.1 check_variable = { which = "monks_fake_luck" value = 5 }}
+							modifier = { factor = 1.1 check_variable = { which = "monks_fake_luck" value = 6 }}
+							letter_event = { id = L3T.438 } #defeat notification
 						}
 					}
 				}
@@ -1752,7 +1757,7 @@ letter_event = {
 		add_artifact = oeuf_3
 	}
 }
-#We DO NOT win the egg at dice
+#We DO NOT win the egg at dice /variante desc1
 letter_event = { 
 	id = L3T.437
 	desc = "DESCL3T.437"
@@ -1761,6 +1766,19 @@ letter_event = {
 
 	option = {
 		name = "L3T.437A" #end
+		prestige = -10
+		clr_character_flag = canGetEasterEgg3
+	}
+}
+#We DO NOT win the egg at dice /variante desc2
+letter_event = { 
+	id = L3T.438
+	desc = "DESCL3T.438"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "L3T.438A" #end
 		prestige = -10
 		clr_character_flag = canGetEasterEgg3
 	}
