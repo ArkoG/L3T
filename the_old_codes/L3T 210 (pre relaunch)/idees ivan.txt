@@ -1,0 +1,79 @@
+Je propose :
+
+I) Rendre la justice :
+
+ A ) Braconniers : [spoiler]
+
+    1) gros braconniers : " Votre maréchal m'ammène un braconnier qui a tué un daim et pris plusieurs lapins dans ses collets. Il demande mon jugement."
+
+       - option 1 : " Qu'on le pende haut et court et qu'une taxe supplémentaire soit prise à sa famille." -  [->] -10 en piété/acquisition d'arbitraire/perte d'aimable,charitable,juste
+
+       - option 2 : "Qu'il soit pendu." - [->] acquisition de juste 
+
+       - option 3 : " Qu'on l'emprisonne." - [->] aucun effet
+
+       - option 4 : " Relachez cet homme." - [->] +10 en piété/acquisition de charitable,aimable/perte de cruel
+
+     2) petits braconniers : event de la vanille [/spoiler]
+
+  B ) Voleurs & brigands [spoiler]
+
+     1) a) bandits de grand chemin : " Depuis quelque temps, une bande de bandits de grand chemin sèment la terreur dans la région. Que dois-je faire ? "
+
+         - option 1 : " Rien, ils finiront par se lasser. " -- [->] -20 auprès de tous les vassaux, -10 de piété/acquisition paresseux, lâche
+
+         - option 2 : " Le Maréchal [From.GetBestName] va se charger de leur apporter ma colère." -- [->] +10 auprès du maréchal, x% de risque que Maréchal [From.GetBestName] trouve la mort, x% de chance que les bandits soient tués, x% de chance que les bandis soient capturés     
+
+         - option 3 :   "Je vais y aller moi même, les étriper et diner de leurs entrailles !" -- [->] +10 auprès de tous les vassaux, -10 de piété, x% de risque de mourir, x% de risque de blessure, x% de risque de mutilation, x% de chance que les bandits soient tués, x% de chance que les bandis soient capturés/acquisition cruel
+
+         - option 4 : "Je vais combattre ces bandits par moi même." -- [->]  +10 auprès de tous les vassaux, x% de risque de mourir, x% de risque de blessure, x% de risque de mutilation, x% de chance que les bandits soient tués, x% de chance que les bandis soient capturés
+
+         - option 5 : "Je vais leur apporter la rédemption." -- [->]  +10 auprès de tous les vassaux, +10 de piété, x% de risque de mourir, x% de risque de blessure, x% de risque de mutilation, x% de chance que les bandits soient tués, x% de chance que les bandis soient capturés/acquisition zélé
+
+        b ) bandits de grand chemin capturés : "Les bandits ont été capturés et c'est maintenant l'heure du jugement."
+
+          - option 1 : "Qu'on les pende sur la grand-place ! " -- [->] +10 en prestige/acquisiton juste
+
+          - option 1bis (si maréchal tué) : " Qu'on les pende sur la grand-place ! Leur butin sera donné à la famille du feu Maréchal [From.GetBestName]." -- [->] +10 prestige/acquisition juste, charitable/ +50 famille directe (femme, enfant(s) du maréchal)
+
+          - option 2 : " Qu'on les emprisonne !" - [->] aucun effet
+
+          - option 2bis (si maréchal tué) : " Qu'on les emprisonne !" - [->] -50 famille directe (femme, enfant(s) du maréchal)
+
+          - option 3 : " Le supplice de la roue leur est réservé !" -- [->]  +10 en prestige, -10 de piété/acquisiton cruel
+
+    2) voleurs de bijoux : "un voleur de bijoux a été surpris et arrêté par votre Maréchal. Il attend mon jugement."
+
+          - option 1 : " Qu'on le pende !" -- [->] -10 de piété/acquisition cruel
+
+          - option 2 : " Qu'il soit emprisonné" -- [->] aucun effet
+
+          - option 3 : " Qu'on lui coupe la main par laquelle il a pêché." -- [->] +10 de piété/acquisition de zélé
+
+    3) voleuse de nourriture : "Un fermier a surpris sa voisine en train de voler de la nourriture dans sa grange. La femme a perdu son mari récemment et a cinq enfants à nourrir. Le fermier attend mon verdict."
+
+          - option 1 : "Je paie au fermier ce qu'elle lui a volé et la laisse repartir." --  [->] +10 de piété/acquisition de charitable, aimable
+
+          - option 2 : "Qu'elle soit emprisonnée !" -- [->] -10 de piété/acquisition de cruel
+
+          - option 3 : "Elle travaillera gratuitement pour le fermier jusqu'à ce que son larcin soit remboursé." -- [->] +10 de prestige/acquisition juste [/spoiler]
+
+  C) Saboteurs & rivalités [spoiler]
+
+      1) saboteurs : "La boulangerie de la place de [From.Location.GetName] a pris feu pendant la nuit. Heureusement, l'incendie a vite été circonscrit. La garde a attrapé le coupable. C'est un boulanger nouvellement installé une centaine de mètres plus loin. Que vais-je faire ?"
+
+         - option 1 : " Ce fou aurait pu faire flamber la ville, la corde pour lui ! " -- [->] +10 de prestige
+
+         - option 2 : " Le condamner a réparer les dégâts." -- [->] +10 de prestige/acquisition juste
+
+         - option 3 : " Le laisser moisir en prison, on verra s'il pourra jouer avec des torches." -- [->] aucun effet
+
+         - option 4 :  " Le brûler vif, on va voir jusqu'où il aime le feu." -- [->] -10 de piété/acquisition cruel, arbitraire
+
+     2) rivalités : " Un soldat s'est battu en duel avec son capitaine pour une histoire de femme. Mon Maréchal me demande de juger cette imbécilité."
+
+         - option 1 : "Qui vit par l'épée périra par l'épée ! Qu'on les décapite !" -- [->] +10 de prestige
+
+         - option 2 : "Qu'ils réfléchissent tous les deux dans le même cachot." -- [->] aucun effet
+
+         - option 3 : " Qu'on les mette à prier devant la croix pendant un jour sans manger, ni boire. Le jeune et la prière les ramèneront sur le droit chemin." -- [->] +10 en piété/acquisition zélé [/spoiler]

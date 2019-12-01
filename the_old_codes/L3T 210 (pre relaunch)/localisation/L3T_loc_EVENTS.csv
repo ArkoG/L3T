@@ -1,0 +1,79 @@
+L3T.0001;Major passes attribution;Attribution des cols majeurs;;;;;;;;;;;;x
+DESCL3T.0001;Notre domaine d'influence comprend un col d'importance majeure en la province de [From.Location.GetName]. \n Profitons de l'avantage que cela nous procure.;Notre domaine d'influence comprend un col d'importance majeure en la province de [From.Location.GetName]. \n Profitons de l'avantage que cela nous procure.;;;;;;;;;;;;x
+L3T.0001A;Good, good...;Bien, bien...;;;;;;;;;;;;x
+L3T.0002;Minor passes attribution;Attribution des cols mineurs;;;;;;;;;;;;x
+DESCL3T.0002;La province de [From.Location.GetName] nous assure le contrôle d'un col mineur. \n Tâchons de mettre cela à notre avantage.;La province de [From.Location.GetName] nous assure le contrôle d'un col mineur. \n Tâchons de mettre cela à notre avantage.;;;;;;;;;;;;x
+L3T.0002A;Excellent !;Excellent !;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+L3T.0003;Choisir l'orientation du domaine -version féodale-;Choisir l'orientation du domaine -version féodale-;;;;;;;;;;;;x
+NAMEL3T.0003;Feudal Demesne;Domaine Seigneurial;;;;;;;;;;;;x
+DESCL3T.0003;We might choose how to developp this feudal demesne. \n\n ;Nous devons décider comment allons-nous développer ce domaine.\n\n     -Une Citadelle remplira aussi bien un rôle de poste frontière sur une de nos marches qu'un rôle de protection et de formation de troupes. C'est un site très bien défendu mais qui coûte cher à entretenir.\n     -Une Citée Fortifiée pourra abriter une population importante derrière ses hauts murs défendus par un château fort. Elle a l'étoffe d'une Capitale pour tout seigneur de notre rang !\n     -Le Bourg Féodal regroupe une communauté de paysans qui exploitent nos terres et vivent bien loin des préoccupation de la cour. Il permet l'exploitation des ressources locales, qui pourront être échangées ou vendues et... taxées pour venir remplir nos coffres.;;;;;;;;;;;;x
+L3T.0003A;This will be a citadel ! Said.;Ce sera une Citadelle ! J'ai dis.;;;;;;;;;;;;x
+L3T.0003B;Obviously a feudal village !;Un Bourg Féodal de toute évidence !;;;;;;;;;;;;x
+L3T.0003C;Let this be a beautiful and powerfull Fortified city !;Faisons-en une belle et puissante Citée Fortifiée !;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+L3T.0004;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;La Commune de $HOLDING$ Choisir l'orientation du domaine -version municipale-;;;;;;;;;;;;x
+NAMEL3T.0004;City Demesne;Domaine Communal;;;;;;;;;;;;x
+DESCL3T.0004;;doit se voir assigner une voie de développement. \n\n     Cette cité peut être développée soit selon une orientation production, soit à caractère commercial. Dans les deux cas, cela constitue une source non négligeable de taxation ! \n;;;;;;;;;;;;x
+L3T.0004A;We might produce !;Produisons ! ;;;;;;;;;;;;x
+L3T.0004B;We might trade !;Commerçons ! ;;;;;;;;;;;;x
+NAMEL3T.0005;Our Beloved City;Notre Belle Cité;;;;;;;;;;;;x
+L3T.0005;upgrade grande cité;upgrade grande cité;;;;;;;;;;;;x
+DESCL3T.0005;This city is developping and overpasses another cape that opens news horizons.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
+L3T.0005A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
+NAMEL3T.0002;Our Glorious City;Notre Glorieuse Cité;;;;;;;;;;;;x
+L3T.0002;upgrade grande cité;upgrade grande cité;;;;;;;;;;;;x
+DESCL3T.0002;This city is developping and overpasses another cape that opens news horizons.;Elle se développe et vient de franchir un nouveau cap qui lui ouvre de nouveaux horizons.;;;;;;;;;;;;x
+L3T.0002A;Grow ! Grow ! Groooooooooooow !;Grandit ! Grandit ! Grandiiiiit !;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+L3T.0006;Choisir l'orientation du domaine -version écclésiale-;Choisir l'orientation du domaine -version écclésiale-;;;;;;;;;;;;x
+NAMEL3T.0006;Clergy Lands  ;Les Terres du Clergé ;;;;;;;;;;;;x
+DESCL3T.0006;Quel avenir lui réserver ? \n\n     Un Monastère constitue un conservatoire du savoir où l'on y instruit la jeunesse et compile nombre de connaissances anciennes ou nouvelles. La communauté religieuse se choisira une règle de vie monastique et pourra rejoindre un ordre monastique. \n     Une Citée Episcopale abritera les institutions religieuses locales et aura la mainmise sur les terres environnantes. \n     Une Commanderie, monastère dédié à un usage principalement militaire, assurera des troupes de qualités, notamment dans l'optique d'une guerre sainte ou juste pour mater ce prétentieux voisin !;en la province de [From.Location.GetName], quel avenir lui réserver ? \n\n     Un Monastère constitue un conservatoire du savoir où l'on y instruit la jeunesse et compile nombre de connaissances anciennes ou nouvelles. La communauté religieuse se choisira une règle de vie monastique et pourra rejoindre un ordre monastique. \n     Une Citée Episcopale abritera les institutions religieuses locales et aura la mainmise sur les terres environnantes. \n     Une Commanderie, monastère dédié à un usage principalement militaire, assurera des troupes de qualités, notamment dans l'optique d'une guerre sainte ou juste pour mater ce prétentieux voisin !;;;;;;;;;;;;x
+L3T.0006A;Implantons-y un Monastère;Implantons-y un Monastère;;;;;;;;;;;;x
+L3T.0006B;Laissons les à libre gestion du clergé local.;Laissons les à libre gestion du clergé local.;;;;;;;;;;;;x
+L3T.0006C;Accordons donc le statut de Commanderie.;Accordons donc le statut de Commanderie.;;;;;;;;;;;;x
+L3T.0007;Choisir la règle monastique du domaine de type monastère;Choisir la règle monastique du domaine de type monastère;;;;;;;;;;;;x
+NAMEL3T.0007;Monastic life;Vie Monastique;;;;;;;;;;;;x
+DESCL3T.0007;Quelle règle monastique ce Monastère va-t-il adopter ? \n\n Ce choix conditionnera ensuite un éventuel rattachement à l'un des ordres monastiques de la même obédience, ordres présentant chacun leurs spécifités.;Quelle règle monastique le Monastère de [From.Location.GetName] va-t-il suivre ? \n\n Ce choix conditionnera ensuite un éventuel rattachement à l'un des ordres monastiques de la même obédience, ordres présentant chacun leurs spécifités.;;;;;;;;;;;;x
+L3T.0007A;Saint Benedict Rule;La Règle de Saint Benoît;;;;;;;;;;;;x
+L3T.0007B;Saint Augustine Rule ;La Règle de Saint Augustin;;;;;;;;;;;;x
+L3T.0007C;Saint Basil Rule;La Règle de Saint Basile;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+#ECO.0020;unrelated stuff;route Vienne - Aoste;;;;;;;;;;;;x
+#DESCECO.0020;unrelated stuff;Le tracé de la principale route reliant les cités de Vienne et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans le développement de cette voie commerciale.;;;;;;;;;;;;x
+#ECO.0021A;unrelated stuff;Merci pour la leçon de géographie !;;;;;;;;;;;;x
+#ECO.0021;unrelated stuff;L'Axe Vienne - Aoste;;;;;;;;;;;;x
+#DESCECO.0021;unrelated stuff;Le tracé de la principale route reliant les cités de Vienne et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans le développement de cette voie commerciale.;;;;;;;;;;;;x
+#ECO.0021A;unrelated stuff;Merci pour la leçon de géographie !;;;;;;;;;;;;x
+#ECO.0022;unrelated stuff;L'Axe Lyon - Aoste;;;;;;;;;;;;x
+#DESCECO.0022;unrelated stuff;Le tracé de la principale route reliant les cités de Lyon et d'Aoste arpente nos terres puisqu'elle traverse la province de [From.Location.GetName]. Ceci nous permet de prélever quelques péages et peut-être davantage si nous investissons dans ce domaine en bonne intelligence.;;;;;;;;;;;;x
+#ECO.0022A;unrelated stuff;Merci pour la leçon d'économie !;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+NAMEL3T.0010;Hello and welcome my Lord! ;Salutations Messire ! ;;;;;;;;;;;;x
+L3T.0010;MOD detection;Détection MOD joué;;;;;;;;;;;;x
+DESCL3T.0010;\n Please tell me what mapmod your are playing alongside of this one to adapt the game. \n\n A "peace of God" is instaurated for 7 years. It prevents any war, faction or revolt.;\n Dis-moi sur quelle carte joues-tu pour adapter la partie ? \n\n Une "paix de Dieu" est instaurée pendant 7 années. Interdisant toute guerre, révolte ou faction.;;;;;;;;;;;;x
+L3T.0010A;Some What More Historic (SWMH);Some What More Historic (SWMH);;;;;;;;;;;;x
+L3T.0010B;La Couronne des Alpes (LCDA);La Couronne des Alpes (LCDA);;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+DESCL3T.0101;Population grew in this province !;La population a cru autour du château et forme à présent un petit hameau !;;;;;;;;;;;;x
+DESCL3T.0102;Population grew in this province !;La population a cru autour du château et forme à présent un village !;;;;;;;;;;;;x
+DESCL3T.0103;Population grew in this province !;La population a cru autour du château et forme à présent un bourg !;;;;;;;;;;;;x
+DESCL3T.0104;Population grew in this province !;La population a cru autour du château et forme à présent une ville !;;;;;;;;;;;;x
+DESCL3T.0105;Population grew in this province !;La population a cru autour du château et forme à présent une cité !;;;;;;;;;;;;x
+DESCL3T.0106;Population grew in this province !;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un petit hameau !;;;;;;;;;;;;x
+DESCL3T.0107;Population grew in this province !;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un village !;;;;;;;;;;;;x
+DESCL3T.0108;Population grew in this province !;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent un bourg !;;;;;;;;;;;;x
+DESCL3T.0109;Population grew in this province !;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une ville !;;;;;;;;;;;;x
+DESCL3T.0110;Population grew in this province !;La population attirée par l'essor économique a commencé à s'agglutiner pour former à présent une cité !;;;;;;;;;;;;x
+DESCL3T.0111;Population grew in this province !;La population a cru autour du lieu de culte et forme à présent un petit hameau !;;;;;;;;;;;;x
+DESCL3T.0112;Population grew in this province !;La population a cru autour du lieu de culte et forme à présent un village !;;;;;;;;;;;;x
+DESCL3T.0113;Population grew in this province !;La population a cru autour du lieu de culte et forme à présent un bourg !;;;;;;;;;;;;x
+DESCL3T.0114;Population grew in this province !;La population a cru autour du lieu de culte et forme à présent une ville !;;;;;;;;;;;;x
+DESCL3T.0115;Population grew in this province !;La population a cru autour du lieu de culte et forme à présent une cité !;;;;;;;;;;;;x
+#;;;;;;;;;;;;;;x
+DESCL3T.0015;;DESCL3T.0015 \n [From.Location.GetName];;;;;;;;;;;;x
+DESCL3T.00160;;DESCL3T.00160 \n [From.Location.GetName];;;;;;;;;;;;x
+DESCL3T.00161;;DESCL3T.00161 \n [From.Location.GetName];;;;;;;;;;;;x
+DESCL3T.0017;;DESCL3T.0017 \n [From.Location.GetName];;;;;;;;;;;;x
+DESCL3T.0018;;DESCL3T.0018 \n [From.Location.GetName];;;;;;;;;;;;x

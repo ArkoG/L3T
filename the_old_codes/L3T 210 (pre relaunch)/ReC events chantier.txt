@@ -1,0 +1,61 @@
+events durant la construction de la cathédrale (ou plus généralement grandschantiers)
+
+GUERRE
+siège >> chantier stoppé (on balance les pierres sur l'assiégeant)
+occupation >> chantier stoppé ou ralenti
+approvisionnements sporadiques/irréguliers >> chantier ralenti jusqu'à la fin de la guerre (war = yes)
+manque main d'oeuvre (MO) (réquisition pour combattre) >> ralentissement chantier ralenti jusqu'à la fin de la guerre (war = yes)
++ le contre event équivalent avec la fin de la guerre (1seul event résolutoire pour les différentes situations)
+
+ACCELERATIONS
+la base de durée est celle ayant le plus de chances d'arriver (3 ou 5 possibilités à chaque fois)
+maître batisseur bon en DIPLO >> meilleur moral des ouvriers. durée random +ou- 1ans
+maître batisseur bon en DIPLO >> meilleure entente/intégration entre les ouvriers (les ouvriers viennent de partout avec des cultures et langues différentes). durée random +ou- 3ans
+maître batisseur bon en STEWARD >> artistes inspirés -car mieux payés/recrutés (selon étapes, quand on a une phase artistique, donc plus sur la fin). durée random +ou- 3ans
+maître batisseur bon en STEWARD >> bon recrutement. durée random +ou- 5ans
+maître batisseur bon en ERUD >> amélioration des plans. durée random +ou- 2ans
+maître batisseur bon en ERUD >> innovation technique. durée random +ou- 5ans
+
+RALENTISSEMENTS
+la base de durée est celle ayant le plus de chances d'arriver (3 ou 5 possibilités à chaque fois)
+maître batisseur mauvais en DIPLO >> inefficacité du maître bâtisseur. durée random +ou- 3ans
+maître batisseur mauvais en DIPLO >> absences répetées du maître bâtisseur. durée random +ou- 3ans
+maître batisseur mauvais en STEWARD >> mauvaise qualité de la pierre (lower if pierre taillée sur le domaine ou à proximité) (higher related to tech). durée random +ou- 2ans
+maître batisseur mauvais en STEWARD >> mauvais recrutement. durée random +ou- 5ans
+maître batisseur mauvais en ERUD >> calculs erronées. durée random +ou- 3ans
+maître batisseur mauvais en ERUD >> mauvais plans ou plans perdus. durée random +ou- 3ans
+
+causes extérieures : liées au routes commerciales disponibles + bandits
+convoi (terrestre) de matériaux pillé 
+convoi (fluvial) de matériaux pillé
+convoi retardé (qualité route ou genre - éboulement, météo, etc. )
+éboulement sur le chantier (échaffaudages)
+chute de gargouille ! (sur quelqu'un en particulier ? le bâtisseur, un moble un evêque etc. )
+
+DONS ponctuels
+(déjà encodés)
+dons de pélerins
+don du pape
+don du clergé
+don des bourgeois
+don des nobles(en nature) 
+don des nobles(en argent) 
+
+SURCOUTS ponctuels
+(déjà encodés)
+si riche extorsion par les fournisseurs
+fournisseurs faisant défaut
+ransom d'un convoi
+surcout de construction (mauvais batisseur)
+
+GREVE (selon DIPLO du maître batisseur) -micro chaînes d'events- voir pour décliner avec STEWARDSHIP et ERUDITION
+(grève level1) RRisk 1% effet 6 mois :
+-tentative résolution par la force (martial seigneur) >> ralentissement 1an en cas de réussite, en cas d'échec durcissement (passage en grève level2)
+-tentative résolution pacifique (diplo batisseur ou seigneur) >> hausse salaires (résolu mais perte d'argent), statu quo (autre tentative - résolution par négociation plus possible)
+-inaction : prolongation de la grève (level2)
+(grève level2) RRisk 2% effet 12 mois
+-mater la grève par la force -réussite obligatoire- >> random accélération ou ralentissement, durée random. pas de grève pendant 5 ans (+random) si codable facilement
+-couper les vivres -réussite obligatoire- >> random accélération ou ralentissement, durée random. pas de grève pendant 5 ans (+random) si codable facilement
+
+
+DIVERS : revoir embauche du batisseur. (décision ?)
