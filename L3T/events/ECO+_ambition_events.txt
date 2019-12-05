@@ -32,11 +32,11 @@ character_event = {
 		NOT = { has_character_flag = epee }
 		NOT = { has_character_flag = epee_taken }
 		NOT = { has_artifact = legendary_sword_2_0 }
-		any_demesne_title = {	
-			tier = baron	
-			holding_type = castle 	
-			has_building = CA_fonderie_L2
-		}
+		#any_demesne_title = {	
+		#	tier = baron	
+		#	holding_type = castle 	
+		#	has_building = CA_fonderie_L2
+		#}
 	}
 	
 	mean_time_to_happen = {
@@ -44,7 +44,15 @@ character_event = {
 		modifier = { factor = 0.9  NOT = { martial = 7 }}
 		modifier = { factor = 0.9  NOT = { martial = 6 }}		
 		modifier = { factor = 0.9  NOT = { martial = 5 }}
-		modifier = { factor = 2.0  war = yes }		
+		modifier = { factor = 2.0  war = yes }	
+		modifier = { 
+			factor = 0.5
+			any_demesne_title = {	
+				tier = baron	
+				holding_type = castle 	
+				has_building = CA_fonderie_L2
+			}
+		}		
 	}
 	
 	# La chaîne d'event commence
@@ -543,9 +551,9 @@ character_event = {
 		NOT = { has_character_flag = drap_taken }
 		NOT = { has_character_flag = cadastreux }
 		war = no
-		any_demesne_province = {
-			has_province_modifier = elevage4_drap
-		}
+		#any_demesne_province = {
+		#	has_province_modifier = elevage4_drap
+		#}
 	}
 	
 	mean_time_to_happen = {
@@ -553,6 +561,10 @@ character_event = {
 		modifier = { factor = 0.9  NOT = { stewardship = 7 }}
 		modifier = { factor = 0.9  NOT = { stewardship = 6 }}		
 		modifier = { factor = 0.9  NOT = { stewardship = 5 }}	
+		modifier = {
+			factor = 0.5
+				any_demesne_province = { has_province_modifier = elevage4_drap }
+		}
 	}
 	
 	option = {
