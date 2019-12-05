@@ -18,6 +18,7 @@ character_event = {
 	only_men = yes
 	
 	trigger = {
+		is_adult = yes
 		OR = {
 			AND = {
 				has_focus = focus_war
@@ -536,6 +537,7 @@ character_event = {
 	min_age = 16
 	
 	trigger = {
+		is_adult = yes
 		OR = {
 			AND = {
 				has_focus = focus_business
@@ -689,9 +691,9 @@ character_event = {
 			18 = { wealth = 8 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303E} }
 			19 = { wealth = 10 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303F} }
 			15 = { wealth = 12 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303G} }
-			11 = { wealth = 14 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303H} }
-			6 = { wealth = 16 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303I} }
-			4 = { wealth = 18 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303J} }	
+			11 = { wealth = 14 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303H} set_character_flag = good_selling_xp }
+			6 = { wealth = 16 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303I} set_character_flag = good_selling_xp }
+			4 = { wealth = 18 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303J} set_character_flag = good_selling_xp }	
 		}	
 	}
 }
@@ -725,9 +727,9 @@ character_event = {
 			18 = { wealth = 20 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304E} }
 			19 = { wealth = 25 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304F} }
 			15 = { wealth = 30 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304G} }
-			11 = { wealth = 35 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304H} }
-			6 = { wealth = 40 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304I} }
-			4 = { wealth = 45 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304J} }
+			11 = { wealth = 35 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304H} set_character_flag = good_selling_xp }
+			6 = { wealth = 40 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304I} set_character_flag = good_selling_xp }
+			4 = { wealth = 45 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304J} set_character_flag = good_selling_xp }
 		}	
 	}
 }
@@ -761,9 +763,9 @@ character_event = {
 			19 = { wealth = 40 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305E} }
 			18 = { wealth = 50 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305F} }
 			13 = { wealth = 60 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305G} }
-			8 = { wealth = 70 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305H} }
-			5 = { wealth = 80 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305I} }
-			2 = { wealth = 90 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305J} }
+			8 = { wealth = 70 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305H} set_character_flag = good_selling_xp }
+			5 = { wealth = 80 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305I} set_character_flag = good_selling_xp }
+			2 = { wealth = 90 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305J} set_character_flag = good_selling_xp }
 		}	
 	}
 }
@@ -803,7 +805,7 @@ character_event = {
 					add_trait = greedy
 				}
 			}
-			50 = { prestige = 10 }
+			50 = { prestige = 15 }
 		}
 		character_event = { id = ECO.307 days = 30 tooltip = TOOLTIPECO.306A}
 	}
@@ -825,11 +827,13 @@ character_event = {
 					add_trait = charitable
 				}
 			}
-			50 = { piety = 10 }
+			50 = { piety = 15 }
 		}
 		character_event = { id = ECO.307 days = 30 tooltip = TOOLTIPECO.306B}
 	}
 }
+
+
 # Fin de la chaîne
 character_event = {
 	id = ECO.307
@@ -843,12 +847,26 @@ character_event = {
 	
 	option = {
 		name = "ECO.307A"
+		trigger = { NOT = { has_character_flag = good_selling_xp }}
 		change_stewardship = 1
 		clr_character_flag = drap
 		# Retire les flags Vanille
 		clr_character_flag = the_inn
 		clr_character_flag = the_garden
 		clr_character_flag = the_survey
+		clr_character_flag = good_selling_xp
+	}
+	
+	option = {
+		name = "ECO.307B"
+		trigger = { NOT = { has_character_flag = good_selling_xp }}
+		change_stewardship = 2
+		clr_character_flag = drap
+		# Retire les flags Vanille
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
+		clr_character_flag = good_selling_xp
 	}
 }
 
