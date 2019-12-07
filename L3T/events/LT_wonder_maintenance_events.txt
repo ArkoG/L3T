@@ -20,6 +20,7 @@ character_event = {
     is_triggered_only = yes
     hide_window = yes
     trigger = {
+		FROM = { NOT = { has_wonder_flag = L3T_pseudo_wonder }}
     }
 
     immediate = {
@@ -100,7 +101,7 @@ character_event = {
     is_triggered_only = yes
     hide_window = yes
     trigger = {
-    	
+    	FROM = { NOT = { has_wonder_flag = L3T_pseudo_wonder }}
     }
 
     immediate = {
@@ -228,7 +229,7 @@ character_event = {
     is_triggered_only = yes
     hide_window = yes
     trigger = {
-        
+        FROM = { NOT = { has_wonder_flag = L3T_pseudo_wonder }}
     }
 
     immediate = {
@@ -290,6 +291,9 @@ character_event = {
     id = LT.10003
     hide_window = yes
     is_triggered_only = yes
+	trigger = {
+		FROM = { NOT = { has_wonder_flag = L3T_pseudo_wonder }}
+	}
     immediate = {
         if = {
             limit = { FROM = { has_wonder_upgrade = upgrade_statue_god } }
