@@ -1,0 +1,18 @@
+1000093016 = {
+	name="Arko van Qlimax"
+	dynasty=0
+	martial=0
+	diplomacy=0
+	intrigue=0
+	stewardship=0
+	religion="catholic"
+	culture="frankish"
+	
+	850.1.1={birth=yes}
+	850.1.1={
+		effect = {
+			narrative_event = { id = L3T.0010 }
+		}
+	}
+	1337.12.31={death=yes}
+}

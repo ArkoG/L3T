@@ -1,0 +1,293 @@
+CODE;ENGLISH;FRENCH;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#EVENEMENTS;;x;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#;;HIDDEN EVENTS;;;;;;;;;;;;x
+#ECO.0001;Attribution ressources -plaine-;Attribution ressources -plaine-;;;;;;;;;;;;x
+DESCECO.0001;Plaine de [From.Location.GetName].;Plaine de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.0001A;Parfait;Parfait;;;;;;;;;;;;x
+#ECO.0002;Attribution ressources -coteaux-;Attribution ressources -coteaux-;;;;;;;;;;;;x
+DESCECO.0002;Côteaux de [From.Location.GetName].;Côteaux de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.0002A;OK;OK;;;;;;;;;;;;x
+#ECO.0003;Attribution ressources -foret-;Attribution ressources -foret-;;;;;;;;;;;;x
+DESCECO.0003;Forêts de [From.Location.GetName].;Forêts de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.0003A;Parfait;Parfait;;;;;;;;;;;;x
+#ECO.0004;Attribution ressources -montagne-;Attribution ressources -montagne-;;;;;;;;;;;;x
+DESCECO.0004;Montagnes de [From.Location.GetName].;Montagnes de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.0004A;OK;OK;;;;;;;;;;;;x
+#ECO.0005;Attribution ressources -plaine agricole-;Attribution ressources -plaine agricole-;;;;;;;;;;;;x
+DESCECO.0005;Plaine agricole de [From.Location.GetName].;Plaine agricole de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.0005A;Parfait;Parfait;;;;;;;;;;;;x
+#ECO.0003;Attribution ressources -côte-;Attribution ressources -côte-;;;;;;;;;;;;x
+DESCECO.0003;Coast of [From.Location.GetName].;Littoral de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.0003A;OK;OK;;;;;;;;;;;;x
+#ECO.0004;Attribution ressources -étang-;Attribution ressources -étang-;;;;;;;;;;;;x
+DESCECO.0004;Etangs, lacs et rivières de [From.Location.GetName].;Etangs, lacs et rivières de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.0004A;Parfait;Parfait;;;;;;;;;;;;x
+#ECO.0005;Attribution ressources -désert-;Attribution ressources -désert-;;;;;;;;;;;;x
+DESCECO.0005;Désert de [From.Location.GetName].;Désert de [From.Location.GetName].;;;;;;;;;;;;x
+ECO.0005A;OK;OK;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#;x;ACTIVATION EVENTS;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+ECO.00100;activation AGRICULTURE;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.00100;Les cultures céréalières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les cultures céréalières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00100A;OK;OK;;;;;;;;;;;;x
+ECO.00101;activation AGRICULTURE;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.00101;Les productions de nos vergers en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les productions de nos vergers en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00101A;OK;OK;;;;;;;;;;;;x
+ECO.00102;activation AGRICULTURE;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.00102;Les activités agricoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités maraîchères en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00102A;OK;OK;;;;;;;;;;;;x
+ECO.00103;activation AGRICULTURE;activation AGRICULTURE;;;;;;;;;;;;x
+DESCECO.00103;Les activités agricoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités viticoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans  les villes de la région.;;;;;;;;;;;;x
+ECO.00103A;OK;OK;;;;;;;;;;;;x
+ECO.00105;activation BIERE;;;;;;;;;;;;;x
+DESCECO.00105;;Les brassins produits en [From.Location.GetName] commencent à avoir une pluôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
+ECO.00105A;OK;Fort bien !;;;;;;;;;;;;x
+ECO.00106;activation VIN;;;;;;;;;;;;;x
+DESCECO.00106;;Les crus qui sortent de nos chais en [From.Location.GetName] commencent à avoir une pluôt bonne réputation ce qui en fait un objet de commerce aux alentours.;;;;;;;;;;;;x
+ECO.00106A;OK;Fort bien !;;;;;;;;;;;;x
+ECO.00110;activation ELEVAGE;activation ELEVAGE;;;;;;;;;;;;x
+DESCECO.00110;Les activités d'élevage en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;La production de laine en [From.Location.GetName] est suffisamment importante pour être vendue et transportée pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00110A;OK;OK;;;;;;;;;;;;x
+ECO.00112;activation ELEVAGE;activation ELEVAGE;;;;;;;;;;;;x
+DESCECO.00112;Les activités d'élevage en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités d'élevage en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00112A;OK;OK;;;;;;;;;;;;x
+ECO.00111;activation ELEVAGE;activation ELEVAGE;;;;;;;;;;;;x
+DESCECO.00111;Les activités d'élevage en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les productions fromagères en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00111A;OK;OK;;;;;;;;;;;;x
+ECO.00120;activation FORET;activation FORET;;;;;;;;;;;;x
+DESCECO.00120;Les activités sylvicoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les produits de la coupe de bois en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00120A;OK;OK;;;;;;;;;;;;x
+ECO.00121;activation FORET;activation FORET;;;;;;;;;;;;x
+DESCECO.00121;Les activités sylvicoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;La production de charbon de bois en [From.Location.GetName] est devenue suffisamment importante pour être vendue et transportée pour alimenter dans les villes de la région en combustible.;;;;;;;;;;;;x
+ECO.00121A;OK;OK;;;;;;;;;;;;x
+ECO.00130;activation PIERRE;activation PIERRE;;;;;;;;;;;;x
+DESCECO.00130;Les activités de nos carrières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités de nos carrières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00130A;OK;OK;;;;;;;;;;;;x
+ECO.00140;activation MINERAI;activation MINERAI;;;;;;;;;;;;x
+DESCECO.00140;Les activités d'exploitation des ressources minérales en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités d'exploitation de nos ressources minières en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00140A;OK;OK;;;;;;;;;;;;x
+ECO.00141;activation MINERAI;activation MINERAI;;;;;;;;;;;;x
+DESCECO.00141;Les activités d'exploitation des ressources minérales en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les produits de l'exploitation de sel en [From.Location.GetName] sont suffisamment importantes pour enpermettre la vente et le transports vers les villes de la région.;;;;;;;;;;;;x
+ECO.00141A;OK;OK;;;;;;;;;;;;x
+ECO.0015;activation PECHE;activation PECHE;;;;;;;;;;;;x
+DESCECO.00150;Les activités de pêche en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités de pêche en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00150A;OK;OK;;;;;;;;;;;;x
+ECO.00151;activation PISCICULTURE;activation PISCICULTURE;;;;;;;;;;;;x
+DESCECO.00151;Les activités piscicoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans villes de la région.;Les activités piscicoles en [From.Location.GetName] sont suffisamment importantes pour être vendues et transportées pour transformation dans les villes de la région.;;;;;;;;;;;;x
+ECO.00151A;OK;OK;;;;;;;;;;;;x
+ECO.00142;activation OR;activation OR;;;;;;;;;;;;x
+DESCECO.00142;;La production d'or en [From.Location.GetName] est désormais suffisante pour en permettre l'export par caravane à destination des les villes de la région.;;;;;;;;;;;;x
+ECO.00142A;OK;OK;;;;;;;;;;;;x
+ECO.00143;activation CUIVRE;activation CUIVRE;;;;;;;;;;;;x
+DESCECO.00143;;La production de cuivre en [From.Location.GetName] permet à présent d'approvisionner caravanes, marchands et artisans.;;;;;;;;;;;;x
+ECO.00143A;OK;OK;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#;x;DEBUT AJOUT MOUCHI;;;;;;;;;;;;x
+ECO.00107;activation FARINE;activation FARINE;;;;;;;;;;;;x
+DESCECO.00107;;;;;;;;;;;;;;x
+ECO.00107A;OK;OK;;;;;;;;;;;;x
+ECO.00108;activation CIDRE;activation CIDRE;;;;;;;;;;;;x
+DESCECO.00108;;;;;;;;;;;;;;x
+ECO.00108A;OK;OK;;;;;;;;;;;;x
+ECO.00109;activation PAIN;activation PAIN;;;;;;;;;;;;x
+DESCECO.00109;;;;;;;;;;;;;;x
+ECO.00109A;OK;OK;;;;;;;;;;;;x
+ECO.00113;activation CUIR;activation CUIR;;;;;;;;;;;;x
+DESCECO.00113;;;;;;;;;;;;;;x
+ECO.00113A;OK;OK;;;;;;;;;;;;x
+ECO.00114;activation VIANDE;activation VIANDE;;;;;;;;;;;;x
+DESCECO.00114;;;;;;;;;;;;;;x
+ECO.00114A;OK;OK;;;;;;;;;;;;x
+ECO.00115;activation ETOFFE;activation ETOFFE;;;;;;;;;;;;x
+DESCECO.00115;;;;;;;;;;;;;;x
+ECO.00115A;OK;OK;;;;;;;;;;;;x
+ECO.00116;activation DRAP;activation DRAP;;;;;;;;;;;;x
+DESCECO.00116;;;;;;;;;;;;;;x
+ECO.00116A;OK;OK;;;;;;;;;;;;x
+ECO.00117;activation CHEVAL;activation CHEVAL;;;;;;;;;;;;x
+DESCECO.00117;;;;;;;;;;;;;;x
+ECO.00117A;OK;OK;;;;;;;;;;;;x
+ECO.00122;activation PLANCHE;activation PLANCHE;;;;;;;;;;;;x
+DESCECO.00122;;;;;;;;;;;;;;x
+ECO.00122A;OK;OK;;;;;;;;;;;;x
+ECO.00123;activation VERRE;activation VERRE;;;;;;;;;;;;x
+DESCECO.00123;;;;;;;;;;;;;;x
+ECO.00123A;OK;OK;;;;;;;;;;;;x
+ECO.00131;activation PIERRE TAILLE;activation PIERRE TAILLE;;;;;;;;;;;;x
+DESCECO.00131;;;;;;;;;;;;;;x
+ECO.00131A;OK;OK;;;;;;;;;;;;x
+ECO.00144;activation METAL;activation METAL;;;;;;;;;;;;x
+DESCECO.00144;;;;;;;;;;;;;;x
+ECO.00144A;OK;OK;;;;;;;;;;;;x
+ECO.00145;activation OUTILS;activation OUTILS;;;;;;;;;;;;x
+DESCECO.00145;;;;;;;;;;;;;;x
+ECO.00145A;OK;OK;;;;;;;;;;;;x
+ECO.00146;activation SEL RAFFINE;activation SEL RAFFINE;;;;;;;;;;;;x
+DESCECO.00146;;;;;;;;;;;;;;x
+ECO.00146A;OK;OK;;;;;;;;;;;;x
+ECO.00147;activation SALAISON;activation SALAISON;;;;;;;;;;;;x
+DESCECO.00147;;;;;;;;;;;;;;x
+ECO.00147A;OK;OK;;;;;;;;;;;;x
+ECO.00152;activation FUMAISON;activation FUMAISON;;;;;;;;;;;;x
+DESCECO.00152;;;;;;;;;;;;;;x
+ECO.00152A;OK;OK;;;;;;;;;;;;x
+ECO.0301;;Acheter pour vendre;;;;;;;;;;;;x
+DESCECO.0301;;Une occasion pour améliorer mon intendance se présente.\n Je pourrais user de mon pouvoir pour acheter des tissus à prix réduit et les revendre à prix exhorbitant.;;;;;;;;;;;;x
+ECO.0301A;;C'est une bonne idée;;;;;;;;;;;;x
+TOOLTIPECO.0301A;;Vous partez à la recherche de commerçants à intimider.;;;;;;;;;;;;x
+ECO.0301B;;C'est une mauvaise idée;;;;;;;;;;;;x
+ECO.0302;;Que faut-il acheter?;;;;;;;;;;;;x
+DESCECO.0302;;Plusieurs options s'offrent à moi.\n;;;;;;;;;;;;x
+ECO.0302A;;Acheter 10 sacs de laine;;;;;;;;;;;;x
+TOOLTIPECO.0302A;;Le laine est la base de toute l'industire textile de la région.;;;;;;;;;;;;x
+ECO.0302B;;Acheter 10 rouleaux d'étoffes;;;;;;;;;;;;x
+TOOLTIPECO.0302B;;Avec les étoffes, on pourra tisser ce que l'on veut.;;;;;;;;;;;;x
+ECO.0302C;;Acheter 10 draps tout faits;;;;;;;;;;;;x
+TOOLTIPECO.0302C;;Les gens voudront me ressembler et les acheter.;;;;;;;;;;;;x
+ECO.0303;;Vente;;;;;;;;;;;;x
+DESCECO.0303;;Les clients affluent et je leur vend mes merveilles à prix d'or.;;;;;;;;;;;;x
+ECO.0303A;;J'ai fini de vendre les sacs de laine;;;;;;;;;;;;x
+TOOLTIPECO.0303A;;Je n'ai pas vendu de sac;;;;;;;;;;;;x
+TOOLTIPECO.0303B;;Je n'ai vendu qu'un sac;;;;;;;;;;;;x
+TOOLTIPECO.0303C;;Je n'ai vendu que 2 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303D;;Je n'ai vendu que 3 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303E;;Je n'ai vendu que 4 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303F;;Je n'ai vendu que 5 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303G;;J'ai réussi à vendre 6 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303H;;J'ai réussi à vendre 7 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303I;;J'ai réussi à vendre 8 sacs;;;;;;;;;;;;x
+TOOLTIPECO.0303J;;J'ai réussi à vendre 9 sacs;;;;;;;;;;;;x
+ECO.0304;;Vente;;;;;;;;;;;;x
+DESCECO.0304;;Les clients affluent et je leur vend mes merveilles à prix d'or.;;;;;;;;;;;;x
+ECO.0304A;;J'ai fini de vendre les rouleaux d'etoffes;;;;;;;;;;;;x
+TOOLTIPECO.0304A;;Je n'ai pas vendu de rouleau;;;;;;;;;;;;x
+TOOLTIPECO.0304B;;Je n'ai vendu qu'un rouleau;;;;;;;;;;;;x
+TOOLTIPECO.0304C;;Je n'ai vendu que 2 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304D;;Je n'ai vendu que 3 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304E;;Je n'ai vendu que 4 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304F;;Je n'ai vendu que 5 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304G;;J'ai réussi à vendre 6 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304H;;J'ai réussi à vendre 7 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304I;;J'ai réussi à vendre 8 rouleaux;;;;;;;;;;;;x
+TOOLTIPECO.0304J;;J'ai réussi à vendre 9 rouleaux;;;;;;;;;;;;x
+ECO.0305;;Vente;;;;;;;;;;;;x
+DESCECO.0305;;Les clients affluent et je leur vend mes merveilles à prix d'or.;;;;;;;;;;;;x
+ECO.0305A;;J'ai fini de vendre les draps;;;;;;;;;;;;x
+TOOLTIPECO.0305A;;Je n'ai pas vendu de drap;;;;;;;;;;;;x
+TOOLTIPECO.0305B;;Je n'ai vendu qu'un drap;;;;;;;;;;;;x
+TOOLTIPECO.0305C;;Je n'ai vendu que 2 draps;;;;;;;;;;;;x
+TOOLTIPECO.0305D;;Je n'ai vendu que 3 draps;;;;;;;;;;;;x
+TOOLTIPECO.0305E;;Je n'ai vendu que 4 draps;;;;;;;;;;;;x
+TOOLTIPECO.0305F;;Je n'ai vendu que 5 draps;;;;;;;;;;;;x
+TOOLTIPECO.0305G;;J'ai réussi à vendre 6 draps;;;;;;;;;;;;x
+TOOLTIPECO.0305H;;J'ai réussi à vendre 7 draps;;;;;;;;;;;;x
+TOOLTIPECO.0305I;;J'ai réussi à vendre 8 draps;;;;;;;;;;;;x
+TOOLTIPECO.0305J;;J'ai réussi à vendre 9 draps;;;;;;;;;;;;x
+ECO.0306;;Les invendus;;;;;;;;;;;;x
+DESCECO.0306;;Certains de mes achats me sont restés sur les bras faute d'acheteurs.\n Que vais-je bien pouvoir en faire ?;;;;;;;;;;;;x
+ECO.0306A;;Les brûler, pardi !;;;;;;;;;;;;x
+TOOLTIPECO.0306A;;Les flammes s'élèvent et manquent de brûler une maison.;;;;;;;;;;;;x
+ECO.0306B;;Les donner aux necessiteux;;;;;;;;;;;;x
+TOOLTIPECO.0306B;;Jacquoille la fripouille est désormais habillé en Jacques-Henri.;;;;;;;;;;;;x
+ECO.0307;;Fin de l'entreprise;;;;;;;;;;;;x
+DESCECO.0307;;Ce fut une entreprise enrichissante où vous avez beaucoup appris.;;;;;;;;;;;;x
+ECO.0307A;;Je ne m'y essayerais plus.;;;;;;;;;;;;x
+ECO.0311;;Epée légendaire;;;;;;;;;;;;x
+DESCECO.0311;;Les grands hommes avaient tous une épée digne de leur grandeur.\nSi j'avais une telle épée, elle pourrait m'aider à laisser ma marque dans l'Histoire.\nVoilà une occasion d'améliorer ma compétence militaire.;;;;;;;;;;;;x
+ECO.0311A;;C'est une bonne idée;;;;;;;;;;;;x
+TOOLTIPECO.0311A;;Je vais chercher un serviteur pour m'aider;;;;;;;;;;;;x
+ECO.0311B;;C'est une mauvaise idée;;;;;;;;;;;;x
+ECO.0312;;Envoi d'un serviteur;;;;;;;;;;;;x
+DESCECO.0312;;J'ai trouvé un volontaire pour partir à la recherche du plan d'une épée légendaire. \nOù vais-je l'envoyer ?;;;;;;;;;;;;x
+ECO.0312A;;A Aix-La-Chappelle, il doit y avoir le plan de Joyeuse;;;;;;;;;;;;x
+TOOLTIPECO.0312A;;Cette quete pourrait être dangereuse pour lui;;;;;;;;;;;;x
+TOOLTIPECO.0312B;;Il me ramène le plan;;;;;;;;;;;;x
+ECO.0312B;;A Reims, il doit y avoir le plan de Almace;;;;;;;;;;;;x
+ECO.0312C;;A Rocamadour, il doit y avoir le plan de Durandal;;;;;;;;;;;;x
+ECO.0313;;Une femme vient;;;;;;;;;;;;x
+DESCECO.0313;;Une femme se présente à vous, elle dit que son mari n'est pas revenu? \nVous lui demandez en quoi est-ce votre problème.\nElle vous répond que vous l'avez envoyer, il y a longtemps, chercher le plan d'une épée légendaire.\n Que lui répondre ?;;;;;;;;;;;;x
+ECO.0313A;;Il va revenir;;;;;;;;;;;;x
+TOOLTIPECO.0313A;;Vous lui mentez;;;;;;;;;;;;x
+ECO.0313B;;Il a du être tué par des bandits ou manger par un loup;;;;;;;;;;;;x
+TOOLTIPECO.0313B;;Vous compatissez;;;;;;;;;;;;x
+ECO.0313C;;C'est un voleur;;;;;;;;;;;;x
+TOOLTIPECO.0313C;;Vous exigez réparation;;;;;;;;;;;;x
+ECO.0314;;Que faire?;;;;;;;;;;;;x
+DESCECO.0314;;Le serviteur que vous avez envoyé chercher un plan d'épée légendaire n'est pas revenu.\nDevez-vous en envoyer un autre ?;;;;;;;;;;;;x
+ECO.0314A;;Chercher quelqu'un d'autre à envoyer;;;;;;;;;;;;x
+TOOLTIPECO.0314A;;Vous chercher un nouveau candidat;;;;;;;;;;;;x
+ECO.0314B;;Abandonner la quête;;;;;;;;;;;;x
+ECO.0315;;Plan trouvé;;;;;;;;;;;;x
+DESCECO.0315;;Votre serviteur est revenu avec le plan d'une épée légendaire.;;;;;;;;;;;;x
+ECO.0315A;;Forger l'épée;;;;;;;;;;;;x
+TOOLTIPECO.0315A;;Le forgeron est à pied d'oeuvre;;;;;;;;;;;;x
+ECO.0316;;Essayer l'épée;;;;;;;;;;;;x
+DESCECO.0316;;Le forgeron a fini l'épée.\nComme vous ne lui faites pas confiance, vous voulez essayer l'épée.\nMais sur qui ?;;;;;;;;;;;;x
+ECO.0316A;;Un bonhomme de paille;;;;;;;;;;;;x
+TOOLTIPECO.0316AA;;Le bonhomme de paille est vaincu;;;;;;;;;;;;x
+TOOLTIPECO.0316AB;;Le bonhomme de paille refuse de mourir;;;;;;;;;;;;x
+ECO.0316B;;Un condamné à mort;;;;;;;;;;;;x
+TOOLTIPECO.0316BA;;Le bourreau m'admire;;;;;;;;;;;;x
+TOOLTIPECO.0316BB;;Le condamné perd seulement un bras;;;;;;;;;;;;x
+ECO.0317;;Epée déséquilibrée;;;;;;;;;;;;x
+DESCECO.0317;;Le forgeron a mal travaillé. Il vous dit que votre épée sera une épée légendaire 2.0 mais qu'il faut lui accorder encore un peu de temps.;;;;;;;;;;;;x
+ECO.0317A;;Il m'a convaincu;;;;;;;;;;;;x
+TOOLTIPECO.0317A;;L'épée est reforgée;;;;;;;;;;;;x
+ECO.0317B;;J'abandonne;;;;;;;;;;;;x
+ECO.0318;;Succès;;;;;;;;;;;;x
+DESCECO.0318;;L'épée est parfaite.\nJ'ai beaucoup appris de cette expérience.;;;;;;;;;;;;x
+ECO.0318A;;La gloire vous attend : vous et votre épée;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#;x;FIN AJOUT MOUCHI;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#;x;NOW HIDDEN EVENTS;;;;;;;;;;;;x
+#ECO.0020;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0020;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0020A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.0021;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0021;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0021A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.0022;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0022;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0022A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.0020;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0020;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0020A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.0021;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0021;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0021A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#ECO.0022;Route terrestre à [From.Location.GetName].;Route terrestre à [From.Location.GetName].;;;;;;;;;;;;x
+#DESCECO.0022;Une route commerciale passe par [From.Location.GetName].;Une route commerciale passe par [From.Location.GetName].;;;;;;;;;;;;x
+#ECO.0022A;Les marchands vont affluer !;Les marchands vont affluer !;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#;x;VARIOUS FLAVOUR eVENTS;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
+#ECO.0200;;bonne récolte;;;;;;;;;;;;x
+DESCECO.0200;;Les rendements agricoles en [From.Location.GetName] ont été excellents cette année, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des paysans contents.;;;;;;;;;;;;x
+ECO.0200A;OK;Bien !;;;;;;;;;;;;x
+#ECO.0201;;mauvaise récolte;;;;;;;;;;;;x
+DESCECO.0201;;Les récoltes en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
+ECO.0201A;OK;Ces incapables de paysans...;;;;;;;;;;;;x
+#ECO.0203;;pêche médiocre;;;;;;;;;;;;x
+DESCECO.0203;;Les rendements de la pêche en [From.Location.GetName] sont misérables cette année, attendons-nous à voir la prospérité de la province baisser, de même que les taxes à en tirer... sans compter sur le mécontentement du petit peuple.;;;;;;;;;;;;x
+ECO.0203A;OK;Bien !;;;;;;;;;;;;x
+#ECO.0202;;pêche abondante;;;;;;;;;;;;x
+DESCECO.0202;;La saison de pêche cette année en [From.Location.GetName] a été excellente, ce qui devrait générer de meilleurs revenus pour la province, donc plus d'impôts et des pêcheurs contents.;;;;;;;;;;;;x
+ECO.0202A;OK;Ces incapables de paysans...;;;;;;;;;;;;x
+ECO.0204;;Accident à la mine;;;;;;;;;;;;x
+DESCECO.0204;;Mauvaise nouvelles en provenance d'une de nos mines de [From.Location.GetName] : certaines installations se sont éffondrées et pires des mineurs y ont perdus la vie.;;;;;;;;;;;;x
+ECO.0204A;OK;Cela va pas arranger nos affaires...;;;;;;;;;;;;x
+ECO.0205;;Nouveau filon à la mine;;;;;;;;;;;;x
+DESCECO.0205;;Le contremaître d'une de nos mines en [From.Location.GetName] nous informe qu'un nouveau filon a été découvert ! La productivité en sera améliorée pour un temps.;;;;;;;;;;;;x
+ECO.0205A;OK;Enfin une bonne nouvelle !;;;;;;;;;;;;x
+ECO.0206;;Industrie prospère
+DESCECO.0206;;Cela fait un moment que [From.Location.GetName] n'est plus en proie à la guerre.\n Cela permet à son industrie de prospérer.;;;;;;;;;;;;x
+ECO.0206A;OK;Bien !;;;;;;;;;;;;x
+ECO.0207;;Industrie plus si prospère;;;;;;;;;;;;x
+DESCECO.0207;;Les ravages de la guerre et les forces mobilisées en [From.Location.GetName] font d'importants dommage à son industrie.;;;;;;;;;;;;x
+ECO.0207A;OK;C'est le prix à payer;;;;;;;;;;;;x
+#;x;x;;;;;;;;;;;;x
