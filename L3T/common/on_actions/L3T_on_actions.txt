@@ -252,3 +252,13 @@ on_death = {
 		REC.2124 # Death of a master painter
 	}
 }
+
+# Triggers when looting of a wonder stage is completed
+# ROOT = owner
+# FROM = wonder
+# FROMFROM = province (location of wonder)
+on_wonder_stage_loot_finish = {
+	events = {
+		REC.103 # Romanesque cathedral burning
+	}
+}
