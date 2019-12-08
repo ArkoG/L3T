@@ -122,6 +122,7 @@ character_event = {
 			tier = baron
 			holding_type = temple
 			has_building = tp_roman_cathedrale
+			location = { has_wonder = wonder_cathedral_romane }
 			OR = {
 				NOT = { has_title_flag = repaired_cathedral }
 				had_title_flag = { flag = repaired_cathedral years = 50 }
@@ -158,6 +159,7 @@ character_event = {
 				tier = baron
 				holding_type = temple
 				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
 				has_siege = yes
 			}
 		}
@@ -167,6 +169,8 @@ character_event = {
 				tier = baron
 				holding_type = temple
 				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
+				###totoro add wonder here
 				is_occupied = yes
 			}
 		}
@@ -181,9 +185,21 @@ character_event = {
 				tier = baron
 				holding_type = temple
 				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
+			}
+			owner = { save_event_target_as = cathedral_patron }
+			save_event_target_as = lieu_cathedrale
+			location = { 
+				destroy_wonder = yes
+				add_wonder = wonder_cathedral_romane
+				wonder = {
+					set_name = wonder_cathedral_romane
+					set_description = wonder_cathedral_romane_desc_UC
+				}
 			}
 			remove_building = tp_roman_cathedrale
 			add_building = tp_constructing_roman_cathedrale
+			
 			location = { province_event = { id = REC.104 days = 3650 } }
 		}
 		# Opus Francigenum can appear
@@ -198,6 +214,7 @@ character_event = {
 				tier = baron
 				holding_type = temple
 				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
 			}
 			location = { owner = { character_event = { id = REC.106 days = 10 } } }
 		}
@@ -216,6 +233,14 @@ province_event = {
 			limit = {
 				holding_type = temple
 				has_building = tp_constructing_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
+			}
+			location = { 
+				any_wonder = { 
+					limit = { has_wonder = wonder_cathedral_romane }
+					add_wonder_stage = 1
+					set_description = wonder_cathedral_romane_desc
+				}
 			}
 			remove_building = tp_constructing_roman_cathedrale
 			add_building = tp_roman_cathedrale
@@ -288,7 +313,7 @@ character_event = {
 			}
 		}
 		# Lord is not pious
-		piety = -10
+		piety = -50
 		FROM = {
 			# The romanesque cathedral is now under construction for 10 years
 			random_demesne_title = {
@@ -296,6 +321,17 @@ character_event = {
 					tier = baron
 					holding_type = temple
 					has_building = tp_roman_cathedrale
+					location = { has_wonder = wonder_cathedral_romane }
+				}
+				owner = { save_event_target_as = cathedral_patron }
+				save_event_target_as = lieu_cathedrale
+				location = {
+					destroy_wonder = yes
+					add_wonder = wonder_cathedral_romane
+					wonder = {
+						set_name = wonder_cathedral_romane
+						set_description = wonder_cathedral_romane_desc_UC
+					}
 				}
 				remove_building = tp_roman_cathedrale
 				add_building = tp_constructing_roman_cathedrale
@@ -332,7 +368,7 @@ character_event = {
 		}
 		# Lord pays 25% and gets piety
 		wealth = -50
-		piety = 10
+		piety = 25
 		FROM = {
 			# The romanesque cathedral is now under construction for 10 years
 			random_demesne_title = {
@@ -340,6 +376,17 @@ character_event = {
 					tier = baron
 					holding_type = temple
 					has_building = tp_roman_cathedrale
+					location = { has_wonder = wonder_cathedral_romane }
+				}
+				owner = { save_event_target_as = cathedral_patron }
+				save_event_target_as = lieu_cathedrale
+				location = {
+					destroy_wonder = yes
+					add_wonder = wonder_cathedral_romane
+					wonder = {
+						set_name = wonder_cathedral_romane
+						set_description = wonder_cathedral_romane_desc_UC
+					}
 				}
 				remove_building = tp_roman_cathedrale
 				add_building = tp_constructing_roman_cathedrale
@@ -389,7 +436,32 @@ character_event = {
 					tier = baron
 					holding_type = temple
 					has_building = tp_roman_cathedrale
+					location = { has_wonder = wonder_cathedral_romane }
 				}
+				location = {
+					destroy_wonder = yes
+				}
+				#if = {
+				#	limit = {
+				#		location = {
+				#			any_demesne_title = {
+				#				OR = { 
+				#					is_LCDA_hard_episcopat = yes
+				#					is_VANILLA_hard_episcopat = yes
+				#					is_SWMH_hard_episcopat = yes
+				#				}
+				#			}
+				#		}
+				#	}
+				#	location = {
+				#		add_wonder = wonder_cathedral_romane
+				#		wonder = {
+				#			set_name = wonder_cathedral_romane
+				#			set_description = wonder_cathedral_romane_desc_promised
+				#		}
+				#	}
+				#}
+				set_title_flag = awaits_gothical_cathedral
 				remove_building = tp_roman_cathedrale
 				location = { 
 					if = {
