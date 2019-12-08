@@ -28,7 +28,7 @@ narrative_event = {
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
-		
+
 	trigger = {
 		OR = {
 			had_global_flag = { flag = SWMH days = 30 }			
@@ -1234,6 +1234,15 @@ province_event = {
 					}
 				}
 				add_building = tp_roman_cathedrale
+				save_event_target_as = lieu_cathedrale
+				location = { 
+					add_wonder = wonder_cathedral_romane
+					wonder = { 
+						add_wonder_stage = 1
+						set_name = wonder_cathedral_romane
+						set_description = wonder_cathedral_romane_desc
+					}
+				}
 				set_title_flag = L3T60_made_me_cas_Ab
 
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
@@ -1302,6 +1311,15 @@ province_event = {
 					}				
 				}
 				add_building = tp_roman_cathedrale
+				save_event_target_as = lieu_cathedrale
+				location = { 
+					add_wonder = wonder_cathedral_romane
+					wonder = { 
+						add_wonder_stage = 1
+						set_name = wonder_cathedral_romane
+						set_description = wonder_cathedral_romane_desc
+					}
+				}
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 				location = {
 					set_province_flag = roman_cathedral
@@ -1383,6 +1401,15 @@ province_event = {
 			}
 			capital_holding = {
 				add_building = tp_roman_cathedrale
+				save_event_target_as = lieu_cathedrale
+				location = { 
+					add_wonder = wonder_cathedral_romane
+					wonder = { 
+						add_wonder_stage = 1
+						set_name = wonder_cathedral_romane
+						set_description = wonder_cathedral_romane_desc
+					}
+				}
 				add_building = CITEEPISCOPALE
 				set_title_flag = L3T61_made_me
 				hidden_tooltip ={
@@ -1480,6 +1507,15 @@ province_event = {
 				is_LCDA_hard_episcopat = no					
 			}
 			add_building = tp_roman_cathedrale
+			save_event_target_as = lieu_cathedrale
+				location = { 
+					add_wonder = wonder_cathedral_romane
+					wonder = { 
+						add_wonder_stage = 1
+						set_name = wonder_cathedral_romane
+						set_description = wonder_cathedral_romane_desc
+					}
+				}
 			add_building = CITEEPISCOPALE
 			set_title_flag = L3T62_made_me
 			hidden_tooltip ={
