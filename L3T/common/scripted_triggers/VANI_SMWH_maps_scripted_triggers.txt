@@ -1,0 +1,27 @@
+###VANILLA map
+is_VANILLA_hard_monastery = {
+	has_global_flag = running_VANILLA
+	OR = {
+	 	#title = b_abondance4 #Valdranses
+	}
+}
+is_VANILLA_hard_episcopat = {
+	has_global_flag = running_VANILLA
+	OR = {
+		#title = b_aoste2
+	}
+}
+
+###SWMH map
+is_SWMH_hard_monastery = {
+	has_global_flag = SWMH
+	OR = {
+	 	#title = b_abondance4 #Valdranses
+	}
+}
+is_SWMH_hard_episcopat = {
+	has_global_flag = SWMH
+	OR = {
+		#title = b_aoste2
+	}
+}
