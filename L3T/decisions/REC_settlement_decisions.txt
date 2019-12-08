@@ -25,6 +25,13 @@ settlement_decisions = {
 			holder_scope = { character = FROM }
 			is_capital = yes
 			FROM = { construire_cathedral_potential = yes }
+			OR = {
+				AND = { 
+					has_character_flag = has_relique_from_cathedral
+					location = { has_title_flag = awaits_gothical_cathedral }
+				}
+				location = { NOT = { has_title_flag = awaits_gothical_cathedral }}
+			}
 		}
 
 		allow = {
