@@ -34,8 +34,11 @@
 	NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER = 45 				-- How many courtiers in a court to make it crowded and increase chance for disease.
 	NDefines.NAI.DOW_AGGRESSION_FACTOR = 0.25
 	NDefines.NEconomy.BUILDING_COST_MULT = 0.0						-- Increase to the build cost of all buildings that cost GOLD
+	NDefines.NEconomy.WONDER_STACKING_PENALTY = 0.0
+	NDefines.NEconomy.WONDER_STACKING_PENALTY_SAME_TYPE = 0.0
 	NDefines.NGraphics.TREASURY_MODIFIER_ICON_FRAME = 182
 	NDefines.NDiplomacy.GIVE_ARTIFACT_INTERACTION_ENABLED = 0
 -- NDefines.NEconomy.HOLDING_SLOT_BUILD_COST_MOD = 1.0
 -- ENFORCE_ONE_OF_EACH_HOLDING = 1,			-- Require players to build at least one City, Temple and Castle in each province
 	NDefines.NTitle.ENFORCE_ONE_OF_EACH_HOLDING = 0			-- Require players to build at least one City, Temple and Castle in each province
+	NDefines.NWonders.MIN_LOOTABLE_STAGE = 3
