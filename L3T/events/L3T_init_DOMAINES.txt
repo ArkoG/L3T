@@ -1226,6 +1226,7 @@ province_event = {
 				limit = {
 					is_capital = yes
 					location = {
+						is_catholic_group = yes #not orthodox or heresy of
 						#religion_group = christian
 						NOT = {
 							had_global_flag = { flag = opus_francigenum days = 360 }
@@ -1304,6 +1305,7 @@ province_event = {
 			if = {
 				limit = {
 					location = {
+						is_catholic_group = yes #not orthodox or heresy of
 						NOT = {
 							had_global_flag = { flag = opus_francigenum days = 360 }
 							has_province_flag = roman_cathedral
@@ -1392,7 +1394,8 @@ province_event = {
 		}
 		if = {
 			limit = {
-				religion_group = christian
+				#religion_group = christian
+				is_catholic_group = yes #not orthodox or heresy of
 				capital_holding = { 
 					holding_type = temple
 					is_LCDA_hard_monastery =no
@@ -1480,7 +1483,8 @@ province_event = {
 		random_province_holding = {
 			limit = {
 				location = {
-					religion_group = christian
+					is_catholic_group = yes #not orthodox or heresy of
+					#religion_group = christian
 					NOT = {
 						has_province_flag = neighbor_roman_cathedral									
 						has_province_flag = neighbor_neighbor_roman_cathedral
