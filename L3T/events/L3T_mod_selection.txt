@@ -80,6 +80,7 @@ character_event = {
 	}
 	
 	immediate = {
+		##map detection finalization
 		if = {
 			limit = {
 				NOT = { has_global_flag = SWMH }
@@ -87,11 +88,14 @@ character_event = {
 			}
 			set_global_flag = running_VANILLA
 		}
+		##triggers mountain passes attribution
 		any_province = {
 			province_event = { id = L3T.28 days = 25 random = 15} #attribution cols
 			set_province_flag = had_event_LT_60001 #to prevent additional holding slot from wonders
 		}
+		##various global flags
 		set_global_flag = running_L3T
+		set_global_flag = paix_de_dieu #moved from individual options
 		set_global_flag = available_relique26
 		if = {
 			limit = { 
@@ -116,67 +120,32 @@ character_event = {
 			limit = { ai = no }
 			set_variable = { which = "global_L3T_saint_number" value = 1 }
 		}
+		##triggers various maps specifities
+		if = {
+			limit = { has_global_flag = SWMH }
+			any_province = { 
+				province_event = { id = L3T.20 } #map based attributions for coasts, land, rivers etc.
+			}
+		}
+		if = {
+			limit = { has_global_flag = running_LCDA }
+			any_province = { 
+				province_event = { id = L3T.21 } #map based attributions for coasts, land, rivers etc.
+			}
+		}
+		if = {
+			limit = { has_global_flag = running_VANILLA }
+			any_province = { 
+				province_event = { id = L3T.22 } #map based attributions for coasts, land, rivers etc.
+			}
+		}		
 	}
 	
-	option = {	
-		#name = "L3T.10A"	
-		name = OK
-		ai_chance = { factor = 0 }
-		trigger = {
-			ai = no
-			has_global_flag = SWMH
-		}
-		#SWMH coasts, land, rivers
-		hidden_tooltip = {
-			any_province = { 
-				province_event = { id = L3T.20   }
-				#province_event = { id = L3T.21   }
-				#province_event = { id = L3T.22   }
-			}
-		}
-		set_global_flag = paix_de_dieu 
-	}
-	option = {	
-		# name = "L3T.10B"	
-		name = OK
-		ai_chance = { factor = 0 }
-		trigger = {
-			ai = no
-			has_global_flag = running_LCDA
-		}
-		#LCDA coasts, land, rivers
-		hidden_tooltip = {
-			any_province = {
-				province_event = { id = L3T.21  } #LCDA coasts, land, rivers
-				#province_event = { id = L3T.31  }
-				#province_event = { id = L3T.32   }
-			}
-		}
-		set_global_flag = paix_de_dieu 
-		
-		###########LAUNCH HARDCODE events from here 
-		
-	}
 	option = {
-		#name = "L3T.10C"	
-		name = OK
+		#name = "L3T.10A"
+		name = OK		
 		ai_chance = { factor = 0 }
-		trigger = {
-			ai = no
-			#NOT = { has_global_flag = SWMH }
-			#NOT = { has_global_flag = running_LCDA }	
-			has_global_flag = running_VANILLA
-		}
-		#VANILLA coasts, land, rivers
-		hidden_tooltip = {
-			any_province = { 
-				province_event = { id = L3T.22   }
-				#province_event = { id = L3T.26   }
-				#province_event = { id = L3T.27   }
-			}
-		}
-		#set_global_flag = running_VANILLA	
-		set_global_flag = paix_de_dieu 
+		trigger = { ai = no }
 	}
 	option = {	
 		trigger = { ai = yes }
