@@ -1,15 +1,17 @@
 #character
 on_startup = {
 	events = {
-		L3T.10 #choix carte/map choice
-
+		#map detection
+		L3T.10
+		#AI random starting money and piety bonus
+		L3T.12
+		
 		#sets capital modifier
-		L3T.50
+		L3T.20
 		
 		#Initialisation population building
 		L3T.1101 
-		#AI money start bonus
-		L3T.12
+
 		
 		#city apocalypto
 		#L3T.45
@@ -28,8 +30,8 @@ on_yearly_pulse = {
 		L3T.225
 		L3T.226
 		#màj capital modifier
-		L3T.50
-		L3T.51
+		L3T.20
+		L3T.21
 		
 		##population events
 		 #castle
@@ -153,8 +155,8 @@ on_new_holder = {
 		REC.1
 		REC.11
 		#màj capital modifier
-		L3T.50
-		L3T.51
+		L3T.20
+		L3T.21
 	}
 }
 
@@ -175,8 +177,8 @@ on_new_holder_inheritance = {
 		REC.1
 		REC.11
 		#màj capital modifier
-		L3T.50
-		L3T.51
+		L3T.20
+		L3T.21
 	}
 }
 
@@ -197,8 +199,8 @@ on_new_holder_usurpation = {
 		REC.1
 		REC.11
 		#màj capital modifier
-		L3T.50
-		L3T.51
+		L3T.20
+		L3T.21
 	}
 }
 
