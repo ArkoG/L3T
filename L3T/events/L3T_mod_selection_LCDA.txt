@@ -8,17 +8,14 @@ province_event = { #installe les provinces côtières, terrestres et rivières L
 	
 	immediate = {
 		if = {
-			limit = {
-				NOT = { has_province_modifier = province_cotiere }
-				port = yes
+			limit = { is_LCDA_coasts = yes }
+			add_province_modifier = {
+				name = province_cotiere
+				duration = -1
 			}
-			add_province_modifier = {	name = province_cotiere  	duration = -1 }
 		}
 		if = {
-			limit = {
-				NOT = { has_province_modifier = province_terrestre }
-				port = no
-			}
+			limit = { is_LCDA_coasts = no }
 			add_province_modifier = {
 				name = province_terrestre
 				duration = -1  
@@ -26,13 +23,11 @@ province_event = { #installe les provinces côtières, terrestres et rivières L
 			}
 		}
 		if = {
-			limit = {
-				OR = { 
-					borders_major_river = yes
-					#province_id = 6 # Aigle
-				}
+			limit = { is_LCDA_rivers = yes }
+			add_province_modifier = { 
+				name = province_fleuve
+				duration = -1
 			}
-			add_province_modifier = { name = province_fleuve duration = -1 }
 		}
 		
 		#for hard republics, will trigger nodes attribution
