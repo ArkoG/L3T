@@ -7,28 +7,10 @@ province_event = { #installe les provinces côtières, terrestres et rivières S
 	is_triggered_only = yes
 	
 	immediate = {
-		if = {
-			limit = { is_SWMH_coasts = yes }
-			add_province_modifier = {
-				name = province_cotiere
-				duration = -1
-			}	
-		}
-		if = {
-			limit = { is_SWMH_coasts = no }
-			add_province_modifier = {
-				name = province_cotiere
-				duration = -1
-			}	
-		}		
-		if = {
-			limit = { is_SWMH_rivers = yes }		
-			add_province_modifier = { 
-				name = province_fleuve
-				duration = -1
-			}
-		}
 		
+		#coasts etc. moved to L3T.10
+		
+
 		#for hard republics, will trigger nodes attribution
 		##those will set the hardcode is done flagS, that opens regular MTTH spec
 		

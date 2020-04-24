@@ -121,24 +121,97 @@ character_event = {
 			set_variable = { which = "global_L3T_saint_number" value = 1 }
 		}
 		##triggers various maps specifities
+
+		#SWMH
 		if = {
 			limit = { has_global_flag = SWMH }
-			any_province = { 
-				province_event = { id = L3T.20 } #map based attributions for coasts, land, rivers etc.
+			any_province = {
+				#map based attributions for coasts, land, rivers etc.
+				province_event = { id = L3T.20 } #still called for common stuff ATM
+				if = {
+					limit = { is_SWMH_coasts = yes }
+					add_province_modifier = {
+						name = province_cotiere
+						duration = -1
+					}	
+				}
+				if = {
+					limit = { is_SWMH_coasts = no }
+					add_province_modifier = {
+						name = province_cotiere
+						duration = -1
+					}	
+				}		
+				if = {
+					limit = { is_SWMH_rivers = yes }		
+					add_province_modifier = { 
+						name = province_fleuve
+						duration = -1
+					}
+				}
 			}
 		}
+		#LCDA
 		if = {
 			limit = { has_global_flag = running_LCDA }
-			any_province = { 
-				province_event = { id = L3T.21 } #map based attributions for coasts, land, rivers etc.
+			any_province = {
+				#map based attributions for coasts, land, rivers etc.
+				province_event = { id = L3T.21 } #still called for common stuff ATM
+				if = {
+					limit = { is_LCDA_coasts = yes }
+					add_province_modifier = {
+						name = province_cotiere
+						duration = -1
+					}
+				}
+				if = {
+					limit = { is_LCDA_coasts = no }
+					add_province_modifier = {
+						name = province_terrestre
+						duration = -1  
+						hidden = yes
+					}
+				}
+				if = {
+					limit = { is_LCDA_rivers = yes }
+					add_province_modifier = { 
+						name = province_fleuve
+						duration = -1
+					}
+				}
+				province_event = { id = L3T.61 } #LCDA only - hard_episcopate/monasteries
 			}
 		}
 		if = {
 			limit = { has_global_flag = running_VANILLA }
-			any_province = { 
-				province_event = { id = L3T.22 } #map based attributions for coasts, land, rivers etc.
+			any_province = {
+				#map based attributions for coasts, land, rivers etc.
+				province_event = { id = L3T.22 } #still called for common stuff ATM
+				if = {
+					limit = { is_VANILLA_coasts = yes }
+					add_province_modifier = { 
+						name = province_cotiere
+						duration = -1
+					}
+				}
+				if = {
+					limit = { is_VANILLA_coasts = no }
+					add_province_modifier = {
+						name = province_terrestre
+						duration = -1  
+						hidden = yes
+					}
+				}
+				if = {
+					limit = { is_VANILLA_rivers = yes }
+					add_province_modifier = {
+						name = province_fleuve
+						duration = -1
+					}	
+				}
 			}
-		}		
+		}
+		
 	}
 	
 	option = {

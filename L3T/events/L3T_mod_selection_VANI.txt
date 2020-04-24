@@ -7,28 +7,8 @@ province_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		if = {
-			limit = { is_VANILLA_coasts = yes }
-			add_province_modifier = { 
-				name = province_cotiere
-				duration = -1
-			}
-		}
-		if = {
-			limit = { is_VANILLA_coasts = no }
-			add_province_modifier = {
-				name = province_terrestre
-				duration = -1  
-				hidden = yes
-			}
-		}
-		if = {
-			limit = { is_VANILLA_rivers = yes }
-			add_province_modifier = {
-				name = province_fleuve
-				duration = -1
-			}	
-		}
+
+		#coasts etc. moved to L3T.10
 		
 		
 		#for hard republics, will trigger nodes attribution
