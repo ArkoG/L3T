@@ -785,28 +785,7 @@ province_event = { #installe les provinces côtières, terrestres et rivières S
 		}
 		
 		#realm's capital receives a prov modifier
-		if = {
-			limit = {
-				owner = {
-					OR = {
-						demesne_size = 3
-						realm_size = 8
-					}
-					capital_scope = {
-						NOT = { has_province_modifier = realm_capital_province }
-					}
-				}
-			}
-			owner = {
-				#owner = { character_event = { id = L3T.50 }}
-				capital_scope = {
-					add_province_modifier = { 
-						name = realm_capital_province
-						duration = -1
-					}
-				}
-			}
-		}
+		#is given through# on_startup/L3T.50
 
 		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
 		if = {
@@ -832,14 +811,14 @@ province_event = { #installe les provinces côtières, terrestres et rivières S
 			province_event = { id = L3T.41 days = 60 }
 		}
 		#RESSOURCES ATTRIBUTION
-			province_event = { id = ECO.1 }
-			province_event = { id = ECO.2 }
-			province_event = { id = ECO.3 }
-			province_event = { id = ECO.4 }
-			province_event = { id = ECO.5 }
-			province_event = { id = ECO.8 }
-			province_event = { id = ECO.80 }
-			province_event = { id = ECO.81 }
-			province_event = { id = ECO.82 }
+		province_event = { id = ECO.1 }
+		province_event = { id = ECO.2 }
+		province_event = { id = ECO.3 }
+		province_event = { id = ECO.4 }
+		province_event = { id = ECO.5 }
+		province_event = { id = ECO.8 }
+		province_event = { id = ECO.80 }
+		province_event = { id = ECO.81 }
+		province_event = { id = ECO.82 }
 	}
 }

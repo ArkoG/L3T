@@ -3,6 +3,9 @@ on_startup = {
 	events = {
 		L3T.10 #choix carte/map choice
 
+		#sets capital modifier
+		L3T.50
+		
 		#Initialisation population building
 		L3T.1101 
 		#AI money start bonus
