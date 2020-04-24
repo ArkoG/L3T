@@ -4,32 +4,35 @@
 
 #List ID des events.
 #namespace = L3T
+#TCL language for better reading of the file
 
 # Cf [COMMENTE] pour les events qui ne sont pas disponibles car commentés
 # Cf [NON INCLUS] pour les fichiers d'events non inclus dans la version courante
 
 ###L3T_init_DOMAINES.txt
+
 #id = L3T.3 #SPEC domaine Féodal
-#id = L3T.31 #domaine Féodal capitals are feudal cities
+#id = L3T.31 #domaine Féodal capitals are feudal cities  (on_action) 
 
 #id = L3T.4 #SPEC domaine Communal  
-#id = L3T.41 #domaine Communal province à double cité  
+#id = L3T.41 #domaine Communal province à double cité  (on_action)  
 #id = L3T.45#city apocalypto
 #id = L3T.46#city apocalypto end
 
 #obsolete#id = L3T.5 #upgrade CITE GRANDE L1  vers L2 à rename en 4x
 
 #id = L3T.6 #SPEC domaine Ecclésial
-#id = L3T.61 #domaine Ecclésial hardcode
-#id = L3T.62 #old cathedral and spe in religious province for capitals
-#id = L3T.63 #filling the grid of old cathedrals 
+#id = L3T.61 #domaine Ecclésial hardcode  (on_action) 
+#id = L3T.62 #old cathedral and spe in religious province for capitals  (on_action) 
+#id = L3T.63 #filling the grid of old cathedrals  (on_action)  
 
-#id = L3T.7 #attribution règle monastique
+#id = L3T.7 #attribution règle monastique  (on_action) 
 
-#id = L3T.9 #Init built holding (on_action)
+#id = L3T.9 #Init built holding  (on_action)
 
 
 ###L3T_mod_selection.txt
+
 #id = L3T.1 #mode debug //activation
 #id = L3T.2 #mode debug //désactivation
 
@@ -37,32 +40,21 @@
 #id = L3T.11 #fin paix de Dieu
 #id = L3T.12 #boost IA gold+piety
 
-###id = L3T.13 #adbication (provisoire, la localisation de la décision porte cet ID}
-
-###L3T_mod_selection_SWMH.txt
-#id = L3T.20 #SWMH attribution coasts/rivers/lands/church pre-attribution/capitales 
-
-###L3T_mod_selection_LCDA.txt
-#id = L3T.21#LCDA attribution coasts/rivers/lands/church pre-attribution/capitales 
-
-###L3T_mod_selection_VANI.txt
-#id = L3T.22 #Vanilla attribution coasts/rivers/lands/church pre-attribution/capitales 
-
-###L3T_mod_selection.txt
+#id = L3T.20 #maintenance capitales - initiate/update
+#id = L3T.21 #maintenance capitales - removal
+#id = L3T.22 #ressources
+#id = L3T.23 #temple pre-spec
+#id = L3T.24 #castle pre-spec
+#id = L3T.25 #city pre-spec
+#id = L3T.26 #####FREE SLOT
+#id = L3T.27 #####FREE SLOT
 #id = L3T.28 #toute carte - Cols attribution
 #id = L3T.29 #toute carte - Cols notification
 
-#id = L3T.50#maintenance capitales - initiate/update
-#id = L3T.51#maintenance capitales - removal
 
-###[NON INCLUS] L3T_minorite.txt
-#id = L3T.15 #event initial
-#id = L3T.16 #check annuel religion
-#id = L3T.17 #marquage conversion depuis
-#id = L3T.18 #
-#id = L3T.19 #
 
 ###L3T_population.txt
+
 #id = L3T.1101 #initialisation dev variable (devv) buildings
 #id = L3T.1102 #check dev variable settlement decision
 #id = L3T.1103 #dev variable natural growth
@@ -86,7 +78,17 @@
 #id = L3T.114 #upgrade population TP vers L4
 #id = L3T.115 #upgrade population TP vers L5
 
+###[NON INCLUS] L3T_minorite.txt
+
+#A RETAG 115 116 117 118 119
+#id = L3T.15 #event initial
+#id = L3T.16 #check annuel religion
+#id = L3T.17 #marquage conversion depuis
+#id = L3T.18 #
+#id = L3T.19 #
+
 ###L3T_pop_notifications.txt
+
 #id = L3T.11031 #dev changes notifs debug
 #id = L3T.11032 #dev changes notifs debug
 #id = L3T.11033 #dev changes notifs debug
@@ -99,6 +101,7 @@
 	#id = L3T.11095 #dev variable ress adv+20
 
 ###L3T_building_modifiers.txt
+
 #id = L3T.201 # Give the chapelle modifier 1 year after starting the building
 #id = L3T.202 # Give the chapelle modifier to the new holder and remove it to the old
 #id = L3T.203 # Give the chapelle modifier
@@ -140,7 +143,8 @@
 #id = L3T.248 # Remove the library_2 modifier
 #id = L3T.249 FREE
 
-#L3T_building_prestige_cost.txt
+##L3T_building_prestige_cost.txt
+
 #id = L3T.230 # Spends prestige point for building ca_tour_L4
 #id = L3T.232 # Spends prestige point for building ca_eglise_L4
 #id = L3T.231 # Spends prestige point for building ca_con_wall_6
@@ -153,7 +157,8 @@
 #id = L3T.241-248 # See L3T_building_modifiers.txt
 #id = L3T.249 FREE
 
-#L3T_various_flavour.txt
+##L3T_various_flavour.txt
+
 #id = L3T.250 #Buy books decision //choose who/where to buy it
 #id = L3T.251 #Buy books decision //choose the type of book
 #id = L3T.2510 #Buy + Studying books decision //flag cleaner
@@ -179,10 +184,12 @@
 #id = L3T.256 #clean used book flag on artifact inheritance
 
 ###L3T_specialization_change.txt
+
 # id = L3T.301 # Remove the FEODAL_adm dependancies and choose a new specialization
 # id = L3T.302 # Add a holding modifier after starting to build
 
 ###L3T_easter_eggs.txt
+
 # id = L3T.401 #end if we go to war.
 # id = L3T.402 #Normal end.
 # id = L3T.411 # Search egg number 1
@@ -205,7 +212,7 @@
 # id = L3T.441 # Search egg number 4
 # id = L3T.442 # Found egg 4 by oneself
 # id = L3T.443 # Someone else found egg 4
-### id = L3T.444 # Free slot
+# id = L3T.444 ###### FREE SLOT
 # id = L3T.445 # Found egg 4 by oneself -false egg "acts" strangely
 # id = L3T.446 # Found egg 4 by oneself -false egg hatches GOOD
 # id = L3T.447 # Found egg 4 by oneself -false egg hatches BAD
@@ -234,6 +241,7 @@
    
 ###ECO_init_RESSOURCES.txt
 ##Détection ressources
+
 #id = ECO.1 #évaluation du potentiel économique -plaines- 
 #id = ECO.2 #évaluation du potentiel économique -coteaux- 
 #id = ECO.3 #évaluation du potentiel économique -forets- 
@@ -245,7 +253,7 @@
 #id = ECO.82 #évaluation du potentiel économique -arctique-  
 #id = ECO.15 #reroll pour les malchanceux (voir détection ressources)
 
-##activation ressources
+#activation ressources
 #id = ECO.100 #activation pour commerce -agriculture -céréales 
 #id = ECO.101 #activation pour commerce -agriculture -fruits
 #id = ECO.102 #activation pour commerce -agriculture -légumes
@@ -444,9 +452,13 @@
 #saint_events.4
 #saint_events.5
 
-#ReC_sainthood.txt
+##ReC_sainthood.txt
 #id = REC.20# deus_vox trait evaluation
 #id = REC.21# deus_gladio trait evaluation
+
+##file à ajouter
+###id = REC.22 #monastery adbication (provisoire, la localisation de la décision porte cet ID}
+
 
 ##Rec_events_opus_francigenum.txt
 #id = REC.101 # Free Opus Francigenum
