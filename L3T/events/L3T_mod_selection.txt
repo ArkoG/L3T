@@ -389,7 +389,7 @@ province_event = {
 		clr_province_flag = text_reponse_generique_D
 	}
 }
-#Maintenance realm capitales
+#Maintenance realm capitales - ADDING/KEEPING the modifier
 # ROOT is the character
 character_event = {
     id = L3T.50
@@ -451,7 +451,7 @@ character_event = {
 }
 			
 
-#Maintenance realm capitals
+#Maintenance realm capitals - REMOVING the modifier
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 character_event = {
     id = L3T.51
