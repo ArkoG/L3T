@@ -1,18 +1,35 @@
 namespace = L3T
 
-province_event = { #installe les provinces côtières, terrestres et rivières SWMH
+##RESSOURCES ATTRIBUTION
+province_event = { 
     id = L3T.20
 	hide_window = yes
 
 	is_triggered_only = yes
 	
 	immediate = {
+		province_event = { id = ECO.1 }
+		province_event = { id = ECO.2 }
+		province_event = { id = ECO.3 }
+		province_event = { id = ECO.4 }
+		province_event = { id = ECO.5 }
+		province_event = { id = ECO.8 }
+		province_event = { id = ECO.80 }
+		province_event = { id = ECO.81 }
+		province_event = { id = ECO.82 }
+	}
+}
 
-		#coasts etc. moved to L3T.10
+##TEMPLES PRE-ATTRIBUTION
+province_event = { 
+    id = L3T.21
+	hide_window = yes
 
-		#for hard republics, will trigger nodes attribution
-		##those will set the hardcode is done flagS, that opens regular MTTH spec
+	is_triggered_only = yes
+
+	#realm's capital prov modifier given through# on_startup/L3T.50 is a pre-req to this event
 		
+	immediate = {
 		#for hard Monasteries, will give basilique and relic if capital
 		#for hard bishoprics, will give basilique and relic		
 		if = {
@@ -88,7 +105,17 @@ province_event = { #installe les provinces côtières, terrestres et rivières S
 			}
 			province_event = { id = L3T.63 days = 2 }
 		}
+	}
+}
 
+##CASTLES PRE-ATTRIBUTION
+province_event = { 
+    id = L3T.22
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
 		#for feudal capital holdings, make them feudal cities				
 		if = {
 			limit = {
@@ -105,10 +132,20 @@ province_event = { #installe les provinces côtières, terrestres et rivières S
 			}
 			province_event = { id = L3T.31 }
 		}
-		
-		#realm's capital receives a prov modifier
-		#is given through# on_startup/L3T.50
+	}
+}
 
+##CITIES PRE-ATTRIBUTION
+province_event = { 
+    id = L3T.23
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		#for hard republics, will trigger nodes attribution
+		##those will set the "hardcode is done" flagS, that opens regular MTTH spec
+		
 		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
 		if = {
 			limit = {
@@ -132,15 +169,5 @@ province_event = { #installe les provinces côtières, terrestres et rivières S
 			# The other are delayed
 			province_event = { id = L3T.41 days = 60 }
 		}
-		#RESSOURCES ATTRIBUTION
-		province_event = { id = ECO.1 }
-		province_event = { id = ECO.2 }
-		province_event = { id = ECO.3 }
-		province_event = { id = ECO.4 }
-		province_event = { id = ECO.5 }
-		province_event = { id = ECO.8 }
-		province_event = { id = ECO.80 }
-		province_event = { id = ECO.81 }
-		province_event = { id = ECO.82 }
 	}
 }
