@@ -179,7 +179,6 @@ character_event = {
 						duration = -1
 					}
 				}
-				province_event = { id = L3T.61 } #LCDA only - hard_episcopate/monasteries
 			}
 		}
 		if = {
@@ -212,7 +211,7 @@ character_event = {
 			}
 		}
 		
-	}
+	} #end of immediate
 	
 	option = {
 		#name = "L3T.10A"

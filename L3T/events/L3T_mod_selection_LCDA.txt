@@ -3,14 +3,13 @@ namespace = L3T
 province_event = { #installe les provinces côtières, terrestres et rivières LCDA
     id = L3T.21
 	hide_window = yes
-	
+
 	is_triggered_only = yes
 	
 	immediate = {
-		
+
 		#coasts etc. moved to L3T.10
 
-		
 		#for hard republics, will trigger nodes attribution
 		##those will set the hardcode is done flagS, that opens regular MTTH spec
 		
@@ -20,7 +19,7 @@ province_event = { #installe les provinces côtières, terrestres et rivières L
 			limit = {
 				any_province_holding = {
 					holding_type = temple
-					OR = {
+					OR = { #LCDA only
 						is_LCDA_hard_monastery = yes
 						is_LCDA_hard_episcopat = yes
 					}
@@ -31,7 +30,7 @@ province_event = { #installe les provinces côtières, terrestres et rivières L
 					}
 				}
 			}
-			province_event = { id = L3T.61 } #LCDA only
+			province_event = { id = L3T.61 }
 		}
 
 		#for christian all CAPITAL temple, will get relic				
@@ -109,7 +108,7 @@ province_event = { #installe les provinces côtières, terrestres et rivières L
 		
 		#realm's capital receives a prov modifier
 		#is given through# on_startup/L3T.50
-		
+
 		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
 		if = {
 		#####TO SPLIT#############

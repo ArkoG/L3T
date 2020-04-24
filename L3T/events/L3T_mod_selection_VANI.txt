@@ -1,6 +1,6 @@
 namespace = L3T
 
-province_event = {
+province_event = { #installe les provinces côtières, terrestres et rivières VANILLA
     id = L3T.22
 	hide_window = yes
 
@@ -9,8 +9,7 @@ province_event = {
 	immediate = {
 
 		#coasts etc. moved to L3T.10
-		
-		
+
 		#for hard republics, will trigger nodes attribution
 		##those will set the hardcode is done flagS, that opens regular MTTH spec
 		
@@ -20,7 +19,7 @@ province_event = {
 			limit = {
 				any_province_holding = {
 					holding_type = temple
-					OR = {
+					OR = { #LCDA only
 						is_LCDA_hard_monastery = yes
 						is_LCDA_hard_episcopat = yes
 					}
@@ -31,7 +30,7 @@ province_event = {
 					}
 				}
 			}
-			#province_event = { id = L3T.61 } #LCDA only
+			province_event = { id = L3T.61 }
 		}
 
 		#for christian all CAPITAL temple, will get relic				
