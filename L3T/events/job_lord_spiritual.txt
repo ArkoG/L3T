@@ -41,7 +41,26 @@ character_event = {
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
 		NOT = { trait = incapable }
-		NOT = { location = { religion = ROOT } }
+		###L3T
+		#possibly continue the conversion work if there is an unwanted minority there
+		OR = {
+			NOT = { location = { religion = ROOT } } #vanilla, wrong religion
+			AND = {
+				location = {
+					religion = ROOT #is same religion
+					has_province_modifier = minority_muslim_neg #there's an unwanted muslim minority
+				}
+				liege = { religion_group = christian } #employer is christian
+			}
+			AND = {
+				location = {
+					religion = ROOT #is same religion
+					has_province_modifier = minority_christian_neg #there's an unwanted christian minority
+				}
+				liege = { religion_group = muslim } #employer is muslim
+			}
+		}
+		###L3T-end
 		location = {
 			owner = { same_realm = ROOT }
 		}
