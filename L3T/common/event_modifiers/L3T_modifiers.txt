@@ -156,10 +156,10 @@
   #209-211 - not used
 #212 - tradition chrétienne
 #213 - tradition musulmane
-#214 - tradition autre (voir si tuile)
-#215 - déclin tradition chrétienne
-#216 - déclin tradition musulmane
-#217 - déclin tradition autre (voir si tuile) [NOT USED]
+#214 - christian minority -accepted-
+#215 - muslim minority -accepted-
+#216 - christian minority -undergone-
+#217 - muslim minority -undergone-
 #218 - depopulation vanilla 1 [NOT USED]
 #219 - depopulation vanilla 2 [NOT USED]
 #220 - depopulation vanilla 3 [NOT USED]
@@ -393,12 +393,12 @@ loge_modifier = {
 }
 
 ##########
-trad_chretienne = { icon = 212 } #flag
-trad_musulmane = { icon = 213 } #flag
-trad_autre = { icon = 214 } #flag
-
-minorite_chretienne = { icon = 215 }
-minorite_musulmane = { icon = 216 }
+trad_christian = { icon = 212 } #+flag
+trad_muslim = { icon = 213 } #+flag
+minority_christian_pos = { icon = 214 } #+flag
+minority_muslim_pos = { icon = 215 } #+flag
+minority_christian_neg = { icon = 216 } #+flag
+minority_muslim_neg = { icon = 217 } #+flag
 
 ##########
 boost_opinion_bourgeois	= {	town_opinion	= 25	icon = 197	}
