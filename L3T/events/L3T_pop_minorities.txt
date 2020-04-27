@@ -9,181 +9,71 @@ namespace = L3T
 ###initial religion detection
 province_event = {
     id = L3T.120
-	desc = "DESCL3T.120"
-	picture = GFX_evt_heretic
-	border = GFX_event_normal_frame_religion
-	
 	hide_window = yes
 
-	#is_triggered_only
+	is_triggered_only = yes
+	
 	trigger = {
 		NOT = { has_province_flag = religion_init_set }
 	}
 		
-	mean_time_to_happen = { days = 10 }
-
 	immediate = {
-	
-			set_province_flag = religion_init_set
-			
-			if = {
-				limit = { religion_group = christian }
-				add_province_modifier = { name = trad_chretienne 	duration = 18250	} #50ans ###à cacher				
-				}
-			if = {
-				limit = { religion_group = muslim }
-				add_province_modifier = { name = trad_musulmane 	duration = 18250	} #50ans ###à cacher
-				}
-			if = {
-				limit = { 	
-					OR = { 						
-						religion_group = pagan_group
-						religion_group = zoroastrian_group
-						religion_group = jewish_group
-						religion_group = indian_group
-						}
-					}
-				add_province_modifier = { name = trad_autre 		duration = 18250	} #50ans ###à cacher
-				}
-			#}
-			
-			
-	#option = {
-		#name = L3T.0015A
-			ROOT = { province_event = { id = L3T.0016 days = 365 }	} #check annuel religion traditionnelle
-			ROOT = { province_event = { id = L3T.0017 days = 365 }	} #check annuel conversion depuis
-			#ROOT = { province_event = { id = L3T.0018 days = 365 }	} #check annuel conversion vers
-			}
-}
-
-###check annuel religion
-province_event = {
-    id = L3T.0016
-	desc = "DESCL3T.0016"
-	picture = GFX_evt_heretic
-	border = GFX_event_normal_frame_religion
-	
-	hide_window = yes
-
-	is_triggered_only = yes
+		set_province_flag = religion_init_set
 		
-	immediate = {
-	
-			if = {
-				limit = {
-					religion_group = christian ###la province est chrétienne et n'a pas été convertie, renouvelement pour 50ans
-					#NOT = { has_province_flag = converti_depuis_chretien }
-					}
-				remove_province_modifier = trad_chretienne	
-				add_province_modifier = { name = trad_chretienne 	duration = 18250	} #50ans ###à cacher				
-				}
-			if = {
-				limit = {
-					religion_group = muslim
-					#NOT = { has_province_flag = converti_depuis_musulman }
-					}
-				remove_province_modifier = trad_musulmane
-				add_province_modifier = { name = trad_musulmane 	duration = 18250	} #50ans ###à cacher
-				}
-			if = {
-				limit = { 	
-					OR = { 						
-						religion_group = pagan_group
-						religion_group = zoroastrian_group
-						religion_group = jewish_group
-						religion_group = indian_group
-						}
-					#NOT = { has_province_flag = converti_depuis_autre }
-					}
-				remove_province_modifier = trad_autre
-				add_province_modifier = { name = trad_autre 		duration = 18250	} #50ans ###à cacher
-				}
-			#}
-			
-			### add a notification if a tradition faded/about to fade
-			
-			
-	#option = {
-		#name = L3T.0016A
-			ROOT = { province_event = { id = L3T.0016 days = 365 }	} #check annuel religion traditionnelle
+		if = {
+			limit = { religion_group = christian }
+			add_province_modifier = { 
+				name = trad_christian
+				duration = -1
+			}
+			set_variable = { which = was_christian_for value = 1 }
 		}
+		
+		if = {
+			limit = { religion_group = muslim }
+			add_province_modifier = { 
+				name = trad_muslim
+				duration = -1
+			}
+			set_variable = { which = was_muslim_for value = 1 }
+		}
+	}
 }
 
-###marquage conversion DEPUIS
-province_event = {
-    id = L3T.0017
-	desc = "DESCL3T.0017"
-	picture = GFX_evt_heretic
-	border = GFX_event_normal_frame_religion
-	
+###annual religion check
+character_event = {
+    id = L3T.121
 	hide_window = yes
 
 	is_triggered_only = yes
-		
-	immediate = {
-				ROOT = { province_event = { id = L3T.0017 days = 365 }	} #check annuel conversion depuis	
-			if = {
-				limit = {
-					has_province_modifier = trad_chretienne #était chrétienne
-					NOT = { religion_group = christian } #n'est plus chrétienne
-					NOT = { has_province_flag = converti_depuis_chretien }
-					}
-				set_province_flag = converti_depuis_chretien	#idendification comme convertie de religion chrétienne vers une autre. Empêche le renouvellement de la tradition.
-				}
-			if = {
-				limit = {
-					has_province_modifier = trad_musulmane
-					NOT = { religion_group = muslim }
-					NOT = { has_province_flag = converti_depuis_musulman }
-					}
-				set_province_flag = converti_depuis_musulman
-				}
-			if = {
-				limit = { 	
-					has_province_modifier = trad_autre
-					OR = { 
-						NOT = { religion_group = pagan_group }
-						NOT = { religion_group = zoroastrian_group }
-						NOT = { religion_group = jewish_group }
-						NOT = { religion_group = indian_group }
-						NOT = { has_province_flag = converti_depuis_autre }
-						}
-					}
-				set_province_flag = converti_depuis_autre
-				}
-			}
-}
-###marquage conversion VERS
-#province_event = {
-#    id = L3T.0018
-#	desc = "DESCL3T.0018"
-#	picture = GFX_evt_heretic
-#	border = GFX_event_normal_frame_religion
-	
-#	hide_window = yes
 
-#	is_triggered_only = yes
-		
-#	immediate = {
-#				ROOT = { province_event = { id = L3T.0018 days = 365 }	} #check annuel conversion vers	
-#			if = {
-#				limit =  { religion_group = christian }
-#				set_province_flag = converti_vers_chretien
-#				}
-#			if = {
-#				limit =  { religion_group = muslim }
-#				set_province_flag = converti_vers_musulman
-#				}
-#			if = {
-#				limit =  { 
-#					OR = {					
-#						religion_group = pagan_group
-#						religion_group = zoroastrian_group
-#						religion_group = jewish_group
-#						religion_group = indian_group
-#						}
-#					}
-#				set_province_flag = converti_vers_autre
-#				}
-#			}
-#}
+	trigger = {
+		any_realm_province = { has_province_flag = religion_init_set }
+	}
+
+	immediate = {
+		any_realm_province = {
+			if = {
+				##province is still christian
+				limit = {
+					religion_group = christian 
+					has_province_modifier = trad_christian
+				}
+				change_variable = { which = "was_christian_for" value = 1 }
+			}
+			if = {
+				##province is still muslim
+				limit = {
+					religion_group = muslim 
+					has_province_modifier = trad_muslim
+				}
+				change_variable = { which = "was_muslim_for" value = 1 }
+			}		
+		}
+	}
+}
+
+### add a notification if a tradition faded/about to fade
+#gestion des minorités
+
+
