@@ -12,6 +12,8 @@ narrative_event = {
 	hide_new = yes
 	hide_from = yes
 
+	religion = catholic
+
 	is_triggered_only = yes	
 	
 	immediate = {
@@ -277,9 +279,8 @@ narrative_event = {
 	option = {
 		name = "OPUSFRANCIGENUM.A"
 		trigger = {
-			NOT = {
-				has_a_relic = yes
-			}
+			NOT = { has_a_relic = yes }
+			is_catholic_group = yes
 		}
 	}
 	
@@ -287,6 +288,13 @@ narrative_event = {
 		name = "OPUSFRANCIGENUM.B"
 		trigger = {
 			has_a_relic = yes
+			is_catholic_group = yes
+		}
+	}
+	option = {
+		name = "OPUSFRANCIGENUM.C"
+		trigger = {
+			is_catholic_group = no #non catholic wouldn't care
 		}
 	}
 }
