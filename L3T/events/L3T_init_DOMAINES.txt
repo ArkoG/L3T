@@ -1134,6 +1134,17 @@ narrative_event = {
 			clear_event_target = holding_to_spec
 			clr_title_flag = temple_to_specialize
 			if = {
+				limit = { 
+					location = { NOT = { has_province_modifier = relique_generique }}
+				}
+				location = { 
+					add_province_modifier = {
+						name = relique_generique
+						duration = -1
+					}
+				}
+			}				
+			if = {
 				limit = {
 					NOT = {
 						has_building = MONASTERE
@@ -1141,8 +1152,17 @@ narrative_event = {
 						has_building = BOURG_EPISCOPAL
 					}
 				}
+				add_building = tp_roman_cathedrale
+				save_event_target_as = lieu_cathedrale
+				location = { 
+					add_wonder = wonder_cathedral_romane
+					wonder = { 
+						add_wonder_stage = 1
+						set_name = wonder_cathedral_romane
+						set_description = wonder_cathedral_romane_desc
+					}
+				}
 				add_building = CITEEPISCOPALE
-				#totoro #pop some event here if recently converted to christianism to import/generate a Relic
 				set_title_flag = L3T6_made_me_opt_C
 				hidden_tooltip ={
 					change_variable = { which = "developpement" value = 15 }
@@ -1150,7 +1170,23 @@ narrative_event = {
 				}
 				add_holding_modifier = { name = episcopale_L1 duration = -1 }
 			}
-			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
+			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
+			location = {
+				set_province_flag = roman_cathedral
+				any_neighbor_province = {
+					set_province_flag = neighbor_roman_cathedral	
+					any_neighbor_province = {
+						limit = {
+							NOT = {
+								has_province_flag = neighbor_roman_cathedral									
+								has_province_flag = neighbor_neighbor_roman_cathedral
+								has_province_flag = roman_cathedral
+							}
+						}
+						set_province_flag = neighbor_neighbor_roman_cathedral
+					}
+				}
+			}
 		}
 	}
 }
