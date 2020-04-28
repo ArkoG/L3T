@@ -427,6 +427,7 @@
 #namespace = REC
 
 ##ReC_events_construction.txt
+
 #id = REC.1 # Give builder trait succession
 #id = REC.2 # Remove builder trait succession
 #id = REC.3 # Construction base progression [character]
@@ -445,6 +446,7 @@
 #id = REC.16 # Catholic starts again construction
 
 ##saint_events.txt
+
 #saint_events.1
 #saint_events.10 alternate debug for saint_events.1
 #saint_events.2
@@ -453,6 +455,7 @@
 #saint_events.5
 
 ##ReC_sainthood.txt
+
 #id = REC.20# deus_vox trait evaluation
 #id = REC.21# deus_gladio trait evaluation
 
@@ -461,17 +464,21 @@
 
 
 ##Rec_events_opus_francigenum.txt
+
 #id = REC.101 # Free Opus Francigenum
 #id = REC.102 # Historical or 50 years Opus Francigenum
 #id = REC.103 # Romanesque cathedral burning
 #id = REC.104 # End of the romanesque cathedral reconstruction
-#id = REC.105 # Dynamic Opus Francigenum
+#id = REC.105 # Dynamic Opus Francigenum notification (player owned rebuilt roman cathedral)
 #id = REC.106 # Ask lord contribution
 #id = REC.107 # Lord gets a piety malus if it has not already (1st year)
 #id = REC.108 # Lord gets a piety malus if it has not already (5years)
 #id = REC.109 # Romanesque cathedral maintenance
+#id = REC.110 # Dynamic Opus Francigenum notification (non player owned rebuilt roman cathedral)
+
 
 ##ReC_events_buildings.txt
+
 #id = REC.201 # bonus achèvement étape 1 (modifieur pour recrutement)
 #id = REC.202 >> REC.211 # bonus achévement des étapes sauf 0210
 #id = REC.1210 # bonus achévement étape n°10_ca
