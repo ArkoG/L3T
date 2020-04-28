@@ -28,8 +28,6 @@ character_event = {
 ## Détection de la carte
 character_event = {
     id = L3T.10
-	#title = "NAMEL3T.10"
-	#desc = "DESCL3T.10"
 	title = { 
 		trigger = {	religion_group = christian	}
 		text = "NAMEL3T.10_christian"
@@ -260,8 +258,6 @@ narrative_event = {
 # Boost IA non feudal
 character_event = {
     id = L3T.12
-	#desc = "DESCL3T.12"
-	#picture = GFX_evt_market
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -274,35 +270,32 @@ character_event = {
 		NOT = { tier = count }
 		tier = baron
 	}
-		
-	#mean_time_to_happen = { days = 10 }	
 
 	immediate = {
-	#name = "L3T.12A"
-	set_character_flag = start_bonus_given  
-	random_list = {
-		16 = { wealth = 35	}
-		14 = { wealth = 42	}
-		13 = { wealth = 57	}
-		12 = { wealth = 78	}
-		10 = { wealth = 82	}
-		 9 = { wealth = 95	}
-		 8 = { wealth = 110	}
-		 7 = { wealth = 125	}
-		 6 = { wealth = 137	}
-		 5 = { wealth = 148	}
+		set_character_flag = start_bonus_given  
+		random_list = {
+			16 = { wealth = 35	}
+			14 = { wealth = 42	}
+			13 = { wealth = 57	}
+			12 = { wealth = 78	}
+			10 = { wealth = 82	}
+			 9 = { wealth = 95	}
+			 8 = { wealth = 110	}
+			 7 = { wealth = 125	}
+			 6 = { wealth = 137	}
+			 5 = { wealth = 148	}
 		}
-	random_list = {
-		16 = { piety = 15	}
-		14 = { piety = 20	}
-		13 = { piety = 25	}
-		12 = { piety = 30	}
-		10 = { piety = 35	}
-		 9 = { piety = 42	}
-		 8 = { piety = 57	}
-		 7 = { piety = 78	}
-		 6 = { piety = 82	}
-		 5 = { piety = 95	}
+		random_list = {
+			16 = { piety = 15	}
+			14 = { piety = 20	}
+			13 = { piety = 25	}
+			12 = { piety = 30	}
+			10 = { piety = 35	}
+			 9 = { piety = 42	}
+			 8 = { piety = 57	}
+			 7 = { piety = 78	}
+			 6 = { piety = 82	}
+			 5 = { piety = 95	}
 		}
 	}
 }
@@ -613,8 +606,6 @@ province_event = {
 # ROOT is the character
 character_event = {
     id = L3T.20
-	#desc = "capital_MAJ_blah"
-	#picture = GFX_evt_debug_totoro
 	hide_window = yes
 	
 	only_rulers = yes
@@ -632,9 +623,6 @@ character_event = {
 	}
 
 	immediate = {
-	#option = {
-		#name = "capital_MAJ"
-		
 		# Ruler can have a realm capital and doesn't have it in his capital holding yet
 		if = {
 			limit = {
@@ -665,7 +653,6 @@ character_event = {
 				}
 				remove_province_modifier = realm_capital_province
 			}
-
 		}
 	}
 }
@@ -675,12 +662,9 @@ character_event = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 character_event = {
     id = L3T.21
-	#desc = "capital_MAJ_blah_51"
-	#picture = GFX_evt_debug_totoro
 	hide_window = yes
 	
 	only_rulers = yes
-	#capable_only = yes
 	prisoner = no
 
 	is_triggered_only = yes
@@ -697,8 +681,6 @@ character_event = {
 	}
 
 	immediate = {
-		#name = "capital_MAJ_51"
-
 		any_demesne_province = { 
 			limit = {
 				has_province_modifier = realm_capital_province
