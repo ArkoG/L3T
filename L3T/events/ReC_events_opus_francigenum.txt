@@ -246,34 +246,19 @@ province_event = {
 			add_building = tp_roman_cathedrale
 			set_title_flag = repaired_cathedral
 		}
-		# Give Opus Francigenum -O.F. has triggered, this rebuilding confirms it. 
+		# Give Opus Francigenum
 		if = {
-			limit = {
-				has_global_flag = dynamic_opus_francigenum
-			}
+			limit = { has_global_flag = dynamic_opus_francigenum }
 			clr_global_flag = dynamic_opus_francigenum
-			
 			if = {
-				limit = { 
-					owner = { ai = yes }
-					NOT = { has_global_flag = opus_francigenum }
-				}
-				owner = { narrative_event = { id = REC.105 days = 10 }}
-				#if the owner is not the player, inform the player
-				any_player = { narrative_event = { id = REC.110 days = 10 }}
-			}
-			if = {
-				limit = {
-					owner = { ai = no }
-					NOT = { has_global_flag = opus_francigenum }
-				}
-				owner = { narrative_event = { id = REC.105 days = 10 }}
+				limit = { NOT = { has_global_flag = opus_francigenum } }
+				owner = { narrative_event = { id = REC.105 days = 10 } }
 			}
 		}
 	}
 }
 
-# Dynamic Opus Francigenum notification - if the activating the rebuilding is in a player's demesne
+# Dynamic Opus Francigenum
 narrative_event = {
     id = REC.105
 	title = "OPUSFRANCIGENUM_title"
@@ -292,48 +277,9 @@ narrative_event = {
 	option = {
 		name = "OPUSFRANCIGENUM.A"
 		trigger = {
-			NOT = { has_a_relic = yes }
-			is_catholic_group = yes
-		}
-	}
-	
-	option = {
-		name = "OPUSFRANCIGENUM.B"
-		trigger = {
-			has_a_relic = yes
-			is_catholic_group = yes
-		}
-	}
-	option = {
-		name = "OPUSFRANCIGENUM.C"
-		trigger = {
-			is_catholic_group = no #non catholic wouldn't care
-		}
-	}
-}
-
-# Dynamic Opus Francigenum notification - if the activating the rebuilding is NOT in a player's demesne
-narrative_event = {
-    id = REC.110
-	title = "OPUSFRANCIGENUM_title"
-	desc = "DESCREC.110"
-	picture = GFX_evt_REC10
-	major = yes
-	hide_new = yes
-	hide_from = yes
-
-	is_triggered_only = yes	
-	
-	trigger = { is_catholic_group = yes }
-	
-	immediate = {
-		set_global_flag = opus_francigenum
-	}
-	
-	option = {
-		name = "OPUSFRANCIGENUM.A"
-		trigger = {
-			NOT = { has_a_relic = yes }
+			NOT = {
+				has_a_relic = yes
+			}
 		}
 	}
 	
