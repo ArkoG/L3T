@@ -92,6 +92,8 @@ character_event = {
 		any_province = {
 			province_event = { id = L3T.28 days = 25 random = 15} #attribution cols
 			set_province_flag = had_event_LT_60001 #to prevent additional holding slot from wonders
+			set_variable = { which = "was_christian_for" value = 1 }
+			set_variable = { which = "was_muslim_for" value = 1 }
 		}
 		##various global flags
 		set_global_flag = running_L3T
