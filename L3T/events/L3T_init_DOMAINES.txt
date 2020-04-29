@@ -1030,6 +1030,7 @@ narrative_event = {
 					}
 				}
 				add_building = MONASTERE
+				clr_title_flag = temple_to_specialize
 				set_title_flag = L3T6_made_me_opt_A
 				hidden_tooltip ={
 					change_variable = { which = "developpement" value = 10 }
@@ -1038,6 +1039,7 @@ narrative_event = {
 				add_holding_modifier = { name = monastere_L1 duration = -1 }
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 				holder_scope = { narrative_event = { id = L3T.7 days = 0 }} ####MAKE IT automatic ONCE new holdings will be built by decision only######
+				clear_event_target = holding_to_spec
 			}
 			if = {
 				limit = {
@@ -1050,8 +1052,6 @@ narrative_event = {
 					NOT = { has_building = REGLE_DE_3 }
 				}
 				add_building = REGLE_DE_3 #saint-Basile
-				clear_event_target = holding_to_spec
-				clr_title_flag = temple_to_specialize
 			}
 		}
 		set_character_flag = canGetEasterEgg3
@@ -1229,7 +1229,7 @@ province_event = {
 			}
 			set_variable = { which = "specNB" value = 0 } #debug
 			add_building = MONASTERE
-			set_title_flag = L3T60_made_me_cas_Aa
+			set_title_flag = L3T61_made_me_cas_Aa
 			hidden_tooltip ={
 				change_variable = { which = "developpement" value = 10 }
 				change_variable = { which = "developpement_spec" value = 10 }
@@ -1281,7 +1281,7 @@ province_event = {
 						set_description = wonder_cathedral_romane_desc
 					}
 				}
-				set_title_flag = L3T60_made_me_cas_Ab
+				set_title_flag = L3T61_made_me_cas_Ab
 
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 				location = {
@@ -1331,7 +1331,7 @@ province_event = {
 			}
 			set_variable = { which = "specNB" value = 0 } #debug
 			add_building = CITEEPISCOPALE
-			set_title_flag = L3T60_made_me_cas_B
+			set_title_flag = L3T61_made_me_cas_B
 			hidden_tooltip ={
 				change_variable = { which = "developpement" value = 15 }
 				change_variable = { which = "developpement_spec" value = 15 }
@@ -1451,7 +1451,7 @@ province_event = {
 					}
 				}
 				add_building = CITEEPISCOPALE
-				set_title_flag = L3T61_made_me
+				set_title_flag = L3T62_made_me
 				hidden_tooltip ={
 					change_variable = { which = "developpement" value = 15 }
 					change_variable = { which = "developpement_spec" value = 15 }
@@ -1558,7 +1558,7 @@ province_event = {
 					}
 				}
 			add_building = CITEEPISCOPALE
-			set_title_flag = L3T62_made_me
+			set_title_flag = L3T63_made_me
 			hidden_tooltip ={
 				change_variable = { which = "developpement" value = 15 }
 				change_variable = { which = "developpement_spec" value = 15 }
