@@ -1,0 +1,34 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+
+better_claims = {
+	name = "RULE_BETTER_CLAIMS"
+	group = "RULE_GROUP_WARFARE"
+	option = {
+		name = restricted
+		text = "RULE_BETTER_CLAIMS_restricted"
+		desc = "RULE_BETTER_CLAIMS_restricted_DESC"
+	}
+	option = {
+		name = vanilla
+		text = "RULE_BETTER_CLAIMS_vanilla"
+		desc = "RULE_BETTER_CLAIMS_vanilla_DESC"
+	}
+	option = {
+		name = plots_only
+		text = "RULE_BETTER_CLAIMS_plots_only"
+		desc = "RULE_BETTER_CLAIMS_plots_only_DESC"
+	}
+}
