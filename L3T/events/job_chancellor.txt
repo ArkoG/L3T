@@ -400,18 +400,57 @@ character_event = {
 		job_event_mtth_modifier_diplomacy_score = yes
 
 		modifier = {
+			factor = 1.2
+			location = {
+				any_province_lord = {
+					job_chancellor = {
+						has_job_action = action_statecraft
+						NOT = { character = ROOT }
+						NOT = { diplomacy = 10 } #bad chancellor is much less impactful
+						#at_location = FROMFROM #unecessary with offmap jobs
+					}
+				}
+			}
+		}
+		modifier = {
 			factor = 2.0
 			location = {
 				any_province_lord = {
 					job_chancellor = {
 						has_job_action = action_statecraft
 						NOT = { character = ROOT }
+						diplomacy = 10
 						#at_location = FROMFROM #unecessary with offmap jobs
 					}
 				}
 			}
 		}		
-
+		modifier = {
+			factor = 1.1
+			location = {
+				any_province_lord = {
+					job_chancellor = {
+						has_job_action = action_statecraft
+						NOT = { character = ROOT }
+						diplomacy = 15
+						#at_location = FROMFROM #unecessary with offmap jobs
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.1
+			location = {
+				any_province_lord = {
+					job_chancellor = {
+						has_job_action = action_statecraft
+						NOT = { character = ROOT }
+						diplomacy = 20
+						#at_location = FROMFROM #unecessary with offmap jobs
+					}
+				}
+			}
+		}
 		modifier = {
 			#factor = 0.75
 			factor = 0.85 #L3T made it less OP
