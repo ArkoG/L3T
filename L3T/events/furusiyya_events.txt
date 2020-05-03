@@ -932,13 +932,28 @@ character_event = {
 		set_character_flag = attending_tournament_event_furusiyya
 	}
 
+	##L3T new option for horse armors
 	option = {
 		trigger = {
 			has_character_flag = tournament_winner_furusiyya
+			NOT = { has_artifact = { horse_armor_tier_3_human }}
 		}
-		name = "EVTOPTA88270"
-		wealth = 100
-		prestige = 300
+		name = "EVTOPT_AA88270"
+		
+		add_artifact = horse_armor_tier_3_human
+
+		ai_chance = {
+			factor = 100		
+			modifier = {
+				factor =  0.8
+				has_artifact = { horse_armor_tier_2_human }
+			}
+			modifier = {
+				factor =  0.9
+				has_artifact = { horse_armor_tier_1_human }
+			}
+		}
+			
 		if = {
 			limit = {
 				NOT = { 
@@ -970,14 +985,133 @@ character_event = {
 			}
 		}
 	}
+	option = {
+		trigger = {
+			has_character_flag = tournament_winner_furusiyya
+		}
+		name = "EVTOPTA88270"
+		#wealth = 100 #happens once per reign, should be better than regular tournaments
+		wealth = 200
+		#prestige = 300
+		prestige = 350
 
+		ai_chance = {
+			factor = 100
+			#not much interested in an armor
+			modifier = {
+				factor =  1.2
+				has_education_martial_trigger = no
+			}
+			modifier = {
+				factor =  1.1
+				has_lifestyle_martial_trigger = no
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { 
+					top_liege = {
+						dynasty = ROOT
+					}
+				}
+			}
+			decadence = -3
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					top_liege = {
+						NOT = {
+							character = ROOT
+						}
+					}
+				}
+				top_liege = { character_event = { id = 88284 days = 3 } }
+			}
+			any_dynasty_member = {
+				limit = { 
+					is_offmap_ruler = no
+					ai = no
+					NOT = { character = ROOT }
+				}
+				character_event = { id = 88301 }
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_character_flag = tournament_second_place_furusiyya
+			NOT = { 
+				has_artifact = { horse_armor_tier_2_human }
+				has_artifact = { horse_armor_tier_3_human }
+			}
+		}
+		name = "EVTOPT_AA88271"
+		
+		add_artifact = horse_armor_tier_2_human
+
+		ai_chance = {
+			factor = 100		
+			modifier = {
+				factor =  0.8
+				has_artifact = { horse_armor_tier_1_human }
+			}
+		}
+		
+		if = {
+			limit = {
+				uses_decadence = yes
+				NOT = { 
+					top_liege = {
+						dynasty = ROOT
+					}
+				}
+			}
+			decadence = -2
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					top_liege = {
+						NOT = {
+							character = ROOT
+						}
+					}
+				}
+				top_liege = { character_event = { id = 88285 days = 2 } }
+			}
+			any_dynasty_member = {
+				limit = { 
+					is_offmap_ruler = no
+					ai = no
+					NOT = { character = ROOT }
+				}
+				character_event = { id = 88302 }
+			}
+		}
+	}	
 	option = {
 		trigger = {
 			has_character_flag = tournament_second_place_furusiyya
 		}
 		name = "EVTOPTA88271"
-		wealth = 75
-		prestige = 250
+		wealth = 150
+		prestige = 300
+
+		ai_chance = {
+			factor = 100
+			#not much interested in an armor
+			modifier = {
+				factor =  1.2
+				has_education_martial_trigger = no
+			}
+			modifier = {
+				factor =  1.1
+				has_lifestyle_martial_trigger = no
+			}
+		}
+		
 		if = {
 			limit = {
 				uses_decadence = yes
@@ -1010,14 +1144,19 @@ character_event = {
 			}
 		}
 	}
-
 	option = {
 		trigger = {
 			has_character_flag = tournament_third_place_furusiyya
+			NOT = { 
+				has_artifact = { horse_armor_tier_1_human }
+				has_artifact = { horse_armor_tier_2_human }
+				has_artifact = { horse_armor_tier_3_human }
+			}
 		}
-		name = "EVTOPTA88272"
-		wealth = 50
-		prestige = 200
+		name = "EVTOPT_AA88272"
+		
+		add_artifact = horse_armor_tier_1_human
+
 		if = {
 			limit = {
 				NOT = { 
@@ -1049,6 +1188,59 @@ character_event = {
 			}
 		}
 	}
+	option = {
+		trigger = {
+			has_character_flag = tournament_third_place_furusiyya
+		}
+		name = "EVTOPTA88272"
+		wealth = 100
+		prestige = 250
+
+		ai_chance = {
+			factor = 100
+			#not much interested in an armor
+			modifier = {
+				factor =  1.2
+				has_education_martial_trigger = no
+			}
+			modifier = {
+				factor =  1.1
+				has_lifestyle_martial_trigger = no
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { 
+					top_liege = {
+						dynasty = ROOT
+					}
+				}
+			}
+			decadence = -1
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					top_liege = {
+						NOT = {
+							character = ROOT
+						}
+					}
+				}
+				top_liege = { character_event = { id = 88286 days = 1 } }
+			}
+			any_dynasty_member = {
+				limit = { 
+					is_offmap_ruler = no
+					ai = no
+					NOT = { character = ROOT }
+				}
+				character_event = { id = 88303 }
+			}
+		}
+	}
+	##L3T new option for horse armors -end
 }
 
 # Inform about winner
