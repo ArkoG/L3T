@@ -42,3 +42,86 @@ title_batisseur = {
 
 	message = yes
 }
+
+title_councilmember_muslim = {
+	is_high_prio = yes
+	dignity = 0.030
+	grant_limit = 1
+	opinion_effect = 5
+	monthly_piety = 0.5
+	monthly_prestige = 0.25
+	is_voter = yes
+	
+	allowed_to_grant = {
+		higher_tier_than = COUNT
+		has_dlc = "Zeus"
+		#primary_title = { has_law = law_voting_power_1 }
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+		#L3T specifics
+		any_demesne_title = { holding_type = temple }
+		any_demesne_title = { NOT = { holding_type = castle }}
+		liege = { religion = ROOT }
+		has_education_learning_trigger = yes
+		#		
+	}
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						#has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+		}
+		#L3T specifics
+		any_demesne_title = { NOT = { holding_type = temple }}
+		any_demesne_title = { holding_type = castle }	
+		NOT = { liege = { religion = ROOT }}
+		#
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
