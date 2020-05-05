@@ -30,7 +30,6 @@ title_batisseur = {
 		#		}
 		#	}
 		#is_feudal = no
-		NOT = { has_character_flag = titre_mineur_detenu }
 	}
 	
 	allowed_to_grant = {
@@ -38,8 +37,8 @@ title_batisseur = {
 		trait = batisseur_cathedrale
 	}
 	
-	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { clr_character_flag = titre_mineur_detenu }
+	gain_effect = {}
+	lose_effect = {}
 
 	message = yes
 }
