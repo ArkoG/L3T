@@ -32,7 +32,6 @@ character_event = {
 			modifier = { factor = 1.5 trait = brilliant_strategist }
 			modifier = { factor = 2 NOT = { combat_rating = 50 }}
 			modifier  = { factor = 0.001 ai = yes is_inaccessible_trigger = yes }
-			}
 		}
 		prestige = 50
 		set_character_flag = attending_tournament
@@ -52,7 +51,6 @@ character_event = {
 			modifier = { factor = 2 NOT = { combat_rating = 0 }}
 		}
 		prestige = -50
-		piety = 50
 		FROM = { character_event = { id = L3T.8 }}#mouchard totoro
 	}
 
@@ -1459,7 +1457,7 @@ character_event = {
 					is_female = no
 				}
 				clr_character_flag = tournament_has_ended
-				character_event = { id = 70000 }
+				character_event = { id = 70000 days = 2 }
 			}
 		}
 	}
