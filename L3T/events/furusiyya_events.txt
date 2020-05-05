@@ -21,19 +21,45 @@ character_event = {
 	option = {
 		name = "EVTOPTA88250"
 		ai_chance = {
-			factor = 100
+			factor = 70
+			modifier = { factor = 5 trait = duelist }
+			modifier = { factor = 1.2 has_education_martial_trigger = yes }
+			modifier = { factor = 2 has_lifestyle_martial_trigger = yes }
+			modifier = { factor = 1.5 trait = brilliant_strategist }
+			modifier = { factor = 2 NOT = { combat_rating = 50 }}
+			modifier  = { factor = 0.001 ai = yes is_inaccessible_trigger = yes }
+			}
 		}
 		prestige = 50
 		set_character_flag = attending_tournament_furusiyya
+		set_character_flag = do_not_disturb
 		hidden_tooltip = { character_event = { id = 88999 days = 300 } } # safety catch flag-clearing
-		
+		FROM = { character_event = { id = L3T.5 }}#mouchard totoro
 	}
+
+	option = {
+		name = "EVTOPTC88250"
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = humble }
+			modifier = { factor = 2 has_bottom_tier_education_trait_trigger = yes }
+			modifier = { factor = 1.2 has_education_martial_trigger = no }
+			modifier = { factor = 2 has_lifestyle_martial_trigger = no }
+			modifier = { factor = 2 NOT = { combat_rating = 0 }}
+		}
+		prestige = -50
+		piety = 50
+		FROM = { character_event = { id = L3T.8 }}#mouchard totoro
+	}
+
 	option = {
 		name = "EVTOPTB88250"
 		ai_chance = {
-			factor = 0.1
+			factor = 10
+			modifier = { factor = 2 trait = proud }
 		}
 		prestige = -100
+		FROM = { character_event = { id = L3T.8 }}#mouchard totoro
 	}
 }
 
@@ -990,7 +1016,7 @@ character_event = {
 			has_character_flag = tournament_winner_furusiyya
 		}
 		name = "EVTOPTA88270"
-		#wealth = 100 #happens once per reign, should be better than regular tournaments
+		#wealth = 100 #happens once per reign, should then be better
 		wealth = 200
 		#prestige = 300
 		prestige = 350
