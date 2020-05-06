@@ -859,7 +859,7 @@ character_event = {
 	
 	option = {
 		name = "ECO.307B"
-		trigger = { NOT = { has_character_flag = good_selling_xp }}
+		trigger = { has_character_flag = good_selling_xp }
 		change_stewardship = 2
 		clr_character_flag = drap
 		# Retire les flags Vanille
