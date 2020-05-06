@@ -56,6 +56,7 @@ title_councilmember_muslim = {
 		higher_tier_than = COUNT
 		has_dlc = "Zeus"
 		#primary_title = { has_law = law_voting_power_1 }
+		religion_group = muslim
 	}
 	
 	allowed_to_hold = {
@@ -68,6 +69,7 @@ title_councilmember_muslim = {
 		any_demesne_title = { NOT = { holding_type = castle }}
 		liege = { religion = ROOT }
 		has_education_learning_trigger = yes
+		religion_group = muslim
 		#		
 	}
 	revoke_trigger = {
