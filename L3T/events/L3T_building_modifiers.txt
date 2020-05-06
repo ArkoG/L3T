@@ -931,7 +931,7 @@ character_event = {
 		name = L3T.229B #make it the new realm capital
 		FROM = { 
 			make_capital_holding = yes
-			clr_title_flag = better_realm_capital
+			capital_holding = { clr_title_flag = better_realm_capital }
 		}
 	}
 }

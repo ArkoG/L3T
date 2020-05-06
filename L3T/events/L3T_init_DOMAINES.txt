@@ -802,7 +802,7 @@ character_event = {
 						modifier = {  factor = 2.0		NOT = { year =  999 }}
 						modifier = {  factor = 1.2		region = world_europe_north }
 						modifier = {  factor = 0.8		region = world_europe_south }
-						modifier = {  factor = 0.8		narbonaise_lands =  yes }
+						#modifier = {  factor = 0.8		narbonaise_lands =  yes }
 						destroy_settlement = THIS
 					}
 					30 = { 

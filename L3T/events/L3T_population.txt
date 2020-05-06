@@ -21,7 +21,7 @@ character_event = {
 				limit = {	
 					year = 900
 					NOT = { year = 1000 }
-					NOT = { religion_group = pagan_group } #already much OP
+					NOT = { location = { religion_group = pagan_group }} #already much OP
 					NOT = { region = world_europe_north }
 					NOT = { region = world_europe_east }
 				}
@@ -41,7 +41,7 @@ character_event = {
 			if = {
 				limit = {	
 					year = 1000
-					NOT = { religion_group = pagan_group } #already much OP
+					NOT = { location = { religion_group = pagan_group }} #already much OP
 					NOT = { region = world_europe_west_brittania } #early brexit
 					NOT = { region = world_europe_north } #
 					NOT = { region = world_europe_east } 
@@ -71,7 +71,7 @@ character_event = {
 			if = {
 				limit = {	
 					year = 900
-					religion_group = muslim #additional boost for muslim world
+					location = { religion_group = muslim } #additional boost for muslim world
 				}
 				# Gives a random bonus
 				random_list = {
@@ -95,8 +95,8 @@ character_event = {
 			if = {
 				limit = {	
 					year = 1150
-					NOT = { religion_group = pagan_group }
-					NOT = { religion_group = muslim } #stagnating muslim
+					NOT = { location = { religion_group = pagan_group }}
+					NOT = { location = { religion_group = muslim }} #stagnating muslim
 					NOT = { region = world_europe_south_east } #declining byz
 					NOT = { region = world_asia_minor } #declining byz
 				}

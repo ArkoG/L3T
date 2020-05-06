@@ -958,7 +958,7 @@ character_event = {
 	option = {
 		trigger = {
 			has_character_flag = tournament_winner_furusiyya
-			NOT = { has_artifact = { horse_armor_tier_3_human }}
+			NOT = { has_artifact = horse_armor_tier_3_human }
 		}
 		name = "EVTOPT_AA88270"
 		
@@ -968,11 +968,11 @@ character_event = {
 			factor = 100		
 			modifier = {
 				factor =  0.8
-				has_artifact = { horse_armor_tier_2_human }
+				has_artifact = horse_armor_tier_2_human
 			}
 			modifier = {
 				factor =  0.9
-				has_artifact = { horse_armor_tier_1_human }
+				has_artifact = horse_armor_tier_1_human
 			}
 			modifier = { 
 				factor = 1.5 
@@ -1069,8 +1069,8 @@ character_event = {
 		trigger = {
 			has_character_flag = tournament_second_place_furusiyya
 			NOT = { 
-				has_artifact = { horse_armor_tier_2_human }
-				has_artifact = { horse_armor_tier_3_human }
+				has_artifact = horse_armor_tier_2_human
+				has_artifact = horse_armor_tier_3_human
 			}
 		}
 		name = "EVTOPT_AA88271"
@@ -1081,7 +1081,7 @@ character_event = {
 			factor = 100		
 			modifier = {
 				factor =  0.8
-				has_artifact = { horse_armor_tier_1_human }
+				has_artifact = horse_armor_tier_1_human
 			}
 			modifier = { 
 				factor = 1.5 
@@ -1178,9 +1178,9 @@ character_event = {
 		trigger = {
 			has_character_flag = tournament_third_place_furusiyya
 			NOT = { 
-				has_artifact = { horse_armor_tier_1_human }
-				has_artifact = { horse_armor_tier_2_human }
-				has_artifact = { horse_armor_tier_3_human }
+				has_artifact = horse_armor_tier_1_human
+				has_artifact = horse_armor_tier_2_human
+				has_artifact = horse_armor_tier_3_human
 			}
 		}
 		name = "EVTOPT_AA88272"
