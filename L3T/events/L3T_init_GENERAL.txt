@@ -109,7 +109,7 @@ character_event = {
 		}
 		if = {
 			limit = { ai = no }
-			set_variable = { which = "global_burns" value = 1 }
+			set_variable = { which = "global_burns" value = 0 }
 			random_list = {
 				30 = {}
 				30 = { change_variable = { which = "global_burns" value = 6 }}
@@ -118,7 +118,7 @@ character_event = {
 		}
 		if = {
 			limit = { ai = no }
-			set_variable = { which = "global_L3T_saint_number" value = 1 }
+			set_variable = { which = "global_L3T_saint_number" value = 0 }
 		}
 		##triggers various maps specifities
 		#SWMH
