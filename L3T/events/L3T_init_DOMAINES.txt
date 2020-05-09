@@ -944,12 +944,13 @@ narrative_event = {
 				has_building = CITEEPISCOPALE
 				has_building = BOURG_EPISCOPAL
 			}
-			is_LCDA_hard_monastery = no
-			is_LCDA_hard_episcopat = no
-			is_SWMH_hard_monastery =no
-			is_SWMH_hard_episcopat = no
-			is_VANILLA_hard_monastery =no
-			is_VANILLA_hard_episcopat = no
+			##hardcode works only on startup
+			#is_LCDA_hard_monastery = no
+			#is_LCDA_hard_episcopat = no
+			#is_SWMH_hard_monastery =no
+			#is_SWMH_hard_episcopat = no
+			#is_VANILLA_hard_monastery =no
+			#is_VANILLA_hard_episcopat = no
 		}
 	}
 
@@ -976,12 +977,12 @@ narrative_event = {
 					has_building = CITEEPISCOPALE
 					has_building = BOURG_EPISCOPAL
 				}
-				is_LCDA_hard_monastery =no
-				is_LCDA_hard_episcopat = no
-				is_SWMH_hard_monastery =no
-				is_SWMH_hard_episcopat = no
-				is_VANILLA_hard_monastery =no
-				is_VANILLA_hard_episcopat = no
+				#is_LCDA_hard_monastery =no
+				#is_LCDA_hard_episcopat = no
+				#is_SWMH_hard_monastery =no
+				#is_SWMH_hard_episcopat = no
+				#is_VANILLA_hard_monastery =no
+				#is_VANILLA_hard_episcopat = no
 			}
 			set_title_flag = temple_to_specialize
 			set_variable = { which = "specNB" value = 0 } #debug
@@ -1129,7 +1130,7 @@ narrative_event = {
 		
 		trigger = {
 			any_demesne_title = {
-				is_capital = yes
+				is_capital = yes #it is a capital, it doens't need to follow the grid
 				location = { religion_group = christian }
 				has_title_flag = temple_to_specialize
 			}
@@ -1231,12 +1232,14 @@ province_event = {
 			limit = {
 				holding_type = temple
 				##MONASTERY
-				is_LCDA_hard_monastery = yes
 				is_LCDA_hard_episcopat = no
-				is_VANILLA_hard_monastery = yes
 				is_VANILLA_hard_episcopat = no
-				is_SWMH_hard_monastery = yes
 				is_SWMH_hard_episcopat = no
+				OR = {
+					is_LCDA_hard_monastery = yes
+					is_VANILLA_hard_monastery = yes
+					is_SWMH_hard_monastery = yes
+				}
 				NOT = {
 					has_building = MONASTERE
 					has_building = CITEEPISCOPALE
@@ -1354,11 +1357,13 @@ province_event = {
 				holding_type = temple
 				##EPISCOPAT
 				is_LCDA_hard_monastery = no
-				is_LCDA_hard_episcopat = yes
 				is_SWMH_hard_monastery = no
-				is_SWMH_hard_episcopat = yes
 				is_VANILLA_hard_monastery = no
-				is_VANILLA_hard_episcopat = yes
+				OR = {
+					is_LCDA_hard_episcopat = yes
+					is_SWMH_hard_episcopat = yes
+					is_VANILLA_hard_episcopat = yes
+				}
 				NOT = {
 					has_building = MONASTERE
 					has_building = CITEEPISCOPALE
