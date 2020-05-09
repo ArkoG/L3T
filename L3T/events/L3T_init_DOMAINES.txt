@@ -946,6 +946,10 @@ narrative_event = {
 			}
 			is_LCDA_hard_monastery = no
 			is_LCDA_hard_episcopat = no
+			is_SWMH_hard_monastery =no
+			is_SWMH_hard_episcopat = no
+			is_VANILLA_hard_monastery =no
+			is_VANILLA_hard_episcopat = no
 		}
 	}
 
@@ -974,6 +978,10 @@ narrative_event = {
 				}
 				is_LCDA_hard_monastery =no
 				is_LCDA_hard_episcopat = no
+				is_SWMH_hard_monastery =no
+				is_SWMH_hard_episcopat = no
+				is_VANILLA_hard_monastery =no
+				is_VANILLA_hard_episcopat = no
 			}
 			set_title_flag = temple_to_specialize
 			set_variable = { which = "specNB" value = 0 } #debug
@@ -1205,6 +1213,10 @@ province_event = {
 			OR = {
 				is_LCDA_hard_monastery = yes
 				is_LCDA_hard_episcopat = yes
+				is_VANILLA_hard_monastery = yes
+				is_VANILLA_hard_episcopat = yes
+				is_SWMH_hard_monastery = yes
+				is_SWMH_hard_episcopat = yes
 			}
 			NOT = {
 				has_building = MONASTERE
@@ -1221,6 +1233,10 @@ province_event = {
 				##MONASTERY
 				is_LCDA_hard_monastery = yes
 				is_LCDA_hard_episcopat = no
+				is_VANILLA_hard_monastery = yes
+				is_VANILLA_hard_episcopat = no
+				is_SWMH_hard_monastery = yes
+				is_SWMH_hard_episcopat = no
 				NOT = {
 					has_building = MONASTERE
 					has_building = CITEEPISCOPALE
@@ -1240,17 +1256,33 @@ province_event = {
 			
 			#add rule automaticaly
 			if = {
-				limit = { is_LCDA_hard_regula1 = yes }
+				limit = { 
+					OR = {
+						is_LCDA_hard_regula1 = yes
+						is_SWMH_hard_regula1 = yes
+						is_VANILLA_hard_regula1 = yes
+					}
+				}
 				add_building = REGLE_DE_1
 			}
 			if = {
-				limit = { is_LCDA_hard_regula2 = yes }
+				limit = { 
+					OR = {
+						is_LCDA_hard_regula2 = yes
+						is_SWMH_hard_regula2 = yes
+						is_VANILLA_hard_regula2 = yes
+					}
+				}
 				add_building = REGLE_DE_2
 			}
 			if = {
 				limit = { 
 					is_LCDA_hard_regula1 = no
 					is_LCDA_hard_regula2 = no
+					is_SWMH_hard_regula1 = no
+					is_SWMH_hard_regula2 = no
+					is_VANILLA_hard_regula1 = no
+					is_VANILLA_hard_regula2 = no
 				}
 				random_list = {
 					10 = { add_building = REGLE_DE_1 }
@@ -1323,6 +1355,10 @@ province_event = {
 				##EPISCOPAT
 				is_LCDA_hard_monastery = no
 				is_LCDA_hard_episcopat = yes
+				is_SWMH_hard_monastery = no
+				is_SWMH_hard_episcopat = yes
+				is_VANILLA_hard_monastery = no
+				is_VANILLA_hard_episcopat = yes
 				NOT = {
 					has_building = MONASTERE
 					has_building = CITEEPISCOPALE
@@ -1411,6 +1447,10 @@ province_event = {
 			holding_type = temple
 			is_LCDA_hard_monastery =no
 			is_LCDA_hard_episcopat = no
+			is_SWMH_hard_monastery =no
+			is_SWMH_hard_episcopat = no
+			is_VANILLA_hard_monastery =no
+			is_VANILLA_hard_episcopat = no
 			NOT = {
 				has_building = MONASTERE
 				has_building = CITEEPISCOPALE
@@ -1437,6 +1477,10 @@ province_event = {
 					holding_type = temple
 					is_LCDA_hard_monastery =no
 					is_LCDA_hard_episcopat = no
+					is_SWMH_hard_monastery =no
+					is_SWMH_hard_episcopat = no
+					is_VANILLA_hard_monastery =no
+					is_VANILLA_hard_episcopat = no
 				}
 			}
 			capital_holding = {
@@ -1513,6 +1557,10 @@ province_event = {
 			is_capital = no
 			is_LCDA_hard_monastery =no
 			is_LCDA_hard_episcopat = no
+			is_SWMH_hard_monastery =no
+			is_SWMH_hard_episcopat = no
+			is_VANILLA_hard_monastery =no
+			is_VANILLA_hard_episcopat = no
 		}
 	}
 	
@@ -1545,7 +1593,11 @@ province_event = {
 				}
 				is_capital = no
 				is_LCDA_hard_monastery =no
-				is_LCDA_hard_episcopat = no					
+				is_LCDA_hard_episcopat = no
+				is_SWMH_hard_monastery =no
+				is_SWMH_hard_episcopat = no
+				is_VANILLA_hard_monastery =no
+				is_VANILLA_hard_episcopat = no				
 			}
 			add_building = tp_roman_cathedrale
 			save_event_target_as = lieu_cathedrale

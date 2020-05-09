@@ -26,6 +26,28 @@ is_VANILLA_hard_episcopat = {
 		title = b_lavaur #toulouse
 		title = b_aix #Arles, Marseille, Aix
 		title = b_embrun
+		#Spains
+		title = b_santiago
+	}
+}
+is_VANILLA_hard_regula1 = { #bénédictins/Cluny
+	has_global_flag = running_VANILLA
+	OR = {
+
+		#title = b_saintmaurice2 #saint Maurice d'Agaune
+
+	}
+}
+is_VANILLA_hard_regula2 = { #augustiniens
+	has_global_flag = running_VANILLA
+	OR = {
+		#title = b_saintmaurice2 #saint Maurice d'Agaune
+	}
+}
+is_VANILLA_hard_rurale = {
+	has_global_flag = running_VANILLA
+	OR = {
+		#title = b_saintmaurice2 #saint Maurice d'Agaune
 	}
 }
 
@@ -60,5 +82,25 @@ is_SWMH_hard_episcopat = {
 		#title = b_lavaur #toulouse
 		title = b_arles #Arles, Marseille, Aix
 		title = b_embrun
+	}
+}
+is_SWMH_hard_regula1 = { #bénédictins/Cluny
+	has_global_flag = SWMH
+	OR = {
+
+		#title = b_saintmaurice2 #saint Maurice d'Agaune
+
+	}
+}
+is_SWMH_hard_regula2 = { #augustiniens
+	has_global_flag = SWMH
+	OR = {
+		#title = b_saintmaurice2 #saint Maurice d'Agaune
+	}
+}
+is_SWMH_hard_rurale = {
+	has_global_flag = SWMH
+	OR = {
+		#title = b_saintmaurice2 #saint Maurice d'Agaune
 	}
 }

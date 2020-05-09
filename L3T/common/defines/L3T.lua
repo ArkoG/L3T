@@ -11,7 +11,14 @@
 -- IDEAL_YEAR_LEVEL_8 ex 1500
 -- CROWDED ex 75
 -- DOW ex 0.75
-	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_STEWARDSHIP_MULT = 0.25
+	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_STEWARDSHIP_MULT = 0.3
+-- vanilla is 0.15
+	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_COUNT_MULT = 1.5
+-- vanilla is 1.0	
+	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_KING_MULT = 5.0
+-- vanilla is 3.0
+	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_EMPEROR_MULT = 2.0
+-- vanilla is 4.0
 	NDefines.NDiplomacy.TRANSFER_VASSAL_INTERACTION_ENABLED = 0
 	NDefines.NCharacter.BASE_NR_OF_CHILDREN_PER_COUPLE = 3
 	NDefines.NCharacter.EXTRA_NR_OF_CHILDREN_FOR_PLAYERS = 0
@@ -41,4 +48,5 @@
 -- NDefines.NEconomy.HOLDING_SLOT_BUILD_COST_MOD = 1.0
 -- ENFORCE_ONE_OF_EACH_HOLDING = 1,			-- Require players to build at least one City, Temple and Castle in each province
 	NDefines.NTitle.ENFORCE_ONE_OF_EACH_HOLDING = 0			-- Require players to build at least one City, Temple and Castle in each province
+	NDefines.NTitle.MIN_REVOKE_MONTHS_AFTER_GRANT = 1200
 	NDefines.NWonders.MIN_LOOTABLE_STAGE = 3
