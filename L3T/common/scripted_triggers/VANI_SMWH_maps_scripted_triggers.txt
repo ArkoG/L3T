@@ -2,7 +2,10 @@
 is_VANILLA_hard_monastery = {
 	has_global_flag = running_VANILLA
 	OR = {
-		#title = b_aoste2
+		title = b_saint_claude
+		title = b_cluny
+		title = b_luxeuil
+		title = b_stgallen
 	}
 }
 is_VANILLA_hard_episcopat = {
@@ -13,7 +16,8 @@ is_VANILLA_hard_episcopat = {
 		title = b_canterbury
 		#France Aquitaine Burgundy
 		title = b_reims
-		title = b_arques #Rouen
+		title = b_fecamp #Rouen
+		title = b_beauvais
 		title = b_montargis #Sens
 		title = b_chinon #Tours
 		title = b_deols #Bourges
@@ -23,11 +27,16 @@ is_VANILLA_hard_episcopat = {
 		title = b_lasauve #Bordeaux
 		title = b_eauze #Auch
 		title = b_albi #
-		title = b_lavaur #toulouse
+		#title = b_lavaur #toulouse
 		title = b_aix #Arles, Marseille, Aix
 		title = b_embrun
 		#Spains
 		title = b_santiago
+		#HRE
+		title = b_strassburg
+		title = b_sitten
+		title = b_chur
+		title = b_havelberg #to enforce since the province is pagan, shouldn't be secilar however
 	}
 }
 is_VANILLA_hard_regula1 = { #bénédictins/Cluny
@@ -56,7 +65,7 @@ is_SWMH_hard_monastery = {
 	has_global_flag = SWMH
 	OR = {
 	 	#title = b_abondance4 #Valdranses
-		b_jumieges
+		title = b_jumieges
 		
 	}
 }
