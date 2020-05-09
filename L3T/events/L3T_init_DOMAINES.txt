@@ -1232,13 +1232,19 @@ province_event = {
 			limit = {
 				holding_type = temple
 				##MONASTERY
-				is_LCDA_hard_episcopat = no
-				is_VANILLA_hard_episcopat = no
-				is_SWMH_hard_episcopat = no
 				OR = {
-					is_LCDA_hard_monastery = yes
-					is_VANILLA_hard_monastery = yes
-					is_SWMH_hard_monastery = yes
+					AND = {
+						is_LCDA_hard_episcopat = no
+						is_LCDA_hard_monastery = yes
+					}
+					AND = {
+						is_VANILLA_hard_episcopat = no
+						is_VANILLA_hard_monastery = yes
+					}
+					AND = {
+						is_SWMH_hard_episcopat = no
+						is_SWMH_hard_monastery = yes
+					}
 				}
 				NOT = {
 					has_building = MONASTERE
@@ -1356,13 +1362,21 @@ province_event = {
 			limit = {
 				holding_type = temple
 				##EPISCOPAT
-				is_LCDA_hard_monastery = no
-				is_SWMH_hard_monastery = no
-				is_VANILLA_hard_monastery = no
+				AND = {
 				OR = {
-					is_LCDA_hard_episcopat = yes
-					is_SWMH_hard_episcopat = yes
-					is_VANILLA_hard_episcopat = yes
+					AND = {
+						is_LCDA_hard_episcopat = yes
+						is_LCDA_hard_monastery = no
+					}
+					AND = {					
+						is_SWMH_hard_episcopat = yes
+						is_SWMH_hard_monastery = no
+					}
+					AND = {
+						is_VANILLA_hard_episcopat = yes
+						is_VANILLA_hard_monastery = no
+					}
+				}
 				}
 				NOT = {
 					has_building = MONASTERE
@@ -1448,6 +1462,15 @@ province_event = {
 	trigger = { 
 		religion_group = christian
 		NOT = { has_province_flag = roman_cathedral }
+		OR = { 
+			AND = {
+				owner = { demesne_size = 2 }
+				has_province_modifier = realm_capital_province
+			}
+			AND = {
+				NOT = { owner = { demesne_size = 2 }}
+			}
+		}
 		capital_holding = { 
 			holding_type = temple
 			is_LCDA_hard_monastery =no
@@ -1468,6 +1491,7 @@ province_event = {
 		if = {
 			limit = {
 				NOT = { has_province_modifier = relique_generique }
+				
 			}
 			add_province_modifier = {
 				name = relique_generique
@@ -1478,6 +1502,15 @@ province_event = {
 			limit = {
 				#religion_group = christian
 				is_catholic_group = yes #not orthodox or heresy of
+				OR = { 
+					AND = {
+						owner = { demesne_size = 2 }
+						has_province_modifier = realm_capital_province
+					}
+					AND = {
+						NOT = { owner = { demesne_size = 2 }}
+					}
+				}
 				capital_holding = { 
 					holding_type = temple
 					is_LCDA_hard_monastery =no
@@ -1560,6 +1593,7 @@ province_event = {
 				has_building = tp_roman_cathedrale
 			}
 			is_capital = no
+
 			is_LCDA_hard_monastery =no
 			is_LCDA_hard_episcopat = no
 			is_SWMH_hard_monastery =no
@@ -1597,6 +1631,7 @@ province_event = {
 					has_building = tp_roman_cathedrale
 				}
 				is_capital = no
+
 				is_LCDA_hard_monastery =no
 				is_LCDA_hard_episcopat = no
 				is_SWMH_hard_monastery =no

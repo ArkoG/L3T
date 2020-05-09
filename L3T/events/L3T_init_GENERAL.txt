@@ -359,7 +359,7 @@ province_event = {
 			limit = {
 				religion_group = christian
 				NOT = { has_province_flag = roman_cathedral }
-				has_province_modifier = realm_capital_province
+				#has_province_modifier = realm_capital_province
 				capital_holding = { 
 					holding_type = temple
 					is_LCDA_hard_monastery =no
@@ -407,15 +407,19 @@ province_event = {
 						has_building = BOURG_EPISCOPAL
 						has_building = tp_roman_cathedrale
 					}
-					OR = {
+					#OR = {
 						is_capital = no
-						AND = {
-							is_capital = yes
-							NOT = { has_province_modifier = realm_capital_province }
-						}
-					}
+					#	AND = {
+					#		is_capital = yes
+					#		NOT = { has_province_modifier = realm_capital_province }
+					#	}
+					#}
 					is_LCDA_hard_monastery =no
 					is_LCDA_hard_episcopat = no
+					is_SWMH_hard_monastery =no
+					is_SWMH_hard_episcopat = no
+					is_VANILLA_hard_monastery =no
+					is_VANILLA_hard_episcopat = no
 				}
 			}
 			province_event = { id = L3T.63 days = 2 }
