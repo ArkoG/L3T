@@ -398,7 +398,7 @@ character_event = {
 		months = 360
 
 		job_event_mtth_modifier_diplomacy_score = yes
-
+########BANISH HIM logic
 		modifier = {
 			factor = 1.2
 			location = {
@@ -1274,15 +1274,17 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 240
-		
+########BANISH HIM logic		
 		job_event_mtth_modifier_inverted_diplomacy_score = yes
 
 		modifier = {
-			factor = 1.25
+			#factor = 1.25
+			factor = 1.15 #L3T less impactive
 			liege = { any_owned_bloodline = { has_bloodline_flag = bloodline_faster_claims } }
 		}
 		modifier = {
-			factor = 1.25
+			#factor = 1.25
+			factor = 1.1 #L3T less impactive
 			any_owned_bloodline = { has_bloodline_flag = bloodline_faster_claims } #If chancellor is also your relative.
 		}
 	}
@@ -1310,12 +1312,19 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA20140" #Make him disappear...
-		ai_chance = { factor = 40 }
-		piety = -10
+		ai_chance = { 
+		########BANISH HIM logic
+			factor = 40
+			#L3T AI logic
+			modifier = { factor = 1.2 has_education_intrigue_trigger = yes }
+			modifier = { factor = 1.2 has_lifestyle_intrigue_trigger = yes }
+		}
+		piety = -25 #change from -10
 		random_list = {
 			50 = {
-				#L3T intrigue comes into play for success
-				job_event_mtth_modifier_inverted_intrigue_score = yes
+				#L3T ruler's VS chancellor's intrigue comes into play for success
+				job_event_mtth_modifier_inverted_intrigue_score = yes #ruler's intrigue
+				FROM = { job_event_mtth_modifier_intrigue_score = yes } #chancellor's intrigue
 				#
 				
 				FROM = {
@@ -1327,17 +1336,45 @@ character_event = {
 			}
 		}
 	}
+	#L3T you can choose bribe amount
 	option = {
 		name = "EVTOPTB20140" #Send him an offer
-		ai_chance = { factor = 30 }
+		ai_chance = { 
+			factor = 20
+			modifier = { factor = 0.8 NOT = { wealth = 50 }}
+			modifier = { factor = 0.9 trait = greedy }
+		}
 		treasury = -50
 		FROM = {
+			set_character_flag = bribe_normal
 			letter_event = { id = 20144 days = 7 tooltip = "EVTTOOLTIP20144" }
 		}
 	}
 	option = {
+		name = "EVTOPTD20140" #Send him an offer #more generous #L3T
+		ai_chance = { 
+			factor = 10
+			modifier = { factor = 1.2 wealth = 200 }
+			modifier = { factor = 0.8 trait = greedy }
+		}
+		trigger = { wealth = 100 }
+		treasury = -150
+		FROM = {
+			set_character_flag = bribe_generous
+			letter_event = { id = 20144 days = 7 tooltip = "EVTTOOLTIP20144b" }
+		}
+	}
+	
+	#
+	#
+	###############BANISH HIM (martial skill) 
+	#
+	#
+	option = {
 		name = "EVTOPTC20140" #I better let it be for now
-		ai_chance = { factor = 30 }
+		ai_chance = { 
+			factor = 30
+		}
 	}
 }
 
@@ -1397,8 +1434,17 @@ letter_event = {
 	
 	is_triggered_only = yes
 	
+	#L3T more options and outcomes
 	option = {
 		name = "EVTOPTA20144"
+		trigger = { has_character_flag = bribe_normal }
+		ai_chance = { #L3T AI logic
+			factor = 10
+			modifier = {
+				factor = 1.5
+				trait = greedy
+			}
+		}
 		wealth = 50
 		FROM = {
 			letter_event = { id = 20145 tooltip = "EVTTOOLTIP20145" }
@@ -1406,15 +1452,66 @@ letter_event = {
 		hidden_tooltip = {
 			add_character_modifier = {
 				name = bribed_by_noble_timer
-				duration = 365
+				duration = 365 #1y
 				hidden = yes
 			}
 		}
+		clr_character_flag = bribe_normal
+	}
+	option = {
+		name = "EVTOPTC20144"
+		trigger = { has_character_flag = bribe_generous }
+		ai_chance = { #L3T AI logic
+			factor = 15
+			modifier = {
+				factor = 2.5
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.5
+				has_character_flag = bribe_generous
+			}			
+		}
+		wealth = 150
+		FROM = {
+			letter_event = { id = 20145 tooltip = "EVTTOOLTIP20145" }
+		}
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = bribed_by_noble_timer
+				duration = 1095 #3y
+				hidden = yes
+			}
+		}
+		clr_character_flag = bribe_generous
 	}
 	option = {
 		name = "EVTOPTB20144"
+		trigger = { has_character_flag = bribe_normal }
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 2
+				trait = honest
+			}
+		}
 		prestige = 5
 		FROM = { letter_event = { id = 20146 tooltip = "EVTTOOLTIP20146" } }
+		clr_character_flag = bribe_normal
+	}
+	option = {
+		name = "EVTOPTD20144"
+		trigger = { has_character_flag = bribe_generous }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.5
+				trait = honest
+			}
+		}
+		prestige = 15
+		FROM = { letter_event = { id = 20146 tooltip = "EVTTOOLTIP20146" } }
+		clr_character_flag = bribe_generous
 	}
 }
 
