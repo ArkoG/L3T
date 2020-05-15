@@ -94,8 +94,9 @@ action_fabricate_claims = {
 				}
 				any_province_lord = {
 					NOT = { character = FROM }
-					#NOT = { is_liege_or_above = FROM }
+					NOT = { is_liege_or_above = FROM }
 				}
+
 				OR = {
 					any_neighbor_province = {
 						owner = {
@@ -128,6 +129,16 @@ action_fabricate_claims = {
 			}
 		}
 		is_within_diplo_range = FROM
+		#L3T AI won't repeat unsuccessful attempt
+		any_province_lord = {
+			ai = yes 
+			NOT = {
+			has_opinion_modifier = {
+				who = FROM
+				name = he_attempted_fabricate_claim_chancellor_killed
+			}
+			}
+		}
 	}
 	
 	events = { 913 914 }
