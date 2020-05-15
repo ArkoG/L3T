@@ -1,0 +1,219 @@
+#################################
+#         L3T  par Arko         #
+#################################
+
+namespace = L3T
+
+##############################
+# CHANCELLOR
+# JOB: action_fabricate_claims
+##############################
+
+
+
+#Chancellor is arrested... (informing the chancellor, guards are here, no choice)
+character_event = {
+	id = L3T.80
+	desc = "DESCL3T.80"
+	picture = GFX_evt_prisoner_hf
+	border = GFX_event_normal_frame_martial
+	
+	is_triggered_only = yes
+	
+	#chance to get injured
+	#tarnished reputation
+	
+	option = {
+		name = "L3T.80A"
+		hidden_tooltip = {
+			#inform character he is caught, is banished, have to abandon job
+			cancel_job_action = action_fabricate_claims
+			#character_event = { id = L3T.82 } #informe de l'échec #that event does this already
+			liege =  { character_event = { id = L3T.83 days = 5 }} #informe le lige du retour
+			#inform noble about success about successful arrestation
+			FROM = { character_event = { id = L3T.84 } }
+		}
+	}
+}
+
+#Chancellor heard about the arrestation attempt, choosing what to do
+character_event = {
+	id = L3T.81
+	desc = "DESCL3T.81"
+	picture = GFX_evt_spymaster
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.81A"
+		#try to flee
+		ai_chance = {
+			factor = 35
+		}
+		#to hide
+		random_list = {
+			75 = {
+				#success but need to abandon job
+				cancel_job_action = action_fabricate_claims
+				character_event = { id = L3T.85 days = 5 } #informe du succès
+				liege =  { character_event = { id = L3T.86 days = 10 }} #informe le lige du retour
+				#noble is informed about the flee
+				FROM = { character_event = { id = L3T.87 days = 5 } }
+			}
+			25 = {
+				#failed and was catched
+				cancel_job_action = action_fabricate_claims
+				character_event = { id = L3T.82 days = 3 random = 2 } #informe de l'échec
+				#inform liege
+				liege =  { character_event = { id = L3T.83 days = 5 random = 3 }} #informe le lige de l'arrestation et du retour
+				#inform noble about success about successful arrestation
+				FROM = { character_event = { id = L3T.84 days = 5 } }
+			}
+		}
+	}
+	option = {
+		name = "L3T.81B"
+		#no worries
+		ai_chance = {
+			factor = 35
+		}
+		#to hide
+		random_list = {
+			25 = {
+				#success, false rumour ?
+				character_event = { id = L3T.88 days = 15 random = 5 } #informe du succès, can get bolder
+			}
+			75 = {
+				#was catched
+				cancel_job_action = action_fabricate_claims
+				character_event = { id = L3T.82 days = 5 random = 2 } #informe de l'échec
+				#inform liege
+				liege =  { character_event = { id = L3T.83 days = 10 random = 3 }} #informe le lige de l'arrestation et du retour
+				#inform noble
+				FROM = { character_event = { id = L3T.84 days = 7 } }
+			}
+		}
+	}
+}
+
+
+####GFX_evt_dead_body_hf
+
+# L3T.82 - chancellor is informed about his arrestion and banishment
+character_event = {
+	id = L3T.82
+	desc = "DESCL3T.82"
+	picture = GFX_evt_death
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.82A"
+	}
+}
+# L3T.83 - liege is informed about the Chancellor's failure and return
+character_event = {
+	id = DESCL3T.83
+	desc = "DESCL3T.83"
+	picture = GFX_evt_death
+	border = GFX_event_normal_frame_diplomacy
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.83A"
+		job_chancellor = {
+			cancel_job_action = action_fabricate_claims
+		}
+	}
+}
+# L3T.84 - Noble is informed that the arrestation attempt succeeded
+character_event = {
+	id = L3T.84
+	desc = "DESCL3T.84"
+	picture = GFX_evt_death
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.84A"
+		hidden_tooltip = { 
+			#FROM is the chancellor to be killed 
+			FROM = { liege = { character_event = { id = 20157 } } }
+			FROM = { liege = { save_event_target_as = banned_chancellors_boss }}
+			opinion = {
+				modifier = he_attempted_fabricate_claim_chancellor_banned
+				who = event_target:banned_chancellors_boss
+				years = 10
+			}
+		}
+	}
+}
+# L3T.85 - Chancellor is informed he has fled but have to abandon job
+character_event = {
+	id = L3T.85
+	desc = "DESCL3T.85"
+	picture = GFX_evt_death
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.85A"
+	}
+}
+# L3T.86 - liege is informed about the Chancellor's flee and return
+character_event = {
+	id = DESCL3T.86
+	desc = "DESCL3T.86"
+	picture = GFX_evt_death
+	border = GFX_event_normal_frame_diplomacy
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	#DECEITHFUL
+	option = {
+		name = "L3T.86A"
+		job_chancellor = {
+			cancel_job_action = action_fabricate_claims
+		}
+	}
+}
+# L3T.87 - Noble is informed successful chancellor's flee
+character_event = {
+	id = L3T.87
+	desc = "DESCL3T.87"
+	picture = GFX_evt_death
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.87A"
+	}
+}
+# L3T.88 - Chancellor is informed he escaped arrestation, or it was false rumor 
+character_event = {
+	id = L3T.88
+	desc = "DESCL3T.88"
+	picture = GFX_evt_death
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.88A"
+		##############set_character_flag = gets_bolder
+	}
+	option = {
+		name = "L3T.88B"
+
+	}
+}
