@@ -143,13 +143,13 @@ character_event = {
 	option = {
 		name = "L3T.84A"
 		hidden_tooltip = { 
-			#FROM is the chancellor to be killed 
-			FROM = { liege = { character_event = { id = 20157 } } }
-			FROM = { liege = { save_event_target_as = banned_chancellors_boss }}
+			
+			FROM = { 
 			opinion = {
 				modifier = he_attempted_fabricate_claim_chancellor_banned
 				who = event_target:banned_chancellors_boss
 				years = 10
+			}
 			}
 		}
 	}
@@ -181,9 +181,9 @@ character_event = {
 	#DECEITHFUL
 	option = {
 		name = "L3T.86A"
-		job_chancellor = {
-			cancel_job_action = action_fabricate_claims
-		}
+		#job_chancellor = {
+		#	cancel_job_action = action_fabricate_claims
+		#}
 	}
 }
 # L3T.87 - Noble is informed successful chancellor's flee
