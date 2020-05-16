@@ -1,0 +1,501 @@
+temple = {
+	TP_monastery_1 = { #Ermitage
+		desc = TP_monastery_1_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		prerequisites = { 
+			MONASTERE
+		}
+		not_if_x_exists = {CITEEPISCOPALE}
+		gold_cost = 100
+		##prestige_cost = 0
+		build_time = 180
+		ai_creation_factor = 97
+		
+		liege_piety = 0.01
+		#liege_prestige = 0
+		local_tax_modifier = 0.01
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 0.5
+	}
+
+	TP_monastery_2 = { #Prieuré
+		desc = TP_monastery_2_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		prerequisites = { 
+			MONASTERE
+		}
+		not_if_x_exists = {CITEEPISCOPALE}
+		upgrades_from = TP_monastery_1
+		gold_cost = 140
+		##prestige_cost = 0
+		build_time = 370
+		ai_creation_factor = 96
+		
+		liege_piety = 0.02
+		#liege_prestige = 0
+		local_tax_modifier = 0.01
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 0.5
+	}
+
+	TP_monastery_3 = { #Monastère
+		desc = TP_monastery_3_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		prerequisites = { 
+			MONASTERE
+		}
+		not_if_x_exists = {CITEEPISCOPALE}
+		upgrades_from = TP_monastery_2
+		gold_cost = 170
+		prestige_cost = 70
+		build_time = 570
+		ai_creation_factor = 95
+		
+		liege_piety = 0.02
+		#liege_prestige = 0
+		local_tax_modifier = 0.02
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TP_monastery_4 = { #Abbaye
+		desc = TP_monastery_4_desc
+		trigger = { TECH_CONSTRUCTION = 1 }
+		prerequisites = { 
+			MONASTERE
+		}
+		not_if_x_exists = {CITEEPISCOPALE}
+		upgrades_from = TP_monastery_3
+		gold_cost = 520
+		#prestige_cost = 0
+		build_time = 1100
+		ai_creation_factor = 94
+		
+		liege_piety = 0.02
+		liege_prestige = 0.01
+		local_tax_modifier = 0.01
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TP_monastery_5 = { #Abbatiale
+		desc = TP_monastery_5_desc
+		trigger = { TECH_CONSTRUCTION = 2 }
+		prerequisites = { 
+			MONASTERE
+		}
+		not_if_x_exists = {CITEEPISCOPALE}
+		upgrades_from = TP_monastery_4
+		gold_cost = 450
+		prestige_cost = 120
+		build_time = 1230
+		ai_creation_factor = 93
+		
+		liege_piety = 0.01
+		liege_prestige = 0.02
+		local_tax_modifier = 0.02
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TP_episcopat_L1 = { #Résidence épiscopale
+		desc = TP_episcopat_L1_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		not_if_x_exists = {MONASTERE}
+		gold_cost = 120
+		#prestige_cost = 0
+		build_time = 180
+		ai_creation_factor = 97
+		
+		liege_prestige = 0.01
+		#tax_income = 0
+		local_tax_modifier = 0.01
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 1.0
+	}
+
+	TP_episcopat_L2 = { #Résidence épiscopale
+		desc = TP_episcopat_L2_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		not_if_x_exists = {MONASTERE}
+		upgrades_from = TP_episcopat_L1
+		gold_cost = 230
+		#prestige_cost = 0
+		build_time = 380
+		ai_creation_factor = 96
+		
+		liege_prestige = 0.01
+		#tax_income = 0
+		local_tax_modifier = 0.01
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 2.0
+	}
+
+	TP_episcopat_L3 = { #Résidence épiscopale
+		desc = TP_episcopat_L3_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		not_if_x_exists = {MONASTERE}
+		upgrades_from = TP_episcopat_L2
+		gold_cost = 360
+		prestige_cost = 70
+		build_time = 770
+		ai_creation_factor = 95
+		
+		liege_prestige = 0.01
+		tax_income = -0.1
+		local_tax_modifier = 0.01
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TP_episcopat_L4 = { #Palais épiscopal
+		desc = TP_episcopat_L4_desc
+		trigger = { TECH_CONSTRUCTION = 1 }
+		prerequisites = { 
+			CITEEPISCOPALE
+		}
+		not_if_x_exists = {MONASTERE}
+		upgrades_from = TP_episcopat_L3
+		gold_cost = 380
+		#prestige_cost = 0
+		build_time = 820
+		ai_creation_factor = 94
+		
+		liege_prestige = 0.01
+		tax_income = -0.2
+		local_tax_modifier = 0.02
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	TP_episcopat_L5 = { #Palais épiscopal
+		desc = TP_episcopat_L5_desc
+		trigger = { TECH_CONSTRUCTION = 2 }
+		prerequisites = { 
+			CITEEPISCOPALE
+		}
+		not_if_x_exists = {MONASTERE}
+		upgrades_from = TP_episcopat_L4
+		gold_cost = 450
+		prestige_cost = 120
+		build_time = 1230
+		ai_creation_factor = 93
+		
+		liege_prestige = 0.01
+		tax_income = -0.3
+		local_tax_modifier = 0.01
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+}
+castle = {
+	CA_logis_L1 = { #Logis seigneurial
+		desc = CA_logis_L1_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		gold_cost = 120
+		prestige_cost = 30
+		build_time = 220
+		ai_creation_factor = 97
+		
+		liege_prestige = 0.01
+		#tax_income = 0
+		local_tax_modifier = 0.02
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 0.3
+	}
+
+	CA_logis_L2 = { #Logis seigneurial
+		desc = CA_logis_L2_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		upgrades_from = CA_logis_L1
+		gold_cost = 150
+		#prestige_cost = 0
+		build_time = 380
+		ai_creation_factor = 96
+		
+		liege_prestige = 0.01
+		#tax_income = 0
+		local_tax_modifier = 0.01
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	CA_logis_L3 = { #Logis seigneurial
+		desc = CA_logis_L3_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		upgrades_from = CA_logis_L2
+		gold_cost = 270
+		prestige_cost = 70
+		build_time = 570
+		ai_creation_factor = 95
+		
+		liege_prestige = 0.01
+		tax_income = -0.1
+		local_tax_modifier = 0.01
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 0.6
+	}
+
+	CA_logis_L4 = { #Logis seigneurial
+		desc = CA_logis_L4_desc
+		trigger = { TECH_CONSTRUCTION = 1 }
+		upgrades_from = CA_logis_L3
+		gold_cost = 270
+		#prestige_cost = 0
+		build_time = 570
+		ai_creation_factor = 94
+		
+		liege_prestige = 0.01
+		tax_income = -0.2
+		local_tax_modifier = 0.01
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	CA_logis_L5 = { #Logis seigneurial
+		desc = CA_logis_L5_desc
+		trigger = { TECH_CONSTRUCTION = 2 }
+		prerequisites = { 
+			FEODAL_adm
+		}
+		upgrades_from = CA_logis_L4
+		gold_cost = 450
+		prestige_cost = 120
+		build_time = 1230
+		ai_creation_factor = 93
+		
+		liege_prestige = 0.01
+		tax_income = -0.3
+		local_tax_modifier = 0.01
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	CA_adm_seigneurial_L1 = { #Perception
+		desc = CA_adm_seigneurial_L1_desc
+		trigger = { TECH_CONSTRUCTION = 1 }
+		gold_cost = 130
+		prestige_cost = 30
+		build_time = 220
+		
+		ai_creation_factor = 95
+		local_tax_modifier = 0.1
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	CA_adm_seigneurial_L2 = { #Perception
+		desc = CA_adm_seigneurial_L2_desc
+		trigger = { TECH_CONSTRUCTION = 1 }
+		upgrades_from = CA_adm_seigneurial_L1
+		gold_cost = 190
+		#prestige_cost = 0
+		build_time = 380
+		
+		ai_creation_factor = 94
+		local_tax_modifier = 0.1
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	CA_adm_seigneurial_L3 = { #Perception
+		desc = CA_adm_seigneurial_L3_desc
+		trigger = { TECH_CONSTRUCTION = 1 }
+		prerequisites = { 
+			FEODAL_adm
+			CA_logis_L3
+		}
+		upgrades_from = CA_adm_seigneurial_L2
+		gold_cost = 330
+		#prestige_cost = 0
+		build_time = 640
+		
+		ai_creation_factor = 93
+		local_tax_modifier = 0.1
+		
+		#add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+}
+city = {
+	CT_adm_urbain_L1 = { #Maison de commune
+		desc = CT_adm_urbain_L1_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		gold_cost = 120
+		#prestige_cost = 0
+		build_time = 180
+		ai_creation_factor = 97
+		
+		#tax_income = 0
+		local_tax_modifier = 0.01
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 1.0
+	}
+
+	CT_adm_urbain_L2 = { #Hôtel de commune
+		desc = CT_adm_urbain_L2_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		upgrades_from = CT_adm_urbain_L1
+		gold_cost = 150
+		#prestige_cost = 0
+		build_time = 380
+		ai_creation_factor = 96
+		
+		#tax_income = 0
+		local_tax_modifier = 0.01
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 2.0
+	}
+
+	CT_adm_urbain_L3 = { #Hôtel de ville
+		desc = CT_adm_urbain_L3_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		prerequisites = { 
+			CITE_L1
+			VOC_COMMERCIALE
+		}
+		upgrades_from = CT_adm_urbain_L2
+		gold_cost = 380
+		prestige_cost = 70
+		build_time = 820
+		ai_creation_factor = 95
+		
+		tax_income = -0.1
+		local_tax_modifier = 0.02
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	CT_adm_urbain_L4 = { #Salle du conseil
+		desc = CT_adm_urbain_L4_desc
+		trigger = { TECH_CONSTRUCTION = 1 }
+		upgrades_from = CT_adm_urbain_L3
+		gold_cost = 520
+		#prestige_cost = 0
+		build_time = 1100
+		ai_creation_factor = 94
+		
+		tax_income = -0.2
+		local_tax_modifier = 0.02
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	CT_adm_urbain_L5 = { #Palais communal
+		desc = CT_adm_urbain_L5_desc
+		trigger = { TECH_CONSTRUCTION = 2 }
+		upgrades_from = CT_adm_urbain_L4
+		gold_cost = 450
+		prestige_cost = 120
+		build_time = 1230
+		ai_creation_factor = 93
+		
+		tax_income = -0.3
+		local_tax_modifier = 0.04
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	CT_beffroi_L1 = { #Tour Horloge
+		desc = CT_beffroi_L1_desc
+		trigger = { TECH_CONSTRUCTION = 1 }
+		prerequisites = { 
+			CITE_L1
+			CT_adm_urbain_L1
+		}
+		gold_cost = 150
+		prestige_cost = 30
+		build_time = 220
+		ai_creation_factor = 95
+		
+		liege_prestige = 0.02
+		tax_income = -0.1
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	CT_beffroi_L2 = { #Beffroi
+		desc = CT_beffroi_L2_desc
+		trigger = { TECH_CONSTRUCTION = 1 }
+		upgrades_from = CT_beffroi_L1
+		gold_cost = 240
+		prestige_cost = 60
+		build_time = 460
+		ai_creation_factor = 94
+		
+		liege_prestige = 0.03
+		tax_income = -0.2
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+
+	CT_beffroi_L3 = { #Haut Beffroi
+		desc = CT_beffroi_L3_desc
+		trigger = { TECH_CONSTRUCTION = 1 }
+		prerequisites = { 
+			CT_adm_urbain_L3
+			VOC_COMMERCIALE
+		}
+		upgrades_from = CT_beffroi_L2
+		gold_cost = 360
+		prestige_cost = 70
+		build_time = 770
+		ai_creation_factor = 93
+		
+		liege_prestige = 0.05
+		tax_income = -0.3
+		
+		add_number_to_name = no
+
+		extra_tech_building_start = 10
+	}
+}
