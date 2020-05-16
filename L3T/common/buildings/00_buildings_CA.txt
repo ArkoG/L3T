@@ -18,7 +18,7 @@ castle = {
 	
 	#recycled tags for history files
 ca_wall_q_1 = { #Fossé
-	desc = ca_wall_q_1_desc
+	desc = wall_q_1_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	gold_cost = 100
 	 
@@ -31,8 +31,9 @@ ca_wall_q_1 = { #Fossé
 }
 
 ca_wall_q_2 = { #Fossé avec piques
-	desc = ca_wall_q_2_desc
+	desc = wall_q_2_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	prerequisites = { ca_wall_1 }
 	upgrades_from = ca_wall_q_1
 	gold_cost = 90
 	 
@@ -45,8 +46,9 @@ ca_wall_q_2 = { #Fossé avec piques
 }
 
 ca_wall_q_3 = { #Fossé inondé
-	desc = ca_wall_q_3_desc
+	desc = wall_q_3_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	prerequisites = { ca_wall_2 }
 	upgrades_from = ca_wall_q_2
 	gold_cost = 150
 	 
@@ -59,7 +61,7 @@ ca_wall_q_3 = { #Fossé inondé
 }
 
 ca_wall_q_4 = { #Douves
-	desc = ca_wall_q_4_desc
+	desc = wall_q_4_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	prerequisites = { 
 		FEODAL_mil
@@ -76,7 +78,7 @@ ca_wall_q_4 = { #Douves
 }
 
 ca_wall_1 = { #Talus défensif
-	desc = ca_wall_1_desc
+	desc = wall_1_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	gold_cost = 160
 	 
@@ -89,7 +91,7 @@ ca_wall_1 = { #Talus défensif
 }
 
 ca_wall_2 = { #Palissade en bois
-	desc = ca_wall_2_desc
+	desc = wall_2_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	upgrades_from = ca_wall_1
 	gold_cost = 200
@@ -104,7 +106,7 @@ ca_wall_2 = { #Palissade en bois
 }
 
 ca_wall_3 = { #Enceinte de pierre
-	desc = ca_wall_3_desc
+	desc = wall_3_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	upgrades_from = ca_wall_2
 	gold_cost = 400
@@ -119,7 +121,7 @@ ca_wall_3 = { #Enceinte de pierre
 }
 
 ca_wall_4 = { #Enceinte épaisse
-	desc = ca_wall_4_desc
+	desc = wall_4_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	not_if_x_exists = { FEODAL_prod}
 	upgrades_from = ca_wall_3
@@ -135,7 +137,7 @@ ca_wall_4 = { #Enceinte épaisse
 }
 
 ca_wall_5 = { #Grande enceinte
-	desc = ca_wall_5_desc
+	desc = wall_5_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	prerequisites = { 
 		FEODAL_mil
