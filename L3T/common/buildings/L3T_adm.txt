@@ -111,6 +111,9 @@ temple = {
 	TP_episcopat_L1 = { #Résidence épiscopale
 		desc = TP_episcopat_L1_desc
 		trigger = { TECH_CONSTRUCTION = 0 }
+		prerequisites = { 
+			CITEEPISCOPALE
+		}
 		not_if_x_exists = {MONASTERE}
 		gold_cost = 120
 		#prestige_cost = 0
