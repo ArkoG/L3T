@@ -94,7 +94,7 @@ action_fabricate_claims = {
 				}
 				any_province_lord = {
 					NOT = { character = FROM }
-					NOT = { is_liege_or_above = FROM }
+					NOT = { is_vassal_or_below_of = FROM }
 				}
 
 				OR = {
@@ -133,10 +133,10 @@ action_fabricate_claims = {
 		any_province_lord = {
 			ai = yes 
 			NOT = {
-			has_opinion_modifier = {
-				who = FROM
-				name = he_attempted_fabricate_claim_chancellor_killed
-			}
+				has_opinion_modifier = {
+					who = FROM
+					name = he_attempted_fabricate_claim_chancellor_banned
+				}
 			}
 		}
 	}
