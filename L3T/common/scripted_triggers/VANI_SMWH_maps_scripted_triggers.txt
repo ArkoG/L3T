@@ -113,3 +113,38 @@ is_SWMH_hard_rurale = {
 		#title = b_saintmaurice2 #saint Maurice d'Agaune
 	}
 }
+narbonaise_lands = {
+	liege = { 
+		has_landed_title = {
+			OR = {
+				AND = {
+					has_global_flag = SWMH
+					OR= {
+						c_montpellier
+						c_narbonne
+						c_carcassonne
+						c_provence
+						c_nimes #SWMH
+						c_beziers #SWMH
+						c_marseille #SWMH
+					}
+				}
+				AND = {
+					has_global_flag = running_VANILLA
+					OR= {
+						c_montpellier
+						c_narbonne
+						c_carcassonne
+						c_provence
+					}
+				}			
+				AND = {
+					has_global_flag = running_LCDA
+					OR= {
+						c_aigle
+					}
+				}
+			}
+		}
+	}
+}
