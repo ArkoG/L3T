@@ -120,6 +120,7 @@ character_event = {
 	only_rulers = yes
 	
 	trigger = {
+		ai=yes
 		any_demesne_title = {
 			tier = baron
 			holding_type = temple
@@ -222,6 +223,7 @@ character_event = {
 				has_building = tp_roman_cathedrale
 				location = { has_wonder = wonder_cathedral_romane }
 			}
+			save_event_target_as = lieu_cathedrale
 			location = { owner = { character_event = { id = REC.106 days = 5 } } }
 		}
 	}
@@ -327,34 +329,36 @@ character_event = {
 		}
 		# Lord is not pious
 		piety = -50
-		FROM = {
-			# The romanesque cathedral is now under construction for 10 years
-			random_demesne_title = {
-				limit = {
-					tier = baron
-					holding_type = temple
-					has_building = tp_roman_cathedrale
-					location = { has_wonder = wonder_cathedral_romane }
-				}
-				owner = { save_event_target_as = cathedral_patron }
-				save_event_target_as = lieu_cathedrale
-				location = {
-					destroy_wonder = yes
-					add_wonder = wonder_cathedral_romane
-					wonder = {
-						set_name = wonder_cathedral_romane
-						set_description = wonder_cathedral_romane_desc_UC
+		custom_tooltip = { text = cathedral_reconstruction_10y }
+		hidden_tooltip = {
+			FROM = {
+				# The romanesque cathedral is now under construction for 10 years
+				random_demesne_title = {
+					limit = {
+						tier = baron
+						holding_type = temple
+						has_building = tp_roman_cathedrale
+						location = { has_wonder = wonder_cathedral_romane }
 					}
+					owner = { save_event_target_as = cathedral_patron }
+					save_event_target_as = lieu_cathedrale
+						location = {
+							destroy_wonder = yes
+							add_wonder = wonder_cathedral_romane
+							wonder = {
+								set_name = wonder_cathedral_romane
+								set_description = wonder_cathedral_romane_desc_UC
+							}
+						}
+						remove_building = tp_roman_cathedrale
+						add_building = tp_constructing_roman_cathedrale
+						location = { province_event = { id = REC.104 days = 3650 } }
+					# Bishop pays by taxes
+					add_holding_modifier = { name = romanesque_construction days = 3650 }
 				}
-				remove_building = tp_roman_cathedrale
-				add_building = tp_constructing_roman_cathedrale
-				location = { province_event = { id = REC.104 days = 3650 } }
-				
-				# Bishop pays by taxes
-				add_holding_modifier = { name = romanesque_construction days = 3650 }
-			}
 			# Opus Francigenum can appear
 			opus_francigenum_dynamic_apparition = yes
+			}
 		}
 	}
 		
@@ -382,34 +386,36 @@ character_event = {
 		# Lord pays 25% and gets piety
 		wealth = -50
 		piety = 25
-		FROM = {
-			# The romanesque cathedral is now under construction for 10 years
-			random_demesne_title = {
-				limit = {
-					tier = baron
-					holding_type = temple
-					has_building = tp_roman_cathedrale
-					location = { has_wonder = wonder_cathedral_romane }
-				}
-				owner = { save_event_target_as = cathedral_patron }
-				save_event_target_as = lieu_cathedrale
-				location = {
-					destroy_wonder = yes
-					add_wonder = wonder_cathedral_romane
-					wonder = {
-						set_name = wonder_cathedral_romane
-						set_description = wonder_cathedral_romane_desc_UC
+		custom_tooltip = { text = cathedral_reconstruction_7y }
+		hidden_tooltip = {
+			FROM = {
+				# The romanesque cathedral is now under construction for 10 years
+				random_demesne_title = {
+					limit = {
+						tier = baron
+						holding_type = temple
+						has_building = tp_roman_cathedrale
+						location = { has_wonder = wonder_cathedral_romane }
 					}
+					owner = { save_event_target_as = cathedral_patron }
+					save_event_target_as = lieu_cathedrale
+						location = {
+							destroy_wonder = yes
+							add_wonder = wonder_cathedral_romane
+							wonder = {
+								set_name = wonder_cathedral_romane
+								set_description = wonder_cathedral_romane_desc_UC
+							}
+						}
+						remove_building = tp_roman_cathedrale
+						add_building = tp_constructing_roman_cathedrale
+						location = { province_event = { id = REC.104 days = 3650 } }
+					# Bishop pays by taxes
+					add_holding_modifier = { name = romanesque_construction days = 2700 } # 75% of 10 years because lord pays 25%
 				}
-				remove_building = tp_roman_cathedrale
-				add_building = tp_constructing_roman_cathedrale
-				location = { province_event = { id = REC.104 days = 3650 } }
-				
-				# Bishop pays by taxes
-				add_holding_modifier = { name = romanesque_construction days = 2700 } # 75% of 10 years because lord pays 25%
+				# Opus Francigenum can appear
+				opus_francigenum_dynamic_apparition = yes
 			}
-			# Opus Francigenum can appear
-			opus_francigenum_dynamic_apparition = yes
 		}
 	}
 		
