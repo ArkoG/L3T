@@ -3,52 +3,79 @@ namespace = L3T
 # ROOT = Builder, FROM = The Holding Title
 
 #holding_type = castle 
+
+#factorisation par coût - prestige -90
 character_event = {
 	id = L3T.230
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { 
-			tier = baron	
-			holding_type = castle 
-			has_building = ca_tour_L4
-			NOT = { has_title_flag = BONUS_ca_tour_L4 }
+		OR = {
+			FROM = { 
+				tier = baron	
+				holding_type = castle 
+				has_building = ca_tour_L4
+				NOT = { has_title_flag = BONUS_ca_tour_L4 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = castle 
+				has_building = ca_eglise_L4
+				NOT = { has_title_flag = BONUS_ca_eglise_L4 }
+			}
 		}
 	}
 	
 	immediate = {
-		FROM = { 
-			set_title_flag = BONUS_ca_tour_L4
-			holder_scope = {
-				prestige = -90
+		FROM = {
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = castle 
+					has_building = ca_tour_L4
+					NOT = { has_title_flag = BONUS_ca_tour_L4 }
+				}
+				set_title_flag = BONUS_ca_tour_L4
+				#holder_scope = { prestige = -90 }
 			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = castle 
+					has_building = ca_eglise_L4
+					NOT = { has_title_flag = BONUS_ca_eglise_L4 }
+				}
+				set_title_flag = BONUS_ca_eglise_L4
+				#holder_scope = { prestige = -90 }
+			}
+			holder_scope = { prestige = -90 }
 		}
 	}
 }
-character_event = {
-	id = L3T.231
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		FROM = { 
-			tier = baron	
-			holding_type = castle 
-			has_building = ca_eglise_L4
-			NOT = { has_title_flag = BONUS_ca_eglise_L4 }
-		}
-	}
-	
-	immediate = {
-		FROM = { 
-			set_title_flag = BONUS_ca_eglise_L4
-			holder_scope = {
-				prestige = -90
-			}
-		}
-	}
-}
+#character_event = {
+#	id = L3T.231
+#	hide_window = yes
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#		FROM = { 
+#			tier = baron	
+#			holding_type = castle 
+#			has_building = ca_eglise_L4
+#			NOT = { has_title_flag = BONUS_ca_eglise_L4 }
+#		}
+#	}
+#	
+#	immediate = {
+#		FROM = { 
+#			set_title_flag = BONUS_ca_eglise_L4
+#			holder_scope = {
+#				prestige = -90
+#			}
+#		}
+#	}
+#}
 character_event = {
 	id = L3T.232
 	hide_window = yes
