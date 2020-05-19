@@ -158,7 +158,7 @@ TECH_GROUP_ECONOMY = {
 		}
 		8 = {
 			add_building = ca_stable_6
-			add_building = ca_town_6
+			#add_building = ca_town_6
 		}
 	}
 	TECH_CITY_CONSTRUCTION = { #city buildings
@@ -246,7 +246,7 @@ TECH_GROUP_ECONOMY = {
 		4 = {
 			add_building = ct_guard_3
 			add_building = ct_university_2
-			add_building = ct_training_grounds_4
+			#add_building = ct_training_grounds_4
 			add_building = no_airag_producer_6
 			add_building = no_ox_wagon_7
 			add_building = no_ox_wagon_8
@@ -270,7 +270,7 @@ TECH_GROUP_ECONOMY = {
 		}
 		6 = {
 			add_building = ct_guard_4
-			add_building = ct_training_grounds_5
+			#add_building = ct_training_grounds_5
 			add_building = no_airag_producer_8
 			add_building = no_felt_crafter_8
 			add_building = no_ger_crafter_8
@@ -279,15 +279,15 @@ TECH_GROUP_ECONOMY = {
 			add_building = tp_school_2
 		}
 		7 = {
-			add_building = ct_marketplace_6
+			#add_building = ct_marketplace_6
 			add_building = ct_barracks_6
 			add_building = tp_barracks_6
-			add_building = tp_town_6
+			#add_building = tp_town_6
 		}
 		8 = {
 			add_building = ct_guard_5
 			add_building = ct_university_3
-			add_building = ct_training_grounds_6
+			#add_building = ct_training_grounds_6
 			add_building = tp_monastery_6
 			add_building = tp_elite_barracks_6
 		}
@@ -533,6 +533,12 @@ TECH_GROUP_CULTURE = {
 	TECH_POPULAR_CUSTOMS = {
 		modifier = {
 			TOWN_OPINION = 24
+			#custom_modifier_text  = tech_custom_illuminations_1 #L3T same custom text for all levels
+		}
+		
+		1 = {
+		#custom_modifier_text  = tech_custom_illuminations_tt #works only inside a modifier block
+		#add_decision = blabla #displays a "government unlocked" text which i guess is not used anymore
 		}
 	}
 	TECH_RELIGIOUS_CUSTOMS = {
