@@ -45,6 +45,7 @@ character_event = {
 			modifier = { factor = 1.2 has_education_martial_trigger = no }
 			modifier = { factor = 2 has_lifestyle_martial_trigger = no }
 			modifier = { factor = 2 NOT = { combat_rating = 0 }}
+			modifier = { factor = 0.5 NOT = { prestige = 50 }}
 		}
 		prestige = -50
 	}
