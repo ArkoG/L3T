@@ -7,12 +7,10 @@ temple = {
 		}
 		not_if_x_exists = {CITEEPISCOPALE}
 		gold_cost = 100
-		##prestige_cost = 0
 		build_time = 180
 		ai_creation_factor = 97
 		
 		liege_piety = 0.01
-		#liege_prestige = 0
 		local_tax_modifier = 0.01
 		
 		add_number_to_name = no
@@ -29,12 +27,10 @@ temple = {
 		not_if_x_exists = {CITEEPISCOPALE}
 		upgrades_from = TP_monastery_1
 		gold_cost = 140
-		##prestige_cost = 0
 		build_time = 370
 		ai_creation_factor = 96
 		
 		liege_piety = 0.02
-		#liege_prestige = 0
 		local_tax_modifier = 0.01
 		
 		add_number_to_name = no
@@ -44,19 +40,22 @@ temple = {
 
 	TP_monastery_3 = { #Monastère
 		desc = TP_monastery_3_desc
-		trigger = { TECH_CONSTRUCTION = 0 }
+		trigger = { 
+			TECH_CONSTRUCTION = 0
+			FROM = { prestige = 70} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		prerequisites = { 
 			MONASTERE
 		}
 		not_if_x_exists = {CITEEPISCOPALE}
 		upgrades_from = TP_monastery_2
 		gold_cost = 170
-		prestige_cost = 70
+		#prestige_cost = 70
 		build_time = 570
 		ai_creation_factor = 95
 		
 		liege_piety = 0.02
-		#liege_prestige = 0
 		local_tax_modifier = 0.02
 		
 		add_number_to_name = no
@@ -73,7 +72,7 @@ temple = {
 		not_if_x_exists = {CITEEPISCOPALE}
 		upgrades_from = TP_monastery_3
 		gold_cost = 520
-		#prestige_cost = 0
+		
 		build_time = 1100
 		ai_creation_factor = 94
 		
@@ -88,14 +87,18 @@ temple = {
 
 	TP_monastery_5 = { #Abbatiale
 		desc = TP_monastery_5_desc
-		trigger = { TECH_CONSTRUCTION = 2 }
+		trigger = { 
+			TECH_CONSTRUCTION = 2
+			FROM = { prestige = 120} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		prerequisites = { 
 			MONASTERE
 		}
 		not_if_x_exists = {CITEEPISCOPALE}
 		upgrades_from = TP_monastery_4
 		gold_cost = 450
-		prestige_cost = 120
+		#prestige_cost = 120
 		build_time = 1230
 		ai_creation_factor = 93
 		
@@ -116,7 +119,7 @@ temple = {
 		}
 		not_if_x_exists = {MONASTERE}
 		gold_cost = 120
-		#prestige_cost = 0
+		
 		build_time = 180
 		ai_creation_factor = 97
 		
@@ -135,7 +138,7 @@ temple = {
 		not_if_x_exists = {MONASTERE}
 		upgrades_from = TP_episcopat_L1
 		gold_cost = 230
-		#prestige_cost = 0
+		
 		build_time = 380
 		ai_creation_factor = 96
 		
@@ -150,11 +153,15 @@ temple = {
 
 	TP_episcopat_L3 = { #Résidence épiscopale
 		desc = TP_episcopat_L3_desc
-		trigger = { TECH_CONSTRUCTION = 0 }
+		trigger = { 
+			TECH_CONSTRUCTION = 0
+			FROM = { prestige = 70} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		not_if_x_exists = {MONASTERE}
 		upgrades_from = TP_episcopat_L2
 		gold_cost = 360
-		prestige_cost = 70
+		#prestige_cost = 70
 		build_time = 770
 		ai_creation_factor = 95
 		
@@ -176,7 +183,7 @@ temple = {
 		not_if_x_exists = {MONASTERE}
 		upgrades_from = TP_episcopat_L3
 		gold_cost = 380
-		#prestige_cost = 0
+		
 		build_time = 820
 		ai_creation_factor = 94
 		
@@ -191,14 +198,18 @@ temple = {
 
 	TP_episcopat_L5 = { #Palais épiscopal
 		desc = TP_episcopat_L5_desc
-		trigger = { TECH_CONSTRUCTION = 2 }
+		trigger = { 
+			TECH_CONSTRUCTION = 2
+			FROM = { prestige = 120} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		prerequisites = { 
 			CITEEPISCOPALE
 		}
 		not_if_x_exists = {MONASTERE}
 		upgrades_from = TP_episcopat_L4
 		gold_cost = 450
-		prestige_cost = 120
+		#prestige_cost = 120
 		build_time = 1230
 		ai_creation_factor = 93
 		
@@ -214,9 +225,13 @@ temple = {
 castle = {
 	CA_logis_L1 = { #Logis seigneurial
 		desc = CA_logis_L1_desc
-		trigger = { TECH_CONSTRUCTION = 0 }
+		trigger = { 
+			TECH_CONSTRUCTION = 0
+			FROM = { prestige = 30} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		gold_cost = 120
-		prestige_cost = 30
+		#prestige_cost = 30
 		build_time = 220
 		ai_creation_factor = 97
 		
@@ -234,7 +249,7 @@ castle = {
 		trigger = { TECH_CONSTRUCTION = 0 }
 		upgrades_from = CA_logis_L1
 		gold_cost = 150
-		#prestige_cost = 0
+		
 		build_time = 380
 		ai_creation_factor = 96
 		
@@ -249,10 +264,14 @@ castle = {
 
 	CA_logis_L3 = { #Logis seigneurial
 		desc = CA_logis_L3_desc
-		trigger = { TECH_CONSTRUCTION = 0 }
+		trigger = { 
+			TECH_CONSTRUCTION = 0
+			FROM = { prestige = 70} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		upgrades_from = CA_logis_L2
 		gold_cost = 270
-		prestige_cost = 70
+		#prestige_cost = 70
 		build_time = 570
 		ai_creation_factor = 95
 		
@@ -270,7 +289,7 @@ castle = {
 		trigger = { TECH_CONSTRUCTION = 1 }
 		upgrades_from = CA_logis_L3
 		gold_cost = 270
-		#prestige_cost = 0
+		
 		build_time = 570
 		ai_creation_factor = 94
 		
@@ -285,13 +304,17 @@ castle = {
 
 	CA_logis_L5 = { #Logis seigneurial
 		desc = CA_logis_L5_desc
-		trigger = { TECH_CONSTRUCTION = 2 }
+		trigger = { 
+			TECH_CONSTRUCTION = 2
+			FROM = { prestige = 120} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		prerequisites = { 
 			FEODAL_adm
 		}
 		upgrades_from = CA_logis_L4
 		gold_cost = 450
-		prestige_cost = 120
+		#prestige_cost = 120
 		build_time = 1230
 		ai_creation_factor = 93
 		
@@ -306,10 +329,12 @@ castle = {
 
 	CA_adm_seigneurial_L1 = { #Perception
 		desc = CA_adm_seigneurial_L1_desc
-		trigger = { TECH_CONSTRUCTION = 1 }
-		gold_cost = 130
-		prestige_cost = 30
-		build_time = 220
+		trigger = { 
+			TECH_CONSTRUCTION = 1
+		}
+		gold_cost = 180
+		
+		build_time = 180
 		
 		ai_creation_factor = 95
 		local_tax_modifier = 0.1
@@ -324,7 +349,7 @@ castle = {
 		trigger = { TECH_CONSTRUCTION = 1 }
 		upgrades_from = CA_adm_seigneurial_L1
 		gold_cost = 190
-		#prestige_cost = 0
+		
 		build_time = 380
 		
 		ai_creation_factor = 94
@@ -344,7 +369,7 @@ castle = {
 		}
 		upgrades_from = CA_adm_seigneurial_L2
 		gold_cost = 330
-		#prestige_cost = 0
+		
 		build_time = 640
 		
 		ai_creation_factor = 93
@@ -360,7 +385,7 @@ city = {
 		desc = CT_adm_urbain_L1_desc
 		trigger = { TECH_CONSTRUCTION = 0 }
 		gold_cost = 120
-		#prestige_cost = 0
+		
 		build_time = 180
 		ai_creation_factor = 97
 		
@@ -377,7 +402,7 @@ city = {
 		trigger = { TECH_CONSTRUCTION = 0 }
 		upgrades_from = CT_adm_urbain_L1
 		gold_cost = 150
-		#prestige_cost = 0
+		
 		build_time = 380
 		ai_creation_factor = 96
 		
@@ -391,14 +416,18 @@ city = {
 
 	CT_adm_urbain_L3 = { #Hôtel de ville
 		desc = CT_adm_urbain_L3_desc
-		trigger = { TECH_CONSTRUCTION = 0 }
+		trigger = { 
+			TECH_CONSTRUCTION = 0
+			FROM = { prestige = 70} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		prerequisites = { 
 			CITE_L1
 			VOC_COMMERCIALE
 		}
 		upgrades_from = CT_adm_urbain_L2
 		gold_cost = 380
-		prestige_cost = 70
+		#prestige_cost = 70
 		build_time = 820
 		ai_creation_factor = 95
 		
@@ -415,7 +444,7 @@ city = {
 		trigger = { TECH_CONSTRUCTION = 1 }
 		upgrades_from = CT_adm_urbain_L3
 		gold_cost = 520
-		#prestige_cost = 0
+		
 		build_time = 1100
 		ai_creation_factor = 94
 		
@@ -429,10 +458,14 @@ city = {
 
 	CT_adm_urbain_L5 = { #Palais communal
 		desc = CT_adm_urbain_L5_desc
-		trigger = { TECH_CONSTRUCTION = 2 }
+		trigger = { 
+			TECH_CONSTRUCTION = 2
+			FROM = { prestige = 120} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		upgrades_from = CT_adm_urbain_L4
 		gold_cost = 450
-		prestige_cost = 120
+		#prestige_cost = 120
 		build_time = 1230
 		ai_creation_factor = 93
 		
@@ -446,13 +479,17 @@ city = {
 
 	CT_beffroi_L1 = { #Tour Horloge
 		desc = CT_beffroi_L1_desc
-		trigger = { TECH_CONSTRUCTION = 1 }
+		trigger = { 
+			TECH_CONSTRUCTION = 1
+			FROM = { prestige = 30} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		prerequisites = { 
 			CITE_L1
 			CT_adm_urbain_L1
 		}
 		gold_cost = 150
-		prestige_cost = 30
+		#prestige_cost = 30
 		build_time = 220
 		ai_creation_factor = 95
 		
@@ -466,10 +503,14 @@ city = {
 
 	CT_beffroi_L2 = { #Beffroi
 		desc = CT_beffroi_L2_desc
-		trigger = { TECH_CONSTRUCTION = 1 }
+		trigger = { 
+			TECH_CONSTRUCTION = 1
+			FROM = { prestige = 60} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		upgrades_from = CT_beffroi_L1
 		gold_cost = 240
-		prestige_cost = 60
+		#prestige_cost = 60
 		build_time = 460
 		ai_creation_factor = 94
 		
@@ -483,14 +524,18 @@ city = {
 
 	CT_beffroi_L3 = { #Haut Beffroi
 		desc = CT_beffroi_L3_desc
-		trigger = { TECH_CONSTRUCTION = 1 }
+		trigger = { 
+			TECH_CONSTRUCTION = 1
+			FROM = { prestige = 70} #replaces prestige_cost
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}
 		prerequisites = { 
 			CT_adm_urbain_L3
 			VOC_COMMERCIALE
 		}
 		upgrades_from = CT_beffroi_L2
 		gold_cost = 360
-		prestige_cost = 70
+		#prestige_cost = 70
 		build_time = 770
 		ai_creation_factor = 93
 		

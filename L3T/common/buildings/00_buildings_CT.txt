@@ -1015,7 +1015,7 @@ ct_eglise_L4 = { #Grande église
 	desc = ct_eglise_L4_desc
 	trigger = { 
 		TECH_CITY_CONSTRUCTION = 0
-		FROM = { prestige = 90 } #replaces prestige_cost
+		FROM = { prestige = 90 } #replaces prestige_cost_90
 		custom_tooltip = { text = TOOLTIP_prestige_building }
 	}	
 	prerequisites = { 
@@ -1036,7 +1036,7 @@ ct_eglise_L5 = { #Basilique
 	desc = ct_eglise_L5_desc
 	trigger = { 
 		TECH_CITY_CONSTRUCTION = 0
-		FROM = { prestige = 120 } #replaces prestige_cost
+		FROM = { prestige = 120 } #replaces prestige_cost_120
 		custom_tooltip = { text = TOOLTIP_prestige_building }
 	}	
 	prerequisites = { 

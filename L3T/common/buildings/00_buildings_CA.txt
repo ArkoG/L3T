@@ -158,7 +158,7 @@ ca_con_wall_6 = { #Murs Théodosiens
 	desc = ca_con_wall_6_desc
 	trigger = { 
 		TECH_CASTLE_CONSTRUCTION = 0
-		FROM = { prestige = 120 } #replaces prestige_cost
+		FROM = { prestige = 120 } #replaces prestige_cost_120
 		custom_tooltip = { text = TOOLTIP_prestige_building }
 	}
 	potential = { 
@@ -229,7 +229,7 @@ ca_tour_L4 = { #Tours rondes
 	desc = ca_tour_L4_desc
 	trigger = { 
 		TECH_CASTLE_CONSTRUCTION = 0
-		FROM = { prestige = 90 } #replaces prestige_cost
+		FROM = { prestige = 90 } #replaces prestige_cost_90
 		custom_tooltip = { text = TOOLTIP_prestige_building }
 	}
 	prerequisites = { 
@@ -710,7 +710,7 @@ ca_eglise_L4 = { #Grande église
 	desc = ca_eglise_L4_desc
 	trigger = { 
 		TECH_CASTLE_CONSTRUCTION = 0
-		FROM = { prestige = 90 } #replaces prestige_cost
+		FROM = { prestige = 90 } #replaces prestige_cost_90
 		custom_tooltip = { text = TOOLTIP_prestige_building }
 	}
 	prerequisites = { 
