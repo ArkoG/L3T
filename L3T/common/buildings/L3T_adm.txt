@@ -65,7 +65,11 @@ temple = {
 
 	TP_monastery_4 = { #Abbaye
 		desc = TP_monastery_4_desc
-		trigger = { TECH_CONSTRUCTION = 1 }
+		trigger = { 
+			TECH_CONSTRUCTION = 1
+			higher_tier_than = BARON
+		}
+		potential = { higher_tier_than = BARON }
 		prerequisites = { 
 			MONASTERE
 		}
@@ -91,7 +95,9 @@ temple = {
 			TECH_CONSTRUCTION = 2
 			FROM = { prestige = 120} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
+			higher_tier_than = COUNT
 		}
+		potential = { higher_tier_than = COUNT }
 		prerequisites = { 
 			MONASTERE
 		}
@@ -176,10 +182,15 @@ temple = {
 
 	TP_episcopat_L4 = { #Palais épiscopal
 		desc = TP_episcopat_L4_desc
-		trigger = { TECH_CONSTRUCTION = 1 }
+		trigger = { 
+			TECH_CONSTRUCTION = 1
+			higher_tier_than = BARON
+		}
+		potential = { higher_tier_than = BARON }
 		prerequisites = { 
 			CITEEPISCOPALE
 		}
+		
 		not_if_x_exists = {MONASTERE}
 		upgrades_from = TP_episcopat_L3
 		gold_cost = 380
@@ -202,7 +213,9 @@ temple = {
 			TECH_CONSTRUCTION = 2
 			FROM = { prestige = 120} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
+			higher_tier_than = COUNT
 		}
+		potential = { higher_tier_than = COUNT }
 		prerequisites = { 
 			CITEEPISCOPALE
 		}
@@ -268,7 +281,9 @@ castle = {
 			TECH_CONSTRUCTION = 0
 			FROM = { prestige = 70} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
+			higher_tier_than = BARON
 		}
+		potential = { higher_tier_than = BARON }
 		upgrades_from = CA_logis_L2
 		gold_cost = 270
 		#prestige_cost = 70
@@ -286,7 +301,11 @@ castle = {
 
 	CA_logis_L4 = { #Logis seigneurial
 		desc = CA_logis_L4_desc
-		trigger = { TECH_CONSTRUCTION = 1 }
+		trigger = { 
+			TECH_CONSTRUCTION = 1
+			higher_tier_than = COUNT
+		}
+		potential = { higher_tier_than = COUNT }
 		upgrades_from = CA_logis_L3
 		gold_cost = 270
 		
@@ -308,7 +327,9 @@ castle = {
 			TECH_CONSTRUCTION = 2
 			FROM = { prestige = 120} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
+			higher_tier_than = DUKE
 		}
+		potential = { higher_tier_than = DUKE }
 		prerequisites = { 
 			FEODAL_adm
 		}
@@ -331,7 +352,9 @@ castle = {
 		desc = CA_adm_seigneurial_L1_desc
 		trigger = { 
 			TECH_CONSTRUCTION = 1
+			higher_tier_than = BARON
 		}
+		potential = { higher_tier_than = BARON }
 		gold_cost = 180
 		
 		build_time = 180
@@ -346,7 +369,11 @@ castle = {
 
 	CA_adm_seigneurial_L2 = { #Perception
 		desc = CA_adm_seigneurial_L2_desc
-		trigger = { TECH_CONSTRUCTION = 1 }
+		trigger = { 
+			TECH_CONSTRUCTION = 1
+			higher_tier_than = COUNT
+		}
+		potential = { higher_tier_than = COUNT }
 		upgrades_from = CA_adm_seigneurial_L1
 		gold_cost = 190
 		
@@ -362,7 +389,11 @@ castle = {
 
 	CA_adm_seigneurial_L3 = { #Perception
 		desc = CA_adm_seigneurial_L3_desc
-		trigger = { TECH_CONSTRUCTION = 1 }
+		trigger = { 
+			TECH_CONSTRUCTION = 1
+			higher_tier_than = DUKE
+		}
+		potential = { higher_tier_than = DUKE }
 		prerequisites = { 
 			FEODAL_adm
 			CA_logis_L3
@@ -420,7 +451,9 @@ city = {
 			TECH_CONSTRUCTION = 0
 			FROM = { prestige = 70} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
+			higher_tier_than = BARON
 		}
+		potential = { higher_tier_than = BARON }
 		prerequisites = { 
 			CITE_L1
 			VOC_COMMERCIALE
@@ -441,7 +474,11 @@ city = {
 
 	CT_adm_urbain_L4 = { #Salle du conseil
 		desc = CT_adm_urbain_L4_desc
-		trigger = { TECH_CONSTRUCTION = 1 }
+		trigger = { 
+			TECH_CONSTRUCTION = 1
+			higher_tier_than = COUNT
+		}
+		potential = { higher_tier_than = COUNT }
 		upgrades_from = CT_adm_urbain_L3
 		gold_cost = 520
 		
@@ -462,7 +499,9 @@ city = {
 			TECH_CONSTRUCTION = 2
 			FROM = { prestige = 120} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
+			higher_tier_than = DUKE
 		}
+		potential = { higher_tier_than = DUKE }
 		upgrades_from = CT_adm_urbain_L4
 		gold_cost = 450
 		#prestige_cost = 120
@@ -483,7 +522,9 @@ city = {
 			TECH_CONSTRUCTION = 1
 			FROM = { prestige = 30} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
+			higher_tier_than = BARON
 		}
+		potential = { higher_tier_than = BARON }
 		prerequisites = { 
 			CITE_L1
 			CT_adm_urbain_L1
@@ -507,7 +548,9 @@ city = {
 			TECH_CONSTRUCTION = 1
 			FROM = { prestige = 60} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
+			higher_tier_than = COUNT
 		}
+		potential = { higher_tier_than = COUNT }
 		upgrades_from = CT_beffroi_L1
 		gold_cost = 240
 		#prestige_cost = 60
@@ -528,7 +571,9 @@ city = {
 			TECH_CONSTRUCTION = 1
 			FROM = { prestige = 70} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
+			higher_tier_than = DUKE
 		}
+		potential = { higher_tier_than = DUKE }
 		prerequisites = { 
 			CT_adm_urbain_L3
 			VOC_COMMERCIALE
