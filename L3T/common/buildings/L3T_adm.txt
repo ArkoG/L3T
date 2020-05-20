@@ -5,13 +5,16 @@ temple = {
 		prerequisites = { 
 			MONASTERE
 		}
-		not_if_x_exists = {CITEEPISCOPALE}
+		not_if_x_exists = {
+			CITEEPISCOPALE
+			BOURG_EPISCOPAL
+		}
 		gold_cost = 100
 		build_time = 180
 		ai_creation_factor = 97
 		
 		liege_piety = 0.01
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.02
 		
 		add_number_to_name = no
 
@@ -24,14 +27,17 @@ temple = {
 		prerequisites = { 
 			MONASTERE
 		}
-		not_if_x_exists = {CITEEPISCOPALE}
+		not_if_x_exists = {
+			CITEEPISCOPALE
+			BOURG_EPISCOPAL
+		}
 		upgrades_from = TP_monastery_1
 		gold_cost = 140
 		build_time = 370
 		ai_creation_factor = 96
 		
 		liege_piety = 0.02
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.02
 		
 		add_number_to_name = no
 
@@ -48,7 +54,10 @@ temple = {
 		prerequisites = { 
 			MONASTERE
 		}
-		not_if_x_exists = {CITEEPISCOPALE}
+		not_if_x_exists = {
+			CITEEPISCOPALE
+			BOURG_EPISCOPAL
+		}
 		upgrades_from = TP_monastery_2
 		gold_cost = 170
 		#prestige_cost = 70
@@ -56,7 +65,7 @@ temple = {
 		ai_creation_factor = 95
 		
 		liege_piety = 0.02
-		local_tax_modifier = 0.02
+		local_tax_modifier = 0.03
 		
 		add_number_to_name = no
 
@@ -73,7 +82,10 @@ temple = {
 		prerequisites = { 
 			MONASTERE
 		}
-		not_if_x_exists = {CITEEPISCOPALE}
+		not_if_x_exists = {
+			CITEEPISCOPALE
+			BOURG_EPISCOPAL
+		}
 		upgrades_from = TP_monastery_3
 		gold_cost = 520
 		
@@ -82,7 +94,7 @@ temple = {
 		
 		liege_piety = 0.02
 		liege_prestige = 0.01
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.02
 		
 		add_number_to_name = no
 
@@ -101,7 +113,10 @@ temple = {
 		prerequisites = { 
 			MONASTERE
 		}
-		not_if_x_exists = {CITEEPISCOPALE}
+		not_if_x_exists = {
+			CITEEPISCOPALE
+			BOURG_EPISCOPAL
+		}
 		upgrades_from = TP_monastery_4
 		gold_cost = 450
 		#prestige_cost = 120
@@ -121,9 +136,10 @@ temple = {
 		desc = TP_episcopat_L1_desc
 		trigger = { TECH_CONSTRUCTION = 0 }
 		prerequisites = { 
-			CITEEPISCOPALE
 		}
-		not_if_x_exists = {MONASTERE}
+		not_if_x_exists = {
+			MONASTERE
+		}
 		gold_cost = 120
 		
 		build_time = 180
@@ -131,7 +147,7 @@ temple = {
 		
 		liege_prestige = 0.01
 		#tax_income = 0
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.02
 		
 		#add_number_to_name = no
 
@@ -141,7 +157,9 @@ temple = {
 	TP_episcopat_L2 = { #Résidence épiscopale
 		desc = TP_episcopat_L2_desc
 		trigger = { TECH_CONSTRUCTION = 0 }
-		not_if_x_exists = {MONASTERE}
+		not_if_x_exists = {
+			MONASTERE
+		}
 		upgrades_from = TP_episcopat_L1
 		gold_cost = 230
 		
@@ -150,7 +168,7 @@ temple = {
 		
 		liege_prestige = 0.01
 		#tax_income = 0
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.03
 		
 		#add_number_to_name = no
 
@@ -164,7 +182,9 @@ temple = {
 			FROM = { prestige = 70} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
 		}
-		not_if_x_exists = {MONASTERE}
+		not_if_x_exists = {
+			MONASTERE
+		}
 		upgrades_from = TP_episcopat_L2
 		gold_cost = 360
 		#prestige_cost = 70
@@ -173,7 +193,7 @@ temple = {
 		
 		liege_prestige = 0.01
 		tax_income = -0.1
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.03
 		
 		#add_number_to_name = no
 
@@ -191,7 +211,10 @@ temple = {
 			CITEEPISCOPALE
 		}
 		
-		not_if_x_exists = {MONASTERE}
+		not_if_x_exists = {
+			MONASTERE
+			BOURG_EPISCOPAL
+		}
 		upgrades_from = TP_episcopat_L3
 		gold_cost = 380
 		
@@ -200,7 +223,7 @@ temple = {
 		
 		liege_prestige = 0.01
 		tax_income = -0.2
-		local_tax_modifier = 0.02
+		local_tax_modifier = 0.04
 		
 		#add_number_to_name = no
 
@@ -219,7 +242,10 @@ temple = {
 		prerequisites = { 
 			CITEEPISCOPALE
 		}
-		not_if_x_exists = {MONASTERE}
+		not_if_x_exists = {
+			MONASTERE
+			BOURG_EPISCOPAL
+		}
 		upgrades_from = TP_episcopat_L4
 		gold_cost = 450
 		#prestige_cost = 120
@@ -228,7 +254,7 @@ temple = {
 		
 		liege_prestige = 0.01
 		tax_income = -0.3
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.03
 		
 		#add_number_to_name = no
 
@@ -306,6 +332,9 @@ castle = {
 			higher_tier_than = COUNT
 		}
 		potential = { higher_tier_than = COUNT }
+		not_if_x_exists = {
+			FEODAL_mil
+		}
 		upgrades_from = CA_logis_L3
 		gold_cost = 270
 		
@@ -330,8 +359,12 @@ castle = {
 			higher_tier_than = DUKE
 		}
 		potential = { higher_tier_than = DUKE }
-		prerequisites = { 
+		prerequisites = {
 			FEODAL_adm
+		}
+		not_if_x_exists = {
+			FEODAL_mil
+			FEODAL_prod 
 		}
 		upgrades_from = CA_logis_L4
 		gold_cost = 450
@@ -355,12 +388,15 @@ castle = {
 			higher_tier_than = BARON
 		}
 		potential = { higher_tier_than = BARON }
+		not_if_x_exists = {
+			FEODAL_mil
+		}
 		gold_cost = 180
 		
 		build_time = 180
 		
 		ai_creation_factor = 95
-		local_tax_modifier = 0.1
+		local_tax_modifier = 0.05
 		
 		#add_number_to_name = no
 
@@ -374,13 +410,20 @@ castle = {
 			higher_tier_than = COUNT
 		}
 		potential = { higher_tier_than = COUNT }
+		prerequisites = { 
+			CA_logis_L1
+		}
+		not_if_x_exists = {
+			FEODAL_mil
+			FEODAL_adm
+		}
 		upgrades_from = CA_adm_seigneurial_L1
 		gold_cost = 190
 		
 		build_time = 380
 		
 		ai_creation_factor = 94
-		local_tax_modifier = 0.1
+		local_tax_modifier = 0.05
 		
 		#add_number_to_name = no
 
@@ -397,6 +440,10 @@ castle = {
 		prerequisites = { 
 			FEODAL_adm
 			CA_logis_L3
+		}
+		not_if_x_exists = {
+			FEODAL_mil
+			FEODAL_adm 
 		}
 		upgrades_from = CA_adm_seigneurial_L2
 		gold_cost = 330
@@ -421,7 +468,7 @@ city = {
 		ai_creation_factor = 97
 		
 		#tax_income = 0
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.02
 		
 		add_number_to_name = no
 
@@ -438,7 +485,7 @@ city = {
 		ai_creation_factor = 96
 		
 		#tax_income = 0
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.03
 		
 		add_number_to_name = no
 
@@ -455,8 +502,7 @@ city = {
 		}
 		potential = { higher_tier_than = BARON }
 		prerequisites = { 
-			CITE_L1
-			VOC_COMMERCIALE
+			CITE_L2
 		}
 		upgrades_from = CT_adm_urbain_L2
 		gold_cost = 380
@@ -465,7 +511,7 @@ city = {
 		ai_creation_factor = 95
 		
 		tax_income = -0.1
-		local_tax_modifier = 0.02
+		local_tax_modifier = 0.05
 		
 		add_number_to_name = no
 
@@ -486,7 +532,7 @@ city = {
 		ai_creation_factor = 94
 		
 		tax_income = -0.2
-		local_tax_modifier = 0.02
+		local_tax_modifier = 0.05
 		
 		add_number_to_name = no
 
@@ -502,6 +548,9 @@ city = {
 			higher_tier_than = DUKE
 		}
 		potential = { higher_tier_than = DUKE }
+		prerequisites = { 
+			CITE_L3
+		}
 		upgrades_from = CT_adm_urbain_L4
 		gold_cost = 450
 		#prestige_cost = 120
@@ -509,7 +558,7 @@ city = {
 		ai_creation_factor = 93
 		
 		tax_income = -0.3
-		local_tax_modifier = 0.04
+		local_tax_modifier = 0.05
 		
 		add_number_to_name = no
 
@@ -551,6 +600,9 @@ city = {
 			higher_tier_than = COUNT
 		}
 		potential = { higher_tier_than = COUNT }
+		prerequisites = { 
+			CITE_L2
+		}
 		upgrades_from = CT_beffroi_L1
 		gold_cost = 240
 		#prestige_cost = 60
@@ -576,7 +628,7 @@ city = {
 		potential = { higher_tier_than = DUKE }
 		prerequisites = { 
 			CT_adm_urbain_L3
-			VOC_COMMERCIALE
+			CITE_L3
 		}
 		upgrades_from = CT_beffroi_L2
 		gold_cost = 360
