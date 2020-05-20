@@ -86,6 +86,30 @@
 
  # Castle
 castle = {
+	
+#castle = {
+#	tax_income = 4 #1/5/4
+#	fort_level = 3 #4/3/2
+#	build_cost_modifier = 500
+#	build_time_modifier = 730
+#	archers = 0 #30/15/15
+#	archers_defensive = 0.02 #0.02/0.0/0.0
+#	archers_offensive = 0.02 #0.02/0.0/0.0
+#	light_infantry = 60 #60/60/50
+#	heavy_infantry = 150 #200/150/50
+#	knights = 0 #7/15/0
+#	pikemen = 0 #0/5/0
+#	pikemen_defensive = 0.02 #0.0/0.03/0.0
+#	light_cavalry = 15 #25/15/10
+#	levy_size = 0 #0.15/0.05/0.0
+#	garrison_size = 0 #0.05/0.15/0.1
+#	liege_prestige = 0 #0.05/0.1/0.0
+#	levy_reinforce_rate = 1.25 #1.25/1.0/0.75
+#	land_organisation = 0.2
+#	tech_growth_modifier_military = 0.05 #0.05/0.0/0.0
+#	tech_growth_modifier_culture = 0.05 #0.0/0.05/0.0
+#	tech_growth_modifier_economy = 0.05 #0.0/0.0/0.05
+#}
 
 	FEODAL_mil = { #défense et attaque, vocation militaire
 		desc = "FEODAL_mil_desc"
@@ -94,19 +118,19 @@ castle = {
 		not_if_x_exists = { FEODAL_adm FEODAL_prod }
 		gold_cost = 0.0
 		build_time = 8
-		tax_income = -3
-		fort_level = 1.0
-		archers = 25
-		light_infantry = 20
-		heavy_infantry = 40
+		tax_income = -3 #1
+		fort_level = 1.0 #4
+		archers = 30
+		#light_infantry = 20
+		heavy_infantry = 50
 		light_cavalry = 10
-		knights = 5
+		knights = 7
 		archers_defensive = 0.02
 		archers_offensive = 0.02
-		levy_size = 0.1
-		liege_piety = 0.05
-		liege_prestige = 0.03
-		military_techpoints = 0.05
+		garrison_size = 0.05
+		levy_size = 0.15
+		liege_prestige = 0.05
+		tech_growth_modifier_military = 0.05
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
@@ -114,25 +138,23 @@ castle = {
 		desc = "FEODAL_adm_desc"
 		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
-#		is_active_trigger = {
-#			is_capital = yes
-#			capital_holding = { title = FROMFROM }
-#		}
 		not_if_x_exists = { FEODAL_mil FEODAL_prod }
 		gold_cost = 0.0
 		build_time = 8
-		#fort_level = 1.0
-		archers = 20
-		light_infantry = 25
-		heavy_infantry = 15
-		light_cavalry = 10
+		tax_income = 1 #5
+		#fort_level = 1.0 #3
+		archers = 15
+		#light_infantry = 25
+		#heavy_infantry = 15
+		#light_cavalry = 10
+		knights = 15
 		pikemen = 5
-		pikemen_defensive = 0.02
+		pikemen_defensive = 0.03
 		levy_reinforce_rate = -0.25
-		garrison_size = 0.1
+		garrison_size = 0.15
+		levy_size = 0.05
 		liege_prestige = 0.1
-		culture_techpoints = 0.05
-		economy_techpoints = 0.05
+		tech_growth_modifier_culture = 0.05
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
@@ -143,14 +165,15 @@ castle = {
 		not_if_x_exists = { FEODAL_adm FEODAL_mil }
 		gold_cost = 0.0
 		build_time = 8
-		fort_level = -1
-		tax_income = -1
+		fort_level = -1 #2
+		#tax_income = -1 #4
 		archers = 15
-		light_infantry = 20
-		heavy_infantry = 10
-		light_cavalry = 5
+		light_infantry = -10
+		heavy_infantry = -100
+		light_cavalry = -5
 		levy_reinforce_rate = -0.50
-		economy_techpoints = 0.05
+		garrison_size = 0.1
+		tech_growth_modifier_economy = 0.05
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}	
@@ -159,6 +182,20 @@ castle = {
 # City
 city = {
 
+#city = {
+#	tax_income = 12 #7-9/9-11/14-16
+#	fort_level = 0 #0.5-1.0/1.0-1.5/2.0-2.5
+#	light_infantry = 75 #100/110/110
+#	archers = 40 #60/80/100
+#	galleys =0 #1/3/5
+#	pikemen = 0 #0/10/20
+#	pikemen_defensive = 0 #0.0/0.02/0.05
+#	garrison_size = 0 #0.1/0.2/0.5
+#	build_cost_modifier = 500
+#	build_time_modifier = 730
+#	land_organisation = 0.2
+#
+#}
 	VOC_INDUSTRIELLE = {
 		desc = "VOC_INDUSTRIELLE_DESC"
 		prerequisites = { CITE_L1 }
@@ -166,7 +203,8 @@ city = {
 		not_if_x_exists = { VOC_COMMERCIALE }		
 		gold_cost = 0.0
 		build_time = 8
-		economy_techpoints = 0.05
+		tax_income = -1 #7
+		tech_growth_modifier_economy = 0.03
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
@@ -177,7 +215,9 @@ city = {
 		not_if_x_exists = { VOC_INDUSTRIELLE }		
 		gold_cost = 0.0
 		build_time = 8
-		economy_techpoints = 0.05
+		fort_level = 0.5 #0.5
+		tax_income = 1 #9
+		tech_growth_modifier_culture = 0.03
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
@@ -187,14 +227,14 @@ city = {
 		trigger = { TECH_TRADE_PRACTICES = 0 }	
 		gold_cost = 0.0
 		build_time = 8
-		tax_income = -4
-		fort_level = 0.5
-		light_infantry = 30
+		tax_income = -4 #8
+		fort_level = 0.5 #0.5
+		light_infantry = 25
 		archers = 20
 		galleys = 1
 		garrison_size = 0.1
-		economy_techpoints = 0.05
-		culture_techpoints = 0.05
+		tech_growth_modifier_economy = 0.03
+		tech_growth_modifier_culture = 0.03
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
@@ -203,17 +243,18 @@ city = {
 		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = CITE_L1
-		#potential = { NOT = { religion_group = pagan_group } }
 		gold_cost = 0.0
 		build_time = 8
-		tax_income = 2
-		fort_level = 0.5
-		light_infantry = 30
+		tax_income = 2 #10
+		fort_level = 0.5 #1.0
+		light_infantry = 10
+		pikemen = 10
+		pikemen_defensive = 0.02
 		archers = 20
 		galleys = 2
-		garrison_size = 0.2
-		economy_techpoints = 0.05
-		culture_techpoints = 0.05
+		garrison_size = 0.1
+		tech_growth_modifier_economy = 0.03
+		tech_growth_modifier_culture = 0.03
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
@@ -223,24 +264,37 @@ city = {
 		prerequisites = {xxx}
 		trigger = { TECH_TRADE_PRACTICES = 0 }
 		upgrades_from = CITE_L2
-		#potential = { NOT = { religion_group = pagan_group } }
 		gold_cost = 0.0
 		build_time = 8
-		tax_income = 2
-		fort_level = 0.5
-		light_infantry = 30
+		tax_income = 5 #15
+		fort_level = 1.0 #2.0
+		heavy_infantry = 15
+		pikemen = 10
+		pikemen_defensive = 0.03
 		archers = 20
 		galleys = 2
 		garrison_size = 0.2
-		economy_techpoints = 0.05
-		culture_techpoints = 0.05
+		tech_growth_modifier_economy = 0.05
+		tech_growth_modifier_culture = 0.05
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
-	}	
+	}
 }
 
 # Temple
 temple = {
+
+#temple = {
+#	tax_income = 8 #6/5/8
+#	fort_level = 0 #0/0/2.0
+#	heavy_infantry = 45 #5/5/60
+#	light_infantry = 45 #30/30/100
+#	archers = 40 #20/20/50
+#	build_cost_modifier = 500
+#	build_time_modifier = 730
+#	levy_reinforce_rate = 0.25
+#	land_organisation = 0.2
+#}
 
 	MONASTERE = {
 		desc = "MONASTERE_desc"
@@ -254,12 +308,12 @@ temple = {
 		gold_cost = 0.0
 		build_time = 8
 		fort_level = 0
-		tax_income = -1
-		heavy_infantry = 5
-		light_infantry = 20
-		archers = 5
+		tax_income = -2 #6
+		heavy_infantry = -55
+		light_infantry = -15
+		archers = -20
 		liege_piety = 0.20
-		culture_techpoints = 0.05
+		tech_growth_modifier_culture = 0.05
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
@@ -276,12 +330,13 @@ temple = {
 		gold_cost = 0.0
 		build_time = 8
 		fort_level = 0
-		tax_income = -2
-		heavy_infantry = 5
-		light_infantry = 20
-		archers = 5
-		liege_piety = 0.20
-		economy_techpoints = 0.05
+		tax_income = -3 #5
+		heavy_infantry = -35
+		light_infantry = -15
+		archers = -20
+		liege_prestige = 0.05
+		liege_piety = 0.05
+		tech_growth_modifier_economy = 0.05
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
@@ -297,15 +352,16 @@ temple = {
 		potential = { NOT = { religion_group = pagan_group } }
 		gold_cost = 0.0
 		build_time = 8
-		fort_level = 1.0
-		#tax_income = -2
-		heavy_infantry = 10
-		light_infantry = 40
+		fort_level = 2.0
+		#tax_income = -2 #8
+		heavy_infantry = 15
+		light_infantry = 55
 		archers = 10
+		knights = 5
 		liege_prestige = 0.10
 		liege_piety = 0.05
-		economy_techpoints = 0.05
-		culture_techpoints = 0.05
+		tech_growth_modifier_economy = 0.05
+		tech_growth_modifier_culture = 0.05
 		ai_creation_factor = 5
 		add_number_to_name = no	extra_tech_building_start = 10.0
 	}
