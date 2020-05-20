@@ -134,7 +134,13 @@ temple = {
 
 	TP_episcopat_L1 = { #Résidence épiscopale
 		desc = TP_episcopat_L1_desc
-		trigger = { TECH_CONSTRUCTION = 0 }
+		trigger = { 
+			TECH_CONSTRUCTION = 0
+			is_catholic_group= yes
+		}
+		potential = {
+			is_catholic_group= yes
+		}
 		prerequisites = { 
 		}
 		not_if_x_exists = {
