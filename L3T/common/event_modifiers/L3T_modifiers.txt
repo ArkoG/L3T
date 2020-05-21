@@ -703,6 +703,7 @@ realm_capital_province = {
 	economy_techpoints = 0.05
 	culture_techpoints = 0.05
 	military_techpoints = 0.05
+	tech_growth_modifier = 0.03
 }
 ### Specialization modifiers
 feodal_prod_L1 = {icon = 225 }
@@ -772,26 +773,31 @@ episco_muslim = {icon = 207 }
 route_size1 = { 
 	icon = 5 #major_modifer_icon_strip
 	local_tax_modifier = 0.07
+	tech_growth_modifier = 0.01
 	major = yes
 }
 route_size2 = { 
 	icon = 4 #major_modifer_icon_strip
 	local_tax_modifier = 0.10 
+	tech_growth_modifier = 0.01
 	major = yes
 }
 route_size3 = { 
 	icon = 3 #major_modifer_icon_strip
 	local_tax_modifier = 0.15
+	tech_growth_modifier = 0.01
 	major = yes
 }
 route_size4 = { 
 	icon = 2 #major_modifer_icon_strip
 	local_tax_modifier = 0.20
+	tech_growth_modifier = 0.01
 	major = yes
 }
 route_size5 = { 
 	icon = 1 #major_modifer_icon_strip
 	local_tax_modifier = 0.25 
+	tech_growth_modifier = 0.01
 	major = yes
 }
 
@@ -799,15 +805,21 @@ route_fluviale = {
 	#icon = 164 
 	icon = 6 #major_modifer_icon_strip
 	local_tax_modifier = 0.05
+	tech_growth_modifier = 0.01
 	major = yes
 	}
 route_terrestre = { 
 	#icon = 165 
 	icon = 8 #major_modifer_icon_strip
 	local_tax_modifier = 0.05
+	tech_growth_modifier = 0.01
 	major = yes
 	}
 future_route = { 
 	icon = 9
 	major = yes
 	}
+realm_stewardship_balance = {
+	icon = 224 #hidden
+	global_tax_modifier = -0.45
+}
