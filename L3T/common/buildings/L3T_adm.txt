@@ -37,7 +37,7 @@ temple = {
 		ai_creation_factor = 96
 		
 		liege_piety = 0.02
-		local_tax_modifier = 0.02
+		local_tax_modifier = 0.03
 		
 		add_number_to_name = no
 
@@ -65,7 +65,7 @@ temple = {
 		ai_creation_factor = 95
 		
 		liege_piety = 0.02
-		local_tax_modifier = 0.03
+		local_tax_modifier = 0.05
 		
 		add_number_to_name = no
 
@@ -94,7 +94,7 @@ temple = {
 		
 		liege_piety = 0.02
 		liege_prestige = 0.01
-		local_tax_modifier = 0.02
+		local_tax_modifier = 0.05
 		
 		add_number_to_name = no
 
@@ -125,7 +125,7 @@ temple = {
 		
 		liege_piety = 0.01
 		liege_prestige = 0.02
-		local_tax_modifier = 0.02
+		local_tax_modifier = 0.05
 		
 		add_number_to_name = no
 
@@ -153,7 +153,7 @@ temple = {
 		
 		liege_prestige = 0.01
 		#tax_income = 0
-		local_tax_modifier = 0.02
+		local_tax_modifier = 0.05
 		
 		#add_number_to_name = no
 
@@ -174,7 +174,7 @@ temple = {
 		
 		liege_prestige = 0.01
 		#tax_income = 0
-		local_tax_modifier = 0.03
+		local_tax_modifier = 0.05
 		
 		#add_number_to_name = no
 
@@ -199,7 +199,7 @@ temple = {
 		
 		liege_prestige = 0.01
 		tax_income = -0.1
-		local_tax_modifier = 0.03
+		local_tax_modifier = 0.05
 		
 		#add_number_to_name = no
 
@@ -229,7 +229,7 @@ temple = {
 		
 		liege_prestige = 0.01
 		tax_income = -0.2
-		local_tax_modifier = 0.04
+		local_tax_modifier = 0.05
 		
 		#add_number_to_name = no
 
@@ -260,7 +260,7 @@ temple = {
 		
 		liege_prestige = 0.01
 		tax_income = -0.3
-		local_tax_modifier = 0.03
+		local_tax_modifier = 0.05
 		
 		#add_number_to_name = no
 
@@ -282,11 +282,11 @@ castle = {
 		
 		liege_prestige = 0.01
 		#tax_income = 0
-		local_tax_modifier = 0.02
+		local_tax_modifier = 0.03
 		
 		#add_number_to_name = no
 
-		extra_tech_building_start = 0.3
+		extra_tech_building_start = 2.0
 	}
 
 	CA_logis_L2 = { #Logis seigneurial
@@ -298,9 +298,9 @@ castle = {
 		build_time = 380
 		ai_creation_factor = 96
 		
-		liege_prestige = 0.01
+		liege_prestige = 0.02
 		#tax_income = 0
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.02
 		
 		#add_number_to_name = no
 
@@ -324,7 +324,7 @@ castle = {
 		
 		liege_prestige = 0.01
 		tax_income = -0.1
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.05
 		
 		#add_number_to_name = no
 
@@ -347,9 +347,9 @@ castle = {
 		build_time = 570
 		ai_creation_factor = 94
 		
-		liege_prestige = 0.01
+		liege_prestige = 0.02
 		tax_income = -0.2
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.05
 		
 		#add_number_to_name = no
 
@@ -378,9 +378,9 @@ castle = {
 		build_time = 1230
 		ai_creation_factor = 93
 		
-		liege_prestige = 0.01
+		liege_prestige = 0.05
 		tax_income = -0.3
-		local_tax_modifier = 0.01
+		local_tax_modifier = 0.05
 		
 		#add_number_to_name = no
 
@@ -474,7 +474,7 @@ city = {
 		ai_creation_factor = 97
 		
 		#tax_income = 0
-		local_tax_modifier = 0.02
+		local_tax_modifier = 0.05
 		
 		add_number_to_name = no
 
@@ -491,7 +491,7 @@ city = {
 		ai_creation_factor = 96
 		
 		#tax_income = 0
-		local_tax_modifier = 0.03
+		local_tax_modifier = 0.05
 		
 		add_number_to_name = no
 
@@ -517,7 +517,7 @@ city = {
 		ai_creation_factor = 95
 		
 		tax_income = -0.1
-		local_tax_modifier = 0.05
+		local_tax_modifier = 0.1
 		
 		add_number_to_name = no
 
@@ -538,7 +538,7 @@ city = {
 		ai_creation_factor = 94
 		
 		tax_income = -0.2
-		local_tax_modifier = 0.05
+		local_tax_modifier = 0.2
 		
 		add_number_to_name = no
 
@@ -564,7 +564,7 @@ city = {
 		ai_creation_factor = 93
 		
 		tax_income = -0.3
-		local_tax_modifier = 0.05
+		local_tax_modifier = 0.25
 		
 		add_number_to_name = no
 
@@ -589,7 +589,7 @@ city = {
 		build_time = 220
 		ai_creation_factor = 95
 		
-		liege_prestige = 0.02
+		liege_prestige = 0.05
 		tax_income = -0.1
 		
 		add_number_to_name = no
@@ -615,7 +615,7 @@ city = {
 		build_time = 460
 		ai_creation_factor = 94
 		
-		liege_prestige = 0.03
+		liege_prestige = 0.05
 		tax_income = -0.2
 		
 		add_number_to_name = no
@@ -642,7 +642,7 @@ city = {
 		build_time = 770
 		ai_creation_factor = 93
 		
-		liege_prestige = 0.05
+		liege_prestige = 0.1
 		tax_income = -0.3
 		
 		add_number_to_name = no
