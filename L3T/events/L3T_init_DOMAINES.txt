@@ -832,7 +832,7 @@ character_event = {
 }
 
 #upgrade CITE L1 vers L2
-narrative_event = {
+character_event = {
 	title = "NAMEL3T.42"
 	desc = "DESCL3T.42"
     id = L3T.42
@@ -870,18 +870,18 @@ narrative_event = {
 		name = "L3T.42A"
 		event_target:ct_2_up = {
 			add_building = CITE_L2
-			#hidden_tooltip ={ #totoro hide it
+			hidden_tooltip ={
 				set_variable = { which = "developpementold" which = "developpement" }
 				change_variable = { which = "developpement" value = 50 }
 				change_variable = { which = "developpement_spec" value = 50 } #debug tracking
 				clear_event_target = ct_2_up
-			#}
+			}
 		}
 	}
 }
 
 #upgrade CITE L2 vers L3
-narrative_event = {
+character_event = {
 	title = "NAMEL3T.43"
 	desc = "DESCL3T.43"
     id = L3T.43
@@ -920,12 +920,12 @@ narrative_event = {
 		name = "L3T.43A"
 		event_target:ct_2_up = {
 			add_building = CITE_L3
-			#hidden_tooltip ={ #totoro hide it
+			hidden_tooltip ={ 
 				set_variable = { which = "developpementold" which = "developpement" }
 				change_variable = { which = "developpement" value = 50 }
 				change_variable = { which = "developpement_spec" value = 50 } #debug tracking
 				clear_event_target = ct_2_up
-			#}
+			}
 		}
 	}
 }
