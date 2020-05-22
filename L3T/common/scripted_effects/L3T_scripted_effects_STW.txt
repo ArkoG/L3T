@@ -37,6 +37,7 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus0_6
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -49,6 +50,7 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus7_10
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -61,6 +63,7 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus11
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -73,6 +76,7 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus12
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -85,6 +89,7 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus13
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -97,6 +102,7 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus14
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -109,6 +115,7 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus15
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -121,6 +128,7 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus16
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -133,6 +141,7 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus17
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -145,6 +154,7 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus18
 			duration = -1
+			hidden=yes
 		}
 	}	
 	if = {
@@ -157,17 +167,20 @@ add_adequate_STWruler_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus19
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
 		limit = {
 			AND = {
 				stewardship = 20
+				#NOT = { stewardship = 21 }
 			}
 		}
 		add_character_modifier = {
 			name = stw_ruler_bonus20
 			duration = -1
+			hidden=yes
 		}
 	}
 }
@@ -182,6 +195,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus0_6
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -196,6 +210,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus7_10
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -210,6 +225,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus11
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -224,6 +240,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus12
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -238,6 +255,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus13
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -252,6 +270,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus14
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -266,6 +285,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus15
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -280,6 +300,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus16
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -294,6 +315,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus17
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -308,6 +330,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus18
 			duration = -1
+			hidden=yes
 		}
 	}	
 	if = {
@@ -322,6 +345,7 @@ add_adequate_STWregent_bonus = {
 		add_character_modifier = {
 			name = stw_ruler_bonus19
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -329,12 +353,14 @@ add_adequate_STWregent_bonus = {
 			regent = {
 				AND = {
 					stewardship = 20
+					#NOT = { stewardship = 21 }
 				}
 			}
 		}
 		add_character_modifier = {
 			name = stw_ruler_bonus20
 			duration = -1
+			hidden=yes
 		}
 	}
 }
@@ -349,6 +375,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus0_6
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -363,6 +390,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus7_10
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -377,6 +405,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus11
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -391,6 +420,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus12
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -405,6 +435,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus13
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -419,6 +450,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus14
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -433,6 +465,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus15
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -447,6 +480,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus16
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -461,6 +495,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus17
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -475,6 +510,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus18
 			duration = -1
+			hidden=yes
 		}
 	}	
 	if = {
@@ -489,6 +525,7 @@ add_adequate_STWsteward_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus19
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -496,12 +533,14 @@ add_adequate_STWsteward_bonus = {
 			job_treasurer = {
 				AND = {
 					stewardship = 20
+					#NOT = { stewardship = 21 }
 				}
 			}
 		}
 		add_character_modifier = {
 			name = stw_stew_bonus20
 			duration = -1
+			hidden=yes
 		}
 	}
 }
@@ -514,6 +553,7 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus0_6
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -526,6 +566,7 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus7_10
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -538,6 +579,7 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus11
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -550,6 +592,7 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus12
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -562,6 +605,7 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus13
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -574,6 +618,7 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus14
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -586,6 +631,7 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus15
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -598,6 +644,7 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus16
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -610,6 +657,7 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus17
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -622,6 +670,7 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus18
 			duration = -1
+			hidden=yes
 		}
 	}	
 	if = {
@@ -634,17 +683,20 @@ add_adequate_STWbaron_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus19
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
 		limit = {
 			AND = {
 				stewardship = 20
+				#NOT = { stewardship = 21 }
 			}
 		}
 		add_character_modifier = {
 			name = stw_stew_bonus20
 			duration = -1
+			hidden=yes
 		}
 	}
 }
@@ -659,6 +711,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus0_6
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -673,6 +726,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus7_10
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -687,6 +741,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus11
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -701,6 +756,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus12
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -715,6 +771,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus13
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -729,6 +786,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus14
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -743,6 +801,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus15
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -757,6 +816,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus16
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -771,6 +831,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus17
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -785,6 +846,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus18
 			duration = -1
+			hidden=yes
 		}
 	}	
 	if = {
@@ -799,6 +861,7 @@ add_adequate_STWbaronRG_bonus = {
 		add_character_modifier = {
 			name = stw_stew_bonus19
 			duration = -1
+			hidden=yes
 		}
 	}
 	if = {
@@ -806,12 +869,14 @@ add_adequate_STWbaronRG_bonus = {
 			regent = {
 				AND = {
 					stewardship = 20
+					#NOT = { stewardship = 21 }
 				}
 			}
 		}
 		add_character_modifier = {
 			name = stw_stew_bonus20
 			duration = -1
+			hidden=yes
 		}
 	}
 }
