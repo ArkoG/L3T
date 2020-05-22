@@ -68,7 +68,7 @@ coastal_sea = {
 }
 
 sea_zone = {
-	max_attrition = 0.05
+	max_attrition = 0.07 #L3T ex 0.05
 }
 
 land_province = {
@@ -131,7 +131,7 @@ nomad_ruling_clan_too_powerful = {
 
 # Isolated county
 county_isolated = {
-	local_revolt_risk = 0.04
+	local_revolt_risk = 0.08 #L3T doubled ex = 0.04
 }
 
 new_administration = {
@@ -255,7 +255,7 @@ troops_tutorial = {
 }
 
 under_siege = {
-	
+	local_tax_modifier = -0.3 #L3T new
 }
 
 revolt_risk = {
@@ -434,7 +434,7 @@ static_intrigue_mod = {
 }
 
 static_stewardship_mod = {
-	global_tax_modifier = 0.02
+	#global_tax_modifier = 0.02  #L3T delete
 }
 
 static_martial_mod = {
@@ -454,7 +454,8 @@ base_values = {
 }
 
 war = {
-	
+	global_tax_modifier = 0.05 #L3T new
+	levy_reinforce_rate = -0.5 #L3T new
 }
 
 peace = {
@@ -512,7 +513,7 @@ trade_post = {
 }
 
 family_palace = {
-	tax_income = 10
+	tax_income = 4 #L3T ex 10
 	fort_level = 0
 	light_infantry = 40
 	archers = 10
@@ -523,7 +524,7 @@ family_palace = {
 
 tribal = {
 	tax_income = 0.5
-	fort_level = 1
+	#fort_level = 1  #L3T delete
 	light_infantry = 100
 	heavy_infantry = 5
 	archers = 20
@@ -535,29 +536,31 @@ tribal = {
 
 nomad = {
 	tax_income = 0
-	fort_level = 1
+	#fort_level = 0  #L3T delete
 	levy_size = -3
-	light_infantry = 160
+	light_infantry = 120   #L3T delete ex 160
 	heavy_infantry = 40
+	horse_archers = 20   #L3T new logic isn't it?
 	levy_reinforce_rate = 0
 	land_organisation = 0
 }
 
 fort = {
-	tax_income = 0
+	tax_income = -2 #L3T ex 0
 	fort_level = 2
 	levy_size = 0
 	build_cost_modifier = 20
 	build_time_modifier = 20
 	light_infantry = 30
-	heavy_infantry = 75
-	light_cavalry = 7
+	heavy_infantry = 15 #L3T ex 75
+	archers = 30 #L3T new
+	#light_cavalry = 7  #L3T delete, was stupid
 	levy_reinforce_rate = 2
 	land_organisation = 0.2
 }
 
 hospital = {
-	tax_income = 0
+	tax_income = -1 #L3T ex 0
 	hospital_level = 1
 	fort_level = 0
 	levy_size = 0
