@@ -866,7 +866,6 @@ narrative_event = {
 			save_event_target_as = ct_2_up
 		}
 	}
-	
 	option = {
 		name = "L3T.42A"
 		event_target:ct_2_up = {
@@ -900,7 +899,6 @@ narrative_event = {
 			holding_type = city
 			num_of_buildings = 35 #à revoir peut être
 			has_building = CITE_L2
-			
 			NOT = { has_building = CITE_L3 }
 		}
 	}	
