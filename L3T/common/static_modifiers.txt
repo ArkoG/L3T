@@ -364,18 +364,15 @@ defenderbonus_mountain = {
 	heavy_infantry_defensive = 0.5
 
 	archers_offensive = 0.5
-	light_infantry_offensive = 1.0
+	pikemen_offensive = 0.2 #from SWMH, but doubled
+	#light_infantry_offensive = 1.0 #L3T delete
 }
 
 defenderbonus_hills = {
 	icon = 1
 	archers_defensive = 0.5
-	light_infantry_defensive = 0.3
-	pikemen_defensive = 0.2
-	heavy_infantry_defensive = 0.2
+	pikemen_defensive = 0.1 #from SWMH
 	horse_archers_defensive = 0.15
-	light_cavalry_defensive = 0.15
-
 	archers_offensive = 0.2
 	pikemen_offensive = 0.1
 	horse_archers_offensive = 0.10
@@ -502,7 +499,7 @@ temple = {
 }
 
 trade_post = {
-	tax_income = 6
+	tax_income = 5 #L3T ex 6
 	fort_level = 0
 	levy_size = 0
 	light_infantry = 50
