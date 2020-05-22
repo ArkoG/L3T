@@ -396,15 +396,18 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_baghatur_council_8
 		}
 		7 = {
-			add_building = ca_wall_q_5
-			add_building = ct_wall_q_5
-			add_building = tp_wall_q_5
-		}
-		8 = {
-			add_building = ca_keep_6
+			#add_building = ca_wall_q_5 #L3T doesn't exist
+			#add_building = ct_wall_q_5 #L3T doesn't exist
+			#add_building = tp_wall_q_5 #L3T doesn't exist
 			add_building = ca_wall_5
 			add_building = ct_wall_5
 			add_building = tp_wall_5
+		}
+		8 = {
+			add_building = ca_keep_6
+			#add_building = ca_wall_5 #L3T moved to L7
+			#add_building = ct_wall_5 #L3T moved to L7
+			#add_building = tp_wall_5 #L3T moved to L7
 		}
 	}
 	TECH_TRADE_PRACTICES = {
