@@ -11,22 +11,27 @@
 
 ###L3T_init_DOMAINES.txt
 
-#id = L3T.3 #SPEC domaine Féodal
+#id = L3T.30 #SPEC domaine Féodal
 #id = L3T.31 #domaine Féodal capitals are feudal cities  (on_action) 
 
-#id = L3T.4 #SPEC domaine Communal  
-#id = L3T.41 #domaine Communal province à double cité  (on_action)  
+#id = L3T.40 #SPEC domaine Communal  
+#id = L3T.41 #domaine Communal province à double cité  (on_action)
+#id = L3T.42 #upgrade CITE L2  (on_action)
+#id = L3T.43 #upgrade CITE L3  (on_action)
+#id = L3T.44 #FREE
 #id = L3T.45#city apocalypto
 #id = L3T.46#city apocalypto end
 
-#obsolete#id = L3T.5 #upgrade CITE GRANDE L1  vers L2 à rename en 4x
+#id = L3T.50's #####FREE SLOT
 
-#id = L3T.6 #SPEC domaine Ecclésial
+#id = L3T.60 #SPEC domaine Ecclésial
 #id = L3T.61 #domaine Ecclésial hardcode  (on_action) 
 #id = L3T.62 #old cathedral and spe in religious province for capitals  (on_action) 
 #id = L3T.63 #filling the grid of old cathedrals  (on_action)  
+#id = L3T.64 #attribution règle monastique  (on_action) 
 
-#id = L3T.7 #attribution règle monastique  (on_action) 
+#id = L3T.70's #####FREE SLOT
+#id = L3T.80's used in job_chancellor_L3T_add.txt
 
 #id = L3T.9 #Init built holding  (on_action)
 
@@ -36,9 +41,14 @@
 #id = L3T.1 #mode debug //activation
 #id = L3T.2 #mode debug //désactivation
 
+#id = L3T.3-8 #####FREE SLOT
+
+#id = L3T.9 ##used in L3T_init_DOMAINES.txt
+
 #id = L3T.10 #détection de la carte + paix de Dieu
 #id = L3T.11 #fin paix de Dieu
 #id = L3T.12 #boost IA gold+piety
+#id = L3T.13 #realm_steawardship_balance
 
 #id = L3T.20 #maintenance capitales - initiate/update
 #id = L3T.21 #maintenance capitales - removal
@@ -141,8 +151,8 @@
 #id = L3T.227 # Wait a little before to alert that it can be a good idea to move the capital
 #id = L3T.228 # Pass by the province to localize its name
 #id = L3T.229 # Alert that it can be a good idea to move the capital
-#id = L3T.230-237 see L3T_building_prestige_cost.txt
-#id = L3T.237-240 FREE
+#id = L3T.230-234 see L3T_building_prestige_cost.txt
+#id = L3T.235-240 FREE
 #id = L3T.241 # Give the library_1 modifier 1 year after starting the building
 #id = L3T.242 # Give the library_1 modifier to the new holder and remove it to the old
 #id = L3T.243 # Give the library_1 modifier
@@ -155,15 +165,12 @@
 
 ##L3T_building_prestige_cost.txt
 
-#id = L3T.230 # Spends prestige point for building ca_tour_L4
-#id = L3T.232 # Spends prestige point for building ca_eglise_L4
-#id = L3T.231 # Spends prestige point for building ca_con_wall_6
-#id = L3T.233 # Spends prestige point for building ct_training_grounds_3
-#id = L3T.234 # Spends prestige point for building ct_eglise_L4
-#id = L3T.235 # Spends prestige point for building ct_eglise_L5
-#id = L3T.236 # Spends prestige point for building TR_bureau_3
-#id = L3T.237 # Spends prestige point for building TR_cartographe_2
-#id = L3T.237-240 FREE
+#id = L3T.230 # Spends prestige point for building cost 30
+#id = L3T.231 # Spends prestige point for building cost 60
+#id = L3T.232 # Spends prestige point for building cost 70
+#id = L3T.233 # Spends prestige point for building cost 90
+#id = L3T.234 # Spends prestige point for building cost 120
+#id = L3T.235-240 FREE
 #id = L3T.241-248 # See L3T_building_modifiers.txt
 #id = L3T.249 FREE
 

@@ -10,7 +10,7 @@ character_event = {
 	
 	# Choice: spe mil
 	option = {
-		name = "L3T.3B" # Get same localisation than the initialisation
+		name = "L3T.30B" # Get same localisation than the initialisation
 		
 		trigger = {
 			location = { NOT = { religion_group = pagan_group } }
@@ -59,7 +59,7 @@ character_event = {
 	
 	# Choice: spe prod
 	option = {
-		name = "L3T.3C" # Get same localisation than the initialisation
+		name = "L3T.30C" # Get same localisation than the initialisation
 		FROM = {
 			add_building = FEODAL_prod
 			add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
