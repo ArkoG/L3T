@@ -1,7 +1,10 @@
 temple = {
 	tp_monastery_1 = { #Ermitage
 		desc = tp_monastery_1_desc
-		trigger = { TECH_CONSTRUCTION = 0 }
+		trigger = { 
+			TECH_CONSTRUCTION = 0
+			religion_group = christian
+		}
 		prerequisites = { 
 			MONASTERE
 		}
