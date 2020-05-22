@@ -284,6 +284,47 @@ character_event = {
 				if = {
 					limit = {
 						holding_type = city
+						has_building = CITE_L2
+						NOT = { has_building = CITE_L3 }
+					}
+					random = {
+						chance = 25
+						modifier = {
+							factor = 1.2
+							is_capital = yes #main/capital holding
+						}
+						modifier = {
+							factor = 1.2 #if realm capital #max36%
+							is_capital = yes
+							location = { has_province_modifier = realm_capital_province }
+						}
+						change_variable = { which = "developpement" value = 1 }
+						change_variable = { which = "developpement_yearly_growth" value = 1 }
+					}
+				}
+				if = {
+					limit = {
+						holding_type = city
+						has_building = CITE_L3
+					}
+					random = {
+						chance = 35
+						modifier = {
+							factor = 1.2
+							is_capital = yes #main/capital holding
+						}
+						modifier = {
+							factor = 1.2 #if realm capital #max50%
+							is_capital = yes
+							location = { has_province_modifier = realm_capital_province }
+						}
+						change_variable = { which = "developpement" value = 1 }
+						change_variable = { which = "developpement_yearly_growth" value = 1 }
+					}
+				}
+				if = {
+					limit = {
+						holding_type = city
 						#+ gov type
 					}
 					change_variable = { which = "developpement" value = 1 }
