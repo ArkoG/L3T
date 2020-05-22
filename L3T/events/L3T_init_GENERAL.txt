@@ -120,6 +120,8 @@ character_event = {
 			limit = { ai = no }
 			set_variable = { which = "global_L3T_saint_number" value = 0 }
 		}
+		#char stuf
+		character_event = { id = L3T.13 } #stewardship
 		##triggers various maps specifities
 		#SWMH
 		if = {
@@ -708,13 +710,12 @@ character_event = {
 		}
 	}
 }
+
 character_event = {
     id = L3T.13
 	hide_window = yes
 	
 	only_rulers = yes
-	capable_only = yes
-	prisoner = no
 
 	is_triggered_only = yes
 	
@@ -723,22 +724,72 @@ character_event = {
 
 	immediate = {
 		if = {
+			#regular case ruler+steward
 			limit = { 
-				is_landed = yes
-				NOT = { has_character_modifier = realm_stewardship_balance }
+				OR = {
+					AND = {
+						is_landed = yes
+						has_regent = no
+					}
+					AND = { 
+						is_landed = yes
+						has_regent = no
+						tier = BARON
+						is_patrician = no
+						any_courtier = { has_job_title = job_treasurer }
+					}
+				}
 			}
-			add_character_modifier = {
-				name = realm_stewardship_balance
-				duration = -1
-				#hidden=yes
-			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWruler_bonus = yes #gives ruler_bonus
+			add_adequate_STWsteward_bonus = yes #gives stew_bonus
 		}
 		if = {
-			limit = { 
-				is_landed = no
-				has_character_modifier = realm_stewardship_balance
+			#under regency regent+steward
+			limit = {
+				OR = {
+					AND = {
+						is_landed = yes
+						has_regent = yes
+					}
+					AND = {
+						is_landed = yes
+						has_regent = yes
+						tier = BARON
+						is_patrician = no
+						any_courtier = { has_job_title = job_treasurer }
+					}
+				}
 			}
-			remove_character_modifier = realm_stewardship_balance
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWregent_bonus = yes #gives ruler_bonus
+			add_adequate_STWsteward_bonus = yes #gives stew_bonus
+		}		
+		if = {
+			#baron with no court ruler+baron (doubling ruler bonus)
+			limit = { 
+				is_landed = yes
+				has_regent = no
+				tier = BARON
+				is_patrician = no
+				NOT = { any_courtier = { has_job_title = job_treasurer }}
+			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWruler_bonus = yes #gives ruler_bonus
+			add_adequate_STWbaron_bonus = yes #gives stew_bonus
+		}	
+		if = {
+			#baron with no court regent+regent2 (doubling regent bonus)
+			limit = { 
+				is_landed = yes
+				has_regent = yes
+				tier = BARON
+				is_patrician = no
+				NOT = { any_courtier = { has_job_title = job_treasurer }}
+			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWregent_bonus = yes #gives ruler_bonus
+			add_adequate_STWbaronRG_bonus = yes #gives stew_bonus
 		}
 	}
 }

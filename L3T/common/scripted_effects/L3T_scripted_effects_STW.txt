@@ -1,0 +1,882 @@
+remove_any_previous_STW_bonus = {
+	#ruler bonus
+	remove_character_modifier = stw_ruler_bonus0_6
+	remove_character_modifier = stw_ruler_bonus7_10
+	remove_character_modifier = stw_ruler_bonus11
+	remove_character_modifier = stw_ruler_bonus11
+	remove_character_modifier = stw_ruler_bonus12
+	remove_character_modifier = stw_ruler_bonus13
+	remove_character_modifier = stw_ruler_bonus14
+	remove_character_modifier = stw_ruler_bonus15
+	remove_character_modifier = stw_ruler_bonus16
+	remove_character_modifier = stw_ruler_bonus17
+	remove_character_modifier = stw_ruler_bonus18
+	remove_character_modifier = stw_ruler_bonus19
+	remove_character_modifier = stw_ruler_bonus20
+	#steward bonus
+	remove_character_modifier = stw_stew_bonus0_6
+	remove_character_modifier = stw_stew_bonus7_10
+	remove_character_modifier = stw_stew_bonus11
+	remove_character_modifier = stw_stew_bonus11
+	remove_character_modifier = stw_stew_bonus12
+	remove_character_modifier = stw_stew_bonus13
+	remove_character_modifier = stw_stew_bonus14
+	remove_character_modifier = stw_stew_bonus15
+	remove_character_modifier = stw_stew_bonus16
+	remove_character_modifier = stw_stew_bonus17
+	remove_character_modifier = stw_stew_bonus18
+	remove_character_modifier = stw_stew_bonus19
+	remove_character_modifier = stw_stew_bonus20
+}
+#RULER
+add_adequate_STWruler_bonus = {
+	if = {
+		limit = {
+			NOT = { stewardship = 7 }
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus0_6
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 7
+				NOT = { stewardship = 11 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus7_10
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 11
+				NOT = { stewardship = 12 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus11
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 12
+				NOT = { stewardship = 13 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus12
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 13
+				NOT = { stewardship = 14 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus13
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 14
+				NOT = { stewardship = 15 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus14
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 15
+				NOT = { stewardship = 16 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus15
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 16
+				NOT = { stewardship = 17 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus16
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 17
+				NOT = { stewardship = 18 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus17
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 18
+				NOT = { stewardship = 19 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus18
+			duration = -1
+			#hidden=yes
+		}
+	}	
+	if = {
+		limit = {
+			AND = {
+				stewardship = 19
+				NOT = { stewardship = 20 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus19
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 20
+				#NOT = { stewardship = 21 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus20
+			duration = -1
+			#hidden=yes
+		}
+	}
+}
+#REGENT
+add_adequate_STWregent_bonus = {
+	if = {
+		limit = {
+			regent = {
+				NOT = { stewardship = 7 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus0_6
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 7
+					NOT = { stewardship = 11 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus7_10
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 11
+					NOT = { stewardship = 12 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus11
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 12
+					NOT = { stewardship = 13 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus12
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 13
+					NOT = { stewardship = 14 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus13
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 14
+					NOT = { stewardship = 15 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus14
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 15
+					NOT = { stewardship = 16 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus15
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 16
+					NOT = { stewardship = 17 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus16
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 17
+					NOT = { stewardship = 18 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus17
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 18
+					NOT = { stewardship = 19 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus18
+			duration = -1
+			#hidden=yes
+		}
+	}	
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 19
+					NOT = { stewardship = 20 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus19
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 20
+					#NOT = { stewardship = 21 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_ruler_bonus20
+			duration = -1
+			#hidden=yes
+		}
+	}
+}
+#STEWARD
+add_adequate_STWsteward_bonus = {
+	if = {
+		limit = {
+			job_treasurer = {
+				NOT = { stewardship = 7 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus0_6
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 7
+					NOT = { stewardship = 11 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus7_10
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 11
+					NOT = { stewardship = 12 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus11
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 12
+					NOT = { stewardship = 13 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus12
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 13
+					NOT = { stewardship = 14 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus13
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 14
+					NOT = { stewardship = 15 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus14
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 15
+					NOT = { stewardship = 16 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus15
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 16
+					NOT = { stewardship = 17 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus16
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 17
+					NOT = { stewardship = 18 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus17
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 18
+					NOT = { stewardship = 19 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus18
+			duration = -1
+			#hidden=yes
+		}
+	}	
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 19
+					NOT = { stewardship = 20 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus19
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			job_treasurer = {
+				AND = {
+					stewardship = 20
+					#NOT = { stewardship = 21 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus20
+			duration = -1
+			#hidden=yes
+		}
+	}
+}
+#BARON
+add_adequate_STWbaron_bonus = {
+	if = {
+		limit = {
+			NOT = { stewardship = 7 }
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus0_6
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 7
+				NOT = { stewardship = 11 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus7_10
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 11
+				NOT = { stewardship = 12 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus11
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 12
+				NOT = { stewardship = 13 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus12
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 13
+				NOT = { stewardship = 14 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus13
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 14
+				NOT = { stewardship = 15 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus14
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 15
+				NOT = { stewardship = 16 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus15
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 16
+				NOT = { stewardship = 17 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus16
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 17
+				NOT = { stewardship = 18 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus17
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 18
+				NOT = { stewardship = 19 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus18
+			duration = -1
+			#hidden=yes
+		}
+	}	
+	if = {
+		limit = {
+			AND = {
+				stewardship = 19
+				NOT = { stewardship = 20 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus19
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				stewardship = 20
+				#NOT = { stewardship = 21 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus20
+			duration = -1
+			#hidden=yes
+		}
+	}
+}
+#REGENT2
+add_adequate_STWbaronRG_bonus = {
+	if = {
+		limit = {
+			regent = {
+				NOT = { stewardship = 7 }
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus0_6
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 7
+					NOT = { stewardship = 11 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus7_10
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 11
+					NOT = { stewardship = 12 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus11
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 12
+					NOT = { stewardship = 13 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus12
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 13
+					NOT = { stewardship = 14 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus13
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 14
+					NOT = { stewardship = 15 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus14
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 15
+					NOT = { stewardship = 16 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus15
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 16
+					NOT = { stewardship = 17 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus16
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 17
+					NOT = { stewardship = 18 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus17
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 18
+					NOT = { stewardship = 19 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus18
+			duration = -1
+			#hidden=yes
+		}
+	}	
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 19
+					NOT = { stewardship = 20 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus19
+			duration = -1
+			#hidden=yes
+		}
+	}
+	if = {
+		limit = {
+			regent = {
+				AND = {
+					stewardship = 20
+					#NOT = { stewardship = 21 }
+				}
+			}
+		}
+		add_character_modifier = {
+			name = stw_stew_bonus20
+			duration = -1
+			#hidden=yes
+		}
+	}
+}
