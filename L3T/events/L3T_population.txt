@@ -70,6 +70,13 @@ character_event = {
 			}
 			if = {
 				limit = {	
+					year = 1000
+					holding_type = city
+				}
+				change_variable = { which = "developpement" value = 50 }
+			}
+			if = {
+				limit = {	
 					year = 900
 					location = { religion_group = muslim } #additional boost for muslim world
 				}
