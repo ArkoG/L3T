@@ -10,18 +10,18 @@ namespace = L3T
 
 #Domaine Féodal     
 narrative_event = {
-	title = "NAMEL3T.3"
-    id = L3T.3
+	title = "NAMEL3T.30"
+    id = L3T.30
 	picture = GFX_evt_castle_construction
 
 	desc = {
 		trigger = { capital_holding = { has_title_flag = castle_to_specialize }}
-		text = "DESCL3T.3.Cap"
+		text = "DESCL3T.30.Cap"
 		picture = GFX_evt_castle_construction
 	}
 	desc = {
 		trigger = { NOT = { capital_holding = { has_title_flag = castle_to_specialize }}}
-		text = "DESCL3T.3.pasCap"
+		text = "DESCL3T.30.pasCap"
 		picture = GFX_evt_castle_construction
 	}
 
@@ -79,7 +79,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = "L3T.3A" #ADM
+		name = "L3T.30A" #ADM
 		custom_tooltip = { text = custom_est_capitale }
 		custom_tooltip = { text = custom_spec_industrie }
 		trigger = {
@@ -120,7 +120,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = "L3T.3B"	#MIL
+		name = "L3T.30B"	#MIL
 		custom_tooltip = { text = custom_spec_milites }
 		ai_chance = {
 			factor = 50
@@ -159,7 +159,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.3C"	#ECO
+		name = "L3T.30C"	#ECO
 		custom_tooltip = { text = custom_spec_production }
 		ai_chance = { 
 			factor = 50
@@ -252,9 +252,9 @@ province_event = {
 
 #Domaine Communal     
 narrative_event = {
-	title = "NAMEL3T.4"
-	id = L3T.4
-	desc = "DESCL3T.4"
+	title = "NAMEL3T.40"
+	id = L3T.40
+	desc = "DESCL3T.40"
 	picture = GFX_evt_L3T_city
 	
 	only_rulers = yes
@@ -320,7 +320,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.4A"	
+		name = "L3T.40A"	
 		custom_tooltip = { text = custom_spec_production }
 		custom_tooltip = { text = custom_spec_industrie }
 		ai_chance = { 
@@ -358,7 +358,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.4B"
+		name = "L3T.40B"
 		custom_tooltip = { text = custom_spec_commerce }
 		trigger = {
 			any_demesne_title = {
@@ -830,100 +830,116 @@ character_event = {
 		set_global_flag = apocalypto_finished
 	}
 }
+
 #upgrade CITE L1 vers L2
-#narrative_event = {
-#	title = "NAMEL3T.5"
-#	desc = "DESCL3T.5"
-#    id = L3T.5
-#	picture = GFX_evt_L3T_city
-#	
-#	only_rulers = yes
-#	capable_only = yes
-#	#prisoner = no
-#	
-#	trigger = {
-#		#OR = { #dealt through gov_type instead of religion
-#		#   NOT = { religion_group = pagan_group }
-#		#   religion = west_african_pagan
-#		#   religion = west_african_pagan_reformed
-#		#}
-#		any_demesne_title = {
-#			tier = baron
-#			holding_type = city
-#			num_of_buildings = 25 #à changer une fois testé
-#			has_building = CITE_L1
-#			
-#			NOT = { has_building = CITE_L2 }
-#		}
-#	}	
-#		
-#	mean_time_to_happen = { days = 450 }	
-#
-#	option = {
-#		name = "L3T.5A"	
-#		random_demesne_title = {
-#			limit = {
-#				tier = baron
-#				holding_type = city
-#				num_of_buildings = 25 #à changer une fois testé -25-
-#				NOT = { has_building = CITE_L2 }
-#			}
-#			add_building = CITE_L2
-#		}
-#	}
-#}
+narrative_event = {
+	title = "NAMEL3T.42"
+	desc = "DESCL3T.42"
+    id = L3T.42
+	picture = GFX_evt_L3T_city
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_demesne_title = {
+			tier = baron
+			holding_type = city
+			num_of_buildings = 25 ##à revoir peut être
+			has_building = CITE_L1
+			NOT = { has_building = CITE_L2 }
+		}
+	}	
+
+	immediate = {
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = city
+				num_of_buildings = 25 ##à revoir peut être
+				has_building = CITE_L1
+				NOT = { has_building = CITE_L2 }
+			}
+			save_event_target_as = ct_2_up
+		}
+	}
+	
+	option = {
+		name = "L3T.42A"
+		event_target:ct_2_up = {
+			add_building = CITE_L2
+			#hidden_tooltip ={ #totoro hide it
+				set_variable = { which = "developpementold" which = "developpement" }
+				change_variable = { which = "developpement" value = 50 }
+				change_variable = { which = "developpement_spec" value = 50 } #debug tracking
+				clear_event_target = ct_2_up
+			#}
+		}
+	}
+}
 
 #upgrade CITE L2 vers L3
-#narrative_event = {
-#	title = "NAMEL3T.2"
-#	desc = "DESCL3T.2"
-#    id = L3T.2
-#	picture = GFX_evt_L3T_city
-#	
-#	only_rulers = yes
-#	capable_only = yes
-#	#prisoner = no
-#		
-#	trigger = {
-#		OR = {
-#		   NOT = { religion_group = pagan_group }
-#		   religion = west_african_pagan
-#		   religion = west_african_pagan_reformed
-#		}
-#		any_demesne_title = {
-#			tier = baron
-#			holding_type = city
-#			num_of_buildings = 45 #à changer une fois testé
-#			has_building = CITE_L2
-#			
-#			NOT = { has_building = CITE_L3 }
-#		}
-#	}	
-#		
-#	mean_time_to_happen = { days = 450 }	
-#
-#	option = {
-#		name = "L3T.2A"	
-#		random_demesne_title = {
-#			limit = {
-#				tier = baron
-#				holding_type = city
-#				num_of_buildings = 45 #à changer une fois testé -25-
-#				NOT = { has_building = CITE_L3 }
-#			}
-#			add_building = CITE_L3
-#		}
-#	}
-#}
+narrative_event = {
+	title = "NAMEL3T.43"
+	desc = "DESCL3T.43"
+    id = L3T.43
+	picture = GFX_evt_L3T_city
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_demesne_title = {
+			tier = baron
+			holding_type = city
+			num_of_buildings = 35 #à revoir peut être
+			has_building = CITE_L2
+			
+			NOT = { has_building = CITE_L3 }
+		}
+	}	
+
+	immediate = {
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = city
+				num_of_buildings = 35 ##à revoir peut être
+				has_building = CITE_L2
+				NOT = { has_building = CITE_L3 }
+			}
+			save_event_target_as = ct_2_up
+		}
+	}
+
+	option = {
+		name = "L3T.43A"
+		event_target:ct_2_up = {
+			add_building = CITE_L3
+			#hidden_tooltip ={ #totoro hide it
+				set_variable = { which = "developpementold" which = "developpement" }
+				change_variable = { which = "developpement" value = 50 }
+				change_variable = { which = "developpement_spec" value = 50 } #debug tracking
+				clear_event_target = ct_2_up
+			#}
+		}
+	}
+}
 
 
 #Domaine Ecclésial     
 narrative_event = {
-    id = L3T.6
-	title = "NAMEL3T.6"
+    id = L3T.60
+	title = "NAMEL3T.60"
 	picture = GFX_evt_monk
 	border = GFX_event_narrative_frame_religion
-	desc = "DESCL3T.6" #ne mettre que si tous les cas ne sont pas couverts par les triggers 
+	desc = "DESCL3T.60" #ne mettre que si tous les cas ne sont pas couverts par les triggers 
 	
 	only_rulers = yes
 	capable_only = yes
@@ -991,7 +1007,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.6A"
+		name = "L3T.60A"
 		custom_tooltip = { text = custom_spec_production }		
 		ai_chance = {
 			factor = 50
@@ -1047,7 +1063,7 @@ narrative_event = {
 				}
 				add_holding_modifier = { name = monastere_L1 duration = -1 }
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
-				holder_scope = { narrative_event = { id = L3T.7 days = 0 }} ####MAKE IT automatic ONCE new holdings will be built by decision only######
+				holder_scope = { narrative_event = { id = L3T.64 days = 0 }} ####MAKE IT automatic ONCE new holdings will be built by decision only######
 				clear_event_target = holding_to_spec
 			}
 			if = {
@@ -1067,7 +1083,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = "L3T.6B"	
+		name = "L3T.60B"	
 		custom_tooltip = { text = custom_spec_production }
 		ai_chance = {
 			factor = 50
@@ -1124,7 +1140,7 @@ narrative_event = {
 		}
 	}
 	option = {
-		name = "L3T.6C"	
+		name = "L3T.60C"	
 		custom_tooltip = { text = custom_spec_industrie }
 		custom_tooltip = { text = custom_est_capitale }
 		
@@ -1683,9 +1699,9 @@ province_event = {
 
 #Attribution règle
 narrative_event = {
-	title = "NAMEL3T.7"
-    id = L3T.7
-	desc = "DESCL3T.7"
+	title = "NAMEL3T.64"
+    id = L3T.64
+	desc = "DESCL3T.64"
 	picture = GFX_evt_monastery_monks
 	
 	only_rulers = yes
@@ -1714,7 +1730,7 @@ narrative_event = {
 
 	#Regula Benedicti
 	option = {
-		name = "L3T.7A"	
+		name = "L3T.64A"	
 #		trigger = {
 #			any_demesne_title = {
 #				location = {
@@ -1739,7 +1755,7 @@ narrative_event = {
 	}
 	#Regula Augustini
 	option = {
-		name = "L3T.7B"	
+		name = "L3T.64B"	
 #		trigger = {
 #			any_demesne_title = {
 #				location = {
@@ -1763,9 +1779,9 @@ narrative_event = {
 		}
 	}
 }
-	#Regula Basili #given by L3T.6
+	#Regula Basili #given by L3T.60
 #	option = {
-#		name = "L3T.7C"	
+#		name = "L3T.64C"	
 #		trigger = {
 #			any_demesne_title = {
 #				location = {
@@ -1796,22 +1812,22 @@ narrative_event = {
 # Init built holding (on_action)
 # ROOT = Builder, FROM = Title
 character_event = {
-	id = L3T.9
+	id = L3T.3
 	hide_window = yes
 	is_triggered_only = yes 
 	
 	immediate = {
 		if = {
 			limit = { FROM = { holding_type = castle } }
-			narrative_event = { id = L3T.3 days = 1 }
+			narrative_event = { id = L3T.30 days = 1 }
 		}
 		if = {
 			limit = { FROM = { holding_type = city } }
-			narrative_event = { id = L3T.4 days = 1 }
+			narrative_event = { id = L3T.40 days = 1 }
 		}
 		if = {
 			limit = { FROM = { holding_type = temple } }
-			narrative_event = { id = L3T.6 days = 1 }
+			narrative_event = { id = L3T.60 days = 1 }
 		}
 	}
 }
