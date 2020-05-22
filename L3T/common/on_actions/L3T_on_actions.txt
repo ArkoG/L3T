@@ -5,6 +5,8 @@ on_startup = {
 		L3T.10
 		#AI random starting money and piety bonus
 		L3T.12
+		#stewardship adjusting
+		L3T.13
 		
 		#sets capital modifier
 		L3T.20
@@ -29,6 +31,8 @@ on_yearly_pulse = {
 		#feodal_adm_modifier
 		L3T.225
 		L3T.226
+		#stewardship adjusting
+		L3T.13
 		#màj capital modifier
 		L3T.20
 		L3T.21
@@ -54,6 +58,9 @@ on_yearly_pulse = {
 		L3T.115
 		 #pop natural growth
 		L3T.1103
+		 #upgrade cities
+		L3T.42
+		L3T.43
 		
 		 #annual religion check
 		L3T.121
@@ -154,6 +161,8 @@ on_new_holder = {
 		#cathedral
 		REC.1
 		REC.11
+		#stewardship adjusting
+		L3T.13
 		#màj capital modifier
 		L3T.20
 		L3T.21
@@ -176,6 +185,8 @@ on_new_holder_inheritance = {
 		#cathedral
 		REC.1
 		REC.11
+		#stewardship adjusting
+		L3T.13
 		#màj capital modifier
 		L3T.20
 		L3T.21
@@ -198,6 +209,8 @@ on_new_holder_usurpation = {
 		#cathedral
 		REC.1
 		REC.11
+		#stewardship adjusting
+		L3T.13
 		#màj capital modifier
 		L3T.20
 		L3T.21
