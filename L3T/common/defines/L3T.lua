@@ -36,11 +36,15 @@
 	NDefines.NCharacter.FERTILITY_BASE_MULT = 0.70						-- Base fertility multiplier to adjust the base chance of impregnation
 	NDefines.NCharacter.INFANT_DEATH_CHANCE = 0.05
 	NDefines.NReligion.CREATE_ANTIPOPE_PRESTIGE_COST = 1000
-	NDefines.NTechnology.IDEAL_YEAR_LEVEL_0 = 950
+	NDefines.NTechnology.IDEAL_YEAR_LEVEL_0 = 900
 	NDefines.NTechnology.IDEAL_YEAR_LEVEL_8 = 1550
 	NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER = 45 				-- How many courtiers in a court to make it crowded and increase chance for disease.
 	NDefines.NAI.DOW_AGGRESSION_FACTOR = 0.25
 	NDefines.NEconomy.BUILDING_COST_MULT = 0.0						-- Increase to the build cost of all buildings that cost GOLD
+	NDefines.NEconomy.MAX_TRADE_POSTS_BASE = 3
+	NDefines.NEconomy.MIN_TRADE_POSTS = 3							-- Minimum number of max trade posts per patrician
+	NDefines.NEconomy.MIN_TRADETECH_LEVEL_FOR_TPS = 0				-- Minimum tech level needed to build trade posts
+	NDefines.NEconomy.TRADETECH_LEVEL_FOR_BASE_TPS = 1				-- tech step which start granting tradepost bonus
 	NDefines.NEconomy.WONDER_STACKING_PENALTY = 0.0
 	NDefines.NEconomy.WONDER_STACKING_PENALTY_SAME_TYPE = 0.0
 	NDefines.NGraphics.TREASURY_MODIFIER_ICON_FRAME = 182
