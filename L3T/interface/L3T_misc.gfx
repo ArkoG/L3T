@@ -274,4 +274,20 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild_locked.dds"
 		noOfFrames = 4
 	}
+	###ALT LAWS
+		spriteType = {
+		name = "GFX_tax_levy_slider_L3Ttrib_unlocked"
+		texturefile = "gfx\\interface\\tax_levy_slider_unlocked_L3Ttrib.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_tax_levy_slider_L3Ttrib_locked"
+		texturefile = "gfx\\interface\\tax_levy_slider_locked_L3Ttrib.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_tax_levy_slider_L3Ttrib_selected"
+		texturefile = "gfx\\interface\\tax_levy_slider_selected_L3Ttrib.dds"
+		noOfFrames = 5
+	}
 }
