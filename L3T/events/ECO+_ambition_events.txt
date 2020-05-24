@@ -849,6 +849,7 @@ character_event = {
 		name = "ECO.307A"
 		trigger = { NOT = { has_character_flag = good_selling_xp }}
 		change_stewardship = 1
+		hidden_tooltip = { character_event = { id = L3T.13 }} #updates stewardship bonus
 		clr_character_flag = drap
 		# Retire les flags Vanille
 		clr_character_flag = the_inn
@@ -861,6 +862,7 @@ character_event = {
 		name = "ECO.307B"
 		trigger = { has_character_flag = good_selling_xp }
 		change_stewardship = 2
+		hidden_tooltip = { character_event = { id = L3T.13 }} #updates stewardship bonus
 		clr_character_flag = drap
 		# Retire les flags Vanille
 		clr_character_flag = the_inn
@@ -1625,6 +1627,7 @@ narrative_event = {
 			is_female = no
 			}
 		change_stewardship = 1
+		hidden_tooltip = { character_event = { id = L3T.13 }} #updates stewardship bonus
 		random_list = {
 			50 = { give_nickname = nick_larpenteur }
 			50 = { give_nickname = nick_le_cartographe }
@@ -1643,6 +1646,7 @@ narrative_event = {
 			is_female = yes
 			}
 		change_stewardship = 1
+		hidden_tooltip = { character_event = { id = L3T.13 }} #updates stewardship bonus
 		random_list = {
 			50 = { give_nickname = nick_larpenteuse }
 			50 = { give_nickname = nick_la_cartographe }
@@ -1668,6 +1672,7 @@ narrative_event = {
 		random = { 
 			chance = 50
 			change_stewardship = 1 
+			hidden_tooltip = { character_event = { id = L3T.13 }} #updates stewardship bonus
 		}
 	}
 	option = {
@@ -1690,6 +1695,7 @@ narrative_event = {
 		random = { 
 			chance = 50
 			change_stewardship = 1 
+			hidden_tooltip = { character_event = { id = L3T.13 }} #updates stewardship bonus
 		}
 	}
 	option = { 
@@ -1712,6 +1718,7 @@ narrative_event = {
 		random = { 
 			chance = 25
 			change_stewardship = 1 
+			hidden_tooltip = { character_event = { id = L3T.13 }} #updates stewardship bonus
 		}
 	}
 	option = { 
@@ -1734,6 +1741,7 @@ narrative_event = {
 		random = { 
 			chance = 25
 			change_stewardship = 1 
+			hidden_tooltip = { character_event = { id = L3T.13 }} #updates stewardship bonus
 		}
 	}
 	option = { 
@@ -1887,6 +1895,7 @@ character_event = { #cadastre achevé
 		name = "ECO.3252A"
 			prestige = 100
 			change_stewardship = 1
+			hidden_tooltip = { character_event = { id = L3T.13 }} #updates stewardship bonus
 			custom_tooltip = { text = entree_chronique }
 			chronicle = {
 				entry = CHRONICLE_CADASTRE

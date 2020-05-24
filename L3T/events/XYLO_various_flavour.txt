@@ -530,6 +530,7 @@ province_event = {
 							NOT = { stewardship = 7 }
 						}
 						change_stewardship = 1
+						hidden_tooltip = { character_event = { id = L3T.13 }} #updates stewardship bonus
 					}
 				}
 			}
