@@ -261,6 +261,15 @@ on_hospital_construction_completed = {
 	}
 }
 
+# A character selects a focus
+# Root = Character
+on_focus_selected = {
+	events = {
+		#stewardship adjusting
+		L3T.13
+	}
+}
+
 # on action event is sent whenever a character receives an artifact (one event for each artifact)
 # Scopes: ROOT is the character, FROM is the artifact, FROMFROM is the old holder
 on_artifact_inheritance = {
