@@ -793,3 +793,69 @@ character_event = {
 		}
 	}
 }
+character_event = {
+	id = L3T.14
+	desc = "DESCL3T.14"
+	#picture = GFX_evt_council
+	picture = GFX_evt_gathering_of_minds
+	border = GFX_event_normal_frame_economy
+	
+	only_rulers = yes
+	is_adult = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_landed = yes
+				has_regent = no
+			}
+			AND = { 
+				is_landed = yes
+				has_regent = no
+				tier = BARON
+				is_patrician = no
+				any_courtier = { has_job_title = job_treasurer }
+			}
+		}
+		#ruler is bad at stewardship, has the worst modifier
+		has_character_modifier = stw_ruler_bonus0_6
+		NOT = { has_character_modifier = STW_delegation }
+		NOT = { has_character_flag = STW_refused_delegation }
+		#steward is above 15
+		job_treasurer = { 
+			stewardship = 16
+			NOT = { has_character_modifier = STW_extra_work }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36		
+
+	}
+	
+	option = {
+		#delegate more
+		name = L3T.14A"
+		remove_character_modifier = stw_ruler_bonus0_6
+		add_character_modifier = { 
+			name = STW_delegation
+			duration = -1
+			#to hide ?
+		}
+		job_treasurer = {
+			add_character_modifier = { 
+				name = STW_extra_work
+				duration = -1
+			}
+		}
+
+	}
+	option = {
+		#no keep going on
+		name = L3T.14B"
+		set_character_flag = STW_refused_delegation
+
+	}
+}
+
+###another event for maintenance ? (on death etc.)

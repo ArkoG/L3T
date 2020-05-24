@@ -2836,6 +2836,8 @@ leave_council_position_effect = {
 	if = {
 		limit = { has_job_title = job_treasurer }
 		remove_title = job_treasurer
+		remove_character_modifier = STW_extra_work #L3T
+		liege = { remove_character_modifier = STW_delegation } #L3T
 		add_character_modifier = {
 			modifier = resigned_in_anger
 			years = 2
