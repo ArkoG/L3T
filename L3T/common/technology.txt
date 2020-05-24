@@ -65,7 +65,7 @@ TECH_GROUP_MILITARY = {
 TECH_GROUP_ECONOMY = {
 	TECH_CASTLE_CONSTRUCTION = { #castle buildings
 		modifier = {
-			CASTLE_TAX_MODIFIER = 0.5
+			CASTLE_TAX_MODIFIER = 0.30 #L3T ex 0.5
 		}
 		1 = {
 			add_building = ca_militia_barracks_2
@@ -163,8 +163,8 @@ TECH_GROUP_ECONOMY = {
 	}
 	TECH_CITY_CONSTRUCTION = { #city buildings
 		modifier = {
-			CITY_TAX_MODIFIER = 0.4
-			TEMPLE_TAX_MODIFIER = 0.4
+			CITY_TAX_MODIFIER = 0.2 #L3T ex 0.4
+			TEMPLE_TAX_MODIFIER = 0.2 #L3T ex 0.4
 		}
 		1 = {
 			add_building = ct_marketplace_3
@@ -412,7 +412,7 @@ TECH_GROUP_ECONOMY = {
 	}
 	TECH_TRADE_PRACTICES = {
 		modifier = {
-			TRADEVALUE_MULT = 0.6
+			TRADEVALUE_MULT = 0.3 #L3T ex 0.6
 		}
 		1 = {
 			add_building = ct_port_2
@@ -448,7 +448,7 @@ TECH_GROUP_ECONOMY = {
 	TECH_CONSTRUCTION = { #improved construction of all buildings
 		modifier = {
 			LOCAL_BUILD_TIME_MODIFIER = -0.25
-			LOCAL_BUILD_COST_MODIFIER = -0.25
+			#LOCAL_BUILD_COST_MODIFIER = -0.25  #L3T delete
 			wonder_build_time_modifier = -0.2
 			wonder_build_cost_modifier = -0.15
 		}
@@ -571,7 +571,7 @@ TECH_GROUP_CULTURE = {
 	TECH_CULTURE_FLEX = {
 		modifier = {
 			CULTURE_FLEX = -0.5
-			RELIGION_FLEX = -0.5
+			RELIGION_FLEX = 0.5 #L3T ex -0.5
 		}
 		1 = {}
 		2 = {}
