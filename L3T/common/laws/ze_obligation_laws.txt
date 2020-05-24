@@ -34,8 +34,8 @@ law_groups = {
 	tax_levy_law_tribal = {
 		law_type = obligations
 		left_value = TAX
-		right_value = LEVY
-		slider_sprite = GFX_tax_levy_slider
+		right_value = OPINION
+		slider_sprite = GFX_tax_levy_slider_L3Ttrib
 		allowed_for_councillors = yes
 	}
 }
@@ -3511,7 +3511,15 @@ laws = {
 			}
 		}
 		allow = {
-			has_law = tax_levy_law_tribal_1
+			AND = {
+				has_law = tax_levy_law_tribal_1
+				holder_scope = {
+					NOR = {
+						is_tribal = yes #L3T
+						is_nomadic = yes #L3T
+					}
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -3523,7 +3531,7 @@ laws = {
 				NAND = {
 					holder_scope = {
 						OR = {
-							is_republic = yes
+							#is_republic = yes
 							is_nomadic = yes
 						}
 					}
@@ -3559,15 +3567,12 @@ laws = {
 				revoke_law = tax_levy_law_tribal_2
 				revoke_law = tax_levy_law_tribal_3
 				revoke_law = tax_levy_law_tribal_4
-				revoke_law = tax_levy_law_tribal_5
-				revoke_law = tax_levy_law_tribal_6
-				revoke_law = tax_levy_law_tribal_7
-				revoke_law = tax_levy_law_tribal_8
 			}
 		}
-		tribal_vassal_min_levy = 0
-		tribal_vassal_max_levy = -1
+		#tribal_vassal_min_levy = 0
+		#tribal_vassal_max_levy = -1
 		tribal_vassal_tax_modifier = 0.4
+		tribal_opinion = -40
 	}
 	
 	tax_levy_law_tribal_1 = {
@@ -3581,9 +3586,17 @@ laws = {
 			}
 		}
 		allow = {
-			OR = {
-				has_law = tax_levy_law_tribal_0
-				has_law = tax_levy_law_tribal_2			
+			AND = {
+				OR = {
+					has_law = tax_levy_law_tribal_0
+					has_law = tax_levy_law_tribal_2			
+				}
+				holder_scope = {
+					NOR = {
+						is_tribal = yes #L3T
+						is_nomadic = yes #L3T
+					}
+				}
 			}
 		}
 		revoke_allowed = {
@@ -3596,7 +3609,7 @@ laws = {
 				NAND = {
 					holder_scope = {
 						OR = {
-							is_republic = yes
+							#is_republic = yes
 							is_nomadic = yes
 						}
 					}
@@ -3651,15 +3664,12 @@ laws = {
 				revoke_law = tax_levy_law_tribal_2
 				revoke_law = tax_levy_law_tribal_3
 				revoke_law = tax_levy_law_tribal_4
-				revoke_law = tax_levy_law_tribal_5
-				revoke_law = tax_levy_law_tribal_6
-				revoke_law = tax_levy_law_tribal_7
-				revoke_law = tax_levy_law_tribal_8
 			}
 		}
-		tribal_vassal_min_levy = 0
-		tribal_vassal_max_levy = -0.9
-		tribal_vassal_tax_modifier = 0.35
+		#tribal_vassal_min_levy = 0
+		#tribal_vassal_max_levy = -0.9
+		tribal_vassal_tax_modifier = 0.30
+		tribal_opinion = -30
 	}
 	
 	tax_levy_law_tribal_2 = {
@@ -3673,9 +3683,17 @@ laws = {
 			}
 		}
 		allow = {
-			OR = {
-				has_law = tax_levy_law_tribal_1
-				has_law = tax_levy_law_tribal_3			
+			AND = {
+				OR = {
+					has_law = tax_levy_law_tribal_1
+					has_law = tax_levy_law_tribal_3			
+				}
+				holder_scope = {
+					NOR = {
+						is_tribal = yes #L3T
+						is_nomadic = yes #L3T
+					}
+				}
 			}
 		}
 		revoke_allowed = {
@@ -3688,7 +3706,7 @@ laws = {
 				NAND = {
 					holder_scope = {
 						OR = {
-							is_republic = yes
+							#is_republic = yes
 							is_nomadic = yes
 						}
 					}
@@ -3749,9 +3767,10 @@ laws = {
 				revoke_law = tax_levy_law_tribal_8
 			}
 		}
-		tribal_vassal_min_levy = 0
-		tribal_vassal_max_levy = -0.8
-		tribal_vassal_tax_modifier = 0.3
+		#tribal_vassal_min_levy = 0
+		#tribal_vassal_max_levy = -0.8
+		tribal_vassal_tax_modifier = 0.20
+		tribal_opinion = -20
 	}
 	
 	tax_levy_law_tribal_3 = {
@@ -3765,9 +3784,17 @@ laws = {
 			}
 		}
 		allow = {
-			OR = {
-				has_law = tax_levy_law_tribal_2
-				has_law = tax_levy_law_tribal_4
+			AND = {
+				OR = {
+					has_law = tax_levy_law_tribal_2
+					has_law = tax_levy_law_tribal_4
+				}
+				holder_scope = {
+					NOR = {
+						is_tribal = yes #L3T
+						is_nomadic = yes #L3T
+					}
+				}
 			}
 		}
 		revoke_allowed = {
@@ -3780,7 +3807,7 @@ laws = {
 				NAND = {
 					holder_scope = {
 						OR = {
-							is_republic = yes
+							#is_republic = yes
 							is_nomadic = yes
 						}
 					}
@@ -3835,15 +3862,12 @@ laws = {
 				revoke_law = tax_levy_law_tribal_1
 				revoke_law = tax_levy_law_tribal_2
 				revoke_law = tax_levy_law_tribal_4
-				revoke_law = tax_levy_law_tribal_5
-				revoke_law = tax_levy_law_tribal_6
-				revoke_law = tax_levy_law_tribal_7
-				revoke_law = tax_levy_law_tribal_8
 			}
 		}
-		tribal_vassal_min_levy = 0.1
-		tribal_vassal_max_levy = -0.7
-		tribal_vassal_tax_modifier = 0.25
+		#tribal_vassal_min_levy = 0.1
+		#tribal_vassal_max_levy = -0.7
+		tribal_vassal_tax_modifier = 0.10
+		tribal_opinion = -10
 	}
 	
 	tax_levy_law_tribal_4 = {
@@ -3858,10 +3882,7 @@ laws = {
 			}
 		}
 		allow = {
-			OR = {
-				has_law = tax_levy_law_tribal_3
-				has_law = tax_levy_law_tribal_5
-			}
+			has_law = tax_levy_law_tribal_3
 		}
 		revoke_allowed = {
 			always = no
@@ -3877,7 +3898,7 @@ laws = {
 							is_nomadic = yes
 						}
 					}
-					has_law = tax_levy_law_tribal_5
+					#has_law = tax_levy_law_tribal_5
 				}
 			}
 		}
@@ -3888,10 +3909,7 @@ laws = {
 			hidden_tooltip = {
 				if = {
 					limit = {
-						OR = {
-							has_law = tax_levy_law_tribal_3
-							has_law = tax_levy_law_tribal_5
-						}
+						has_law = tax_levy_law_tribal_3
 					}
 					holder_scope = {
 						any_vassal = {
@@ -3912,343 +3930,11 @@ laws = {
 				revoke_law = tax_levy_law_tribal_1
 				revoke_law = tax_levy_law_tribal_2
 				revoke_law = tax_levy_law_tribal_3
-				revoke_law = tax_levy_law_tribal_5
-				revoke_law = tax_levy_law_tribal_6
-				revoke_law = tax_levy_law_tribal_7
-				revoke_law = tax_levy_law_tribal_8
 			}
 		}
-		tribal_vassal_min_levy = 0.2
-		tribal_vassal_max_levy = -0.6
-		tribal_vassal_tax_modifier = 0.2
-	}
-	
-	tax_levy_law_tribal_5 = {
-		group = tax_levy_law_tribal
-		
-		potential = {
-			has_dlc = "Zeus"
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-		}
-		allow = {
-			OR = {
-				has_law = tax_levy_law_tribal_4
-				has_law = tax_levy_law_tribal_6
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 0.01
-			modifier = {
-				factor = 0
-				NAND = {
-					holder_scope = {
-						OR = {
-							is_republic = yes
-							is_nomadic = yes
-						}
-					}
-					has_law = tax_levy_law_tribal_6
-				}
-			}
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				if = {
-					limit = {
-						has_law = tax_levy_law_tribal_4
-					}
-					holder_scope = {
-						any_vassal = {
-							limit = {
-								is_tribal = yes
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_dislikes_new_obligation_law } }
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_likes_new_obligation_law } }
-							}
-							opinion = {
-								who = ROOT
-								modifier = opinion_dislikes_new_obligation_law
-								years = 5
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_law = tax_levy_law_tribal_6
-					}
-					holder_scope = {
-						any_vassal = {
-							limit = {
-								is_tribal = yes
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_likes_new_obligation_law } }
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_dislikes_new_obligation_law } }
-							}
-							opinion = {
-								who = ROOT
-								modifier = opinion_likes_new_obligation_law
-								years = 5
-							}
-						}
-					}
-				}
-				revoke_law = tax_levy_law_tribal_0
-				revoke_law = tax_levy_law_tribal_1
-				revoke_law = tax_levy_law_tribal_2
-				revoke_law = tax_levy_law_tribal_3
-				revoke_law = tax_levy_law_tribal_4
-				revoke_law = tax_levy_law_tribal_6
-				revoke_law = tax_levy_law_tribal_7
-				revoke_law = tax_levy_law_tribal_8
-			}
-		}
-		tribal_vassal_min_levy = 0.3
-		tribal_vassal_max_levy = -0.5
-		tribal_vassal_tax_modifier = 0.15
-	}
-	
-	tax_levy_law_tribal_6 = {
-		group = tax_levy_law_tribal
-		
-		potential = {
-			has_dlc = "Zeus"
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-		}
-		allow = {
-			OR = {
-				has_law = tax_levy_law_tribal_5
-				has_law = tax_levy_law_tribal_7
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 0.01
-			modifier = {
-				factor = 0
-				NAND = {
-					holder_scope = {
-						OR = {
-							is_republic = yes
-							is_nomadic = yes
-						}
-					}
-					has_law = tax_levy_law_tribal_7
-				}
-			}
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				if = {
-					limit = {
-						has_law = tax_levy_law_tribal_5
-					}
-					holder_scope = {
-						any_vassal = {
-							limit = {
-								is_tribal = yes
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_dislikes_new_obligation_law } }
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_likes_new_obligation_law } }
-							}
-							opinion = {
-								who = ROOT
-								modifier = opinion_dislikes_new_obligation_law
-								years = 5
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_law = tax_levy_law_tribal_7
-					}
-					holder_scope = {
-						any_vassal = {
-							limit = {
-								is_tribal = yes
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_likes_new_obligation_law } }
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_dislikes_new_obligation_law } }
-							}
-							opinion = {
-								who = ROOT
-								modifier = opinion_likes_new_obligation_law
-								years = 5
-							}
-						}
-					}
-				}
-				revoke_law = tax_levy_law_tribal_0
-				revoke_law = tax_levy_law_tribal_1
-				revoke_law = tax_levy_law_tribal_2
-				revoke_law = tax_levy_law_tribal_3
-				revoke_law = tax_levy_law_tribal_4
-				revoke_law = tax_levy_law_tribal_5
-				revoke_law = tax_levy_law_tribal_7
-				revoke_law = tax_levy_law_tribal_8
-			}
-		}
-		tribal_vassal_min_levy = 0.4
-		tribal_vassal_max_levy = -0.4
-		tribal_vassal_tax_modifier = 0.1
-	}
-	
-	tax_levy_law_tribal_7 = {
-		group = tax_levy_law_tribal
-		
-		potential = {
-			has_dlc = "Zeus"
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-		}
-		allow = {
-			OR = {
-				has_law = tax_levy_law_tribal_6
-				has_law = tax_levy_law_tribal_8
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 0.01
-			modifier = {
-				factor = 0
-				NAND = {
-					holder_scope = {
-						OR = {
-							is_republic = yes
-							is_nomadic = yes
-						}
-					}
-					has_law = tax_levy_law_tribal_8
-				}
-			}
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				if = {
-					limit = {
-						has_law = tax_levy_law_tribal_6
-					}
-					holder_scope = {
-						any_vassal = {
-							limit = {
-								is_tribal = yes
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_dislikes_new_obligation_law } }
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_likes_new_obligation_law } }
-							}
-							opinion = {
-								who = ROOT
-								modifier = opinion_dislikes_new_obligation_law
-								years = 5
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_law = tax_levy_law_tribal_8
-					}
-					holder_scope = {
-						any_vassal = {
-							limit = {
-								is_tribal = yes
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_likes_new_obligation_law } }
-								NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_dislikes_new_obligation_law } }
-							}
-							opinion = {
-								who = ROOT
-								modifier = opinion_likes_new_obligation_law
-								years = 5
-							}
-						}
-					}
-				}
-				revoke_law = tax_levy_law_tribal_0
-				revoke_law = tax_levy_law_tribal_1
-				revoke_law = tax_levy_law_tribal_2
-				revoke_law = tax_levy_law_tribal_3
-				revoke_law = tax_levy_law_tribal_4
-				revoke_law = tax_levy_law_tribal_5
-				revoke_law = tax_levy_law_tribal_6
-				revoke_law = tax_levy_law_tribal_8
-			}
-		}
-		tribal_vassal_min_levy = 0.5
-		tribal_vassal_max_levy = -0.3
-		tribal_vassal_tax_modifier = 0.05
-	}
-	
-	tax_levy_law_tribal_8 = {
-		group = tax_levy_law_tribal
-		
-		potential = {
-			has_dlc = "Zeus"
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-		}
-		allow = {
-			has_law = tax_levy_law_tribal_7
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				holder_scope = {
-					any_vassal = {
-						limit = {
-							is_tribal = yes
-							NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_dislikes_new_obligation_law } }
-							NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_likes_new_obligation_law } }
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_dislikes_new_obligation_law
-							years = 5
-						}
-					}
-				}
-				revoke_law = tax_levy_law_tribal_0
-				revoke_law = tax_levy_law_tribal_1
-				revoke_law = tax_levy_law_tribal_2
-				revoke_law = tax_levy_law_tribal_3
-				revoke_law = tax_levy_law_tribal_4
-				revoke_law = tax_levy_law_tribal_5
-				revoke_law = tax_levy_law_tribal_6
-				revoke_law = tax_levy_law_tribal_7
-			}
-		}
-		tribal_vassal_min_levy = 0.6
-		tribal_vassal_max_levy = -0.2
-		tribal_vassal_tax_modifier = 0
+		#tribal_vassal_min_levy = 0.0
+		#tribal_vassal_max_levy = -1.0
+		#tribal_vassal_tax_modifier = 0.05
+		#tribal_opinion = 10
 	}
 }
