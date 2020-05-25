@@ -7,7 +7,6 @@ on_startup = {
 		L3T.12
 		#stewardship adjusting
 		L3T.90
-		L3T.94 #steward asymetry
 		
 		#sets capital modifier
 		L3T.20
@@ -34,7 +33,7 @@ on_yearly_pulse = {
 		L3T.226
 		#stewardship adjusting
 		L3T.90
-		L3T.94 #steward asymetry
+		L3T.93 #steward asymetry
 		#màj capital modifier
 		L3T.20
 		L3T.21
@@ -165,7 +164,6 @@ on_new_holder = {
 		REC.11
 		#stewardship adjusting
 		L3T.90
-		L3T.94 #steward asymetry
 		#màj capital modifier
 		L3T.20
 		L3T.21
@@ -190,7 +188,6 @@ on_new_holder_inheritance = {
 		REC.11
 		#stewardship adjusting
 		L3T.90
-		L3T.94 #steward asymetry
 		#màj capital modifier
 		L3T.20
 		L3T.21
@@ -215,7 +212,6 @@ on_new_holder_usurpation = {
 		REC.11
 		#stewardship adjusting
 		L3T.90
-		L3T.94 #steward asymetry
 		#màj capital modifier
 		L3T.20
 		L3T.21
@@ -271,11 +267,12 @@ on_focus_pulse = {
 	random_events = {
 		## War Focus
 		180 = ECO.310 # Legendary sword
-		#vanilla event are chance 120 each
+		#vanilla events are chance 120 each
 		
 		##Business focus
 		100 = ECO.300 #textile
 		100 = ECO.308 #cadastre
+		#vanilla has no pulse for this focus
 	}
 }
 
@@ -294,7 +291,7 @@ on_death = {
 		REC.2104 # Death of a master glass maker
 		REC.2114 # Death of a master sculptor
 		REC.2124 # Death of a master painter
-		L3T.94 #steward asymetry
+		L3T.92 #steward delegation removal
 	}
 }
 
