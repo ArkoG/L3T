@@ -19,16 +19,16 @@ character_event = {
 	}
 	is_triggered_only = yes
 
-	immediate = { 
-	if = {
-		limit = { NOT = { has_global_flag = debug_L3T }}
+	option = { 
+		name = OK  
+		trigger = { NOT = { has_global_flag = debug_L3T }}
 		set_global_flag = debug_L3T
 	}
-	if = {
-		limit = { has_global_flag = debug_L3T }
+	option = { 
+		name = OK  
+		trigger = { has_global_flag = debug_L3T }
 		clr_global_flag = debug_L3T
 	}
-	option = { name = OK }
 }
 
 ## Détection de la carte
