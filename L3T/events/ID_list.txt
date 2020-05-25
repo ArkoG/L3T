@@ -38,17 +38,16 @@
 
 ###L3T_init_GENERAL.txt
 
-#id = L3T.1 #mode debug //activation
-#id = L3T.2 #mode debug //désactivation
+#id = L3T.1 #mode debug //activation/désactivation
 
-#id = L3T.3-8 #####FREE SLOT
+#id = L3T.2-8 #####FREE SLOT
 
 #id = L3T.9 ##used in L3T_init_DOMAINES.txt
 
 #id = L3T.10 #détection de la carte + paix de Dieu
 #id = L3T.11 #fin paix de Dieu
 #id = L3T.12 #boost IA gold+piety
-#id = L3T.13 #realm_stewardship_balance
+#id = L3T.90 #realm_stewardship_balance
 #id = L3T.14 #stewardship delegation
 
 #id = L3T.20 #maintenance capitales - initiate/update
@@ -73,6 +72,12 @@
 #id = L3T.86 #liege is informed of that
 #id = L3T.87 #noble learnt about it
 #id = L3T.88 #Chancellor is not purchased it seems
+
+job_treasurer_L3T_add.txt
+#id = L3T.90 #realm_stewardship_balance
+#id = L3T.91 #stewardship delegation
+#id = L3T.92 #death of liege
+#id = L3T.93 #death of the steward
 
 ###L3T_population.txt
 
@@ -382,6 +387,7 @@
 
 ##ambition_events.txt
 
+#id = ECO.300 #Début chaîne d'event "acheter pour revendre" (focus event pulse)
 #id = ECO.301 #Début chaîne d'event "acheter pour revendre"
 #id = ECO.302 #Choix de l'achat
 #id = ECO.303 #Vente laine
@@ -389,7 +395,10 @@
 #id = ECO.305 #Vente drap
 #id = ECO.306 #Gestion des invendus
 #id = ECO.307 #Fin de la chaîne
+#id = ECO.308 #voir cadastre
+#id = ECO.309 #FREE
 
+#id = ECO.310 #Début chaîne d'event "fabriquer une épée légendaire" (focus event pulse)
 #id = ECO.311 #Début chaîne d'event "fabriquer une épée légendaire"
 #id = ECO.312 #Envoi d'un serviteur
 #id = ECO.313 #Une femme vient vous voir
@@ -399,6 +408,7 @@
 #id = ECO.317 #Equilibrage épée ou abandon
 #id = ECO.318 #Fin de la chaîne
 
+#id = ECO.308 #flag chaînes cadastre (focus event pulse)
 #id = ECO.319 #flag chaînes cadastre
 #id = ECO.320 #conflits de parcelles
 #id = ECO.3201 #conflits de parcelles suites
@@ -415,6 +425,7 @@
 #id = ECO.325 #rédiger un cadastre complet
 #id = ECO.3251 #rédiger un cadastre complet suites
 #id = ECO.3252 #rédiger un cadastre complet suites
+#id = ECO.326 #tombola chaines cadastre
 
 ##Vin & bière
 
