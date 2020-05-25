@@ -4,26 +4,32 @@ namespace = L3T
 character_event = {
     id = L3T.1
 	title = "NAMEL3T.1"
-	desc = "DESCL3T.1"
+	#desc = "DESCL3T.1"
 	picture = GFX_evt_L3T_capitulaire
 
+	desc = {
+		trigger = { NOT = { has_global_flag = debug_L3T }}
+		text = "DESCL3T.1"
+		picture = GFX_evt_L3T_capitulaire
+	}
+	desc = {
+		trigger = { has_global_flag = debug_L3T }
+		text = "DESCL3T.2"
+		picture = GFX_evt_L3T_capitulaire
+	}
 	is_triggered_only = yes
 
-	immediate = { set_global_flag = debug_L3T }
+	immediate = { 
+	if = {
+		limit = { NOT = { has_global_flag = debug_L3T }}
+		set_global_flag = debug_L3T
+	}
+	if = {
+		limit = { has_global_flag = debug_L3T }
+		clr_global_flag = debug_L3T
+	}
 	option = { name = OK }
 }
-character_event = {
-    id = L3T.2
-	title = "NAMEL3T.2"
-	desc = "DESCL3T.2"
-	picture = GFX_evt_L3T_capitulaire
-
-	is_triggered_only = yes
-	
-	immediate = { clr_global_flag = debug_L3T }
-	option = { name = OK }
-}
-
 
 ## Détection de la carte
 character_event = {
