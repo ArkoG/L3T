@@ -30,6 +30,16 @@ remove_any_previous_STW_bonus = {
 }
 #RULER
 add_adequate_STWruler_bonus = {
+	#doesn't need the delegation anymore
+	if = {
+		limit = {
+			stewardship = 7
+			has_character_modifier = STW_delegation
+		}
+		character_event = { id = L3T.94 days = 5 random = 5 }
+		job_treasurer = {character_event = { id = L3T.94 days = 5 random = 5 }}
+	}
+	#annual check
 	if = {
 		limit = {
 			NOT = { stewardship = 7 }
@@ -39,6 +49,7 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -52,6 +63,7 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -65,6 +77,7 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -78,6 +91,7 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -91,6 +105,7 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -104,6 +119,7 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -117,6 +133,7 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -130,6 +147,7 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -143,6 +161,7 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -156,7 +175,8 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
-	}	
+
+	}
 	if = {
 		limit = {
 			AND = {
@@ -169,6 +189,7 @@ add_adequate_STWruler_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -197,6 +218,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -212,6 +234,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -227,6 +250,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -242,6 +266,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -257,6 +282,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -272,6 +298,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -287,6 +314,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -302,6 +330,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -317,6 +346,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -332,6 +362,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}	
 	if = {
 		limit = {
@@ -347,6 +378,7 @@ add_adequate_STWregent_bonus = {
 			duration = -1
 			hidden=yes
 		}
+
 	}
 	if = {
 		limit = {
@@ -366,6 +398,18 @@ add_adequate_STWregent_bonus = {
 }
 #STEWARD
 add_adequate_STWsteward_bonus = {
+	#can't assume delegation anymore
+	if = {
+		limit = {
+			job_treasurer = {
+				NOT = { stewardship = 16 }
+				has_character_modifier = STW_extra_work
+			}
+		}
+		character_event = { id = L3T.95 days = 5 random = 5 }
+		job_treasurer = {character_event = { id = L3T.95 days = 5 random = 5 }}
+	}
+	#annual check
 	if = {
 		limit = {
 			job_treasurer = {
@@ -377,6 +421,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -392,6 +437,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -407,6 +453,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -422,6 +469,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -437,6 +485,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -452,6 +501,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -467,6 +517,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -482,6 +533,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -497,6 +549,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -512,6 +565,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}	
 	if = {
 		limit = {
@@ -527,6 +581,7 @@ add_adequate_STWsteward_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -555,6 +610,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -568,6 +624,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -581,6 +638,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -594,6 +652,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -607,6 +666,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -620,6 +680,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -633,6 +694,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -646,6 +708,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -659,6 +722,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -672,6 +736,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}	
 	if = {
 		limit = {
@@ -685,6 +750,7 @@ add_adequate_STWbaron_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -713,6 +779,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -728,6 +795,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -743,6 +811,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -758,6 +827,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -773,6 +843,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -788,6 +859,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -803,6 +875,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -818,6 +891,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -833,6 +907,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
@@ -848,6 +923,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}	
 	if = {
 		limit = {
@@ -863,6 +939,7 @@ add_adequate_STWbaronRG_bonus = {
 			duration = -1
 			hidden=yes
 		}
+		break = yes
 	}
 	if = {
 		limit = {
