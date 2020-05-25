@@ -1,0 +1,247 @@
+#################################
+#         L3T  par Arko         #
+#################################
+
+namespace = L3T
+
+################################
+#  STEWARDSHIP BALANCE EVENTS  #
+################################
+
+
+
+character_event = {
+    id = L3T.90
+	hide_window = yes
+	
+	only_rulers = yes
+
+	is_triggered_only = yes
+	
+	trigger = { 
+	}
+
+	immediate = {
+		if = {
+			#regular case ruler+steward
+			limit = { 
+				OR = {
+					AND = {
+						is_landed = yes
+						has_regent = no
+					}
+					AND = { 
+						is_landed = yes
+						has_regent = no
+						tier = BARON
+						is_patrician = no
+						any_courtier = { has_job_title = job_treasurer }
+					}
+				}
+			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWruler_bonus = yes #gives ruler_bonus
+			add_adequate_STWsteward_bonus = yes #gives stew_bonus
+		}
+		if = {
+			#under regency regent+steward
+			limit = {
+				OR = {
+					AND = {
+						is_landed = yes
+						has_regent = yes
+					}
+					AND = {
+						is_landed = yes
+						has_regent = yes
+						tier = BARON
+						is_patrician = no
+						any_courtier = { has_job_title = job_treasurer }
+					}
+				}
+			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWregent_bonus = yes #gives ruler_bonus
+			add_adequate_STWsteward_bonus = yes #gives stew_bonus
+		}		
+		if = {
+			#baron with no court ruler+baron (doubling ruler bonus)
+			limit = { 
+				is_landed = yes
+				has_regent = no
+				tier = BARON
+				is_patrician = no
+				NOT = { any_courtier = { has_job_title = job_treasurer }}
+			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWruler_bonus = yes #gives ruler_bonus
+			add_adequate_STWbaron_bonus = yes #gives stew_bonus
+		}	
+		if = {
+			#baron with no court regent+regent2 (doubling regent bonus)
+			limit = { 
+				is_landed = yes
+				has_regent = yes
+				tier = BARON
+				is_patrician = no
+				NOT = { any_courtier = { has_job_title = job_treasurer }}
+			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWregent_bonus = yes #gives ruler_bonus
+			add_adequate_STWbaronRG_bonus = yes #gives stew_bonus
+		}
+	}
+}
+character_event = {
+	id = L3T.91
+	desc = "DESCL3T.91"
+	#picture = GFX_evt_council
+	picture = GFX_evt_gathering_of_minds
+	border = GFX_event_normal_frame_economy
+	
+	only_rulers = yes
+	is_adult = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_landed = yes
+				has_regent = no
+			}
+			AND = { 
+				is_landed = yes
+				has_regent = no
+				tier = BARON
+				is_patrician = no
+				any_courtier = { has_job_title = job_treasurer }
+			}
+		}
+		#ruler is bad at stewardship, has the worst modifier
+		has_character_modifier = stw_ruler_bonus0_6
+		NOT = { has_character_modifier = STW_delegation }
+		NOT = { has_character_flag = STW_refused_delegation }
+		#steward is above 15
+		job_treasurer = { 
+			stewardship = 16
+			NOT = { has_character_modifier = STW_extra_work }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36		
+
+	}
+	
+	option = {
+		#delegate more
+		name = L3T.91A"
+		#remove_character_modifier = stw_ruler_bonus0_6
+		add_character_modifier = { 
+			name = STW_delegation
+			duration = -1
+		}
+		job_treasurer = {
+			add_character_modifier = { 
+				name = STW_extra_work
+				duration = -1
+			}
+		}
+
+	}
+	option = {
+		#no keep going on
+		name = L3T.91B"
+		set_character_flag = STW_refused_delegation
+
+	}
+}
+
+#chancellor or liege dies
+character_event = {
+    id = L3T.92
+	hide_window = yes
+
+	#called on_new_holder on_death etc. ROOT is the dead character
+	is_triggered_only = yes 
+	
+	trigger = {
+		OR = {
+			ROOT = {
+				has_job_title = job_treasurer
+				has_character_modifier = STW_extra_work
+			}
+			ROOT = {
+				has_character_modifier = STW_delegation
+			}
+		}
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				ROOT = {
+					has_job_title = job_treasurer
+					has_character_modifier = STW_extra_work
+				}
+			}
+			ROOT = {
+				liege = {
+					remove_character_modifier = STW_delegation
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					has_character_modifier = STW_delegation
+				}
+			}
+			ROOT = {
+				job_treasurer = { remove_character_modifier = STW_extra_work }
+			}
+		}
+				
+	}
+}
+#maintenance if not covered by breakup cases (leave council, death)
+character_event = {
+    id = L3T.94
+	hide_window = yes
+
+	#called on_yearly_pulse
+	is_triggered_only = yes 
+
+	trigger = {
+		OR = {
+			##fixing asymetry
+			#is the chancellor but has no corresponding liege (délégant)
+			AND = {
+				has_job_title = job_treasurer
+				has_character_modifier = STW_extra_work
+				liege = { NOT = { has_character_modifier = STW_delegation }}
+			}
+			#is the liege but no corresponding chancellor (délégataire)
+			AND = {
+				has_character_modifier = STW_delegation
+				job_treasurer = { NOT = { has_character_modifier = STW_delegation }}
+			}
+		}
+	}
+	immediate = {
+		if = { 
+			limit = {
+				has_job_title = job_treasurer
+				has_character_modifier = STW_extra_work
+				liege = { NOT = { has_character_modifier = STW_delegation }}
+			}
+			remove_character_modifier = STW_extra_work
+		}
+		if = {
+			limit = {
+				has_character_modifier = STW_delegation
+				job_treasurer = { NOT = { has_character_modifier = STW_delegation }}
+			}	
+			remove_character_modifier = STW_delegation
+		}
+	}
+}
