@@ -101,7 +101,7 @@ character_event = {
     is_triggered_only = yes
     hide_window = yes
     trigger = {
-    	FROM = { NOT = { has_wonder_flag = L3T_pseudo_wonder }}
+    	FROMFROM = { NOT = { has_wonder_flag = L3T_pseudo_wonder }}
     }
 
     immediate = {
@@ -292,7 +292,7 @@ character_event = {
     hide_window = yes
     is_triggered_only = yes
 	trigger = {
-		FROM = { NOT = { has_wonder_flag = L3T_pseudo_wonder }}
+		FROMFROM = { NOT = { has_wonder_flag = L3T_pseudo_wonder }}
 	}
     immediate = {
         if = {
