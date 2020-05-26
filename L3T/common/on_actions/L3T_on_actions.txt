@@ -1,6 +1,9 @@
 #character
 on_startup = {
 	events = {
+		#Initialisation population building
+		L3T.1101 
+
 		#map detection
 		L3T.10
 		#AI random starting money and piety bonus
@@ -10,10 +13,6 @@ on_startup = {
 		
 		#sets capital modifier
 		L3T.20
-		
-		#Initialisation population building
-		L3T.1101 
-
 		
 		#city apocalypto
 		#L3T.45
