@@ -478,7 +478,7 @@ castle = {
 }
 
 city = {
-	tax_income = 12
+	tax_income = 7 #L3T ex12
 	fort_level = 0
 	light_infantry = 75
 	archers = 40
@@ -488,7 +488,7 @@ city = {
 }
 
 temple = {
-	tax_income = 8
+	tax_income = 6 #L3T ex8
 	heavy_infantry = 45
 	light_infantry = 45
 	archers = 40
@@ -537,7 +537,7 @@ nomad = {
 	levy_size = -3
 	light_infantry = 120   #L3T delete ex 160
 	heavy_infantry = 40
-	horse_archers = 20   #L3T new logic isn't it?
+	horse_archers = 20   #L3T new, more logic
 	levy_reinforce_rate = 0
 	land_organisation = 0
 }
@@ -551,7 +551,7 @@ fort = {
 	light_infantry = 30
 	heavy_infantry = 15 #L3T ex 75
 	archers = 30 #L3T new
-	#light_cavalry = 7  #L3T delete, was stupid
+	#light_cavalry = 7  #L3T delete, it's stupid
 	levy_reinforce_rate = 2
 	land_organisation = 0.2
 }
