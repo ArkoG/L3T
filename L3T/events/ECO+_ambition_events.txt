@@ -23,7 +23,7 @@ character_event = {
 		OR = {
 			AND = {
 				has_focus = focus_war
-				NOT = { martial = 8 }
+				NOT = { martial = 15 }
 			}
 			has_ambition = obj_improve_martial
 		}
@@ -108,7 +108,7 @@ character_event = {
 		OR = {
 			AND = {
 				has_focus = focus_war
-				NOT = { martial = 8 }
+				NOT = { martial = 15 }
 			}
 			has_ambition = obj_improve_martial
 		}
@@ -631,7 +631,7 @@ character_event = {
 		OR = {
 			AND = {
 				has_focus = focus_business
-				NOT = { stewardship = 8 }
+				NOT = { stewardship = 15 }
 			}
 			has_ambition = obj_improve_stewardship
 		}
@@ -707,7 +707,7 @@ character_event = {
 		OR = {
 			AND = {
 				has_focus = focus_business
-				NOT = { stewardship = 8 }
+				NOT = { stewardship = 15 }
 			}
 			has_ambition = obj_improve_stewardship
 		}
@@ -1058,7 +1058,7 @@ narrative_event = {
 		OR = {
 			AND = {
 				has_focus = focus_business
-				NOT = { stewardship = 10 }
+				NOT = { stewardship = 15 }
 			}
 			has_ambition = obj_improve_stewardship
 		}
@@ -1128,7 +1128,7 @@ narrative_event = {
 		OR = {
 			AND = {
 				has_focus = focus_business
-				NOT = { stewardship = 10 }
+				NOT = { stewardship = 15 }
 			}
 			has_ambition = obj_improve_stewardship
 		}
@@ -1859,17 +1859,17 @@ narrative_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-		modifier = { factor = 1.20	has_character_flag = chaine_cadastre_1_refusee }
-		modifier = { factor = 1.50	has_character_flag = chaine_cadastre_2_refusee }
-		modifier = { factor = 1.20	has_character_flag = chaine_cadastre_3_refusee }
-		modifier = { factor = 1.20	has_character_flag = chaine_cadastre_4_refusee }
-		modifier = { factor = 0.80	has_character_flag = chaine_cadastre_1_terminee }
-		modifier = { factor = 0.60	has_character_flag = chaine_cadastre_2_terminee }
-		modifier = { factor = 0.80	has_character_flag = chaine_cadastre_3_terminee }
-		modifier = { factor = 0.80	has_character_flag = chaine_cadastre_4_terminee }		
-	}
+	#mean_time_to_happen = {
+	#	months = 12
+	#	modifier = { factor = 1.20	has_character_flag = chaine_cadastre_1_refusee }
+	#	modifier = { factor = 1.50	has_character_flag = chaine_cadastre_2_refusee }
+	#	modifier = { factor = 1.20	has_character_flag = chaine_cadastre_3_refusee }
+	#	modifier = { factor = 1.20	has_character_flag = chaine_cadastre_4_refusee }
+	#	modifier = { factor = 0.80	has_character_flag = chaine_cadastre_1_terminee }
+	#	modifier = { factor = 0.60	has_character_flag = chaine_cadastre_2_terminee }
+	#	modifier = { factor = 0.80	has_character_flag = chaine_cadastre_3_terminee }
+	#	modifier = { factor = 0.80	has_character_flag = chaine_cadastre_4_terminee }		
+	#}
 
 	immediate = {
 	}
