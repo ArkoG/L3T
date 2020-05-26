@@ -6,10 +6,13 @@ is_VANILLA_hard_monastery = {
 		title = b_cluny
 		title = b_luxeuil
 		title = b_stgallen
+		title = b_romainmotier
 	}
 }
 is_VANILLA_hard_episcopat = {
 	has_global_flag = running_VANILLA
+	NOT = { title = b_rialto} #venice island
+	NOT = { title = b_tholen} #zeeland islands
 	OR = {
 		#British islands
 		title = b_st_peters #York
@@ -19,24 +22,27 @@ is_VANILLA_hard_episcopat = {
 		title = b_fecamp #Rouen
 		title = b_beauvais
 		title = b_montargis #Sens
-		title = b_chinon #Tours
+		#title = b_chinon #Tours
 		title = b_deols #Bourges
-		title = b_bellevaux #Besac
+		#title = b_bellevaux #Besac
+		title = b_autun #bishopric still ?
 		title = b_stjeanbaptiste #Lyon
-		title = b_vienne
-		title = b_lasauve #Bordeaux
+		#title = b_vienne
+		#title = b_lasauve #Bordeaux
 		title = b_eauze #Auch
 		title = b_albi #
 		#title = b_lavaur #toulouse
 		title = b_aix #Arles, Marseille, Aix
-		title = b_embrun
+		#title = b_embrun
+		title = b_dol #britain, bishopric ?
 		#Spains
 		title = b_santiago
 		#HRE
 		title = b_strassburg
 		title = b_sitten
 		title = b_chur
-		title = b_havelberg #to enforce since the province is pagan, shouldn't be secilar however
+		title = b_havelberg #to enforce since the province is pagan, shouldn't be secular however
+		title = b_utrecht
 	}
 }
 is_VANILLA_hard_regula1 = { #bénédictins/Cluny
