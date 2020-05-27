@@ -1136,3 +1136,57 @@ character_event = {
 		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
+character_event = {
+	id = L3T.249
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			tier = baron	
+			holding_type = castle
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				FROM = {
+					tier = baron	
+					holding_type = castle
+					#first building, has not the variable yet, add it
+					NOT = { check_variable = { which = "prison_capacity" value = 0 }}
+				}
+			}		
+			set_variable = { which = "prison_capacity" value = 0 }
+			change_variable = { which = "prison_capacity" value = 1 }
+		}
+		if = {
+			limit = {
+				FROM = {
+					tier = baron	
+					holding_type = castle
+					has_building = CA_prison_L1
+					NOT = { has_building = CA_prison_L2 } #currently being built
+					#not the first building, should have the variable and first building
+					check_variable = { which = "prison_capacity" value = 0 }
+				}
+			}
+			change_variable = { which = "prison_capacity" value = 1 }
+		}
+		if = {
+			limit = {
+				FROM = {
+					tier = baron	
+					holding_type = castle
+					has_building = CA_prison_L2
+					NOT = { has_building = CA_prison_L3 } #currently being built
+					#not the first building, should have the variable and two first buildings
+					check_variable = { which = "prison_capacity" value = 0 }
+				}
+			}
+			change_variable = { which = "prison_capacity" value = 1 }
+		}
+	}
+}
