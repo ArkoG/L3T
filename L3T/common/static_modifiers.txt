@@ -473,7 +473,7 @@ castle = {
 	light_infantry = 60
 	heavy_infantry = 150
 	light_cavalry = 15
-	levy_reinforce_rate = 1.25
+	levy_reinforce_rate = 1.00
 	land_organisation = 0.2
 }
 
@@ -489,13 +489,13 @@ city = {
 
 temple = {
 	tax_income = 6 #L3T ex8
-	heavy_infantry = 45
+	#heavy_infantry = 45
 	light_infantry = 45
 	archers = 40
 	build_cost_modifier = 500
 	build_time_modifier = 730
-	levy_reinforce_rate = 0.25
-	land_organisation = 0.2
+	#levy_reinforce_rate = 0.25
+	land_organisation = 0.1
 }
 
 trade_post = {
@@ -510,7 +510,7 @@ trade_post = {
 }
 
 family_palace = {
-	tax_income = 4 #L3T ex 10
+	tax_income = 6 #L3T ex 10
 	fort_level = 0
 	light_infantry = 40
 	archers = 10
@@ -543,7 +543,7 @@ nomad = {
 }
 
 fort = {
-	tax_income = -2 #L3T ex 0
+	tax_income = 0 #L3T can't get negative
 	fort_level = 2
 	levy_size = 0
 	build_cost_modifier = 20
