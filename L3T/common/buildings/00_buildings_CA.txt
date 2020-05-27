@@ -295,6 +295,9 @@ ca_tour_L4 = { #Tours rondes
 		desc = ca_keep_1_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 4 }
 		upgrades_from = ca_keep_3
+		not_if_x_exists = {
+			FEODAL_prod
+		}
 		gold_cost = 400
 		build_time = 1460 #4y
 		levy_size = 0.2
@@ -307,6 +310,9 @@ ca_tour_L4 = { #Tours rondes
 	ca_keep_5 = {
 		desc = ca_keep_1_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 6 }
+		not_if_x_exists = {
+			FEODAL_prod
+		}
 		upgrades_from = ca_keep_4
 		gold_cost = 500
 		build_time = 2190 #6y
@@ -320,6 +326,13 @@ ca_tour_L4 = { #Tours rondes
 	ca_keep_6 = {
 		desc = ca_keep_1_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 8 }
+		prerequisites = { 
+			FEODAL_mil
+		}
+		not_if_x_exists = {
+			FEODAL_adm
+			FEODAL_prod
+		}
 		upgrades_from = ca_keep_5
 		gold_cost = 500
 		build_time = 2190 #6y
@@ -359,6 +372,11 @@ ca_tour_L4 = { #Tours rondes
 	ca_militia_barracks_3 = {
 		desc = ca_militia_barracks_3_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 5 }
+		prerequisites = { 
+		}
+		not_if_x_exists = {
+			FEODAL_prod
+		}
 		upgrades_from = ca_militia_barracks_2
 		gold_cost = 200
 		build_time = 1095
@@ -371,6 +389,13 @@ ca_tour_L4 = { #Tours rondes
 	ca_militia_barracks_4 = {
 		desc = ca_militia_barracks_3_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 7 }
+		prerequisites = { 
+			FEODAL_mil
+		}
+		not_if_x_exists = {
+			FEODAL_adm
+			FEODAL_prod
+		}
 		upgrades_from = ca_militia_barracks_3
 		gold_cost = 300
 		build_time = 1095
@@ -460,7 +485,7 @@ ca_training_grounds_2 = { #Porte en pierre
 	ca_barracks_3 = {
 		desc = ca_barracks_1_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		prerequisites = { ca_wall_2 FEODAL_mil }
+		prerequisites = { ca_wall_2  }
 		upgrades_from = ca_barracks_2
 		gold_cost = 200
 		build_time = 730
@@ -473,6 +498,11 @@ ca_training_grounds_2 = { #Porte en pierre
 	ca_barracks_4 = {
 		desc = ca_barracks_1_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		prerequisites = { 
+		}
+		not_if_x_exists = {
+			FEODAL_prod
+		}
 		upgrades_from = ca_barracks_3
 		gold_cost = 300
 		build_time = 1095
@@ -485,6 +515,13 @@ ca_training_grounds_2 = { #Porte en pierre
 	ca_barracks_5 = {
 		desc = ca_barracks_1_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 5 }
+		prerequisites = { 
+			FEODAL_mil
+		}
+		not_if_x_exists = {
+			FEODAL_adm
+			FEODAL_prod
+		}
 		upgrades_from = ca_barracks_4
 		gold_cost = 400
 		build_time = 2190
@@ -494,18 +531,18 @@ ca_training_grounds_2 = { #Porte en pierre
 		#add_number_to_name = no
 		extra_tech_building_start = 2.0
 	}
-	ca_barracks_6 = {
-		desc = ca_barracks_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 7 }
-		upgrades_from = ca_barracks_5
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 65
-		pikemen = 30
-		ai_creation_factor = 100
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
+#	ca_barracks_6 = {
+#		desc = ca_barracks_1_desc
+#		trigger = { TECH_CASTLE_CONSTRUCTION = 7 }
+#		upgrades_from = ca_barracks_5
+#		gold_cost = 500
+#		build_time = 2190
+#		heavy_infantry = 65
+#		pikemen = 30
+#		ai_creation_factor = 100
+#		#add_number_to_name = no
+#		extra_tech_building_start = 0.2
+#	}
 	
 	#Stable, gives light cavalry and some heavy cavalry
 	##utilise en prebuild jusqu au niveau 2
@@ -546,6 +583,9 @@ ca_training_grounds_2 = { #Porte en pierre
 	ca_stable_4 = {
 		desc = ca_stable_1_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		not_if_x_exists = {
+			FEODAL_prod
+		}
 		upgrades_from = ca_stable_3
 		gold_cost = 300
 		build_time = 1095
@@ -558,6 +598,13 @@ ca_training_grounds_2 = { #Porte en pierre
 	ca_stable_5 = {
 		desc = ca_stable_1_desc
 		trigger = { TECH_CASTLE_CONSTRUCTION = 6 }
+		prerequisites = { 
+			FEODAL_mil
+		}
+		not_if_x_exists = {
+			FEODAL_adm
+			FEODAL_prod
+		}
 		upgrades_from = ca_stable_4
 		gold_cost = 400
 		build_time = 2190
@@ -567,18 +614,18 @@ ca_training_grounds_2 = { #Porte en pierre
 		#add_number_to_name = no
 		extra_tech_building_start = 0.2
 	}
-	ca_stable_6 = {
-		desc = ca_stable_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 8 }
-		upgrades_from = ca_stable_5
-		gold_cost = 500
-		build_time = 2190
-		light_cavalry = 55
-		knights = 20
-		ai_creation_factor = 85
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
+#	ca_stable_6 = {
+#		desc = ca_stable_1_desc
+#		trigger = { TECH_CASTLE_CONSTRUCTION = 8 }
+#		upgrades_from = ca_stable_5
+#		gold_cost = 500
+#		build_time = 2190
+#		light_cavalry = 55
+#		knights = 20
+#		ai_creation_factor = 85
+#		#add_number_to_name = no
+#		extra_tech_building_start = 0.2
+#	}
 	
 	#Castle town, gives income
 	##utilise en prebuild jusqu au niveau 3
@@ -759,6 +806,9 @@ ca_eglise_L4 = { #Grande église
 		desc = shipyard_desc
 		port = yes
 		trigger = { TECH_NAVAL = 3 }
+		not_if_x_exists = {
+			FEODAL_prod
+		}
 		upgrades_from = ca_shipyard_2
 		gold_cost = 100
 		build_time = 1095
@@ -772,6 +822,13 @@ ca_eglise_L4 = { #Grande église
 		desc = shipyard_desc
 		port = yes
 		trigger = { TECH_NAVAL = 4 }
+		prerequisites = { 
+			FEODAL_mil
+		}
+		not_if_x_exists = {
+			FEODAL_adm
+			FEODAL_prod
+		}
 		upgrades_from = ca_shipyard_3
 		gold_cost = 100
 		build_time = 1460
@@ -782,46 +839,15 @@ ca_eglise_L4 = { #Grande église
 	}
 
 	#Castellan Bloodline buildings.
+	
+	#no more bloodline lock, but FEODAL_mil restricted
 	ca_special_fortifications_1 = { #Insulated Sections
 		desc = ca_special_fortifications_1_desc
-		potential = { 
-			OR = {
-				FROMFROM = { has_building = ca_special_fortifications_1 } #Show the building only if it has been already built or if the owner has the proper bloodline to build it.
-				FROM = {
-					any_owned_bloodline = {
-						has_bloodline_flag = bloodline_castellan 
-					}
-				}
-				FROM = {
-					any_liege = {
-						any_owned_bloodline = {
-							has_bloodline_flag = bloodline_castellan 
-						}	
-					}
-				}
-			}
-		}
 		trigger = { 
 			TECH_FORTIFICATIONS_CONSTRUCTION = 1 
-			custom_tooltip = {
-				text = tooltip_has_castellan_bloodline
-				hidden_tooltip = {
-					OR = {
-						FROM = {
-							any_owned_bloodline = {
-								has_bloodline_flag = bloodline_castellan 
-							}
-						}
-						FROM = {
-							any_liege = {
-								any_owned_bloodline = {
-									has_bloodline_flag = bloodline_castellan 
-								}	
-							}
-						}
-					}
-				}
-			}
+		}
+		prerequisites = { 
+			FEODAL_mil
 		}
 		is_active_trigger = {
 			FROM = {
@@ -841,31 +867,12 @@ ca_eglise_L4 = { #Grande église
 
 		ai_creation_factor = 88
 
-		extra_tech_building_start = 1.2
+		extra_tech_building_start = 10.0
 	}
 	ca_special_fortifications_2 = { #Killing Fields
 		desc = ca_special_fortifications_2_desc
 		trigger = { 
 			TECH_FORTIFICATIONS_CONSTRUCTION = 3
-			custom_tooltip = {
-				text = tooltip_has_castellan_bloodline
-				hidden_tooltip = {
-					OR = {
-						FROM = {
-							any_owned_bloodline = {
-								has_bloodline_flag = bloodline_castellan 
-							}
-						}
-						FROM = {
-							any_liege = {
-								any_owned_bloodline = {
-									has_bloodline_flag = bloodline_castellan 
-								}	
-							}
-						}
-					}
-				}
-			}
 		}
 		is_active_trigger = {
 			FROM = {
@@ -886,31 +893,12 @@ ca_eglise_L4 = { #Grande église
 		
 		ai_creation_factor = 88
 
-		extra_tech_building_start = 1.2
+		extra_tech_building_start = 10.0
 	}
 	ca_special_fortifications_3 = { #Extended Machicolations
 		desc = ca_special_fortifications_3_desc
 		trigger = { 
-			TECH_FORTIFICATIONS_CONSTRUCTION = 5
-			custom_tooltip = {
-				text = tooltip_has_castellan_bloodline
-				hidden_tooltip = {
-					OR = {
-						FROM = {
-							any_owned_bloodline = {
-								has_bloodline_flag = bloodline_castellan 
-							}
-						}
-						FROM = {
-							any_liege = {
-								any_owned_bloodline = {
-									has_bloodline_flag = bloodline_castellan 
-								}	
-							}
-						}
-					}
-				}
-			}
+
 		}
 		is_active_trigger = {
 			FROM = {
@@ -931,31 +919,12 @@ ca_eglise_L4 = { #Grande église
 		
 		ai_creation_factor = 88
 
-		extra_tech_building_start = 1.2
+		extra_tech_building_start = 10.0
 	}
 	ca_special_fortifications_4 = { #Reinforced Barbican
 		desc = ca_special_fortifications_4_desc
 		trigger = { 
 			TECH_FORTIFICATIONS_CONSTRUCTION = 7
-			custom_tooltip = {
-				text = tooltip_has_castellan_bloodline
-				hidden_tooltip = {
-					OR = {
-						FROM = {
-							any_owned_bloodline = {
-								has_bloodline_flag = bloodline_castellan 
-							}
-						}
-						FROM = {
-							any_liege = {
-								any_owned_bloodline = {
-									has_bloodline_flag = bloodline_castellan 
-								}	
-							}
-						}
-					}
-				}
-			}
 		}
 		is_active_trigger = {
 			FROM = {
@@ -977,13 +946,18 @@ ca_eglise_L4 = { #Grande église
 		
 		ai_creation_factor = 88
 
-		extra_tech_building_start = 1.2
+		extra_tech_building_start = 10.0
 	}
 
 	#Murder Builder Bloodline buildings.
 	ca_oppressive_fortifications_1 = { #Gloomy Monument
 		desc = ca_oppressive_fortifications_1_desc
 		potential = { 
+			#L3T restriction
+			has_game_rule = {
+				name = supernatural_events
+				value = on
+			}
 			OR = {
 				FROMFROM = { has_building = ca_oppressive_fortifications_1 } #Show the building only if it has been already built or if the owner has the proper bloodline to build it.
 				FROM = {
@@ -1022,6 +996,9 @@ ca_eglise_L4 = { #Grande église
 				}
 			}
 		}
+		prerequisites = { 
+			FEODAL_mil
+		}
 		is_active_trigger = {
 			FROM = {
 				NOR = {
@@ -1040,7 +1017,7 @@ ca_eglise_L4 = { #Grande église
 
 		ai_creation_factor = 88
 
-		extra_tech_building_start = 1.2
+		extra_tech_building_start = 10.0
 	}
 	ca_oppressive_fortifications_2 = { #Connected Watchtowers
 		desc = ca_oppressive_fortifications_2_desc
@@ -1085,7 +1062,7 @@ ca_eglise_L4 = { #Grande église
 		
 		ai_creation_factor = 88
 
-		extra_tech_building_start = 1.2
+		extra_tech_building_start = 10.0
 	}
 	ca_oppressive_fortifications_3 = { #Lonely Spire
 		desc = ca_oppressive_fortifications_3_desc
@@ -1130,7 +1107,7 @@ ca_eglise_L4 = { #Grande église
 		
 		ai_creation_factor = 88
 
-		extra_tech_building_start = 1.2
+		extra_tech_building_start = 10.0
 	}
 	ca_oppressive_fortifications_4 = { #Palace of Justice
 		desc = ca_oppressive_fortifications_4_desc
@@ -1175,6 +1152,6 @@ ca_eglise_L4 = { #Grande église
 		
 		ai_creation_factor = 88
 
-		extra_tech_building_start = 1.2
+		extra_tech_building_start = 10.0
 	}
 }
