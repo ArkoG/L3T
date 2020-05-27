@@ -54,6 +54,10 @@ laws = {
 		}
 		allow = {
 			has_law = tax_levy_law_feudal_1
+			OR = {
+				has_law = centralization_4 #max
+				has_law = centralization_3 #high
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -125,6 +129,11 @@ laws = {
 			OR = {
 				has_law = tax_levy_law_feudal_0
 				has_law = tax_levy_law_feudal_2			
+			}
+			OR = {
+				has_law = centralization_4 #max
+				has_law = centralization_3 #high
+				has_law = centralization_2 #medium
 			}
 		}
 		revoke_allowed = {
@@ -217,7 +226,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.1
 		castle_vassal_max_levy = -0.7
-		castle_vassal_tax_modifier = 0.35
+		castle_vassal_tax_modifier = 0.3 #L3T ex 0.35
 	}
 	
 	tax_levy_law_feudal_2 = {
@@ -235,6 +244,12 @@ laws = {
 			OR = {
 				has_law = tax_levy_law_feudal_1
 				has_law = tax_levy_law_feudal_3			
+			}
+			OR = {
+				has_law = centralization_4 #max
+				has_law = centralization_3 #high
+				has_law = centralization_2 #medium
+				has_law = centralization_1 #low
 			}
 		}
 		revoke_allowed = {
@@ -327,7 +342,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.2
 		castle_vassal_max_levy = -0.6
-		castle_vassal_tax_modifier = 0.3
+		castle_vassal_tax_modifier = 0.2  #L3T ex 0.3
 	}
 	
 	tax_levy_law_feudal_3 = {
@@ -345,6 +360,12 @@ laws = {
 			OR = {
 				has_law = tax_levy_law_feudal_2
 				has_law = tax_levy_law_feudal_4			
+			}
+			OR = {
+				has_law = centralization_4 #max
+				has_law = centralization_3 #high
+				has_law = centralization_2 #medium
+				has_law = centralization_1 #low
 			}
 		}
 		revoke_allowed = {
@@ -437,7 +458,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.3
 		castle_vassal_max_levy = -0.5
-		castle_vassal_tax_modifier = 0.25
+		castle_vassal_tax_modifier = 0.1  #L3T ex 0.25
 	}
 	
 	tax_levy_law_feudal_4 = {
@@ -548,7 +569,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.4
 		castle_vassal_max_levy = -0.4
-		castle_vassal_tax_modifier = 0.2
+		castle_vassal_tax_modifier = 0.05  #L3T ex 0.2
 	}
 	
 	tax_levy_law_feudal_5 = {
@@ -658,7 +679,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.5
 		castle_vassal_max_levy = -0.3
-		castle_vassal_tax_modifier = 0.15
+		#castle_vassal_tax_modifier = 0.15
 	}
 	
 	tax_levy_law_feudal_6 = {
@@ -768,7 +789,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.6
 		castle_vassal_max_levy = -0.2
-		castle_vassal_tax_modifier = 0.1
+		#castle_vassal_tax_modifier = 0.1
 	}
 	
 	tax_levy_law_feudal_7 = {
@@ -878,7 +899,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.7
 		castle_vassal_max_levy = -0.1
-		castle_vassal_tax_modifier = 0.05
+		#castle_vassal_tax_modifier = 0.05
 	}
 	
 	tax_levy_law_feudal_8 = {
@@ -940,7 +961,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.8
 		castle_vassal_max_levy = 0
-		castle_vassal_tax_modifier = 0
+		#castle_vassal_tax_modifier = 0
 	}
 	
 	tax_levy_law_iqta_0 = {
@@ -956,6 +977,11 @@ laws = {
 		}
 		allow = {
 			has_law = tax_levy_law_iqta_1
+			OR = {
+				has_law = centralization_4 #max
+				has_law = centralization_3 #high
+
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -1028,6 +1054,11 @@ laws = {
 			OR = {
 				has_law = tax_levy_law_iqta_0
 				has_law = tax_levy_law_iqta_2
+			}
+			OR = {
+				has_law = centralization_4 #max
+				has_law = centralization_3 #high
+				has_law = centralization_2 #medium
 			}
 		}
 		revoke_allowed = {
@@ -1120,7 +1151,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.05
 		castle_vassal_max_levy = -0.75
-		castle_vassal_tax_modifier = 0.4
+		castle_vassal_tax_modifier = 0.35 #L3T ex 0.4
 	}
 	
 	tax_levy_law_iqta_2 = {
@@ -1138,6 +1169,12 @@ laws = {
 			OR = {
 				has_law = tax_levy_law_iqta_1
 				has_law = tax_levy_law_iqta_3
+			}
+			OR = {
+				has_law = centralization_4 #max
+				has_law = centralization_3 #high
+				has_law = centralization_2 #medium
+				has_law = centralization_1 #low
 			}
 		}
 		revoke_allowed = {
@@ -1230,7 +1267,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.15
 		castle_vassal_max_levy = -0.65
-		castle_vassal_tax_modifier = 0.35
+		castle_vassal_tax_modifier = 0.3 #L3T ex 0.35
 	}
 	
 	tax_levy_law_iqta_3 = {
@@ -1248,6 +1285,12 @@ laws = {
 			OR = {
 				has_law = tax_levy_law_iqta_2
 				has_law = tax_levy_law_iqta_4
+			}
+			OR = {
+				has_law = centralization_4 #max
+				has_law = centralization_3 #high
+				has_law = centralization_2 #medium
+				has_law = centralization_1 #low
 			}
 		}
 		revoke_allowed = {
@@ -1340,7 +1383,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.25
 		castle_vassal_max_levy = -0.55
-		castle_vassal_tax_modifier = 0.3
+		castle_vassal_tax_modifier = 0.15 L3T ex 0.3
 	}
 	
 	tax_levy_law_iqta_4 = {
@@ -1451,7 +1494,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.35
 		castle_vassal_max_levy = -0.45
-		castle_vassal_tax_modifier = 0.25
+		castle_vassal_tax_modifier = 0.10 #L3T ex 0.25
 	}
 	
 	tax_levy_law_iqta_5 = {
@@ -1561,7 +1604,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.45
 		castle_vassal_max_levy = -0.35
-		castle_vassal_tax_modifier = 0.2
+		#castle_vassal_tax_modifier = 0.2
 	}
 	
 	tax_levy_law_iqta_6 = {
@@ -1671,7 +1714,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.55
 		castle_vassal_max_levy = -0.25
-		castle_vassal_tax_modifier = 0.15
+		#castle_vassal_tax_modifier = 0.15
 	}
 	
 	tax_levy_law_iqta_7 = {
@@ -1781,7 +1824,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.65
 		castle_vassal_max_levy = -0.15
-		castle_vassal_tax_modifier = 0.1
+		#castle_vassal_tax_modifier = 0.1
 	}
 	
 	tax_levy_law_iqta_8 = {
@@ -1843,7 +1886,7 @@ laws = {
 		}
 		castle_vassal_min_levy = 0.75
 		castle_vassal_max_levy = -0.05
-		castle_vassal_tax_modifier = 0.05
+		#castle_vassal_tax_modifier = 0.05
 	}
 	
 	tax_levy_law_republic_0 = {
