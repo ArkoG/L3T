@@ -1162,7 +1162,7 @@ castle = {
 	CA_prison_L1 = { #
 		desc = prison_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
-		prerequisites = { FEODAL_mil }
+		prerequisites = { FEODAL_mil ca_keep_2 }
 		gold_cost = 125
 		build_time = 365
 		ai_creation_factor = 95
