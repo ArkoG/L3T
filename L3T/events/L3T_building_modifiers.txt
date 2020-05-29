@@ -1146,6 +1146,7 @@ character_event = {
 		FROM = { 
 			tier = baron	
 			holding_type = castle
+			has_building = FEODAL_mil
 		}
 	}
 	
@@ -1159,9 +1160,11 @@ character_event = {
 					NOT = { check_variable = { which = "prison_capacity" value = 0 }}
 				}
 			}		
-			set_variable = { which = "prison_capacity" value = 0 }
-			change_variable = { which = "prison_capacity" value = 1 }
-		}
+			FROM = { 
+				set_variable = { which = "prison_capacity" value = 0 }
+				change_variable = { which = "prison_capacity" value = 1 }
+			}
+			}
 		if = {
 			limit = {
 				FROM = {
@@ -1173,7 +1176,7 @@ character_event = {
 					check_variable = { which = "prison_capacity" value = 0 }
 				}
 			}
-			change_variable = { which = "prison_capacity" value = 1 }
+			FROM = { change_variable = { which = "prison_capacity" value = 1 }}
 		}
 		if = {
 			limit = {
@@ -1186,7 +1189,7 @@ character_event = {
 					check_variable = { which = "prison_capacity" value = 0 }
 				}
 			}
-			change_variable = { which = "prison_capacity" value = 1 }
+			FROM = { change_variable = { which = "prison_capacity" value = 1 }}
 		}
 	}
 }
