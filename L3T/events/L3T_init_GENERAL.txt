@@ -32,6 +32,7 @@ character_event = {
 }
 
 ## Détection de la carte
+#pops on day1
 character_event = {
     id = L3T.10
 	title = { 
@@ -94,7 +95,7 @@ character_event = {
 		}
 		##triggers mountain passes attribution
 		any_province = {
-			province_event = { id = L3T.28 days = 25 random = 15} #attribution cols
+			province_event = { id = L3T.28 days = 7 random = 7} #attribution cols
 			set_province_flag = had_event_LT_60001 #to prevent additional holding slot from wonders
 			set_variable = { which = "was_christian_for" value = 0 }
 			set_variable = { which = "was_muslim_for" value = 0 }
@@ -490,11 +491,11 @@ province_event = {
 						NOT = { tier = baron }
 					}
 				}
-				province_event = { id = L3T.41 days = 10 }
+				province_event = { id = L3T.41 } #no delay unless I am adding some hardcode pre-set
 				break = yes
 			}
 			# The other are delayed
-			province_event = { id = L3T.41 days = 60 }
+			province_event = { id = L3T.41 days = 1 }
 		}
 	}
 }
@@ -521,14 +522,14 @@ province_event = {
 				NOT = { any_neighbor_province = { terrain = mountain }} #isolated mountains will receive a minor pass
 			}
 		add_province_modifier = { name = minor_pass	duration = -1 }
-		province_event = { id = L3T.29 days = 25 }
+		province_event = { id = L3T.29 days = 20 random = 5 }
 		}
 		if = {
 			limit = { 
 				any_neighbor_province = { terrain = mountain }	
 			}
 		add_province_modifier = { name = great_pass	duration = -1 }
-		province_event = { id = L3T.29 days = 25 }
+		province_event = { id = L3T.29 days = 10 random = 5 }
 		}
 	}
 }
