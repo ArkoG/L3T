@@ -607,7 +607,6 @@ targetted_decisions = {
 			}
 		}		
 			
-		}
 		allow = {
 			prisoner = yes
 		}
@@ -647,7 +646,10 @@ targetted_decisions = {
 			modifier = {
 				factor = 0.5 # Less likely to do it
 			}
-
+			modifier = {
+				factor = 1.1
+				is_landed = yes
+			}
 			modifier = {
 				factor = 0.9
 				tier = baron
