@@ -591,23 +591,22 @@ targetted_decisions = {
 			prisoner = yes
 			NOT = { has_character_modifier = the_fortress }
 		}
-			
-		FROM = { 
-			any_demesne_title = {
-				tier = baron
-				holding_type = castle
-				#have to wait the construction to be finished, even if the variable is here already
-				OR = {
-					has_building = CA_prison_L1
-					has_building = CA_prison_L2
-					has_building = CA_prison_L3
+
+		allow = {			
+			FROM = { 
+				any_demesne_title = {
+					tier = baron
+					holding_type = castle
+					#have to wait the construction to be finished, even if the variable is here already
+					OR = {
+						has_building = CA_prison_L1
+						has_building = CA_prison_L2
+						has_building = CA_prison_L3
+					}
+					check_variable = { which = "prison_capacity" value = 1 }#1 or more
+					save_event_target_as = your_new_home
 				}
-				check_variable = { which = "prison_capacity" value = 1 }#1 or more
-				save_event_target_as = your_new_home
-			}
-		}		
-			
-		allow = {
+			}		
 			prisoner = yes
 		}
 		effect = {
