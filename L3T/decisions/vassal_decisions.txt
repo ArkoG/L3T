@@ -598,18 +598,37 @@ targetted_decisions = {
 					tier = baron
 					holding_type = castle
 					#have to wait the construction to be finished, even if the variable is here already
-					OR = {
+					#OR = {
 						has_building = CA_prison_L1
-						has_building = CA_prison_L2
-						has_building = CA_prison_L3
-					}
-					check_variable = { which = "prison_capacity" value = 1 }#1 or more
-					save_event_target_as = your_new_home
+					#	has_building = CA_prison_L2
+					#	has_building = CA_prison_L3
+					#}
+					#check_variable = { which = "prison_capacity" value = 1 }#1 or more
+					#save_event_target_as = your_new_home
 				}
-			}		
+			}
 			prisoner = yes
 		}
 		effect = {
+			custom_tooltip = { text = has_a_warm_prison }
+			hidden_tooltip = {
+				FROM = { 
+					random_demesne_title = {
+						limit = {
+							tier = baron
+							holding_type = castle
+							#have to wait the construction to be finished, even if the variable is here already
+							#OR = {
+								has_building = CA_prison_L1
+							#	has_building = CA_prison_L2
+							#	has_building = CA_prison_L3
+							#}
+							#check_variable = { which = "prison_capacity" value = 1 }#1 or more
+						}
+						#save_event_target_as = your_new_home
+					}
+				}
+			}
 			add_character_modifier = { 
 				name = the_fortress
 				duration = -1
@@ -619,8 +638,8 @@ targetted_decisions = {
 				remove_character_modifier = house_arrest
 				remove_character_modifier = the_oubliette
 			}
-			event_target:your_new_home = { change_variable = { which = "prison_capacity" value = -1 }}
-			clear_event_target = your_new_home 
+			#event_target:your_new_home = { change_variable = { which = "prison_capacity" value = -1 }}
+			#clear_event_target = your_new_home 
 		}
 		
 		revoke_allowed = {
