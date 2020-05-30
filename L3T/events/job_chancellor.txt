@@ -1330,7 +1330,7 @@ character_event = {
 			50 = {
 				#L3T ruler's VS chancellor's intrigue comes into play for success
 				job_event_mtth_modifier_inverted_intrigue_score = yes #ruler's intrigue
-				FROM = { job_event_mtth_modifier_intrigue_score = yes } #chancellor's intrigue
+				from_job_event_mtth_modifier_intrigue_score = yes #chancellor's intrigue
 				#
 				
 				FROM = {
@@ -1388,25 +1388,29 @@ character_event = {
 		########BANISH HIM logic
 			factor = 35
 			modifier = { factor = 1.2 has_education_martial_trigger = yes }
-			modifier = { factor = 1.2 as_lifestyle_martial_trigger = yes }
+			modifier = { factor = 1.2 has_lifestyle_martial_trigger = yes }
 		}
+		
+		save_event_target_as = claim_noble
+		FROM = { save_event_target_as = claim_chancellor }
+		FROM = { liege = { save_event_target_as = claim_liege }}
 		
 		random_list = {
 			50 = {
 				#L3T ruler's VS chancellor's martial comes into play for success
 				job_event_mtth_modifier_inverted_martial_score = yes #ruler's martial
 				job_event_mtth_modifier_inverted_intrigue_score = yes #ruler's intrigue to get it discreet enough
-				FROM = { job_event_mtth_modifier_martial_score = yes } #chancellor's martial
+				from_job_event_mtth_modifier_martial_score = yes  #chancellor's martial
 				
-				FROM = {
-					character_event = { id = L3T.80 tooltip = "EVTTOOLTIP20148" }
+				event_target:claim_chancellor = {
+					character_event = { id = L3T.80 tooltip = "EVTTOOLTIPL3T80" }
 				}
 			}
 			50 = {
 				#intrigue test on the chancellor to know about the planned arrestation
-				FROM = { job_event_mtth_modifier_inverted_intrigue_score = yes }
-				FROM {
-					character_event = { id = L3T.81 days = 7 tooltip = "EVTTOOLTIP20149" }
+				from_job_event_mtth_modifier_inverted_intrigue_score = yes #FROM scope is inside
+				event_target:claim_chancellor = {
+					character_event = { id = L3T.81 days = 7 tooltip = "EVTTOOLTIPL3T81" }
 				}
 			}
 		}
