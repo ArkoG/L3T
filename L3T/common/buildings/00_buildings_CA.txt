@@ -1162,12 +1162,15 @@ castle = {
 	CA_prison_L1 = { #
 		desc = prison_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
+		potential = {
+			FROMFROM = { has_building = FEODAL_mil } #doesn't work despite being used in vanilla
+		}
 		prerequisites = { FEODAL_mil ca_keep_2 }
 		gold_cost = 125
 		build_time = 365
 		ai_creation_factor = 95
 		
-		fort_level = 1.0
+		fort_level = 0.5
 		tax_income = -0.1
 		#add_number_to_name = no
 		extra_tech_building_start = 10.0
@@ -1182,7 +1185,7 @@ castle = {
 		ai_creation_factor = 93
 		
 		fort_level = 0.5
-		tax_income = -0.1
+		tax_income = -0.2
 		#add_number_to_name = no
 		extra_tech_building_start = 10.0
 	}
