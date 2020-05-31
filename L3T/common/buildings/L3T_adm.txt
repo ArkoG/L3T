@@ -12,6 +12,12 @@ temple = {
 			CITEEPISCOPALE
 			BOURG_EPISCOPAL
 		}
+		potential = {
+			religion_group = christian
+		}
+		is_active_trigger = {
+			religion_group = christian
+		}
 		gold_cost = 100
 		build_time = 180
 		ai_creation_factor = 97
@@ -33,6 +39,9 @@ temple = {
 		not_if_x_exists = {
 			CITEEPISCOPALE
 			BOURG_EPISCOPAL
+		}
+		is_active_trigger = {
+			religion_group = christian
 		}
 		upgrades_from = tp_monastery_1
 		gold_cost = 140
@@ -61,6 +70,9 @@ temple = {
 			CITEEPISCOPALE
 			BOURG_EPISCOPAL
 		}
+		is_active_trigger = {
+			religion_group = christian
+		}
 		upgrades_from = tp_monastery_2
 		gold_cost = 170
 		#prestige_cost = 70
@@ -88,6 +100,9 @@ temple = {
 		not_if_x_exists = {
 			CITEEPISCOPALE
 			BOURG_EPISCOPAL
+		}
+		is_active_trigger = {
+			religion_group = christian
 		}
 		upgrades_from = tp_monastery_3
 		gold_cost = 520
@@ -120,6 +135,9 @@ temple = {
 			CITEEPISCOPALE
 			BOURG_EPISCOPAL
 		}
+		is_active_trigger = {
+			religion_group = christian
+		}
 		upgrades_from = tp_monastery_4
 		gold_cost = 450
 		#prestige_cost = 120
@@ -141,9 +159,9 @@ temple = {
 			TECH_CONSTRUCTION = 0
 			is_catholic_group= yes
 		}
-		potential = {
-			is_catholic_group= yes
-		}
+		#potential = {
+		#	is_catholic_group= yes
+		#}
 		prerequisites = { 
 		}
 		not_if_x_exists = {
