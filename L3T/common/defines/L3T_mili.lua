@@ -20,7 +20,7 @@
 	--ex 15
 	NDefines.NMilitary.NAVY_MOVEMENT_SPEED = 12						-- Base movement speed of naval units
 	--ex 1.0 doesn't work on startup given troops like for william
-	NDefines.NMilitary.EVENT_TROOPS_SIZE_MULT = 0.7							-- Applied to match_mult to determine size of troops spawned from events & history
+	NDefines.NMilitary.EVENT_TROOPS_SIZE_MULT = 0.6							-- Applied to match_mult to determine size of troops spawned from events & history
 	NDefines.NMilitary.RETINUE_HIRE_COST_MULTIPLIER = 0.14			-- Retinues are free to hire atm, but they cost a lot to reinforce
 	--ex 0.025
 	NDefines.NMilitary.RETINUE_REINFORCE_RATE = 0.02
