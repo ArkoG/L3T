@@ -1683,10 +1683,10 @@ character_event = {
 			has_character_modifier = the_fortress #L3T
 		}
 		modifier = {
-			factor = 0.001
+			factor = 0.01
 			has_global_flag = debug_L3T
 		}
-	}	
+	}
 
 	immediate = {
 		set_character_flag = nag_pope_to_help_me
@@ -1950,7 +1950,8 @@ character_event = {
 			is_theocracy = yes
 			religion = orthodox
 			imprisoned_days = 100
-			host = { character = ROOT }		
+			host = { character = ROOT }	
+			NOT = { has_character_modifier = the_fortress } #L3T
 		}
 	}
 	
@@ -1980,7 +1981,6 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA39230"	#let him go
-		ai_chance = 100
 		random_courtier = {
 			limit = {
 				prisoner = yes
@@ -1989,29 +1989,6 @@ character_event = {
 				imprisoned_days = 100
 				is_theocracy = yes
 				host = { character = ROOT }	
-				has_character_modifier = the_fortress #L3T
-			}
-			prisoner = no 
-		}
-		religion_authority = {
-			modifier = ruler_bowed_to_patriarch
-			years = 10
-		}
-		piety = 10
-	}
-	
-	option = {
-		name = "EVTOPTA39230"	#let him go
-		ai_chance = 50		
-		random_courtier = {
-			limit = {
-				prisoner = yes
-				demesne_size = 1
-				religion = orthodox
-				imprisoned_days = 100
-				is_theocracy = yes
-				host = { character = ROOT }	
-				has_character_modifier = the_fortress #L3T
 			}
 			prisoner = no 
 		}
@@ -2024,7 +2001,6 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTB39230"	#refuse
-		ai_chance = 100
 		piety = -25
 		prestige = -25
 		religion_authority = {
