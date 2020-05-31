@@ -1102,6 +1102,25 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 50
+		#L3T make it less likely if in fortress prison
+		modifier = {
+			factor = 2
+			liege = {
+				num_of_prisoners = 1
+				NOT = { character = ROOT }
+				any_realm_lord = {
+					prisoner = yes
+					host = { 
+						character = PREV
+					}
+					is_friend = ROOT
+					NOT = {
+						has_character_modifier = petition_release_prisoner_timer
+					}
+					has_character_modifier = the_fortress
+				}
+			}			
+		}	
 	}
 	
 	option = {
@@ -1171,6 +1190,50 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA50026"
+		ai_chance = 100
+		trigger = {
+			random_realm_lord = {
+				limit = {
+					prisoner = yes
+					has_character_modifier = petition_release_prisoner_timer
+					NOT = { has_character_modifier = the_fortress }
+				}
+				prisoner = no
+			}			
+		}
+		prestige = -50
+		random_realm_lord = {
+			limit = {
+				prisoner = yes
+				has_character_modifier = petition_release_prisoner_timer
+			}
+			prisoner = no
+		}
+		any_vassal = {
+			limit = {
+				prisoner = no
+			}
+			opinion = {
+				modifier = opinion_released_prisoner
+				who = ROOT
+				months = 30
+			}
+		}
+	}
+	#alternate if in fortress, less likely to accept liberation
+	option = {
+		name = "EVTOPTA50026"
+		ai_chance = 50
+		trigger = {
+			random_realm_lord = {
+				limit = {
+					prisoner = yes
+					has_character_modifier = petition_release_prisoner_timer
+					has_character_modifier = the_fortress
+				}
+				prisoner = no
+			}			
+		}
 		prestige = -50
 		random_realm_lord = {
 			limit = {
@@ -1192,6 +1255,7 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTB50026"
+		ai_chance = 100
 		any_vassal = {
 			limit = {
 				liege = {
