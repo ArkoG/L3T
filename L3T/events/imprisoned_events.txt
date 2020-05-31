@@ -305,6 +305,11 @@ character_event = {
 			factor = 2.0
 			trait = content
 		}
+		#L3T much less liekly to ask from the fortress
+		modifier = {
+			factor = 4.0
+			has_character_modifier = the_fortress
+		}		
 	}
 	
 	option = {
@@ -354,7 +359,12 @@ character_event = {
 			weight_trait_check_effect = yes
 		}
 
-		ai_chance = { factor = 34 }
+		ai_chance = { 
+			factor = 34
+			#L3T more likely denied  if in fortress
+			modifier = { factor = 3.0 FROM = { has_character_modifier = the_fortress }}
+		}
+		
 		reverse_opinion = {
 			who = FROM
 			modifier = opinion_angry
@@ -519,6 +529,7 @@ character_event = {
 			remove_character_modifier = house_arrest
 			remove_character_modifier = the_dungeon
 			remove_character_modifier = the_oubliette
+			remove_character_modifier = the_fortress #L3T
 		}
 		if = {
 			limit = {
@@ -554,6 +565,7 @@ character_event = {
 			remove_character_modifier = house_arrest
 			remove_character_modifier = the_dungeon
 			remove_character_modifier = the_oubliette
+			remove_character_modifier = the_fortress #L3T
 		}
 		if = {
 			limit = {
@@ -588,6 +600,7 @@ character_event = {
 			remove_character_modifier = house_arrest
 			remove_character_modifier = the_dungeon
 			remove_character_modifier = the_oubliette
+			remove_character_modifier = the_fortress #L3T
 		}
 		reverse_add_favor = FROM
 		prisoner = no
