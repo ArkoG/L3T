@@ -31,6 +31,52 @@ character_event = {
 	}
 }
 
+province_event = { 
+    id = L3T.2
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		#technology adjusting
+		if = {
+			limit = {	
+				#pre-1000 - shirmish bonus
+				NOT = { year = 1000 }
+				OR = {
+					owner = { is_tribal = yes }
+					#owner = { is_nomadic = yes }
+					religion_group = pagan_group
+				}
+			}
+			location = {
+				change_tech = {
+					technology = TECH_SKIRMISH
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {	
+				#pre-1100 - feudal
+				NOT = { year = 1100 }
+				NOT = {
+					owner = { is_tribal = yes }
+					owner = { is_nomadic = yes }
+					religion_group = pagan_group
+				}
+			}
+			location = {
+				change_tech = {
+					technology = TECH_SIEGE_EQUIPMENT
+					value = 1.2
+				}
+			}
+		}
+	}
+}
+			
+
 ## Détection de la carte
 #pops on day1
 character_event = {
@@ -317,6 +363,7 @@ province_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		province_event = { id = L3T.2  days = 1 } #technology adjusting
 		province_event = { id = ECO.1 }
 		province_event = { id = ECO.2 }
 		province_event = { id = ECO.3 }
