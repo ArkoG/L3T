@@ -30,7 +30,10 @@ republic_governments = {
 					religion = norse_pagan_reformed
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
-				religion = paulician
+				AND = {
+					has_global_flag = SWMH
+					religion = paulician
+				}
 			}
 			#is_female = no
 			OR = {
@@ -118,8 +121,20 @@ republic_governments = {
 			NAND = {
 				controls_religion = yes
 				NOT = { religion_group = muslim }
-				NOT = { religion = norse_pagan_reformed }
-				NOT = { religion = paulician }
+				#NOT = { religion = norse_pagan_reformed }
+				#NOT = { religion = paulician }
+			}
+			NOT = {
+				AND = {
+					has_global_flag = SWMH
+					NOT = { religion = norse_pagan_reformed }
+				}
+			}
+			NOT = {
+				AND = {
+					has_global_flag = SWMH
+					NOT = { religion = paulician }
+				}
 			}
 			NOT = { is_government_potential = merchant_republic_government }
 			holy_order = no

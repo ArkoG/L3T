@@ -27,7 +27,10 @@ feudal_governments = {
 					religion = norse_pagan_reformed
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
-				religion = paulician
+				AND = {
+					has_global_flag = SWMH
+					religion = paulician
+				}
 			}
 			NOT = {	religion_group = muslim	}
 			NOT = { is_government_potential = roman_imperial_government }
@@ -103,7 +106,10 @@ feudal_governments = {
 					religion = norse_pagan_reformed
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
-				religion = paulician
+				AND = {
+					has_global_flag = SWMH
+					religion = paulician
+				}
 			}
 			religion_group = muslim
 			NOT = { is_government_potential = roman_imperial_government }
@@ -176,7 +182,10 @@ feudal_governments = {
 					religion = norse_pagan_reformed
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
-				religion = paulician
+				AND = {
+					has_global_flag = SWMH
+					religion = paulician
+				}
 			}
 			NOT = {	religion_group = muslim	}
 			NOT = { is_government_potential = roman_imperial_government }
