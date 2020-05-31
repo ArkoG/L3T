@@ -129,6 +129,7 @@ character_event = {
 		job_treasurer = { 
 			stewardship = 16
 			NOT = { has_character_modifier = STW_extra_work }
+			NOT = { trait = pregnant }
 		}
 	}
 	
@@ -177,14 +178,19 @@ character_event = {
 	is_triggered_only = yes 
 	
 	trigger = {
-		AND = {
-			OR = {
-				ROOT = { has_job_title = job_treasurer }
-				ROOT = { any_courtier = { has_job_title = job_treasurer }}
+		OR = {
+			#treasurer is dying
+			ROOT = { 
+				has_job_title = job_treasurer
+				has_character_modifier = STW_extra_work
+				employer = { has_character_modifier = STW_delegation }
 			}
-			OR = {
-				ROOT = { has_character_modifier = STW_extra_work }
-				ROOT = { has_character_modifier = STW_delegation }
+			#employer is dying
+			ROOT = { 
+				job_treasurer= { 
+					has_character_modifier = STW_extra_work
+				}
+				has_character_modifier = STW_delegation
 			}
 		}
 	}
@@ -194,11 +200,13 @@ character_event = {
 			limit = {
 				#dead steward
 				ROOT = {
+					has_job_title = job_treasurer
 					has_character_modifier = STW_extra_work
+					employer = { has_character_modifier = STW_delegation }
 				}
 			}
 			ROOT = {
-				liege = {
+				employer = {
 					#remove_character_modifier = STW_delegation
 					character_event = { id = L3T.96 }
 				}
@@ -209,6 +217,9 @@ character_event = {
 				#dead ruler
 				ROOT = {
 					has_character_modifier = STW_delegation
+					job_treasurer= { 
+						has_character_modifier = STW_extra_work
+					}
 				}
 			}
 			ROOT = {
@@ -231,24 +242,18 @@ character_event = {
 	is_triggered_only = yes 
 
 	trigger = {
-		AND = {
-			OR = {
+		OR = {
+			##fixing asymetry
+			#is the treasurer but has no corresponding liege (délégant)
+			AND = {
 				has_job_title = job_treasurer
-				any_courtier = { has_job_title = job_treasurer }
+				has_character_modifier = STW_extra_work
+				liege = { NOT = { has_character_modifier = STW_delegation }}
 			}
-			OR = {
-				##fixing asymetry
-				#is the chancellor but has no corresponding liege (délégant)
-				AND = {
-					has_job_title = job_treasurer
-					has_character_modifier = STW_extra_work
-					liege = { NOT = { has_character_modifier = STW_delegation }}
-				}
-				#is the liege but no corresponding chancellor (délégataire)
-				AND = {
-					has_character_modifier = STW_delegation
-					job_treasurer = { NOT = { has_character_modifier = STW_delegation }}
-				}
+			#is the liege but no corresponding chancellor (délégataire)
+			AND = {
+				has_character_modifier = STW_delegation
+				job_treasurer = { NOT = { has_character_modifier = STW_extra_work }}
 			}
 		}
 	}
@@ -260,6 +265,7 @@ character_event = {
 				liege = { NOT = { has_character_modifier = STW_delegation }}
 			}
 			remove_character_modifier = STW_extra_work
+			set_character_flag = removed_by_93
 		}
 		if = {
 			limit = {
@@ -267,6 +273,7 @@ character_event = {
 				job_treasurer = { NOT = { has_character_modifier = STW_delegation }}
 			}	
 			remove_character_modifier = STW_delegation
+			set_character_flag = removed_by_93
 		}
 	}
 }
@@ -298,17 +305,29 @@ character_event = {
 		name = "L3T.94A"
 		trigger = {
 			NOT = { has_job_title = job_treasurer }
+			has_character_modifier = STW_delegation
+			job_treasurer = { has_character_modifier = STW_extra_work }
 		}
 		remove_character_modifier = STW_delegation
-		job_treasurer = { remove_character_modifier = STW_extra_work } #to ping him in the event option
+		set_character_flag = removed_by_94
+		job_treasurer = { 
+			remove_character_modifier = STW_extra_work
+			set_character_flag = removed_by_94
+		} #to ping him in the event option
 	}
 	option = {
 		name = "L3T.94A"
 		trigger = {
 			has_job_title = job_treasurer
+			has_character_modifier = STW_extra_work
+			employer = { has_character_modifier = STW_delegation }
 		}		
 		remove_character_modifier = STW_extra_work
-		liege = { remove_character_modifier = STW_delegation } #to ping him in the event option
+		set_character_flag = removed_by_94
+		employer = { 
+			remove_character_modifier = STW_delegation
+			set_character_flag = removed_by_94
+		} #to ping him in the event option
 	}
 }
 # L3T.95 - inform liege and treasurer about the end of delegation (due to steward)
@@ -341,7 +360,11 @@ character_event = {
 			NOT = { has_job_title = job_treasurer }
 		}
 		remove_character_modifier = STW_delegation
-		job_treasurer = { remove_character_modifier = STW_extra_work }#to ping him in the event option
+		set_character_flag = removed_by_95
+		job_treasurer = { 
+			remove_character_modifier = STW_extra_work
+			set_character_flag = removed_by_95
+		}#to ping him in the event option
 	}
 	option = {
 		name = "L3T.95A"
@@ -349,7 +372,11 @@ character_event = {
 			has_job_title = job_treasurer
 		}		
 		remove_character_modifier = STW_extra_work
-		liege = { remove_character_modifier = STW_delegation }#to ping him in the event option
+		set_character_flag = removed_by_95
+		employer = { 
+			remove_character_modifier = STW_delegation
+			set_character_flag = removed_by_95
+		}#to ping him in the event option
 	}
 }
 
@@ -363,6 +390,8 @@ character_event = {
 	desc = {
 		trigger = {
 			NOT = { has_job_title = job_treasurer }
+			has_character_modifier = STW_delegation
+			job_treasurer = { has_character_modifier = STW_extra_work }
 		}
 		text = "DESCL3T.96a"
 		picture = GFX_evt_death
@@ -370,6 +399,8 @@ character_event = {
 	desc = {
 		trigger = {
 			has_job_title = job_treasurer
+			has_character_modifier = STW_extra_work
+			employer = { has_character_modifier = STW_delegation }
 		}
 		text = "DESCL3T.96b"
 		picture = GFX_evt_death
@@ -381,16 +412,22 @@ character_event = {
 		name = "L3T.96A"
 		trigger = {
 			NOT = { has_job_title = job_treasurer }
+			has_character_modifier = STW_delegation
+			job_treasurer = { has_character_modifier = STW_extra_work }
 		}
 		remove_character_modifier = STW_delegation
+		set_character_flag = removed_by_96
 		#job_treasurer = { remove_character_modifier = STW_extra_work } #to ping him in the event option
 	}
 	option = {
 		name = "L3T.96A"
 		trigger = {
 			has_job_title = job_treasurer
+			has_character_modifier = STW_extra_work
+			employer = { has_character_modifier = STW_delegation }
 		}		
 		remove_character_modifier = STW_extra_work
+		set_character_flag = removed_by_96
 		#liege = { remove_character_modifier = STW_delegation } #to ping him in the event option
 	}
 }
