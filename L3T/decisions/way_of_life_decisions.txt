@@ -625,6 +625,7 @@ targetted_decisions = {
 		allow = {
 			NOT = { trait = incapable }
 			NOT = { has_character_modifier = failed_escape }
+			NOT = { has_character_modifier = the_fortress } #L3T may extend
 		}
 		
 		effect = {
