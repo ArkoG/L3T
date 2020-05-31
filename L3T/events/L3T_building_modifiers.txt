@@ -1136,6 +1136,9 @@ character_event = {
 		remove_feodal_adm_modifier_if_necessary = yes
 	}
 }
+
+#doesn't work correctly, it should start only for actual prison, needs to mark the owner aswell maybe
+#so not used ATM
 character_event = {
 	id = L3T.249
 	
@@ -1164,7 +1167,7 @@ character_event = {
 				set_variable = { which = "prison_capacity" value = 0 }
 				change_variable = { which = "prison_capacity" value = 1 }
 			}
-			}
+		}
 		if = {
 			limit = {
 				FROM = {
