@@ -312,8 +312,8 @@ on_wonder_stage_loot_finish = {
 #character. Triggers if someone is released from prison - ROOT is prisoner, FROM is imprisoner
 on_released_from_prison = {
 	events = {
-	#L3T.2490 #released from fortress prison (frees on imprisoning slot)
-		}
+		L3T.2490 #released from fortress prison (frees on imprisoning slot), removes the prison modifier
+	}
 }
 
 #character. Triggers if someone is executed, character not dead yet
@@ -322,9 +322,11 @@ on_executed = {
  		#L3T.2490 #executed when was in fortress prison (frees on imprisoning slot)
  	}
 }
+
+#root is the prisoner too
 RANSOM_CHARACTER_INTERACTION_ACCEPT_EVENT = {
 	events = {
-		#L3T.2490
+		L3T.2490 #removes the prison modifier
 	}
 }
 
