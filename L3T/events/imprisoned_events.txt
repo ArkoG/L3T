@@ -311,13 +311,20 @@ character_event = {
 			has_character_modifier = the_fortress
 		}	
 		modifier = {
-			factor = 0.001
+			factor = 0.01
 			has_global_flag = debug_L3T
 		}		
 	}
 	
 	option = {
 		name = "EVTOPTA50005"
+		ai_chance = { 
+			factor = 100
+			modifier = {
+				factor = 20
+				has_global_flag = debug_L3T
+			}
+		}
 		set_character_flag = asked_for_better_prison
 		hidden_tooltip = {
 			host = {
@@ -331,6 +338,10 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTB50005" #I deserve this
+		ai_chance = { 
+			factor = 100
+			modifier = { factor = 3 has_character_modifier = the_fortress }
+		}
 		set_character_flag = asked_for_better_prison
 	}
 }
@@ -1061,7 +1072,7 @@ character_event = {
 		}
 		if = { #if not independent: Add notification sent to this character's liege
 			limit = {
-				independent = non
+				independent = no
 			}
 			character_event = { id = 50022 }
 		}
@@ -1151,6 +1162,7 @@ character_event = {
 					prisoner = yes
 					is_friend = ROOT
 				}
+				save_event_target_as = friend_2_free
 				score_value = { #Prioritizes selecting an interesting courtier...
 		            value = 10
 		            interesting_courtier_selection_score = yes
@@ -1207,16 +1219,9 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA50026"
-		ai_chance = 100
+		ai_chance = { factor = 100 }
 		trigger = {
-			random_realm_lord = {
-				limit = {
-					prisoner = yes
-					has_character_modifier = petition_release_prisoner_timer
-					NOT = { has_character_modifier = the_fortress }
-				}
-				prisoner = no
-			}			
+			event_target:friend_2_free = { NOT = { has_character_modifier = the_fortress }}		
 		}
 		prestige = -50
 		random_realm_lord = {
@@ -1240,16 +1245,9 @@ character_event = {
 	#alternate if in fortress, less likely to accept liberation
 	option = {
 		name = "EVTOPTA50026"
-		ai_chance = 50
+		ai_chance = { factor = 50 }
 		trigger = {
-			random_realm_lord = {
-				limit = {
-					prisoner = yes
-					has_character_modifier = petition_release_prisoner_timer
-					has_character_modifier = the_fortress
-				}
-				prisoner = no
-			}			
+			event_target:friend_2_free = { has_character_modifier = the_fortress }			
 		}
 		prestige = -50
 		random_realm_lord = {
@@ -1272,7 +1270,7 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTB50026"
-		ai_chance = 100
+		ai_chance = { factor = 100 }
 		any_vassal = {
 			limit = {
 				liege = {
