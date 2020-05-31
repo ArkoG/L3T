@@ -7865,9 +7865,10 @@ character_event = {
 	option = { #Prince-bishop Baptism
 		name = EVTOPTBHF20100
 		custom_tooltip = { text = tooltip_HF20100_B }
-		trigger = { event_target:scoped_bishop = { is_alive = yes } }
+		#trigger = { event_target:scoped_bishop = { is_alive = yes } }
 		show_portrait = scoped_bishop
 		trigger = { 
+			event_target:scoped_bishop = { is_alive = yes }
 			any_realm_character = { 
 				is_theocracy = yes 
 				top_liege = { character = ROOT }
