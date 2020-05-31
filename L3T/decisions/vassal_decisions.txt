@@ -133,6 +133,7 @@ targetted_decisions = {
 					}
 				}
 				prisoner = no
+				remove_character_modifier = the_fortress #L3T
 			}
 			opinion = {
 				modifier = opinion_castrated_me
@@ -286,6 +287,7 @@ targetted_decisions = {
 					}
 				}
 				prisoner = no
+				remove_character_modifier = the_fortress #L3T
 			}
 			opinion = {
 				modifier = opinion_blinded_me
@@ -416,6 +418,7 @@ targetted_decisions = {
 			host = { character = FROM }
 			prisoner = yes
 			NOT = { has_character_modifier = zun_judgement }
+			NOT = { has_character_modifier = the_fortress } #L3T
 		}
 		allow = {
 			prisoner = yes
