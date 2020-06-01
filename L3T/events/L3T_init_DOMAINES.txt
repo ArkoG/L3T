@@ -747,7 +747,7 @@ character_event = {
 						NOT = { religion_group = muslim }
 						any_province_holding = {
 							holding_type = city
-							NOT = { count = 2 }
+							count < 2
 							tier = baron
 						}
 					}
@@ -761,7 +761,7 @@ character_event = {
 				}
 				random_list = {
 					50 = { 
-						convert_to = CASTLE
+						convert_to = castle
 						refill_holding_levy = yes
 						holder_scope = { 	set_government_type = feudal_government }
 						#set_title_flag = city_2_convert
@@ -778,7 +778,7 @@ character_event = {
 						religion_group = muslim
 						any_province_holding = {
 							holding_type = city
-							NOT = { count = 2 }
+							count < 2
 							tier = baron
 						}
 					}
@@ -792,7 +792,7 @@ character_event = {
 				}
 				random_list = {
 					30 = { 
-						convert_to = CASTLE
+						convert_to = castle
 						refill_holding_levy = yes
 						holder_scope = { 	set_government_type = feudal_government }
 						#set_title_flag = city_2_convert
@@ -1150,12 +1150,14 @@ narrative_event = {
 			}
 		}
 		capital_holding = {
-			limit = {
-				location = { religion_group = christian }
-				has_title_flag = temple_to_specialize
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					has_title_flag = temple_to_specialize
+				}
+				clear_event_target = holding_to_spec
+				clr_title_flag = temple_to_specialize
 			}
-			clear_event_target = holding_to_spec
-			clr_title_flag = temple_to_specialize
 			if = {
 				limit = { 
 					location = { NOT = { has_province_modifier = relique_generique }}
