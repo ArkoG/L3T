@@ -1914,7 +1914,12 @@ narrative_event = {
 			check_variable = { which = "cadastre" value = 10 }
 			is_female = no
 			}
-		change_stewardship = 1
+		change_stewardship = 2
+		random = { 
+			chance = 20
+			modifier = { factor = 4 check_variable = { which = "cadastre" value = 12 }}
+			change_stewardship = 1 
+		}
 		hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		random_list = {
 			50 = { give_nickname = nick_larpenteur }
@@ -1933,7 +1938,12 @@ narrative_event = {
 			check_variable = { which = "cadastre" value = 10 }
 			is_female = yes
 			}
-		change_stewardship = 1
+		change_stewardship = 2
+		random = { 
+			chance = 20
+			modifier = { factor = 3 check_variable = { which = "cadastre" value = 12 }}
+			change_stewardship = 1 
+		}
 		hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		random_list = {
 			50 = { give_nickname = nick_larpenteuse }
@@ -1957,8 +1967,11 @@ narrative_event = {
 			50 = { give_nickname = nick_larpenteur }
 			50 = { give_nickname = nick_le_cartographe }
 			}
+		change_stewardship = 1 
 		random = { 
 			chance = 50
+			modifier = { factor = 0.8 NOT = { check_variable = { which = "cadastre" value = 8 }}}
+			modifier = { factor = 1.2 check_variable = { which = "cadastre" value = 9 }}
 			change_stewardship = 1 
 			hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		}
@@ -1980,8 +1993,11 @@ narrative_event = {
 			50 = { give_nickname = nick_larpenteuse }
 			50 = { give_nickname = nick_la_cartographe }
 			}
+		change_stewardship = 1 
 		random = { 
 			chance = 50
+			modifier = { factor = 0.8 NOT = { check_variable = { which = "cadastre" value = 8 }}}
+			modifier = { factor = 1.2 check_variable = { which = "cadastre" value = 9 }}
 			change_stewardship = 1 
 			hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		}
@@ -2004,7 +2020,9 @@ narrative_event = {
 			50 = { give_nickname = nick_le_cartographe }
 			}
 		random = { 
-			chance = 25
+			chance = 50
+			modifier = { factor = 0.8 NOT = { check_variable = { which = "cadastre" value = 5 }}}
+			modifier = { factor = 1.2 check_variable = { which = "cadastre" value = 6 }}
 			change_stewardship = 1 
 			hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		}
@@ -2027,7 +2045,9 @@ narrative_event = {
 			50 = { give_nickname = nick_la_cartographe }
 			}
 		random = { 
-			chance = 25
+			chance = 50
+			modifier = { factor = 0.8 NOT = { check_variable = { which = "cadastre" value = 5 }}}
+			modifier = { factor = 1.2 check_variable = { which = "cadastre" value = 6 }}
 			change_stewardship = 1 
 			hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		}
