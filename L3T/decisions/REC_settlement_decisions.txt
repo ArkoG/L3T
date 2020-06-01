@@ -27,10 +27,10 @@ settlement_decisions = {
 			FROM = { construire_cathedral_potential = yes }
 			OR = {
 				AND = { 
-					has_character_flag = has_relique_from_cathedral
-					location = { has_title_flag = awaits_gothical_cathedral }
+					FROM = { has_character_flag = has_relique_from_cathedral }
+					has_title_flag = awaits_gothical_cathedral
 				}
-				location = { NOT = { has_title_flag = awaits_gothical_cathedral }}
+				NOT = { has_title_flag = awaits_gothical_cathedral }
 			}
 		}
 
