@@ -929,7 +929,7 @@ character_event = {
 	}
 	option = {
 		name = L3T.229B #make it the new realm capital
-		FROM = { 
+		FROMFROM = { 
 			make_capital_holding = yes
 			capital_holding = { clr_title_flag = better_realm_capital }
 		}
@@ -1146,7 +1146,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { 
+		FROMFROM = { 
 			tier = baron	
 			holding_type = castle
 			has_building = FEODAL_mil
@@ -1156,7 +1156,7 @@ character_event = {
 	immediate = {
 		if = {
 			limit = {
-				FROM = {
+				FROMFROM = {
 					tier = baron	
 					holding_type = castle
 					#first building, has not the variable yet, add it
@@ -1170,7 +1170,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				FROM = {
+				FROMFROM = {
 					tier = baron	
 					holding_type = castle
 					has_building = CA_prison_L1
@@ -1179,11 +1179,11 @@ character_event = {
 					check_variable = { which = "prison_capacity" value = 0 }
 				}
 			}
-			FROM = { change_variable = { which = "prison_capacity" value = 1 }}
+			FROMFROM = { change_variable = { which = "prison_capacity" value = 1 }}
 		}
 		if = {
 			limit = {
-				FROM = {
+				FROMFROM = {
 					tier = baron	
 					holding_type = castle
 					has_building = CA_prison_L2
@@ -1192,7 +1192,7 @@ character_event = {
 					check_variable = { which = "prison_capacity" value = 0 }
 				}
 			}
-			FROM = { change_variable = { which = "prison_capacity" value = 1 }}
+			FROMFROM = { change_variable = { which = "prison_capacity" value = 1 }}
 		}
 	}
 }
