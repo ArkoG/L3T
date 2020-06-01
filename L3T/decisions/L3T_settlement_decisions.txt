@@ -117,15 +117,7 @@ settlement_decisions = {
 						}
 						remove_building = ca_barracks_5
 					}
-					if = {
-						limit = { has_building = ca_barracks_6}
-						random_list = {
-							20 = { owner = { wealth = 200 } }
-							60 = { owner = { wealth = 250 } }
-							20 = { owner = { wealth = 300 } }
-						}
-						remove_building = ca_barracks_6
-					}
+
 					remove_building = FEODAL_mil
 					remove_holding_modifier = feodal_mil_L1
 				}
@@ -1025,15 +1017,7 @@ settlement_decisions = {
 					}
 					remove_building = ca_barracks_5
 				}
-				if = {
-					limit = { has_building = ca_barracks_6}
-					random_list = {
-						20 = { owner = { wealth = 200 } }
-						60 = { owner = { wealth = 250 } }
-						20 = { owner = { wealth = 300 } }
-					}
-					remove_building = ca_barracks_6
-				}
+
 				# Remove weapons if there is no more producer
 				location = {
 					if = {

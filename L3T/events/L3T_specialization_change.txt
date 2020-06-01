@@ -16,7 +16,7 @@ character_event = {
 			location = { NOT = { religion_group = pagan_group } }
 		}
 
-		FROM = {
+		FROM = { #correct scope (b_title) despite validator pestering about it
 			add_building = FEODAL_mil
 			add_holding_modifier = { name = feodal_mil_L1 duration = -1 }	
 			
