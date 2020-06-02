@@ -4,25 +4,49 @@ trade_route = {
 	tribal_tax_modifier = 0.05
 	icon = 4
 }
-thieves_guild = {
-	city_tax_modifier = -0.25
-	castle_tax_modifier = -0.25
-	temple_tax_modifier = -0.25
-	tribal_tax_modifier = -0.25
-	nomad_tax_modifier = -0.25
-	icon = 23
-}
-smugglers_ring = {
-	disease_defence = -0.1
-	local_build_time_modifier = 0.5
-	local_build_cost_modifier = 0.25
-	icon = 31
+
+incompetent_rule = {
+	local_revolt_risk = 0.05
+	local_tax_modifier = -0.25
+	icon = 25 #red crown	
 }
 
-highway_robber_band = {
+thieves_guild = { #voleurs
+	##thieves steal travellers and villagers, racketeering. cities are less affected
+	#city_tax_modifier = -0.25
+	castle_tax_modifier = -0.20
+	temple_tax_modifier = -0.20
+	tribal_tax_modifier = -0.20
+	nomad_tax_modifier = -0.20
+	##harsh to stand for people
+	local_revolt_risk = 0.1	
+	icon = 23 #red letter
+}
+
+smugglers_ring = { #contrebande
+	#disease_defence = -0.1
+	##good material is harder to get and more expensive
+	#local_build_time_modifier = 0.5
+	local_build_time_modifier = 0.3
+	#local_build_cost_modifier = 0.25
+	local_build_cost_modifier = 0.3
+	##cities gain less
+	city_tax_modifier = -0.30
+	icon = 24 #gray coins
+}
+
+highway_robber_band = { #routiers
 	supply_limit = -2
 	levy_size = -0.33
 	tribal_levy_size = -0.33	
 	manpower_growth = -0.1
-	icon = 24
+	##harder to move in security
+	global_movement_speed = -0.15
+	local_tax_modifier = -0.10
+	icon = 31 #red gauntlet
+}
+
+purge_mobilization = {
+	levy_size = -0.2
+	castle_tax_modifier = -0.05
 }
