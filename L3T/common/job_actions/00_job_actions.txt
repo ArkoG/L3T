@@ -93,21 +93,29 @@ action_fabricate_claims = {
 					value = restricted
 				}
 				any_province_lord = {
-					NOT = { character = FROM }
-					NOT = { is_vassal_or_below_of = FROM }
+					NOT = { character = FROM } #not against me
+					NOT = { is_vassal_or_below_of = FROM } #not against vassals
 				}
 
 				OR = {
+					#a neighbour of my demesne, 1 province far
 					any_neighbor_province = {
 						owner = {
 							character = FROM
 						}
 					}
+					#a neighbour of my demesne, 2 provinces far
 					any_neighbor_province = {
 						any_neighbor_province = {
 							owner = {
 								character = FROM
 							}
+						}
+					}
+					#a neighbour a vassal, 1 province far
+					any_neighbor_province = {
+						owner = {
+							is_vassal_or_below_of = FROM
 						}
 					}
 				}
@@ -139,6 +147,127 @@ action_fabricate_claims = {
 				}
 			}
 		}
+	}
+
+	display_on_map = {
+		tooltip = JOB_CLAIM_CONNECTED_INSIDE
+		trigger = {
+			AND = {
+				has_game_rule = {
+					name = better_claims
+					value = restricted
+				}
+				any_province_lord = {
+					NOT = { character = FROM } #not against me
+					NOT = { is_vassal_or_below_of = FROM } #not against vassals
+					same_realm = FROM
+				}
+
+				#OR = {
+					#a neighbour of my demesne, 1 province far
+					any_neighbor_province = {
+						owner = {
+							character = FROM
+						}
+					}
+				#}
+			}
+		}
+		color = { 0 255 0 }
+	}
+	display_on_map = {
+		tooltip = JOB_CLAIM_CONNECTED_OUTSIDE
+		trigger = {
+			AND = {
+				has_game_rule = {
+					name = better_claims
+					value = restricted
+				}
+				any_province_lord = {
+					NOT = { character = FROM } #not against me
+					NOT = { is_vassal_or_below_of = FROM } #not against vassals
+					NOT = { same_realm = FROM }
+				}
+
+				#OR = {
+					#a neighbour of my demesne, 1 province far
+					any_neighbor_province = {
+						owner = {
+							character = FROM
+						}
+					}
+				#}
+			}
+		}
+		color = { 255 255 0 }
+	}
+	display_on_map = {
+		tooltip = JOB_CLAIM_UNCONNECTED_INSIDE
+		trigger = {
+			AND = {
+				has_game_rule = {
+					name = better_claims
+					value = restricted
+				}
+				any_province_lord = {
+					NOT = { character = FROM } #not against me
+					NOT = { is_vassal_or_below_of = FROM } #not against vassals
+					same_realm = FROM
+				}
+
+				OR = {
+					#a neighbour of my demesne, 2 provinces far
+					any_neighbor_province = {
+						any_neighbor_province = {
+							owner = {
+								character = FROM
+							}
+						}
+					}
+					#a neighbour a vassal, 1 province far
+					any_neighbor_province = {
+						owner = {
+							is_vassal_or_below_of = FROM
+						}
+					}
+				}
+			}
+		}
+		color = { 0 155 0 }
+	}
+	display_on_map = {
+		tooltip = JOB_CLAIM_UNCONNECTED_OUTSIDE
+		trigger = {
+			AND = {
+				has_game_rule = {
+					name = better_claims
+					value = restricted
+				}
+				any_province_lord = {
+					NOT = { character = FROM } #not against me
+					NOT = { is_vassal_or_below_of = FROM } #not against vassals
+					NOT = { same_realm = FROM }
+				}
+
+				OR = {
+					#a neighbour of my demesne, 2 provinces far
+					any_neighbor_province = {
+						any_neighbor_province = {
+							owner = {
+								character = FROM
+							}
+						}
+					}
+					#a neighbour a vassal, 1 province far
+					any_neighbor_province = {
+						owner = {
+							is_vassal_or_below_of = FROM
+						}
+					}
+				}
+			}
+		}
+		color = { 155 155 0 }
 	}
 	
 	events = { 913 914 }
@@ -290,6 +419,29 @@ action_advance_eco_tech = {
 			character = FROM
 		}
 		technology_can_spread = yes
+	}
+
+	display_on_map = {
+		tooltip = JOB_ECO_CAPITAL
+		trigger = {
+			any_province_lord = {
+				character = FROM
+			}
+			technology_can_spread = yes
+			has_province_modifier = realm_capital_province
+		}
+		color = { 0 50 250 }
+	}
+	display_on_map = {
+		tooltip = JOB_ECO_CAPITAL_NOT
+		trigger = {
+			any_province_lord = {
+				character = FROM
+			}
+			technology_can_spread = yes
+			NOT = { has_province_modifier = realm_capital_province }
+		}
+		color = { 230 230 0 }
 	}
 	
 	tech_growth_modifier_economy = 0.05
@@ -568,6 +720,10 @@ action_inquisition = {
 	
 	potential = {
 	}
+
+	###L3T
+	#possibly continue the conversion work if there is an unwanted minority there
+
 	
 	trigger = {
 		num_of_settlements = 1
@@ -590,6 +746,7 @@ action_inquisition = {
 		tooltip = JOB_PROSELYTIZE_SAME_RELIGION
 		trigger = {
 			religion = FROM
+			NOT = { is_heresy_of = FROM }
 			any_province_lord = {
 				OR = {
 					character = FROM
@@ -600,6 +757,20 @@ action_inquisition = {
 		color = { 0 0 255 }
 	}
 	
+	display_on_map = {
+		tooltip = JOB_PROSELYTIZE_SAME_RELIGION_HERESY
+		trigger = {
+			#religion = FROM
+			is_heresy_of = FROM
+			any_province_lord = {
+				OR = {
+					character = FROM
+					is_liege_or_above = FROM
+				}
+			}
+		}
+		color = { 255 255 0 }
+	}	
 	display_on_map = {
 		tooltip = JOB_PROSELYTIZE_DIFFERENT_RELIGION
 		trigger = {
