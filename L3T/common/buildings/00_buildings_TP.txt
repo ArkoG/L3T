@@ -215,7 +215,7 @@ tp_wall_5 = { #Grande enceinte
 		archers = 30
 		ai_creation_factor = 94
 		#add_number_to_name = no
-		extra_tech_building_start = 0.5
+		extra_tech_building_start = 1.0
 	}
 	tp_barracks_2 = {
 		desc = tp_barracks_1_desc
@@ -228,7 +228,7 @@ tp_wall_5 = { #Grande enceinte
 		archers = 45
 		ai_creation_factor = 93
 		#add_number_to_name = no
-		extra_tech_building_start = 1.0
+		extra_tech_building_start = 2
 	}
 	tp_barracks_3 = {
 		desc = tp_barracks_1_desc
@@ -237,11 +237,10 @@ tp_wall_5 = { #Grande enceinte
 		upgrades_from = tp_barracks_2
 		gold_cost = 200
 		build_time = 730
-		light_infantry = 70
-		archers = 60
+		heavy_infantry = 65
 		ai_creation_factor = 92
 		#add_number_to_name = no
-		extra_tech_building_start = 0.5
+		extra_tech_building_start = 3
 	}
 	tp_barracks_4 = {
 		desc = tp_barracks_1_desc
@@ -253,7 +252,7 @@ tp_wall_5 = { #Grande enceinte
 		archers = 75
 		ai_creation_factor = 91
 		#add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10.0
 	}
 	tp_barracks_5 = {
 		desc = tp_barracks_1_desc
@@ -261,11 +260,10 @@ tp_wall_5 = { #Grande enceinte
 		upgrades_from = tp_barracks_4
 		gold_cost = 400
 		build_time = 2190
-		light_infantry = 85
-		archers = 85
+		heavy_infantry = 75
 		ai_creation_factor = 90
 		#add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10.0
 	}
 	tp_barracks_6 = {
 		desc = tp_barracks_1_desc
@@ -275,78 +273,20 @@ tp_wall_5 = { #Grande enceinte
 		build_time = 2190
 		light_infantry = 95
 		archers = 95
+		heavy_infantry = 95
 		ai_creation_factor = 89
 		#add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10.0
 	}
 	
-	tp_elite_barracks_1 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
-		gold_cost = 100
-		build_time = 365
-		heavy_infantry = 45
-		ai_creation_factor = 95
-		#add_number_to_name = no
-		extra_tech_building_start = 0.5
-	}
-	tp_elite_barracks_2 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
-		prerequisites = { tp_wall_1 }
-		upgrades_from = tp_elite_barracks_1
-		gold_cost = 120
-		build_time = 730
-		heavy_infantry = 55
-		ai_creation_factor = 94
-		#add_number_to_name = no
-		extra_tech_building_start = 1.0
-	}
-	tp_elite_barracks_3 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 2 }
-		prerequisites = { tp_wall_2 }
-		upgrades_from = tp_elite_barracks_2
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 65
-		ai_creation_factor = 93
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_elite_barracks_4 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 4 }
-		upgrades_from = tp_elite_barracks_3
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 75
-		ai_creation_factor = 92
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_elite_barracks_5 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 6 }
-		upgrades_from = tp_elite_barracks_4
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 85
-		ai_creation_factor = 91
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_elite_barracks_6 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 8 }
-		upgrades_from = tp_elite_barracks_5
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 95
-		ai_creation_factor = 90
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
+#	tp_elite_barracks_1 = {
+#	tp_elite_barracks_2 = {
+#	tp_elite_barracks_3 = {
+#	tp_elite_barracks_4 = {
+#	tp_elite_barracks_5 = {
+#	tp_elite_barracks_6 = {
+
+
 ##utilise en prebuild jusqu au niveau 2	
 	tp_town_1 = {
 		desc = tp_town_1_desc
