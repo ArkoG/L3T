@@ -24,6 +24,8 @@ province_event = {
 			has_province_modifier = thieves_guild
 			has_province_modifier = smugglers_ring
 			has_province_modifier = highway_robber_band
+		}
+		NOT = {
 			has_province_modifier = purge_mobilization
 			has_province_modifier = failed_purge
 			has_province_flag = ongoing_purge
