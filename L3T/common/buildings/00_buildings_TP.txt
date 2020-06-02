@@ -407,7 +407,108 @@ tp_wall_5 = { #Grande enceinte
 		add_number_to_name = no
 		extra_tech_building_start = 1
 	}
+	#temple church new tag
+	tp_eglise_L1 = { #Oratoire
+		desc = tp_eglise_L1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		potential = { 
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+				}
+			}
+		gold_cost = 100
 
+		build_time = 180
+		ai_creation_factor = 101
+		liege_piety = 0.02
+		add_number_to_name = no
+
+		extra_tech_building_start = 0
+	}
+
+	tp_eglise_L2 = { #Chapelle
+		desc = tp_eglise_L2_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { 
+			tp_town_1
+		}
+		upgrades_from = tp_eglise_L1
+		gold_cost = 140
+
+		build_time = 370
+		ai_creation_factor = 100
+		liege_piety = 0.03
+		add_number_to_name = no
+
+		extra_tech_building_start = 1
+	}
+
+	tp_eglise_L3 = { #Église
+		desc = tp_eglise_L3_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { 
+			tp_town_2
+		}
+		upgrades_from = tp_eglise_L2
+		gold_cost = 290
+
+		build_time = 680
+		ai_creation_factor = 99
+		liege_piety = 0.05
+		add_number_to_name = no
+
+		extra_tech_building_start = 2
+	}
+
+	tp_eglise_L4 = { #Grande église
+		desc = tp_eglise_L4_desc
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 0
+			FROM = { prestige = 90 } #replaces prestige_cost_90
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}	
+		prerequisites = { 
+			tp_town_3
+		}
+		not_if_x_exists = { 
+			BOURG_EPISCOPAL
+		}
+		upgrades_from = tp_eglise_L3
+		gold_cost = 390
+		#prestige_cost = 90
+		build_time = 920
+		ai_creation_factor = 98
+		liege_piety = 0.05
+		add_number_to_name = no
+
+		extra_tech_building_start = 3
+	}
+
+	tp_eglise_L5 = { #Basilique
+		desc = tp_eglise_L5_desc
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 0
+			FROM = { prestige = 120 } #replaces prestige_cost_120
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}	
+		prerequisites = { 
+			tp_town_4
+		}
+		not_if_x_exists = { 
+			BOURG_EPISCOPAL
+		}
+		upgrades_from = tp_eglise_L4
+		gold_cost = 650
+		#prestige_cost = 120
+		build_time = 1750
+		ai_creation_factor = 97
+		liege_piety = 0.10
+		add_number_to_name = no
+
+		extra_tech_building_start = 4
+	}
+	
 ##utilise en prebuild jusqu au niveau 4	
 	tp_shipyard_1 = {
 		desc = shipyard_desc
