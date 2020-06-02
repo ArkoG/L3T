@@ -417,6 +417,10 @@ tp_wall_5 = { #Grande enceinte
 				religion_group = muslim
 				}
 			}
+		is_active_trigger = {
+			religion_group = christian
+			religion_group = muslim
+		}
 		gold_cost = 100
 
 		build_time = 180
@@ -434,6 +438,10 @@ tp_wall_5 = { #Grande enceinte
 			tp_town_1
 		}
 		upgrades_from = tp_eglise_L1
+		is_active_trigger = {
+			religion_group = christian
+			religion_group = muslim
+		}
 		gold_cost = 140
 
 		build_time = 370
@@ -451,6 +459,10 @@ tp_wall_5 = { #Grande enceinte
 			tp_town_2
 		}
 		upgrades_from = tp_eglise_L2
+		is_active_trigger = {
+			religion_group = christian
+			religion_group = muslim
+		}
 		gold_cost = 290
 
 		build_time = 680
@@ -475,6 +487,10 @@ tp_wall_5 = { #Grande enceinte
 			BOURG_EPISCOPAL
 		}
 		upgrades_from = tp_eglise_L3
+		is_active_trigger = {
+			religion_group = christian
+			religion_group = muslim
+		}
 		gold_cost = 390
 		#prestige_cost = 90
 		build_time = 920
@@ -499,6 +515,10 @@ tp_wall_5 = { #Grande enceinte
 			BOURG_EPISCOPAL
 		}
 		upgrades_from = tp_eglise_L4
+		is_active_trigger = {
+			religion_group = christian
+			religion_group = muslim
+		}
 		gold_cost = 650
 		#prestige_cost = 120
 		build_time = 1750
@@ -1190,4 +1210,76 @@ tp_wall_5 = { #Grande enceinte
 		#add_number_to_name = no
 		extra_tech_building_start = 10
 	}	
+
+#generic temples
+	tp_temple_L1 = { #
+		desc = tp_temple_A_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		potential = { 
+			NOT = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		is_active_trigger = {
+			NOT = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 100
+
+		build_time = 180
+		ai_creation_factor = 101
+		liege_piety = 0.02
+		#add_number_to_name = no
+
+		extra_tech_building_start = 0
+	}
+
+	tp_temple_L2 = { #
+		desc = tp_temple_A_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { 
+			tp_town_1
+		}
+		upgrades_from = tp_temple_L1
+		is_active_trigger = {
+			NOT = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 140
+
+		build_time = 370
+		ai_creation_factor = 100
+		liege_piety = 0.03
+		#add_number_to_name = no
+
+		extra_tech_building_start = 1
+	}
+
+	tp_temple_L3 = { #
+		desc = tp_temple_B_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { 
+			tp_town_2
+		}
+		upgrades_from = tp_temple_L2
+		is_active_trigger = {
+			NOT = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 290
+
+		build_time = 680
+		ai_creation_factor = 99
+		liege_piety = 0.05
+		#add_number_to_name = no
+
+		extra_tech_building_start = 2
+	}
 }
