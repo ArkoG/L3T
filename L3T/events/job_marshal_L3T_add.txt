@@ -135,8 +135,8 @@ clr_province_flag = villains_robbers
 
 #L3T new event, send good marshal purging the province
 province_event = {
-	id = L3T.100
-	desc = "DESCL3T.100"
+	id = L3T.98
+	desc = "DESCL3T.98"
 	picture = GFX_evt_shadow
 	
 	trigger = {
@@ -171,7 +171,7 @@ province_event = {
 
 	#target the head, relying mostly on spymaster skills, act fast
 	option = {
-		name = "L3T.100A"
+		name = "L3T.98A"
 		ai_chance = {
 			factor = 100
 			modifier = { factor = 1.2	owner = { job_spymaster = { intrigue = 15 }}} 
@@ -183,7 +183,7 @@ province_event = {
 		hidden_tooltip = {
 			random_list = {
 				50 = {
-					province_event = { id = L3T.98 days = 10 random = 5 }
+					province_event = { id = L3T.99 days = 10 random = 5 }
 					set_province_flag = villains_success
 					modifier = { factor = 1.1	owner = { job_spymaster = { intrigue = 13 }}} 
 					modifier = { factor = 1.1	owner = { job_spymaster = { intrigue = 14 }}}
@@ -203,7 +203,7 @@ province_event = {
 
 	#target the head, relying mostly on spymaster skills, take your time
 	option = {
-		name = "L3T.100B"
+		name = "L3T.98B"
 		ai_chance = {
 			factor = 100
 			modifier = { factor = 1.2	owner = { job_spymaster = { NOt = { intrigue = 15 }}}} #intrigue matters less on duration
@@ -212,7 +212,7 @@ province_event = {
 		hidden_tooltip = {
 			random_list = {
 				60 = {
-					province_event = { id = L3T.98 days = 25 random = 10 }
+					province_event = { id = L3T.99 days = 25 random = 10 }
 					set_province_flag = villains_success
 					modifier = { factor = 1.1	owner = { job_spymaster = { intrigue = 13 }}} 
 					modifier = { factor = 1.1	owner = { job_spymaster = { intrigue = 14 }}}
@@ -346,6 +346,7 @@ province_event = {
 	#success on owner
 	option = {
 		name = "L3T.99A"
+		trigger = { has_province_flag = villains_success }
 		#opinion
 		if = {
 			limit = {
@@ -357,7 +358,6 @@ province_event = {
 					modifier = opinion_success_bandits
 					who = job_spymaster
 					years = 5
-					origin_description = success
 				}
 			}
 		}
@@ -378,18 +378,19 @@ province_event = {
 		}			
 		#butin
 		#if = { limit = { has_province_flag = butin1 } wealth = 0 } #<4 holdings
-		if = { limit = { has_province_flag = butin2 } wealth = 80 }#4 holdings, 20/holding
-		if = { limit = { has_province_flag = butin3 } wealth = 100 }
-		if = { limit = { has_province_flag = butin4 } wealth = 120 }
-		if = { limit = { has_province_flag = butin5 } wealth = 140 }
-		#donner butin pour le conseiller ? fixe
-		wealth = 30 #
+		if = { limit = { has_province_flag = butin2 } wealth = 100 }#4 holdings, 20/holding
+		if = { limit = { has_province_flag = butin3 } wealth = 125 }
+		if = { limit = { has_province_flag = butin4 } wealth = 150 }
+		if = { limit = { has_province_flag = butin5 } wealth = 175 }
+		wealth = 75 #
+		#redistribuer le butin ?
+		
+		####################################################
 		
 		#modifers and flags
 		remove_province_modifier = thieves_guild
 		remove_province_modifier = smugglers_ring
 		remove_province_modifier = highway_robber_band	
-		clr_province_flag = villains_thieves
 		clr_province_flag = butin1
 		clr_province_flag = butin2
 		clr_province_flag = butin3
@@ -398,19 +399,68 @@ province_event = {
 		clr_province_flag = butin6
 		clr_province_flag = butin7
 		clr_province_flag = butin8
-		clr_province_flag = butin9		
+		clr_province_flag = butin9
+		clr_province_flag = villains_success
 	}
 	
 	#failure on owner
 	option = {
 		name = "L3T.99B"
+		trigger = { has_province_flag = villains_failure }
+		#opinion
+		if = {
+			limit = {
+				has_province_modifier = thieves_guild
+			}
 
-		#mofifiers
-		#flags
+			owner = {
+				opinion = {
+					modifier = opinion_failure_bandits
+					who = job_spymaster
+					years = 5
+					origin_description = success
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_province_modifier = smugglers_ring
+					has_province_modifier = highway_robber_band
+				}
+			}
+			owner = {
+				opinion = {
+					modifier = opinion_failure_bandits
+					who = job_marshal
+					years = 5
+				}
+			}
+		}
+
+
 		#opinion
 		add_province_modifier = {
-			name = failed_purge	
-			duration = -1
+				name = failed_purge	
+				duration = -1
 		}
+		clr_province_flag = villains_failure
 	}
 }
+
+
+###redistribuer le butin ?
+##keep all, it is the realm treasure (contrebande)
+
+##piety donations
+#gives it to the poors (piety) 1 piety/2po
+#gives it to the church (piety) 1 piety/2po
+#build an hospital (75po), keep the rest
+#improve an hospital, keep the rest?
+
+##redis for province event
+#recruit some thugs (50%) to protect the province (prov bonus mod) (+1 intri mod)
+#redistribute 50% to paying justice to people (thieves)+just (+1 diplo mod)
+#redistribute everything >> gives a prov bonus modifier  (+1 stew mod)
+
+##it shall go to my councillor (50%) + opinion
