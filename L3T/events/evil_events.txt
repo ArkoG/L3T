@@ -198,6 +198,11 @@ province_event = {
 		months = 240
 
 		#Bad demesne efficiency
+		modifier = { factor = 0.8	terrain = forest } #ideal hideaway
+		modifier = { factor = 0.9	terrain = jungle } #ideal hideaway
+		modifier = { factor = 1.1	terrain = steppes }
+		modifier = { factor = 1.2	terrain = desert }	
+		
 		modifier = {
 			factor = 0.9
 			NOT = { owner = { demesne_efficiency = 0.9 } }
@@ -269,6 +274,7 @@ province_event = {
 			name = thieves_guild
 			duration = -1
 		}
+		set_province_flag = villains_thieves
 	}
 
 	option = {
@@ -288,6 +294,7 @@ province_event = {
 	trigger = {
 		demesne_efficiency = 1.0
 		has_province_modifier = thieves_guild
+		NOT = { has_province_flag = ongoing_purge }
 	}
 	
 	mean_time_to_happen = {
@@ -308,6 +315,7 @@ province_event = {
 	
 	immediate = {
 		remove_province_modifier = thieves_guild
+		clr_province_flag = villains_thieves
 	}
 
 	option = {
@@ -336,6 +344,13 @@ province_event = {
 		months = 240
 		
 		#Bad demesne efficiency
+		modifier = { factor = 0.9	terrain = farmlands } #richer
+		modifier = { factor = 0.9	terrain = plains }
+		modifier = { factor = 1.1	terrain = steppes }
+		modifier = { factor = 1.2	terrain = desert }
+		modifier = { factor = 0.9	terrain = mountains } #easy to hide and pass merchandises
+		modifier = { factor = 1.5	terrain = marsh }		
+
 		modifier = {
 			factor = 0.9
 			NOT = { owner = { demesne_efficiency = 0.9 } }
@@ -407,6 +422,7 @@ province_event = {
 			name = smugglers_ring
 			duration = -1
 		}
+		set_province_flag = villains_smugglers
 	}
 
 	option = {
@@ -426,6 +442,7 @@ province_event = {
 	trigger = {
 		demesne_efficiency = 0.8
 		has_province_modifier = smugglers_ring
+		NOT = { has_province_flag = ongoing_purge }
 	}
 	
 	mean_time_to_happen = {
@@ -452,6 +469,7 @@ province_event = {
 	
 	immediate = {
 		remove_province_modifier = smugglers_ring
+		clr_province_flag = villains_smugglers
 	}
 
 	option = {
@@ -475,6 +493,10 @@ province_event = {
 	
 	mean_time_to_happen = {
 		months = 240
+
+		modifier = { factor = 0.9	has_province_modifier = route_size1 } #best to travel and rich area
+		modifier = { factor = 0.9	has_province_modifier = route_fluviale }
+		modifier = { factor = 0.9	has_province_modifier = route_terrestre }
 		
 		#Bad demesne efficiency
 		modifier = {
@@ -548,6 +570,7 @@ province_event = {
 			name = highway_robber_band
 			duration = -1
 		}
+		set_province_flag = villains_robbers
 	}
 
 	option = {
@@ -656,6 +679,7 @@ province_event = {
 	trigger = {
 		owner = { wealth = 0 }
 		has_province_modifier = highway_robber_band
+		NOT = { has_province_flag = ongoing_purge }
 	}
 	
 	mean_time_to_happen = {
@@ -711,6 +735,7 @@ province_event = {
 	
 	immediate = {
 		remove_province_modifier = highway_robber_band
+		clr_province_flag = villains_robbers
 		if = {
 			limit = {
 				owner = {
