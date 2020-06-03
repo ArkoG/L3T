@@ -315,6 +315,7 @@ province_event = {
 	
 	immediate = {
 		remove_province_modifier = thieves_guild
+		remove_province_modifier = failed_purge
 		clr_province_flag = villains_thieves
 	}
 
@@ -469,6 +470,7 @@ province_event = {
 	
 	immediate = {
 		remove_province_modifier = smugglers_ring
+		remove_province_modifier = failed_purge
 		clr_province_flag = villains_smugglers
 	}
 
@@ -735,6 +737,7 @@ province_event = {
 	
 	immediate = {
 		remove_province_modifier = highway_robber_band
+		remove_province_modifier = failed_purge
 		clr_province_flag = villains_robbers
 		if = {
 			limit = {
