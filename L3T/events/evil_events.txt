@@ -274,6 +274,7 @@ province_event = {
 			name = thieves_guild
 			duration = -1
 		}
+		set_province_flag = villains_thieves
 	}
 
 	option = {
@@ -317,6 +318,7 @@ province_event = {
 	immediate = {
 		remove_province_modifier = thieves_guild
 		remove_province_modifier = failed_purge
+		clr_province_flag = villains_thieves
 	}
 
 	option = {
@@ -423,6 +425,7 @@ province_event = {
 			name = smugglers_ring
 			duration = -1
 		}
+		set_province_flag = villains_smugglers
 	}
 
 	option = {
@@ -470,6 +473,7 @@ province_event = {
 	immediate = {
 		remove_province_modifier = smugglers_ring
 		remove_province_modifier = failed_purge
+		clr_province_flag = villains_smugglers
 	}
 
 	option = {
@@ -570,6 +574,7 @@ province_event = {
 			name = highway_robber_band
 			duration = -1
 		}
+		set_province_flag = villains_robbers
 	}
 
 	option = {
@@ -735,6 +740,7 @@ province_event = {
 	immediate = {
 		remove_province_modifier = highway_robber_band
 		remove_province_modifier = failed_purge
+		clr_province_flag = villains_robbers
 		if = {
 			limit = {
 				owner = {
