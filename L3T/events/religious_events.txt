@@ -1649,6 +1649,7 @@ character_event = {
 		is_theocracy = yes
 		imprisoned_days = 14
 		host = { religion = ROOT }
+		host = { NOT = { any_realm_character = { has_claim = k_papal_state}}} #host has no antipope
 		NOT = { rightful_religious_head = ROOT }
 		religion_head = {
 			reverse_opinion = { who = ROOT value = 25 }		#not grovel if we dont like the pope.
