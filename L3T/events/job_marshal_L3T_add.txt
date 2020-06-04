@@ -73,6 +73,7 @@ province_event = {
 			owner = { wealth = 100 }
 		}
 		owner = { wealth = -100 }
+		custom_tooltip = { text = cust_L3T.98A }
 		hidden_tooltip = {
 			random_list = {
 				50 = {
@@ -104,6 +105,7 @@ province_event = {
 			modifier = { factor = 0.5	has_province_modifier = smugglers_ring }
 			modifier = { factor = 1.5	has_province_modifier = highway_robber_band }
 		}
+		custom_tooltip = { text = cust_L3T.97B }
 		hidden_tooltip = {
 			random_list = {
 				60 = {
@@ -185,6 +187,7 @@ province_event = {
 
 		}
 		owner = { wealth = -35 }
+		custom_tooltip = { text = cust_L3T.98A }
 		hidden_tooltip = {
 			random_list = {
 				50 = {
@@ -214,6 +217,7 @@ province_event = {
 			modifier = { factor = 1.2	owner = { job_spymaster = { NOt = { intrigue = 15 }}}} #intrigue matters less on duration
 		}
 		owner = { wealth = -75 }
+		custom_tooltip = { text = cust_L3T.98B }
 		hidden_tooltip = {
 			random_list = {
 				60 = {
