@@ -37,10 +37,14 @@ province_event = {
 			has_province_flag = ongoing_purge
 		}
 		owner = { job_marshal = { martial = 12 }}
+		OR = {
+			had_province_flag = { flag = villains_smugglers days = 365 }
+			had_province_flag = { flag = villains_robbers days = 365 }
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 240
+		months = 360
 		modifier = { factor = 0.9	owner = { job_marshal = { martial = 14 }}}
 		modifier = { factor = 0.9	owner = { job_marshal = { martial = 15 }}}
 		modifier = { factor = 0.9	owner = { job_marshal = { martial = 16 }}}
@@ -151,10 +155,11 @@ province_event = {
 		}
 		owner = { job_spymaster = { intrigue = 10 }}
 		owner = { wealth = 75 }
+		had_province_flag = { flag = villains_thieves days = 365 }
 	}
 	
 	mean_time_to_happen = {
-		months = 240
+		months = 360
 		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 14 }}}
 		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 15 }}}
 		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 16 }}}
@@ -401,6 +406,9 @@ province_event = {
 		clr_province_flag = butin8
 		clr_province_flag = butin9
 		clr_province_flag = villains_success
+		clr_province_flag = villains_thieves
+		clr_province_flag = villains_smugglers
+		clr_province_flag = villains_robbers
 	}
 	
 	#failure on owner
@@ -453,14 +461,17 @@ province_event = {
 ##keep all, it is the realm treasure (contrebande)
 
 ##piety donations
-#gives it to the poors (piety) 1 piety/2po
-#gives it to the church (piety) 1 piety/2po
+#gives it to the poors (piety) 1 piety/2po (ou modifier)
+#gives it to the church (piety) 1 piety/2po (ou modifier)
 #build an hospital (75po), keep the rest
 #improve an hospital, keep the rest?
 
-##redis for province event
+##redis for province event - or just stew pour tout ?
 #recruit some thugs (50%) to protect the province (prov bonus mod) (+1 intri mod)
 #redistribute 50% to paying justice to people (thieves)+just (+1 diplo mod)
 #redistribute everything >> gives a prov bonus modifier  (+1 stew mod)
 
-##it shall go to my councillor (50%) + opinion
+##it shall go to my councillor (50%) + opinion (if strong vassal)
+
+
+# add a pirate coastal version (martial oriented?)

@@ -24,6 +24,11 @@ province_event = {
 	mean_time_to_happen = {
 		months = 240
 		
+		modifier = {
+			factor = 0.9
+			has_province_modifier = failed_purge
+		}	
+		
 		#DEBT	
 		modifier = {
 			factor = 0.9
@@ -202,6 +207,11 @@ province_event = {
 		modifier = { factor = 0.9	terrain = jungle } #ideal hideaway
 		modifier = { factor = 1.1	terrain = steppes }
 		modifier = { factor = 1.2	terrain = desert }	
+
+		modifier = {
+			factor = 0.9
+			has_province_modifier = failed_purge
+		}
 		
 		modifier = {
 			factor = 0.9
@@ -295,6 +305,7 @@ province_event = {
 		demesne_efficiency = 1.0
 		has_province_modifier = thieves_guild
 		NOT = { has_province_flag = ongoing_purge }
+		had_province_flag = { flag = villains_thieves days = 365 }
 	}
 	
 	mean_time_to_happen = {
@@ -354,6 +365,11 @@ province_event = {
 		modifier = { factor = 0.9	terrain = mountains } #easy to hide and pass merchandises
 		modifier = { factor = 1.5	terrain = marsh }		
 
+		modifier = {
+			factor = 0.9
+			has_province_modifier = failed_purge
+		}
+		
 		modifier = {
 			factor = 0.9
 			NOT = { owner = { demesne_efficiency = 0.9 } }
@@ -446,6 +462,7 @@ province_event = {
 		demesne_efficiency = 0.8
 		has_province_modifier = smugglers_ring
 		NOT = { has_province_flag = ongoing_purge }
+		had_province_flag = { flag = villains_smugglers days = 365 }
 	}
 	
 	mean_time_to_happen = {
@@ -493,6 +510,7 @@ province_event = {
 	trigger = {
 		NOT = { owner = { demesne_efficiency = 1.0 } }
 		NOT = { has_province_modifier = highway_robber_band } 
+		NOT = { has_province_modifier = purge_mobilization }
 	}
 	
 	mean_time_to_happen = {
@@ -684,6 +702,7 @@ province_event = {
 		owner = { wealth = 0 }
 		has_province_modifier = highway_robber_band
 		NOT = { has_province_flag = ongoing_purge }
+		had_province_flag = { flag = villains_robbers days = 365 }
 	}
 	
 	mean_time_to_happen = {
