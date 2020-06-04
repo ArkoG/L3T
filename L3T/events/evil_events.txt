@@ -309,7 +309,9 @@ province_event = {
 		modifier = {
 			factor = 0.75
 			owner = { trait = just }
-		}			
+		}
+		modifier = { factor = 1.2	terrain = forest } #ideal hideaway
+		modifier = { factor = 1.1	terrain = jungle } #ideal hideaway
 	}
 	
 	immediate = {
