@@ -773,31 +773,36 @@ episco_muslim = {icon = 207 }
 route_size1 = { 
 	icon = 5 #major_modifer_icon_strip
 	local_tax_modifier = 0.07
+	levy_reinforce_rate = 0.01
 	tech_growth_modifier = 0.01
 	major = yes
 }
 route_size2 = { 
 	icon = 4 #major_modifer_icon_strip
-	local_tax_modifier = 0.10 
-	tech_growth_modifier = 0.01
+	local_tax_modifier = 0.10
+	levy_reinforce_rate = 0.02	
+	tech_growth_modifier = 0.02
 	major = yes
 }
 route_size3 = { 
 	icon = 3 #major_modifer_icon_strip
 	local_tax_modifier = 0.15
-	tech_growth_modifier = 0.01
+	levy_reinforce_rate = 0.03
+	tech_growth_modifier = 0.03
 	major = yes
 }
 route_size4 = { 
 	icon = 2 #major_modifer_icon_strip
 	local_tax_modifier = 0.20
-	tech_growth_modifier = 0.01
+	levy_reinforce_rate = 0.04
+	tech_growth_modifier = 0.04
 	major = yes
 }
 route_size5 = { 
 	icon = 1 #major_modifer_icon_strip
 	local_tax_modifier = 0.25 
-	tech_growth_modifier = 0.01
+	levy_reinforce_rate = 0.05
+	tech_growth_modifier = 0.05
 	major = yes
 }
 

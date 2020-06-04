@@ -10,7 +10,7 @@
 	--ex 3.0
 	NDefines.NMilitary.MERCENARY_MAINTENANCE_FACTOR = 3.5				-- Maintenance factor for NORMAL mercenary units
 	--ex0.05
-	NDefines.NMilitary.REINFORCE_RATE = 0.03							-- Reinforce rate per year
+	NDefines.NMilitary.REINFORCE_RATE = 0.04							-- Reinforce rate per year
 	--ex 0.015
 	NDefines.NMilitary.MERC_REINFORCE_RATE = 0.0					-- The rate at which mercenaries and holy orders reinforce in the field
 	--ex0.0
@@ -32,7 +32,7 @@
 	-- ex 10.0
 	NDefines.NMilitary.MAX_RIVER_MOVEMENT_FORT_LEVEL = 7.0
 	--ex 0.05
-	NDefines.NMilitary.LIEGE_LEVY_REINF_RATE = 0.03
+	NDefines.NMilitary.LIEGE_LEVY_REINF_RATE = 0.04
 	--ex 18
 	NDefines.NAI.RAID_AGGRESSION = 36									-- General frequency of raids. A LOWER number means more often!
 	--no clue if i need to lower or increase it to get lower aggression ?
