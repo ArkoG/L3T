@@ -234,6 +234,12 @@ on_character_convert_religion = {
 		REC.12
 	}
 }
+# When the religion changes in a county, ROOT is province. FROM has the old religion.
+on_county_religion_change = {
+	events = {
+
+	}
+}
 
 on_loot_settlement = { #seems it fires for the settlement owner, FROM is the settlement
 	#random_events = {
