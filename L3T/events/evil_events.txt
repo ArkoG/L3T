@@ -110,16 +110,13 @@ province_event = {
 		modifier = { factor = 2.0	owner = { realm_stewardship = 25 }}
 		modifier = { factor = 1.5	owner = { realm_stewardship = 20 }}
 	}
-	
-	immediate = {
+
+	option = {
+		name = EVTOPTA68000
 		add_province_modifier = {
 			name = incompetent_rule
 			duration = -1
 		}
-	}
-
-	option = {
-		name = EVTOPTA68000
 	}
 }
 
@@ -152,10 +149,6 @@ province_event = {
 		}			
 	}
 	
-	immediate = {
-		remove_province_modifier = incompetent_rule
-	}
-
 	option = {
 		name = EVTOPTA68001
 		trigger = {
@@ -163,6 +156,7 @@ province_event = {
 				religion_group = christian
 			}
 		}
+		remove_province_modifier = incompetent_rule
 	}
 	option = {
 		name = EVTOPTB68001
@@ -171,6 +165,7 @@ province_event = {
 				religion_group = muslim
 			}
 		}
+		remove_province_modifier = incompetent_rule
 	}
 	option = {
 		name = EVTOPTA88283
@@ -180,6 +175,7 @@ province_event = {
 				NOT = { religion_group = muslim }
 			}
 		}
+		remove_province_modifier = incompetent_rule
 	}
 }
 
@@ -194,9 +190,11 @@ province_event = {
 	trigger = {
 		#back to demesne efficiency instead of debt
 		NOT = { owner = { demesne_efficiency = 1.0 } }
-		#can't co-exists both
+		#can't co-exists three
 		NOT = { has_province_modifier = thieves_guild } 
 		NOT = { has_province_modifier = smugglers_ring } 
+		NOT = { has_province_modifier = highway_robber_band } 
+
 	}
 	
 	mean_time_to_happen = {
@@ -205,7 +203,7 @@ province_event = {
 		#Bad demesne efficiency
 		modifier = { factor = 0.8	terrain = forest } #ideal hideaway
 		modifier = { factor = 0.9	terrain = jungle } #ideal hideaway
-		modifier = { factor = 1.1	terrain = steppes }
+		modifier = { factor = 1.1	terrain = steppe }
 		modifier = { factor = 1.2	terrain = desert }	
 
 		modifier = {
@@ -279,16 +277,13 @@ province_event = {
 		}
 	}
 	
-	immediate = {
+	option = {
+		name = EVTOPTA68010
 		add_province_modifier = {
 			name = thieves_guild
 			duration = -1
 		}
 		set_province_flag = villains_thieves
-	}
-
-	option = {
-		name = EVTOPTA68010
 	}
 }
 
@@ -302,7 +297,7 @@ province_event = {
 	#notification = yes
 	
 	trigger = {
-		demesne_efficiency = 1.0
+		owner = { demesne_efficiency = 1.0 }
 		has_province_modifier = thieves_guild
 		NOT = { has_province_flag = ongoing_purge }
 		had_province_flag = { flag = villains_thieves days = 365 }
@@ -326,14 +321,11 @@ province_event = {
 		modifier = { factor = 1.1	terrain = jungle } #ideal hideaway
 	}
 	
-	immediate = {
+	option = {
+		name = EVTOPTA68011
 		remove_province_modifier = thieves_guild
 		remove_province_modifier = failed_purge
 		clr_province_flag = villains_thieves
-	}
-
-	option = {
-		name = EVTOPTA68011
 	}
 }
 
@@ -347,9 +339,10 @@ province_event = {
 	trigger = {
 		#back to demesne efficiency instead of debt
 		NOT = { owner = { demesne_efficiency = 1.0 } }
-		#can't co-exists both
-		NOT = { has_province_modifier = smugglers_ring }
+		#can't co-exists three
 		NOT = { has_province_modifier = thieves_guild } 
+		NOT = { has_province_modifier = smugglers_ring } 
+		NOT = { has_province_modifier = highway_robber_band } 
 	}
 	
 	picture = GFX_evt_bandits
@@ -360,9 +353,9 @@ province_event = {
 		#Bad demesne efficiency
 		modifier = { factor = 0.9	terrain = farmlands } #richer
 		modifier = { factor = 0.9	terrain = plains }
-		modifier = { factor = 1.1	terrain = steppes }
+		modifier = { factor = 1.1	terrain = steppe }
 		modifier = { factor = 1.2	terrain = desert }
-		modifier = { factor = 0.9	terrain = mountains } #easy to hide and pass merchandises
+		modifier = { factor = 0.9	terrain = mountain } #easy to hide and pass merchandises
 		modifier = { factor = 1.5	terrain = marsh }		
 
 		modifier = {
@@ -436,16 +429,13 @@ province_event = {
 		}
 	}
 	
-	immediate = {
+	option = {
+		name = EVTOPTA68020
 		add_province_modifier = {
 			name = smugglers_ring
 			duration = -1
 		}
 		set_province_flag = villains_smugglers
-	}
-
-	option = {
-		name = EVTOPTA68020
 	}
 }
 
@@ -459,7 +449,7 @@ province_event = {
 	picture = GFX_evt_burning_house
 	
 	trigger = {
-		demesne_efficiency = 0.8
+		owner = { demesne_efficiency = 0.8 }
 		has_province_modifier = smugglers_ring
 		NOT = { has_province_flag = ongoing_purge }
 		had_province_flag = { flag = villains_smugglers days = 365 }
@@ -487,14 +477,11 @@ province_event = {
 		}	
 	}
 	
-	immediate = {
+	option = {
+		name = EVTOPTA68021
 		remove_province_modifier = smugglers_ring
 		remove_province_modifier = failed_purge
 		clr_province_flag = villains_smugglers
-	}
-
-	option = {
-		name = EVTOPTA68021
 	}
 }
 
@@ -509,6 +496,8 @@ province_event = {
 	
 	trigger = {
 		NOT = { owner = { demesne_efficiency = 1.0 } }
+		NOT = { has_province_modifier = thieves_guild } 
+		NOT = { has_province_modifier = smugglers_ring } 
 		NOT = { has_province_modifier = highway_robber_band } 
 		NOT = { has_province_modifier = purge_mobilization }
 	}
@@ -587,16 +576,13 @@ province_event = {
 		}
 	}
 	
-	immediate = {
+	option = {
+		name = EVTOPTA68030
 		add_province_modifier = {
 			name = highway_robber_band
 			duration = -1
 		}
 		set_province_flag = villains_robbers
-	}
-
-	option = {
-		name = EVTOPTA68030
 	}
 }
 
@@ -756,7 +742,8 @@ province_event = {
 		}
 	}
 	
-	immediate = {
+	option = {
+		name = EVTOPTA68031
 		remove_province_modifier = highway_robber_band
 		remove_province_modifier = failed_purge
 		clr_province_flag = villains_robbers
@@ -800,9 +787,5 @@ province_event = {
 				}
 			}
 		}
-	}
-
-	option = {
-		name = EVTOPTA68031
 	}
 }
