@@ -137,9 +137,8 @@ action_fabricate_claims = {
 			}
 		}
 		is_within_diplo_range = FROM
-		#L3T AI won't repeat unsuccessful attempt
+		#can't send back a chancellor against the same target
 		any_province_lord = {
-			ai = yes 
 			NOT = {
 				has_opinion_modifier = {
 					who = FROM
