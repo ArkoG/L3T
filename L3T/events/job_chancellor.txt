@@ -1274,11 +1274,12 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		#months = 240
-		days = 10 #test totoro
+		months = 240
+
 ########BANISH HIM logic		
 		job_event_mtth_modifier_inverted_diplomacy_score = yes
 
+		modifier = { factor = 0.1 has_global_flag = debug_L3T }
 		modifier = {
 			#factor = 1.25
 			factor = 1.15 #L3T less impactive
@@ -1327,7 +1328,7 @@ character_event = {
 		}
 		piety = -25 #change from -10
 		random_list = {
-			50 = {
+			25 = {
 				#L3T ruler's VS chancellor's intrigue comes into play for success
 				job_event_mtth_modifier_inverted_intrigue_score = yes #ruler's intrigue
 				from_job_event_mtth_modifier_intrigue_score = yes #chancellor's intrigue
@@ -1337,7 +1338,7 @@ character_event = {
 					character_event = { id = 20141 days = 7 tooltip = "EVTTOOLTIP20141" }
 				}
 			}
-			50 = {
+			75 = {
 				character_event = { id = 20143 days = 7 tooltip = "EVTTOOLTIP20143" }
 			}
 		}
@@ -1404,6 +1405,7 @@ character_event = {
 				
 				event_target:claim_chancellor = {
 					character_event = { id = L3T.80 tooltip = "EVTTOOLTIPL3T80" }
+					set_character_flag = CHL_captured_str8
 				}
 			}
 			50 = {
