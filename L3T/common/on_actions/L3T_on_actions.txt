@@ -235,9 +235,10 @@ on_character_convert_religion = {
 	}
 }
 # When the religion changes in a county, ROOT is province. FROM has the old religion.
+#fires only on "natural" conversion, no console
 on_county_religion_change = {
 	events = {
-
+		#L3T.122 #test event ATM
 	}
 }
 

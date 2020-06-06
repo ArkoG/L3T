@@ -11,7 +11,7 @@ province_event = {
     id = L3T.120
 	hide_window = yes
 
-	is_triggered_only = yes
+	is_triggered_only = yes #from L3T_init_general (L3T.10)
 	
 	trigger = {
 		NOT = { has_province_flag = religion_init_set }
@@ -19,6 +19,10 @@ province_event = {
 		
 	immediate = {
 		set_province_flag = religion_init_set
+
+
+### add some random fake history
+## prévoir un cas de date historique ?
 		
 		if = {
 			limit = { 
@@ -28,6 +32,7 @@ province_event = {
 			add_province_modifier = { 
 				name = trad_christian
 				duration = -1
+				hidden = yes  #hidden for now
 			}
 			#set_variable = { which = was_christian_for value = 1 }
 		}
@@ -40,13 +45,14 @@ province_event = {
 			add_province_modifier = { 
 				name = trad_muslim
 				duration = -1
+				hidden = yes  #hidden for now
 			}
 			#set_variable = { which = was_muslim_for value = 1 }
 		}
 	}
 }
 
-###annual religion check
+###annual religion check (variable)
 character_event = {
     id = L3T.121
 	hide_window = yes
@@ -90,5 +96,46 @@ character_event = {
 
 ### add a notification if a tradition faded/about to fade
 #gestion des minorités
+
+###religion check (on_county_religion_change)
+
+
+###religion check (on_county_religion_change)
+#ROOT is province. FROM has the old religion
+#in religion scope ? pops for province owner, so character scope
+province_event = {
+    id = L3T.122
+	desc = "DESCL3T.122"
+	picture = "GFX_evt_bishop"
+	border = "GFX_event_normal_frame_religion"
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	trigger = {}
+	
+	immediate = {}
+	
+	option = {
+		name = "L3T.122A"
+		
+		ROOT = { 
+			add_province_modifier = {
+				name = totoro
+				duration = -1
+			}
+		}
+		religion_authority = {
+			modifier = achat_indulgence
+			years = 5
+		}
+		FROM = {
+			religion_authority = {
+				modifier = achat_indulgence
+				years = 5
+			}
+		}
+	}
+}
 
 
