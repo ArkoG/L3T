@@ -37,10 +37,10 @@ province_event = {
 			has_province_flag = ongoing_purge
 		}
 		owner = { job_marshal = { martial = 12 }}
-		#OR = {
-			#had_province_flag = { flag = villains_smugglers days = 365 } #DEBUG
-			#had_province_flag = { flag = villains_robbers days = 365 } #DEBUG
-		#}
+		OR = {
+			had_province_flag = { flag = villains_smugglers days = 365 }
+			had_province_flag = { flag = villains_robbers days = 365 }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -154,7 +154,7 @@ province_event = {
 		}
 		owner = { job_spymaster = { intrigue = 10 }}
 		owner = { wealth = 75 }
-		#had_province_flag = { flag = villains_thieves days = 365 } #DEBUG
+		had_province_flag = { flag = villains_thieves days = 365 }
 	}
 	
 	mean_time_to_happen = {
