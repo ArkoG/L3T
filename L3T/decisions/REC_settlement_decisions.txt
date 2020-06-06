@@ -23,7 +23,7 @@ settlement_decisions = {
 		
 		potential = {
 			holder_scope = { character = FROM }
-			is_capital = yes
+			is_capital = yes #province capital
 			FROM = { construire_cathedral_potential = yes }
 			OR = {
 				AND = { 
