@@ -1683,10 +1683,6 @@ character_event = {
 			factor = 0.9
 			has_character_modifier = the_fortress #L3T
 		}
-		modifier = {
-			factor = 0.01
-			has_global_flag = debug_L3T
-		}
 	}
 
 	immediate = {
@@ -1973,10 +1969,6 @@ character_event = {
 		modifier = {
 			factor = 1.5
 			religion_authority = 0.50
-		}
-		modifier = {
-			factor = 50
-			has_global_flag = debug_L3T
 		}
 	}
 

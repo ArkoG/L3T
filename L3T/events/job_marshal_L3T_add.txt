@@ -45,7 +45,6 @@ province_event = {
 	
 	mean_time_to_happen = {
 		months = 360
-		modifier = { factor = 0.01	has_global_flag = debug_L3T }
 		modifier = { factor = 0.9	owner = { job_marshal = { martial = 14 }}}
 		modifier = { factor = 0.9	owner = { job_marshal = { martial = 15 }}}
 		modifier = { factor = 0.9	owner = { job_marshal = { martial = 16 }}}
@@ -159,7 +158,6 @@ province_event = {
 	
 	mean_time_to_happen = {
 		months = 360
-		modifier = { factor = 0.01	has_global_flag = debug_L3T }
 		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 14 }}}
 		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 15 }}}
 		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 16 }}}

@@ -134,8 +134,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 36		
-		modifier = { factor = 0.01 has_global_flag = debug_L3T }
+		months = 36	
 		modifier = { factor = 0.75 NOT = { stewardship = 2 } }
 		modifier = { factor = 0.75 NOT = { stewardship = 4 } }
 		modifier = { factor = 0.75 NOT = { stewardship = 6 } }
