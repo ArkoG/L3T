@@ -114,7 +114,13 @@ castle = {
 	FEODAL_mil = { #défense et attaque, vocation militaire
 		desc = "FEODAL_mil_desc"
 		prerequisites = {xxx}
-		trigger = { TECH_TRADE_PRACTICES = 0 }
+		trigger = { 
+			TECH_TRADE_PRACTICES = 0
+			custom_tooltip = {
+				text = xxx
+				always = no
+			}
+		}
 		not_if_x_exists = { FEODAL_adm FEODAL_prod }
 		gold_cost = 0.0
 		build_time = 8
