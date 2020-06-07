@@ -10,39 +10,32 @@ namespace = L3T
 ##############################
 
 
-
 #Chancellor is arrested... (informing the chancellor, guards are here, no choice)
 character_event = {
 	id = L3T.80
 	#desc = "DESCL3T.80"
-	picture = GFX_evt_prisoner_hf
 	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-
-	#inform character he is caught, is banished, have to abandon job
 
 	#desc for direct arrestation
 	desc = {
 		text = DESCL3T.80a
 		trigger = { has_character_flag = CHL_captured_str8 }
 	}
-
 	#desc for arrestation after flee
 	desc = {
 		text = DESCL3T.80b
 		trigger = { has_character_flag = CHL_captured_flee }
 	}
-
-	picture = GFX_evt_prisoner_hf
-
-	immediate = {
-		random_list = {
-			1 = { set_character_flag = random_1 }
-			1 = { set_character_flag = random_2 }
-		}
+	#desc for arrestation after NOT flee
+	desc = {
+		text = DESCL3T.80c
+		trigger = { has_character_flag = CHL_captured_unflee }
 	}
 	
+	picture = GFX_evt_prisoner_hf
+
+	is_triggered_only = yes
+
 	option = {
 		name = "L3T.80A"
 		trigger = { has_character_flag = CHL_captured_str8 }
@@ -57,8 +50,6 @@ character_event = {
 		event_target:claim_liege =  { letter_event = { id = L3T.83 days = 5 }} #informe le lige du retour
 		#inform noble about successful arrestation
 		event_target:claim_noble = { letter_event = { id = L3T.84 } }
-		
-		set_character_flag = chancellor_claim_tarnished_reputation
 		
 		event_target:claim_noble = {
 			opinion = {
@@ -83,7 +74,30 @@ character_event = {
 		#inform noble about successful arrestation
 		event_target:claim_noble = { letter_event = { id = L3T.84 } }
 		
-		set_character_flag = chancellor_claim_tarnished_reputation
+	
+		event_target:claim_noble = {
+			opinion = {
+				who = event_target:claim_chancellor
+				name = he_attempted_fabricate_claim_chancellor_banned
+				years = 99
+			}
+		}
+	}
+	option = {
+		name = "L3T.80C"
+		trigger = { has_character_flag = CHL_captured_unflee }
+		#abandon job
+		event_target:claim_chancellor = { cancel_job_action = action_fabricate_claims }
+		event_target:claim_chancellor = {
+			add_character_modifier = {
+				name = tarnished_reputation
+				duration = -1
+			}
+		}
+		event_target:claim_liege =  { letter_event = { id = L3T.83 days = 5 }} #informe le lige du retour
+		#inform noble about successful arrestation
+		event_target:claim_noble = { letter_event = { id = L3T.84 } }
+		
 		
 		event_target:claim_noble = {
 			opinion = {
@@ -115,14 +129,14 @@ character_event = {
 			75 = {
 				#success but need to abandon job
 				event_target:claim_chancellor = { 
-					letter_event = { id = L3T.82 days = 5 } #informe du succès
+					character_event = { id = L3T.82 days = 5 } #informe du succès
 					set_character_flag = CHL_fled
 				}
 			}
 			25 = {
 				#failed and was catched
 				event_target:claim_chancellor = { 
-					letter_event = { id = L3T.80 days = 5 } #informe du succès
+					character_event = { id = L3T.80 days = 5 } #informe de l'échec
 					set_character_flag = CHL_captured_flee
 				}
 			}
@@ -139,53 +153,52 @@ character_event = {
 		#to hide
 		#was catched
 		character_event = { id = L3T.80 days = 5 random = 2 } #informe de l'échec
-		set_character_flag = CHL_captured_flee
+		set_character_flag = CHL_captured_unflee
 	}
 }
 
 # L3T.82 - Chancellor is informed he has fled but have to abandon job
-letter_event = {
+character_event = {
 	id = L3T.82
 	desc = "DESCL3T.82"
-	picture = GFX_evt_death
+	picture = GFX_evt_emissary
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = "L3T.82A"
-			#success but need to abandon job
-			event_target:claim_chancellor = { 
-				cancel_job_action = action_fabricate_claims
+		#success but need to abandon job
+		event_target:claim_chancellor = { 
+			cancel_job_action = action_fabricate_claims
 
+		}
+		event_target:claim_chancellor = {
+			add_character_modifier = {
+				name = tarnished_reputation
+				duration = -1
 			}
-			event_target:claim_chancellor = {
-				add_character_modifier = {
-					name = tarnished_reputation
-					duration = -1
-				}
+		}
+		event_target:claim_liege =  { letter_event = { id = L3T.83 days = 10 }} #informe le lige du retour
+		#noble is informed about the flee
+		event_target:claim_noble = { letter_event = { id = L3T.84 days = 5 } }
+		#noble will hate me BTW
+		event_target:claim_noble = {
+			opinion = {
+				who = event_target:claim_chancellor
+				name = he_attempted_fabricate_claim_chancellor_banned #might be duplicate of 84 effect? turn it into a tooltip ?
+				years = 99
 			}
-			event_target:claim_liege =  { letter_event = { id = L3T.83 days = 10 }} #informe le lige du retour
-			#noble is informed about the flee
-			event_target:claim_noble = { letter_event = { id = L3T.84 days = 5 } }
-			#noble will hate me BTW
-			event_target:claim_noble = {
-				opinion = {
-					who = event_target:claim_chancellor
-					name = he_attempted_fabricate_claim_chancellor_banned
-					years = 99
-				}
-			}
-
+		}
 	}
 }
 
 # L3T.83 - liege is informed about the Chancellor's failure and return
 letter_event = {
 	id = L3T.83
-	desc = "DESCL3T.83"
-	picture = GFX_evt_death
-	border = GFX_event_normal_frame_diplomacy
+#	desc = "DESCL3T.83"
+
+	border = GFX_event_letter_frame_diplomacy
 
 	#desc for direct arrestation
 	desc = {
@@ -201,19 +214,18 @@ letter_event = {
 	desc = {
 		text = DESCL3T.84c
 		trigger = { event_target:claim_chancellor = { has_character_flag = CHL_fled }}
-	}	
+	}
 	#desc after flee or NOT
-#	event_target:claim_chancellor
-#has_character_flag = CHL_captured_flee
-#	event_target:claim_chancellor
-#has_character_flag = CHL_captured_str8
-
-	show_from_from = yes
+	desc = {
+		text = DESCL3T.84d
+		trigger = { event_target:claim_chancellor = { has_character_flag = CHL_captured_unflee }}
+	}	
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = "L3T.83A"
+		trigger = { job_chancellor = { has_character_flag = CHL_fled }}
 		job_chancellor = {
 			cancel_job_action = action_fabricate_claims
 		}
@@ -228,6 +240,40 @@ letter_event = {
 			name = opinion_failure_claim
 			years = 5
 		}
+		event_target:claim_chancellor = {
+			clr_character_flag = CHL_captured_str8
+			clr_character_flag = CHL_captured_flee
+			clr_character_flag = CHL_fled
+			clr_character_flag = CHL_captured_unflee
+		}
+		clear_event_target = claim_noble
+		clear_event_target = claim_chancellor
+		clear_event_target = claim_liege
+		
+	}
+	option = {
+		name = "L3T.83B"
+		trigger = { job_chancellor = { NOT = { has_character_flag = CHL_fled }}}
+		job_chancellor = {
+			cancel_job_action = action_fabricate_claims
+		}
+		event_target:claim_chancellor = {
+			add_character_modifier = {
+				name = tarnished_reputation
+				duration = -1
+			}
+		}
+		opinion = {
+			who = event_target:claim_chancellor
+			name = opinion_failure_claim
+			years = 5
+		}
+		event_target:claim_chancellor = {
+			clr_character_flag = CHL_captured_str8
+			clr_character_flag = CHL_captured_flee
+			clr_character_flag = CHL_fled
+			clr_character_flag = CHL_captured_unflee
+		}
 		clear_event_target = claim_noble
 		clear_event_target = claim_chancellor
 		clear_event_target = claim_liege
@@ -236,9 +282,8 @@ letter_event = {
 # L3T.84 - Noble is informed that the arrestation attempt succeeded or failed
 letter_event = {
 	id = L3T.84
-	desc = "DESCL3T.84"
-	picture = GFX_evt_death
-	border = GFX_event_normal_frame_diplomacy
+	#desc = "DESCL3T.84"
+	border = GFX_event_letter_frame_diplomacy
 	
 	is_triggered_only = yes
 
@@ -246,83 +291,84 @@ letter_event = {
 	desc = {
 		text = DESCL3T.84a
 		trigger = { event_target:claim_chancellor = { has_character_flag = CHL_captured_str8 }}
+
 	}
 	#desc for arrestation after flee
 	desc = {
 		text = DESCL3T.84b
 		trigger = { event_target:claim_chancellor = { has_character_flag = CHL_captured_flee }}
+
 	}
 	#desc successful flee
 	desc = {
 		text = DESCL3T.84c
 		trigger = { event_target:claim_chancellor = { has_character_flag = CHL_fled }}
+
 	}
 	#desc after flee or NOT
-#	event_target:claim_chancellor
-#has_character_flag = CHL_captured_flee
-#	event_target:claim_chancellor
-#has_character_flag = CHL_captured_str8
-#had feld
-	
-	immediate = {
-		random_list = {
-			1 = { set_character_flag = random_1 }
-			1 = { set_character_flag = random_2 }
-		}
+	desc = {
+		text = DESCL3T.84d
+		trigger = { event_target:claim_chancellor = { has_character_flag = CHL_captured_unflee }}
+
 	}
+	
+
 
 	option = {
-		#great!
+		#qu'il ne revienne jamais!
 		name = "L3T.84A"
-		trigger = { has_character_flag = random_1 }
-		clr_character_flag = random_1
-		#hidden_tooltip = { 
-			
+		trigger = { NOT = { has_character_flag = CHL_fled }}
 
-		#}
 		opinion = {
 			who = event_target:claim_chancellor
 			name = he_attempted_fabricate_claim_chancellor_banned
 			years = 99
 		}
+		opinion = {
+			who = event_target:claim_liege
+			name = he_attempted_fabricate_claim_chancellor_banned
+			years = 10
+		}
+		#only applied if actually banned, not successful flee
+		reverse_opinion = {
+			who = event_target:claim_noble
+			name = banned_councillor
+			years = 10
+		}
+		#flag cleanup
+		event_target:claim_chancellor = {
+			clr_character_flag = CHL_captured_str8
+			clr_character_flag = CHL_captured_flee
+			clr_character_flag = CHL_fled
+			clr_character_flag = CHL_captured_unflee
+		}
 		clear_event_target = claim_noble
 		clear_event_target = claim_chancellor
 		clear_event_target = claim_liege
 	}
 	option = {
-		#excellent!
+		#il n'est pas prêt de revenir
 		name = "L3T.84B"
-		trigger = { has_character_flag = random_2 }
-		clr_character_flag = random_2
-		#hidden_tooltip = { 
-			
-			event_target:claim_noble = {
-				reverse_opinion = {
-					modifier = he_attempted_fabricate_claim_chancellor_banned
-					who = event_target:claim_liege
-					years = 10
-				}
-			}
-		#}
-		clear_event_target = claim_noble
-		clear_event_target = claim_chancellor
-		clear_event_target = claim_liege
-	}
-	option = {
-		#excellent!
-		name = "L3T.84C"
-		trigger = { event_target:claim_chancellor = { has_character_flag = CHL_fled }}
-		clr_character_flag = random_2
-		#hidden_tooltip = { 
-			
-			event_target:claim_noble = {
-				reverse_opinion = {
-					modifier = he_attempted_fabricate_claim_chancellor_banned
-					who = event_target:claim_liege
-					years = 10
-				}
-			}
-		#}
+		trigger = { has_character_flag = CHL_fled }
+
+		opinion = {
+			who = event_target:claim_chancellor
+			name = he_attempted_fabricate_claim_chancellor_banned
+			years = 99
+		}
+		opinion = {
+			who = event_target:claim_liege
+			name = he_attempted_fabricate_claim_chancellor_banned
+			years = 10
+		}
+		
+		#flag cleanup
+		event_target:claim_chancellor = {
+			clr_character_flag = CHL_captured_str8
+			clr_character_flag = CHL_captured_flee
+			clr_character_flag = CHL_fled
+			clr_character_flag = CHL_captured_unflee
+		}
 		clear_event_target = claim_noble
 		clear_event_target = claim_chancellor
 		clear_event_target = claim_liege
