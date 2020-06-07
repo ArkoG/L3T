@@ -1283,7 +1283,7 @@ character_event = {
 		modifier = { factor = 0.9 has_character_modifier = tarnished_reputation }
 		job_event_mtth_modifier_inverted_diplomacy_score = yes
 
-		modifier = { factor = 0.1 has_global_flag = debug_L3T }
+		modifier = { factor = 0.05 has_global_flag = debug_L3T }
 		modifier = {
 			#factor = 1.25
 			factor = 1.15 #L3T less impactive
@@ -1394,6 +1394,7 @@ character_event = {
 			factor = 35
 			modifier = { factor = 1.2 has_education_martial_trigger = yes }
 			modifier = { factor = 1.2 has_lifestyle_martial_trigger = yes }
+			modifier = { factor = 5 has_global_flag = debug_L3T }
 		}
 		
 		save_event_target_as = claim_noble
@@ -1455,11 +1456,6 @@ character_event = {
 			#FROM is the chancellor to be killed 
 			FROM = { liege = { character_event = { id = 20147 } } }
 			FROM = { liege = { save_event_target_as = killed_chancellors_boss }}
-			opinion = {
-				modifier = he_attempted_fabricate_claim_chancellor_killed
-				who = event_target:killed_chancellors_boss
-				years = 10
-			}
 		}
 	}
 }
