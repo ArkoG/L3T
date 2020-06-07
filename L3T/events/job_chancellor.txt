@@ -249,7 +249,7 @@ character_event = {
 			ROOT = {
 				location = {
 					OR = {
-						## barony claim - L3T rule
+						## barony claim - L3T addition
 						#can create a claim on a non capital castles
 						AND = {
 							has_game_rule = {
@@ -401,7 +401,6 @@ character_event = {
 
 		job_event_mtth_modifier_diplomacy_score = yes
 		modifier = { factor = 1.1 has_character_modifier = tarnished_reputation }
-########BANISH HIM logic
 		modifier = {
 			factor = 1.2
 			location = {
@@ -470,9 +469,15 @@ character_event = {
 		name = "EVTOPTA913"
 		hidden_tooltip = {
 			# Try to claim Kingdom title - only available with Become King ambition
+			#vanilla version
 			if = {
 				limit = {
 					diplomacy = 22
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = vanilla
+					}
 					liege = {
 						has_ambition = obj_become_king
 						NOT = { has_character_flag = kingdom_claimed_with_ambition }
@@ -509,6 +514,11 @@ character_event = {
 				limit = {
 					diplomacy = 18
 					NOT = { diplomacy = 22 }
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = vanilla
+					}
 					liege = {
 						has_ambition = obj_become_king
 						NOT = { has_character_flag = kingdom_claimed_with_ambition }
@@ -545,6 +555,11 @@ character_event = {
 				limit = {
 					diplomacy = 15
 					NOT = { diplomacy = 18 }
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = vanilla
+					}
 					liege = {
 						has_ambition = obj_become_king
 						NOT = { has_character_flag = kingdom_claimed_with_ambition }
@@ -577,15 +592,21 @@ character_event = {
 					break = yes
 				}
 			}
+			#L3T version, claim a duchy
 			if = {
 				limit = {
-					NOT = { diplomacy = 15 }
+					diplomacy = 22
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = restricted
+					}
 					liege = {
 						has_ambition = obj_become_king
-						NOT = { has_character_flag = kingdom_claimed_with_ambition }
+						NOT = { has_character_flag = duchy_claimed_with_ambition }
 						ROOT = {
 							location = {
-								kingdom = {
+								duchy = {
 									NOT = { claimed_by = PREVPREVPREV }
 									holder_scope = {
 										NOT = { character = ROOT }
@@ -597,16 +618,58 @@ character_event = {
 					}
 				}
 				random = {
-					chance = 2
+					chance = 20
 					location = {
-						kingdom = {
+						duchy = {
 							save_event_target_as = target_title
 							holder_scope = {
-								set_character_flag = kingdom_claimed
+								set_character_flag = duchy_claimed
 								character_event = { id = 20130 days = 1 }
 							}
 						}
 					}
+					liege = { set_character_flag = duchy_claimed_with_ambition }
+					set_character_flag = claim_done
+					break = yes
+				}
+			}
+			if = {
+				limit = {
+					diplomacy = 18
+					NOT = { diplomacy = 22 }
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = rectricted
+					}
+					liege = {
+						has_ambition = obj_become_king
+						NOT = { has_character_flag = duchy_claimed_with_ambition }
+						ROOT = {
+							location = {
+								duchy = {
+									NOT = { claimed_by = PREVPREVPREV }
+									holder_scope = {
+										NOT = { character = ROOT }
+										owns = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				random = {
+					chance = 10
+					location = {
+						duchy = {
+							save_event_target_as = target_title
+							holder_scope = {
+								set_character_flag = duchy_claimed
+								character_event = { id = 20130 days = 1 }
+							}
+						}
+					}
+					liege = { set_character_flag = duchy_claimed_with_ambition }
 					set_character_flag = claim_done
 					break = yes
 				}
@@ -615,6 +678,55 @@ character_event = {
 				limit = {
 					diplomacy = 15
 					NOT = { diplomacy = 18 }
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = restricted
+					}
+					liege = {
+						has_ambition = obj_become_king
+						NOT = { has_character_flag = duchy_claimed_with_ambition }
+						ROOT = {
+							location = {
+								duchy = {
+									NOT = { claimed_by = PREVPREVPREV }
+									holder_scope = {
+										NOT = { character = ROOT }
+										owns = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				random = {
+					chance = 5
+					location = {
+						duchy = {
+							save_event_target_as = target_title
+							holder_scope = {
+								set_character_flag = duchy_claimed
+								character_event = { id = 20130 days = 1 }
+							}
+						}
+					}
+					liege = { set_character_flag = duchy_claimed_with_ambition }
+					set_character_flag = claim_done
+					break = yes
+				}
+			}
+			#L3T removed less than diplo 15 that gave 2% success chance to get the claim
+
+			#claim duchy vanilla
+			if = {
+				limit = {
+					diplomacy = 15
+					NOT = { diplomacy = 18 }
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = vanilla
+					}
 					liege = {
 						ROOT = {
 							location = {
@@ -648,6 +760,11 @@ character_event = {
 				limit = {
 					diplomacy = 18
 					NOT = { diplomacy = 20 }
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = vanilla
+					}
 					liege = {
 						ROOT = {
 							location = {
@@ -680,6 +797,11 @@ character_event = {
 			if = {
 				limit = {
 					diplomacy = 20
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = vanilla
+					}
 					liege = {
 						ROOT = {
 							location = {
@@ -708,10 +830,132 @@ character_event = {
 					}
 					set_character_flag = claim_done
 				}
-			}			
-			# Try to claim county title
+			}
+			
+			#claim duchy L3T
 			if = {
 				limit = {
+					diplomacy = 15
+					NOT = { diplomacy = 18 }
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = restricted
+					}
+					liege = {
+						ROOT = {
+							location = {
+								county = {
+									NOT = { claimed_by = PREVPREVPREV }
+									holder_scope = {
+										NOT = { is_liege_of = ROOT }
+										NOT = { character = ROOT }
+										owns = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				random = {
+					chance = 10
+					location = {
+						county = {
+							save_event_target_as = target_title
+							holder_scope = {
+								set_character_flag = county_claimed
+								character_event = { id = 20130 days = 1 }
+							}
+						}
+					}
+					set_character_flag = claim_done
+				}
+			}
+			if = {
+				limit = {
+					diplomacy = 18
+					NOT = { diplomacy = 20 }
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = restricted
+					}
+					liege = {
+						ROOT = {
+							location = {
+								county = {
+									NOT = { claimed_by = PREVPREVPREV }
+									holder_scope = {
+										NOT = { is_liege_of = ROOT }
+										NOT = { character = ROOT }
+										owns = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				random = {
+					chance = 20
+					location = {
+						county = {
+							save_event_target_as = target_title
+							holder_scope = {
+								set_character_flag = county_claimed
+								character_event = { id = 20130 days = 1 }
+							}
+						}
+					}
+					set_character_flag = claim_done
+				}
+			}
+			if = {
+				limit = {
+					diplomacy = 20
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = restricted
+					}
+					liege = {
+						ROOT = {
+							location = {
+								county = {
+									NOT = { claimed_by = PREVPREVPREV }
+									holder_scope = {
+										NOT = { is_liege_of = ROOT }
+										NOT = { character = ROOT }
+										owns = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				random = {
+					chance = 30
+					location = {
+						county = {
+							save_event_target_as = target_title
+							holder_scope = {
+								set_character_flag = county_claimed
+								character_event = { id = 20130 days = 1 }
+							}
+						}
+					}
+					set_character_flag = claim_done
+				}
+			}
+
+			
+			# Try to claim county title VANILLA
+			if = {
+				limit = {
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = vanilla
+					}
 					NOT = { has_character_flag = claim_done }
 					liege = {
 						ROOT = {
@@ -737,6 +981,13 @@ character_event = {
 					}
 				}
 			}
+			#try to claim barony (L3T)
+			#
+			#
+			#TO DO
+			#
+			#
+			#######
 			clr_character_flag = claim_done
 		}
 	}
@@ -754,14 +1005,15 @@ character_event = {
 	option = {
 		name = "EVTOPTA20130"
 		hidden_tooltip = {
+			# Claim barony
+			if = {
+				###new event ID
+				limit = { has_character_flag = barony_claimed }
+				FROM = { liege = { letter_event = { id = 20135 days = 1 } } } ##!!!new ID
+			}
 			# Claim county
 			if = {
-				limit = {
-					NOR = {
-						has_character_flag = duchy_claimed
-						has_character_flag = kingdom_claimed
-					}
-				}
+				limit = { has_character_flag = county_claimed }
 				FROM = { liege = { letter_event = { id = 20131 days = 1 } } }
 			}
 			# Claim duchy
