@@ -137,7 +137,7 @@ action_fabricate_claims = {
 			}
 		}
 		is_within_diplo_range = FROM
-		#can't send back a chancellor against the same target
+		#ruler can't send again a chancellor against the same target after banishment
 		NOT = {
 			any_province_lord = {
 				has_opinion_modifier = {
