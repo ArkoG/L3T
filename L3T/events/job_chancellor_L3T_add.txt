@@ -48,6 +48,12 @@ character_event = {
 		trigger = { has_character_flag = CHL_captured_str8 }
 		#abandon job
 		event_target:claim_chancellor = { cancel_job_action = action_fabricate_claims }
+		event_target:claim_chancellor = {
+			add_character_modifier = {
+				name = tarnished_reputation
+				duration = -1
+			}
+		}
 		event_target:claim_liege =  { letter_event = { id = L3T.83 days = 5 }} #informe le lige du retour
 		#inform noble about successful arrestation
 		event_target:claim_noble = { letter_event = { id = L3T.84 } }
@@ -67,6 +73,12 @@ character_event = {
 		trigger = { has_character_flag = CHL_captured_flee }
 		#abandon job
 		event_target:claim_chancellor = { cancel_job_action = action_fabricate_claims }
+		event_target:claim_chancellor = {
+			add_character_modifier = {
+				name = tarnished_reputation
+				duration = -1
+			}
+		}
 		event_target:claim_liege =  { letter_event = { id = L3T.83 days = 5 }} #informe le lige du retour
 		#inform noble about successful arrestation
 		event_target:claim_noble = { letter_event = { id = L3T.84 } }
@@ -147,6 +159,12 @@ letter_event = {
 				cancel_job_action = action_fabricate_claims
 
 			}
+			event_target:claim_chancellor = {
+				add_character_modifier = {
+					name = tarnished_reputation
+					duration = -1
+				}
+			}
 			event_target:claim_liege =  { letter_event = { id = L3T.83 days = 10 }} #informe le lige du retour
 			#noble is informed about the flee
 			event_target:claim_noble = { letter_event = { id = L3T.84 days = 5 } }
@@ -198,6 +216,12 @@ letter_event = {
 		name = "L3T.83A"
 		job_chancellor = {
 			cancel_job_action = action_fabricate_claims
+		}
+		event_target:claim_chancellor = {
+			add_character_modifier = {
+				name = tarnished_reputation
+				duration = -1
+			}
 		}
 		opinion = {
 			who = event_target:claim_chancellor
