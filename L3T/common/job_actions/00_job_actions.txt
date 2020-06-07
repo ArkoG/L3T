@@ -138,8 +138,8 @@ action_fabricate_claims = {
 		}
 		is_within_diplo_range = FROM
 		#can't send back a chancellor against the same target
-		any_province_lord = {
-			NOT = {
+		NOT = {
+			any_province_lord = {
 				has_opinion_modifier = {
 					who = FROM
 					name = he_attempted_fabricate_claim_chancellor_banned
