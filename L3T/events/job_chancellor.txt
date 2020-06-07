@@ -1267,7 +1267,6 @@ character_event = {
 		NOT = { has_character_modifier = bedridden_illness }
 		NOT = { trait = incapable }
 		NOT = { has_character_modifier = bribed_by_noble_timer }
-		########BANISH HIM logic
 		location = {
 			owner = {
 				NOT = { is_liege_of = ROOT }
@@ -1279,11 +1278,10 @@ character_event = {
 	mean_time_to_happen = {
 		months = 240
 
-########BANISH HIM logic
 		modifier = { factor = 0.9 has_character_modifier = tarnished_reputation }
 		job_event_mtth_modifier_inverted_diplomacy_score = yes
 
-		modifier = { factor = 0.05 has_global_flag = debug_L3T }
+		#modifier = { factor = 0.01 has_global_flag = debug_L3T }
 		modifier = {
 			#factor = 1.25
 			factor = 1.15 #L3T less impactive
@@ -1293,10 +1291,6 @@ character_event = {
 			#factor = 1.25
 			factor = 1.1 #L3T less impactive
 			any_owned_bloodline = { has_bloodline_flag = bloodline_faster_claims } #If chancellor is also your relative.
-		}
-		modifier = {
-			factor = 0.8 #L3T less impactive
-			has_character_flag = gets_bolder #if uncatched become less cautious
 		}
 	}
 	
@@ -1324,9 +1318,7 @@ character_event = {
 	option = {
 		name = "EVTOPTA20140" #Make him disappear...
 		ai_chance = { 
-		########BANISH HIM logic
 			factor = 35
-			#L3T AI logic
 			modifier = { factor = 1.2 has_education_intrigue_trigger = yes }
 			modifier = { factor = 1.2 has_lifestyle_intrigue_trigger = yes }
 		}
@@ -1376,11 +1368,9 @@ character_event = {
 		}
 	}
 	
-	#
-	#
-	###############BANISH HIM (martial skill) 
-	#
-	#
+	#BANISH HIM (martial skill) 
+	
+	#old vanilla option
 	#option = {
 	#	name = "EVTOPTC20140" #I better let it be for now
 	#	ai_chance = { 
@@ -1390,34 +1380,107 @@ character_event = {
 	option = {
 		name = "EVTOPTC20140" #L3T additional option #Banish him... (martial/option)
 		ai_chance = { 
-		########BANISH HIM logic
 			factor = 35
 			modifier = { factor = 1.2 has_education_martial_trigger = yes }
 			modifier = { factor = 1.2 has_lifestyle_martial_trigger = yes }
-			modifier = { factor = 5 has_global_flag = debug_L3T }
+			#modifier = { factor = 50 has_global_flag = debug_L3T }
 		}
 		
 		save_event_target_as = claim_noble
 		FROM = { save_event_target_as = claim_chancellor }
 		FROM = { liege = { save_event_target_as = claim_liege }}
-		
+
 		random_list = {
 			50 = {
+				custom_tooltip = { text = "EVTTOOLTIPL3T80" }
 				#L3T ruler's VS chancellor's martial comes into play for success
-				job_event_mtth_modifier_inverted_martial_score = yes #ruler's martial
-				job_event_mtth_modifier_inverted_intrigue_score = yes #ruler's intrigue to get it discreet enough
-				from_job_event_mtth_modifier_martial_score = yes  #chancellor's martial
+				modifier = { factor = 0.75 NOT = { martial = 2 } }
+				modifier = { factor = 0.75 NOT = { martial = 4 } }
+				modifier = { factor = 0.75 NOT = { martial = 6 } }
+				modifier = { factor = 0.75 NOT = { martial = 8 } }
+				modifier = { factor = 1.15 martial = 10 }
+				modifier = { factor = 1.15 martial = 11 }
+				modifier = { factor = 1.15 martial = 12 }
+				modifier = { factor = 1.15 martial = 13 }
+				modifier = { factor = 1.10 martial = 14 }
+				modifier = { factor = 1.10 martial = 15 }
+				modifier = { factor = 1.10 martial = 16 }
+				modifier = { factor = 1.10 martial = 17 }
+				modifier = { factor = 1.10 martial = 18 }
+				modifier = { factor = 1.10 martial = 19 }
+				modifier = { factor = 1.05 martial = 20 }
+				modifier = { factor = 1.05 martial = 21 }
+				modifier = { factor = 1.05 martial = 22 }
+				
+				modifier = { factor = 1.25 event_target:claim_chancellor = { NOT = { martial = 2 } }}
+				modifier = { factor = 1.25 event_target:claim_chancellor = { NOT = { martial = 4 } }}
+				modifier = { factor = 1.25 event_target:claim_chancellor = { NOT = { martial = 6 } }}
+				modifier = { factor = 1.25 event_target:claim_chancellor = { NOT = { martial = 8 } }}
+				modifier = { factor = 0.85 event_target:claim_chancellor = { martial = 10 }}
+				modifier = { factor = 0.85 event_target:claim_chancellor = { martial = 11 }}
+				modifier = { factor = 0.85 event_target:claim_chancellor = { martial = 12 }}
+				modifier = { factor = 0.85 event_target:claim_chancellor = { martial = 13 }}
+				modifier = { factor = 0.85 event_target:claim_chancellor = { martial = 14 }}
+				modifier = { factor = 0.85 event_target:claim_chancellor = { martial = 15 }}
+				modifier = { factor = 0.85 event_target:claim_chancellor = { martial = 16 }}
+				modifier = { factor = 0.90 event_target:claim_chancellor = { martial = 17 }}
+				modifier = { factor = 0.90 event_target:claim_chancellor = { martial = 18 }}
+				modifier = { factor = 0.90 event_target:claim_chancellor = { martial = 19 }}
+				modifier = { factor = 0.95 event_target:claim_chancellor = { martial = 20 }}
+				modifier = { factor = 0.95 event_target:claim_chancellor = { martial = 21 }}
+				modifier = { factor = 0.95 event_target:claim_chancellor = { martial = 22 }}
+
+				#job_event_mtth_modifier_inverted_martial_score = yes #ruler's martial
+				#job_event_mtth_modifier_inverted_intrigue_score = yes #ruler's intrigue to get it discreet enough
+				#from_job_event_mtth_modifier_martial_score = yes  #chancellor's martial
 				
 				event_target:claim_chancellor = {
-					character_event = { id = L3T.80 tooltip = "EVTTOOLTIPL3T80" }
+					character_event = { id = L3T.80 }
 					set_character_flag = CHL_captured_str8
 				}
 			}
 			50 = {
+				custom_tooltip = { text = "EVTTOOLTIPL3T81" }
 				#intrigue test on the chancellor to know about the planned arrestation
-				from_job_event_mtth_modifier_inverted_intrigue_score = yes #FROM scope is inside
+				modifier = { factor = 0.75 event_target:claim_chancellor = {NOT = { intrigue = 2 } }}
+				modifier = { factor = 0.75 event_target:claim_chancellor = {NOT = { intrigue = 4 } }}
+				modifier = { factor = 0.75 event_target:claim_chancellor = {NOT = { intrigue = 6 } }}
+				modifier = { factor = 0.75 event_target:claim_chancellor = {NOT = { intrigue = 8 } }}
+				modifier = { factor = 1.15 event_target:claim_chancellor = {intrigue = 10 }}
+				modifier = { factor = 1.15 event_target:claim_chancellor = {intrigue = 11 }}
+				modifier = { factor = 1.15 event_target:claim_chancellor = {intrigue = 12 }}
+				modifier = { factor = 1.15 event_target:claim_chancellor = {intrigue = 13 }}
+				modifier = { factor = 1.10 event_target:claim_chancellor = {intrigue = 14 }}
+				modifier = { factor = 1.10 event_target:claim_chancellor = {intrigue = 15 }}
+				modifier = { factor = 1.10 event_target:claim_chancellor = {intrigue = 16 }}
+				modifier = { factor = 1.10 event_target:claim_chancellor = {intrigue = 17 }}
+				modifier = { factor = 1.10 event_target:claim_chancellor = {intrigue = 18 }}
+				modifier = { factor = 1.10 event_target:claim_chancellor = {intrigue = 19 }}
+				modifier = { factor = 1.05 event_target:claim_chancellor = {intrigue = 20 }}
+				modifier = { factor = 1.05 event_target:claim_chancellor = {intrigue = 21 }}
+				modifier = { factor = 1.05 event_target:claim_chancellor = {intrigue = 22 }}
+				
+				modifier = { factor = 1.25 NOT = { intrigue = 2 } }
+				modifier = { factor = 1.25 NOT = { intrigue = 4 } }
+				modifier = { factor = 1.25 NOT = { intrigue = 6 } }
+				modifier = { factor = 1.25 NOT = { intrigue = 8 } }
+				modifier = { factor = 0.85 intrigue = 10 }
+				modifier = { factor = 0.85 intrigue = 11 }
+				modifier = { factor = 0.85 intrigue = 12 }
+				modifier = { factor = 0.85 intrigue = 13 }
+				modifier = { factor = 0.85 intrigue = 14 }
+				modifier = { factor = 0.85 intrigue = 15 }
+				modifier = { factor = 0.85 intrigue = 16 }
+				modifier = { factor = 0.90 intrigue = 17 }
+				modifier = { factor = 0.90 intrigue = 18 }
+				modifier = { factor = 0.90 intrigue = 19 }
+				modifier = { factor = 0.95 intrigue = 20 }
+				modifier = { factor = 0.95 intrigue = 21 }
+				modifier = { factor = 0.95 intrigue = 22 }
+
+				#from_job_event_mtth_modifier_inverted_intrigue_score = yes #FROM scope is inside
 				event_target:claim_chancellor = {
-					character_event = { id = L3T.81 days = 7 tooltip = "EVTTOOLTIPL3T81" }
+					character_event = { id = L3T.81 days = 7 }
 				}
 			}
 		}
@@ -1455,7 +1518,6 @@ character_event = {
 		hidden_tooltip = { 
 			#FROM is the chancellor to be killed 
 			FROM = { liege = { character_event = { id = 20147 } } }
-			FROM = { liege = { save_event_target_as = killed_chancellors_boss }}
 		}
 	}
 }
