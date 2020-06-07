@@ -1,24 +1,29 @@
 #;;;;;;;;;;;;;;x
-EVTTOOLTIPL3T80;[From.GetJobTitle][From.GetBestName] is caught easily and get banned.;La capture et le banissement de [From.GetJobTitle] [From.GetBestName] est facile.;;;;;;;;;;;;x
-EVTTOOLTIPL3T81;[From.GetJobTitle][From.GetBestName] can learn about the arrest thanks to [From.GetHerHis] Intrigue skills.;[From.GetJobTitle] [From.GetBestName] peut suspecter de son arrestation grâce à ses compétences en Intrigue. ;;;;;;;;;;;;x
-DESCL3T.80a;As soon as I hear a knock on the door of my apartments I sense that something is not right. No need to be a soothsayer for that of course and when the door crashes and the guards of [claim_liege.GetName] enter the room I know my fate is sealed. \nThe next moment I am (man)-handled to [claim_liege.GetHerHim] to be trialed immediately and banished from the Realm.;Dès que j'entends frapper à la porte de mes appartements je pressens que quelque chose n'est pas normal. Nul besoin d'être devin pour cela évidemment et lorsque la porte se fracasse et que les gardes de [claim_liege.GetName] entrent dans la pièce je sais que mon sort est scellé. \nL'instant d'après je suis (mal)-mené jusque devant [claim_liege.GetHerHim] pour être jugé immédiatement et banni du Royaume. ;;;;;;;;;;;;x
+EVTTOOLTIPL3T80;The [From.GetJobTitle] is caught and get banned.;Il est procédé à la capture et au banissement du Conseiller.;;;;;;;;;;;;x
+EVTTOOLTIPL3T81;The [From.GetJobTitle] can learn about the arrest thanks to [From.GetHerHis] Intrigue skills.;Le [From.GetJobTitle] peut suspecter de son arrestation grâce à ses compétences en Intrigue. ;;;;;;;;;;;;x
+DESCL3T.80a;As soon as I hear a knock on the door of my apartments I feel that something is not right. No need to be a soothsayer for that of course and when the door crashes and the guards of [claim_liege.GetName] enter the room I know my fate is sealed. \nThe next moment I am (man)-handled to [claim_liege.GetHerHim] to be trialed immediately and banished from the Realm.;Dès que j'entends frapper à la porte de mes appartements je pressens que quelque chose n'est pas normal. Nul besoin d'être devin pour cela évidemment et lorsque la porte se fracasse et que les gardes de [claim_liege.GetName] entrent dans la pièce je sais que mon sort est scellé. \nL'instant d'après je suis (mal)-mené jusque devant [claim_liege.GetHerHim] pour être jugé immédiatement et banni du Royaume. ;;;;;;;;;;;;x
 DESCL3T.80b;;;;;;;;;;;;;;x
-L3T.80A;We might feel happy that we have not suffered more ...;Estimons-nous heureux de n'avoir pas subi davantage...;;;;;;;;;;;;x
-L3T.80B;;;;;;;;;;;;;;x
+DESCL3T.80c;;;;;;;;;;;;;;x
+L3T.80A;This could have been worse...;Cela aurait pu être pire...;;;;;;;;;;;;x
+L3T.80B;It's no good;Cela n'augure rien de bon;;;;;;;;;;;;x
+L3T.80C;How dare they?;Comment osent-ils ?;;;;;;;;;;;;x
 DESCL3T.81;Thanks to my network of informants, I was made aware that fellowing of my actions against [claim_liege.GetName] is trying to arrest me. This probably to stop my activities regarding the falsification of documents to create a claim on his titles. \nHe is right, indeed, remains to be seen what my options are... ;Grâce à mon réseau d'informateurs, il m'a été donné à connaître que suite à mes agissements [claim_liege.GetName] cherche à me mettre aux arrêts. Cela probablement afin que je cesse mes activités quant à la falsification de documents pour créer une revendication sur ses titres. \nIl a vu juste en effet, reste à voir quelles sont mes options...;;;;;;;;;;;;x
 L3T.81A;Fly, you foooools!!!;Fuyez, pauvres fous !!!;;;;;;;;;;;;x
-L3T.81B;A vile attempt at intimidation, I can't believe it...;Une vile tentative d'intimidation, je ne peux le croire... ;;;;;;;;;;;;x
+L3T.81B;A vile attempt at intimidation, I can't believe in this...;Une vile tentative d'intimidation, je ne peux le croire... ;;;;;;;;;;;;x
 DESCL3T.82;I was able to escape the fate that [claim_liege.GetName] was reserving to me but unfortunately I have to abandon my mission. My liege-lord will probably be irritated by this and any new attempt risks being compromised... ;J'ai pu échapper au sort que me réservais [claim_liege.GetName] mais je dois malheureusement abandonner ma mission. Mon seigneur-lige en sera probablement irrité et toute nouvelle tentative risque d'en être compromise...;;;;;;;;;;;;x
 L3T.82A;Sad outcome, but happy to have survived this situation...;Triste issue, mais content d'avoir survécu à cette situation... ;;;;;;;;;;;;x
 DESCL3T.83a;We had sent [claim_chancellor.Get.Name] with the mission of making a claim on our behalf for titles. \nUnfortunately, things took a terrible turn when our target, [claim_noble.GetName] ordered the arrest of our [claim_chancellor.GetJobTitle], who fortunately succeed to escape. ;Nous avions envoyé [claim_chancellor.Get.Name] avec pour mission de fabriquer pour notre compte une revendication sur des titres. \nMalheureusement les choses ont pris une tournure infortune lorsque notre cible, [claim_noble.GetName] a ordonné l'arrestation de notre [claim_chancellor.GetJobTitle], a heureusement puis s'échapper. ;;;;;;;;;;;;x
 DESCL3T.83b;We had sent [claim_chancellor.Get.Name] with the mission of fabricating on our behalf a claim on the titles of [claim_noble.GetName], which unfortunately ordered the arrest and banishment of our [claim_chancellor.GetJobTitle]. We are awaiting his return to my court shortly... ;;;;;;;;;;;; x;Nous avions envoyé [claim_chancellor.Get.Name] avec pour mission de fabriquer pour notre compte une revendication sur les titres de [claim_noble.GetName], qui malheureusement a ordonné l'arrestation et le bannisement de notre [claim_chancellor.GetJobTitle]. Nous attendons son retour à ma cour sous peu...;;;;;;;;;;;;x;;;;;;;;;;;;x
+DESCL3T.83c;;;;;;;;;;;;;;x
+DESCL3T.83d;;;;;;;;;;;;;;x
 L3T.83A;Bring [claim_chancellor.GetHerHim] to us!;Amenez-[claim_chancellor.GetHerHim] nous !;;;;;;;;;;;;x
 L3T.83B;What incompetence!;Quelle incompétence !;;;;;;;;;;;;;x
 DESCL3T.84a;Finally we caught this vile scoundrel!;Enfin nous avons attrapé ce vil faquin !;;;;;;;;;;;;;x
 DESCL3T.84b;How did [claim_chancellor.GetName] escape us !?;Comment [claim_chancellor.GetName] a pu nous échapper !?;;;;;;;;;;;;x
-L3T.84A;Great !;Bien !;;;;;;;;;;;;x
-L3T.84B;Excellent!;Excellent !;;;;;;;;;;;;x
-L3T.84C;How could they have failed with such a target?;Comment ont-ils pu faillir avec une telle cicble ?;;;;;;;;;;;;x
+DESCL3T.84c;;;;;;;;;;;;;;x
+DESCL3T.84d;;;;;;;;;;;;;;x
+L3T.84A;That he never comes back!;Qu'il ne revienne jamais !;;;;;;;;;;;;x
+L3T.84B;He's not about to come back...;Il n'est pas prêt de revenir...;;;;;;;;;;;;x
 he_attempted_fabricate_claim_chancellor_banned;Tried to fabricate claim on my titles;A tenté de fabriquer une revendication sur mes titres;;;;;;;;;;;;x
 opinion_failure_claim;Failed at fabrication claims;A failli dans sa mission de fabrication de revendications;;;;;;;;;;;;x
 tarnished_repuation;Tarnished reputation;Réputation ternie;;;;;;;;;;;;x
