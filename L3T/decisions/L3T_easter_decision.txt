@@ -193,7 +193,7 @@ decisions = {
 					}
 					##courtier chain
 					#easier to get, so reducing the chances
-					12 = {
+					6 = { #halved v1.10
 						#more likely to fire if not owned
 						modifier = { 
 							factor = 1.5
@@ -227,7 +227,7 @@ decisions = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 0.5 #halved v1.10
 			modifier = {
 				factor = 5
 				has_ambition = obj_egg_them_all
@@ -254,7 +254,7 @@ decisions = {
 				NOT = {
 					had_character_flag = {
 						flag = recent_minor_decision
-						days = 730
+						days = 1095 #3y for ai
 					}
 				}
 			}
