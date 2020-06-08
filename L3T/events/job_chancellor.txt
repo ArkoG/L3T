@@ -832,7 +832,7 @@ character_event = {
 				}
 			}
 			
-			#claim duchy L3T
+			#claim county L3T
 			if = {
 				limit = {
 					diplomacy = 15
@@ -976,6 +976,7 @@ character_event = {
 					county = {
 						save_event_target_as = target_title					
 						holder_scope = {
+							set_character_flag = county_claimed #new line L3T
 							character_event = { id = 20130 days = 1 }
 						}
 					}
@@ -983,7 +984,47 @@ character_event = {
 			}
 			#try to claim barony (L3T)
 			#
-			#
+			if = {
+				limit = {
+					#vanilla only
+					has_game_rule = {
+						name = better_claims
+						value = restricted
+					}
+					NOT = { has_character_flag = claim_done }
+					liege = {
+						ROOT = {
+							location = {
+								any_province_holding  = { #baronies
+									tier = baron
+									holding_type = castle
+									is_capital = no
+									NOT = { claimed_by = PREVPREVPREV }
+									holder_scope = {
+										NOT = { is_liege_of = ROOT }
+										NOT = { character = ROOT }
+										owns = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				location = {
+					random_province_holding  = { #baronies
+						limit = {
+							tier = baron
+							holding_type = castle
+							is_capital = no
+						}
+						save_event_target_as = target_title					
+						holder_scope = {
+							set_character_flag = barony_claimed
+							character_event = { id = 20130 days = 1 }
+						}
+					}
+				}
+			}
 			#TO DO
 			#
 			#
@@ -1033,6 +1074,7 @@ character_event = {
 }
 
 # 20131: The liege is informed and has a choice to press the claim or not
+##COUNTY CLAIM
 letter_event = {
 	id = 20131
 	desc = "EVTDESC20131"
