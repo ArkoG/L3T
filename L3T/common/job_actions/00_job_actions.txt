@@ -77,6 +77,7 @@ action_fabricate_claims = {
 	
 	potential = {
 		FROM = { is_nomadic = no }
+		FROM = { is_tribal = no }
 		NOT = {
 			has_game_rule = {
 				name = better_claims
