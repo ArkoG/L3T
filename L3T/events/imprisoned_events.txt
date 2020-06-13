@@ -310,20 +310,12 @@ character_event = {
 			factor = 4.0
 			has_character_modifier = the_fortress
 		}	
-		modifier = {
-			factor = 0.01
-			has_global_flag = debug_L3T
-		}		
 	}
 	
 	option = {
 		name = "EVTOPTA50005"
 		ai_chance = { 
 			factor = 100
-			modifier = {
-				factor = 20
-				has_global_flag = debug_L3T
-			}
 		}
 		set_character_flag = asked_for_better_prison
 		hidden_tooltip = {

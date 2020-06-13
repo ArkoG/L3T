@@ -1606,7 +1606,6 @@ character_event = {
 		modifier = { factor = 0.9 has_character_modifier = tarnished_reputation }
 		job_event_mtth_modifier_inverted_diplomacy_score = yes
 
-		#modifier = { factor = 0.01 has_global_flag = debug_L3T }
 		modifier = {
 			#factor = 1.25
 			factor = 1.15 #L3T less impactive
@@ -1708,7 +1707,6 @@ character_event = {
 			factor = 35
 			modifier = { factor = 1.2 has_education_martial_trigger = yes }
 			modifier = { factor = 1.2 has_lifestyle_martial_trigger = yes }
-			#modifier = { factor = 50 has_global_flag = debug_L3T }
 		}
 		
 		save_event_target_as = claim_noble
