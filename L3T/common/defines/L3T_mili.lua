@@ -4,7 +4,7 @@
 -- 
 
 	--ex 0.01 might kill more
-	NDefines.NMilitary.ATTACK_TO_DAMAGE_MULT = 0.02					-- Attack value of troops is multiplied by this when doing damage
+	NDefines.NMilitary.ATTACK_TO_DAMAGE_MULT = 0.04					-- Attack value of troops is multiplied by this when doing damage
 	--ex 1.5
 	NDefines.NMilitary.LEVY_MAINTENANCE_FACTOR = 1.7					-- General maintenance factor for levy troops
 	--ex 3.0
@@ -13,6 +13,8 @@
 	NDefines.NMilitary.REINFORCE_RATE = 0.04							-- Reinforce rate per year
 	--ex 0.015
 	NDefines.NMilitary.MERC_REINFORCE_RATE = 0.0					-- The rate at which mercenaries and holy orders reinforce in the field
+	--ex0.5
+	NDefines.NMilitary.LEVY_RAISED_REINFORCE_RATE_MULTIPLIER = 0.1	-- The rate at which the garrison/levy reinforce when the levy is raised
 	--ex0.0
 	NDefines.NMilitary.NAVAL_ATTRITION = 0.04
 	--ex 3
@@ -28,7 +30,7 @@
 	NDefines.NMilitary.RETINUE_REINFORCE_COST = 4.0					-- Retinues cost while reinforcing.
 	NDefines.NMilitary.RETINUE_CONSTANT_COST = 0.25 					-- Retinues cost at all times.
 	--ex 2, knight is 10, cavalry is 3
-	NDefines.NMilitary.SPECIAL_TROOPS_MAINTENANCE = 4
+	NDefines.NMilitary.SPECIAL_TROOPS_MAINTENANCE = 5
 	-- ex 10.0
 	NDefines.NMilitary.MAX_RIVER_MOVEMENT_FORT_LEVEL = 7.0
 	--ex 0.05
