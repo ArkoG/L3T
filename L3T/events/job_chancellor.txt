@@ -1025,10 +1025,6 @@ character_event = {
 					}
 				}
 			}
-			#TO DO
-			#
-			#
-			#######
 			clr_character_flag = claim_done
 		}
 	}
@@ -1050,7 +1046,7 @@ character_event = {
 			if = {
 				###new event ID
 				limit = { has_character_flag = barony_claimed }
-				FROM = { liege = { letter_event = { id = 20135 days = 1 } } } ##!!!new ID
+				FROM = { liege = { letter_event = { id = L3T.85 days = 1 } } } ##!!!new ID
 			}
 			# Claim county
 			if = {
