@@ -374,3 +374,209 @@ letter_event = {
 		clear_event_target = claim_liege
 	}
 }
+
+# L3T.85: The liege is informed and has a choice to press the claim or not
+##CLAIM ON BARONY
+letter_event = {
+	id = L3T.85
+	desc = "DESCL3T.85"
+	border = GFX_event_letter_frame_diplomacy
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			FROM = {
+				has_job_action = action_fabricate_claims
+				location = {
+					any_province_holding  = { #baronies
+						tier = baron
+						holding_type = castle
+						is_capital = no
+						NOT = { claimed_by = ROOT }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {	# Emperor or King
+		name = "EVTOPTA20131" #Press the Claim
+		trigger = { primary_title = { higher_tier_than = DUKE }	}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				NOT = { scaled_wealth = 1.25 }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					spouse = { character = FROM }
+					current_heir = { character = FROM }
+				}
+			}
+		}
+		scaled_wealth = -1.0
+		prestige = -125
+		piety = -100
+#		FROM = {
+#			FROM = {
+#				location = {
+#					county = {
+#						add_claim = ROOT
+#					}
+#				}
+#			}
+#		}
+		event_target:target_title = { show_scope_change = no add_claim = ROOT }
+
+		FROM = {
+			show_scope_change = no
+			opinion = {
+				modifier = opinion_furious
+				who = ROOT
+				years = 10
+			}
+			hidden_tooltip = {
+				character_event = { id = 20132 days = 7 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = ck2_tutorial_2
+			}
+			character_event = { id = 107300 }
+		}
+	}
+	option = {	# Duke
+		name = "EVTOPTA20131" #Press the Claim
+		trigger = { primary_title = { tier = DUKE } }
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				NOT = { scaled_wealth = 1.25 }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					spouse = { character = FROM }
+					current_heir = { character = FROM }
+				}
+			}
+		}
+		scaled_wealth = -1.0
+		prestige = -50
+		piety = -50
+#		FROM = {
+#			FROM = {
+#				location = {
+#					county = {
+#						add_claim = ROOT
+#					}
+#				}
+#			}
+#		}
+		event_target:target_title = { show_scope_change = no add_claim = ROOT }
+		FROM = {
+			show_scope_change = no
+			opinion = {
+				modifier = opinion_furious
+				who = ROOT
+				years = 10
+			}
+			hidden_tooltip = {
+				character_event = { id = 20132 days = 7 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = ck2_tutorial_2
+			}
+			character_event = { id = 107300 }
+		}
+	}
+	option = {	# Count or Patrician
+		name = "EVTOPTA20131" #Press the Claim
+		trigger = {
+			OR = {
+				primary_title = { tier = COUNT }
+				AND = {
+					is_patrician = yes
+					primary_title = { NOT = { higher_tier_than = COUNT } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				NOT = { scaled_wealth = 1.25 }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					spouse = { character = FROM }
+					current_heir = { character = FROM }
+				}
+			}
+		}
+		scaled_wealth = -1.0
+		prestige = -25
+		piety = -25
+#		FROM = {
+#			FROM = {
+#				location = {
+#					county = {
+#						add_claim = ROOT
+#					}
+#				}
+#			}
+#		}
+		event_target:target_title = { show_scope_change = no add_claim = ROOT }
+
+		FROM = {
+			show_scope_change = no
+			opinion = {
+				modifier = opinion_furious
+				who = ROOT
+				years = 10
+			}
+			hidden_tooltip = {
+				character_event = { id = 20132 days = 7 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = ck2_tutorial_2
+			}
+			character_event = { id = 107300 }
+		}
+	}
+	option = {
+		name = "EVTOPTB20131" #Let it go
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { trait = ambitious }
+				scaled_wealth = 1.0
+				NOT = {
+					OR = {
+						spouse = { character = FROM }
+						current_heir = { character = FROM }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = ambitious
+				scaled_wealth = 0.75
+			}
+		}
+		#piety = 10
+	}
+}

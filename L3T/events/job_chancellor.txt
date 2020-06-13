@@ -640,7 +640,7 @@ character_event = {
 					#vanilla only
 					has_game_rule = {
 						name = better_claims
-						value = rectricted
+						value = restricted
 					}
 					liege = {
 						has_ambition = obj_become_king
@@ -1047,11 +1047,13 @@ character_event = {
 				###new event ID
 				limit = { has_character_flag = barony_claimed }
 				FROM = { liege = { letter_event = { id = L3T.85 days = 1 } } } ##!!!new ID
+				clr_character_flag = barony_claimed
 			}
 			# Claim county
 			if = {
 				limit = { has_character_flag = county_claimed }
 				FROM = { liege = { letter_event = { id = 20131 days = 1 } } }
+				clr_character_flag = county_claimed
 			}
 			# Claim duchy
 			if = {
@@ -1085,14 +1087,15 @@ letter_event = {
 			FROM = {
 				has_job_action = action_fabricate_claims
 				location = {
-					OR = {
+					#OR = {
 						county = {
 							NOT = { claimed_by = ROOT }
 						}
-						duchy = {
-							NOT = { claimed_by = ROOT }
-						}
-					}
+#						#DUCHY
+#						duchy = {
+#							NOT = { claimed_by = ROOT }
+#						}
+					#}
 				}
 			}
 		}
@@ -1105,7 +1108,7 @@ letter_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { scaled_wealth = 1.25 }
+				NOT = { scaled_wealth = 1.75 } #L3T ex 1.25
 			}
 			modifier = {
 				factor = 0
@@ -1115,8 +1118,11 @@ letter_event = {
 				}
 			}
 		}
-		scaled_wealth = -1.0
-		prestige = -150
+		#scaled_wealth = -1.0
+		scaled_wealth = -1.5
+		#prestige = -150
+		prestige = -250
+		piety = -100
 #		FROM = {
 #			FROM = {
 #				location = {
@@ -1153,7 +1159,7 @@ letter_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { scaled_wealth = 1.25 }
+				NOT = { scaled_wealth = 1.75 } #L3T ex 1.25
 			}
 			modifier = {
 				factor = 0
@@ -1163,8 +1169,10 @@ letter_event = {
 				}
 			}
 		}
-		scaled_wealth = -1.0
+		#scaled_wealth = -1.0
+		scaled_wealth = -1.5
 		prestige = -100
+		piety = -50
 #		FROM = {
 #			FROM = {
 #				location = {
@@ -1208,7 +1216,7 @@ letter_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { scaled_wealth = 1.25 }
+				NOT = { scaled_wealth = 1.75 } #L3T ex 1.25
 			}
 			modifier = {
 				factor = 0
@@ -1218,8 +1226,10 @@ letter_event = {
 				}
 			}
 		}
-		scaled_wealth = -1.0
+		#scaled_wealth = -1.0
+		scaled_wealth = -1.5
 		prestige = -50
+		piety = -25
 #		FROM = {
 #			FROM = {
 #				location = {
@@ -1255,7 +1265,8 @@ letter_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				scaled_wealth = 1.25
+				NOT = { trait = ambitious }
+				scaled_wealth = 1.5
 				NOT = {
 					OR = {
 						spouse = { character = FROM }
@@ -1263,12 +1274,18 @@ letter_event = {
 					}
 				}
 			}
+			modifier = {
+				factor = 0
+				trait = ambitious
+				scaled_wealth = 1
+			}
 		}
-		piety = 10
+		#piety = 10
 	}
 }	
 	
 # 20133: The liege is informed and has a choice to press the claim or not
+#CLAIM ON DUCHY
 letter_event = {
 	id = 20133
 	desc = "EVTDESC20133"
@@ -1298,11 +1315,11 @@ letter_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { scaled_wealth = 2.25 }
+				NOT = { scaled_wealth = 2.75 }
 			}
 		}
-		scaled_wealth = -2.0
-		prestige = -300
+		scaled_wealth = -2.5
+		prestige = -500
 #		FROM = {
 #			FROM = {
 #				location = {
@@ -1332,11 +1349,12 @@ letter_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { scaled_wealth = 2.25 }
+				NOT = { scaled_wealth = 2.75 }
 			}
 		}
-		scaled_wealth = -2.0
+		scaled_wealth = -2.5
 		prestige = -200
+		piety = -50
 #		FROM = {
 #			FROM = {
 #				location = {
@@ -1366,11 +1384,12 @@ letter_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { scaled_wealth = 2.25 }
+				NOT = { scaled_wealth = 2.75 }
 			}
 		}
-		scaled_wealth = -2.0
+		scaled_wealth = -2.5
 		prestige = -100
+		piety = -25
 #		FROM = {
 #			FROM = {
 #				location = {
@@ -1399,14 +1418,21 @@ letter_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				scaled_wealth = 2.25
+				NOT = { trait = ambitious }
+				scaled_wealth = 2.5
+			}
+			modifier = {
+				factor = 0
+				trait = ambitious
+				scaled_wealth = 2.0
 			}
 		}
-		piety = 20
+		#piety = 20
 	}
 }
 
 # 20134: The liege is informed and has a choice to press the claim or not
+#CLAIM ON KINGDOM
 letter_event = {
 	id = 20134
 	desc = "EVTDESC20134"
@@ -1436,11 +1462,12 @@ letter_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { scaled_wealth = 2.25 }
+				NOT = { scaled_wealth = 3.25 }
 			}
 		}
-		scaled_wealth = -2.0
-		prestige = -200
+		scaled_wealth = -3.0
+		prestige = -500
+		piety = -100
 #		FROM = {
 #			FROM = {
 #				location = {
@@ -1470,11 +1497,12 @@ letter_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { scaled_wealth = 2.25 }
+				NOT = { scaled_wealth = 3.25 }
 			}
 		}
-		scaled_wealth = -2.0
-		prestige = -100
+		scaled_wealth = -3.0
+		prestige = -250
+		piety = -50
 #		FROM = {
 #			FROM = {
 #				location = {
@@ -1503,16 +1531,23 @@ letter_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				scaled_wealth = 2.25
+				NOT = { trait = ambitious }
+				scaled_wealth = 3.0
+			}
+			modifier = {
+				factor = 0
+				trait = ambitious
+				scaled_wealth = 2.5
 			}
 		}
-		piety = 20
+		#piety = 20
 	}
 }
 
 # 20132: The noble is informed if the claim is pressed, and is insulted
 character_event = {
 	id = 20132
+	title = "NAME.20132"
 	desc = "EVTDESC20132"
 	picture = GFX_evt_emissary
 	border = GFX_event_normal_frame_diplomacy
