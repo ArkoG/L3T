@@ -581,7 +581,7 @@ letter_event = {
 	}
 }
 
-letter_event = {
+character_event = {
 	id = L3T.86
 	desc = "DESCL3T.86"
 	picture = GFX_evt_council
@@ -604,14 +604,14 @@ letter_event = {
 			modifier = { factor = 1.5 job_chancellor = { diplomacy = 20 }}
 			modifier = { factor = 1.5 has_ambition = obj_become_king }
 		}
-		scaled_wealth = 0.35
+		scaled_wealth = -0.5
 		job_chancellor = { clr_character_flag = low_claim_funds }
 	}
 	option = {
 		name = "L3T.86B"
 		ai_chance = {
 			factor = 50
-			modifier = { factor = 2.1 NOT = { scaled_wealth = 0.4 }}
+			modifier = { factor = 2.1 NOT = { scaled_wealth = 0.6 }}
 		}
 		job_chancellor = { cancel_job_action = action_fabricate_claims }
 		job_chancellor = { clr_character_flag = low_claim_funds }
