@@ -170,7 +170,7 @@ tp_wall_4 = { #Enceinte épaisse
 	extra_tech_building_start = 10
 }
 
-tp_wall_5 = { #Grande enceinte
+tp_wall_5 = { #Grande enceinte #used in events
 	desc = wall_5_desc
 	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 	prerequisites = { CITEEPISCOPALE}
@@ -203,7 +203,7 @@ tp_wall_5 = { #Grande enceinte
 #	tp_monastery_3 = {
 #	tp_monastery_4 = {
 #	tp_monastery_5 = {
-#	tp_monastery_6 = {
+#	tp_monastery_6 = { #used in scripted triggers
 
 ##utilise en prebuild jusqu au niveau 2	
 	tp_barracks_1 = {

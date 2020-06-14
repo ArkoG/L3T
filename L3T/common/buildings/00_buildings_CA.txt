@@ -136,7 +136,7 @@ castle = {
 		extra_tech_building_start = 10
 	}
 
-	ca_wall_5 = { #Grande enceinte
+	ca_wall_5 = { #Grande enceinte #used in events
 		desc = wall_5_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 		prerequisites = { 
@@ -323,7 +323,7 @@ castle = {
 		#court_size_modifier = 1 #temporary, give it palace
 		extra_tech_building_start = 6.0
 	}
-	ca_keep_6 = {
+	ca_keep_6 = {  #used in scripted triggers
 		desc = ca_keep_1_desc
 		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 8 }
 		prerequisites = { 
@@ -698,6 +698,8 @@ castle = {
 			add_number_to_name = no
 			extra_tech_building_start = 10
 		}
+		#ca_town_6 = { #exists in vanilla scripted triggers
+
 		
 		#new tags
 	ca_eglise_L1 = { #Oratoire
