@@ -1616,6 +1616,42 @@ character_event = {
 			factor = 1.1 #L3T less impactive
 			any_owned_bloodline = { has_bloodline_flag = bloodline_faster_claims } #If chancellor is also your relative.
 		}
+		
+		#L3T# Noble defences
+		modifier = {
+			factor = 0.9
+			location = {
+				owner = {
+					job_spymaster = {
+						has_job_action = action_uncover_plots_offmap
+						intrigue = 10
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			location = {
+				owner = {
+					job_spymaster = {
+						has_job_action = action_uncover_plots_offmap
+						intrigue = 15
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			location = {
+				owner = {
+					job_spymaster = {
+						has_job_action = action_uncover_plots_offmap
+						intrigue = 20
+					}
+				}
+			}
+		}
+		#
 	}
 	
 	option = {
