@@ -168,7 +168,7 @@ decisions = {
 					}
 					de_jure_liege = PREV
 					####has_de_jure_pretension ####
-					location = { province_event = { id = L3T.80 }}
+					location = { province_event = { id = L3T.56 }}
 					event_target:new_primary_title = { set_variable = { which = created_DJ_size value = 1 }}
 				}
 				any_demesne_title = {
@@ -183,7 +183,7 @@ decisions = {
 						}
 					}
 					de_jure_liege = PREV
-					location = { province_event = { id = L3T.81 }}
+					location = { province_event = { id = L3T.57 }}
 					#set_title_flag = integrated_yet
 					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
 				}
@@ -199,7 +199,7 @@ decisions = {
 						}
 					}
 					de_jure_liege = PREV
-					location = { province_event = { id = L3T.82 }}
+					location = { province_event = { id = L3T.58 }}
 					#set_title_flag = integrated_yet
 					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
 				}
@@ -223,7 +223,7 @@ decisions = {
 						}
 					}
 					de_jure_liege = PREV
-					location = { province_event = { id = L3T.83 }}
+					location = { province_event = { id = L3T.59 }}
 					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
 				}
 				random_demesne_title = { #2
@@ -242,7 +242,7 @@ decisions = {
 						}
 					}
 					de_jure_liege = PREV
-					location = { province_event = { id = L3T.83 }}
+					location = { province_event = { id = L3T.59 }}
 					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
 				}
 				random_demesne_title = { #3
@@ -261,7 +261,7 @@ decisions = {
 						}
 					}
 					de_jure_liege = PREV
-					location = { province_event = { id = L3T.83 }}
+					location = { province_event = { id = L3T.59 }}
 					event_target:new_primary_title = { change_variable = { which = created_DJ_size value = 1 }}
 				}
 				#remove flags
