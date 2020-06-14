@@ -14,9 +14,11 @@ settlement_decisions = {
 		only_rulers = yes
 		filter = owned # capital create some logs in error.log
 		ai_target_filter = owned # same thing
+		diplomacy_icon = GFX_diplo_land_icon
 		
 		from_potential = {
 			is_ruler = yes
+			ai = no
 		}
 		
 		potential = {
@@ -116,15 +118,7 @@ settlement_decisions = {
 						}
 						remove_building = ca_barracks_5
 					}
-					if = {
-						limit = { has_building = ca_barracks_6}
-						random_list = {
-							20 = { owner = { wealth = 200 } }
-							60 = { owner = { wealth = 250 } }
-							20 = { owner = { wealth = 300 } }
-						}
-						remove_building = ca_barracks_6
-					}
+
 					remove_building = FEODAL_mil
 					remove_holding_modifier = feodal_mil_L1
 				}
@@ -462,9 +456,11 @@ settlement_decisions = {
 		only_rulers = yes
 		filter = owned
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_land_icon
 		
 		from_potential = {
 			is_ruler = yes
+			ai = no
 		}
 		
 		potential = {
@@ -613,9 +609,11 @@ settlement_decisions = {
 		only_playable = yes
 		filter = owned
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_land_icon
 		
 		from_potential = {
 			is_ruler = yes
+			ai = no
 		}
 		
 		potential = {
@@ -941,9 +939,11 @@ settlement_decisions = {
 		only_playable = yes
 		filter = owned
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_land_icon
 		
 		from_potential = {
 			is_ruler = yes
+			ai = no
 		}
 		
 		potential = {
@@ -1021,15 +1021,7 @@ settlement_decisions = {
 					}
 					remove_building = ca_barracks_5
 				}
-				if = {
-					limit = { has_building = ca_barracks_6}
-					random_list = {
-						20 = { owner = { wealth = 200 } }
-						60 = { owner = { wealth = 250 } }
-						20 = { owner = { wealth = 300 } }
-					}
-					remove_building = ca_barracks_6
-				}
+
 				# Remove weapons if there is no more producer
 				location = {
 					if = {
@@ -1103,6 +1095,7 @@ settlement_decisions = {
 		
 		from_potential = {
 			is_ruler = yes
+			ai = no
 		}
 		
 		potential = {
@@ -1133,6 +1126,7 @@ settlement_decisions = {
 		
 		from_potential = {
 			is_ruler = yes
+			ai = no
 		}
 		
 		potential = {
@@ -1163,6 +1157,7 @@ settlement_decisions = {
 		
 		from_potential = {
 			is_ruler = yes
+			ai = no
 		}
 		
 		potential = {

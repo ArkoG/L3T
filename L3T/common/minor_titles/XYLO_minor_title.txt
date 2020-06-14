@@ -12,7 +12,6 @@ title_forestier = {
 		is_adult = yes
 		is_female = no
 		stewardship = 10
-		NOT = { has_character_flag = titre_mineur_detenu }
 		}
 		
 	allowed_to_grant = {
@@ -20,9 +19,8 @@ title_forestier = {
 		any_demesne_province = { region = world_europe }
 	}
 		
-	gain_effect = { set_character_flag = titre_mineur_detenu }
+	gain_effect = { }
 	lose_effect = { 
-		clr_character_flag = titre_mineur_detenu
 		remove_opinion = { 
 			modifier = opinion_titre_mineur_promu
 			who = ROOT
@@ -47,7 +45,6 @@ title_veneur = {
 			trait = falconer
 			martial = 12
 			}
-		NOT = { has_character_flag = titre_mineur_detenu }
 		}
 		
 		allowed_to_grant = {
@@ -56,8 +53,8 @@ title_veneur = {
 			any_demesne_province = { has_province_modifier = foret2_chasse }
 		}
 	
-	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { clr_character_flag = titre_mineur_detenu }
+	gain_effect = {}
+	lose_effect = {}
 
 	message = yes
 }
@@ -76,15 +73,14 @@ title_soigneur = {
 		is_adult = yes
 		is_female = no
 		learning = 12
-		NOT = { has_character_flag = titre_mineur_detenu }
 		}
 		
 		allowed_to_grant = {
 			capital_holding = { has_building = TP_herboriste_L2 }
 		}
 	
-	gain_effect = { set_character_flag = titre_mineur_detenu }
-	lose_effect = { clr_character_flag = titre_mineur_detenu }
+	gain_effect = {}
+	lose_effect = {}
 
 	message = yes
 }

@@ -843,98 +843,11 @@ character_event = {
 	}
 }
 
+
 # Wait a little before to alert that it can be a good idea to move the capital
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
-character_event = {
-	id = L3T.227
-	
-	hide_window = yes
-	is_triggered_only = yes
-	
-	#ai = no
-	
-	immediate = {
-		FROM = { set_variable = { which = "global_best_capital" which = "best_capital" }}
-		if = {
-			limit = {
-				ai = no
-				NOT = {
-					FROM = { is_capital = ROOT }
-					ROOT = {
-						any_demesne_title = {
-							is_capital = yes
-							holding_type = castle
-							has_building = FEODAL_adm
-							check_variable = { which = "best_capital" which = "global_best_capital" }
-						}
-					}
-				}
-			}
-			#makes the events firing only if the title is has a better "best_capital" value
-			FROM = { location = { province_event = { id = L3T.228 days = 30 } } } #ex days=30
-			FROM  = { set_title_flag = better_realm_capital }
-		}
-		if = {
-			limit = {
-				ai = yes
-				NOT = { 
-					FROM = { is_capital = ROOT }
-					ROOT = {
-						any_demesne_title = {
-							is_capital = yes
-							holding_type = castle
-							has_building = FEODAL_adm
-							check_variable = { which = "best_capital" which = "global_best_capital" }
-						}
-					}
-				}
-			}
-			#for the AI, if this title has a better "best_capital" value, make it the new capital
-			FROM = { make_capital_holding = yes }
-		}
-	}
-}
-
-# Pass by the province to localize its name
-province_event = {
-	id = L3T.228
-		
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { FROM = { is_capital = ROOT } }
-		capital_holding = {
-			holding_type = castle 
-			has_building = FEODAL_adm
-			has_title_flag = better_realm_capital
-		}
-	}
-	
-	immediate = {
-		holder_scope = { character_event = { id = L3T.229 days = 0 } }
-	}
-}
-
-# Alert that it can be a good idea to move the capital
-character_event = {
-	id = L3T.229
-	desc = "DESCL3T.229"
-	picture = GFX_evt_castle_construction
-		
-	is_triggered_only = yes
-	
-	option = {
-		name = L3T.229A #I'll think about it
-	}
-	option = {
-		name = L3T.229B #make it the new realm capital
-		FROM = { 
-			make_capital_holding = yes
-			clr_title_flag = better_realm_capital
-		}
-	}
-}
+###obsolete since all capital castles are feudal cities now
+##(not triggered anymore) #ex 227/228/229
 
 # Give the librairie_1 modifier 1 year after starting the building
 # ROOT = Builder, FROM = The Holding Title
@@ -1134,5 +1047,87 @@ character_event = {
 			add_character_modifier = { name = librairie_1 duration = -1 }
 		}
 		remove_feodal_adm_modifier_if_necessary = yes
+	}
+}
+
+#doesn't work correctly, it should start only for actual prison, needs to mark the owner aswell maybe
+#so not used ATM
+character_event = {
+	id = L3T.249
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = { 
+			tier = baron	
+			holding_type = castle
+			has_building = FEODAL_mil
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				FROMFROM = {
+					tier = baron	
+					holding_type = castle
+					#first building, has not the variable yet, add it
+					NOT = { check_variable = { which = "prison_capacity" value = 0 }}
+				}
+			}		
+			FROM = { 
+				set_variable = { which = "prison_capacity" value = 0 }
+				change_variable = { which = "prison_capacity" value = 1 }
+			}
+		}
+		if = {
+			limit = {
+				FROMFROM = {
+					tier = baron	
+					holding_type = castle
+					has_building = CA_prison_L1
+					NOT = { has_building = CA_prison_L2 } #currently being built
+					#not the first building, should have the variable and first building
+					check_variable = { which = "prison_capacity" value = 0 }
+				}
+			}
+			FROMFROM = { change_variable = { which = "prison_capacity" value = 1 }}
+		}
+		if = {
+			limit = {
+				FROMFROM = {
+					tier = baron	
+					holding_type = castle
+					has_building = CA_prison_L2
+					NOT = { has_building = CA_prison_L3 } #currently being built
+					#not the first building, should have the variable and two first buildings
+					check_variable = { which = "prison_capacity" value = 0 }
+				}
+			}
+			FROMFROM = { change_variable = { which = "prison_capacity" value = 1 }}
+		}
+	}
+}
+
+#ROOT is prisoner, FROM is imprisoner
+character_event = {
+	id = L3T.2490
+	
+	hide_window = yes
+	is_triggered_only = yes
+	#triggered from on_released_from_prison
+	#triggered from RANSOM_CHARACTER_INTERACTION_ACCEPT_EVENT
+	
+	trigger = {
+		ROOT = { 
+			has_character_modifier = the_fortress
+		}
+	}
+	
+	immediate = {
+		ROOT = { 
+			remove_character_modifier = the_fortress
+		}
 	}
 }

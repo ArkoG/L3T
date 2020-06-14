@@ -16513,14 +16513,9 @@ tributary_cb = {
 		has_dlc = "Horse Lords"
 
 		ROOT = {
-		###L3T###
-			FROM = {
-				OR = {
-					is_nomadic = yes
-					is_tribal = yes
-				}
-			}		
-		###L3T###
+			###L3T
+			is_theocracy = no
+
 			mercenary = no
 			OR = {
 				is_tributary = no
@@ -16541,6 +16536,44 @@ tributary_cb = {
 			}
 			independent = yes
 		}
+		###L3T
+		#ROOT is attacker
+		#FROM is target
+		OR = {
+			#feudal can only tributarize other feudal if of different religion group
+			AND = {
+				ROOT = { 
+					is_feudal = yes
+				}
+				FROM = {
+					is_feudal = yes
+					NOT = { religion_group = ROOT }
+				}
+			}
+			#feudal can tributarize republics
+			AND = {
+				ROOT = { 
+					is_feudal = yes
+				}
+				FROM = {
+					is_republic = yes
+				}
+			}
+			#republics can tributarize other republics or feudals
+			AND = {
+				ROOT = { 
+					is_republic = yes
+				}
+				FROM = {
+					OR = {
+						is_republic = yes
+						is_feudal = yes
+					}
+				}
+			}
+		}			
+		##
+			
 		FROM = {
 			higher_tier_than = BARON
 			NOT = {

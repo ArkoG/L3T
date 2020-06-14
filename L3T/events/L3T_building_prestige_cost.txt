@@ -2,192 +2,381 @@ namespace = L3T
 
 # ROOT = Builder, FROM = The Holding Title
 
-#holding_type = castle 
+##prestige cost for buildings requiring both gold and prestige
+#factorisation par coût - prestige -30
 character_event = {
 	id = L3T.230
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { 
-			tier = baron	
-			holding_type = castle 
-			has_building = ca_tour_L4
-			NOT = { has_title_flag = BONUS_ca_tour_L4 }
+		OR = {
+			FROM = { 
+				tier = baron	
+				holding_type = city 
+				has_building = CT_beffroi_L1
+				NOT = { has_title_flag = BONUS_CT_beffroi_L1 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = castle 
+				has_building = CA_logis_L1
+				NOT = { has_title_flag = BONUS_CA_logis_L1 }
+			}
 		}
 	}
 	
 	immediate = {
-		FROM = { 
-			set_title_flag = BONUS_ca_tour_L4
-			holder_scope = {
-				prestige = -90
+		FROM = {
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = city
+					has_building = CT_beffroi_L1
+					NOT = { has_title_flag = BONUS_CT_beffroi_L1 }
+				}
+				set_title_flag = BONUS_CT_beffroi_L1
+				#holder_scope = { prestige = -30 }
 			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = castle
+					has_building = CA_logis_L1
+					NOT = { has_title_flag = BONUS_CA_logis_L1 }
+				}
+				set_title_flag = BONUS_CA_logis_L1
+				#holder_scope = { prestige = -30 }
+			}
+			holder_scope = { prestige = -30 }
 		}
 	}
 }
+
+#factorisation par coût - prestige -60
 character_event = {
 	id = L3T.231
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { 
-			tier = baron	
-			holding_type = castle 
-			has_building = ca_eglise_L4
-			NOT = { has_title_flag = BONUS_ca_eglise_L4 }
+		OR = {
+			FROM = { 
+				tier = baron	
+				holding_type = city 
+				has_building = CT_beffroi_L2
+				NOT = { has_title_flag = BONUS_CT_beffroi_L2 }
+			}
 		}
 	}
 	
 	immediate = {
-		FROM = { 
-			set_title_flag = BONUS_ca_eglise_L4
-			holder_scope = {
-				prestige = -90
+		FROM = {
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = city
+					has_building = CT_beffroi_L2
+					NOT = { has_title_flag = BONUS_CT_beffroi_L2 }
+				}
+				set_title_flag = BONUS_CT_beffroi_L2
+				#holder_scope = { prestige = -60 }
 			}
+			holder_scope = { prestige = -60 }
 		}
 	}
 }
+
+#factorisation par coût - prestige -70
 character_event = {
 	id = L3T.232
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { 
-			tier = baron	
-			holding_type = castle 
-			has_building = ca_con_wall_6
-			NOT = { has_title_flag = BONUS_ca_con_wall_6 }
-		}
-	}
-	
-	immediate = {
-		FROM = {
-			set_title_flag = BONUS_ca_con_wall_6
-			holder_scope = {
-				prestige = -120
+		OR = {
+			FROM = { 
+				tier = baron	
+				holding_type = city 
+				has_building = ct_training_grounds_3
+				NOT = { has_title_flag = BONUS_ct_training_grounds_3 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = city 
+				has_building = CT_beffroi_L3
+				NOT = { has_title_flag = BONUS_CT_beffroi_L3 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = temple 
+				has_building = tp_monastery_3
+				NOT = { has_title_flag = BONUS_TP_monastery_3 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = temple 
+				has_building = TP_episcopat_L3
+				NOT = { has_title_flag = BONUS_TP_episcopat_L3 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = castle
+				has_building = CA_logis_L3
+				NOT = { has_title_flag = BONUS_CA_logis_L3 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = city
+				has_building = CT_adm_urbain_L3
+				NOT = { has_title_flag = BONUS_CT_adm_urbain_L3 }
 			}
 		}
 	}
+
+	immediate = {
+		FROM = {
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = city
+					has_building = ct_training_grounds_3
+					NOT = { has_title_flag = BONUS_ct_training_grounds_3 }
+				}
+				set_title_flag = BONUS_ct_training_grounds_3
+				#holder_scope = { prestige = -70 }
+			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = city
+					has_building = CT_beffroi_L3
+					NOT = { has_title_flag = BONUS_CT_beffroi_L3 }
+				}
+				set_title_flag = BONUS_CT_beffroi_L3
+				#holder_scope = { prestige = -70 }
+			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = temple
+					has_building = tp_monastery_3
+					NOT = { has_title_flag = BONUS_TP_monastery_3 }
+				}
+				set_title_flag = BONUS_TP_monastery_3
+				#holder_scope = { prestige = -70 }
+			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = temple
+					has_building = TP_episcopat_L3
+					NOT = { has_title_flag = BONUS_TP_episcopat_L3 }
+				}
+				set_title_flag = BONUS_TP_episcopat_L3
+				#holder_scope = { prestige = -70 }
+			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = castle
+					has_building = CA_logis_L3
+					NOT = { has_title_flag = BONUS_CA_logis_L3 }
+				}
+				set_title_flag = BONUS_CA_logis_L3
+				#holder_scope = { prestige = -70 }
+			}			
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = city
+					has_building = CT_adm_urbain_L3
+					NOT = { has_title_flag = BONUS_CT_adm_urbain_L3 }
+				}
+				set_title_flag = BONUS_CT_adm_urbain_L3
+				#holder_scope = { prestige = -70 }
+			}
+			holder_scope = { prestige = -70 }
+		}
+	}
 }
-#holding_type = city 
+
+#factorisation par coût - prestige -90
 character_event = {
 	id = L3T.233
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { 
-			tier = baron	
-			holding_type = city 
-			has_building = ct_training_grounds_3
-			NOT = { has_title_flag = BONUS_ct_training_grounds_3 }
+		OR = {
+			FROM = { 
+				tier = baron	
+				holding_type = castle 
+				has_building = ca_tour_L4
+				NOT = { has_title_flag = BONUS_ca_tour_L4 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = castle 
+				has_building = ca_eglise_L4
+				NOT = { has_title_flag = BONUS_ca_eglise_L4 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = city 
+				has_building = ct_eglise_L4
+				NOT = { has_title_flag = BONUS_ct_eglise_L4 }
+			}
 		}
 	}
 	
 	immediate = {
 		FROM = {
-			set_title_flag = BONUS_ct_training_grounds_3
-			holder_scope = {
-				prestige = -70
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = castle 
+					has_building = ca_tour_L4
+					NOT = { has_title_flag = BONUS_ca_tour_L4 }
+				}
+				set_title_flag = BONUS_ca_tour_L4
+				#holder_scope = { prestige = -90 }
 			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = castle 
+					has_building = ca_eglise_L4
+					NOT = { has_title_flag = BONUS_ca_eglise_L4 }
+				}
+				set_title_flag = BONUS_ca_eglise_L4
+				#holder_scope = { prestige = -90 }
+			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = city 
+					has_building = ct_eglise_L4
+					NOT = { has_title_flag = BONUS_ct_eglise_L4 }
+				}
+				set_title_flag = BONUS_ct_eglise_L4
+				#holder_scope = { prestige = -90 }
+			}
+			holder_scope = { prestige = -90 }
 		}
 	}
 }
+
+#factorisation par coût - prestige -120
 character_event = {
 	id = L3T.234
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		FROM = { 
-			tier = baron	
-			holding_type = city  
-			has_building = ct_eglise_L4
-			NOT = { has_title_flag = BONUS_ct_eglise_L4 }
+		OR = {
+			FROM = { 
+				tier = baron	
+				holding_type = castle 
+				has_building = ca_con_wall_6
+				NOT = { has_title_flag = BONUS_ca_con_wall_6 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = city  
+				has_building = ct_eglise_L5
+				NOT = { has_title_flag = BONUS_ct_eglise_L5 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = temple  
+				has_building = tp_monastery_5
+				NOT = { has_title_flag = BONUS_TP_monastery_5 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = temple  
+				has_building = TP_episcopat_L5
+				NOT = { has_title_flag = BONUS_TP_episcopat_L5 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = castle 
+				has_building = CA_logis_L5
+				NOT = { has_title_flag = BONUS_CA_logis_L5 }
+			}
+			FROM = { 
+				tier = baron	
+				holding_type = city 
+				has_building = CT_adm_urbain_L5
+				NOT = { has_title_flag = BONUS_CT_adm_urbain_L5 }
+			}
 		}
 	}
 	
 	immediate = {
 		FROM = {
-			set_title_flag = BONUS_ct_eglise_L4
-			holder_scope = {
-				prestige = -90
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = castle 
+					has_building = ca_con_wall_6
+					NOT = { has_title_flag = BONUS_ca_con_wall_6 }
+				}
+				set_title_flag = BONUS_ca_con_wall_6
+				#holder_scope = { prestige = -120 }
 			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = city
+					has_building = ct_eglise_L5
+					NOT = { has_title_flag = BONUS_ct_eglise_L5 }
+				}
+				set_title_flag = BONUS_ct_eglise_L5
+				#holder_scope = { prestige = -120 }
+			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = temple
+					has_building = tp_monastery_5
+					NOT = { has_title_flag = BONUS_TP_monastery_5 }
+				}
+				set_title_flag = BONUS_TP_monastery_5
+				#holder_scope = { prestige = -120 }
+			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = temple
+					has_building = TP_episcopat_L5
+					NOT = { has_title_flag = BONUS_TP_episcopat_L5 }
+				}
+				set_title_flag = BONUS_TP_episcopat_L5
+				#holder_scope = { prestige = -120 }
+			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = castle
+					has_building = CA_logis_L5
+					NOT = { has_title_flag = BONUS_CA_logis_L5 }
+				}
+				set_title_flag = BONUS_CA_logis_L5
+				#holder_scope = { prestige = -120 }
+			}
+			if = {
+				limit = {
+					tier = baron	
+					holding_type = city
+					has_building = CT_adm_urbain_L5
+					NOT = { has_title_flag = BONUS_CT_adm_urbain_L5 }
+				}
+				set_title_flag = BONUS_CT_adm_urbain_L5
+				#holder_scope = { prestige = -120 }
+			}
+			holder_scope = { prestige = -120 }
 		}
 	}
 }
-character_event = {
-	id = L3T.235
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		FROM = { 
-			tier = baron	
-			holding_type = city  
-			has_building = ct_eglise_L5
-			NOT = { has_title_flag = BONUS_ct_eglise_L5 }
-		}
-	}
-	
-	immediate = {
-		FROM = { 
-			set_title_flag = BONUS_ct_eglise_L5
-			holder_scope = {
-				prestige = -120
-			}
-		}
-	}
-}
-
-#character_event = {
-#	id = L3T.236
-#	hide_window = yes
-#	is_triggered_only = yes
-#	
-#	trigger = {
-#		FROM = { 
-#			tier = baron	
-#			location = { trade_post_has_building = TR_bureau_3 }
-#			NOT = { has_title_flag = BONUS_TR_bureau_3 }
-#		}
-#	}
-#	
-#	immediate = {
-#		FROM = { 
-#			set_title_flag = BONUS_TR_bureau_3
-#			holder_scope = {
-#				prestige = -70
-#			}
-#		}
-#	}
-#}
-#character_event = {
-#	id = L3T.237
-#	hide_window = yes
-#	is_triggered_only = yes
-#	
-#	trigger = {
-#		FROM = { 
-#			tier = baron	
-#			location = { trade_post_has_building = TR_cartographe_2 }
-#			NOT = { has_title_flag = BONUS_TR_cartographe_2 }
-#		}
-#	}
-#	
-#	immediate = {
-#		FROM = { 
-#			set_title_flag = BONUS_TR_cartographe_2
-#			holder_scope = {
-#				prestige = -60
-#			}
-#		}
-#	}
-#}
-
-#holding_type = temple
-
-

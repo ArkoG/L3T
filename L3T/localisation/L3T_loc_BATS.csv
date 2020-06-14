@@ -557,6 +557,10 @@ tp_cathedrale_11;Cathedral, Celestial Spire;Cathédrale, Flèche Céleste;;;;;;;;;;
 tp_cathedrale_12;Cathedral;Cathédrale;;;;;;;;;;;;x
 tp_roman_cathedrale;Romanesque Cathedral;Cathédrale romane;;;;;;;;;;;;x
 tp_constructing_roman_cathedrale;Romanesque Cathedral in reconstruction;Cathédrale romane en reconstruction;;;;;;;;;;;;x
+TP_hostellerie_pelerins_1;Pilgrim inn;Auberge de pélerins;;;;;;;;;;;;x
+TP_hostellerie_pelerins_1_desc;This modest hostel welcomes pilgrims who come to venerate the relics of the cathedral.;Cette modeste auberge accueille les pélerins venus vénérer les reliques de la cathédrale.;;;;;;;;;;;;x
+TP_hostellerie_pelerins_2;Pilgrim road house;Hostellerie de pélerins;;;;;;;;;;;;x
+TP_hostellerie_pelerins_2_desc;This hostelry offers room and board to the pilgrims who have come to venerate the relics of the cathedral.;Cette hostellerie offre le gîte et le couvert aux pélerins venus vénérer les reliques de la cathédrale.;;;;;;;;;;;;x
 #;;CATHEDRAL DESC;;;;;;;;;;;;x
 cathedrale_01_desc;When constructing a cathedral one must make decisions;Pour construire la cathédrale il faut en prendre la §Ydécision§!;;;;;;;;;;;;x
 cathedrale_02_desc;All the foundations of the cathedral are in place and the crypt to house the reliquary.;L'ensemble des fondations de la cathédrale est en place ainsi que la crypte qui accueillera le reliquaire.;;;;;;;;;;;;x
@@ -620,15 +624,15 @@ FEODAL_adm_muslim;Specialization: FORTIFIED CITY;Spécialisation : CITÉ FORTIFIÉE
 FEODAL_adm_muslim_desc;Designating this holding as a §Yfortified city§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un ! \n\nCe bâtiment est une §Yspécialisation§! de domaine.;;;;;;;;;;x;;
 FEODAL_adm_zoroastrian_group;Specialization: FORTIFIED CITY;Spécialisation : CITÉ FORTIFIÉE;;;;;;;;;;;;x
 FEODAL_adm_zoroastrian_group_desc;Designating this holding as an §Yfortified city§! allows the holder to further develop the capacity of this province to serve as the regional capital. As such, it can support a large population and garrison behind thick, defensible walls to protect those living inside.;Cette cité abrite un centre de politique important et convient tout à fait pour y installer votre résidence et votre capitale. Elle abrite une population non négligeable, protégée derrière d'épais murs et défendue par une puissante garnison. C'est là aussi que se concentre votre pouvoir administratif... quand vous en avez un ! \n\nCe bâtiment est une §Yspécialisation§! de domaine.;;;;;;;;;;x;;
-CITE_L1;Urban Commune;Spécialisation : BOURG COMMUNAL ;;;;;;;;;;;;x
-CITE_L1_muslim;Medina Quarter;Spécialisation : BOURG URBAIN ;;;;;;;;;;;;x
-CITE_L1_zoroastrian_group;Market Town;Spécialisation : BOURG URBAIN ;;;;;;;;;;;;x
-CITE_L1_pagan_group;Market Village;Spécialisation : VILLAGE ;;;;;;;;;;;;x
-CITE_L1_desc;This burgeoning city is developing from a small market to a significant urban center. Under the wise leadership of an astute leader, it has the potential to become a major center of commerce, industry, and artisanry fueled by resources from trade and the surrounding land.;Cité mineure, relais de votre administration, elle abrite un centre de commerce et d'artisanat en plus des sources de revenus agricoles de la campagne avoisinante. \n\nCe bâtiment est une §Yspécialisation§! de domaine.;;;;;;;;;;x
-#CITE_L2;Regional Urban Center;PETITE CITÉ ;;;;;;;;;;;;x
-#CITE_L2_desc;This city has become the bedrock of the regional economy, connecting the local rural villages and attracting merchants from far and wide to peruse the wide selection of goods in the market square.;Une prometteuse cité qui commence à prendre de l'importance au niveau économique et démographique. Une bonne source de taxes en somme ! ;;;;;;;;;;x
-#CITE_L3;Major Urban Center;GRANDE CITÉ ;;;;;;;;;;;;x
-#CITE_L3_desc;This city has risen in prominence among the great municipalities of the realm and is renowned for its great wealth. Merchant caravans arrive in droves and the burghers' wealth rivals that of even the high nobility.;Une grande cité, riche et bien peuplée : une mine d'or mais bien gardée ! ;;;;;;;;;;x
+CITE_L1;URBAN COMMUNE;BOURG COMMUNAL ;;;;;;;;;;;;x
+CITE_L1_muslim;URBAN TOWN Quarter;BOURG URBAIN ;;;;;;;;;;;;x
+CITE_L1_zoroastrian_group;URBAN TOWN;BOURG URBAIN ;;;;;;;;;;;;x
+CITE_L1_pagan_group;VILLAGE;VILLAGE ;;;;;;;;;;;;x
+CITE_L1_desc;This small city is developing from local production and selling its surplus on the markets. \nUnder the wise leadership of an astute leader, it has the potential to become a more important center of commerce, industry, and artisanry fueled by resources from trade and the surrounding lands. ;Cette petite ville se développe à partir de la production locale et vend ses surplus sur les marchés. \nSous la direction éclairée d'un dirigeant avisé, elle a le potentiel pour devenir un centre de commerce plus important, d'industrie et d'artisanat plus important alimenté par les ressources du commerce et des terres environnantes.;;;;;;;;;;x
+CITE_L2;SMALL CITY;PETITE CITÉ ;;;;;;;;;;;;x
+CITE_L2_desc;This city has become the bedrock of the regional economy, connecting the local rural villages and attracting merchants who sell an always larger selection of goods in the market square.;Cette ville est devenue la base de l'économie régionale, reliant les villages ruraux locaux et attirant les commerçants qui vendent une sélection toujours plus grande de marchandises sur la place du marché. ;;;;;;;;;;;;x
+CITE_L3;GREAT CITY;GRANDE CITÉ ;;;;;;;;;;;;x
+CITE_L3_desc;This city has risen in prominence among the great municipalities of the realm and is renowned for its great wealth. \nTravelling merchants arrive in droves and the burghers' wealth rivals that of even the high nobility.;Cette ville est remarquable de par son importance parmi les grandes municipalités du royaume et est réputée pour sa grande richesse. \nLes marchands ambulants arrivent en masse et la richesse des bourgeois rivalise avec celle de la haute noblesse. ;;;;;;;;;;;;x
 VOC_INDUSTRIELLE;Specialization: Manufacturing and Artisanry;Spécialisation : Production et artisanat;;;;;;;;;;;;x
 VOC_INDUSTRIELLE_DESC;Specializing this holding as a center of §YManufacturing and Artisanry§! allows the holder to focus solely on the extraction and production of processed and luxury goods to be used by the local lord or exported for profit.;Cette cité s'est spécialisée dans l'extraction et la §Yproduction§! de matières premières ainsi que dans leur transformation. Elle en retire de bons revenus.  \n\nCe bâtiment est une §Yspécialisation§! de domaine.;;;;;;;;;;;;x
 VOC_COMMERCIALE;Specialization: Trade and Commerce;Spécialisation : Commerce et péages;;;;;;;;;;;;x
@@ -655,7 +659,7 @@ COMMANDERIE_desc;A commandry is a demesne under the control of a commander of a 
 REGLE_DE_1;Monastic rule : Regula Benedicti;Règle monastique : Regula Benedicti;;;;;;;;;;;;x
 REGLE_DE_1_desc;The §YRule of Saint Benedict§! is a monastic rule written by Saint Benedict of Nursia to instruct his disciples in the way of monastic life. The unique Benedictine emphasis on autonomy include cultivating models of tightly bonded communities, contemplative lifestyles, as well as encouragement of manual labor. ;La §YRègle de saint Benoît§! est une règle monastique écrite par Benoît de Nursie pour guider ses disciples dans la vie monastique communautaire. L'idée générale est que les moines sont tous frères. La journée du moine est réglée en fonction de ce que saint Benoît appelle "Oeuvre de Dieu". Une partie est dédiée à la prière, l'autre au travail manuel et la dernière à l'enrichissement spirituel par l'étude et la lecture de l'Ecriture des Pères de l'Eglise. \n\nLes moines se choisissent une règle de vie monastique. Ceci constitue une §Yspécialisation§! de ce domaine.;;;;;;;;;;;;x
 REGLE_DE_2;Monastic rule : Regula Augustini;Règle monastique : Regula Augustini;;;;;;;;;;;;x
-REGLE_DE_2_desc;The §YRule of Saint Augustine§! is derived from a brief document divided into eight chapters and serves as an outline for religious life lived in community. The Rule governs chastity, poverty, obedience, detachment from the world, the apportionment of labour, the inferiors, fraternal charity, prayer in common, fasting and abstinence proportionate to the strength of the individual, care of the sick, silence and reading during meals.;La §YRègle de saint Augustin!§ dérive de plusieurs écrits dont une lettre authentique d'Augustin d'Hippone. Elle est destinée à régler la vie d'une communauté d'hommes. \n\nLes moines se choisissent une règle de vie monastique. Ceci constitue une §Yspécialisation§! de ce domaine.;;;;;;;;;;;;x
+REGLE_DE_2_desc;The §YRule of Saint Augustine§! is derived from a brief document divided into eight chapters and serves as an outline for religious life lived in community. The Rule governs chastity, poverty, obedience, detachment from the world, the apportionment of labour, the inferiors, fraternal charity, prayer in common, fasting and abstinence proportionate to the strength of the individual, care of the sick, silence and reading during meals.;La §YRègle de saint Augustin§! dérive de plusieurs écrits dont une lettre authentique d'Augustin d'Hippone. Elle est destinée à régler la vie d'une communauté d'hommes. \n\nLes moines se choisissent une règle de vie monastique. Ceci constitue une §Yspécialisation§! de ce domaine.;;;;;;;;;;;;x
 REGLE_DE_3;Monastic rule : Regula Basili;Règle monastique : Regula Basili;;;;;;;;;;;;x
 REGLE_DE_3_desc;The §YRule of Saint Basil§! refers to the principles of ascetic life followed by the Basilians, the most ancient of the monastic communities. While not an Order by the Western monastic definition, adherents live in small communities focused mainly upon prayer and contemplation isolated from the world.;La Règle de §Ysaint Basile§! est celle suivie par les basiliens, le plus ancien des ordres monastiques. Cet ordre, auquel sont affiliés presque tous les monastères d'Orient, se voue surtout à la prière et à la contemplation. \n\nLes moines se choisissent une règle de vie monastique. Ceci constitue une §Yspécialisation§! de ce domaine.;;;;;;;;;;;;x
 ORDRE_MONACAL_1;ORDO STRATEGIUM;ORDO STRATEGIUM;;;;;;;;;;;;x
@@ -749,11 +753,11 @@ CT_route_L2;TRADE: Gravel Road;COMMERCE : Chemin empierré;;;;;;;;;;;;x
 CT_route_L2_desc;The primitive dirt road that passed through these parts is no longer enough to facilitate travel through these parts. A booming economy requires better roads, and surfacing them with gravel will improve travel by foot, horse, as well as cart.;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
 CT_route_L3;TRADE: Paved Road;COMMERCE : Route pavée;;;;;;;;;;;;x
 CT_route_L3_desc;The growing importance of this region as an economic center requires the expansion and construction of more evenly paved roads to facilitate the droves of merchants that pass through every year.;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
-CT_fleuve_L1;TRADE: Ferry;COMMERCE : Ponton fluvial;;;;;;;;;;;;x
+CT_fleuve_L1;TRADE: River pontoon;COMMERCE : Ponton fluvial;;;;;;;;;;;;x
 CT_fleuve_L1_desc;Local peasants make a living ferrying small groups of merchants travelling through these parts (and then of course, pass on a portion of the payment to the local lord). It is a safer alternative to travelling by land... until one of the boats springs a leak.;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
-CT_fleuve_L2;TRADE: Trading Quay;COMMERCE : Quai fluvial;;;;;;;;;;;;x
+CT_fleuve_L2;TRADE: River Quay;COMMERCE : Quai fluvial;;;;;;;;;;;;x
 CT_fleuve_L2_desc;The establishment of a wharf on the banks of the river allows for a significant number of rivercraft to ferry goods across otherwise unfriendly water.;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
-CT_fleuve_L3;TRADE: Inland Trading Port;COMMERCE : Port fluvial;;;;;;;;;;;;x
+CT_fleuve_L3;TRADE: River harbour;COMMERCE : Port fluvial;;;;;;;;;;;;x
 CT_fleuve_L3_desc;Establishing a small port where merchants can rest and then transport larger volumes of goods on sturdier boats has attracted more traffic through these parts.;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
 TP_COMMERCE_tooltip;TRADE buildings (info);Bâtiments de COMMERCE (infos);;;;;;;;;;;;x
 TP_COMMERCE_tooltip_desc;The buildings of the §YTRADE§! category, despite generating income and taxes, permit once built to §Yinfluence the spread of trade routes§! by "attracting" them to the province. \nThe construction of several buildings' types, or beyond their first level reinforces the commercial attractivness.;Les bâtiments de la catégorie §YCOMMERCE§!, en dehors de générer des revenus et taxes, leur construction permet d'§Yinfluencer le développement des routes de commerce§! en les "attirant" dans la province. \nLa construction de plusieurs types de bâtiments, ou au delà du premier niveau, renforce l'attractivité commerciale.;;;;;;;;;;;;x
@@ -773,15 +777,15 @@ TP_relais_L2;TRADE: Mountain Inn;COMMERCE : Refuge de montagne;;;;;;;;;;;;x
 TP_relais_L2_desc;The local inn not only offers warm drink and a hot soup at the end of a day's travel, but also relatively comfortable beds for tired merchants willing to pay for such comforts.;Cette auberge de montagne installée au passage du col offre une halte au chaud et le couvert aux marchands désireux de franchir la montagne.;;;;;;;;;;;;x
 TP_route_L1;TRADE: Dirt Trail;COMMERCE : Chemin de terre;;;;;;;;;;;;x
 TP_route_L1_desc;The roads more travelled by peasants and merchants are often more worn, leaving clear trails for strangers to the province to follow as they bring their goods to market. Clearing the trails and expanding them make travel a little easier and attract more (taxable!) traffic.;Le chemin de terre relie la route commerciale aux domaines de la province. Il peut aussi bien devenir une route commerciale ou ne rester qu'un chemin d'importance moindre, un peu cahoteux qui assure a minima son rôle de voie de transport.;;;;;;;;;;;;x
-TP_route_L2;Infrastructure Gravel Road;COMMERCE : Chemin empierré;;;;;;;;;;;;x
+TP_route_L2;TRADE: Gravel Road;COMMERCE : Chemin empierré;;;;;;;;;;;;x
 TP_route_L2_desc;The primitive dirt road that passed through these parts is no longer enough to facilitate travel through these parts. A booming economy requires better roads, and surfacing them with gravel will improve travel by foot, horse, as well as cart.;L'ancien chemin de terre n'était plus suffisant pour les marchands qui passaient par là. Le renforcement de la route avec des pierres permet au moins d'éviter les ornières, ennemies héréditaires des roues de chariots !;;;;;;;;;;;;x
 TP_route_L3;TRADE: Paved Road;COMMERCE : Route pavée;;;;;;;;;;;;x
 TP_route_L3_desc;The growing importance of this region as an economic center requires the expansion and construction of more evenly paved roads to facilitate the droves of merchants that pass through every year.;Toujours plus de marchands empruntent la route, il est temps de l'élargir et d'en renforcer la structure. \nL'entretien permettra de prétexter plus de taxes de péage.;;;;;;;;;;;;x
-TP_fleuve_L1;TRADE: Ferry;COMMERCE : Ponton fluvial;;;;;;;;;;;;x
+TP_fleuve_L1;TRADE: River pontoon;COMMERCE : Ponton fluvial;;;;;;;;;;;;x
 TP_fleuve_L1_desc;Local peasants make a living ferrying small groups of merchants travelling through these parts (and then of course, pass on a portion of the payment to the local lord). It is a safer alternative to travelling by land... until one of the boats springs a leak.;A peine un ponton en bois qui s'avance sur les eaux pour permettre l'amarrage des embarcations et mener les opération de chargement.;;;;;;;;;;;;x
-TP_fleuve_L2;TRADE: Trading Quay;COMMERCE : Quai fluvial;;;;;;;;;;;;x
+TP_fleuve_L2;TRADE: River quay;COMMERCE : Quai fluvial;;;;;;;;;;;;x
 TP_fleuve_L2_desc;The establishment of a wharf on the banks of the river allows for a significant number of rivercraft to ferry goods across otherwise unfriendly water.;Ce quai en pierre permet un amarrage solide et peut accueillir davantage de bateleurs. ;;;;;;;;;;;;x
-TP_fleuve_L3;TRADE: Inland Trading Port;COMMERCE : Port fluvial;;;;;;;;;;;;x
+TP_fleuve_L3;TRADE: River harbour;COMMERCE : Port fluvial;;;;;;;;;;;;x
 TP_fleuve_L3_desc;Establishing a small port where merchants can rest and then transport larger volumes of goods on sturdier boats has attracted more traffic through these parts.;Un petit port a été ici aménagé. L'on peut s'y reposer pour la nuit et s'y restaurer. Des bêtes de sommes peuvent y être louées pour la halage.;;;;;;;;;;;;x
 #;;;;;;;;;;;;;;x
 tr_port_fluvial_1;Inland Trading Quay;Débarcadère fluvial;;;;;;;;;;;;x
@@ -822,11 +826,11 @@ CA_chambre_1_desc;The Seneschal office is the place where tax administration of 
 CA_chambre_2;Chamber of Accounts;Chambre des Comptes;;;;;;;;;;;;x;
 CA_chambre_2_desc;The Seneschal office is the place where tax administration of your domain is centralized.\n§YThe stewardship point will be given by a character modifier.\nThe demesne size bonus will be given by a character modifier.§!;La chambre du Sénéchal est le lieu où est centralisé l'administration fiscale de votre domaine.\n§YL'octroi du point d'intendance sera donné par un modificateur de personnage.§!\n§YLe bonus de taille de Domaine sera donné par un modificateur de personnage.§!;;;;;;;;;;;;x;
 CA_tresor;Treasure Room;Salle du Trésor;;;;;;;;;;;;x;
-CA_tresor_desc;Place, secret and well defended to store your wealth. This guarantees not to lose a purse of gold, or a chalice ...;Lieu, secret et bien défendu, de stockage de vos richesses. Ce qui garantit de ne pas égarer une bourse d'or, ou un calice...;;;;;;;;;;;;x;
+CA_tresor_desc;Place, secret and well defended to store your wealth. This guarantees not to lose a purse of gold, or a chalice...;Lieu, secret et bien défendu, de stockage de vos richesses. Ce qui garantit de ne pas égarer une bourse d'or, ou un calice...;;;;;;;;;;;;x;
 CA_archives_1;Hall of Records;Salle des Archives;;;;;;;;;;;;x;
-CA_archives_1_desc;This room contains all the necessary documents to the administration: the books of your Senechal, cadastral maps, letters, capitularies ...\n§YThe stewardship point will be given by a character modifier.§!;Cette salle contient tous les documents nécessaires à l'administration : des livres de compte de votre Sénéchal, relevés cadastraux, lettres, capitulaires ...\n§YLe point d'intendance sera donné par un modificateur de personnage.§!;;;;;;;;;;;;x;
+CA_archives_1_desc;This room contains all the necessary documents to the administration: the books of your Senechal, cadastral maps, letters, capitularies...\n§YThe stewardship point will be given by a character modifier.§!;Cette salle contient tous les documents nécessaires à l'administration : des livres de compte de votre Sénéchal, relevés cadastraux, lettres, capitulaires...\n§YLe point d'intendance sera donné par un modificateur de personnage.§!;;;;;;;;;;;;x;
 CA_archives_2;Big Hall of Records;Grande salle des Archives;;;;;;;;;;;;x;
-CA_archives_2_desc;This room contains all the necessary documents to the administration: the books of your Senechal, cadastral maps, letters, capitularies ...;Cette salle contient tous les documents nécessaires à l'administration : des livres de compte de votre Sénéchal, relevés cadastraux, lettres, capitulaires ... ;;;;;;;;;;;;x;
+CA_archives_2_desc;This room contains all the necessary documents to the administration: the books of your Senechal, cadastral maps, letters, capitularies...;Cette salle contient tous les documents nécessaires à l'administration : des livres de compte de votre Sénéchal, relevés cadastraux, lettres, capitulaires... ;;;;;;;;;;;;x;
 CA_cour_justice;Court;Cour de Justice;;;;;;;;;;;;x;
 CA_cour_justice_desc;It is here that you receive the complaints of your subjects, and do justice.\n§YThe diplomacy point and the prestige effect will be given by a character modifier.§!;C'est en ce lieu que vous recevez les doléances de vos sujets, et rendez justice.\n§YLe point de diplomatie et le bonus de prestige seront donnés par un modificateur de personnage.§!;;;;;;;;;;;;x
 CA_chancellerie;Chancellery;Chancellerie;;;;;;;;;;;;x;
@@ -834,11 +838,19 @@ CA_chancellerie_desc;General Secretariat of the lord, led by the chancellor. Ser
 CA_chap_seign;Lordly chapel;Chapelle seigneuriale;;;;;;;;;;;;x;
 CA_chap_seign_desc;A Chapel adjoins your house where only you and your family can go.\n§YPiety and church opinion effect will be given by a character modifier.§!;Une Chapelle accolée à votre logis où seuls vous et votre famille pouvez vous rendre.\n§YLes effets de piété et de relation avec l'Eglise seront donnés par un modificateur de personnage.§!;;;;;;;;;;;;x
 CA_chap_seign_2;Greater lordly chapel;Grande chapelle seigneuriale;;;;;;;;;;;;x;
-CA_chap_seign_2_desc;Adding a mausoleum and a reliquary for your family. Opening your subjects can be harvested some "pious" gifts ...\n§YPiety and prestige effect will be given by a character modifier.§! \nIf the character builds BOTH the §YLibrary§! AND the §YGreater lordly chapel§!, he receives a dynastic opinon bonus via the trait "§YDynastic keeper§!".;Ajout d'un mausolée et d'un reliquaire destiné à votre famille. L'ouverture à vos sujets permet de récolter quelque "pieux" dons...\n§YLes effets de piété et de prestige seront donnés par un modificateur de personnage.§! \nSi le personnage construit ET la §YBibliothèque§! ET la §YGrande chapelle seigneuriale§!, il reçoit un bonus d'opinion dynastique via le trait "§YConservation de biens dynastiques§!".;;;;;;;;;;;;x
+CA_chap_seign_2_desc;Adding a mausoleum and a reliquary for your family. Opening your subjects can be harvested some "pious" gifts...\n§YPiety and prestige effect will be given by a character modifier.§! \nIf the character builds BOTH the §YLibrary§! AND the §YGreater lordly chapel§!, he receives a dynastic opinon bonus via the trait "§YDynastic keeper§!".;Ajout d'un mausolée et d'un reliquaire destiné à votre famille. L'ouverture à vos sujets permet de récolter quelque "pieux" dons...\n§YLes effets de piété et de prestige seront donnés par un modificateur de personnage.§! \nSi le personnage construit ET la §YBibliothèque§! ET la §YGrande chapelle seigneuriale§!, il reçoit un bonus d'opinion dynastique via le trait "§YConservation de biens dynastiques§!".;;;;;;;;;;;;x
 CA_library_L1;Personnal study;Etude personnelle;;;;;;;;;;;;;x
 CA_library_L1_desc;This small room is arranged with a work and studying office surrounded by shelves with books of all sorts and origins : a gulf of knowledge.\n§YBonus will be given through a character modifier.§! \n\nThis unlocks a decision: §YAcquire some books§!.;Cette petite pièce isolée est aménagée avec un bureau et des étagères garnies de livres de toutes sortes et de toutes origines : un puit de savoir.\n§YLes bonus seront donnés par un modificateur de personnage.§!\n\nCeci débloque une décision : §YAcquérir des livres§!.;;;;;;;;;;;;;x
 CA_library_L2;Library;Bibliothèque;;;;;;;;;;;;;x
 CA_library_L2_desc;The small study was enlarged to fit even more books and knowledge from the known world. \nIt also host the archives of the dynasty and its genealogy.\n§YBonus will be given through a character modifier.§! \n\nIf the character builds BOTH the §YLibrary§! AND the §YGreater lordly chapel§!, he receives a dynastic opinon bonus via the trait "§YDynastic keeper§!".\n\nThis unlocks the decision: §YAcquire some books§!. \nThis unlocks the decision: §YStudy some books§!.;La petite étude a été agrandie pour accueillir toujours plus d'ouvrages et de savoirs du Monde connu. \nOn y trouve aussi les archives de la dynastie et sa généalogie.\n§YLes bonus seront donnés par un modificateur de personnage.§! \n\nSi le personnage construit ET la §YBibliothèque§! ET la §YGrande chapelle seigneuriale§!, il reçoit un bonus d'opinion dynastique via le trait "§YConservation de biens dynastiques§!". \n\nCeci débloque la décision : §YAcquérir des livres§!. \nCeci débloque la décision : §YEtudier des livres§!.;;;;;;;;;;;;;x
+
+CA_prison_L1;Securised prison;Cachots sécurisés;;;;;;;;;;;;;x
+CA_prison_L2;Securised prison;Cachots sécurisés;;;;;;;;;;;;;x
+CA_prison_L3;Securised prison;Cachots sécurisés;;;;;;;;;;;;;x
+#prison_desc;Less inconvenient than the dungeon, these dungeons are much better secured and nestled deep in the fortress. \nAlthough no one has ever escaped from them, their capacity is limited and their surveillance costly. \nEach level can accommodate §B1§! additional "resident".;Moins incommants que l'oubliette, ces cachots sont bien mieux sécurisés et nichés aux tréfonds de la forteresse. \nBien que nul ne s'en soit jamais échappé, leur capacité est limitée et leur surveillance coûteuse. \nChaque niveau permet d'acceuillir §B1§! "résident" supplémentaire.;;;;;;;;;;;;;x
+prison_desc;Less inconvenient than the dungeon, these dungeons are much better secured and nestled deep in the fortress. \nAlthough no one has ever escaped from them, their capacity is limited and their surveillance costly. ;Moins incommants que l'oubliette, ces cachots sont bien mieux sécurisés et nichés aux tréfonds de la forteresse. \nBien que nul ne s'en soit jamais échappé, leur capacité est limitée et leur surveillance coûteuse. ;;;;;;;;;;;;;x
+
+
 #;NEW main buildings tag L3T;;;;;;;;;;;;;x
 ca_tour_L1;Woodlog towers;Tours en rondins;;;;;;;;;;;;;x
 ca_tour_L1_desc;_;Cette structure elevée est faite de bois et offre un bon point de tir pour les archers.;;;;;;;;;;;;;x
@@ -847,39 +859,38 @@ ca_tour_L2_desc;_;Plus solides et plus massives, les tours en pierres sont bien 
 ca_tour_L3;Cutstone towers;Tours en pierre maçonnées;;;;;;;;;;;;;x
 ca_tour_L3_desc;_;Les tours sont faites en pierres taillées et bien scellées entre elles par du mortier formant une paroi lisse offrant peu de prises à l'assaillant et plus résistante aux tirs des machines de sièges.;;;;;;;;;;;;;x
 ca_tour_L4;Round towers;Tours rondes;;;;;;;;;;;;;x
-ca_tour_L4_desc;_;Les tours rondes offrent une meilleure résistance aux projectiles et ont l'avantage de n'offrir aucun angle mort.;;;;;;;;;;;;;x
+ca_tour_L4_desc;This building costs §Y90§! prestige to get built. Your prestige points will be decreased when you start to build it.;Les tours rondes offrent une meilleure résistance aux projectiles et ont l'avantage de n'offrir aucun angle mort. \nCe bâtiment requiert de dépenser §Y90§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
 tp_training_grounds_L1;Wooden gate;Porte de guet;;;;;;;;;;;;;x
-tp_training_grounds_L1_desc;_;Des planches et poutres assemblées afin de sécuriser le domaine. Cette porte est surmontée d'une vigie donnant une vue imprenable sur la région.;;;;;;;;;;;;;x
+tp_training_grounds_L1_desc;Planks and beams assembled to secure the area. This door is surmounted by a lookout giving a breathtaking view of the region.;Des planches et poutres assemblées afin de sécuriser le domaine. Cette porte est surmontée d'une vigie donnant une vue imprenable sur la région.;;;;;;;;;;;;;x
 tp_training_grounds_L2;Stone gate;Porte en pierre;;;;;;;;;;;;;x
-tp_training_grounds_L2_desc;_;Une structure de pierres assemblées afin de contrôler les entrées et sorties et se barricader en cas d'attaque.;;;;;;;;;;;;;x
+tp_training_grounds_L2_desc;A structure of stones assembled to control entrances and exits and barricade themselves in the event of an attack.;Une structure de pierres assemblées afin de contrôler les entrées et sorties et se barricader en cas d'attaque.;;;;;;;;;;;;;x
 ca_eglise_L1;Oratory;Oratoire;;;;;;;;;;;;;x
-ca_eglise_L1_desc;_;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
+ca_eglise_L1_desc;A modest place of worship, but sufficient to accommodate the few faithfuls.;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
 ca_eglise_L2;Chapel;Chapelle;;;;;;;;;;;;;x
-ca_eglise_L2_desc;_;;;;;;;;;;;;;;x
+ca_eglise_L2_desc;;;;;;;;;;;;;;;x
 ca_eglise_L3;Church;Église;;;;;;;;;;;;;x
-ca_eglise_L3_desc;_;;;;;;;;;;;;;;x
+ca_eglise_L3_desc;The gathering place of the religious community to pray and gather under the stone arches.;Le lieu de rassemblement de la communauté religieuse pour prier et se recueillir sous les voûtes de pierre. ;;;;;;;;;;;;;x
 ca_eglise_L4;Great church;Grande église;;;;;;;;;;;;;x
-ca_eglise_L4_desc;_;;;;;;;;;;;;;;x
+ca_eglise_L4_desc;This building costs §Y90§! prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser §Y90§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
 ca_eglise_L1_muslim;Small mosque;Petite mosquée;;;;;;;;;;;;;x
-ca_eglise_L1_muslim_desc;_;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
+ca_eglise_L1_muslim_desc;A modest place of worship, but sufficient to accommodate the few faithfuls.;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
 ca_eglise_L2_muslim;Mosque;Mosquée;;;;;;;;;;;;;x
 ca_eglise_L2_muslim_desc;_;;;;;;;;;;;;;;x
 ca_eglise_L3_muslim;Domed mosque;Mosquée à dôme;;;;;;;;;;;;;x
 ca_eglise_L3_muslim_desc;_;;;;;;;;;;;;;;x
 ca_eglise_L4_muslim;Great mosque;Grande mosquée;;;;;;;;;;;;;x
+ca_eglise_L4_mulsim_desc;This building costs §Y90§! prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser §Y90§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
 ca_eglise_L4_muslim_desc;_;;;;;;;;;;;;;;x
-ca_eglise_L5_muslim;Magnifiscent mosque;Magnifique mosquée;;;;;;;;;;;;;x
-ca_eglise_L5_muslim_desc;_;;;;;;;;;;;;;;x
 ct_eglise_L1;Oratory;Oratoire;;;;;;;;;;;;;x
-ct_eglise_L1_desc;_;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
+ct_eglise_L1_desc;A modest place of worship, but sufficient to accommodate the few faithfuls.;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
 ct_eglise_L2;Chapel;Chapelle;;;;;;;;;;;;;x
 ct_eglise_L2_desc;_;;;;;;;;;;;;;;x
 ct_eglise_L3;Church;Église;;;;;;;;;;;;;x
 ct_eglise_L3_desc;_;;;;;;;;;;;;;;x
 ct_eglise_L4;Great church;Grande église;;;;;;;;;;;;;x
-ct_eglise_L4_desc;_;;;;;;;;;;;;;;x
+ct_eglise_L4_desc;This building costs §Y90§! prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser §Y90§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
 ct_eglise_L5;Basilica;Basilique;;;;;;;;;;;;;x
-ct_eglise_L5_desc;_;;;;;;;;;;;;;;x
+ct_eglise_L5_desc;This building costs §Y120§! prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser §Y120§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
 ct_eglise_L1_muslim;Small mosque;Petite mosquée;;;;;;;;;;;;;x
 ct_eglise_L1_muslim_desc;_;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
 ct_eglise_L2_muslim;Mosque;Mosquée;;;;;;;;;;;;;x
@@ -887,12 +898,38 @@ ct_eglise_L2_muslim_desc;_;;;;;;;;;;;;;;x
 ct_eglise_L3_muslim;Domed mosque;Mosquée à dôme;;;;;;;;;;;;;x
 ct_eglise_L3_muslim_desc;_;;;;;;;;;;;;;;x
 ct_eglise_L4_muslim;Great mosque;Grande mosquée;;;;;;;;;;;;;x
-ct_eglise_L4_muslim_desc;_;;;;;;;;;;;;;;x
+ct_eglise_L4_muslim_desc;This building costs §Y120§! prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser §Y120§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
 ct_eglise_L5_muslim;Magnifiscent mosque;Magnifique mosquée;;;;;;;;;;;;;x
-ct_eglise_L5_muslim_desc;_;;;;;;;;;;;;;;x
+ct_eglise_L5_muslim_desc;This building costs §Y120§! prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser §Y120§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
+tp_eglise_L1;Oratory;Oratoire;;;;;;;;;;;;;x
+tp_eglise_L1_desc;A modest place of worship, but sufficient to accommodate the few faithfuls.;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
+tp_eglise_L2;Chapel;Chapelle;;;;;;;;;;;;;x
+tp_eglise_L2_desc;_;;;;;;;;;;;;;;x
+tp_eglise_L3;Church;Église;;;;;;;;;;;;;x
+tp_eglise_L3_desc;_;;;;;;;;;;;;;;x
+tp_eglise_L4;Great church;Grande église;;;;;;;;;;;;;x
+tp_eglise_L4_desc;This building costs §Y90§! prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser §Y90§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
+tp_eglise_L5;Basilica;Basilique;;;;;;;;;;;;;x
+tp_eglise_L5_desc;This building costs §Y120§! prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser §Y120§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
+tp_eglise_L1_muslim;Small mosque;Petite mosquée;;;;;;;;;;;;;x
+tp_eglise_L1_muslim_desc;_;Un modeste lieu de culte, mais suffisant pour accueillir les quelques fidèles.;;;;;;;;;;;;;x
+tp_eglise_L2_muslim;Mosque;Mosquée;;;;;;;;;;;;;x
+tp_eglise_L2_muslim_desc;_;;;;;;;;;;;;;;x
+tp_eglise_L3_muslim;Domed mosque;Mosquée à dôme;;;;;;;;;;;;;x
+tp_eglise_L3_muslim_desc;_;;;;;;;;;;;;;;x
+tp_eglise_L4_muslim;Great mosque;Grande mosquée;;;;;;;;;;;;;x
+tp_eglise_L4_muslim_desc;This building costs §Y120§! prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser §Y120§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
+tp_eglise_L5_muslim;Magnifiscent mosque;Magnifique mosquée;;;;;;;;;;;;;x
+tp_eglise_L5_muslim_desc;This building costs §Y120§! prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser §Y120§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
 TP_universite_mutazilite_desc;_;;;;;;;;;;;;;;x
 TP_universite_mutazilite_1;Mutazilite university;Université mutazilite;;;;;;;;;;;;;x
 TP_universite_mutazilite_2;Mutazilite university;Université mutazilite;;;;;;;;;;;;;x
 TP_universite_asharite_desc;_;;;;;;;;;;;;;;x
 TP_universite_asharite_1;Ashari university;Université asharite;;;;;;;;;;;;;x
 TP_universite_asharite_2;Ashari university;Université asharite;;;;;;;;;;;;;x
+
+tp_temple_L1;[Root.Holder.GetHouseOfWorshipCap];[Root.Holder.GetHouseOfWorshipCap];[Root.Holder.GetHouseOfWorshipCap];;[Root.Holder.GetHouseOfWorshipCap];;;;;;;;;x
+tp_temple_L2;[Root.Holder.GetHouseOfWorshipCap];[Root.Holder.GetHouseOfWorshipCap];[Root.Holder.GetHouseOfWorshipCap];;[Root.Holder.GetHouseOfWorshipCap];;;;;;;;;x
+tp_temple_L3;[Root.Holder.GetHouseOfWorshipCap];[Root.Holder.GetHouseOfWorshipCap];[Root.Holder.GetHouseOfWorshipCap];;[Root.Holder.GetHouseOfWorshipCap];;;;;;;;;x
+tp_temple_A_desc;This [Root.Holder.GetHouseOfWorship] serves as the spiritual center of the local community.;[GetHouseOfWorshipUnUne] tout ce qu'il y a de plus commun qui sert de centre spirituel de la communauté locale.;;;;;;;;;;;;x
+tp_temple_B_desc;People from across the province come here to visit this impressive [Root.Holder.GetHouseOfWorship]. They come to pray or make offerings in this very sacred building.;Des fidèles viennent de tous les environs visiter ce bâtiment monumental. Ils viennent ici se recueillir, prier et faire des offrandes dans la grande salle [Root.Holder.GetHouseOfWorshipDuDela].;;;;;;;;;;;;x

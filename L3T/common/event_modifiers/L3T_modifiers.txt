@@ -156,10 +156,10 @@
   #209-211 - not used
 #212 - tradition chrétienne
 #213 - tradition musulmane
-#214 - tradition autre (voir si tuile)
-#215 - déclin tradition chrétienne
-#216 - déclin tradition musulmane
-#217 - déclin tradition autre (voir si tuile) [NOT USED]
+#214 - christian minority -accepted-
+#215 - muslim minority -accepted-
+#216 - christian minority -undergone-
+#217 - muslim minority -undergone-
 #218 - depopulation vanilla 1 [NOT USED]
 #219 - depopulation vanilla 2 [NOT USED]
 #220 - depopulation vanilla 3 [NOT USED]
@@ -283,7 +283,7 @@ relique_achercher_05 = {icon = 179}
 relique_graal_01 = {icon = 179}
 relique_generique = {	
 	icon = 179
-	temple_tax_modifier = 0.15
+	#temple_tax_modifier = 0.15 #bonus moved to TP_hostellerie_pelerins_1&2
 }
 relique_fort_douteuse = {icon = 179} 
 relique_falsifiee = {icon = 179} 
@@ -393,12 +393,12 @@ loge_modifier = {
 }
 
 ##########
-trad_chretienne = { icon = 212 } #flag
-trad_musulmane = { icon = 213 } #flag
-trad_autre = { icon = 214 } #flag
-
-minorite_chretienne = { icon = 215 }
-minorite_musulmane = { icon = 216 }
+trad_christian = { icon = 212 } #+flag
+trad_muslim = { icon = 213 } #+flag
+minority_christian_pos = { icon = 214 } #+flag
+minority_muslim_pos = { icon = 215 } #+flag
+minority_christian_neg = { icon = 216 } #+flag
+minority_muslim_neg = { icon = 217 } #+flag
 
 ##########
 boost_opinion_bourgeois	= {	town_opinion	= 25	icon = 197	}
@@ -586,7 +586,7 @@ industrie_prospere = {
 	icon =  162
 	local_revolt_risk = -0.05
 	tax_income = 3.0
-	local_tax_modifier =  0.15
+	local_tax_modifier =  0.25
 }
 
 ###Meteo
@@ -703,6 +703,7 @@ realm_capital_province = {
 	economy_techpoints = 0.05
 	culture_techpoints = 0.05
 	military_techpoints = 0.05
+	tech_growth_modifier = 0.03
 }
 ### Specialization modifiers
 feodal_prod_L1 = {icon = 225 }
@@ -772,26 +773,37 @@ episco_muslim = {icon = 207 }
 route_size1 = { 
 	icon = 5 #major_modifer_icon_strip
 	local_tax_modifier = 0.05 #+node (10%) +route (5%) = +20%
+	levy_reinforce_rate = 0.01
+	tech_growth_modifier = 0.01
 	major = yes
 }
 route_size2 = { 
 	icon = 4 #major_modifer_icon_strip
 	local_tax_modifier = 0.10 #+node (10%) +route (5%) = +25%
+	levy_reinforce_rate = 0.02	
+	tech_growth_modifier = 0.02
 	major = yes
 }
 route_size3 = { 
 	icon = 3 #major_modifer_icon_strip
 	local_tax_modifier = 0.20 #+node (10%) +route (5%) = +35%
+	levy_reinforce_rate = 0.03
+	tech_growth_modifier = 0.03
+
 	major = yes
 }
 route_size4 = { 
 	icon = 2 #major_modifer_icon_strip
 	local_tax_modifier = 0.25 #+node (10%) +route (5%) = +40%
+	levy_reinforce_rate = 0.04
+	tech_growth_modifier = 0.04
 	major = yes
 }
 route_size5 = { 
 	icon = 1 #major_modifer_icon_strip
 	local_tax_modifier = 0.35 #+node (10%) +route (5%) = +50%
+	levy_reinforce_rate = 0.05
+	tech_growth_modifier = 0.05
 	major = yes
 }
 
@@ -799,15 +811,39 @@ route_fluviale = {
 	#icon = 164 
 	icon = 6 #major_modifer_icon_strip
 	local_tax_modifier = 0.05
+	tech_growth_modifier = 0.01
 	major = yes
 	}
 route_terrestre = { 
 	#icon = 165 
 	icon = 8 #major_modifer_icon_strip
 	local_tax_modifier = 0.05
+	tech_growth_modifier = 0.01
 	major = yes
 	}
 future_route = { 
 	icon = 9
 	major = yes
 	}
+	
+#fortress prison
+the_fortress = {
+	health = -1
+	diplomacy = -20
+	icon = 38
+}
+
+#vanilla bandits
+purge_mobilization = {
+	levy_size = -0.2
+	castle_tax_modifier = -0.05
+	icon = 19
+}
+failed_purge = {
+	local_revolt_risk = 0.02
+	icon = 32
+}
+tarnished_reputation_claim = {
+	diplomacy = -1
+	icon = 21
+}

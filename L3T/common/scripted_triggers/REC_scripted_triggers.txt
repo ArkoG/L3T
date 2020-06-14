@@ -107,7 +107,7 @@ construire_cathedral_allow = {
 			text = custom_paix_totale
 			hidden_tooltip = {
 				war = no
-				NOT = { any_liege = { war = yes } }
+				#NOT = { any_liege = { war = yes } } #it tends to be hard to achieve
 			}
 		}
 	   #Has a relic

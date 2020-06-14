@@ -4,65 +4,93 @@
 
 #List ID des events.
 #namespace = L3T
+#TCL language for better reading of the file
 
 # Cf [COMMENTE] pour les events qui ne sont pas disponibles car commentés
 # Cf [NON INCLUS] pour les fichiers d'events non inclus dans la version courante
 
 ###L3T_init_DOMAINES.txt
-#id = L3T.3 #SPEC domaine Féodal
-#id = L3T.31 #domaine Féodal capitals are feudal cities
 
-#id = L3T.4 #SPEC domaine Communal  
-#id = L3T.41 #domaine Communal province à double cité  
+#id = L3T.30 #SPEC domaine Féodal
+#id = L3T.31 #domaine Féodal capitals are feudal cities  (on_action) 
+
+#id = L3T.40 #SPEC domaine Communal  
+#id = L3T.41 #domaine Communal province à double cité  (on_action)
+#id = L3T.42 #upgrade CITE L2  (on_action)
+#id = L3T.43 #upgrade CITE L3  (on_action)
+#id = L3T.44 #FREE
 #id = L3T.45#city apocalypto
 #id = L3T.46#city apocalypto end
 
-#obsolete#id = L3T.5 #upgrade CITE GRANDE L1  vers L2 à rename en 4x
+#id = L3T.50's #####FREE SLOT
 
-#id = L3T.6 #SPEC domaine Ecclésial
-#id = L3T.61 #domaine Ecclésial hardcode
-#id = L3T.62 #old cathedral and spe in religious province for capitals
-#id = L3T.63 #filling the grid ofold cathedrals 
+#id = L3T.60 #SPEC domaine Ecclésial
+#id = L3T.61 #domaine Ecclésial hardcode  (on_action) 
+#id = L3T.62 #old cathedral and spe in religious province for capitals  (on_action) 
+#id = L3T.63 #filling the grid of old cathedrals  (on_action)  
+#id = L3T.64 #attribution règle monastique  (on_action) 
 
-#id = L3T.7 #attribution règle monastique
+#id = L3T.70's #####FREE SLOT
+#id = L3T.80's used in job_chancellor_L3T_add.txt
+#id = L3T.90's used in job_treasurer_L3T_add.txt
 
-#id = L3T.9 #Init built holding (on_action)
+#id = L3T.3 #Init built holding  (on_action)
 
 
-###L3T_mod_selection.txt
-#id = L3T.1 #mode debug //activation
-#id = L3T.2 #mode debug //désactivation
+###L3T_init_GENERAL.txt
+
+#id = L3T.1 #mode debug //activation/désactivation
+#id = L3T.2 #technology adjusting
+#id = L3T.3 ##used in L3T_init_DOMAINES.txt
+#id = L3T.4-8 #####FREE SLOT
 
 #id = L3T.10 #détection de la carte + paix de Dieu
 #id = L3T.11 #fin paix de Dieu
 #id = L3T.12 #boost IA gold+piety
+#id = L3T.13 #####FREE SLOT
+#id = L3T.14 #stewardship delegation
 
-###id = L3T.13 #adbication (provisoire, la localisation de la décision porte cet ID}
-
-###L3T_mod_selection_SWMH.txt
-#id = L3T.20 #SWMH attribution coasts rivers lands
-
-###L3T_mod_selection_LCDA.txt
-#id = L3T.21#LCDA attribution coasts rivers lands
-
-###L3T_mod_selection_VANI.txt
-#id = L3T.22 #Vanilla attribution coasts rivers lands
-
-###L3T_mod_selection.txt
+#id = L3T.20 #maintenance capitales - initiate/update
+#id = L3T.21 #maintenance capitales - removal
+#id = L3T.22 #ressources
+#id = L3T.23 #temple pre-spec
+#id = L3T.24 #castle pre-spec
+#id = L3T.25 #city pre-spec
+#id = L3T.26 #####FREE SLOT
+#id = L3T.27 #####FREE SLOT
 #id = L3T.28 #toute carte - Cols attribution
 #id = L3T.29 #toute carte - Cols notification
 
-#id = L3T.50#maintenance capitales - update
-#id = L3T.51#maintenance capitales - removal
+###job_chancellor_L3T_add.txt
 
-###[NON INCLUS] L3T_minorite.txt
-#id = L3T.15 #event initial
-#id = L3T.16 #check annuel religion
-#id = L3T.17 #marquage conversion depuis
-#id = L3T.18 #
-#id = L3T.19 #
+#id = L3T.80 #successful arrestation, inform everyone
+#id = L3T.81 #Chancellor heard about the arrestation attempt, choosing what to do
+#id = L3T.82 #Chancellor is informed he has fled but have to abandon job
+#id = L3T.83 #liege is informed about chancellor's failure and return 
+#id = L3T.84 #noble is informed about chancellor's arrestation and banishment
+#id = L3T.85 #claim fabricated on a barony
+#id = L3T.86 #recurrent claim fabrication cost
+#id = L3T.87-89 ######FREE SLOT
+
+###job_treasurer_L3T_add.txt
+
+#id = L3T.90 #realm_stewardship_balance	(on_yearly_pulse)
+#id = L3T.91 #stewardship delegation
+#id = L3T.92 #death of liege or steward (on_death) 
+#id = L3T.93 #fixing asymetry (on_yearly_pulse)
+#id = L3T.94 #inform liege and treasurer about the end of delegation (due to ruler)
+#id = L3T.95 #inform liege and treasurer about the end of delegation (due to steward)
+#id = L3T.96 #inform liege and treasurer about the end of delegation (due to death)
+
+##job_marshal_L3T_add.txt
+
+#id = L3T.97 #send skillful marshal purging the province from thieves smugglers robbers
+#id = L3T.98 #send skillful spymaster kill villains's chief
+#id = L3T.99 #inform of success/failure
+#id = L3T.100 #what to make with the loot (TO DO)
 
 ###L3T_population.txt
+
 #id = L3T.1101 #initialisation dev variable (devv) buildings
 #id = L3T.1102 #check dev variable settlement decision
 #id = L3T.1103 #dev variable natural growth
@@ -86,7 +114,17 @@
 #id = L3T.114 #upgrade population TP vers L4
 #id = L3T.115 #upgrade population TP vers L5
 
+###[NON INCLUS] L3T_pop_minorities.txt
+
+#A RETAG 120 121 122 123 124 125
+#id = L3T.120 #initial event  (on_action)
+#id = L3T.121 #annual religion check for variables  (on_action)
+#id = L3T.122 #on_county_religion_change test  (on_action)
+#id = L3T.123 #
+#id = L3T.124 #
+
 ###L3T_pop_notifications.txt
+
 #id = L3T.11031 #dev changes notifs debug
 #id = L3T.11032 #dev changes notifs debug
 #id = L3T.11033 #dev changes notifs debug
@@ -99,6 +137,7 @@
 	#id = L3T.11095 #dev variable ress adv+20
 
 ###L3T_building_modifiers.txt
+
 #id = L3T.201 # Give the chapelle modifier 1 year after starting the building
 #id = L3T.202 # Give the chapelle modifier to the new holder and remove it to the old
 #id = L3T.203 # Give the chapelle modifier
@@ -125,11 +164,9 @@
 #id = L3T.224 # Remove the chancellerie modifier
 #id = L3T.225 # Remove the feodal_adm_modifier [MAINTENANCE EVENT]
 #id = L3T.226 # Add the feodal_adm_modifier [MAINTENANCE EVENT]
-#id = L3T.227 # Wait a little before to alert that it can be a good idea to move the capital
-#id = L3T.228 # Pass by the province to localize its name
-#id = L3T.229 # Alert that it can be a good idea to move the capital
-#id = L3T.230-237 see L3T_building_prestige_cost.txt
-#id = L3T.237-240 FREE
+#id = L3T.227-229 FREE #obsolete since all capital castles are feudal cities now
+#id = L3T.230-234 see L3T_building_prestige_cost.txt
+#id = L3T.235-240 FREE
 #id = L3T.241 # Give the library_1 modifier 1 year after starting the building
 #id = L3T.242 # Give the library_1 modifier to the new holder and remove it to the old
 #id = L3T.243 # Give the library_1 modifier
@@ -138,22 +175,21 @@
 #id = L3T.246 # Give the library_2 modifier to the new holder and remove it to the old
 #id = L3T.247 # Give the library_2 modifier
 #id = L3T.248 # Remove the library_2 modifier
-#id = L3T.249 FREE
+#id = L3T.249 # Cells capacity for fortress prison 
+#id = L3T.2490 # Ransomed or released from prison maintenance event 
 
-#L3T_building_prestige_cost.txt
-#id = L3T.230 # Spends prestige point for building ca_tour_L4
-#id = L3T.232 # Spends prestige point for building ca_eglise_L4
-#id = L3T.231 # Spends prestige point for building ca_con_wall_6
-#id = L3T.233 # Spends prestige point for building ct_training_grounds_3
-#id = L3T.234 # Spends prestige point for building ct_eglise_L4
-#id = L3T.235 # Spends prestige point for building ct_eglise_L5
-#id = L3T.236 # Spends prestige point for building TR_bureau_3
-#id = L3T.237 # Spends prestige point for building TR_cartographe_2
-#id = L3T.237-240 FREE
-#id = L3T.241-248 # See L3T_building_modifiers.txt
-#id = L3T.249 FREE
+##L3T_building_prestige_cost.txt
 
-#L3T_various_flavour.txt
+#id = L3T.230 # Spends prestige point for building cost 30
+#id = L3T.231 # Spends prestige point for building cost 60
+#id = L3T.232 # Spends prestige point for building cost 70
+#id = L3T.233 # Spends prestige point for building cost 90
+#id = L3T.234 # Spends prestige point for building cost 120
+#id = L3T.235-240 FREE
+#id = L3T.241-249 # See L3T_building_modifiers.txt
+
+##L3T_various_flavour.txt
+
 #id = L3T.250 #Buy books decision //choose who/where to buy it
 #id = L3T.251 #Buy books decision //choose the type of book
 #id = L3T.2510 #Buy + Studying books decision //flag cleaner
@@ -179,10 +215,12 @@
 #id = L3T.256 #clean used book flag on artifact inheritance
 
 ###L3T_specialization_change.txt
+
 # id = L3T.301 # Remove the FEODAL_adm dependancies and choose a new specialization
 # id = L3T.302 # Add a holding modifier after starting to build
 
 ###L3T_easter_eggs.txt
+
 # id = L3T.401 #end if we go to war.
 # id = L3T.402 #Normal end.
 # id = L3T.411 # Search egg number 1
@@ -205,7 +243,7 @@
 # id = L3T.441 # Search egg number 4
 # id = L3T.442 # Found egg 4 by oneself
 # id = L3T.443 # Someone else found egg 4
-### id = L3T.444 # Free slot
+# id = L3T.444 ###### FREE SLOT
 # id = L3T.445 # Found egg 4 by oneself -false egg "acts" strangely
 # id = L3T.446 # Found egg 4 by oneself -false egg hatches GOOD
 # id = L3T.447 # Found egg 4 by oneself -false egg hatches BAD
@@ -234,6 +272,7 @@
    
 ###ECO_init_RESSOURCES.txt
 ##Détection ressources
+
 #id = ECO.1 #évaluation du potentiel économique -plaines- 
 #id = ECO.2 #évaluation du potentiel économique -coteaux- 
 #id = ECO.3 #évaluation du potentiel économique -forets- 
@@ -245,7 +284,7 @@
 #id = ECO.82 #évaluation du potentiel économique -arctique-  
 #id = ECO.15 #reroll pour les malchanceux (voir détection ressources)
 
-##activation ressources
+#activation ressources
 #id = ECO.100 #activation pour commerce -agriculture -céréales 
 #id = ECO.101 #activation pour commerce -agriculture -fruits
 #id = ECO.102 #activation pour commerce -agriculture -légumes
@@ -365,6 +404,8 @@
 #id = ECO.227 #mayor answers to crafters
 
 ##ambition_events.txt
+
+#id = ECO.300 #Début chaîne d'event "acheter pour revendre" (focus event pulse)
 #id = ECO.301 #Début chaîne d'event "acheter pour revendre"
 #id = ECO.302 #Choix de l'achat
 #id = ECO.303 #Vente laine
@@ -372,7 +413,10 @@
 #id = ECO.305 #Vente drap
 #id = ECO.306 #Gestion des invendus
 #id = ECO.307 #Fin de la chaîne
+#id = ECO.308 #voir cadastre
+#id = ECO.309 #FREE
 
+#id = ECO.310 #Début chaîne d'event "fabriquer une épée légendaire" (focus event pulse)
 #id = ECO.311 #Début chaîne d'event "fabriquer une épée légendaire"
 #id = ECO.312 #Envoi d'un serviteur
 #id = ECO.313 #Une femme vient vous voir
@@ -382,6 +426,7 @@
 #id = ECO.317 #Equilibrage épée ou abandon
 #id = ECO.318 #Fin de la chaîne
 
+#id = ECO.308 #flag chaînes cadastre (focus event pulse)
 #id = ECO.319 #flag chaînes cadastre
 #id = ECO.320 #conflits de parcelles
 #id = ECO.3201 #conflits de parcelles suites
@@ -398,8 +443,10 @@
 #id = ECO.325 #rédiger un cadastre complet
 #id = ECO.3251 #rédiger un cadastre complet suites
 #id = ECO.3252 #rédiger un cadastre complet suites
+#id = ECO.326 #tombola chaines cadastre
 
 ##Vin & bière
+
 #id = ECO.320 #Bière ou vin au banquet ? !!!à renuméroter!!!
 #id = ECO.321 #Bonne réputation pour le vignoble !!!à renuméroter!!!
 #id = ECO.322 #Bonne réputation pour la brasserie !!!à renuméroter!!!
@@ -438,6 +485,7 @@
 #namespace = REC
 
 ##ReC_events_construction.txt
+
 #id = REC.1 # Give builder trait succession
 #id = REC.2 # Remove builder trait succession
 #id = REC.3 # Construction base progression [character]
@@ -456,6 +504,7 @@
 #id = REC.16 # Catholic starts again construction
 
 ##saint_events.txt
+
 #saint_events.1
 #saint_events.10 alternate debug for saint_events.1
 #saint_events.2
@@ -463,21 +512,30 @@
 #saint_events.4
 #saint_events.5
 
-#ReC_sainthood.txt
+##ReC_sainthood.txt
+
 #id = REC.20# deus_vox trait evaluation
 #id = REC.21# deus_gladio trait evaluation
 
+##file à ajouter
+###id = REC.22 #monastery adbication (provisoire, la localisation de la décision porte cet ID}
+
+
 ##Rec_events_opus_francigenum.txt
+
 #id = REC.101 # Free Opus Francigenum
 #id = REC.102 # Historical or 50 years Opus Francigenum
 #id = REC.103 # Romanesque cathedral burning
 #id = REC.104 # End of the romanesque cathedral reconstruction
-#id = REC.105 # Dynamic Opus Francigenum
+#id = REC.105 # Dynamic Opus Francigenum notification (player owned rebuilt roman cathedral)
 #id = REC.106 # Ask lord contribution
 #id = REC.107 # Lord gets a piety malus if it has not already (1st year)
 #id = REC.108 # Lord gets a piety malus if it has not already (5years)
+#id = REC.109 # Romanesque cathedral maintenance #used ?
+#id = REC.110 # Some pilgrim can build an hostellerie during romanesque cathedral recontruction
 
 ##ReC_events_buildings.txt
+
 #id = REC.201 # bonus achèvement étape 1 (modifieur pour recrutement)
 #id = REC.202 >> REC.211 # bonus achévement des étapes sauf 0210
 #id = REC.1210 # bonus achévement étape n°10_ca

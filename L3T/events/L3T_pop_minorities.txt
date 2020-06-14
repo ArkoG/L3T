@@ -1,0 +1,141 @@
+#################################
+#         L3T  par Arko         #
+#################################
+
+
+namespace = L3T
+
+
+###initial religion detection
+province_event = {
+    id = L3T.120
+	hide_window = yes
+
+	is_triggered_only = yes #from L3T_init_general (L3T.10)
+	
+	trigger = {
+		NOT = { has_province_flag = religion_init_set }
+	}
+		
+	immediate = {
+		set_province_flag = religion_init_set
+
+
+### add some random fake history
+## prévoir un cas de date historique ?
+		
+		if = {
+			limit = { 
+				religion_group = christian
+				NOT = { has_province_modifier = trad_christian }
+			}
+			add_province_modifier = { 
+				name = trad_christian
+				duration = -1
+				hidden = yes  #hidden for now
+			}
+			#set_variable = { which = was_christian_for value = 1 }
+		}
+		
+		if = {
+			limit = { 
+				religion_group = muslim
+				NOT = { has_province_modifier = trad_muslim }
+			}
+			add_province_modifier = { 
+				name = trad_muslim
+				duration = -1
+				hidden = yes  #hidden for now
+			}
+			#set_variable = { which = was_muslim_for value = 1 }
+		}
+	}
+}
+
+###annual religion check (variable)
+character_event = {
+    id = L3T.121
+	hide_window = yes
+
+	only_playable = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_demesne_province = { has_province_flag = religion_init_set }
+		#negates year 1066 as it is not complete and some rulers may not get the yearly pulse for this event during this year
+		OR = {
+			year = 1067
+			NOT = { year = 1066 }
+		}
+	}
+
+	immediate = {
+		any_demesne_province = {
+			limit = { 
+				has_province_flag = religion_init_set
+			}
+			if = {
+				##province is still christian
+				limit = {
+					religion_group = christian 
+					has_province_modifier = trad_christian
+				}
+				change_variable = { which = "was_christian_for" value = 1 }
+			}
+			if = {
+				##province is still muslim
+				limit = {
+					religion_group = muslim 
+					has_province_modifier = trad_muslim
+				}
+				change_variable = { which = "was_muslim_for" value = 1 }
+			}		
+		}
+	}
+}
+
+### add a notification if a tradition faded/about to fade
+#gestion des minorités
+
+###religion check (on_county_religion_change)
+
+
+###religion check (on_county_religion_change)
+#ROOT is province. FROM has the old religion
+#in religion scope ? pops for province owner, so character scope
+province_event = {
+    id = L3T.122
+	desc = "DESCL3T.122"
+	picture = "GFX_evt_bishop"
+	border = "GFX_event_normal_frame_religion"
+
+	#only_playable = yes
+	is_triggered_only = yes
+
+	trigger = {}
+	
+	immediate = {}
+	
+	option = {
+		name = "L3T.122A"
+		
+		ROOT = { 
+			add_province_modifier = {
+				name = totoro
+				duration = -1
+			}
+		}
+		religion_authority = {
+			modifier = achat_indulgence
+			years = 5
+		}
+		FROM = {
+			religion_authority = {
+				modifier = achat_indulgence
+				years = 5
+			}
+		}
+	}
+}
+
+

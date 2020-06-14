@@ -52,206 +52,159 @@ tp_training_grounds_L2 = { #Porte en pierre
 }
 
 #vanilla
-	tp_wall_q_1 = {	
-		desc = tp_wall_q_1_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
-		prerequisites = { tp_wall_1 }
-		gold_cost = 50
-		build_time = 182
-		fort_level = 0.5
-		ai_creation_factor = 82
-		#add_number_to_name = no		
-		extra_tech_building_start = 0.4
-	}
-	tp_wall_q_2 = {
-		desc = tp_wall_q_2_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 1 }
-		prerequisites = { tp_wall_2 }
-		upgrades_from = tp_wall_q_1
-		gold_cost = 50
-		build_time = 182
-		fort_level = 0.5
-		ai_creation_factor = 81
-		#add_number_to_name = no
-		extra_tech_building_start = 0.8
-	}	
-	tp_wall_q_3 = {
-		desc = ca_wall_q_3_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 3 }
-		upgrades_from = tp_wall_q_2
-		gold_cost = 50
-		build_time = 182
-		fort_level = 0.5
-		ai_creation_factor = 80
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_wall_q_4 = {
-		desc = ca_wall_q_4_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 5 }
-		upgrades_from = tp_wall_q_3
-		gold_cost = 100
-		build_time = 365
-		fort_level = 1
-		ai_creation_factor = 79
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_wall_q_5 = {
-		desc = ca_wall_q_5_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 7 }
-		upgrades_from = tp_wall_q_4
-		gold_cost = 100
-		build_time = 365
-		fort_level = 1
-		ai_creation_factor = 78
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
+##utilise en prebuild jusqu au niveau 1
+tp_wall_q_1 = { #Fossé
+	desc = wall_q_1_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	gold_cost = 100
+	 
+	build_time = 180
+	ai_creation_factor = 99
+	fort_level = 0.1
+	add_number_to_name = no
+
+	extra_tech_building_start = 2
+}
+
+tp_wall_q_2 = { #Fossé avec piques
+	desc = wall_q_2_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	prerequisites = { tp_wall_1 }
+	upgrades_from = tp_wall_q_1
+	gold_cost = 90
+	 
+	build_time = 260
+	ai_creation_factor = 98
+	fort_level = 0.2
+	add_number_to_name = no
+
+	extra_tech_building_start = 3
+}
+
+tp_wall_q_3 = { #Fossé inondé
+	desc = wall_q_3_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	prerequisites = { tp_wall_2 }
+	upgrades_from = tp_wall_q_2
+	gold_cost = 150
+	 
+	build_time = 480
+	ai_creation_factor = 97
+	fort_level = 0.4
+	add_number_to_name = no
+
+	extra_tech_building_start = 4
+}
+
+tp_wall_q_4 = { #Douves
+	desc = wall_q_4_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	prerequisites = { CITEEPISCOPALE}
+	upgrades_from = tp_wall_q_3
+	gold_cost = 310
+	 
+	build_time = 1100
+	ai_creation_factor = 96
+	fort_level = 0.3
+	add_number_to_name = no
+
+	extra_tech_building_start = 5
+}
 ##utilise en prebuild jusqu au niveau 2
-	tp_wall_1 = {
-		desc = ca_wall_1_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
-		gold_cost = 50
-		build_time = 365
-		fort_level = 0.5
-		levy_size = 0.025
-		tax_income = 0.2
-		ai_creation_factor = 95
-		#add_number_to_name = no
-		extra_tech_building_start = 0.5
-	}
-	tp_wall_2 = {
-		desc = ca_wall_2_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
-		upgrades_from = tp_wall_1
-		gold_cost = 50
-		build_time = 547
-		fort_level = 0.5
-		levy_size = 0.025
-		tax_income = 0.2
-		ai_creation_factor = 94
-		#add_number_to_name = no
-		extra_tech_building_start = 1.0
-	}
-	tp_wall_3 = {
-		desc = tp_wall_3_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 4 }
-		upgrades_from = tp_wall_2
-		gold_cost = 100
-		build_time = 730
-		fort_level = 1.0
-		levy_size = 0.05
-		tax_income = 0.2
-		ai_creation_factor = 93
-		#add_number_to_name = no
-		extra_tech_building_start = 1.5
-	}
-	tp_wall_4 = {
-		desc = tp_wall_4_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 6 }
-		upgrades_from = tp_wall_3
-		gold_cost = 100
-		build_time = 1095
-		fort_level = 1.0
-		levy_size = 0.05
-		tax_income = 0.2
-		ai_creation_factor = 92
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_wall_5 = {
-		desc = tp_wall_5_desc
-		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 8 }
-		upgrades_from = tp_wall_4
-		gold_cost = 150
-		build_time = 1460
-		fort_level = 1.5
-		levy_size = 0.075
-		tax_income = 0.5
-		ai_creation_factor = 91
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
+tp_wall_1 = { #Talus défensif
+	desc = wall_1_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	gold_cost = 160
+	 
+	build_time = 270
+	ai_creation_factor = 100
+	fort_level = 0.1
+	add_number_to_name = no
+
+	extra_tech_building_start = 1
+}
+
+tp_wall_2 = { #Palissade en bois
+	desc = wall_2_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	upgrades_from = tp_wall_1
+	gold_cost = 200
+	 
+	build_time = 550
+	ai_creation_factor = 99
+	fort_level = 0.5
+	tax_income = -0.2
+	add_number_to_name = no
+
+	extra_tech_building_start = 2
+}
+
+tp_wall_3 = { #Enceinte de pierre
+	desc = wall_3_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	upgrades_from = tp_wall_2
+	gold_cost = 400
+	 
+	build_time = 910
+	ai_creation_factor = 98
+	fort_level = 1.2
+	tax_income = -0.6
+	add_number_to_name = no
+
+	extra_tech_building_start = 3
+}
+
+tp_wall_4 = { #Enceinte épaisse
+	desc = wall_4_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	prerequisites = { CITEEPISCOPALE}
+	upgrades_from = tp_wall_3
+	gold_cost = 360
+	 
+	build_time = 770
+	ai_creation_factor = 97
+	fort_level = 0.5
+	tax_income = -0.3
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
+tp_wall_5 = { #Grande enceinte #used in events
+	desc = wall_5_desc
+	trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
+	prerequisites = { CITEEPISCOPALE}
+	upgrades_from = tp_wall_4
+	gold_cost = 590
+	 
+	build_time = 1460
+	ai_creation_factor = 96
+	fort_level = 0.7
+	tax_income = -0.4
+	add_number_to_name = no
+
+	extra_tech_building_start = 10
+}
+
 ##utilise en prebuild jusqu au niveau 3
-	tp_monastery_1 = {
-		desc = tp_monastery_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
-		gold_cost = 150
-		build_time = 547
-		levy_size = 0.05
-		garrison_size = 0.05
-		ai_creation_factor = 96
-		liege_piety = 0.05
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_monastery_2 = {
-		desc = tp_monastery_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
-		prerequisites = { tp_wall_1 }
-		upgrades_from = tp_monastery_1
-		gold_cost = 200
-		build_time = 730
-		levy_size = 0.075
-		garrison_size = 0.1
-		ai_creation_factor = 95
-		liege_piety = 0.05
-		#add_number_to_name = no		
-		extra_tech_building_start = 0.2
-	} 
-	tp_monastery_3 = {
-		desc = tp_monastery_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 2 }
-		upgrades_from = tp_monastery_2
-		gold_cost = 300
-		build_time = 1095
-		levy_size = 0.1
-		garrison_size = 0.15
-		ai_creation_factor = 94
-		liege_piety = 0.05
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	} 
-	tp_monastery_4 = {
-		desc = tp_monastery_2_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 4 }
-		upgrades_from = tp_monastery_3
-		gold_cost = 400
-		build_time = 1460
-		levy_size = 0.125
-		garrison_size = 0.2
-		ai_creation_factor = 93
-		liege_piety = 0.05
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	} 
-	tp_monastery_5 = {
-		desc = tp_monastery_2_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 6 }
-		upgrades_from = tp_monastery_4
-		gold_cost = 500
-		build_time = 2190
-		levy_size = 0.15
-		garrison_size = 0.25
-		ai_creation_factor = 92
-		liege_piety = 0.05
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_monastery_6 = {
-		desc = tp_monastery_2_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 8 }
-		upgrades_from = tp_monastery_5
-		gold_cost = 500
-		build_time = 2190
-		levy_size = 0.15
-		garrison_size = 0.25
-		ai_creation_factor = 91
-		liege_piety = 0.05
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
+#	tp_monastery_1 = {
+#		desc = tp_monastery_1_desc
+#		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+#		gold_cost = 150
+#		build_time = 547
+#		levy_size = 0.05
+#		garrison_size = 0.05
+#		ai_creation_factor = 96
+#		liege_piety = 0.05
+#		#add_number_to_name = no
+#		extra_tech_building_start = 0.2
+#	}
+#	tp_monastery_2 = {
+#	tp_monastery_3 = {
+#	tp_monastery_4 = {
+#	tp_monastery_5 = {
+#	tp_monastery_6 = { #used in scripted triggers
+
 ##utilise en prebuild jusqu au niveau 2	
 	tp_barracks_1 = {
 		desc = tp_barracks_1_desc
@@ -262,7 +215,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		archers = 30
 		ai_creation_factor = 94
 		#add_number_to_name = no
-		extra_tech_building_start = 0.5
+		extra_tech_building_start = 1.0
 	}
 	tp_barracks_2 = {
 		desc = tp_barracks_1_desc
@@ -275,7 +228,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		archers = 45
 		ai_creation_factor = 93
 		#add_number_to_name = no
-		extra_tech_building_start = 1.0
+		extra_tech_building_start = 2
 	}
 	tp_barracks_3 = {
 		desc = tp_barracks_1_desc
@@ -284,11 +237,10 @@ tp_training_grounds_L2 = { #Porte en pierre
 		upgrades_from = tp_barracks_2
 		gold_cost = 200
 		build_time = 730
-		light_infantry = 70
-		archers = 60
+		heavy_infantry = 65
 		ai_creation_factor = 92
 		#add_number_to_name = no
-		extra_tech_building_start = 0.5
+		extra_tech_building_start = 3
 	}
 	tp_barracks_4 = {
 		desc = tp_barracks_1_desc
@@ -300,7 +252,7 @@ tp_training_grounds_L2 = { #Porte en pierre
 		archers = 75
 		ai_creation_factor = 91
 		#add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10.0
 	}
 	tp_barracks_5 = {
 		desc = tp_barracks_1_desc
@@ -308,11 +260,10 @@ tp_training_grounds_L2 = { #Porte en pierre
 		upgrades_from = tp_barracks_4
 		gold_cost = 400
 		build_time = 2190
-		light_infantry = 85
-		archers = 85
+		heavy_infantry = 75
 		ai_creation_factor = 90
 		#add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10.0
 	}
 	tp_barracks_6 = {
 		desc = tp_barracks_1_desc
@@ -322,78 +273,20 @@ tp_training_grounds_L2 = { #Porte en pierre
 		build_time = 2190
 		light_infantry = 95
 		archers = 95
+		heavy_infantry = 95
 		ai_creation_factor = 89
 		#add_number_to_name = no
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 10.0
 	}
 	
-	tp_elite_barracks_1 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
-		gold_cost = 100
-		build_time = 365
-		heavy_infantry = 45
-		ai_creation_factor = 95
-		#add_number_to_name = no
-		extra_tech_building_start = 0.5
-	}
-	tp_elite_barracks_2 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 0 }
-		prerequisites = { tp_wall_1 }
-		upgrades_from = tp_elite_barracks_1
-		gold_cost = 120
-		build_time = 730
-		heavy_infantry = 55
-		ai_creation_factor = 94
-		#add_number_to_name = no
-		extra_tech_building_start = 1.0
-	}
-	tp_elite_barracks_3 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 2 }
-		prerequisites = { tp_wall_2 }
-		upgrades_from = tp_elite_barracks_2
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 65
-		ai_creation_factor = 93
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_elite_barracks_4 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 4 }
-		upgrades_from = tp_elite_barracks_3
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 75
-		ai_creation_factor = 92
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_elite_barracks_5 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 6 }
-		upgrades_from = tp_elite_barracks_4
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 85
-		ai_creation_factor = 91
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
-	tp_elite_barracks_6 = {
-		desc = tp_elite_barracks_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 8 }
-		upgrades_from = tp_elite_barracks_5
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 95
-		ai_creation_factor = 90
-		#add_number_to_name = no
-		extra_tech_building_start = 0.2
-	}
+#	tp_elite_barracks_1 = {
+#	tp_elite_barracks_2 = {
+#	tp_elite_barracks_3 = {
+#	tp_elite_barracks_4 = {
+#	tp_elite_barracks_5 = {
+#	tp_elite_barracks_6 = {
+
+
 ##utilise en prebuild jusqu au niveau 2	
 	tp_town_1 = {
 		desc = tp_town_1_desc
@@ -454,7 +347,138 @@ tp_training_grounds_L2 = { #Porte en pierre
 		add_number_to_name = no
 		extra_tech_building_start = 1
 	}
+	#temple church new tag
+	tp_eglise_L1 = { #Oratoire
+		desc = tp_eglise_L1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		potential = { 
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+				}
+			}
+		is_active_trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 100
 
+		build_time = 180
+		ai_creation_factor = 101
+		liege_piety = 0.02
+		add_number_to_name = no
+
+		extra_tech_building_start = 0
+	}
+
+	tp_eglise_L2 = { #Chapelle
+		desc = tp_eglise_L2_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { 
+			tp_town_1
+		}
+		upgrades_from = tp_eglise_L1
+		is_active_trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 140
+
+		build_time = 370
+		ai_creation_factor = 100
+		liege_piety = 0.03
+		add_number_to_name = no
+
+		extra_tech_building_start = 1
+	}
+
+	tp_eglise_L3 = { #Église
+		desc = tp_eglise_L3_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { 
+			tp_town_2
+		}
+		upgrades_from = tp_eglise_L2
+		is_active_trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 290
+
+		build_time = 680
+		ai_creation_factor = 99
+		liege_piety = 0.05
+		add_number_to_name = no
+
+		extra_tech_building_start = 2
+	}
+
+	tp_eglise_L4 = { #Grande église
+		desc = tp_eglise_L4_desc
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 0
+			FROM = { prestige = 90 } #replaces prestige_cost_90
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}	
+		prerequisites = { 
+			tp_town_3
+		}
+		not_if_x_exists = { 
+			BOURG_EPISCOPAL
+		}
+		upgrades_from = tp_eglise_L3
+		is_active_trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 390
+		#prestige_cost = 90
+		build_time = 920
+		ai_creation_factor = 98
+		liege_piety = 0.05
+		add_number_to_name = no
+
+		extra_tech_building_start = 3
+	}
+
+	tp_eglise_L5 = { #Basilique
+		desc = tp_eglise_L5_desc
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 0
+			FROM = { prestige = 120 } #replaces prestige_cost_120
+			custom_tooltip = { text = TOOLTIP_prestige_building }
+		}	
+		prerequisites = { 
+			tp_town_4
+		}
+		not_if_x_exists = { 
+			BOURG_EPISCOPAL
+		}
+		upgrades_from = tp_eglise_L4
+		is_active_trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 650
+		#prestige_cost = 120
+		build_time = 1750
+		ai_creation_factor = 97
+		liege_piety = 0.10
+		add_number_to_name = no
+
+		extra_tech_building_start = 4
+	}
+	
 ##utilise en prebuild jusqu au niveau 4	
 	tp_shipyard_1 = {
 		desc = shipyard_desc
@@ -510,8 +534,8 @@ tp_training_grounds_L2 = { #Porte en pierre
 	
 	tp_school_1 = {
 		desc = tp_school_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 3 }
-		prerequisites = { tp_wall_1 }
+		trigger = { TECH_CITY_CONSTRUCTION = 2 }
+		#prerequisites = { tp_wall_1 }
 		gold_cost = 120
 		build_time = 547
 		
@@ -522,12 +546,12 @@ tp_training_grounds_L2 = { #Porte en pierre
 		#add_number_to_name = no
 		liege_piety = 0.05
 
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 2.0
 	}
 	tp_school_2 = {
 		desc = tp_school_1_desc
-		trigger = { TECH_CITY_CONSTRUCTION = 6 }
-		prerequisites = { tp_wall_2 }
+		trigger = { TECH_CITY_CONSTRUCTION = 4 }
+		#prerequisites = { tp_wall_2 }
 		upgrades_from = tp_school_1
 		gold_cost = 120
 		build_time = 547
@@ -539,7 +563,33 @@ tp_training_grounds_L2 = { #Porte en pierre
 		#add_number_to_name = no
 		liege_piety = 0.05
 		
-		extra_tech_building_start = 0.2
+		extra_tech_building_start = 5.0
+	}
+	tp_school_3 = {
+		desc = tp_school_1_desc
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 6
+			religion_group = muslim
+		}
+		potential = { 
+			religion_group = muslim
+		}
+		is_active_trigger = { 
+			religion_group = muslim
+		}
+		#prerequisites = { tp_wall_2 }
+		upgrades_from = tp_school_2
+		gold_cost = 250
+		build_time = 1300
+		
+		tech_growth_modifier = 0.2
+		culture_techpoints = 0.04
+		
+		ai_creation_factor = 92
+		#add_number_to_name = no
+		liege_piety = 0.05
+		
+		extra_tech_building_start = 10.0
 	}
 	# Hellenic Dedicated temples
 	tp_shrine_zeus = {
@@ -1027,7 +1077,8 @@ tp_training_grounds_L2 = { #Porte en pierre
 		build_time = 730
 		
 		liege_prestige = 0.05
-		economy_techpoints = 0.02
+		economy_techpoints = 0.07
+		tech_growth_modifier = 0.3
 		
 		ai_creation_factor = 92
 		#add_number_to_name = no
@@ -1051,8 +1102,9 @@ tp_training_grounds_L2 = { #Porte en pierre
 		prestige_cost = 280 #prix et tps a recalc
 		build_time = 365
 		
-		military_techpoints = 0.02
-		economy_techpoints = 0.01
+		military_techpoints = 0.04
+		economy_techpoints = 0.03
+		tech_growth_modifier = 0.3
 		
 		ai_creation_factor = 91
 		#add_number_to_name = no
@@ -1075,7 +1127,8 @@ tp_training_grounds_L2 = { #Porte en pierre
 		build_time = 730
 		
 		liege_piety = 0.05
-		culture_techpoints = 0.02
+		culture_techpoints = 0.07
+		tech_growth_modifier = 0.3
 		
 		ai_creation_factor = 92
 		#add_number_to_name = no
@@ -1100,10 +1153,83 @@ tp_training_grounds_L2 = { #Porte en pierre
 		build_time = 365
 		
 		liege_piety = 0.05
-		culture_techpoints = 0.01
+		culture_techpoints = 0.02
+		tech_growth_modifier = 0.03
 		
 		ai_creation_factor = 91
 		#add_number_to_name = no
 		extra_tech_building_start = 10
 	}	
+
+#generic temples
+	tp_temple_L1 = { #
+		desc = tp_temple_A_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		potential = { 
+			NOT = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		is_active_trigger = {
+			NOT = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 100
+
+		build_time = 180
+		ai_creation_factor = 101
+		liege_piety = 0.02
+		#add_number_to_name = no
+
+		extra_tech_building_start = 0
+	}
+
+	tp_temple_L2 = { #
+		desc = tp_temple_A_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { 
+			tp_town_1
+		}
+		upgrades_from = tp_temple_L1
+		is_active_trigger = {
+			NOT = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 140
+
+		build_time = 370
+		ai_creation_factor = 100
+		liege_piety = 0.03
+		#add_number_to_name = no
+
+		extra_tech_building_start = 1
+	}
+
+	tp_temple_L3 = { #
+		desc = tp_temple_B_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { 
+			tp_town_2
+		}
+		upgrades_from = tp_temple_L2
+		is_active_trigger = {
+			NOT = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		gold_cost = 290
+
+		build_time = 680
+		ai_creation_factor = 99
+		liege_piety = 0.05
+		#add_number_to_name = no
+
+		extra_tech_building_start = 2
+	}
 }
