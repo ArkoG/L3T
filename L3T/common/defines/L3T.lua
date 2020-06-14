@@ -20,8 +20,12 @@
 	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_EMPEROR_MULT = 2.0
 -- vanilla is 4.0
 	NDefines.NDiplomacy.TRANSFER_VASSAL_INTERACTION_ENABLED = 0
+
+	-- ex 2
 	NDefines.NCharacter.BASE_NR_OF_CHILDREN_PER_COUPLE = 3
+	-- ex 2
 	NDefines.NCharacter.EXTRA_NR_OF_CHILDREN_FOR_PLAYERS = 0
+
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_0 = 300					-- Natural deaths per decade out of 10000 people: Age 0-9
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_10 = 10				-- Natural deaths per decade out of 10000 people: Age 10-19
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_20 = 10				-- Natural deaths per decade out of 10000 people: Age 20-29
@@ -33,12 +37,27 @@
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_80 = 2000				-- Natural deaths per decade out of 10000 people: Age 80-90
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_90 = 4000				-- Natural deaths per decade out of 10000 people: Age 90-99
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_100 = 8000			-- Natural deaths per decade out of 10000 people: Age 100+
+	-- ex 0.5
 	NDefines.NCharacter.FERTILITY_BASE_MULT = 0.70						-- Base fertility multiplier to adjust the base chance of impregnation
 	NDefines.NCharacter.INFANT_DEATH_CHANCE = 0.05
+
 	NDefines.NReligion.CREATE_ANTIPOPE_PRESTIGE_COST = 1000
+	-- ex 0 , 25 , 0
+	NDefines.NReligion.ASK_FOR_EXCOMMUNICATION_INTERACTION_MONEY = 50
+	NDefines.NReligion.ASK_FOR_EXCOMMUNICATION_INTERACTION_PIETY = 250
+	NDefines.NReligion.ASK_FOR_EXCOMMUNICATION_INTERACTION_PRESTIGE = 250
+	-- ex 0 , 25 , 0
+	NDefines.NReligion.ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_MONEY = 50
+	NDefines.NReligion.ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_PIETY = 250
+	NDefines.NReligion.ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_PRESTIGE = 250
+
 	NDefines.NTechnology.IDEAL_YEAR_LEVEL_0 = 900
 --	NDefines.NTechnology.IDEAL_YEAR_LEVEL_8 = 1550
 	NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER = 45 				-- How many courtiers in a court to make it crowded and increase chance for disease.
+	-- 
+	NDefines.NAI.MAX_KING_TITLES_TO_CREATE = 3,							-- AI will not seek to create/usurp more King-level titles than this (0 for unlimited)
+	NDefines.NAI.MAX_EMPIRE_TITLES_TO_CREATE = 1,						-- AI will not seek to create/usurp more Empire-level titles than this (0 for unlimited)
+
 	NDefines.NAI.DOW_AGGRESSION_FACTOR = 0.25
 	NDefines.NEconomy.BUILDING_COST_MULT = 0.0						-- Increase to the build cost of all buildings that cost GOLD
 	NDefines.NEconomy.MAX_TRADE_POSTS_BASE = 3
