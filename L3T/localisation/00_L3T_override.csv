@@ -43,9 +43,9 @@ tp_town_5_muslim;City;Cité;;;;;;;;;;;;x
 tp_town_5_muslim_desc;Each step indicates the amount of population and the degree of development and attractivity of the demesne. It represents the taxable base for the demesne's holder.;Chaque étape indique le niveau de population, le degré de développement et d'attractivité du domaine. \nCe bâtiment représente la base taxable par le propriétaire du domaine. ;;;;;;;;;;;;x
 #ct_town_1;Hamlet;Hameau;;;;;;;;;;;;x
 #ct_town_1_desc;Each step indicates the amount of population and the degree of development and attractivity of the demesne. It represents the taxable base for the demesne's holder.\nRequires §Y10§! buildings. Next population level requires §Y15§! buildings. ;Chaque étape indique le niveau de population, le degré de développement et d'attractivité du domaine. \nCe bâtiment représente la base taxable par le propriétaire du domaine.\nRequiert §Y10§! bâtiments au total. Le prochain niveau de population requiert §Y15§! bâtiments.;;;;;;;;;;;;x
-ct_town_1;Village;Village;;;;;;;;;;;;x
+ct_town_1;Small borough;Bourg modeste;;;;;;;;;;;;x
 ct_town_1_desc;Each step indicates the amount of population and the degree of development and attractivity of the demesne. It represents the taxable base for the demesne's holder.;Chaque étape indique le niveau de population, le degré de développement et d'attractivité du domaine. \nCe bâtiment représente la base taxable par le propriétaire du domaine.;;;;;;;;;;;;x
-ct_town_2;Borough;Bourg;;;;;;;;;;;;x
+ct_town_2;Flourishing borough;Bourg florissant;;;;;;;;;;;;x
 ct_town_2_desc;Each step indicates the amount of population and the degree of development and attractivity of the demesne. It represents the taxable base for the demesne's holder.;Chaque étape indique le niveau de population, le degré de développement et d'attractivité du domaine. \nCe bâtiment représente la base taxable par le propriétaire du domaine.;;;;;;;;;;;;x
 ct_town_3;Town;Ville;;;;;;;;;;;;x
 ct_town_3_desc;Each step indicates the amount of population and the degree of development and attractivity of the demesne. It represents the taxable base for the demesne's holder.;Chaque étape indique le niveau de population, le degré de développement et d'attractivité du domaine. \nCe bâtiment représente la base taxable par le propriétaire du domaine.;;;;;;;;;;;;x
@@ -65,36 +65,63 @@ ct_town_5_muslim;City;Cité;;;;;;;;;;;;x
 ct_town_5_muslim_desc;Each step indicates the amount of population and the degree of development and attractivity of the demesne. It represents the taxable base for the demesne's holder.;Chaque étape indique le niveau de population, le degré de développement et d'attractivité du domaine. \nCe bâtiment représente la base taxable par le propriétaire du domaine.;;;;;;;;;;;;x
 #;;OTHER REPLACEMENTS OF VANILLA TAGS FOR BATS;;;;;;;;;;;;x
 ca_wall_q_1;Ditch;Fossé;;;;;;;;;;;;;x
-ca_wall_q_1_desc;_;Un simple fossé ceinturant les lieux, basique mais c'est toujours mieux que rien.;;;;;;;;;;;;;x
-ca_wall_q_2;Ditch ans spikes;Fossé avec piques;;;;;;;;;;;;;x
-ca_wall_q_2_desc;_;Qui s'y frotte s'y pique ! ;;;;;;;;;;;;;x
+ca_wall_q_2;Ditch and spikes;Fossé avec piques;;;;;;;;;;;;;x
 ca_wall_q_3;Flooded ditch;Fossé inondé;;;;;;;;;;;;;x
-ca_wall_q_3_desc;_;Un grand fossé entourant nos défenses et empli d'eaux brunâtres.;;;;;;;;;;;;;x
 ca_wall_q_4;Moats;Douves;;;;;;;;;;;;;x
-ca_wall_q_4_desc;_;Un fossé profond et large rempli d'eau.;;;;;;;;;;;;;x
 ca_wall_1;Earth bank;Talus défensif;;;;;;;;;;;;;x
-ca_wall_1_desc;_;De la terre et des pierres amassées pour former une défense assez sommaire mais qui permet néanmoins de ralentir l'ennemi.;;;;;;;;;;;;;x
 ca_wall_2;Wooden palissade;Palissade en bois;;;;;;;;;;;;;x
-ca_wall_2_desc;_;Une palissade de rondins alignés au somment taillé en pointe. Une défense efficace contre les bêtes et les bandits mais beaucoup plus vulnérables à des soldats entraînés.;;;;;;;;;;;;;x
 ca_wall_3;Stone walls;Enceinte de pierre;;;;;;;;;;;;;x
-ca_wall_3_desc;_;Une enceinte de pierre taillées et maçonnées  qui représente une défense digne et suffisante pour la plupart des seigneurs.;;;;;;;;;;;;;x
 ca_wall_4;Thick stone walls;Enceinte épaisse;;;;;;;;;;;;;x
-ca_wall_4_desc;_;Une véritable enceinte faite pour résister à l'ennemi et au machines de siège.;;;;;;;;;;;;;x
 ca_wall_5;Great walls;Grande enceinte;;;;;;;;;;;;;x
-ca_wall_5_desc;_;Des murs en pierre bien épais, hérissés de créneaux et de tours. Qui oserait s'en prendre à nous derrière nos solides murailles ?;;;;;;;;;;;;;x
+ct_wall_q_1;Ditch;Fossé;;;;;;;;;;;;;x
+ct_wall_q_2;Ditch and spikes;Fossé avec piques;;;;;;;;;;;;;x
+ct_wall_q_3;Flooded ditch;Fossé inondé;;;;;;;;;;;;;x
+ct_wall_q_4;Moats;Douves;;;;;;;;;;;;;x
+ct_wall_1;Earth bank;Talus défensif;;;;;;;;;;;;;x
+ct_wall_2;Wooden palissade;Palissade en bois;;;;;;;;;;;;;x
+ct_wall_3;Stone walls;Enceinte de pierre;;;;;;;;;;;;;x
+ct_wall_4;Thick stone walls;Enceinte épaisse;;;;;;;;;;;;;x
+ct_wall_5;Great walls;Grande enceinte;;;;;;;;;;;;;x
+tp_wall_q_1;Ditch;Fossé;;;;;;;;;;;;;x
+tp_wall_q_2;Ditch and spikes;Fossé avec piques;;;;;;;;;;;;;x
+tp_wall_q_3;Flooded ditch;Fossé inondé;;;;;;;;;;;;;x
+tp_wall_q_4;Moats;Douves;;;;;;;;;;;;;x
+tp_wall_1;Earth bank;Talus défensif;;;;;;;;;;;;;x
+tp_wall_2;Wooden palissade;Palissade en bois;;;;;;;;;;;;;x
+tp_wall_3;Stone walls;Enceinte de pierre;;;;;;;;;;;;;x
+tp_wall_4;Thick stone walls;Enceinte épaisse;;;;;;;;;;;;;x
+tp_wall_5;Great walls;Grande enceinte;;;;;;;;;;;;;x
+tp_wall_q_1_muslim;Ditch;Fossé;;;;;;;;;;;;;x
+tp_wall_q_2_muslim;Ditch and spikes;Fossé avec piques;;;;;;;;;;;;;x
+tp_wall_q_3_muslim;Flooded ditch;Fossé inondé;;;;;;;;;;;;;x
+tp_wall_q_4_muslim;Moats;Douves;;;;;;;;;;;;;x
+tp_wall_1_muslim;Earth bank;Talus défensif;;;;;;;;;;;;;x
+tp_wall_2_muslim;Wooden palissade;Palissade en bois;;;;;;;;;;;;;x
+tp_wall_3_muslim;Stone walls;Enceinte de pierre;;;;;;;;;;;;;x
+tp_wall_4_muslim;Thick stone walls;Enceinte épaisse;;;;;;;;;;;;;x
+tp_wall_5_muslim;Great walls;Grande enceinte;;;;;;;;;;;;;x
+wall_q_1_desc;A simple ditch surrounding the property, basic but it is always better than nothing.;Un simple fossé ceinturant les lieux, basique mais c'est toujours mieux que rien.;;;;;;;;;;;;;x
+wall_q_2_desc;Gather thistles, expect prickles!;Qui s'y frotte s'y pique ! ;;;;;;;;;;;;;x
+wall_q_3_desc;A large ditch surrounding our defenses and filled with brownish waters.;Un grand fossé entourant nos défenses et empli d'eaux brunâtres.;;;;;;;;;;;;;x
+wall_q_4_desc;A deep and wide ditch filled with water.;Un fossé profond et large rempli d'eau.;;;;;;;;;;;;;x
+wall_1_desc;Earth and stones amassed to form a fairly basic defense but which nevertheless makes it possible to slow down the enemy.;De la terre et des pierres amassées pour former une défense assez sommaire mais qui permet néanmoins de ralentir l'ennemi.;;;;;;;;;;;;;x
+wall_2_desc;A palisade of logs aligned with their top sharpened. An effective defense against beasts and bandits but much more vulnerable to trained soldiers.;Une palissade de rondins alignés au sommet taillé en pointe. Une défense efficace contre les bêtes et les bandits mais beaucoup plus vulnérables à des soldats entraînés.;;;;;;;;;;;;;x
+wall_3_desc;An enclosure of masoned cut stones which represents a decent and sufficient defense for most lords.;Une enceinte de pierre taillées et maçonnées qui représente une défense digne et suffisante pour la plupart des seigneurs. ;;;;;;;;;;;;;x
+wall_4_desc;A real enclosure made to resist the enemy and siege machines.;Une véritable enceinte faite pour résister à l'ennemi et aux machines de siège.;;;;;;;;;;;;;x
+wall_5_desc;Thick stone walls bristling with battlements and towers. Who would dare to attack us behind our solid walls?;Des murs en pierre bien épais, hérissés de créneaux et de tours. Qui oserait s'en prendre à nous derrière nos solides murailles ?;;;;;;;;;;;;;x
 ca_con_wall_6;Theodesian walls;Murs Théodosiens;;;;;;;;;;;;;x
-ca_con_wall_6_desc;_;Les murs théodosiens ont été érigés pendant le règne de l'empereur Théodose II au début du Ve siècle. Ces murs comptent parmi les plus formidables fortifications jamais construites par l'Homme.;;;;;;;;;;;;;x
+ca_con_wall_6_desc;Theodosian walls were erected during the reign of Emperor Theodosius II in the early 5th century. These walls are among the most formidable fortifications ever built by human kind.;Les murs théodosiens ont été érigés pendant le règne de l'empereur Théodose II au début du Ve siècle. Ces murs comptent parmi les plus formidables fortifications jamais construites par l'Homme.;;;;;;;;;;;;;x
 ca_training_grounds_1;Wooden gate;Porte de guet;;;;;;;;;;;;;x
-ca_training_grounds_1_desc;_;Des planches et poutres assemblées afin de sécuriser le domaine. Cette porte est surmontée d'une vigie donnant une vue imprenable sur la région.;;;;;;;;;;;;;x
+ca_training_grounds_1_desc;Planks and beams assembled to secure the demesne. This door is surmounted by a lookout giving a breathtaking view of the region.;Des planches et poutres assemblées afin de sécuriser le domaine. Cette porte est surmontée d'une vigie donnant une vue imprenable sur la région.;;;;;;;;;;;;;x
 ca_training_grounds_2;Stone gate;Porte en pierre;;;;;;;;;;;;;x
-ca_training_grounds_2_desc;_;Une structure de pierres assemblées afin de contrôler les entrées et sorties et se barricader en cas d'attaque.;;;;;;;;;;;;;x
+ca_training_grounds_2_desc;A structure of stones assembled to control the comings and goings and allow people to barricade in case of attack.;Une structure de pierres assemblées afin de contrôler les allers et venues et permettre de se barricader en cas d'attaque.;;;;;;;;;;;;;x
 ct_training_grounds_1;Stone gate;Porte en pierre;;;;;;;;;;;;;x
-ct_training_grounds_1_desc;_;Des planches et poutres assemblées afin de sécuriser le domaine. Cette porte est surmontée d'une vigie donnant une vue imprenable sur la région.;;;;;;;;;;;;;x
+ct_training_grounds_1_desc;Planks and beams assembled to secure the area. This door is surmounted by a lookout giving a breathtaking view of the region.;Des planches et poutres assemblées afin de sécuriser le domaine. Cette porte est surmontée d'une vigie donnant une vue imprenable sur la région.;;;;;;;;;;;;;x
 ct_training_grounds_2;Guarded gate;Porte gardée;;;;;;;;;;;;;x
-ct_training_grounds_2_desc;_;Une structure de pierres assemblées afin de contrôler les entrées et sorties et se barricader en cas d'attaque.;;;;;;;;;;;;;x
+ct_training_grounds_2_desc;A structure of stones assembled to control entrances and exits and barricade themselves in the event of an attack.;Une structure de pierres assemblées afin de contrôler les entrées et sorties et se barricader en cas d'attaque.;;;;;;;;;;;;;x
 ct_training_grounds_3;City gate;Porte de  la ville;;;;;;;;;;;;;x
-ct_training_grounds_3_desc;_;Une porte renforcée avec des factionnaires en poste.;;;;;;;;;;;;;x
-#;;temp to preven vanilla silliness;;;;;;;;;;;;x
+ct_training_grounds_3_desc;A reinforced door with sentries on duty. \nThis building costs §Y70§! prestige to get built. Your prestige points will be decreased when you start to build it.;Une porte renforcée avec des factionnaires en poste. \nCe bâtiment requiert de dépenser §Y30§! points de prestige pour être construit.\n Le coût en prestige est décompté au commencement des travaux.;;;;;;;;;;;;;x
+#;;temp to prevent vanilla silliness;;;;;;;;;;;;x
 ca_keep_1;Keep;Donjon;Bergfried;;Torreón;;;;;;;;;x
 ca_keep_2;Keep;Donjon;Bergfried;;Torreón;;;;;;;;;x
 ca_keep_3;Keep;Donjon;Bergfried;;Torreón;;;;;;;;;x
@@ -104,13 +131,8 @@ ca_keep_6;Keep;Donjon;Bergfried;;Torreón;;;;;;;;;x
 #;;MINOR TITLE;;;;;;;;;;;;x
 title_master_of_the_hunt;Master of the Hunt;Maître de Chasse;Jägermeister;;Maestro de caza;;;;;;;;;x
 title_master_of_the_hunt_desc;In an era when hunting was an opportunity to demonstrate horsemanship and martial prowess the hunt was serious business. The master of the hunt was a position of importance.;La chasse permet d’afficher ses talents de cavalier et de guerrier, et jouit d’une grande popularité. Maître de chasse est un titre important.;In einem Zeitalter, in dem Jagen als Möglichkeit galt, die eigene Reit- und Kriegskunst unter Beweis zu stellen, war die Jagd ein ernsthaftes Geschäft. Demnach war das Amt des Jägermeisters sehr wichtig.;;En una época en la que cazar era una oportunidad de demostrar las habilidades marciales y de equitación, la caza era algo serio. Así pues, ser maestro de caza era un cargo importante.;;;;;;;;;x
-#;;BANDIT EVENTS;;;;;;;;;;;;x
-EVTDESC68001;The peasants of [Root.GetName] are slowly starting to respect my rule again. I should keep my demesne small enough to manage.;Les paysans de [Root.GetName] recommencent progressivement à respecter mon autorité. Je devrais maintenir mon domaine à une taille gérable.;;;;;;;;;;;;x
-EVTDESC68010;Due to my somewhat lacking Stewardship skill, a Thieves' Guild has been established in [Root.GetName].;Mon inaptitude pour l’intendance a entraîné l’établissement d’une Guilde de voleurs à [Root.GetName].;;;;;;;;;;;;x
-EVTDESC68020;My less than perfect Diplomacy has allowed a Smugglers' Ring to appear in [Root.GetName].;Mes piètres talents de diplomate ont permis à un Cercle de contrebandiers de se créer à [Root.GetName].;;;;;;;;;;;;x
-EVTDESC68030;Due to my mediocre understanding of Martial matters, bands of robbers are roaming the countryside in [Root.GetName]. They are too craven to attack my castles though.;À cause de mon manque de discernement dans le domaine martial, des bandes de voleurs sillonnent les campagnes de [Root.GetName]. Ils sont cependant trop lâches pour attaquer mes châteaux.;;;;;;;;;;;;x
 #;;DIVERS;;;;;;;;;;;;x
-CHRONICLE_FILL0009;A river flooded parts of [Root.GetName] in the spring.;Une hideuse sorcière a été pourchassée une bonne partie de l'année par les contrées de [Root.GetName].\nElle fût finalement capturée et -sommairement- jugée avant qu'elle n'offrit un superbe feu de joie pour la population ! ;Ein Fluss trat im [Root.GetName] im Frühjahr über die Ufer.;;En primavera, un río inundó partes de [Root.GetName].;;;;;;;;x
+CHRONICLE_FILL0009;An hideous witch was prosecuted for most of the year in the lands of [Root.GetName] in the spring.;Une hideuse sorcière a été pourchassée une bonne partie de l'année par les contrées de [Root.GetName].\nElle fût finalement capturée et -sommairement- jugée avant qu'elle n'offrit un superbe feu de joie pour la population ! ;Ein Fluss trat im [Root.GetName] im Frühjahr über die Ufer.;;En primavera, un río inundó partes de [Root.GetName].;;;;;;;;x
 coastal_desert;Coastal;Désert côtier;Ozean;;Océano;;;;;;;;;x
 hills;Hills;Coteaux;Hügel;;Colinas;;;;;;;;;x
 defenderbonus_hills;Hills;Coteaux;Hügel;;Colinas;;;;;;;;;x
@@ -162,17 +184,25 @@ ct_marketplace_2_muslim;Village bazaar;Bazar de village;;;;;;;;;;;;;x
 ct_marketplace_3_muslim;Local Souq;Souk local;;;;;;;;;;;;;x
 ct_marketplace_4_muslim;Medina Quarter;Quartier de la médina;;;;;;;;;;;;;x
 ct_marketplace_5_muslim;Great bazaar;Grand bazar;;;;;;;;;;;;;x
-marketplace_1_desc;;Une petite place de marché au centre du hameau où les habitants pratique essentiellement le troc.;;;;;;;;;;;;;x
-marketplace_2_desc;;Ce marché est au centre de ce qui est désormais un village. Les marchands y vendent la production des alentours immédiats.;;;;;;;;;;;;;x
-marketplace_3_desc;;Grâce à la richesse des productions artisanales locales, ce marché attire des acheteurs venus de toute la province.;;;;;;;;;;;;;x
-marketplace_4_desc;;Le marché déjà florissant prend encore de l'ampleur à mesure que la cité croît et génère encore plus d'échanges, de transactions et de revenus.;;;;;;;;;;;;;x
-marketplace_5_desc;;La spécialisation des industries locales permet de proposer des produits uniques. Ceux-ci attirent des clients et marchands venus de loin pour acquérir ces produits peu courants.;;;;;;;;;;;;;x
+tp_school_1_muslim;Madrasah [muslim.GetGroupName] School;Médersa (Ecole [muslim.GetReligiousGroupMascFem];Madrasa [muslim.GetGroupName]e Schule;;Escuela madrasa [muslim.GetGroupName];;;;;x
+tp_school_2_muslim;Madrasah [muslim.GetGroupName] School;Médersa (Ecole [muslim.GetReligiousGroupMascFem];Madrasa [muslim.GetGroupName]e Schule;;Escuela madrasa [muslim.GetGroupName];;;;;x
+tp_school_3_muslim;Madrasah [muslim.GetGroupName] School;Médersa (Ecole [muslim.GetReligiousGroupMascFem];Madrasa [muslim.GetGroupName]e Schule;;Escuela madrasa [muslim.GetGroupName];;;;;x
+tp_school_1;Monastic School;École monastique;Klosterschule;;Escuela monástica;;;;;;;;;x
+tp_school_2;Monastic School;École monastique;Klosterschule;;Escuela monástica;;;;;;;;;x
+tp_school_3;Monastic School;École monastique;Klosterschule;;Escuela monástica;;;;;;;;;x
+tp_school_1_desc;This school teaches many subjects and is a rare center of high learning, but the students enrolled here primarily study to prepare themselves for future careers in the clergy. No girls allowed.;De nombreuses disciplines sont enseignées dans cette école et c'est l'un des rares lieux d'enseignement. Toutefois, les élèves qui y sont admis se préparent principalement à une carrière religieuse. Les filles n'y sont bien sûr pas admises.;Diese Schule unterrichtet viele Fächer und ist ein seltenes Zentrum der höheren Lehre, doch die Schüler, die hier eingeschrieben sind, studieren hier hauptsächlich, um sich auf ihre zukünftigen Karrieren im Klerus vorzubereiten. Mädchen sind nicht erlaubt.;;Esta escuela imparte numerosas materias y es un centro poco habitual para la formación superior, aunque la mayoría de los estudiantes matriculados en ella se preparan para su futura carrera en el clero. No se admiten mujeres.;;;;;;;;;x
+marketplace_1_desc;A small market place in the center of the hamlet where the inhabitants mainly trade.;Une petite place de marché au centre du hameau où les habitants pratiquent essentiellement le troc.;;;;;;;;;;;;;x
+marketplace_2_desc;This market is at the center of what is now a village. The merchants sell the production from the immediate vicinity.;Ce marché est au centre de ce qui est désormais un village. Les marchands y vendent la production des alentours immédiats.;;;;;;;;;;;;;x
+marketplace_3_desc;Thanks to the wealth of local crafted products, this market attracts buyers from all over the province.;Grâce à la richesse des productions artisanales locales, ce marché attirent des acheteurs venus de toute la province.;;;;;;;;;;;;;x
+marketplace_4_desc;The already flourishing market continues to grow as the city grows and generates even more trade, transactions and income.;Le marché déjà florissant prend encore de l'ampleur à mesure que la cité croît et génère encore plus d'échanges, de transactions et de revenus.;;;;;;;;;;;;;x
+marketplace_5_desc;The specialization of local industries allows us to offer unique products. These attract customers and merchants from far and wide to acquire these unusual products.;La spécialisation des industries locales permet de proposer des produits uniques. Ceux-ci attirent des clients et marchands venus de loin pour acquérir ces produits peu courants.;;;;;;;;;;;;;x
 marketplace_1_desc_muslim;A small bazaar in the center of town where merchants peddle their wares.;Un petit souk logé au coeur de la ville où les marchands locaux mènent leurs petites affaires.;Ein kleiner Basar im Zentrum der Stadt, wo die Kaufleute ihre Waren feilbieten. ;;Pequeño bazar del centro de la ciudad donde los mercaderes venden sus mercancías. ;;;;;;;;;x
 marketplace_2_desc_muslim;A large bazaar in the center of town where merchants peddle their wares.;Un souk situé au centre de la ville où les marchands de la région concluent leurs affaires.;Ein großer Basar im Zentrum der Stadt, wo die Kaufleute ihre Waren feilbieten. ;;Gran bazar del centro de la ciudad donde los mercaderes venden sus mercancías. ;;;;;;;;;x
 marketplace_3_desc_muslim;This open-air marketplace is filled with merchant stands where almost anything can be bought.;Ce marché à ciel ouvert est rempli de kiosques de marchands où on peut acheter à peu près tout.;Dieser Marktplatz im Freien ist gefüllt mit den Ständen der Kaufleute, an denen man fast alles kaufen kann. ;;Este mercado al aire libre está lleno de puestos de mercaderes que venden prácticamente de todo.;;;;;;;;;x
 marketplace_4_desc_muslim;This walled and highly populated quarter of the city is a complex maze of narrow streets and alleyways.;Ce bazar à l'intérieur de l'enceinte de la cité est très peuplé. Ses rues étroites et ses ruelles forment un complexe labyrinthe.;Dieses von Mauern umgebene und stark bewohnte Stadtviertel ist ein komplexes Labyrinth aus engen Straßen und Gassen.;;Este barrio amurallado de la ciudad, densamente poblado, es un complejo laberinto de callejuelas y pasadizos.;;;;;;;;;x
 marketplace_5_desc_muslim;A great bazaar that seems filled with merchants from all over the known world. If an item can't be found for sale here, it likely doesn't exist.;Un grand bazar qui accueille les marchands provenant de tous les coins du monde connu. Si vous ne trouvez pas ce que vous cherchez ici, c'est probablement que cela n'existe pas.;Ein großer Basar, der mit Kaufleuten aus der ganzen Welt gefüllt ist. Wenn ein Gegenstand hier nicht zum Verkauf feilgeboten wird, ist es sehr wahrscheinlich, dass er gar nicht existiert. ;;Este gran bazar parece reunir a mercaderes de todo el mundo conocido. Lo que no está a la venta aquí, probablemente ni existe. ;;;;;;;;;x
-EARLY_MED;High Middle Ages;Haut Moyen Âge;Hochmittelalter;;Plena Edad Media;;;;;;;;;x
+#VARIOUS;x
+EARLY_MED;High Middle Ages;Haut Moyen Âge;;;;;;;;;;;;x
 BM_FATE_OF_ENGLAND_ERA;Central Middle Ages;Moyen Âge central;Hochmittelalter;;Plena Edad Media;;;;;;;;;x
 prosperityz_modifier_1;Prospering;Prospérité économique;Wachsend;;Prosperando;;;;;;;;;x
 prosperityz_modifier_2;Flourishing;Économie florissante;Blühend;;Floreciendo;;;;;;;;;x
@@ -182,3 +212,56 @@ desc_prosperityz_modifier_2;A prolonged period of peace and shrewd management ha
 desc_prosperityz_modifier_3;A prolonged period of peace and shrewd management has caused this county to §YBoom§!! \n\n§YProsperity§! will increase with time, but will be hampered by negative province modifiers, war, disease and sieges. Construct §YHospitals§! and keep the province clear of hostile armies to ensure that the county continues to prosper.;Une période prolongée de paix et une gestion judicieuse ont donné lieu à une §Yéconomie en plein essor§! dans le comté ! \n\nLa §Yprospérité§! augmentera avec le temps, mais sera entravée par tout modificateur comtal négatif, la guerre, la maladie ou un siège. Construisez un §Yhôpital§! et gardez toute armée ennemie hors du comté afin qu'il continue à prospérer.;Nach einer langen Zeit des Friedens und gewandter Verwaltung §Yfloriert§! diese Grafschaft geradezu! \n\nDer §YWohlstand§! wird sich im Lauf der Zeit steigern, doch negative Provinzmodifikatoren, Kriege, Krankheiten und Belagerungen wirken dem entgegen. Baut §YHospitale§! und haltet feindliche Armeen aus der Provinz fern, damit die Grafschaft weiter boomen kann.;;Un prolongado período de paz y gestión inteligente ha llevado a este condado a un §YAuge§!! \n\nLa §YProsperidad§! aumentará con el tiempo, pero será dificultada por modificadores de provincia negativos: guerra, enfermedad y asedios. Construye §YHospitales§! y mantén provincia libre de ejércitos hostiles para asegurarte que el condado sigue prosperando.;;;;;;;;;x
 trade_route;Trade agreement;Accord commercial;;;;;;;;;;;;x
 desc_trade_route;The local Lord has conclued a trade agreement with a foreign realm bringing in exotic goods.;Le seigneur local a passé un accord commercial avec un royaume lointain, ce qui permet un approvisionnement en biens exotiques.;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+thieves_guild;Thieves' lair;Repaire de voleurs;;;Repare de ladrones;;;;;;;;;x
+smugglers_ring;Smugglers' Ring;Réseau de contrebandiers;Schmugglerring;;Red de contrabandistas;;;;;;;;;x
+highway_robber_band;Highway Robbers company;Compagnie de bandits de grands chemins;;;;;;;;;;;;x
+highway_robber_band_desc;A large band of robbers is prowling the countryside.;Un grand nombre de voleurs rôde dans la campagne.;Eine große Räuberbande macht die Gegend unsicher.;;Una gran banda de bandidos está merodeando por el campo.;;;;;;;;;x
+smugglers_ring_desc;Smugglers infest the area and harm local trade.;Des contrebandiers infestent la région et nuisent au commerce.;Schmuggler haben sich in dem Gebiet breitgemacht.;;Contrabandistas infestan la zona.;;;;;;;;;x
+thieves_guild_desc;The number of misdeeds of these bandits who attack the inhabitants and travellers has exploded.;Les nombre de méfait de ces bandits qui s'en prennent aux habitants et aux voyageurs a explosé.;Die Menge der Diebe, die sich an dieser Grafschaft schadlos halten, ist enorm.;;La cantidad de ladrones que atacan a la gente de este condado es enorme.;;;;;;;;;x
+action_fabricate_claims_desc;Send your [GetChancellorName] to fabricate claims on landed titles held by local rulers.\n A skilled enough [GetChancellorName] may fabricate a claim on a county.\n Only with the "Become King" ambition is it possible to fabricate a claim on duchies.;Envoyez votre [GetChancellorName] fabriquer des revendications sur des titres fonciers détenus par des seigneurs locaux. \nSi sa compétence est suffisamment élevée il pourra éventuellement fabriquer une revendication sur un titre de Comte.\n Par contre, il ne sera possible de fabriquer une revendication pour un Duché qu'en poursuivant l'ambition "Devenir roi".;;;Envía a tu [GetChancellorName] para fabricación derechos sobre títulos de tierras que poseen los gobernantes locales. Un [GetChancellorName] altamente calificado puede incluso fabricar una reclamación sobre un condado. Sólo con la ambición "Convertirse en Rey" es posible fabricar una reclamación sobre un ducato.;;;;;;;;;x
+action_statecraft_desc;Work to improve relations with random vassals, neighboring rulers, and your liege – and lower threat.\nAdditionally, it permits to lower claim fabrication chances against you.;Oeuvrer à améliorer les relations avec des vassaux, des dirigeants voisins et votre seigneur lige, ainsi que réduire la menace que vous représentez. \nDe plus, cela permet également de diminuer les chances de fabriquer de revendications contre vous. ;;;;;;;;;;;;x
+action_advance_eco_tech;Develop Economy;Développer l'économie;Entwicklung der Wirtschaft;;Desarrollar la economía;;;;;;;;;x
+action_advance_eco_tech_desc;Have your [GetTreasurerName] developing the economy. \nYour [GetTreasurerName] will be researching techniques and methods, controling measurings in markets and shops as well as rules being respected to create a favorable mood for economy. \n§G!Get yearly a chance to gain a bonus in development growth.§!;Envoyez votre [GetTreasurerName] veiller au bon développement de l'économie. \nPour se faire, votre [GetTreasurerName] recherchera de meilleures techniques et méthodes, contrôlera les mesures et pesées sur les marchés locaux et dans les échoppes, la régularité des échanges afin de créer un climat favorable à l'économie.  \n§G!Chaque année a une chance d'obtenir un bonus de développement dans la province.§!;;;;;;;;;;;;x
+JOB_PROSELYTIZE_SAME_RELIGION;Proselytize: §YProvince already of our faith.§!;Faire du prosélytisme: §YProvince déjà de notre foi§!;Bekehrung: §YProvinz ist bereits konvertiert.§!;;Proselitismo: §Yprovincia ya convertida.§!;;;;;;;;;x
+JOB_PROSELYTIZE_DIFFERENT_RELIGION;Proselytize: §GProvince can be converted. §!Current religion: §Y[Root.Religion.GetName]§!;Faire du prosélytisme: §GLa province peut être convertie. §!Religion actuelle: §Y[Root.Religion.GetName]§!;Bekehren: §GProvinzen können konvertiert werden. Momentane Religion: §!§Y[Root.Religion.GetName]§!;;Proselitismo: §Gse puede convertir la provincia. Religión actual: §!§Y[Root.Religion.GetName]§!;;;;;;;;;x
+JOB_PROSELYTIZE_CONVERT_INDEPENDENT;Proselytize: §GIndependent ruler can be converted. §!Current religion: §Y[Root.Holder.Religion.GetName]§!;Faire du prosélytisme: §GLe dirigeant indépendant peut être converti. §!Religion actuelle: §Y[Root.Holder.Religion.GetName]§!;Bekehren: §GUnabhängiger Herrscher kann konvertiert werden. Momentane Religion: §!§Y[Root.Holder.Religion.GetName]§!;;Proselitismo: §Gse puede convertir al gobernante independiente. Religión actual: §!§Y[Root.Holder.Religion.GetName]§!;;;;;;;;;x
+#EVENTS;x
+#tournament;x
+EVTOPTA88270;A momentous day.;Un jour mémorable.;Ein bedeutsamer Tag. ;;Un día memorable.;;;;;;;;;x
+EVTOPT_AA88270;Victory will be its name!;Victoire sera sont nom !;;;;;;;;;;;;x
+EVTOPT_AA88271;A well deserved prize.;Un prix bien mérité.;;;;;;;;;;;;x
+EVTOPT_AA88272;It will serve me well!;Elle me servira bien !;;;;;;;;;;;;x
+EVTOPTC70000;Not really something for us.;Ce n'est pas pour nous.;;;;;;;;;;;;x
+EVTOPTC88250;Not really something for us.;Ce n'est pas pour nous.;;;;;;;;;;;;x
+#claim;x
+EVTOPTB20140;Try to bribe [This.GetHerHim];J'essaie de le soudoyer.;Versuchen, ihn zu bestechen;;Intenta sobornarlo.;;;;;;;;;x
+EVTOPTD20140;Such offer can't be refused...;Une telle offre ne peut se refuser...;;;;;;;;;;;;x
+EVTTOOLTIP20144;Send [This.GetHerHim] an offer;Je lui fais une proposition.;Ihm ein Angebot senden;;Hazle una oferta.;;;;;;;;;x
+EVTTOOLTIP20144b;Send [This.GetHerHim] a generous offer;Je lui fais une offre généreuse.;Ihm ein Angebot senden;;Hazle una oferta.;;;;;;;;;x
+EVTOPTC20140;Arrest and banish [From.GetHerHim];L'arrête et [From.GetLeLa] bannir;Ich lasse es besser erstmal gut sein;;Mejor pasar del tema por ahora.;;;;;;;;;x
+EVTOPTA20144;I guess that could be arranged;Je suppose que cela peut s'arranger.;Ich denke, das könnte sich arrangieren lassen;;De acuerdo, por qué no.;;;;;;;;;x
+EVTOPTB20144;I would never betray my liege!;Je ne trahirai jamais m[Root.Liege.GetOnA] [Root.Liege.GetLordLady] lige !;Ich würde nie meinen Lehnsherrn verraten!;;¡Jamás traicionaría a mi señor!;;;;;;;;;x
+EVTOPTC20144;I guess that could be arranged;Je suppose que cela peut s'arranger.;Ich denke, das könnte sich arrangieren lassen;;De acuerdo, por qué no.;;;;;;;;;x
+EVTOPTD20144;I would never betray my liege!;Je ne trahirai jamais m[Root.Liege.GetOnA] [Root.Liege.GetLordLady] lige !;Ich würde nie meinen Lehnsherrn verraten!;;¡Jamás traicionaría a mi señor!;;;;;;;;;x
+#LAWS;x
+tax_levy_law_tribal;Tribal;Tribu;Stammesbesteuerung;;Tribal;;;;;;;;;x
+tax_levy_law_tribal_desc;Tribes do not generate much gold, but their taxation can be adjusted by laws.;Les tribus ne rapportent pas beaucoup d'or, par contre les lois ajusteront leurs impôts.;Die Goldeinnahmen der Stämme sind gering. Trotzdem ist die Höhe der Besteuerung gesetzlich geregelt.;;Las tribus no generan mucho oro, pero sus impuestos pueden ser ajustados por las leyes.;;;;;;;;;x
+tax_levy_law_tribal_4;No Tribal Tax;Exonération des tribus;Keine Stammesbesteuerung;;Ningún impuesto Tribal;;;;;;;;;x
+tax_levy_law_tribal_4_desc;Tribes are exempt from taxes.;Les tribus sont exonérées d'impôts.;Die Stämme sind von Steuern befreit.;;Las tribus están exentas de impuestos.;;;;;;;;;x
+tax_levy_law_tribal_3;Minimal Tribal Tax;Impôt tribal minimal;Minimale Stammesbesteuerung;;Impuesto tribal mínimo;;;;;;;;;x
+tax_levy_law_tribal_3_desc;Tribes have to pay a small contribution to the greater good of the realm.;Les tribus doivent payer une petite contribution financière pour l'intérêt supérieur du Royaume.;Die Stämme müssen für das allgemeine Wohl des Reichs einen geringen finanziellen Beitrag leisten.;;Se espera que las tribus hagan una pequeña contribución financiera para el bien mayor del reino.;;;;;;;;;x
+tax_levy_law_tribal_2;Medium Tribal Tax;Impôt tribal moyen;Mittlere Stammesbesteuerung;;Impuesto tribal medio;;;;;;;;;x
+tax_levy_law_tribal_2_desc;Tribes have to pay a moderate contribution to the greater good of the realm.;Les tribus doivent payer une contribution financière modérée pour l'intérêt supérieur du Royaume.;Die Stämme müssen für das allgemeine Wohl des Reichs einen moderaten finanziellen Beitrag leisten.;;Se espera que las tribus hagan una moderada contribución financiera para el bien mayor del reino.;;;;;;;;;x
+tax_levy_law_tribal_1;Large Tribal Tax;Impôt tribal élevé;Hohe Stammesbesteuerung;;Impuesto tribal grande;;;;;;;;;x
+tax_levy_law_tribal_1_desc;Tribes have to pay a substantial contribution to the greater good of the realm.;Les tribus doivent payer une contribution financière substantielle pour l'intérêt supérieur du Royaume.;Die Stämme müssen für das allgemeine Wohl des Reichs einen erheblichen finanziellen Beitrag leisten.;;Se espera que las tribus hagan una sustancial contribución financiera para el bien mayor del reino.;;;;;;;;;x
+tax_levy_law_tribal_0;Very Large Tribal Tax;Impôt tribal trés élevé;Hohe Stammesbesteuerung;;Impuesto tribal grande;;;;;;;;;x
+tax_levy_law_tribal_0_desc;Tribes have to pay a very large contribution to the greater good of the realm.;Les tribus doivent payer une contribution financière trés importante pour l'intérêt supérieur du Royaume.;;;;;;;;;;;;x
+#BANDITS;x
+EVTDESC68001;The burghers and peasants of [Root.GetName] are slowly starting to respect my rule again. This would help me as well towards clergy and local nobles. I should never let my treasury go negative!;Les bourgeois ainsi que la paysannerie en [Root.GetName] commencent à respecter de nouveau ma position. Cela devrait me permettre de reprendre le dessus concernant le clergé local et la noblesse. Plus jamais je n'aurai de dettes !;Allmählich respektieren die Bauern von [Root.GetName] wieder meine Herrschaft. Nie wieder soll meine Schatzkammer leer sein!;;Los campesinos de [Root.GetName] vuelven lentamente a respetar mi mandato. ¡Nunca debí dejar que las cuentas del tesoro tocaran fondo!;;;;;;;;;x
+EVTDESC68010;My sheriffs and magistrates struggle to maintain things in order in [Root.GetName]. \nAs we somehow lack diplomacy skills, we failed to make the rise of the Thieves' Lair in [Root.GetName] not impacting the whole province.;Mes prévôts et baillis peinent à maintenir l'ordre sur nos terres de [Root.GetName]. \nPar manque de qualités de diplomate, nous n'avons pu empêcher que l'émergence d'un Repaire de voleurs récemment établi, n'impacte désormais [Root.GetName] dans son entiereté.;;;;;;;;;;;;x
+EVTDESC68020;My sheriffs and baillifs struggle to maintain things in order in [Root.GetName]. \nAs we somehow lack stewardship skills, we failed to restrict the growing influence of a Smuggler's ring in [Root.GetName], which is now well established and plagues the whole province.;Mes prévôts et baillis peinent à maintenir l'ordre sur nos terres de [Root.GetName]. \nPar manque de qualités d'intendance, nous n'avons pu empêcher qu'un Réseau de contrebandiers soit maintenant bien ancré et prospère [Root.GetName].;;;;;;;;;;;;x
+EVTDESC68030;My sheriffs struggle to control correctly [Root.GetName]. \nAs we somehow lack martial skills, we failed to fight efficiently the fierce Highway robbers company, letting them roam almost freely in the whole province of [Root.GetName].;Mes baillis peinent à maintenir l'ordre et surveiller nos terres de [Root.GetName]. \nPar manque de qualités martiales, le contrôle des routes et l'enrôlement des hommes de [Root.GetName] nous échappe en laissant prospérer et circuler dans toute la province une Compagnie de bandits de grands chemins.;;;;;;;;;;;;x
+EVTDESC68011;Thanks to my wise Stewardship of §Y[Root.GetName]§! and some cunning, the local Thieves' lair has been eradicated.;Grâce à ma bonne gestion de [Root.GetName] et de fines manipulations, le Repaire de voleurs a  pu être éradiqué.;;;;;;;;;;;;x
+EVTDESC68021;Thanks to my great Stewardship skill, the Smugglers' Ring in §Y[Root.GetName]§! has been destroyed. The head of the last smuggler is now rotting on a pike outside the city gates.;Grâce à mes grandes compétences en intendance, le Réseau de contrebandiers de [Root.GetName] a été éradiqué. La tête du dernier contrebandier pourrit désormais au bout d'une pique devant les portes de la cité.;Dank meiner großartigen Diplomatiefähigkeit wurde der Schmugglerring in §Y[Root.GetName]§! vernichtet. Der Kopf des letzten Schmugglers verrottet nun auf einem Spieß vor den Stadttoren.;;Gracias a mi habilidad diplomática, la red de contrabandistas de [Root.GetName] ha sido destruida. El jefe del último contrabandista se pudre ahora empalado en una pica fuera de la villa.;;;;;;;;;x
+EVTDESC68031;With my great Martial ability, I have rounded up and executed the highway robber company that was plaguing §Y[Root.GetName]§!!;Grâce à mes grandes compétences martiales, j'ai fait arrêter et exécuter la plupart des scélérats de la compagnie de bandits de grands chemins qui sévissait en [Root.GetName] !;Dank meiner großartigen Kriegskunstfähigkeit konnte ich die §Y[Root.GetName]§! heimsuchenden Räuberbanden zusammentreiben und hinrichten!;;¡Con mi gran habilidad militar he acorralado y ejecutado a las bandas de ladrones que plagaban [Root.GetName]!;;;;;;;;;x

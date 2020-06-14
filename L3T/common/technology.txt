@@ -65,7 +65,7 @@ TECH_GROUP_MILITARY = {
 TECH_GROUP_ECONOMY = {
 	TECH_CASTLE_CONSTRUCTION = { #castle buildings
 		modifier = {
-			CASTLE_TAX_MODIFIER = 0.5
+			CASTLE_TAX_MODIFIER = 0.30 #L3T ex 0.5
 		}
 		1 = {
 			add_building = ca_militia_barracks_2
@@ -143,8 +143,8 @@ TECH_GROUP_ECONOMY = {
 		}
 		6 = {
 			add_building = ca_stable_5
-			add_building = ca_town_5
-			add_building = ca_training_grounds_3
+			#add_building = ca_town_5
+			#add_building = ca_training_grounds_3
 			add_building = no_wrestling_8
 			add_building = no_composite_bow_crafter_7
 			add_building = no_lamellar_armor_crafter_8
@@ -152,19 +152,19 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_elephant_camp_8
 		}
 		7 = {
-			add_building = ca_barracks_6
+			#add_building = ca_barracks_6
 			add_building = ca_militia_barracks_4
 			add_building = no_composite_bow_crafter_8
 		}
 		8 = {
-			add_building = ca_stable_6
-			add_building = ca_town_6
+			#add_building = ca_stable_6
+			#add_building = ca_town_6
 		}
 	}
 	TECH_CITY_CONSTRUCTION = { #city buildings
 		modifier = {
-			CITY_TAX_MODIFIER = 0.4
-			TEMPLE_TAX_MODIFIER = 0.4
+			CITY_TAX_MODIFIER = 0.2 #L3T ex 0.4
+			TEMPLE_TAX_MODIFIER = 0.2 #L3T ex 0.4
 		}
 		1 = {
 			add_building = ct_marketplace_3
@@ -216,7 +216,6 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_gathering_hall_5
 			add_building = no_gathering_hall_6
 			add_building = tp_monastery_3
-			add_building = tp_elite_barracks_3
 			add_building = no_shrine_4
 			add_building = no_minority_shrine_4
 			add_building = no_minority_shrine_5
@@ -246,7 +245,7 @@ TECH_GROUP_ECONOMY = {
 		4 = {
 			add_building = ct_guard_3
 			add_building = ct_university_2
-			add_building = ct_training_grounds_4
+			#add_building = ct_training_grounds_4
 			add_building = no_airag_producer_6
 			add_building = no_ox_wagon_7
 			add_building = no_ox_wagon_8
@@ -270,26 +269,24 @@ TECH_GROUP_ECONOMY = {
 		}
 		6 = {
 			add_building = ct_guard_4
-			add_building = ct_training_grounds_5
+			#add_building = ct_training_grounds_5
 			add_building = no_airag_producer_8
 			add_building = no_felt_crafter_8
 			add_building = no_ger_crafter_8
 			add_building = tp_monastery_5
-			add_building = tp_elite_barracks_5
 			add_building = tp_school_2
 		}
 		7 = {
-			add_building = ct_marketplace_6
+			#add_building = ct_marketplace_6
 			add_building = ct_barracks_6
 			add_building = tp_barracks_6
-			add_building = tp_town_6
+			#add_building = tp_town_6
 		}
 		8 = {
 			add_building = ct_guard_5
 			add_building = ct_university_3
-			add_building = ct_training_grounds_6
-			add_building = tp_monastery_6
-			add_building = tp_elite_barracks_6
+			#add_building = ct_training_grounds_6
+			#add_building = tp_monastery_6
 		}
 	}
 #	TECH_TEMPLE_CONSTRUCTION = { #temple buildings
@@ -396,20 +393,23 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_baghatur_council_8
 		}
 		7 = {
-			add_building = ca_wall_q_5
-			add_building = ct_wall_q_5
-			add_building = tp_wall_q_5
-		}
-		8 = {
-			add_building = ca_keep_6
+			#add_building = ca_wall_q_5 #L3T doesn't exist
+			#add_building = ct_wall_q_5 #L3T doesn't exist
+			#add_building = tp_wall_q_5 #L3T doesn't exist
 			add_building = ca_wall_5
 			add_building = ct_wall_5
 			add_building = tp_wall_5
 		}
+		8 = {
+			add_building = ca_keep_6
+			#add_building = ca_wall_5 #L3T moved to L7
+			#add_building = ct_wall_5 #L3T moved to L7
+			#add_building = tp_wall_5 #L3T moved to L7
+		}
 	}
 	TECH_TRADE_PRACTICES = {
 		modifier = {
-			TRADEVALUE_MULT = 0.6
+			TRADEVALUE_MULT = 0.3 #L3T ex 0.6
 		}
 		1 = {
 			add_building = ct_port_2
@@ -445,7 +445,7 @@ TECH_GROUP_ECONOMY = {
 	TECH_CONSTRUCTION = { #improved construction of all buildings
 		modifier = {
 			LOCAL_BUILD_TIME_MODIFIER = -0.25
-			LOCAL_BUILD_COST_MODIFIER = -0.25
+			#LOCAL_BUILD_COST_MODIFIER = -0.25  #L3T delete
 			wonder_build_time_modifier = -0.2
 			wonder_build_cost_modifier = -0.15
 		}
@@ -533,6 +533,12 @@ TECH_GROUP_CULTURE = {
 	TECH_POPULAR_CUSTOMS = {
 		modifier = {
 			TOWN_OPINION = 24
+			#custom_modifier_text  = tech_custom_illuminations_1 #L3T same custom text for all levels
+		}
+		
+		1 = {
+		#custom_modifier_text  = tech_custom_illuminations_tt #works only inside a modifier block
+		#add_decision = blabla #displays a "government unlocked" text which i guess is not used anymore
 		}
 	}
 	TECH_RELIGIOUS_CUSTOMS = {
@@ -562,7 +568,7 @@ TECH_GROUP_CULTURE = {
 	TECH_CULTURE_FLEX = {
 		modifier = {
 			CULTURE_FLEX = -0.5
-			RELIGION_FLEX = -0.5
+			RELIGION_FLEX = 0.5 #L3T ex -0.5
 		}
 		1 = {}
 		2 = {}

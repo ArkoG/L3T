@@ -212,7 +212,7 @@ trade_post = {
 		build_time = 180
 		ai_creation_factor = 97
 		galleys = 2
-		tax_income = 0.5
+		tax_income = -0.5
 		add_number_to_name = no
 
 		extra_tech_building_start = 2
@@ -227,7 +227,7 @@ trade_post = {
 		build_time = 550
 		ai_creation_factor = 96
 		galleys = 3
-		tax_income = 0.5
+		tax_income = -0.5
 		add_number_to_name = no
 
 		extra_tech_building_start = 10
@@ -242,7 +242,7 @@ trade_post = {
 		build_time = 640
 		ai_creation_factor = 95
 		galleys = 5
-		tax_income = 0.5
+		tax_income = -1.0
 		add_number_to_name = no
 
 		extra_tech_building_start = 10
@@ -317,6 +317,7 @@ trade_post = {
 		retinuesize = 10
 		pikemen = 30
 		galleys = 2
+		tax_income = -0.2
 		add_number_to_name = no
 
 		extra_tech_building_start = 2
@@ -336,6 +337,7 @@ trade_post = {
 		retinuesize = 30
 		pikemen = 50
 		galleys = 2
+		tax_income = -0.2
 		add_number_to_name = no
 
 		extra_tech_building_start = 10

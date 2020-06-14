@@ -33,7 +33,16 @@ character_event = {
 		is_tribal = no
 		any_demesne_province = { has_province_modifier = foret1 }
 		any_demesne_province = { region = world_europe }
-		NOT = { any_courtier = { has_minor_title = title_forestier }} #n'a pas déjà de forestier
+		is_ruler = yes
+		NOT = {	any_courtier = { has_minor_title = title_forestier }	}
+		NOT = {	any_vassal = { has_minor_title = title_forestier }	}
+		any_courtier = {
+			prisoner = no
+			age = 16
+			is_female = no	
+			stewardship = 10
+			has_minor_title = no
+		}
 	}
 
 	weight_multiplier = {

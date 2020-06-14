@@ -822,7 +822,8 @@ province_event = { #Reclaim Land
 	has_flag = crown_focus_province
 	
 	trigger = {
-		has_province_modifier = prosperityz_modifier_3 #L3T
+		always = no # Disabled in plain SWMH, L3T too
+		has_province_modifier = prosperityz_modifier_3
 		NOT = {
 			num_of_max_settlements = 7
 		}
