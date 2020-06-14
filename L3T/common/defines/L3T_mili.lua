@@ -31,14 +31,18 @@
 	NDefines.NMilitary.RETINUE_CONSTANT_COST = 0.25 					-- Retinues cost at all times.
 	--ex 2, knight is 10, cavalry is 3
 	NDefines.NMilitary.SPECIAL_TROOPS_MAINTENANCE = 5
+
+	-- ex 1.5
+	NDefines.NMilitary.SHATTERED_RETREAT_MORALE_MULTIPLIER = 1.1	-- Multiplier of morale regain when shattered
+	-- ex 10
+	NDefines.NMilitary.SHATTERED_RETREAT_MAX_PROVINCES = 7					-- Units can not move longer than this many provinces during a shattered retreat
+
 	-- ex 10.0
 	NDefines.NMilitary.MAX_RIVER_MOVEMENT_FORT_LEVEL = 7.0
 	--ex 0.05
 	NDefines.NMilitary.LIEGE_LEVY_REINF_RATE = 0.04
 	--ex 18
 	NDefines.NAI.RAID_AGGRESSION = 36									-- General frequency of raids. A LOWER number means more often!
-	--no clue if i need to lower or increase it to get lower aggression ?
-	NDefines.NAI.DOW_AGGRESSION_FACTOR = 0.66							-- General aggressiveness declarations of war
 
 
 	--ex 0.5
