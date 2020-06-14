@@ -658,7 +658,7 @@ province_event = {
 						holder_scope = { 
 							random_courtier = { 
 								limit = { has_minor_title = title_forestier }
-								show_portrait = no
+								NOT = { show_portrait = yes }
 								letter_event = { id = XYLO.3133 }
 							}
 						}
@@ -687,7 +687,7 @@ province_event = {
 						holder_scope = { 
 							random_courtier = { 
 								limit = { has_job_title = job_marshal }
-								show_portrait = no
+								NOT = { show_portrait = yes }
 								letter_event = { id = XYLO.3133 }
 							}
 						}
@@ -720,7 +720,7 @@ province_event = {
 									is_female = no
 									prisoner = no
 								}
-								show_portrait = no
+								NOT = { show_portrait = yes }
 								letter_event = { id = XYLO.3133 }
 							}
 						}

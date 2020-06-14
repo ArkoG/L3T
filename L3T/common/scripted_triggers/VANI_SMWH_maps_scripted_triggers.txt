@@ -119,7 +119,7 @@ is_SWMH_hard_rurale = {
 	}
 }
 narbonaise_lands = {
-	liege = { 
+	#liege = { 
 		has_landed_title = {
 			OR = {
 				AND = {
@@ -151,5 +151,5 @@ narbonaise_lands = {
 				}
 			}
 		}
-	}
+	#}
 }
