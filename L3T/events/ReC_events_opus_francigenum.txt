@@ -12,6 +12,8 @@ narrative_event = {
 	hide_new = yes
 	hide_from = yes
 
+	religion = catholic
+
 	is_triggered_only = yes	
 	
 	immediate = {
@@ -118,10 +120,12 @@ character_event = {
 	only_rulers = yes
 	
 	trigger = {
+		ai=yes
 		any_demesne_title = {
 			tier = baron
 			holding_type = temple
 			has_building = tp_roman_cathedrale
+			location = { has_wonder = wonder_cathedral_romane }
 			OR = {
 				NOT = { has_title_flag = repaired_cathedral }
 				had_title_flag = { flag = repaired_cathedral years = 50 }
@@ -158,6 +162,7 @@ character_event = {
 				tier = baron
 				holding_type = temple
 				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
 				has_siege = yes
 			}
 		}
@@ -167,6 +172,8 @@ character_event = {
 				tier = baron
 				holding_type = temple
 				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
+				###totoro add wonder here
 				is_occupied = yes
 			}
 		}
@@ -181,9 +188,25 @@ character_event = {
 				tier = baron
 				holding_type = temple
 				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
+			}
+			owner = { save_event_target_as = cathedral_patron }
+			save_event_target_as = lieu_cathedrale
+			location = { 
+				destroy_wonder = yes
+				add_wonder = wonder_cathedral_romane
+				wonder = {
+					set_name = wonder_cathedral_romane
+					set_description = wonder_cathedral_romane_desc_UC
+				}
 			}
 			remove_building = tp_roman_cathedrale
 			add_building = tp_constructing_roman_cathedrale
+			random_list = {
+				20 = { set_title_flag = emotional_burning } #people were attached to this one
+				80 = {}
+			}
+			
 			location = { province_event = { id = REC.104 days = 3650 } }
 		}
 		# Opus Francigenum can appear
@@ -198,8 +221,10 @@ character_event = {
 				tier = baron
 				holding_type = temple
 				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
 			}
-			location = { owner = { character_event = { id = REC.106 days = 10 } } }
+			save_event_target_as = lieu_cathedrale
+			location = { owner = { character_event = { id = REC.106 days = 5 } } }
 		}
 	}
 }
@@ -216,10 +241,19 @@ province_event = {
 			limit = {
 				holding_type = temple
 				has_building = tp_constructing_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
+			}
+			location = { 
+				any_wonder = { 
+					limit = { has_wonder = wonder_cathedral_romane }
+					add_wonder_stage = 1
+					set_description = wonder_cathedral_romane_desc
+				}
 			}
 			remove_building = tp_constructing_roman_cathedrale
 			add_building = tp_roman_cathedrale
 			set_title_flag = repaired_cathedral
+			clr_title_flag = emotional_burning
 		}
 		# Give Opus Francigenum
 		if = {
@@ -252,9 +286,8 @@ narrative_event = {
 	option = {
 		name = "OPUSFRANCIGENUM.A"
 		trigger = {
-			NOT = {
-				has_a_relic = yes
-			}
+			NOT = { has_a_relic = yes }
+			is_catholic_group = yes
 		}
 	}
 	
@@ -262,6 +295,13 @@ narrative_event = {
 		name = "OPUSFRANCIGENUM.B"
 		trigger = {
 			has_a_relic = yes
+			is_catholic_group = yes
+		}
+	}
+	option = {
+		name = "OPUSFRANCIGENUM.C"
+		trigger = {
+			is_catholic_group = no #non catholic wouldn't care
 		}
 	}
 }
@@ -288,24 +328,37 @@ character_event = {
 			}
 		}
 		# Lord is not pious
-		piety = -10
-		FROM = {
-			# The romanesque cathedral is now under construction for 10 years
-			random_demesne_title = {
-				limit = {
-					tier = baron
-					holding_type = temple
-					has_building = tp_roman_cathedrale
+		piety = -50
+		custom_tooltip = { text = cathedral_reconstruction_10y }
+		hidden_tooltip = {
+			FROM = {
+				# The romanesque cathedral is now under construction for 10 years
+				random_demesne_title = {
+					limit = {
+						tier = baron
+						holding_type = temple
+						has_building = tp_roman_cathedrale
+						location = { has_wonder = wonder_cathedral_romane }
+					}
+					owner = { save_event_target_as = cathedral_patron }
+					save_event_target_as = lieu_cathedrale
+						location = {
+							destroy_wonder = yes
+							add_wonder = wonder_cathedral_romane
+							wonder = {
+								set_name = wonder_cathedral_romane
+								set_description = wonder_cathedral_romane_desc_UC
+							}
+						}
+						remove_building = tp_roman_cathedrale
+						add_building = tp_constructing_roman_cathedrale
+						location = { province_event = { id = REC.104 days = 3650 } }
+					# Bishop pays by taxes
+					add_holding_modifier = { name = romanesque_construction days = 3650 }
 				}
-				remove_building = tp_roman_cathedrale
-				add_building = tp_constructing_roman_cathedrale
-				location = { province_event = { id = REC.104 days = 3650 } }
-				
-				# Bishop pays by taxes
-				add_holding_modifier = { name = romanesque_construction days = 3650 }
-			}
 			# Opus Francigenum can appear
 			opus_francigenum_dynamic_apparition = yes
+			}
 		}
 	}
 		
@@ -332,24 +385,37 @@ character_event = {
 		}
 		# Lord pays 25% and gets piety
 		wealth = -50
-		piety = 10
-		FROM = {
-			# The romanesque cathedral is now under construction for 10 years
-			random_demesne_title = {
-				limit = {
-					tier = baron
-					holding_type = temple
-					has_building = tp_roman_cathedrale
+		piety = 25
+		custom_tooltip = { text = cathedral_reconstruction_7y }
+		hidden_tooltip = {
+			FROM = {
+				# The romanesque cathedral is now under construction for 10 years
+				random_demesne_title = {
+					limit = {
+						tier = baron
+						holding_type = temple
+						has_building = tp_roman_cathedrale
+						location = { has_wonder = wonder_cathedral_romane }
+					}
+					owner = { save_event_target_as = cathedral_patron }
+					save_event_target_as = lieu_cathedrale
+						location = {
+							destroy_wonder = yes
+							add_wonder = wonder_cathedral_romane
+							wonder = {
+								set_name = wonder_cathedral_romane
+								set_description = wonder_cathedral_romane_desc_UC
+							}
+						}
+						remove_building = tp_roman_cathedrale
+						add_building = tp_constructing_roman_cathedrale
+						location = { province_event = { id = REC.104 days = 3650 } }
+					# Bishop pays by taxes
+					add_holding_modifier = { name = romanesque_construction days = 2700 } # 75% of 10 years because lord pays 25%
 				}
-				remove_building = tp_roman_cathedrale
-				add_building = tp_constructing_roman_cathedrale
-				location = { province_event = { id = REC.104 days = 3650 } }
-				
-				# Bishop pays by taxes
-				add_holding_modifier = { name = romanesque_construction days = 2700 } # 75% of 10 years because lord pays 25%
+				# Opus Francigenum can appear
+				opus_francigenum_dynamic_apparition = yes
 			}
-			# Opus Francigenum can appear
-			opus_francigenum_dynamic_apparition = yes
 		}
 	}
 		
@@ -389,7 +455,32 @@ character_event = {
 					tier = baron
 					holding_type = temple
 					has_building = tp_roman_cathedrale
+					location = { has_wonder = wonder_cathedral_romane }
 				}
+				location = {
+					destroy_wonder = yes
+				}
+				#if = {
+				#	limit = {
+				#		location = {
+				#			any_demesne_title = {
+				#				OR = { 
+				#					is_LCDA_hard_episcopat = yes
+				#					is_VANILLA_hard_episcopat = yes
+				#					is_SWMH_hard_episcopat = yes
+				#				}
+				#			}
+				#		}
+				#	}
+				#	location = {
+				#		add_wonder = wonder_cathedral_romane
+				#		wonder = {
+				#			set_name = wonder_cathedral_romane
+				#			set_description = wonder_cathedral_romane_desc_promised
+				#		}
+				#	}
+				#}
+				set_title_flag = awaits_gothical_cathedral
 				remove_building = tp_roman_cathedrale
 				location = { 
 					if = {
@@ -446,5 +537,116 @@ character_event = {
 		add_character_modifier = { name = stolen_relic duration = 1826 } #5years
 		# Lord should use the relic in the year
 		character_event = { id = REC.108 days = 1826 } #5years
+	}
+}
+
+character_event = {
+	id = REC.110
+	desc = "DESCREC.110"
+	picture = GFX_evt_REC10
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_title = {
+			tier = baron
+			holding_type = temple
+			has_building = tp_constructing_roman_cathedrale
+			has_holding_modifier = romanesque_construction
+			NOT = { 
+				has_building = TP_hostellerie_pelerins_1
+				has_building = TP_hostellerie_pelerins_2
+			}			
+		}
+	}
+	
+	immediate = {
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_constructing_roman_cathedrale
+				has_holding_modifier = romanesque_construction
+				NOT = { 
+						has_building = TP_hostellerie_pelerins_1
+						has_building = TP_hostellerie_pelerins_2
+				}
+			}
+			set_title_flag = hostellerie_to_be_built
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 10
+
+		modifier = {
+			factor = 3
+			AND = {
+				any_war = { #the character is involved in war
+					using_cb = religious #that is a (minor) holy war
+				}
+				is_primary_war_defender = yes #is a defender in this war
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_demesne_title = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_constructing_roman_cathedrale
+				has_holding_modifier = romanesque_construction
+				has_siege = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			any_demesne_title = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_constructing_roman_cathedrale
+				has_holding_modifier = romanesque_construction
+				is_occupied = yes
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_demesne_title = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_constructing_roman_cathedrale
+				has_holding_modifier = romanesque_construction
+				is_capital = yes
+			}
+		}
+		modifier = {
+			factor = 0.7
+			any_demesne_title = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_constructing_roman_cathedrale
+				has_holding_modifier = romanesque_construction
+				has_title_flag = emotional_burning
+			}
+		}	
+	}
+
+	option = {
+		name = "REC.110A"
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_constructing_roman_cathedrale
+				has_holding_modifier = romanesque_construction
+				NOT = { 
+					has_building = TP_hostellerie_pelerins_1
+					has_building = TP_hostellerie_pelerins_2
+				}
+				has_title_flag = hostellerie_to_be_built
+			}
+			add_building = TP_hostellerie_pelerins_1
+			clr_title_flag = hostellerie_to_be_built
+			set_title_flag = mouchard_built_by_event
+		}
 	}
 }

@@ -6,7 +6,13 @@ XXX;an event for being built;un évènement pour être construit;;;;;;;;;;;;x
 TOOLTIP_JAMAIS;This fictious building is used to display a tooltip.;Ce bâtiment fictif sert de support à une info-bulle.;;;;;;;;;;;;x
 nobuilding;an event for being built;un évènement pour être construit;;;;;;;;;;;;x
 TOOLTIP_recent_construction;Has not already built something here during past year\n;N'a pas déjà construit quelque chose durant l'année dans ce domaine\n;;;;;;;;;;;;x
-TOOLTIP_prestige_building;This building require to spend some prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser des points de prestige pour être construit.\n Le coût en prestige sera déduit dès le lancement de la construction.;;;;;;;;;;;;x
+TOOLTIP_prestige_building;This building require to spend some prestige to get built. Your prestige points will be decreased when you start to build it.;Ce bâtiment requiert de dépenser des points de prestige pour être construit.;;;;;;;;;;;;x
+TOOLTIP_prestige_building_30;This building costs §Y30§! prestige to get built. ;Ce bâtiment requiert de dépenser §Y30§! points de prestige pour être construit.;;;;;;;;;;;;x
+TOOLTIP_prestige_building_60;This building costs §Y60§! prestige to get built. ;Ce bâtiment requiert de dépenser §Y60§! points de prestige pour être construit.;;;;;;;;;;;;x
+TOOLTIP_prestige_building_70;This building costs §Y70§! prestige to get built. ;Ce bâtiment requiert de dépenser §Y70§! points de prestige pour être construit.;;;;;;;;;;;;x
+TOOLTIP_prestige_building_90;This building costs §Y90§! prestige to get built. ;Ce bâtiment requiert de dépenser §Y90§! points de prestige pour être construit.;;;;;;;;;;;;x
+TOOLTIP_prestige_building_120;This building costs §Y120§! prestige to get built. ;Ce bâtiment requiert de dépenser §Y120§! points de prestige pour être construit.;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
 opinion_egg_stolen;Easter egg robber;Voleur d'œufs de Pâques;;;;;;;;;;;;x
 opinion_cathedral_employer;Employer;Employeur;;;;;;;;;;;;x
 donation;Cathedral donator;Donateur de ma Cathédrale;;;;;;;;;;;;x
@@ -15,6 +21,10 @@ stolen_relic_attempt;Attempted to steal my relic;A tenté de voler ma relique;;;;
 not_involved_in_personnal_war;Must not be involved in a personnal;Ne doit pas être impliqué dans une guerre privée;;;;;;;;;;;;x
 custom_paix_totale;§YTotal peace§! : nor you or any of your lieges must NOT be involved in a war;§YPaix totale§! : ni vous ni l'un de vos suzerains ne doivent être engagés dans un guerre;;;;;;;;;;;;x
 custom_relique;You must own a §YHoly relic§!;Vous devez posséder une §YSainte relique§!;;;;;;;;;;;;x
+i_attempted_fabricate_claim_chancellor_banned;Banished my Chancellor;A banni mon Chancelier;;;;;;;;;;;;x
+i_attempted_fabricate_claim_chancellor_killed;Killed my chancellor;A fait assassiner mon Chancelier;;;;;;;;;;;;x
+he_attempted_fabricate_claim_chancellor_banned;Banished his Chancellor;J'ai banni son Chancelier;;;;;;;;;;;;x
+he_attempted_fabricate_claim_chancellor_killed;Made killed his chancellor;J'ai fait assassiner son Chancelier;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 #;;ReC;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
@@ -49,9 +59,9 @@ developpement;development;développement;;;;;;;;;;;x
 developpementold;development was;développement était;;;;;;;;;;;x
 RULE_OPUS_FRANCIGENUM;§RL3T§!: Opus Francigenum;§RL3T§! : Opus Francigenum;;;;;;;;;;;;x
 RULE_OPUS_FRANCIGENUM_DYNAMIC;Dynamic;Dynamique;Dynamisch;;Dinámico;;;;;;;;;x
-RULE_OPUS_FRANCIGENUM_DYNAMIC_DESC;The Opus Francigenum will occur dynamically under certain conditions;L'Opus Francigenum se produira dynamiquement sous certaines conditions;;;;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM_DYNAMIC_DESC;The Opus Francigenum will occur dynamically under certain conditions.;L'Opus Francigenum se produira dynamiquement sous certaines conditions.;;;;;;;;;;;;x
 RULE_OPUS_FRANCIGENUM_HISTORICAL;Historical;Historique;Historisch;;Histórico;;;;;;;;;x
-RULE_OPUS_FRANCIGENUM_HISTORICAL_DESC;The Opus Francigenum will occur between the years of 1130 and 1150;L'Opus Francigenum se produira entre l'an 1130 et l'an 1150.;;;;;;;;;;;;x
+RULE_OPUS_FRANCIGENUM_HISTORICAL_DESC;The Opus Francigenum will occur between the years of 1130 and 1150.;L'Opus Francigenum se produira entre l'an 1130 et l'an 1150.;;;;;;;;;;;;x
 RULE_OPUS_FRANCIGENUM_FIFTY_YEARS;Random;Aléatoire;Zufällig;;Aleatorio;;;;;;;;;x
 RULE_OPUS_FRANCIGENUM_FIFTY_YEARS_DESC;The Opus Francigenum will occur at a random date, though at the earliest 50 years after the game is started.;L'Opus Francigenum se produira à une date aléatoire, mais au plus tôt 50 ans après le début de la partie.;;;;;;;;;;;;x
 RULE_OPUS_FRANCIGENUM_FREE;Free;Libre;;;;;;;;;;;;x
@@ -61,6 +71,15 @@ RULE_ESSOR_URBAIN_DYNAMIC;More historical context;Contexte plus historique;;;Con
 RULE_ESSOR_URBAIN_DYNAMIC_DESC;;La présente règle tend à rétablir le contexte désurbanisé du Moyen-âge en limitant le nombre de cités présentes trop tôt sur la carte. Le système d'émergence des cités du mod est à son plein potentiel. ;;;;;;;;;;;;x
 RULE_ESSOR_URBAIN_STATIC;Static context;Contexte statique;;;Contexto statico;;;;;;;;;x
 RULE_ESSOR_URBAIN_STATIC_DESC;;Cette règle préserve toutes les cités définies sur la carte, quelque soit la période. Le système d'émergence des cités du mod est néanmoins appliqué mais sera limité du fait du nombre de villes déjà présentes.;;;;;;;;;;;;x
+RULE_BETTER_CLAIMS;§RL3T§!: Claims system;§RL3T§! : Système de revendications;;;;;;;;;;;;x
+RULE_BETTER_CLAIMS_restricted;Restricted;Restreint;;;;;;;;;;;;x
+RULE_BETTER_CLAIMS_restricted_DESC;You can fabricate claims on counties and baronies, you can only fabricate claim on duchies if you pursue the "become king" ambition, your chancellor can counter claim fabrications from other rulers.;Vous pouvez fabriquer des revendications sur les comtés et baronnies, sur les duchés si vous avez l'ambition "Devenir roi", et votre chancelier peut contrer la fabrication de revendications des autres dirigeants.;;;;;;;;;;;;x
+RULE_BETTER_CLAIMS_vanilla;Vanilla;Original;;;;;;;;;;;;x
+RULE_BETTER_CLAIMS_vanilla_DESC;Mechanics for claims remain unchanged.;Les mécanismes de revendications demeurent inchangés.;;;;;;;;;;;;x
+RULE_BETTER_CLAIMS_plots_only;Harsh;Rigoureux;;;;;;;;;;;;x
+RULE_BETTER_CLAIMS_plots_only_DESC;It is no longer possible to send your chancellor fabricating claims.;Il n'est plus possible d'envoyer votre chancelier fabriquer des revendications.;;;;;;;;;;;;x
+RULE_GROUP_L3T;The 3 Towers;Les 3 Tours;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
 L3T_fights_for_faith;Gain §Grecognition for fighting§! for Catholic faith;Gagne §Greconnaissance pour son combat§! pour la Foi catholique;;;;;;;;;;;;x
 L3T_defends_for_faith;Gain §Grecognition for defending§! Catholic faith;Gagne §Greconnaissance pour sa défense§! de la Foi catholique;;;;;;;;;;;;x
 L3T_works_for_faith;Gain §Grecognition for spreading§! Catholic faith;Gagne §Greconnaissance comme précheur§! de la Foi catholique;;;;;;;;;;;;x

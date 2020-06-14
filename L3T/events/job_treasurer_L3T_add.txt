@@ -1,0 +1,432 @@
+#################################
+#         L3T  par Arko         #
+#################################
+
+namespace = L3T
+
+################################
+#  STEWARDSHIP BALANCE EVENTS  #
+################################
+
+##evaluate yearly the ruler's situation if regency etc.
+##evaluate yearly the stewardship bonus/malus
+##delete the delegation (both sides) if the ruler don't needs it anymore
+##delete the delegation (both sides) if the chancellor can't assume it anymore
+character_event = {
+    id = L3T.90
+	hide_window = yes
+	
+	only_rulers = yes
+
+	is_triggered_only = yes
+	
+	trigger = { 
+	}
+
+	immediate = {
+		if = {
+			#regular case ruler+steward
+			limit = { 
+				OR = {
+					AND = {
+						is_landed = yes
+						has_regent = no
+					}
+					AND = { 
+						is_landed = yes
+						has_regent = no
+						tier = BARON
+						is_patrician = no
+						any_courtier = { has_job_title = job_treasurer }
+					}
+				}
+			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWruler_bonus = yes #gives ruler_bonus
+			add_adequate_STWsteward_bonus = yes #gives stew_bonus
+		}
+		if = {
+			#under regency regent+steward
+			limit = {
+				OR = {
+					AND = {
+						is_landed = yes
+						has_regent = yes
+					}
+					AND = {
+						is_landed = yes
+						has_regent = yes
+						tier = BARON
+						is_patrician = no
+						any_courtier = { has_job_title = job_treasurer }
+					}
+				}
+			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWregent_bonus = yes #gives ruler_bonus
+			add_adequate_STWsteward_bonus = yes #gives stew_bonus
+		}		
+		if = {
+			#baron with no court ruler+baron (doubling ruler bonus)
+			limit = { 
+				is_landed = yes
+				has_regent = no
+				tier = BARON
+				is_patrician = no
+				NOT = { any_courtier = { has_job_title = job_treasurer }}
+			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWruler_bonus = yes #gives ruler_bonus
+			add_adequate_STWbaron_bonus = yes #gives stew_bonus
+		}	
+		if = {
+			#baron with no court regent+regent2 (doubling regent bonus)
+			limit = { 
+				is_landed = yes
+				has_regent = yes
+				tier = BARON
+				is_patrician = no
+				NOT = { any_courtier = { has_job_title = job_treasurer }}
+			}
+			remove_any_previous_STW_bonus = yes
+			add_adequate_STWregent_bonus = yes #gives ruler_bonus
+			add_adequate_STWbaronRG_bonus = yes #gives stew_bonus
+		}
+	}
+}
+##si trop quiche en intendance, possibilité de déléguer
+character_event = {
+	id = L3T.91
+	desc = "DESCL3T.91"
+	#picture = GFX_evt_council
+	picture = GFX_evt_gathering_of_minds
+	border = GFX_event_normal_frame_economy
+	
+	only_rulers = yes
+	min_age = 16
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_landed = yes
+				has_regent = no
+			}
+			AND = { 
+				is_landed = yes
+				has_regent = no
+				tier = BARON
+				is_patrician = no
+				any_courtier = { has_job_title = job_treasurer }
+			}
+		}
+		#ruler is not a steward himself
+		NOT = { has_job_title = job_treasurer }
+		#ruler is bad at stewardship, has the worst modifier
+		has_character_modifier = stw_ruler_bonus0_6
+		NOT = { has_character_modifier = STW_delegation }
+		NOT = { has_character_flag = STW_refused_delegation }
+		#steward is above 15
+		job_treasurer = { 
+			stewardship = 16
+			NOT = { has_character_modifier = STW_extra_work }
+			NOT = { trait = pregnant }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36	
+		modifier = { factor = 0.75 NOT = { stewardship = 2 } }
+		modifier = { factor = 0.75 NOT = { stewardship = 4 } }
+		modifier = { factor = 0.75 NOT = { stewardship = 6 } }
+		modifier = { factor = 0.85 job_treasurer = {stewardship = 16 }}
+		modifier = { factor = 0.90 job_treasurer = {stewardship = 17 }}
+		modifier = { factor = 0.90 job_treasurer = {stewardship = 18 }}
+		modifier = { factor = 0.90 job_treasurer = {stewardship = 19 }}
+		modifier = { factor = 0.95 job_treasurer = {stewardship = 20 }}
+	}
+	
+	option = {
+		#delegate more
+		name = "L3T.91A"
+		##additional modifier that lowers the effect of "stw_ruler_bonus0_6
+		add_character_modifier = { 
+			name = STW_delegation
+			duration = -1
+		}
+		job_treasurer = {
+			#modifier that lowers effecient for other tasks
+			add_character_modifier = { 
+				name = STW_extra_work
+				duration = -1
+			}
+		}
+	}
+	option = {
+		#no keep going on
+		name = "L3T.91B"
+		set_character_flag = STW_refused_delegation
+	}
+}
+
+#chancellor or liege dies
+character_event = {
+    id = L3T.92
+	hide_window = yes
+
+	#called on_death ROOT is the dead character
+	is_triggered_only = yes 
+	
+	trigger = {
+		OR = {
+			#treasurer is dying
+			ROOT = { 
+				has_job_title = job_treasurer
+				has_character_modifier = STW_extra_work
+				employer = { has_character_modifier = STW_delegation }
+			}
+			#employer is dying
+			ROOT = { 
+				job_treasurer= { 
+					has_character_modifier = STW_extra_work
+				}
+				has_character_modifier = STW_delegation
+			}
+		}
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				#dead steward
+				ROOT = {
+					has_job_title = job_treasurer
+					has_character_modifier = STW_extra_work
+					employer = { has_character_modifier = STW_delegation }
+				}
+			}
+			ROOT = {
+				employer = {
+					#remove_character_modifier = STW_delegation
+					character_event = { id = L3T.96 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				#dead ruler
+				ROOT = {
+					has_character_modifier = STW_delegation
+					job_treasurer= { 
+						has_character_modifier = STW_extra_work
+					}
+				}
+			}
+			ROOT = {
+				#job_treasurer = { remove_character_modifier = STW_extra_work }
+				job_treasurer = { character_event = { id = L3T.96 }}
+			}
+		}
+	}
+}
+#maintenance if not covered by breakup cases (leave council, death)
+character_event = {
+    id = L3T.93
+	#picture = GFX_evt_gathering_of_minds
+	#border = GFX_event_normal_frame_economy
+	hide_window = yes
+
+	min_age = 16
+	
+	#called on_yearly_pulse
+	is_triggered_only = yes 
+
+	trigger = {
+		OR = {
+			##fixing asymetry
+			#is the treasurer but has no corresponding liege (délégant)
+			AND = {
+				has_job_title = job_treasurer
+				has_character_modifier = STW_extra_work
+				liege = { NOT = { has_character_modifier = STW_delegation }}
+			}
+			#is the liege but no corresponding chancellor (délégataire)
+			AND = {
+				has_character_modifier = STW_delegation
+				job_treasurer = { NOT = { has_character_modifier = STW_extra_work }}
+			}
+		}
+	}
+	immediate = {
+		if = { 
+			limit = {
+				has_job_title = job_treasurer
+				has_character_modifier = STW_extra_work
+				liege = { NOT = { has_character_modifier = STW_delegation }}
+			}
+			remove_character_modifier = STW_extra_work
+			set_character_flag = removed_by_93
+		}
+		if = {
+			limit = {
+				has_character_modifier = STW_delegation
+				job_treasurer = { NOT = { has_character_modifier = STW_delegation }}
+			}	
+			remove_character_modifier = STW_delegation
+			set_character_flag = removed_by_93
+		}
+	}
+}
+# L3T.94 - inform liege and treasurer about the end of delegation (due to ruler)
+character_event = {
+	id = L3T.94
+	#desc = "DESCL3T.94"
+	picture = GFX_evt_gathering_of_minds
+	border = GFX_event_normal_frame_economy
+	
+	desc = {
+		trigger = {
+			NOT = { has_job_title = job_treasurer }
+		}
+		text = "DESCL3T.94a"
+		picture = GFX_evt_gathering_of_minds
+	}
+	desc = {
+		trigger = {
+			has_job_title = job_treasurer
+		}
+		text = "DESCL3T.94b"
+		picture = GFX_evt_gathering_of_minds
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.94A"
+		trigger = {
+			NOT = { has_job_title = job_treasurer }
+			has_character_modifier = STW_delegation
+			job_treasurer = { has_character_modifier = STW_extra_work }
+		}
+		remove_character_modifier = STW_delegation
+		set_character_flag = removed_by_94
+		job_treasurer = { 
+			remove_character_modifier = STW_extra_work
+			set_character_flag = removed_by_94
+		} #to ping him in the event option
+	}
+	option = {
+		name = "L3T.94A"
+		trigger = {
+			has_job_title = job_treasurer
+			has_character_modifier = STW_extra_work
+			employer = { has_character_modifier = STW_delegation }
+		}		
+		remove_character_modifier = STW_extra_work
+		set_character_flag = removed_by_94
+		employer = { 
+			remove_character_modifier = STW_delegation
+			set_character_flag = removed_by_94
+		} #to ping him in the event option
+	}
+}
+# L3T.95 - inform liege and treasurer about the end of delegation (due to steward)
+character_event = {
+	id = L3T.95
+	#desc = "DESCL3T.95"
+	picture = GFX_evt_gathering_of_minds
+	border = GFX_event_normal_frame_economy
+	
+	desc = {
+		trigger = {
+			NOT = { has_job_title = job_treasurer }
+		}
+		text = "DESCL3T.95a"
+		picture = GFX_evt_gathering_of_minds
+	}
+	desc = {
+		trigger = {
+			has_job_title = job_treasurer
+		}
+		text = "DESCL3T.95b"
+		picture = GFX_evt_gathering_of_minds
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.95A"
+		trigger = {
+			NOT = { has_job_title = job_treasurer }
+		}
+		remove_character_modifier = STW_delegation
+		set_character_flag = removed_by_95
+		job_treasurer = { 
+			remove_character_modifier = STW_extra_work
+			set_character_flag = removed_by_95
+		}#to ping him in the event option
+	}
+	option = {
+		name = "L3T.95A"
+		trigger = {
+			has_job_title = job_treasurer
+		}		
+		remove_character_modifier = STW_extra_work
+		set_character_flag = removed_by_95
+		employer = { 
+			remove_character_modifier = STW_delegation
+			set_character_flag = removed_by_95
+		}#to ping him in the event option
+	}
+}
+
+# L3T.96 - inform surviving part about the end of delegation (due to death)
+character_event = {
+	id = L3T.96
+	#desc = "DESCL3T.96"
+	picture = GFX_evt_death
+	border = GFX_event_normal_frame_economy
+	
+	desc = {
+		trigger = {
+			NOT = { has_job_title = job_treasurer }
+			has_character_modifier = STW_delegation
+			job_treasurer = { has_character_modifier = STW_extra_work }
+		}
+		text = "DESCL3T.96a"
+		picture = GFX_evt_death
+	}
+	desc = {
+		trigger = {
+			has_job_title = job_treasurer
+			has_character_modifier = STW_extra_work
+			employer = { has_character_modifier = STW_delegation }
+		}
+		text = "DESCL3T.96b"
+		picture = GFX_evt_death
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "L3T.96A"
+		trigger = {
+			NOT = { has_job_title = job_treasurer }
+			has_character_modifier = STW_delegation
+			job_treasurer = { has_character_modifier = STW_extra_work }
+		}
+		remove_character_modifier = STW_delegation
+		set_character_flag = removed_by_96
+		#job_treasurer = { remove_character_modifier = STW_extra_work } #to ping him in the event option
+	}
+	option = {
+		name = "L3T.96A"
+		trigger = {
+			has_job_title = job_treasurer
+			has_character_modifier = STW_extra_work
+			employer = { has_character_modifier = STW_delegation }
+		}		
+		remove_character_modifier = STW_extra_work
+		set_character_flag = removed_by_96
+		#liege = { remove_character_modifier = STW_delegation } #to ping him in the event option
+	}
+}
