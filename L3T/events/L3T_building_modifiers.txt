@@ -845,6 +845,8 @@ character_event = {
 
 # Wait a little before to alert that it can be a good idea to move the capital
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
+###obsolete since all capital castles are feudal cities now
+##(not triggered anymore)
 character_event = {
 	id = L3T.227
 	
