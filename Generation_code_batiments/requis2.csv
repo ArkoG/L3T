@@ -1,0 +1,27 @@
+tag;nom FR;nom ENG;cout Or;cout Prestige;temps;Effet 1 nom;Effet 1 valeur;Effet 2 nom;Effet 2 valeur;Effet 3 nom;Effet 3 valeur;Effet 4 nom;Effet 4 valeur;libre code;not_if_exists;Prérequis Bâtiment1;Prérequis Bâtiment2;Upgrade from;Prérequis Terrain;Prérequis modifieur de province;Prérequis Technologie;Niveau de la technologie requise;Facteur de création IA;Extra tech;Description FR;Description ENG
+TP_monastery_1;Ermitage;Hermitage;100;0;180;liege_piety;0,01;liege_prestige;0;local_tax_modifier;0,01;;;;;MONASTERE;;;;;TECH_CONSTRUCTION;0;97;10;x;x
+TP_monastery_2;Prieuré;Priory;140;0;370;liege_piety;0,02;liege_prestige;0;local_tax_modifier;0,01;;;;;MONASTERE;;TP_monastery_1;;;TECH_CONSTRUCTION;0;96;10;x;x
+TP_monastery_3;Monastère;Monastery;170;70;570;liege_piety;0,02;liege_prestige;0;local_tax_modifier;0,02;;;;;MONASTERE;;TP_monastery_2;;;TECH_CONSTRUCTION;0;95;10;x;x
+TP_monastery_4;Abbaye;Abbey;520;0;1100;liege_piety;0,02;liege_prestige;0,01;local_tax_modifier;0,01;;;;;MONASTERE;;TP_monastery_3;;;TECH_CONSTRUCTION;1;94;10;x;x
+TP_monastery_5;Abbatiale;Abbey church;450;120;1230;liege_piety;0,01;liege_prestige;0,02;local_tax_modifier;0,02;;;;;MONASTERE;;TP_monastery_4;;;TECH_CONSTRUCTION;2;93;10;x;x
+TP_episcopat_L1;Résidence épiscopale;Episcopal residence;120;0;180;liege_prestige;0,01;tax_income;0;local_tax_modifier;0,01;;;;;;MONASTERE;;;;TECH_CONSTRUCTION;0;97;10;x;x
+TP_episcopat_L2;Résidence épiscopale;Episcopal residence;230;0;380;liege_prestige;0,01;tax_income;0;local_tax_modifier;0,01;;;;;;MONASTERE;TP_episcopat_L1;;;TECH_CONSTRUCTION;0;96;10;x;x
+TP_episcopat_L3;Résidence épiscopale;Episcopal residence;360;70;770;liege_prestige;0,01;tax_income;-0,1;local_tax_modifier;0,01;;;;;;MONASTERE;TP_episcopat_L2;;;TECH_CONSTRUCTION;0;95;10;x;x
+TP_episcopat_L4;Palais épiscopal;Episcopal Palace;380;0;820;liege_prestige;0,01;tax_income;-0,2;local_tax_modifier;0,02;;;;;CITEEPISCOPALE;MONASTERE;TP_episcopat_L3;;;TECH_CONSTRUCTION;1;94;10;x;x
+TP_episcopat_L5;Palais épiscopal;Episcopal Palace;450;120;1230;liege_prestige;0,01;tax_income;-0,3;local_tax_modifier;0,01;;;;;CITEEPISCOPALE;MONASTERE;TP_episcopat_L4;;;TECH_CONSTRUCTION;2;93;10;x;x
+CA_logis_L1;Logis seigneurial;Seigniorial Residence;120;30;220;liege_prestige;0,01;tax_income;0;local_tax_modifier;0,02;;;;;;;;;;TECH_CONSTRUCTION;0;97;10;x;x
+CA_logis_L2;Logis seigneurial;Seigniorial Residence;150;0;380;liege_prestige;0,01;tax_income;0;local_tax_modifier;0,01;;;;;;;CA_logis_L1;;;TECH_CONSTRUCTION;0;96;10;x;x
+CA_logis_L3;Logis seigneurial;Seigniorial Residence;270;70;570;liege_prestige;0,01;tax_income;-0,1;local_tax_modifier;0,01;;;;;;;CA_logis_L2;;;TECH_CONSTRUCTION;0;95;10;x;x
+CA_logis_L4;Logis seigneurial;Seigniorial Palace;270;0;570;liege_prestige;0,01;tax_income;-0,2;local_tax_modifier;0,01;;;;;;;CA_logis_L3;;;TECH_CONSTRUCTION;1;94;10;x;x
+CA_logis_L5;Logis seigneurial;Seigniorial Palace;450;120;1230;liege_prestige;0,01;tax_income;-0,3;local_tax_modifier;0,01;;;;;FEODAL_adm;;CA_logis_L4;;;TECH_CONSTRUCTION;2;93;10;x;x
+CA_adm_seigneurial_L1;Perception;Perception;130;30;220;local_tax_modifier;0,1;;;;;;;;;;CA_logis_L1;;;;TECH_CONSTRUCTION;1;95;10;x;x
+CA_adm_seigneurial_L2;Perception;Perception;190;0;380;local_tax_modifier;0,1;;;;;;;;;;FEODAL_mil;CA_adm_seigneurial_L1;;;TECH_CONSTRUCTION;1;94;10;x;x
+CA_adm_seigneurial_L3;Perception;Perception;330;0;640;local_tax_modifier;0,1;;;;;;;;;FEODAL_adm;CA_logis_L3;CA_adm_seigneurial_L2;;;TECH_CONSTRUCTION;1;93;10;x;x
+CT_adm_urbain_L1;Maison de commune;Communal House;120;0;180;tax_income;0;local_tax_modifier;0,01;;;;;;;;;;;;TECH_CONSTRUCTION;0;97;10;x;x
+CT_adm_urbain_L2;Hôtel de commune;Town Hall;150;0;380;tax_income;0;local_tax_modifier;0,01;;;;;;;;;CT_adm_urbain_L1;;;TECH_CONSTRUCTION;0;96;10;x;x
+CT_adm_urbain_L3;Hôtel de ville;City Hall;380;70;820;tax_income;-0,1;local_tax_modifier;0,02;;;;;;;CITE_L1;VOC_COMMERCIALE;CT_adm_urbain_L2;;;TECH_CONSTRUCTION;0;95;10;x;x
+CT_adm_urbain_L4;Salle du conseil;Council room;520;0;1100;tax_income;-0,2;local_tax_modifier;0,02;;;;;;;;VOC_COMMERCIALE;CT_adm_urbain_L3;;;TECH_CONSTRUCTION;1;94;10;x;x
+CT_adm_urbain_L5;Palais communal;City palace;450;120;1230;tax_income;-0,3;local_tax_modifier;0,04;;;;;;;;VOC_COMMERCIALE;CT_adm_urbain_L4;;;TECH_CONSTRUCTION;2;93;10;x;x
+CT_beffroi_L1;Tour Horloge;Clock Tower;150;30;220;liege_prestige;0,02;tax_income;-0,1;;;;;;;CITE_L1;CT_adm_urbain_L1;;;;TECH_CONSTRUCTION;1;95;10;x;x
+CT_beffroi_L2;Beffroi;Belfry;240;60;460;liege_prestige;0,03;tax_income;-0,2;;;;;;;;VOC_COMMERCIALE;CT_beffroi_L1;;;TECH_CONSTRUCTION;1;94;10;x;x
+CT_beffroi_L3;Haut Beffroi;High Belfry;360;70;770;liege_prestige;0,05;tax_income;-0,3;;;;;;;CT_adm_urbain_L3;VOC_COMMERCIALE;CT_beffroi_L2;;;TECH_CONSTRUCTION;1;93;10;x;x

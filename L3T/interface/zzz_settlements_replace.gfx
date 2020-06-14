@@ -1,0 +1,59 @@
+objectTypes = {
+
+#### Western settlement REPLACEMENT########################################################
+
+
+	EMFXActorType = {
+		name = "westerngfx_temple_1"
+		actorfile = "gfx\models\Settlements\Western\Western_Church_01.xac"
+		scale = 1.2f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_temple_2"
+		actorfile = "gfx\models\Settlements\Western\Western_Church_01.xac"
+		scale = 1.2f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_temple_3"
+		actorfile = "gfx\models\Settlements\Western\Western_Church_01.xac"
+		scale = 1.2f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_temple_4" #romanesque cathedral
+		actorfile = "gfx\models\Settlements\Western\Western_Church_02.xac"
+		scale = 1.8f
+		use_animation = no
+		cull_distance = 750.0f
+	}
+	EMFXActorType = {
+		name = "westerngfx_temple_5" #gotjical cathedral
+		actorfile = "gfx\models\Settlements\Western\Western_Church_03.xac"
+		scale = 1.8f
+		use_animation = no
+		cull_distance = 750.0f
+	}
+
+	pdxmesh = {
+		name = "tradepost_camp"
+		file = "gfx\models\Settlements\Trade\tradepost.mesh"
+		
+		scale = 0.2f
+		cull_distance = 500.0f
+	}
+	pdxmesh = {
+		name = "wonder_construction"
+		file = "gfx/models/Mapitems/great_works/construction/wonder_construction.mesh"		
+		
+		# scale = 0.7 #vanilla
+		scale = 0.5
+	}
+}

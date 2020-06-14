@@ -41,13 +41,33 @@ character_event = {
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
 		NOT = { trait = incapable }
-		NOT = { location = { religion = ROOT } }
+		###L3T
+		#possibly continue the conversion work if there is an unwanted minority there
+		OR = {
+			NOT = { location = { religion = ROOT } } #vanilla, wrong religion
+			AND = {
+				location = {
+					religion = ROOT #is same religion
+					has_province_modifier = minority_muslim_neg #there's an unwanted muslim minority
+				}
+				liege = { religion_group = christian } #employer is christian
+			}
+			AND = {
+				location = {
+					religion = ROOT #is same religion
+					has_province_modifier = minority_christian_neg #there's an unwanted christian minority
+				}
+				liege = { religion_group = muslim } #employer is muslim
+			}
+		}
+		###L3T-end
 		location = {
 			owner = { same_realm = ROOT }
 		}
 	}
 	
 	mean_time_to_happen = {
+		#TOTORO missing religion_for influence
 		months = 960
 		
 		modifier = {
@@ -298,6 +318,69 @@ character_event = {
 		name = "EVTOPTA900"
 		piety = 10
 		location = { religion = ROOT }
+		
+#		hidden_tooltip = {
+			location = {
+				#christian >> muslim
+				if = {
+					limit = {
+						has_province_modifier = trad_christian
+						religion_group = muslim
+					}
+					remove_province_modifier = trad_christian
+					add_province_modifier = { 
+						name = trad_muslim
+						duration = -1
+						hidden = yes  #hidden for now
+					}
+					###minority computation here 
+					
+					#
+					#
+					#should put all this in a separate event
+					#
+					#
+				}
+				#muslim >>> christian
+				if = {
+					limit = {
+						has_province_modifier = trad_muslim
+						religion_group = christian
+					}
+					remove_province_modifier = trad_muslim
+					add_province_modifier = { 
+						name = trad_christian
+						duration = -1
+						hidden = yes  #hidden for now
+					}
+					###minority computation here
+				}
+				#christian >>> other
+				if = {
+					limit = {
+						has_province_modifier = trad_christian
+						NOT = { 
+							religion_group = christian
+							religion_group = muslim
+						}
+					}
+					remove_province_modifier = trad_christian
+					###minority computation here
+				}
+				#muslim >>> other
+				if = {
+					limit = {
+						has_province_modifier = trad_muslim
+						NOT = { 
+							religion_group = christian
+							religion_group = muslim
+						}
+					}
+					remove_province_modifier = trad_muslim
+					###minority computation here
+				}
+			}		
+#		}
 		hidden_tooltip = {
 			location = {
 				if = {

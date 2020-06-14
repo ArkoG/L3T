@@ -23,8 +23,15 @@ settlement_decisions = {
 		
 		potential = {
 			holder_scope = { character = FROM }
-			is_capital = yes
+			is_capital = yes #province capital
 			FROM = { construire_cathedral_potential = yes }
+			OR = {
+				AND = { 
+					FROM = { has_character_flag = has_relique_from_cathedral }
+					has_title_flag = awaits_gothical_cathedral
+				}
+				NOT = { has_title_flag = awaits_gothical_cathedral }
+			}
 		}
 
 		allow = {

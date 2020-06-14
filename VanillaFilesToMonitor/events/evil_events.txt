@@ -11,8 +11,13 @@
 #If in the red  => increase revolt risk in a province.
 province_event = {
 	id = 68000
+<<<<<<< HEAD
 	desc = "EVTDESC68000"
 	picture = "GFX_evt_bandits"
+=======
+	desc = EVTDESC68000
+	picture = GFX_evt_bandits
+>>>>>>> master
 	
 	notification = yes
 	
@@ -119,14 +124,23 @@ province_event = {
 	}
 
 	option = {
+<<<<<<< HEAD
 		name = "EVTOPTA68000"
+=======
+		name = EVTOPTA68000
+>>>>>>> master
 	}
 }
 
 province_event = {
 	id = 68001
+<<<<<<< HEAD
 	desc = "EVTDESC68001"
 	picture = "GFX_evt_council"
+=======
+	desc = EVTDESC68001
+	picture = GFX_evt_council
+>>>>>>> master
 	
 	notification = yes
 	
@@ -157,7 +171,11 @@ province_event = {
 	}
 
 	option = {
+<<<<<<< HEAD
 		name = "EVTOPTA68001"
+=======
+		name = EVTOPTA68001
+>>>>>>> master
 		trigger = {
 			owner = {
 				religion_group = christian
@@ -165,7 +183,11 @@ province_event = {
 		}
 	}
 	option = {
+<<<<<<< HEAD
 		name = "EVTOPTB68001"
+=======
+		name = EVTOPTB68001
+>>>>>>> master
 		trigger = {
 			owner = {
 				religion_group = muslim
@@ -173,7 +195,11 @@ province_event = {
 		}
 	}
 	option = {
+<<<<<<< HEAD
 		name = "EVTOPTA88283"
+=======
+		name = EVTOPTA88283
+>>>>>>> master
 		trigger = {
 			owner = {
 				NOT = { religion_group = christian }
@@ -186,8 +212,13 @@ province_event = {
 # Establishment of thieves_guild in a province, if budget in the red
 province_event = {
 	id = 68010
+<<<<<<< HEAD
 	desc = "EVTDESC68010"
 	picture = "GFX_evt_bandits"
+=======
+	desc = EVTDESC68010
+	picture = GFX_evt_bandits
+>>>>>>> master
 	
 	notification = yes
 	
@@ -286,16 +317,26 @@ province_event = {
 	}
 
 	option = {
+<<<<<<< HEAD
 		name = "EVTOPTA68010"
+=======
+		name = EVTOPTA68010
+>>>>>>> master
 	}
 }
 
 # Destruction of thieves_guild in a province
 province_event = {
 	id = 68011
+<<<<<<< HEAD
 	desc = "EVTDESC68011"
 	
 	picture = "GFX_evt_burning_house"
+=======
+	desc = EVTDESC68011
+	
+	picture = GFX_evt_burning_house
+>>>>>>> master
 	
 	notification = yes
 	
@@ -326,14 +367,22 @@ province_event = {
 	}
 
 	option = {
+<<<<<<< HEAD
 		name = "EVTOPTA68011"
+=======
+		name = EVTOPTA68011
+>>>>>>> master
 	}
 }
 
 # Establishment of smugglers_ring in a province, if red budget
 province_event = {
 	id = 68020
+<<<<<<< HEAD
 	desc = "EVTDESC68020"
+=======
+	desc = EVTDESC68020
+>>>>>>> master
 	
 	notification = yes
 	
@@ -342,7 +391,11 @@ province_event = {
 		NOT = { has_province_modifier = smugglers_ring }
 	}
 	
+<<<<<<< HEAD
 	picture = "GFX_evt_bandits"
+=======
+	picture = GFX_evt_bandits
+>>>>>>> master
 	
 	mean_time_to_happen = {
 		months = 240
@@ -433,18 +486,161 @@ province_event = {
 	}
 
 	option = {
+<<<<<<< HEAD
 		name = "EVTOPTA68020"
+=======
+		name = EVTOPTA68020
+>>>>>>> master
 	}
 }
 
 # Destruction of smugglers_ring in a province
 province_event = {
 	id = 68021
+<<<<<<< HEAD
 	desc = "EVTDESC68021"
 	
 	notification = yes
 	
 	picture = "GFX_evt_burning_house"
+=======
+	desc = {
+		text = EVTDESC68021
+		trigger = {
+			NOR = {
+				trigger_if = {
+					limit = {
+						owner = {
+							any_demesne_wonder = { 
+								count = 1
+								location = { province = PREVPREVPREV }
+							}
+						}
+					}
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+					}
+				}
+				any_neighbor_province = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+					}
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC68021_RETINUE
+		trigger = {
+			OR = {
+				trigger_if = {
+					limit = {
+						owner = {
+							any_demesne_wonder = { 
+								count = 1
+								location = { province = PREVPREVPREV }
+							}
+						}
+					}
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+						has_wonder_upgrade = upgrade_retinue
+					}
+				}
+				any_neighbor_province = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+						has_wonder_upgrade = upgrade_retinue
+					}
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC68021_TEMPLE_GUARDS
+		trigger = {
+			OR = {
+				trigger_if = {
+					limit = {
+						owner = {
+							any_demesne_wonder = { 
+								count = 1
+								location = { province = PREVPREVPREV }
+							}
+						}
+					}
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+						has_wonder_upgrade = upgrade_temple_guards
+					}
+				}
+				any_neighbor_province = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+						has_wonder_upgrade = upgrade_temple_guards
+					}
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC68021_FALLBACK
+		trigger = {
+			OR = {
+				trigger_if = {
+					limit = {
+						owner = {
+							any_demesne_wonder = { 
+								count = 1
+								location = { province = PREVPREVPREV }
+							}
+						}
+					}
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+						NOR = { #Fallback if we add the flags to more upgrades
+							has_wonder_upgrade = upgrade_temple_guards
+							has_wonder_upgrade = upgrade_retinue
+						}
+					}
+				}
+				any_neighbor_province = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+						NOR = { #Fallback if we add the flags to more upgrades
+							has_wonder_upgrade = upgrade_temple_guards
+							has_wonder_upgrade = upgrade_retinue
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	notification = yes
+	
+	picture = GFX_evt_burning_house
+>>>>>>> master
 	
 	trigger = {
 		owner = { wealth = 0 }
@@ -461,30 +657,130 @@ province_event = {
 			factor = 0.75
 			owner = { realm_intrigue = 20 }
 		}
+<<<<<<< HEAD
 	
 		modifier = {
 			factor = 0.75
 			owner = { trait = just }
 		}			
+=======
+		modifier = {
+			factor = 0.75
+			owner = { trait = just }
+		}	
+		modifier = {
+			factor = 2
+			OR = {
+				trigger_if = {
+					limit = {
+						owner = {
+							any_demesne_wonder = { 
+								count = 1
+								location = { province = PREVPREVPREV }
+							}
+						}
+					}
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+					}
+				}
+				trigger_if = {
+					limit = {
+						any_neighbor_province = {
+							has_wonder = yes
+						}
+					}
+					any_neighbor_province = {
+						has_wonder = yes
+						wonder = {
+							is_active = yes
+							has_wonder_upgrade_flag = defensive
+							has_wonder_upgrade_flag = unit
+						}
+					}
+				}
+			}
+		}		
+>>>>>>> master
 	}
 	
 	immediate = {
 		remove_province_modifier = smugglers_ring
+<<<<<<< HEAD
 	}
 
 	option = {
 		name = "EVTOPTA68021"
+=======
+		if = {
+			limit = {
+				owner = {
+					any_demesne_wonder = { 
+						count = 1
+						location = { province = PREVPREVPREV }
+					}
+				}
+				wonder = {
+					is_active = yes
+					has_wonder_upgrade_flag = defensive
+					has_wonder_upgrade_flag = unit
+				}
+			}
+			wonder = {
+				save_event_target_as = target_wonder
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+					}
+				}
+			}
+			random_neighbor_province = {
+				limit = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+					}
+				}
+				wonder = {
+					save_event_target_as = target_wonder
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA68021
+>>>>>>> master
 	}
 }
 
 #Establishment of highway_robber_band in a province, if red budget
 province_event = {
 	id = 68030
+<<<<<<< HEAD
 	desc = "EVTDESC68030"
 	
 	notification = yes
 	
 	picture = "GFX_evt_bandits"
+=======
+	desc = EVTDESC68030
+	
+	notification = yes
+	
+	picture = GFX_evt_bandits
+>>>>>>> master
 	
 	trigger = {
 		NOT = { owner = { wealth = 0 } }
@@ -579,6 +875,7 @@ province_event = {
 	}
 
 	option = {
+<<<<<<< HEAD
 		name = "EVTOPTA68030"
 	}
 }
@@ -588,6 +885,107 @@ province_event = {
 	id = 68031
 	desc = "EVTDESC68031"
 	picture = "GFX_evt_burning_house"
+=======
+		name = EVTOPTA68030
+	}
+}
+
+
+# Destruction of highway_robber_band in a province
+province_event = {
+	id = 68031
+	desc = {
+		text = EVTDESC68031
+		trigger = {
+			NOR = {
+				any_demesne_wonder = {
+					is_active = yes
+					has_wonder_upgrade_flag = defensive
+					has_wonder_upgrade_flag = unit
+				}
+				any_neighbor_province = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+					}
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC68031_RETINUE
+		trigger = {
+			OR = {
+				any_demesne_wonder = {
+					is_active = yes
+					has_wonder_upgrade_flag = defensive
+					has_wonder_upgrade_flag = unit
+					has_wonder_upgrade = upgrade_retinue
+				}
+				any_neighbor_province = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+						has_wonder_upgrade = upgrade_retinue
+					}
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC68031_TEMPLE_GUARDS
+		trigger = {
+			OR = {
+				any_demesne_wonder = {
+					is_active = yes
+					has_wonder_upgrade_flag = defensive
+					has_wonder_upgrade = upgrade_temple_guards
+				}
+				any_neighbor_province = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade = upgrade_temple_guards
+					}
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC68031_FALLBACK
+		trigger = {
+			OR = {
+				any_demesne_wonder = {
+					is_active = yes
+					has_wonder_upgrade_flag = defensive
+					has_wonder_upgrade_flag = unit
+					NOR = { #Fallback if we add the flags to more upgrades
+						has_wonder_upgrade = upgrade_temple_guards
+						has_wonder_upgrade = upgrade_retinue
+					}
+				}
+				any_neighbor_province = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+						NOR = { #Fallback if we add the flags to more upgrades
+							has_wonder_upgrade = upgrade_temple_guards
+							has_wonder_upgrade = upgrade_retinue
+						}
+					}
+				}
+			}
+		}
+	}
+	picture = GFX_evt_burning_house
+>>>>>>> master
 	
 	notification = yes
 	
@@ -606,18 +1004,107 @@ province_event = {
 			factor = 0.75
 			owner = { realm_intrigue = 20 }
 		}
+<<<<<<< HEAD
 	
 		modifier = {
 			factor = 0.75
 			owner = { trait = just }
 		}			
+=======
+		modifier = {
+			factor = 0.75
+			owner = { trait = just }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				trigger_if = {
+					limit = {
+						owner = {
+							any_demesne_wonder = { 
+								count = 1
+								location = { province = PREVPREVPREV }
+							}
+						}
+					}
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+					}
+				}
+				trigger_if = {
+					limit = {
+						any_neighbor_province = {
+							has_wonder = yes
+						}
+					}
+					any_neighbor_province = {
+						has_wonder = yes
+						wonder = {
+							is_active = yes
+							has_wonder_upgrade_flag = defensive
+							has_wonder_upgrade_flag = unit
+						}
+					}
+				}
+			}
+		}
+>>>>>>> master
 	}
 	
 	immediate = {
 		remove_province_modifier = highway_robber_band
+<<<<<<< HEAD
 	}
 
 	option = {
 		name = "EVTOPTA68031"
+=======
+		if = {
+			limit = {
+				owner = {
+					has_wonder = yes
+					any_demesne_wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+					}
+				}
+			}
+			wonder = {
+				save_event_target_as = target_wonder
+			}
+		}
+		else_if = {
+			limit = {
+				any_neighbor_province = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+					}
+				}
+			}
+			random_neighbor_province = {
+				limit = {
+					has_wonder = yes
+					wonder = {
+						is_active = yes
+						has_wonder_upgrade_flag = defensive
+						has_wonder_upgrade_flag = unit
+					}
+				}
+				wonder = {
+					save_event_target_as = target_wonder
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA68031
+>>>>>>> master
 	}
 }

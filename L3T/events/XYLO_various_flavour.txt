@@ -462,8 +462,7 @@ province_event = {
 		picture = "GFX_evt_XYLO_forest2"
 	}
 
-	only_playable = yes
-	is_triggered_only = yes
+		is_triggered_only = yes
 
 	immediate = { 	
 		clr_province_flag = braconnage_notifie_seigneur
@@ -531,6 +530,7 @@ province_event = {
 							NOT = { stewardship = 7 }
 						}
 						change_stewardship = 1
+						hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 					}
 				}
 			}
@@ -658,7 +658,6 @@ province_event = {
 						holder_scope = { 
 							random_courtier = { 
 								limit = { has_minor_title = title_forestier }
-								show_portrait = no
 								letter_event = { id = XYLO.3133 }
 							}
 						}
@@ -687,7 +686,6 @@ province_event = {
 						holder_scope = { 
 							random_courtier = { 
 								limit = { has_job_title = job_marshal }
-								show_portrait = no
 								letter_event = { id = XYLO.3133 }
 							}
 						}
@@ -720,7 +718,6 @@ province_event = {
 									is_female = no
 									prisoner = no
 								}
-								show_portrait = no
 								letter_event = { id = XYLO.3133 }
 							}
 						}

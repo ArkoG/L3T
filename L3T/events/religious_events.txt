@@ -1649,6 +1649,7 @@ character_event = {
 		is_theocracy = yes
 		imprisoned_days = 14
 		host = { religion = ROOT }
+		host = { NOT = { any_realm_character = { has_claim = k_papal_state}}} #host has no antipope
 		NOT = { rightful_religious_head = ROOT }
 		religion_head = {
 			reverse_opinion = { who = ROOT value = 25 }		#not grovel if we dont like the pope.
@@ -1678,7 +1679,11 @@ character_event = {
 				reverse_opinion = { who = ROOT value = 25 }		
 			}
 		}
-	}	
+		modifier = {
+			factor = 0.9
+			has_character_modifier = the_fortress #L3T
+		}
+	}
 
 	immediate = {
 		set_character_flag = nag_pope_to_help_me
@@ -1900,6 +1905,10 @@ character_event = {
 					opinion = { who = FROM value = 20 }
 				}
 			}
+			modifier = {
+				factor = 2
+				FROM = { has_character_modifier = the_fortress } #L3T
+			}
 		}
 		piety = -25
 		religion_authority = {
@@ -1938,7 +1947,8 @@ character_event = {
 			is_theocracy = yes
 			religion = orthodox
 			imprisoned_days = 100
-			host = { character = ROOT }		
+			host = { character = ROOT }	
+			NOT = { has_character_modifier = the_fortress } #L3T
 		}
 	}
 	
@@ -1961,10 +1971,9 @@ character_event = {
 			religion_authority = 0.50
 		}
 	}
-	
+
 	option = {
 		name = "EVTOPTA39230"	#let him go
-		
 		random_courtier = {
 			limit = {
 				prisoner = yes
@@ -1972,7 +1981,7 @@ character_event = {
 				religion = orthodox
 				imprisoned_days = 100
 				is_theocracy = yes
-				host = { character = ROOT }		
+				host = { character = ROOT }	
 			}
 			prisoner = no 
 		}
@@ -3563,6 +3572,8 @@ province_event = {
 				religion = PREV
 			}
 		}
+		#TOTORO remind me to launch maintenance event from here
+		#might be unecessary with the on_action
 	}
 	
 	option = {
@@ -4223,6 +4234,95 @@ character_event = {
 					}
 				}
 			}
+
+		###L3T religious traditions factors - extension to realm stability factors
+			#eases conversion if used to be christian/muslim or a minority is still present in the past
+			
+			#at least 3 provinces are already of right religion group or a minority still exists
+			modifier = {
+				factor = 1.5
+				FROM = { religion_group = christian }
+				any_realm_province = {
+					count = 3
+					OR = {
+						has_province_modifier = trad_christian
+						has_province_modifier = minority_christian_neg #tolerated communities
+						
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { religion_group = muslim }
+				any_realm_province = {
+					count = 3
+					OR = {
+						has_province_modifier = trad_muslim
+						has_province_modifier = minority_muslim_neg #tolerated communities
+					}
+				}
+			}
+			
+			#at least 2 provinces have accepted minority, host keeps them as mercy, not to convert to their false faith
+			modifier = {
+				factor = 0.5
+				FROM = { religion_group = christian }
+				any_realm_province = {
+					count = 2
+					has_province_modifier = minority_christian_pos #accepted communities
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { religion_group = muslim }
+				any_realm_province = {
+					count = 2
+					has_province_modifier = minority_muslim_pos #accepted communities
+				}
+			}
+			
+			#at least 2 provinces are of the right religion since at least 10 years
+			modifier = {
+				factor = 2
+				FROM = { religion_group = christian }
+				any_realm_province = {
+					count = 2
+					has_province_modifier = trad_christian
+					check_variable = { which = "was_christian_for" value = 10 } #10 years
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_group = muslim }
+				any_realm_province = {
+					count = 2
+					has_province_modifier = trad_muslim
+					check_variable = { which = "was_muslim_for" value = 10 } #10 years
+				}
+			}
+			
+			#at least 2 provinces are of the right religion since at least 25 years
+			modifier = {
+				factor = 2.5 #cumulative so factor 5
+				FROM = { religion_group = christian }
+				any_realm_province = {
+					count = 2
+					has_province_modifier = trad_christian
+					check_variable = { which = "was_christian_for" value = 25 } #25 years
+				}
+			}
+			modifier = {
+				factor = 2.5 #cumulative so factor 5
+				FROM = { religion_group = muslim }
+				any_realm_province = {
+					count = 2
+					has_province_modifier = trad_muslim
+					check_variable = { which = "was_muslim_for" value = 25 } #25 years
+				}
+			}
+				
+		###L3T religious traditions factors end
+			
 			modifier = {
 				factor = 0.3
 				NOT = {
