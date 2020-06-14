@@ -843,100 +843,11 @@ character_event = {
 	}
 }
 
+
 # Wait a little before to alert that it can be a good idea to move the capital
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 ###obsolete since all capital castles are feudal cities now
-##(not triggered anymore)
-character_event = {
-	id = L3T.227
-	
-	hide_window = yes
-	is_triggered_only = yes
-	
-	#ai = no
-	
-	immediate = {
-		FROM = { set_variable = { which = "global_best_capital" which = "best_capital" }}
-		if = {
-			limit = {
-				ai = no
-				NOT = {
-					FROM = { is_capital = ROOT }
-					ROOT = {
-						any_demesne_title = {
-							is_capital = yes
-							holding_type = castle
-							has_building = FEODAL_adm
-							check_variable = { which = "best_capital" which = "global_best_capital" }
-						}
-					}
-				}
-			}
-			#makes the events firing only if the title is has a better "best_capital" value
-			FROM = { location = { province_event = { id = L3T.228 days = 30 } } } #ex days=30
-			FROM  = { set_title_flag = better_realm_capital }
-		}
-		if = {
-			limit = {
-				ai = yes
-				NOT = { 
-					FROM = { is_capital = ROOT }
-					ROOT = {
-						any_demesne_title = {
-							is_capital = yes
-							holding_type = castle
-							has_building = FEODAL_adm
-							check_variable = { which = "best_capital" which = "global_best_capital" }
-						}
-					}
-				}
-			}
-			#for the AI, if this title has a better "best_capital" value, make it the new capital
-			FROM = { make_capital_holding = yes }
-		}
-	}
-}
-
-# Pass by the province to localize its name
-province_event = {
-	id = L3T.228
-		
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { FROM = { is_capital = ROOT } }
-		capital_holding = {
-			holding_type = castle 
-			has_building = FEODAL_adm
-			has_title_flag = better_realm_capital
-		}
-	}
-	
-	immediate = {
-		holder_scope = { character_event = { id = L3T.229 days = 0 } }
-	}
-}
-
-# Alert that it can be a good idea to move the capital
-character_event = {
-	id = L3T.229
-	desc = "DESCL3T.229"
-	picture = GFX_evt_castle_construction
-		
-	is_triggered_only = yes
-	
-	option = {
-		name = L3T.229A #I'll think about it
-	}
-	option = {
-		name = L3T.229B #make it the new realm capital
-		FROMFROM = { 
-			make_capital_holding = yes
-			capital_holding = { clr_title_flag = better_realm_capital }
-		}
-	}
-}
+##(not triggered anymore) #ex 227/228/229
 
 # Give the librairie_1 modifier 1 year after starting the building
 # ROOT = Builder, FROM = The Holding Title
