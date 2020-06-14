@@ -407,10 +407,10 @@ letter_event = {
 		trigger = { primary_title = { higher_tier_than = DUKE }	}
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 1.25 }
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 1.25 }
+			#}
 			modifier = {
 				factor = 0
 				OR = {
@@ -419,7 +419,7 @@ letter_event = {
 				}
 			}
 		}
-		scaled_wealth = -1.0
+		#scaled_wealth = -1.0
 		prestige = -125
 		piety = -100
 #		FROM = {
@@ -456,10 +456,10 @@ letter_event = {
 		trigger = { primary_title = { tier = DUKE } }
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 1.25 }
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 1.25 }
+			#}
 			modifier = {
 				factor = 0
 				OR = {
@@ -468,7 +468,7 @@ letter_event = {
 				}
 			}
 		}
-		scaled_wealth = -1.0
+		#scaled_wealth = -1.0
 		prestige = -50
 		piety = -50
 #		FROM = {
@@ -512,10 +512,10 @@ letter_event = {
 		}
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 1.25 }
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 1.25 }
+			#}
 			modifier = {
 				factor = 0
 				OR = {
@@ -524,7 +524,7 @@ letter_event = {
 				}
 			}
 		}
-		scaled_wealth = -1.0
+		#scaled_wealth = -1.0
 		prestige = -25
 		piety = -25
 #		FROM = {
@@ -563,7 +563,7 @@ letter_event = {
 			modifier = {
 				factor = 0
 				NOT = { trait = ambitious }
-				scaled_wealth = 1.0
+				#scaled_wealth = 1.0
 				NOT = {
 					OR = {
 						spouse = { character = FROM }
@@ -574,9 +574,58 @@ letter_event = {
 			modifier = {
 				factor = 0
 				trait = ambitious
-				scaled_wealth = 0.75
+				#scaled_wealth = 0.75
 			}
 		}
 		#piety = 10
 	}
 }
+
+letter_event = {
+	id = L3T.86
+	desc = "DESCL3T.86"
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_diplomacy
+
+	is_triggered_only = yes #on_yearly_pulse
+
+	trigger = {
+		job_chancellor = {
+			has_job_action = action_fabricate_claims
+		}
+	}
+	
+	option = {
+		name = "L3T.86A"
+		ai_chance = {
+			factor = 100
+			modifier = { factor = 1.1 job_chancellor = { diplomacy = 12 }}
+			modifier = { factor = 1.1 job_chancellor = { diplomacy = 15 }}
+			modifier = { factor = 1.5 job_chancellor = { diplomacy = 20 }}
+			modifier = { factor = 1.5 has_ambition = obj_become_king }
+		}
+		scaled_wealth = 0.35
+		job_chancellor = { clr_character_flag = low_claim_funds }
+	}
+	option = {
+		name = "L3T.86B"
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2.1 NOT = { scaled_wealth = 0.4 }}
+		}
+		job_chancellor = { cancel_job_action = action_fabricate_claims }
+		job_chancellor = { clr_character_flag = low_claim_funds }
+	}
+	option = {
+		name = "L3T.86C" #no need for pay
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 1.2 job_chancellor = { diplomacy = 15 }}
+			modifier = { factor = 1.5 job_chancellor = { diplomacy = 20 }}
+			modifier = { factor = 0.5 has_ambition = obj_become_king }
+		}
+		job_chancellor = { set_character_flag = low_claim_funds }
+		custom_tooltip = { text = custom_L3T.86_claim }
+	}
+}
+	

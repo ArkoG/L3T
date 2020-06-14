@@ -70,7 +70,13 @@ on_yearly_pulse = {
 		#additional check for Deus vult traits
 		 REC.20
 		 REC.21
+	}
+}
 
+#character
+on_five_year_pulse = {
+	events = {
+		L3T.86 #fund claim fabrication
 	}
 }
 

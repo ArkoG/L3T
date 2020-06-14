@@ -397,10 +397,11 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 360
+		months = 240
 
 		job_event_mtth_modifier_diplomacy_score = yes
 		modifier = { factor = 1.1 has_character_modifier = tarnished_reputation }
+		modifier = { factor = 1.5 set_character_flag = low_claim_funds }
 		modifier = {
 			factor = 1.2
 			location = {
@@ -1106,10 +1107,10 @@ letter_event = {
 		trigger = { primary_title = { higher_tier_than = DUKE }	}
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 1.75 } #L3T ex 1.25
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 1.75 } #L3T ex 1.25
+			#}
 			modifier = {
 				factor = 0
 				OR = {
@@ -1119,7 +1120,7 @@ letter_event = {
 			}
 		}
 		#scaled_wealth = -1.0
-		scaled_wealth = -1.5
+		#scaled_wealth = -1.5
 		#prestige = -150
 		prestige = -250
 		piety = -100
@@ -1157,10 +1158,10 @@ letter_event = {
 		trigger = { primary_title = { tier = DUKE } }
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 1.75 } #L3T ex 1.25
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 1.75 } #L3T ex 1.25
+			#}
 			modifier = {
 				factor = 0
 				OR = {
@@ -1170,7 +1171,7 @@ letter_event = {
 			}
 		}
 		#scaled_wealth = -1.0
-		scaled_wealth = -1.5
+		#scaled_wealth = -1.5
 		prestige = -100
 		piety = -50
 #		FROM = {
@@ -1214,10 +1215,10 @@ letter_event = {
 		}
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 1.75 } #L3T ex 1.25
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 1.75 } #L3T ex 1.25
+			#}
 			modifier = {
 				factor = 0
 				OR = {
@@ -1227,7 +1228,7 @@ letter_event = {
 			}
 		}
 		#scaled_wealth = -1.0
-		scaled_wealth = -1.5
+		#scaled_wealth = -1.5
 		prestige = -50
 		piety = -25
 #		FROM = {
@@ -1266,7 +1267,7 @@ letter_event = {
 			modifier = {
 				factor = 0
 				NOT = { trait = ambitious }
-				scaled_wealth = 1.5
+				#scaled_wealth = 1.5
 				NOT = {
 					OR = {
 						spouse = { character = FROM }
@@ -1277,7 +1278,7 @@ letter_event = {
 			modifier = {
 				factor = 0
 				trait = ambitious
-				scaled_wealth = 1
+				#scaled_wealth = 1
 			}
 		}
 		#piety = 10
@@ -1313,12 +1314,12 @@ letter_event = {
 		trigger = { primary_title = { higher_tier_than = DUKE } }
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 2.75 }
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 2.75 }
+			#}
 		}
-		scaled_wealth = -2.5
+		#scaled_wealth = -2.5
 		prestige = -500
 #		FROM = {
 #			FROM = {
@@ -1347,12 +1348,12 @@ letter_event = {
 		trigger = { primary_title = { tier = DUKE } }
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 2.75 }
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 2.75 }
+			#}
 		}
-		scaled_wealth = -2.5
+		#scaled_wealth = -2.5
 		prestige = -200
 		piety = -50
 #		FROM = {
@@ -1382,12 +1383,12 @@ letter_event = {
 		trigger = { primary_title = { tier = COUNT } }
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 2.75 }
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 2.75 }
+			#}
 		}
-		scaled_wealth = -2.5
+		#scaled_wealth = -2.5
 		prestige = -100
 		piety = -25
 #		FROM = {
@@ -1419,12 +1420,12 @@ letter_event = {
 			modifier = {
 				factor = 0
 				NOT = { trait = ambitious }
-				scaled_wealth = 2.5
+			#	scaled_wealth = 2.5
 			}
 			modifier = {
 				factor = 0
 				trait = ambitious
-				scaled_wealth = 2.0
+			#	scaled_wealth = 2.0
 			}
 		}
 		#piety = 20
@@ -1460,12 +1461,12 @@ letter_event = {
 		trigger = { primary_title = { tier = DUKE } }
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 3.25 }
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 3.25 }
+			#}
 		}
-		scaled_wealth = -3.0
+		#scaled_wealth = -3.0
 		prestige = -500
 		piety = -100
 #		FROM = {
@@ -1495,12 +1496,12 @@ letter_event = {
 		trigger = { primary_title = { tier = COUNT } }
 		ai_chance = {
 			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { scaled_wealth = 3.25 }
-			}
+			#modifier = {
+			#	factor = 0
+			#	NOT = { scaled_wealth = 3.25 }
+			#}
 		}
-		scaled_wealth = -3.0
+		#scaled_wealth = -3.0
 		prestige = -250
 		piety = -50
 #		FROM = {
@@ -1532,12 +1533,12 @@ letter_event = {
 			modifier = {
 				factor = 0
 				NOT = { trait = ambitious }
-				scaled_wealth = 3.0
+				#scaled_wealth = 3.0
 			}
 			modifier = {
 				factor = 0
 				trait = ambitious
-				scaled_wealth = 2.5
+				#scaled_wealth = 2.5
 			}
 		}
 		#piety = 20
