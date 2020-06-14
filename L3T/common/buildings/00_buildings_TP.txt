@@ -358,8 +358,10 @@ tp_wall_5 = { #Grande enceinte
 				}
 			}
 		is_active_trigger = {
-			religion_group = christian
-			religion_group = muslim
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		gold_cost = 100
 
@@ -379,8 +381,10 @@ tp_wall_5 = { #Grande enceinte
 		}
 		upgrades_from = tp_eglise_L1
 		is_active_trigger = {
-			religion_group = christian
-			religion_group = muslim
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		gold_cost = 140
 
@@ -400,8 +404,10 @@ tp_wall_5 = { #Grande enceinte
 		}
 		upgrades_from = tp_eglise_L2
 		is_active_trigger = {
-			religion_group = christian
-			religion_group = muslim
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		gold_cost = 290
 
@@ -428,8 +434,10 @@ tp_wall_5 = { #Grande enceinte
 		}
 		upgrades_from = tp_eglise_L3
 		is_active_trigger = {
-			religion_group = christian
-			religion_group = muslim
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		gold_cost = 390
 		#prestige_cost = 90
@@ -456,8 +464,10 @@ tp_wall_5 = { #Grande enceinte
 		}
 		upgrades_from = tp_eglise_L4
 		is_active_trigger = {
-			religion_group = christian
-			religion_group = muslim
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		gold_cost = 650
 		#prestige_cost = 120

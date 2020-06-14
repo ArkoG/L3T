@@ -618,7 +618,7 @@ city = {
 			TECH_CONSTRUCTION = 1
 			FROM = { prestige = 30} #replaces prestige_cost
 			custom_tooltip = { text = TOOLTIP_prestige_building }
-			higher_tier_than = BARON
+			FROM = { higher_tier_than = BARON }
 		}
 		#potential = { higher_tier_than = BARON }
 		prerequisites = { 

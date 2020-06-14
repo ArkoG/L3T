@@ -55,8 +55,8 @@
 --	NDefines.NTechnology.IDEAL_YEAR_LEVEL_8 = 1550
 	NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER = 45 				-- How many courtiers in a court to make it crowded and increase chance for disease.
 	-- 
-	NDefines.NAI.MAX_KING_TITLES_TO_CREATE = 3,							-- AI will not seek to create/usurp more King-level titles than this (0 for unlimited)
-	NDefines.NAI.MAX_EMPIRE_TITLES_TO_CREATE = 1,						-- AI will not seek to create/usurp more Empire-level titles than this (0 for unlimited)
+	NDefines.NAI.MAX_KING_TITLES_TO_CREATE = 3							-- AI will not seek to create/usurp more King-level titles than this (0 for unlimited)
+	NDefines.NAI.MAX_EMPIRE_TITLES_TO_CREATE = 1						-- AI will not seek to create/usurp more Empire-level titles than this (0 for unlimited)
 
 	NDefines.NAI.DOW_AGGRESSION_FACTOR = 0.25
 	NDefines.NEconomy.BUILDING_COST_MULT = 0.0						-- Increase to the build cost of all buildings that cost GOLD
