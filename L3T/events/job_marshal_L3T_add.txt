@@ -1,0 +1,525 @@
+#################################
+#         L3T  par Arko         #
+#################################
+
+namespace = L3T
+
+################################
+#    MARSHAL CHASES BANDITS    #
+################################
+
+
+#L3T new event, send good marshal purging the province
+province_event = {
+	id = L3T.97
+	title = NAMEL3T.97 
+	
+	desc = {
+		text = DESCL3T.97a
+		trigger = { has_province_modifier = smugglers_ring }
+	}
+	desc = {
+		text = DESCL3T.97b
+		trigger = { has_province_modifier = highway_robber_band }
+	}
+	picture = GFX_evt_council
+	
+	trigger = {
+		is_tribal = no
+		NOT = { is_nomadic = yes }
+		OR = { 
+			has_province_modifier = smugglers_ring
+			has_province_modifier = highway_robber_band
+		}
+		NOT = {
+			has_province_modifier = purge_mobilization
+			has_province_modifier = failed_purge
+			has_province_flag = ongoing_purge
+		}
+		owner = { job_marshal = { martial = 12 }}
+		OR = {
+			had_province_flag = { flag = villains_smugglers days = 365 }
+			had_province_flag = { flag = villains_robbers days = 365 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+		modifier = { factor = 0.9	owner = { job_marshal = { martial = 14 }}}
+		modifier = { factor = 0.9	owner = { job_marshal = { martial = 15 }}}
+		modifier = { factor = 0.9	owner = { job_marshal = { martial = 16 }}}
+		modifier = { factor = 0.9	owner = { job_marshal = { martial = 17 }}}
+		modifier = { factor = 0.9	owner = { job_marshal = { martial = 18 }}}
+		modifier = { factor = 0.9	owner = { job_marshal = { martial = 19 }}}
+		modifier = { factor = 0.9	owner = { job_marshal = { martial = 20 }}} #~50%
+		modifier = { factor = 0.5	owner = { job_marshal = { martial = 25 }}} #~25%
+	}
+	
+	immediate = {
+		random_province_holding = { save_event_target_as = holding_lair }
+		set_province_flag = ongoing_purge
+		set_province_flag = sent_marshal
+	}
+
+	#target the head, relying mostly on marshal skills with an immediate cost
+	option = {
+		name = "L3T.97A"
+		custom_tooltip = { text = cust_L3T.97A }
+		ai_chance = {
+			factor = 100
+			modifier = { factor = 1.2	owner = { job_marshal = { martial = 15 }}} #more confident if better marshal
+			modifier = { factor = 1.2	owner = { job_marshal = { martial = 20 }}} #more confident if better marshal
+			modifier = { factor = 1.5	has_province_modifier = smugglers_ring }
+			modifier = { factor = 0.5	has_province_modifier = highway_robber_band }
+		}
+		trigger = {
+			owner = { wealth = 100 }
+		}
+		owner = { wealth = -100 }
+
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					province_event = { id = L3T.99 days = 20 random = 10 }
+					set_province_flag = villains_success
+					modifier = { factor = 1.2	has_province_modifier = smugglers_ring }			
+					modifier = { factor = 1.5	owner = { job_marshal = { martial = 15 }}} #more confident if better marshal
+					modifier = { factor = 1.5	owner = { job_marshal = { martial = 20 }}} #more confident if better marshal
+					modifier = { factor = 0.8	owner = { job_marshal = { NOT = { martial = 13 }}}} #more confident if better marshal
+				}
+				50 = {
+					province_event = { id = L3T.99 days = 20 random = 10 }
+					set_province_flag = villains_failure
+					modifier = { factor = 1.2	has_province_modifier = highway_robber_band }
+					modifier = { factor = 1.3	owner = { job_marshal = { martial = 15 }}} #more confident if better marshal
+					modifier = { factor = 1.5	owner = { job_marshal = { martial = 20 }}} #more confident if better marshal
+					modifier = { factor = 0.9	owner = { job_marshal = { NOT = { martial = 13 }}}} #more confident if better marshal
+				}
+			}
+		}
+	}
+
+	#invest gold and men, play on duration
+	option = {
+		name = "L3T.97B"
+		ai_chance = {
+			factor = 100
+			modifier = { factor = 1.3	owner = { job_marshal = { NOT = { martial = 15 }}}} #martial matters less on duration
+			modifier = { factor = 0.5	has_province_modifier = smugglers_ring }
+			modifier = { factor = 1.5	has_province_modifier = highway_robber_band }
+		}
+		custom_tooltip = { text = cust_L3T.97B }
+		hidden_tooltip = {
+			random_list = {
+				60 = {
+					province_event = { id = L3T.99 days = 90 random = 15 }
+					set_province_flag = villains_success
+					modifier = { factor = 1.1	has_province_modifier = smugglers_ring }			
+				}
+				40 = {
+					province_event = { id = L3T.99 days = 90 random = 15 }
+					set_province_flag = villains_failure
+					modifier = { factor = 1.2	has_province_modifier = highway_robber_band }
+					modifier = { factor = 0.8	owner = { job_marshal = { NOT = { martial = 15 }}}} #more confident if better marshal
+				}
+			}
+		}
+		add_province_modifier = {
+			name = purge_mobilization
+			duration = 365
+		}
+	}
+	option = {
+		name = "L3T.98C" #do nothing
+		ai_chance = { factor = 0 }
+	}
+}
+
+#L3T new event, send good spymaster purging the province
+province_event = {
+	id = L3T.98
+	title = NAMEL3T.98
+	desc = "DESCL3T.98"
+	picture = GFX_evt_shadow
+	
+	trigger = {
+		is_tribal = no
+		NOT = { is_nomadic = yes }
+		has_province_modifier = thieves_guild
+		NOT = {
+			has_province_modifier = purge_mobilization
+			has_province_modifier = failed_purge
+			has_province_flag = ongoing_purge
+		}
+		owner = { job_spymaster = { intrigue = 10 }}
+		owner = { wealth = 75 }
+		had_province_flag = { flag = villains_thieves days = 365 }
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 14 }}}
+		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 15 }}}
+		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 16 }}}
+		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 17 }}}
+		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 18 }}}
+		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 19 }}}
+		modifier = { factor = 0.9	owner = { job_spymaster = { intrigue = 20 }}} #~50%
+		modifier = { factor = 0.5	owner = { job_spymaster = { intrigue = 25 }}} #~25%
+	}
+	
+	immediate = {
+		set_province_flag = ongoing_purge
+		set_province_flag = sent_spymaster
+		random_province_holding = { 
+			save_event_target_as = holding_lair_A
+		}
+		any_neighbor_province = {
+			random_province_holding = { 
+				save_event_target_as = holding_lair_B
+			}
+		}
+	}
+
+	#target the head, relying mostly on spymaster skills, act fast
+	option = {
+		name = "L3T.98A"
+		custom_tooltip = { text = cust_L3T.98A }
+		ai_chance = {
+			factor = 100
+			modifier = { factor = 1.2	owner = { job_spymaster = { intrigue = 15 }}} 
+			modifier = { factor = 1.2	owner = { job_spymaster = { intrigue = 20 }}} 
+
+
+		}
+		owner = { wealth = -35 }
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					province_event = { id = L3T.99 days = 10 random = 5 }
+					set_province_flag = villains_success
+					modifier = { factor = 1.1	owner = { job_spymaster = { intrigue = 13 }}} 
+					modifier = { factor = 1.1	owner = { job_spymaster = { intrigue = 14 }}}
+					modifier = { factor = 1.5	owner = { job_spymaster = { intrigue = 15 }}} 
+					modifier = { factor = 1.5	owner = { job_spymaster = { intrigue = 20 }}}
+				}
+				50 = {
+					province_event = { id = L3T.99 days = 10 random = 5 }
+					set_province_flag = villains_failure
+					modifier = { factor = 0.9	owner = { job_spymaster = { NOT = { intrigue = 11 }}}} 
+					modifier = { factor = 0.9	owner = { job_spymaster = { NOT = { intrigue = 12 }}}} 
+					modifier = { factor = 0.9	owner = { job_spymaster = { NOT = { intrigue = 13 }}}} 
+				}
+			}
+		}
+	}
+
+	#target the head, relying mostly on spymaster skills, take your time
+	option = {
+		name = "L3T.98B"
+		ai_chance = {
+			factor = 100
+			modifier = { factor = 1.2	owner = { job_spymaster = { NOT = { intrigue = 15 }}}} #intrigue matters less on duration
+		}
+		custom_tooltip = { text = cust_L3T.98B }
+		owner = { wealth = -75 }
+		hidden_tooltip = {
+			random_list = {
+				60 = {
+					province_event = { id = L3T.99 days = 25 random = 10 }
+					set_province_flag = villains_success
+					modifier = { factor = 1.1	owner = { job_spymaster = { intrigue = 13 }}} 
+					modifier = { factor = 1.1	owner = { job_spymaster = { intrigue = 14 }}}
+					modifier = { factor = 1.5	owner = { job_spymaster = { intrigue = 15 }}} 
+					modifier = { factor = 1.5	owner = { job_spymaster = { intrigue = 20 }}}
+				}
+				40 = {
+					province_event = { id = L3T.99 days = 25 random = 10 }
+					set_province_flag = villains_failure
+					modifier = { factor = 0.9	owner = { job_spymaster = { NOT = { intrigue = 11 }}}} 
+					modifier = { factor = 0.9	owner = { job_spymaster = { NOT = { intrigue = 12 }}}} 
+					modifier = { factor = 0.9	owner = { job_spymaster = { NOT = { intrigue = 13 }}}}
+				}
+			}
+		}
+	}
+	option = {
+		name = "L3T.98C" #do nothing
+		ai_chance = { factor = 0 }
+	}
+}
+
+# L3T.99 - inform owner about the councillor's success or failure
+province_event = {
+	id = L3T.99
+
+	title = { 
+		trigger = {	has_province_flag = villains_success }
+		text = "NAMEL3T.99a"
+	}
+	title = {
+		trigger = {	has_province_flag = villains_failure }
+		text = "NAMEL3T.99b"
+	}
+	
+	desc = {
+		text = DESCL3T.99a #success thieves spymaster
+		trigger = {
+			has_province_modifier = thieves_guild
+			has_province_flag = sent_spymaster
+			has_province_flag = villains_success
+		}
+		picture = GFX_evt_dead_body_hf
+		
+	}
+	desc = {
+		text = DESCL3T.99b #failure thieves spymaster
+		trigger = {
+			has_province_modifier = thieves_guild		
+			has_province_flag = sent_spymaster
+			has_province_flag = villains_failure
+		}
+		picture = GFX_evt_cornered_duel_hf
+	}
+	desc = {
+		text = DESCL3T.99c #success smugglers marshal
+		trigger = {
+			has_province_modifier = smugglers_ring
+			has_province_flag = sent_marshal
+			has_province_flag = villains_success			
+		}
+		picture = GFX_evt_dead_body_hf
+	}
+	desc = {
+		text = DESCL3T.99d #failure smugglers marshal
+		trigger = {
+			has_province_modifier = smugglers_ring
+			has_province_flag = sent_marshal
+			has_province_flag = villains_failure			
+		}
+		picture = GFX_evt_bandits
+	}
+	desc = {
+		text = DESCL3T.99e #success routiers marshal
+		trigger = {
+			has_province_modifier = highway_robber_band			
+			has_province_flag = sent_marshal
+			has_province_flag = villains_success
+		}
+		picture = GFX_evt_heads_on_pikes_hf
+	}
+	desc = {
+		text = DESCL3T.99f #failure routiers marshal
+		trigger = {
+			has_province_modifier = highway_robber_band			
+			has_province_flag = sent_marshal
+			has_province_flag = villains_failure			
+		}
+		picture = GFX_evt_bandits
+	}
+	picture = GFX_evt_bandits
+	
+	is_triggered_only = yes
+
+	immediate = {
+		clr_province_flag = ongoing_purge
+		#tombola butin
+		if = {
+			limit = { has_province_flag = villains_success }
+			if = {
+				limit = {
+					any_province_holding = {
+						NOT = { holding_type = tribal }
+						NOT = { holding_type = nomad }
+						count < 4 #1,2,3
+						tier = baron
+					}				
+				}
+				set_province_flag = butin1 #zero
+			}
+			if = {
+				limit = {
+					any_province_holding = {
+						NOT = { holding_type = tribal }
+						NOT = { holding_type = nomad }
+						count == 4
+						tier = baron
+					}				
+				}
+				set_province_flag = butin2
+			}
+			if = {
+				limit = {
+					any_province_holding = {
+						NOT = { holding_type = tribal }
+						NOT = { holding_type = nomad }
+						count == 5 
+						tier = baron
+					}				
+				}
+				set_province_flag = butin3
+			}
+			if = {
+				limit = {
+					any_province_holding = {
+						NOT = { holding_type = tribal }
+						NOT = { holding_type = nomad }
+						count == 6
+						tier = baron
+					}				
+				}
+				set_province_flag = butin4
+			}
+			if = {
+				limit = {
+					any_province_holding = {
+						NOT = { holding_type = tribal }
+						NOT = { holding_type = nomad }
+						count > 6
+						tier = baron
+					}				
+				}
+				set_province_flag = butin5
+			}
+		}
+	}
+	
+	#success on owner
+	option = {
+		name = "L3T.99A"
+		trigger = { has_province_flag = villains_success }
+		owner = { prestige = 50 }
+		#opinion
+		if = {
+			limit = {
+				has_province_modifier = thieves_guild
+				has_province_flag = sent_spymaster
+			}
+
+			owner = {
+				opinion = {
+					modifier = opinion_success_bandits
+					who = job_spymaster
+					years = 5
+				}
+			}
+			remove_province_modifier = thieves_guild
+		}
+		if = {
+			limit = {
+				has_province_flag = sent_marshal
+				OR = {
+					has_province_modifier = smugglers_ring
+					has_province_modifier = highway_robber_band
+				}
+			}
+			owner = {
+				opinion = {
+					modifier = opinion_success_bandits
+					who = job_marshal
+					years = 5
+				}
+			}
+			remove_province_modifier = smugglers_ring
+			remove_province_modifier = highway_robber_band	
+		}			
+		#butin
+		#if = { limit = { has_province_flag = butin1 } wealth = 0 } #<4 holdings
+		if = { limit = { has_province_flag = butin2 } owner = { wealth = 100} }#4 holdings, 20/holding
+		if = { limit = { has_province_flag = butin3 } owner = { wealth = 125} }
+		if = { limit = { has_province_flag = butin4 } owner = { wealth = 150} }
+		if = { limit = { has_province_flag = butin5 } owner = { wealth = 175} }
+		owner = { wealth = 75 } #
+		#redistribuer le butin ?
+		
+		####################################################
+		
+		#modifers and flags
+		
+		
+		
+		clr_province_flag = butin1
+		clr_province_flag = butin2
+		clr_province_flag = butin3
+		clr_province_flag = butin4
+		clr_province_flag = butin5
+		clr_province_flag = butin6
+		clr_province_flag = butin7
+		clr_province_flag = butin8
+		clr_province_flag = butin9
+		clr_province_flag = villains_success
+		clr_province_flag = villains_thieves
+		clr_province_flag = villains_smugglers
+		clr_province_flag = villains_robbers
+		clr_province_flag = sent_spymaster
+		clr_province_flag = sent_marshal
+	}
+	
+	#failure on owner
+	option = {
+		name = "L3T.99B"
+		trigger = { has_province_flag = villains_failure }
+		owner = { prestige = -50 }
+		#opinion
+		if = {
+			limit = {
+				has_province_modifier = thieves_guild
+				has_province_flag = sent_spymaster
+			}
+
+			owner = {
+				opinion = {
+					modifier = opinion_failure_bandits
+					who = job_spymaster
+					years = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_province_modifier = smugglers_ring
+					has_province_modifier = highway_robber_band
+				}
+				has_province_flag = sent_marshal
+			}
+			owner = {
+				opinion = {
+					modifier = opinion_failure_bandits
+					who = job_marshal
+					years = 5
+				}
+			}
+		}
+
+
+		#opinion
+		add_province_modifier = {
+			name = failed_purge	
+			duration = -1
+		}
+		clr_province_flag = villains_failure
+		clr_province_flag = sent_spymaster
+		clr_province_flag = sent_marshal
+	}
+}
+
+
+###redistribuer le butin ?
+##keep all, it is the realm treasure (contrebande)
+
+##piety donations
+#gives it to the poors (piety) 1 piety/2po (ou modifier)
+#gives it to the church (piety) 1 piety/2po (ou modifier)
+#build an hospital (75po), keep the rest
+#improve an hospital, keep the rest?
+
+##redis for province event - or just stew pour tout ?
+#recruit some thugs (50%) to protect the province (prov bonus mod) (+1 intri mod)
+#redistribute 50% to paying justice to people (thieves)+just (+1 diplo mod)
+#redistribute everything >> gives a prov bonus modifier  (+1 stew mod)
+
+##it shall go to my councillor (50%) + opinion (if strong vassal)
+
+
+# add a pirate coastal version (martial oriented?)

@@ -1,0 +1,127 @@
+#####################################################################
+############################ INDEX ##################################
+#####################################################################
+### ANYONE ADDING WONDERS: Keep this updated, please!
+###
+### Template:
+###
+###		wonder_example_name = {
+###		    picture = GFX_something
+###			model = GFX_something
+###			default_picture_stage = 3
+###			allow_construction = yes
+###			is_in_water = no
+###			allow_coastal = no
+###			show_model = yes
+###			background_overrides = {
+###				jungle = fields
+###				forest = jungle
+###			}
+###			potential = {
+###			}
+###			active = {
+###			}
+###			available_upgrades = {
+###			}
+###			flags = {
+###			}
+###			stage = {
+###				allow = {
+###
+###				}
+###				build_time = 600
+###				restore_time = 90
+###				loot_time = 10
+###				gold_cost_flat = 1000
+###				gold_cost_ticking = 2
+###				restore_cost_flat = 427
+###				restore_cost_ticking = 3
+###				upgrade_slots = {
+###
+###				}
+###				local_modifier = {
+###
+###				}
+###				owner_modifier = {
+###
+###				}
+###			}
+###		}
+###
+#<wonder_name> = { # The unique identifier of the wonder type. For example pyramid, great_library.
+#	available_upgrades = { <upgrade_name> <upgrade_name> } # A list of upgrades that are available for construction in this wonder. Choose upgrades from the common/wonder_upgrades folder.
+#	picture = GFX_wonder_cathedral # The gfx entry to use for this wonder
+#	stage = { # defines values for the first stage. Required. Stages are order dependant.
+#		build_time = 12 # Defines how long the base build time is in months.
+#		gold_cost_flat = 500 # Defines how much gold will be deducted when the stage construction is initiated.
+#		gold_cost_ticking = 10 # Defines how much gold will be deducted at the end of each month
+#		upgrade_slots = 2 # Defines how many new upgrade slots the stage makes available.
+
+# Scopes: 
+#ROOT is the character, 
+#FROMFROM the wonder
+#FROMFROMFROM the province.
+
+################### Available Wonders #############################
+
+# 1A. Cathedral
+wonder_cathedral_romane = {
+	picture = GFX_wonder_strip_cathedral_romane
+	model = westerngfx_temple_4
+	#stage n°0 until stage n°1 is achieved, displays empty picture +contruction 3D model
+	potential = {
+		religion_group = christian
+	}
+	active = {
+		ROOT = {
+			religion_group = christian
+		}
+	}
+	flags = {
+		cathedrale_romane
+		is_historical #to prevent renaming
+		holy_building
+		inspires_piety
+		burial_ground
+		is_destructible
+		L3T_pseudo_wonder
+	}
+	available_upgrades = {}
+	allow_construction = no #Indicates if new construction of new instances of this wonder type should be allowed. Defaults to yes. 
+
+	#stage n°1 #once achieved, displays "holding picture" +contruction 3D model
+	stage = {
+		allow = { always = no }
+		build_time = 120
+		gold_cost_flat = 200
+		gold_cost_ticking = 1
+		restore_time = 120
+		loot_time = 6
+		restore_cost_flat = 200
+		restore_cost_ticking = 1
+		upgrade_slots = 0
+		local_modifier = {
+		}
+		owner_modifier = {
+		}
+	}
+
+	#stage n°2 #1st stage showing the dedicated 3D model
+	stage = {
+		allow = { always = no }
+		build_time = 120
+		gold_cost_flat = 200
+		gold_cost_ticking = 1
+		restore_time = 120
+		loot_time = 6
+		restore_cost_flat = 200
+		restore_cost_ticking = 1
+		upgrade_slots = 0
+		local_modifier = {
+			monthly_character_prestige = 0.2 #province owner
+			monthly_character_piety = 0.2 #province owner
+		}
+		owner_modifier = {
+		}
+	}
+}

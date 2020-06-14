@@ -1,5 +1,3 @@
-#;;x;;;;;;;;;;;;x
-
 #;;DECISIONS;;;;;;;;;;;;x
 egg_hunt;Search for Easter Eggs;Chercher des œufs de Pâques;;;;;;;;;;;;x
 egg_hunt_desc;During season of Spring, people seek for Easter eggs. To hold a search for some of them would be a pious act.;Le printemps est la saison des œufs de Pâques. En chercher serait faire preuve de piété.;;;;;;;;;;;;x
@@ -22,7 +20,7 @@ enable_notification;Show all immersion notifications;Voir toutes les notificatio
 enable_notification_desc;Shows the notifications about immersion events that were previously disabled.;Montre toutes les notifications d'événements d'immersion préalablement désactivées.;;;;;;;;;;;;x
 set_adm_spe;Convert to a FEUDAL CITY;Établir une CITÉ SEIGNEURIALE;;;;;;;;;;;;x
 set_adm_spe_desc;Specialize this settlement into an administrative center.;Spécialiser ce domaine en une véritable capitale administrative.;;;;;;;;;;;;x
-remove_adm_spe;Remove the useless FEUDAL CITY;Démolir l'ancienne CITÉ SEIGNEURIALE;;;;;;;;;;;;x
+remove_adm_spe;Remove the FEUDAL CITY;Démolir la CITÉ SEIGNEURIALE;;;;;;;;;;;;x
 remove_adm_spe_desc;The FEUDAL CITY is no more usefull because the settlement is no more a major capital.;Cette CITÉ FÉODALE n'est plus d'aucune utilité étant donné que le domaine n'est plus une importante capitale.;;;;;;;;;;;;x
 set_spe_mil_from_prod;Convert into a Citadel;Transformer en FORTERESSE;;;;;;;;;;;;x
 set_spe_mil_from_prod_desc;We need more troops than gold.;Nous avons plus intérêt à avoir des troupes que des marchands.;;;;;;;;;;;;x
@@ -32,7 +30,6 @@ TOOLTIPanotherPROD;There is another Feudal Manor in the county.;Il y a un autre 
 TOOLTIPdelocalize;The production buildings will be moved to another settlement with a Feudal Manor in the county.\n;Les bâtiments de production vont être délocalisés dans un autre domaine du comté possédant un BOURG FÉODAL.\n;;;;;;;;;;;;x
 TOOLTIPfromMilToProd;The weapon manufacturing buildings and upgraded barracks will be sold between §Y40%§! and §Y60%§! of their building cost.\n;Les bâtiments de production d'outils et les casernes évoluées seront vendus entre §Y40%§! et §Y60%§! de leur coût de construction.\n;;;;;;;;;;;;x
 TOOLTIPfromMilToAdm;The weapon manufacturing buildings will be converted to tool manufacturing. The upgraded barracks will be sold between §Y40%§! and §Y60%§! of their building cost.\n;Les bâtiments de production d'armes fabriqueront des outils. Les casernes évoluées seront vendus entre §Y40%§! et §Y60%§! de leur coût de construction.\n;;;;;;;;;;;;x
-
 form_new_duchy;Found a new Duchy;Former un nouveau Duché;;;;;;;;;;;;x
 form_new_duchy_desc;A powerful [Root.PrimaryTitle.GetRulerTitle] such as me surely deserves to be recognized as something more. Perhaps the time has come to claim a superior dignity. \nThis only can be done once per lifetime, we must catch our chance!;En tant que [Root.PrimaryTitle.GetRulerTitle] à la puissance reconnue, je mérite un meilleur rang. Peut-être que le temps est venu de revendiquer une dignité supérieure ! \nCeci ne peut être fait qu'une fois par règne, ne laissons pas passer notre chance !;;;;;;;;;;;x
 new_duchy_req_tooltip_package;Must at least own one province adjacent to your capital.;Nous devons détenir au moins une province adjacente à notre capitale.;;;;;;;;;;x
@@ -41,11 +38,10 @@ new_duchy_req_tooltip_yind;As independant ruler, we need §Y250§! prestige and §Y
 new_duchy_req_tooltip_nind;As a vassal, we need §Y500§! prestige and §Y300§! piety.;En tant que vassal, nous avons besoin d'un prestige de §Y500§! et d'une piété de §Y300§!.;;;;;;;;;;;;x
 form_new_duchy_tooltip;A new §YDuchy§! is created. \nAll possessed provinces become de jure of the newly created title.;Un nouveau §GDuché§! est créé.\nToutes les provinces détenues deviennent de jure du titre nouvellement créé.;;;;;;;;;;;;x
 CHRONICLE_FOUNDED_NEW_DUCHY;Thanks to [Root.GetHerHis] cleverness [Root.GetDynName] managed to get [Root.GetHerHis] great power recognized by founding the [Root.PrimaryTitle.GetFullName].;[Root.GetDynName] par son habilité a réussi à faire reconnaître sa puissance en fondant [Root.PrimaryTitle.Get_le_RealmFull].;[Root.GetDynName] zeigte [Root.GetHerHis]e große Macht durch die Gründung des neuen Titels [Root.PrimaryTitle.GetFullName].;;[Root.GetDynName] muestra [Root.GetHerHis] gran poder al fundar el nuevo [Root.PrimaryTitle.GetFullName].;;;;;;;;;x
-
 #;;x;;;;;;;;;;;;x
-construire_cathedrale;Build a cathedral in your capital;Construire une Cathédrale dans votre capitale;;;;;;;;;;;;x
+construire_cathedrale;Build a cathedral in [Root.Capital.GetName];Construire une Cathédrale en [Root.Capital.GetName];;;;;;;;;;;;x
 construire_cathedrale_desc;Let's begin this cathedral !;Lancer le chantier de notre cathédrale !;;;;;;;;;;;;x
-TOOLTIPCONSTRUIRECATHEDRALE;Beginning of the construction.\n§RWarning, the annual construction cost of the Cathedral is about 100¤, and over more than a century.§!;Début de la construction.\n§RAttention le coût de construction de la Cathédrale est d'environ 100¤/an, et cela sur plus d'un siècle.§!;;;;;;;;;;;;x
+TOOLTIPCONSTRUIRECATHEDRALE;Beginning of the construction.\n§RWarning, the annual construction cost of the Cathedral is about 100¤, for over more than a century.§!;Début de la construction.\n§RAttention le coût de construction de la Cathédrale est d'environ 100¤/an, et cela sur plus d'un siècle.§!;;;;;;;;;;;;x
 construire_cathedral_province;Build a cathedral;Construire une Cathédrale;;;;;;;;;;;;x
 construire_cathedral_province_desc;Let's begin this cathedral !;Lancer le chantier de notre cathédrale !;;;;;;;;;;;;x
 ask_construction_progession;Ask about construction progression;Demander l'avancement du chantier;;;;;;;;;;;;x
@@ -83,30 +79,32 @@ borrow_money_jews_ke_desc;I can borrow 300¤ from Jewish merchants and moneylende
 repay_money_jews_ke;Repay the 350¤ loan;Rembourser notre dette de 350¤;;;;;;;;;;;;x
 repay_money_jews_ke_desc;I will repay the gold that I owe the Jewish moneylenders.;Il nous est possible de rembourser la somme que nous devons aux usuriers juifs.;;;;;;;;;;;;x
 borrowed_from_jews;Owes to Jewish Moneylenders;Dette envers les usuriers juifs;;;;;;;;;;;;x
-#;;x;;;;;;;;;;;;
-#L3T.13;Monastic retirement;Retraite Monastique;;;;;;;;;;;;x
-#NAMEL3T.13;Monastic retirement;Retraite monastique;;;;;;;;;;;;x
-#DESCL3T.13;After years of ruling, [Root.GetTitledFirstName] has decided that [Root.GetSheHe] is no longer fit to rule and as such decided to abdicate in favour of [Root.GetHerHis] heir, while [Root.GetSheHe] [Root.GetHerselfHimself] will retire into a monastry.;Epuisé par des années de règne, [Root.GetTitledFirstName] a décidé qu'il était temps de laisser la main à son héritier et de rejoindre un monastère pour dédier le reste de sa vie à Dieu, hors des contraintes du Monde.;;;;;;;;;;;;
-#L3T.13A;Deo gratias !;Deo gratias !;;;;;;;;;;;;x
+#;;x;;;;;;;;;;;;x
+#REC.22;Monastic retirement;Retraite Monastique;;;;;;;;;;;;x
+#NAMEREC.22;Monastic retirement;Retraite monastique;;;;;;;;;;;;x
+#DESCREC.22;After years of ruling, [Root.GetTitledFirstName] has decided that [Root.GetSheHe] is no longer fit to rule and as such decided to abdicate in favour of [Root.GetHerHis] heir, while [Root.GetSheHe] [Root.GetHerselfHimself] will retire into a monastry.;Epuisé par des années de règne, [Root.GetTitledFirstName] a décidé qu'il était temps de laisser la main à son héritier et de rejoindre un monastère pour dédier le reste de sa vie à Dieu, hors des contraintes du Monde.;;;;;;;;;;;;
+#REC.22A;Deo gratias !;Deo gratias !;;;;;;;;;;;;x
 abdiquer;Retire to a monastery;Se retirer dans un Monastère;;;;;;;;;;;;
 abdiquer_desc;I have grown very much past my prime. It is time for the next generation to rule while I retire in a peacefull monastery.;J'ai fait mon temps. Ce monastère que j'ai fondé il y a quelques années sera un havre parfait pour mes vieux jours.;;;;;;;;;;;;;x
-
+#;;x;;;;;;;;;;;;x
 #;;AMBITIONS;;;;;;;;;;;;x
 obj_build_something_title;Build a monument;Construire un Monument ;;;;;;;;;;;;x
 obj_build_something_desc;This character wants to let his print in History by building something big and hopefully eternal.;Ce personnage a pour ambition de laisser une empreinte durable dans l'Histoire par ses réalisations à la fois solides et monumentales.;;;;;;;;;;;;x
 build_something_reussite;The character must have achieved a major construction or a step of it.\n§YThe steps of the Cathedral which can validate this ambition are:\n3 - Proto-Cathedral\n5 - Cathedral, Magnificent Nave\n6 - Cathedral, Transept\n7 - Cathedral, Northern Tower\n8 - Cathedral, Southern Tower§!;Le personnage doit avoir achevé une construction majeure ou une étape de celle-ci.\n§YLes étapes de la Cathédrale qui peuvent valider cette ambition sont : \n3 - Proto-Cathédrale\n5 -Cathédrale, Nef Magnifique\n6 - Cathédrale, Transept\n7 - Cathédrale, Tour Nord\n8 - Cathédrale, Tour du Midi§!;;;;;;;;;;;;x
 obj_egg_them_all_title;Search for the One-Egg;Se mettre en quête l'Oeuf Unique;;;;;;;;;;;;x
-obj_egg_them_all_desc;Having laid our hands on several of these egg-relics and heard the lingering rumor that they would permit find an even more powerful artifact. \nWe are looking for other Eggs so we can someday discover this Holy Artifact.\n§GThis increases our chances to find the other eggs§;Ayant mis la main sur plusieurs de ces oeufs-reliques et ayant entendu la rumeur persistante qu'ils permettraient de trouver un artefact encore plus puissant. \nNous nous mettons en quête des autres Oeufs afin de peut être découvrir un jour ce Saint artefact. \n§GCeci améliore nos chances de trouver les autres Oeufs§;;;;;;;;;;;;x
+obj_egg_them_all_desc;Having laid our hands on several of these egg-relics and heard the lingering rumor that they would permit find an even more powerful artifact. \nWe are looking for other Eggs so we can someday discover this Holy Artifact.\n§GThis increases our chances to find the other eggs§!;Ayant mis la main sur plusieurs de ces oeufs-reliques et ayant entendu la rumeur persistante qu'ils permettraient de trouver un artefact encore plus puissant. \nNous nous mettons en quête des autres Oeufs afin de peut être découvrir un jour ce Saint artefact. \n§GCeci améliore nos chances de trouver les autres Oeufs§!;;;;;;;;;;;;x
 custom_egg_them_all;Succeed in collecting the Eggs-relics needed and obtain the Unique Egg;Réussir à rassembler les Oeufs-reliques nécessaires et obtenir de l'Oeuf Unique;;;;;;;;;;;;x
-
 #;;BLOODLINES;;;;;;;;;;;;x
 monastery_foundation_bloodline;Legacy of [This.GetTitledFirstName];Héritage de [This.GetTitledFirstName];;;;;;;;;;;;
 monastery_foundation_bloodline_desc;Members of the [This.GetOnlyDynastyName] dynasty are recognized as benefactors of the [This.Religion.GetName] faith. This, thanks to the goodness of [This.GetFirstNameWithNick] who donated from his lands [monastery_name.Location.GetDeDapostrophe][monastery_name.Location.GetName] to found the Monastery [monastery_name.GetDeDapostrophe][monastery_name.GetName].;Les membres de la dynastie [This.GetOnlyDynastyName] sont reconnus comme bienfaiteurs de la foi [This.Religion.GetName]. Ce, grâce à la bonté de [This.GetFirstNameWithNick] qui fit donation sur ses terres [monastery_name.Location.GetDeDapostrophe][monastery_name.Location.GetName] pour fonder le Monastère [monastery_name.GetDeDapostrophe][monastery_name.GetName]. ;;;;;;;;;;;;;
 monastery_bloodline_desc;Members of the [From.GetOnlyDynastyName] dynasty are recognized as benefactors of the [From.Religion.GetName] faith. This, thanks to the goodness of [From.GetFirstNameWithNick] who donated from his lands [monastery_name.Location.GetDeDapostrophe][holding_to_spec.Location.GetName] to found the Monastery [monastery_name.GetDeDapostrophe][holding_to_spec.GetName].;Les membres de la dynastie [This.GetOnlyDynastyName] sont reconnus comme bienfaiteurs de la foi [This.Religion.GetName]. Ce, grâce à la bonté de [This.GetFirstNameWithNick] qui fit donation sur ses terres [monastery_name.Location.GetDeDapostrophe][monastery_name.Location.GetName] pour fonder le Monastère [monastery_name.GetDeDapostrophe][monastery_name.GetName]. ;;;;;;;;;;;;;
 bloodline_effect_fading_BL;The remembrance of this legacy will fade over time, until the point of not being transmitted anymore.;Le souvenir de cet héritage s'effacera avec le temps, au point de ne plus être transmis. ;;;;;;;;;;;;x
-
 IS_NOT_DE_JURE_LIEGE;Is NOT de jure liege;N'est PAS de jure;Ist NICHT De-jure-Lehnsherr;;NO es señor de iure;;;;;;;;;x
-
+#;;x;;;;;;;;;;;;x
 L3T_RENAME_LOG;Rename [Root.GetName] title into something you find more fitty.;Renommer le titre [Root.GetName] en quelque chose plus à votre goût.;;;;;;;x
 DEC_rename_any_title;Rename this title;Renommer ce titre;;;;;;;x
 DEC_rename_any_title_desc;You are about to rename the following title: \n§Y[Root.GetName]§!;Vous êtes sur le point de donner un nouveau nom au titre suivant :\n§Y[Root.GetName]§!;;;;;;;x
+#;;x;;;;;;;;;;;;x
+prisoner_to_fortress;Move to Securised Dungeon [your_new_home.GetName];Transférer en cachot sécurisé;;;;;;;;;;;;x
+prisoner_to_fortress_desc;Have §Y[Root.GetTitledFirstName]§! moved to a secured cell in one of of our fortresses, where [Root.GetSubjectPronoun] can't escape, yet with a fair life expectancy.;Faire transférer [Root.Get_le_TitledFirstNameJ] dans une cellule sécurisée d'une de nos forteresses, d'où [Root.GetIlElle] ne s'échappera pas et aura une espérance de vie correcte.;;;;;;;;;;;;x
+has_a_warm_prison;Has a §YSecured dungeons§! in a demesne's §YFortress§! holding;Possède des §YCachots sécurisés§! dans l'une de ces propriétés de type §YForteresse§!;;;;;;;;;;;;x

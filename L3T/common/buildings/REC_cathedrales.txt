@@ -837,4 +837,59 @@ temple = {
 		add_number_to_name = no
 		extra_tech_building_start = 100.0
 	}
+	
+	TP_hostellerie_pelerins_1 = {
+		desc = TP_hostellerie_pelerins_1_desc
+		potential = {
+			has_province_modifier = relique_generique
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			FROM = {  is_catholic_group = yes }
+			religion_group = christian
+		}
+		is_active_trigger = {
+			FROM = {  is_catholic_group = yes }
+			religion_group = christian
+			has_province_modifier = relique_generique
+		}	
+		gold_cost = 120
+		build_time = 365
+		
+		liege_piety = 0.05
+		temple_tax_modifier = 0.07
+		
+		ai_creation_factor = 93
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+	}
+	TP_hostellerie_pelerins_2 = {
+		desc = TP_hostellerie_pelerins_2_desc
+		potential = {
+			has_province_modifier = relique_generique
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			FROM = {  is_catholic_group = yes }
+			religion_group = christian
+		}
+
+		is_active_trigger = {
+			FROM = {  is_catholic_group = yes }
+			religion_group = christian
+			has_province_modifier = relique_generique
+		}
+		
+		upgrades_from = TP_hostellerie_pelerins_1
+		
+		gold_cost = 185
+		build_time = 730
+		
+		liege_piety = 0.05
+		temple_tax_modifier = 0.08
+		
+		ai_creation_factor = 91
+		add_number_to_name = no	
+		extra_tech_building_start = 10.0
+	}
 }

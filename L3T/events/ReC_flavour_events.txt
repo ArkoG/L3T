@@ -2017,26 +2017,33 @@ character_event = {
 	picture = GFX_evt_relic_box
 	
 	is_triggered_only = yes
+
+	immediate = {
+		FROMFROMFROM = { save_event_target_as = relic_seller}
+		ROOT = { save_event_target_as = relic_buyer }		
+	}
 	
 	option = {
 		name = "REC.1706A"
 		FROMFROMFROM = { opinion = { modifier = stolen_relic_opinion who = ROOT years = 10 } }
-		random_artifact = {
-			limit = { 
-				NOT = { has_artifact_flag = dynastic_relic }
-				OR = {
-					#ReC relics
-					has_artifact_flag = relique
-					#vanilla generic/dynamic relic support
-					AND = { 
-						has_artifact_flag = saint
-						has_artifact_flag = bodypart
+		FROMFROMFROM = {
+			random_artifact = {
+				limit = { 
+					NOT = { has_artifact_flag = dynastic_relic }
+					OR = {
+						#ReC relics
+						has_artifact_flag = relique
+						#vanilla generic/dynamic relic support
+						AND = { 
+							has_artifact_flag = saint
+							has_artifact_flag = bodypart
+						}
 					}
 				}
-			}
-			transfer_artifact = {		
-				from = FROMFROMFROM
-				to = ROOT
+				transfer_artifact = {		
+					from = event_target:relic_seller
+					to = event_target:relic_buyer
+				}
 			}
 		}
 	}

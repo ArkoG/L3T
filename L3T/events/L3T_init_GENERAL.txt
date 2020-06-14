@@ -1,0 +1,766 @@
+namespace = L3T
+
+## Mode debug
+character_event = {
+    id = L3T.1
+	title = "NAMEL3T.1"
+	#desc = "DESCL3T.1"
+	picture = GFX_evt_L3T_capitulaire
+
+	desc = {
+		trigger = { NOT = { has_global_flag = debug_L3T }}
+		text = "DESCL3T.1"
+		picture = GFX_evt_L3T_capitulaire
+	}
+	desc = {
+		trigger = { has_global_flag = debug_L3T }
+		text = "DESCL3T.2"
+		picture = GFX_evt_L3T_capitulaire
+	}
+	is_triggered_only = yes
+
+	option = { 
+		name = OK  
+		trigger = { NOT = { has_global_flag = debug_L3T }}
+		set_global_flag = debug_L3T
+	}
+	option = { 
+		name = OK  
+		trigger = { has_global_flag = debug_L3T }
+		clr_global_flag = debug_L3T
+	}
+}
+
+province_event = { 
+    id = L3T.2
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		#technology adjusting
+		if = {
+			limit = {	
+				#pre-1000 - shirmish bonus
+				NOT = { year = 1000 }
+				OR = {
+					owner = { is_tribal = yes }
+					#owner = { is_nomadic = yes }
+					religion_group = pagan_group
+				}
+			}
+			location = {
+				change_tech = {
+					technology = TECH_SKIRMISH
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {	
+				#pre-1100 - feudal
+				NOT = { year = 1100 }
+				NOT = {
+					owner = { is_tribal = yes }
+					owner = { is_nomadic = yes }
+					religion_group = pagan_group
+				}
+			}
+			location = {
+				change_tech = {
+					technology = TECH_SIEGE_EQUIPMENT
+					value = 1.2
+				}
+			}
+		}
+	}
+}
+			
+
+## Détection de la carte
+#pops on day1
+character_event = {
+    id = L3T.10
+	title = { 
+		trigger = {	religion_group = christian	}
+		text = "NAMEL3T.10_christian"
+	}
+	title = {
+		trigger = {	religion_group = muslim	}
+		text = "NAMEL3T.10_muslim"
+	}
+	title = { 
+		trigger = { NOT = { religion_group = muslim religion_group = christian }}
+		text = "NAMEL3T.10_other"
+	}
+
+	desc = {
+		trigger = { has_global_flag = running_LCDA }
+		text = DESCL3T.10_LCDA
+	}
+	desc = {
+		trigger = { has_global_flag = SWMH }
+		text = DESCL3T.10_SWMH
+	}	
+	desc = {
+		trigger = { 
+			NOT = { has_global_flag = SWMH }
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = DESCL3T.10_VANILLA
+	}
+	
+	picture = GFX_evt_L3Tv_hermes
+	window = EventWindowL3T
+
+	major = yes
+	hide_new = yes
+	hide_from = yes
+	ai=no 
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			had_global_flag = { flag = running_LCDA days = 2 }
+			has_global_flag = running_VANILLA
+			# The SWMH flag is already given when creating history
+			# The LCDA flag is already given when creating history
+			had_global_flag = { flag = SWMH days = 2 }
+		}			
+	}
+	
+	immediate = {
+		##map detection finalization
+		if = {
+			limit = {
+				NOT = { has_global_flag = SWMH }
+				NOT = { has_global_flag = running_LCDA }
+			}
+			set_global_flag = running_VANILLA
+		}
+		##triggers mountain passes attribution
+		any_province = {
+			province_event = { id = L3T.28 days = 7 random = 7} #attribution cols
+			set_province_flag = had_event_LT_60001 #to prevent additional holding slot from wonders
+			set_variable = { which = "was_christian_for" value = 0 }
+			set_variable = { which = "was_muslim_for" value = 0 }
+		}
+		##various global flags
+		set_global_flag = running_L3T
+		set_global_flag = paix_de_dieu #moved from individual options
+		set_global_flag = available_relique26
+		if = {
+			limit = { 
+				ai = no
+				has_game_rule = {
+					name = opus_francigenum
+					value = free
+				}
+			}
+			narrative_event = { id = REC.101 days = 10 }
+		}
+		if = {
+			limit = { ai = no }
+			set_variable = { which = "global_burns" value = 0 }
+			random_list = {
+				30 = {}
+				30 = { change_variable = { which = "global_burns" value = 6 }}
+				30 = { change_variable = { which = "global_burns" value = 11 }}
+			}
+		}
+		if = {
+			limit = { ai = no }
+			set_variable = { which = "global_L3T_saint_number" value = 0 }
+		}
+		#char stuf
+		character_event = { id = L3T.90 } #stewardship
+		##triggers various maps specifities
+		#SWMH
+		if = {
+			limit = { has_global_flag = SWMH }
+			any_province = {
+				#map based attributions for coasts, land, rivers etc.
+				if = {
+					limit = { is_SWMH_coasts = yes }
+					add_province_modifier = {
+						name = province_cotiere
+						duration = -1
+					}	
+				}
+				if = {
+					limit = { is_SWMH_coasts = no }
+					add_province_modifier = {
+						name = province_cotiere
+						duration = -1
+					}	
+				}		
+				if = {
+					limit = { is_SWMH_rivers = yes }		
+					add_province_modifier = { 
+						name = province_fleuve
+						duration = -1
+					}
+				}
+			}
+		}
+		#LCDA
+		if = {
+			limit = { has_global_flag = running_LCDA }
+			any_province = {
+				#map based attributions for coasts, land, rivers etc.
+				if = {
+					limit = { is_LCDA_coasts = yes }
+					add_province_modifier = {
+						name = province_cotiere
+						duration = -1
+					}
+				}
+				if = {
+					limit = { is_LCDA_coasts = no }
+					add_province_modifier = {
+						name = province_terrestre
+						duration = -1  
+						hidden = yes
+					}
+				}
+				if = {
+					limit = { is_LCDA_rivers = yes }
+					add_province_modifier = { 
+						name = province_fleuve
+						duration = -1
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_global_flag = running_VANILLA }
+			any_province = {
+				#map based attributions for coasts, land, rivers etc.
+				if = {
+					limit = { is_VANILLA_coasts = yes }
+					add_province_modifier = { 
+						name = province_cotiere
+						duration = -1
+					}
+				}
+				if = {
+					limit = { is_VANILLA_coasts = no }
+					add_province_modifier = {
+						name = province_terrestre
+						duration = -1  
+						hidden = yes
+					}
+				}
+				if = {
+					limit = { is_VANILLA_rivers = yes }
+					add_province_modifier = {
+						name = province_fleuve
+						duration = -1
+					}	
+				}
+			}
+		}
+		any_province = {
+			province_event = { id = L3T.22 } #ressources attribution
+			province_event = { id = L3T.23 } #temple pre-spec
+			province_event = { id = L3T.24 } #castle pre-spec
+			province_event = { id = L3T.25 } #city pre-spec
+			province_event = { id = L3T.120 } #religion check init
+		}
+
+		
+	} #end of immediate
+	
+	option = {
+		#name = "L3T.10A"
+		name = OK		
+		ai_chance = { factor = 0 }
+		trigger = { ai = no }
+	}
+	option = {	
+		trigger = { ai = yes }
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Fin paix de Dieu
+narrative_event = {
+    id = L3T.11
+	hide_window = yes
+
+	trigger = {
+		NOT = { has_global_flag = paix_de_dieu_cleared }
+		has_global_flag = paix_de_dieu
+		had_global_flag = { flag = paix_de_dieu days = 1825 } #5 years
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = { factor = 1.90	had_global_flag = { flag = paix_de_dieu days = 1825 } } #5years
+		modifier = { factor = 1.40	had_global_flag = { flag = paix_de_dieu days = 2190 } } #6years
+		#modifier = { factor = 1.00	had_global_flag = { flag = paix_de_dieu days = 2555 } } #7years #ideal year
+		modifier = { factor = 0.90	had_global_flag = { flag = paix_de_dieu days = 2920 } } #8years
+		modifier = { factor = 0.80	had_global_flag = { flag = paix_de_dieu days = 3285 } } #9years
+	}
+	
+	immediate = {	
+	clr_global_flag = paix_de_dieu
+	set_global_flag = paix_de_dieu_cleared
+	}
+}
+
+# Boost IA non feudal
+character_event = {
+    id = L3T.12
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_character_flag = start_bonus_given }
+		ai = yes
+		is_feudal = no
+		is_patrician = no
+		NOT = { tier = count }
+		tier = baron
+	}
+
+	immediate = {
+		set_character_flag = start_bonus_given  
+		random_list = {
+			16 = { wealth = 35	}
+			14 = { wealth = 42	}
+			13 = { wealth = 57	}
+			12 = { wealth = 78	}
+			10 = { wealth = 82	}
+			 9 = { wealth = 95	}
+			 8 = { wealth = 110	}
+			 7 = { wealth = 125	}
+			 6 = { wealth = 137	}
+			 5 = { wealth = 148	}
+		}
+		random_list = {
+			16 = { piety = 15	}
+			14 = { piety = 20	}
+			13 = { piety = 25	}
+			12 = { piety = 30	}
+			10 = { piety = 35	}
+			 9 = { piety = 42	}
+			 8 = { piety = 57	}
+			 7 = { piety = 78	}
+			 6 = { piety = 82	}
+			 5 = { piety = 95	}
+		}
+	}
+}
+
+##RESSOURCES ATTRIBUTION
+province_event = { 
+    id = L3T.22
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		province_event = { id = L3T.2  days = 1 } #technology adjusting
+		province_event = { id = ECO.1 }
+		province_event = { id = ECO.2 }
+		province_event = { id = ECO.3 }
+		province_event = { id = ECO.4 }
+		province_event = { id = ECO.5 }
+		province_event = { id = ECO.8 }
+		province_event = { id = ECO.80 }
+		province_event = { id = ECO.81 }
+		province_event = { id = ECO.82 }
+	}
+}
+
+##TEMPLES PRE-ATTRIBUTION
+province_event = { 
+    id = L3T.23
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	#realm's capital prov modifier given through# on_startup/L3T.20 is a pre-req to this event
+		
+	immediate = {
+		#for hard Monasteries, will give basilique and relic if capital
+		#for hard bishoprics, will give basilique and relic		
+		if = {
+			limit = {
+				any_province_holding = {
+					holding_type = temple
+					OR = {
+						is_LCDA_hard_monastery = yes
+						is_LCDA_hard_episcopat = yes
+						is_VANILLA_hard_monastery = yes
+						is_VANILLA_hard_episcopat = yes
+						is_SWMH_hard_monastery = yes
+						is_SWMH_hard_episcopat = yes
+					}
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
+					}
+				}
+			}
+			province_event = { id = L3T.61 }
+		}
+
+		#for christian all CAPITAL temple, will get relic				
+		if = {
+			limit = {
+				religion_group = christian
+				NOT = { has_province_flag = roman_cathedral }
+				#has_province_modifier = realm_capital_province
+				capital_holding = { 
+					holding_type = temple
+					is_LCDA_hard_monastery =no
+					is_LCDA_hard_episcopat = no
+					is_SWMH_hard_monastery =no
+					is_SWMH_hard_episcopat = no
+					is_VANILLA_hard_monastery =no
+					is_VANILLA_hard_episcopat = no
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
+					}
+				}
+			}
+			province_event = { id = L3T.62 days = 1 }
+		}
+		
+		#for christian NON capital, to give relic, following grid pattern, to fill the grid
+		if = {
+			limit = {
+				any_province_holding = {
+					location = {
+						religion_group = christian
+						NOT = {
+								has_province_flag = neighbor_roman_cathedral									
+								has_province_flag = neighbor_neighbor_roman_cathedral
+								has_province_flag = roman_cathedral
+							}
+							any_neighbor_province = {
+								NOT = {
+									has_province_flag = neighbor_roman_cathedral									
+									has_province_flag = neighbor_neighbor_roman_cathedral
+									has_province_flag = roman_cathedral
+								}
+							}
+						NOT = { has_province_modifier = relique_generique }
+						}
+											
+					holding_type = temple
+					#NOT = { has_title_flag = temple_to_specialize }
+					NOT = {
+						has_building = MONASTERE
+						has_building = CITEEPISCOPALE
+						has_building = BOURG_EPISCOPAL
+						has_building = tp_roman_cathedrale
+					}
+					#OR = {
+						is_capital = no
+					#	AND = {
+					#		is_capital = yes
+					#		NOT = { has_province_modifier = realm_capital_province }
+					#	}
+					#}
+					is_LCDA_hard_monastery =no
+					is_LCDA_hard_episcopat = no
+					is_SWMH_hard_monastery =no
+					is_SWMH_hard_episcopat = no
+					is_VANILLA_hard_monastery =no
+					is_VANILLA_hard_episcopat = no
+				}
+			}
+			province_event = { id = L3T.63 days = 2 }
+		}
+	}
+}
+
+##CASTLES PRE-ATTRIBUTION
+province_event = { 
+    id = L3T.24
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		#for feudal capital holdings, make them feudal cities				
+		if = {
+			limit = {
+				#religion_group = christian
+					#holder = { capital_scope = capital_holding }
+				capital_holding = { 
+					holding_type = castle
+					NOT = {
+						has_building = FEODAL_mil
+						has_building = FEODAL_prod
+						has_building = FEODAL_adm
+					}
+				}
+			}
+			province_event = { id = L3T.31 }
+		}
+	}
+}
+
+##CITIES PRE-ATTRIBUTION
+province_event = { 
+    id = L3T.25
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		#for hard republics, will trigger nodes attribution
+		##those will set the "hardcode is done" flagS, that opens regular MTTH spec
+		
+		# Specialization of the province with at least 2 cities (which need to have province_fleuve or not)
+		if = {
+			limit = {
+				any_province_holding = {
+					count = 2
+					tier = baron
+					holding_type = city
+				}
+			}
+			# Priority for republics
+			if = {
+				limit = {
+					owner = {
+						is_republic = yes
+						NOT = { tier = baron }
+					}
+				}
+				province_event = { id = L3T.41 } #no delay unless I am adding some hardcode pre-set
+				break = yes
+			}
+			# The other are delayed
+			province_event = { id = L3T.41 days = 1 }
+		}
+	}
+}
+
+#MOUNTAIN PASS ATTRIBUTION
+province_event = { 
+    id = L3T.28
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = minor_pass }
+		NOT = { has_province_modifier = great_pass }
+		NOT = { any_neighbor_province = { has_province_modifier = great_pass }}
+		terrain = mountain
+		NOT = { is_pass = yes } #not already a hardcoded pass in LCDA
+		NOT = { any_neighbor_province = { is_pass = yes }}
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { any_neighbor_province = { terrain = mountain }} #isolated mountains will receive a minor pass
+			}
+		add_province_modifier = { name = minor_pass	duration = -1 }
+		province_event = { id = L3T.29 days = 20 random = 5 }
+		}
+		if = {
+			limit = { 
+				any_neighbor_province = { terrain = mountain }	
+			}
+		add_province_modifier = { name = great_pass	duration = -1 }
+		province_event = { id = L3T.29 days = 10 random = 5 }
+		}
+	}
+}
+#notification pass    
+province_event = {
+    id = L3T.29
+	picture = GFX_evt_LCDA_montagne1
+	
+	title = { 
+		trigger = { has_global_flag = running_LCDA }
+		text = "NAMEL3T.29_LCDA"
+	}
+	title = { 
+		trigger = { NOT = { has_global_flag = running_LCDA }}
+		text = "NAMEL3T.29_noLCDA"
+	}
+	
+	desc = {
+		trigger = { 
+			has_province_modifier = great_pass
+			has_global_flag = running_LCDA
+			}
+		text = "DESCL3T.29_maj_extA"
+		picture = GFX_evt_LCDA_montagne1
+	}
+	desc = {
+		trigger = { 
+			has_province_modifier = minor_pass
+			has_global_flag = running_LCDA
+			}
+		text = "DESCL3T.29_min_extA"
+		picture = GFX_evt_LCDA_montagne2
+	}
+	desc = {
+		trigger = { 
+			has_province_modifier = great_pass
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = "DESCL3T.29_maj"
+		picture = GFX_evt_LCDA_montagne1
+	}
+	desc = {
+		trigger = { 
+			has_province_modifier = minor_pass
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = "DESCL3T.29_min"
+		picture = GFX_evt_LCDA_montagne2
+	}
+  #dry mountains variant for muslim regions
+	desc = {
+		trigger = { 
+			has_province_modifier = great_pass
+			owner = { religion_group = muslim }
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = "DESCL3T.29_maj"
+		picture = GFX_evt_LCDA_montagne2_muslim
+	}
+	desc = {
+		trigger = { 
+			has_province_modifier = minor_pass
+			owner = { religion_group = muslim }
+			NOT = { has_global_flag = running_LCDA }
+			}
+		text = "DESCL3T.29_min"
+		picture = GFX_evt_LCDA_montagne2_muslim
+	}
+	
+	is_triggered_only = yes #on_startup
+	
+	immediate = {
+		random_list = {
+			25 = { set_province_flag = text_reponse_generique_A }
+			25 = { set_province_flag = text_reponse_generique_B }
+			25 = { set_province_flag = text_reponse_generique_C }
+			25 = { set_province_flag = text_reponse_generique_D }
+		}
+	}
+	option = {
+		name = "text_reponse_generique_A"	
+		trigger = { has_province_flag = text_reponse_generique_A }
+		clr_province_flag = text_reponse_generique_A
+	}
+	option = {
+		name = "text_reponse_generique_B"	
+		trigger = { has_province_flag = text_reponse_generique_B }
+		clr_province_flag = text_reponse_generique_B
+	}
+	option = {
+		name = "text_reponse_generique_C"	
+		trigger = { has_province_flag = text_reponse_generique_C }
+		clr_province_flag = text_reponse_generique_C
+	}
+	option = {
+		name = "text_reponse_generique_D"	
+		trigger = { has_province_flag = text_reponse_generique_D }
+		clr_province_flag = text_reponse_generique_D
+	}
+}
+#Maintenance realm capitales - ADDING/KEEPING the modifier
+# ROOT is the character
+character_event = {
+    id = L3T.20
+	hide_window = yes
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	trigger = { 
+		higher_tier_than = BARON
+		OR = {
+			demesne_size = 2
+			higher_tier_than = COUNT
+		}
+	}
+
+	immediate = {
+		# Ruler can have a realm capital and doesn't have it in his capital holding yet
+		if = {
+			limit = {
+				any_demesne_province = {
+					owner = { capital_scope = { province = PREVPREV}}
+					NOT = { has_province_modifier = realm_capital_province }
+				}
+			}
+			capital_scope = {
+				add_province_modifier = { 
+					name = realm_capital_province
+					duration = -1
+				}
+			}
+		}
+		#remove capital modifier from any province that is not the capital
+		if = { 
+			limit = {
+				any_demesne_province = {	
+					NOT = { owner = { capital_scope = { province = PREVPREV}}}
+					has_province_modifier = realm_capital_province
+				}
+			}
+			any_demesne_province = { #remove any other capital modifier if any
+				limit = {
+					NOT = { owner = { capital_scope = { province = PREVPREV}}}
+					has_province_modifier = realm_capital_province
+				}
+				remove_province_modifier = realm_capital_province
+			}
+		}
+	}
+}
+			
+
+#Maintenance realm capitals - REMOVING the modifier
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+character_event = {
+    id = L3T.21
+	hide_window = yes
+	
+	only_rulers = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	# Ruler became too small to have a realm capital
+	trigger = { 
+		higher_tier_than = BARON
+		NOT = {
+			OR = {
+				demesne_size = 2
+				higher_tier_than = COUNT
+			}
+		}
+	}
+
+	immediate = {
+		any_demesne_province = { 
+			limit = {
+				has_province_modifier = realm_capital_province
+			}
+			remove_province_modifier = realm_capital_province
+		}
+	}
+}

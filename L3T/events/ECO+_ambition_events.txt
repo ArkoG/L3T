@@ -5,10 +5,9 @@ namespace = ECO
 ####################
 
 ### Epée légendaire
-
 # Début chaîne d'event
 character_event = {
-	id = ECO.311
+	id = ECO.310 #focus pulse version
 	desc = "DESCECO.311"
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
@@ -16,12 +15,15 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	only_men = yes
+
+	is_triggered_only = yes
 	
 	trigger = {
+		is_adult = yes
 		OR = {
 			AND = {
 				has_focus = focus_war
-				NOT = { martial = 8 }
+				NOT = { martial = 15 }
 			}
 			has_ambition = obj_improve_martial
 		}
@@ -32,19 +34,114 @@ character_event = {
 		NOT = { has_character_flag = epee }
 		NOT = { has_character_flag = epee_taken }
 		NOT = { has_artifact = legendary_sword_2_0 }
-		any_demesne_title = {	
-			tier = baron	
-			holding_type = castle 	
-			has_building = CA_fonderie_L2
+		NOT = { has_artifact = sayf_al_islam }
+		#any_demesne_title = {	
+		#	tier = baron	
+		#	holding_type = castle 	
+		#	has_building = CA_fonderie_L2
+		#}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = { factor = 1.5  NOT = { martial = 7 }}
+		modifier = { factor = 1.5  NOT = { martial = 6 }}		
+		modifier = { factor = 1.5  NOT = { martial = 5 }}
+		modifier = { factor = 0.5  war = yes }	
+		modifier = { 
+			factor = 2.0
+			any_demesne_title = {	
+				tier = baron	
+				holding_type = castle 	
+				has_building = CA_fonderie_L2
+			}
 		}
+		modifier = { factor = 1.5 has_ambition = obj_create_treasury }		
+	}
+	
+	# La chaîne d'event commence
+	option = {
+		name = "ECO.311A"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
+		character_event = { id = ECO.312 days = 30 tooltip = TOOLTIPECO.311A}
+		set_character_flag = epee
+		set_character_flag = epee_taken
+		# On met les flags des events Vanilla ici pour qu'ils n'interfèrent pas
+		# En mettant cela ici, on évite de changer les events Vanilla
+		set_character_flag = toy_army
+		set_character_flag = street_ruffians
+		set_character_flag = warrior_mentor
+	}
+	
+	# On n'est pas interessé
+	option = {
+		name = "ECO.311B"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
+		custom_tooltip = { text = improve_martial_quit }
+	}
+}
+# Début chaîne d'event
+character_event = {
+	id = ECO.311 #normal version
+	desc = "DESCECO.311"
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	capable_only = yes
+	prisoner = no
+	only_men = yes
+	
+	trigger = {
+		is_adult = yes
+		OR = {
+			AND = {
+				has_focus = focus_war
+				NOT = { martial = 15 }
+			}
+			has_ambition = obj_improve_martial
+		}
+		wealth = 100
+		NOT = { has_character_flag = toy_army }
+		NOT = { has_character_flag = street_ruffians }
+		NOT = { has_character_flag = warrior_mentor }
+		NOT = { has_character_flag = epee }
+		NOT = { has_character_flag = epee_taken }
+		NOT = { has_artifact = legendary_sword_2_0 }
+		NOT = { has_artifact = sayf_al_islam }
+		#any_demesne_title = {	
+		#	tier = baron	
+		#	holding_type = castle 	
+		#	has_building = CA_fonderie_L2
+		#}
 	}
 	
 	mean_time_to_happen = {
 		months = 140
-		modifier = { factor = 0.9  NOT = { martial = 7 }}
-		modifier = { factor = 0.9  NOT = { martial = 6 }}		
-		modifier = { factor = 0.9  NOT = { martial = 5 }}
-		modifier = { factor = 2.0  war = yes }		
+		modifier = { factor = 0.8  NOT = { martial = 7 }}
+		modifier = { factor = 0.8  NOT = { martial = 6 }}		
+		modifier = { factor = 0.8  NOT = { martial = 5 }}
+		modifier = { factor = 2.0  war = yes }	
+		modifier = { 
+			factor = 0.5
+			any_demesne_title = {	
+				tier = baron	
+				holding_type = castle 	
+				has_building = CA_fonderie_L2
+			}
+		}
+		modifier = { factor = 0.8 has_ambition = obj_create_treasury }			
 	}
 	
 	# La chaîne d'event commence
@@ -518,7 +615,7 @@ character_event = {
 ##Le textile
 # Event de choix de faire la suite ou pas
 character_event = {
-	id = ECO.301
+	id = ECO.300 #focus pulse version
 	desc = "DESCECO.301"
 	picture = GFX_evt_carriage
 	border = GFX_event_normal_frame_economy
@@ -526,12 +623,15 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	min_age = 16
+
+	is_triggered_only = yes
 	
 	trigger = {
+		is_adult = yes
 		OR = {
 			AND = {
 				has_focus = focus_business
-				NOT = { stewardship = 8 }
+				NOT = { stewardship = 15 }
 			}
 			has_ambition = obj_improve_stewardship
 		}
@@ -543,16 +643,21 @@ character_event = {
 		NOT = { has_character_flag = drap_taken }
 		NOT = { has_character_flag = cadastreux }
 		war = no
-		any_demesne_province = {
-			has_province_modifier = elevage4_drap
-		}
+		#any_demesne_province = {
+		#	has_province_modifier = elevage4_drap
+		#}
 	}
 	
-	mean_time_to_happen = {
-		months = 140
-		modifier = { factor = 0.9  NOT = { stewardship = 7 }}
-		modifier = { factor = 0.9  NOT = { stewardship = 6 }}		
-		modifier = { factor = 0.9  NOT = { stewardship = 5 }}	
+	weight_multiplier = {
+		days = 1
+		modifier = { factor = 1.5  NOT = { stewardship = 7 }}
+		modifier = { factor = 1.5  NOT = { stewardship = 6 }}		
+		modifier = { factor = 1.5  NOT = { stewardship = 5 }}
+		modifier = { factor = 0.5  war = yes }
+		modifier = {
+			factor = 2.0
+				any_demesne_province = { has_province_modifier = elevage4_drap }
+		}
 	}
 	
 	option = {
@@ -583,6 +688,83 @@ character_event = {
 			}
 		}
 		custom_tooltip = { text = improve_stewardship_quit }
+		set_character_flag = drap_taken
+	}
+}
+
+character_event = {
+	id = ECO.301
+	desc = "DESCECO.301"
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_economy
+	
+	capable_only = yes
+	prisoner = no
+	min_age = 16
+	
+	trigger = {
+		is_adult = yes
+		OR = {
+			AND = {
+				has_focus = focus_business
+				NOT = { stewardship = 15 }
+			}
+			has_ambition = obj_improve_stewardship
+		}
+		wealth = 50
+		NOT = { has_character_flag = the_inn }
+		NOT = { has_character_flag = the_garden }
+		NOT = { has_character_flag = the_survey }
+		NOT = { has_character_flag = drap }
+		NOT = { has_character_flag = drap_taken }
+		NOT = { has_character_flag = cadastreux }
+		war = no
+		#any_demesne_province = {
+		#	has_province_modifier = elevage4_drap
+		#}
+	}
+	
+	mean_time_to_happen = {
+		months = 140
+		modifier = { factor = 0.8  NOT = { stewardship = 7 }}
+		modifier = { factor = 0.8  NOT = { stewardship = 6 }}		
+		modifier = { factor = 0.8  NOT = { stewardship = 5 }}
+		modifier = { factor = 2.0  war = yes }			
+		modifier = {
+			factor = 0.5
+				any_demesne_province = { has_province_modifier = elevage4_drap }
+		}
+	}
+	
+	option = {
+		name = "ECO.301A"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
+		character_event = { id = ECO.302 days = 30 tooltip = TOOLTIPECO.301A}
+		set_character_flag = drap
+		set_character_flag = drap_taken
+		# On met les flags des events Vanilla ici pour qu'ils n'interfèrent pas
+		# En mettant cela ici, on évite de changer les events Vanilla
+		set_character_flag = the_inn
+		set_character_flag = the_garden
+		set_character_flag = the_survey
+	}
+	option = {
+		name = "ECO.301B"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
+		custom_tooltip = { text = improve_stewardship_quit }
+		set_character_flag = drap_taken
 	}
 }
 # Choix de l'achat
@@ -677,9 +859,9 @@ character_event = {
 			18 = { wealth = 8 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303E} }
 			19 = { wealth = 10 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303F} }
 			15 = { wealth = 12 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303G} }
-			11 = { wealth = 14 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303H} }
-			6 = { wealth = 16 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303I} }
-			4 = { wealth = 18 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303J} }	
+			11 = { wealth = 14 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303H} set_character_flag = good_selling_xp }
+			6 = { wealth = 16 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303I} set_character_flag = good_selling_xp }
+			4 = { wealth = 18 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.303J} set_character_flag = good_selling_xp }	
 		}	
 	}
 }
@@ -713,9 +895,9 @@ character_event = {
 			18 = { wealth = 20 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304E} }
 			19 = { wealth = 25 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304F} }
 			15 = { wealth = 30 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304G} }
-			11 = { wealth = 35 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304H} }
-			6 = { wealth = 40 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304I} }
-			4 = { wealth = 45 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304J} }
+			11 = { wealth = 35 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304H} set_character_flag = good_selling_xp }
+			6 = { wealth = 40 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304I} set_character_flag = good_selling_xp }
+			4 = { wealth = 45 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.304J} set_character_flag = good_selling_xp }
 		}	
 	}
 }
@@ -749,9 +931,9 @@ character_event = {
 			19 = { wealth = 40 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305E} }
 			18 = { wealth = 50 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305F} }
 			13 = { wealth = 60 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305G} }
-			8 = { wealth = 70 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305H} }
-			5 = { wealth = 80 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305I} }
-			2 = { wealth = 90 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305J} }
+			8 = { wealth = 70 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305H} set_character_flag = good_selling_xp }
+			5 = { wealth = 80 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305I} set_character_flag = good_selling_xp }
+			2 = { wealth = 90 character_event = { id = ECO.306 days = 30 tooltip = TOOLTIPECO.305J} set_character_flag = good_selling_xp }
 		}	
 	}
 }
@@ -791,7 +973,7 @@ character_event = {
 					add_trait = greedy
 				}
 			}
-			50 = { prestige = 10 }
+			50 = { prestige = 15 }
 		}
 		character_event = { id = ECO.307 days = 30 tooltip = TOOLTIPECO.306A}
 	}
@@ -813,11 +995,13 @@ character_event = {
 					add_trait = charitable
 				}
 			}
-			50 = { piety = 10 }
+			50 = { piety = 15 }
 		}
 		character_event = { id = ECO.307 days = 30 tooltip = TOOLTIPECO.306B}
 	}
 }
+
+
 # Fin de la chaîne
 character_event = {
 	id = ECO.307
@@ -831,18 +1015,34 @@ character_event = {
 	
 	option = {
 		name = "ECO.307A"
+		trigger = { NOT = { has_character_flag = good_selling_xp }}
 		change_stewardship = 1
+		hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		clr_character_flag = drap
 		# Retire les flags Vanille
 		clr_character_flag = the_inn
 		clr_character_flag = the_garden
 		clr_character_flag = the_survey
+		clr_character_flag = good_selling_xp
+	}
+	
+	option = {
+		name = "ECO.307B"
+		trigger = { has_character_flag = good_selling_xp }
+		change_stewardship = 2
+		hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
+		clr_character_flag = drap
+		# Retire les flags Vanille
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
+		clr_character_flag = good_selling_xp
 	}
 }
 
 ##Le cadastre
 narrative_event = {
-	id = ECO.319
+	id = ECO.308 #focus pulse version
 	desc = "DESCECO.319"
 	picture = GFX_evt_L3T_carte
 	border = GFX_event_narrative_frame_economy
@@ -851,12 +1051,14 @@ narrative_event = {
 	capable_only = yes
 	prisoner = no
 	min_age = 16
+
+	is_triggered_only = yes
 	
 	trigger = {
 		OR = {
 			AND = {
 				has_focus = focus_business
-				NOT = { stewardship = 10 }
+				NOT = { stewardship = 15 }
 			}
 			has_ambition = obj_improve_stewardship
 		}
@@ -871,8 +1073,12 @@ narrative_event = {
 		NOT = { has_character_flag = cadastreux_refuse }
 	}
 	
-	mean_time_to_happen = {
-		months = 140
+	weight_multiplier = {
+		days = 1
+		modifier = { factor = 1.5  NOT = { stewardship = 7 }}
+		modifier = { factor = 1.5  NOT = { stewardship = 6 }}		
+		modifier = { factor = 1.5  NOT = { stewardship = 5 }}
+		modifier = { factor = 0.5  war = yes }
 	}
 	
 	option = {
@@ -892,6 +1098,77 @@ narrative_event = {
 		set_character_flag = the_inn
 		set_character_flag = the_garden
 		set_character_flag = the_survey
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
+	}
+	option = {
+		name = "ECO.319B"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				trait = content
+			}
+		}
+		custom_tooltip = { text = improve_stewardship_quit } #d'autres moyens
+		set_character_flag = cadastreux_refuse #ne se le reverra pas proposé
+	}
+}
+narrative_event = {
+	id = ECO.319
+	desc = "DESCECO.319"
+	picture = GFX_evt_L3T_carte
+	border = GFX_event_narrative_frame_economy
+	title = "NAMEECO.319"
+
+	capable_only = yes
+	prisoner = no
+	min_age = 16
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_focus = focus_business
+				NOT = { stewardship = 15 }
+			}
+			has_ambition = obj_improve_stewardship
+		}
+		wealth = 100
+		NOT = { has_character_flag = the_inn }
+		NOT = { has_character_flag = the_garden }
+		NOT = { has_character_flag = the_survey }
+		NOT = { has_character_flag = drap }
+		war = no
+		NOT = { has_character_flag = cadastreux } #ne peut plus relancer cette session une fois entamée, même terminée
+		NOT = { has_character_flag = cadastreux_termine }
+		NOT = { has_character_flag = cadastreux_refuse }
+	}
+	
+	mean_time_to_happen = {
+		months = 140
+		modifier = { factor = 0.8  NOT = { stewardship = 7 }}
+		modifier = { factor = 0.8  NOT = { stewardship = 6 }}		
+		modifier = { factor = 0.8  NOT = { stewardship = 5 }}
+		modifier = { factor = 2.0  war = yes }	
+	}
+	
+	option = {
+		name = "ECO.319A"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
+		custom_tooltip = { text = TOOLTIPECO319 }
+		set_character_flag = cadastreux
+		hidden_tooltip = {	ROOT = { set_variable = { which = "cadastre" value = 1}}}
+		# On met les flags des events Vanilla ici pour qu'ils n'interfèrent pas
+		# En mettant cela ici, on évite de changer les events Vanilla
+		set_character_flag = the_inn
+		set_character_flag = the_garden
+		set_character_flag = the_survey
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 	}
 	option = {
 		name = "ECO.319B"
@@ -923,16 +1200,16 @@ character_event = { #régler les conflits de parcelles #acception/refus
 		OR = {
 			AND = {
 				has_focus = focus_business
-				NOT = { stewardship = 8 }
+				NOT = { stewardship = 15 }
 			}
 			has_ambition = obj_improve_stewardship
 		}
 		wealth = 100
-		NOT = { has_character_flag = the_inn }
-		NOT = { has_character_flag = the_garden }
-		NOT = { has_character_flag = the_survey }
-		NOT = { has_character_flag = drap }
-		NOT = { has_character_flag = drap_taken }
+		#NOT = { has_character_flag = the_inn }
+		#NOT = { has_character_flag = the_garden }
+		#NOT = { has_character_flag = the_survey }
+		#NOT = { has_character_flag = drap }
+		#NOT = { has_character_flag = drap_taken }
 		#war = no
 		has_character_flag = cadastreux
 		NOT = { has_character_flag = chaine_cadastre_1_refusee }
@@ -960,6 +1237,7 @@ character_event = { #régler les conflits de parcelles #acception/refus
 			}
 		}
 		set_character_flag = chaine_cadastre_1_refusee
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 	}
 }
 character_event = { #régler les conflits de parcelle : sur le terrain
@@ -996,6 +1274,7 @@ character_event = { #régler les conflits de parcelle : sur le terrain
 		}
 		custom_tooltip = { text = TOOLTIPECO3202B }
 		set_character_flag = chaine_cadastre_1_terminee #fin prématurée
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 	}
 }
 character_event = { #faire les mesures
@@ -1021,6 +1300,7 @@ character_event = { #faire les mesures
 			}
 		}
 		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 	}
 	option = {
 		name = "ECO.3202B" #faire preuve de clémence fiscale
@@ -1044,6 +1324,7 @@ character_event = { #faire les mesures
 				}
 			}
 		}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 	}
 }
 #Inventaire des fiefs #chaine 2
@@ -1062,16 +1343,16 @@ character_event = { #Inventaire des fiefs #acception/refus
 		OR = {
 			AND = {
 				has_focus = focus_business
-				NOT = { stewardship = 8 }
+				NOT = { stewardship = 15 }
 			}
 			has_ambition = obj_improve_stewardship
 		}
 		wealth = 100
-		NOT = { has_character_flag = the_inn }
-		NOT = { has_character_flag = the_garden }
-		NOT = { has_character_flag = the_survey }
-		NOT = { has_character_flag = drap }
-		NOT = { has_character_flag = drap_taken }
+		#NOT = { has_character_flag = the_inn }
+		#NOT = { has_character_flag = the_garden }
+		#NOT = { has_character_flag = the_survey }
+		#NOT = { has_character_flag = drap }
+		#NOT = { has_character_flag = drap_taken }
 		#war = no
 		has_character_flag = cadastreux
 		NOT = { has_character_flag = chaine_cadastre_2_refusee }
@@ -1092,6 +1373,7 @@ character_event = { #Inventaire des fiefs #acception/refus
 			}
 		}
 		set_character_flag = chaine_cadastre_2_refusee
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 	}
 	option = {
 		name = "ECO.321B" #intérêt #propres fiefs
@@ -1302,6 +1584,7 @@ character_event = { #allons plus loin ? registre or not registre ?
 			}
 		}
 		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 		wealth = -50
 	}
 	option = {
@@ -1313,6 +1596,7 @@ character_event = { #allons plus loin ? registre or not registre ?
 				trait = content
 			}
 		}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 		prestige = 25
 	}
 }
@@ -1332,33 +1616,22 @@ character_event = { #cartographier nos fiefs ? #acception/refus
 		OR = {
 			AND = {
 				has_focus = focus_business
-				NOT = { stewardship = 8 }
+				NOT = { stewardship = 15 }
 			}
 			has_ambition = obj_improve_stewardship
 		}
 		wealth = 100
-		NOT = { has_character_flag = the_inn }
-		NOT = { has_character_flag = the_garden }
-		NOT = { has_character_flag = the_survey }
-		NOT = { has_character_flag = drap }
-		NOT = { has_character_flag = drap_taken }
+		#NOT = { has_character_flag = the_inn }
+		#NOT = { has_character_flag = the_garden }
+		#NOT = { has_character_flag = the_survey }
+		#NOT = { has_character_flag = drap }
+		#NOT = { has_character_flag = drap_taken }
 		#war = no
 		has_character_flag = cadastreux
 		NOT = { has_character_flag = chaine_cadastre_3_refusee }
 		NOT = { has_character_flag = chaine_cadastre_3_terminee }
 	}
-	
-	option = {
-		name = "ECO.322A" #pas intéressé
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-		}
-		set_character_flag = chaine_cadastre_3_refusee
-	}
+
 	option = {
 		name = "ECO.322B" #intérêt
 		ai_chance = {
@@ -1370,7 +1643,20 @@ character_event = { #cartographier nos fiefs ? #acception/refus
 		}
 		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		character_event = { id = ECO.3221 days = 30 tooltip = TOOLTIPECO3221}
+	}	
+	option = {
+		name = "ECO.322A" #pas intéressé
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
+		set_character_flag = chaine_cadastre_3_refusee
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 	}
+
 }
 character_event = { #existant ou néant ?
 	id = ECO.3221
@@ -1404,6 +1690,7 @@ character_event = { #existant ou néant ?
 				50 = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 			}
 		}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 		wealth = -40
 	}
 	option = {
@@ -1421,6 +1708,7 @@ character_event = { #existant ou néant ?
 				50 = { ROOT = { change_variable = { which = "cadastre" value = 2}}}
 			}
 		}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 		wealth = -80
 	}
 	option = {
@@ -1432,6 +1720,7 @@ character_event = { #existant ou néant ?
 				trait = content
 			}
 		}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 	}
 }
 #harmoniser les mesures ? #chaine 4
@@ -1450,33 +1739,22 @@ character_event = { #harmoniser les mesures ? #acception/refus
 		OR = {
 			AND = {
 				has_focus = focus_business
-				NOT = { stewardship = 8 }
+				NOT = { stewardship = 15 }
 			}
 			has_ambition = obj_improve_stewardship
 		}
 		wealth = 100
-		NOT = { has_character_flag = the_inn }
-		NOT = { has_character_flag = the_garden }
-		NOT = { has_character_flag = the_survey }
-		NOT = { has_character_flag = drap }
-		NOT = { has_character_flag = drap_taken }
+		#NOT = { has_character_flag = the_inn }
+		#NOT = { has_character_flag = the_garden }
+		#NOT = { has_character_flag = the_survey }
+		#NOT = { has_character_flag = drap }
+		#NOT = { has_character_flag = drap_taken }
 		#war = no
 		has_character_flag = cadastreux
 		NOT = { has_character_flag = chaine_cadastre_4_refusee }
 		NOT = { has_character_flag = chaine_cadastre_4_terminee }
 	}
-	
-	option = {
-		name = "ECO.323A" #pas intéressé
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-		}
-		set_character_flag = chaine_cadastre_4_refusee
-	}
+
 	option = {
 		name = "ECO.323B" #intérêt
 		ai_chance = {
@@ -1489,6 +1767,19 @@ character_event = { #harmoniser les mesures ? #acception/refus
 		hidden_tooltip = { ROOT = { change_variable = { which = "cadastre" value = 1}}}
 		character_event = { id = ECO.3231 days = 30 tooltip = TOOLTIPECO3231}
 	}
+	option = {
+		name = "ECO.323A" #pas intéressé
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+		}
+		set_character_flag = chaine_cadastre_4_refusee
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
+	}
+
 }
 character_event = { #harmoniser les mesures
 	id = ECO.3231
@@ -1512,6 +1803,7 @@ character_event = { #harmoniser les mesures
 				trait = proud
 			}
 		}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 		prestige = 50
 		wealth = 25		
 	}
@@ -1524,6 +1816,7 @@ character_event = { #harmoniser les mesures
 				NOT = { wealth = 50 }
 			}
 		}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 		prestige = -50
 		wealth = 65
 	}
@@ -1536,8 +1829,33 @@ character_event = { #harmoniser les mesures
 				trait = slothful
 			}
 		}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 		prestige = -25
 		wealth = 45		
+	}
+	option = {
+		name = "ECO.3231D" #inventer quelque chose
+		custom_tooltip = { text = TOOLTIPECO3231D }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = mystic
+			}
+		}
+		random_list = {
+			20 = { prestige = 50 }
+			30 = { prestige = 25 }
+			30 = { prestige = -25 }
+			20 = { prestige = -50 }
+		}
+		random_list = {
+			20 = { wealth = -25 }
+			30 = { wealth = 25 }
+			30 = { wealth = 45 }
+			20 = { wealth = 65 }
+		}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 	}
 }
 #conclusions
@@ -1550,7 +1868,9 @@ narrative_event = {
 
 	capable_only = yes
 	prisoner = no
-	
+
+	is_triggered_only = yes
+		
 	trigger = {
 		has_character_flag = cadastreux
 		NOT = { has_character_flag = cadastreux_termine }
@@ -1566,17 +1886,17 @@ narrative_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-		modifier = { factor = 1.20	has_character_flag = chaine_cadastre_1_refusee }
-		modifier = { factor = 1.50	has_character_flag = chaine_cadastre_2_refusee }
-		modifier = { factor = 1.20	has_character_flag = chaine_cadastre_3_refusee }
-		modifier = { factor = 1.20	has_character_flag = chaine_cadastre_4_refusee }
-		modifier = { factor = 0.80	has_character_flag = chaine_cadastre_1_terminee }
-		modifier = { factor = 0.60	has_character_flag = chaine_cadastre_2_terminee }
-		modifier = { factor = 0.80	has_character_flag = chaine_cadastre_3_terminee }
-		modifier = { factor = 0.80	has_character_flag = chaine_cadastre_4_terminee }		
-	}
+	#mean_time_to_happen = {
+	#	months = 12
+	#	modifier = { factor = 1.20	has_character_flag = chaine_cadastre_1_refusee }
+	#	modifier = { factor = 1.50	has_character_flag = chaine_cadastre_2_refusee }
+	#	modifier = { factor = 1.20	has_character_flag = chaine_cadastre_3_refusee }
+	#	modifier = { factor = 1.20	has_character_flag = chaine_cadastre_4_refusee }
+	#	modifier = { factor = 0.80	has_character_flag = chaine_cadastre_1_terminee }
+	#	modifier = { factor = 0.60	has_character_flag = chaine_cadastre_2_terminee }
+	#	modifier = { factor = 0.80	has_character_flag = chaine_cadastre_3_terminee }
+	#	modifier = { factor = 0.80	has_character_flag = chaine_cadastre_4_terminee }		
+	#}
 
 	immediate = {
 	}
@@ -1594,7 +1914,13 @@ narrative_event = {
 			check_variable = { which = "cadastre" value = 10 }
 			is_female = no
 			}
-		change_stewardship = 1
+		change_stewardship = 2
+		random = { 
+			chance = 20
+			modifier = { factor = 4 check_variable = { which = "cadastre" value = 12 }}
+			change_stewardship = 1 
+		}
+		hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		random_list = {
 			50 = { give_nickname = nick_larpenteur }
 			50 = { give_nickname = nick_le_cartographe }
@@ -1612,7 +1938,13 @@ narrative_event = {
 			check_variable = { which = "cadastre" value = 10 }
 			is_female = yes
 			}
-		change_stewardship = 1
+		change_stewardship = 2
+		random = { 
+			chance = 20
+			modifier = { factor = 3 check_variable = { which = "cadastre" value = 12 }}
+			change_stewardship = 1 
+		}
+		hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		random_list = {
 			50 = { give_nickname = nick_larpenteuse }
 			50 = { give_nickname = nick_la_cartographe }
@@ -1635,9 +1967,13 @@ narrative_event = {
 			50 = { give_nickname = nick_larpenteur }
 			50 = { give_nickname = nick_le_cartographe }
 			}
+		change_stewardship = 1 
 		random = { 
 			chance = 50
+			modifier = { factor = 0.8 NOT = { check_variable = { which = "cadastre" value = 8 }}}
+			modifier = { factor = 1.2 check_variable = { which = "cadastre" value = 9 }}
 			change_stewardship = 1 
+			hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		}
 	}
 	option = {
@@ -1657,9 +1993,13 @@ narrative_event = {
 			50 = { give_nickname = nick_larpenteuse }
 			50 = { give_nickname = nick_la_cartographe }
 			}
+		change_stewardship = 1 
 		random = { 
 			chance = 50
+			modifier = { factor = 0.8 NOT = { check_variable = { which = "cadastre" value = 8 }}}
+			modifier = { factor = 1.2 check_variable = { which = "cadastre" value = 9 }}
 			change_stewardship = 1 
+			hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		}
 	}
 	option = { 
@@ -1680,8 +2020,11 @@ narrative_event = {
 			50 = { give_nickname = nick_le_cartographe }
 			}
 		random = { 
-			chance = 25
+			chance = 50
+			modifier = { factor = 0.8 NOT = { check_variable = { which = "cadastre" value = 5 }}}
+			modifier = { factor = 1.2 check_variable = { which = "cadastre" value = 6 }}
 			change_stewardship = 1 
+			hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		}
 	}
 	option = { 
@@ -1702,8 +2045,11 @@ narrative_event = {
 			50 = { give_nickname = nick_la_cartographe }
 			}
 		random = { 
-			chance = 25
+			chance = 50
+			modifier = { factor = 0.8 NOT = { check_variable = { which = "cadastre" value = 5 }}}
+			modifier = { factor = 1.2 check_variable = { which = "cadastre" value = 6 }}
 			change_stewardship = 1 
+			hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 		}
 	}
 	option = { 
@@ -1724,16 +2070,25 @@ narrative_event = {
 			NOT = { check_variable = { which = "cadastre" value =  10 }}
 			# Il existe un moyen de gagner des points
 			OR = {
-				NOT = { has_character_flag = chaine_cadastre_1_refusee }
-				NOT = { has_character_flag = chaine_cadastre_1_terminee }
-				NOT = { has_character_flag = chaine_cadastre_2_refusee }
-				NOT = { has_character_flag = chaine_cadastre_2_terminee }
-				NOT = { has_character_flag = chaine_cadastre_3_refusee }
-				NOT = { has_character_flag = chaine_cadastre_3_terminee }
-				NOT = { has_character_flag = chaine_cadastre_4_refusee }
-				NOT = { has_character_flag = chaine_cadastre_4_terminee }
+				NOT = { 
+					has_character_flag = chaine_cadastre_1_refusee
+					has_character_flag = chaine_cadastre_1_terminee
+				}
+				NOT = {
+					has_character_flag = chaine_cadastre_2_refusee
+					has_character_flag = chaine_cadastre_2_terminee
+				}
+				NOT = {
+					has_character_flag = chaine_cadastre_3_refusee
+					has_character_flag = chaine_cadastre_3_terminee
+				}
+				NOT = {
+					has_character_flag = chaine_cadastre_4_refusee
+					has_character_flag = chaine_cadastre_4_terminee
+				}
 			}
 		}
+		hidden_tooltip = { character_event = { id = ECO.326}} #launches tombola for the 4 chains
 	}
 }
 character_event = { #aller plus loin ?
@@ -1857,6 +2212,7 @@ character_event = { #cadastre achevé
 		name = "ECO.3252A"
 			prestige = 100
 			change_stewardship = 1
+			hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 			custom_tooltip = { text = entree_chronique }
 			chronicle = {
 				entry = CHRONICLE_CADASTRE
@@ -1865,4 +2221,125 @@ character_event = { #cadastre achevé
 			location = { add_province_modifier = { name = redaction_dun_cadastre duration = 3650 }}
 	}
 }
+#event tombola
+character_event = {
+    id = ECO.326
+	hide_window = yes
 
+	is_triggered_only = yes 
+	
+	immediate = {
+		random_list = {
+			10 = { 
+				modifier = {
+					factor = 0
+					OR = {
+						has_character_flag = chaine_cadastre_1_refusee
+						has_character_flag = chaine_cadastre_1_terminee
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						has_character_flag = chaine_cadastre_1_terminee
+						has_character_flag = chaine_cadastre_2_terminee
+						has_character_flag = chaine_cadastre_3_terminee
+						has_character_flag = chaine_cadastre_4_terminee
+					}
+				}
+				character_event = { id = ECO.320 days=30 random=15 }
+			}
+			10 = { 
+				modifier = {
+					factor = 0
+					OR = {
+						has_character_flag = chaine_cadastre_2_refusee
+						has_character_flag = chaine_cadastre_2_terminee
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						has_character_flag = chaine_cadastre_1_terminee
+						has_character_flag = chaine_cadastre_2_terminee
+						has_character_flag = chaine_cadastre_3_terminee
+						has_character_flag = chaine_cadastre_4_terminee
+					}
+				}
+				character_event = { id = ECO.321 days=30 random=15 }
+			}
+			10 = { 
+				modifier = {
+					factor = 0
+					OR = {
+						has_character_flag = chaine_cadastre_3_refusee
+						has_character_flag = chaine_cadastre_3_terminee
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						has_character_flag = chaine_cadastre_1_terminee
+						has_character_flag = chaine_cadastre_2_terminee
+						has_character_flag = chaine_cadastre_3_terminee
+						has_character_flag = chaine_cadastre_4_terminee
+					}
+				}
+				character_event = { id = ECO.322 days=30 random=15 }
+			}
+			10 = { 
+				modifier = {
+					factor = 0
+					OR = {
+						has_character_flag = chaine_cadastre_4_refusee
+						has_character_flag = chaine_cadastre_4_terminee
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						has_character_flag = chaine_cadastre_1_terminee
+						has_character_flag = chaine_cadastre_2_terminee
+						has_character_flag = chaine_cadastre_3_terminee
+						has_character_flag = chaine_cadastre_4_terminee
+					}
+				}
+				character_event = { id = ECO.323 days=30 random=15 }
+			}
+			10 = { 
+				modifier = {
+					factor = 0
+					NOT = {
+						has_character_flag = chaine_cadastre_1_refusee
+						has_character_flag = chaine_cadastre_1_terminee
+						has_character_flag = chaine_cadastre_2_refusee
+						has_character_flag = chaine_cadastre_2_terminee
+						has_character_flag = chaine_cadastre_3_refusee
+						has_character_flag = chaine_cadastre_3_terminee
+						has_character_flag = chaine_cadastre_4_refusee
+						has_character_flag = chaine_cadastre_4_terminee
+					}
+				}
+				modifier = {
+					factor = 100
+					OR = {
+						AND = {
+							has_character_flag = chaine_cadastre_1_refusee
+							has_character_flag = chaine_cadastre_2_refusee
+							has_character_flag = chaine_cadastre_3_refusee
+							has_character_flag = chaine_cadastre_4_refusee
+						}
+						AND = {
+							has_character_flag = chaine_cadastre_1_terminee
+							has_character_flag = chaine_cadastre_2_terminee
+							has_character_flag = chaine_cadastre_3_terminee
+							has_character_flag = chaine_cadastre_4_terminee	
+						}
+					}
+				}
+				#finishing
+				narrative_event = { id = ECO.324 days=10 random=5 }
+			}
+		}
+	}
+}
