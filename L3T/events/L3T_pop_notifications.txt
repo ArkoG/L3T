@@ -1,6 +1,5 @@
 # Development variable notifications
-
-character_event = { #notification for 1103 normal growth #debug mode only
+character_event = { #notification for 1103 normal growth -synthesis #debug mode only
 	id = L3T.11031
 	desc = "DESCL3T.11031"
 	title = "NAMEL3T.11031"
@@ -20,6 +19,7 @@ character_event = { #notification for 1103 normal growth #debug mode only
 		clear_event_target = holding_dev 
 	}
 }
+
 character_event = { #notification for 1103 disease decrease
 	id = L3T.11032
 	title = "NAMEL3T.11032"
@@ -106,7 +106,66 @@ character_event = {  #notification for 1103 occupied stagnation
 		clear_event_target = holding_dev 
 	}
 }
+character_event = { #notification for 1103 BONUS from prosperity #debug mode only
+	id = L3T.11035
+	desc = "DESCL3T.11035"
+	title = "NAMEL3T.11035"
 
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes #called only in debug mod
+	
+	trigger = {
+		has_global_flag = init_population
+		has_global_flag = debug_L3T #safety catch
+	}
+
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
+character_event = { #notification for 1103 BONUS from capital #debug mode only
+	id = L3T.11036
+	desc = "DESCL3T.11035"
+	title = "NAMEL3T.11036"
+
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes #called only in debug mod
+	
+	trigger = {
+		has_global_flag = init_population
+		has_global_flag = debug_L3T #safety catch
+	}
+
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
+character_event = { #notification for 1103 BONUS from steward job #debug mode only
+	id = L3T.11037
+	desc = "DESCL3T.11035"
+	title = "NAMEL3T.11037"
+
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes #called only in debug mod
+	
+	trigger = {
+		has_global_flag = init_population
+		has_global_flag = debug_L3T #safety catch
+	}
+
+	option = {
+		name = "OK"	
+		clear_event_target = holding_dev 
+	}
+}
 character_event = { #notification for 1106 on_loot_settlement decrease
 	id = L3T.11061
 	title = "NAMEL3T.11061"

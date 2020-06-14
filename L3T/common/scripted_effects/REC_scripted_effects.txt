@@ -112,7 +112,15 @@ destroy_relic = {
 	
 	random_artifact = {					
 		limit = { 
-			has_a_relic = yes
+			OR = {
+				#ReC relics
+				has_artifact_flag = relique
+				#vanilla generic/dynamic relic support
+				AND = { 
+					has_artifact_flag = saint
+					has_artifact_flag = bodypart
+				}
+			}
 		}
 		# The relic will be available to be create again
 		if = {

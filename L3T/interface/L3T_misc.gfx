@@ -83,6 +83,10 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\diplo_relic_icon.dds"
 	}
 	spriteType = {
+		name = "GFX_diplo_muslimc_icon"
+		texturefile = "gfx\\interface\\diplo_muslim_icon.dds"
+	}
+	spriteType = {
 		name = "GFX_diplo_gold_icon"
 		texturefile = "gfx\\interface\\diplo_gold_icon.dds"
 	}
@@ -97,6 +101,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_diplo_play_icon"
 		texturefile = "gfx\\interface\\diplo_play_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_diplo_land_icon"
+		texturefile = "gfx\\interface\\diplo_land_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_diplo_prison_icon"
+		texturefile = "gfx\\interface\\diplo_prison_icon.dds"
 	}
 #REC traits
 	spriteType = {
@@ -269,5 +281,21 @@ spriteTypes = {
 		name = "GFX_artists_ranks_locked"
 		texturefile = "gfx\\interface\\societies\\rank_icons_artist_guild_locked.dds"
 		noOfFrames = 4
+	}
+	###ALT LAWS
+		spriteType = {
+		name = "GFX_tax_levy_slider_L3Ttrib_unlocked"
+		texturefile = "gfx\\interface\\tax_levy_slider_unlocked_L3Ttrib.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_tax_levy_slider_L3Ttrib_locked"
+		texturefile = "gfx\\interface\\tax_levy_slider_locked_L3Ttrib.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_tax_levy_slider_L3Ttrib_selected"
+		texturefile = "gfx\\interface\\tax_levy_slider_selected_L3Ttrib.dds"
+		noOfFrames = 5
 	}
 }

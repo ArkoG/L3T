@@ -1,12 +1,18 @@
 #character
 on_startup = {
 	events = {
-		L3T.10 #choix carte/map choice
-
 		#Initialisation population building
 		L3T.1101 
-		#AI money start bonus
+
+		#map detection
+		L3T.10
+		#AI random starting money and piety bonus
 		L3T.12
+		#stewardship adjusting
+		L3T.90
+		
+		#sets capital modifier
+		L3T.20
 		
 		L3T.600 #luck init
 		
@@ -26,9 +32,12 @@ on_yearly_pulse = {
 		#feodal_adm_modifier
 		L3T.225
 		L3T.226
+		#stewardship adjusting
+		L3T.90
+		L3T.93 #steward asymetry
 		#màj capital modifier
-		L3T.50
-		L3T.51
+		L3T.20
+		L3T.21
 		
 		##population events
 		 #castle
@@ -51,6 +60,12 @@ on_yearly_pulse = {
 		L3T.115
 		 #pop natural growth
 		L3T.1103
+		 #upgrade cities
+		L3T.42
+		L3T.43
+		
+		 #annual religion check
+		L3T.121
 		
 		#ReC
 		 REC.3
@@ -63,16 +78,23 @@ on_yearly_pulse = {
 		 L3T.601
 		 L3T.602
 	}
-	
-	random_events = {
-		# Stewardship focus
-		1000 = ECO.320
-		3000 = ECO.321
-		1000 = ECO.322
-		1000 = ECO.323	
+}
+
+#character
+on_five_year_pulse = {
+	events = {
+		L3T.86 #fund claim fabrication
 	}
 }
- 
+
+# character
+on_adulthood = {
+	events = {
+		#stewardship adjusting
+		L3T.90 #to wipe regency
+	}
+}
+
 # character
 on_decade_pulse = {
 	events = {
@@ -134,16 +156,16 @@ on_holding_building_start = {
 		L3T.221
 		L3T.241 #library_1
 		L3T.245 #library_2
+		#L3T.249 #prison
 		L3T.302
+		
 		#building prestige cost events
-		L3T.230
-		L3T.231
-		L3T.232
-		L3T.233
-		L3T.234
-		L3T.235
-#		L3T.236
-#		L3T.237	
+		L3T.230 #30 prestige
+		L3T.231 #60 prestige
+		L3T.232 #70 prestige
+		L3T.233 #90 prestige
+		L3T.234 #120 prestige
+		
 	}
 }
 
@@ -159,13 +181,15 @@ on_new_holder = {
 		L3T.222
 		L3T.242 #library_1
 		L3T.246 #library_2
-		L3T.227
+
 		#cathedral
 		REC.1
 		REC.11
+		#stewardship adjusting
+		L3T.90
 		#màj capital modifier
-		L3T.50
-		L3T.51
+		L3T.20
+		L3T.21
 	}
 }
 
@@ -181,13 +205,15 @@ on_new_holder_inheritance = {
 		L3T.222
 		L3T.242 #library_1
 		L3T.246 #library_2
-		L3T.227
+
 		#cathedral
 		REC.1
 		REC.11
+		#stewardship adjusting
+		L3T.90
 		#màj capital modifier
-		L3T.50
-		L3T.51
+		L3T.20
+		L3T.21
 	}
 }
 
@@ -203,20 +229,22 @@ on_new_holder_usurpation = {
 		L3T.222
 		L3T.242 #library_1
 		L3T.246 #library_2
-		L3T.227
+
 		#cathedral
 		REC.1
 		REC.11
+		#stewardship adjusting
+		L3T.90
 		#màj capital modifier
-		L3T.50
-		L3T.51
+		L3T.20
+		L3T.21
 	}
 }
 
 # ROOT = Builder, FROM = Title
 on_settlement_construction_completed = {
 	events = {
-		L3T.9 #starts spec holding for the new built building
+		L3T.3 #starts spec holding for the new built building
 		L3T.1101 #gives dev init + random bonus
 	}
 }
@@ -225,6 +253,13 @@ on_settlement_construction_completed = {
 on_character_convert_religion = {
 	events = {
 		REC.12
+	}
+}
+# When the religion changes in a county, ROOT is province. FROM has the old religion.
+#fires only on "natural" conversion, no console
+on_county_religion_change = {
+	events = {
+		#L3T.122 #test event ATM
 	}
 }
 
@@ -249,6 +284,28 @@ on_hospital_construction_completed = {
 	}
 }
 
+# A character selects a focus
+# Root = Character
+on_focus_selected = {
+	events = {
+		#stewardship adjusting
+		L3T.90
+	}
+}
+# Yearly pulse (six months from on_yearly_pulse) intended for Focus events (only fires for characters with a Focus)
+on_focus_pulse = {
+	random_events = {
+		## War Focus
+		180 = ECO.310 # Legendary sword
+		#vanilla events are chance 120 each
+		
+		##Business focus
+		100 = ECO.300 #textile
+		100 = ECO.308 #cadastre
+		#vanilla has no pulse for this focus
+	}
+}
+
 # on action event is sent whenever a character receives an artifact (one event for each artifact)
 # Scopes: ROOT is the character, FROM is the artifact, FROMFROM is the old holder
 on_artifact_inheritance = {
@@ -264,5 +321,61 @@ on_death = {
 		REC.2104 # Death of a master glass maker
 		REC.2114 # Death of a master sculptor
 		REC.2124 # Death of a master painter
+		L3T.92 #steward delegation removal
+		#L3T.2490 #dies when was in fortress prison (frees on imprisoning slot)
+	}
+}
+
+# Triggers when looting of a wonder stage is completed
+# ROOT = owner
+# FROM = wonder
+# FROMFROM = province (location of wonder)
+on_wonder_stage_loot_finish = {
+	events = {
+		REC.103 # Romanesque cathedral burning
+	}
+}
+
+
+#character. Triggers if someone is released from prison - ROOT is prisoner, FROM is imprisoner
+on_released_from_prison = {
+	events = {
+		L3T.2490 #released from fortress prison (frees on imprisoning slot), removes the prison modifier
+	}
+}
+
+#character. Triggers if someone is executed, character not dead yet
+on_executed = {
+	events = {
+ 		#L3T.2490 #executed when was in fortress prison (frees on imprisoning slot)
+ 	}
+}
+
+#root is the prisoner too
+RANSOM_CHARACTER_INTERACTION_ACCEPT_EVENT = {
+	events = {
+		L3T.2490 #removes the prison modifier
+	}
+}
+
+
+##L3T may be usefull for STW check and prison feature
+
+# Triggers when a change of employer has been detected. Note that the from scope is empty for newly created characters.
+# Root = character that got a new employer
+# From = previous employer
+# FromFrom = new employer
+on_employer_change = {
+	events = {
+	}
+}
+
+# Triggers when a change of host has been detected. Note that the from scope is empty for newly created characters. "on_employer_change" is triggered first if a character has had both their employer and host changed since the last check was made.
+# Root = the character that got a new host
+# From = the previous host
+# FromFrom = new employer
+on_host_change = {
+	events = {
+		L3T.2490 #removes the prison modifier
 	}
 }
