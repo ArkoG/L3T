@@ -1,88 +1,87 @@
-###############################
+##################################
 # MOD Les 3 Tours / The 3 Towers #
-##############################
+##################################
 
 ###by Arko and Mouchi
 
-CURRENT DEV
- 
- 
-màj 31mai 
+RELEASE 1.00 SEAL1 (14th june 2020) for CK2 v3.3.3
 
- 
-credits to Mouchi for translate helper
- 
- 
+INSTALL WILL REQUIRE DIRECTORY CLEAN-UP (renamed and removed files, event ID re-tag)
+NOT SAVE COMPATIBLE
+
+
 MAJOR:
--INSTALL WILL REQUIRE DIRECTORY CLEANUP (renamed and removed files, event ID retag)
--religion tradition/minorities
+-revamped bandits events (smuggler's ring etc. ) and effects. Additional events involving your marshal
 -new claims mechanics and flavour (mechanics being rule locked behind a new game rule)
 -new way to apply stewardship bonus to taxes, making holdings, buildings, provinces matter much
 -changed some computation on population growth mechanics, among changes, the steward's "research technology" bringing possible bonus here. 
 -brand new loading screens based on "Codex Manesse" graphics
+-made "Fortress" specialization more worthy (prison building, new special fortifications, balance)
+-Romanesque cathedrals are now wonders and so showed on map with a 3D model
 
 MINOR and VARIOUS:
-
-
-
--BALANCE on military side : less raids, lower reinforcement speeds, naval attrition, armies are slightly slower, more expensive maintenance
--made "Fortress" specialization more worthy (prison building, new special fortifications, balance)
--new prison building and according decision to use that new accomodation. A prisoner can't be moved back from there. Various liberation/evasion options are less likely to happen and success
--tax laws for feudal and iqta are now capped by centralization levels, tax levels are lowered, levy slider don't bring taxes anymore
--BALANCE the population buildings progression are a bit faster on first levels
--improve ambition chains ("textile experience" and "the sword") are now more likely to happen (lessen the skill cap)
--"cadastre" event chains are now more dynmaic and triggered only, it is also more rewarding
+-new prison building and according decision to use that new accommodation. A prisoner can't be moved back from there. Various liberation/evasion options are less likely to happen and success
+-proselytize job map highlights now feature a distinct colour for heresies
 -debug event is now reduced to only one event (L3T.1), alternatively turning on/off the debug mod. Mind that beyond special actions and notifications, some MTTH are now affected by this too
 -new steward flavour (delegation)
--building costs won't decrease overtime due to technology
--religious tolerance technology now worsen inter-religion opinion instead of improving it 
 -AI with no tribal vassals won't enact tribal related laws
--BALANCE tradepost limits are higher as vanilla has much more pre-built tradeposts than the limits, vastly disadvantaging emerging patrician houses
 -tribal laws can only bring gold (with opinion counterpart) to non tribal and never give troops to anyone
 -some renovated and new events pics
 -updated and added some icons (modifiers and target decisions)
--BALANCE income and taxes
--BALANCE technology giver buildings - trade routes also now give technology progression
--muslim school building "Madrasah" gets an additional level
--BALANCE specialization buildings, tribal holdings
--cities get a city size marker automated building chain, showing the groth of the holding (3 levels)
+-Muslim school building "Madrasah" gets an additional level
+-cities get a city size marker automated building chain, showing the growth of the holding (3 levels)
 -some buildings cost both gold and prestige (prestige cost is displayed in the buildings' tooltips and triggers)
 -adapting some vanilla buildings to holdings specializations (capped by specialization)
 -new chains of buildings (perception and belfry)
--new chains of buildings (main power buildings like episcopal palace, seignorial residence... +their muslim variations when needed) 
--fortification buildings from castles exported to city and temple holdings as well
+-new chains of buildings (main power buildings like episcopal palace, seigniorial residence... and their Muslim variations when needed 
+-fortification buildings for cities and temples holdings (merely same as castles ones)
 -chancellor's "perform statecraft" job now can protect against claim fabrication
+-spymaster's "scheme" job can help spotting a foreign chancellor fabricating claims on you
 -new option to arrest and banish a chancellor fabricating a claim
 -added support for pre-scripted holding specialization for episcopal cities and monasteries for both vanilla and SWMH map
--BALANCE tweaked the demesne sizes for various ranks, tribal government type don't bring anymore demesne size bonus
--BALANCE you can't revoke a recently given title any more (cooldown is 100years instead of 12months)
--put some limitations on using the extort tribute CB (theocracies can't use it, as well as feudal vs other feudal co-religionists)
--romanesque cathedral burning may bring in pilgrims
+-Romanesque cathedral burning may bring in pilgrims
 -addition of a Pilgrim inn/road house you can build in a province with a province relic
--a province relic in itself don't bring taxes anymore (it didn't differed among religions)
--addition a "Mufti" council position for muslim
--AI may sometimes not attend to tournaments and furusiyyas
+-a province relic in itself don't bring taxes any-more (it didn't differed among religions)
+-addition of a "Mufti" council position for Muslim
 -new horse armours artefacts given as prize in Furusiyyas
--BALANCE improved starting population levels for various areas and eras
--BALANCE some starting technologies for various areas and eras
--improved religion conversions
--some event optimisation and file cleanup
--realm capitals are now assigned on startup
--historical cathedrals (hardcode)
--can't add a new holding slot in a province anymore
--one new cathedral event picture
--improve skill "selling textile" event chain has been improved a bit
--improve skills event chains from the mod are now more likely to fire
--romanesque cathedrals are now wonders and so showed on map with a 3D model
-
-
--better event computation, code and files cleanup
+-some event optimisation and file clean-up
+-better event computation, code and files clean-up
 -filling missing texts and better texts
--improved some english translations
+-improved some English translations
+
+BALANCE:
+-realm capitals are now assigned on startup
+-AI may sometimes not attend to tournaments and furusiyyas
+-can't add a new holding slot in a province any-more
+-religious tolerance technology now worsen inter-religion opinion instead of improving it 
+-put some limitations on using the extort tribute CB (theocracies can't use it, as well as feudal vs other feudal co-religionists)
+-building costs won't decrease overtime due to technology
+-improve ambition chains ("textile experience" and "the sword") are now more likely to happen (lessen the skill cap)
+-"cadastre" event chains are now more dynamic and triggered only, it is also more rewarding
+-tax laws for feudal and iqta are now capped by centralization levels, tax levels are lowered, levy slider don't bring taxes any-more
+-ask for/ask to lift excommunication actions now require some reasonable amount of prestige and piety to be performed
+-weaken chances a bit for "increase council power" faction
+-dynamic trade routes helps with troops reinforcement and technology spread
+-prosperous industry modifier is more worthy
+-general military: less raids, lower reinforcement speeds, naval attrition, armies are slightly slower, more expensive maintenance
+-the population buildings progression are a bit faster on first levels
+-trade-posts limits are now higher (vanilla has much more pre-built trade-posts than the limits, vastly disadvantaging emerging patrician houses)
+-general income and taxes changes
+-various changes to specialization buildings, tribal holdings
+-tweaked the demesne sizes for various ranks, tribal government type don't bring any-more demesne size bonus
+-you can't revoke a recently given title any-more (cool-down is 100years instead of 12months)
+-improved starting population levels for various areas and eras
+-changed some starting technologies for various areas and eras
+
 BUGFIX:
--fixing some vanilla bugs
--fixing my own bugs by the way
+-fixed relic not being consumed properly when starting the cathedral
+-fixed buying relic not always transferring the relic properly
+-non Christian capitals properly get a "Feudal city" (or equivalent) on startup
+-fixed some vanilla bugs
+-fixed my own bugs by the way
 -population bonus from specializations now apply correctly
+
+
 
 RELEASE BETA 0.99 SAINT2 (3rd of november 2019) for CK2 v3.2.x/v3.3.0
 
