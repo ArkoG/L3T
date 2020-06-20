@@ -22,10 +22,16 @@ temple = {
 			BOURG_EPISCOPAL
 		}
 		potential = {
-			religion_group = christian
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		is_active_trigger = {
-			religion_group = christian
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		gold_cost = 100
 		build_time = 180
@@ -36,7 +42,7 @@ temple = {
 		
 		add_number_to_name = no
 
-		extra_tech_building_start = 0.5
+		extra_tech_building_start = 10.0
 	}
 
 	tp_monastery_2 = { #Prieuré
@@ -54,7 +60,10 @@ temple = {
 			BOURG_EPISCOPAL
 		}
 		is_active_trigger = {
-			religion_group = christian
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		upgrades_from = tp_monastery_1
 		gold_cost = 140
@@ -86,7 +95,10 @@ temple = {
 			BOURG_EPISCOPAL
 		}
 		is_active_trigger = {
-			religion_group = christian
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		upgrades_from = tp_monastery_2
 		gold_cost = 170
@@ -119,7 +131,10 @@ temple = {
 			BOURG_EPISCOPAL
 		}
 		is_active_trigger = {
-			religion_group = christian
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		upgrades_from = tp_monastery_3
 		gold_cost = 520
@@ -155,7 +170,10 @@ temple = {
 			BOURG_EPISCOPAL
 		}
 		is_active_trigger = {
-			religion_group = christian
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		upgrades_from = tp_monastery_4
 		gold_cost = 450
@@ -179,9 +197,18 @@ temple = {
 			TECH_CONSTRUCTION = 0
 			#is_catholic_group= yes
 		}
-		#potential = {
-		#	is_catholic_group= yes
-		#}
+		potential = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		is_active_trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
 		prerequisites = {
 			#none, to allow muslim to build their version of it, may be split in the future if adding Waqf spec
 		}
@@ -199,7 +226,7 @@ temple = {
 		court_size_modifier = 1
 		#add_number_to_name = no
 
-		extra_tech_building_start = 1.0
+		extra_tech_building_start = 10.0
 	}
 
 	TP_episcopat_L2 = { #Résidence épiscopale
@@ -207,6 +234,12 @@ temple = {
 		trigger = { TECH_CONSTRUCTION = 0 }
 		not_if_x_exists = {
 			MONASTERE
+		}
+		is_active_trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		upgrades_from = TP_episcopat_L1
 		gold_cost = 230
@@ -232,6 +265,12 @@ temple = {
 		}
 		not_if_x_exists = {
 			MONASTERE
+		}
+		is_active_trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		upgrades_from = TP_episcopat_L2
 		gold_cost = 360
@@ -263,6 +302,12 @@ temple = {
 			MONASTERE
 			BOURG_EPISCOPAL
 		}
+		is_active_trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
 		upgrades_from = TP_episcopat_L3
 		gold_cost = 380
 		
@@ -293,6 +338,12 @@ temple = {
 		not_if_x_exists = {
 			MONASTERE
 			BOURG_EPISCOPAL
+		}
+		is_active_trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
 		}
 		upgrades_from = TP_episcopat_L4
 		gold_cost = 450
@@ -328,7 +379,7 @@ castle = {
 		court_size_modifier = 1
 		#add_number_to_name = no
 
-		extra_tech_building_start = 2.0
+		extra_tech_building_start = 1.0
 	}
 
 	CA_logis_L2 = { #Logis seigneurial
@@ -346,7 +397,7 @@ castle = {
 		court_size_modifier = 1
 		#add_number_to_name = no
 
-		extra_tech_building_start = 10
+		extra_tech_building_start = 2.0
 	}
 
 	CA_logis_L3 = { #Logis seigneurial
@@ -370,7 +421,7 @@ castle = {
 		court_size_modifier = 1
 		#add_number_to_name = no
 
-		extra_tech_building_start = 0.6
+		extra_tech_building_start = 5.0
 	}
 
 	CA_logis_L4 = { #Logis seigneurial
@@ -448,7 +499,7 @@ castle = {
 		
 		#add_number_to_name = no
 
-		extra_tech_building_start = 10
+		extra_tech_building_start = 3.0
 	}
 
 	CA_adm_seigneurial_L2 = { #Perception
