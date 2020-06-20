@@ -147,4 +147,60 @@ settlement_decisions = {
 			factor = 0
 		}
 	}
+	debug_convert_2_christian = {
+		only_playable = yes
+		filter = all
+		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_debug_icon
+		
+		from_potential = {
+			ai = no
+		}
+		
+		potential = {
+			location = { NOT = { religion_group = christian }}
+		}
+		
+		allow = {
+			location = { NOT = { religion_group = christian }}
+		}
+		
+		effect = {
+			location = { 
+				religion = catholic
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_convert_2_muslim = {
+		only_playable = yes
+		filter = all
+		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_debug_icon
+		
+		from_potential = {
+			ai = no
+		}
+		
+		potential = {
+			location = { NOT = { religion_group = muslim }}
+		}
+		
+		allow = {
+			location = { NOT = { religion_group = muslim }}
+		}
+		
+		effect = {
+			location = { 
+				religion = sunni
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }
