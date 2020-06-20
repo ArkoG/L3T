@@ -355,6 +355,102 @@ character_event = {
 	}
 }
 
+##Maintenance muslim cities
+# ROOT is the character
+#applies a malus if held directly, unless it is within capital county
+character_event = {
+    id = L3T.13
+	hide_window = yes
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	trigger = { 
+		religion_group = muslim
+		#government = muslim_government #is iqta
+		NOR = { 
+			is_tribal = yes
+			is_nomadic = yes
+		}
+		any_demesne_title = {
+			tier = baron
+			holding_type = city 
+			#NOT = {
+			#	has_holding_modifier = iqta_held_direct
+			#}
+			#NOT = { location = { has_province_modifier = realm_capital_province}}
+		}
+	}
+
+	immediate = {
+		#if iqta directly held, applies a malus if not capital county
+		if = {
+			limit = {
+				any_demesne_title = {
+					tier = baron
+					holding_type = city 
+					NOT = { has_holding_modifier = iqta_held_direct }
+					NOT = { location = { has_province_modifier = realm_capital_province }}
+				}				
+			}
+			any_demesne_title = {
+				limit = {
+					tier = baron
+					holding_type = city
+					NOT = { has_holding_modifier = iqta_held_direct }
+					NOT = { location = { has_province_modifier = realm_capital_province}}
+				}
+				add_holding_modifier = { 
+					name = iqta_held_direct 
+					duration = -1
+				}
+			}
+		}
+		#if iqta directly held, removes the malus if capital county
+		if = {
+			limit = {
+				any_demesne_title = {
+					tier = baron
+					holding_type = city 
+					has_holding_modifier = iqta_held_direct
+					location = { has_province_modifier = realm_capital_province }
+				}				
+			}
+			any_demesne_title = {
+				limit = {
+					tier = baron
+					holding_type = city
+					has_holding_modifier = iqta_held_direct
+					location = { has_province_modifier = realm_capital_province}
+				}
+				remove_holding_modifier = iqta_held_direct
+			}
+		}		
+		#if NON-iqta directly held (AKA is mayor), removes the malus
+		if = {
+			limit = {
+				NOT = { government = muslim_government } #is NOT iqta
+				any_demesne_title = {
+					tier = baron
+					holding_type = city 
+					has_holding_modifier = iqta_held_direct
+				}				
+			}
+			any_demesne_title = {
+				limit = {
+					tier = baron
+					holding_type = city
+					has_holding_modifier = iqta_held_direct
+				}
+				remove_holding_modifier = iqta_held_direct
+			}
+		}		
+	}
+}
+
 ##RESSOURCES ATTRIBUTION
 province_event = { 
     id = L3T.22
@@ -764,3 +860,4 @@ character_event = {
 		}
 	}
 }
+
