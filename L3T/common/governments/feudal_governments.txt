@@ -75,10 +75,10 @@ feudal_governments = {
 	}
 	
 	muslim_government = {
-		preferred_holdings = { CASTLE }
+		preferred_holdings = { CASTLE }  #L3T CITY is additional
 		allowed_holdings = { 
 			CASTLE
-			CITY
+			CITY #L3T in place of Temple
 			FORT
 			HOSPITAL
 		}
