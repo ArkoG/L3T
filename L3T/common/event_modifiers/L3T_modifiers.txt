@@ -713,27 +713,27 @@ feodal_prod_L4 = {icon = 228 }
 feodal_prod_L5 = {icon = 229 }
 
 feodal_mil_L1 = {icon = 230 }
-feodal_mil_L2 = {icon = 231 }
+feodal_mil_muslim = {icon = 231 }
 feodal_mil_L3 = {icon = 232 }
 feodal_mil_L4 = {icon = 233 }
 feodal_mil_L5 = {icon = 234 }
 
 feodal_adm_L1 = {icon = 235 }
-feodal_adm_L2 = {icon = 236 }
+feodal_adm_muslim = {icon = 236 }
 feodal_adm_L3 = {icon = 237 }
 feodal_adm_L4 = {icon = 238 }
 feodal_adm_L5 = {icon = 239 }
 
 monastere_L1 = {icon = 240 }
-monastere_L2 = {icon = 241 }
+zaouia_L1 = {icon = 241 }
 monastere_L3 = {icon = 242 }
 monastere_L4 = {icon = 243 }
 monastere_L5 = {icon = 244 }
 
 episcopale_L1 = {icon = 246 } #episcopal land
 episcopale_L2 = {icon = 246 } #episcopal city
-episcopale_L3 = {icon = 247 }
-episcopale_L4 = {icon = 248 }
+waqf_rural_L1 = {icon = 247 }
+waqf_urbain_L1 = {icon = 248 }
 episcopale_L5 = {icon = 249 }
 
 episco_land_L1 = {icon = 245 }
@@ -845,4 +845,8 @@ failed_purge = {
 tarnished_reputation_claim = {
 	diplomacy = -1
 	icon = 21
+}
+iqta_held_direct = {
+	local_tax_modifier = -0.5
+	icon = 22
 }
