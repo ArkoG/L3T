@@ -78,10 +78,9 @@ feudal_governments = {
 		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
 			CASTLE
-			#TEMPLE
+			CITY
 			FORT
 			HOSPITAL
-			CITY
 		}
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
