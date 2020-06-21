@@ -457,12 +457,6 @@ defined_text = {
 			has_title_flag = REGLE_SUFI_SCHOOL
 		}
 	}
-	text = {
-		localisation_key = getmonastic_sufi_named
-		trigger = { 
-			has_title_flag = REGLE_SUFI_named
-		}
-	}
 	fallback_text = {
 		localisation_key = getmonastic_fallback #fallback, in case it fails to find relevant info
 	}
@@ -492,12 +486,6 @@ defined_text = {
 		localisation_key = getmonastic_sufi_default_desc
 		trigger = { 
 			has_title_flag = REGLE_SUFI_SCHOOL
-		}
-	}
-	text = {
-		localisation_key = getmonastic_sufi_named_desc
-		trigger = { 
-			has_title_flag = REGLE_SUFI_named
 		}
 	}
 	fallback_text = {
