@@ -389,6 +389,7 @@ character_event = {
 		#if iqta directly held, applies a malus if not capital county
 		if = {
 			limit = {
+				government = muslim_government
 				any_demesne_title = {
 					tier = baron
 					holding_type = city 
@@ -412,6 +413,7 @@ character_event = {
 		#if iqta directly held, removes the malus if capital county
 		if = {
 			limit = {
+				government = muslim_government
 				any_demesne_title = {
 					tier = baron
 					holding_type = city 
