@@ -67,6 +67,7 @@ laws = {
 			}
 		}
 		potential = {
+			holder_scope = { is_tribal = no } #L3T
 			higher_tier_than = count
 			is_nomadic = no
 		}
@@ -143,6 +144,7 @@ laws = {
 			}
 		}
 		potential = {
+			holder_scope = { is_tribal = no } #L3T
 			higher_tier_than = count
 			is_nomadic = no
 		}
@@ -219,6 +221,7 @@ laws = {
 			}
 		}
 		potential = {
+			holder_scope = { is_tribal = no } #L3T
 			higher_tier_than = count
 			is_nomadic = no
 		}
@@ -291,6 +294,7 @@ laws = {
 			}
 		}
 		potential = {
+			holder_scope = { is_tribal = no } #L3T
 			higher_tier_than = count
 			is_nomadic = no
 		}
@@ -360,6 +364,7 @@ laws = {
 			}
 		}
 		potential = {
+			holder_scope = { is_tribal = no } #L3T
 			higher_tier_than = count
 			is_nomadic = no
 		}
@@ -777,6 +782,8 @@ laws = {
 				revoke_law = tribal_tax_3
 			}
 		}
+		vassal_limit = 5
+		demesne_size = 1
 	}
 	
 	tribal_organization_2 = {
@@ -972,6 +979,7 @@ laws = {
 				revoke_law = tribal_tax_3
 			}
 		}
+		demesne_size = 1
 	}
 	
 	tribal_organization_3 = {
@@ -1152,6 +1160,8 @@ laws = {
 				revoke_law = tribal_organization_4
 			}
 		}
+		vassal_limit = -5
+		demesne_size = 1
 	}
 	
 	tribal_organization_4 = {
@@ -1293,6 +1303,8 @@ laws = {
 				revoke_law = tribal_organization_4
 			}
 		}
+		vassal_limit = -10
+		demesne_size = 2
 	}
 	
 	# VICE ROYALTY LAWS
