@@ -41,7 +41,7 @@ character_event = {
 					}
 				}
 				any_province_holding = {
-					limit = { NOT = has_holding_modifier = { L3T_jyzia }}
+					limit = { NOT = { has_holding_modifier = L3T_jyzia }}
 					add_holding_modifier = {
 						name = L3T_jyzia
 						duration = -1
@@ -65,8 +65,8 @@ character_event = {
 		}
 	}
 }
-#jyzia modifier province version
-character_event = {
+##jyzia modifier province version
+province_event = {
     id = REC.31
 	hide_window = yes
 	
@@ -85,7 +85,7 @@ character_event = {
 				}
 			}
 			any_province_holding = {
-				limit = { NOT = has_holding_modifier = { L3T_jyzia }}
+				limit = { NOT = { has_holding_modifier = L3T_jyzia }}
 				add_holding_modifier = {
 					name = L3T_jyzia
 					duration = -1
