@@ -100,5 +100,27 @@ province_event = {
 				remove_holding_modifier = L3T_jyzia
 			}	
 		}
+		if = {
+			limit = {
+				owner = { religion_group = muslim }
+				religion_group = muslim
+			}
+			any_province_holding = {
+				remove_holding_modifier = L3T_jyzia
+			}	
+		}
+		if = {
+			limit = {
+				owner = { 
+					OR = { 
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+			}
+			any_province_holding = {
+				remove_holding_modifier = L3T_jyzia
+			}	
+		}
 	}
 }
