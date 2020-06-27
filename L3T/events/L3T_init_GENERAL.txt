@@ -139,13 +139,45 @@ character_event = {
 			}
 			set_global_flag = running_VANILLA
 		}
-		##triggers mountain passes attribution
+		##triggers mountain passes attribution +  religion counter
 		any_province = {
 			province_event = { id = L3T.28 days = 7 random = 7} #attribution cols
 			set_province_flag = had_event_LT_60001 #to prevent additional holding slot from wonders
 			set_variable = { which = "was_christian_for" value = 0 }
 			set_variable = { which = "was_muslim_for" value = 0 }
 		}
+		##resets jizya_tax
+		any_province = {
+			owner = { set_jizya_tax = no }
+			any_province_holding = {
+				remove_holding_modifier = jizya_tax
+				holder_scope = { set_jizya_tax = no }
+			}
+		}
+		any_province = {
+			#totoro maybe trigger here the maintenance event directly
+			#add law/fatwa decision
+			limit = {
+				NOT = { religion_group = muslim }
+				owner = { religion_group = muslim }
+			}
+			any_province_holding = {
+				#limit to non temple only ?
+				add_holding_modifier = {
+					name = L3T_jyzia
+					duration = -1
+				}
+			}
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
 		##various global flags
 		set_global_flag = running_L3T
 		set_global_flag = paix_de_dieu #moved from individual options
