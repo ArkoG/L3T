@@ -759,9 +759,8 @@ character_event = {
 			check_variable = { which = "developpement" value = 50 }
 		}
 	}
-		
-	option = {
-		name = "OK"	
+
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
@@ -770,6 +769,12 @@ character_event = {
 				check_variable = { which = "developpement" value = 50 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {	
 			add_building = ca_town_1
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 100 } }
 		}
@@ -800,17 +805,21 @@ character_event = {
 		}
 	}
 		
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				holding_type = castle 
+				holding_type = castle 	
+				NOT = {	has_building = ca_town_2	}
 				check_variable = { which = "developpement" value = 100 }
-								has_building = ca_town_1
-				NOT = { has_building = ca_town_2 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {	
 			add_building = ca_town_2
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 150 }}
 		}
@@ -841,17 +850,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				holding_type = castle 
+				holding_type = castle 	
+				NOT = {	has_building = ca_town_3	}
 				check_variable = { which = "developpement" value = 150 }
-				has_building = ca_town_2
-				NOT = { has_building = ca_town_3 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = ca_town_3
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 200 }}
 		}
@@ -882,17 +895,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				holding_type = castle 
+				holding_type = castle 	
+				NOT = {	has_building = ca_town_4	}
 				check_variable = { which = "developpement" value = 200 }
-				has_building = ca_town_3
-				NOT = { has_building = ca_town_4 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = ca_town_4
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 300 }}
 		}
@@ -926,17 +943,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				holding_type = castle 
+				holding_type = castle 	
+				NOT = {	has_building = ca_town_5	}
 				check_variable = { which = "developpement" value = 300 }
-				has_building = ca_town_4
-				NOT = { has_building = ca_town_5 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = ca_town_5
 		}
 	}
@@ -967,16 +988,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
-				tier = baron
-				holding_type = city	
+				tier = baron	
+				holding_type = city 	
 				NOT = {	has_building = ct_town_1	}
 				check_variable = { which = "developpement" value = 50 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = ct_town_1
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 120 }}
 		}
@@ -1007,17 +1033,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
-				tier = baron
-				holding_type = city	
+				tier = baron	
+				holding_type = city 	
+				NOT = {	has_building = ct_town_2	}
 				check_variable = { which = "developpement" value = 120 }
-				has_building = ct_town_1
-				NOT = { has_building = ct_town_2 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = ct_town_2
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 240 }}
 		}
@@ -1048,17 +1078,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
-				tier = baron
-				holding_type = city	
+				tier = baron	
+				holding_type = city 	
+				NOT = {	has_building = ct_town_3	}
 				check_variable = { which = "developpement" value = 240 }
-				has_building = ct_town_2
-				NOT = { has_building = ct_town_3 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = ct_town_3
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 400 }}
 		}
@@ -1089,17 +1123,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
-				tier = baron
-				holding_type = city		
+				tier = baron	
+				holding_type = city 	
+				NOT = {	has_building = ct_town_4	}
 				check_variable = { which = "developpement" value = 400 }
-				has_building = ct_town_3
-				NOT = { has_building = ct_town_4 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = ct_town_4
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 500 }}
 		}
@@ -1133,17 +1171,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
-				tier = baron
-				holding_type = city	
+				tier = baron	
+				holding_type = city 	
+				NOT = {	has_building = ct_town_5	}
 				check_variable = { which = "developpement" value = 500 }
-				has_building = ct_town_4
-				NOT = { has_building = ct_town_5 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = ct_town_5
 		}
 	}
@@ -1173,16 +1215,21 @@ character_event = {
 		}
 	}
 		
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				holding_type = temple	
+				holding_type = temple 	
 				NOT = {	has_building = tp_town_1	}
 				check_variable = { which = "developpement" value = 70 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = tp_town_1
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 140 }}
 		}
@@ -1213,17 +1260,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				holding_type = temple
-				check_variable = { which = "developpement" value = 140 }
-				has_building = tp_town_1
+				holding_type = temple 	
 				NOT = {	has_building = tp_town_2	}
+				check_variable = { which = "developpement" value = 140 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = tp_town_2
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 220 }}
 		}
@@ -1254,17 +1305,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				holding_type = temple
-				check_variable = { which = "developpement" value = 220 }
-				has_building = tp_town_2
+				holding_type = temple 	
 				NOT = {	has_building = tp_town_3	}
+				check_variable = { which = "developpement" value = 220 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = tp_town_3
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 300 }}
 		}
@@ -1295,17 +1350,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				holding_type = temple
-				check_variable = { which = "developpement" value = 300 }
-				has_building = tp_town_3
+				holding_type = temple 	
 				NOT = {	has_building = tp_town_4	}
+				check_variable = { which = "developpement" value = 300 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = tp_town_4
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 400 }}
 		}
@@ -1339,17 +1398,21 @@ character_event = {
 		}
 	}
 
-	option = {
-		name = "OK"	
+	immediate = {
 		random_demesne_title = {	
 			limit = {	
 				tier = baron	
-				holding_type = temple
-				check_variable = { which = "developpement" value = 400 }
-				has_building = tp_town_4
+				holding_type = temple 	
 				NOT = {	has_building = tp_town_5	}
+				check_variable = { which = "developpement" value = 400 }
 			}
 			save_event_target_as = holding_pop
+		}
+	}
+	
+	option = {
+		name = "OK"	
+		event_target:holding_pop = {
 			add_building = tp_town_5
 		}
 	}
