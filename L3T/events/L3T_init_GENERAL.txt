@@ -402,7 +402,6 @@ character_event = {
 	
 	trigger = { 
 		religion_group = muslim
-		#government = muslim_government #is iqta
 		NOR = { 
 			is_tribal = yes
 			is_nomadic = yes
@@ -410,10 +409,6 @@ character_event = {
 		any_demesne_title = {
 			tier = baron
 			holding_type = city 
-			#NOT = {
-			#	has_holding_modifier = iqta_held_direct
-			#}
-			#NOT = { location = { has_province_modifier = realm_capital_province}}
 		}
 	}
 
@@ -464,24 +459,135 @@ character_event = {
 			}
 		}		
 		#if NON-iqta directly held (AKA is mayor), removes the malus
+		#(removed option) L3T.14 does the job now
+	}
+}
+#remove malus if non muslim
+character_event = {
+    id = L3T.14
+	hide_window = yes
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	trigger = { 
+		NOT = { government = muslim_government } #is NOT iqta
+		any_demesne_title = {
+			tier = baron
+			holding_type = city 
+		}
+	}
+
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = city
+			}
+			remove_holding_modifier = iqta_held_direct
+		}
+	}
+}
+
+##Maintenance muslim jyzia /character version
+# ROOT is the character
+#jyzia modifier character version
+character_event = {
+    id = L3T.15
+	hide_window = yes
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	trigger = { 
+		religion_group = muslim
+		NOR = { 
+			is_tribal = yes
+			is_nomadic = yes
+		}
+		any_demesne_province = {
+			NOT = { religion_group = muslim }
+		}
+	}
+	immediate = {
+		any_demesne_province = {
+			if = {
+				limit = {
+					NOT = { religion_group = muslim }
+					owner = { 
+						religion_group = muslim
+						NOR = { 
+							is_tribal = yes
+							is_nomadic = yes
+						}
+					}
+				}
+				any_province_holding = {
+					limit = { NOT = has_holding_modifier = { L3T_jyzia }}
+					add_holding_modifier = {
+						name = L3T_jyzia
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					owner = {
+						NOT = { religion_group = muslim }
+						OR = { 
+							is_tribal = yes
+							is_nomadic = yes
+						}
+					}
+				}
+				any_province_holding = {
+					remove_holding_modifier = L3T_jyzia
+				}
+			}
+		}
+	}
+}
+#jyzia modifier province version
+character_event = {
+    id = L3T.16
+	hide_window = yes
+	
+	is_triggered_only = yes #on_county_religion_change
+	
+	immediate = {
 		if = {
 			limit = {
-				NOT = { government = muslim_government } #is NOT iqta
-				any_demesne_title = {
-					tier = baron
-					holding_type = city 
-					has_holding_modifier = iqta_held_direct
-				}				
-			}
-			any_demesne_title = {
-				limit = {
-					tier = baron
-					holding_type = city
-					has_holding_modifier = iqta_held_direct
+				NOT = { religion_group = muslim }
+				owner = { 
+					religion_group = muslim
+					NOR = { 
+						is_tribal = yes
+						is_nomadic = yes
+					}					
 				}
-				remove_holding_modifier = iqta_held_direct
 			}
-		}		
+			any_province_holding = {
+				limit = { NOT = has_holding_modifier = { L3T_jyzia }}
+				add_holding_modifier = {
+					name = L3T_jyzia
+					duration = -1
+				}
+			}	
+		}
+		if = {
+			limit = {
+				owner = { NOT = { religion_group = muslim }}
+			}
+			any_province_holding = {
+				remove_holding_modifier = L3T_jyzia
+			}	
+		}
 	}
 }
 
@@ -860,6 +966,7 @@ character_event = {
 			}
 		}
 	}
+	character_event = { id = L3T.13 } #recalc iqta city held malus
 }
 			
 

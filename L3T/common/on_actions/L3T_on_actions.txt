@@ -35,13 +35,15 @@ on_yearly_pulse = {
 		#stewardship adjusting
 		L3T.90
 		L3T.93 #steward asymetry
-		#muslim city maintenance
-		L3T.13
+
 		#màj capital modifier
 		L3T.20
 		L3T.21
-		#muslim city setup
-		L3T.13
+		#muslim city maintenance
+		#L3T.13 #safety catch
+		#L3T.14 #safety catch
+		#L3T.15 #jyzia safety catch
+		#L3T.16 #jyzia safety catch
 		
 		##population events
 		 #castle
@@ -182,8 +184,11 @@ on_new_holder = {
 		#màj capital modifier
 		L3T.20
 		L3T.21
-		#muslim city setup
-		L3T.13
+		#muslim ways
+		L3T.13 #iqta held maintenance muslim
+		L3T.14 #iqta held removal non iqta
+		L3T.15 #jyzia+
+		L3T.16 #jyzia-
 	}
 }
 
@@ -208,8 +213,11 @@ on_new_holder_inheritance = {
 		#màj capital modifier
 		L3T.20
 		L3T.21
-		#muslim city setup
-		L3T.13
+		#muslim ways
+		L3T.13 #iqta held maintenance muslim
+		L3T.14 #iqta held removal non iqta
+		L3T.15 #jyzia+
+		L3T.16 #jyzia-
 	}
 }
 
@@ -234,8 +242,11 @@ on_new_holder_usurpation = {
 		#màj capital modifier
 		L3T.20
 		L3T.21
-		#muslim city setup
-		L3T.13
+		#muslim ways
+		L3T.13 #iqta held maintenance muslim
+		L3T.14 #iqta held removal non iqta
+		L3T.15 #jyzia+
+		L3T.16 #jyzia-
 	}
 }
 
@@ -258,6 +269,7 @@ on_character_convert_religion = {
 on_county_religion_change = {
 	events = {
 		#L3T.122 #test event ATM
+		L3T.16 #jyzia
 	}
 }
 
