@@ -189,7 +189,7 @@ province_event = {
 	
 	trigger = {
 		#back to demesne efficiency instead of debt
-		NOT = { owner = { demesne_efficiency = 1.0 } }
+		NOT = { owner = { demesne_efficiency = 0.9 } }
 		#can't co-exists three
 		NOT = { has_province_modifier = thieves_guild } 
 		NOT = { has_province_modifier = smugglers_ring } 
@@ -338,7 +338,7 @@ province_event = {
 	
 	trigger = {
 		#back to demesne efficiency instead of debt
-		NOT = { owner = { demesne_efficiency = 1.0 } }
+		NOT = { owner = { demesne_efficiency = 0.9 } }
 		#can't co-exists three
 		NOT = { has_province_modifier = thieves_guild } 
 		NOT = { has_province_modifier = smugglers_ring } 
