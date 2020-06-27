@@ -481,7 +481,139 @@ character_event = {
 		}
 	}
 }
+##holding modifier maintenance
+#ROOT is province. FROM has the old religion
+province_event = {
+    id = L3T.15
+	hide_window = yes
 
+	is_triggered_only = yes #on_county_religion_change
+	
+	trigger = {
+		owner = {
+			NOR = { 
+				is_tribal = yes
+				is_nomadic = yes
+			}
+		}
+	}
+
+	immediate = {
+		any_province_holding = {
+			#turned to muslim
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = feodal_prod_L1
+					NOT = { has_holding_modifier = feodal_prod_muslim }
+				}
+				remove_holding_modifier = feodal_prod_L1
+				add_holding_modifier = { name = feodal_prod_muslim duration = -1 }
+			}
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = feodal_mil_L1
+					NOT = { has_holding_modifier = feodal_mil_muslim }
+				}
+				remove_holding_modifier = feodal_mil_L1
+				add_holding_modifier = { name = feodal_mil_muslim duration = -1 }
+			}			
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = feodal_adm_L1
+					NOT = { has_holding_modifier = feodal_adm_muslim }
+				}
+				remove_holding_modifier = feodal_adm_L1
+				add_holding_modifier = { name = feodal_adm_muslim duration = -1 }
+			}				
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = monastere_L1
+					NOT = { has_holding_modifier = zaouia_L1 }
+				}
+				remove_holding_modifier = monastere_L1
+				add_holding_modifier = { name = zaouia_L1 duration = -1 }
+			}				
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = episco_land_L1
+					NOT = { has_holding_modifier = waqf_rural_L1 }
+				}
+				remove_holding_modifier = episco_land_L1
+				add_holding_modifier = { name = waqf_rural_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = episcopale_L1
+					NOT = { has_holding_modifier = waqf_urbain_L1 }
+				}
+				remove_holding_modifier = episcopale_L1
+				add_holding_modifier = { name = waqf_urbain_L1 duration = -1 }
+			}				
+
+			#turned to non-muslim
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = feodal_prod_L1 }
+					has_holding_modifier = feodal_prod_muslim
+				}
+				remove_holding_modifier = feodal_prod_muslim
+				add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = feodal_mil_L1 }
+					has_holding_modifier = feodal_mil_muslim
+				}
+				remove_holding_modifier = feodal_mil_muslim
+				add_holding_modifier = { name = feodal_mil_L1 duration = -1 }
+			}			
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = feodal_adm_L1 }
+					has_holding_modifier = feodal_adm_muslim
+				}
+				remove_holding_modifier = feodal_adm_muslim
+				add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+			}				
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = monastere_L1 }
+					has_holding_modifier = zaouia_L1
+				}
+				remove_holding_modifier = zaouia_L1
+				add_holding_modifier = { name = monastere_L1 duration = -1 }
+			}				
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = episco_land_L1 }
+					has_holding_modifier = waqf_rural_L1
+				}
+				remove_holding_modifier = waqf_rural_L1
+				add_holding_modifier = { name = episco_land_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = episcopale_L1 }
+					has_holding_modifier = waqf_urbain_L1
+				}
+				remove_holding_modifier = waqf_urbain_L1
+				add_holding_modifier = { name = episcopale_L1 duration = -1 }
+			}
+		}
+	}
+}
 
 
 ##RESSOURCES ATTRIBUTION
