@@ -49,8 +49,6 @@
 #id = L3T.12 #boost IA gold+piety
 #id = L3T.13 #muslim cities ruler malus
 #id = L3T.14 #muslim cities ruler malus cleanup if non iqta
-#id = L3T.15 #muslim jyzia maint. (on_yearly_pulse + on new holder serie)#adding
-#id = L3T.16 #muslim jyzia maint. (on_yearly_pulse + on new holder serie)#removing if unmuslim
 
 #id = L3T.20 #maintenance capitales - initiate/update
 #id = L3T.21 #maintenance capitales - removal
@@ -499,6 +497,14 @@
 
 #id = REC.20# deus_vox trait evaluation
 #id = REC.21# deus_gladio trait evaluation
+
+##ReC_muslim.txt
+
+#id = REC.30 #muslim jyzia maint. (on_yearly_pulse + on new holder serie)#adding
+#id = REC.31 #muslim jyzia maint. (on_yearly_pulse + on new holder serie)#removing if unmuslim
+#id = REC.32 #enact jyzia decision
+#id = REC.33 #enact jyzia vassal
+#id = REC.34 #enact jyzia liege
 
 ##file à ajouter
 ###id = REC.22 #monastery adbication (provisoire, la localisation de la décision porte cet ID}
