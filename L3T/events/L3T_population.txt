@@ -740,6 +740,7 @@ character_event = {
 ##niveau 1	CASTLE
 character_event = {
    	id = L3T.101
+	title = "NAME.101_115"
 	desc = "DESCL3T.101"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -768,6 +769,7 @@ character_event = {
 				NOT = {	has_building = ca_town_1	}
 				check_variable = { which = "developpement" value = 50 }
 			}
+			save_event_target_as = holding_pop
 			add_building = ca_town_1
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 100 } }
 		}
@@ -777,6 +779,7 @@ character_event = {
 ##niveau 2	CASTLE
 character_event = {
     id = L3T.102
+	title = "NAME.101_115"
 	desc = "DESCL3T.102"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -807,6 +810,7 @@ character_event = {
 								has_building = ca_town_1
 				NOT = { has_building = ca_town_2 }
 			}
+			save_event_target_as = holding_pop
 			add_building = ca_town_2
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 150 }}
 		}
@@ -816,6 +820,7 @@ character_event = {
 ##niveau 3	CASTLE
 character_event = {
    	id = L3T.103
+	title = "NAME.101_115"
 	desc = "DESCL3T.103"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -846,6 +851,7 @@ character_event = {
 				has_building = ca_town_2
 				NOT = { has_building = ca_town_3 }
 			}
+			save_event_target_as = holding_pop
 			add_building = ca_town_3
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 200 }}
 		}
@@ -855,6 +861,7 @@ character_event = {
 ##niveau 4	CASTLE
 character_event = {
    	id = L3T.104
+	title = "NAME.101_115"
 	desc = "DESCL3T.104"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -885,6 +892,7 @@ character_event = {
 				has_building = ca_town_3
 				NOT = { has_building = ca_town_4 }
 			}
+			save_event_target_as = holding_pop
 			add_building = ca_town_4
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 300 }}
 		}
@@ -894,6 +902,7 @@ character_event = {
 ##niveau 5	CASTLE
 character_event = {
    	id = L3T.105
+	title = "NAME.101_115"
 	desc = "DESCL3T.105"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -927,6 +936,7 @@ character_event = {
 				has_building = ca_town_4
 				NOT = { has_building = ca_town_5 }
 			}
+			save_event_target_as = holding_pop
 			add_building = ca_town_5
 		}
 	}
@@ -937,6 +947,7 @@ character_event = {
 ##niveau 1	CITY 
 character_event = {
    	id = L3T.106
+	title = "NAME.101_115"
 	desc = "DESCL3T.106"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -965,6 +976,7 @@ character_event = {
 				NOT = {	has_building = ct_town_1	}
 				check_variable = { which = "developpement" value = 50 }
 			}
+			save_event_target_as = holding_pop
 			add_building = ct_town_1
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 120 }}
 		}
@@ -974,6 +986,7 @@ character_event = {
 ##niveau 2	CITY 
 character_event = {
    	id = L3T.107
+	title = "NAME.101_115"
 	desc = "DESCL3T.107"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -1004,6 +1017,7 @@ character_event = {
 				has_building = ct_town_1
 				NOT = { has_building = ct_town_2 }
 			}
+			save_event_target_as = holding_pop
 			add_building = ct_town_2
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 240 }}
 		}
@@ -1013,6 +1027,7 @@ character_event = {
 ##niveau 3	CITY 
 character_event = {
    	id = L3T.108
+	title = "NAME.101_115"
 	desc = "DESCL3T.108"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -1043,6 +1058,7 @@ character_event = {
 				has_building = ct_town_2
 				NOT = { has_building = ct_town_3 }
 			}
+			save_event_target_as = holding_pop
 			add_building = ct_town_3
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 400 }}
 		}
@@ -1052,6 +1068,7 @@ character_event = {
 ##niveau 4	CITY 
 character_event = {
    	id = L3T.109
+	title = "NAME.101_115"
 	desc = "DESCL3T.109"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -1082,6 +1099,7 @@ character_event = {
 				has_building = ct_town_3
 				NOT = { has_building = ct_town_4 }
 			}
+			save_event_target_as = holding_pop
 			add_building = ct_town_4
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 500 }}
 		}
@@ -1091,6 +1109,7 @@ character_event = {
 ##niveau 5	CITY 
 character_event = {
    	id = L3T.110
+	title = "NAME.101_115"
 	desc = "DESCL3T.110"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -1124,6 +1143,7 @@ character_event = {
 				has_building = ct_town_4
 				NOT = { has_building = ct_town_5 }
 			}
+			save_event_target_as = holding_pop
 			add_building = ct_town_5
 		}
 	}
@@ -1133,6 +1153,7 @@ character_event = {
 ##niveau 1	TEMPLE 
 character_event = {
    	id = L3T.111
+	title = "NAME.101_115"
 	desc = "DESCL3T.111"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -1161,6 +1182,7 @@ character_event = {
 				NOT = {	has_building = tp_town_1	}
 				check_variable = { which = "developpement" value = 70 }
 			}
+			save_event_target_as = holding_pop
 			add_building = tp_town_1
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 140 }}
 		}
@@ -1170,6 +1192,7 @@ character_event = {
 ##niveau 2	TEMPLE 
 character_event = {
    	id = L3T.112
+	title = "NAME.101_115"
 	desc = "DESCL3T.112"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -1200,6 +1223,7 @@ character_event = {
 				has_building = tp_town_1
 				NOT = {	has_building = tp_town_2	}
 			}
+			save_event_target_as = holding_pop
 			add_building = tp_town_2
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 220 }}
 		}
@@ -1209,6 +1233,7 @@ character_event = {
 ##niveau 3	TEMPLE 
 character_event = {
    	id = L3T.113
+	title = "NAME.101_115"
 	desc = "DESCL3T.113"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -1239,6 +1264,7 @@ character_event = {
 				has_building = tp_town_2
 				NOT = {	has_building = tp_town_3	}
 			}
+			save_event_target_as = holding_pop
 			add_building = tp_town_3
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 300 }}
 		}
@@ -1248,6 +1274,7 @@ character_event = {
 ##niveau 4	TEMPLE 
 character_event = {
    	id = L3T.114
+	title = "NAME.101_115"
 	desc = "DESCL3T.114"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -1278,6 +1305,7 @@ character_event = {
 				has_building = tp_town_3
 				NOT = {	has_building = tp_town_4	}
 			}
+			save_event_target_as = holding_pop
 			add_building = tp_town_4
 			hidden_tooltip = { set_variable = { which = "devnextstep" value = 400 }}
 		}
@@ -1287,6 +1315,7 @@ character_event = {
 ##niveau 5	TEMPLE 
 character_event = {
    	id = L3T.115
+	title = "NAME.101_115"
 	desc = "DESCL3T.115"
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_economy
@@ -1320,6 +1349,7 @@ character_event = {
 				has_building = tp_town_4
 				NOT = {	has_building = tp_town_5	}
 			}
+			save_event_target_as = holding_pop
 			add_building = tp_town_5
 		}
 	}
