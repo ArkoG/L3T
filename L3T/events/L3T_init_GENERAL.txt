@@ -146,7 +146,7 @@ character_event = {
 			set_variable = { which = "was_christian_for" value = 0 }
 			set_variable = { which = "was_muslim_for" value = 0 }
 		}
-		##resets jizya_tax
+		##L3T jizya_tax system
 		any_province = {
 			owner = { set_jizya_tax = no }
 			any_province_holding = {
@@ -155,29 +155,19 @@ character_event = {
 			}
 		}
 		any_province = {
-			#totoro maybe trigger here the maintenance event directly
-			#add law/fatwa decision
+			#add law/fatwa decision trigger
 			limit = {
 				NOT = { religion_group = muslim }
 				owner = { religion_group = muslim }
 			}
 			any_province_holding = {
-				#limit to non temple only ?
+
 				add_holding_modifier = {
 					name = L3T_jyzia
 					duration = -1
 				}
 			}
 		}
-
-		
-		
-		
-		
-		
-		
-		
-		
 		##various global flags
 		set_global_flag = running_L3T
 		set_global_flag = paix_de_dieu #moved from individual options
@@ -966,7 +956,6 @@ character_event = {
 			}
 		}
 	}
-	character_event = { id = L3T.13 } #recalc iqta city held malus
 }
 			
 
