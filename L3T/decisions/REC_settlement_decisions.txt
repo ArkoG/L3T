@@ -205,4 +205,114 @@ settlement_decisions = {
 			factor = 0
 		}
 	}
+
+	confiscate_city = {
+		only_playable = yes
+		filter = vassal_owned
+		ai_target_filter = vassal_owned
+		ai_check_interval = 12 #AI checks to do the decision, in months. By default 1 (every month).
+		diplomacy_icon = GFX_diplo_muslim_icon
+		
+		from_potential = {
+			religion_group = muslim
+			government = muslim_government
+			NOT = { is_nomadic = yes }
+			higher_tier_than = baron
+		}
+		
+		potential = {
+			holder_scope = { 
+				government = republic_government
+				tier = baron
+			}
+			holding_type = city
+			location = { 
+				owner = {
+					character = FROM
+				}
+			}
+		}
+		
+		allow = {
+			FROM = {
+				NOT = { is_tribal = yes }
+				demesne_size_compared_to_limit < 1
+			}
+			OR = {
+				custom_tooltip = { 
+					text = counts_can_hold1
+					FROM = { 
+						tier = count
+						num_of_demesne_cities < 1
+					}
+				}
+				custom_tooltip = { 
+					text = dukes_can_hold2
+					FROM = {
+						tier = duke
+						num_of_demesne_cities < 2
+					}
+				}
+				custom_tooltip = { 
+					text = kings_can_hold3
+					FROM = {
+						OR = {
+							tier = king
+							tier = emperor
+						}
+						num_of_demesne_cities < 3
+					}
+				}					
+			}
+		}
+		
+		effect = {
+			grant_title = FROM
+			FROM = {
+				character_event = { id = L3T.13 }
+				character_event = { id = L3T.14 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = { demesne_size_compared_to_limit > 1 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { demesne_size_compared_to_limit < 1 }
+			}	
+			modifier = {
+				factor = 0
+				NOT = { location = { has_province_modifier = realm_capital_province }}
+			}
+			modifier = {
+				factor = 0
+				FROM = { num_of_demesne_cities > 1 }
+			}
+			modifier = {
+				factor = 1.2
+				FROM = {
+					OR = {
+						has_focus = focus_rulership
+						has_focus = focus_business
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				FROM = {
+					has_ambition = obj_see_the_realm_prosper
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_focus = focus_war
+				}
+			}
+		}
+	}
 }

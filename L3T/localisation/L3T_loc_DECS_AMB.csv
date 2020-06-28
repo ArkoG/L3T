@@ -87,9 +87,16 @@ obj_egg_them_all_desc;Having laid our hands on several of these egg-relics and h
 custom_egg_them_all;Succeed in collecting the Eggs-relics needed and obtain the Unique Egg;Réussir à rassembler les Oeufs-reliques nécessaires et obtenir de l'Oeuf Unique;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 L3T_RENAME_LOG;Rename [Root.GetName] title into something you find more fitty.;Renommer le titre [Root.GetName] en quelque chose plus à votre goût.;;;;;;;x
-DEC_rename_any_title;Rename this title;Renommer ce titre;;;;;;;x
+DEC_rename_any_title;Rename this title;Renommer ce titre;;;;;;;;;;;;x
 DEC_rename_any_title_desc;You are about to rename the following title: \n§Y[Root.GetName]§!;Vous êtes sur le point de donner un nouveau nom au titre suivant :\n§Y[Root.GetName]§!;;;;;;;x
 #;;x;;;;;;;;;;;;x
 prisoner_to_fortress;Move to Securised Dungeon [your_new_home.GetName];Transférer en cachot sécurisé;;;;;;;;;;;;x
 prisoner_to_fortress_desc;Have §Y[Root.GetTitledFirstName]§! moved to a secured cell in one of of our fortresses, where [Root.GetSubjectPronoun] can't escape, yet with a fair life expectancy.;Faire transférer [Root.Get_le_TitledFirstNameJ] dans une cellule sécurisée d'une de nos forteresses, d'où [Root.GetIlElle] ne s'échappera pas et aura une espérance de vie correcte.;;;;;;;;;;;;x
 has_a_warm_prison;Has a §YSecured dungeons§! in a demesne's §YFortress§! holding;Possède des §YCachots sécurisés§! dans l'une de ces propriétés de type §YForteresse§!;;;;;;;;;;;;x
+#;x
+confiscate_city;Confiscate this city;Confisquer cette cité;;;;;;;;;;;;x
+confiscate_city_desc;Muslim lords under the §YIqta§! government can own cities directly. \nNevertheless, depending on his rank, that lord may own only a limited number of cities, and only one from which he will net the full income.;Les seigneurs musulmans sous le régime de l'§YIqta§! peuvent détenir en propre des cités. \nNéanmoins, fonction de son rang, ce seigneur ne peut en posséder qu'un nombre limité, et une seulement dont il pourra tirer les pleins revenus.;;;;;;;;;;;;x
+counts_can_hold1;Is at least ranked '§YCount§!' and does not already have §Y1§! city;A au moins le rang de "§YComte§!" et ne possède pas déjà §Y1§! cité;;;;;;;;;;;;x
+dukes_can_hold2;Is at least ranked '§YDuke§!' and has less than §Y2§! cities;A au moins le rang de "§YDuc§!" et possède moins de §Y2§! cités;;;;;;;;;;;;x
+kings_can_hold3;Is at least ranked '§YKing§!' and has less than §Y3§! cities;A au moins le rang de "§YRoi§!" et possède moins de §Y3§! cités;;;;;;;;;;;;x
+
