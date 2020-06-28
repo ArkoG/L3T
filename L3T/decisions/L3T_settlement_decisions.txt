@@ -1055,9 +1055,11 @@ settlement_decisions = {
 		only_playable = yes
 		filter = owned
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_debug_icon
 		
 		from_potential = {
 			is_ruler = yes
+			ai = no
 		}
 		
 		potential = {
@@ -1092,6 +1094,7 @@ settlement_decisions = {
 		only_rulers = yes
 		filter = all
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_debug_icon
 		
 		from_potential = {
 			is_ruler = yes
@@ -1123,6 +1126,7 @@ settlement_decisions = {
 		only_rulers = yes
 		filter = all
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_debug_icon
 		
 		from_potential = {
 			is_ruler = yes
@@ -1154,6 +1158,7 @@ settlement_decisions = {
 		only_rulers = yes
 		filter = all
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_debug_icon
 		
 		from_potential = {
 			is_ruler = yes
