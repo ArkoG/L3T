@@ -238,6 +238,17 @@ settlement_decisions = {
 				NOT = { is_tribal = yes }
 				demesne_size_compared_to_limit < 1
 			}
+			custom_tooltip = {
+				text = only_one_city
+				NOT = {
+					location = {
+						any_province_holding = {
+							holding_type = city
+							holder_scope = { character = FROM }
+						}
+					}
+				}
+			}
 			OR = {
 				custom_tooltip = { 
 					text = counts_can_hold1
@@ -277,6 +288,14 @@ settlement_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 1.5
+				FROM = { num_of_demesne_cities < 1 }
+			}
+			modifier = {
+				factor = 0
+				FROM = { num_of_demesne_cities > 2 }
+			}
+			modifier = {
 				factor = 0
 				FROM = { demesne_size_compared_to_limit > 1 }
 			}
@@ -285,15 +304,19 @@ settlement_decisions = {
 				FROM = { demesne_size_compared_to_limit < 1 }
 			}	
 			modifier = {
-				factor = 0
+				factor = 2
+				location = { has_province_modifier = realm_capital_province }
+			}
+			modifier = {
+				factor = 0.5
 				NOT = { location = { has_province_modifier = realm_capital_province }}
 			}
 			modifier = {
 				factor = 0
-				FROM = { num_of_demesne_cities > 1 }
+				FROM = { num_of_demesne_cities > 2 }
 			}
 			modifier = {
-				factor = 1.2
+				factor = 1.5
 				FROM = {
 					OR = {
 						has_focus = focus_rulership
@@ -302,13 +325,13 @@ settlement_decisions = {
 				}
 			}
 			modifier = {
-				factor = 1.1
+				factor = 1.2
 				FROM = {
 					has_ambition = obj_see_the_realm_prosper
 				}
 			}
 			modifier = {
-				factor = 0.8
+				factor = 0.5
 				FROM = {
 					has_focus = focus_war
 				}
