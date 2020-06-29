@@ -131,17 +131,7 @@ laws = {
 				has_law = centralization_0
 				has_law = centralization_2
 			}
-			OR = {
-				OR = {
-					has_law = tribal_organization_1
-					has_law = tribal_organization_2
-					has_law = tribal_organization_3
-					has_law = tribal_organization_4
-				}
-				holder_scope = {
-					is_tribal = no
-				}
-			}
+			#L3T removed tribal_organization criteria
 		}
 		potential = {
 			holder_scope = { is_tribal = no } #L3T
@@ -209,16 +199,7 @@ laws = {
 				has_law = centralization_1
 				has_law = centralization_3
 			}
-			OR = {
-				OR = {
-					has_law = tribal_organization_2
-					has_law = tribal_organization_3
-					has_law = tribal_organization_4
-				}
-				holder_scope = {
-					is_tribal = no
-				}
-			}
+			#L3T removed tribal_organization criteria
 		}
 		potential = {
 			holder_scope = { is_tribal = no } #L3T
@@ -283,15 +264,7 @@ laws = {
 				has_law = centralization_2
 				has_law = centralization_4
 			}
-			OR = {
-				OR = {
-					has_law = tribal_organization_3
-					has_law = tribal_organization_4
-				}
-				holder_scope = {
-					is_tribal = no
-				}
-			}
+			#L3T removed tribal_organization criteria
 		}
 		potential = {
 			holder_scope = { is_tribal = no } #L3T
@@ -356,12 +329,7 @@ laws = {
 		
 		allow = {
 			has_law = centralization_3
-			OR = {
-				has_law = tribal_organization_4
-				holder_scope = {
-					is_tribal = no
-				}
-			}
+			#L3T removed tribal_organization criteria
 		}
 		potential = {
 			holder_scope = { is_tribal = no } #L3T
