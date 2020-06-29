@@ -292,6 +292,10 @@ settlement_decisions = {
 				FROM = { num_of_demesne_cities < 1 }
 			}
 			modifier = {
+				factor = 0.5
+				FROM = { num_of_demesne_cities = 1 }
+			}
+			modifier = {
 				factor = 0
 				FROM = { num_of_demesne_cities > 2 }
 			}
@@ -300,7 +304,7 @@ settlement_decisions = {
 				FROM = { demesne_size_compared_to_limit > 1 }
 			}
 			modifier = {
-				factor = 2
+				factor = 1.5
 				FROM = { demesne_size_compared_to_limit < 1 }
 			}	
 			modifier = {
@@ -312,11 +316,7 @@ settlement_decisions = {
 				NOT = { location = { has_province_modifier = realm_capital_province }}
 			}
 			modifier = {
-				factor = 0
-				FROM = { num_of_demesne_cities > 2 }
-			}
-			modifier = {
-				factor = 1.5
+				factor = 1.2
 				FROM = {
 					OR = {
 						has_focus = focus_rulership
@@ -331,7 +331,7 @@ settlement_decisions = {
 				}
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.8
 				FROM = {
 					has_focus = focus_war
 				}
