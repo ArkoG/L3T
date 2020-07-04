@@ -155,13 +155,20 @@ character_event = {
 			}
 		}
 		any_province = {
-			#add law/fatwa decision trigger
 			limit = {
 				NOT = { religion_group = muslim }
+				OR = {
+					religion_group = christian
+					religion_group = jewish_group
+				}
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
 				owner = { religion_group = muslim }
 			}
+			#might intriduce at some point using demesne title to take into account different liege holdings
 			any_province_holding = {
-
 				add_holding_modifier = {
 					name = L3T_jyzia
 					duration = -1
