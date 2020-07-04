@@ -1,0 +1,219 @@
+# Crown level (de jure) laws
+# Laws ending with 0 will be default laws at game start
+
+law_groups = {
+	jizya_group = {
+		law_type = realm
+		allowed_for_councillors = no
+	}
+}
+
+##Jizya
+laws = {
+	#valid and applied
+	jizya_0 = {
+		show_as_title = yes
+		group = jizya_group
+
+		
+		city_opinion = -5
+		temple_opinion = 5
+		
+		potential = {
+			always = no #will use this with minorities
+			holder_scope = { 
+				religion_group = muslim
+				OR = {
+					government = muslim_government
+					is_republic = yes
+					is_theocracy = yes
+				}
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}				
+			}
+			OR = {
+				NOT = { tier = baron }
+				holder_scope = { is_patrician = yes }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = tt_changed_jizya_once
+				holder_scope = {
+					NOT = { has_character_flag = changed_jizya_once }
+				}
+			}
+			#can be applied against someone
+			holder_scope = {
+				any_demesne_province = { religion_group = christian }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0.5
+			modifier = {
+				factor = 5
+				is_theocracy = yes
+			}
+		}
+		pass_effect = {
+			holder_scope = { set_character_flag = changed_jizya_once }
+			holder_scope = { 
+				#apply the tax
+				character_event = { id = REC.30 }
+				#asking vassal to apply the law too, liege can follow to
+				if = {
+					limit = {
+						liege = { NOT = { has_law = jizya_0 }}
+					}
+					#liege = { character_event = { id = REC.32 }} #inspire liege
+				}
+				if = {
+					limit = {
+						any_vassal = { NOT = { has_law = jizya_0 }}
+					}
+					#any_vassal = { character_event = { id = REC.33 }} #influence vassals
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = jizya_1
+				revoke_law = jizya_2
+			}
+		}
+	}
+	#invalid - no dhimmis
+	jizya_1 = {
+		show_as_title = yes
+		group = jizya_group
+		default = yes
+		
+		potential = {
+			always = no #will use this with minorities
+			holder_scope = { 
+				religion_group = muslim
+				government = muslim_government
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}				
+			}
+			OR = {
+				NOT = { tier = baron }
+				holder_scope = { is_patrician = yes }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = tt_can_apply_jizya
+				holder_scope = {
+					NOT = { 
+						any_demesne_province = {
+							religion_group = christian
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { 
+						any_demesne_province = {
+							religion_group = christian
+						}
+					}
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+		pass_effect = {
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = jizya_0
+				revoke_law = jizya_2
+			}
+		}
+	}
+	#valid but not applied
+	jizya_2 = {
+		show_as_title = yes
+		group = jizya_group
+		city_opinion = 5
+		temple_opinion = -5
+		
+		potential = {
+			always = no #will use this with minorities
+			holder_scope = { 
+				religion_group = muslim
+				government = muslim_government
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}				
+			}
+			OR = {
+				NOT = { tier = baron }
+				holder_scope = { is_patrician = yes }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = tt_changed_jizya_once
+				holder_scope = {
+					NOT = { has_character_flag = changed_jizya_once }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 10
+				is_republic = yes
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+		}
+		ai_will_revoke = {
+			factor = 1
+		}
+		pass_effect = {
+			holder_scope = { set_character_flag = changed_jizya_once }
+			holder_scope = { 
+				#removes the tax
+				character_event = { id = REC.30 }
+				#asking vassal to remove the law too, liege can follow to
+				if = {
+					limit = {
+						liege = { NOT = { has_law = jizya_0 }}
+					}
+					#liege = { character_event = { id = REC.34 }} #inspire liege
+				}
+				if = {
+					limit = {
+						any_vassal = { NOT = { has_law = jizya_0 }}
+					}
+					#any_vassal = { character_event = { id = REC.35 }} #influence vassals
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = jizya_0
+				revoke_law = jizya_1
+			}
+		}
+	}
+}
