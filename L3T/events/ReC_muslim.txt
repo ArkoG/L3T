@@ -12,55 +12,61 @@ character_event = {
 	hide_window = yes
 	
 	only_rulers = yes
-	capable_only = yes
-	prisoner = no
 
 	is_triggered_only = yes
 	
-	trigger = { 
-		religion_group = muslim
-		NOR = { 
-			is_tribal = yes
-			is_nomadic = yes
-		}
-		any_demesne_province = {
-			NOT = { religion_group = muslim }
-		}
-	}
+	trigger = {}
+	
 	immediate = {
-		any_demesne_province = {
-			if = {
-				limit = {
-					NOT = { religion_group = muslim }
-					owner = { 
-						religion_group = muslim
-						NOR = { 
-							is_tribal = yes
-							is_nomadic = yes
+		if = {
+			limit = {
+				religion_group = muslim
+				NOR = { 
+					is_tribal = yes
+					is_nomadic = yes
+				}				
+				any_demesne_title = {
+					location = {
+						OR = {
+							religion_group = christian
+							religion_group = jewish_group
 						}
-					}
-				}
-				any_province_holding = {
-					limit = { NOT = { has_holding_modifier = L3T_jyzia }}
-					add_holding_modifier = {
-						name = L3T_jyzia
-						duration = -1
 					}
 				}
 			}
-			if = {
-				limit = {
-					owner = {
-						NOT = { religion_group = muslim }
-						OR = { 
-							is_tribal = yes
-							is_nomadic = yes
+			any_demesne_title = {
+				limit = { 
+					NOT = { 
+						location = {
+							OR = {
+								religion_group = christian
+								religion_group = jewish_group
+							}
 						}
 					}
+					NOT = {
+						has_holding_modifier = L3T_jyzia
+						holding_type = tribal
+						holding_type = nomad
+					}
 				}
-				any_province_holding = {
-					remove_holding_modifier = L3T_jyzia
+				add_holding_modifier = {
+					name = L3T_jyzia
+					duration = -1
 				}
+			}
+		}
+			
+		if = {
+			limit = {
+				OR = { 
+					NOT = { religion_group = muslim }
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+			any_demesne_title = {
+				remove_holding_modifier = L3T_jyzia
 			}
 		}
 	}
@@ -75,7 +81,10 @@ province_event = {
 	immediate = {
 		if = {
 			limit = {
-				NOT = { religion_group = muslim }
+				OR = {
+					religion_group = christian
+					religion_group = jewish_group
+				}
 				owner = { 
 					religion_group = muslim
 					NOR = { 
@@ -84,31 +93,45 @@ province_event = {
 					}					
 				}
 			}
-			any_province_holding = {
-				limit = { NOT = { has_holding_modifier = L3T_jyzia }}
-				add_holding_modifier = {
-					name = L3T_jyzia
-					duration = -1
+			owner = {
+				any_demesne_title = {
+					limit = { 
+						NOT = { 
+							has_holding_modifier = L3T_jyzia
+							holding_type = tribal
+							holding_type = nomad
+						}
+					}
+					add_holding_modifier = {
+						name = L3T_jyzia
+						duration = -1
+					}
 				}
-			}	
+			}
 		}
+		#province is ruled by a non muslim
 		if = {
 			limit = {
 				owner = { NOT = { religion_group = muslim }}
 			}
 			any_province_holding = {
+				limit = {
+					holder_scope = { NOT = { religion_group = muslim }}
+				}
+				##minority excpeted
 				remove_holding_modifier = L3T_jyzia
-			}	
+			}
 		}
+		#province becomes muslim
 		if = {
 			limit = {
-				owner = { religion_group = muslim }
 				religion_group = muslim
 			}
 			any_province_holding = {
 				remove_holding_modifier = L3T_jyzia
-			}	
+			}
 		}
+		#province is owned by tribal or nomadic
 		if = {
 			limit = {
 				owner = { 
@@ -119,8 +142,17 @@ province_event = {
 				}
 			}
 			any_province_holding = {
+				limit = {
+					holder_scope = { 
+						OR = { 
+							is_tribal = yes
+							is_nomadic = yes
+						}
+					}
+				}
+				##minority excepted
 				remove_holding_modifier = L3T_jyzia
-			}	
+			}
 		}
 	}
 }
