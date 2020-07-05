@@ -852,6 +852,7 @@ iqta_held_direct = {
 }
 L3T_jyzia = {
 	icon = 207
-	local_tax_modifier = 0.2
-	levy_size = -0.2
+	local_tax_modifier = 0.25
+	levy_size = -0.2 #muslim are a ruling minority (statics for wrong culture -25% and wrong religion -50% are cumulative
+	retinuesize = 100
 }
