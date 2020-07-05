@@ -562,7 +562,22 @@ province_event = {
 				remove_holding_modifier = episcopale_L1
 				add_holding_modifier = { name = waqf_urbain_L1 duration = -1 }
 			}				
-
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					OR = {
+						has_title_flag = REGLE_DE_1
+						has_title_flag = REGLE_DE_2
+						has_title_flag = REGLE_DE_3
+					}
+					NOT = { has_title_flag = REGLE_SUFI_SCHOOL }
+				}
+				clr_title_flag = REGLE_DE_1
+				clr_title_flag = REGLE_DE_2
+				clr_title_flag = REGLE_DE_3
+				set_title_flag = REGLE_SUFI_SCHOOL
+			}
+			
 			#turned to non-muslim
 			if = {
 				limit = {
@@ -617,6 +632,34 @@ province_event = {
 				}
 				remove_holding_modifier = waqf_urbain_L1
 				add_holding_modifier = { name = episcopale_L1 duration = -1 }
+			}
+			
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					has_title_flag = REGLE_SUFI_SCHOOL
+					NOT = {
+						has_title_flag = REGLE_DE_1
+						has_title_flag = REGLE_DE_2
+						has_title_flag = REGLE_DE_3
+					}
+				}
+				clr_title_flag = REGLE_SUFI_SCHOOL
+				if = {
+					limit = {
+						location = { catholic_group = yes }
+					}
+					random_list = {
+						50 = { set_title_flag = REGLE_DE_1 }
+						50 = { set_title_flag = REGLE_DE_2 }
+					}
+				}
+				if = {
+					limit = {
+						location = { catholic_group = no }
+					}
+					set_title_flag = REGLE_DE_3
+				}
 			}
 		}
 	}
