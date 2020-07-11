@@ -35,7 +35,8 @@ character_event = {
 				}
 			}
 			any_demesne_title = {
-				limit = { 
+				limit = {
+					has_holding_modifier = L3T_jizya
 					NOT = { 
 						location = {
 							OR = {
@@ -44,16 +45,12 @@ character_event = {
 							}
 						}
 					}
-					NOT = {
-						has_holding_modifier = L3T_jizya
+					OR = {
 						holding_type = tribal
 						holding_type = nomad
 					}
 				}
-				add_holding_modifier = {
-					name = L3T_jizya
-					duration = -1
-				}
+				remove_holding_modifier = L3T_jizya
 			}
 		}
 			
