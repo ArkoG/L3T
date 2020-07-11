@@ -26,11 +26,18 @@ character_event = {
 					is_nomadic = yes
 				}				
 				any_demesne_title = {
-					location = {
-						OR = {
-							religion_group = christian
-							religion_group = jewish_group
+					has_holding_modifier = L3T_jizya
+					NOT = { 
+						location = {
+							OR = {
+								religion_group = christian
+								religion_group = jewish_group
+							}
 						}
+					}
+					OR = {
+						holding_type = tribal
+						holding_type = nomad
 					}
 				}
 			}
