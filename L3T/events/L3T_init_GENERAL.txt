@@ -165,10 +165,12 @@ character_event = {
 					is_tribal = yes
 					is_nomadic = yes
 				}
-				owner = { religion_group = muslim }
 			}
 			#might intriduce at some point using demesne title to take into account different liege holdings
 			any_province_holding = {
+				limit = {
+					holder_scope = { religion_group = muslim }
+				}
 				add_holding_modifier = {
 					name = L3T_jizya
 					duration = -1
