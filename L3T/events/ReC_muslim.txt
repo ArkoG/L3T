@@ -18,6 +18,7 @@ character_event = {
 	trigger = {}
 	
 	immediate = {
+		# Adding L3T_jizya for non tribal and nomadic holding in christian or jewish province ruled by muslim
 		if = {
 			limit = {
 				religion_group = muslim
@@ -25,6 +26,44 @@ character_event = {
 					is_tribal = yes
 					is_nomadic = yes
 				}				
+				any_demesne_title = {
+					location = {
+						OR = {
+							religion_group = christian
+							religion_group = jewish_group
+						}
+					}
+					NOT = {
+						has_holding_modifier = L3T_jizya
+						holding_type = tribal
+						holding_type = nomad
+					}
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					location = {
+						OR = {
+							religion_group = christian
+							religion_group = jewish_group
+						}
+					}
+					NOT = {
+						has_holding_modifier = L3T_jizya
+						holding_type = tribal
+						holding_type = nomad
+					}
+				}
+				add_holding_modifier = {
+					name = L3T_jizya
+					duration = -1
+				}
+			}
+		}
+		
+		# Remove L3T_jizya for tribal and nomadic holding or holding in non christian and non jewish province
+		if = {
+			limit = {				
 				any_demesne_title = {
 					has_holding_modifier = L3T_jizya
 					NOT = { 
@@ -61,6 +100,7 @@ character_event = {
 			}
 		}
 			
+		# Remove L3T_jizya in all holding of a non muslim ruler or a tribal or nomadic ruler
 		if = {
 			limit = {
 				OR = { 
@@ -75,6 +115,7 @@ character_event = {
 		}
 	}
 }
+
 ##jyzia modifier province version
 province_event = {
     id = REC.31
