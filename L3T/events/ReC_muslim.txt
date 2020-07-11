@@ -130,44 +130,40 @@ province_event = {
 					religion_group = christian
 					religion_group = jewish_group
 				}
-				owner = { 
-					religion_group = muslim
-					NOR = { 
-						is_tribal = yes
-						is_nomadic = yes
-					}					
-				}
 			}
-			owner = {
-				any_demesne_title = {
-					limit = { 
-						NOT = { 
-							has_holding_modifier = L3T_jizya
-							holding_type = tribal
-							holding_type = nomad
-						}
-					}
-					add_holding_modifier = {
-						name = L3T_jizya
-						duration = -1
-					}
-				}
-			}
-		}
-		#province is ruled by a non muslim
-		if = {
-			limit = {
-				owner = { NOT = { religion_group = muslim }}
-			}
+			
+			# holding ruled by a muslim (not tribal nor nomadic) on christian or jewish province
 			any_province_holding = {
 				limit = {
-					holder_scope = { NOT = { religion_group = muslim }}
+					NOT = { 
+						has_holding_modifier = L3T_jizya
+						holding_type = tribal
+						holding_type = nomad
+					}
+					holder_scope = {
+						religion_group = muslim
+						NOR = { 
+							is_tribal = yes
+							is_nomadic = yes
+						}	
+					}
 				}
-				##minority excpeted
-				remove_holding_modifier = L3T_jizya
+				## minority expected
+				add_holding_modifier = {
+					name = L3T_jizya
+					duration = -1
+				}
 			}
 		}
-		#province becomes muslim
+		# holding ruled by a non muslim
+		any_province_holding = {
+			limit = {
+				holder_scope = { NOT = { religion_group = muslim }}
+			}
+			## minority expected
+			remove_holding_modifier = L3T_jizya
+		}
+		# province becomes muslim
 		if = {
 			limit = {
 				religion_group = muslim
@@ -176,28 +172,18 @@ province_event = {
 				remove_holding_modifier = L3T_jizya
 			}
 		}
-		#province is owned by tribal or nomadic
-		if = {
+		# holding ruled by a tribal or a nomadic
+		any_province_holding = {
 			limit = {
-				owner = { 
+				holder_scope = { 
 					OR = { 
 						is_tribal = yes
 						is_nomadic = yes
 					}
 				}
 			}
-			any_province_holding = {
-				limit = {
-					holder_scope = { 
-						OR = { 
-							is_tribal = yes
-							is_nomadic = yes
-						}
-					}
-				}
-				##minority excepted
-				remove_holding_modifier = L3T_jizya
-			}
+			## minority expected
+			remove_holding_modifier = L3T_jizya
 		}
 	}
 }
