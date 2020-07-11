@@ -42,8 +42,7 @@ on_yearly_pulse = {
 		#muslim city maintenance
 		L3T.13 #can't be linked to capital moving L3T.20/21 due to their triggers
 		#L3T.14 #safety catch
-		#REC.30 #jyzia safety catch
-		#REC.31 #jyzia safety catch
+
 		
 		##population events
 		 #castle
@@ -187,8 +186,7 @@ on_new_holder = {
 		#muslim ways
 		L3T.13 #iqta held maintenance muslim
 		L3T.14 #iqta held removal non iqta
-		REC.30 #jyzia+
-		REC.31 #jyzia-
+		REC.30 #jyzia
 	}
 }
 
@@ -216,8 +214,7 @@ on_new_holder_inheritance = {
 		#muslim ways
 		L3T.13 #iqta held maintenance muslim
 		L3T.14 #iqta held removal non iqta
-		REC.30 #jyzia+
-		REC.31 #jyzia-
+		REC.30 #jyzia
 	}
 }
 
@@ -245,8 +242,7 @@ on_new_holder_usurpation = {
 		#muslim ways
 		L3T.13 #iqta held maintenance muslim
 		L3T.14 #iqta held removal non iqta
-		REC.30 #jyzia+
-		REC.31 #jyzia-
+		REC.30 #jyzia
 	}
 }
 
