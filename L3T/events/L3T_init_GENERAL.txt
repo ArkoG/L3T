@@ -222,8 +222,9 @@ character_event = {
 				if = {
 					limit = { is_SWMH_coasts = no }
 					add_province_modifier = {
-						name = province_cotiere
-						duration = -1
+						name = province_terrestre
+						duration = -1  
+						hidden = yes
 					}	
 				}		
 				if = {
