@@ -193,4 +193,30 @@ targetted_decisions = {
 			}
 		}
 	}
+	get_stadolphus_relic = {
+		only_playable = yes
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_diplo_debug_icon
+		
+		from_potential = {
+			has_global_flag = debug_L3T
+			ai = no
+			is_catholic_group = yes
+		}
+
+		potential = {
+			has_global_flag = debug_L3T			
+		}
+		
+		allow = {}
+		
+		effect = {
+			add_artifact = relique26
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }
