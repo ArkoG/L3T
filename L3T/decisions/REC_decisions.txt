@@ -19,9 +19,11 @@ decisions = {
 			destroy_relic = yes
 
 			chronicle = {
-				entry = CHRONICLE_CATHEDRALE_BEGINS
+				entry = CHRONICLE_CATHEDRALE_BEGINS_root
+				portrait = [Root.GetID]
 				picture = GFX_evt_cathedral
 			}
+			log = "i am NOT the culprit3b"
 
 			capital_scope = {
 				custom_tooltip = { text = TOOLTIPCONSTRUIRECATHEDRALE }
@@ -36,6 +38,7 @@ decisions = {
 					}
 					capital_holding = {
 						set_title_flag = cathedral_construction
+						log = "i am NOT the culprit4b"
 						random_list = {
 							25 = { set_variable = { which = cathedral value = 10 } }
 							25 = { set_variable = { which = cathedral value = 20 } }

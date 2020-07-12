@@ -45,9 +45,11 @@ settlement_decisions = {
 				add_trait = batisseur_cathedrale
 				destroy_relic = yes
 				chronicle = {
-					entry = CHRONICLE_CATHEDRALE_BEGINS
+					entry = CHRONICLE_CATHEDRALE_BEGINS_from
+					portrait = [From.GetID]
 					picture = GFX_evt_cathedral
 				}
+				log = "i am NOT the culprit3a"
 				hidden_tooltip = { character_event = { id = REC.5 days = 10} }
 				if = {
 					limit = {
@@ -70,13 +72,18 @@ settlement_decisions = {
 					}
 					capital_holding = {
 						set_title_flag = cathedral_construction
+						log = "i am NOT the culprit4a"
 						random_list = {
 							25 = { set_variable = { which = cathedral value = 10 } }
 							25 = { set_variable = { which = cathedral value = 20 } }
 							25 = { set_variable = { which = cathedral value = 30 } }
 							25 = { set_variable = { which = cathedral value = 40 } }
 						}
-					}	
+						if = {
+							limit = { has_title_flag = awaits_gothical_cathedral }
+							clr_title_flag = awaits_gothical_cathedral
+						}
+					}
 				}
 			}
 		}
