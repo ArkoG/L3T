@@ -221,8 +221,13 @@ settlement_decisions = {
 		diplomacy_icon = GFX_diplo_muslim_icon
 		
 		from_potential = {
-			religion_group = muslim
-			government = muslim_government
+			#religion_group = muslim
+			OR = {
+				government = muslim_government
+				government = chinese_imperial_government
+				government = roman_imperial_government
+				government = confucian_bureaucracy #but won't get the city malus
+			}
 			NOT = { is_nomadic = yes }
 			higher_tier_than = baron
 		}
@@ -295,11 +300,11 @@ settlement_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
+				factor = 1.75
 				FROM = { num_of_demesne_cities < 1 }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.35
 				FROM = { num_of_demesne_cities = 1 }
 			}
 			modifier = {
@@ -343,6 +348,12 @@ settlement_decisions = {
 					has_focus = focus_war
 				}
 			}
+			modifier = {
+				factor = 3
+				FROM = {
+					government = confucian_bureaucracy
+				}
+			}			
 		}
 	}
 }

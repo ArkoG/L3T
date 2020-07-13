@@ -398,10 +398,12 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 
-	is_triggered_only = yes
+	is_triggered_only = yes #on holder changes + on startup + on yearly pulse
+	#+ from confiscate city decision
 	
 	trigger = { 
-		religion_group = muslim
+		#religion_group = muslim
+		
 		NOR = { 
 			is_tribal = yes
 			is_nomadic = yes
@@ -416,7 +418,11 @@ character_event = {
 		#if iqta directly held, applies a malus if not capital county
 		if = {
 			limit = {
-				government = muslim_government
+				OR = {
+					government = muslim_government
+					government = chinese_imperial_government
+					government = roman_imperial_government
+				}
 				any_demesne_title = {
 					tier = baron
 					holding_type = city 
@@ -440,7 +446,11 @@ character_event = {
 		#if iqta directly held, removes the malus if capital county
 		if = {
 			limit = {
-				government = muslim_government
+				OR = {
+					government = muslim_government
+					government = chinese_imperial_government
+					government = roman_imperial_government
+				}
 				any_demesne_title = {
 					tier = baron
 					holding_type = city 
@@ -471,10 +481,14 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 
-	is_triggered_only = yes
+	is_triggered_only = yes #on holder changes #+ from confiscate city decision
 	
 	trigger = { 
-		NOT = { government = muslim_government } #is NOT iqta
+		NOR = {
+			government = muslim_government
+			government = chinese_imperial_government
+			government = roman_imperial_government
+		}
 		any_demesne_title = {
 			tier = baron
 			holding_type = city 
