@@ -5,10 +5,11 @@
 ###by Arko and Mouchi
 
 
+
 CURRENT_DEV 1.10 SEAL2 (--- july 2020) for CK2 v3.3.3
 MAJOR:
--muslim under iqta can hold cities
--iqta rulers can confiscate freely up to 3 cities
+-iqta rulers can hold cities
+-governments that allow holding cities can confiscate freely up to 3 cities (iqta, roman and chinese imperial, confucian bureaucracy) 
 -iqta ruler get a bonus to retinue cap
 -introducing muslim religious holdings specializations (waqf, zaouia)
 -reviewed jizya only affecting Dhimmis, affecting retinues (bonus), and levies (malus)
@@ -21,12 +22,17 @@ MINOR and VARIOUS:
 -some new muslim event pictures
 -population growth events now mention the name of the holding in their description
 -various localisation changes or improvments
+-"Imperial" governement is renamed to "Roman imperial" as it only applies to Restored roman empire or Byzantine empire
+-"Impérialisme chinois" in Frecnh loc is remaned to "Impérial chinois" for consistency sake and more accuracy
 
 BALANCE:
--iqta held cities bring a reduced amount of income, unless it is in cpaital county
+-directly held cities by non-republic bring a reduced amount of income, unless it is in capital county (confusician bureaucracy get confiscate cities but don't get any malus)
 -iqta rulers pay less for retinues reinforcement
 -wrong religion_group and culture_group provinces significantly bring less levies and slower reinforce rate
 -monastic rules are named dynamicaly (bloats less the building list)
+-AI will try to confiscate cities in the way players can
+-capital bonus is slighlty better (more tax and better protection against revolts)
+-roman imperial government get a bonus to demesne size
 
 BUGFIX:
 -fixed duplicate naming for fishing ressources
