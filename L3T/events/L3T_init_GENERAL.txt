@@ -664,7 +664,7 @@ province_event = {
 				clr_title_flag = REGLE_SUFI_SCHOOL
 				if = {
 					limit = {
-						location = { catholic_group = yes }
+						location = { is_catholic_group = yes }
 					}
 					random_list = {
 						50 = { set_title_flag = REGLE_DE_1 }
@@ -673,7 +673,7 @@ province_event = {
 				}
 				if = {
 					limit = {
-						location = { catholic_group = no }
+						location = { is_catholic_group = no }
 					}
 					set_title_flag = REGLE_DE_3
 				}
