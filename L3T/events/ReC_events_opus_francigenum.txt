@@ -492,7 +492,9 @@ character_event = {
 				#		}
 				#	}
 				#}
-				set_title_flag = awaits_gothical_cathedral
+				set_title_flag = awaits_gothical_cathedral #what is it used for exactly ? the cathedral won't be rebuild in the same place, unless maybe if the liege don't uses the relic ?
+				#should be directed to the capital holding to enforce rebuilding in the same province totoro?
+				
 				remove_building = tp_roman_cathedrale
 				location = { 
 					if = {
