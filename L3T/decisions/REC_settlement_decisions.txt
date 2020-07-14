@@ -57,7 +57,6 @@ settlement_decisions = {
 						}
 					}
 				}
-				log = "i am NOT the culprit3a"
 				hidden_tooltip = { character_event = { id = REC.5 days = 10} }
 				if = {
 					limit = {
@@ -80,7 +79,6 @@ settlement_decisions = {
 					}
 					capital_holding = {
 						set_title_flag = cathedral_construction
-						log = "i am NOT the culprit4a"
 						random_list = {
 							25 = { set_variable = { which = cathedral value = 10 } }
 							25 = { set_variable = { which = cathedral value = 20 } }
