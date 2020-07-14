@@ -357,6 +357,7 @@
 ###ECO+_init_COMMERCE.txt
 
 ##Détection route commerciales
+
 #[COMMENTE] id = ECO.23 #centre commercial1 test
 #[COMMENTE] id = ECO.24 #centre commercial2 test
 #[COMMENTE] id = ECO.25 #centre commercial3 test
@@ -365,24 +366,32 @@
 ###ECO+_immersion.txt
 
 ##Récoltes
+
 #id = ECO.200 #bonne récolte [HIDDEN]
 #id = ECO.250 #bonne récolte
 #id = ECO.201 #mauvaise récolte [HIDDEN]
 #id = ECO.251 #mauvaise récolte
+
 ##Peches
+
 #id = ECO.202 #bonne pêche [HIDDEN]
 #id = ECO.252 #bonne pêche
 #id = ECO.203 #mauvaise pêche [HIDDEN]
 #id = ECO.253 #mauvaise pêche
+
 ##Mine
+
 #id = ECO.204 #baisse productivité de la mine
 #id = ECO.205 #amelioration productivité de la mine
 #id = ECO.213 #nouveau filon découvert + notif chronique
 
 ##Industrie
+
 #id = ECO.206 #industrie prospère
 #id = ECO.207 #fin industrie prospère
+
 ##Meteo
+
 #id = ECO.208 #inondation [HIDDEN]
 #id = ECO.258 #inondation
 #id = ECO.209 #sécheresse [HIDDEN]
@@ -531,6 +540,7 @@
 #id = REC.212 # bonus achévement ultime étape
 
 ##ReC_flavour_events.txt
+
 #ralentissements chantier
 #id = REC.1101 # TODO
 #accélérations chantier
