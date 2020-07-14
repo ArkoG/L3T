@@ -300,6 +300,16 @@ character_event = {
 			province_event = { id = L3T.25 } #city pre-spec
 			province_event = { id = L3T.120 } #religion check init
 		}
+		#avoid byzzies crying
+		any_title = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = running_LCDA }
+					title = b_constantinople
+				}
+				change_variable = { which = "developpement" value = 100 }
+			}
+		}
 
 		
 	} #end of immediate
