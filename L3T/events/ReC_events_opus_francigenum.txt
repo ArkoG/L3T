@@ -67,6 +67,13 @@ narrative_event = {
 					value = fiftyYears
 				}
 			}
+			AND = {
+				#catch for free OF if player is not starting catholic
+				has_game_rule = {
+					name = opus_francigenum
+					value = free
+				}
+			}
 		}
 		controls_religion = yes # Let it happen for the Pope. He's always around.
 	}
@@ -89,6 +96,13 @@ narrative_event = {
 				value = fiftyYears
 			}
 		}
+		modifier = {
+			factor = 0.01
+			has_game_rule = {
+				name = opus_francigenum
+				value = free
+			}
+		}
 	}
 	
 	immediate = {
@@ -98,9 +112,8 @@ narrative_event = {
 	option = {
 		name = "OPUSFRANCIGENUM.A"
 		trigger = {
-			NOT = {
-				has_a_relic = yes
-			}
+			NOT = { has_a_relic = yes }
+			is_catholic_group = yes
 		}
 	}
 	
@@ -108,6 +121,13 @@ narrative_event = {
 		name = "OPUSFRANCIGENUM.B"
 		trigger = {
 			has_a_relic = yes
+			is_catholic_group = yes
+		}
+	}
+	option = {
+		name = "OPUSFRANCIGENUM.C"
+		trigger = {
+			is_catholic_group = no #non catholic wouldn't care
 		}
 	}
 }
