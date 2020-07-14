@@ -17,11 +17,13 @@ decisions = {
 			piety = 100
 			add_trait = batisseur_cathedrale
 			destroy_relic = yes
-
-			chronicle = {
-				entry = CHRONICLE_CATHEDRALE_BEGINS_root
-				portrait = [Root.GetID]
-				picture = GFX_evt_cathedral
+			if = {
+				limit = { ai = no }
+				chronicle = {
+					entry = CHRONICLE_CATHEDRALE_BEGINS_root
+					portrait = [Root.GetID]
+					picture = GFX_evt_cathedral
+				}
 			}
 			log = "i am NOT the culprit3b"
 

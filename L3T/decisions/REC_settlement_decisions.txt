@@ -44,10 +44,13 @@ settlement_decisions = {
 				piety = 100
 				add_trait = batisseur_cathedrale
 				destroy_relic = yes
-				chronicle = {
-					entry = CHRONICLE_CATHEDRALE_BEGINS_from
-					portrait = [From.GetID]
-					picture = GFX_evt_cathedral
+				if = {
+					limit = { ai = no }
+					chronicle = {
+						entry = CHRONICLE_CATHEDRALE_BEGINS_from
+						portrait = [From.GetID]
+						picture = GFX_evt_cathedral
+					}
 				}
 				log = "i am NOT the culprit3a"
 				hidden_tooltip = { character_event = { id = REC.5 days = 10} }
