@@ -21,7 +21,8 @@ decisions = {
 				if = {
 					limit = { ai = no }
 					chronicle = {
-						entry = CHRONICLE_CATHEDRALE_BEGINS_root
+						#entry = CHRONICLE_CATHEDRALE_BEGINS_root
+						entry = CHRONICLE_CATHEDRALE_BEGINS
 						portrait = [Root.GetID]
 						picture = GFX_evt_cathedral
 					}

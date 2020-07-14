@@ -48,7 +48,8 @@ settlement_decisions = {
 					if = {
 						limit = { ai = no }
 						chronicle = {
-							entry = CHRONICLE_CATHEDRALE_BEGINS_from
+							#entry = CHRONICLE_CATHEDRALE_BEGINS_from
+							entry = CHRONICLE_CATHEDRALE_BEGINS
 							portrait = [From.GetID]
 							picture = GFX_evt_cathedral
 						}
