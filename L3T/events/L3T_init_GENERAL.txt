@@ -304,6 +304,7 @@ character_event = {
 		any_title = {
 			if = {
 				limit = {
+					NOT = { year = 1100 }
 					NOT = { has_global_flag = running_LCDA }
 					title = b_constantinople
 				}
