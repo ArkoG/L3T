@@ -13,6 +13,8 @@ decisions = {
 		}
 	
 		effect = {
+			capital_scope = { save_event_target_as = cathedral_location }
+			save_event_target_as = cathedral_patron
 			wealth = -100
 			piety = 100
 			add_trait = batisseur_cathedrale
@@ -21,7 +23,6 @@ decisions = {
 				if = {
 					limit = { ai = no }
 					chronicle = {
-						#entry = CHRONICLE_CATHEDRALE_BEGINS_root
 						entry = CHRONICLE_CATHEDRALE_BEGINS
 						portrait = [Root.GetID]
 						picture = GFX_evt_cathedral

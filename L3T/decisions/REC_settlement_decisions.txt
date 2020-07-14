@@ -39,16 +39,18 @@ settlement_decisions = {
 		}
 		
 		effect = {
+			save_event_target_as = cathedral_location
 			FROM = {
+				save_event_target_as = cathedral_patron
 				wealth = -100
 				piety = 100
 				add_trait = batisseur_cathedrale
 				destroy_relic = yes
+				
 				hidden_tooltip = { 
 					if = {
 						limit = { ai = no }
 						chronicle = {
-							#entry = CHRONICLE_CATHEDRALE_BEGINS_from
 							entry = CHRONICLE_CATHEDRALE_BEGINS
 							portrait = [From.GetID]
 							picture = GFX_evt_cathedral
