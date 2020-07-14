@@ -221,7 +221,8 @@ settlement_decisions = {
 		filter = vassal_owned
 		ai_target_filter = vassal_owned
 		ai_check_interval = 12 #AI checks to do the decision, in months. By default 1 (every month).
-		diplomacy_icon = GFX_diplo_muslim_icon
+		#diplomacy_icon = GFX_diplo_muslim_icon
+		diplomacy_icon = GFX_obligations_icon
 		
 		from_potential = {
 			#religion_group = muslim
