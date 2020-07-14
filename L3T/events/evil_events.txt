@@ -46,27 +46,19 @@ province_event = {
 			factor = 0.5
 			NOT = { owner = { wealth = -500 } }
 		}
+		
 		#Bad demesne efficiency
 		modifier = {
 			factor = 0.9
-			NOT = { owner = { demesne_efficiency = 0.9 } }
-			##see to use demesne_size_compared_to_limit < 0.9 (1=100%)
+			demesne_size_compared_to_limit > 1.2
 		}
 		modifier = {
 			factor = 0.7
-			NOT = { owner = { demesne_efficiency = 0.7 } }
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { owner = { demesne_efficiency = 0.5 } }
-		}
-		modifier = {
-			factor = 0.3
-			NOT = { owner = { demesne_efficiency = 0.3 } }
+			demesne_size_compared_to_limit > 1.5
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { owner = { demesne_efficiency = 0.1 } }
+			demesne_size_compared_to_limit > 2.0
 		}
 		
 		#traits affect this
@@ -143,11 +135,15 @@ province_event = {
 			factor = 0.75
 			owner = { realm_diplomacy = 20 }
 		}
-	
 		modifier = {
-			factor = 0.75
-			owner = { trait = just }
-		}			
+			factor = 0.9
+			demesne_size_compared_to_limit < 1
+		}
+		
+		#trait package
+		modifier = { factor = 0.75 owner = { trait = just }}
+		modifier = { factor = 0.75 owner = { trait = ambitious }}
+		modifier = { factor = 1.25 owner = { trait = content }}
 	}
 	
 	option = {
@@ -180,7 +176,7 @@ province_event = {
 	}
 }
 
-# Establishment of thieves_guild in a province, if budget in the red
+# Establishment of thieves_guild in a province, if demesne_size_compared_to_limit > 1
 province_event = {
 	id = 68010
 	desc = EVTDESC68010
@@ -190,7 +186,7 @@ province_event = {
 	
 	trigger = {
 		#back to demesne efficiency instead of debt
-		NOT = { owner = { demesne_efficiency = 0.9 } }
+		demesne_size_compared_to_limit > 1
 		#can't co-exists three
 		NOT = { has_province_modifier = thieves_guild } 
 		NOT = { has_province_modifier = smugglers_ring } 
@@ -201,7 +197,6 @@ province_event = {
 	mean_time_to_happen = {
 		months = 240
 
-		#Bad demesne efficiency
 		modifier = { factor = 0.8	terrain = forest } #ideal hideaway
 		modifier = { factor = 0.9	terrain = jungle } #ideal hideaway
 		modifier = { factor = 1.1	terrain = steppe }
@@ -212,25 +207,18 @@ province_event = {
 			has_province_modifier = failed_purge
 		}
 		
+		#Bad demesne efficiency
 		modifier = {
 			factor = 0.9
-			NOT = { owner = { demesne_efficiency = 0.9 } }
+			demesne_size_compared_to_limit > 1.2
 		}
 		modifier = {
 			factor = 0.7
-			NOT = { owner = { demesne_efficiency = 0.7 } }
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { owner = { demesne_efficiency = 0.5 } }
-		}
-		modifier = {
-			factor = 0.3
-			NOT = { owner = { demesne_efficiency = 0.3 } }
+			demesne_size_compared_to_limit > 1.5
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { owner = { demesne_efficiency = 0.1 } }
+			demesne_size_compared_to_limit > 2.0
 		}		
 		
 		#DEBT
@@ -240,8 +228,8 @@ province_event = {
 		modifier = { factor = 0.7	NOT = { owner = { realm_diplomacy = 15 }}}
 		modifier = { factor = 0.7	NOT = { owner = { realm_diplomacy = 10 }}}
 		modifier = { factor = 0.7	NOT = { owner = { realm_diplomacy = 5 }}}
-		modifier = {factor = 1.5	owner = { realm_diplomacy = 20 }}
-		modifier = {factor = 2.0	owner = { realm_diplomacy = 25 }}
+		modifier = { factor = 1.5	owner = { realm_diplomacy = 20 }}
+		modifier = { factor = 2.0	owner = { realm_diplomacy = 25 }}
 
 		#traits affect this
 		modifier = {
@@ -298,7 +286,7 @@ province_event = {
 	#notification = yes
 	
 	trigger = {
-		owner = { demesne_efficiency = 1.0 }
+		demesne_size_compared_to_limit < 1.1
 		has_province_modifier = thieves_guild
 		NOT = { has_province_flag = ongoing_purge }
 		had_province_flag = { flag = villains_thieves days = 365 }
@@ -315,9 +303,15 @@ province_event = {
 			owner = { realm_intrigue = 20 }
 		}
 		modifier = {
-			factor = 0.75
-			owner = { trait = just }
+			factor = 0.9
+			demesne_size_compared_to_limit < 1
 		}
+		
+		#trait package
+		modifier = { factor = 0.75 owner = { trait = just }}
+		modifier = { factor = 0.75 owner = { trait = ambitious }}
+		modifier = { factor = 1.25 owner = { trait = content }}
+		
 		modifier = { factor = 1.2	terrain = forest } #ideal hideaway
 		modifier = { factor = 1.1	terrain = jungle } #ideal hideaway
 	}
@@ -330,7 +324,7 @@ province_event = {
 	}
 }
 
-# Establishment of smugglers_ring in a province, if red budget
+# Establishment of smugglers_ring in a province, demesne_size_compared_to_limit > 1
 province_event = {
 	id = 68020
 	desc = EVTDESC68020
@@ -339,7 +333,7 @@ province_event = {
 	
 	trigger = {
 		#back to demesne efficiency instead of debt
-		NOT = { owner = { demesne_efficiency = 0.9 } }
+		demesne_size_compared_to_limit > 1
 		#can't co-exists three
 		NOT = { has_province_modifier = thieves_guild } 
 		NOT = { has_province_modifier = smugglers_ring } 
@@ -351,7 +345,6 @@ province_event = {
 	mean_time_to_happen = {
 		months = 240
 		
-		#Bad demesne efficiency
 		modifier = { factor = 0.9	terrain = farmlands } #richer
 		modifier = { factor = 0.9	terrain = plains }
 		modifier = { factor = 1.1	terrain = steppe }
@@ -364,26 +357,19 @@ province_event = {
 			has_province_modifier = failed_purge
 		}
 		
+		#Bad demesne efficiency
 		modifier = {
 			factor = 0.9
-			NOT = { owner = { demesne_efficiency = 0.9 } }
+			demesne_size_compared_to_limit > 1.2
 		}
 		modifier = {
 			factor = 0.7
-			NOT = { owner = { demesne_efficiency = 0.7 } }
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { owner = { demesne_efficiency = 0.5 } }
-		}
-		modifier = {
-			factor = 0.3
-			NOT = { owner = { demesne_efficiency = 0.3 } }
+			demesne_size_compared_to_limit > 1.5
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { owner = { demesne_efficiency = 0.1 } }
-		}		
+			demesne_size_compared_to_limit > 2.0
+		}	
 		
 		#DEBT
 		modifier = { factor = 0.75	NOT = { owner = { wealth = -150 }}}
@@ -392,8 +378,8 @@ province_event = {
 		modifier = { factor = 0.7	NOT = { owner = { realm_stewardship = 15 }}}
 		modifier = { factor = 0.7	NOT = { owner = { realm_stewardship = 10 }}}
 		modifier = { factor = 0.7	NOT = { owner = { realm_stewardship = 5 }}}
-		modifier = {factor = 1.5	owner = { realm_stewardship = 20 }}
-		modifier = {factor = 2.0	owner = { realm_stewardship = 25 }}
+		modifier = { factor = 1.5	owner = { realm_stewardship = 20 }}
+		modifier = { factor = 2.0	owner = { realm_stewardship = 25 }}
 
 		#traits affect this
 		modifier = {
@@ -450,7 +436,7 @@ province_event = {
 	picture = GFX_evt_burning_house
 	
 	trigger = {
-		owner = { demesne_efficiency = 0.8 }
+		demesne_size_compared_to_limit < 1.1
 		has_province_modifier = smugglers_ring
 		NOT = { has_province_flag = ongoing_purge }
 		had_province_flag = { flag = villains_smugglers days = 365 }
@@ -462,20 +448,16 @@ province_event = {
 			factor = 0.5
 			owner = { realm_stewardship = 20 }
 		}
-		#Bad demesne efficiency
 		modifier = {
-			factor = 1.1
-			NOT = { owner = { demesne_efficiency = 0.95 } }
+			factor = 0.9
+			demesne_size_compared_to_limit < 1
 		}
-		modifier = {
-			factor = 1.1
-			NOT = { owner = { demesne_efficiency = 0.85 } }
-		}
-
-		modifier = {
-			factor = 0.75
-			owner = { trait = just }
-		}	
+		
+		#trait package
+		modifier = { factor = 0.75 owner = { trait = just }}
+		modifier = { factor = 0.75 owner = { trait = ambitious }}
+		modifier = { factor = 1.25 owner = { trait = content }}
+	
 	}
 	
 	option = {
@@ -486,7 +468,7 @@ province_event = {
 	}
 }
 
-#Establishment of highway_robber_band in a province, if red budget
+#Establishment of highway_robber_band in a province, if demesne_size_compared_to_limit > 1
 province_event = {
 	id = 68030
 	desc = EVTDESC68030
@@ -496,7 +478,7 @@ province_event = {
 	picture = GFX_evt_bandits
 	
 	trigger = {
-		NOT = { owner = { demesne_efficiency = 1.0 } }
+		demesne_size_compared_to_limit > 1
 		NOT = { has_province_modifier = thieves_guild } 
 		NOT = { has_province_modifier = smugglers_ring } 
 		NOT = { has_province_modifier = highway_robber_band } 
@@ -513,24 +495,16 @@ province_event = {
 		#Bad demesne efficiency
 		modifier = {
 			factor = 0.9
-			NOT = { owner = { demesne_efficiency = 0.9 } }
+			demesne_size_compared_to_limit > 1.2
 		}
 		modifier = {
 			factor = 0.7
-			NOT = { owner = { demesne_efficiency = 0.7 } }
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { owner = { demesne_efficiency = 0.5 } }
-		}
-		modifier = {
-			factor = 0.3
-			NOT = { owner = { demesne_efficiency = 0.3 } }
+			demesne_size_compared_to_limit > 1.5
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { owner = { demesne_efficiency = 0.1 } }
-		}		
+			demesne_size_compared_to_limit > 2.0
+		}	
 		
 		#DEBT
 		modifier = { factor = 0.75	NOT = { owner = { wealth = -150 }}}
@@ -694,6 +668,7 @@ province_event = {
 	#notification = yes
 	
 	trigger = {
+		demesne_size_compared_to_limit < 1.1
 		owner = { wealth = 0 }
 		has_province_modifier = highway_robber_band
 		NOT = { has_province_flag = ongoing_purge }
@@ -711,9 +686,15 @@ province_event = {
 			owner = { realm_stewardship = 30 }
 		}
 		modifier = {
-			factor = 0.75
-			owner = { trait = just }
+			factor = 0.9
+			demesne_size_compared_to_limit < 1
 		}
+		
+		#trait package
+		modifier = { factor = 0.75 owner = { trait = just }}
+		modifier = { factor = 0.75 owner = { trait = ambitious }}
+		modifier = { factor = 1.25 owner = { trait = content }}
+
 		modifier = {
 			factor = 0.5
 			OR = {
