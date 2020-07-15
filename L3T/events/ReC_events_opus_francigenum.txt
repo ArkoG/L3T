@@ -490,9 +490,9 @@ character_event = {
 				#		}
 				#	}
 				#}
-				set_title_flag = awaits_gothical_cathedral
 				remove_building = tp_roman_cathedrale
-				location = { 
+				location = {
+					set_province_flag = awaits_gothical_cathedral
 					if = {
 						limit = { NOT = { has_province_modifier = chantier_cathedrale } }
 						remove_province_modifier = relique_generique

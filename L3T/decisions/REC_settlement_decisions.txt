@@ -28,9 +28,9 @@ settlement_decisions = {
 			OR = {
 				AND = { 
 					FROM = { has_character_flag = has_relique_from_cathedral }
-					has_title_flag = awaits_gothical_cathedral
+					location = { has_province_flag = awaits_gothical_cathedral }
 				}
-				NOT = { has_title_flag = awaits_gothical_cathedral }
+				NOT = { has_character_flag = has_relique_from_cathedral }
 			}
 		}
 
@@ -88,8 +88,8 @@ settlement_decisions = {
 							25 = { set_variable = { which = cathedral value = 40 } }
 						}
 						if = {
-							limit = { has_title_flag = awaits_gothical_cathedral }
-							clr_title_flag = awaits_gothical_cathedral
+							limit = { location = { has_province_flag = awaits_gothical_cathedral } }
+							clr_province_flag = awaits_gothical_cathedral
 						}
 					}
 				}
