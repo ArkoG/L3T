@@ -8,7 +8,7 @@
 # Written by Johan Andersson
 # Adjusted by Henrik Fåhraeus
 
-#If in the red  => increase revolt risk in a province.
+#If in the red => increase revolt risk in a province.
 province_event = {
 	id = 68000
 	desc = EVTDESC68000
@@ -50,15 +50,15 @@ province_event = {
 		#Bad demesne efficiency
 		modifier = {
 			factor = 0.9
-			demesne_size_compared_to_limit > 1.2
+			owner = { demesne_size_compared_to_limit > 1.2 }
 		}
 		modifier = {
 			factor = 0.7
-			demesne_size_compared_to_limit > 1.5
+			owner = { demesne_size_compared_to_limit > 1.5 }
 		}
 		modifier = {
 			factor = 0.1
-			demesne_size_compared_to_limit > 2.0
+			owner = { demesne_size_compared_to_limit > 2.0 }
 		}
 		
 		#traits affect this
@@ -137,7 +137,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.9
-			demesne_size_compared_to_limit < 1
+			owner = { demesne_size_compared_to_limit < 1 }
 		}
 		
 		#trait package
@@ -186,7 +186,7 @@ province_event = {
 	
 	trigger = {
 		#back to demesne efficiency instead of debt
-		demesne_size_compared_to_limit > 1
+		owner = { demesne_size_compared_to_limit > 1 }
 		#can't co-exists three
 		NOT = { has_province_modifier = thieves_guild } 
 		NOT = { has_province_modifier = smugglers_ring } 
@@ -210,15 +210,15 @@ province_event = {
 		#Bad demesne efficiency
 		modifier = {
 			factor = 0.9
-			demesne_size_compared_to_limit > 1.2
+			owner = { demesne_size_compared_to_limit > 1.2 }
 		}
 		modifier = {
 			factor = 0.7
-			demesne_size_compared_to_limit > 1.5
+			owner = { demesne_size_compared_to_limit > 1.5 }
 		}
 		modifier = {
 			factor = 0.1
-			demesne_size_compared_to_limit > 2.0
+			owner = { demesne_size_compared_to_limit > 2.0 }
 		}		
 		
 		#DEBT
@@ -286,7 +286,7 @@ province_event = {
 	#notification = yes
 	
 	trigger = {
-		demesne_size_compared_to_limit < 1.1
+		owner = { demesne_size_compared_to_limit < 1.1 }
 		has_province_modifier = thieves_guild
 		NOT = { has_province_flag = ongoing_purge }
 		had_province_flag = { flag = villains_thieves days = 365 }
@@ -304,7 +304,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.9
-			demesne_size_compared_to_limit < 1
+			owner = { demesne_size_compared_to_limit < 1 }
 		}
 		
 		#trait package
@@ -333,7 +333,7 @@ province_event = {
 	
 	trigger = {
 		#back to demesne efficiency instead of debt
-		demesne_size_compared_to_limit > 1
+		owner = { demesne_size_compared_to_limit > 1 }
 		#can't co-exists three
 		NOT = { has_province_modifier = thieves_guild } 
 		NOT = { has_province_modifier = smugglers_ring } 
@@ -360,15 +360,15 @@ province_event = {
 		#Bad demesne efficiency
 		modifier = {
 			factor = 0.9
-			demesne_size_compared_to_limit > 1.2
+			owner = { demesne_size_compared_to_limit > 1.2 }
 		}
 		modifier = {
 			factor = 0.7
-			demesne_size_compared_to_limit > 1.5
+			owner = { demesne_size_compared_to_limit > 1.5 }
 		}
 		modifier = {
 			factor = 0.1
-			demesne_size_compared_to_limit > 2.0
+			owner = { demesne_size_compared_to_limit > 2.0 }
 		}	
 		
 		#DEBT
@@ -436,7 +436,7 @@ province_event = {
 	picture = GFX_evt_burning_house
 	
 	trigger = {
-		demesne_size_compared_to_limit < 1.1
+		owner = { demesne_size_compared_to_limit < 1.1 }
 		has_province_modifier = smugglers_ring
 		NOT = { has_province_flag = ongoing_purge }
 		had_province_flag = { flag = villains_smugglers days = 365 }
@@ -450,7 +450,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.9
-			demesne_size_compared_to_limit < 1
+			owner = { demesne_size_compared_to_limit < 1 }
 		}
 		
 		#trait package
@@ -478,7 +478,7 @@ province_event = {
 	picture = GFX_evt_bandits
 	
 	trigger = {
-		demesne_size_compared_to_limit > 1
+		owner = { demesne_size_compared_to_limit > 1 }
 		NOT = { has_province_modifier = thieves_guild } 
 		NOT = { has_province_modifier = smugglers_ring } 
 		NOT = { has_province_modifier = highway_robber_band } 
@@ -495,15 +495,15 @@ province_event = {
 		#Bad demesne efficiency
 		modifier = {
 			factor = 0.9
-			demesne_size_compared_to_limit > 1.2
+			owner = { demesne_size_compared_to_limit > 1.2 }
 		}
 		modifier = {
 			factor = 0.7
-			demesne_size_compared_to_limit > 1.5
+			owner = { demesne_size_compared_to_limit > 1.5 }
 		}
 		modifier = {
 			factor = 0.1
-			demesne_size_compared_to_limit > 2.0
+			owner = { demesne_size_compared_to_limit > 2.0 }
 		}	
 		
 		#DEBT
@@ -668,7 +668,7 @@ province_event = {
 	#notification = yes
 	
 	trigger = {
-		demesne_size_compared_to_limit < 1.1
+		owner = { demesne_size_compared_to_limit < 1.1 }
 		owner = { wealth = 0 }
 		has_province_modifier = highway_robber_band
 		NOT = { has_province_flag = ongoing_purge }
@@ -687,7 +687,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.9
-			demesne_size_compared_to_limit < 1
+			owner = { demesne_size_compared_to_limit < 1 }
 		}
 		
 		#trait package

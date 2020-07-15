@@ -434,6 +434,8 @@ character_event = {
 		trigger = {
 			has_global_flag = opus_francigenum 
 			yearly_income = 100
+			construire_cathedral_potential = yes #can actually build a cathedral
+			has_a_relic = no #is actually in need of a relic
 		}
 		ai_chance = {
 			factor = 70
@@ -492,7 +494,7 @@ character_event = {
 				#}
 				remove_building = tp_roman_cathedrale
 				location = {
-					set_province_flag = awaits_gothical_cathedral
+					set_province_flag = awaits_gothical_cathedral # Force cathedral to be built in same province
 					if = {
 						limit = { NOT = { has_province_modifier = chantier_cathedrale } }
 						remove_province_modifier = relique_generique
@@ -525,7 +527,7 @@ character_event = {
 		name = "REC.107A"
 		piety = -20
 		add_character_modifier = { name = stolen_relic duration = 1826 }
-		# Lord should use the relic in the year
+		# Lord get a chance to use the relic in the upcoming 5 years
 		character_event = { id = REC.108 days = 1826 }
 	}
 }
@@ -545,7 +547,7 @@ character_event = {
 		name = "REC.108A"
 		piety = -100
 		add_character_modifier = { name = stolen_relic duration = 1826 } #5years
-		# Lord should use the relic in the year
+		# Lord get a chance to use the relic in the upcoming 5 years
 		character_event = { id = REC.108 days = 1826 } #5years
 	}
 }

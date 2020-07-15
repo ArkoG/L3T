@@ -23,7 +23,7 @@ MINOR and VARIOUS:
 -population growth events now mention the name of the holding in their description
 -various localisation changes or improvments
 -"Imperial" governement is renamed to "Roman imperial" as it only applies to Restored roman empire or Byzantine empire
--"Impérialisme chinois" in Frecnh loc is remaned to "Impérial chinois" for consistency sake and more accuracy
+-"Impérialisme chinois" in Frecnh loc is renamed to "Impérial chinois" for consistency sake and more accuracy
 
 BALANCE:
 -directly held cities by non-republic bring a reduced amount of income, unless it is in capital county (confusician bureaucracy get confiscate cities but don't get any malus)
@@ -35,9 +35,13 @@ BALANCE:
 -roman imperial government get a bonus to demesne size
 
 BUGFIX:
+-decision to start to build a cathedral should no more cause a CTD
 -fixed duplicate naming for fishing ressources
 -fixing all land provinces being wrongly coastal provinces with SWMH
-
+-fixed the Opus francigenum never happening with "Free" rule if not starting as a catholic character
+-the mod won't try to write chronicles entries for AI
+-fixed "evil events" (smugglers ring etc.) being off
+-remaining building cathedral speed modifiers after cathedral is finished are now cleaned properly
 
 RELEASE 1.00 SEAL1 (14th june 2020) for CK2 v3.3.3
 
