@@ -147,97 +147,136 @@ character_event = {
 			
 			set_variable = { which = "developpement_init" which = "developpement" }
 			
-			# Castles
-			#if = { #buggy pour mémoire
-			#	holding_type = castle
-			#	limit = { check_variable = { which = "developpement" value = 0 }}
-			#	set_variable = { which = "devnextstep" value = 100 }
-			#}
 			if = {
-				limit = { check_variable = { which = "developpement" value = 50 }}
+				limit = { 
+					holding_type = castle
+					check_variable = { which = "developpement" value = 50 }
+				}
 				add_building = ca_town_1
-				set_variable = { which = "devnextstep" value = 100 }
+				set_variable = { which = "devnextstep" value = 100 } 
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 100 }}
+				limit = { 
+					holding_type = castle
+					check_variable = { which = "developpement" value = 100 }
+				}
 				set_variable = { which = "devnextstep" value = 150 }
 				add_building = ca_town_2
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 150 }}
+				limit = { 
+					holding_type = castle
+					check_variable = { which = "developpement" value = 150 }
+				}
 				set_variable = { which = "devnextstep" value = 200 }
 				add_building = ca_town_3
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 200 }}
+				limit = { 
+					holding_type = castle
+					check_variable = { which = "developpement" value = 200 }
+				}
 				set_variable = { which = "devnextstep" value = 300 }
 				add_building = ca_town_4
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 300 }}
+				limit = { 
+					holding_type = castle
+					check_variable = { which = "developpement" value = 300 }
+				}
 				add_building = ca_town_5
 			}
 
 			# Cities
 			if = {
-				limit = { check_variable = { which = "developpement" value = 50 }}
+				limit = { 
+					holding_type = city
+					check_variable = { which = "developpement" value = 50 }
+				}
 				add_building = ct_town_1
 				set_variable = { which = "devnextstep" value = 120 }
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 120 }}
+				limit = { 
+					holding_type = city
+					check_variable = { which = "developpement" value = 120 }
+				}
 				add_building = ct_town_2
 				set_variable = { which = "devnextstep" value = 240 }
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 240 }}
+				limit = { 
+					holding_type = city
+					check_variable = { which = "developpement" value = 240 }
+				}
 				add_building = ct_town_3
 				set_variable = { which = "devnextstep" value = 400 }
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 400 }}
+				limit = { 
+					holding_type = city
+					check_variable = { which = "developpement" value = 400 }
+				}
 				add_building = ct_town_4
 				set_variable = { which = "devnextstep" value = 500 }
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 500 }}
+				limit = { 
+					holding_type = city
+					check_variable = { which = "developpement" value = 500 }
+				}
 				add_building = ct_town_5
 			}
 			# Temples
 			if = {
-				limit = { check_variable = { which = "developpement" value = 70 }}
+				limit = { 
+					holding_type = temple
+					check_variable = { which = "developpement" value = 70 }
+				}
 				add_building = tp_town_1
 				set_variable = { which = "devnextstep" value = 140 }
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 140 }}
+				limit = { 
+					holding_type = temple
+					check_variable = { which = "developpement" value = 140 }
+				}
 				add_building = tp_town_2
 				set_variable = { which = "devnextstep" value = 220 }
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 220 }}
+				limit = { 
+					holding_type = temple
+					check_variable = { which = "developpement" value = 220 }
+				}
 				add_building = tp_town_3
 				set_variable = { which = "devnextstep" value = 300 }
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 300 }}
+				limit = { 
+					holding_type = temple
+					check_variable = { which = "developpement" value = 300 }
+				}
 				add_building = tp_town_4
 				set_variable = { which = "devnextstep" value = 400 }
 			}
 			
 			if = {
-				limit = { check_variable = { which = "developpement" value = 400 }}
+				limit = { 
+					holding_type = temple
+					check_variable = { which = "developpement" value = 400 }
+				}
 				add_building = tp_town_5
 			}
 		}
