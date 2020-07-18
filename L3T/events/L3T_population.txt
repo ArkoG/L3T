@@ -294,6 +294,14 @@ character_event = {
 				}
 			}
 			save_event_target_as = holding_dev
+			##for new holdings
+			if = {
+				limit = {
+					NOT = { check_variable = { which = "developpement" value = 0 }}
+				}
+				set_variable = { which = "developpement" value = 0 }
+			}
+			##
 			set_variable = { which = "developpementold" which = "developpement" } #copies to the new set variable the value of the 2nd one
 			set_variable = { which = "developpement_yearly_growth" value = 0 }#resets yearly count
 							
