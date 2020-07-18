@@ -44,7 +44,7 @@ province_event = {
 	
 	immediate = {
 		if = {
-			limit = { ai = no }
+			limit = { owner = { ai = no }}
 			random = {		
 				chance = 15
 				owner = { 		
@@ -114,7 +114,7 @@ province_event = {
 	
 	immediate = {
 		if = {
-			limit = { ai = no }
+			limit = { owner = { ai = no }}
 			random = {		
 				chance = 15
 				owner = { 		
@@ -178,7 +178,7 @@ province_event = {
 
 	immediate = {
 		if = {
-			limit = { ai = no }
+			limit = { owner = { ai = no }}
 			random = {		
 				chance = 15
 				owner = { 		
@@ -242,7 +242,7 @@ province_event = {
 
 	immediate = {
 		if = {
-			limit = { ai = no }
+			limit = { owner = { ai = no }}
 			random = {		
 				chance = 15
 				owner = { 		
@@ -492,7 +492,7 @@ province_event = {
 				05 = { change_variable = { which = "stock_minerai" value =  700 } } #35ans de stock à conso=20
 				}
 			if = {
-				limit = { ai = no }
+				limit = { owner = { ai = no }}
 				random_list = {		
 					85 = {}
 					15 = {
@@ -711,7 +711,7 @@ province_event = {
 			18 = {
 				add_province_modifier = { name = meteo_secheresse duration = 90 }
 				if = {
-					limit = { ai = no }
+					limit = { owner = { ai = no }}
 					random = {	
 						chance = 50 
 						owner = {
@@ -726,7 +726,7 @@ province_event = {
 			8 = {
 				add_province_modifier = { name = meteo_secheresse duration = 120 }
 				if = {
-					limit = { ai = no }
+					limit = { owner = { ai = no }}
 					random = {	
 						chance = 75
 						owner = {
@@ -741,7 +741,7 @@ province_event = {
 			5 = { 
 				add_province_modifier = { name = meteo_secheresse duration = 150 }
 				if = {
-					limit = { ai = no }
+					limit = { owner = { ai = no }}
 					random = {	
 						chance = 80
 						owner = {
@@ -794,7 +794,7 @@ province_event = {
 		custom_tooltip = { text = chronique_prosperite_custom }
 		hidden_tooltip = {
 			if = {
-				limit = { ai = no }
+				limit = { owner = { ai = no }}
 				owner = {
 					chronicle = {
 						entry = CHRONICLE_PROSPERITE_A
@@ -831,7 +831,7 @@ province_event = {
 		custom_tooltip = { text = chronique_prosperite_custom }
 		hidden_tooltip = {
 			if = {
-				limit = { ai = no }
+				limit = { owner = { ai = no }}
 				owner = {
 					chronicle = {
 						entry = CHRONICLE_PROSPERITE_B
@@ -868,7 +868,7 @@ province_event = {
 		custom_tooltip = { text = chronique_prosperite_custom }
 		hidden_tooltip = {
 			if = {
-				limit = { ai = no }
+				limit = { owner = { ai = no }}
 				owner = {
 					chronicle = {
 						entry = CHRONICLE_PROSPERITE_C
