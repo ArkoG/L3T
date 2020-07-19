@@ -380,6 +380,36 @@ province_event = {
 					}
 					add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
 				}
+				#iqta retinues, to take holding spec into account
+				if = {
+					limit = {
+						location = { has_province_modifier = realm_capital_province }
+						holder_scope = {
+							is_landed = yes
+							government = muslim_government
+							culture_group = arabic
+							is_tribal = no
+							is_nomadic = no
+						}
+					}
+					holder_scope = { character_event = { id = L3T.16 }}
+				}
+				#counts with only one province and capital bonus modifier
+				if = {
+					limit = {
+						#location = { has_province_modifier = realm_capital_province }
+						holder_scope = {
+							is_landed = yes
+							government = muslim_government
+							culture_group = arabic
+							is_tribal = no
+							is_nomadic = no
+							NOT = { demesne_size = 2 }
+							tier = count
+						}
+					}
+					holder_scope = { character_event = { id = L3T.16 }}
+				}
 			}
 		}
 	}
