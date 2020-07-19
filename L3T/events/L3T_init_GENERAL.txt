@@ -293,6 +293,9 @@ character_event = {
 				}
 			}
 		}
+		any_character = {
+			character_event = { id = L3T.20 }
+		}
 		any_province = {
 			province_event = { id = L3T.22 } #ressources attribution
 			province_event = { id = L3T.23 } #temple pre-spec
@@ -311,8 +314,6 @@ character_event = {
 				change_variable = { which = "developpement" value = 50 }
 			}
 		}
-
-		
 	} #end of immediate
 	
 	option = {
@@ -692,7 +693,186 @@ province_event = {
 		}
 	}
 }
+##IQTA RETINUES
+character_event = { 
+    id = L3T.16
+	hide_window = yes
 
+	is_triggered_only = yes #from castle pre-spec L3T.31 (triggered from L3T.10)
+	
+	immediate = {
+		##iqta rulers get some free retinues at start
+		#based on rank gets 1/2/3 army for its capital, within retinue cap
+		#1 additional army if independent (no cap)
+		#each province of arabic culture, gives 1 army, within retinue cap
+		#gets jizya holdings armies 
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = SWMH
+					has_global_flag = running_VANILLA
+				}
+				is_landed = yes
+				government = muslim_government
+				culture_group = arabic
+				is_nomadic = no
+				is_tribal = no
+			}
+			##RANK
+			if = {
+				limit = { 
+					higher_tier_than = BARON # COUNT
+				}
+				create_retinue = RETTYPE_L3T_ARAB
+				set_character_flag = ret_from_Count
+			}
+			if = {
+				limit = { 
+					higher_tier_than = COUNT # DUKE
+					has_space_for_retinue = RETTYPE_L3T_ARAB
+				}
+				create_retinue = RETTYPE_L3T_ARAB
+				set_character_flag = ret_from_Duke
+			}
+			if = {
+				limit = { 
+					higher_tier_than = DUKE #  KING
+					has_space_for_retinue = RETTYPE_L3T_ARAB
+				}
+				create_retinue = RETTYPE_L3T_ARAB
+				set_character_flag = ret_from_King
+			}
+					#debug
+						if = {
+							limit = { 
+								higher_tier_than = DUKE #  KING
+								NOT = { has_space_for_retinue = RETTYPE_L3T_ARAB }
+							}
+							set_character_flag = LACK_SPACE_ret_from_King
+						}
+					##
+			if = {
+				limit = { 
+					higher_tier_than = KING #  EMPEROR
+					has_space_for_retinue = RETTYPE_L3T_ARAB
+				}
+				create_retinue = RETTYPE_L3T_ARAB
+				set_character_flag = ret_from_Emperor
+			}
+					#debug
+						if = {
+							limit = { 
+								higher_tier_than = KING #  EMPEROR
+								NOT = { has_space_for_retinue = RETTYPE_L3T_ARAB }
+							}
+							set_character_flag = LACK_SPACE_ret_from_Emperor
+						}
+					##
+			##INDEP
+			if = {
+				limit = { 
+					independent = yes
+				}
+				create_retinue = RETTYPE_L3T_ARAB
+				set_character_flag = ret_from_Indep
+			}
+			##PROVINCES
+					#debug
+					any_demesne_province = {
+						limit = {
+							culture_group = arabic
+							NOT = { owner = { has_space_for_retinue = RETTYPE_L3T_ARAB_FILLER }}
+						}					
+						owner = { set_character_flag = LACK_SPACE_ret_from_provinces }
+					}
+					##
+					#for each own province, capped
+			any_demesne_province = {
+				limit = {
+					culture_group = arabic
+					owner = { has_space_for_retinue = RETTYPE_L3T_ARAB_FILLER }
+				}					
+				owner = { create_retinue = RETTYPE_L3T_ARAB_FILLER } #l_cavalry off/def
+				owner = { set_character_flag = ret_from_provinces }
+			}
+
+		}
+		##JIZYA
+		#muslim with jizya modifier gets the retinues from it
+		if = {
+			limit = {
+				religion_group = muslim
+				is_nomadic = no
+				is_tribal = no
+				any_demesne_title = {
+					has_holding_modifier = L3T_jizya
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					has_holding_modifier = L3T_jizya
+					tier = baron
+					holding_type = castle
+				}
+				if = { 
+					limit = { 
+						location =  { holder_scope = { religion_group = muslim }}
+					}
+					location = { holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_CA }}
+				}
+				#if a muslim ruled barony is enclaved in non muslim province (happens in Calabria 936)
+				if = { 
+					limit = { 
+						location =  { holder_scope = { NOT = { religion_group = muslim }}}
+					}
+					holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_CA }
+				}						
+			}
+			any_demesne_title = {
+				limit = {
+					has_holding_modifier = L3T_jizya
+					tier = baron
+					holding_type = city
+					location =  { holder_scope = { religion_group = muslim }}
+				}
+				if = {
+					limit = { 
+						location =  { holder_scope = { religion_group = muslim }}
+					}
+					location = { holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_CT }}
+				}
+				#if a muslim ruled barony is enclaved in non muslim province (happens in Calabria 936)
+				if = { 
+					limit = { 
+						location =  { holder_scope = { NOT = { religion_group = muslim }}}
+					}
+					holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_CT }
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					has_holding_modifier = L3T_jizya
+					tier = baron
+					holding_type = temple
+					location =  { holder_scope = { religion_group = muslim }}
+				}
+				if = { 
+					limit = { 
+						location =  { holder_scope = { religion_group = muslim }}
+					}
+					location = { holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_TP }}
+				}
+				#if a muslim ruled barony is enclaved in non muslim province (happens in Calabria 936)
+				if = { 
+					limit = { 
+						location =  { holder_scope = { NOT = { religion_group = muslim }}}
+					}
+					holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_TP }
+				}
+			}
+		}
+	}
+}
 
 ##RESSOURCES ATTRIBUTION
 province_event = { 
