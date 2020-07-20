@@ -87,7 +87,7 @@ settlement_decisions = {
 						}
 						if = {
 							limit = { location = { has_province_flag = awaits_gothical_cathedral } }
-							clr_province_flag = awaits_gothical_cathedral
+							location = { clr_province_flag = awaits_gothical_cathedral }
 						}
 					}
 				}

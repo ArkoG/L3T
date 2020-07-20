@@ -453,9 +453,11 @@ character_event = {
 				limit = {
 					location = { is_catholic_group = yes }
 				}
-				add_province_modifier = {
-					name = religious_unrest
-					duration = 3650
+				location = {
+					add_province_modifier = {
+						name = religious_unrest
+						duration = 3650
+					}
 				}
 			}
 			location = {
