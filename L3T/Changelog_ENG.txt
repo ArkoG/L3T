@@ -7,6 +7,9 @@
 
 
 CURRENT_DEV 1.10 SEAL2 (--- july 2020) for CK2 v3.3.3
+
+
+
 MAJOR:
 -iqta rulers can hold cities
 -governments that allow holding cities can confiscate freely up to 3 cities (iqta, roman and chinese imperial, confucian bureaucracy) 
@@ -24,6 +27,7 @@ MINOR and VARIOUS:
 -various localisation changes or improvments
 -"Imperial" governement is renamed to "Roman imperial" as it only applies to Restored roman empire or Byzantine empire
 -"Impérialisme chinois" in Frecnh loc is renamed to "Impérial chinois" for consistency sake and more accuracy
+-new options when a romanesque cathedral burnt (for Prince-bishops and higher, for non catholics)
 
 BALANCE:
 -directly held cities by non-republic bring a reduced amount of income, unless it is in capital county (confusician bureaucracy get confiscate cities but don't get any malus)
@@ -33,6 +37,9 @@ BALANCE:
 -AI will try to confiscate cities in the way players can
 -capital bonus is slighlty better (more tax and better protection against revolts)
 -roman imperial government get a bonus to demesne size
+-iqta rulers get some free retinue at start, from their rank, from jizya holdings, from correct culture province (limited to their retinue cap)
+-some new arabic retinues
+-muslim feodal holding specializations now give a levy malus and a retinue bonus
 
 BUGFIX:
 -decision to start to build a cathedral should no more cause a CTD
@@ -43,6 +50,8 @@ BUGFIX:
 -fixed "evil events" (smugglers ring etc.) being off
 -remaining building cathedral speed modifiers after cathedral is finished are now cleaned properly
 -prevented that the benefits of finishing a cathedral end up in wrong faith hands
+
+
 
 RELEASE 1.00 SEAL1 (14th june 2020) for CK2 v3.3.3
 
