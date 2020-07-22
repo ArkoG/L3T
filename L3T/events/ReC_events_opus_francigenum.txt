@@ -171,6 +171,14 @@ character_event = {
 			higher_tier_than = BARON #prince-bishop and higher are more careful
 		}
 		modifier = {
+			factor = 0.8
+			is_catholic_group = no #non catholic won't care
+		}
+		modifier = {
+			factor = 0.5
+			religion_group = pagan_group #pagans would even burn it by will
+		}
+		modifier = {
 			factor = 0.7
 			any_demesne_title = {
 				tier = baron
