@@ -113,7 +113,41 @@ narrative_event = {
 				change_variable = { which = "developpement_spec" value = 20 }
 				#change_variable = { which = "specNB" value = 1 } #debug
 			}
-			add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+			#add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+			##adds dynamicaly holding type based on religion
+			if = {
+				limit = {
+					location = {
+						religion_group = christian
+						NOT = { religion_group = muslim }
+					}
+					NOT = { has_holding_modifier = feodal_adm_L1 }
+					NOT = { has_holding_modifier = feodal_adm_muslim }
+				}
+				add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = {
+						NOT = { religion_group = christian }
+						religion_group = muslim
+					}
+					NOT = { has_holding_modifier = feodal_adm_L1 }
+					NOT = { has_holding_modifier = feodal_adm_muslim }
+				}
+				add_holding_modifier = { name = feodal_adm_muslim duration = -1 }
+			}
+			if = {
+				limit = {
+					location = {
+						NOT = { religion_group = christian }
+						NOT = { religion_group = muslim }
+					}
+					NOT = { has_holding_modifier = feodal_adm_L1 }
+					NOT = { has_holding_modifier = feodal_adm_muslim }
+				}
+				add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+			}			
 			clr_title_flag = castle_to_specialize
 			clear_event_target = holding_to_spec
 		}
@@ -152,7 +186,41 @@ narrative_event = {
 			hidden_tooltip ={
 				#change_variable = { which = "specNB" value = 1 } #debug
 			}
-			add_holding_modifier = { name = feodal_mil_L1 duration = -1 }	
+			#add_holding_modifier = { name = feodal_mil_L1 duration = -1 }	
+			##adds dynamicaly holding type based on religion
+			if = {
+				limit = {
+					location = {
+						religion_group = christian
+						NOT = { religion_group = muslim }
+					}
+					NOT = { has_holding_modifier = feodal_mil_L1 }
+					NOT = { has_holding_modifier = feodal_mil_muslim }
+				}
+				add_holding_modifier = { name = feodal_mil_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = {
+						NOT = { religion_group = christian }
+						religion_group = muslim
+					}
+					NOT = { has_holding_modifier = feodal_mil_L1 }
+					NOT = { has_holding_modifier = feodal_mil_muslim }
+				}
+				add_holding_modifier = { name = feodal_mil_muslim duration = -1 }
+			}
+			if = {
+				limit = {
+					location = {
+						NOT = { religion_group = christian }
+						NOT = { religion_group = muslim }
+					}
+					NOT = { has_holding_modifier = feodal_mil_L1 }
+					NOT = { has_holding_modifier = feodal_mil_muslim }
+				}
+				add_holding_modifier = { name = feodal_mil_L1 duration = -1 }
+			}
 			clr_title_flag = castle_to_specialize
 			clear_event_target = holding_to_spec
 		}
@@ -202,7 +270,41 @@ narrative_event = {
 				change_variable = { which = "developpement_spec" value = 10 }
 			#change_variable = { which = "specNB" value = 1 } #debug
 			}
-			add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
+			#add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
+			##adds dynamicaly holding type based on religion
+			if = {
+				limit = {
+					location = {
+						religion_group = christian
+						NOT = { religion_group = muslim }
+					}
+					NOT = { has_holding_modifier = feodal_prod_L1 }
+					NOT = { has_holding_modifier = feodal_prod_muslim }
+				}
+				add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = {
+						NOT = { religion_group = christian }
+						religion_group = muslim
+					}
+					NOT = { has_holding_modifier = feodal_prod_L1 }
+					NOT = { has_holding_modifier = feodal_prod_muslim }
+				}
+				add_holding_modifier = { name = feodal_prod_muslim duration = -1 }
+			}
+			if = {
+				limit = {
+					location = {
+						NOT = { religion_group = christian }
+						NOT = { religion_group = muslim }
+					}
+					NOT = { has_holding_modifier = feodal_prod_L1 }
+					NOT = { has_holding_modifier = feodal_prod_muslim }
+				}
+				add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
+			}
 			clr_title_flag = castle_to_specialize
 			clear_event_target = holding_to_spec
 		}
@@ -243,7 +345,71 @@ province_event = {
 				change_variable = { which = "developpement" value = 20 }
 				change_variable = { which = "developpement_spec" value = 20 }
 				#change_variable = { which = "specNB" value = 1 } #debug
-				add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+				#add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+				##adds dynamicaly holding type based on religion
+				if = {
+					limit = {
+						location = {
+							religion_group = christian
+							NOT = { religion_group = muslim }
+						}
+						NOT = { has_holding_modifier = feodal_adm_L1 }
+						NOT = { has_holding_modifier = feodal_adm_muslim }
+					}
+					add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+				}
+				if = {
+					limit = {
+						location = {
+							NOT = { religion_group = christian }
+							religion_group = muslim
+						}
+						NOT = { has_holding_modifier = feodal_adm_L1 }
+						NOT = { has_holding_modifier = feodal_adm_muslim }
+					}
+					add_holding_modifier = { name = feodal_adm_muslim duration = -1 }
+				}
+				if = {
+					limit = {
+						location = {
+							NOT = { religion_group = christian }
+							NOT = { religion_group = muslim }
+						}
+						NOT = { has_holding_modifier = feodal_adm_L1 }
+						NOT = { has_holding_modifier = feodal_adm_muslim }
+					}
+					add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+				}
+				#iqta retinues, to take holding spec into account
+				if = {
+					limit = {
+						location = { has_province_modifier = realm_capital_province }
+						holder_scope = {
+							is_landed = yes
+							government = muslim_government
+							culture_group = arabic
+							is_tribal = no
+							is_nomadic = no
+						}
+					}
+					holder_scope = { character_event = { id = L3T.16 }}
+				}
+				#counts with only one province and capital bonus modifier
+				if = {
+					limit = {
+						#location = { has_province_modifier = realm_capital_province }
+						holder_scope = {
+							is_landed = yes
+							government = muslim_government
+							culture_group = arabic
+							is_tribal = no
+							is_nomadic = no
+							NOT = { demesne_size = 2 }
+							tier = count
+						}
+					}
+					holder_scope = { character_event = { id = L3T.16 }}
+				}
 			}
 		}
 	}
@@ -263,16 +429,16 @@ narrative_event = {
 		
 	trigger = {
 		OR = {
-			had_global_flag = { flag = SWMH days = 360 }			
-			had_global_flag = { flag = running_VANILLA days = 360 }
-			had_global_flag = { flag = running_LCDA days = 360 }
+			had_global_flag = { flag = SWMH days = 60 }			
+			had_global_flag = { flag = running_VANILLA days = 60 }
+			had_global_flag = { flag = running_LCDA days = 60 }
 			AND = { # Priorité aux républiques
 				is_republic = yes
 				NOT = { tier = baron }
 				OR = {
-					had_global_flag = { flag = SWMH days = 60 }				
-					had_global_flag = { flag = running_VANILLA days = 60 }
-					had_global_flag = { flag = running_LCDA days = 60 }
+					had_global_flag = { flag = SWMH days = 30 }				
+					had_global_flag = { flag = running_VANILLA days = 30 }
+					had_global_flag = { flag = running_LCDA days = 30 }
 				}
 			}
 		}
@@ -294,9 +460,9 @@ narrative_event = {
 		modifier = {
 			factor = 0.5
 			OR = {
-				had_global_flag = { flag = SWMH days = 720 }			
-				had_global_flag = { flag = running_VANILLA days = 720 }
-				had_global_flag = { flag = running_LCDA days = 720 }
+				had_global_flag = { flag = SWMH days = 100 }			
+				had_global_flag = { flag = running_VANILLA days = 100 }
+				had_global_flag = { flag = running_LCDA days = 100 }
 			}
 		}
 	}
@@ -389,6 +555,7 @@ narrative_event = {
 			modifier = { 
 				factor = 2
 				any_demesne_title = {
+					has_title_flag = city_to_specialize
 					location = { trade_route = silk_road } #favors starting points on the silk_road
 				}
 			}
@@ -399,6 +566,13 @@ narrative_event = {
 					location = { is_variable_equal = { which = "resourceNb" value = 3 } }
 				}
 			}
+			modifier = {
+				factor = 2
+				any_demesne_title = {
+					has_title_flag = city_to_specialize
+					location = { has_province_modifier = realm_capital_province }
+				}
+			}			
 		}
 		random_demesne_title = {
 			limit = {
@@ -702,6 +876,8 @@ character_event = {
 			is_merchant_republic  = no
 		}
 	}
+	
+	##add some temple treatment
 
 	immediate = {
 		character_event = { id = L3T.46 days = 150 }
@@ -945,13 +1121,19 @@ narrative_event = {
 		
 	trigger = {	
 		OR = {
-			had_global_flag = { flag = SWMH days = 360 }			
-			had_global_flag = { flag = running_VANILLA days = 360 }
-			had_global_flag = { flag = running_LCDA days = 360 }
+			had_global_flag = { flag = SWMH days = 30 }			
+			had_global_flag = { flag = running_VANILLA days = 30 }
+			had_global_flag = { flag = running_LCDA days = 30 }
 		}		
 		any_demesne_title = {
+			tier = baron
 			holding_type = temple
-			location = { religion_group = christian }
+			location = { 
+				OR = {
+					religion_group = christian
+					religion_group = muslim
+				}
+			}
 			NOT = { has_title_flag = temple_to_specialize }
 			NOT = {
 				has_building = MONASTERE
@@ -983,8 +1165,14 @@ narrative_event = {
 	immediate = {
 		random_demesne_title = {
 			limit = {
+				tier = baron
 				holding_type = temple
-				location = { religion_group = christian }
+				location = { 
+					OR = {
+						religion_group = christian
+						religion_group = muslim
+					}
+				}
 				NOT = { has_title_flag = temple_to_specialize }
 				NOT = {
 					has_building = MONASTERE
@@ -1026,10 +1214,19 @@ narrative_event = {
 				factor = 1.5
 				capital_holding = { has_building = MONASTERE }
 			}
+			modifier = {
+				factor = 3
+				location = { religion_group = muslim }
+			}
 		}
 		trigger = {
 			any_demesne_title = {
-				location = { religion_group = christian }
+				location = { 
+					OR = {
+						religion_group = christian
+						religion_group = muslim
+					}
+				}
 				has_title_flag = temple_to_specialize
 				#is_LCDA_hard_monastery = no
 				#is_LCDA_hard_episcopat = no
@@ -1038,7 +1235,12 @@ narrative_event = {
 		}
 		random_demesne_title = {
 			limit = {
-				location = { religion_group = christian }
+				location = { 
+					OR = {
+						religion_group = christian
+						religion_group = muslim
+					}
+				}
 				has_title_flag = temple_to_specialize
 				#is_LCDA_hard_monastery = no
 				#is_LCDA_hard_episcopat = no
@@ -1053,17 +1255,59 @@ narrative_event = {
 					}
 				}
 				add_building = MONASTERE
+				add_building = tp_monastery_1
 				clr_title_flag = temple_to_specialize
 				set_title_flag = L3T6_made_me_opt_A
 				hidden_tooltip ={
 					change_variable = { which = "developpement" value = 10 }
 					change_variable = { which = "developpement_spec" value = 10 }
 				}
-				add_holding_modifier = { name = monastere_L1 duration = -1 }
+				#add_holding_modifier = { name = monastere_L1 duration = -1 }
 				hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
 				holder_scope = { narrative_event = { id = L3T.64 days = 0 }} ####MAKE IT automatic ONCE new holdings will be built by decision only######
 				clear_event_target = holding_to_spec
 			}
+			##adds dynamicaly the monastary type based on religion
+			#monastery for Christians
+			#zaouia for muslim (+custom loc)
+			if = {
+				limit = {
+					location = {
+						religion_group = christian
+						NOT = { religion_group = muslim }
+					}
+					NOT = { has_holding_modifier = monastere_L1 }
+					NOT = { has_holding_modifier = zaouia_L1 }
+				}
+				add_holding_modifier = { name = monastere_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = {
+						NOT = { religion_group = christian }
+						religion_group = muslim
+					}
+					NOT = { has_holding_modifier = monastere_L1 }
+					NOT = { has_holding_modifier = zaouia_L1 }
+				}
+				add_holding_modifier = { name = zaouia_L1 duration = -1 }
+			}
+			#non orthodox christian monastic rules
+			#choice is given through event L3T.64
+
+			#muslim monastic rule
+			if = {
+				limit = {
+					location = {
+						NOT = { religion_group = christian }
+						religion_group = muslim
+					}
+					NOT = { has_building = REGLE_MONASTIQUE }
+				}
+				add_building = REGLE_MONASTIQUE #
+				set_title_flag = REGLE_SUFI_SCHOOL
+			}
+			#orthodox monastic rule			
 			if = {
 				limit = {
 					location = {
@@ -1071,10 +1315,12 @@ narrative_event = {
 							religion = orthodox
 							is_heresy_of = orthodox
 						}
+						
 					}
-					NOT = { has_building = REGLE_DE_3 }
+					NOT = { has_building = REGLE_MONASTIQUE }
 				}
-				add_building = REGLE_DE_3 #saint-Basile
+				add_building = REGLE_MONASTIQUE #
+				set_title_flag = REGLE_DE_3
 			}
 		}
 		set_character_flag = canGetEasterEgg3
@@ -1103,17 +1349,31 @@ narrative_event = {
 				factor = 1.5
 				capital_holding = { has_building = CITEEPISCOPALE }
 			}
+			modifier = {
+				factor = 0.5
+				location = { religion_group = muslim }
+			}
 		}
 		trigger = {
 			any_demesne_title = {
-				location = { religion_group = christian }
+				location = { 
+					OR = {
+						religion_group = christian
+						religion_group = muslim
+					}
+				}
 				has_title_flag = temple_to_specialize
 				is_capital = no
 			}
 		}
 		random_demesne_title = {
 			limit = {
-				location = { religion_group = christian }
+				location = { 
+					OR = {
+						religion_group = christian
+						religion_group = muslim
+					}
+				}
 				has_title_flag = temple_to_specialize
 			}
 			clear_event_target = holding_to_spec
@@ -1127,14 +1387,40 @@ narrative_event = {
 					}
 				}
 				add_building = BOURG_EPISCOPAL
+				add_building = TP_episcopat_L1
 				set_title_flag = L3T6_made_me_opt_B
 				hidden_tooltip ={
 					change_variable = { which = "developpement" value = 10 }
 					change_variable = { which = "developpement_spec" value = 10 }
 				}
+				#add_holding_modifier = { name = episco_land_L1 duration = -1 }
+			}
+			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug
+			##adds dynamicaly the monastery type based on religion
+			#monastery for Christians
+			#zaouia for muslim (+custom loc)
+			if = {
+				limit = {
+					location = {
+						religion_group = christian
+						NOT = { religion_group = muslim }
+					}
+					NOT = { has_holding_modifier = episco_land_L1 }
+					NOT = { has_holding_modifier = waqf_rural_L1 }
+				}
 				add_holding_modifier = { name = episco_land_L1 duration = -1 }
 			}
-			hidden_tooltip = { change_variable = { which = "specNB" value = 1 }} #debug			
+			if = {
+				limit = {
+					location = {
+						NOT = { religion_group = christian }
+						religion_group = muslim
+					}
+					NOT = { has_holding_modifier = episco_land_L1 }
+					NOT = { has_holding_modifier = waqf_rural_L1 }
+				}
+				add_holding_modifier = { name = waqf_rural_L1 duration = -1 }
+			}			
 		}
 	}
 	option = {
@@ -1188,6 +1474,7 @@ narrative_event = {
 					}
 				}
 				add_building = CITEEPISCOPALE
+				add_building = TP_episcopat_L1
 				set_title_flag = L3T6_made_me_opt_C
 				hidden_tooltip ={
 					change_variable = { which = "developpement" value = 15 }
@@ -1270,6 +1557,7 @@ province_event = {
 			}
 			set_variable = { which = "specNB" value = 0 } #debug
 			add_building = MONASTERE
+			add_building = tp_monastery_1
 			set_title_flag = L3T61_made_me_cas_Aa
 			hidden_tooltip ={
 				change_variable = { which = "developpement" value = 10 }
@@ -1288,7 +1576,8 @@ province_event = {
 						is_VANILLA_hard_regula1 = yes
 					}
 				}
-				add_building = REGLE_DE_1
+				add_building = REGLE_MONASTIQUE #
+				set_title_flag = REGLE_DE_1
 			}
 			if = {
 				limit = { 
@@ -1298,7 +1587,8 @@ province_event = {
 						is_VANILLA_hard_regula2 = yes
 					}
 				}
-				add_building = REGLE_DE_2
+				add_building = REGLE_MONASTIQUE #
+				set_title_flag = REGLE_DE_2
 			}
 			if = {
 				limit = { 
@@ -1310,8 +1600,14 @@ province_event = {
 					is_VANILLA_hard_regula2 = no
 				}
 				random_list = {
-					10 = { add_building = REGLE_DE_1 }
-					10 = { add_building = REGLE_DE_2 }
+					10 = { 
+						add_building = REGLE_MONASTIQUE #
+						set_title_flag = REGLE_DE_1
+					}
+					10 = { 
+						add_building = REGLE_MONASTIQUE #
+						set_title_flag = REGLE_DE_2
+					}
 				}
 			}
 			
@@ -1402,6 +1698,7 @@ province_event = {
 			}
 			set_variable = { which = "specNB" value = 0 } #debug
 			add_building = CITEEPISCOPALE
+			add_building = TP_episcopat_L1
 			set_title_flag = L3T61_made_me_cas_B
 			hidden_tooltip ={
 				change_variable = { which = "developpement" value = 15 }
@@ -1549,6 +1846,7 @@ province_event = {
 					}
 				}
 				add_building = CITEEPISCOPALE
+				add_building = TP_episcopat_L1
 				set_title_flag = L3T62_made_me
 				hidden_tooltip ={
 					change_variable = { which = "developpement" value = 15 }
@@ -1666,6 +1964,7 @@ province_event = {
 					}
 				}
 			add_building = CITEEPISCOPALE
+			add_building = TP_episcopat_L1
 			set_title_flag = L3T63_made_me
 			hidden_tooltip ={
 				change_variable = { which = "developpement" value = 15 }
@@ -1718,11 +2017,7 @@ narrative_event = {
 			tier = baron
 			holding_type = temple
 			has_building = MONASTERE
-			NOT = {
-				has_building = REGLE_DE_1
-				has_building = REGLE_DE_2				
-				#has_building = REGLE_DE_3
-			}
+			NOT = { has_building = REGLE_MONASTIQUE }
 		}
 	}
 		
@@ -1743,13 +2038,10 @@ narrative_event = {
 				tier = baron
 				holding_type = temple
 				has_building = MONASTERE
-				NOT = {
-					has_building = REGLE_DE_1
-					has_building = REGLE_DE_2				
-					#has_building = REGLE_DE_3
-				}
+				NOT = { has_building = REGLE_MONASTIQUE }
 			}
-			add_building = REGLE_DE_1
+			add_building = REGLE_MONASTIQUE #
+			set_title_flag = REGLE_DE_1
 			clear_event_target = holding_to_spec
 		}
 	}
@@ -1768,46 +2060,14 @@ narrative_event = {
 				tier = baron
 				holding_type = temple
 				has_building = MONASTERE
-				NOT = {
-					has_building = REGLE_DE_1
-					has_building = REGLE_DE_2				
-					#has_building = REGLE_DE_3
-				}
+				NOT = { has_building = REGLE_MONASTIQUE }
 			}
-			add_building = REGLE_DE_2
+			add_building = REGLE_MONASTIQUE #
+			set_title_flag = REGLE_DE_2
 			clear_event_target = holding_to_spec
 		}
 	}
 }
-	#Regula Basili #given by L3T.60
-#	option = {
-#		name = "L3T.64C"	
-#		trigger = {
-#			any_demesne_title = {
-#				location = {
-#					OR = {
-#						religion = orthodox
-#						is_heresy_of = orthodox
-#					}
-#				}
-#			}
-#		}
-#		random_demesne_title = {
-#			limit = {
-#				tier = baron
-#				holding_type = temple
-#				has_building = MONASTERE
-#				NOT = {
-#					has_building = REGLE_DE_1
-#					has_building = REGLE_DE_2				
-#					has_building = REGLE_DE_3
-#				}
-#			}
-#			add_building = REGLE_DE_3 #saint-Basile
-#			clear_event_target = holding_to_spec
-#		}
-#	}
-#}
 
 # Init built holding (on_action)
 # ROOT = Builder, FROM = Title

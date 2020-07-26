@@ -120,10 +120,10 @@ republic_governments = {
 		potential = {
 			NAND = {
 				controls_religion = yes
-				NOT = { religion_group = muslim }
+				#NOT = { religion_group = muslim }
 				#NOT = { religion = norse_pagan_reformed }
 				#NOT = { religion = paulician }
-			}
+
 			NOT = {
 				AND = {
 					has_global_flag = SWMH
@@ -138,6 +138,7 @@ republic_governments = {
 			}
 			NOT = { is_government_potential = merchant_republic_government }
 			holy_order = no
+			}
 		}
 		
 		color = { 209 125 130 }

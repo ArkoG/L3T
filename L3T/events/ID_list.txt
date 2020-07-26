@@ -25,10 +25,10 @@
 #id = L3T.50's #####FREE SLOT
 
 #id = L3T.60 #SPEC domaine Ecclésial
-#id = L3T.61 #domaine Ecclésial hardcode  (on_action) 
-#id = L3T.62 #old cathedral and spe in religious province for capitals  (on_action) 
-#id = L3T.63 #filling the grid of old cathedrals  (on_action)  
-#id = L3T.64 #attribution règle monastique  (on_action) 
+#id = L3T.61 #domaine Ecclésial hardcode  (triggered) 
+#id = L3T.62 #old cathedral and spe in religious province for capitals  (triggered) 
+#id = L3T.63 #filling the grid of old cathedrals  (triggered)  
+#id = L3T.64 #attribution règle monastique  (triggered) 
 
 #id = L3T.70's #####FREE SLOT
 #id = L3T.80's used in job_chancellor_L3T_add.txt
@@ -47,8 +47,10 @@
 #id = L3T.10 #détection de la carte + paix de Dieu
 #id = L3T.11 #fin paix de Dieu
 #id = L3T.12 #boost IA gold+piety
-#id = L3T.13 #####FREE SLOT
-#id = L3T.14 #stewardship delegation
+#id = L3T.13 #muslim cities ruler malus
+#id = L3T.14 #muslim cities ruler malus cleanup if non iqta
+#id = L3T.15 #muslim vs christian holding modifiers maintenance
+#id = L3T.16 #iqta retinues
 
 #id = L3T.20 #maintenance capitales - initiate/update
 #id = L3T.21 #maintenance capitales - removal
@@ -364,6 +366,7 @@
 ###ECO+_init_COMMERCE.txt
 
 ##Détection route commerciales
+
 #[COMMENTE] id = ECO.23 #centre commercial1 test
 #[COMMENTE] id = ECO.24 #centre commercial2 test
 #[COMMENTE] id = ECO.25 #centre commercial3 test
@@ -372,24 +375,32 @@
 ###ECO+_immersion.txt
 
 ##Récoltes
+
 #id = ECO.200 #bonne récolte [HIDDEN]
 #id = ECO.250 #bonne récolte
 #id = ECO.201 #mauvaise récolte [HIDDEN]
 #id = ECO.251 #mauvaise récolte
+
 ##Peches
+
 #id = ECO.202 #bonne pêche [HIDDEN]
 #id = ECO.252 #bonne pêche
 #id = ECO.203 #mauvaise pêche [HIDDEN]
 #id = ECO.253 #mauvaise pêche
+
 ##Mine
+
 #id = ECO.204 #baisse productivité de la mine
 #id = ECO.205 #amelioration productivité de la mine
 #id = ECO.213 #nouveau filon découvert + notif chronique
 
 ##Industrie
+
 #id = ECO.206 #industrie prospère
 #id = ECO.207 #fin industrie prospère
+
 ##Meteo
+
 #id = ECO.208 #inondation [HIDDEN]
 #id = ECO.258 #inondation
 #id = ECO.209 #sécheresse [HIDDEN]
@@ -506,6 +517,11 @@
 #id = REC.20# deus_vox trait evaluation
 #id = REC.21# deus_gladio trait evaluation
 
+##ReC_muslim.txt
+
+#id = REC.30 #muslim jyzia maint. (on_yearly_pulse + on new holder serie)#adding
+#id = REC.31 #muslim jyzia maint. (on_yearly_pulse + on new holder serie)#removing if unmuslim
+
 ##file à ajouter
 ###id = REC.22 #monastery adbication (provisoire, la localisation de la décision porte cet ID}
 
@@ -533,6 +549,7 @@
 #id = REC.212 # bonus achévement ultime étape
 
 ##ReC_flavour_events.txt
+
 #ralentissements chantier
 #id = REC.1101 # TODO
 #accélérations chantier

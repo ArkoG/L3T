@@ -1,0 +1,111 @@
+RETTYPE_L3T_JIZYA_CA = {
+
+	first_type = 3 #light cavalry
+	first_amount = 50
+	
+	second_type = 0 #light infantry
+	second_amount = 50	
+	
+	potential = {
+		is_nomadic = no
+		is_tribal = no
+		culture_group = arabic
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.2
+		light_infantry_defensive = 0.2
+		light_cavalry_offensive = 0.2
+		light_cavalry_morale = 0.2
+	}
+}
+RETTYPE_L3T_JIZYA_CT = {
+
+	first_type = 1 #heavy infantry
+	first_amount = 50
+	
+	second_type = 5 #archer
+	second_amount = 50	
+	
+	potential = {
+		is_nomadic = no
+		is_tribal = no
+		culture_group = arabic
+	}
+	
+	modifier = {
+		heavy_infantry_offensive = 0.2
+		heavy_infantry_defensive = 0.2
+		archers_offensive = 0.1
+		archers_defensive = 0.3
+	}
+}
+RETTYPE_L3T_JIZYA_TP = {
+
+	first_type = 3 #light cavalry
+	first_amount = 25
+	
+	second_type = 5 #archer
+	second_amount = 25	
+	
+	potential = {
+		is_nomadic = no
+		is_tribal = no
+		culture_group = arabic
+	}
+	
+	modifier = {
+		#halved off/def bonus but higher morale
+		light_cavalry_offensive = 0.1
+		light_cavalry_morale = 0.3 #zeal
+		archers_offensive = 0.05
+		archers_defensive = 0.15
+		archers_morale = 0.2 #zeal
+	}
+}
+RETTYPE_L3T_ARAB = { 
+
+	first_type = 3
+	first_amount = 150
+
+	second_type = 2 #pikemen
+	second_amount = 50	
+	
+	potential = {
+		is_nomadic = no
+		is_tribal = no
+		culture_group = arabic
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.3
+		light_cavalry_defensive = 0.1
+		light_cavalry_morale = 0.1
+		pikemen_offensive = 0.1
+		pikemen_defensive = 0.3
+		pikemen_morale = 0.1
+	}
+}
+RETTYPE_L3T_ARAB_FILLER = { 
+
+	first_type = 3
+	first_amount = 50
+
+	second_type = 2 #pikemen
+	second_amount = 10	
+	
+	potential = {
+		is_nomadic = no
+		is_tribal = no
+		culture_group = arabic
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.3
+		light_cavalry_defensive = 0.1
+		light_cavalry_morale = 0.1
+		pikemen_offensive = 0.1
+		pikemen_defensive = 0.3
+		pikemen_morale = 0.1
+	}
+}
