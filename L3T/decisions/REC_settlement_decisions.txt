@@ -28,9 +28,9 @@ settlement_decisions = {
 			OR = {
 				AND = { 
 					FROM = { has_character_flag = has_relique_from_cathedral }
-					has_title_flag = awaits_gothical_cathedral
+					location = { has_province_flag = awaits_gothical_cathedral }
 				}
-				NOT = { has_title_flag = awaits_gothical_cathedral }
+				NOT = { has_character_flag = has_relique_from_cathedral }
 			}
 		}
 
@@ -39,14 +39,23 @@ settlement_decisions = {
 		}
 		
 		effect = {
+			save_event_target_as = cathedral_location
 			FROM = {
+				save_event_target_as = cathedral_patron
 				wealth = -100
 				piety = 100
 				add_trait = batisseur_cathedrale
 				destroy_relic = yes
-				chronicle = {
-					entry = CHRONICLE_CATHEDRALE_BEGINS
-					picture = GFX_evt_cathedral
+				
+				hidden_tooltip = { 
+					if = {
+						limit = { ai = no }
+						chronicle = {
+							entry = CHRONICLE_CATHEDRALE_BEGINS
+							portrait = [From.GetID]
+							picture = GFX_evt_cathedral
+						}
+					}
 				}
 				hidden_tooltip = { character_event = { id = REC.5 days = 10} }
 				if = {
@@ -76,7 +85,11 @@ settlement_decisions = {
 							25 = { set_variable = { which = cathedral value = 30 } }
 							25 = { set_variable = { which = cathedral value = 40 } }
 						}
-					}	
+						if = {
+							limit = { location = { has_province_flag = awaits_gothical_cathedral } }
+							location = { clr_province_flag = awaits_gothical_cathedral }
+						}
+					}
 				}
 			}
 		}
@@ -154,6 +167,7 @@ settlement_decisions = {
 		diplomacy_icon = GFX_diplo_debug_icon
 		
 		from_potential = {
+			has_global_flag = debug_L3T
 			ai = no
 		}
 		
@@ -182,6 +196,7 @@ settlement_decisions = {
 		diplomacy_icon = GFX_diplo_debug_icon
 		
 		from_potential = {
+			has_global_flag = debug_L3T
 			ai = no
 		}
 		
@@ -201,6 +216,151 @@ settlement_decisions = {
 		
 		ai_will_do = {
 			factor = 0
+		}
+	}
+
+	confiscate_city = {
+		only_playable = yes
+		filter = vassal_owned
+		ai_target_filter = vassal_owned
+		ai_check_interval = 12 #AI checks to do the decision, in months. By default 1 (every month).
+		#diplomacy_icon = GFX_diplo_muslim_icon
+		diplomacy_icon = GFX_obligations_icon
+		
+		from_potential = {
+			#religion_group = muslim
+			OR = {
+				government = muslim_government
+				government = chinese_imperial_government
+				government = roman_imperial_government
+				government = confucian_bureaucracy #but won't get the city malus
+			}
+			NOT = { is_nomadic = yes }
+			higher_tier_than = baron
+		}
+		
+		potential = {
+			holder_scope = { 
+				government = republic_government
+				tier = baron
+			}
+			holding_type = city
+			location = { 
+				owner = {
+					character = FROM
+				}
+			}
+		}
+		
+		allow = {
+			FROM = {
+				NOT = { is_tribal = yes }
+				demesne_size_compared_to_limit < 1
+			}
+			custom_tooltip = {
+				text = only_one_city
+				NOT = {
+					location = {
+						any_province_holding = {
+							holding_type = city
+							holder_scope = { character = FROM }
+						}
+					}
+				}
+			}
+			OR = {
+				custom_tooltip = { 
+					text = counts_can_hold1
+					FROM = { 
+						tier = count
+						num_of_demesne_cities < 1
+					}
+				}
+				custom_tooltip = { 
+					text = dukes_can_hold2
+					FROM = {
+						tier = duke
+						num_of_demesne_cities < 2
+					}
+				}
+				custom_tooltip = { 
+					text = kings_can_hold3
+					FROM = {
+						OR = {
+							tier = king
+							tier = emperor
+						}
+						num_of_demesne_cities < 3
+					}
+				}					
+			}
+		}
+		
+		effect = {
+			grant_title = FROM
+			FROM = {
+				character_event = { id = L3T.13 }
+				character_event = { id = L3T.14 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.75
+				FROM = { num_of_demesne_cities < 1 }
+			}
+			modifier = {
+				factor = 0.35
+				FROM = { num_of_demesne_cities = 1 }
+			}
+			modifier = {
+				factor = 0
+				FROM = { num_of_demesne_cities > 2 }
+			}
+			modifier = {
+				factor = 0
+				FROM = { demesne_size_compared_to_limit > 1 }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { demesne_size_compared_to_limit < 1 }
+			}	
+			modifier = {
+				factor = 2
+				location = { has_province_modifier = realm_capital_province }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { location = { has_province_modifier = realm_capital_province }}
+			}
+			modifier = {
+				factor = 1.2
+				FROM = {
+					OR = {
+						has_focus = focus_rulership
+						has_focus = focus_business
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				FROM = {
+					has_ambition = obj_see_the_realm_prosper
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_focus = focus_war
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = {
+					government = confucian_bureaucracy
+				}
+			}			
 		}
 	}
 }

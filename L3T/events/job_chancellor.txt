@@ -401,7 +401,7 @@ character_event = {
 
 		job_event_mtth_modifier_diplomacy_score = yes
 		modifier = { factor = 1.1 has_character_modifier = tarnished_reputation }
-		modifier = { factor = 1.5 set_character_flag = low_claim_funds }
+		modifier = { factor = 1.5 has_character_flag = low_claim_funds }
 		modifier = {
 			factor = 1.2
 			location = {

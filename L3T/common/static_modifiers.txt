@@ -106,6 +106,8 @@ same_culture_group = {
 # A culture in another culture group
 non_accepted_culture = {
 	local_revolt_risk = 0.02
+	levy_size = -0.2 #L3T
+	levy_reinforce_rate = -0.2 #L3T
 }
 
 # Another religion in the same religion group
@@ -116,6 +118,8 @@ same_religion_group = {
 # A religion in another religion group
 different_religion = {
 	local_revolt_risk = 0.02
+	levy_size = -0.5 #L3T
+	levy_reinforce_rate = -0.5 #L3T
 }
 
 # County vs Count is heresy vs parent religion
@@ -452,11 +456,12 @@ base_values = {
 }
 
 war = {
-	global_tax_modifier = 0.05 #L3T new doesn't work
-	levy_reinforce_rate = -0.5 #L3T new
+	global_tax_modifier = -0.05 #L3T new doesn't work
+	levy_reinforce_rate = -0.25 #L3T new
 }
 
 peace = {
+	global_tax_modifier = 0.05 #L3T new doesn't work
 }
 
 pretender_modifier = {

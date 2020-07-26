@@ -6,7 +6,7 @@ character_event = {
 	desc = "DESCL3T.301"
 	picture = GFX_evt_castle_construction
 
-	is_triggered_only = yes
+	is_triggered_only = yes #from remove_adm_spe decision
 	
 	# Choice: spe mil
 	option = {
@@ -18,8 +18,19 @@ character_event = {
 
 		FROM = { #correct scope (b_title) despite validator pestering about it
 			add_building = FEODAL_mil
-			add_holding_modifier = { name = feodal_mil_L1 duration = -1 }	
 			
+			if = {
+				limit = {
+					location = { NOT = { religion_group = muslim }}
+				}
+				add_holding_modifier = { name = feodal_mil_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+				}
+				add_holding_modifier = { name = feodal_mil_muslim duration = -1 }
+			}
 			# Convert outilleur to armurerie
 			custom_tooltip = { text = TOOLTIPL3T301A }
 			hidden_tooltip = {
@@ -62,8 +73,18 @@ character_event = {
 		name = "L3T.30C" # Get same localisation than the initialisation
 		FROM = {
 			add_building = FEODAL_prod
-			add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
-			
+			if = {
+				limit = {
+					location = { NOT = { religion_group = muslim }}
+				}
+				add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+				}
+				add_holding_modifier = { name = feodal_prod_muslim duration = -1 }
+			}			
 			# Sell the weapon production buildings
 			custom_tooltip = { text = TOOLTIPL3T301B }
 			hidden_tooltip = {

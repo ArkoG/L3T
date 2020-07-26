@@ -1239,6 +1239,10 @@ character_event = {
 		FROM = {
 			remove_province_modifier = chantier_cathedrale
 			if = {
+				limit = { has_province_modifier = chantier_up }
+				remove_province_modifier = chantier_up
+			}			
+			if = {
 				limit = { has_province_modifier = chantier_down }
 				remove_province_modifier = chantier_down
 			}
