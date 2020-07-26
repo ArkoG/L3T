@@ -12,8 +12,6 @@ narrative_event = {
 	hide_new = yes
 	hide_from = yes
 
-	religion = catholic
-
 	is_triggered_only = yes	
 	
 	immediate = {
@@ -23,9 +21,8 @@ narrative_event = {
 	option = {
 		name = "OPUSFRANCIGENUM.A"
 		trigger = {
-			NOT = {
-				has_a_relic = yes
-			}
+			NOT = { has_a_relic = yes }
+			is_catholic_group = yes
 		}
 	}
 	
@@ -33,6 +30,13 @@ narrative_event = {
 		name = "OPUSFRANCIGENUM.B"
 		trigger = {
 			has_a_relic = yes
+			is_catholic_group = yes
+		}
+	}
+	option = {
+		name = "OPUSFRANCIGENUM.C"
+		trigger = {
+			is_catholic_group = no #non catholic wouldn't care
 		}
 	}
 }
@@ -98,9 +102,8 @@ narrative_event = {
 	option = {
 		name = "OPUSFRANCIGENUM.A"
 		trigger = {
-			NOT = {
-				has_a_relic = yes
-			}
+			NOT = { has_a_relic = yes }
+			is_catholic_group = yes
 		}
 	}
 	
@@ -108,6 +111,13 @@ narrative_event = {
 		name = "OPUSFRANCIGENUM.B"
 		trigger = {
 			has_a_relic = yes
+			is_catholic_group = yes
+		}
+	}
+	option = {
+		name = "OPUSFRANCIGENUM.C"
+		trigger = {
+			is_catholic_group = no #non catholic wouldn't care
 		}
 	}
 }
@@ -157,6 +167,18 @@ character_event = {
 			}
 		}
 		modifier = {
+			factor = 1.2
+			higher_tier_than = BARON #prince-bishop and higher are more careful
+		}
+		modifier = {
+			factor = 0.8
+			is_catholic_group = no #non catholic won't care
+		}
+		modifier = {
+			factor = 0.5
+			religion_group = pagan_group #pagans would even burn it by will
+		}
+		modifier = {
 			factor = 0.7
 			any_demesne_title = {
 				tier = baron
@@ -180,7 +202,13 @@ character_event = {
 	}
 	
 	option = {
-		trigger = { wealth = 200 }
+		trigger = { 
+			OR = {
+				wealth = 200
+				higher_tier_than = BARON #count and above can't ask help to overlord
+				is_catholic_group = yes
+			}
+		}
 		wealth = -200
 		# The romanesque cathedral is now under construction for 10 years
 		random_demesne_title = {
@@ -214,7 +242,11 @@ character_event = {
 	}
 	
 	option = {
-		trigger = { NOT = { wealth = 200 }  }
+		trigger = { 
+			NOT = { wealth = 200 }
+			NOT = { higher_tier_than = BARON }
+			is_catholic_group = yes
+		}
 		# Ask assistance to the lord of the province
 		random_demesne_title = {
 			limit = {
@@ -227,6 +259,226 @@ character_event = {
 			location = { owner = { character_event = { id = REC.106 days = 5 } } }
 		}
 	}
+	#if prince-bishop who can afford it and OF started, Prince-bishop can take the relic to rebuild a completly new cathedral
+	option = {
+		trigger = { 
+			is_catholic_group = yes
+			higher_tier_than = BARON
+			has_global_flag = opus_francigenum 
+			yearly_income = 100
+			construire_cathedral_potential = yes #can actually build a cathedral
+			has_a_relic = no #is actually in need of a relic
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				trait = charitable
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				piety = 1000
+			}
+			modifier = {
+				factor = 2
+				yearly_income = 300
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { yearly_income = 200 }
+			}
+		}
+		# get the relic and rebuild a gothic cathedral instead
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
+			}
+			location = {
+				destroy_wonder = yes
+			}
+			remove_building = tp_roman_cathedrale
+			location = {
+				set_province_flag = awaits_gothical_cathedral # Force cathedral to be built in same province
+				if = {
+					limit = { NOT = { has_province_modifier = chantier_cathedrale } }
+					remove_province_modifier = relique_generique
+				}
+			}
+		}
+		# Prince-bishop should use the relic in the year
+		character_event = { id = REC.107 days = 365 }
+		# Prince-bishop gets the relic
+		get_relic = yes
+		# WARNING : DON'T PUT CODE HERE, IT WILL NOT BE EXECUTED
+		# because there is a break in get_relic
+	}
+	#non catholic but abrahamic, may preserve or recycle the cathedral
+	#population will fund it
+	option = {
+		trigger = { 
+			is_catholic_group = no
+			OR = {
+				religion_group = muslim
+				religion_group = jewish_group
+				religion_group = christian
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 2
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.5
+				religion_group = christian
+			}
+			modifier = {
+				factor = 0.1
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				piety = 1000
+			}
+			modifier = {
+				factor = 5
+				any_demesne_title = {
+					tier = baron
+					holding_type = temple
+					has_building = tp_roman_cathedrale
+					location = { has_wonder = wonder_cathedral_romane }
+					location = { is_catholic_group = yes }
+				}
+			}
+		}
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
+			}
+			location = { 
+				destroy_wonder = yes
+				add_wonder = wonder_cathedral_romane
+				wonder = {
+					set_name = wonder_cathedral_romane
+					set_description = wonder_cathedral_romane_desc_UC
+				}
+			}
+			remove_building = tp_roman_cathedrale
+			add_building = tp_constructing_roman_cathedrale
+			add_holding_modifier = { name = romanesque_construction_abm days = 7300 }
+			location = {
+				province_event = { id = REC.104 days = 7300 } #20 years
+			}
+		}
+		# Opus Francigenum can appear
+		opus_francigenum_dynamic_apparition = yes
+	}
+	#non catholic but abrahamic, may choose to raze it
+	option = {
+		trigger = { 
+			is_catholic_group = no
+			OR = {
+				religion_group = muslim
+				religion_group = jewish_group
+				religion_group = christian
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.5
+				trait = charitable
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 0.5
+				any_demesne_title = {
+					tier = baron
+					holding_type = temple
+					has_building = tp_roman_cathedrale
+					location = { has_wonder = wonder_cathedral_romane }
+					location = { is_catholic_group = yes }
+				}
+			}
+		}
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
+			}
+			location = {
+				destroy_wonder = yes
+			}
+			remove_building = tp_roman_cathedrale
+			location = {
+				set_province_flag = awaits_gothical_cathedral #could be rebuilt later on
+				remove_province_modifier = relique_generique
+			}
+		}
+		#sell the material
+		wealth = 150
+	}
+	#other religions will pillage and raze it
+	option = {
+		trigger = { 
+			NOT = {
+				religion_group = muslim
+				religion_group = jewish_group
+				religion_group = christian
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = temple
+				has_building = tp_roman_cathedrale
+				location = { has_wonder = wonder_cathedral_romane }
+			}
+			location = {
+				destroy_wonder = yes
+			}
+			remove_building = tp_roman_cathedrale
+			if = {
+				limit = {
+					location = { is_catholic_group = yes }
+				}
+				location = {
+					add_province_modifier = {
+						name = religious_unrest
+						duration = 3650
+					}
+				}
+			}
+			location = {
+				set_province_flag = awaits_gothical_cathedral #could be rebuilt later on
+				remove_province_modifier = relique_generique
+			}
+		}
+		#sell the material
+		wealth = 150
+	}
+	#
+	#add an option to convert into a mosque (muslim), with mosque as wonder/great building maybe
+	#
 }
 
 # End of the romanesque cathedral reconstruction
@@ -424,6 +676,8 @@ character_event = {
 		trigger = {
 			has_global_flag = opus_francigenum 
 			yearly_income = 100
+			construire_cathedral_potential = yes #can actually build a cathedral
+			has_a_relic = no #is actually in need of a relic
 		}
 		ai_chance = {
 			factor = 70
@@ -480,9 +734,9 @@ character_event = {
 				#		}
 				#	}
 				#}
-				set_title_flag = awaits_gothical_cathedral
 				remove_building = tp_roman_cathedrale
-				location = { 
+				location = {
+					set_province_flag = awaits_gothical_cathedral # Force cathedral to be built in same province
 					if = {
 						limit = { NOT = { has_province_modifier = chantier_cathedrale } }
 						remove_province_modifier = relique_generique
@@ -515,7 +769,7 @@ character_event = {
 		name = "REC.107A"
 		piety = -20
 		add_character_modifier = { name = stolen_relic duration = 1826 }
-		# Lord should use the relic in the year
+		# Lord get a chance to use the relic in the upcoming 5 years
 		character_event = { id = REC.108 days = 1826 }
 	}
 }
@@ -535,7 +789,7 @@ character_event = {
 		name = "REC.108A"
 		piety = -100
 		add_character_modifier = { name = stolen_relic duration = 1826 } #5years
-		# Lord should use the relic in the year
+		# Lord get a chance to use the relic in the upcoming 5 years
 		character_event = { id = REC.108 days = 1826 } #5years
 	}
 }

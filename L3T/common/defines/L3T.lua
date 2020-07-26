@@ -11,14 +11,17 @@
 -- IDEAL_YEAR_LEVEL_8 ex 1500
 -- CROWDED ex 75
 -- DOW ex 0.75
-	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_STEWARDSHIP_MULT = 0.3
--- vanilla is 0.15
-	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_COUNT_MULT = 1.5
--- vanilla is 1.0	
+
+	--ex 0.15
+	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_STEWARDSHIP_MULT = 0.2
+	--ex 1.0
+	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_COUNT_MULT = 1.3
+	--ex 1.0
+	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_DUKE_MULT = 1.0			-- Extra Max Demesne Size from the ruler's rank
+	--ex 3.0
 	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_KING_MULT = 5.0
--- vanilla is 3.0
+	--ex 4.0
 	NDefines.NDiplomacy.DEMESNE_MAX_SIZE_EMPEROR_MULT = 2.0
--- vanilla is 4.0
 	NDefines.NDiplomacy.TRANSFER_VASSAL_INTERACTION_ENABLED = 0
 
 	-- ex 2

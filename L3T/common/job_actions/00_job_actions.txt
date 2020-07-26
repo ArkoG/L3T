@@ -474,9 +474,67 @@ action_administer_realm = {
 
 	potential = {
 		has_dlc = Mystics
+		#NOT = { has_global_flag = debug_L3T }
 	}
 
 	offmap = yes
+	
+	events = { MNM.70005 MNM.78007 }
+}
+
+action_debug_trade = {
+	attribute = stewardship
+
+	potential = {
+		has_dlc = Mystics
+		has_global_flag = debug_L3T
+	}
+	
+	trigger = {
+		OR = {
+			has_province_flag = bloc_A
+			has_province_flag = bloc_B
+			has_province_flag = bloc_C
+			has_province_flag = bloc_D
+			has_province_flag = bloc_E
+		}
+	}
+		
+	display_on_map = {
+		tooltip = bloc_A
+		trigger = {
+			has_province_flag = bloc_A
+		}
+		color = { 0 0 255 }
+	}
+	display_on_map = {
+		tooltip = bloc_B
+		trigger = {
+			has_province_flag = bloc_B
+		}
+		color = { 0 50 200 }
+	}
+	display_on_map = {
+		tooltip = bloc_C
+		trigger = {
+			has_province_flag = bloc_C
+		}
+		color = { 0 100 150 }
+	}
+	display_on_map = {
+		tooltip = bloc_D
+		trigger = {
+			has_province_flag = bloc_D
+		}
+		color = { 0 150 100 }
+	}
+	display_on_map = {
+		tooltip = bloc_E
+		trigger = {
+			has_province_flag = bloc_E
+		}
+		color = { 0 200 50 }
+	}
 	
 	events = { MNM.70005 MNM.78007 }
 }
