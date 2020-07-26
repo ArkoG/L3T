@@ -13613,13 +13613,14 @@ dejure_county_claim = {
 		}
 		
 		OR = {
-			kingdom = {
+			##L3T maybe act here totoro -zeeland case- 
+			kingdom = { #has the DJ kingdom title
 				holder = ROOT
 			}
-			empire = {
+			empire = {  #has the DJ empire title
 				holder = ROOT
 			}
-			dejure_liege_title = {
+			dejure_liege_title = { #any DJ level
 				holder = ROOT
 			}
 		}
@@ -19921,7 +19922,7 @@ reconquista_leon = {
 	allowed_to_target_tributaries = yes
 	can_ask_to_join_war = yes
 
-	sort_priority = 10000
+	sort_priority = 2000 #L3T# sort_priority = 10000
 
 	can_use_gui = {
 		ROOT = {
@@ -20143,7 +20144,7 @@ reconquista_castille = {
 	allowed_to_target_tributaries = yes
 	can_ask_to_join_war = yes
 
-	sort_priority = 10000
+	sort_priority = 2000 #L3T# sort_priority = 10000
 
 	can_use_gui = {
 		ROOT = {
@@ -20352,7 +20353,7 @@ reconquista_aragon = {
 	allowed_to_target_tributaries = yes
 	can_ask_to_join_war = yes
 
-	sort_priority = 10000
+	sort_priority = 2000 #L3T# sort_priority = 10000
 
 	can_use_gui = {
 		ROOT = {
@@ -20561,7 +20562,7 @@ reconquista_galicia = {
 	allowed_to_target_tributaries = yes
 	can_ask_to_join_war = yes
 
-	sort_priority = 10000
+	sort_priority = 2000 #L3T# sort_priority = 10000
 
 	can_use_gui = {
 		ROOT = {
@@ -20777,7 +20778,7 @@ reconquista_beja = {
 	allowed_to_target_tributaries = yes
 	can_ask_to_join_war = yes
 
-	sort_priority = 10000
+	sort_priority = 2000 #L3T# sort_priority = 10000
 
 	can_use_gui = {
 		ROOT = {
@@ -20988,7 +20989,7 @@ reconquista_granada = {
 	allowed_to_target_tributaries = yes
 	can_ask_to_join_war = yes
 
-	sort_priority = 10000
+	sort_priority = 2000 #L3T# sort_priority = 10000
 
 	can_use_gui = {
 		ROOT = {
@@ -21195,7 +21196,7 @@ reconquista_cordoba = {
 	allowed_to_target_tributaries = yes
 	can_ask_to_join_war = yes
 
-	sort_priority = 10000
+	sort_priority = 2000 #L3T# sort_priority = 10000
 
 	can_use_gui = {
 		ROOT = {
@@ -21402,7 +21403,7 @@ reconquista_valencia = {
 	allowed_to_target_tributaries = yes
 	can_ask_to_join_war = yes
 
-	sort_priority = 10000
+	sort_priority = 2000 #L3T# sort_priority = 10000
 
 	can_use_gui = {
 		ROOT = {
@@ -21609,7 +21610,7 @@ reconquista_navarra = {
 	allowed_to_target_tributaries = yes
 	can_ask_to_join_war = yes
 
-	sort_priority = 10000
+	sort_priority = 2000 #L3T# sort_priority = 10000
 
 	can_use_gui = {
 		ROOT = {
@@ -21815,7 +21816,7 @@ reconquista_balearic = {
 	allowed_to_target_tributaries = yes
 	can_ask_to_join_war = yes
 
-	sort_priority = 10000
+	sort_priority = 2000 #L3T# sort_priority = 10000
 
 	can_use_gui = {
 		ROOT = {

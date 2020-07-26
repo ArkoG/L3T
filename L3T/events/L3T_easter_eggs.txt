@@ -2907,12 +2907,15 @@ narrative_event = {
 
 	option = {
 		name = "L3T.500A"
-		chronicle = {
-			entry = CHRONICLE_EGG_UNITED
-			portrait = [Root.GetID]
-			picture = GFX_evt_L3T_city_visitor
-			#find proper easter egg event pic
-		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_EGG_UNITED
+				portrait = [Root.GetID]
+				picture = GFX_evt_L3T_city_visitor
+				#find proper easter egg event pic
+			}
+		}			
 		custom_tooltip = {
 			text = EGG_UNIFICATION
 			hidden_tooltip = {		

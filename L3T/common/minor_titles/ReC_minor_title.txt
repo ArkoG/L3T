@@ -65,8 +65,8 @@ title_councilmember_muslim = {
 		}
 		can_be_councilmember_king_trigger = yes
 		#L3T specifics
-		any_demesne_title = { holding_type = temple }
-		any_demesne_title = { NOT = { holding_type = castle }}
+		is_landed = yes
+		government = theocracy_government
 		liege = { religion = ROOT }
 		has_education_learning_trigger = yes
 		religion_group = muslim
@@ -84,8 +84,8 @@ title_councilmember_muslim = {
 			}
 		}
 		#L3T specifics
-		any_demesne_title = { NOT = { holding_type = temple }}
-		any_demesne_title = { holding_type = castle }	
+		is_landed = no
+		NOT = { government = theocracy_government }
 		NOT = { liege = { religion = ROOT }}
 		#
 	}

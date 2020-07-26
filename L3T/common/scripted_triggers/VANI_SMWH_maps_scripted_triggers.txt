@@ -7,6 +7,8 @@ is_VANILLA_hard_monastery = {
 		title = b_luxeuil
 		title = b_stgallen
 		title = b_romainmotier
+		title = b_zelle #AUSTRIA
+		title = b_prum #near AACHEN
 	}
 }
 is_VANILLA_hard_episcopat = {
@@ -119,37 +121,34 @@ is_SWMH_hard_rurale = {
 	}
 }
 narbonaise_lands = {
-	#liege = { 
-		has_landed_title = {
-			OR = {
-				AND = {
-					has_global_flag = SWMH
-					OR= {
-						c_montpellier
-						c_narbonne
-						c_carcassonne
-						c_provence
-						c_nimes #SWMH
-						c_beziers #SWMH
-						c_marseille #SWMH
-					}
-				}
-				AND = {
-					has_global_flag = running_VANILLA
-					OR= {
-						c_montpellier
-						c_narbonne
-						c_carcassonne
-						c_provence
-					}
-				}			
-				AND = {
-					has_global_flag = running_LCDA
-					OR= {
-						c_aigle
-					}
-				}
+	#used on character event//capital_holding scope
+	OR = {
+		AND = {
+			has_global_flag = SWMH
+			OR= {
+				title = c_montpellier
+				title = c_narbonne
+				title = c_carcassonne
+				title = c_provence
+				title = c_nimes #SWMH
+				title = c_beziers #SWMH
+				title = c_marseille #SWMH
 			}
 		}
-	#}
+		AND = {
+			has_global_flag = running_VANILLA
+			OR= {
+				title = c_montpellier
+				title = c_narbonne
+				title = c_carcassonne
+				title = c_provence
+			}
+		}		
+		AND = {
+			has_global_flag = running_LCDA
+			OR= {
+				title = c_aigle
+			}
+		}
+	}
 }

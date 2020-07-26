@@ -175,12 +175,43 @@ character_event = {
 			}
 			set_global_flag = running_VANILLA
 		}
-		##triggers mountain passes attribution
+		##triggers mountain passes attribution +  religion counter
 		any_province = {
 			province_event = { id = L3T.28 days = 7 random = 7} #attribution cols
 			set_province_flag = had_event_LT_60001 #to prevent additional holding slot from wonders
 			set_variable = { which = "was_christian_for" value = 0 }
 			set_variable = { which = "was_muslim_for" value = 0 }
+		}
+		##L3T jizya_tax system
+		any_province = {
+			owner = { set_jizya_tax = no }
+			any_province_holding = {
+				remove_holding_modifier = jizya_tax
+				holder_scope = { set_jizya_tax = no }
+			}
+		}
+		any_province = {
+			limit = {
+				NOT = { religion_group = muslim }
+				OR = {
+					religion_group = christian
+					religion_group = jewish_group
+				}
+			}
+			#might intriduce at some point using demesne title to take into account different liege holdings
+			any_province_holding = {
+				limit = {
+					holder_scope = {
+						religion_group = muslim
+						is_tribal = no
+						is_nomadic = no
+					}
+				}
+				add_holding_modifier = {
+					name = L3T_jizya
+					duration = -1
+				}
+			}
 		}
 		##various global flags
 		set_global_flag = running_L3T
@@ -227,8 +258,9 @@ character_event = {
 				if = {
 					limit = { is_SWMH_coasts = no }
 					add_province_modifier = {
-						name = province_cotiere
-						duration = -1
+						name = province_terrestre
+						duration = -1  
+						hidden = yes
 					}	
 				}		
 				if = {
@@ -297,6 +329,9 @@ character_event = {
 				}
 			}
 		}
+		any_character = {
+			character_event = { id = L3T.20 }
+		}
 		any_province = {
 			province_event = { id = L3T.22 } #ressources attribution
 			province_event = { id = L3T.23 } #temple pre-spec
@@ -304,8 +339,17 @@ character_event = {
 			province_event = { id = L3T.25 } #city pre-spec
 			province_event = { id = L3T.120 } #religion check init
 		}
-
-		
+		#avoid byzzies crying
+		any_title = {
+			if = {
+				limit = {
+					NOT = { year = 1100 }
+					NOT = { has_global_flag = running_LCDA }
+					title = b_constantinople
+				}
+				change_variable = { which = "developpement" value = 50 }
+			}
+		}
 	} #end of immediate
 	
 	option = {
@@ -387,6 +431,481 @@ character_event = {
 			 7 = { piety = 78	}
 			 6 = { piety = 82	}
 			 5 = { piety = 95	}
+		}
+	}
+}
+
+##Maintenance muslim cities
+# ROOT is the character
+#applies a malus if held directly, unless it is within capital county
+character_event = {
+    id = L3T.13
+	hide_window = yes
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes #on holder changes + on startup + on yearly pulse
+	#+ from confiscate city decision
+	
+	trigger = { 
+		#religion_group = muslim
+		
+		NOR = { 
+			is_tribal = yes
+			is_nomadic = yes
+		}
+		any_demesne_title = {
+			tier = baron
+			holding_type = city 
+		}
+	}
+
+	immediate = {
+		#if iqta directly held, applies a malus if not capital county
+		if = {
+			limit = {
+				OR = {
+					government = muslim_government
+					government = chinese_imperial_government
+					government = roman_imperial_government
+				}
+				any_demesne_title = {
+					tier = baron
+					holding_type = city 
+					NOT = { has_holding_modifier = iqta_held_direct }
+					NOT = { location = { has_province_modifier = realm_capital_province }}
+				}				
+			}
+			any_demesne_title = {
+				limit = {
+					tier = baron
+					holding_type = city
+					NOT = { has_holding_modifier = iqta_held_direct }
+					NOT = { location = { has_province_modifier = realm_capital_province}}
+				}
+				add_holding_modifier = { 
+					name = iqta_held_direct 
+					duration = -1
+				}
+			}
+		}
+		#if iqta directly held, removes the malus if capital county
+		if = {
+			limit = {
+				OR = {
+					government = muslim_government
+					government = chinese_imperial_government
+					government = roman_imperial_government
+				}
+				any_demesne_title = {
+					tier = baron
+					holding_type = city 
+					has_holding_modifier = iqta_held_direct
+					location = { has_province_modifier = realm_capital_province }
+				}				
+			}
+			any_demesne_title = {
+				limit = {
+					tier = baron
+					holding_type = city
+					has_holding_modifier = iqta_held_direct
+					location = { has_province_modifier = realm_capital_province}
+				}
+				remove_holding_modifier = iqta_held_direct
+			}
+		}		
+		#if NON-iqta directly held (AKA is mayor), removes the malus
+		#(removed option) L3T.14 does the job now
+	}
+}
+#remove malus if non muslim
+character_event = {
+    id = L3T.14
+	hide_window = yes
+	
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	is_triggered_only = yes #on holder changes #+ from confiscate city decision
+	
+	trigger = { 
+		NOR = {
+			government = muslim_government
+			government = chinese_imperial_government
+			government = roman_imperial_government
+		}
+		any_demesne_title = {
+			tier = baron
+			holding_type = city 
+		}
+	}
+
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				tier = baron
+				holding_type = city
+			}
+			remove_holding_modifier = iqta_held_direct
+		}
+	}
+}
+##holding modifier maintenance
+#ROOT is province. FROM has the old religion
+province_event = {
+    id = L3T.15
+	hide_window = yes
+
+	is_triggered_only = yes #on_county_religion_change
+	
+	trigger = {
+		owner = {
+			NOR = { 
+				is_tribal = yes
+				is_nomadic = yes
+			}
+		}
+	}
+
+	immediate = {
+		any_province_holding = {
+			#turned to muslim
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = feodal_prod_L1
+					NOT = { has_holding_modifier = feodal_prod_muslim }
+				}
+				remove_holding_modifier = feodal_prod_L1
+				add_holding_modifier = { name = feodal_prod_muslim duration = -1 }
+			}
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = feodal_mil_L1
+					NOT = { has_holding_modifier = feodal_mil_muslim }
+				}
+				remove_holding_modifier = feodal_mil_L1
+				add_holding_modifier = { name = feodal_mil_muslim duration = -1 }
+			}			
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = feodal_adm_L1
+					NOT = { has_holding_modifier = feodal_adm_muslim }
+				}
+				remove_holding_modifier = feodal_adm_L1
+				add_holding_modifier = { name = feodal_adm_muslim duration = -1 }
+			}				
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = monastere_L1
+					NOT = { has_holding_modifier = zaouia_L1 }
+				}
+				remove_holding_modifier = monastere_L1
+				add_holding_modifier = { name = zaouia_L1 duration = -1 }
+			}				
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = episco_land_L1
+					NOT = { has_holding_modifier = waqf_rural_L1 }
+				}
+				remove_holding_modifier = episco_land_L1
+				add_holding_modifier = { name = waqf_rural_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					has_holding_modifier = episcopale_L1
+					NOT = { has_holding_modifier = waqf_urbain_L1 }
+				}
+				remove_holding_modifier = episcopale_L1
+				add_holding_modifier = { name = waqf_urbain_L1 duration = -1 }
+			}				
+			if = {
+				limit = {
+					location = { religion_group = muslim }
+					OR = {
+						has_title_flag = REGLE_DE_1
+						has_title_flag = REGLE_DE_2
+						has_title_flag = REGLE_DE_3
+					}
+					NOT = { has_title_flag = REGLE_SUFI_SCHOOL }
+				}
+				clr_title_flag = REGLE_DE_1
+				clr_title_flag = REGLE_DE_2
+				clr_title_flag = REGLE_DE_3
+				set_title_flag = REGLE_SUFI_SCHOOL
+			}
+			
+			#turned to non-muslim
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = feodal_prod_L1 }
+					has_holding_modifier = feodal_prod_muslim
+				}
+				remove_holding_modifier = feodal_prod_muslim
+				add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = feodal_mil_L1 }
+					has_holding_modifier = feodal_mil_muslim
+				}
+				remove_holding_modifier = feodal_mil_muslim
+				add_holding_modifier = { name = feodal_mil_L1 duration = -1 }
+			}			
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = feodal_adm_L1 }
+					has_holding_modifier = feodal_adm_muslim
+				}
+				remove_holding_modifier = feodal_adm_muslim
+				add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+			}				
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = monastere_L1 }
+					has_holding_modifier = zaouia_L1
+				}
+				remove_holding_modifier = zaouia_L1
+				add_holding_modifier = { name = monastere_L1 duration = -1 }
+			}				
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = episco_land_L1 }
+					has_holding_modifier = waqf_rural_L1
+				}
+				remove_holding_modifier = waqf_rural_L1
+				add_holding_modifier = { name = episco_land_L1 duration = -1 }
+			}
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					NOT = { has_holding_modifier = episcopale_L1 }
+					has_holding_modifier = waqf_urbain_L1
+				}
+				remove_holding_modifier = waqf_urbain_L1
+				add_holding_modifier = { name = episcopale_L1 duration = -1 }
+			}
+			
+			if = {
+				limit = {
+					location = { religion_group = christian }
+					has_title_flag = REGLE_SUFI_SCHOOL
+					NOT = {
+						has_title_flag = REGLE_DE_1
+						has_title_flag = REGLE_DE_2
+						has_title_flag = REGLE_DE_3
+					}
+				}
+				clr_title_flag = REGLE_SUFI_SCHOOL
+				if = {
+					limit = {
+						location = { is_catholic_group = yes }
+					}
+					random_list = {
+						50 = { set_title_flag = REGLE_DE_1 }
+						50 = { set_title_flag = REGLE_DE_2 }
+					}
+				}
+				if = {
+					limit = {
+						location = { is_catholic_group = no }
+					}
+					set_title_flag = REGLE_DE_3
+				}
+			}
+		}
+	}
+}
+##IQTA RETINUES
+character_event = { 
+    id = L3T.16
+	hide_window = yes
+
+	is_triggered_only = yes #from castle pre-spec L3T.31 (triggered from L3T.10)
+	
+	immediate = {
+		##iqta rulers get some free retinues at start
+		#based on rank gets 1/2/3 army for its capital, within retinue cap
+		#1 additional army if independent (no cap)
+		#each province of arabic culture, gives 1 army, within retinue cap
+		#gets jizya holdings armies 
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = SWMH
+					has_global_flag = running_VANILLA
+				}
+				is_landed = yes
+				government = muslim_government
+				culture_group = arabic
+				is_nomadic = no
+				is_tribal = no
+			}
+			##RANK
+			if = {
+				limit = { 
+					higher_tier_than = BARON # COUNT
+				}
+				create_retinue = RETTYPE_L3T_ARAB
+				set_character_flag = ret_from_Count
+			}
+			if = {
+				limit = { 
+					higher_tier_than = COUNT # DUKE
+					has_space_for_retinue = RETTYPE_L3T_ARAB
+				}
+				create_retinue = RETTYPE_L3T_ARAB
+				set_character_flag = ret_from_Duke
+			}
+			if = {
+				limit = { 
+					higher_tier_than = DUKE #  KING
+					has_space_for_retinue = RETTYPE_L3T_ARAB
+				}
+				create_retinue = RETTYPE_L3T_ARAB
+				set_character_flag = ret_from_King
+			}
+					#debug
+						if = {
+							limit = { 
+								higher_tier_than = DUKE #  KING
+								NOT = { has_space_for_retinue = RETTYPE_L3T_ARAB }
+							}
+							set_character_flag = LACK_SPACE_ret_from_King
+						}
+					##
+			if = {
+				limit = { 
+					higher_tier_than = KING #  EMPEROR
+					has_space_for_retinue = RETTYPE_L3T_ARAB
+				}
+				create_retinue = RETTYPE_L3T_ARAB
+				set_character_flag = ret_from_Emperor
+			}
+					#debug
+						if = {
+							limit = { 
+								higher_tier_than = KING #  EMPEROR
+								NOT = { has_space_for_retinue = RETTYPE_L3T_ARAB }
+							}
+							set_character_flag = LACK_SPACE_ret_from_Emperor
+						}
+					##
+			##INDEP
+			if = {
+				limit = { 
+					independent = yes
+				}
+				create_retinue = RETTYPE_L3T_ARAB
+				set_character_flag = ret_from_Indep
+			}
+			##PROVINCES
+					#debug
+					any_demesne_province = {
+						limit = {
+							culture_group = arabic
+							NOT = { owner = { has_space_for_retinue = RETTYPE_L3T_ARAB_FILLER }}
+						}					
+						owner = { set_character_flag = LACK_SPACE_ret_from_provinces }
+					}
+					##
+					#for each own province, capped
+			any_demesne_province = {
+				limit = {
+					culture_group = arabic
+					owner = { has_space_for_retinue = RETTYPE_L3T_ARAB_FILLER }
+				}					
+				owner = { create_retinue = RETTYPE_L3T_ARAB_FILLER } #l_cavalry off/def
+				owner = { set_character_flag = ret_from_provinces }
+			}
+
+		}
+		##JIZYA
+		#muslim with jizya modifier gets the retinues from it
+		if = {
+			limit = {
+				religion_group = muslim
+				is_nomadic = no
+				is_tribal = no
+				any_demesne_title = {
+					has_holding_modifier = L3T_jizya
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					has_holding_modifier = L3T_jizya
+					tier = baron
+					holding_type = castle
+				}
+				if = { 
+					limit = { 
+						location =  { holder_scope = { religion_group = muslim }}
+					}
+					location = { holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_CA }}
+				}
+				#if a muslim ruled barony is enclaved in non muslim province (happens in Calabria 936)
+				if = { 
+					limit = { 
+						location =  { holder_scope = { NOT = { religion_group = muslim }}}
+					}
+					holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_CA }
+				}						
+			}
+			any_demesne_title = {
+				limit = {
+					has_holding_modifier = L3T_jizya
+					tier = baron
+					holding_type = city
+					location =  { holder_scope = { religion_group = muslim }}
+				}
+				if = {
+					limit = { 
+						location =  { holder_scope = { religion_group = muslim }}
+					}
+					location = { holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_CT }}
+				}
+				#if a muslim ruled barony is enclaved in non muslim province (happens in Calabria 936)
+				if = { 
+					limit = { 
+						location =  { holder_scope = { NOT = { religion_group = muslim }}}
+					}
+					holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_CT }
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					has_holding_modifier = L3T_jizya
+					tier = baron
+					holding_type = temple
+					location =  { holder_scope = { religion_group = muslim }}
+				}
+				if = { 
+					limit = { 
+						location =  { holder_scope = { religion_group = muslim }}
+					}
+					location = { holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_TP }}
+				}
+				#if a muslim ruled barony is enclaved in non muslim province (happens in Calabria 936)
+				if = { 
+					limit = { 
+						location =  { holder_scope = { NOT = { religion_group = muslim }}}
+					}
+					holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_TP }
+				}
+			}
 		}
 	}
 }
@@ -721,7 +1240,7 @@ character_event = {
 	
 	only_rulers = yes
 	capable_only = yes
-	prisoner = no
+	#prisoner = no
 
 	is_triggered_only = yes
 	
@@ -800,3 +1319,4 @@ character_event = {
 		}
 	}
 }
+

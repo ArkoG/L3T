@@ -102,9 +102,19 @@ bloodline_effect_fading_BL;The remembrance of this legacy will fade over time, u
 IS_NOT_DE_JURE_LIEGE;Is NOT de jure liege;N'est PAS de jure;Ist NICHT De-jure-Lehnsherr;;NO es señor de iure;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
 L3T_RENAME_LOG;Rename [Root.GetName] title into something you find more fitty.;Renommer le titre [Root.GetName] en quelque chose plus à votre goût.;;;;;;;x
-DEC_rename_any_title;Rename this title;Renommer ce titre;;;;;;;x
+DEC_rename_any_title;Rename this title;Renommer ce titre;;;;;;;;;;;;x
 DEC_rename_any_title_desc;You are about to rename the following title: \n§Y[Root.GetName]§!;Vous êtes sur le point de donner un nouveau nom au titre suivant :\n§Y[Root.GetName]§!;;;;;;;x
-#;;x;;;;;;;;;;;;x
+#
 prisoner_to_fortress;Move to Securised Dungeon [your_new_home.GetName];Transférer en cachot sécurisé;;;;;;;;;;;;x
 prisoner_to_fortress_desc;Have §Y[Root.GetTitledFirstName]§! moved to a secured cell in one of of our fortresses, where [Root.GetSubjectPronoun] can't escape, yet with a fair life expectancy.;Faire transférer [Root.Get_le_TitledFirstNameJ] dans une cellule sécurisée d'une de nos forteresses, d'où [Root.GetIlElle] ne s'échappera pas et aura une espérance de vie correcte.;;;;;;;;;;;;x
 has_a_warm_prison;Has a §YSecured dungeons§! in a demesne's §YFortress§! holding;Possède des §YCachots sécurisés§! dans l'une de ces propriétés de type §YForteresse§!;;;;;;;;;;;;x
+#;x
+confiscate_city;Confiscate this city;Confisquer cette cité;;;;;;;;;;;;x
+confiscate_city_desc;Rulers of §Y[From.Government.GetName]§! government can own cities directly. \nNevertheless, depending on his rank, that lord may own only a limited number of cities, and only one from which he will net the full income.;Les dirigeants d'un régime §Y[From.Government.GetName]§! peuvent détenir en propre des cités, ainsi un régime §Y \nNéanmoins, fonction de son rang, ce seigneur ne peut en posséder qu'un nombre limité, et une seulement dont il pourra tirer les pleins revenus.;;;;;;;;;;;;x
+counts_can_hold1;Is at least ranked '§YCount§!' and does not already have §Y1§! city;A au moins le rang de "§YComte§!" et ne possède pas déjà §Y1§! cité;;;;;;;;;;;;x
+dukes_can_hold2;Is at least ranked '§YDuke§!' and has less than §Y2§! cities;A au moins le rang de "§YDuc§!" et possède moins de §Y2§! cités;;;;;;;;;;;;x
+kings_can_hold3;Is at least ranked '§YKing§!' and has less than §Y3§! cities;A au moins le rang de "§YRoi§!" et possède moins de §Y3§! cités;;;;;;;;;;;;x
+only_one_city;Does not already own a city in this province;Ne détient pas déjà une cité dans cette province;;;;;;;;;;;;x
+#;x
+get_stadolphus_relic;Saint Adolphus blessing;Bénédiction de Saint Adolphus;;;;;;;;;;;;x
+get_stadolphus_relic_desc;Saint Adolphus blessing;Bénédiction de Saint Adolphus;;;;;;;;;;;;x

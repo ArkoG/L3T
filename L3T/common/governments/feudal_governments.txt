@@ -75,10 +75,10 @@ feudal_governments = {
 	}
 	
 	muslim_government = {
-		preferred_holdings = { CASTLE }
+		preferred_holdings = { CASTLE }  #L3T CITY is additional
 		allowed_holdings = { 
 			CASTLE
-			TEMPLE
+			CITY #L3T in place of Temple
 			FORT
 			HOSPITAL
 		}
@@ -150,6 +150,10 @@ feudal_governments = {
 
 		## Modifiers
 		court_size_modifier = 10
+		unit_modifier = {
+			#levy_size = -0.2 #L3T isn't displayed correctly in UI
+			retinuesize_perc = 0.4 #L3T
+		}
 	}
 	
 	theocratic_feudal_government = {
@@ -442,5 +446,10 @@ feudal_governments = {
 		
 		## Modifiers
 		court_size_modifier = 15
+		demesne_size = 2 #L3T
+		unit_modifier = {
+			#levy_size = -0.2 #L3T isn't displayed correctly in UI
+			retinuesize_perc = 0.2 #L3T
+		}
 	}
 }

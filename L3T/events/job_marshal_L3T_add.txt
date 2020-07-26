@@ -25,8 +25,10 @@ province_event = {
 	picture = GFX_evt_council
 	
 	trigger = {
-		is_tribal = no
-		NOT = { is_nomadic = yes }
+		owner = { 
+			is_tribal = no
+			is_nomadic = no
+		}
 		OR = { 
 			has_province_modifier = smugglers_ring
 			has_province_modifier = highway_robber_band
@@ -143,8 +145,10 @@ province_event = {
 	picture = GFX_evt_shadow
 	
 	trigger = {
-		is_tribal = no
-		NOT = { is_nomadic = yes }
+		owner = { 
+			is_tribal = no
+			is_nomadic = no
+		}
 		has_province_modifier = thieves_guild
 		NOT = {
 			has_province_modifier = purge_mobilization

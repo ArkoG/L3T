@@ -83,9 +83,12 @@ character_event = {
 		hidden_tooltip = {
 			set_character_flag = tournament_begins
 			set_character_flag = attending_tournament
-			chronicle = {
-				entry = CHRONICLE_GRAND_TOURNAMENT
-				picture = GFX_evt_joust
+			if = {
+				limit = { ai = no }
+				chronicle = {
+					entry = CHRONICLE_GRAND_TOURNAMENT
+					picture = GFX_evt_joust
+				}
 			}
 			#Injuries
 			any_realm_character = {
