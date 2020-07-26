@@ -28,6 +28,7 @@ MINOR and VARIOUS:
 -"Imperial" governement is renamed to "Roman imperial" as it only applies to Restored roman empire or Byzantine empire
 -"Impérialisme chinois" in Frecnh loc is renamed to "Impérial chinois" for consistency sake and more accuracy
 -new options when a romanesque cathedral burnt (for Prince-bishops and higher, for non catholics)
+-holding specialization happen faster
 
 BALANCE:
 -directly held cities by non-republic bring a reduced amount of income, unless it is in capital county (confusician bureaucracy get confiscate cities but don't get any malus)
@@ -40,6 +41,10 @@ BALANCE:
 -iqta rulers get some free retinue at start, from their rank, from jizya holdings, from correct culture province (limited to their retinue cap)
 -some new arabic retinues
 -muslim feodal holding specializations now give a levy malus and a retinue bonus
+-lowered priority for Reconquista CB (lesser than Crusades now)
+-revised feudal opinion for adminstration laws (bonus for "feudal", malus for "late", further malus for "imperial")
+-revised vassal limit for adminstration laws (bonus for "feudal", malus for "imperial")
+-adminstration laws now also influences demesne size (late gives +1, imperial gives +3)
 
 BUGFIX:
 -decision to start to build a cathedral should no more cause a CTD
