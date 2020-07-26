@@ -13613,13 +13613,14 @@ dejure_county_claim = {
 		}
 		
 		OR = {
-			kingdom = {
+			##L3T maybe act here totoro -zeeland case- 
+			kingdom = { #has the DJ kingdom title
 				holder = ROOT
 			}
-			empire = {
+			empire = {  #has the DJ empire title
 				holder = ROOT
 			}
-			dejure_liege_title = {
+			dejure_liege_title = { #any DJ level
 				holder = ROOT
 			}
 		}
