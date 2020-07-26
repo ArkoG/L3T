@@ -786,6 +786,7 @@ province_event = {
 			is_building_cathedral_step_12 = yes
 			check_variable = { which = cathedral value = 12000 }
 		}
+		owner = { is_catholic_group = yes } #ensures that it benefits to someone of the right faith
 	}
 
 	immediate = {
@@ -804,6 +805,7 @@ province_event = {
 		name = "REC.212A"	
 		owner = { add_character_modifier = { name = en_odeur_de_saintete duration = -1	} }
 		owner = { excommunicate = no }
+		owner = { remove_trait = batisseur_cathedrale }
 		random_province_holding = {
 			limit = {
 				is_building_cathedral_step_12 = yes
@@ -823,6 +825,14 @@ province_event = {
 			}
 			clr_title_flag = cathedral_construction
 		}
+		#temp_wall might naturaly be removed
 		remove_province_modifier = chantier_cathedrale
+		remove_province_modifier = chantier_up
+		remove_province_modifier = chantier_down
+		remove_province_modifier = chantier_down_rivalite_1 #to not forget it if rivaliries get back
+		remove_province_modifier = chantier_down_rivalite_2 #to not forget it if rivaliries get back
+		remove_province_modifier = chantier_down_rivalite_3 #to not forget it if rivaliries get back
+		#remove_province_modifier = chantier_stop #the cathedral might not get finisihed if stopped
+		
 	}
 }

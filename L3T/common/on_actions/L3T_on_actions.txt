@@ -14,7 +14,9 @@ on_startup = {
 		L3T.90
 		
 		#sets capital modifier
-		L3T.20
+		#L3T.20
+		#muslim city setup
+		L3T.13 #need to fire after capital attribution
 		
 		#city apocalypto
 		#L3T.45
@@ -35,9 +37,14 @@ on_yearly_pulse = {
 		#stewardship adjusting
 		L3T.90
 		L3T.93 #steward asymetry
-		#màj capital modifier
+
+		#màj capital modifier, necessary for "manual" capital change
 		L3T.20
 		L3T.21
+		#muslim city maintenance
+		L3T.13 #can't be linked to capital moving L3T.20/21 due to their triggers
+		#L3T.14 #safety catch
+
 		
 		##population events
 		 #castle
@@ -178,6 +185,10 @@ on_new_holder = {
 		#màj capital modifier
 		L3T.20
 		L3T.21
+		#muslim ways
+		L3T.13 #iqta held maintenance muslim
+		L3T.14 #iqta held removal non iqta
+		REC.30 #jizya
 	}
 }
 
@@ -202,6 +213,10 @@ on_new_holder_inheritance = {
 		#màj capital modifier
 		L3T.20
 		L3T.21
+		#muslim ways
+		L3T.13 #iqta held maintenance muslim
+		L3T.14 #iqta held removal non iqta
+		REC.30 #jizya
 	}
 }
 
@@ -226,15 +241,23 @@ on_new_holder_usurpation = {
 		#màj capital modifier
 		L3T.20
 		L3T.21
+		#muslim ways
+		L3T.13 #iqta held maintenance muslim
+		L3T.14 #iqta held removal non iqta
+		REC.30 #jizya
 	}
 }
 
 # ROOT = Builder, FROM = Title
 on_settlement_construction_completed = {
+	#happens to builder character
 	events = {
 		L3T.3 #starts spec holding for the new built building
-		L3T.1101 #gives dev init + random bonus
+		L3T.1103 #init development variable (general init event cannot do this due to its trigger) 
+		L3T.13 #deals with iqta held cities
+		REC.30 #jizya
 	}
+	#does it happen for event/decision built settlement in vanilla ?
 }
 
 # Character converts religion, for whatever reason. ROOT is the character after conversion and the FROM scope has the old religion.
@@ -248,6 +271,8 @@ on_character_convert_religion = {
 on_county_religion_change = {
 	events = {
 		#L3T.122 #test event ATM
+		REC.31 #jizya
+		L3T.15 #holding modifier maintenance
 	}
 }
 
