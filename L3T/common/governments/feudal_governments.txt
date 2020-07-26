@@ -447,5 +447,9 @@ feudal_governments = {
 		## Modifiers
 		court_size_modifier = 15
 		demesne_size = 2 #L3T
+		unit_modifier = {
+			#levy_size = -0.2 #L3T isn't displayed correctly in UI
+			retinuesize_perc = 0.2 #L3T
+		}
 	}
 }
