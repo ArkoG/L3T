@@ -121,6 +121,7 @@ settlement_decisions = {
 
 					remove_building = FEODAL_mil
 					remove_holding_modifier = feodal_mil_L1
+					remove_holding_modifier = feodal_mil_muslim
 				}
 				# Remove weapons if there is no more producer
 				location = {
@@ -415,11 +416,19 @@ settlement_decisions = {
 				}
 				remove_building = FEODAL_prod
 				remove_holding_modifier = feodal_prod_L1
+				remove_holding_modifier = feodal_prod_muslim
 			}
 			
 			# In both cases, add FEODAL_adm spe
 			add_building = FEODAL_adm
-			add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+			if = { 
+				limit = { location = { NOT = { religion_group = muslim }}}
+				add_holding_modifier = { name = feodal_adm_L1 duration = -1 }
+			}
+			if = { 
+				limit = { location = { religion_group = muslim }}
+				add_holding_modifier = { name = feodal_adm_muslim duration = -1 }
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -482,6 +491,7 @@ settlement_decisions = {
 			FROM = { wealth = -100 }
 			remove_building = FEODAL_adm
 			remove_holding_modifier = feodal_adm_L1
+			remove_holding_modifier = feodal_adm_muslim
 			
 			# Sell administrative buildings
 			hidden_tooltip = {
@@ -924,8 +934,16 @@ settlement_decisions = {
 			# Change the specialization building
 			remove_building = FEODAL_prod
 			remove_holding_modifier = feodal_prod_L1
+			remove_holding_modifier = feodal_prod_muslim
 			add_building = FEODAL_mil
-			add_holding_modifier = { name = feodal_mil_L1 duration = -1 }			
+			if = { 
+				limit = { location = { NOT = { religion_group = muslim }}}
+				add_holding_modifier = { name = feodal_mil_L1 duration = -1 }
+			}
+			if = { 
+				limit = { location = { religion_group = muslim }}
+				add_holding_modifier = { name = feodal_mil_muslim duration = -1 }
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -1040,8 +1058,16 @@ settlement_decisions = {
 			}
 			remove_building = FEODAL_mil
 			remove_holding_modifier = feodal_mil_L1
-			add_building = FEODAL_prod			
-			add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
+			remove_holding_modifier = feodal_mil_muslim
+			add_building = FEODAL_prod	
+			if = { 
+				limit = { location = { NOT = { religion_group = muslim }}}
+				add_holding_modifier = { name = feodal_prod_L1 duration = -1 }
+			}
+			if = { 
+				limit = { location = { religion_group = muslim }}
+				add_holding_modifier = { name = feodal_prod_muslim duration = -1 }
+			}			
 		}
 		revoke_allowed = {
 			always = no
@@ -1055,9 +1081,11 @@ settlement_decisions = {
 		only_playable = yes
 		filter = owned
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_debug_icon
 		
 		from_potential = {
 			is_ruler = yes
+			ai = no
 		}
 		
 		potential = {
@@ -1092,6 +1120,7 @@ settlement_decisions = {
 		only_rulers = yes
 		filter = all
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_debug_icon
 		
 		from_potential = {
 			is_ruler = yes
@@ -1123,6 +1152,7 @@ settlement_decisions = {
 		only_rulers = yes
 		filter = all
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_debug_icon
 		
 		from_potential = {
 			is_ruler = yes
@@ -1154,6 +1184,7 @@ settlement_decisions = {
 		only_rulers = yes
 		filter = all
 		ai_target_filter = owned
+		diplomacy_icon = GFX_diplo_debug_icon
 		
 		from_potential = {
 			is_ruler = yes

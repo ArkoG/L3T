@@ -258,7 +258,7 @@ castle = {
 		build_time = 547 #1.5y
 		levy_size = 0.05
 		garrison_size = 0.05
-		ai_creation_factor = 102
+		ai_creation_factor = 100
 		#add_number_to_name = no
 		#court_size_modifier = 1 #temporary, give it palace
 		extra_tech_building_start = 1.0
@@ -272,7 +272,7 @@ castle = {
 		build_time = 730 #2y
 		levy_size = 0.1
 		garrison_size = 0.1
-		ai_creation_factor = 101
+		ai_creation_factor = 98
 		#add_number_to_name = no
 		#court_size_modifier = 1 #temporary, give it palace
 		extra_tech_building_start = 3.0
@@ -286,7 +286,7 @@ castle = {
 		build_time = 1095 #3y
 		levy_size = 0.15
 		garrison_size = 0.15
-		ai_creation_factor = 100
+		ai_creation_factor = 96
 		#add_number_to_name = no
 		#court_size_modifier = 1 #temporary, give it palace		
 		extra_tech_building_start = 4.0
@@ -302,7 +302,7 @@ castle = {
 		build_time = 1460 #4y
 		levy_size = 0.2
 		garrison_size = 0.2
-		ai_creation_factor = 99
+		ai_creation_factor = 93
 		#add_number_to_name = no
 		#court_size_modifier = 1 #temporary, give it palace
 		extra_tech_building_start = 5.0
@@ -318,7 +318,7 @@ castle = {
 		build_time = 2190 #6y
 		levy_size = 0.25
 		garrison_size = 0.2
-		ai_creation_factor = 98
+		ai_creation_factor = 90
 		#add_number_to_name = no
 		#court_size_modifier = 1 #temporary, give it palace
 		extra_tech_building_start = 6.0
@@ -338,7 +338,7 @@ castle = {
 		build_time = 2190 #6y
 		levy_size = 0.3
 		garrison_size = 0.2
-		ai_creation_factor = 97
+		ai_creation_factor = 85
 		#add_number_to_name = no		
 		extra_tech_building_start = 6.0
 	}
@@ -352,7 +352,7 @@ castle = {
 		build_time = 365
 		light_infantry = 80
 		archers = 10
-		ai_creation_factor = 100
+		ai_creation_factor = 99
 		#add_number_to_name = no		
 		extra_tech_building_start = 1.0
 	}
@@ -365,7 +365,7 @@ castle = {
 		build_time = 547
 		light_infantry = 50
 		archers = 50
-		ai_creation_factor = 99
+		ai_creation_factor = 97
 		#add_number_to_name = no
 		extra_tech_building_start = 2.0
 	}
@@ -382,7 +382,7 @@ castle = {
 		build_time = 1095
 		light_infantry = 20
 		archers = 90
-		ai_creation_factor = 98
+		ai_creation_factor = 97
 		#add_number_to_name = no
 		extra_tech_building_start = 0.5
 	}
@@ -401,7 +401,7 @@ castle = {
 		build_time = 1095
 		light_infantry = 30
 		archers = 120
-		ai_creation_factor = 98
+		ai_creation_factor = 96
 		#add_number_to_name = no
 		extra_tech_building_start = 0.5
 	}
@@ -432,7 +432,7 @@ castle = {
 		gold_cost = 270
 
 		build_time = 550
-		ai_creation_factor = 96
+		ai_creation_factor = 97
 		fort_level = 0.4
 		tax_income = -0.1
 		pikemen = 20
@@ -478,7 +478,7 @@ castle = {
 			build_time = 547
 			heavy_infantry = 40
 			pikemen = 15
-			ai_creation_factor = 104
+			ai_creation_factor = 100
 			#add_number_to_name = no		
 			extra_tech_building_start = 1.8
 		}
@@ -491,7 +491,7 @@ castle = {
 			build_time = 730
 			heavy_infantry = 45
 			pikemen = 20
-			ai_creation_factor = 103
+			ai_creation_factor = 98
 			#add_number_to_name = no
 			extra_tech_building_start = 3.0
 		}
@@ -508,7 +508,7 @@ castle = {
 			build_time = 1095
 			heavy_infantry = 50
 			pikemen = 25
-			ai_creation_factor = 102
+			ai_creation_factor = 96
 			#add_number_to_name = no
 			extra_tech_building_start = 3.0
 		}
@@ -527,7 +527,7 @@ castle = {
 			build_time = 2190
 			heavy_infantry = 60
 			pikemen = 25
-			ai_creation_factor = 101
+			ai_creation_factor = 95
 			#add_number_to_name = no
 			extra_tech_building_start = 2.0
 		}
@@ -552,7 +552,7 @@ castle = {
 			gold_cost = 100
 			build_time = 365
 			light_cavalry = 35
-			ai_creation_factor = 89
+			ai_creation_factor = 97
 			#add_number_to_name = no		
 			extra_tech_building_start = 0.4
 		}
@@ -564,7 +564,7 @@ castle = {
 			gold_cost = 120
 			build_time = 547
 			light_cavalry = 45
-			ai_creation_factor = 88
+			ai_creation_factor = 95
 			#add_number_to_name = no
 			extra_tech_building_start = 0.8
 		}
@@ -576,7 +576,7 @@ castle = {
 			gold_cost = 200
 			build_time = 730
 			light_cavalry = 55
-			ai_creation_factor = 87
+			ai_creation_factor = 93
 			#add_number_to_name = no
 			extra_tech_building_start = 0.2
 		}
@@ -591,7 +591,7 @@ castle = {
 			build_time = 1095
 			light_cavalry = 25
 			knights = 15
-			ai_creation_factor = 86
+			ai_creation_factor = 90
 			#add_number_to_name = no
 			extra_tech_building_start = 0.2
 		}
@@ -714,7 +714,7 @@ castle = {
 		gold_cost = 100
 
 		build_time = 180
-		ai_creation_factor = 101
+		ai_creation_factor = 98
 		liege_piety = 0.02
 		add_number_to_name = no
 
@@ -731,7 +731,7 @@ castle = {
 		gold_cost = 140
 
 		build_time = 370
-		ai_creation_factor = 100
+		ai_creation_factor = 96
 		liege_piety = 0.01
 		add_number_to_name = no
 
@@ -748,7 +748,7 @@ castle = {
 		gold_cost = 290
 
 		build_time = 680
-		ai_creation_factor = 99
+		ai_creation_factor = 95
 		liege_piety = 0.03
 		add_number_to_name = no
 
@@ -769,7 +769,7 @@ castle = {
 		gold_cost = 390
 		#prestige_cost = 90
 		build_time = 920
-		ai_creation_factor = 98
+		ai_creation_factor = 93
 		liege_piety = 0.05
 		add_number_to_name = no
 
@@ -812,10 +812,9 @@ castle = {
 		build_time = 730
 		tax_income = -0.2
 		galleys = 5
-		ai_creation_factor = 99
-
-		add_number_to_name = no		
-		extra_tech_building_start = 10.0
+		ai_creation_factor = 95
+		#add_number_to_name = no		
+		extra_tech_building_start = 1.5
 	}
 	
 	ca_shipyard_3 = {
@@ -835,10 +834,9 @@ castle = {
 		build_time = 1095
 		tax_income = -0.2
 		galleys = 8
-		ai_creation_factor = 98
-
-		add_number_to_name = no		
-		extra_tech_building_start = 10.0
+		ai_creation_factor = 93
+		#add_number_to_name = no		
+		extra_tech_building_start = 3.0
 	}
 	
 	ca_shipyard_4 = {
@@ -862,10 +860,9 @@ castle = {
 		build_time = 1460
 		tax_income = -0.2
 		galleys = 12
-		ai_creation_factor = 97
-
-		add_number_to_name = no		
-		extra_tech_building_start = 10.0
+		ai_creation_factor = 91
+		#add_number_to_name = no		
+		extra_tech_building_start = 4.0
 	}
 
 	#Castellan Bloodline buildings.
@@ -895,7 +892,7 @@ castle = {
 		
 		add_number_to_name = no
 
-		ai_creation_factor = 88
+		ai_creation_factor = 95
 
 		extra_tech_building_start = 10.0
 	}
@@ -921,7 +918,7 @@ castle = {
 
 		add_number_to_name = no
 		
-		ai_creation_factor = 88
+		ai_creation_factor = 94
 
 		extra_tech_building_start = 10.0
 	}
@@ -947,7 +944,7 @@ castle = {
 
 		add_number_to_name = no
 		
-		ai_creation_factor = 88
+		ai_creation_factor = 93
 
 		extra_tech_building_start = 10.0
 	}
@@ -974,7 +971,7 @@ castle = {
 
 		add_number_to_name = no
 		
-		ai_creation_factor = 88
+		ai_creation_factor = 92
 
 		extra_tech_building_start = 10.0
 	}

@@ -77,13 +77,22 @@ spriteTypes = {
 		name = "GFX_enable_notification"
 		texturefile = "gfx\\interface\\decision_icon_thesunandtherainfall_enable.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_jizya_abolish"
+		texturefile = "gfx\\interface\\decision_icon_jizya_abolish.dds"
+	}
+	spriteType = {
+		name = "GFX_jizya_enact"
+		texturefile = "gfx\\interface\\decision_icon_jizya_enact.dds"
+	}
 #TARGETTED DECISIONS
 	spriteType = {
 		name = "GFX_diplo_relic_icon"
 		texturefile = "gfx\\interface\\diplo_relic_icon.dds"
 	}
 	spriteType = {
-		name = "GFX_diplo_muslimc_icon"
+		name = "GFX_diplo_muslim_icon"
 		texturefile = "gfx\\interface\\diplo_muslim_icon.dds"
 	}
 	spriteType = {
@@ -106,6 +115,10 @@ spriteTypes = {
 		name = "GFX_diplo_prison_icon"
 		texturefile = "gfx\\interface\\diplo_prison_icon.dds"
 	}
+	spriteType = {
+		name = "GFX_diplo_debug_icon"
+		texturefile = "gfx\\interface\\diplo_debug_icon.dds"
+	}
 #REC traits
 	spriteType = {
 		name = "GFX_trait_batisseur_cathedrale"
@@ -123,7 +136,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_trait_compagnon_sculpteur"
-		texturefile = "gfx/traitsartisan_compagnon.tga"
+		texturefile = "gfx/traits/artisan_compagnon.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -259,5 +272,11 @@ spriteTypes = {
 		name = "GFX_tax_levy_slider_L3Ttrib_selected"
 		texturefile = "gfx\\interface\\tax_levy_slider_selected_L3Ttrib.dds"
 		noOfFrames = 5
+	}
+	###DEBUG JOB
+	spriteType = {
+		name = "GFX_action_debug_trade"
+		texturefile = "gfx\\interface\\jobs_administer_realm.dds"
+		noOfFrames = 2
 	}
 }

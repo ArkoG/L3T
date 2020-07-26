@@ -1,7 +1,7 @@
 #;;x;;;;;;;;;;;;x
 #;;LOIS;;;;;;;;;;;;x
 groupe_tolerance;Religious Tolerance;Acceptation religieuse;;;;;;;;;;;;x
-groupe_tolerance_desc;The degree of tolerance of other creeds within our lands. /nGreater religious tolerance allows the growth of thriving commmunities and economic prosperity. This will generally have a positive effect on the burghers of the realm but displease the clergy.;Il s'agit du degré d'acceptation d'autres religions sur nos terres. /nLa présence de communautés d'autres religions ouvrent des opportunités dans les domaines économiques, artistiques ou scientifiques par exemple. Cela convient en général aux cités mais déplaît à notre Clergé.;;;;;;;;;;;;x
+groupe_tolerance_desc;The degree of tolerance of other creeds within our lands. \nGreater religious tolerance allows the growth of thriving commmunities and economic prosperity. This will generally have a positive effect on the burghers of the realm but displease the clergy.;Il s'agit du degré d'acceptation d'autres religions sur nos terres. \nLa présence de communautés d'autres religions ouvrent des opportunités dans les domaines économiques, artistiques ou scientifiques par exemple. Cela convient en général aux cités mais déplaît à notre Clergé.;;;;;;;;;;;;x
 tolerance_nulle_option;None;Aucune;;;;;;;;;;;;x
 tolerance_nulle;Religious Intolerance;Aucune acceptation religieuse;;;;;;;;;;;;x
 tolerance_nulle_desc;Heretics and infidels are actively persecuted and most are either put to the sword, forcefully converted, or expelled from the realm.;Les infidèles sont persécutés, convertis de force ou bannis.;;;;;;;;;;;;x
@@ -15,3 +15,14 @@ tolerance_pleine_option;High;Elevée;;;;;;;;;;;;x
 tolerance_pleine;Religious Acceptance;Acceptation religieuse élevée;;;;;;;;;;;;x
 tolerance_pleine_desc;Peoples of all faiths and creeds coexist peacefully and are encouraged to settle in the cities, much to the chagrin of clerics across the realm.;Les fidèles des différentes religions cohabitent dans la paix et le respect de l'autre, quoiqu'en disent les grincheux du Clergé.;;;;;;;;;;;;x
 #;;x;;;;;;;;;;;;x
+jizya_group;Ahl al-kitâb status;Statut des Ahl al-kitâb;;;;;;;;;;;;x
+jizya_group_desc;Ahl al-kitâb, the "People of the Book", are monotheistic non-Muslims whose religion is based on divine teachings through a book revealed to and taught by a prophet. \nA Muslim ruler may decide to integrate these populations or subject them to the status of "Dhimmi". \nThis status prohibits them from fighting and obliges them to pay an additional tax, the §YJizia§!, in return for the protection of their person, their property and their freedom of belief. ;Ahl al-kitâb, les "gens du livre", sont des non-musulmans monothéistes dont la religion est fondée sur des enseignements divins à travers un livre révélé à un prophète et enseigné par ce dernier. \nUn souverain musulman peut décider d'intégrer ces populations ou de les soumettre au statut de "Dhimmi". \nCe statut leur interdit de combattre et les obligent au paiement d'un impôt supplémentaire, la §YDjizia§!, en contrepartie de la protection de leur personne, leurs biens et de leur liberté de croyance. ;;;;;;;;;;;;x
+jizya_0_option;Dhimmis;Dhimmis;;;;;;;;;;;;x
+jizya_0;Dhimmis status;Statut de Dhimmis;;;;;;;;;;;;x
+jizya_0_desc;The People of the book are forced to pay a fee to fund their protection. \nThey can't join the levies or garrisons. \n;Les gens du livre sont contraints à payer une taxe pour financer leur protection. \nIls ne peuvent rejoindre les forces armées ou garnisons. \n;;;;;;;;;;;;x
+jizya_1_option;Invalid;Invalide;;;;;;;;;;;;x
+jizya_1;Invalid;Invalide;;;;;;;;;;;;x
+jizya_1_desc;There are no non-muslim people of the book in the kingdom, there's no need to pass a law about them.;Il n'y a pas de gens du livre non-musulmans dans le royaume, inutile de passer une loi les concernant.;;;;;;;;;;;;x
+jizya_2_option;Citizenship;Citoyenneté;;;;;;;;;;;;x
+jizya_2;Citizenship for the People of the Book;Citoyenneté pour les Gens du Livre;;;;;;;;;;;;x
+jizya_2_desc;People of the Book are integrated and can fight in their lord's armed forces. \n;Les Gens du Livre sont intégrés et peuvent combattre dans les forces armées de leur seigneur. \n;;;;;;;;;;;;x

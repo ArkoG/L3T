@@ -4,6 +4,60 @@
 
 ###by Arko and Mouchi
 
+
+
+CURRENT_DEV 1.10 SEAL2 (--- july 2020) for CK2 v3.3.3
+
+
+
+MAJOR:
+-iqta rulers can hold cities
+-governments that allow holding cities can confiscate freely up to 3 cities (iqta, roman and chinese imperial, confucian bureaucracy) 
+-iqta ruler get a bonus to retinue cap
+-introducing muslim religious holdings specializations (waqf, zaouia)
+-reviewed jizya only affecting Dhimmis, affecting retinues (bonus), and levies (malus)
+
+MINOR and VARIOUS:
+-muslim under iqta no more can hold temples
+-muslim temple holders are theocracies instead of iqta
+-iqta rulers pay less for retinues reinforcement
+-tribals can't access to centralization laws, but have some of its effects in tribal organization laws
+-some new muslim event pictures
+-population growth events now mention the name of the holding in their description
+-various localisation changes or improvments
+-"Imperial" governement is renamed to "Roman imperial" as it only applies to Restored roman empire or Byzantine empire
+-"Impérialisme chinois" in Frecnh loc is renamed to "Impérial chinois" for consistency sake and more accuracy
+-new options when a romanesque cathedral burnt (for Prince-bishops and higher, for non catholics)
+-holding specialization happen faster
+
+BALANCE:
+-directly held cities by non-republic bring a reduced amount of income, unless it is in capital county (confusician bureaucracy get confiscate cities but don't get any malus)
+-iqta rulers pay less for retinues reinforcement
+-wrong religion_group and culture_group provinces significantly bring less levies and slower reinforce rate
+-monastic rules are named dynamicaly (bloats less the building list)
+-AI will try to confiscate cities in the way players can
+-capital bonus is slighlty better (more tax and better protection against revolts)
+-roman imperial government get a bonus to demesne size
+-iqta rulers get some free retinue at start, from their rank, from jizya holdings, from correct culture province (limited to their retinue cap)
+-some new arabic retinues
+-muslim feodal holding specializations now give a levy malus and a retinue bonus
+-lowered priority for Reconquista CB (lesser than Crusades now)
+-revised feudal opinion for adminstration laws (bonus for "feudal", malus for "late", further malus for "imperial")
+-revised vassal limit for adminstration laws (bonus for "feudal", malus for "imperial")
+-adminstration laws now also influences demesne size (late gives +1, imperial gives +3)
+
+BUGFIX:
+-decision to start to build a cathedral should no more cause a CTD
+-fixed duplicate naming for fishing ressources
+-fixing all land provinces being wrongly coastal provinces with SWMH
+-fixed the Opus francigenum never happening with "Free" rule if not starting as a catholic character
+-the mod won't try to write chronicles entries for AI
+-fixed "evil events" (smugglers ring etc.) being off
+-remaining building cathedral speed modifiers after cathedral is finished are now cleaned properly
+-prevented that the benefits of finishing a cathedral end up in wrong faith hands
+
+
+
 RELEASE 1.00 SEAL1 (14th june 2020) for CK2 v3.3.3
 
 INSTALL WILL REQUIRE DIRECTORY CLEAN-UP (renamed and removed files, event ID re-tag)

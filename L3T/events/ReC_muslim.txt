@@ -1,0 +1,189 @@
+#######################################################
+# [ReC][Reliques et Cathédrales]  par Arko  et Mouchi #
+#######################################################
+
+namespace = REC
+
+##Maintenance muslim jizya /character version
+# ROOT is the character
+#jizya modifier character version
+character_event = {
+    id = REC.30
+	hide_window = yes
+	
+	only_rulers = yes
+
+	is_triggered_only = yes
+	
+	trigger = {}
+	
+	immediate = {
+		# Adding L3T_jizya for non tribal and nomadic holding in christian or jewish province ruled by muslim
+		if = {
+			limit = {
+				religion_group = muslim
+				NOR = { 
+					is_tribal = yes
+					is_nomadic = yes
+				}				
+				any_demesne_title = {
+					location = {
+						OR = {
+							religion_group = christian
+							religion_group = jewish_group
+						}
+					}
+					NOT = {
+						has_holding_modifier = L3T_jizya
+						holding_type = tribal
+						holding_type = nomad
+					}
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					location = {
+						OR = {
+							religion_group = christian
+							religion_group = jewish_group
+						}
+					}
+					NOT = {
+						has_holding_modifier = L3T_jizya
+						holding_type = tribal
+						holding_type = nomad
+					}
+				}
+				add_holding_modifier = {
+					name = L3T_jizya
+					duration = -1
+				}
+			}
+		}
+		
+		# Remove L3T_jizya for tribal and nomadic holding or holding in non christian and non jewish province
+		if = {
+			limit = {				
+				any_demesne_title = {
+					has_holding_modifier = L3T_jizya
+					NOT = { 
+						location = {
+							OR = {
+								religion_group = christian
+								religion_group = jewish_group
+							}
+						}
+					}
+					OR = {
+						holding_type = tribal
+						holding_type = nomad
+					}
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					has_holding_modifier = L3T_jizya
+					NOT = { 
+						location = {
+							OR = {
+								religion_group = christian
+								religion_group = jewish_group
+							}
+						}
+					}
+					OR = {
+						holding_type = tribal
+						holding_type = nomad
+					}
+				}
+				remove_holding_modifier = L3T_jizya
+			}
+		}
+			
+		# Remove L3T_jizya in all holding of a non muslim ruler or a tribal or nomadic ruler
+		if = {
+			limit = {
+				OR = { 
+					NOT = { religion_group = muslim }
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+			any_demesne_title = {
+				remove_holding_modifier = L3T_jizya
+			}
+		}
+	}
+}
+
+##jizya modifier province version
+province_event = {
+    id = REC.31
+	hide_window = yes
+	
+	is_triggered_only = yes #on_county_religion_change
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					religion_group = christian
+					religion_group = jewish_group
+				}
+			}
+			
+			# holding ruled by a muslim (not tribal nor nomadic) on christian or jewish province
+			any_province_holding = {
+				limit = {
+					NOT = { 
+						has_holding_modifier = L3T_jizya
+						holding_type = tribal
+						holding_type = nomad
+					}
+					holder_scope = {
+						religion_group = muslim
+						NOR = { 
+							is_tribal = yes
+							is_nomadic = yes
+						}	
+					}
+				}
+				## minority expected
+				add_holding_modifier = {
+					name = L3T_jizya
+					duration = -1
+				}
+			}
+		}
+		# holding ruled by a non muslim
+		any_province_holding = {
+			limit = {
+				holder_scope = { NOT = { religion_group = muslim }}
+			}
+			## minority expected
+			remove_holding_modifier = L3T_jizya
+		}
+		# province becomes muslim
+		if = {
+			limit = {
+				religion_group = muslim
+			}
+			any_province_holding = {
+				remove_holding_modifier = L3T_jizya
+			}
+		}
+		# holding ruled by a tribal or a nomadic
+		any_province_holding = {
+			limit = {
+				holder_scope = { 
+					OR = { 
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+			}
+			## minority expected
+			remove_holding_modifier = L3T_jizya
+		}
+	}
+}
