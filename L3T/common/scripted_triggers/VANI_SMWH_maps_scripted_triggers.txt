@@ -121,32 +121,33 @@ is_SWMH_hard_rurale = {
 	}
 }
 narbonaise_lands = {
+	#used on character event//capital_holding scope
 	OR = {
 		AND = {
 			has_global_flag = SWMH
 			OR= {
-				has_landed_title = c_montpellier
-				has_landed_title = c_narbonne
-				has_landed_title = c_carcassonne
-				has_landed_title = c_provence
-				has_landed_title = c_nimes #SWMH
-				has_landed_title = c_beziers #SWMH
-				has_landed_title = c_marseille #SWMH
+				title = c_montpellier
+				title = c_narbonne
+				title = c_carcassonne
+				title = c_provence
+				title = c_nimes #SWMH
+				title = c_beziers #SWMH
+				title = c_marseille #SWMH
 			}
 		}
 		AND = {
 			has_global_flag = running_VANILLA
 			OR= {
-				has_landed_title = c_montpellier
-				has_landed_title = c_narbonne
-				has_landed_title = c_carcassonne
-				has_landed_title = c_provence
+				title = c_montpellier
+				title = c_narbonne
+				title = c_carcassonne
+				title = c_provence
 			}
 		}		
 		AND = {
 			has_global_flag = running_LCDA
 			OR= {
-				has_landed_title = c_aigle
+				title = c_aigle
 			}
 		}
 	}
