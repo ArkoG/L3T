@@ -1436,6 +1436,8 @@ laws = {
 				revoke_law = imperial_administration
 			}
 		}
+		vassal_limit = 10
+		feudal_opinion = 10
 	}
 	
 	imperial_administration = {
@@ -1482,8 +1484,9 @@ laws = {
 			}
 		}
 		
-		vassal_limit = 25
-		feudal_opinion = -10
+		vassal_limit = -10
+		demesne_size = 3
+		feudal_opinion = -20
 	}
 	
 	
