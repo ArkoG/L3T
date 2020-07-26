@@ -81,9 +81,12 @@ character_event = {
 			set_character_flag = tournament_begins_furusiyya
 			set_character_flag = attending_tournament_furusiyya
 			set_character_flag = tournament_60_days_furusiyya
-			chronicle = {
-				entry = CHRONICLE_FURUSIYYA
-				picture = GFX_evt_joust
+			if = {
+				limit = { ai = no }
+				chronicle = {
+					entry = CHRONICLE_FURUSIYYA
+					picture = GFX_evt_joust
+				}
 			}
 			#Injuries
 			any_realm_character = {

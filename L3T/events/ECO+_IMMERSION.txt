@@ -43,12 +43,15 @@ province_event = {
 	}
 	
 	immediate = {
-		random = {		
-			chance = 15
-			owner = { 		
-				chronicle = {
-					entry = RECOLTE_BONNE_CHRONIQUE
-					picture = GFX_evt_ECO1
+		if = {
+			limit = { owner = { ai = no }}
+			random = {		
+				chance = 15
+				owner = { 		
+					chronicle = {
+						entry = RECOLTE_BONNE_CHRONIQUE
+						picture = GFX_evt_ECO1
+					}
 				}
 			}
 		}
@@ -110,12 +113,15 @@ province_event = {
 	}
 	
 	immediate = {
-		random = {		
-			chance = 15
-			owner = { 		
-				chronicle = {
-					entry = RECOLTE_MAUVAISE_CHRONIQUE
-					picture = GFX_evt_ECO3
+		if = {
+			limit = { owner = { ai = no }}
+			random = {		
+				chance = 15
+				owner = { 		
+					chronicle = {
+						entry = RECOLTE_MAUVAISE_CHRONIQUE
+						picture = GFX_evt_ECO3
+					}
 				}
 			}
 		}
@@ -171,12 +177,15 @@ province_event = {
 	}
 
 	immediate = {
-		random = {		
-			chance = 15
-			owner = { 		
-				chronicle = {
-					entry = PECHE_BONNE_CHRONIQUE
-					picture = GFX_evt_L3T_fishing
+		if = {
+			limit = { owner = { ai = no }}
+			random = {		
+				chance = 15
+				owner = { 		
+					chronicle = {
+						entry = PECHE_BONNE_CHRONIQUE
+						picture = GFX_evt_L3T_fishing
+					}
 				}
 			}
 		}
@@ -232,12 +241,15 @@ province_event = {
 	}
 
 	immediate = {
-		random = {		
-			chance = 15
-			owner = { 		
-				chronicle = {
-					entry = PECHE_MAUVAISE_CHRONIQUE
-					picture = GFX_evt_merchant_ship_at_sea_republic
+		if = {
+			limit = { owner = { ai = no }}
+			random = {		
+				chance = 15
+				owner = { 		
+					chronicle = {
+						entry = PECHE_MAUVAISE_CHRONIQUE
+						picture = GFX_evt_merchant_ship_at_sea_republic
+					}
 				}
 			}
 		}
@@ -479,13 +491,16 @@ province_event = {
 				05 = { change_variable = { which = "stock_minerai" value =  500 } } #25ans de stock à conso=20
 				05 = { change_variable = { which = "stock_minerai" value =  700 } } #35ans de stock à conso=20
 				}
-			random_list = {		
-				85 = {}
-				15 = {
-					owner = { 		
-						chronicle = {
-							entry = NOUVEAU_FILON_CHRONIQUE
-							picture = GFX_evt_L3T_mine
+			if = {
+				limit = { owner = { ai = no }}
+				random_list = {		
+					85 = {}
+					15 = {
+						owner = { 		
+							chronicle = {
+								entry = NOUVEAU_FILON_CHRONIQUE
+								picture = GFX_evt_L3T_mine
+							}
 						}
 					}
 				}
@@ -695,38 +710,47 @@ province_event = {
 			20 = { add_province_modifier = { name = meteo_secheresse duration =  70 }}
 			18 = {
 				add_province_modifier = { name = meteo_secheresse duration = 90 }
-				random = {	
-					chance = 50 
-					owner = {
-						chronicle = {
-							entry = CHRONICLE_SECHERESSE_1
-							picture = GFX_evt_ECO2
+				if = {
+					limit = { owner = { ai = no }}
+					random = {	
+						chance = 50 
+						owner = {
+							chronicle = {
+								entry = CHRONICLE_SECHERESSE_1
+								picture = GFX_evt_ECO2
+							}
 						}
 					}
 				}
 			}
 			8 = {
 				add_province_modifier = { name = meteo_secheresse duration = 120 }
-				random = {	
-					chance = 75
-					owner = {
-						chronicle = {
-							entry = CHRONICLE_SECHERESSE_2
-							picture = GFX_evt_ECO2
-						}
-					}					
+				if = {
+					limit = { owner = { ai = no }}
+					random = {	
+						chance = 75
+						owner = {
+							chronicle = {
+								entry = CHRONICLE_SECHERESSE_2
+								picture = GFX_evt_ECO2
+							}
+						}					
+					}
 				}
 			}
 			5 = { 
 				add_province_modifier = { name = meteo_secheresse duration = 150 }
-				random = {	
-					chance = 80
-					owner = {
-						chronicle = {
-							entry = CHRONICLE_SECHERESSE_3
-							picture = GFX_evt_ECO2
-						}
-					}					
+				if = {
+					limit = { owner = { ai = no }}
+					random = {	
+						chance = 80
+						owner = {
+							chronicle = {
+								entry = CHRONICLE_SECHERESSE_3
+								picture = GFX_evt_ECO2
+							}
+						}					
+					}
 				}
 			}
 		}
@@ -769,10 +793,13 @@ province_event = {
 		name = "ECO.210A"
 		custom_tooltip = { text = chronique_prosperite_custom }
 		hidden_tooltip = {
-			owner = {
-				chronicle = {
-					entry = CHRONICLE_PROSPERITE_A
-					picture = GFX_evt_market
+			if = {
+				limit = { owner = { ai = no }}
+				owner = {
+					chronicle = {
+						entry = CHRONICLE_PROSPERITE_A
+						picture = GFX_evt_market
+					}
 				}
 			}
 		}
@@ -803,10 +830,13 @@ province_event = {
 		name = "ECO.211A"
 		custom_tooltip = { text = chronique_prosperite_custom }
 		hidden_tooltip = {
-			owner = {
-				chronicle = {
-					entry = CHRONICLE_PROSPERITE_B
-					picture = GFX_evt_market
+			if = {
+				limit = { owner = { ai = no }}
+				owner = {
+					chronicle = {
+						entry = CHRONICLE_PROSPERITE_B
+						picture = GFX_evt_market
+					}
 				}
 			}
 		}
@@ -837,10 +867,13 @@ province_event = {
 		name = "ECO.212A"
 		custom_tooltip = { text = chronique_prosperite_custom }
 		hidden_tooltip = {
-			owner = {
-				chronicle = {
-					entry = CHRONICLE_PROSPERITE_C
-					picture = GFX_evt_market
+			if = {
+				limit = { owner = { ai = no }}
+				owner = {
+					chronicle = {
+						entry = CHRONICLE_PROSPERITE_C
+						picture = GFX_evt_market
+					}
 				}
 			}
 		}

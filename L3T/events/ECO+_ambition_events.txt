@@ -2214,9 +2214,12 @@ character_event = { #cadastre achevé
 			change_stewardship = 1
 			hidden_tooltip = { character_event = { id = L3T.90 }} #updates stewardship bonus
 			custom_tooltip = { text = entree_chronique }
-			chronicle = {
-				entry = CHRONICLE_CADASTRE
-				picture = GFX_evt_L3T_carte
+			if = { 
+				limit = { ai = no }
+				chronicle = {
+					entry = CHRONICLE_CADASTRE
+					picture = GFX_evt_L3T_carte
+				}
 			}
 			location = { add_province_modifier = { name = redaction_dun_cadastre duration = 3650 }}
 	}

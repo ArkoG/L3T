@@ -327,5 +327,168 @@ defined_text = {
 		}
 	}
 }
+##muslim zaouias
+defined_text = {
+	name = GetZaouia # written in full CAP
+
+	text = {
+		localisation_key = getzaouia_zaouia #Magrebh region
+		trigger = { 
+			OR = {
+				region = world_africa_north
+				region = world_europe_west #iberia France Brittania west germania
+				region = world_europe_south_italy
+			}
+		}
+	}
+	text = {
+		localisation_key = getzaouia_dahira #originated from Senegal
+		trigger = { 
+			OR = {
+				region = world_africa_west
+				region = world_africa_central
+			}
+		}
+	}
+	text = {
+		localisation_key = getzaouia_khanqah
+		trigger = { 
+			OR = {
+				region = world_africa_east
+				region = world_middle_east #jerusalem + arabia
+				region = world_persia
+				region = world_asia_minor
+				region = world_europe_east
+				region = world_europe_south_east #greece+balkany
+				region = world_europe_north
+			}
+		}
+	}
+	text = {
+		localisation_key = getzaouia_dargah
+		trigger = { 
+			OR = {
+				region = world_india
+				region = world_himalayas
+				region = world_steppe #east+west steppe+tarim
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = getzaouia_default #fallback, in case it fails to find relevant info
+	}
+}
+defined_text = {
+	name = GetZaouiaLow # written in lower case with capped first letter
+
+	text = {
+		localisation_key = getzaouiaLow_zaouia #Magrebh region
+		trigger = { 
+			OR = {
+				region = world_africa_north
+				region = world_europe_west #iberia France Brittania west germania
+				region = world_europe_south_italy
+			}
+		}
+	}
+	text = {
+		localisation_key = getzaouiaLow_dahira #originated from Senegal
+		trigger = { 
+			OR = {
+				region = world_africa_west
+				region = world_africa_central
+			}
+		}
+	}
+	text = {
+		localisation_key = getzaouiaLow_khanqah
+		trigger = { 
+			OR = {
+				region = world_africa_east
+				region = world_middle_east #jerusalem + arabia
+				region = world_persia
+				region = world_asia_minor
+				region = world_europe_east
+				region = world_europe_south_east #greece+balkany
+				region = world_europe_north
+			}
+		}
+	}
+	text = {
+		localisation_key = getzaouiaLow_dargah
+		trigger = { 
+			OR = {
+				region = world_india
+				region = world_himalayas
+				region = world_steppe #east+west steppe+tarim
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = getzaouiaLow_default #fallback, in case it fails to find relevant info
+	}
+}
 	
-	
+##monastic rule
+defined_text = {
+	name = GetMonastic_rule
+
+	text = {
+		localisation_key = getmonastic_benedicti
+		trigger = { 
+			has_title_flag = REGLE_DE_1
+		}
+	}
+	text = {
+		localisation_key = getmonastic_augustini
+		trigger = { 
+			has_title_flag = REGLE_DE_2
+		}
+	}
+	text = {
+		localisation_key = getmonastic_basili
+		trigger = { 
+			has_title_flag = REGLE_DE_3
+		}
+	}
+	text = {
+		localisation_key = getmonastic_sufi_default
+		trigger = { 
+			has_title_flag = REGLE_SUFI_SCHOOL
+		}
+	}
+	fallback_text = {
+		localisation_key = getmonastic_fallback #fallback, in case it fails to find relevant info
+	}
+}
+defined_text = {
+	name = GetMonastic_rule_desc
+
+	text = {
+		localisation_key = getmonastic_benedicti_desc
+		trigger = { 
+			has_title_flag = REGLE_DE_1
+		}
+	}
+	text = {
+		localisation_key = getmonastic_augustini_desc
+		trigger = { 
+			has_title_flag = REGLE_DE_2
+		}
+	}
+	text = {
+		localisation_key = getmonastic_basili_desc
+		trigger = { 
+			has_title_flag = REGLE_DE_3
+		}
+	}
+	text = {
+		localisation_key = getmonastic_sufi_default_desc
+		trigger = { 
+			has_title_flag = REGLE_SUFI_SCHOOL
+		}
+	}
+	fallback_text = {
+		localisation_key = getmonastic_fallback_desc #fallback, in case it fails to find relevant info
+	}
+}
