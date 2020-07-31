@@ -9,7 +9,10 @@ RETTYPE_L3T_JIZYA_CA = {
 	potential = {
 		is_nomadic = no
 		is_tribal = no
-		culture_group = arabic
+		OR = {
+			culture_group = arabic
+			culture = andalusian_arabic
+		}
 	}
 	
 	modifier = {
@@ -30,7 +33,20 @@ RETTYPE_L3T_JIZYA_CT = {
 	potential = {
 		is_nomadic = no
 		is_tribal = no
-		culture_group = arabic
+		OR = {
+			culture_group = arabic
+			culture = andalusian_arabic
+			culture_group = iranian #horse archer
+			culture_group = altaic #horse archer
+			#
+			culture_group = north_african #light_cavalry
+			#NOT = { culture = canarian } #light_cavalry
+			#
+			culture_group = west_african #light_infantry
+			culture_group = central_african #light_infantry
+			culture = canarian #light_infantry
+			culture_group = east_african #light_infantry
+		}
 	}
 	
 	modifier = {
@@ -51,7 +67,20 @@ RETTYPE_L3T_JIZYA_TP = {
 	potential = {
 		is_nomadic = no
 		is_tribal = no
-		culture_group = arabic
+		OR = {
+			culture_group = arabic
+			culture = andalusian_arabic
+			culture_group = iranian #horse archer
+			culture_group = altaic #horse archer
+			#
+			culture_group = north_african #light_cavalry
+			#NOT = { culture = canarian } #light_cavalry
+			#
+			culture_group = west_african #light_infantry
+			culture_group = central_african #light_infantry
+			culture = canarian #light_infantry
+			culture_group = east_african #light_infantry
+		}
 	}
 	
 	modifier = {
@@ -65,7 +94,7 @@ RETTYPE_L3T_JIZYA_TP = {
 }
 RETTYPE_L3T_ARAB = { 
 
-	first_type = 3
+	first_type = 3 #light cavalry
 	first_amount = 150
 
 	second_type = 2 #pikemen
@@ -74,7 +103,20 @@ RETTYPE_L3T_ARAB = {
 	potential = {
 		is_nomadic = no
 		is_tribal = no
-		culture_group = arabic
+		OR = {
+			culture_group = arabic
+			culture = andalusian_arabic
+			culture_group = iranian #horse archer
+			culture_group = altaic #horse archer
+			#
+			culture_group = north_african #light_cavalry
+			#NOT = { culture = canarian } #light_cavalry
+			#
+			culture_group = west_african #light_infantry
+			culture_group = central_african #light_infantry
+			culture = canarian #light_infantry
+			culture_group = east_african #light_infantry
+		}
 	}
 	
 	modifier = {
@@ -88,24 +130,37 @@ RETTYPE_L3T_ARAB = {
 }
 RETTYPE_L3T_ARAB_FILLER = { 
 
-	first_type = 3
+	first_type = 3 #light cavalry
 	first_amount = 50
 
-	second_type = 2 #pikemen
-	second_amount = 10	
+	#second_type = 2 #pikemen
+	#second_amount = 10	
 	
 	potential = {
 		is_nomadic = no
 		is_tribal = no
-		culture_group = arabic
+		OR = {
+			culture_group = arabic
+			culture = andalusian_arabic
+			culture_group = iranian #horse archer
+			culture_group = altaic #horse archer
+			#
+			culture_group = north_african #light_cavalry
+			#NOT = { culture = canarian } #light_cavalry
+			#
+			culture_group = west_african #light_infantry
+			culture_group = central_african #light_infantry
+			culture = canarian #light_infantry
+			culture_group = east_african #light_infantry
+		}
 	}
 	
 	modifier = {
 		light_cavalry_offensive = 0.3
 		light_cavalry_defensive = 0.1
 		light_cavalry_morale = 0.1
-		pikemen_offensive = 0.1
-		pikemen_defensive = 0.3
-		pikemen_morale = 0.1
+		#pikemen_offensive = 0.1
+		#pikemen_defensive = 0.3
+		#pikemen_morale = 0.1
 	}
 }

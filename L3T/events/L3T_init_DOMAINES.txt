@@ -387,7 +387,7 @@ province_event = {
 						holder_scope = {
 							is_landed = yes
 							government = muslim_government
-							culture_group = arabic
+							#culture_group = arabic
 							is_tribal = no
 							is_nomadic = no
 						}
@@ -401,7 +401,7 @@ province_event = {
 						holder_scope = {
 							is_landed = yes
 							government = muslim_government
-							culture_group = arabic
+							#culture_group = arabic
 							is_tribal = no
 							is_nomadic = no
 							NOT = { demesne_size = 2 }

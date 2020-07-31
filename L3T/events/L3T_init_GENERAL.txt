@@ -714,7 +714,7 @@ character_event = {
 				}
 				is_landed = yes
 				government = muslim_government
-				culture_group = arabic
+				#culture_group = arabic
 				is_nomadic = no
 				is_tribal = no
 			}
@@ -780,7 +780,7 @@ character_event = {
 					#debug
 					any_demesne_province = {
 						limit = {
-							culture_group = arabic
+							culture_group = ROOT
 							NOT = { owner = { has_space_for_retinue = RETTYPE_L3T_ARAB_FILLER }}
 						}					
 						owner = { set_character_flag = LACK_SPACE_ret_from_provinces }
@@ -789,7 +789,7 @@ character_event = {
 					#for each own province, capped
 			any_demesne_province = {
 				limit = {
-					culture_group = arabic
+					culture_group = ROOT
 					owner = { has_space_for_retinue = RETTYPE_L3T_ARAB_FILLER }
 				}					
 				owner = { create_retinue = RETTYPE_L3T_ARAB_FILLER } #l_cavalry off/def
@@ -804,11 +804,11 @@ character_event = {
 				religion_group = muslim
 				is_nomadic = no
 				is_tribal = no
-				any_demesne_title = {
+				any_realm_title  = {
 					has_holding_modifier = L3T_jizya
 				}
 			}
-			any_demesne_title = {
+			any_title_under  = {
 				limit = {
 					has_holding_modifier = L3T_jizya
 					tier = baron
@@ -828,7 +828,7 @@ character_event = {
 					holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_CA }
 				}						
 			}
-			any_demesne_title = {
+			any_title_under  = {
 				limit = {
 					has_holding_modifier = L3T_jizya
 					tier = baron
@@ -849,7 +849,7 @@ character_event = {
 					holder_scope = { create_retinue = RETTYPE_L3T_JIZYA_CT }
 				}
 			}
-			any_demesne_title = {
+			any_title_under  = {
 				limit = {
 					has_holding_modifier = L3T_jizya
 					tier = baron
