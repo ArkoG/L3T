@@ -177,6 +177,12 @@ character_event = {
 				}
 			}
 		}
+		##removes retinue bonus for muslim religions in SWMH
+		any_province = {
+			limit = { owner = { religion_group = muslim }}
+			owner = { set_unit_modifier = { retinuesize_perc = 0.0 }}
+		}
+		
 		##various global flags
 		set_global_flag = running_L3T
 		set_global_flag = paix_de_dieu #moved from individual options
@@ -729,7 +735,7 @@ character_event = {
 			if = {
 				limit = { 
 					higher_tier_than = COUNT # DUKE
-					has_space_for_retinue = RETTYPE_L3T_ARAB
+					#has_space_for_retinue = RETTYPE_L3T_ARAB
 				}
 				create_retinue = RETTYPE_L3T_ARAB
 				set_character_flag = ret_from_Duke
@@ -737,7 +743,7 @@ character_event = {
 			if = {
 				limit = { 
 					higher_tier_than = DUKE #  KING
-					has_space_for_retinue = RETTYPE_L3T_ARAB
+					#has_space_for_retinue = RETTYPE_L3T_ARAB
 				}
 				create_retinue = RETTYPE_L3T_ARAB
 				set_character_flag = ret_from_King
@@ -754,7 +760,7 @@ character_event = {
 			if = {
 				limit = { 
 					higher_tier_than = KING #  EMPEROR
-					has_space_for_retinue = RETTYPE_L3T_ARAB
+					#has_space_for_retinue = RETTYPE_L3T_ARAB
 				}
 				create_retinue = RETTYPE_L3T_ARAB
 				set_character_flag = ret_from_Emperor
@@ -790,7 +796,7 @@ character_event = {
 			any_demesne_province = {
 				limit = {
 					culture_group = ROOT
-					owner = { has_space_for_retinue = RETTYPE_L3T_ARAB_FILLER }
+					#owner = { has_space_for_retinue = RETTYPE_L3T_ARAB_FILLER }
 				}					
 				owner = { create_retinue = RETTYPE_L3T_ARAB_FILLER } #l_cavalry off/def
 				owner = { set_character_flag = ret_from_provinces }
