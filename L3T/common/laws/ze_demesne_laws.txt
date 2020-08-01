@@ -699,7 +699,7 @@ laws = {
 				revoke_law = ze_administration_laws_2
 			}
 		}
-		vassal_limit = 10
+		vassal_limit = 15
 		feudal_opinion = 10
 	}
 	ze_administration_laws_1 = {
@@ -753,7 +753,7 @@ laws = {
 				#revoke_law = ze_administration_laws_3
 			}
 		}
-		demesne_size = 1
+		demesne_size = 2
 		feudal_opinion = -10
 	}
 	ze_administration_laws_2 = {
@@ -822,8 +822,8 @@ laws = {
 				#revoke_law = ze_administration_laws_3
 			}
 		}
-		vassal_limit = -10
-		demesne_size = 3
+		#vassal_limit = -10
+		demesne_size = 4
 		feudal_opinion = -20
 	}
 }
