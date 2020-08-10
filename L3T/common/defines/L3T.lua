@@ -42,7 +42,7 @@
 	NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_100 = 8000			-- Natural deaths per decade out of 10000 people: Age 100+
 	-- ex 0.5
 	NDefines.NCharacter.FERTILITY_BASE_MULT = 0.70						-- Base fertility multiplier to adjust the base chance of impregnation
-	NDefines.NCharacter.INFANT_DEATH_CHANCE = 0.05
+	--NDefines.NCharacter.INFANT_DEATH_CHANCE = 0.05
 
 	NDefines.NReligion.CREATE_ANTIPOPE_PRESTIGE_COST = 1000
 	-- ex 0 , 25 , 0
